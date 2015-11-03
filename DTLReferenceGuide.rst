@@ -233,10 +233,10 @@ of the argument. Here are some cardinalites that you'll come across:
      - | ``["values", 1, 2, 3]``
        
    * - ``function-expression``
-     - | Refers to an value expression argument that operates on a list
+     - | Refers to a value expression argument that operates on a list
          of values, and exposes the ``_`` current value variable for
          each of them.
-     - | ``["values", 1, 2, 3]``
+     - | ``["upper", "_.name"]``
        
    * - ``string``
      - | Refers to a constant string literal.
@@ -245,7 +245,7 @@ of the argument. Here are some cardinalites that you'll come across:
    * - ``wildcard-string``
      - | Refers to a constant string pattern literal that can include
          the ``*`` and ``?`` wildcard characters.
-     - | ``"alpha_*"`` or ``person``
+     - | ``"alpha_*"`` or ``"person"``
 
    * - ``wildcard-string-list``
      - | Same as ``wildcard-string``, but a list of them.
@@ -982,7 +982,8 @@ Values / collections
        |
        | Returns ``["a", "b", "c"]``.
        |
-       | ``["map", ["distinct", "_."], ["values", ["values", "A", "A"], ["values", "B", "C"]]]``
+       | ``["map", ["distinct", "_."],``
+       |   ``["values", ["values", "A", "A"], ["values", "B", "C"]]]``
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
@@ -1050,6 +1051,7 @@ Sets
        |
        | Returns ``["A"]``.
        |
-       | ``["difference", ["values", "A", "B", "C", "D"], ["values", "A", "B", "E"]]``
+       | ``["difference",``
+       |   ``["values", "A", "B", "C", "D"], ["values", "A", "B", "E"]]``
        |
        | Returns ``["C", "D"]``.
