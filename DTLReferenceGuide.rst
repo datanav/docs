@@ -4,11 +4,53 @@ DTL Reference Guide
 
 .. contents:: Table of Contents
 
+
 Introduction
 ===================
 
-TODO: include an introduction to DTL.
+The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets. 
 
+Core Concepts
+-------------
+
+DTL allows developers to describe a data transform. A DTL processor applies the transform to a stream of data. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.  
+
+A DTL transform describes how to construct a new entity. It can assume that it is provided a 'source' entity from which it can use property values. A transform can also perform queries that range across data in the datahub. These queries must start from the source entity.
+
+DTL consists of 'functions' that can pick and transform data and 'hops' that can traverse the data in the datahub. In combination these offer a powerful way to construct new data entities from existing data. DTL functions are composable and thus allowing complex computation to be expressed.
+
+Syntax
+------
+
+DTL uses a json syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
+
+An example using the 'add' transform:
+
+  ["add", ["name", "_S.firstname"]]
+
+And composing functions:
+
+  ["add", ["name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]]
+
+Input Streams
+-------------
+
+For a DTL processor to produce new entities it must be supplied a stream of source entities. DTL can only be applied to entities being sourced from a datahub dataset. When defining a DTL transform it is possible to process entities from many streams.
+
+A DTL script must specify which datasets should be used as a source. This can be a list of datasets.
+
+  {
+    "datasets": ["people"]  
+  }
+
+A first example
+---------------
+
+Here is a simple first example that takes all entities from the customer dataset and creates new objects.
+
+
+
+  
 Example
 ===================
 
