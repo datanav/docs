@@ -799,9 +799,9 @@ Sets
        |   SET1(value-expression{1})
        |   SET2(value-expression{1})
        |
-       | Returns the union of the two sets SET1 and SET2. The two arguments
-         do not have to be real sets, but will be coerced into sets before
-         applying the union operator.
+       | Returns the union of the two sets SET1 and SET2, i.e. the elements that
+         are either in SET1 or in SET2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the union operator.
      - | ``["union", ["values", "A", "B"], ["values", "B", "C"]]``
        |
        | Returns ``["A", "B", "C"]``.
@@ -815,9 +815,9 @@ Sets
        |   SET1(value-expression{1})
        |   SET2(value-expression{1})
        |
-       | Returns the intersection of the two sets SET1 and SET2. The two arguments
-         do not have to be real sets, but will be coerced into sets before
-         applying the intersection operator.
+       | Returns the intersection of the two sets SET1 and SET2, i.e. the elements
+         that are in both SET1 and SET2. The two arguments do not have to be real sets,
+         but will be coerced into sets before applying the intersection operator.
      - | ``["intersection", ["values", "A", "B"], ["values", "B", "C"]]``
        |
        | Returns ``["B"]``.
@@ -828,16 +828,16 @@ Sets
        |
        | ``["intersection", "A", ["values", "B", "C"]]``
        |
-       | Returns ``["A"]``.
+       | Returns ``[]``.
        
    * - ``difference``
      - | *Arguments:*
        |   SET1(value-expression{1})
        |   SET2(value-expression{1})
        |
-       | Returns the difference of the two sets SET1 and SET2. The two arguments
-         do not have to be real sets, but will be coerced into sets before
-         applying the difference operator.
+       | Returns the difference of the two sets SET1 and SET2, i.e. the elements
+         that are in SET1, but not in SET2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the difference operator.
      - | ``["difference", ["values", "A", "B"], ["values", "B"]]``
        |
        | Returns ``["A"]``.
