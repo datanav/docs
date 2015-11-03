@@ -119,24 +119,5 @@ Sesam Interactive is a provided as a Jupyter server that is configured to connec
 
 This setup can be used to explore datasets programmatically and also perform analytics and queries to show how the data in the DataLake can be used.
 
-## Sesam Management Studio
-
-The Sesam Management Studio is a web application for configuring and managing one or more nodes or clusters of Sesam Nodes.
-
-### Logging On
-
-### Selecting a Node or Node Cluster
-
-### Listing the Providers
-
-### Configuring and Testing a New Provider
-
-### Configuring a new External System
-
-### Using the External System to create providers
-
-### Listing Data Pipes
-
-### Adding with Data Pipes
 
 
