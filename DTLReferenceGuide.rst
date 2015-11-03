@@ -22,15 +22,15 @@ DTL consists of 'functions' that can pick and transform data and 'hops' that can
 Syntax
 ------
 
-DTL uses a json syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
+DTL uses a JSON syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
 
 An example using the 'add' transform:
 
-  ["add", ["name", "_S.firstname"]]
+  ["add", "name", "_S.firstname"]
 
 And composing functions:
 
-  ["add", ["name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]]
+  ["add", "name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]
 
 Input Streams
 -------------
@@ -50,8 +50,8 @@ Annotated Example
 ===================
 
 
-Here is a simple first example that takes all entities from the
-customer dataset and creates new objects. Below you'll find a complete
+Here is a simple example that takes entities from the ``person``
+dataset and creates new entities from it. Below you'll find a complete
 DTL document with a detailed description of how it works.
 
 ::
@@ -81,7 +81,8 @@ DTL document with a detailed description of how it works.
 
 Explanation:
 
-1. The DTL will process source entities from the ``person`` dataset.
+1. | The DTL will read and transform source entities from the ``person``
+     dataset.
 
 2. | There are two named ``transforms`` specified in the example:
      ``default`` and ``order``. The ``default`` named transform is
