@@ -4,6 +4,214 @@ DTL Reference Guide
 
 .. contents:: Table of Contents
 
+Introduction
+===================
+
+TODO: include an introduction to DTL.
+
+Example
+===================
+
+TODO: include full DTL example with explanation.
+
+Transforms
+===================
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+       
+   * - ``if``
+     - | *Arguments:*
+       |   CONDITION(boolean-expression{1}),
+       |   THEN(transforms{1}),
+       |   ELSE(transforms{0|1})
+       |
+       | If CONDITION evaluates to *true* then apply the transforms in THEN.
+         If CONDITION evaluates to *false* then apply the transforms in ELSE.
+         Note that THEN and ELSE can contain empty lists of transforms.
+     - | ``["if", ["eq", "_S.type", "person"],``
+       |      ``[["add", "type", "person"],``
+       |       ``["copy", ["name", "age"]]]]``
+       |
+       | If the source entity's ``type`` field contains ``person`` then apply
+         the ``add`` and ``copy`` transformat. There is no else clause given.
+       |
+       | ``["if", ["gt", "_S.age", 18],``
+       |      ``["add", "type", "adult"],``
+       |      ``["add", "type", "child"]]``
+       |
+       | If the source entity's ``age`` is greater than 18 then add ``type``
+         field with value ``adult``, if not add ``child``.
+       
+   * - ``filter``
+     - | *Arguments:*
+       |   FILTER(boolean-expression{0|1})
+       |
+       | If the evaluation of the FILTER expresion returns false, then stop
+         applying transformations. If the processing is stopped then *no*
+         target entity is emitted for the source entity. Note that any entities
+         already emitted by ``create`` will not be stopped. If the FILTER argument
+         is not given then the filter evaluates to false, so it effectively stops
+         the processing of the source entity.
+     - | ``["filter", ["gt", "_S.age", 42]]``
+       |
+       | Continue processing only if the source entity's age is greater than 42.
+       |
+       | ``["filter", ["eq", "_S.type", "person]]``
+       |
+       | Continue processing only if the source entity's type is ``person``.
+       |
+       | ``["filter"]``
+       |
+       | Stop processing.
+       
+   * - ``add``
+     - | *Arguments:*
+       |   PROPERTY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Adds the PROPERTY field to the target entity with the values returned
+         by evaluating the VALUES expression.
+     - | ``["add", "age", 26]``
+       |
+       | Adds the ``age`` property with the value 26 to the target entity.
+       |
+       | ``["add", "upper_name", ["upper", "_S.name"]]``
+       |
+       | Adds the ``upper_name`` property to the target entity. The value is
+         the uppercased version of the source entity's ``name`` property.
+       
+   * - ``default``
+     - | *Arguments:*
+       |   PROPERTY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Adds the PROPERTY field to the target entity with the values returned
+         by evaluating the VALUES expression, unless the property already exists.
+         ``default`` behaves exactly like ``add``, except that it does not add
+         the property if the property already exists on the target entity. If
+         the property exists it does nothing.
+     - | ``["default", "age", 26]``
+       |
+       | Adds the ``age`` property with the value 26 to the target entity, if
+         the propery does not exists.
+       |
+       | ``["default", "upper_name", ["upper", "_S.name"]]``
+       |
+       | Adds the ``upper_name`` property to the target entity, if
+         the propery does not exists.. The value is
+         the uppercased version of the source entity's ``name`` property.
+       
+   * - ``remove``
+     - | *Arguments:*
+       |   PROPERTY(wildcard-string{1})
+       |
+       | Removes the PROPERTY field from the target entity. The PROPERTY can
+         be pattern with ``*`` and ``?`` characters in it. The pattern must match
+         the full property names.
+     - | ``["remove", "age"]``
+       |
+       | Removes the ``age`` property from the target entity.
+       |
+       | ``["remove", "temp_*"]``
+       |
+       | Removes all properties matching the ``temp_*`` wildcard pattern from
+         the target entity.
+       
+   * - ``copy``
+     - | *Arguments:*
+       |   INCLUDE_PROPERTIES(wildcard-string-list{1})
+       |   EXCLUDE_PROPERTIES(wildcard-string-list{1})
+       |
+       | Copies properties in INCLUDE_PROPERTIES from the source entity to the
+         target entity. Any properties matching any ofthe EXCLUDE_PROPERTIES
+         patterns are not included. INCLUDE_PROPERTIES and EXCLUDE_PROPERTIES
+         can be a single string or a list of strings, where the strings are
+         patterns. ``*`` and ``?`` are valid pattern characters.
+     - | ``["copy", "age"]``
+       |
+       | Copies the ``age`` property from the source entity to the target entity.
+       |
+       | ``["copy", "a*", "ab*"]``
+       |
+       | Copies all properties starting with ``a`` from the source entity to the
+         target entity, but not those starting with ``ab``.
+       |
+       | ``["copy", ["a*", "b*"], ["ab*", "ba*"]]``
+       |
+       | Copies all properties starting with ``a`` or ``b`` from the source entity
+         to the target entity, but not those starting with ``ab`` or ``ba``.
+       
+   * - ``rename``
+     - | *Arguments:*
+       |   PROPERTY1(string{1})
+       |   PROPERTY2(string{1})
+       |
+       | Copies the PROPERTY1 field from the source entity to the PROPERTY2 field
+         on the target entity. This is effectively a way to copy and rename
+         properties from the source entity to the target entity. No wildcard
+         patterns are supported.
+     - | ``["rename", "age", "current_age"]``
+       |
+       | Copies the ``age`` field from the source entity and adds it as
+         ``current_age`` on the target entity.
+       
+   * - ``merge``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | For each entity in VALUES copy all the properties of the value onto the
+         target entity, unless the property already exists. This means that
+         properties from earlier value entities win over later ones.
+     - | ``["merge", "_S.orders"]``
+       |
+       | Copies the properties of the entities in ``_S.orders`` to the target,
+         unless the property exists already.
+       |
+       | ``["merge", ["values", {"a": 1}, {"a": 2, "b": 3}]]``
+       |
+       | Add the properties ``a=1`` and ``b=3`` to the target entity. Note that
+         ``a=2`` is not added because the ``a`` property already exists.
+       
+   * - ``merge-union``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | For each entity in VALUES copy all the properties of the value onto the
+         target entity. If the property already exists on the target entity, add
+         the new values to the existing list of values.
+     - | ``["merge", "_S.orders"]``
+       |
+       | Copies the properties of the entities in ``_S.orders`` to the target.
+         Merge the property values if the property already exists.
+       |
+       | ``["merge", ["values", {"a": 1}, {"a": 2, "b": 3}]]``
+       |
+       | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
+       
+   * - ``create``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | For each entity in VALUES emit them as new entities to the DTLs output
+         pipeline. Note that these new entites *must* have an ``_id`` property.
+     - | ``["create", "_S.orders"]``
+       |
+       | Emit the orders in the source entity's ``orders`` field as new entities.
+       |
+       | ``["create", ["apply", "order", "_S.orders"]]``
+       |
+       | Emit the orders in the source entity's ``orders`` field as new entities,
+         but apply the ``order`` transform to them first.
+       
+
+Expression language
+===================
 
 Variables
 ----------
