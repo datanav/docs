@@ -6,7 +6,7 @@ DTL Reference Guide
 
 
 Introduction
-===================
+============
 
 The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets. 
 
@@ -47,7 +47,7 @@ A DTL script must specify which datasets should be used as a source. This can be
 
   
 Annotated Example
-===================
+=================
 
 Lets say that we have two datasets ``person`` and ``orders``, and that
 we want to transform the *persons* by joining in their *orders* and
@@ -270,11 +270,11 @@ Path Expressions and Hops
 There are three ways that one can access properties on entities:
 
 1. **Property path strings**: ``"_S.order.amount"``, which will start
-   from the ``_S`` variable (the source entity), and then traverse to
-   the ``order`` property and then to the ``amount`` property. The end
-   result is a list of amounts. Note that property path strings
-   function can only access property on the entity it operates on,
-   including nested entities.
+   from the given variable, in this case the source entity ``_S``, and
+   then traverse to the ``order`` property and then to the ``amount``
+   property. The end result is a list of amounts. Note that property
+   path strings function can only access property on the entity it
+   operates on, including nested entities.
 
 2. **The "path" function**: ``["path", "foo.bar", ["sorted",
    "_.amount", "_S.foos"]]``, which will first evaluate the rightmost
@@ -299,8 +299,14 @@ There are three ways that one can access properties on entities:
    use ``hops``.
 
 
+Dependency Tracking
+===================
+
+TODO: Explain how this works.
+
+
 Notation
-==========
+========
 
 Argument types
 --------------
@@ -572,7 +578,7 @@ Expression language
 
 
 Logical
----------------
+-------
 
 .. list-table:: 
    :header-rows: 1
@@ -620,7 +626,7 @@ Logical
 A *boolean-expression* is any function that returns a boolean value.
 
 Comparisons
---------------------
+-----------
 
 .. list-table:: 
    :header-rows: 1
@@ -719,7 +725,7 @@ Comparisons
 
 
 Conditionals
----------------------
+------------
 
 .. list-table:: 
    :header-rows: 1
@@ -789,7 +795,7 @@ Nested transformations
 
 
 Paths
-----------------------
+-----
 
 .. list-table:: 
    :header-rows: 1
@@ -822,7 +828,7 @@ Paths
 
 
 Hops
-----------------------
+----
 
 .. list-table:: 
    :header-rows: 1
@@ -836,12 +842,63 @@ Hops
      - | *Arguments:*
        |   HOPS_SPEC(dict{1})
        |
-       | ...TODO...
-     - |
+       | The HOPS_SPEC is a dictionary that takes the following keys:
+
+       1. ``datasets``: A list of strings with the dataset id
+          whitespace separated by the dataset alias. The database
+          aliases can be referenced in the ``where`` clause.
+
+       2. ``where``: An expression or a list of expressions. If it is
+          a list, then the expressions in the list will be wrapped
+          with the ``and`` function. The expressions are then
+          evaluated to perform the joins.
+
+       3. ``return``: OPTIONAL. A string, or an expression, or not
+          specified. If it is a string, then it should refer to a
+          comma separated list of dataset aliases. In that case all
+          the values of those aliases will be returned. If it is an
+          expression then the expression is evaluated on the hops
+          result and its result is returned. If not specified, then it
+          will return the last dataset alias in the list. This is the
+          default.
+
+       4. ``track-dependencies``: OPTIONAL. A boolean. The default is
+          true. Can be used to disable dependency tracking for this
+          particular ``hops`` function.
+
+       | The join criteria are described by using the
+         ``eq`` function. All dataset aliases defined in the
+         ``datasets`` key have to be joined and all must by navigable
+         from the source entity. If that is not the case, then an error
+         will be raised.
+       | The ``hops`` function produces a table inside, one column per
+         dataset alias. This table is the projected down into a list
+         of values by the ``return`` clause that is then returned by
+         the function.
+
+     - ::
+
+          ["hops", {
+            "datasets": ["Address a", "Country c"],
+            "return": "a",
+            "where": [
+              ["or",
+                 ["eq", "a.type", "SHIPPING"],
+                 ["eq", "a.type", "BILLING"]],
+              ["eq", "_S.address", "a._id"],
+              ["eq", "c._id", "a.country"]
+            ]}]
+
+       | Join the source entity's ``address`` property with the
+         ``Address``'s ``_id`` property, and then the ``Address``'s
+         ``country`` property with``Country``'s ``_id`` property.
+         Filter the addresses by type, so that only shipping and
+         billing addresses are included in the result. Return the
+         addresses found.
 
 
 Strings
-----------------------
+-------
 
 .. list-table:: 
    :header-rows: 1
@@ -909,7 +966,7 @@ Strings
 
 
 Values / collections
-----------------------
+--------------------
 
 .. list-table:: 
    :header-rows: 1
@@ -1098,7 +1155,7 @@ Values / collections
 
 
 Sets
-----------------------
+----
 
 .. list-table:: 
    :header-rows: 1
