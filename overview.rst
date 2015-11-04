@@ -5,7 +5,7 @@ Overview
 Introduction
 ============
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting data from source systems, transforming that data and delivering it to target systems. What makes Sesam special is its ability to track and process only data that has changed, and its powerful data query and construction langauge.   
+Sesam is a general purpose data integration and processing platform. It is optimised for collecting data from source systems, transforming that data and delivering it to target systems. What makes Sesam special is its ability to track and process only data that has changed, and its powerful data query and construction language.   
 
 
 Installation
@@ -13,14 +13,18 @@ Installation
 
 Sesam is offered as a cloud service and can also be installed locally. Local installations are managed by Sesam but run on client hardware. 
 
-The Sesam service is run as either a single Sesam Node or as a cluster of Sesam nodes. Each node has the capability to collect, transform and deliver data. However, various topologies of nodes can be used to separate concerns where needed. A cluster of Sesam Nodes can be managed by a master node or accessed direclty. All nodes expose the Sesam API as way to control and introspect the node. When used in a cluster the master node exposes a common API across all worker nodes.
+The Sesam service is run as either a single Sesam Node or as a cluster of Sesam nodes. Each node has the capability to collect, transform and deliver data. However, various topologies of nodes can be used to separate concerns where needed. A cluster of Sesam Nodes can be managed by a master node or accessed directly. All nodes expose the Sesam API as way to control and introspect the node. When used in a cluster the master node exposes a common API across all worker nodes.
 
-docker pull sesam/sesam-node
+::
+   
+  docker pull sesam/sesam-node
 
 Running Sesam
 =============
 
-docker run sesam/sesam-node 
+::
+
+  docker run sesam/sesam-node 
 
 Concepts
 ========
@@ -31,7 +35,7 @@ IMAGE - collect, connect and share.
 
 Sesam produces and consumes streams of data. Each stream contains a number of data entities each of whom consists of a number of key / property values and a special property called "_id". 
 
-Components called providers expose data from source systems such as REST APIs and Relational Databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks store the entities in datasets. A dataset is a log of entities supported by indexes for random access.
+Components called providers expose data from source systems such as REST APIs and Relational Databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks write the entities to datasets. A dataset is a log of entities supported by indexes for random access.
 
 Datasets also act as providers. They can expose the data they contain. However, a more common usage is to transform the data from a dataset into a new shape or representation. This is done using the Data Transformation Language (DTL). The DTL is optimised for ease of use in stream and graph processing and the construction of new data entities. DTL transformations can use data from many datasets to construct new entities.
 
@@ -42,12 +46,12 @@ These concepts are explored in more detail in the following sections.
 A Sesam Node
 ============
 
-A Sesam Node is a running process that is capaable of hosting instances of the components described below. In addition, each node instance exposes an API and a user interface. Nodes can be organised into clusters with one Node acting as the master. In the case of a cluster the API and user interface is exposed from the Master node.   
+A Sesam Node is a running process that is capable of hosting instances of the components described below. In addition, each node instance exposes an API and a user interface. Nodes can be organised into clusters with one node acting as the master. In the case of a cluster the API and user interface is exposed from the Master node.   
 
 Sesam Node Config
 =================
 
-Each Sesam Node has a configuration file or files that describe the set of components that should be instantiated and run by the Node. These files are themselves just a serialised set of data entities. Each entity is the configuration for one component. Any changes to the file will result in a component being reloaded but only if the data for actual component changes.
+Each Sesam Node has a configuration file or files that describe the set of components that should be instantiated and run by the node. These files are themselves just a serialised set of data entities. Each entity is the configuration for one component. Any changes to the file will result in a component being reconfigured but only if the data for actual component changes.
 
 By convention the config file is called node-config.json and is found in the root folder for the node. (ed - too much detail)
 
@@ -57,18 +61,20 @@ Data Providers
 (ed - please decide on the name of these things.)
 A Data Provider is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a relational database table, the rows in a CSV file, or data from an API. 
 
-The provider component offers one capability which is 'getEntities'. This operation can take an additional parameter that is an 'offset' token. This token can be used to only fetch the entities that have changed since that given offset. An offset is just a string token and different providers can interpret it differently.
+The provider component offers one capability which is 'getEntities'. This operation can take an additional parameter that is an 'offset' token. This token can be used to only fetch the entities that have changed *since* that given offset. An offset is just a string token [TODO: not just strings - grove] and different providers can interpret it differently [TODO: how is that? - grove].
 
-Each entity returned by a provider is a dictionary that maps keys to values. Values can be simple literals such as string, int, long, etc. They can also be lists or child entities. They can even be lists of entities. There are just three special or reserved keys within an entity, and they are; "_id", "_updated" and "_deleted". It is a requirement that every entity exposed by a provider has an "_id" property. This identifier should be unique within the set of entities being exposed by that provider, but need not be globally unique across all entities. 
+Each entity returned by a provider is a dictionary that maps keys to values. Values can be simple literals such as string, int, long, etc. They can also be lists or child entities. They can even be lists of entities. There are just three special or reserved keys within an entity, and they are; "_id", "_updated" and "_deleted". [TODO: all keys starting with '_' are reserved - grove] It is a requirement that every entity exposed by a provider has an "_id" property. This identifier should be unique within the set of entities being exposed by that provider, but need not be globally unique across all entities. 
 
-Sesam offers a number of core built in providers but it is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote provider is able to cosume data from these endpoints.
+Sesam offers a number of core built-in providers but it is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote provider is able to consume data from these endpoints.
 
 Entity Data Model
 =================
 
-Sesam uses a entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary. 
+Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary. 
 
 A Sesam entity has a few special keys that should not be messed with. The following data prototype explains these special properties.
+
+::
 
   {
   	"_id": "the id of the entity. required on all entities.",
@@ -78,12 +84,17 @@ A Sesam entity has a few special keys that should not be messed with. The follow
 
 The entity data model supports a wide range of data types including, int, float, URI, datetime etc. Over the wire both a binary and JSON representation is used. To enable datatypes not supported in JSON something else is used. (ed - i forgot what it is)
 
+Datatypes
+----------
+
+[TODO: describe the valid data types, i.e. the JSON data types and our extensions - grove]
+
 DataHub
 =======
 
 The datahub is where Sesam stores all its data. The data it collects from external systems and the data it has transformed is all stored in the datahub. The datahub is comprised of many datasets. 
 
-DataSets
+Datasets
 ========
 
 
