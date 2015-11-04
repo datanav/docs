@@ -49,10 +49,40 @@ A DTL script must specify which datasets should be used as a source. This can be
 Annotated Example
 ===================
 
+Lets say that we have two datasets ``person`` and ``orders``, and that
+we want to transform the *persons* by joining in their *orders* and
+apply a few other transform functions. In this section you'll find a
+complete DTL document that takes entities from the ``person`` dataset,
+joins them with entities from the ``orders`` dataset and creates new
+entities from them.
 
-Here is a simple example that takes entities from the ``person``
-dataset and creates new entities from it. Below you'll find a complete
-DTL document with a detailed description of how it works.
+Given the following *source entity* (from the ``person`` dataset):
+
+::
+
+    {
+      "_id": "1",
+      "name": "John Smith",
+      "age": 25
+    }
+
+We then want to transform it into the following *target entity*:
+
+::
+
+    {
+      "_id": "1",
+      "type": "customer",
+      "name": "JOHN SMITH",
+      "orders": [
+        {"_id": 100, "amount": 320 },
+        {"_id": 200, "amount": 500 }
+      ],
+      "order_count": 2
+    }
+
+Using the DTL document below we can transform the source entity into
+the target entity:
 
 ::
 
@@ -62,15 +92,16 @@ DTL document with a detailed description of how it works.
             "default": [
                 ["copy", "_id"],
                 ["add", "type", "customer"],
-                ["add", "name", "_S.name"],
+                ["add", "name", ["upper", "_S.name"]],
                 ["add", "orders",
-                  ["apply", "order", ["sorted", "_.amount", ["hops", {
+                  ["sorted", "_.amount", ["apply", "order", ["hops", {
                     "datasets": ["orders o"],
                     "where": [
                       ["eq", "_S._id", "o.cust_id"]
                     ]
                 }]]]],
-                ["add", "order_count", ["count", "_T.orders"]]
+                ["add", "order_count", ["count", "_T.orders"]],
+                ["filter", ["gt", "_T.order_count", 10]]
             ],
             "order": [
                 ["copy", "_id"],
@@ -84,7 +115,7 @@ Explanation:
 1. | The DTL will read and transform source entities from the ``person``
      dataset.
 
-2. | There are two named ``transforms`` specified in the example:
+2. | There are two named ``transforms`` specified in the DTL document:
      ``default`` and ``order``. The ``default`` named transform is
      mandatory and is the one that is applied to the entities in the
      ``person`` dataset.
@@ -93,52 +124,94 @@ Explanation:
      entity to the target entity.
 
 4. | ``["add", "type", "customer"]`` adds the ``type`` property to the target
-     entity with the literal value ``customer``.
+     entity with the literal value ``"customer"``.
 
-5. ...
+5. | ``["add", "name", ["upper", "_S.name"]]`` add the ``name``
+     property to the target entity by uppercasing the name in the source
+     entity.
+
+   ::
    
-``person`` source entity:
+       ["add", "orders",
+         ["sorted", "_.amount", ["apply", "order", ["hops", {
+           "datasets": ["orders o"],
+           "where": [
+             ["eq", "_S._id", "o.cust_id"]
+           ]
+       }]]]]
 
-::
+6. | The expression above adds the ``orders`` property to the target
+     entity. It does this by joining the source entity's ``_id``
+     property with the ``cust_id`` property of entities in the
+     ``orders`` dataset. The join is done by the ``hops`` function,
+     which takes a list of ``datasets``, assigns aliases to them, which
+     then get exposed as variables that you can use in expressions in
+     the ``where`` clause. The result of the ``hops`` is a list of
+     order entities:
 
-    {
-      "_id": "1",
-      "name": "John Smith",
-      "age": 25
-    }
+   ::
 
-``order`` entities joined in through hops:
-
-
-::
-
-    {
-      "_id": "100",
-      "amount": 320,
+    [{
+      "_id": 200,
+      "amount": 500
       "order_lines": [...],
       "cust_id": "1"
     },
     {
-      "_id": "200",
-      "amount": 500
+      "_id": 100,
+      "amount": 320,
       "order_lines": [...],
       "cust_id": "1"
-    }
+    }]
 
-The target entity (the result):
+   | The ``order`` transform is then applied using the ``apply`` function.
+     The result of this is a list of orders with two properties: ``_id``
+     and ``amount``:
 
-::
+   ::
 
+    [{
+      "_id": 200,
+      "amount": 500
+    },
     {
-      "_id": "1",
-      "type": customer,
-      "name": "John Smith",
-      "orders": [
-        {"_id": 100, "amount": 320 },
-        {"_id": 200, "amount": 500 }
-      ],
-      "order_count": 2
-    }
+      "_id": 100,
+      "amount": 320
+    }]
+
+   | The order entites are then ``sorted`` by their ``amount``
+     property before being assigned to the ``orders`` property on the
+     target entity:
+
+   ::
+
+    [{
+      "_id": 100,
+      "amount": 320
+    },
+    {
+      "_id": 200,
+      "amount": 500
+    }]
+
+7. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
+     ``order_count`` property to the target entity. Note that the value
+     is the number of order entities in the target entity's ``orders``
+     property. Note that we can access properties on the target entity
+     once we've added them.
+
+8. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
+     evaluates to true. If the filter is false the target entity is not
+     emitted / created.
+
+Things to note:
+
+- Transform functions are applied in the order given. The order is
+  significant, and one transform can use target entity properties
+  created by earlier transform function.
+  
+- The filter function can be used to stop transformation of individual
+  entities, effectively filtering them out of the output stream.
 
 
 Variables
@@ -180,15 +253,22 @@ current value in functional expressions.
 
    * - ``_``
      - Refers to the current entity. This variable is only available
-       inside a few functions that take an expression as an
-       argument. Examples of such functions are ``filter``, ``sort``
-       and ``coalesce``.
+       inside a few functions that take a function expression as an
+       argument. Examples of such functions are ``filter``, ``sorted``
+       ``min``, ``max``, and ``coalesce``.
      - | ``["filter", ["gt", "_.amount", 100], "_S.orders"]]``
        |
        | Filters out the order entities that have an amount of less than
          100, i.e. the filter function returns only the orders that have
          an amount of greater than 100. As you can see the ``_`` variable
          refers to the individual order entities, one at a time.
+
+
+Path Expressions and Hops
+=========================
+
+TODO: Explain ``S.order.amount``
+
 
 Notation
 ==========
