@@ -267,7 +267,36 @@ current value in functional expressions.
 Path Expressions and Hops
 =========================
 
-TODO: Explain ``S.order.amount``
+There are three ways that one can access properties on entities:
+
+1. **Property path strings**: ``"_S.order.amount"``, which will start
+   from the ``_S`` variable (the source entity), and then traverse to
+   the ``order`` property and then to the ``amount`` property. The end
+   result is a list of amounts. Note that property path strings
+   function can only access property on the entity it operates on,
+   including nested entities.
+
+2. **The "path" function**: ``["path", "foo.bar", ["sorted",
+   "_.amount", "_S.foos"]]``, which will first evaluate the rightmost
+   expression. Then it will traverse the path given in the first
+   argument for each of them and return the end result. Note that the
+   ``path`` function can only access property on the entity it
+   operates on, including nested entities.
+
+3. **The "hops" function**:
+
+   ::
+      
+       ["hops", {
+           "datasets": ["orders o"],
+           "where": [
+             ["eq", "_S._id", "o.cust_id"]
+           ]
+       }]
+
+   The ``hops`` function can be used to perform joins across two or
+   more datasets, so if you want to navigate beyond the current entity
+   use ``hops``.
 
 
 Notation
