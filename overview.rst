@@ -86,16 +86,33 @@ The datahub is where Sesam stores all its data. The data it collects from extern
 DataSets
 ========
 
+A dataset is the basic means of storage inside the Sesam datahub. A dataset is a log of entities supported by primary and secondary indexes. A dataset sink can write entities to the dataset. The dataset stores the entity in the log if and only if it is new or different from an existing entity with the same identity.
 
-Data Transformation Language
-============================
+A dataset provider exposes the entities from the log so that they can be consumed by an external system or used by data transormations. As the main data structure is a log the provider can read from a specific point in the log. 
+
+Data transformations can be applied to datasets. A data transformation takes a stream of entities and transforms them into a new stream of entities. A transform can query across many other datasets in order to create the new entity.
+
+Data Transformation Language (DTL)
+==================================
+
+The Data Transformation Language is used to construct new data from existing data. DTL transforms can only be applied to data in a dataset. The result of a DTL transform is exposed via DTL provider. 
+
+DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', 'merge' for 
 
 Sinks
 =====
 
-## A Data Pipe
 
-## External Systems
+Data Sync Task
+==============
+
+A Data Pipe
+===========
+
+A data pipe is any combination of provider, sync task and sink. It is a simple way to talk about the flow of data from a source to a target system.
+
+External Systems
+================
 
 An external system is any database, or application API that could be used as a source of data for the DataLake or as the target of transformed entities coming out of the DataLake. The External System components in the DataLake are a way to represent the actual systems being connected, or integrated. 
 
