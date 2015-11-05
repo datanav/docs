@@ -6,7 +6,7 @@ DTL Reference Guide
 
 
 Introduction
-===================
+============
 
 The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets. 
 
@@ -22,15 +22,15 @@ DTL consists of 'functions' that can pick and transform data and 'hops' that can
 Syntax
 ------
 
-DTL uses a json syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
+DTL uses a JSON syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
 
 An example using the 'add' transform:
 
-  ["add", ["name", "_S.firstname"]]
+  ["add", "name", "_S.firstname"]
 
 And composing functions:
 
-  ["add", ["name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]]
+  ["add", "name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]
 
 Input Streams
 -------------
@@ -39,25 +39,345 @@ For a DTL processor to produce new entities it must be supplied a stream of sour
 
 A DTL script must specify which datasets should be used as a source. This can be a list of datasets.
 
+::
+
   {
     "datasets": ["people"]  
   }
 
-A first example
----------------
-
-Here is a simple first example that takes all entities from the customer dataset and creates new objects.
-
-
-
   
-Example
+Annotated Example
+=================
+
+Lets say that we have two datasets ``person`` and ``orders``, and that
+we want to transform the *persons* by joining in their *orders* and
+apply a few other transform functions. In this section you'll find a
+complete DTL document that takes entities from the ``person`` dataset,
+joins them with entities from the ``orders`` dataset and creates new
+entities from them.
+
+Given the following *source entity* (from the ``person`` dataset):
+
+::
+
+    {
+      "_id": "1",
+      "name": "John Smith",
+      "age": 25
+    }
+
+We then want to transform it into the following *target entity*:
+
+::
+
+    {
+      "_id": "1",
+      "type": "customer",
+      "name": "JOHN SMITH",
+      "orders": [
+        {"_id": 100, "amount": 320 },
+        {"_id": 200, "amount": 500 }
+      ],
+      "order_count": 2
+    }
+
+Using the DTL document below we can transform the source entity into
+the target entity:
+
+::
+
+    {
+        "dataset": "person",
+        "transforms": {
+            "default": [
+                ["copy", "_id"],
+                ["add", "type", "customer"],
+                ["add", "name", ["upper", "_S.name"]],
+                ["add", "orders",
+                  ["sorted", "_.amount", ["apply", "order", ["hops", {
+                    "datasets": ["orders o"],
+                    "where": [
+                      ["eq", "_S._id", "o.cust_id"]
+                    ]
+                }]]]],
+                ["add", "order_count", ["count", "_T.orders"]],
+                ["filter", ["gt", "_T.order_count", 10]]
+            ],
+            "order": [
+                ["copy", "_id"],
+                ["add", "amount", "_S.amount"]
+            ]
+        }
+    }
+
+Explanation:
+
+1. | The DTL will read and transform source entities from the ``person``
+     dataset.
+
+2. | There are two named ``transforms`` specified in the DTL document:
+     ``default`` and ``order``. The ``default`` named transform is
+     mandatory and is the one that is applied to the entities in the
+     ``person`` dataset.
+
+3. | ``["copy", "_id"]`` copies the ``_id`` property from the source
+     entity to the target entity.
+
+4. | ``["add", "type", "customer"]`` adds the ``type`` property to the target
+     entity with the literal value ``"customer"``.
+
+5. | ``["add", "name", ["upper", "_S.name"]]`` add the ``name``
+     property to the target entity by uppercasing the name in the source
+     entity.
+
+   ::
+   
+       ["add", "orders",
+         ["sorted", "_.amount", ["apply", "order", ["hops", {
+           "datasets": ["orders o"],
+           "where": [
+             ["eq", "_S._id", "o.cust_id"]
+           ]
+       }]]]]
+
+6. | The expression above adds the ``orders`` property to the target
+     entity. It does this by joining the source entity's ``_id``
+     property with the ``cust_id`` property of entities in the
+     ``orders`` dataset. The join is done by the ``hops`` function,
+     which takes a list of ``datasets``, assigns aliases to them, which
+     then get exposed as variables that you can use in expressions in
+     the ``where`` clause. The result of the ``hops`` is a list of
+     order entities:
+
+   ::
+
+    [{
+      "_id": 200,
+      "amount": 500
+      "order_lines": [...],
+      "cust_id": "1"
+    },
+    {
+      "_id": 100,
+      "amount": 320,
+      "order_lines": [...],
+      "cust_id": "1"
+    }]
+
+   | The ``order`` transform is then applied using the ``apply`` function.
+     The result of this is a list of orders with two properties: ``_id``
+     and ``amount``:
+
+   ::
+
+    [{
+      "_id": 200,
+      "amount": 500
+    },
+    {
+      "_id": 100,
+      "amount": 320
+    }]
+
+   | The order entites are then ``sorted`` by their ``amount``
+     property before being assigned to the ``orders`` property on the
+     target entity:
+
+   ::
+
+    [{
+      "_id": 100,
+      "amount": 320
+    },
+    {
+      "_id": 200,
+      "amount": 500
+    }]
+
+7. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
+     ``order_count`` property to the target entity. Note that the value
+     is the number of order entities in the target entity's ``orders``
+     property. Note that we can access properties on the target entity
+     once we've added them.
+
+8. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
+     evaluates to true. If the filter is false the target entity is not
+     emitted / created.
+
+Things to note:
+
+- Transform functions are applied in the order given. The order is
+  significant, and one transform can use target entity properties
+  created by earlier transform function.
+  
+- The filter function can be used to stop transformation of individual
+  entities, effectively filtering them out of the output stream.
+
+
+Variables
+=========
+
+There are three variables in the Data Transformation Language. These
+are ``_S``, ``_T`` and ``_``. They refer to the source entity, target
+entity and the current value respectively. ``_S`` and ``_T`` appear in
+pairs inside each applied transform. ``_`` is used to refer to the
+current value in functional expressions.
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Variable
+     - Description
+     - Examples
+       
+   * - ``_S``
+     - Refers to the source entity. This is the entity on which the
+       DTL transform operate. Note that with the ``apply`` function
+       you can apply nested transforms, where each of the values
+       given to ``apply`` is made a source entity for that nested
+       transform.
+     - | ``["gt", "_S.age", 42]``
+       |
+       | The source entity's ``age`` field must have a value greater than 26.
+
+   * - ``_T``
+     - Refers to the target entity. This is the entity that is the
+       primary target entity of transforming the source entity. Note
+       that the ``create`` transform can be used to emit entities
+       in addition to just the target entity.
+     - | ``["length", "_T.description", 100]``
+       |
+       | The target entity's ``description`` field must have a length of
+         more than 100 characters.
+
+   * - ``_``
+     - Refers to the current entity. This variable is only available
+       inside a few functions that take a function expression as an
+       argument. Examples of such functions are ``filter``, ``sorted``
+       ``min``, ``max``, and ``coalesce``.
+     - | ``["filter", ["gt", "_.amount", 100], "_S.orders"]]``
+       |
+       | Filters out the order entities that have an amount of less than
+         100, i.e. the filter function returns only the orders that have
+         an amount of greater than 100. As you can see the ``_`` variable
+         refers to the individual order entities, one at a time.
+
+
+Path Expressions and Hops
+=========================
+
+There are three ways that one can access properties on entities:
+
+1. **Property path strings**: ``"_S.order.amount"``, which will start
+   from the given variable, in this case the source entity ``_S``, and
+   then traverse to the ``order`` property and then to the ``amount``
+   property. The end result is a list of amounts. Note that property
+   path strings function can only access property on the entity it
+   operates on, including nested entities.
+
+2. **The "path" function**: ``["path", "foo.bar", ["sorted",
+   "_.amount", "_S.foos"]]``, which will first evaluate the rightmost
+   expression. Then it will traverse the path given in the first
+   argument for each of them and return the end result. Note that the
+   ``path`` function can only access property on the entity it
+   operates on, including nested entities.
+
+3. **The "hops" function**:
+
+   ::
+      
+       ["hops", {
+           "datasets": ["orders o"],
+           "where": [
+             ["eq", "_S._id", "o.cust_id"]
+           ]
+       }]
+
+   The ``hops`` function can be used to perform joins across two or
+   more datasets, so if you want to navigate beyond the current entity
+   use ``hops``.
+
+
+Dependency Tracking
 ===================
 
-TODO: include full DTL example with explanation.
+TODO: Explain how this works.
+
+
+Notation
+========
+
+Argument types
+--------------
+
+In the function tables below you'll see argument lists like this
+``CONDITION(boolean-expression{1}), THEN(transforms{1}), ELSE(transforms{0|1})``.
+
+``CONDITION``, ``THEN`` and ``ELSE`` are logical names that have no
+meaning other than so that we can refer to them by name. Inside the
+parenthesis is the type of argument, i.e. ``boolean-expression`` and
+``transforms``. The numbers inside the curly braces is the cardinality
+of the argument. Here are some cardinalites that you'll come across:
+
+#. ``{0|1}``: zero or one, i.e. optional.
+
+#. ``{1}``: exactly one
+
+#. ``{2}``: two
+
+#. ``{>=0}``: zero or more
+
+#. ``{>=1}``: one or more
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Argument type
+     - Description
+     - Examples
+       
+   * - ``boolean-expression``
+     - | Refers to an expression that returns a single boolean value.
+     - | ``["eq", "_S.type", "person"]``
+       
+   * - ``value-expression``
+     - | Refers to an expression that returns null, a single value or a
+         list of values.
+     - | ``["values", 1, 2, 3]``
+       
+   * - ``function-expression``
+     - | Refers to a value expression argument that operates on a list
+         of values, and exposes the ``_`` current value variable for
+         each of them.
+     - | ``["upper", "_.name"]``
+       
+   * - ``string``
+     - | Refers to a constant string literal.
+     - | ``"Jupiter"``
+       
+   * - ``wildcard-string``
+     - | Refers to a constant string pattern literal that can include
+         the ``*`` and ``?`` wildcard characters.
+     - | ``"alpha_*"`` or ``"person"``
+
+   * - ``wildcard-string-list``
+     - | Same as ``wildcard-string``, but a list of them.
+     - | ``["alpha_*", "beta_*"]``
+       
+   * - ``transforms``
+     - | A single transform function, or a list of them.
+     - | ``[["add", "type", "person"],``
+       |  ``["copy", ["name", "age"]]]]``
+       |
+       | or
+       |
+       | ``["add", "type", "person"]``
+
 
 Transforms
-===================
+==========
 
 .. list-table:: 
    :header-rows: 1
@@ -80,8 +400,9 @@ Transforms
        |      ``[["add", "type", "person"],``
        |       ``["copy", ["name", "age"]]]]``
        |
-       | If the source entity's ``type`` field contains ``person`` then apply
-         the ``add`` and ``copy`` transformat. There is no else clause given.
+       | If the source entity's ``type`` field is equal ``person`` then apply
+         the ``add`` and ``copy`` transforms. There is no else clause given,
+         which is effectively the same as an empty list with no transforms.
        |
        | ``["if", ["gt", "_S.age", 18],``
        |      ``["add", "type", "adult"],``
@@ -255,53 +576,9 @@ Transforms
 Expression language
 ===================
 
-Variables
-----------
-
-.. list-table:: 
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Variable
-     - Description
-     - Examples
-       
-   * - ``_S``
-     - Refers to the source entity. This is the entity on which the
-       DTL transform operate. Note that with the ``apply`` function
-       you can apply nested transforms, where each of the values
-       given to ``apply`` is made a source entity for that nested
-       transform.
-     - | ``["gt", "_S.age", 42]``
-       |
-       | The source entity's ``age`` field must have a value greater than 26.
-
-   * - ``_T``
-     - Refers to the target entity. This is the entity that is the
-       primary target entity of transforming the source entity. Note
-       that the ``create`` transform can be used to emit entities
-       in addition to just the target entity.
-     - | ``["length", "_T.description", 100]``
-       |
-       | The target entity's ``description`` field must have a length of
-         more than 100 characters.
-
-   * - ``_``
-     - Refers to the current entity. This variable is only available
-       inside a few functions that take an expression as an
-       argument. Examples of such functions are ``filter``, ``sort``
-       and ``coalesce``.
-     - | ``["filter", ["gt", "_.amount", 100], "_S.orders"]]``
-       |
-       | Filters out the order entities that have an amount of less than
-         100, i.e. the filter function returns only the orders that have
-         an amount of greater than 100. As you can see the ``_`` variable
-         refers to the individual order entities, one at a time.
-
-
 
 Logical
----------------
+-------
 
 .. list-table:: 
    :header-rows: 1
@@ -349,7 +626,7 @@ Logical
 A *boolean-expression* is any function that returns a boolean value.
 
 Comparisons
---------------------
+-----------
 
 .. list-table:: 
    :header-rows: 1
@@ -448,7 +725,7 @@ Comparisons
 
 
 Conditionals
----------------------
+------------
 
 .. list-table:: 
    :header-rows: 1
@@ -518,7 +795,7 @@ Nested transformations
 
 
 Paths
-----------------------
+-----
 
 .. list-table:: 
    :header-rows: 1
@@ -551,7 +828,7 @@ Paths
 
 
 Hops
-----------------------
+----
 
 .. list-table:: 
    :header-rows: 1
@@ -565,12 +842,63 @@ Hops
      - | *Arguments:*
        |   HOPS_SPEC(dict{1})
        |
-       | ...TODO...
-     - |
+       | The HOPS_SPEC is a dictionary that takes the following keys:
+
+       1. ``datasets``: A list of strings with the dataset id
+          whitespace separated by the dataset alias. The database
+          aliases can be referenced in the ``where`` clause.
+
+       2. ``where``: An expression or a list of expressions. If it is
+          a list, then the expressions in the list will be wrapped
+          with the ``and`` function. The expressions are then
+          evaluated to perform the joins.
+
+       3. ``return``: OPTIONAL. A string, or an expression, or not
+          specified. If it is a string, then it should refer to a
+          comma separated list of dataset aliases. In that case all
+          the values of those aliases will be returned. If it is an
+          expression then the expression is evaluated on the hops
+          result and its result is returned. If not specified, then it
+          will return the last dataset alias in the list. This is the
+          default.
+
+       4. ``track-dependencies``: OPTIONAL. A boolean. The default is
+          true. Can be used to disable dependency tracking for this
+          particular ``hops`` function.
+
+       | The join criteria are described by using the
+         ``eq`` function. All dataset aliases defined in the
+         ``datasets`` key have to be joined and all must by navigable
+         from the source entity. If that is not the case, then an error
+         will be raised.
+       | The ``hops`` function produces a table inside, one column per
+         dataset alias. This table is the projected down into a list
+         of values by the ``return`` clause that is then returned by
+         the function.
+
+     - ::
+
+          ["hops", {
+            "datasets": ["Address a", "Country c"],
+            "return": "a",
+            "where": [
+              ["or",
+                 ["eq", "a.type", "SHIPPING"],
+                 ["eq", "a.type", "BILLING"]],
+              ["eq", "_S.address", "a._id"],
+              ["eq", "c._id", "a.country"]
+            ]}]
+
+       | Join the source entity's ``address`` property with the
+         ``Address``'s ``_id`` property, and then the ``Address``'s
+         ``country`` property with``Country``'s ``_id`` property.
+         Filter the addresses by type, so that only shipping and
+         billing addresses are included in the result. Return the
+         addresses found.
 
 
 Strings
-----------------------
+-------
 
 .. list-table:: 
    :header-rows: 1
@@ -638,7 +966,7 @@ Strings
 
 
 Values / collections
-----------------------
+--------------------
 
 .. list-table:: 
    :header-rows: 1
@@ -716,7 +1044,7 @@ Values / collections
        
    * - ``min``
      - | *Arguments:*
-       |   FUNCTION(value-expression(0|1}
+       |   FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
        | Returns the minimum value in VALUES. If FUNCTION is given, the
@@ -734,7 +1062,7 @@ Values / collections
        
    * - ``max``
      - | *Arguments:*
-       |   FUNCTION(value-expression(0|1}
+       |   FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
        | Returns the maximum value in VALUES. If FUNCTION is given, the
@@ -766,7 +1094,7 @@ Values / collections
        
    * - ``distinct``
      - | *Arguments:*
-       |   FUNCTION(value-expression(0|1}
+       |   FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
        | Returns a list of distinct values in VALUES, i.e. it returns a list
@@ -789,7 +1117,7 @@ Values / collections
        
    * - ``sorted``
      - | *Arguments:*
-       |   FUNCTION(value-expression(0|1}
+       |   FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
        | Returns a list of sorted values in VALUES. If FUNCTION is given, then
@@ -811,7 +1139,7 @@ Values / collections
        
    * - ``map``
      - | *Arguments:*
-       |   FUNCTION(value-expression(1}
+       |   FUNCTION(function-expression(1}
        |   VALUES(value-expression{1})
        |
        | For each value in VALUES apply the FUNCTION function and construct a new
@@ -820,13 +1148,14 @@ Values / collections
        |
        | Returns ``["a", "b", "c"]``.
        |
-       | ``["map", ["distinct", "_."], ["values", ["values", "A", "A"], ["values", "B", "C"]]]``
+       | ``["map", ["distinct", "_."],``
+       |   ``["values", ["values", "A", "A"], ["values", "B", "C"]]]``
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
 
 Sets
-----------------------
+----
 
 .. list-table:: 
    :header-rows: 1
@@ -888,6 +1217,7 @@ Sets
        |
        | Returns ``["A"]``.
        |
-       | ``["difference", ["values", "A", "B", "C", "D"], ["values", "A", "B", "E"]]``
+       | ``["difference",``
+       |   ``["values", "A", "B", "C", "D"], ["values", "A", "B", "E"]]``
        |
        | Returns ``["C", "D"]``.
