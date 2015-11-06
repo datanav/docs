@@ -784,7 +784,7 @@ Data Types
        |   VALUES(value-expression{1})
        |
        | Translates all input values to URIs. Only strings in VALUES will be
-         cast to URIs.
+         cast to URIs. Note that *no* URI escaping is done on the strings.
      - | ``["uri", "http://www.bouvet.no/"]``
        |
        | Returns one URI.
@@ -1011,11 +1011,26 @@ Values / collections
          null is returned.
      - | ``["first", ["values", "a", "b", "c"]]``
        |
-       | Returns ``"A"``.
+       | Returns ``"a"``.
        |
        | ``["first", "_S.tags"]``
        |
        | Returns the first tag in the source entity's ``tags`` field.
+       
+   * - ``last``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the last value in VALUES. If VALUES is not a sequence
+         of values, then VALUES is returned. If VALUES is empty, then
+         null is returned.
+     - | ``["last", ["values", "a", "b", "c"]]``
+       |
+       | Returns ``"c"``.
+       |
+       | ``["last", "_S.tags"]``
+       |
+       | Returns the last tag in the source entity's ``tags`` field.
        
    * - ``values``
      - | *Arguments:*
