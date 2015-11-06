@@ -345,7 +345,7 @@ of the argument. Here are some cardinalites that you'll come across:
    * - ``value-expression``
      - | Refers to an expression that returns null, a single value or a
          list of values.
-     - | ``["values", 1, 2, 3]``
+     - | ``["list", 1, 2, 3]``
        
    * - ``function-expression``
      - | Refers to a value expression argument that operates on a list
@@ -536,7 +536,7 @@ Transforms
        | Copies the properties of the entities in ``_S.orders`` to the target,
          unless the property exists already.
        |
-       | ``["merge", ["values", {"a": 1}, {"a": 2, "b": 3}]]``
+       | ``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
        | Add the properties ``a=1`` and ``b=3`` to the target entity. Note that
          ``a=2`` is not added because the ``a`` property already exists.
@@ -553,7 +553,7 @@ Transforms
        | Copies the properties of the entities in ``_S.orders`` to the target.
          Merge the property values if the property already exists.
        |
-       | ``["merge", ["values", {"a": 1}, {"a": 2, "b": 3}]]``
+       | ``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
        
@@ -789,7 +789,7 @@ Data Types
        |
        | Returns one URI.
        |
-       | ``["uri", ["values", "http://www.bouvet.no/", ""http://www.sesam.io/", 12345]]``
+       | ``["uri", ["list", "http://www.bouvet.no/", ""http://www.sesam.io/", 12345]]``
        |
        | Returns a list of two URIs. The number is silently ignored because it is not a string.
 
@@ -841,7 +841,7 @@ Paths
          the traversal. PROPERTY_PATH paths are separated by '``.``'
          (periods). Only properties on the entity can be traversed. If
          you want to traverse to other entities use ``hops`` instead.
-     - | ``["path", "age", ["values", {"age": 23}, {"age": 24}]]``
+     - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
        |
        | Traverses the ``age`` field of the VALUES entities.
          Returns ``[23, 24]``.
@@ -940,7 +940,7 @@ Strings
        |
        | Returns the uppercase version of its input strings.
          Non-string values are ignored.
-     - | ``["upper", ["values", "a", "b", "c"]]``
+     - | ``["upper", ["list", "a", "b", "c"]]``
        |
        | Returns ``["A", "B", "C"]``.
        |
@@ -954,7 +954,7 @@ Strings
        |
        | Returns the lowercase version of its input strings.
          Non-string values are ignored.
-     - | ``["lower", ["values", "A", "B", "C"]]``
+     - | ``["lower", ["list", "A", "B", "C"]]``
        |
        | Returns ``["a", "b", "c"]``.
        |
@@ -968,7 +968,7 @@ Strings
        |
        | Returns the length (number of characters) of its input strings.
          Non-string values are ignored.
-     - | ``["length", ["values", "", "a", "bb", "ccc"]]``
+     - | ``["length", ["list", "", "a", "bb", "ccc"]]``
        |
        | Returns ``[0, 1, 2, 3]``.
        |
@@ -982,7 +982,7 @@ Strings
        |
        | Returns a concatenated string of its input strings.
          Non-string values are ignored.
-     - | ``["concat", ["values", "a", "b", "c"]]``
+     - | ``["concat", ["list", "a", "b", "c"]]``
        |
        | Returns ``"abc"``.
        |
@@ -1002,6 +1002,23 @@ Values / collections
      - Description
      - Examples
        
+   * - ``list``
+     - | *Arguments:*
+       |   VALUES(value-expression{>0})
+       |
+       | Constructs a list of the values in VALUES.
+     - | ``["list"]``
+       |
+       | Returns ``[]``.
+       |
+       | ``["list", "a", "b", "c"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["list", "a", ["list", "b"], "c"]``
+       |
+       | Returns ``["a", ["b"], "c"]``.
+       
    * - ``first``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1009,7 +1026,7 @@ Values / collections
        | Returns the first value in VALUES. If VALUES is not a sequence
          of values, then VALUES is returned. If VALUES is empty, then
          null is returned.
-     - | ``["first", ["values", "a", "b", "c"]]``
+     - | ``["first", ["list", "a", "b", "c"]]``
        |
        | Returns ``"a"``.
        |
@@ -1024,7 +1041,7 @@ Values / collections
        | Returns the last value in VALUES. If VALUES is not a sequence
          of values, then VALUES is returned. If VALUES is empty, then
          null is returned.
-     - | ``["last", ["values", "a", "b", "c"]]``
+     - | ``["last", ["list", "a", "b", "c"]]``
        |
        | Returns ``"c"``.
        |
@@ -1032,38 +1049,21 @@ Values / collections
        |
        | Returns the last tag in the source entity's ``tags`` field.
        
-   * - ``values``
-     - | *Arguments:*
-       |   VALUES(value-expression{>0})
-       |
-       | Constructs a list of the values in VALUES.
-     - | ``["values"]``
-       |
-       | Returns ``[]``.
-       |
-       | ``["values", "a", "b", "c"]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       |
-       | ``["values", "a", ["values", "b"], "c"]``
-       |
-       | Returns ``["a", ["b"], "c"]``.
-       
    * - ``flatten``
      - | *Arguments:*
        |   VALUES(value-expression{>0})
        |
        | Flattens its input values in VALUES. Note that it does *not* do so
          recursively. Constructs a new list.
-     - | ``["flatten", ["values", 1, 2], ["values", 3, 4]]``
+     - | ``["flatten", ["list", 1, 2], ["list", 3, 4]]``
        |
        | Returns ``[1, 2, 3, 4]``.
        |
-       | ``["flatten", ["values", 1, 2], ["values", 3, ["values", 4]]]``
+       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]]]``
        |
        | Returns ``[1, 2, 3, [4]]``.
        |
-       | ``["flatten", ["values", 1, 2], ["values", 3, ["values", 4]], 5]``
+       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]], 5]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.
        
@@ -1075,7 +1075,7 @@ Values / collections
        | Filters out the the values in VALUES for which the FILTER expression
          does *not* evaluate to *true*.
      - | ``["filter", ["gt", "_.age", 42],``
-       |     ``["values", {"age": 30}, {"age": 50}, {"age": 40}]]``
+       |     ``["list", {"age": 30}, {"age": 50}, {"age": 40}]]``
        |
        | Returns ``[{"age": 50}]``.
        |
@@ -1093,7 +1093,7 @@ Values / collections
          value is used to for ordering to figure out what is the minimal value.
          Note that even though FUNCTION is given it is the value in VALUES that
          is returned.
-     - | ``["min", ["values", 4, 2, 5, 3]]``
+     - | ``["min", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``2``.
        |
@@ -1111,7 +1111,7 @@ Values / collections
          value is used to for ordering to figure out what is the maximal value.
          Note that even though FUNCTION is given it is the value in VALUES that
          is returned.
-     - | ``["max", ["values", 4, 2, 5, 3]]``
+     - | ``["max", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``5``.
        |
@@ -1124,7 +1124,7 @@ Values / collections
        |   VALUES(value-expression{1})
        |
        | Returns the number of elements in VALUES.
-     - | ``["count", ["values", 2, 4, 6]]``
+     - | ``["count", ["list", 2, 4, 6]]``
        |
        | Returns ``3``.
        |
@@ -1143,7 +1143,7 @@ Values / collections
          function is evaluated for each value in VALUES, and the return
          value is used to check for duplicates. Note that even though FUNCTION is
          given it is the value in VALUES that is returned.
-     - | ``["distinct", ["values", 4, 2, 5, 4, 3]]``
+     - | ``["distinct", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[4, 2, 5, 3]``.
        |
@@ -1166,11 +1166,11 @@ Values / collections
          value is used as the sort key. Note that even though FUNCTION is
          given it is the value in VALUES that is returned. Note that this function
          does *not* remove duplicates. Use ``distinct`` to do that.
-     - | ``["sorted", ["values", 4, 2, 5, 4, 3]]``
+     - | ``["sorted", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[2, 3, 4, 4, 5]``.
        |
-       | ``["sorted", ["values", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       | ``["sorted", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 20}, {"age": 30}, {"age": 50}]``.
        |
@@ -1185,12 +1185,12 @@ Values / collections
        |
        | For each value in VALUES apply the FUNCTION function and construct a new
          list of the return values.
-     - | ``["map", ["lower", "_."], ["values", "A", "B", "C"]]``
+     - | ``["map", ["lower", "_."], ["list", "A", "B", "C"]]``
        |
        | Returns ``["a", "b", "c"]``.
        |
        | ``["map", ["distinct", "_."],``
-       |   ``["values", ["values", "A", "A"], ["values", "B", "C"]]]``
+       |   ``["list", ["list", "A", "A"], ["list", "B", "C"]]]``
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
@@ -1214,11 +1214,11 @@ Sets
        | Returns the union of the two sets SET1 and SET2, i.e. the elements that
          are either in SET1 or in SET2. The two arguments do not have to be real
          sets, but will be coerced into sets before applying the union operator.
-     - | ``["union", ["values", "A", "B"], ["values", "B", "C"]]``
+     - | ``["union", ["list", "A", "B"], ["list", "B", "C"]]``
        |
        | Returns ``["A", "B", "C"]``.
        |
-       | ``["union", "A", ["values", "B", "C"]]``
+       | ``["union", "A", ["list", "B", "C"]]``
        |
        | Returns ``["A", "B", "C"]``.
        
@@ -1230,15 +1230,15 @@ Sets
        | Returns the intersection of the two sets SET1 and SET2, i.e. the elements
          that are in both SET1 and SET2. The two arguments do not have to be real sets,
          but will be coerced into sets before applying the intersection operator.
-     - | ``["intersection", ["values", "A", "B"], ["values", "B", "C"]]``
+     - | ``["intersection", ["list", "A", "B"], ["list", "B", "C"]]``
        |
        | Returns ``["B"]``.
        |
-       | ``["intersection", "B", ["values", "B", "C"]]``
+       | ``["intersection", "B", ["list", "B", "C"]]``
        |
        | Returns ``["B"]``.
        |
-       | ``["intersection", "A", ["values", "B", "C"]]``
+       | ``["intersection", "A", ["list", "B", "C"]]``
        |
        | Returns ``[]``.
        
@@ -1250,15 +1250,15 @@ Sets
        | Returns the difference of the two sets SET1 and SET2, i.e. the elements
          that are in SET1, but not in SET2. The two arguments do not have to be real
          sets, but will be coerced into sets before applying the difference operator.
-     - | ``["difference", ["values", "A", "B"], ["values", "B"]]``
+     - | ``["difference", ["list", "A", "B"], ["list", "B"]]``
        |
        | Returns ``["A"]``.
        |
-       | ``["difference", "A", ["values", "B", "C"]]``
+       | ``["difference", "A", ["list", "B", "C"]]``
        |
        | Returns ``["A"]``.
        |
        | ``["difference",``
-       |   ``["values", "A", "B", "C", "D"], ["values", "A", "B", "E"]]``
+       |   ``["list", "A", "B", "C", "D"], ["list", "A", "B", "E"]]``
        |
        | Returns ``["C", "D"]``.
