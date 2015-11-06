@@ -324,7 +324,7 @@ of the argument. Here are some cardinalites that you'll come across:
 
 #. ``{1}``: exactly one
 
-#. ``{2}``: two
+#. ``{2}``: exactly two
 
 #. ``{>=0}``: zero or more
 
@@ -766,6 +766,32 @@ Conditionals
        |     ``["gt", "_.expenses", 1000], "_S.hobbies"]``
        |
        | Returns the first hobby that has expenses greater than 1000.
+
+
+Data Types
+----------
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+       
+   * - ``uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to URIs. Only strings in VALUES will be
+         cast to URIs.
+     - | ``["uri", "http://www.bouvet.no/"]``
+       |
+       | Returns one URI.
+       |
+       | ``["uri", ["values", "http://www.bouvet.no/", ""http://www.sesam.io/", 12345]]``
+       |
+       | Returns a list of two URIs. The number is silently ignored because it is not a string.
 
 
 Nested transformations
