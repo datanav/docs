@@ -276,6 +276,11 @@ There are three ways that one can access properties on entities:
    path strings function can only access property on the entity it
    operates on, including nested entities.
 
+   One can also refer to the content of the variables themselves,
+   e.g. ``_S.`` would refer to the source entity itself (note the dot
+   after the variable name). ``_T.`` refers to the target entity, and
+   ``_.`` refers to the current value.
+
 2. **The "path" function**: ``["path", "foo.bar", ["sorted",
    "_.amount", "_S.foos"]]``, which will first evaluate the rightmost
    expression. Then it will traverse the path given in the first
@@ -1128,10 +1133,9 @@ Values / collections
        |
        | Returns ``3``.
        |
-       | ``["count", ["gt", "_.amount", 100], "_S.orders"]]``
+       | ``["count", "_S.orders"]]``
        |
-       | Returns the the number of order entities that have an amount of
-         more than 100.
+       | Returns the the number of orders.
        
    * - ``distinct``
      - | *Arguments:*
