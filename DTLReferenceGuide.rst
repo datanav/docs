@@ -605,7 +605,7 @@ Logical
        | Age must be greater than 26 and the gender must be male.
 
    * - ``or``
-     - | *Arguments:* boolean-expression{>=0}
+     - | *Arguments:* boolean-expression{>0}
        |
        | Takes at least one boolean expression argument.
          Returns true if any of the arguments evaluate to true.
@@ -627,8 +627,6 @@ Logical
        |
        | The category must contain neither "A" nor "B".
 
-
-A *boolean-expression* is any function that returns a boolean value.
 
 Comparisons
 -----------
