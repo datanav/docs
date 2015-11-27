@@ -1179,7 +1179,20 @@ Values / collections
        | ``["sorted", "_S.tags"]]``
        |
        | Returns a sorted list of tags.
-       
+
+   * - ``reversed``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns VALUES in reversed order.
+     - | ``["reversed", ["list", 1, 3, 2]]``
+       |
+       | Returns ``[2, 3, 1]``.
+       |
+       | ``["reversed", ["sorted", "_S.tags"]]``
+       |
+       | Returns list of tags sorted in descending order.
+
    * - ``map``
      - | *Arguments:*
        |   FUNCTION(function-expression(1}
