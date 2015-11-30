@@ -993,6 +993,40 @@ Strings
        |
        | Returns a concatenated version of the source entity's tags.
 
+   * - ``join``
+     - | *Arguments:*
+       |   SEPARATOR(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a string created by joining its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["join", "-", ["list", "a", "b", 123, "c"]]``
+       |
+       | Returns ``"a-b-c"``.
+       |
+       | ``["join", "-", "_S.tags"]``
+       |
+       | Returns a joined string of the source entity's tags separated by dashes.
+
+   * - ``split``
+     - | *Arguments:*
+       |   SEPARATOR(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a list of strings created by splitting its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["split", "-", "a-b-c"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
+       |
+       | Returns ``["a", "b", "c", "d", "e"]``.
+       |
+       | ``["split", "-", "_S.uuid"]``
+       |
+       | Returns a list of strings of the source entity's tags separated by dashes.
+
 
 Values / collections
 --------------------
@@ -1051,7 +1085,29 @@ Values / collections
        | ``["last", "_S.tags"]``
        |
        | Returns the last tag in the source entity's ``tags`` field.
-       
+
+   * - ``nth``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |   INDEX(value-expression{1})
+       |
+       | Returns the nth value in VALUES. If VALUES is not a sequence
+         of values, then VALUES is returned only if INDEX is 0. If VALUES is
+         empty or the INDEX is out of bounds, then null is returned.
+         Note that INDEX is zero-based.
+
+     - | ``["nth", ["list", "a", "b", "c"], 1]``
+       |
+       | Returns ``"b"``.
+       |
+       | ``["nth", ["list", "a", "b", "c"], 5]``
+       |
+       | Returns ``null``.
+       |
+       | ``["nth", "_S.tags", 1]``
+       |
+       | Returns the second tag in the source entity's ``tags`` field.
+
    * - ``flatten``
      - | *Arguments:*
        |   VALUES(value-expression{>0})
@@ -1121,6 +1177,19 @@ Values / collections
        | ``["max", "_.amount", "_S.orders"]]``
        |
        | Returns the order with the highest amount.
+
+   * - ``sum``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the sum of the numeric values in VALUES. Any non-numeric values are ignored.
+     - | ``["sum", ["list", 2, 4, 6]]``
+       |
+       | Returns ``12``.
+       |
+       | ``["sum", "_S.amounts"]]``
+       |
+       | Returns the sum of the amounts.
 
    * - ``count``
      - | *Arguments:*
