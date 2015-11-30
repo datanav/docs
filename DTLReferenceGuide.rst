@@ -1462,3 +1462,35 @@ Dictionaries / Entities
        | ``["dict", ["list", "X", 123, ["A", 1]]``
        |
        | Returns ``{"A": 1}``.
+
+   * - ``keys``
+     - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a single list of keys.
+         For each key+value pair in the dictionaries one key is added to the output
+         list. Non-dict values are ignored.
+     - | ``["keys", ["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
+       |
+       | Returns ``["A", "B", "A", "C"]``.
+       |
+       | ``["keys", ["list", "X", 123, {"A": 1}]]``
+       |
+       | Returns ``["A"]``.
+
+   * - ``values``
+     - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a single list of values.
+         For each key+value pair in the dictionaries one value is added to the output
+         list. Non-dict values are ignored.
+     - | ``["values", ["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
+       |
+       | Returns ``[1, 2, 1, 3]``.
+       |
+       | ``["values", ["list", "X", 123, {"A": 1}]]``
+       |
+       | Returns ``[1]``.
+
+       
