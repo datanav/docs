@@ -8,12 +8,12 @@ DTL Reference Guide
 Introduction
 ============
 
-The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets. 
+The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets.
 
 Core Concepts
 -------------
 
-DTL allows developers to describe a data transform. A DTL processor applies the transform to a stream of data. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.  
+DTL allows developers to describe a data transform. A DTL processor applies the transform to a stream of data. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.
 
 A DTL transform describes how to construct a new entity. It can assume that it is provided a 'source' entity from which it can use property values. A transform can also perform queries that range across data in the datahub. These queries must start from the source entity.
 
@@ -22,7 +22,7 @@ DTL consists of 'functions' that can pick and transform data and 'hops' that can
 Syntax
 ------
 
-DTL uses a JSON syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language. 
+DTL uses a JSON syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language.
 
 An example using the 'add' transform:
 
@@ -42,10 +42,10 @@ A DTL script must specify which datasets should be used as a source. This can be
 ::
 
   {
-    "datasets": ["people"]  
+    "datasets": ["people"]
   }
 
-  
+
 Annotated Example
 =================
 
@@ -131,7 +131,7 @@ Explanation:
      entity.
 
    ::
-   
+
        ["add", "orders",
          ["sorted", "_.amount", ["apply", "order", ["hops", {
            "datasets": ["orders o"],
@@ -209,7 +209,7 @@ Things to note:
 - Transform functions are applied in the order given. The order is
   significant, and one transform can use target entity properties
   created by earlier transform function.
-  
+
 - The filter function can be used to stop transformation of individual
   entities, effectively filtering them out of the output stream.
 
@@ -223,14 +223,14 @@ entity and the current value respectively. ``_S`` and ``_T`` appear in
 pairs inside each applied transform. ``_`` is used to refer to the
 current value in functional expressions.
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Variable
      - Description
      - Examples
-       
+
    * - ``_S``
      - Refers to the source entity. This is the entity on which the
        DTL transform operate. Note that with the ``apply`` function
@@ -291,7 +291,7 @@ There are three ways that one can access properties on entities:
 3. **The "hops" function**:
 
    ::
-      
+
        ["hops", {
            "datasets": ["orders o"],
            "where": [
@@ -335,33 +335,33 @@ of the argument. Here are some cardinalites that you'll come across:
 
 #. ``{>=1}``: one or more
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Argument type
      - Description
      - Examples
-       
+
    * - ``boolean-expression``
      - | Refers to an expression that returns a single boolean value.
      - | ``["eq", "_S.type", "person"]``
-       
+
    * - ``value-expression``
      - | Refers to an expression that returns null, a single value or a
          list of values.
      - | ``["list", 1, 2, 3]``
-       
+
    * - ``function-expression``
      - | Refers to a value expression argument that operates on a list
          of values, and exposes the ``_`` current value variable for
          each of them.
      - | ``["upper", "_.name"]``
-       
+
    * - ``string``
      - | Refers to a constant string literal.
      - | ``"Jupiter"``
-       
+
    * - ``wildcard-string``
      - | Refers to a constant string pattern literal that can include
          the ``*`` and ``?`` wildcard characters.
@@ -370,7 +370,7 @@ of the argument. Here are some cardinalites that you'll come across:
    * - ``wildcard-string-list``
      - | Same as ``wildcard-string``, but a list of them.
      - | ``["alpha_*", "beta_*"]``
-       
+
    * - ``transforms``
      - | A single transform function, or a list of them.
      - | ``[["add", "type", "person"],``
@@ -384,14 +384,14 @@ of the argument. Here are some cardinalites that you'll come across:
 Transforms
 ==========
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``if``
      - | *Arguments:*
        |   CONDITION(boolean-expression{1}),
@@ -415,7 +415,7 @@ Transforms
        |
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
-       
+
    * - ``filter``
      - | *Arguments:*
        |   FILTER(boolean-expression{0|1})
@@ -437,7 +437,7 @@ Transforms
        | ``["filter"]``
        |
        | Stop processing.
-       
+
    * - ``add``
      - | *Arguments:*
        |   PROPERTY(string{1})
@@ -453,7 +453,7 @@ Transforms
        |
        | Adds the ``upper_name`` property to the target entity. The value is
          the uppercased version of the source entity's ``name`` property.
-       
+
    * - ``default``
      - | *Arguments:*
        |   PROPERTY(string{1})
@@ -474,7 +474,7 @@ Transforms
        | Adds the ``upper_name`` property to the target entity, if
          the propery does not exists.. The value is
          the uppercased version of the source entity's ``name`` property.
-       
+
    * - ``remove``
      - | *Arguments:*
        |   PROPERTY(wildcard-string{1})
@@ -490,7 +490,7 @@ Transforms
        |
        | Removes all properties matching the ``temp_*`` wildcard pattern from
          the target entity.
-       
+
    * - ``copy``
      - | *Arguments:*
        |   INCLUDE_PROPERTIES(wildcard-string-list{1})
@@ -514,7 +514,7 @@ Transforms
        |
        | Copies all properties starting with ``a`` or ``b`` from the source entity
          to the target entity, but not those starting with ``ab`` or ``ba``.
-       
+
    * - ``rename``
      - | *Arguments:*
        |   PROPERTY1(string{1})
@@ -528,7 +528,7 @@ Transforms
        |
        | Copies the ``age`` field from the source entity and adds it as
          ``current_age`` on the target entity.
-       
+
    * - ``merge``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -545,7 +545,7 @@ Transforms
        |
        | Add the properties ``a=1`` and ``b=3`` to the target entity. Note that
          ``a=2`` is not added because the ``a`` property already exists.
-       
+
    * - ``merge-union``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -561,7 +561,7 @@ Transforms
        | ``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
-       
+
    * - ``create``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -576,7 +576,7 @@ Transforms
        |
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
-       
+
 
 Expression language
 ===================
@@ -585,14 +585,14 @@ Expression language
 Logical
 -------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``and``
      - | *Arguments:* boolean-expression{>0}
        |
@@ -614,7 +614,7 @@ Logical
        |   ``["eq", "_S.category", "B"]]``
        |
        | The category field must contain "A" or "B".
-       
+
    * - ``not``
      - | *Arguments:* boolean-expression{1}
        |
@@ -631,14 +631,14 @@ Logical
 Comparisons
 -----------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``eq``
      - | *Arguments:* value-expression{2}
        |
@@ -648,7 +648,7 @@ Comparisons
      - | ``["eq", "_S.age", 42]``
        |
        | The source entity's age field must have the value 42.
-       
+
    * - ``neq``
      - | *Arguments:* value-expression{2}
        |
@@ -658,7 +658,7 @@ Comparisons
      - | ``["neq", "_S.age", 42]``
        |
        | The source entity's age field must *not* have the value 42.
-       
+
    * - ``gt``
      - | *Arguments:* value-expression{2}
        |
@@ -669,7 +669,7 @@ Comparisons
        |
        | The source entity's ``age`` field must have a value greater
          than 42.
-       
+
    * - ``gte``
      - | *Arguments:* value-expression{2}
        |
@@ -680,7 +680,7 @@ Comparisons
        |
        | The source entity's ``age`` field must have a value greater
          than or equal 42.
-       
+
    * - ``lt``
      - | *Arguments:* value-expression{2}
        |
@@ -691,7 +691,7 @@ Comparisons
        |
        | The source entity's ``age`` field must have a value less
          than 42.
-       
+
    * - ``lte``
      - | *Arguments:* value-expression{2}
        |
@@ -702,7 +702,7 @@ Comparisons
        |
        | The source entity's ``age`` field must have a value less
          than or equal 42.
-       
+
    * - ``empty``
      - | *Arguments:* value-expression{1}
        |
@@ -714,7 +714,7 @@ Comparisons
        | Returns true of the source entity's ``hobbies`` field is
          empty (has no values).
 
-       
+
    * - ``not-empty``
      - | *Arguments:* value-expression{1}
        |
@@ -730,14 +730,14 @@ Comparisons
 Conditionals
 ------------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``if``
      - | *Arguments:*
        |   CONDITION(boolean-expression{1}),
@@ -774,14 +774,14 @@ Conditionals
 Data Types
 ----------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``uri``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -800,14 +800,14 @@ Data Types
 Nested transformations
 ----------------------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``apply``
      - | *Arguments:*
        |   TRANSFORM_ID(string{1}),
@@ -826,14 +826,14 @@ Nested transformations
 Paths
 -----
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``path``
      - | *Arguments:*
        |   PROPERTY_PATH(string{1}),
@@ -859,14 +859,14 @@ Paths
 Hops
 ----
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``hops``
      - | *Arguments:*
        |   HOPS_SPEC(dict{1})
@@ -929,14 +929,14 @@ Hops
 Strings
 -------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``upper``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -950,7 +950,7 @@ Strings
        | ``["upper", "_S.name"]``
        |
        | Returns an uppercased version of the source entity's name.
-       
+
    * - ``lower``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -964,7 +964,7 @@ Strings
        | ``["lower", "_S.name"]``
        |
        | Returns a lowercased version of the source entity's name.
-       
+
    * - ``length``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -978,7 +978,7 @@ Strings
        | ``["length", "_S.name"]``
        |
        | Returns the length of the source entity's name.
-       
+
    * - ``concat``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1055,14 +1055,14 @@ Strings
 Values / collections
 --------------------
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``list``
      - | *Arguments:*
        |   VALUES(value-expression{>0})
@@ -1079,7 +1079,7 @@ Values / collections
        | ``["list", "a", ["list", "b"], "c"]``
        |
        | Returns ``["a", ["b"], "c"]``.
-       
+
    * - ``first``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1094,7 +1094,7 @@ Values / collections
        | ``["first", "_S.tags"]``
        |
        | Returns the first tag in the source entity's ``tags`` field.
-       
+
    * - ``last``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1149,7 +1149,7 @@ Values / collections
        | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]], 5]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.
-       
+
    * - ``filter``
      - | *Arguments:*
        |   FILTER(boolean-expression(1}
@@ -1165,7 +1165,7 @@ Values / collections
        | ``["filter", ["gt", "_.amount", 100], "_S.orders"]]``
        |
        | Returns the order entities that have an amount of more than 100.
-       
+
    * - ``min``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1183,7 +1183,7 @@ Values / collections
        | ``["min", "_.amount", "_S.orders"]]``
        |
        | Returns the order with the lowest amount.
-       
+
    * - ``max``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1227,7 +1227,7 @@ Values / collections
        | ``["count", "_S.orders"]]``
        |
        | Returns the the number of orders.
-       
+
    * - ``distinct``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1250,7 +1250,7 @@ Values / collections
        |
        | Returns a list of order lines, but only one per unique EAN, i.e. product
          number.
-       
+
    * - ``sorted``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1306,14 +1306,14 @@ Values / collections
 Sets
 ----
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
 
    * - Function
      - Description
      - Examples
-       
+
    * - ``union``
      - | *Arguments:*
        |   SET1(value-expression{1})
@@ -1329,7 +1329,7 @@ Sets
        | ``["union", "A", ["list", "B", "C"]]``
        |
        | Returns ``["A", "B", "C"]``.
-       
+
    * - ``intersection``
      - | *Arguments:*
        |   SET1(value-expression{1})
@@ -1349,7 +1349,7 @@ Sets
        | ``["intersection", "A", ["list", "B", "C"]]``
        |
        | Returns ``[]``.
-       
+
    * - ``difference``
      - | *Arguments:*
        |   SET1(value-expression{1})
