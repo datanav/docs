@@ -1420,3 +1420,45 @@ Sets
        |   ``["list", "A", "B", "C", "D"], ["list", "A", "B", "E"]]``
        |
        | Returns ``["C", "D"]``.
+
+
+Dictionaries / Entities
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``items``
+     - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a single list of key+value tuples.
+         For each key+value pair in the dictionaries one pair is added to the output
+         list. Non-dict values are ignored.
+     - | ``["items", ["list", {"A": 1, "B": 2}, {"C": 3}]]``
+       |
+       | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
+       |
+       | ``["items", ["list", "X", 123, {"A": 1}]]``
+       |
+       | Returns ``[["A": 1]]``.
+
+   * - ``dict``
+     - | *Arguments:*
+       |   ITEMS(value-expression{1})
+       |
+       | Takes a list of key+value pair tuples and returns a single dictionary with
+         those tuples as keys and values. Note that the last key in the tuple list
+         wins. Non-dict values are ignored.
+     - | ``["dict", ["list", ["list", "A", 1], ["list", "B", 2], ["list", "C", 3]]]``
+       |
+       | Returns ``{"A": 1, "B": 2, "C": 3}``.
+       |
+       | ``["dict", ["list", "X", 123, ["A", 1]]``
+       |
+       | Returns ``{"A": 1}``.
