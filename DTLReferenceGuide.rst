@@ -1027,6 +1027,30 @@ Strings
        |
        | Returns a list of strings of the source entity's tags separated by dashes.
 
+   * - ``strip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the beginning and end. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["strip", [" ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab", "cd", "ef"]``.
+       |
+       | ``["strip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["strip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed.
+       |
+       | ``["strip", "x", ["123xxx", "xx456xx"]]``
+       |
+       | Returns ``["123", "456"]``.
+
 
 Values / collections
 --------------------
