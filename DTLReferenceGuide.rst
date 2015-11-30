@@ -1033,7 +1033,7 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Returns a version of its input strings where characters in CHARACTERS are removed
-         from the beginning and end. Non-string values are ignored. The default value of
+         from both sides. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
      - | ``["strip", [" ab ", "cd ", "ef"]]``
        |
@@ -1050,6 +1050,56 @@ Strings
        | ``["strip", "x", ["123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "456"]``.
+
+   * - ``lstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the left side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["lstrip", [" ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab ", "cd ", "ef"]``.
+       |
+       | ``["lstrip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["lstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the left.
+       |
+       | ``["lstrip", "x", ["123xxx", "xx456xx"]]``
+       |
+       | Returns ``["123xxx", "456xx"]``.
+
+   * - ``rstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the right side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["rstrip", [" ab ", "cd ", "ef"]]``
+       |
+       | Returns ``[" ab", "cd", "ef"]``.
+       |
+       | ``["rstrip", "  abc"]]``
+       |
+       | Returns ``"  abc"``.
+       |
+       | ``["rstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the right.
+       |
+       | ``["rstrip", "x", ["123xxx", "xx456xx"]]``
+       |
+       | Returns ``["123", "xx456"]``.
 
 
 Values / collections
