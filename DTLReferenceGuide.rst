@@ -1010,7 +1010,7 @@ Strings
 
    * - ``split``
      - | *Arguments:*
-       |   SEPARATOR(string{1})
+       |   SEPARATOR(string{0|1})
        |   VALUES(value-expression{1})
        |
        | Returns a list of strings created by splitting its input strings by SEPARATOR.
@@ -1029,7 +1029,7 @@ Strings
 
    * - ``strip``
      - | *Arguments:*
-       |   CHARACTERS(string{0})
+       |   CHARACTERS(string{0|1})
        |   VALUES(value-expression{1})
        |
        | Returns a version of its input strings where characters in CHARACTERS are removed
@@ -1053,7 +1053,7 @@ Strings
 
    * - ``lstrip``
      - | *Arguments:*
-       |   CHARACTERS(string{0})
+       |   CHARACTERS(string{0|1})
        |   VALUES(value-expression{1})
        |
        | Returns a version of its input strings where characters in CHARACTERS are removed
@@ -1078,7 +1078,7 @@ Strings
 
    * - ``rstrip``
      - | *Arguments:*
-       |   CHARACTERS(string{0})
+       |   CHARACTERS(string{0|1})
        |   VALUES(value-expression{1})
        |
        | Returns a version of its input strings where characters in CHARACTERS are removed
@@ -1100,6 +1100,22 @@ Strings
        | ``["rstrip", "x", ["123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "xx456"]``.
+
+   * - ``replace``
+     - | *Arguments:*
+       |   OLD_STRING(string{1})
+       |   NEW_STRING(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
+         are ignored.
+     - | ``["replace", ["http://", "https://", "http://www.sesam.io/"]]``
+       |
+       | Returns ``"https://www.sesam.io/"``.
+       |
+       | ``["replace", ":", ".", "_S.date"]]``
+       |
+       | Returns a date string where the colon has been replaced by a period.
 
 
 Values / collections
