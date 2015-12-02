@@ -1455,7 +1455,8 @@ Dictionaries / Entities
        |
        | Takes a list of dictionaries in and outputs a single list of key+value tuples.
          For each key+value pair in the dictionaries one pair is added to the output
-         list. Non-dict values are ignored.
+         list. Non-dictionary values are ignored. Note that entities are dictionaries,
+         so you can use this function with them.
      - | ``["items", ["list", {"A": 1, "B": 2}, {"C": 3}]]``
        |
        | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
@@ -1470,7 +1471,7 @@ Dictionaries / Entities
        |
        | Takes a list of key+value pair tuples and returns a single dictionary with
          those tuples as keys and values. Note that the last key in the tuple list
-         wins. Non-dict values are ignored.
+         wins. Values are not two-element tuples are ignored.
      - | ``["dict", ["list", ["list", "A", 1], ["list", "B", 2], ["list", "C", 3]]]``
        |
        | Returns ``{"A": 1, "B": 2, "C": 3}``.
@@ -1508,5 +1509,3 @@ Dictionaries / Entities
        | ``["values", ["list", "X", 123, {"A": 1}]]``
        |
        | Returns ``[1]``.
-
-       
