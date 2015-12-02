@@ -553,12 +553,12 @@ Transforms
        | For each entity in VALUES copy all the properties of the value onto the
          target entity. If the property already exists on the target entity, add
          the new values to the existing list of values.
-     - | ``["merge", "_S.orders"]``
+     - | ``["merge-union", "_S.orders"]``
        |
        | Copies the properties of the entities in ``_S.orders`` to the target.
          Merge the property values if the property already exists.
        |
-       | ``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+       | ``["merge-union", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
 
