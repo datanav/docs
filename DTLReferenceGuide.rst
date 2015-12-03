@@ -1123,7 +1123,8 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Returns the values in VALUES that match the pattern in PATTERN. The '*' and '?'
-         wildcard characters can be used. Non-string values are ignored.
+         wildcard characters can be used. Non-string values are ignored. If PATTERN contains
+         multiple string values then only the first one is used.
      - | ``["matches", "a*p*a", ["list", "alpha", "beta", "epsilon"]``
        |
        | Returns ``["alpha"]``.
@@ -1337,11 +1338,12 @@ Values / collections
        |   FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Returns a list of sorted values in VALUES. If FUNCTION is given, then
+       | Returns VALUES sorted in ascending order. If FUNCTION is given, then
          function is evaluated for each value in VALUES, and the return
          value is used as the sort key. Note that even though FUNCTION is
          given it is the value in VALUES that is returned. Note that this function
-         does *not* remove duplicates. Use ``distinct`` to do that.
+         does *not* remove duplicates. Use ``distinct`` to do that. If VALUES is not
+         a list, then VALUES is returned.
      - | ``["sorted", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[2, 3, 4, 4, 5]``.
@@ -1352,7 +1354,30 @@ Values / collections
        |
        | ``["sorted", "_S.tags"]]``
        |
-       | Returns a sorted list of tags.
+       | Returns the tags in ascending order.
+
+   * - ``sorted-descending``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Returns VALUES sorted in descending order. If FUNCTION is given, then
+         function is evaluated for each value in VALUES, and the return
+         value is used as the sort key. Note that even though FUNCTION is
+         given it is the value in VALUES that is returned. Note that this function
+         does *not* remove duplicates. Use ``distinct`` to do that. If VALUES is not
+         a list, then VALUES is returned.
+     - | ``["sorted-descending", ["list", 4, 2, 5, 4, 3]]``
+       |
+       | Returns ``[5, 4, 4, 3, 2]``.
+       |
+       | ``["sorted-descending", "_.age", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       |
+       | Returns ``[{"age": 50}, {"age": 30}, {"age": 20}]``.
+       |
+       | ``["sorted-descending", "_S.tags"]]``
+       |
+       | Returns the tags in descending order.
 
    * - ``reversed``
      - | *Arguments:*
