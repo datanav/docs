@@ -1117,6 +1117,21 @@ Strings
        |
        | Returns a date string where the colon has been replaced by a period.
 
+   * - ``matches``
+     - | *Arguments:*
+       |   PATTERN(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns the values in VALUES that match the pattern in PATTERN. The '*' and '?'
+         wildcard characters can be used. Non-string values are ignored.
+     - | ``["matches", "a*p*a", ["list", "alpha", "beta", "epsilon"]``
+       |
+       | Returns ``["alpha"]``.
+       |
+       | ``["matches", "*_sport", ".", "_S.tags"]]``
+       |
+       | Returns the tags that have a "_sport" suffix.
+
 
 Values / collections
 --------------------
