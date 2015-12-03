@@ -1109,7 +1109,7 @@ Strings
        |
        | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
          are ignored.
-     - | ``["replace", ["http://", "https://", "http://www.sesam.io/"]]``
+     - | ``["replace", "http://", "https://", "http://www.sesam.io/"]``
        |
        | Returns ``"https://www.sesam.io/"``.
        |
@@ -1178,23 +1178,23 @@ Values / collections
 
    * - ``nth``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
        |   INDEX(value-expression{1})
+       |   VALUES(value-expression{1})
        |
        | Returns the nth value in VALUES. If VALUES is not a sequence
          of values, then VALUES is returned only if INDEX is 0. If VALUES is
          empty or the INDEX is out of bounds, then null is returned.
          Note that INDEX is zero-based.
 
-     - | ``["nth", ["list", "a", "b", "c"], 1]``
+     - | ``["nth", 1, ["list", "a", "b", "c"]]``
        |
        | Returns ``"b"``.
        |
-       | ``["nth", ["list", "a", "b", "c"], 5]``
+       | ``["nth", 5, ["list", "a", "b", "c"]]``
        |
        | Returns ``null``.
        |
-       | ``["nth", "_S.tags", 1]``
+       | ``["nth", 1, "_S.tags"]``
        |
        | Returns the second tag in the source entity's ``tags`` field.
 
@@ -1331,7 +1331,7 @@ Values / collections
        |
        | Returns ``[2, 3, 4, 4, 5]``.
        |
-       | ``["sorted", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       | ``["sorted", "_.age", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 20}, {"age": 30}, {"age": 50}]``.
        |
@@ -1439,7 +1439,7 @@ Sets
 
 
 Dictionaries / Entities
-------------
+-----------------------
 
 .. list-table::
    :header-rows: 1
