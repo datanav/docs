@@ -1408,6 +1408,27 @@ Values / collections
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
+   * - ``group-by``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Groups the values in VALUES by the result of executing the FUNCTION function
+         on them. Returns a list of two-element tuples, where the first item is the
+         group key and the second item is the list of values in VALUES that were
+         grouped under that key.
+     - | ``["group-by", ["length", "_.], ["list", "phi", "alpha", "rho"]]``
+       |
+       | Returns ``[[3, ["phi", "rho"]], [5, ["alpha"]]]``.
+       |
+       | ``["group-by", "_S.tags"]]``
+       |
+       | Returns a deduplicated list of tags.
+       |
+       | ``["distinct", "_.ean", "_S.orders.line_item"]]``
+       |
+       | Returns a list of order lines grouped by EAN, i.e. product number.
+
 
 Sets
 ----
@@ -1549,3 +1570,45 @@ Dictionaries / Entities
        | ``["values", ["list", "X", 123, {"A": 1}]]``
        |
        | Returns ``[1]``.
+
+
+Math
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``plus``
+     - | *Arguments:*
+       |   INCREMENT(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and increments them by INCREMENT. Non-numeric
+         values are ignored.
+     - | ``["plus", 10, ["list", 1, 2, 3]]``
+       |
+       | Returns ``[11, 12, 13]``.
+       |
+       | ``["plus", 10, 10]``
+       |
+       | Returns ``20``.
+
+   * - ``minus``
+     - | *Arguments:*
+       |   DECREMENT(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and decrements them by DECREMENT. Non-numeric
+         values are ignored.
+     - | ``["minus", 1, ["list", 1, 2, 3]]``
+       |
+       | Returns ``[0, 1, 2]``.
+       |
+       | ``["minus", 10, 12]``
+       |
+       | Returns ``2``.
