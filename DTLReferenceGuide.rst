@@ -1425,9 +1425,13 @@ Values / collections
        |
        | Returns a deduplicated list of tags.
        |
-       | ``["distinct", "_.ean", "_S.orders.line_item"]]``
+       | ``["group-by", "_.ean", "_S.orders.line_item"]]``
        |
        | Returns a list of order lines grouped by EAN, i.e. product number.
+       |
+       | ``["group-by", "_.gender", "_S.people"]]``
+       |
+       | Returns a list of people grouped by their gender.
 
 
 Sets
