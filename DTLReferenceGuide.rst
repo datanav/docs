@@ -1654,3 +1654,18 @@ Math
        | ``["multiply", 2.3, 2]``
        |
        | Returns ``4.6``.
+
+   * - ``mod``
+     - | *Arguments:*
+       |   DIVISOR(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and finds the remainder of dividing them
+         by DIVISOR. Non-numeric values are ignored.
+     - | ``["mod", 2, ["list", 2, 5, 6]]``
+       |
+       | Returns ``[0, 1, 0]``.
+       |
+       | ``["mod", 3, 5]``
+       |
+       | Returns ``2``.
