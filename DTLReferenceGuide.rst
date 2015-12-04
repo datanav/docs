@@ -1616,3 +1616,41 @@ Math
        | ``["minus", 10, 12]``
        |
        | Returns ``2``.
+
+   * - ``divide``
+     - | *Arguments:*
+       |   DIVISOR(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and divides them by DIVISOR. Non-numeric
+         values are ignored.
+     - | ``["divide", 2, ["list", 2, 4, 6]]``
+       |
+       | Returns ``[1, 2, 3]``.
+       |
+       | ``["divide", 10, 20]``
+       |
+       | Returns ``2``.
+       |
+       | ``["divide", 2, 3]``
+       |
+       | Returns ``1.5``.
+
+   * - ``multiply``
+     - | *Arguments:*
+       |   MULTIPLIER(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and multiplies them by MULTIPLIER. Non-numeric
+         values are ignored.
+     - | ``["multiply", 2, ["list", 2, 4, 6]]``
+       |
+       | Returns ``[4, 8, 12]``.
+       |
+       | ``["multiply", 10, 20]``
+       |
+       | Returns ``200``.
+       |
+       | ``["multiply", 2.3, 2]``
+       |
+       | Returns ``4.6``.
