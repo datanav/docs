@@ -269,9 +269,9 @@ Path Expressions and Hops
 
 There are three ways that one can access properties on entities:
 
-1. **Property path strings**: ``"_S.order.amount"``, which will start
+1. **Property path strings**: ``"_S.orders.amount"``, which will start
    from the given variable, in this case the source entity ``_S``, and
-   then traverse to the ``order`` property and then to the ``amount``
+   then traverse to the ``orders`` property and then to the ``amount``
    property. The end result is a list of amounts. Note that property
    path strings function can only access property on the entity it
    operates on, including nested entities.
@@ -281,12 +281,14 @@ There are three ways that one can access properties on entities:
    after the variable name). ``_T.`` refers to the target entity, and
    ``_.`` refers to the current value.
 
-2. **The "path" function**: ``["path", "foo.bar", ["sorted",
-   "_.amount", "_S.foos"]]``, which will first evaluate the rightmost
-   expression. Then it will traverse the path given in the first
-   argument for each of them and return the end result. Note that the
-   ``path`` function can only access property on the entity it
-   operates on, including nested entities.
+2. **The "path" function**: ``["path", "placed_by", ["sorted",
+   "_.amount", "_S.orders"]]``, which will first evaluate the
+   rightmost expression. Then it will traverse the path given in the
+   first argument for each of them and return the end result. The
+   first argument is an expression that resolve to either a single
+   string or a list of strings. Note that the ``path`` function can
+   only access property on the dictionary/entity it operates on,
+   including nested entities.
 
 3. **The "hops" function**:
 
@@ -295,13 +297,20 @@ There are three ways that one can access properties on entities:
        ["hops", {
            "datasets": ["orders o"],
            "where": [
-             ["eq", "_S._id", "o.cust_id"]
+             ["eq", "_S._id", "o.cust_id"],
+             ["eq", "o.type", "BILLING"]
            ]
        }]
 
    The ``hops`` function can be used to perform joins across two or
    more datasets, so if you want to navigate beyond the current entity
-   use ``hops``.
+   use ``hops``. This particular example will join the source entity
+   with entities from the ``orders`` dataset using the ``["eq",
+   "_S._id", "o.cust_id"]`` join expression and then filter the orders
+   by ``["eq", "o.type", "BILLING"]``. Note that only ``eq`` functions
+   will be treated as join expressions. All other function are treated
+   as filter expressions. For an ``eq`` to be a join expression it
+   will have to refer to variables from two different datasets.
 
 
 Dependency Tracking
@@ -836,24 +845,26 @@ Paths
 
    * - ``path``
      - | *Arguments:*
-       |   PROPERTY_PATH(string{1}),
+       |   PROPERTY_PATH(value-expression{1}),
        |   VALUES(value-expression{1})
        |
        | Traverses the PROPERTY_PATH path for each of the entities in
          VALUES. The result is a list of all the values at the end of
-         the traversal. PROPERTY_PATH paths are separated by '``.``'
-         (periods). Only properties on the entity can be traversed. If
-         you want to traverse to other entities use ``hops`` instead.
+         the traversal. PROPERTY_PATH is an expression that should resolve
+         to a string or a list of strings. Those strings are treated as
+         literals, i.e. property names, so no variables can be used. Only
+         properties on the entity can be traversed. If you want to traverse
+         to other entities use the ``hops`` function instead.
      - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
        |
        | Traverses the ``age`` field of the VALUES entities.
          Returns ``[23, 24]``.
        |
-       | ``["path", "order_lines.item_name", "_S.orders"]``
+       | ``["path", ["list", "order_lines", "item_name"], "_S.orders"]``
        |
-       | This will travese from the source entity's orders to the
-         order lines and their item names. The output is a list of
-         product item names.
+       | This will traverse from the source entity's orders to the
+         order lines and then return their item names. The output is a
+         list of product item names.
 
 
 Hops
