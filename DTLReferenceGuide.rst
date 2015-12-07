@@ -1414,24 +1414,20 @@ Values / collections
        |   VALUES(value-expression{1})
        |
        | Groups the values in VALUES by the result of executing the FUNCTION function
-         on them. Returns a list of two-element tuples, where the first item is the
-         group key and the second item is the list of values in VALUES that were
+         on them. Returns a dictionary, where the key is the
+         group key and the value is the list of values in VALUES that were
          grouped under that key.
      - | ``["group-by", ["length", "_.], ["list", "phi", "alpha", "rho"]]``
        |
-       | Returns ``[[3, ["phi", "rho"]], [5, ["alpha"]]]``.
-       |
-       | ``["group-by", "_S.tags"]]``
-       |
-       | Returns a deduplicated list of tags.
+       | Returns ``{3: ["phi", "rho"], 5: ["alpha"]}``.
        |
        | ``["group-by", "_.ean", "_S.orders.line_item"]]``
        |
-       | Returns a list of order lines grouped by EAN, i.e. product number.
+       | Returns order lines grouped by EAN, i.e. product number.
        |
        | ``["group-by", "_.gender", "_S.people"]]``
        |
-       | Returns a list of people grouped by their gender.
+       | Returns a dictionary of people grouped by their gender.
 
 
 Sets
