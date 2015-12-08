@@ -16,10 +16,13 @@ Services
    :depth: 1
 
 .. cornice-autodoc::
-   :modules: lake.node.webapp.api.providers, lake.node.webapp.api.sinks, lake.node.webapp.api.scheduled_tasks,
-             lake.node.webapp.api.running_tasks,
+   :modules: lake.node.webapp.api.pipes,
              lake.node.webapp.api.datasets,
              lake.node.webapp.api.external_systems,
+             lake.node.webapp.api.providers,
+             lake.node.webapp.api.sinks,
+             lake.node.webapp.api.scheduled_tasks,
+             lake.node.webapp.api.running_tasks,
              lake.node.webapp.api.status
 
 
