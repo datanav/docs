@@ -16,7 +16,8 @@ Services
    :depth: 1
 
 .. cornice-autodoc::
-   :modules: lake.node.webapp.api.pipes,
+   :modules: lake.node.webapp.api.root,
+             lake.node.webapp.api.pipes,
              lake.node.webapp.api.metadata,
              lake.node.webapp.api.datasets,
              lake.node.webapp.api.external_systems,
