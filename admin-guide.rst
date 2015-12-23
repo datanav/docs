@@ -16,7 +16,7 @@ if you are using a local installation then the url will be something like:
 	http://sesam-server/admin
 
 Sesam Management Studio (this should be the main title)
-=======================
+=======================================================
 
 Logging On
 ----------

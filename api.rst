@@ -93,7 +93,7 @@ If the sync task is already running, a "409 (Conflict)"-response will be returne
 
 
 Start a snapshot now
----------------------
+--------------------
 
 POST /scheduled-tasks/{snapshot-task-id}
 
@@ -111,13 +111,13 @@ fetch the representation of the synctask resource, update the value of the 'last
 
 
 Set last change date
-------------------------
+--------------------
 
 fetch the representation of the synctask resource, update the value of the 'last-change' property and then PUT to that resource.
 
 
 
 Stop all sync tasks running on a sdshare client
-------------------------
+-----------------------------------------------
 
 client iterates and stops each one.

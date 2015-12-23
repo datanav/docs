@@ -9,6 +9,7 @@ Contents:
 
    Data Transformation Language (DTL) <DTLReferenceGuide>
    API Guide <api>
+   Commandline client <commandlineclient>
    Admin <admin>
 
 
