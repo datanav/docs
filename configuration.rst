@@ -68,3 +68,125 @@ The Pipe
     }
  }
 
+
+Sinks
+=====
+
+
+
+
+
+
+Sources
+=======
+
+Sources provide streams of entities as input to the pipes which is the building blocks for the flows in the data lake. These entities can take
+any shape (i.e. they can also be nested), and have a single required property: "_id". This "_id" field must be unique within a flow.
+Sources can also support "since" monikers or markers which lets them pick up where the previous stream of entities left off, sort
+of like a bookmark in the entitiy stream. The "since" marker is opaque to the rest of the data lake components, and is assumed
+to be interpretable only by the source. Within an entity, the marker is carried in the "_updated" property if supported
+by the source.
+
+The data lake supports a diverse set of core data sources:
+
+The dataset source
+==================
+
+The dataset source is one of the most commmonly used datasources in a lake. It simply presents a stream of entities from a
+dataset stored in a datalake node. Its configuration is very simple and looks like:
+
+ ::
+
+ {
+   "_id": "id-of-source",
+   "dataset": "id-of-dataset",
+   "supports_since": True,
+   "include_previous_versions": True,
+ }
+
+Only the 'dataset' configuration property is mandatory (the "_id" field is always mandatory in all entities, including
+the configuration entities).
+
+The 'supports_since' flag (default set to True) indicates wether to use a 'since' marker when reading from the dataset,
+i.e. whether to start at the beginning each time or not.
+
+If the 'include_previous_versions' flag (default set to True) is set to False, the data source will only return the
+latest version of any entity for any unique '_id' value in the dataset. The default behaviour is to return all entities
+recorded in the dataset in-order without considering the contents of the '_id' property.
+
+The relational database source
+==============================
+
+The relational database source is one of the most commonly used data sources. It short, it presents database relations
+(i.e. tables or queries) as entities to the data lake. It has several options, all of which are presented below with
+their default values:
+
+ ::
+
+ {
+   "_id": "id-of-source",
+   "external_system": "id-of-external-system",
+   "table": "name-of-table",
+   "primary_key": ["list","of","key","names"],
+   "query": "SQL query string",
+   "updated_query": "SQL query string for 'since' support in queries",
+   "updated_column": "column-name-for-since-support-in-tables',
+   "batch_size": 1000,
+   "schema": "default-schema-name-if-included"
+ }
+
+The 'external_system' property is mandatory for this datasource and must refer to a 'external system' component by id.
+The role of this component is to do connection pooling and provide authentication services for the data sources using it.
+
+If 'table' is given, it must refer to a fully qualified table name in the database system (not including schema, which if
+ needed must be set separately). The 'table' and 'query' properties are mutually exclusive with 'table' used if both are
+ present.
+
+The value of the 'primary_key' property can be a single string with the name of the
+column that contains the primary key (PK) of the table or query, or a list of strings if it is a compound primary key. If
+the property is not set and the 'table' property is used, the data source component will attempt to use table metadata
+to deduce the PK to use. In other words, you will have to set this property if the 'query' property us used.
+
+The 'query' property must be a valid query in the dialect of the RDBMS represented by the 'external_system' property.
+You will also have to configure the primary key(s) of the query in the 'primary_key' property.
+
+If the underlying relation contains information about updates, the data source is able to support 'since' markers. You
+can provide the name of the column to use for such queries in 'updated_column'. This must be a valid column name in the
+'table' or 'query' result sets and it must be of a data type that supports larger than (">") tests for the 'table' case.
+
+For custom queries given in the 'query' property, the 'since' support must be expressed by a full query including any
+test needed. A single variable substitution "{{ since }}" must be included somewhere in the query string - for example
+"select * from view_name v where v.updates > '{{ since }}'".
+
+The 'batch_size' property controls the default size of the result sets to get from the database, with 1000 rows being
+the default.
+
+If a specific schema within a database is needed, you must provide its name in 'schema'. Do not use schema names in
+table names.
+
+
+The CSV source
+==============
+
+
+The RDF source
+==============
+
+The SDShare source
+==================
+
+The external system source
+==========================
+
+The JSON sources
+================
+
+JSON file source
+================
+
+Remote JSON source
+==================
+
+JSON Stream source
+==================
+
