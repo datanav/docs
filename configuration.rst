@@ -68,15 +68,6 @@ The Pipe
     }
  }
 
-
-Sinks
-=====
-
-
-
-
-
-
 Sources
 =======
 
@@ -99,6 +90,7 @@ dataset stored in a datalake node. Its configuration is very simple and looks li
 
  {
    "_id": "id-of-source",
+   "type": "source:dataset",
    "dataset": "id-of-dataset",
    "supports_since": True,
    "include_previous_versions": True,
@@ -114,6 +106,24 @@ If the 'include_previous_versions' flag (default set to True) is set to False, t
 latest version of any entity for any unique '_id' value in the dataset. The default behaviour is to return all entities
 recorded in the dataset in-order without considering the contents of the '_id' property.
 
+The union dataset source
+========================
+
+The union dataset source is similar to the dataset source, except it can process several datasets at once and keep
+track of each one in its since marker handler:
+
+ ::
+
+ {
+   "_id": "id-of-source",
+   "type": "source:union_datasets",
+   "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
+   "supports_since": True,
+   "include_previous_versions": True,
+ }
+
+The configuration of this source is identical to the 'dataset' source, except 'datasets' can be a list of datasets ids.
+
 The relational database source
 ==============================
 
@@ -125,6 +135,7 @@ their default values:
 
  {
    "_id": "id-of-source",
+   "type": "source:relational",
    "external_system": "id-of-external-system",
    "table": "name-of-table",
    "primary_key": ["list","of","key","names"],
@@ -168,25 +179,224 @@ table names.
 The CSV source
 ==============
 
+The CSV data source translates the rows of files in CSV format to entities. The configuration options are:
+
+ ::
+
+ {
+   "_id": "source-id-here",
+   "type": "source:csv",
+   "filename": "path-to-file",
+   "has_header": True,
+   "field_names": ["mappings","from","columns","to","properties"],
+   "auto_dialect": True,
+   "dialect": "excel",
+   "encoding": "utf-8",
+   "id_field": "what-column-name-to-use-as-id",
+   "delimiter": ","
+ }
+
+The 'filename' property is mandatory and must refer to a file in CSV format that exists.
+
+'has_header' (default to True) is a flag that indicates to the source that the first row in the CSV file contains the
+ names of the columns.
+
+The contents of 'field_names', if given, is the names of the columns. It takes precedence over the header in the CSV file
+ if present.
+
+'auto_dialect' is a flag that hints to the source that it should try to guess the dialect of the CSV file on its own.
+
+'dialect' is a string property that encodes what type of CSV file the file is. This is basically presets of the other properties.
+The recognised values are "excel", "escaped", "excel-tab" and "singlequote".
+
+'id_field' is a string property containing the name of the column to use as "_id" in the generated entities.
+
+'delimiter' is a string property with the character to use as the CSV delimiter (comma i.e. "," by default)
 
 The RDF source
 ==============
 
+The RDF data source is able to read data in RDF NTriples, Turtle or RDF/XML format and turn this into entities.
+It will transform triples on the form <subject> <predicate> "value" into entities on the form:
+
+  ::
+
+  {
+    "_id": "<subject>",
+    "<predicate>": "value",
+    ..
+  }
+
+The configuration snippet for the RDF data source is:
+
+  ::
+
+  {
+    "_id": "source-id-here",
+    "type": "source:rdf",
+    "filename": "path-to-file-here",
+    "format": "nt-ttl-or-xml"
+  }
+
+'filename' is the full path to a RDF file to load - it can contain multiple subjects (with blank node hierarchies) and
+each unique non-blank subject will result in a single root entity.
+
+'format' is a string property with the following recongnised values: "nt" for NTriples, "ttl" for Turtle form or "xml"
+for RDF/XML files.
+
 The SDShare source
 ==================
+
+The SDShare data source can read RDF from ATOM feeds after the SDShare specification (http://sdshare.org). It has
+the following properties:
+
+ ::
+
+ {
+   "_id": "data-source-id",
+    "type": "source:sdshare",
+    "sdshare_server": "url-to-sdshare-http-server",
+    "provider_id": "the-id-of-the-sdshare-provider",
+    "inline_feed": False,
+    "updated_predicate": "URI-for-updated-value-predicate",
+ }
+
+'sdshare_server' is mandatory and must contain the URL to a http SDShare server
+
+'provider_id' is also mandatory and is a string property with the id of the sdshare provider to read from
+
+'inline_feed' is a optional flag that indicates whether to read the inline RDF (if it exists) or read a RDF fragment
+by following the links.
+
+'updated_predicate' is the predicate URI to look for to set the "_updated" property in the generated entities to be able
+to support since markers.
+
+The LDAP source
+===============
+
+The LDAP source provides entities from a LDAP catalog. It supports the following properties:
+
+  ::
+
+  {
+    "_id": "id-of-source",
+    "type": "source:ldap",
+    "host": "FQDN of LDAP host",
+    "port": 389,
+    "use_ssl": False,
+    "username": "authentication-username-here",
+    "password": "authentication-password-here",
+    "search_base": "*",
+    "search_filter": "(objectClass=organizationalPerson)",
+    "attributes": "*",
+    "id_attribute": "cn",
+    "charset": "latin-1",
+    "page_size": 500,
+    "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
+  }
+
+'host' is mandatory and must contain the fully qualified domain name of the LDAP host server
+
+'port' is a optional integer property which defaults to 389. It must be set to the port of the LDAP service.
+
+'use_ssl' is a flag that indicates to use SSL or not when communicating with the LDAP service (optional)
+
+'username' is a string property containing the user name to use when authenticating with the LDAP service
+
+'password' is a string property with the password to use when authenticating
+
+'search_base' is the base LDAP search expression to use when looking for records (optional)
+
+'search_filter' is a filter expression to apply to all records found by the 'search_base' expression (optional)
+
+'attributes' is a wildcard specifying which attributes to include in the entity (optional)
+
+'id_attribute' which of the LDAP attributes to use for the "_id" property of a entity (optional)
+
+'charset' the charset used to encode strings in the LDAP database (optional)
+
+'page_size' the default number of records to read at a time from the LDAP service (optional)
+
+'attribute_blacklist' is a list of attribute names (as strings) to exclude from the record when constructing entities
 
 The external system source
 ==========================
 
+The external system source [TODO]
+
 The JSON sources
 ================
+
+There are several JSON datasources in the core lake:
 
 JSON file source
 ================
 
+The JSON file source can read entities from one or more a JSON file(s).
+
+ ::
+
+ {
+   "_id": "source-id"
+   "type": "source:json_file",
+   "filepath": "path-to-json-file(s)",
+   "notify_read_errors": True
+ }
+
+'filepath' is mandatory and can be either a full path to a JSON file, or a path to a directory containing ".json" files.
+
+'notify_read_errors" is a optional boolean flag (True by default) that indicates if the source should throw exceptions on
+parse errors, or produce special inline error-entities instead (these can be interpreted by a datasync task without
+stopping the process). The flag is useful for reading configuration files from disk, for example.
+
 Remote JSON source
 ==================
 
-JSON Stream source
+The remote JSON source can read entities from a JSON file available over HTTP.
+
+ ::
+
+ {
+   "_id": "source-id"
+   "type": "source:json_remote",
+   "fileurl": "URL-to-json-file",
+ }
+
+'fileurl' is a mandatory string propery containing the full URL to a JSON file to download and parse.
+
+The metrics source
 ==================
+
+The metrics data source provides the internal metrics of the lake as a list of JSON entities. It has no configuration:
+
+
+ ::
+
+ {
+   "_id": "source-id"
+   "type": "source:metrics",
+ }
+
+Sinks
+=====
+
+The dataset sink
+================
+
+The dataset sink writes the entities it is given to a identified dataset
+
+The InfluxDB sink
+=================
+
+The JSON push sink
+==================
+
+The SDShare push sink
+=====================
+
+The SMS message sink
+====================
+
+The mail message sink
+=====================
 
