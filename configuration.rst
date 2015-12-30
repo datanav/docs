@@ -369,7 +369,6 @@ The metrics source
 
 The metrics data source provides the internal metrics of the lake as a list of JSON entities. It has no configuration:
 
-
  ::
 
  {
@@ -377,26 +376,321 @@ The metrics data source provides the internal metrics of the lake as a list of J
    "type": "source:metrics",
  }
 
+The empty source
+================
+
+Sometimes it is useful for debugging or development purposes to have a data source that doesn't produce any entities:
+
+ ::
+
+ {
+   "_id": "the-id-of-the-source",
+   "type": "source:empty"
+ }
+
+
 Sinks
 =====
+
+Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a external
+system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing
+ the batch.
 
 The dataset sink
 ================
 
-The dataset sink writes the entities it is given to a identified dataset
+The dataset sink writes the entities it is given to a identified dataset. The configuration looks like:
+
+ ::
+
+ {
+   "_id": "id-of-sink",
+   "type": "sink:dataset",
+   "dataset": "id-of-dataset"
+ }
+
+'dataset' is mandatory and contain the id of the dataset to write entities into. Note: if it doesn't exist before
+entities are written to the sink, it will be created on the fly.
 
 The InfluxDB sink
 =================
 
+The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database (https://influxdata.com/).
+A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
+ written to it. The expected form of an entity to be written to the sink is:
+
+ ::
+
+ {
+   "_id": "toplevel/sublevel/parent/measurement",
+   "property": value,
+   "another_property": another_value,
+ }
+
+The id is expected to be a path-style composite value consisting of a top level node, a sublevel node, a parent node
+and finally a measurement, for example "lake_node/sinks/test-sink/some-metric". The path components are used as tags
+in the influxdb database so metrics can be easily searched for in for example Grafana (http://grafana.org/).
+
+The rest of the properties on the entity should be on the form 'string-key: numeric-value'. There can be more than one
+measurement per metric, for example a histogram of multiple sliding window values.
+
+The sink has a configuration that looks like:
+
+ ::
+
+ {
+   "_id": "id-of-sink",
+   "type": "sink:influxdb",
+   "host": "localhost",
+   "port": 8086,
+   "username": "root",
+   "password": "root",
+   "database": "lake",
+   "ssl": False,
+   "verify_ssl": False,
+   "timeout": None,
+   "use_udp": False,
+   "udp_port": 4444
+ }
+
+The 'host' property is the FQDN of the InfluxDB server, default is localhost.
+
+'port' is the port of the InfluxDB service, default is 8086
+
+'username' is the user to authenticate as against the InfluxDB service, default is 'root'
+
+'password' is the password to use for authenticating with the InfluxDB service, default is 'root'.
+
+'database' is the name of the database to create and write into. Default is 'lake'. Note that it will be created automatically
+if it doesn't exist.
+
+'ssl' is a boolean flag that indicates whether to use ssl in communications with InfluxDB or not. Default is False.
+
+'verify_ssl' is a boolean flag that tells the client to verify the server's ssl certificate before initiating communication with it.
+The default is False.
+
+'timeout' is a integer property that, if set, sets the timeout to a specified number of seconds. Default is not set and indicates
+no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+
+'use_udp' is a optional boolean flag to indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
+ Default is False (i.e. use TCP). UDP can in certain high-volume scenarios be more efficient than TCP due to its simplicity.
+
+ 'udp_port' optional integer property for the port to use if 'use_udp' is set to True. Default is 4444.
+
 The JSON push sink
 ==================
+
+The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are POST-ed as JSON
+ lists of dictionaries to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
+ of entities as JSON is described in more detail here: [TODO].
+
+ The configuration is:
+
+ ::
+
+ {
+   "_id": "some-unique-id",
+   "type": "sink:json_push",
+   "endpoint": "url-to-http-endpoint',
+   "batch_size": 1500,
+ }
+
+'endpoint' is a mandatory string property that must contain a full URL to HTTP service implementing the JSON push
+protocol described.
+
+'batch_size' is a optional integer property for the maximum number of entities to accumulate before posting. Note that the remainder
+of the internal buffer is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
 
 The SDShare push sink
 =====================
 
+The SDShare push sink is similar to the JSON push sink, but instead of posting JSON it translates the inbound entities
+to RDF and POSTs the converted result in NTriples form to the HTTP endpoint.
+
+ ::
+
+ {
+   "_id": "some-unique-sink-id-here",
+   "type": "sink:sdshare_push",
+   "endpoint": "url-to-http-endpoint",
+   "graph": "uri-for-graph-to-post-to",
+   "default_subject_prefix": "default-prefix-for-subjects',
+   "default_predicate_prefix": "default-prefix-for-predicates"
+ }
+
+'endpoint' is a mandatory string property that must contain a full URL to HTTP service implementing the SDShare push
+protocol.
+
+'graph' is a mandatory string property containing a URI to a graph to post the RDF ntriples to
+
+'default_subject_prefix' is a optional string property with a prefix to use for subjects if no prefix manager is found
+
+'default_predicate_prefix is a optional string property with a prefix to use for predicates if no prefix manager is found
+
 The SMS message sink
 ====================
 
+The SMS message sink is capable of sending SMS messages based on the entities it receives. The message to send can be
+constructed either by inline templates or from templates read from disk. These templates are assumed to be Jinja
+templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
+name can either be fixed in the configuration or given as part of the input entity. Note that the only service supported
+by the sink is Twilio.
+
+  ::
+
+  {
+    "_id": "some-id",
+    "type": "sink:sms",
+    "body_template": "static jinja template as a string",
+    "body_template_property": "id-of-property-to-get-as-a-body-template",
+    "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+    "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
+    "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+    "recipients_property": "id-of-property-to-get-recipients-from",
+    "from_number": "static-international-phone-number-to-use-as-from-number",
+    "account": "twilio-account-number",
+    "token": "twilio-api-token"
+    "max_per_hour": 1000
+  }
+
+The configuration must contain at most one of 'body_template', 'body_template_property', 'body_template_file' or
+'body_template_file_property'.
+
+'body_template' is a string property that should contain a Jinja template to use for constructing messages. The template
+will have access to all entity properties by name.
+
+'body_template_property' is a string property that should contain a id of a property of the incoming entity to use for
+looking up the Jinja template (i.e for inlining the templates in the entities). It should not be used at the same time
+as 'body_template' or 'body_template_file*".
+
+'body_template_file' is a string property that should refer to a text file on disk containing the Jinja template to use
+for constructing the SMS body message from the incoming entity. It is mutually exclusive with the other ways of specifying
+a body template.
+
+'body_template_file_propery" is a string property with a id of a property in the incoming entity to use for looking up
+the file name of the Jinja template on disk (i.e. inlining the bodu template filename in the entity). As with the other
+body template options, it is mutually exclusive in use.
+
+'recipients' is a string propery that should contain a comma-separated list of internationalised phone-numbers to send
+the message constructed to. If this is not inlined in the entities via 'recipients_property' (see below) this property
+is mandatory.
+
+'recipients_property' is a string property that should contain the id of the property to look up the recpients from the
+entity itself (i.e for inlining the recpients). If 'recipients' (see abowe) is not specified, this property is mandatory
+and the propery referenced by it must exists and be valid for all entities.
+
+'from_number' is a mandatory string propery containing a internartional phone number to use as the sender of all messages.
+
+'account' is a string propery with the Twilio account number (mandatory)
+
+'token' is a string property with the Twilio API token (mandatory)
+
+'max_per_hour' is a optional integer propery indicating the maximum number of messages to send for any hour. It is
+used for stopping run-away message sending in development or testing. Note that any message not sent will be logged but
+discarded.
+
 The mail message sink
 =====================
+
+The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
+constructed either by inline templates or from templates read from disk. These templates are assumed to be Jinja
+templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
+name can either be fixed in the configuration or given as part of the input entity.
+
+  ::
+
+  {
+    "_id": "some-id",
+    "type": "sink:mail",
+    "smtp_server": "localhost",
+    "smtp_port": 25,
+    "smtp_username": None,
+    "smtp_password": None,
+    "use_tls": False,
+    "body_template": "static jinja template as a string",
+    "body_template_property": "id-of-property-to-get-as-a-body-template",
+    "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+    "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
+    "subject_template": "static jinja template as a string",
+    "subject_template_property": "id-of-property-to-get-as-a-subject-template",
+    "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+    "subject_template_file_property": "id-of-property-to-get-as-a-subject-template-file-name",
+    "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+    "recipients_property": "id-of-property-to-get-recipients-from",
+    "mail_from": "static@email.address",
+    "max_per_hour": 1000
+  }
+
+'smtp_server' is a string propery containing a FQDN of the SMTP servive to use. The default is localhost.
+
+'smtp_port' is a integer property for the SMTP port to use when talking to the SMTP server. The default is 25.
+
+'smtp_username' is a optional string property containing the username to use when authenticating with the SMTP server. If
+not set, no authentication is attempted.
+
+'smtp_password' is string property containing the password to use if 'smtp_username' is set. It is mandatory if the
+'smtp_username' is provided.
+
+'use_tls' is a optional boolean flag indicating to the client to use TLS encryption when communicating with the SMTP server. The
+default is False.
+
+The configuration must contain at most one of 'body_template', 'body_template_property', 'body_template_file' or
+'body_template_file_property'. The same applies to 'subject_template'.
+
+'body_template' is a string property that should contain a Jinja template to use for constructing messages. The template
+will have access to all entity properties by name.
+
+'body_template_property' is a string property that should contain a id of a property of the incoming entity to use for
+looking up the Jinja template (i.e for inlining the templates in the entities). It should not be used at the same time
+as 'body_template' or 'body_template_file*".
+
+'body_template_file' is a string property that should refer to a text file on disk containing the Jinja template to use
+for constructing the SMS body message from the incoming entity. It is mutually exclusive with the other ways of specifying
+a body template.
+
+'body_template_file_propery" is a string property with a id of a property in the incoming entity to use for looking up
+the file name of the Jinja template on disk (i.e. inlining the bodu template filename in the entity). As with the other
+body template options, it is mutually exclusive in use.
+
+'subject_template' is a string property that should contain a Jinja template to use for constructing subjects for the email
+messages. The template will have access to all entity properties by name.
+
+'subject_template_property' is a string property that should contain a id of a property of the incoming entity to use for
+looking up the Jinja template (i.e for inlining the templates in the entities). It should not be used at the same time
+as 'subject_template' or 'subject_template_file*".
+
+'subject_template_file' is a string property that should refer to a text file on disk containing the Jinja template to use
+for constructing the mail subject from the incoming entity. It is mutually exclusive with the other ways of specifying
+a subject template.
+
+'subject_template_file_propery" is a string property with a id of a property in the incoming entity to use for looking up
+the file name of the Jinja template on disk (i.e. inlining the bodu template filename in the entity). As with the other
+subject template options, it is mutually exclusive in use.
+
+'recipients' is a string propery that should contain a comma-separated list of email addresses to send
+the message constructed to. If this is not inlined in the entities via 'recipients_property' (see below) this property
+is mandatory.
+
+'recipients_property' is a string property that should contain the id of the property to look up the recpients from the
+entity itself (i.e for inlining the recpients). If 'recipients' (see abowe) is not specified, this property is mandatory
+and the propery referenced by it must exists and be valid for all entities.
+
+'mail_from' is a mandatory string propery containing an email address to use as the sender of all messages.
+
+'max_per_hour' is a optional integer propery indicating the maximum number of messages to send for any hour. It is
+used for stopping run-away message sending in development or testing. Note that any message not sent will be logged but
+discarded.
+
+The null sink
+=============
+
+The null sink is the equivalent of the empty data source; it will discard any entities written to it and do nothing (it
+never raises an error):
+
+ ::
+
+ {
+   "_id": "id-of-sink",
+   "type": "sink:null"
+ }
 
