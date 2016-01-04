@@ -18,6 +18,7 @@ import os
 import shlex
 import guzzle_sphinx_theme
 import cornice
+import sphinx_rtd_theme
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -60,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Sesam'
-copyright = '2015, Graham Moore'
+copyright = '2015, Sesam'
 author = 'Graham Moore'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -122,20 +123,21 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'alabaster'
+html_theme = "sphinx_rtd_theme"
 
 # Adds an HTML table visitor to apply Bootstrap table classes
-html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
-html_theme_path = guzzle_sphinx_theme.html_theme_path()
-html_theme = 'guzzle_sphinx_theme'
+# html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
+# html_theme_path = guzzle_sphinx_theme.html_theme_path()
+# html_theme = 'guzzle_sphinx_theme'
 
 # Register the theme as an extension to generate a sitemap.xml
-extensions.append("guzzle_sphinx_theme")
+# extensions.append("guzzle_sphinx_theme")
 
 # Guzzle theme options (see theme.conf for more information)
-html_theme_options = {
+# html_theme_options = {
     # Set the name of the project to appear in the sidebar
-    "project_nav_name": "Sesam",
-}
+#    "project_nav_name": "Sesam",
+# }
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -144,6 +146,7 @@ html_theme_options = {
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

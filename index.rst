@@ -6,21 +6,15 @@
 Sesam Data Integration Platform
 ===============================
 
-Contents:
-
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    Overview <overview>
    Concepts <concepts>
    Developer Guide <developer-guide>
    Admin Guide <admin-guide>
    Example <northwind>
+   Reference <reference>
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
