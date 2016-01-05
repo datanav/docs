@@ -160,8 +160,8 @@ The 'external_system' property is mandatory for this datasource and must refer t
 The role of this component is to do connection pooling and provide authentication services for the data sources using it.
 
 If 'table' is given, it must refer to a fully qualified table name in the database system (not including schema, which if
- needed must be set separately). The 'table' and 'query' properties are mutually exclusive with 'table' used if both are
- present.
+needed must be set separately). The 'table' and 'query' properties are mutually exclusive with 'table' used if both are
+present.
 
 The value of the 'primary_key' property can be a single string with the name of the
 column that contains the primary key (PK) of the table or query, or a list of strings if it is a compound primary key. If
@@ -209,10 +209,10 @@ The CSV data source translates the rows of files in CSV format to entities. The 
 The 'filename' property is mandatory and must refer to a file in CSV format that exists.
 
 'has_header' (default to True) is a flag that indicates to the source that the first row in the CSV file contains the
- names of the columns.
+names of the columns.
 
 The contents of 'field_names', if given, is the names of the columns. It takes precedence over the header in the CSV file
- if present.
+if present.
 
 'auto_dialect' is a flag that hints to the source that it should try to guess the dialect of the CSV file on its own.
 
