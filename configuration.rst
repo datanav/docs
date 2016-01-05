@@ -56,10 +56,10 @@ a very efficient handling of entity streams within the Sesam Node.
 The Pipe
 ========
 
-A pipe is a triple of a source, sink and data sync task. The task 'pumps' data in the form om entities from the source
+A pipe is a triple of a source, sink and data sync task. The task "pumps" data in the form om entities from the source
 to the sink at regular or scheduled intervals.
 
-The configuration of a pipe has two forms; one 'complete' form and one short hand form. Let's describe the 'complete'
+The configuration of a pipe has two forms; one "complete" form and one short hand form. Let's describe the "complete"
 form first and revisit the shorthand form after describing the various sinks and sources availble in the Sesam Node core:
 
 ::
@@ -82,10 +82,10 @@ Sources
 =======
 
 Sources provide streams of entities as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
-any shape (i.e. they can also be nested), and have a single required property: "_id". This "_id" field must be unique within a flow.
-Sources can also support "since" monikers or markers which lets them pick up where the previous stream of entities left off, sort
-of like a bookmark in the entitiy stream. The "since" marker is opaque to the rest of the Sesam Node components, and is assumed
-to be interpretable only by the source. Within an entity, the marker is carried in the "_updated" property if supported
+any shape (i.e. they can also be nested), and have a single required property: ``_id``. This ``_id`` field must be unique within a flow.
+Sources can also support ``since`` monikers or markers which lets them pick up where the previous stream of entities left off, sort
+of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the Sesam Node components, and is assumed
+to be interpretable only by the source. Within an entity, the marker is carried in the ``_updated`` property if supported
 by the source.
 
 The Sesam Node supports a diverse set of core data sources:
@@ -119,8 +119,8 @@ recorded in the dataset in-order without considering the contents of the ``_id``
 The union dataset source
 ------------------------
 
-The union dataset source is similar to the dataset source, except it can process several datasets at once and keep
-track of each one in its since marker handler:
+The union dataset source is similar to the ``dataset source``, except it can process several datasets at once and keep
+track of each one in its ``since`` marker handler:
 
 ::
 
@@ -137,8 +137,8 @@ The configuration of this source is identical to the ``dataset`` source, except 
 The relational database source
 ------------------------------
 
-The relational database source is one of the most commonly used data sources. It short, it presents database relations
-(i.e. tables or queries) as entities to the Sesam Node. It has several options, all of which are presented below with
+The relational database source is one of the most commonly used data sources. It short, it presents database ``relations``
+(i.e. ``tables``, ``views`` or ``queries``) as entities to the Sesam Node. It has several options, all of which are presented below with
 their default values:
 
 ::
@@ -164,7 +164,7 @@ needed must be set separately). The ``table`` and ``query`` properties are mutua
 present.
 
 The value of the ``primary_key`` property can be a single string with the name of the
-column that contains the primary key (PK) of the table or query, or a list of strings if it is a compound primary key. If
+column that contains the ``primary key`` (PK) of the table or query, or a list of strings if it is a compound primary key. If
 the property is not set and the ``table`` property is used, the data source component will attempt to use table metadata
 to deduce the PK to use. In other words, you will have to set this property if the ``query`` property us used.
 
@@ -630,6 +630,137 @@ name can either be fixed in the configuration or given as part of the input enti
         "max_per_hour": 1000
     }
 
+The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
+``body_template_file_property``. The same applies to ``subject_template``.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 50, 10, 10
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Mandatory
+
+   * - ``smtp_server``
+     - String
+     - | Contains a ``FQDN`` of the ``SMTP service`` to use
+     - "localhost"
+     -
+
+   * - ``smtp_port``
+     - Integer
+     - | The TCP port to use when talking to the ``SMTP service``
+     - 25
+     -
+
+   * - ``smtp_username``
+     - String
+     - | The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
+     -
+     -
+
+   * - ``smtp_password``
+     - String
+     - | The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
+     -
+     - Yes
+
+   * - ``use_tls``
+     - Boolean
+     - | Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
+     - false
+     -
+
+   * - ``body_template``
+     - String
+     - | Should contain a ``Jinja template`` to use for constructing messages. The template will have access to all entity properties by name.
+     -
+     - Yes
+
+   * - ``body_template_property``
+     - String
+     - | Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
+       | (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``
+       | or ``body_template_file*``
+     -
+     -
+
+   * - ``body_template_file``
+     - String
+     - | Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
+       | from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
+     -
+     -
+
+   * - ``body_template_file_propery``
+     - String
+     - | The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
+       | on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
+       | it is mutually exclusive in use.
+     -
+     -
+
+   * - ``subject_template``
+     - String
+     - | Should contain a ``Jinja template`` to use for constructing subjects for the email messages. The template
+       | will have access to all entity properties by name
+     -
+     - Yes
+
+   * - ``subject_template_property``
+     - String
+     - | Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
+       | (i.e for inlining the templates in the entities). It should not be used at the same time as ``subject_template``
+       | or ``subject_template_file*``
+     -
+     -
+
+   * - ``subject_template_file``
+     - String
+     - | Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the message subject
+       | from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
+     -
+     -
+
+   * - ``subject_template_file_propery``
+     - String
+     - | The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
+       | on disk (i.e. inlining the subject template filename in the entity). As with the other subject template options,
+       | it is mutually exclusive in use.
+     -
+     -
+
+   * - ``recipients``
+     - String
+     - | Should contain a comma-separated list of email addresses to send the message constructed to. If this is not
+       | inlined in the entities via ``recipients_property`` (see below) this property is mandatory.
+     -
+     - Yes
+
+   * - ``recipients_property``
+     - String
+     - | Should contain the id of the property to look up the recpients from the entity itself (i.e for inlining the
+       | recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory and the propery
+       | referenced by it must exists and be valid for all entities.
+     -
+     -
+
+   * - ``mail_from``
+     - String
+     - | An email address to use as the sender of all messages
+     -
+     - Yes
+
+   * - ``max_per_hour``
+     - Integer
+     - | The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       | development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
+
+
 ``smtp_server`` is a string propery containing a ``FQDN`` of the ``SMTP service`` to use. The default is ``"localhost"``.
 
 ``smtp_port`` is a integer property for the TCP port to use when talking to the ``SMTP service``. The default is ``25``.
@@ -643,8 +774,7 @@ not set, no authentication is attempted.
 ``use_tls`` is a optional boolean flag indicating to the client to use ``TLS encryption`` when communicating with the
 ``SMTP service``. The default is ``false``.
 
-The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
-``body_template_file_property``. The same applies to ``subject_template``.
+
 
 ``body_template`` is a string property that should contain a ``Jinja template`` to use for constructing messages. The template
 will have access to all entity properties by name.
