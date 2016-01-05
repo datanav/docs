@@ -11,21 +11,22 @@ General
 
  ::
 
- [
-   {
-     "_id": "some-node-wide-unique-id"
-     "type": "component-type:component-subtype",
-     "other-properties": "other values",
-     ..
-   },
-   {
-     "_id": "some-other-node-wide-unique-id"
-     "type": "component-type:component-subtype",
-     "other-properties": "other values",
-     ..
-   },
-   ..
- ]
+    [
+        {
+            "_id": "some-node-wide-unique-id"
+            "type": "component-type:component-subtype",
+            "other-properties": "other values",
+            ..
+        },
+        {
+            "_id": "some-other-node-wide-unique-id"
+            "type": "component-type:component-subtype",
+            "other-properties": "other values",
+        ..
+        },
+        ..
+    ]
+
 
 Flows
 =====
@@ -54,19 +55,19 @@ The Pipe
 
  ::
 
- {
-    "_id": "pipe-id",
-    "type": "pipe",
-    "source": {
-      ..
-    },
-    "sink": {
-      ..
+    {
+       "_id": "pipe-id",
+       "type": "pipe",
+       "source": {
+         ..
+       },
+       "sink": {
+         ..
+       }
+       "task":  {
+         ..
+       }
     }
-    "task":  {
-      ..
-    }
- }
 
 Sources
 =======
@@ -88,13 +89,13 @@ dataset stored in a datalake node. Its configuration is very simple and looks li
 
  ::
 
- {
-   "_id": "id-of-source",
-   "type": "source:dataset",
-   "dataset": "id-of-dataset",
-   "supports_since": True,
-   "include_previous_versions": True,
- }
+    {
+       "_id": "id-of-source",
+       "type": "source:dataset",
+       "dataset": "id-of-dataset",
+       "supports_since": True,
+       "include_previous_versions": True,
+    }
 
 Only the 'dataset' configuration property is mandatory (the "_id" field is always mandatory in all entities, including
 the configuration entities).
@@ -114,13 +115,13 @@ track of each one in its since marker handler:
 
  ::
 
- {
-   "_id": "id-of-source",
-   "type": "source:union_datasets",
-   "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
-   "supports_since": True,
-   "include_previous_versions": True,
- }
+    {
+       "_id": "id-of-source",
+       "type": "source:union_datasets",
+       "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
+       "supports_since": True,
+       "include_previous_versions": True,
+    }
 
 The configuration of this source is identical to the 'dataset' source, except 'datasets' can be a list of datasets ids.
 
@@ -133,18 +134,18 @@ their default values:
 
  ::
 
- {
-   "_id": "id-of-source",
-   "type": "source:relational",
-   "external_system": "id-of-external-system",
-   "table": "name-of-table",
-   "primary_key": ["list","of","key","names"],
-   "query": "SQL query string",
-   "updated_query": "SQL query string for 'since' support in queries",
-   "updated_column": "column-name-for-since-support-in-tables',
-   "batch_size": 1000,
-   "schema": "default-schema-name-if-included"
- }
+    {
+       "_id": "id-of-source",
+       "type": "source:relational",
+       "external_system": "id-of-external-system",
+       "table": "name-of-table",
+       "primary_key": ["list","of","key","names"],
+       "query": "SQL query string",
+       "updated_query": "SQL query string for 'since' support in queries",
+       "updated_column": "column-name-for-since-support-in-tables',
+       "batch_size": 1000,
+       "schema": "default-schema-name-if-included"
+    }
 
 The 'external_system' property is mandatory for this datasource and must refer to a 'external system' component by id.
 The role of this component is to do connection pooling and provide authentication services for the data sources using it.
@@ -183,18 +184,18 @@ The CSV data source translates the rows of files in CSV format to entities. The 
 
  ::
 
- {
-   "_id": "source-id-here",
-   "type": "source:csv",
-   "filename": "path-to-file",
-   "has_header": True,
-   "field_names": ["mappings","from","columns","to","properties"],
-   "auto_dialect": True,
-   "dialect": "excel",
-   "encoding": "utf-8",
-   "id_field": "what-column-name-to-use-as-id",
-   "delimiter": ","
- }
+    {
+       "_id": "source-id-here",
+       "type": "source:csv",
+       "filename": "path-to-file",
+       "has_header": True,
+       "field_names": ["mappings","from","columns","to","properties"],
+       "auto_dialect": True,
+       "dialect": "excel",
+       "encoding": "utf-8",
+       "id_field": "what-column-name-to-use-as-id",
+       "delimiter": ","
+    }
 
 The 'filename' property is mandatory and must refer to a file in CSV format that exists.
 
@@ -221,22 +222,22 @@ It will transform triples on the form <subject> <predicate> "value" into entitie
 
   ::
 
-  {
-    "_id": "<subject>",
-    "<predicate>": "value",
-    ..
-  }
+    {
+        "_id": "<subject>",
+        "<predicate>": "value",
+        ..
+    }
 
 The configuration snippet for the RDF data source is:
 
   ::
 
-  {
-    "_id": "source-id-here",
-    "type": "source:rdf",
-    "filename": "path-to-file-here",
-    "format": "nt-ttl-or-xml"
-  }
+    {
+        "_id": "source-id-here",
+        "type": "source:rdf",
+        "filename": "path-to-file-here",
+        "format": "nt-ttl-or-xml"
+    }
 
 'filename' is the full path to a RDF file to load - it can contain multiple subjects (with blank node hierarchies) and
 each unique non-blank subject will result in a single root entity.
@@ -252,14 +253,14 @@ the following properties:
 
  ::
 
- {
-   "_id": "data-source-id",
-    "type": "source:sdshare",
-    "sdshare_server": "url-to-sdshare-http-server",
-    "provider_id": "the-id-of-the-sdshare-provider",
-    "inline_feed": False,
-    "updated_predicate": "URI-for-updated-value-predicate",
- }
+    {
+       "_id": "data-source-id",
+        "type": "source:sdshare",
+        "sdshare_server": "url-to-sdshare-http-server",
+        "provider_id": "the-id-of-the-sdshare-provider",
+        "inline_feed": False,
+        "updated_predicate": "URI-for-updated-value-predicate",
+    }
 
 'sdshare_server' is mandatory and must contain the URL to a http SDShare server
 
@@ -278,22 +279,22 @@ The LDAP source provides entities from a LDAP catalog. It supports the following
 
   ::
 
-  {
-    "_id": "id-of-source",
-    "type": "source:ldap",
-    "host": "FQDN of LDAP host",
-    "port": 389,
-    "use_ssl": False,
-    "username": "authentication-username-here",
-    "password": "authentication-password-here",
-    "search_base": "*",
-    "search_filter": "(objectClass=organizationalPerson)",
-    "attributes": "*",
-    "id_attribute": "cn",
-    "charset": "latin-1",
-    "page_size": 500,
-    "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
-  }
+    {
+        "_id": "id-of-source",
+        "type": "source:ldap",
+        "host": "FQDN of LDAP host",
+        "port": 389,
+        "use_ssl": False,
+        "username": "authentication-username-here",
+        "password": "authentication-password-here",
+        "search_base": "*",
+        "search_filter": "(objectClass=organizationalPerson)",
+        "attributes": "*",
+        "id_attribute": "cn",
+        "charset": "latin-1",
+        "page_size": 500,
+        "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
+    }
 
 'host' is mandatory and must contain the fully qualified domain name of the LDAP host server
 
@@ -336,12 +337,12 @@ The JSON file source can read entities from one or more a JSON file(s).
 
  ::
 
- {
-   "_id": "source-id"
-   "type": "source:json_file",
-   "filepath": "path-to-json-file(s)",
-   "notify_read_errors": True
- }
+    {
+       "_id": "source-id"
+       "type": "source:json_file",
+       "filepath": "path-to-json-file(s)",
+       "notify_read_errors": True
+    }
 
 'filepath' is mandatory and can be either a full path to a JSON file, or a path to a directory containing ".json" files.
 
@@ -356,11 +357,11 @@ The remote JSON source can read entities from a JSON file available over HTTP.
 
  ::
 
- {
-   "_id": "source-id"
-   "type": "source:json_remote",
-   "fileurl": "URL-to-json-file",
- }
+    {
+       "_id": "source-id"
+       "type": "source:json_remote",
+       "fileurl": "URL-to-json-file",
+    }
 
 'fileurl' is a mandatory string propery containing the full URL to a JSON file to download and parse.
 
@@ -371,10 +372,10 @@ The metrics data source provides the internal metrics of the lake as a list of J
 
  ::
 
- {
-   "_id": "source-id"
-   "type": "source:metrics",
- }
+    {
+       "_id": "source-id"
+       "type": "source:metrics",
+    }
 
 The empty source
 ================
@@ -383,18 +384,16 @@ Sometimes it is useful for debugging or development purposes to have a data sour
 
  ::
 
- {
-   "_id": "the-id-of-the-source",
-   "type": "source:empty"
- }
-
+    {
+       "_id": "the-id-of-the-source",
+       "type": "source:empty"
+    }
 
 Sinks
 =====
 
 Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a external
-system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing
- the batch.
+system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
 
 The dataset sink
 ================
@@ -403,11 +402,11 @@ The dataset sink writes the entities it is given to a identified dataset. The co
 
  ::
 
- {
-   "_id": "id-of-sink",
-   "type": "sink:dataset",
-   "dataset": "id-of-dataset"
- }
+    {
+       "_id": "id-of-sink",
+       "type": "sink:dataset",
+       "dataset": "id-of-dataset"
+    }
 
 'dataset' is mandatory and contain the id of the dataset to write entities into. Note: if it doesn't exist before
 entities are written to the sink, it will be created on the fly.
@@ -417,15 +416,15 @@ The InfluxDB sink
 
 The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database (https://influxdata.com/).
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
- written to it. The expected form of an entity to be written to the sink is:
+written to it. The expected form of an entity to be written to the sink is:
 
  ::
 
- {
-   "_id": "toplevel/sublevel/parent/measurement",
-   "property": value,
-   "another_property": another_value,
- }
+    {
+       "_id": "toplevel/sublevel/parent/measurement",
+       "property": value,
+       "another_property": another_value,
+    }
 
 The id is expected to be a path-style composite value consisting of a top level node, a sublevel node, a parent node
 and finally a measurement, for example "lake_node/sinks/test-sink/some-metric". The path components are used as tags
@@ -438,20 +437,20 @@ The sink has a configuration that looks like:
 
  ::
 
- {
-   "_id": "id-of-sink",
-   "type": "sink:influxdb",
-   "host": "localhost",
-   "port": 8086,
-   "username": "root",
-   "password": "root",
-   "database": "lake",
-   "ssl": False,
-   "verify_ssl": False,
-   "timeout": None,
-   "use_udp": False,
-   "udp_port": 4444
- }
+    {
+       "_id": "id-of-sink",
+       "type": "sink:influxdb",
+       "host": "localhost",
+       "port": 8086,
+       "username": "root",
+       "password": "root",
+       "database": "lake",
+       "ssl": False,
+       "verify_ssl": False,
+       "timeout": None,
+       "use_udp": False,
+       "udp_port": 4444
+    }
 
 The 'host' property is the FQDN of the InfluxDB server, default is localhost.
 
@@ -488,12 +487,12 @@ The JSON push sink implements a simple HTTP based protocol where entities or lis
 
  ::
 
- {
-   "_id": "some-unique-id",
-   "type": "sink:json_push",
-   "endpoint": "url-to-http-endpoint',
-   "batch_size": 1500,
- }
+    {
+       "_id": "some-unique-id",
+       "type": "sink:json_push",
+       "endpoint": "url-to-http-endpoint',
+       "batch_size": 1500,
+    }
 
 'endpoint' is a mandatory string property that must contain a full URL to HTTP service implementing the JSON push
 protocol described.
@@ -509,14 +508,14 @@ to RDF and POSTs the converted result in NTriples form to the HTTP endpoint.
 
  ::
 
- {
-   "_id": "some-unique-sink-id-here",
-   "type": "sink:sdshare_push",
-   "endpoint": "url-to-http-endpoint",
-   "graph": "uri-for-graph-to-post-to",
-   "default_subject_prefix": "default-prefix-for-subjects',
-   "default_predicate_prefix": "default-prefix-for-predicates"
- }
+    {
+       "_id": "some-unique-sink-id-here",
+       "type": "sink:sdshare_push",
+       "endpoint": "url-to-http-endpoint",
+       "graph": "uri-for-graph-to-post-to",
+       "default_subject_prefix": "default-prefix-for-subjects',
+       "default_predicate_prefix": "default-prefix-for-predicates"
+    }
 
 'endpoint' is a mandatory string property that must contain a full URL to HTTP service implementing the SDShare push
 protocol.
@@ -538,20 +537,20 @@ by the sink is Twilio.
 
   ::
 
-  {
-    "_id": "some-id",
-    "type": "sink:sms",
-    "body_template": "static jinja template as a string",
-    "body_template_property": "id-of-property-to-get-as-a-body-template",
-    "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-    "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
-    "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
-    "recipients_property": "id-of-property-to-get-recipients-from",
-    "from_number": "static-international-phone-number-to-use-as-from-number",
-    "account": "twilio-account-number",
-    "token": "twilio-api-token"
-    "max_per_hour": 1000
-  }
+    {
+        "_id": "some-id",
+        "type": "sink:sms",
+        "body_template": "static jinja template as a string",
+        "body_template_property": "id-of-property-to-get-as-a-body-template",
+        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+        "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
+        "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+        "recipients_property": "id-of-property-to-get-recipients-from",
+        "from_number": "static-international-phone-number-to-use-as-from-number",
+        "account": "twilio-account-number",
+        "token": "twilio-api-token"
+        "max_per_hour": 1000
+    }
 
 The configuration must contain at most one of 'body_template', 'body_template_property', 'body_template_file' or
 'body_template_file_property'.
@@ -599,27 +598,27 @@ name can either be fixed in the configuration or given as part of the input enti
 
   ::
 
-  {
-    "_id": "some-id",
-    "type": "sink:mail",
-    "smtp_server": "localhost",
-    "smtp_port": 25,
-    "smtp_username": None,
-    "smtp_password": None,
-    "use_tls": False,
-    "body_template": "static jinja template as a string",
-    "body_template_property": "id-of-property-to-get-as-a-body-template",
-    "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-    "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
-    "subject_template": "static jinja template as a string",
-    "subject_template_property": "id-of-property-to-get-as-a-subject-template",
-    "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-    "subject_template_file_property": "id-of-property-to-get-as-a-subject-template-file-name",
-    "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
-    "recipients_property": "id-of-property-to-get-recipients-from",
-    "mail_from": "static@email.address",
-    "max_per_hour": 1000
-  }
+    {
+        "_id": "some-id",
+        "type": "sink:mail",
+        "smtp_server": "localhost",
+        "smtp_port": 25,
+        "smtp_username": None,
+        "smtp_password": None,
+        "use_tls": False,
+        "body_template": "static jinja template as a string",
+        "body_template_property": "id-of-property-to-get-as-a-body-template",
+        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+        "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
+        "subject_template": "static jinja template as a string",
+        "subject_template_property": "id-of-property-to-get-as-a-subject-template",
+        "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk"
+        "subject_template_file_property": "id-of-property-to-get-as-a-subject-template-file-name",
+        "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+        "recipients_property": "id-of-property-to-get-recipients-from",
+        "mail_from": "static@email.address",
+        "max_per_hour": 1000
+    }
 
 'smtp_server' is a string propery containing a FQDN of the SMTP servive to use. The default is localhost.
 
@@ -689,8 +688,8 @@ never raises an error):
 
  ::
 
- {
-   "_id": "id-of-sink",
-   "type": "sink:null"
- }
+    {
+       "_id": "id-of-sink",
+       "type": "sink:null"
+    }
 
