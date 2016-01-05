@@ -579,7 +579,7 @@ The JSON sources
 There are several ``JSON`` datasources in the core Sesam Node:
 
 JSON file source
-----------------
+^^^^^^^^^^^^^^^^
 
 The ``JSON`` file source can read entities from one or more a ``JSON`` file(s).
 
@@ -617,7 +617,7 @@ The ``JSON`` file source can read entities from one or more a ``JSON`` file(s).
      -
 
 Remote JSON source
-------------------
+^^^^^^^^^^^^^^^^^^
 
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
