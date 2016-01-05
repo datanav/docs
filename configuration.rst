@@ -106,15 +106,37 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
        "include_previous_versions": true
     }
 
-Only the ``dataset`` configuration property is mandatory (the ``_id`` field is always mandatory in all entities, including
-the configuration entities).
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-The ``supports_since`` flag (default set to ``true``) indicates wether to use a ``since`` marker when reading from the dataset,
-i.e. whether to start at the beginning each time or not.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-If the ``include_previous_versions`` flag (default set to ``true``) is set to ``false``, the data source will only return the
-latest version of any entity for any unique ``_id`` value in the dataset. The default behaviour is to return all entities
-recorded in the dataset in-order without considering the contents of the ``_id`` property.
+   * - ``dataset``
+     - String
+     - | A dataset id
+     -
+     - Yes
+
+   * - ``supports_since``
+     - Boolean
+     - | Flag to indicate wether to use a ``since`` marker when reading from the dataset, i.e. to start
+       | at the beginning each time or not.
+     - true
+     -
+
+   * - ``include_previous_versions``
+     - Boolean
+     - | If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the
+       | latest version of any entity for any unique ``_id`` value in the dataset. The default behaviour is
+       | to return all entities recorded in the dataset in-order without considering the contents of
+       | the ``_id`` property.
+     - true
+     -
 
 The union dataset source
 ------------------------
@@ -133,6 +155,38 @@ track of each one in its ``since`` marker handler:
     }
 
 The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``datasets``
+     - List
+     - | A list of datasets ids (strings).
+     -
+     - Yes
+
+   * - ``supports_since``
+     - Boolean
+     - | Flag to indicate wether to use a ``since`` marker when reading from the dataset, i.e. to start
+       | at the beginning each time or not.
+     - true
+     -
+
+   * - ``include_previous_versions``
+     - Boolean
+     - | If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the
+       | latest version of any entity for any unique ``_id`` value in the dataset. The default behaviour is
+       | to return all entities recorded in the dataset in-order without considering the contents of
+       | the ``_id`` property.
+     - true
+     -
 
 The relational database source
 ------------------------------
@@ -156,35 +210,82 @@ their default values:
        "schema": "default-schema-name-if-included"
     }
 
-The ``external_system`` property is mandatory for this datasource and must refer to a ``external system`` component by id.
-The role of this component is to do connection pooling and provide authentication services for the data sources using it.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 30, 10, 3
 
-If ``table`` is given, it must refer to a fully qualified table name in the database system (not including schema, which if
-needed must be set separately). The ``table`` and ``query`` properties are mutually exclusive with ``table`` used if both are
-present.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-The value of the ``primary_key`` property can be a single string with the name of the
-column that contains the ``primary key`` (PK) of the table or query, or a list of strings if it is a compound primary key. If
-the property is not set and the ``table`` property is used, the data source component will attempt to use table metadata
-to deduce the PK to use. In other words, you will have to set this property if the ``query`` property us used.
+   * - ``external_system``
+     - String
+     - | Must refer to a ``external system`` component by ``id``. The role of this component is to do connection
+       | pooling and provide authentication services for the data sources using it
+     -
+     - Yes
 
-The ``query`` property must be a valid query in the dialect of the RDBMS represented by the ``external_system`` property.
-You will also have to configure the primary key(s) of the query in the ``primary_key`` property.
+   * - ``table``
+     - String
+     - | If ``table`` is given, it must refer to a fully qualified table name in the database system,
+       | not including schema, which if needed must be set separately. The ``table`` and ``query``
+       | properties are mutually exclusive with ``table`` used if both are present.
+     -
+     - Yes
 
-If the underlying relation contains information about updates, the data source is able to support ``since`` markers. You
-can provide the name of the column to use for such queries in ``updated_column``. This must be a valid column name in the
-``table`` or ``query`` result sets and it must be of a data type that supports larger than (">") tests for the ``table`` case.
+   * - ``primary_key``
+     - List
+     - | The value of this property can be a single string with the name of the column
+       | that contains the ``primary key`` (PK) of the table or query, or a list of strings
+       | if it is a compound primary key. If the property is not set and the ``table``
+       | property is used, the data source component will attempt to use table metadata
+       | to deduce the PK to use. In other words, you will have to set this property if
+       | the ``query`` property us used.
+     -
+     -
 
-For custom queries given in the ``query`` property, the ``since`` support must be expressed by a full query including any
-test needed. A single variable substitution ``{{ since }}`` must be included somewhere in the query string - for example
-``select * from view_name v where v.updates > '{{ since }}'``.
+   * - ``query``
+     - String
+     - | Must be a valid query in the dialect of the ``RDBMS`` represented by the
+       | ``external_system`` property. You will also have to configure the primary key(s)
+       | of the query in the ``primary_key`` property. Note: mutually exclusive with the
+       | ``table`` property with ``table`` taking precedence.
+     -
+     - Yes
 
-The ``batch_size`` property controls the default size of the result sets to get from the database, with 1000 rows being
-the default.
+   * - ``updated_column``
+     - String
+     - | If the underlying relation contains information about updates, the data source is
+       | able to support ``since`` markers. You can provide the name of the column to use
+       | for such queries here. This must be a valid column name in the ``table`` or ``query``
+       | result sets and it must be of a data type that supports larger than (">") tests
+       | for the ``table`` case.
+     -
+     -
 
-If a specific schema within a database is needed, you must provide its name in ``schema``. Do not use schema names in
-table names.
+   * - ``updated_query``
+     - String
+     - | If the ``query`` property is set, the ``since`` support must be expressed by a
+       | full query including any test needed. A single variable substitution
+       | ``{{ since }}`` must be included somewhere in the query string - for example
+       | "select * from view_name v where v.updates > '{{ since }}'".
+     -
+     -
 
+   * - ``schema``
+     - String
+     - | If a specific schema within a database is needed, you must provide its name in this property.
+       | Do *not* use schema names in the ``table`` property.
+     -
+     -
+
+   * - ``batch_size``
+     - Integer
+     - | the default size of the result sets to get from the database
+     - 1000
+     -
 
 The CSV source
 --------------
@@ -206,22 +307,59 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
        "delimiter": ","
     }
 
-The ``filename`` property is mandatory and must refer to a file in CSV format that exists.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``has_header`` (default ``true``) is a flag that indicates to the source that the first row in the CSV file contains the
-names of the columns.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-The contents of ``field_names``, if given, is the names of the columns. It takes precedence over the header in the CSV file
-if present.
+   * - ``filename``
+     - String
+     - | The full path to a file in CSV format (must exist).
+     -
+     - Yes
 
-``auto_dialect`` is a flag that hints to the source that it should try to guess the dialect of the CSV file on its own.
+   * - ``has_header``
+     - Boolean
+     - | Flag that indicates to the source that the first row in the ``CSV`` file contains the names of the columns.
+     - true
+     -
 
-``dialect`` is a string property that encodes what type of CSV file the file is. This is basically presets of the other properties.
-The recognised values are ``"excel"``, ``"escaped"``, ``"excel-tab"`` and ``"singlequote"``. TODO: explain what they mean.
+   * - ``field_names``
+     - List
+     - | If set, specifies the names of the columns. It takes precedence over the header in the CSV file if present.
+     -
+     -
 
-``id_field`` is a string property containing the name of the column to use as ``_id`` in the generated entities.
+   * - ``auto_dialect``
+     - Boolean
+     - | Flag that hints to the source that it should try to guess the dialect of the ``CSV`` file on its own.
+     - true
+     -
 
-``delimiter`` is a string property with the character to use as the CSV delimiter (comma i.e. ``","`` by default)
+   * - ``dialect``
+     - String
+     - | Encodes what type of CSV file the file is. This is basically presets of the other properties.
+       | The recognised values are ``"excel"``, ``"escaped"``, ``"excel-tab"`` and ``"singlequote"``.
+       | TODO: explain what they mean.
+     -
+     -
+
+   * - ``id_field``
+     - String
+     - | The name of the column to use as ``_id`` in the generated entities.
+     -
+     - Yes
+
+   * - ``delimiter``
+     - String
+     - | The character or string to use as the ``CSV`` field separator (delimiter)
+     - ","
+     -
 
 The RDF source
 --------------
@@ -248,11 +386,29 @@ The configuration snippet for the RDF data source is:
         "format": "nt-ttl-or-xml"
     }
 
-``filename`` is the full path to a ``RDF`` file to load - it can contain multiple subjects (with ``blank node`` hierarchies) and
-each unique non-blank subject will result in a single root entity.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``format`` is a string property with the following recongnised values: ``"nt"`` for ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"``
-for ``RDF/XML`` files.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``filename``
+     - String
+     - | The full path to a ``RDF`` file to load - it can contain multiple subjects (with ``blank node`` hierarchies)
+       | and each unique non-blank subject will result in a single root entity.
+     -
+     - Yes
+
+   * - ``format``
+     - String
+     - | The type of ``RDF`` file referenced by the ``filename`` property. It is a enumeration that can take following
+       | recongnised values: ``"nt"`` for ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML`` files.
+     -
+     - Yes
 
 The SDShare source
 ------------------
@@ -271,15 +427,40 @@ the following properties:
         "updated_predicate": "URI-for-updated-value-predicate",
     }
 
-``sdshare_server`` is mandatory and must contain the URL to a http SDShare server
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``provider_id`` is also mandatory and is a string property with the id of the sdshare provider to read from
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-``inline_feed`` is a optional flag that indicates whether to read the inline RDF (if it exists) or read a RDF fragment
-by following the links.
+   * - ``sdshare_server``
+     - String
+     - | the URL to a HTTP SDShare server
+     -
+     - Yes
 
-``updated_predicate`` is the predicate URI to look for to set the ``_updated`` property in the generated entities to be able
-to support since markers.
+   * - ``provider_id``
+     - String
+     - | the id of the sdshare provider to read from
+     -
+     - Yes
+
+   * - ``inline_feed``
+     - Boolean
+     - | Indicates whether to read the inline ``RDF`` (if it exists) or read a ``RDF`` fragment by following the links.
+     - false
+     -
+
+   * - ``updated_predicate``
+     - String
+     - | The predicate URI to look for to set the ``_updated`` property in the generated entities to be able
+       | to support since markers. If not set, ``since`` will not be supported for this data source.
+     -
+     -
 
 The LDAP source
 ---------------
@@ -305,30 +486,88 @@ The LDAP source provides entities from a ``LDAP catalog``. It supports the follo
         "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
     }
 
-``host`` is mandatory and must contain the fully qualified domain name of the LDAP host server
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``port`` is a optional integer property which defaults to 389. It must be set to the port of the LDAP service.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-``use_ssl`` is a flag that indicates to use SSL or not when communicating with the LDAP service (optional)
+   * - ``host``
+     - String
+     - | The fully qualified domain name (``FQDN``) of the LDAP host server
+     - "localhost"
+     -
 
-``username`` is a string property containing the user name to use when authenticating with the LDAP service
+   * - ``port``
+     - Integer
+     - | The TCP port of the LDAP service.
+     - 389
+     -
 
-``password`` is a string property with the password to use when authenticating
+   * - ``use_ssl``
+     - Boolean
+     - | Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
+     - false
+     -
 
-``search_base`` is the base LDAP search expression to use when looking for records (optional)
+   * - ``username``
+     - String
+     - | The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
+     -
+     -
 
-``search_filter`` is a filter expression to apply to all records found by the 'search_base' expression (optional)
+   * - ``password``
+     - String
+     - | The password to use for authenticating with the LDAP service. Required if ``username`` is set.
+     -
+     - Yes
 
-``attributes`` is a wildcard specifying which attributes to include in the entity (optional)
+   * - ``search_base``
+     - String
+     - | The base LDAP search expression to use when looking for records
+     - "*"
+     -
 
-``id_attribute`` which of the LDAP attributes to use for the ``_id`` property of a entity (optional)
+   * - ``search_filter``
+     - String
+     - | LDAP filter expression to apply to all records found by the ``search_base`` expression
+     - "(objectClass=organizationalPerson)"
+     -
 
-``charset`` the charset used to encode strings in the LDAP database (optional, defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
-as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing)
+   * - ``attributes``
+     - String
+     - | A wildcard expression specifying which attributes to include in the entity.
+     - "*"
+     -
 
-``page_size`` the default number of records to read at a time from the LDAP service (optional)
+   * - ``id_attribute``
+     - String
+     - | Sets which of the LDAP attributes to use for the ``_id`` property of a entity.
+     - "cn"
+     -
 
-``attribute_blacklist`` is a list of attribute names (as strings) to exclude from the record when constructing entities
+   * - ``charset``
+     - String
+     - | The charset used to encode strings in the LDAP database. Defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
+       | as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing.
+     - "latin-1"
+     -
+
+   * - ``page_size``
+     - Integer
+     - | The default number of records to read at a time from the LDAP service.
+     - 500
+     -
+
+   * - ``attribute_blacklist``
+     - List
+     - | A list of attribute names (as strings) to exclude from the record when constructing entities.
+     - []
+     -
 
 The external system source
 --------------------------
@@ -354,11 +593,29 @@ The ``JSON`` file source can read entities from one or more a ``JSON`` file(s).
        "notify_read_errors": true
     }
 
-``filepath`` is mandatory and can be either a full path to a ``JSON`` file, or a path to a directory containing ``.json`` files.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``notify_read_errors`` is a optional boolean flag (``true`` by default) that indicates if the source should throw exceptions on
-parse errors, or produce special inline error-entities instead (these can be interpreted by a datasync task without
-stopping the process). The flag is useful for reading configuration files from disk, for example.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``filepath``
+     - String
+     - | A full path to a ``JSON`` file, or a path to a directory containing ``.json`` files
+     -
+     - Yes
+
+   * - ``notify_read_errors``
+     - Boolean
+     - | Indicates if the source should throw exceptions or parse errors, or produce special inline error-entities
+       | instead (these can be interpreted by a datasync task without stopping the process). The flag is useful for
+       | reading configuration files from disk, for example.
+     - true
+     -
 
 Remote JSON source
 ------------------
@@ -373,7 +630,21 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
        "fileurl": "URL-to-json-file"
     }
 
-``fileurl`` is a mandatory string propery containing the full URL to a ``JSON`` file to download and parse.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``fileurl``
+     - String
+     - | The full URL to a ``JSON`` file to download and parse
+     -
+     - Yes
 
 The metrics source
 ------------------
@@ -418,8 +689,22 @@ The dataset sink writes the entities it is given to a identified dataset. The co
        "dataset": "id-of-dataset"
     }
 
-``dataset`` is mandatory and contain the id of the dataset to write entities into. Note: if it doesn't exist before
-entities are written to the sink, it will be created on the fly.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``dataset``
+     - String
+     - | The id of the dataset to write entities into. Note: if it doesn't exist before
+       | entities are written to the sink, it will be created on the fly.
+     -
+     - Yes
 
 The InfluxDB sink
 -----------------
@@ -462,29 +747,74 @@ The sink has a configuration that looks like:
        "udp_port": 4444
     }
 
-The ``host`` property is the ``FQDN`` of the InfluxDB server, default is ``"localhost"``.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``port`` is the port of the InfluxDB service, the default is ``8086``
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-``username`` is the user to authenticate as against the InfluxDB service, default is ``"root"``
+   * - ``host``
+     - String
+     - | The ``FQDN`` of the InfluxDB server
+     - "localhost"
+     -
 
-``password`` is the password to use for authenticating with the InfluxDB service, default is ``"root"``.
+   * - ``port``
+     - Integer
+     - | The TCP port of the InfluxDB service
+     - 8086
+     -
 
-``database`` is the name of the database to create and write into. Default is ``"Sesam Node"``. Note that it will be created automatically
-if it doesn't exist.
+   * - ``username``
+     - String
+     - | The user to authenticate as against the InfluxDB service
+     - "root"
+     -
 
-``ssl`` is a boolean flag that indicates whether to use ssl in communications with InfluxDB or not. Default is ``false``.
+   * - ``password``
+     - String
+     - | The password to use for authenticating with the InfluxDB service
+     - "root"
+     -
 
-``verify_ssl`` is a boolean flag that tells the client to verify the server's ssl certificate before initiating communication with it.
-The default is ``false``.
+   * - ``database``
+     - String
+     - | The name of the database to create and write into. Note that it will be created automatically
+       | if it doesn't exist.
+     - "sesam_node"
+     -
 
-``timeout`` is a integer property that, if set, sets the timeout to a specified number of seconds. Default is not set and indicates
-no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+   * - ``verify_ssl``
+     - Boolean
+     - | Flag to indicate that the client hould verify the server's ssl certificate before initiating
+       | communication with it
+     - false
+     -
 
-``use_udp`` is a optional boolean flag to indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
-Default is ``false`` (i.e. use TCP). UDP can in certain high-volume scenarios be more efficient than TCP due to its simplicity.
+   * - ``timeout``
+     - Integer
+     - | If set, sets the timeout to a specified number of seconds. Default is not set and indicates
+       | no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+     -
+     -
 
-``udp_port`` optional integer property for the port to use if ``use_udp`` is set to ``true``. The default is ``4444``.
+   * - ``use_udp``
+     - Boolean
+     - | Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
+       | The fefault is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
+       | than TCP due to its simplicity
+     - false
+     -
+
+   * - ``udp_port``
+     - Integer
+     - | The ``UDP`` port to use if ``use_udp`` is set to ``true``.
+     - 4444
+     -
 
 The JSON push sink
 ------------------
@@ -504,11 +834,28 @@ The configuration is:
        "batch_size": 1500
     }
 
-``endpoint`` is a mandatory string property that must contain a full URL to HTTP service implementing the JSON push
-protocol described.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``batch_size`` is a optional integer property for the maximum number of entities to accumulate before posting. Note that the remainder
-of the internal buffer is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``endpoint``
+     - String
+     - | The full URL to HTTP service implementing the ``JSON push protocol`` described.
+     -
+     - Yes
+
+   * - ``batch_size``
+     - Integer
+     - | The maximum number of entities to accumulate before posting. Note that the remainder of the internal buffe
+       | is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
+     - 1000
+     -
 
 The SDShare push sink
 ---------------------
@@ -527,14 +874,39 @@ to ``RDF`` and ``POST``s the converted result in ``NTriples`` form to the HTTP e
        "default_predicate_prefix": "default-prefix-for-predicates"
     }
 
-``endpoint`` is a mandatory string property that must contain a full URL to HTTP service implementing the ``SDShare push
-protocol``.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``graph`` is a mandatory string property containing a URI to a graph to post the ``RDF ntriples`` to
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-``default_subject_prefix`` is a optional string property with a prefix to use for subjects if no prefix manager is found
+   * - ``endpoint``
+     - String
+     - | The full URL to HTTP service implementing the ``SDShare push protocol``.
+     -
+     - Yes
 
-``default_predicate_prefix`` is a optional string property with a prefix to use for predicates if no prefix manager is found
+   * - ``graph``
+     - String
+     - | A URI representing a graph to post the ``RDF ntriples`` to
+     -
+     - Yes
+
+   * - ``default_subject_prefix``
+     - String
+     - | A prefix to use for subjects if no prefix manager is found
+     -
+     - Yes
+
+   * - ``default_predicate_prefix``
+     - String
+     - | A prefix to use for predicates if no prefix manager is found
+     -
+     - Yes
 
 The SMS message sink
 --------------------
@@ -563,40 +935,116 @@ by the sink is ``Twilio``.
     }
 
 The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
-``body_template_file_property``.
+``body_template_file_property``:
 
-``body_template`` is a string property that should contain a ``Jinja template`` to use for constructing messages. The template
-will have access to all entity properties by name.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
 
-``body_template_property`` is a string property that should contain a id of a property of the incoming entity to use for
-looking up the ``Jinja template`` (i.e for inlining the templates in the entities). It should not be used at the same time
-as ``body_template`` or ``body_template_file*``.
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
 
-``body_template_file`` is a string property that should refer to a text file on disk containing the ``Jinja template`` to use
-for constructing the SMS body message from the incoming entity. It is mutually exclusive with the other ways of specifying
-a body template.
+   * - ``smtp_server``
+     - String
+     - | Contains a ``FQDN`` of the ``SMTP service`` to use
+     - "localhost"
+     -
 
-``body_template_file_propery`` is a string property with a ``id`` of a property in the incoming entity to use for looking up
-the file name of the ``Jinja template`` on disk (i.e. inlining the bodu template filename in the entity). As with the other
-body template options, it is mutually exclusive in use.
+   * - ``smtp_port``
+     - Integer
+     - | The TCP port to use when talking to the ``SMTP service``
+     - 25
+     -
 
-``recipients`` is a string propery that should contain a comma-separated list of internationalised phone-numbers to send
-the message constructed to. If this is not inlined in the entities via ``recipients_property`` (see below) this property
-is mandatory.
+   * - ``smtp_username``
+     - String
+     - | The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
+     -
+     -
 
-``recipients_property`` is a string property that should contain the id of the property to look up the recpients from the
-entity itself (i.e for inlining the recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory
-and the propery referenced by it must exists and be valid for all entities.
+   * - ``smtp_password``
+     - String
+     - | The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
+     -
+     - Yes
 
-``from_number`` is a mandatory string propery containing a internartional phone number to use as the sender of all messages.
+   * - ``use_tls``
+     - Boolean
+     - | Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
+     - false
+     -
 
-``account`` is a string propery with the ``Twilio`` account number (mandatory)
+   * - ``body_template``
+     - String
+     - | Should contain a ``Jinja template`` to use for constructing messages. The template will have access to all entity properties by name.
+     -
+     - Yes
 
-``token`` is a string property with the ``Twilio`` API token (mandatory)
+   * - ``body_template_property``
+     - String
+     - | Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
+       | (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``
+       | or ``body_template_file*``
+     -
+     -
 
-``max_per_hour`` is a optional integer propery indicating the maximum number of messages to send for any hour. It is
-used for stopping run-away message sending in development or testing. Note that any message not sent will be logged but
-discarded.
+   * - ``body_template_file``
+     - String
+     - | Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
+       | from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
+     -
+     -
+
+   * - ``body_template_file_propery``
+     - String
+     - | The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
+       | on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
+       | it is mutually exclusive in use.
+     -
+     -
+
+   * - ``recipients``
+     - String
+     - | Should contain a comma-separated list of internationalised phone-numbers to send the message constructed to.
+       | If this is not inlined in the entities via ``recipients_property`` (see below) the property is required.
+     -
+     - Yes
+
+   * - ``recipients_property``
+     - String
+     - | Should contain the id of the property to look up the recpients from the entity itself (i.e for inlining the
+       | recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory and the propery
+       | referenced by it must exists and be valid for all entities.
+     -
+     - Yes
+
+   * - ``from_number``
+     - String
+     - | A internartional phone number to use as the sender of all messages
+     -
+     - Yes
+
+   * - ``account``
+     - String
+     - | The ``Twilio`` account number
+     -
+     - Yes
+
+   * - ``token``
+     - String
+     - | The ``Twilio`` API token
+     -
+     - Yes
+
+   * - ``max_per_hour``
+     - Integer
+     - | The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       | development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
 
 The mail message sink
 ---------------------
@@ -635,13 +1083,13 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 10, 50, 10, 10
+   :widths: 10, 10, 60, 10, 3
 
    * - Property
      - Type
      - Description
      - Default
-     - Mandatory
+     - Req
 
    * - ``smtp_server``
      - String
@@ -760,65 +1208,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - 1000
      -
 
-
-``smtp_server`` is a string propery containing a ``FQDN`` of the ``SMTP service`` to use. The default is ``"localhost"``.
-
-``smtp_port`` is a integer property for the TCP port to use when talking to the ``SMTP service``. The default is ``25``.
-
-``smtp_username`` is a optional string property containing the username to use when authenticating with the ``SMTP service``. If
-not set, no authentication is attempted.
-
-``smtp_password`` is string property containing the password to use if ``smtp_username`` is set. It is mandatory if the
-``smtp_username`` is provided.
-
-``use_tls`` is a optional boolean flag indicating to the client to use ``TLS encryption`` when communicating with the
-``SMTP service``. The default is ``false``.
-
-
-
-``body_template`` is a string property that should contain a ``Jinja template`` to use for constructing messages. The template
-will have access to all entity properties by name.
-
-``body_template_property`` is a string property that should contain a ``id`` of a property of the incoming entity to use for
-looking up the ``Jinja template`` (i.e for inlining the templates in the entities). It should not be used at the same time
-as ``body_template`` or ``body_template_file*``.
-
-``body_template_file`` is a string property that should refer to a text file on disk containing the ``Jinja template`` to use
-for constructing the SMS body message from the incoming entity. It is mutually exclusive with the other ways of specifying
-a body template.
-
-``body_template_file_propery`` is a string property with a ``id`` of a property in the incoming entity to use for looking up
-the file name of the ``Jinja template`` on disk (i.e. inlining the bodu template filename in the entity). As with the other
-body template options, it is mutually exclusive in use.
-
-``subject_template`` is a string property that should contain a ``Jinja template`` to use for constructing subjects for the email
-messages. The template will have access to all entity properties by name.
-
-``subject_template_property`` is a string property that should contain a id of a property of the incoming entity to use for
-looking up the ``Jinja template`` (i.e for inlining the templates in the entities). It should not be used at the same time
-as ``subject_template`` or ``subject_template_file*``.
-
-``subject_template_file`` is a string property that should refer to a text file on disk containing the ``Jinja template`` to use
-for constructing the mail subject from the incoming entity. It is mutually exclusive with the other ways of specifying
-a subject template.
-
-``subject_template_file_propery`` is a string property with a id of a property in the incoming entity to use for looking up
-the file name of the ``Jinja template`` on disk (i.e. inlining the bodu template filename in the entity). As with the other
-subject template options, it is mutually exclusive in use.
-
-``recipients`` is a string propery that should contain a comma-separated list of email addresses to send
-the message constructed to. If this is not inlined in the entities via ``recipients_property`` (see below) this property
-is mandatory.
-
-``recipients_property`` is a string property that should contain the id of the property to look up the recpients from the
-entity itself (i.e for inlining the recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory
-and the propery referenced by it must exists and be valid for all entities.
-
-``mail_from`` is a mandatory string propery containing an email address to use as the sender of all messages.
-
-``max_per_hour`` is a optional integer propery indicating the maximum number of messages to send for any hour. It is
-used for stopping run-away message sending in development or testing. Note that any message not sent will be logged but
-discarded.
 
 The null sink
 -------------
