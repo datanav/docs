@@ -10,12 +10,12 @@ Component configuration guide
 General
 =======
 
-The Sesam Node is configured using JSON structures, either on disk or by posting to the API (see the API section). The main
-concepts to configure for a node is the external systems and the flow between them and the Sesam Node. Also flows within
+The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the API section). The main
+concepts to configure for a node is the external systems and the *flow* between them and the *Sesam Node*. Also flows within
 the Sesam Node is configured the same way.
 
-The node configuration is a JSON list of one or more external system configurations and one or more pipe configurations describing
-the flows into, within and out of the Sesam Node from these external systems. These configuration entities are JSON dictionaries
+The node configuration is a *JSON list* of one or more *external system* configurations and one or more *pipe* configurations describing
+the flows into, within and out of the Sesam Node from these external systems. These configuration entities are *JSON dictionaries*
 on the general form:
 
 ::
@@ -40,14 +40,14 @@ on the general form:
 Flows
 =====
 
-A data flow is a set of pipes describing the flow of data entities from an external system, between datasets inside
-the Sesam Node and finally out of the Sesam Node to a external system. At the sources of each individual pipe in such a flow,
-optional transforms can be specified that transforms the entities streaming from the source to a another form
-before arriving at the destination sink.
+A *data flow* is a set of *pipes* describing the flow of data *entities* from an external system, between *datasets* inside
+the Sesam Node and finally out of the Sesam Node to a(nother) external system. At the sources of each individual pipe in such a flow,
+optional *transforms* can be specified that transforms the entities streaming from the source to a another form
+before arriving at the destination.
 
-This transform is described using a domain specific language inspired by Lisp called 'DTL' (see the DTL section for
+This transform is described using a domain specific language inspired by Lisp called *"DTL"* (see the DTL section for
 more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
-like joins in SQL select statements, with the main difference that the result is persisted for each pipe in the flow.
+like joins in *SQL select* statements, with the main difference that the result is persisted for each pipe in the flow.
 
 The Sesam Node keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
 are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
@@ -56,10 +56,10 @@ a very efficient handling of entity streams within the Sesam Node.
 The Pipe
 ========
 
-A pipe is a triple of a source, sink and data sync task. The task "pumps" data in the form om entities from the source
+A pipe is a *triple* of a *source*, *sink* and *data sync task*. The task "pumps" data in the form of entities from the source
 to the sink at regular or scheduled intervals.
 
-The configuration of a pipe has two forms; one "complete" form and one short hand form. Let's describe the "complete"
+The configuration of a pipe has two forms; one "complete" form and one *short hand* form. Let's describe the "complete"
 form first and revisit the shorthand form after describing the various sinks and sources availble in the Sesam Node core:
 
 ::
@@ -81,11 +81,11 @@ form first and revisit the shorthand form after describing the various sinks and
 Sources
 =======
 
-Sources provide streams of entities as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
-any shape (i.e. they can also be nested), and have a single required property: ``_id``. This ``_id`` field must be unique within a flow.
+Sources provide *streams of entities* as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
+*any* shape (i.e. they can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow*.
 Sources can also support ``since`` monikers or markers which lets them pick up where the previous stream of entities left off, sort
 of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the Sesam Node components, and is assumed
-to be interpretable only by the source. Within an entity, the marker is carried in the ``_updated`` property if supported
+to be interpretable *only by the source*. Within an entity, the marker is carried in the ``_updated`` property if supported
 by the source.
 
 The Sesam Node supports a diverse set of core data sources:
