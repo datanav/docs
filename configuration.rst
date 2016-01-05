@@ -10,12 +10,12 @@ Component configuration guide
 General
 =======
 
-The datalake is configured using JSON structures, either on disk or by posting to the API (see the API section). The main
-concepts to configure for a node is the external systems and the flow between them and the lake. Also flows within
-the lake is configured the same way.
+The Sesam Node is configured using JSON structures, either on disk or by posting to the API (see the API section). The main
+concepts to configure for a node is the external systems and the flow between them and the Sesam Node. Also flows within
+the Sesam Node is configured the same way.
 
 The node configuration is a JSON list of one or more external system configurations and one or more pipe configurations describing
-the flows into, within and out of the lake from these external systems. These configuration entities are JSON dictionaries
+the flows into, within and out of the Sesam Node from these external systems. These configuration entities are JSON dictionaries
 on the general form:
 
 ::
@@ -41,7 +41,7 @@ Flows
 =====
 
 A data flow is a set of pipes describing the flow of data entities from an external system, between datasets inside
-the lake and finally out of the lake to a external system. At the sources of each individual pipe in such a flow,
+the Sesam Node and finally out of the Sesam Node to a external system. At the sources of each individual pipe in such a flow,
 optional transforms can be specified that transforms the entities streaming from the source to a another form
 before arriving at the destination sink.
 
@@ -49,9 +49,9 @@ This transform is described using a domain specific language inspired by Lisp ca
 more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
 like joins in SQL select statements, with the main difference that the result is persisted for each pipe in the flow.
 
-The datalake keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
+The Sesam Node keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
 are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
-a very efficient handling of entity streams within the lake.
+a very efficient handling of entity streams within the Sesam Node.
 
 The Pipe
 ========
@@ -60,7 +60,7 @@ A pipe is a triple of a source, sink and data sync task. The task 'pumps' data i
 to the sink at regular or scheduled intervals.
 
 The configuration of a pipe has two forms; one 'complete' form and one short hand form. Let's describe the 'complete'
-form first and revisit the shorthand form after describing the various sinks and sources availble in the datalake core:
+form first and revisit the shorthand form after describing the various sinks and sources availble in the Sesam Node core:
 
 ::
 
@@ -81,20 +81,20 @@ form first and revisit the shorthand form after describing the various sinks and
 Sources
 =======
 
-Sources provide streams of entities as input to the pipes which is the building blocks for the flows in the data lake. These entities can take
+Sources provide streams of entities as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
 any shape (i.e. they can also be nested), and have a single required property: "_id". This "_id" field must be unique within a flow.
 Sources can also support "since" monikers or markers which lets them pick up where the previous stream of entities left off, sort
-of like a bookmark in the entitiy stream. The "since" marker is opaque to the rest of the data lake components, and is assumed
+of like a bookmark in the entitiy stream. The "since" marker is opaque to the rest of the Sesam Node components, and is assumed
 to be interpretable only by the source. Within an entity, the marker is carried in the "_updated" property if supported
 by the source.
 
-The data lake supports a diverse set of core data sources:
+The Sesam Node supports a diverse set of core data sources:
 
 The dataset source
 ------------------
 
-The dataset source is one of the most commmonly used datasources in a lake. It simply presents a stream of entities from a
-dataset stored in a datalake node. Its configuration is very simple and looks like:
+The dataset source is one of the most commmonly used datasources in a Sesam Node. It simply presents a stream of entities from a
+dataset stored in a Sesam Node. Its configuration is very simple and looks like:
 
 ::
 
@@ -132,13 +132,13 @@ track of each one in its since marker handler:
        "include_previous_versions": true,
     }
 
-The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ``id``s.
+The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
 
 The relational database source
 ------------------------------
 
 The relational database source is one of the most commonly used data sources. It short, it presents database relations
-(i.e. tables or queries) as entities to the data lake. It has several options, all of which are presented below with
+(i.e. tables or queries) as entities to the Sesam Node. It has several options, all of which are presented below with
 their default values:
 
 ::
@@ -189,7 +189,7 @@ table names.
 The CSV source
 --------------
 
-The CSV data source translates the rows of files in CSV format to entities. The configuration options are:
+The CSV data source translates the rows of files in ``CSV format`` to entities. The configuration options are:
 
 ::
 
@@ -226,8 +226,8 @@ The recognised values are ``"excel"``, ``"escaped"``, ``"excel-tab"`` and ``"sin
 The RDF source
 --------------
 
-The RDF data source is able to read data in RDF NTriples, Turtle or RDF/XML format and turn this into entities.
-It will transform triples on the form <subject> <predicate> "value" into entities on the form:
+The RDF data source is able to read data in ``RDF NTriples``, ``Turtle`` or ``RDF/XML`` format and turn this into entities.
+It will transform triples on the form ``<subject> <predicate> "value"`` into entities on the form:
 
 ::
 
@@ -248,16 +248,16 @@ The configuration snippet for the RDF data source is:
         "format": "nt-ttl-or-xml"
     }
 
-``filename`` is the full path to a RDF file to load - it can contain multiple subjects (with blank node hierarchies) and
+``filename`` is the full path to a ``RDF`` file to load - it can contain multiple subjects (with ``blank node`` hierarchies) and
 each unique non-blank subject will result in a single root entity.
 
-``format`` is a string property with the following recongnised values: ``"nt"`` for NTriples, ``"ttl"`` for Turtle form or ``"xml"``
-for RDF/XML files.
+``format`` is a string property with the following recongnised values: ``"nt"`` for ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"``
+for ``RDF/XML`` files.
 
 The SDShare source
 ------------------
 
-The SDShare data source can read RDF from ATOM feeds after the SDShare specification (http://sdshare.org). It has
+The SDShare data source can read ``RDF`` from ``ATOM feeds`` after the ``SDShare specification`` (http://sdshare.org). It has
 the following properties:
 
 ::
@@ -284,7 +284,7 @@ to support since markers.
 The LDAP source
 ---------------
 
-The LDAP source provides entities from a LDAP catalog. It supports the following properties:
+The LDAP source provides entities from a ``LDAP catalog``. It supports the following properties:
 
 ::
 
@@ -338,7 +338,7 @@ The external system source [TODO]
 The JSON sources
 ----------------
 
-There are several ``JSON`` datasources in the core lake:
+There are several ``JSON`` datasources in the core Sesam Node:
 
 JSON file source
 ----------------
@@ -378,7 +378,7 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
 The metrics source
 ------------------
 
-The metrics data source provides the internal metrics of the lake as a list of ``JSON`` entities. It has no configuration:
+The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam Node as a list of ``JSON`` entities. It has no configuration:
 
 ::
 
@@ -454,7 +454,7 @@ The sink has a configuration that looks like:
        "port": 8086,
        "username": "root",
        "password": "root",
-       "database": "lake",
+       "database": "Sesam Node",
        "ssl": false,
        "verify_ssl": false,
        "timeout": None,
@@ -470,7 +470,7 @@ The ``host`` property is the ``FQDN`` of the InfluxDB server, default is ``"loca
 
 ``password`` is the password to use for authenticating with the InfluxDB service, default is ``"root"``.
 
-``database`` is the name of the database to create and write into. Default is ``"lake"``. Note that it will be created automatically
+``database`` is the name of the database to create and write into. Default is ``"Sesam Node"``. Note that it will be created automatically
 if it doesn't exist.
 
 ``ssl`` is a boolean flag that indicates whether to use ssl in communications with InfluxDB or not. Default is ``false``.
