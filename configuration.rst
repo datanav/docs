@@ -1,15 +1,24 @@
+
+=============================
+Component configuration guide
+=============================
+
+
+.. contents:: Table of Contents
+
+
 General
 =======
 
- The datalake is configured using JSON structures, either on disk or by posting to the API (see the API section). The main
- concepts to configure for a node is the external systems and the flow between them and the lake. Also flows within
- the lake is configured the same way.
+The datalake is configured using JSON structures, either on disk or by posting to the API (see the API section). The main
+concepts to configure for a node is the external systems and the flow between them and the lake. Also flows within
+the lake is configured the same way.
 
- The node configuration is a JSON list of one or more external system configurations and one or more pipe configurations describing
- the flows into, within and out of the lake from these external systems. These configuration entities are JSON dictionaries
- on the general form:
+The node configuration is a JSON list of one or more external system configurations and one or more pipe configurations describing
+the flows into, within and out of the lake from these external systems. These configuration entities are JSON dictionaries
+on the general form:
 
- ::
+::
 
     [
         {
@@ -31,29 +40,29 @@ General
 Flows
 =====
 
- A data flow is a set of pipes describing the flow of data entities from an external system, between datasets inside
- the lake and finally out of the lake to a external system. At the sources of each individual pipe in such a flow,
- optional transforms can be specified that transforms the entities streaming from the source to a another form
- before arriving at the destination sink.
+A data flow is a set of pipes describing the flow of data entities from an external system, between datasets inside
+the lake and finally out of the lake to a external system. At the sources of each individual pipe in such a flow,
+optional transforms can be specified that transforms the entities streaming from the source to a another form
+before arriving at the destination sink.
 
- This transform is described using a domain specific language inspired by Lisp called 'DTL' (see the DTL section for
- more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
- like joins in SQL select statements, with the main difference that the result is persisted for each pipe in the flow.
+This transform is described using a domain specific language inspired by Lisp called 'DTL' (see the DTL section for
+more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
+like joins in SQL select statements, with the main difference that the result is persisted for each pipe in the flow.
 
- The datalake keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
- are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
- a very efficient handling of entity streams within the lake.
+The datalake keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
+are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
+a very efficient handling of entity streams within the lake.
 
 The Pipe
 ========
 
- A pipe is a triple of a source, sink and data sync task. The task 'pumps' data in the form om entities from the source
- to the sink at regular or scheduled intervals.
+A pipe is a triple of a source, sink and data sync task. The task 'pumps' data in the form om entities from the source
+to the sink at regular or scheduled intervals.
 
- The configuration of a pipe has two forms; one 'complete' form and one short hand form. Let's describe the 'complete'
- form first and revisit the shorthand form after describing the various sinks and sources availble in the datalake core:
+The configuration of a pipe has two forms; one 'complete' form and one short hand form. Let's describe the 'complete'
+form first and revisit the shorthand form after describing the various sinks and sources availble in the datalake core:
 
- ::
+::
 
     {
        "_id": "pipe-id",
@@ -82,12 +91,12 @@ by the source.
 The data lake supports a diverse set of core data sources:
 
 The dataset source
-==================
+------------------
 
 The dataset source is one of the most commmonly used datasources in a lake. It simply presents a stream of entities from a
 dataset stored in a datalake node. Its configuration is very simple and looks like:
 
- ::
+::
 
     {
        "_id": "id-of-source",
@@ -108,12 +117,12 @@ latest version of any entity for any unique '_id' value in the dataset. The defa
 recorded in the dataset in-order without considering the contents of the '_id' property.
 
 The union dataset source
-========================
+------------------------
 
 The union dataset source is similar to the dataset source, except it can process several datasets at once and keep
 track of each one in its since marker handler:
 
- ::
+::
 
     {
        "_id": "id-of-source",
@@ -126,13 +135,13 @@ track of each one in its since marker handler:
 The configuration of this source is identical to the 'dataset' source, except 'datasets' can be a list of datasets ids.
 
 The relational database source
-==============================
+------------------------------
 
 The relational database source is one of the most commonly used data sources. It short, it presents database relations
 (i.e. tables or queries) as entities to the data lake. It has several options, all of which are presented below with
 their default values:
 
- ::
+::
 
     {
        "_id": "id-of-source",
@@ -178,11 +187,11 @@ table names.
 
 
 The CSV source
-==============
+--------------
 
 The CSV data source translates the rows of files in CSV format to entities. The configuration options are:
 
- ::
+::
 
     {
        "_id": "source-id-here",
@@ -215,12 +224,12 @@ The recognised values are "excel", "escaped", "excel-tab" and "singlequote".
 'delimiter' is a string property with the character to use as the CSV delimiter (comma i.e. "," by default)
 
 The RDF source
-==============
+--------------
 
 The RDF data source is able to read data in RDF NTriples, Turtle or RDF/XML format and turn this into entities.
 It will transform triples on the form <subject> <predicate> "value" into entities on the form:
 
-  ::
+::
 
     {
         "_id": "<subject>",
@@ -230,7 +239,7 @@ It will transform triples on the form <subject> <predicate> "value" into entitie
 
 The configuration snippet for the RDF data source is:
 
-  ::
+::
 
     {
         "_id": "source-id-here",
@@ -246,12 +255,12 @@ each unique non-blank subject will result in a single root entity.
 for RDF/XML files.
 
 The SDShare source
-==================
+------------------
 
 The SDShare data source can read RDF from ATOM feeds after the SDShare specification (http://sdshare.org). It has
 the following properties:
 
- ::
+::
 
     {
        "_id": "data-source-id",
@@ -273,11 +282,11 @@ by following the links.
 to support since markers.
 
 The LDAP source
-===============
+---------------
 
 The LDAP source provides entities from a LDAP catalog. It supports the following properties:
 
-  ::
+::
 
     {
         "_id": "id-of-source",
@@ -321,21 +330,21 @@ The LDAP source provides entities from a LDAP catalog. It supports the following
 'attribute_blacklist' is a list of attribute names (as strings) to exclude from the record when constructing entities
 
 The external system source
-==========================
+--------------------------
 
 The external system source [TODO]
 
 The JSON sources
-================
+----------------
 
 There are several JSON datasources in the core lake:
 
 JSON file source
-================
+----------------
 
 The JSON file source can read entities from one or more a JSON file(s).
 
- ::
+::
 
     {
        "_id": "source-id"
@@ -351,11 +360,11 @@ parse errors, or produce special inline error-entities instead (these can be int
 stopping the process). The flag is useful for reading configuration files from disk, for example.
 
 Remote JSON source
-==================
+------------------
 
 The remote JSON source can read entities from a JSON file available over HTTP.
 
- ::
+::
 
     {
        "_id": "source-id"
@@ -366,11 +375,11 @@ The remote JSON source can read entities from a JSON file available over HTTP.
 'fileurl' is a mandatory string propery containing the full URL to a JSON file to download and parse.
 
 The metrics source
-==================
+------------------
 
 The metrics data source provides the internal metrics of the lake as a list of JSON entities. It has no configuration:
 
- ::
+::
 
     {
        "_id": "source-id"
@@ -378,11 +387,11 @@ The metrics data source provides the internal metrics of the lake as a list of J
     }
 
 The empty source
-================
+----------------
 
 Sometimes it is useful for debugging or development purposes to have a data source that doesn't produce any entities:
 
- ::
+::
 
     {
        "_id": "the-id-of-the-source",
@@ -396,11 +405,11 @@ Sinks are at the receiving end of pipes and are responsible for writing entities
 system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
 
 The dataset sink
-================
+----------------
 
 The dataset sink writes the entities it is given to a identified dataset. The configuration looks like:
 
- ::
+::
 
     {
        "_id": "id-of-sink",
@@ -412,13 +421,13 @@ The dataset sink writes the entities it is given to a identified dataset. The co
 entities are written to the sink, it will be created on the fly.
 
 The InfluxDB sink
-=================
+-----------------
 
 The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database (https://influxdata.com/).
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
 written to it. The expected form of an entity to be written to the sink is:
 
- ::
+::
 
     {
        "_id": "toplevel/sublevel/parent/measurement",
@@ -435,7 +444,7 @@ measurement per metric, for example a histogram of multiple sliding window value
 
 The sink has a configuration that looks like:
 
- ::
+::
 
     {
        "_id": "id-of-sink",
@@ -472,20 +481,20 @@ The default is False.
 no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
 
 'use_udp' is a optional boolean flag to indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
- Default is False (i.e. use TCP). UDP can in certain high-volume scenarios be more efficient than TCP due to its simplicity.
+Default is False (i.e. use TCP). UDP can in certain high-volume scenarios be more efficient than TCP due to its simplicity.
 
- 'udp_port' optional integer property for the port to use if 'use_udp' is set to True. Default is 4444.
+'udp_port' optional integer property for the port to use if 'use_udp' is set to True. Default is 4444.
 
 The JSON push sink
-==================
+------------------
 
 The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are POST-ed as JSON
- lists of dictionaries to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
- of entities as JSON is described in more detail here: [TODO].
+lists of dictionaries to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
+of entities as JSON is described in more detail here: [TODO].
 
- The configuration is:
+The configuration is:
 
- ::
+::
 
     {
        "_id": "some-unique-id",
@@ -501,12 +510,12 @@ protocol described.
 of the internal buffer is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
 
 The SDShare push sink
-=====================
+---------------------
 
 The SDShare push sink is similar to the JSON push sink, but instead of posting JSON it translates the inbound entities
 to RDF and POSTs the converted result in NTriples form to the HTTP endpoint.
 
- ::
+::
 
     {
        "_id": "some-unique-sink-id-here",
@@ -527,7 +536,7 @@ protocol.
 'default_predicate_prefix is a optional string property with a prefix to use for predicates if no prefix manager is found
 
 The SMS message sink
-====================
+--------------------
 
 The SMS message sink is capable of sending SMS messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be Jinja
@@ -535,7 +544,7 @@ templates (http://jinja.pocoo.org/) with the entities properties available to th
 name can either be fixed in the configuration or given as part of the input entity. Note that the only service supported
 by the sink is Twilio.
 
-  ::
+::
 
     {
         "_id": "some-id",
@@ -589,14 +598,14 @@ used for stopping run-away message sending in development or testing. Note that 
 discarded.
 
 The mail message sink
-=====================
+---------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be Jinja
 templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
 name can either be fixed in the configuration or given as part of the input entity.
 
-  ::
+::
 
     {
         "_id": "some-id",
@@ -681,12 +690,12 @@ used for stopping run-away message sending in development or testing. Note that 
 discarded.
 
 The null sink
-=============
+-------------
 
 The null sink is the equivalent of the empty data source; it will discard any entities written to it and do nothing (it
 never raises an error):
 
- ::
+::
 
     {
        "_id": "id-of-sink",

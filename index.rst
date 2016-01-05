@@ -12,9 +12,7 @@ Contents:
    :maxdepth: 3
 
    Overview <overview>
-   Overview <overview>
    Concepts <concepts>
-   Configuration <configuration>
    Developer Guide <developer-guide>
    Admin Guide <admin-guide>
    Example <northwind>
