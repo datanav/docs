@@ -72,7 +72,7 @@ form first and revisit the shorthand form after describing the various sinks and
        },
        "sink": {
          ..
-       }
+       },
        "task":  {
          ..
        }
@@ -103,7 +103,7 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
        "type": "source:dataset",
        "dataset": "id-of-dataset",
        "supports_since": true,
-       "include_previous_versions": true,
+       "include_previous_versions": true
     }
 
 Only the ``dataset`` configuration property is mandatory (the ``_id`` field is always mandatory in all entities, including
@@ -129,7 +129,7 @@ track of each one in its ``since`` marker handler:
        "type": "source:union_datasets",
        "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
        "supports_since": true,
-       "include_previous_versions": true,
+       "include_previous_versions": true
     }
 
 The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
@@ -233,7 +233,7 @@ It will transform triples on the form ``<subject> <predicate> "value"`` into ent
 
     {
         "_id": "<subject>",
-        "<predicate>": "value",
+        "<predicate>": "value"
         ..
     }
 
@@ -348,7 +348,7 @@ The ``JSON`` file source can read entities from one or more a ``JSON`` file(s).
 ::
 
     {
-       "_id": "source-id"
+       "_id": "source-id",
        "type": "source:json_file",
        "filepath": "path-to-json-file(s)",
        "notify_read_errors": true
@@ -368,9 +368,9 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
 ::
 
     {
-       "_id": "source-id"
+       "_id": "source-id",
        "type": "source:json_remote",
-       "fileurl": "URL-to-json-file",
+       "fileurl": "URL-to-json-file"
     }
 
 ``fileurl`` is a mandatory string propery containing the full URL to a ``JSON`` file to download and parse.
@@ -383,8 +383,8 @@ The metrics data source provides the ``internal metrics`` (i.e. counters and sta
 ::
 
     {
-       "_id": "source-id"
-       "type": "source:metrics",
+       "_id": "source-id",
+       "type": "source:metrics"
     }
 
 The empty source
@@ -500,8 +500,8 @@ The configuration is:
     {
        "_id": "some-unique-id",
        "type": "sink:json_push",
-       "endpoint": "url-to-http-endpoint',
-       "batch_size": 1500,
+       "endpoint": "url-to-http-endpoint",
+       "batch_size": 1500
     }
 
 ``endpoint`` is a mandatory string property that must contain a full URL to HTTP service implementing the JSON push
@@ -523,7 +523,7 @@ to ``RDF`` and ``POST``s the converted result in ``NTriples`` form to the HTTP e
        "type": "sink:sdshare_push",
        "endpoint": "url-to-http-endpoint",
        "graph": "uri-for-graph-to-post-to",
-       "default_subject_prefix": "default-prefix-for-subjects',
+       "default_subject_prefix": "default-prefix-for-subjects",
        "default_predicate_prefix": "default-prefix-for-predicates"
     }
 
@@ -551,14 +551,14 @@ by the sink is ``Twilio``.
         "_id": "some-id",
         "type": "sink:sms",
         "body_template": "static jinja template as a string",
-        "body_template_property": "id-of-property-to-get-as-a-body-template",
-        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-        "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
-        "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+        "body_template_property": "id-of-property-for-body-template",
+        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
+        "body_template_file_property": "id-of-property-for-template-file-name",
+        "recipients": "static,comma,separated,list,of,international,phonenumbers",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "from_number": "static-international-phone-number-to-use-as-from-number",
         "account": "twilio-account-number",
-        "token": "twilio-api-token"
+        "token": "twilio-api-token",
         "max_per_hour": 1000
     }
 
@@ -618,13 +618,13 @@ name can either be fixed in the configuration or given as part of the input enti
         "use_tls": false,
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
-        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-        "body_template_file_property": "id-of-property-to-get-as-a-body-template-file-name",
+        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
+        "body_template_file_property": "id-of-property-for-body-template-filename",
         "subject_template": "static jinja template as a string",
         "subject_template_property": "id-of-property-to-get-as-a-subject-template",
-        "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk"
-        "subject_template_file_property": "id-of-property-to-get-as-a-subject-template-file-name",
-        "recipients": "static,comma,separated,list,of,fully,international,+xyz,phonenumbers",
+        "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk",
+        "subject_template_file_property": "id-of-property-for-subject-template-filename",
+        "recipients": "static,comma,separated,list,of,email,addresses",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "mail_from": "static@email.address",
         "max_per_hour": 1000
