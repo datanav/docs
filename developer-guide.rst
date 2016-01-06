@@ -5,8 +5,9 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-   Component configuration <configuration>
+   Component Configuration <configuration>
+   Entity Data Model <entitymodel>
    Data Transformation Language (DTL) <DTLReferenceGuide>
-   API Guide <api>
-   Commandline client <commandlineclient>
-   Admin <admin>
+   Sesam Service API  <api>
+   Sesam Client <commandlineclient>
+   Service Administration <admin>
