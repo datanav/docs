@@ -14,7 +14,7 @@ The Sesam Node is configured using *JSON* structures, either on disk or by posti
 concepts to configure for a node is the external systems and the *flow* between them and the *Sesam Node*. Also flows within
 the Sesam Node is configured the same way.
 
-The node configuration is a *JSON list* of one or more *external system* configurations and one or more *pipe* configurations describing
+The node configuration is a *JSON list* of *external system* configurations and *pipe* configurations describing
 the flows into, within and out of the Sesam Node from these external systems. These configuration entities are *JSON dictionaries*
 on the general form:
 
@@ -24,13 +24,13 @@ on the general form:
         {
             "_id": "some-node-wide-unique-id"
             "type": "component-type:component-subtype",
-            "other-properties": "other values",
+            "some-property": "some value",
             ..
         },
         {
             "_id": "some-other-node-wide-unique-id"
             "type": "component-type:component-subtype",
-            "other-properties": "other values",
+            "some-other-property": "some other value",
         ..
         },
         ..
@@ -40,12 +40,12 @@ on the general form:
 Flows
 =====
 
-A *data flow* is a set of *pipes* describing the flow of data *entities* from an external system, between *datasets* inside
-the Sesam Node and finally out of the Sesam Node to a(nother) external system. At the sources of each individual pipe in such a flow,
+A *flow* is a set of *pipes* describing the flow of data *entities* from an external system, between *datasets* inside
+the Sesam Node and finally out of the Sesam Node to a external system. At the sources of each individual pipe in such a flow,
 optional *transforms* can be specified that transforms the entities streaming from the source to a another form
 before arriving at the destination.
 
-This transform is described using a domain specific language inspired by Lisp called *"DTL"* (see the DTL section for
+This transform is described using a domain specific language called *"DTL"* (see the DTL section for
 more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
 like joins in *SQL select* statements, with the main difference that the result is persisted for each pipe in the flow.
 
@@ -53,14 +53,14 @@ The Sesam Node keeps track of the dependencies between datasets through DTL tran
 are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
 a very efficient handling of entity streams within the Sesam Node.
 
-The Pipe
-========
+Pipes
+=====
 
 A pipe is a *triple* of a *source*, *sink* and *data sync task*. The task "pumps" data in the form of entities from the source
 to the sink at regular or scheduled intervals.
 
 The configuration of a pipe has two forms; one "complete" form and one *short hand* form. Let's describe the "complete"
-form first and revisit the shorthand form after describing the various sinks and sources availble in the Sesam Node core:
+form first and revisit the shorthand form after describing the various sinks and sources available in the Sesam Node core:
 
 ::
 
@@ -82,7 +82,8 @@ Sources
 =======
 
 Sources provide *streams of entities* as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
-*any* shape (i.e. they can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow*.
+*any* shape (i.e. they can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
+a specific logical entity. There may however exist multiple *versions* of this entity within a flow.
 Sources can also support ``since`` monikers or markers which lets them pick up where the previous stream of entities left off, sort
 of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the Sesam Node components, and is assumed
 to be interpretable *only by the source*. Within an entity, the marker is carried in the ``_updated`` property if supported
@@ -93,7 +94,7 @@ The Sesam Node supports a diverse set of core data sources:
 The dataset source
 ------------------
 
-The dataset source is one of the most commmonly used datasources in a Sesam Node. It simply presents a stream of entities from a
+The dataset source is one of the most commonly used datasources in a Sesam Node. It simply presents a stream of entities from a
 dataset stored in a Sesam Node. Its configuration is very simple and looks like:
 
 ::
@@ -132,9 +133,8 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
    * - ``include_previous_versions``
      - Boolean
      - If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the latest
-       version of any entity for any unique ``_id`` value in the dataset. The default behaviour is to return all
-       entities recorded in the dataset in-order without considering the contents of the ``_id`` property.
-     - true
+       version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
+     - false
      -
 
 The union dataset source
@@ -181,17 +181,16 @@ The configuration of this source is identical to the ``dataset`` source, except 
    * - ``include_previous_versions``
      - Boolean
      - If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the
-       latest version of any entity for any unique ``_id`` value in the dataset. The default behaviour is
-       to return all entities recorded in the dataset in-order without considering the contents of
+       latest version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
        the ``_id`` property.
-     - true
+     - false
      -
 
 The relational database source
 ------------------------------
 
-The relational database source is one of the most commonly used data sources. It short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as entities to the Sesam Node. It has several options, all of which are presented below with
+The relational database source is one of the most commonly used data sources. In short, it presents database ``relations``
+(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
 their default values:
 
 ::
@@ -221,8 +220,8 @@ their default values:
 
    * - ``external_system``
      - String
-     - Must refer to a ``external system`` component by ``id``. The role of this component is to do connection
-       pooling and provide authentication services for the data sources using it
+     - Must refer to an ``external system`` component by ``id``. The role of this component is provide services like connection
+       pooling and authentication for the data sources using it
      -
      - Yes
 
@@ -230,7 +229,7 @@ their default values:
      - String
      - If ``table`` is given, it must refer to a fully qualified table name in the database system,
        not including schema, which if needed must be set separately. The ``table`` and ``query``
-       properties are mutually exclusive with ``table`` used if both are present.
+       properties are mutually exclusive with ``table`` used if both are present. TODO: are table names case sensitive?
      -
      - Yes
 
@@ -241,7 +240,7 @@ their default values:
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used.
+       the ``query`` property us used. TODO: are these names case sensitive?
      -
      -
 
@@ -250,7 +249,7 @@ their default values:
      - Must be a valid query in the dialect of the ``RDBMS`` represented by the
        ``external_system`` property. You will also have to configure the primary key(s)
        of the query in the ``primary_key`` property. Note: mutually exclusive with the
-       ``table`` property with ``table`` taking precedence.
+       ``table`` property with ``table`` taking precedence. TODO: are queries case sensitive?
      -
      - Yes
 
@@ -259,8 +258,8 @@ their default values:
      - If the underlying relation contains information about updates, the data source is
        able to support ``since`` markers. You can provide the name of the column to use
        for such queries here. This must be a valid column name in the ``table`` or ``query``
-       result sets and it must be of a data type that supports larger than (">") tests
-       for the ``table`` case.
+       result sets and it must be of a data type that supports larger than (">") and larger or equal (">=") tests
+       for the ``table`` case. TODO: are these names case sensitive?
      -
      -
 
@@ -269,20 +268,20 @@ their default values:
      - If the ``query`` property is set, the ``since`` support must be expressed by a
        full query including any test needed. A single variable substitution
        ``{{ since }}`` must be included somewhere in the query string - for example
-       "select * from view_name v where v.updates > '{{ since }}'".
+       "select * from view_name v where v.updates > '{{ since }}'".  TODO: are queries case sensitive?
      -
      -
 
    * - ``schema``
      - String
      - If a specific schema within a database is needed, you must provide its name in this property.
-       Do *not* use schema names in the ``table`` property.
+       Do *not* use schema names in the ``table`` property. TODO: are these names case sensitive?
      -
      -
 
    * - ``batch_size``
      - Integer
-     - The default size of the result sets to get from the database
+     - The default size of the result sets (number of rows in a cursor fetch) to get from the database
      - 1000
      -
 
@@ -348,6 +347,12 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
      -
      -
 
+   * - ``encoding``
+     - String
+     - | The character set to used to encode the text in the CSV file
+     - "UTF-8"
+     -
+
    * - ``id_field``
      - String
      - | The name of the column to use as ``_id`` in the generated entities.
@@ -374,7 +379,7 @@ It will transform triples on the form ``<subject> <predicate> "value"`` into ent
         ..
     }
 
-The configuration snippet for the RDF data source is:
+RDF blank nodes will be turned into child entities. The configuration snippet for the RDF data source is:
 
 ::
 
@@ -450,7 +455,7 @@ the following properties:
 
    * - ``inline_feed``
      - Boolean
-     - Indicates whether to read the inline ``RDF`` (if it exists) or read a ``RDF`` fragment by following the links.
+     - Indicates wether to read the inline ``RDF`` (if it exists) or read a ``RDF`` fragment by following the links.
      - false
      -
 
@@ -509,7 +514,7 @@ The LDAP source provides entities from a ``LDAP catalog``. It supports the follo
 
    * - ``use_ssl``
      - Boolean
-     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
+     - Indicates to the client wether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
      - false
      -
 
@@ -581,7 +586,7 @@ There are several ``JSON`` datasources in the core Sesam Node:
 JSON file source
 ^^^^^^^^^^^^^^^^
 
-The ``JSON`` file source can read entities from one or more a ``JSON`` file(s).
+The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
 
 ::
 
@@ -672,13 +677,13 @@ Sometimes it is useful for debugging or development purposes to have a data sour
 Sinks
 =====
 
-Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a external
+Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or an external
 system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
 
 The dataset sink
 ----------------
 
-The dataset sink writes the entities it is given to a identified dataset. The configuration looks like:
+The dataset sink writes the entities it is given to an identified dataset. The configuration looks like:
 
 ::
 
@@ -708,7 +713,7 @@ The dataset sink writes the entities it is given to a identified dataset. The co
 The InfluxDB sink
 -----------------
 
-The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database (https://influxdata.com/).
+The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/.
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
 written to it. The expected form of an entity to be written to the sink is:
 
@@ -722,7 +727,7 @@ written to it. The expected form of an entity to be written to the sink is:
 
 The ``_id`` property is expected to be a path-style composite value consisting of a top level node, a sublevel node, a parent node
 and finally a measurement, for example "lake_node/sinks/test-sink/some-metric". The path components are used as ``tags``
-in the influxdb database so metrics can be easily searched for in for example Grafana (http://grafana.org/).
+in the influxdb database so metrics can be easily searched for in for example Grafana http://grafana.org/.
 
 The rest of the properties on the entity should be on the form ``'string-key: numeric-value'``. There can be more than one
 measurement per metric, for example a histogram of multiple sliding window values.
@@ -819,7 +824,7 @@ The JSON push sink
 ------------------
 
 The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are ``POST``ed as ``JSON``
-lists of dictionaries to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
+lists of objects to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
 of entities as JSON is described in more detail here: [TODO].
 
 The configuration is:
@@ -967,7 +972,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      -
 
-   * - ``body_template_file_propery``
+   * - ``body_template_file_property``
      - String
      - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
        on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
@@ -984,7 +989,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
    * - ``recipients_property``
      - String
-     - Should contain the id of the property to look up the recpients from the entity itself (i.e for inlining the
+     - Should contain the id of the property to look up the recipients from the entity itself (i.e for inlining the
        recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory and the propery
        referenced by it must exists and be valid for all entities.
      -
@@ -992,7 +997,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
    * - ``from_number``
      - String
-     - A internartional phone number to use as the sender of all messages
+     - An international phone number to use as the sender of all messages
      -
      - Yes
 
@@ -1106,12 +1111,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
    * - ``body_template_file``
      - String
-     - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
+         - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
        from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
      -
      -
 
-   * - ``body_template_file_propery``
+   * - ``body_template_file_property``
      - String
      - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
        on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
@@ -1141,7 +1146,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      -
 
-   * - ``subject_template_file_propery``
+   * - ``subject_template_file_property``
      - String
      - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
        on disk (i.e. inlining the subject template filename in the entity). As with the other subject template options,
@@ -1191,3 +1196,13 @@ never raises an error):
        "type": "sink:null"
     }
 
+External system
+===============
+
+
+Task
+====
+
+
+Pipes revisited
+===============
