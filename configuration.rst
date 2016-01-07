@@ -25,15 +25,15 @@ on the general form:
             "_id": "some-node-wide-unique-id"
             "type": "component-type:component-subtype",
             "some-property": "some value",
-            ..
+            ...
         },
         {
             "_id": "some-other-node-wide-unique-id"
             "type": "component-type:component-subtype",
             "some-other-property": "some other value",
-        ..
+        ...
         },
-        ..
+        ...
     ]
 
 
@@ -68,13 +68,13 @@ form first and revisit the shorthand form after describing the various sinks and
        "_id": "pipe-id",
        "type": "pipe",
        "source": {
-         ..
+         ...
        },
        "sink": {
-         ..
+         ...
        },
-       "task":  {
-         ..
+       "task": {
+         ...
        }
     }
 
@@ -379,7 +379,7 @@ entities on the form:
     {
         "_id": "<subject>",
         "<predicate>": "value"
-        ..
+        ...
     }
 
 RDF blank nodes will be turned into child entities. The configuration
@@ -414,7 +414,7 @@ snippet for the RDF data source is:
 
    * - ``format``
      - String
-     - The type of ``RDF`` file referenced by the ``filename`` property. It is
+     - The type of ``RDF`` file referenced by the ``url`` property. It is
        an enumeration that can take following recognized values: ``"nt"`` for
        ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
        files.
@@ -1213,23 +1213,80 @@ The following data sources support transforms:
 * `The dataset source`_
 * `The union datasets source`_
 
+Transforms can be configured on a data source in the "``transform``" property:
+
+::
+   
+   {"_id": "mypipe",
+    "type": "pipe",
+    ...
+    "source": {
+      "type": "source:dataset",
+       ...
+      "transform": ...the transform configuration goes here...
+    }}
 
 
 The DTL transform
 -----------------
 
-TODO: Data Transformation Language transforms. See
-:doc:`DTLReferenceGuide` for more details on the transformation
-lanuage itself.
+This transform lets you apply Data Transformation Language transformations
+on the entities stream produced by the data source.
+
+See :doc:`DTLReferenceGuide` for more details on the transformation
+language itself.
+
+**Example:** Pipe configuration that reads entities from the
+``Northwind:Customers`` dataset and transforms them using the DTL
+transform specified in the "``transform``" key on the source. The
+transformed entities are then written to the ``customer-with-orders``
+dataset.
+
+::
+   
+   {"_id": "customer-with-orders",
+    "type": "pipe",
+    "source": {
+      "type": "source:dataset",
+      "dataset": "Northwind:Customers",
+      "transform": {
+          "type": "transform:dtl",
+          "dataset": "Northwind:Customers",
+          "transforms": {
+              "default": [
+                  ["copy", "_id"],
+                  ["add", "name", "_S.ContactName"],
+                  ["add", "orders", ["apply", "order", ["hops", {
+                      "datasets": ["Northwind:Orders o"],
+                      "where": [
+                          ["eq", "_S._id", "o.CustomerID"]
+                      ]
+                  }]]]
+              ],
+              "order": [
+                  ["add", "order_id", "_S.OrderID"],
+                  ["add", "order_date", "_S.OrderDate"]
+              ]
+          }
+      }
+    }}
 
 
 The properties transform
 ------------------------
 
-TODO: Add prefixes to properties, i.e. turn them into CURIEs.
+The properties transform has the following capabilities:
+
+* Add CURIE prefixes to properties
+* Rename properties
+* Collapse URIs into CURIEs
+
+TODO: Add detailed docs plus examples.
+
 
 The remote transform
 --------------------
 
 TODO: This is not yet implemented, but the idea is that entities are
-posted to an HTTP endpoint, transformed and then returned.
+posted to an HTTP endpoint, transformed by the service, and then
+returned.
