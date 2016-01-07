@@ -1203,17 +1203,10 @@ Pipes revisited
 ===============
 
 
-.. _transforms:
-
 Transforms
 ==========
 
-The following data sources support transforms:
-
-* `The dataset source`_
-* `The union datasets source`_
-
-Transforms can be configured on a data source in the "``transform``" property:
+Transforms can be configured on a pipe by specifying the "``transform``" property:
 
 ::
    
@@ -1221,9 +1214,9 @@ Transforms can be configured on a data source in the "``transform``" property:
     "type": "pipe",
     ...
     "source": {
-      "type": "source:dataset",
        ...
-      "transform": ...the transform configuration goes here...
+    }.
+    "transform": ...the transform configuration goes here...
     }}
 
 
@@ -1248,27 +1241,27 @@ dataset.
     "type": "pipe",
     "source": {
       "type": "source:dataset",
-      "dataset": "Northwind:Customers",
-      "transform": {
-          "type": "transform:dtl",
-          "dataset": "Northwind:Customers",
-          "transforms": {
-              "default": [
-                  ["copy", "_id"],
-                  ["add", "name", "_S.ContactName"],
-                  ["add", "orders", ["apply", "order", ["hops", {
-                      "datasets": ["Northwind:Orders o"],
-                      "where": [
-                          ["eq", "_S._id", "o.CustomerID"]
-                      ]
-                  }]]]
-              ],
-              "order": [
-                  ["add", "order_id", "_S.OrderID"],
-                  ["add", "order_date", "_S.OrderDate"]
-              ]
-          }
-      }
+      "dataset": "Northwind:Customers"
+    },
+    "transform": {
+        "type": "transform:dtl",
+        "dataset": "Northwind:Customers",
+        "transforms": {
+            "default": [
+                ["copy", "_id"],
+                ["add", "name", "_S.ContactName"],
+                ["add", "orders", ["apply", "order", ["hops", {
+                    "datasets": ["Northwind:Orders o"],
+                    "where": [
+                        ["eq", "_S._id", "o.CustomerID"]
+                    ]
+                }]]]
+            ],
+            "order": [
+                ["add", "order_id", "_S.OrderID"],
+                ["add", "order_date", "_S.OrderDate"]
+            ]
+        }
     }}
 
 

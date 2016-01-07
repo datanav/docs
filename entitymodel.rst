@@ -2,19 +2,28 @@
 Entity Data Model
 =================
 
-Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
+Sesam uses an entity data model as the core representation of
+data. Each entity is a dictionary of key-value pairs. Each key is a
+string and the value can be either a literal value, a list or another
+dictionary.
 
-A Sesam entity has a few special keys that should not be messed with. The following data prototype explains these special properties.
+A Sesam entity has a few special keys that should not be messed
+with. The following data prototype explains these special properties.
 
 ::
 
   {
-  	"_id": "the id of the entity. required on all entities.",
+  	"_id": "the identity of the entity",
   	"_updated": "a token indicating when this was modified",
-  	"_deleted": "indicating if the entity should be treated as deleted"
+  	"_deleted": "indicating if the entity should be treated as deleted",
+        "_hash": "a hash string of the entity's content",
+        "_previous": "the _updated token of the previous version",
+        "_ts": "timestamp for when entity was registered in source"
   }
 
-The entity data model supports a wide range of data types including, int, float, URI, datetime etc. Over the wire both a binary and JSON representation is used. To enable datatypes not supported in JSON something else is used. (ed - i forgot what it is)
+The entity data model supports a wide range of data types including,
+string, integer, decimal, boolean, URI, bytes and datetime. Over the
+wire both a binary and JSON representation is used.
 
 Reserved fields
 ---------------
@@ -26,18 +35,21 @@ are only reserved at the root level, so child entities can have them.
 
 .. list-table::
    :header-rows: 1
-   :widths: 30, 50
+   :widths: 30, 50, 10
 
    * - Field
      - Description
+     - Required
 
    * - ``_id``
      - This is the primary key of the entity. The value is always a
-       string. Mandatory.
+       string.
+     - Yes
 
    * - ``_deleted``
      - If ``true`` then the entity is deleted. All other values are
-       interpreted as if the entity is not deleted. Optional.
+       interpreted as if the entity is not deleted.
+     -
 
    * - ``_updated``
      - The sequence of the entity. The value must be either a string
@@ -45,19 +57,33 @@ are only reserved at the root level, so child entities can have them.
        entities. The value is meant to be opaque, and should not be
        parsed or interpreted by other parties than the data source
        that produced it. The ``_updated`` value can be passed through
-       to the ``since`` request parameter in HTTP endpoints. Optional.
+       to the ``since`` request parameter in HTTP endpoints.
+     -
+
+   * - ``_hash``
+     - A string containing the hash of the entity's content. This value
+       is used to decide when an entity has changed.
+
+       *This field is used by entities stored in datasets.*
+     -
 
    * - ``_previous``
      - A pointer back to the previous version of this entity. The
        value refers to the ``_updated`` field of the previous
-       version. Optional. If the field is missing or the value is
+       version. If the field is missing or the value is
        ``null``, then there exists no previous version.
+
+       *This field is used by entities stored in datasets.*
+     -
 
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
        the datasource. The value is an integer representing the number
        of seconds since epoch (January 1st 1970 UTC). This field is
-       used only for informal purposes. Optional.
+       used only for informal purposes.
+
+       *This field is used by entities stored in datasets.*
+     -
 
 
 Standard datatypes
@@ -132,8 +158,9 @@ types that are not recognized will be treated as string values.
    * - Datetime
      - Date and time with up to nanoseconds precision. The valid range is
        from ``"~t1677-09-21T00:12:43.145224192Z"`` to
-       ``"~t2262-04-11T23:47:16.854775807Z"``. Note that the time part
-       of the string is mandatory. The fraction of a second is optional.
+       ``"~t2262-04-11T23:47:16.854775807Z"``. The date and time parts
+       of the string are mandatory. The fraction of a second is optional.
+       The value must always be in UTC, so the ``Z`` at the end is mandatory.
      - ``"~t2015-01-02T03:04:05.123456789Z"``, ``"~t1973-01-22T23:11:54Z"``
 
    * - Bytes
