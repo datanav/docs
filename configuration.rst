@@ -104,7 +104,7 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
        "type": "source:dataset",
        "dataset": "id-of-dataset",
        "supports_since": true,
-       "include_previous_versions": true
+       "include_previous_versions": false
     }
 
 .. list-table::
@@ -125,7 +125,7 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
 
    * - ``supports_since``
      - Boolean
-     - Flag to indicate wether to use a ``since`` marker when reading from the dataset, i.e. to start at
+     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
        the beginning each time or not.
      - true
      -
@@ -137,11 +137,12 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
      - false
      -
 
-The union dataset source
-------------------------
+The union datasets source
+-------------------------
 
-The union dataset source is similar to the ``dataset source``, except it can process several datasets at once and keep
-track of each one in its ``since`` marker handler:
+The union datasets source is similar to the ``dataset source``, except
+it can process several datasets at once and keep track of each one in
+its ``since`` marker handler:
 
 ::
 
@@ -150,7 +151,7 @@ track of each one in its ``since`` marker handler:
        "type": "source:union_datasets",
        "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
        "supports_since": true,
-       "include_previous_versions": true
+       "include_previous_versions": false
     }
 
 The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
@@ -173,7 +174,7 @@ The configuration of this source is identical to the ``dataset`` source, except 
 
    * - ``supports_since``
      - Boolean
-     - Flag to indicate wether to use a ``since`` marker when reading from the dataset, i.e. to start
+     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start
        at the beginning each time or not.
      - true
      -
@@ -368,8 +369,10 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
 The RDF source
 --------------
 
-The RDF data source is able to read data in ``RDF NTriples``, ``Turtle`` or ``RDF/XML`` format and turn this into entities.
-It will transform triples on the form ``<subject> <predicate> "value"`` into entities on the form:
+The RDF data source is able to read data in ``RDF NTriples``,
+``Turtle`` or ``RDF/XML`` format and turn this into entities.  It will
+transform triples on the form ``<subject> <predicate> "value"`` into
+entities on the form:
 
 ::
 
@@ -379,14 +382,15 @@ It will transform triples on the form ``<subject> <predicate> "value"`` into ent
         ..
     }
 
-RDF blank nodes will be turned into child entities. The configuration snippet for the RDF data source is:
+RDF blank nodes will be turned into child entities. The configuration
+snippet for the RDF data source is:
 
 ::
 
     {
         "_id": "source-id-here",
         "type": "source:rdf",
-        "filename": "path-to-file-here",
+        "url": "url-to-rdf-file-here",
         "format": "nt-ttl-or-xml"
     }
 
@@ -400,35 +404,38 @@ RDF blank nodes will be turned into child entities. The configuration snippet fo
      - Default
      - Req
 
-   * - ``filename``
+   * - ``url``
      - String
-     - The full path to a ``RDF`` file to load - it can contain multiple subjects (with ``blank node`` hierarchies)
-       and each unique non-blank subject will result in a single root entity.
+     - The URL of the ``RDF`` file to load - it can contain multiple subjects
+       (with ``blank node`` hierarchies) and each unique non-blank subject will
+       result in a single root entity.
      -
      - Yes
 
    * - ``format``
      - String
-     - The type of ``RDF`` file referenced by the ``filename`` property. It is a enumeration that can take following
-       recongnised values: ``"nt"`` for ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML`` files.
-     -
-     - Yes
+     - The type of ``RDF`` file referenced by the ``filename`` property. It is
+       an enumeration that can take following recognized values: ``"nt"`` for
+       ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
+       files.
+     - ``nt``
+     - 
+
 
 The SDShare source
 ------------------
 
-The SDShare data source can read ``RDF`` from ``ATOM feeds`` after the ``SDShare specification`` (http://sdshare.org). It has
-the following properties:
+The SDShare data source can read ``RDF`` from ``ATOM feeds`` after the
+``SDShare specification`` (http://sdshare.org). It has the following
+properties:
 
 ::
 
     {
        "_id": "data-source-id",
         "type": "source:sdshare",
-        "sdshare_server": "url-to-sdshare-http-server",
-        "provider_id": "the-id-of-the-sdshare-provider",
-        "inline_feed": false,
-        "updated_predicate": "URI-for-updated-value-predicate",
+        "url": "url-to-sdshare-fragments-feed",
+        "supports_since": false
     }
 
 .. list-table::
@@ -441,30 +448,19 @@ the following properties:
      - Default
      - Req
 
-   * - ``sdshare_server``
+   * - ``url``
      - String
-     - The URL to a HTTP SDShare server
+     - The URL of the SDShare fragments feed to consume.
      -
      - Yes
 
-   * - ``provider_id``
-     - String
-     - The id of the sdshare provider to read from
-     -
-     - Yes
-
-   * - ``inline_feed``
+   * - ``supports_since``
      - Boolean
-     - Indicates wether to read the inline ``RDF`` (if it exists) or read a ``RDF`` fragment by following the links.
-     - false
+     - Flag to indicate whether to include ``since`` request parameter when
+       reading from the fragments feed.
+     - true
      -
 
-   * - ``updated_predicate``
-     - String
-     - The predicate URI to look for to set the ``_updated`` property in the generated entities to be able
-       to support since markers. If not set, ``since`` will not be supported for this data source.
-     -
-     -
 
 The LDAP source
 ---------------
@@ -514,7 +510,7 @@ The LDAP source provides entities from a ``LDAP catalog``. It supports the follo
 
    * - ``use_ssl``
      - Boolean
-     - Indicates to the client wether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
+     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
      - false
      -
 
@@ -864,8 +860,10 @@ The configuration is:
 The SDShare push sink
 ---------------------
 
-The SDShare push sink is similar to the ``JSON push sink``, but instead of posting ``JSON`` it translates the inbound entities
-to ``RDF`` and ``POST``s the converted result in ``NTriples`` form to the HTTP endpoint.
+The SDShare push sink is similar to the ``JSON push sink``, but
+instead of posting ``JSON`` it translates the inbound entities to
+``RDF`` and ``POST``s them in ``NTriples`` form to the ``SDShare push
+protocol`` HTTP endpoint.
 
 ::
 
@@ -873,9 +871,10 @@ to ``RDF`` and ``POST``s the converted result in ``NTriples`` form to the HTTP e
        "_id": "some-unique-sink-id-here",
        "type": "sink:sdshare_push",
        "endpoint": "url-to-http-endpoint",
-       "graph": "uri-for-graph-to-post-to",
-       "default_subject_prefix": "default-prefix-for-subjects",
-       "default_predicate_prefix": "default-prefix-for-predicates"
+       "graph": "uri-of-graph-to-post-to",
+       "prefixes": {
+          "a-prefix": "the-expansion"
+       }
     }
 
 .. list-table::
@@ -900,17 +899,13 @@ to ``RDF`` and ``POST``s the converted result in ``NTriples`` form to the HTTP e
      -
      - Yes
 
-   * - ``default_subject_prefix``
-     - String
-     - A prefix to use for subjects if no prefix manager is found
+   * - ``prefixes``
+     - Dictionary
+     - A dictionary mapping prefix to their URI expansions. This prefix mapping
+       will be used to expand CURIES into full URIs.
      -
      - Yes
 
-   * - ``default_predicate_prefix``
-     - String
-     - A prefix to use for predicates if no prefix manager is found
-     -
-     - Yes
 
 The SMS message sink
 --------------------
@@ -1111,7 +1106,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
    * - ``body_template_file``
      - String
-         - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
+     - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
        from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
      -
      -
@@ -1206,3 +1201,35 @@ Task
 
 Pipes revisited
 ===============
+
+
+.. _transforms:
+
+Transforms
+==========
+
+The following data sources support transforms:
+
+* `The dataset source`_
+* `The union datasets source`_
+
+
+
+The DTL transform
+-----------------
+
+TODO: Data Transformation Language transforms. See
+:doc:`DTLReferenceGuide` for more details on the transformation
+lanuage itself.
+
+
+The properties transform
+------------------------
+
+TODO: Add prefixes to properties, i.e. turn them into CURIEs.
+
+The remote transform
+--------------------
+
+TODO: This is not yet implemented, but the idea is that entities are
+posted to an HTTP endpoint, transformed and then returned.
