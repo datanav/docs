@@ -205,6 +205,7 @@ their default values:
        "query": "SQL query string",
        "updated_query": "SQL query string for 'since' support in queries",
        "updated_column": "column-name-for-since-support-in-tables',
+       "column_blacklist": ["columns","to","not","include"],
        "batch_size": 1000,
        "schema": "default-schema-name-if-included"
     }
@@ -277,6 +278,12 @@ their default values:
      - String
      - If a specific schema within a database is needed, you must provide its name in this property.
        Do *not* use schema names in the ``table`` property. TODO: are these names case sensitive?
+     -
+     -
+
+   * - ``column_blacklist``
+     - List
+     - A list of column names to exclude from the generated entity. TODO: are these names case sensitive?
      -
      -
 
