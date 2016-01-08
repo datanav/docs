@@ -28,9 +28,10 @@ wire both a binary and JSON representation is used.
 Reserved fields
 ---------------
 
-Entity fields starting with ``_`` are reserved. Any such fields will
-be ignored when writing an entity to a dataset. Note that the fields
-are only reserved at the root level, so child entities can have them.
+Entity fields starting with ``_`` are reserved. Any such fields,
+except ``_id`` and ``_deleted`` will be ignored when writing an entity
+to a dataset. Note that the fields are only reserved at the root
+level, so child entities can have them.
 
 
 .. list-table::
@@ -64,7 +65,8 @@ are only reserved at the root level, so child entities can have them.
      - A string containing the hash of the entity's content. This value
        is used to decide when an entity has changed.
 
-       *This field is used by entities stored in datasets.*
+       *This field is generated automatically when writing an entity
+        to a dataset.*
      -
 
    * - ``_previous``
@@ -73,7 +75,8 @@ are only reserved at the root level, so child entities can have them.
        version. If the field is missing or the value is
        ``null``, then there exists no previous version.
 
-       *This field is used by entities stored in datasets.*
+       *This field is generated automatically when writing an entity
+        to a dataset.*
      -
 
    * - ``_ts``
@@ -81,8 +84,9 @@ are only reserved at the root level, so child entities can have them.
        the datasource. The value is an integer representing the number
        of seconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
-
-       *This field is used by entities stored in datasets.*
+       
+       *This field is generated automatically when writing an entity
+        to a dataset.*
      -
 
 
