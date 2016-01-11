@@ -29,7 +29,7 @@ Reserved fields
 ---------------
 
 Entity fields starting with ``_`` are reserved. Any such fields,
-except ``_id`` and ``_deleted`` will be ignored when writing an entity
+except ``_id`` and ``_deleted``, will be ignored when writing an entity
 to a dataset. Note that the fields are only reserved at the root
 level, so child entities can have them.
 
