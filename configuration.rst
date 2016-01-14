@@ -951,13 +951,8 @@ Prototype
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The JSON sources
+The JSON file source
 ----------------
-
-There are several ``JSON`` datasources in the core Sesam Node:
-
-JSON file source
-^^^^^^^^^^^^^^^^
 
 The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
 
@@ -1015,8 +1010,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-Remote JSON source
-^^^^^^^^^^^^^^^^^^
+The JSON remote source
+----------------------
 
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
