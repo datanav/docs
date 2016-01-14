@@ -5,47 +5,49 @@ Component configuration guide
 
 
 .. contents:: Table of Contents
-
+   :depth: 3
 
 General
 =======
 
-The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the API section). The main
-concepts to configure for a node is the external systems and the *flow* between them and the *Sesam Node*. Also flows within
+The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the :doc:`API section <api>`). The main
+concepts to configure for a node is the systems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
 the Sesam Node is configured the same way.
 
-The node configuration is a *JSON list* of *external system* configurations and *pipe* configurations describing
-the flows into, within and out of the Sesam Node from these external systems. These configuration entities are *JSON dictionaries*
-on the general form:
+The node configuration is a *JSON list* of system* and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
+of the Sesam Node from these systems. These configuration entities are *JSON objects* on the general form:
 
 ::
 
     [
         {
             "_id": "some-node-wide-unique-id"
+            "name": "Name of component",
             "type": "component-type:component-subtype",
             "some-property": "some value",
             ...
         },
         {
             "_id": "some-other-node-wide-unique-id"
+            "name": "Name of other component",
             "type": "component-type:component-subtype",
             "some-other-property": "some other value",
-        ...
+            ...
         },
         ...
     ]
 
+.. _flow_section:
 
 Flows
 =====
 
-A *flow* is a set of *pipes* describing the flow of data *entities* from an external system, between *datasets* inside
-the Sesam Node and finally out of the Sesam Node to a external system. At the sources of each individual pipe in such a flow,
-optional *transforms* can be specified that transforms the entities streaming from the source to a another form
-before arriving at the destination.
+A *flow* is a set of :ref:`pipes <pipe_section>` describing the stream of :doc:`entities <entitymodel>` from a source
+:ref:`system <system_section>`, between *datasets* inside the Sesam Node and finally out of the Sesam Node to a
+target system. At the :ref:`sources <source_section>` of each individual pipe in such a flow, optional :ref:`transforms <transform_section>`
+can be specified that transforms the entities streaming from the source to a another form before :ref:`arriving at the destination <sink_section>`.
 
-This transform is described using a domain specific language called *"DTL"* (see the DTL section for
+This transform is described using a domain specific language called Data Transform Language (*DTL*) (see the :doc:`DTL section <DTLReferenceGuide>` for
 more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
 like joins in *SQL select* statements, with the main difference that the result is persisted for each pipe in the flow.
 
@@ -53,43 +55,208 @@ The Sesam Node keeps track of the dependencies between datasets through DTL tran
 are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
 a very efficient handling of entity streams within the Sesam Node.
 
+.. _pipe_section:
+
 Pipes
 =====
 
-A pipe is a *triple* of a *source*, *sink* and *data sync task*. The task "pumps" data in the form of entities from the source
-to the sink at regular or scheduled intervals.
+A pipe is a *triple* of a :ref:`source <source_section>`, :ref:`sink <sink_section>` and :ref:`data sync task <task_section>`.
+The task "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals.
 
 The configuration of a pipe has two forms; one "complete" form and one *short hand* form. Let's describe the "complete"
-form first and revisit the shorthand form after describing the various sinks and sources available in the Sesam Node core:
+form first and :ref:`revisit <pipes_revisited>` the shorthand form after describing the various sinks and sources
+available in the Sesam Node core:
+
+Prototype
+---------
 
 ::
 
     {
-       "_id": "pipe-id",
+        "_id": "pipe-id",
+        "name": "Name of pipe",
+        "type": "pipe",
+        "short_config": "relational://system/table",
+        "source": {
+        },
+        "sink": {
+        },
+        "task": {
+        }
+    }
+
+
+Note that if no ``name`` property is explicitly set for the source, sink or task configurations one will be
+generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or
+"task" respectively).
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``_id``
+     - String
+     - The id of the pipe, this should be unique within a Sesam Node.
+     -
+     - Yes
+
+   * - ``name``
+     - String
+     - A human redable name of the component.
+     -
+     - Yes
+
+   * - ``type``
+     - String
+     - The type of the component, for pipes the only allowed value is "pipe"
+     -
+     - Yes
+
+   * - ``short_config``
+     - String
+     - A connectionstring-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
+       more information on the format of this property.
+     -
+     - No
+
+   * - ``source``
+     - Object
+     - A configuration object for the :ref:`source <source_section>` component of the pipe. It can be omitted if
+       ``short_config`` is present and contains enough information to infer the source configuration. See the
+       :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
+       this case.
+     -
+     - No
+
+   * - ``sink``
+     - Object
+     - A configuration object for the :ref:`sink <sink_section>` component of the pipe. If omitted, it defaults to
+       a :ref:`dataset sink <dataset_sink>` with its ``dataset`` property set to same as the pipe's ``_id`` property.
+     -
+     - No
+
+   * - ``task``
+     - Object
+     - A configuration object for the :ref:`task definiton <task_section>` component of the pipe. If omitted, it
+       defaults to a :ref:`datasync task <datasync_task>` with its ``source`` and ``sink`` properties set to the
+       respective ``_id`` properties of the source and sink respectively (possibly a computed value).
+     -
+     - No
+
+
+Example configuration
+---------------------
+
+::
+
+   {
+       "_id": "northwind-customers",
+       "name": "Northwind customers pipe",
        "type": "pipe",
        "source": {
-         ...
+           "type": "source:relational",
+           "system": "Northwind",
+           "table": "Customers"
        },
        "sink": {
-         ...
+           "type": "sink:dataset",
+           "dataset": "Northwind:Customers"
        },
        "task": {
-         ...
+           "type": "task:datasync",
+           "schedule_interval": "30000"
        }
-    }
+   }
+
+.. _source_section:
 
 Sources
 =======
 
-Sources provide *streams of entities* as input to the pipes which is the building blocks for the flows in the Sesam Node. These entities can take
-*any* shape (i.e. they can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
+Sources provide *streams* of :doc:`entities <entitymodel>` as input to the :ref:`pipes <pipe_section>` which is the
+building blocks for the :ref:`flows <flow_section>` in the Sesam Node. These entities can take *any* shape (i.e. they
+can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
 a specific logical entity. There may however exist multiple *versions* of this entity within a flow.
-Sources can also support ``since`` monikers or markers which lets them pick up where the previous stream of entities left off, sort
-of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the Sesam Node components, and is assumed
-to be interpretable *only by the source*. Within an entity, the marker is carried in the ``_updated`` property if supported
-by the source.
+
+Continuation support
+--------------------
+
+Sources can optionally support a ``since`` moniker or marker which lets them pick up where the previous stream of
+entities left off, sort of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the
+Sesam Node components, and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
+in the ``_updated`` property if supported by its source.
 
 The Sesam Node supports a diverse set of core data sources:
+
+Common properties
+-----------------
+
+All sources have certain properties in common. Some of these are omitted in the documentation of the individual types
+of sources except if the source has different default values for this propery (typically the ``supports_since`` property):
+
+Protoype
+^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-source",
+        "name": "Name of source",
+        "type": "source:type-of-source",
+        "supports_since": false,
+        "source_specific": "properties",
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``_id``
+     - String
+     - The id of the component, this should be unique within a Sesam Node. It may be omitted as part of a pipe
+       configuration, in case it will be generated based on the pipe's ``_id`` property with a ":source" postfix.
+     -
+     - No
+
+   * - ``name``
+     - String
+     - A human redable name of the component. It may be omitted as part of a pipe
+       configuration, in case it will be generated based on the pipe's ``name`` property with a "source" postfix.
+     -
+     - No
+
+   * - ``type``
+     - String
+     - The type of source, it is a enumeration with values from the list of supported sources. See the details in the
+       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a relational type
+       source.
+     - "source:relational"
+     - No
+
+   * - ``supports_since``
+     - Boolean
+     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
+       the beginning each time or not.
+     - false
+     - No
 
 The dataset source
 ------------------
@@ -97,15 +264,20 @@ The dataset source
 The dataset source is one of the most commonly used datasources in a Sesam Node. It simply presents a stream of entities from a
 dataset stored in a Sesam Node. Its configuration is very simple and looks like:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "id-of-source",
-       "type": "source:dataset",
-       "dataset": "id-of-dataset",
-       "supports_since": true,
-       "include_previous_versions": false
+        "type": "source:dataset",
+        "dataset": "id-of-dataset",
+        "supports_since": true,
+        "include_previous_versions": false
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -123,19 +295,29 @@ dataset stored in a Sesam Node. Its configuration is very simple and looks like:
      -
      - Yes
 
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
-       the beginning each time or not.
-     - true
-     -
-
    * - ``include_previous_versions``
      - Boolean
      - If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the latest
        version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:northwind:customers",
+            "type": "source:dataset",
+            "dataset": "northwind:customers",
+            "supports_since": false,
+            "include_previous_versions": true
+        }
+    }
 
 The union datasets source
 -------------------------
@@ -144,15 +326,20 @@ The union datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
 its ``since`` marker handler:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "id-of-source",
-       "type": "source:union_datasets",
-       "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
-       "supports_since": true,
-       "include_previous_versions": false
+        "type": "source:union_datasets",
+        "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
+        "supports_since": true,
+        "include_previous_versions": false
     }
+
+Properties
+^^^^^^^^^^
 
 The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
 
@@ -187,6 +374,25 @@ The configuration of this source is identical to the ``dataset`` source, except 
      - false
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:northwind:customers_and_orders",
+            "type": "source:union_datasets",
+            "datasets": ["northwind:customers", "northwind:orders"],
+            "supports_since": true,
+            "include_previous_versions": true
+        }
+    }
+
+.. _relational_source:
+
 The relational database source
 ------------------------------
 
@@ -194,21 +400,26 @@ The relational database source is one of the most commonly used data sources. In
 (i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
 their default values:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "id-of-source",
-       "type": "source:relational",
-       "external_system": "id-of-external-system",
-       "table": "name-of-table",
-       "primary_key": ["list","of","key","names"],
-       "query": "SQL query string",
-       "updated_query": "SQL query string for 'since' support in queries",
-       "updated_column": "column-name-for-since-support-in-tables',
-       "column_blacklist": ["columns","to","not","include"],
-       "batch_size": 1000,
-       "schema": "default-schema-name-if-included"
+        "type": "source:relational",
+        "external_system": "id-of-external-system",
+        "table": "name-of-table",
+        "primary_key": ["list","of","key","names"],
+        "query": "SQL query string",
+        "updated_query": "SQL query string for 'since' support in queries",
+        "updated_column": "column-name-for-since-support-in-tables",
+        "column_blacklist": ["columns","to","not","include"],
+        "batch_size": 1000,
+        "schema": "default-schema-name-if-included"
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -293,15 +504,84 @@ their default values:
      - 1000
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+Example with a single table:
+
+::
+
+    {
+        "source": {
+            "_id": "source:northwind:customers",
+            "type": "source:relational",
+            "system": "Northwind",
+            "table": "Customers"
+        }
+    }
+
+Example with a single table, where the primary key is in a column named ``table_id`` and the updated datestamp is
+in a column called ``updated``. This enabled to switch on ``since`` support:
+
+::
+
+    {
+        "source": {
+            "_id": "source:my_system:my_table",
+            "type": "source:relational",
+            "system": "my_system",
+            "table": "my_table",
+            "primary_key": "table_id",
+            "updated_column": "updated",
+            "supports_since": true
+        }
+    }
+
+Example with custom query:
+
+::
+
+    {
+        "source": {
+            "_id": "source:northwind:customers",
+            "type": "source:relational",
+            "system": "Northwind",
+            "query": "select * from Customers",
+            "primary_key": "CustomerID"
+        }
+    }
+
+Example with a custom query from a table called ``my_table`` where the primary key is in a column named ``table_id``
+and the updated datestamp is in a column called ``updated``. This enabled to switch on ``since`` support:
+
+::
+
+    {
+        "source": {
+            "_id": "source:my_system:my_table",
+            "type": "source:relational",
+            "system": "my_system",
+            "query": "select * from my_table",
+            "primary_key": "table_id",
+            "updated_column": "updated",
+            "updated_query": "select * from my_table where updated >= {{ since }}",
+            "supports_since": true
+        }
+    }
+
 The CSV source
 --------------
 
 The CSV data source translates the rows of files in ``CSV format`` to entities. The configuration options are:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "source-id-here",
        "type": "source:csv",
        "url": "url-to-csv-file",
        "has_header": true,
@@ -312,6 +592,9 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
        "id_field": "what-column-name-to-use-as-id",
        "delimiter": ","
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -373,6 +656,9 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
      - ","
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
 The RDF source
 --------------
 
@@ -392,14 +678,19 @@ entities on the form:
 RDF blank nodes will be turned into child entities. The configuration
 snippet for the RDF data source is:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-        "_id": "source-id-here",
         "type": "source:rdf",
         "url": "url-to-rdf-file",
         "format": "nt-ttl-or-xml"
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -426,8 +717,10 @@ snippet for the RDF data source is:
        ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
        files.
      - ``nt``
-     - 
+     -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The SDShare source
 ------------------
@@ -436,14 +729,19 @@ The SDShare data source can read ``RDF`` from ``ATOM feeds`` after the
 ``SDShare specification`` (http://sdshare.org). It has the following
 properties:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "data-source-id",
         "type": "source:sdshare",
         "url": "url-to-sdshare-fragments-feed",
         "supports_since": false
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -468,16 +766,20 @@ properties:
      - true
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The LDAP source
 ---------------
 
 The LDAP source provides entities from a ``LDAP catalog``. It supports the following properties:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-        "_id": "id-of-source",
         "type": "source:ldap",
         "host": "FQDN of LDAP host",
         "port": 389,
@@ -492,6 +794,9 @@ The LDAP source provides entities from a ``LDAP catalog``. It supports the follo
         "page_size": 500,
         "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -576,10 +881,19 @@ The LDAP source provides entities from a ``LDAP catalog``. It supports the follo
      - []
      -
 
-The external system source
---------------------------
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
-The external system source [TODO]
+The system source
+-----------------
+
+The system source [TODO]
+
+Prototype
+^^^^^^^^^
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The JSON sources
 ----------------
@@ -591,14 +905,19 @@ JSON file source
 
 The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
 
+Prototype
+~~~~~~~~~
+
 ::
 
     {
-       "_id": "source-id",
-       "type": "source:json_file",
-       "filepath": "path-to-json-file(s)",
-       "notify_read_errors": true
+        "type": "source:json_file",
+        "filepath": "path-to-json-file(s)",
+        "notify_read_errors": true
     }
+
+Properties
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -624,18 +943,26 @@ The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
      - true
      -
 
+Example configuration
+~~~~~~~~~~~~~~~~~~~~~
+
 Remote JSON source
 ^^^^^^^^^^^^^^^^^^
 
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
+Prototype
+~~~~~~~~~
+
 ::
 
     {
-       "_id": "source-id",
        "type": "source:json_remote",
        "url": "url-to-json-file"
     }
+
+Properties
+~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -653,29 +980,47 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
      -
      - Yes
 
+Example configuration
+~~~~~~~~~~~~~~~~~~~~~
+
 The metrics source
 ------------------
 
-The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam Node as a list of ``JSON`` entities. It has no configuration:
+The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam Node as a list
+of ``JSON`` entities. It has no specific configuration:
+
+Prototype
+^^^^^^^^^
 
 ::
 
     {
-       "_id": "source-id",
-       "type": "source:metrics"
+        "_id": "source-id",
+        "name": "Name of source",
+        "type": "source:metrics"
     }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The empty source
 ----------------
 
 Sometimes it is useful for debugging or development purposes to have a data source that doesn't produce any entities:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "the-id-of-the-source",
-       "type": "source:empty"
+        "type": "source:empty"
     }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+.. _sink_section:
 
 Sinks
 =====
@@ -683,18 +1028,25 @@ Sinks
 Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or an external
 system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
 
+.. _dataset_sink:
+
 The dataset sink
 ----------------
 
 The dataset sink writes the entities it is given to an identified dataset. The configuration looks like:
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "id-of-sink",
-       "type": "sink:dataset",
-       "dataset": "id-of-dataset"
+        "type": "sink:dataset",
+        "dataset": "id-of-dataset"
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -713,6 +1065,9 @@ The dataset sink writes the entities it is given to an identified dataset. The c
      -
      - Yes
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
 The InfluxDB sink
 -----------------
 
@@ -723,9 +1078,9 @@ written to it. The expected form of an entity to be written to the sink is:
 ::
 
     {
-       "_id": "toplevel/sublevel/parent/measurement",
-       "property": value,
-       "another_property": another_value,
+        "_id": "toplevel/sublevel/parent/measurement",
+        "property": value,
+        "another_property": another_value,
     }
 
 The ``_id`` property is expected to be a path-style composite value consisting of a top level node, a sublevel node, a parent node
@@ -735,24 +1090,27 @@ in the influxdb database so metrics can be easily searched for in for example Gr
 The rest of the properties on the entity should be on the form ``'string-key: numeric-value'``. There can be more than one
 measurement per metric, for example a histogram of multiple sliding window values.
 
-The sink has a configuration that looks like:
+Prototype
+^^^^^^^^^
 
 ::
 
     {
-       "_id": "id-of-sink",
-       "type": "sink:influxdb",
-       "host": "localhost",
-       "port": 8086,
-       "username": "root",
-       "password": "root",
-       "database": "Sesam Node",
-       "ssl": false,
-       "verify_ssl": false,
-       "timeout": None,
-       "use_udp": false,
-       "udp_port": 4444
+        "type": "sink:influxdb",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "Sesam Node",
+        "ssl": false,
+        "verify_ssl": false,
+        "timeout": None,
+        "use_udp": false,
+        "udp_port": 4444
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -823,6 +1181,9 @@ The sink has a configuration that looks like:
      - 4444
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
 The JSON push sink
 ------------------
 
@@ -830,16 +1191,19 @@ The JSON push sink implements a simple HTTP based protocol where entities or lis
 lists of objects to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
 of entities as JSON is described in more detail here: [TODO].
 
-The configuration is:
+Prototype
+^^^^^^^^^
 
 ::
 
     {
-       "_id": "some-unique-id",
-       "type": "sink:json_push",
-       "endpoint": "url-to-http-endpoint",
-       "batch_size": 1500
+        "type": "sink:json_push",
+        "endpoint": "url-to-http-endpoint",
+        "batch_size": 1500
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -864,6 +1228,9 @@ The configuration is:
      - 1000
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
 The SDShare push sink
 ---------------------
 
@@ -872,17 +1239,22 @@ instead of posting ``JSON`` it translates the inbound entities to
 ``RDF`` and ``POST``s them in ``NTriples`` form to the ``SDShare push
 protocol`` HTTP endpoint.
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "some-unique-sink-id-here",
-       "type": "sink:sdshare_push",
-       "endpoint": "url-to-http-endpoint",
-       "graph": "uri-of-graph-to-post-to",
-       "prefixes": {
-          "a-prefix": "the-expansion"
-       }
+        "type": "sink:sdshare_push",
+        "endpoint": "url-to-http-endpoint",
+        "graph": "uri-of-graph-to-post-to",
+        "prefixes": {
+            "a-prefix": "the-expansion"
+        }
     }
+
+Properties
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -913,6 +1285,8 @@ protocol`` HTTP endpoint.
      -
      - Yes
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The SMS message sink
 --------------------
@@ -923,10 +1297,12 @@ templates (http://jinja.pocoo.org/) with the entities properties available to th
 name can either be fixed in the configuration or given as part of the input entity. Note that the only service supported
 by the sink is ``Twilio``.
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-        "_id": "some-id",
         "type": "sink:sms",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
@@ -939,6 +1315,9 @@ by the sink is ``Twilio``.
         "token": "twilio-api-token",
         "max_per_hour": 1000
     }
+
+Properties
+^^^^^^^^^^
 
 The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
 ``body_template_file_property``:
@@ -1022,6 +1401,9 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - 1000
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
 The mail message sink
 ---------------------
 
@@ -1030,10 +1412,12 @@ constructed either by inline templates or from templates read from disk. These t
 templates`` (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
 name can either be fixed in the configuration or given as part of the input entity.
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-        "_id": "some-id",
         "type": "sink:mail",
         "smtp_server": "localhost",
         "smtp_port": 25,
@@ -1053,6 +1437,9 @@ name can either be fixed in the configuration or given as part of the input enti
         "mail_from": "static@email.address",
         "max_per_hour": 1000
     }
+
+Properties
+^^^^^^^^^^
 
 The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
 ``body_template_file_property``. The same applies to ``subject_template``.
@@ -1184,6 +1571,8 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - 1000
      -
 
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 The null sink
 -------------
@@ -1191,24 +1580,34 @@ The null sink
 The null sink is the equivalent of the empty data source; it will discard any entities written to it and do nothing (it
 never raises an error):
 
+Prototype
+^^^^^^^^^
+
 ::
 
     {
-       "_id": "id-of-sink",
-       "type": "sink:null"
+        "type": "sink:null"
     }
 
-External system
-===============
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
+.. _system_section:
+
+Systems
+=======
+
+.. _task_section:
 
 Task
 ====
 
+.. _pipes_revisited:
 
 Pipes revisited
 ===============
 
+.. _transform_section:
 
 Transforms
 ==========
@@ -1216,14 +1615,19 @@ Transforms
 Transforms can be configured on a pipe by specifying the "``transform``" property:
 
 ::
-   
-   {"_id": "mypipe",
-    "type": "pipe",
-    ...
-    "source": {
+
+   {
+       "_id": "mypipe",
+       "name": "Name of pipe",
+       "type": "pipe",
        ...
-    }.
-    "transform": ...the transform configuration goes here...
+       "source": {
+          ...
+       },
+       ..
+       "transform": {
+           ...the transform configuration goes here...
+       }
     }}
 
 
@@ -1236,40 +1640,45 @@ on the entities stream produced by the data source.
 See :doc:`DTLReferenceGuide` for more details on the transformation
 language itself.
 
-**Example:** Pipe configuration that reads entities from the
-``Northwind:Customers`` dataset and transforms them using the DTL
-transform specified in the "``transform``" key on the source. The
-transformed entities are then written to the ``customer-with-orders``
-dataset.
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Pipe configuration that reads entities from the ``Northwind:Customers`` dataset and transforms them using the DTL
+transform specified in the "``transform``" key on the source. The transformed entities are then written to the
+``customer-with-orders`` dataset.
 
 ::
-   
-   {"_id": "customer-with-orders",
-    "type": "pipe",
-    "source": {
-      "type": "source:dataset",
-      "dataset": "Northwind:Customers"
-    },
-    "transform": {
-        "type": "transform:dtl",
-        "dataset": "Northwind:Customers",
-        "transforms": {
-            "default": [
-                ["copy", "_id"],
-                ["add", "name", "_S.ContactName"],
-                ["add", "orders", ["apply", "order", ["hops", {
-                    "datasets": ["Northwind:Orders o"],
-                    "where": [
-                        ["eq", "_S._id", "o.CustomerID"]
-                    ]
-                }]]]
-            ],
-            "order": [
-                ["add", "order_id", "_S.OrderID"],
-                ["add", "order_date", "_S.OrderDate"]
-            ]
-        }
-    }}
+
+   {
+       "_id": "customer-with-orders",
+       "name": "Customers with orders",
+       "type": "pipe",
+       "source": {
+          "type": "source:dataset",
+          "dataset": "Northwind:Customers"
+       },
+       "transform": {
+           "type": "transform:dtl",
+           "name": "Join customers with their orders",
+           "dataset": "Northwind:Customers",
+            "transforms": {
+                "default": [
+                    ["copy", "_id"],
+                    ["add", "name", "_S.ContactName"],
+                    ["add", "orders", ["apply", "order", ["hops", {
+                        "datasets": ["Northwind:Orders o"],
+                        "where": [
+                            ["eq", "_S._id", "o.CustomerID"]
+                        ]
+                    }]]]
+                ],
+                "order": [
+                    ["add", "order_id", "_S.OrderID"],
+                    ["add", "order_date", "_S.OrderDate"]
+                ]
+            }
+       }
+   }
 
 
 The properties transform
