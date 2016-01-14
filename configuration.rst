@@ -303,7 +303,7 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
     {
        "_id": "source-id-here",
        "type": "source:csv",
-       "filename": "path-to-file",
+       "url": "url-to-csv-file",
        "has_header": true,
        "field_names": ["mappings","from","columns","to","properties"],
        "auto_dialect": true,
@@ -323,9 +323,9 @@ The CSV data source translates the rows of files in ``CSV format`` to entities. 
      - Default
      - Req
 
-   * - ``filename``
+   * - ``url``
      - String
-     - The full path to a file in CSV format (must exist).
+     - The URL of the ``CVS`` file to load.
      -
      - Yes
 
@@ -397,7 +397,7 @@ snippet for the RDF data source is:
     {
         "_id": "source-id-here",
         "type": "source:rdf",
-        "url": "url-to-rdf-file-here",
+        "url": "url-to-rdf-file",
         "format": "nt-ttl-or-xml"
     }
 
@@ -634,7 +634,7 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
     {
        "_id": "source-id",
        "type": "source:json_remote",
-       "fileurl": "URL-to-json-file"
+       "url": "url-to-json-file"
     }
 
 .. list-table::
@@ -647,9 +647,9 @@ The remote ``JSON`` source can read entities from a ``JSON`` file available over
      - Default
      - Req
 
-   * - ``fileurl``
+   * - ``url``
      - String
-     - The full URL to a ``JSON`` file to download and parse
+     - The URL of the ``JSON`` file to load.
      -
      - Yes
 
