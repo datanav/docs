@@ -523,7 +523,7 @@ Example with a single table:
     }
 
 Example with a single table, where the primary key is in a column named ``table_id`` and the updated datestamp is
-in a column called ``updated``. This enabled to switch on ``since`` support:
+in a column called ``updated``. This enables us to switch on ``since`` support:
 
 ::
 
@@ -554,7 +554,7 @@ Example with custom query:
     }
 
 Example with a custom query from a table called ``my_table`` where the primary key is in a column named ``table_id``
-and the updated datestamp is in a column called ``updated``. This enabled to switch on ``since`` support:
+and the updated datestamp is in a column called ``updated``. This enables us to switch on ``since`` support:
 
 ::
 
@@ -659,6 +659,21 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        source: {
+            "_id": "source:country_names",
+            "type": "source:csv",
+            "name": "Country names from CSV source",
+            "url": "http://blog.plsoucy.com/wp-content/uploads/2012/04/countries-20140629.csv",
+            "id_field": "Code",
+            "encoding": "iso-8859-1"
+        }
+    }
+
 The RDF source
 --------------
 
@@ -722,6 +737,20 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        source: {
+            "_id": "source:elvis_impersonators",
+            "type": "source:rdf",
+            "name": "Metadata about Elvis impersonators",
+            "url": "http://www.snee.com/rdf/elvisimp.rdf",
+            "format": "xml",
+        }
+    }
+
 The SDShare source
 ------------------
 
@@ -768,6 +797,19 @@ Properties
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        source: {
+            "_id": "source:enhetsregisteret",
+            "type": "source:sdshare",
+            "name": "Metadata about norwegian companies",
+            "url": "https://open.sesam.io/sdshare/server/1/fragments/enhetsregisteret"
+        }
+    }
 
 The LDAP source
 ---------------
