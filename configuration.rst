@@ -664,7 +664,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 ::
 
     {
-        source: {
+        "source": {
             "_id": "source:country_names",
             "type": "source:csv",
             "name": "Country names from CSV source",
@@ -742,7 +742,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 ::
 
     {
-        source: {
+        "source": {
             "_id": "source:elvis_impersonators",
             "type": "source:rdf",
             "name": "Metadata about Elvis impersonators",
@@ -803,7 +803,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 ::
 
     {
-        source: {
+        "source": {
             "_id": "source:enhetsregisteret",
             "type": "source:sdshare",
             "name": "Metadata about norwegian companies",
@@ -926,6 +926,24 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:enhetsregisteret",
+            "type": "source:ldap",
+            "name": "Bouvet LDAP server data",
+            "host": "dc1.bouvet.no",
+            "port": 389,
+            "username": "bouvet\\some-user",
+            "password": "********",
+            "search_base": "ou=Bouvet,dc=bouvet,dc=no",
+        }
+    }
+
+
 The system source
 -----------------
 
@@ -988,6 +1006,19 @@ Properties
 Example configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:test_json",
+            "type": "source:json_file",
+            "name": "Test JSON source",
+            "filepath": "/sesam/data/test.json",
+        }
+    }
+
 Remote JSON source
 ^^^^^^^^^^^^^^^^^^
 
@@ -1025,6 +1056,19 @@ Properties
 Example configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:test_json_http",
+            "type": "source:json_remote",
+            "name": "Test JSON source via HTTP",
+            "filepath": "https://server.com/sesam/data/test.json",
+        }
+    }
+
 The metrics source
 ------------------
 
@@ -1045,6 +1089,18 @@ Prototype
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:node_metrics",
+            "type": "source:metrics",
+            "name": "Sesam Node Metrics",
+        }
+    }
+
 The empty source
 ----------------
 
@@ -1061,6 +1117,18 @@ Prototype
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "_id": "source:an_empty_source",
+            "type": "source:empty",
+            "name": "An empty source",
+        }
+    }
 
 .. _sink_section:
 
@@ -1109,6 +1177,19 @@ Properties
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:northwind_customer",
+            "type": "sink:dataset",
+            "name": "Northwind Customer dataset sink",
+            "dataset": "Northwind:Customer",
+        }
+    }
 
 The InfluxDB sink
 -----------------
@@ -1226,6 +1307,23 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:to_influx_db",
+            "type": "sink:influxdb",
+            "name": "InfluxDB sink",
+            "host": "localhost",
+            "port": 8086,
+            "username": "root",
+            "password": "root",
+            "database": "my_database",
+        }
+    }
+
 The JSON push sink
 ------------------
 
@@ -1272,6 +1370,19 @@ Properties
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:to_json_push_service",
+            "type": "sink:json_push",
+            "name": "Local JSON push service sink",
+            "endpoint": "http://localhost/json_push_service"
+        }
+    }
 
 The SDShare push sink
 ---------------------
@@ -1329,6 +1440,24 @@ Properties
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:to_sdshare_push_service",
+            "type": "sink:sdshare_push",
+            "name": "Local SDShare push service sink",
+            "endpoint": "http://localhost:8001/sdshare_push_service",
+            "prefixes": {
+                "dc": "http://purl.org/dc/elements/1.1/",
+                "foaf": "http://xmlns.com/foaf/0.1/",
+                "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+            }
+        }
+    }
 
 The SMS message sink
 --------------------
@@ -1445,6 +1574,67 @@ The configuration must contain at most one of ``body_template``, ``body_template
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:sms_messages",
+            "type": "sink:sms",
+            "name": "Send SMS messages",
+            "body_template": "SMS message: {{ message_prop_id }}",
+            "recipients": "+4799887766,+4788776655",
+            "from_number": "+4766554433",
+            "account": "12334567890",
+            "token": "ABCD-ADEF-FAA1-1234",
+            "max_per_hour": 100000
+        }
+    }
+
+For the example above the entities sent to the sink should have at least a single property ``message_prop_id``:
+
+::
+
+    {
+        "_id": "message_id",
+        "message_prop_id": "This is the message to send"
+        "some_other_property": "Some other value"
+    }
+
+An example where the template to use is included in the entity written to the sink:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:sms_messages",
+            "type": "sink:sms",
+            "name": "Send SMS messages",
+            "body_template_property": "body_template_property_id",
+            "recipients": "+4799887766,+4788776655",
+            "from_number": "+4766554433",
+            "account": "12334567890",
+            "token": "ABCD-ADEF-FAA1-1234",
+            "max_per_hour": 100000
+        }
+    }
+
+For the example above the entities sent to the sink should have at least a single property ``body_template_property_id``
+and it also needs to have the properties references in the embedded template:
+
+::
+
+    {
+        "_id": "message_id",
+        "body_template_property_id": "SMS message: {{ message_prop_id }}",
+        "message_prop_id": "This is the message to send"
+        "some_other_property": "Some other value"
+    }
+
+You can also store the JINJA templates on disk and reference them in the same way via filenames instead of embedding
+the templates in config or the entities themselves.
 
 The mail message sink
 ---------------------
@@ -1616,6 +1806,62 @@ The configuration must contain at most one of ``body_template``, ``body_template
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:mail_messages",
+            "type": "sink:mail",
+            "name": "Send mail messages",
+            "smtp_server": "localhost",
+            "smtp_port": 25,
+            "smtp_username": "some-user",
+            "smtp_password": "*********",
+            "body_template": "Mail message body: {{ message_prop_id }}",
+            "subject_template": "Subject: {{ subject_prop_id }}",
+            "recipients": "foo@bar.com,info@example.com",
+            "mail_from": "all@of.us",
+            "max_per_hour": 100000
+        }
+    }
+
+For the example above the entities sent to the sink should have at least a single property ``message_prop_id``:
+
+::
+
+    {
+        "_id": "message_id",
+        "message_prop_id": "This is the message to send"
+        "subject_prop_id": "This is the subject of the message to send"
+        "some_other_property": "Some other value"
+    }
+
+As for the SMS sink, you can either supply a subject or body template embedded in the entities you write to the sink.
+You can also reference filenames either in the config or embedded in the entities.
+
+Example of filenames referenced in the config:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:mail_messages",
+            "type": "sink:mail",
+            "name": "Send mail messages",
+            "smtp_server": "localhost",
+            "smtp_port": 25,
+            "smtp_username": "some-user",
+            "smtp_password": "*********",
+            "body_template_file": "/path/to/file/bodytemplate.jinja"",
+            "subject_template_file": "/path/to/file/subjecttemplate.jinja"",
+            "recipients": "foo@bar.com,info@example.com",
+            "mail_from": "all@of.us",
+            "max_per_hour": 100000
+        }
+    }
+
 The null sink
 -------------
 
@@ -1633,6 +1879,18 @@ Prototype
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "_id": "sink:null_sink",
+            "type": "sink:nill",
+            "name": "Sink that doesn't do anything",
+        }
+    }
 
 .. _system_section:
 
