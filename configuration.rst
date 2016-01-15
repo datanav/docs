@@ -21,20 +21,17 @@ of the Sesam Node from these systems. These configuration entities are *JSON obj
 
     [
         {
-            "_id": "some-node-wide-unique-id"
+            "_id": "some-node-wide-unique-id",
             "name": "Name of component",
             "type": "component-type:component-subtype",
-            "some-property": "some value",
-            ...
+            "some-property": "some value"
         },
         {
-            "_id": "some-other-node-wide-unique-id"
+            "_id": "some-other-node-wide-unique-id",
             "name": "Name of other component",
             "type": "component-type:component-subtype",
-            "some-other-property": "some other value",
-            ...
-        },
-        ...
+            "some-other-property": "some other value"
+        }
     ]
 
 .. _flow_section:
@@ -173,7 +170,7 @@ Example configuration
        },
        "task": {
            "type": "task:datasync",
-           "schedule_interval": "30000"
+           "schedule_interval": 30000
        }
    }
 
@@ -687,7 +684,6 @@ entities on the form:
     {
         "_id": "<subject>",
         "<predicate>": "value"
-        ...
     }
 
 RDF blank nodes will be turned into child entities. The configuration
@@ -932,7 +928,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:enhetsregisteret",
+            "_id": "source:user_data",
             "type": "source:ldap",
             "name": "Bouvet LDAP server data",
             "host": "dc1.bouvet.no",
@@ -1854,8 +1850,8 @@ Example of filenames referenced in the config:
             "smtp_port": 25,
             "smtp_username": "some-user",
             "smtp_password": "*********",
-            "body_template_file": "/path/to/file/bodytemplate.jinja"",
-            "subject_template_file": "/path/to/file/subjecttemplate.jinja"",
+            "body_template_file": "/path/to/file/bodytemplate.jinja",
+            "subject_template_file": "/path/to/file/subjecttemplate.jinja",
             "recipients": "foo@bar.com,info@example.com",
             "mail_from": "all@of.us",
             "max_per_hour": 100000
@@ -1897,10 +1893,340 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 Systems
 =======
 
+A system component represents a computer system that can provide data entities. Its task is to provide common properties
+and services that can be used by several data sources, such as connection pooling, authentication settings,
+communication protocol settings and so on.
+
+.. _relational_system:
+
+The relational system
+---------------------
+
+The relational system component represents a RDBMS and contains the necessary information to establish a connection
+to the RDBMS and manage these connections among the sources that read from it. The configuration of the relational
+system should be made available before any sources that use it. It can also provide source configurations for reading
+from all tables it can introspect from the RDBMS schema.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "relational_system_id",
+        "type": "system:relational",
+        "name": "The Foo Database",
+        "connection_string": "foo://database/SID",
+        "pool_size": 10,
+        "pool_timeout": 30,
+        "pool_max_overflow": 10,
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``connection_string``
+     - String
+     - Contains a SQLAlchemy connection URL used for establishing a connection to the RDBMS. See
+       http://docs.sqlalchemy.org/en/latest/core/engines.html for details of the formatting of this string for the
+       various databases supported. A Sesam Node currently supports SQLite, Oracle, MS SQL Server, MySQL and Postgresql
+       drivers.
+     -
+     - Yes
+
+   * - ``pool_size``
+     - Integer
+     - The target maximum number of concurrent connections to the database
+     - 10
+     -
+
+   * - ``pool_timeout``
+     - Integer
+     - The number of seconds to wait before a idle connection is terminated
+     - 30
+     -
+
+   * - ``pool_max_overflow``
+     - Integer
+     - How many connections over the ``pool_size`` are allowed before refusing to establish a incoming connection. This
+       means that the absolute hard limit of connections in a connection pool is ``pool_size`` + ``pool_max_overflow``.
+     - 10
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Example SQL Lite configuration:
+
+::
+
+    {
+        "_id": "northwind_db",
+        "name": "Northwind example database",
+        "type": "system:relational",
+        "connection_string": "sqlite:///lake/exampledata/Northwind.db"
+    }
+
+Example Oracle configuration:
+
+::
+
+    {
+        "_id": "oracle_db",
+        "name": "Oracle test database",
+        "type": "system:relational",
+        "connection_string": "oracle://system:oracle@oraclecontainer:1521/XE?charset=utf8"
+    }
+
+Example MS SQL Server configuration:
+
+::
+
+    {
+        "_id": "sqlserver_db",
+        "name": "MS SQL Server test database",
+        "type": "system:relational",
+        "connection_string": "mssql+pymssql://user:password@localhost:1433/testdb?charset=utf8"
+    }
+
+
 .. _task_section:
 
 Task
 ====
+
+Tasks are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
+from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The task is also responsible
+for retrying failed writes of entities and logging its activity. It can also log ultimately failed entities to a "dead letter"
+dataset for manual inspection. Tasks log their :ref:`execution history <task_execution_dataset>` in a internal dataset with
+the id "system:task_execution:<task_id>".
+
+Prototype
+---------
+
+::
+
+    {
+        "_id": "task_id",
+        "type": "task:datasync",
+        "name": "My Pipe pump",
+        "schedule_interval": 15000,
+        "cron_expression": "* * * * * *",
+        "rescan_run_count": 10,
+        "rescan_cron_expression": "* * * * * *",
+        "run_at_startup": false,
+        "max_read_retries": 0,
+        "max_retries_per_entity": 5,
+        "max_consecutive_write_errors": 1,
+        "max_write_errors_in_retry_dataset": 0
+        "dead_letter_dataset": "dead-letter-dataset-id",
+    }
+
+Properties
+----------
+
+A note on the required properties: a task configuration needs to have either a ``schedule_interval`` *or* a
+``cron_expression`` property to govern when the task should be run. They are mutually exclusive with the
+``cron_expression`` taking precedence if both are present.
+
+If you are unfamiliar with *cron expressions*, this `tutorial <http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger>`_
+is a good resource for learning about how to format them correctly to achieve the schedule you want.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``schedule_interval``
+     - Integer
+     - The number of milliseconds between runs. It is a required field if no ``cron_expression`` is present. It is
+       mutually exclusive with the ``cron_expression`` property.
+     -
+     - Yes
+
+   * - ``cron_expression``
+     - String
+     - A cron expression that indicates when the task should run. It is a required field if no ``schedule_interval`` is
+       specified. It is mutually exclusive with the ``schedule_interval`` property.
+     -
+     - Yes
+
+   * - ``rescan_run_count``
+     - Integer
+     - How many times the task should run before scheduling a complete rescan of the source of the pipe that the task
+       is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
+     -
+     -
+
+   * - ``rescan_cron_expression``
+     - String
+     - A cron expression that indicates when the task should schedule a full rescan of the source of the pipe the task
+       is part of. It is mutually exclusive with the ``rescan_run_count`` property.
+     -
+     -
+
+   * - ``run_at_startup``
+     - Boolean
+     - A flag that indicates if the task should run when the Sesam Node starts up, in addition to the normal schedule
+       specified by the ``schedule_interval`` or ``cron_expression`` properties.
+     - false
+     -
+
+   * - ``max_read_retries``
+     - Integer
+     - A counter that indicates to the task how many times it should retry when failing to read a entity from a source.
+       The default (0) means that it should not retry but log an error immediately when encountering read errors.
+     - 0
+     -
+
+   * - ``max_retries_per_entity``
+     - Integer
+     - A counter that indicates to the task how many times it should retry a failing entity when writing to a sink before
+       giving up on it, which in case it can optionally write it to a ``dead_letter_dataset`` (if specified).
+     - 5
+     -
+
+   * - ``max_consecutive_write_errors``
+     - Integer
+     - A counter that indicates to the task how many consecutive write errors it tolerates before terminating the
+       current run. The default (1) means it will terminate after the first write error it encounters.
+     - 1
+     -
+
+   * - ``max_write_errors_in_retry_dataset``
+     - Integer
+     - A counter that indicates to the task how many write errors it accepts in its execution history dataset. If the number of
+       retryable and not "dead" failed entities in the dataset exceeds this number, the task will refuse to
+       write any more failed entities to the execution dataset and terminate, even if the ``max_retries_per_entity`` or
+       ``max_retries_per_entity`` is not reached at that point. This purpose of this property is to limit the size of the
+       task execution dataset in the case where a target system is unrechable (or misconfigured). The default value (0) effectively
+       disables retries for write errors.
+     - 0
+     -
+
+Example configuration
+---------------------
+
+
+.. _task_execution_dataset:
+
+The task execution dataset
+--------------------------
+
+The task execution dataset is a log wich contains entities with information about the task execution history. It will always
+contain at least two entities for each time it runs with the ``_id`` "task-started" and either "task-ended" or "task-completed".
+
+The "task-started" entity has the form:
+
+::
+
+    {
+        "_id":  "task-started",
+        "event_type": "task-started",
+        "task_definition": "task-configuration-id",
+        "task_instance": "task-instance-id",
+        "start_time": "iso-timestamp-in-UTC",
+        "source": {
+            "the-full": "configuration-entity-of",
+            "the-source": "at-the-time-the-task-started"
+        },
+        "sink": {
+            "the-full": "configuration-entity-of",
+            "the-sink": "at-the-time-the-task-started"
+        },
+    }
+
+If the task completes successfully, it will write a "task-completed" entity that looks like:
+
+::
+
+    {
+        "_id":  "task-completed",
+        "event_type": "task-completed",
+        "task_definition": "task-configuration-id",
+        "task_instance": "task-instance-id",
+        "start_time": "task-started-timestamp-in-UTC",
+        "end_time": "task-ended-iso-timestamp-in-UTC",
+        "task_started_location": 1234,
+        "retry_entities_exist": false,
+        "entities_succeeded": 123,
+        "entities_failed": 0
+    }
+
+If the task fails for some reason, it will write a "task-failed" entity when it terminates:
+
+::
+
+    {
+        "_id":  "task-failed",
+        "event_type": "task-failed",
+        "task_definition": "task-configuration-id",
+        "task_instance": "task-instance-id",
+        "start_time": "task-started-timestamp-in-UTC",
+        "end_time": "task-ended-iso-timestamp-in-UTC",
+        "task_started_location": 1234,
+        "retry_entities_exist": true,
+        "entities_succeeded": 123,
+        "entities_failed": 10,
+        "task_definition": self.id,
+        "reason_why_stopped": "traceback-info"
+    }
+
+The execution dataset also can contain entities that record failed reads and/or entities wich represents retryable
+entities (from write errors). For read errors the entity's ``_id`` will be a autogenerated GUID. The entity will have the form:
+
+::
+
+    {
+        "_id":  "read-error:<GUID>",
+        "event_type": "read-error",
+        "task_definition": self.id,
+        "task_instance": self.instance_id,
+        "error_code": current_exception.code,
+        "source": self.source.configuration,
+        "event_time": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        "exception": traceback_info,
+        "underlying_exception": getattr(current_exception, "underlying_exception")
+    }
+
+For retryable (write) errors:
+
+::
+
+    {
+        "_id":  "write-error:entity_id",
+        "event_type": "write-error",
+        "task_definition": self.id,
+        "task_instance": self.instance_id,
+        "error_code": getattr(current_exception, "code", -1),
+        "retry_attempts": 0,
+        "retryable": True,
+        "dead": False,
+        "entity": e,
+        "sink": self.sink.configuration,
+        "event_time": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        "exception": traceback_info,
+        "underlying_exception": getattr(current_exception, "underlying_exception")
+    }
+
+
+
+
 
 .. _pipes_revisited:
 
