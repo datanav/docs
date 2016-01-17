@@ -12,6 +12,7 @@ Sesam Data Integration Platform
    Overview <overview>
    Concepts <concepts>
    Developer Guide <developer-guide>
+   Patterns <patterms>
    Sesam Management Studio <management-studio>
    Example <northwind>
 

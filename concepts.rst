@@ -102,6 +102,4 @@ Sesam API
 
 The Sesam API is a RESTful API that exposes the current state of a Sesam Node or cluster and allows clients to manage tasks, register new DTL,
 
-Sesam Command Line
-------------------
 
