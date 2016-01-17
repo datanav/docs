@@ -14,8 +14,8 @@ The results of applying a DTL transformation is a new stream of entities. These 
 
 These concepts are explored in more detail in the following sections.
 
-A Sesam Node
-------------
+Sesam Node
+----------
 
 A Sesam Node is a running process that is capable of hosting instances of the components described below. In addition, each node instance exposes an API and a user interface. Nodes can be organised into clusters with one node acting as the master. In the case of a cluster the API and user interface is exposed from the Master node.
 
@@ -23,16 +23,15 @@ Each Sesam Node has a configuration file or files that describe the set of compo
 
 By convention the config file is called node-config.json and is found in the root folder for the node. (ed - too much detail)
 
-
-Entity Data Model
------------------
-
-The entity data model is a simple model.
-
 DataHub
 -------
 
 The datahub is where Sesam stores all its data. The data it collects from external systems and the data it has transformed is all stored in the datahub. The datahub is comprised of many datasets.
+
+Entity Data Model
+=================
+
+The entity data model is a simple model.
 
 Datasets
 ========
@@ -79,8 +78,11 @@ rescanning the data source from scratch at configurable points in time. If error
 writing an entity later. The retry strategy is configurable in several ways and if a end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
 
 
+Transforms
+----------
+
 Data Transformation Language (DTL)
-----------------------------------
+==================================
 
 The Data Transformation Language is used to construct new data from existing data. DTL transforms can only be applied to data in a dataset. The result of a DTL transform is exposed via DTL provider.
 
