@@ -1047,13 +1047,14 @@ Prototype
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+
 The JSON file source
-----------------
+--------------------
 
 The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
 
 Prototype
-~~~~~~~~~
+^^^^^^^^^
 
 ::
 
@@ -1064,7 +1065,7 @@ Prototype
     }
 
 Properties
-~~~~~~~~~~
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1091,7 +1092,7 @@ Properties
      -
 
 Example configuration
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
 
@@ -1113,7 +1114,7 @@ The JSON remote source
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
 Prototype
-~~~~~~~~~
+^^^^^^^^^
 
 ::
 
@@ -1123,7 +1124,7 @@ Prototype
     }
 
 Properties
-~~~~~~~~~~
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1142,7 +1143,7 @@ Properties
      - Yes
 
 Example configuration
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
 
