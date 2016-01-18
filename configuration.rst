@@ -294,7 +294,7 @@ Properties
 
    * - ``include_previous_versions``
      - Boolean
-     - If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the latest
+     - If set to ``false``, the data source will only return the latest
        version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
@@ -321,7 +321,14 @@ The union datasets source
 
 The union datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
-its ``since`` marker handler:
+its ``since`` marker handler. The union datasets source reads its
+datasets in order, exhausting each one before moving to the next.
+
+The entity ``_id`` property in entities is prefixed by the dataset
+id separated by the ``:`` character. This is done to prevent unwanted
+identity collisions. The entity id ``dave`` from the ``men`` dataset
+will end up with the id ``men:dave``, and the entity id ``claire``
+from the ``women`` dataset will end up with the id ``women:claire``.
 
 Prototype
 ^^^^^^^^^
@@ -330,7 +337,7 @@ Prototype
 
     {
         "type": "source:union_datasets",
-        "datasets": ["a-id-of-dataset","another-id-of-another-dataset"],
+        "datasets": ["id-of-dataset1", "id-of-dataset2"],
         "supports_since": true,
         "include_previous_versions": false
     }
@@ -338,7 +345,8 @@ Prototype
 Properties
 ^^^^^^^^^^
 
-The configuration of this source is identical to the ``dataset`` source, except ``datasets`` can be a list of datasets ids.
+The configuration of this source is identical to the ``dataset``
+source, except ``datasets`` can be a list of datasets ids.
 
 .. list-table::
    :header-rows: 1
@@ -351,34 +359,34 @@ The configuration of this source is identical to the ``dataset`` source, except 
      - Req
 
    * - ``datasets``
-     - List
-     - A list of datasets ids (strings).
+     - List<String>
+     - A list of datasets ids.
      -
      - Yes
 
    * - ``supports_since``
      - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start
-       at the beginning each time or not.
+     - Flag to indicate whether to use a ``since`` marker when reading
+       from the dataset, i.e. to start at the beginning each time or not.
      - true
      -
 
    * - ``include_previous_versions``
      - Boolean
-     - If the ``include_previous_versions`` flag is set to ``false``, the data source will only return the
-       latest version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
-       the ``_id`` property.
+     - If set to ``false``, the
+       data source will only return the latest version of any entity for
+       any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity:
 
 ::
 
-    {
         "source": {
             "_id": "source:northwind:customers_and_orders",
             "type": "source:union_datasets",
@@ -388,8 +396,96 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _relational_source:
+The merge datasets source
+-------------------------
 
+The merge datasets source is similar to the ``dataset source``, except
+it can process several datasets at once and keep track of each one in
+its ``since`` marker handler.
+
+The merge datasets source reads its all of its datasets and returns
+entities ordered by their ``_ts`` field. It knows how to deal with
+identities, so that only the *latest* version of entities are returned.
+
+Entity ids are not modified in any way.
+
+::
+   
+   {
+       "type": "source:merge_datasets",
+       "datasets": ["id-of-dataset1", "id-of-dataset2"],
+       "strategy": "latest",
+       "supports_since": true
+    }
+
+The configuration has two primary properties, ``datasets`` which must
+be a list of datasets ids and ``strategy`` for choosing the merge
+strategy.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``datasets``
+     - List<String>
+     - A list of datasets ids.
+     -
+     - Yes
+
+   * - ``strategy``
+     - String
+     - The name of the strategy to use to merge entities. Valid
+       options are "``latest``" (the default) and "``all``".
+
+       The "``latest``" strategy returns the version of the entity with
+       the newest timestamp (as given in the ``_ts`` field). It will
+       return the entity from the dataset that contains the latest
+       version. This strategy is useful when only the latest version
+       of an entity among the given datasets are of interest.
+
+       The "``all``" strategy returns a merged version of the entity that
+       contains all latest versions from all datasets. The individual
+       dataset entities are keyed under the dataset id that they came
+       from. The entities are ordered by the timestamp of the latest
+       version of that entity. The returned entity contains all latest
+       versions from all datasets where is appears. This strategy is
+       useful when all datasets provide data for the resulting
+       entity. In a lot of cases one may want to use it with a
+       transform, so that only the entity can be shaped in a way that
+       is more useful downstream.
+     - "latest"
+     -
+
+   * - ``supports_since``
+     - Boolean
+     - Flag to indicate whether to use a ``since`` marker when reading
+       from the dataset, i.e. to start at the beginning each time or not.
+     - true
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity:
+
+::
+
+        "source": {
+            "type": "source:merge_datasets",
+            "datasets": ["products", "products-metadata"],
+            "supports_since": true
+        }
+    }
+
+
+.. _relational_source:
 The relational database source
 ------------------------------
 
@@ -951,13 +1047,8 @@ Prototype
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The JSON sources
+The JSON file source
 ----------------
-
-There are several ``JSON`` datasources in the core Sesam Node:
-
-JSON file source
-^^^^^^^^^^^^^^^^
 
 The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
 
@@ -1015,8 +1106,9 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-Remote JSON source
-^^^^^^^^^^^^^^^^^^
+The JSON remote source
+----------------------
+
 
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
