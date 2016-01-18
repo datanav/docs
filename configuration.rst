@@ -3,7 +3,6 @@
 Component configuration guide
 =============================
 
-
 .. contents:: Table of Contents
    :depth: 3
 
@@ -14,8 +13,8 @@ The Sesam Node is configured using *JSON* structures, either on disk or by posti
 concepts to configure for a node is the systems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
 the Sesam Node is configured the same way.
 
-The node configuration is a *JSON list* of system* and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
-of the Sesam Node from these systems. These configuration entities are *JSON objects* on the general form:
+The node configuration is a *JSON array* of system and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
+of the Sesam Node. The configuration entities are *JSON objects* on the general form:
 
 ::
 
@@ -57,11 +56,11 @@ a very efficient handling of entity streams within the Sesam Node.
 Pipes
 =====
 
-A pipe is a *triple* of a :ref:`source <source_section>`, :ref:`sink <sink_section>` and :ref:`data sync task <task_section>`.
-The task "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals.
+A pipe is a *quad* consisting of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and :ref:`datasync task <task_section>`.
+The task "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
 
-The configuration of a pipe has two forms; one "complete" form and one *short hand* form. Let's describe the "complete"
-form first and :ref:`revisit <pipes_revisited>` the shorthand form after describing the various sinks and sources
+The configuration of a pipe has two forms; one *complete* form and one *short hand* form. Let's describe the *complete*
+form first and :ref:`revisit <pipes_revisited>` the *short hand* form after describing the various sinks and sources
 available in the Sesam Node core:
 
 Prototype
@@ -75,6 +74,8 @@ Prototype
         "type": "pipe",
         "short_config": "relational://system/table",
         "source": {
+        },
+        "transform": {
         },
         "sink": {
         },
@@ -120,7 +121,7 @@ Properties
 
    * - ``short_config``
      - String
-     - A connectionstring-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
+     - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
        more information on the format of this property.
      -
      - No
@@ -134,6 +135,16 @@ Properties
      -
      - No
 
+   * - ``transform``
+     - Object/List
+     - Zero or more configuration objects for the :ref:`transform <transform_section>` components of the pipe.
+       The default is to do no transformation of the entities. If a list of more than one transform components is
+       given, then they are chained together in the order given. This means that the output of the first transform
+       is passed as the input of the second, and so on. The output of the last transform is then passed to the
+       sink. The first transform gets its input from the source.
+     -
+     - No
+
    * - ``sink``
      - Object
      - A configuration object for the :ref:`sink <sink_section>` component of the pipe. If omitted, it defaults to
@@ -143,7 +154,7 @@ Properties
 
    * - ``task``
      - Object
-     - A configuration object for the :ref:`task definiton <task_section>` component of the pipe. If omitted, it
+     - A configuration object for the :ref:`task <task_section>` component of the pipe. If omitted, it
        defaults to a :ref:`datasync task <datasync_task>` with its ``source`` and ``sink`` properties set to the
        respective ``_id`` properties of the source and sink respectively (possibly a computed value).
      -
@@ -1452,7 +1463,7 @@ Properties
 
    * - ``batch_size``
      - Integer
-     - The maximum number of entities to accumulate before posting. Note that the remainder of the internal buffe
+     - The maximum number of entities to accumulate before posting. Note that the remainder of the internal buffer
        is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
      - 1000
      -
@@ -2401,6 +2412,33 @@ on the entities stream produced by the data source.
 See :doc:`DTLReferenceGuide` for more details on the transformation
 language itself.
 
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 3, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``dataset``
+     - String
+     - The dataset id from which entities read by the transform originate. This
+       dataset id used when inferring inverse hops.
+     - 
+     - Yes
+
+   * - ``transforms``
+     - Object
+     - The DTL transformation specification. This is an object keyed by the
+       name of the transform. The key ``default`` is mandatory.
+     - 
+     - Yes
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -2440,6 +2478,69 @@ transform specified in the "``transform``" key on the source. The transformed en
             }
        }
    }
+
+
+The JSON Schema validation transform
+------------------------------------
+
+A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document. 
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 3, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``schema``
+     - Object
+     - The JSON schema to validate entities against.
+     - 
+     - Yes
+
+   * - ``key_valid``
+     - String
+     - The field to store the validation result. This is a boolean value,
+       which is true if the entity is valid, otherwise false.
+     - ``valid``
+     - 
+
+   * - ``key_errors``
+     - String
+     - The field to store the validation error messages. The error messages
+       is a list of strings. The field is only added if the entity is invalid.
+     - ``errors``
+     - 
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  {
+      "_id": "men-validated",
+      "type": "pipe",
+      "source": {
+          "type": "dataset",
+          "dataset": "men"
+      },
+      "transform": {
+          "type": "json_schema",
+          "schema": {
+              "type" : "object",
+              "properties" : {
+                  "name" : {"type" : "string"},
+                  "born" : {"type" : "string"}
+              },
+              "required": ["name", "born"]
+          }
+      }
 
 
 The properties transform

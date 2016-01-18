@@ -1,13 +1,20 @@
 The task execution dataset
 ==========================
 
-The task execution dataset is a log (dataset) wich contains entities with information about a particular task's
-execution history. The dataset ``id`` is computed from the task's ``_id`` property as "system:task_execution:<task_id>".
+.. contents:: Table of Contents
+   :depth: 2
 
-It will always contain at least two entities for each time the task runs. The first will have
-the ``_id`` "task-started" and the last either "task-ended" *or* "task-completed". In between these entities, there may be
-entities recording read- and/or write errors. Depending on the task settings, the write errors can then be retried one or
-more times during the next runs.
+The task execution dataset is a log which contains entities with
+information about a particular task's execution history. The dataset
+id is computed from the task's ``_id`` property as
+``system:task_execution:<task_id>``.
+
+It will always contain at least two entities for each time the task
+runs. The first will have the id "task-started" and the last either
+"task-ended" *or* "task-completed". In between these entities,
+there may be entities recording read errors and/or write
+errors. Depending on the task settings, the write errors can then be
+retried one or more times during the next runs.
 
 The task-started entity
 -----------------------
