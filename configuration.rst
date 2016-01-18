@@ -154,8 +154,8 @@ Properties
 
    * - ``task``
      - Object
-     - A configuration object for the :ref:`task <task_section>` component of the pipe. If omitted, it
-       defaults to a :ref:`datasync task <datasync_task>` with its ``source`` and ``sink`` properties set to the
+     - A configuration object for the :ref:`task definition <task_section>` component of the pipe. If omitted, it
+       defaults to a ``datasync`` task with its ``source`` and ``sink`` properties set to the
        respective ``_id`` properties of the source and sink respectively (possibly a computed value).
      -
      - No
@@ -168,7 +168,7 @@ Example configuration
 
    {
        "_id": "northwind-customers",
-       "name": "Northwind customers pipe",
+       "name": "Northwind customers",
        "type": "pipe",
        "source": {
            "type": "source:relational",
@@ -217,7 +217,6 @@ Protoype
 ::
 
     {
-        "_id": "id-of-source",
         "name": "Name of source",
         "type": "source:type-of-source",
         "supports_since": false,
@@ -278,6 +277,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:dataset",
         "dataset": "id-of-dataset",
         "supports_since": true,
@@ -319,7 +319,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:northwind:customers",
             "type": "source:dataset",
             "dataset": "northwind:customers",
             "supports_since": false,
@@ -347,6 +346,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
         "supports_since": true,
@@ -398,8 +398,9 @@ configuration, which is omitted here for brevity:
 
 ::
 
+    {
         "source": {
-            "_id": "source:northwind:customers_and_orders",
+            "name": "Customers and orders",
             "type": "source:union_datasets",
             "datasets": ["northwind:customers", "northwind:orders"],
             "supports_since": true,
@@ -420,14 +421,21 @@ identities, so that only the *latest* version of entities are returned.
 
 Entity ids are not modified in any way.
 
+Prototype
+^^^^^^^^^
+
 ::
    
    {
+       "name": "Name of source",
        "type": "source:merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
        "strategy": "latest",
        "supports_since": true
     }
+
+Properties
+^^^^^^^^^^
 
 The configuration has two primary properties, ``datasets`` which must
 be a list of datasets ids and ``strategy`` for choosing the merge
@@ -489,6 +497,7 @@ configuration, which is omitted here for brevity:
 ::
 
         "source": {
+            "name": "Products with metadata",
             "type": "source:merge_datasets",
             "datasets": ["products", "products-metadata"],
             "supports_since": true
@@ -497,6 +506,7 @@ configuration, which is omitted here for brevity:
 
 
 .. _relational_source:
+
 The relational database source
 ------------------------------
 
@@ -510,6 +520,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:relational",
         "external_system": "id-of-external-system",
         "table": "name-of-table",
@@ -619,7 +630,6 @@ Example with a single table:
 
     {
         "source": {
-            "_id": "source:northwind:customers",
             "type": "source:relational",
             "system": "Northwind",
             "table": "Customers"
@@ -633,7 +643,6 @@ in a column called ``updated``. This enables us to switch on ``since`` support:
 
     {
         "source": {
-            "_id": "source:my_system:my_table",
             "type": "source:relational",
             "system": "my_system",
             "table": "my_table",
@@ -649,7 +658,6 @@ Example with custom query:
 
     {
         "source": {
-            "_id": "source:northwind:customers",
             "type": "source:relational",
             "system": "Northwind",
             "query": "select * from Customers",
@@ -664,7 +672,6 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 
     {
         "source": {
-            "_id": "source:my_system:my_table",
             "type": "source:relational",
             "system": "my_system",
             "query": "select * from my_table",
@@ -686,6 +693,7 @@ Prototype
 ::
 
     {
+       "name": "Name of source",
        "type": "source:csv",
        "url": "url-to-csv-file",
        "has_header": true,
@@ -769,7 +777,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:country_names",
             "type": "source:csv",
             "name": "Country names from CSV source",
             "url": "http://blog.plsoucy.com/wp-content/uploads/2012/04/countries-20140629.csv",
@@ -802,9 +809,10 @@ Prototype
 ::
 
     {
-        "type": "source:rdf",
-        "url": "url-to-rdf-file",
-        "format": "nt-ttl-or-xml"
+       "name": "Name of source",
+       "type": "source:rdf",
+       "url": "url-to-rdf-file",
+       "format": "nt-ttl-or-xml"
     }
 
 Properties
@@ -846,7 +854,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:elvis_impersonators",
             "type": "source:rdf",
             "name": "Metadata about Elvis impersonators",
             "url": "http://www.snee.com/rdf/elvisimp.rdf",
@@ -867,9 +874,10 @@ Prototype
 ::
 
     {
-        "type": "source:sdshare",
-        "url": "url-to-sdshare-fragments-feed",
-        "supports_since": false
+       "name": "Name of source",
+       "type": "source:sdshare",
+       "url": "url-to-sdshare-fragments-feed",
+       "supports_since": false
     }
 
 Properties
@@ -907,7 +915,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:enhetsregisteret",
             "type": "source:sdshare",
             "name": "Metadata about norwegian companies",
             "url": "https://open.sesam.io/sdshare/server/1/fragments/enhetsregisteret"
@@ -925,6 +932,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:ldap",
         "host": "FQDN of LDAP host",
         "port": 389,
@@ -1035,7 +1043,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:user_data",
             "type": "source:ldap",
             "name": "Bouvet LDAP server data",
             "host": "dc1.bouvet.no",
@@ -1070,6 +1077,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:json_file",
         "filepath": "path-to-json-file(s)",
         "notify_read_errors": true
@@ -1111,7 +1119,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:test_json",
             "type": "source:json_file",
             "name": "Test JSON source",
             "filepath": "/sesam/data/test.json",
@@ -1130,6 +1137,7 @@ Prototype
 ::
 
     {
+       "name": "Name of source",
        "type": "source:json_remote",
        "url": "url-to-json-file"
     }
@@ -1162,7 +1170,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:test_json_http",
             "type": "source:json_remote",
             "name": "Test JSON source via HTTP",
             "filepath": "https://server.com/sesam/data/test.json",
@@ -1181,7 +1188,6 @@ Prototype
 ::
 
     {
-        "_id": "source-id",
         "name": "Name of source",
         "type": "source:metrics"
     }
@@ -1195,9 +1201,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:node_metrics",
-            "type": "source:metrics",
-            "name": "Sesam Node Metrics",
+            "name": "Sesam Node Metrics"
+            "type": "source:metrics"
         }
     }
 
@@ -1212,6 +1217,7 @@ Prototype
 ::
 
     {
+        "name": "Name of source",
         "type": "source:empty"
     }
 
@@ -1224,11 +1230,236 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "_id": "source:an_empty_source",
             "type": "source:empty",
             "name": "An empty source",
         }
     }
+
+
+The HTTP endpoint source
+------------------------
+
+This is a special data source that registers an HTTP endpoint that one
+can ``POST`` entities to. Entities posted here will be written to the
+pipe's sink. Both individual entities and lists of entities can be
+posted.
+
+The ``POST`` endpoint will be available at the same location
+as where you can ``GET`` pipe entities. By using the ``HTTP endpoint``
+source you enable ``POST`` support at this endpoint.
+
+::
+
+   http://localhost:9042/pipes/mypipe/entities
+
+A pipe that references the ``HTTP endpoint`` source will not pump, in
+practice this means that a ``datasync`` task is not scheduled for the
+pipe. This means that the only way to push entities through the pipe
+is by posting to the HTTP endpoint.
+
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of source",
+        "type": "source:http_endpoint"
+    }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity:
+
+::
+   
+    {
+        "source": {
+            "name": "Endpoint - events",
+            "type": "source:http_endpoint"
+        },
+    }
+
+
+.. _transform_section:
+
+Transforms
+==========
+
+Transforms sit between the source and the sink. Entities passed from a
+source to a sink, can optionally be passed through a chain of
+transforms before they are passed on to the sink. This makes it
+possible to reshape the entities on their way to the sink. Transforms
+can also be used to filter entities and construct new entities.
+
+Transforms can be configured on a pipe by specifying the
+"``transform``" property. The field is optional, and can contain
+either a transform configuration object or a list of them.
+
+::
+
+   {
+       "_id": "mypipe",
+       "name": "Name of pipe",
+       "type": "pipe",
+       ...
+       "source": {
+          ...
+       },
+       ..
+       "transform": {
+           ...the transform configuration goes here...
+       }
+    }}
+
+
+The DTL transform
+-----------------
+
+This is a transform that lets you apply Data Transformation Language
+transformations on the entities stream produced by the data source.
+
+See :doc:`DTLReferenceGuide` for more details on the transformation
+language itself.
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Pipe configuration that reads entities from the
+``Northwind:Customers`` dataset and transforms them using the Data
+Transformation Language before writing them to the
+``customer-with-orders`` dataset.
+
+::
+
+   {
+       "_id": "customer-with-orders",
+       "name": "Customers with orders",
+       "type": "pipe",
+       "source": {
+          "type": "source:dataset",
+          "dataset": "Northwind:Customers"
+       },
+       "transform": {
+           "type": "transform:dtl",
+           "name": "Join customers with their orders",
+           "dataset": "Northwind:Customers",
+           "transforms": {
+               "default": [
+                   ["copy", "_id"],
+                   ["add", "name", "_S.ContactName"],
+                   ["add", "orders", ["apply", "order", ["hops", {
+                       "datasets": ["Northwind:Orders o"],
+                       "where": [
+                           ["eq", "_S._id", "o.CustomerID"]
+                       ]
+                   }]]]
+               ],
+               "order": [
+                   ["add", "order_id", "_S.OrderID"],
+                   ["add", "order_date", "_S.OrderDate"]
+               ]
+           }
+       }
+   }
+
+
+The properties transform
+------------------------
+
+This transform has the following capabilities:
+
+* Rename properties
+* Delete properties
+
+TODO: Add detailed docs plus examples.
+TODO: Not yet implemented.
+
+
+The JSON Schema validation transform
+------------------------------------
+
+A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document. 
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 3, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``schema``
+     - Object
+     - The JSON schema to validate entities against.
+     - 
+     - Yes
+
+   * - ``key_valid``
+     - String
+     - The field to store the validation result. This is a boolean value,
+       which is true if the entity is valid, otherwise false.
+     - ``valid``
+     - 
+
+   * - ``key_errors``
+     - String
+     - The field to store the validation error messages. The error messages
+       is a list of strings. The field is only added if the entity is invalid.
+     - ``errors``
+     - 
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  {
+      "_id": "men-validated",
+      "type": "pipe",
+      "source": {
+          "type": "dataset",
+          "dataset": "men"
+      },
+      "transform": {
+          "type": "json_schema",
+          "schema": {
+              "type" : "object",
+              "properties" : {
+                  "name" : {"type" : "string"},
+                  "born" : {"type" : "string"}
+              },
+              "required": ["name", "born"]
+          }
+      }
+
+
+The external/remote transform
+-----------------------------
+
+TODO: This is not yet implemented, but the idea is that entities are
+posted to an HTTP endpoint, transformed by the service, and then
+returned.
+
+
+The RDF/CURIE transform
+------------------------
+
+This transform has the following capabilities:
+
+* Add CURIE prefixes to properties
+* Collapse URIs into CURIEs
+
+TODO: Add detailed docs plus examples.
+
 
 .. _sink_section:
 
@@ -1251,6 +1482,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:dataset",
         "dataset": "id-of-dataset"
     }
@@ -1284,7 +1516,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:northwind_customer",
             "type": "sink:dataset",
             "name": "Northwind Customer dataset sink",
             "dataset": "Northwind:Customer",
@@ -1319,6 +1550,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:influxdb",
         "host": "localhost",
         "port": 8086,
@@ -1413,7 +1645,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:to_influx_db",
             "type": "sink:influxdb",
             "name": "InfluxDB sink",
             "host": "localhost",
@@ -1437,6 +1668,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:json_push",
         "endpoint": "url-to-http-endpoint",
         "batch_size": 1500
@@ -1477,7 +1709,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:to_json_push_service",
             "type": "sink:json_push",
             "name": "Local JSON push service sink",
             "endpoint": "http://localhost/json_push_service"
@@ -1498,6 +1729,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:sdshare_push",
         "endpoint": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
@@ -1547,7 +1779,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:to_sdshare_push_service",
             "type": "sink:sdshare_push",
             "name": "Local SDShare push service sink",
             "endpoint": "http://localhost:8001/sdshare_push_service",
@@ -1574,6 +1805,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:sms",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
@@ -1681,7 +1913,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:sms_messages",
             "type": "sink:sms",
             "name": "Send SMS messages",
             "body_template": "SMS message: {{ message_prop_id }}",
@@ -1699,7 +1930,7 @@ For the example above the entities sent to the sink should have at least a singl
 
     {
         "_id": "message_id",
-        "message_prop_id": "This is the message to send"
+        "message_prop_id": "This is the message to send",
         "some_other_property": "Some other value"
     }
 
@@ -1709,7 +1940,6 @@ An example where the template to use is included in the entity written to the si
 
     {
         "sink": {
-            "_id": "sink:sms_messages",
             "type": "sink:sms",
             "name": "Send SMS messages",
             "body_template_property": "body_template_property_id",
@@ -1729,7 +1959,7 @@ and it also needs to have the properties references in the embedded template:
     {
         "_id": "message_id",
         "body_template_property_id": "SMS message: {{ message_prop_id }}",
-        "message_prop_id": "This is the message to send"
+        "message_prop_id": "This is the message to send",
         "some_other_property": "Some other value"
     }
 
@@ -1750,6 +1980,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:mail",
         "smtp_server": "localhost",
         "smtp_port": 25,
@@ -1912,7 +2143,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:mail_messages",
             "type": "sink:mail",
             "name": "Send mail messages",
             "smtp_server": "localhost",
@@ -1933,8 +2163,8 @@ For the example above the entities sent to the sink should have at least a singl
 
     {
         "_id": "message_id",
-        "message_prop_id": "This is the message to send"
-        "subject_prop_id": "This is the subject of the message to send"
+        "message_prop_id": "This is the message to send",
+        "subject_prop_id": "This is the subject of the message to send",
         "some_other_property": "Some other value"
     }
 
@@ -1947,7 +2177,6 @@ Example of filenames referenced in the config:
 
     {
         "sink": {
-            "_id": "sink:mail_messages",
             "type": "sink:mail",
             "name": "Send mail messages",
             "smtp_server": "localhost",
@@ -1974,6 +2203,7 @@ Prototype
 ::
 
     {
+        "name": "Name of sink",
         "type": "sink:null"
     }
 
@@ -1986,7 +2216,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "_id": "sink:null_sink",
             "type": "sink:nill",
             "name": "Sink that doesn't do anything",
         }
@@ -2112,7 +2341,7 @@ Tasks
 Tasks are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
 from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The task is also responsible
 for retrying failed writes of entities and logging its activity. It can also log ultimately failed entities to a "dead letter"
-dataset for manual inspection. Tasks log their :ref:`execution history <task_execution_dataset>` in a internal dataset with
+dataset for manual inspection. Tasks log their :doc:`execution history <task-execution>` in a internal dataset with
 the id "system:task_execution:<task_id>". See the :doc:`chapter on the task execution dataset <task-execution>` for more
 details about the contents of this dataset.
 
@@ -2235,7 +2464,7 @@ A scheduled task running every 30 seconds, no retries or dead letter dataset:
 
     {
         "task": {
-           "_id": "task_id",
+           "_id": "task_id",  # TODO: is this required / neccessary?
            "type": "task:datasync",
            "name": "My Pipe pump",
            "schedule_interval": 30000
@@ -2332,14 +2561,12 @@ to this fully expanded pipe configuration:
            "_id": "Northwind:Orders",
            "type": "pipe",
            "source": {
-               "_id": "source:Northwind:Orders",
                "name": "Orders from northwind - source",
                "type": "relational",
                "system": "Northwind",
                "table": "Orders"
            },
            "sink": {
-               "_id": "sink:Northwind:Orders",
                "name": "Orders from northwind - sink",
                "type": "datset",
                "dataset": "Northwind:Orders"
@@ -2378,186 +2605,3 @@ changing the task schedule and startup flag:
            }
         }
     ]
-
-.. _transform_section:
-
-Transforms
-==========
-
-Transforms can be configured on a pipe by specifying the "``transform``" property:
-
-::
-
-   {
-       "_id": "mypipe",
-       "name": "Name of pipe",
-       "type": "pipe",
-       ...
-       "source": {
-          ...
-       },
-       ..
-       "transform": {
-           ...the transform configuration goes here...
-       }
-    }}
-
-
-The DTL transform
------------------
-
-This transform lets you apply Data Transformation Language transformations
-on the entities stream produced by the data source.
-
-See :doc:`DTLReferenceGuide` for more details on the transformation
-language itself.
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 3, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``dataset``
-     - String
-     - The dataset id from which entities read by the transform originate. This
-       dataset id used when inferring inverse hops.
-     - 
-     - Yes
-
-   * - ``transforms``
-     - Object
-     - The DTL transformation specification. This is an object keyed by the
-       name of the transform. The key ``default`` is mandatory.
-     - 
-     - Yes
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-Pipe configuration that reads entities from the ``Northwind:Customers`` dataset and transforms them using the DTL
-transform specified in the "``transform``" key on the source. The transformed entities are then written to the
-``customer-with-orders`` dataset.
-
-::
-
-   {
-       "_id": "customer-with-orders",
-       "name": "Customers with orders",
-       "type": "pipe",
-       "source": {
-          "type": "source:dataset",
-          "dataset": "Northwind:Customers"
-       },
-       "transform": {
-           "type": "transform:dtl",
-           "name": "Join customers with their orders",
-           "dataset": "Northwind:Customers",
-            "transforms": {
-                "default": [
-                    ["copy", "_id"],
-                    ["add", "name", "_S.ContactName"],
-                    ["add", "orders", ["apply", "order", ["hops", {
-                        "datasets": ["Northwind:Orders o"],
-                        "where": [
-                            ["eq", "_S._id", "o.CustomerID"]
-                        ]
-                    }]]]
-                ],
-                "order": [
-                    ["add", "order_id", "_S.OrderID"],
-                    ["add", "order_date", "_S.OrderDate"]
-                ]
-            }
-       }
-   }
-
-
-The JSON Schema validation transform
-------------------------------------
-
-A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document. 
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 3, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``schema``
-     - Object
-     - The JSON schema to validate entities against.
-     - 
-     - Yes
-
-   * - ``key_valid``
-     - String
-     - The field to store the validation result. This is a boolean value,
-       which is true if the entity is valid, otherwise false.
-     - ``valid``
-     - 
-
-   * - ``key_errors``
-     - String
-     - The field to store the validation error messages. The error messages
-       is a list of strings. The field is only added if the entity is invalid.
-     - ``errors``
-     - 
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-::
-
-  {
-      "_id": "men-validated",
-      "type": "pipe",
-      "source": {
-          "type": "dataset",
-          "dataset": "men"
-      },
-      "transform": {
-          "type": "json_schema",
-          "schema": {
-              "type" : "object",
-              "properties" : {
-                  "name" : {"type" : "string"},
-                  "born" : {"type" : "string"}
-              },
-              "required": ["name", "born"]
-          }
-      }
-
-
-The properties transform
-------------------------
-
-The properties transform has the following capabilities:
-
-* Add CURIE prefixes to properties
-* Rename properties
-* Collapse URIs into CURIEs
-
-TODO: Add detailed docs plus examples.
-
-
-The remote transform
---------------------
-
-TODO: This is not yet implemented, but the idea is that entities are
-posted to an HTTP endpoint, transformed by the service, and then
-returned.
