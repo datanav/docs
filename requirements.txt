@@ -1,0 +1,5 @@
+sphinx==1.3.1
+pyaml==15.8.2
+sphinx-argparse==0.1.15
+cornice==1.1.0
+guzzle-sphinx-theme==0.7.11
