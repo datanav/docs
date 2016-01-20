@@ -2,11 +2,18 @@
 Concepts
 ========
 
-Sesam is a collector, manipulator and producer of data. It collects raw data from source systems and stores it in a datahub in the form of datasets. Data Transformations can then be defined and executed to construct new datasets. Data from these datasets is then exposed and delivered to external systems.
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
+Introduction
+------------
+
+Sesam is a collector, manipulator and producer of data. It collects raw data from source systems and stores it in nodes in the form of datasets. Data transformations can be defined and executed to construct new datasets. Data from these datasets can be exposed and delivered to other systems.
 
 Sesam produces and consumes streams of data. Each stream contains a number of data entities each of whom consists of a number of key / property values and a special property called "_id".
 
-Components called datasources expose data from source systems such as REST APIs and Relational Databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks write the entities to datasets. A dataset is a log of entities supported by indexes for random access.
+Components called data sources expose data from source systems such as REST APIs and relational databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks write the entities to datasets. A dataset is a log of entities supported by indexes for random access.
 
 Datasets also act as data sources. They can expose the data they contain. However, a more common usage is to transform the data from a dataset into a new shape or representation. This is done using the Data Transformation Language (DTL). The DTL is optimised for ease of use in stream and graph processing and the construction of new data entities. DTL transformations can use data from many datasets to construct new entities.
 
@@ -14,44 +21,40 @@ The results of applying a DTL transformation is a new stream of entities. These 
 
 These concepts are explored in more detail in the following sections.
 
-Sesam Node
-----------
+Node
+----
 
-A Sesam Node is a running process that is capable of hosting instances of the components described below. In addition, each node instance exposes an API and a user interface. Nodes can be organised into clusters with one node acting as the master. In the case of a cluster the API and user interface is exposed from the Master node.
+A *node* is a running process that is capable of hosting instances of the components described below. In addition, each node instance exposes a service API and a graphical user interface. Nodes can be organised into clusters with one node acting as the master. In the case of a cluster the API and user interface is exposed from the master node.
 
-Each Sesam Node has a configuration file or files that describe the set of components that should be instantiated and run by the node. These files are themselves just a serialised set of data entities. Each entity is the configuration for one component. Any changes to the file will result in a component being reconfigured but only if the data for actual component changes.
+The node has a configuration file, ```node-config.json``, that describe the set of components that should be instantiated and run by the node. These files are themselves just a serialised set of data entities. Each entity is the configuration for one component. Any changes to the file will result in a component being reconfigured but only if the data for actual component changes.
 
-By convention the config file is called node-config.json and is found in the root folder for the node. (ed - too much detail)
-
-DataHub
--------
-
-The datahub is where Sesam stores all its data. The data it collects from external systems and the data it has transformed is all stored in the datahub. The datahub is comprised of many datasets.
-
-Entity Data Model
-=================
-
-The entity data model is a simple model.
+The node stores entities in datasets. A node can have any number of these.
 
 Datasets
-========
+--------
 
-A dataset is the basic means of storage inside the Sesam datahub. A dataset is a log of entities supported by primary and secondary indexes. A dataset sink can write entities to the dataset. The dataset stores the entity in the log if and only if it is new or different from an existing entity with the same identity.
+A dataset is the basic means of storage inside the node. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A ``dataset`` sink can write entities to the dataset. The dataset stores the entity in the log if and only if it is new or if it is different from an existing entity with the same identity.
 
-A dataset (data) source exposes the entities from the log so that they can be consumed by an external system or used by data transormations. As the main data structure is a log the source can read from a specific point in the log.
+A ``dataset`` source exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
 
-Data transformations can be applied to datasets. A data transformation takes a stream of entities and transforms them into a new stream of entities. A transform can query across many other datasets in order to create the new entity.
+Systems
+-------
+
+A *system* is any database or API that could be used as a source of data for the node or as the target of transformed entities coming out of the node. The system components in the node are a way to represent the actual systems being connected, or integrated.
+
+The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how the node consumes or delivers data.
 
 
 Pipes
 -----
 
-A data pipe is any combination of source, sync task and sink. It is a simple way to talk about the flow of data from a source to a target system. The pipe is the only way to specify a stream of entities from a source to a sink in a node.
+A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is the only way to specify how entities stream from dataset to dataset in a node.
 
-Data Sources
-============
 
-A Data Source (source) is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a relational database table, the rows in a CSV file, or data from an API.
+Sources
+=======
+
+A data *source* is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a relational database table, the rows in a CSV file, or data from an API.
 
 The source component offers an object called a Data Source Reader which has one capability which is 'getEntities'. This 'reader' object is immune to changes to the configuration of its parent source during its lifetime.
 
@@ -63,10 +66,16 @@ Each entity returned by a data source reader is a dictionary that maps keys to v
 Sesam offers a number of core built-in data sources but it is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints.
 
 
+Transforms
+==========
+
+Entities streaming through a pipe can be transformed on their way from the source to the sink. A transformation chain takes a stream of entities, transforms them, and creates a new stream of entities. A transform can query across many other datasets in order to enrich or create entities.
+
+
 Sinks
 =====
 
-Sinks are components which can consume entities fed to them through 'Sink Writer' objects provided by a 'Data Sink' object. The sink writer has the resposibility to write these entites to the target, handle transactional
+A data *sink* is a components that can consume entities fed to them through 'Sink Writer' objects provided by a 'Data Sink' object. The sink writer has the resposibility to write these entites to the target, handle transactional
 boundaries and potentially batching of multiple entities if supported by the target system. The 'Sink Writer' object inherits its parent sink's configuration settings but is immutable to changes to this durings its life time.
 Several types of data sinks are supplied with the core service. Using the JSON push sink enables you to transfer entities to remote nodes.
 
@@ -77,24 +86,27 @@ The data sync task handles the mechanics of 'pumping' data from a source to a si
 rescanning the data source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry
 writing an entity later. The retry strategy is configurable in several ways and if a end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
 
+Change tracking
+---------------
 
-Transforms
-----------
+TODO: explain
 
-Data Transformation Language (DTL)
-==================================
+Dependency Tracking
+-------------------
+
+TODO: explain
+
+Retention Policies
+------------------
+
+TODO: explain
+
+The Data Transformation Language (DTL)
+--------------------------------------
 
 The Data Transformation Language is used to construct new data from existing data. DTL transforms can only be applied to data in a dataset. The result of a DTL transform is exposed via DTL provider.
 
 DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', 'merge' for
-
-
-External Systems
-----------------
-
-An external system is any database, or application API that could be used as a source of data for the DataLake or as the target of transformed entities coming out of the DataLake. The External System components in the DataLake are a way to represent the actual systems being connected, or integrated.
-
-The External System component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the Sesam Admin User Interface to quickly and efficiently configure how the DataLake consumes or delivers data.
 
 
 Sesam API

@@ -2,13 +2,20 @@
 Overview
 ========
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems into a datahub. Data from source systems is stored in datasets in the datahub. A dataset is a log of data entities with additional indexes for random access and lookups. Data is fetched from the source systems on a regular basis and the entities are stored in the log only if they have changed from the last time the entity was seen.
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
 
-Entities in the datasets can be processed using the Data Transformation Language. DTL takes a stream of entities as input and exposes a new set of entities. It can join data from other datasets to create new entities. Data produced via DTL can be stored in new datasets to be exposed or sent to applications that need it.
+Introduction
+------------
+
+Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems, transforming data, and pushing or providing data to target systems. Sesam stores data in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched from the source systems on a regular basis and the entities are stored in the log only if they have changed from the last time the entity was seen.
+
+Entities in the datasets can be processed using the Data Transformation Language. DTL takes a stream of entities as input and returns a new stream of transformed entities. It can join data from other datasets to create new entities. Data produced via DTL can be stored in new datasets to be exposed or sent to applications that need it.
 
 The final piece of Sesam is to deliver data from a dataset to a sink. Sinks are used to write data into target systems or send it to service endpoints.
 
-Sesam provides implementations for many types of DataSources, including relational databases, LDAP, and MongoDB. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
+Sesam provides implementations for many types of data sources, including relational databases, LDAP, and MongoDB. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
 
 Installation
 ------------
@@ -29,6 +36,4 @@ Getting Started
 
   docker run sesam/sesam-node
 
-
-
-
+TODO: add information about what volumes to bind.

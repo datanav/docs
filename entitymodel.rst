@@ -2,6 +2,10 @@
 Entity Data Model
 =================
 
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
 Sesam uses an entity data model as the core representation of
 data. Each entity is a dictionary of key-value pairs. Each key is a
 string and the value can be either a literal value, a list or another
@@ -48,7 +52,7 @@ level, so child entities can have them.
      - Yes
 
    * - ``_deleted``
-     - If ``true`` then the entity is deleted. All other values are
+     - If ``true``, then the entity is deleted. All other values are
        interpreted as if the entity is not deleted.
      -
 
@@ -63,10 +67,10 @@ level, so child entities can have them.
 
    * - ``_hash``
      - A string containing the hash of the entity's content. This value
-       is used to decide when an entity has changed.
+       is used to decide when an entity has changed. Of the reserved
+       fields, only ``_id`` and ``_deleted`` contribute to the hash value.
 
-       *This field is generated automatically when writing an entity
-        to a dataset.*
+       *This field is generated automatically when writing an entity to a dataset.*
      -
 
    * - ``_previous``
@@ -75,8 +79,7 @@ level, so child entities can have them.
        version. If the field is missing or the value is
        ``null``, then there exists no previous version.
 
-       *This field is generated automatically when writing an entity
-        to a dataset.*
+       *This field is generated automatically when writing an entity to a dataset.*
      -
 
    * - ``_ts``
@@ -85,18 +88,17 @@ level, so child entities can have them.
        of seconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
        
-       *This field is generated automatically when writing an entity
-        to a dataset.*
+       *This field is generated automatically when writing an entity to a dataset.*
      -
 
 
-Standard datatypes
+Standard types
 ------------------
 
 Entities are mapped to and from JSON objects, so they support the same
-datatypes as JSON does. Because JSON only supports a limited number of
-datatypes there is also limited support for `Transit
-<https://github.com/cognitect/transit-format>`_ datatypes.
+data types as JSON does. Because JSON only supports a limited number of
+data types there is also limited support for `Transit
+<https://github.com/cognitect/transit-format>`_ data types.
 
 .. list-table::
    :header-rows: 1
@@ -115,19 +117,18 @@ datatypes there is also limited support for `Transit
      - ``["abc", 123, [4, 5], {"x": "y"}]``
 
    * - String
-     - A string value. Maximum size is 4294967296 bytes.
+     - A string value. Maximum length is 4294967296 bytes.
      - ``"abc"``
 
    * - Integer
-     - An integer value. The valid range is between ``-9223372036854775808``
-       and ``9223372036854775807``.
+     - An integer value.
      - ``123``
 
    * - Decimal
      - A decimal number. The valid range is the IEEE 754 binary 64 format,
        because we're currently storing the value as a double-precision
        floating-point number. Note that you may loose precision when using
-       this datatype.
+       this data type.
      - ``123.456``
 
    * - Boolean
@@ -138,8 +139,8 @@ datatypes there is also limited support for `Transit
      - A null value. Typically used to represent a missing value.
      - ``null``
 
-Extension types (Transit encoded)
-----------------------------------
+Extension types
+---------------------------------
 
 `Transit <https://github.com/cognitect/transit-format>`_ encoded
 values are represented as strings in JSON. The value is prefixed by
@@ -161,8 +162,8 @@ types that are not recognized will be treated as string values.
 
    * - Datetime
      - Date and time with up to nanoseconds precision. The valid range is
-       from ``"~t1677-09-21T00:12:43.145224192Z"`` to
-       ``"~t2262-04-11T23:47:16.854775807Z"``. The date and time parts
+       from ``"~t0001-01-01T00:00:00Z"`` to
+       ``"~t9999-12-31T23:59:59.123456789Z"``. The date and time parts
        of the string are mandatory. The fraction of a second is optional.
        The value must always be in UTC, so the ``Z`` at the end is mandatory.
      - ``"~t2015-01-02T03:04:05.123456789Z"``, ``"~t1973-01-22T23:11:54Z"``
