@@ -1,4 +1,3 @@
-
 =============================
 Component configuration guide
 =============================
@@ -426,7 +425,7 @@ Prototype
 ^^^^^^^^^
 
 ::
-   
+
    {
        "name": "Name of source",
        "type": "source:merge_datasets",
@@ -497,6 +496,7 @@ configuration, which is omitted here for brevity:
 
 ::
 
+    {
         "source": {
             "name": "Products with metadata",
             "type": "source:merge_datasets",
@@ -504,7 +504,6 @@ configuration, which is omitted here for brevity:
             "supports_since": true
         }
     }
-
 
 .. _relational_source:
 
@@ -1276,7 +1275,7 @@ The outermost object would be your :ref:`pipe <pipe_section>`
 configuration, which is omitted here for brevity:
 
 ::
-   
+
     {
         "source": {
             "name": "Endpoint - events",
@@ -1284,6 +1283,160 @@ configuration, which is omitted here for brevity:
         },
     }
 
+
+.. _fake_source:
+
+The fake source
+---------------
+
+This is a utility data source intended to be used to quickly mock up syntetic data for testing purposes.
+It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ package in conjunction with a entity
+template to produce custom entities that can be consumed by a sink. Fake sources that can be connected can be constructed
+by using the shared id pools of the related :ref:`Fake System <fake_system>` component.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of source",
+        "type": "source:fake",
+        "entities": 1234,
+        "external_system": "fake-system-id",
+        "template": {
+            "_id": "system:some_id_pool",
+            "some_property": "fake_factory_method_name"
+        }
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``external_system``
+     - String
+     - The id of a :ref:`Fake System <fake_system>` component. It is only required if the ``template`` property contain
+       fields using a "system:<pool_id>" value to generate id fields from a predefined population (i.e. so datasets can be
+       linked).
+     -
+     -
+
+   * - ``entities``
+     - Integer
+     - The number of entities to generate. Note that the shared ids in the :ref:`Fake System <fake_system>` component
+       should take this into account. If the pool size is less than the number of entities to generate, an error will
+       be raised.
+     -
+     - Yes
+
+   * - ``template``
+     - Object
+     - A entity template for the generation. It needs to contain at least a ``_id`` property for the entity to be valid.
+       Se the example configurations for more details on how this template works.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity.
+
+A source that generates a typical person entity via various `Fake Factory providers <http://fake-factory.readthedocs.org/en/latest/providers/faker.providers.person.html>`_.
+
+::
+
+    {
+        "source": {
+            "name": "Fake people",
+            "type": "source:fake",
+            "entities": 100,
+            "template": {
+                "_id": "uuid4",
+                "last_name": "last_name",
+                "first_name": "first_name",
+                "address": "address",
+                "telephone": "phone_number",
+                "email": "email",
+                "employer": "company"
+            }
+        },
+    }
+
+The general form of a template property is "property_name": "fake_factory_provider_name". For generating id properties
+from a fixed set (to be able to link entities from different sources together), a special syntax for the value part
+is used: "shared_id_propery": "system:<pool_id_from_fake_system_component>". These shared id pools are configured
+as part of the :ref:`Fake System <fake_system>` component, and you have to include its id in the ``external_system``
+property. Here's an example of two pipes with sources for fake employee and employer (company) entities using a shared pool
+of ids for the employer id:
+
+.. _fake_system_example:
+
+::
+
+    [
+        {
+            "_id": "employers_employees",
+            "type": "external_system:fake",
+            "name": "Employees and employers system",
+            "id_pools": {
+                "employers": {
+                    "seed": 1234,
+                    "min": 1,
+                    "max": 1000
+                }
+            }
+        },
+        {
+            "_id": "employees",
+            "name": "Employees",
+            "type": "pipe",
+            "source": {
+                "name": "Fake employees source",
+                "type": "source:fake",
+                "external_system": "employers_employees",
+                "entities": 100,
+                "template": {
+                    "_id": "uuid4",
+                    "last_name": "last_name",
+                    "first_name": "first_name",
+                    "address": "address",
+                    "telephone": "phone_number",
+                    "email": "email",
+                    "employer": "system:employers"
+                }
+            }
+        },
+        {
+            "_id": "employers",
+            "name": "Employers",
+            "type": "pipe",
+            "source": {
+                "name": "Fake employers source",
+                "type": "source:fake",
+                "external_system": "employers_employees",
+                "entities": 100,
+                "template": {
+                    "_id": "system:employers",
+                    "name": "company",
+                    "address": "address",
+                    "email": "company_email",
+                    "home_page": "uri"
+                }
+            }
+        }
+    ]
 
 .. _transform_section:
 
@@ -1383,7 +1536,7 @@ TODO: Not yet implemented.
 The JSON Schema validation transform
 ------------------------------------
 
-A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document. 
+A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document.
 
 Properties
 ^^^^^^^^^^
@@ -1401,7 +1554,7 @@ Properties
    * - ``schema``
      - Object
      - The JSON schema to validate entities against.
-     - 
+     -
      - Yes
 
    * - ``key_valid``
@@ -1409,14 +1562,14 @@ Properties
      - The field to store the validation result. This is a boolean value,
        which is true if the entity is valid, otherwise false.
      - ``valid``
-     - 
+     -
 
    * - ``key_errors``
      - String
      - The field to store the validation error messages. The error messages
        is a list of strings. The field is only added if the entity is invalid.
      - ``errors``
-     - 
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1452,7 +1605,7 @@ returned.
 
 
 The RDF/CURIE transform
-------------------------
+-----------------------
 
 This transform has the following capabilities:
 
@@ -2333,6 +2486,82 @@ Example MS SQL Server configuration:
         "connection_string": "mssql+pymssql://user:password@localhost:1433/testdb?charset=utf8"
     }
 
+.. _fake_system:
+
+The fake system
+---------------
+
+The fake component represents a generic fake data source. It is meant to be used in conjunction with the :ref:`fake source <fake_source>`
+to produce test data, and is responsible for providing fixed sets of ids so "fake" entities from different fake sources
+can be linked.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "fake_system_id",
+        "type": "system:fake",
+        "name": "The Fake System",
+        "id_pools": {
+            "pool1": {
+               "seed": 1234,
+               "min": 1,
+               "max": 10
+            },
+            "pool2": {
+               "seed": 1234,
+               "min": 100,
+               "max": 10000
+            }
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``id_pools``
+     - Object
+     - Contains a mapping of names pool objects that can be used by a :ref:`fake source <fake_source>` to draw
+       id values from. The values are integers (which is cast to a string for ``_id`` properties) and the maximum number
+       of entries in the set is given by ``max``-``min``. The number of ``entities`` of a fake source must not exceed
+       this number, or an error will be raised (i.e. it should be equal or less).
+     -
+     - Yes
+
+   * - ``seed``
+     - Integer
+     - A random seed to be used with the pool.
+     - 1234
+     -
+
+   * - ``min``
+     - Integer
+     - The minimum value in the pool set
+     - 0
+     -
+
+   * - ``max``
+     - Integer
+     - The maximum value in the pool set
+     - 100000000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`example configuration <fake_system_example>` in the fake source section.
 
 .. _task_section:
 
