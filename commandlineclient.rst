@@ -1,6 +1,6 @@
-==================
-Commandline client
-==================
+===================
+Command line client
+===================
 
 
 .. argparse::

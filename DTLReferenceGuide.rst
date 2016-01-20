@@ -3,6 +3,8 @@ DTL Reference Guide
 ===================
 
 .. contents:: Table of Contents
+   :depth: 2
+   :local:
 
 
 Introduction
@@ -319,11 +321,8 @@ Dependency Tracking
 TODO: Explain how this works.
 
 
-Notation
-========
-
 Argument types
---------------
+==============
 
 In the function tables below you'll see argument lists like this
 ``CONDITION(boolean-expression{1}), THEN(transforms{1}), ELSE(transforms{0|1})``.

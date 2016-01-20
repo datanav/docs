@@ -2,6 +2,10 @@
 Patterns
 ========
 
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
 Sesam provides powerful data management, transformation and delivery capabilities that are easy to misuse. This section helps to guide developers in the best ways to use the Sesam platform.
 
 

@@ -5,9 +5,9 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-   Sesam Node Configuration <configuration>
+   Node Configuration <configuration>
    Entity Data Model <entitymodel>
    Data Transformation Language (DTL) <DTLReferenceGuide>
-   Sesam Service API <api>
-   Sesam Client <commandlineclient>
+   Service API <api>
+   Command Line Client <commandlineclient>
    Cluster Configuration <cluster-config>
