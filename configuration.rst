@@ -522,7 +522,7 @@ Prototype
     {
         "name": "Name of source",
         "type": "source:relational",
-        "external_system": "id-of-external-system",
+        "system": "id-of-system",
         "table": "name-of-table",
         "primary_key": ["list","of","key","names"],
         "query": "SQL query string",
@@ -546,9 +546,9 @@ Properties
      - Default
      - Req
 
-   * - ``external_system``
+   * - ``system``
      - String
-     - Must refer to an ``external system`` component by ``id``. The role of this component is provide services like connection
+     - Must refer to a ``system`` component by ``id``. The role of this component is provide services like connection
        pooling and authentication for the data sources using it
      -
      - Yes
@@ -575,7 +575,7 @@ Properties
    * - ``query``
      - String
      - Must be a valid query in the dialect of the ``RDBMS`` represented by the
-       ``external_system`` property. You will also have to configure the primary key(s)
+       ``system`` property. You will also have to configure the primary key(s)
        of the query in the ``primary_key`` property. Note: mutually exclusive with the
        ``table`` property with ``table`` taking precedence. TODO: are queries case sensitive?
      -
@@ -1303,7 +1303,7 @@ Prototype
         "name": "Name of source",
         "type": "source:fake",
         "entities": 1234,
-        "external_system": "fake-system-id",
+        "system": "fake-system-id",
         "template": {
             "_id": "system:some_id_pool",
             "some_property": "fake_factory_method_name"
@@ -1324,7 +1324,7 @@ Properties
      - Default
      - Req
 
-   * - ``external_system``
+   * - ``system``
      - String
      - The id of a :ref:`Fake System <fake_system>` component. It is only required if the ``template`` property contain
        fields using a "system:<pool_id>" value to generate id fields from a predefined population (i.e. so datasets can be
@@ -1377,7 +1377,7 @@ A source that generates a typical person entity via various `Fake Factory provid
 The general form of a template property is "property_name": "fake_factory_provider_name". For generating id properties
 from a fixed set (to be able to link entities from different sources together), a special syntax for the value part
 is used: "shared_id_propery": "system:<pool_id_from_fake_system_component>". These shared id pools are configured
-as part of the :ref:`Fake System <fake_system>` component, and you have to include its id in the ``external_system``
+as part of the :ref:`Fake System <fake_system>` component, and you have to include its id in the ``system``
 property. Here's an example of two pipes with sources for fake employee and employer (company) entities using a shared pool
 of ids for the employer id:
 
@@ -1388,7 +1388,7 @@ of ids for the employer id:
     [
         {
             "_id": "employers_employees",
-            "type": "external_system:fake",
+            "type": "system:fake",
             "name": "Employees and employers system",
             "id_pools": {
                 "employers": {
@@ -1405,7 +1405,7 @@ of ids for the employer id:
             "source": {
                 "name": "Fake employees source",
                 "type": "source:fake",
-                "external_system": "employers_employees",
+                "system": "employers_employees",
                 "entities": 100,
                 "template": {
                     "_id": "uuid4",
@@ -1425,7 +1425,7 @@ of ids for the employer id:
             "source": {
                 "name": "Fake employers source",
                 "type": "source:fake",
-                "external_system": "employers_employees",
+                "system": "employers_employees",
                 "entities": 100,
                 "template": {
                     "_id": "system:employers",
@@ -1620,8 +1620,8 @@ TODO: Add detailed docs plus examples.
 Sinks
 =====
 
-Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or an external
-system. Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
+Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a target system.
+Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
 
 .. _dataset_sink:
 

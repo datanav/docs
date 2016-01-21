@@ -17,7 +17,7 @@ Components called data sources expose data from source systems such as REST APIs
 
 Datasets also act as data sources. They can expose the data they contain. However, a more common usage is to transform the data from a dataset into a new shape or representation. This is done using the Data Transformation Language (DTL). The DTL is optimised for ease of use in stream and graph processing and the construction of new data entities. DTL transformations can use data from many datasets to construct new entities.
 
-The results of applying a DTL transformation is a new stream of entities. These are exposed using a source and, like any other stream of entities, can be consumed into a sink. These sinks can either be another dataset sink or it can be a sink that connects to an external system. External systems can be databases, APIs, message queues, etc.
+The results of applying a DTL transformation is a new stream of entities. These are exposed using a source and, like any other stream of entities, can be consumed into a sink. These sinks can either be another dataset sink or it can be a sink that connects to an target system. Systems can be databases, APIs, message queues, etc.
 
 These concepts are explored in more detail in the following sections.
 
