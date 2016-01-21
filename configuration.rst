@@ -2526,7 +2526,7 @@ Example Oracle configuration:
         "_id": "oracle_db",
         "name": "Oracle test database",
         "type": "system:relational",
-        "connection_string": "oracle://system:oracle@oraclecontainer:1521/XE?charset=utf8"
+        "connection_string": "oracle://system:oracle@oracle:1521/XE?charset=utf8"
     }
 
 Example MS SQL Server configuration:
