@@ -35,9 +35,9 @@ Listing the Providers
 
 ### Configuring and Testing a New Provider
 
-### Configuring a new External System
+### Configuring a new System
 
-### Using the External System to create providers
+### Using the System to create providers
 
 ### Listing Data Pipes
 
