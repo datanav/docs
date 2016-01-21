@@ -1596,12 +1596,66 @@ Example configuration
       }
 
 
-The external/remote transform
+The HTTP transform
 -----------------------------
 
-TODO: This is not yet implemented, but the idea is that entities are
-posted to an HTTP endpoint, transformed by the service, and then
-returned.
+This transform POSTs entities to an HTTP endpoint, which transforms
+them and then returns them in the response. The HTTP endpoint must
+accept ``application/json`` and the response must be
+``application/json``. The endpoint must support lists of entities
+only, i.e. it should expect to receive a JSON array and it should
+always return a JSON array. If the endpoint returns a 4xx or 5xx HTTP
+response, then the transform will raise an exception.
+
+The endpoint is free to decide how the entitites are
+transformed. It'll just have to produce a list of zero or more
+entities from the entities it was posted. This means that entities can
+be transformed, filtered out or new ones created.
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 3, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``url``
+     - Object
+     - The URL to HTTP POST entities to.
+     -
+     - Yes
+
+   * - ``batch_size``
+     - Integer
+     - The maximum number of entities to POST in each request. If there are
+       more entities than this then they'll be split between different HTTP
+       requests.
+     - 20
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  {
+      "_id": "deduplicated-men",
+      "type": "pipe",
+      "source": {
+          "type": "dataset",
+          "dataset": "men"
+      },
+      "transform": {
+          "type": "http",
+          "url": "http://localhost:8080/transforms/deduplicate",
+          "batch_size": 5
+      }
 
 
 The RDF/CURIE transform
