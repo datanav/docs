@@ -1131,6 +1131,10 @@ The JSON remote source
 
 The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
 
+If the ``supports_since`` property is set to *true*, then the
+``since`` request parameter is added to the URL to signal that we want
+only changes that happened after the since marker.
+
 Prototype
 ^^^^^^^^^
 
@@ -1536,7 +1540,11 @@ TODO: Not yet implemented.
 The JSON Schema validation transform
 ------------------------------------
 
-A transform that validates entities against a ``JSON Schema`` (http://json-schema.org/) document.
+A transform that validates entities against a ``JSON Schema``
+(http://json-schema.org/) document. If the document is valid then the
+field referenced by ``key_valid`` will be set to true, otherwise
+false. Any validation error messages will be added to the field
+referenced by ``key_errors``.
 
 Properties
 ^^^^^^^^^^
