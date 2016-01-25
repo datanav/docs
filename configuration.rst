@@ -745,7 +745,7 @@ Properties
    * - ``dialect``
      - String
      - Encodes what type of CSV file the file is. This is basically presets of the other properties.
-       The recognised values are ``"excel"``, ``"escaped"``, ``"excel-tab"`` and ``"singlequote"``.
+       The recognised values are ``"excel"``, ``"excel_tab"`` and ``"unix_dialect"``.
        TODO: explain what they mean.
      -
      -
