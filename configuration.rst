@@ -236,13 +236,6 @@ Properties
      - Default
      - Req
 
-   * - ``_id``
-     - String
-     - The id of the component, this should be unique within a Sesam Node. It may be omitted as part of a pipe
-       configuration, in case it will be generated based on the pipe's ``_id`` property with a ":source" postfix.
-     -
-     - No
-
    * - ``name``
      - String
      - A human redable name of the component. It may be omitted as part of a pipe
@@ -1605,7 +1598,7 @@ Example configuration
 
 
 The HTTP transform
------------------------------
+------------------
 
 This transform POSTs entities to an HTTP endpoint, which transforms
 them and then returns them in the response. The HTTP endpoint must
