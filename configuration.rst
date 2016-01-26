@@ -2586,7 +2586,7 @@ See the :ref:`example configuration <fake_system_example>` in the fake source se
 The LDAP system
 ===============
 
-The LDAP system contains the configuration needed to commuicate with a LDAP system. It is used by
+The LDAP system contains the configuration needed to communicate with a LDAP system. It is used by
 :ref:`LDAP sources <ldap_source>` to stream entities from LDAP catalogs.
 
 It supports the following properties:
@@ -2602,7 +2602,7 @@ Prototype
         "use_ssl": false,
         "username": "authentication-username-here",
         "password": "authentication-password-here",
-        "charset": "latin-1",
+        "charset": "latin-1"
     }
 
 Properties
