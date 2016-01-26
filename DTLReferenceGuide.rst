@@ -1459,7 +1459,8 @@ Sets
        | Returns the union of the two sets SET1 and SET2, i.e. the elements that
          are either in SET1 or in SET2. The two arguments do not have to be real
          sets, but will be coerced into sets before applying the union operator.
-     - | ``["union", ["list", "A", "B"], ["list", "B", "C"]]``
+     - | ``["union",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
        | Returns ``["A", "B", "C"]``.
        |
@@ -1475,7 +1476,8 @@ Sets
        | Returns the intersection of the two sets SET1 and SET2, i.e. the elements
          that are in both SET1 and SET2. The two arguments do not have to be real sets,
          but will be coerced into sets before applying the intersection operator.
-     - | ``["intersection", ["list", "A", "B"], ["list", "B", "C"]]``
+     - | ``["intersection",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
        | Returns ``["B"]``.
        |
@@ -1495,7 +1497,8 @@ Sets
        | Returns the difference of the two sets SET1 and SET2, i.e. the elements
          that are in SET1, but not in SET2. The two arguments do not have to be real
          sets, but will be coerced into sets before applying the difference operator.
-     - | ``["difference", ["list", "A", "B"], ["list", "B"]]``
+     - | ``["difference",``
+       |    ``["list", "A", "B"], ["list", "B"]]``
        |
        | Returns ``["A"]``.
        |
@@ -1504,7 +1507,8 @@ Sets
        | Returns ``["A"]``.
        |
        | ``["difference",``
-       |   ``["list", "A", "B", "C", "D"], ["list", "A", "B", "E"]]``
+       |   ``["list", "A", "B", "C", "D"],``
+       |   ``["list", "A", "B", "E"]]``
        |
        | Returns ``["C", "D"]``.
 
@@ -1528,7 +1532,8 @@ Dictionaries / Entities
          For each key+value pair in the dictionaries one pair is added to the output
          list. Non-dictionary values are ignored. Note that entities are dictionaries,
          so you can use this function with them.
-     - | ``["items", ["list", {"A": 1, "B": 2}, {"C": 3}]]``
+     - | ``["items",``
+       |     ``["list", {"A": 1, "B": 2}, {"C": 3}]]``
        |
        | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
        |
@@ -1543,7 +1548,11 @@ Dictionaries / Entities
        | Takes a list of key+value pair tuples and returns a single dictionary with
          those tuples as keys and values. Note that the last key in the tuple list
          wins. Values are not two-element tuples are ignored.
-     - | ``["dict", ["list", ["list", "A", 1], ["list", "B", 2], ["list", "C", 3]]]``
+     - | ``["dict",``
+       |     ``["list",``
+       |         ``["list", "A", 1],``
+       |         ``["list", "B", 2],``
+       |         ``["list", "C", 3]]]``
        |
        | Returns ``{"A": 1, "B": 2, "C": 3}``.
        |
@@ -1558,7 +1567,8 @@ Dictionaries / Entities
        | Takes a list of dictionaries in and outputs a single list of keys.
          For each key+value pair in the dictionaries one key is added to the output
          list. Non-dict values are ignored.
-     - | ``["keys", ["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
+     - | ``["keys",``
+       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
        |
        | Returns ``["A", "B", "A", "C"]``.
        |
@@ -1573,7 +1583,8 @@ Dictionaries / Entities
        | Takes a list of dictionaries in and outputs a single list of values.
          For each key+value pair in the dictionaries one value is added to the output
          list. Non-dict values are ignored.
-     - | ``["values", ["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
+     - | ``["values",``
+       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
        |
        | Returns ``[1, 2, 1, 3]``.
        |
