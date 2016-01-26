@@ -28,6 +28,8 @@ For getting started with Sesam a single node will suffice. The Sesam Node is ava
 
   docker pull sesam/sesam-node
 
+.. _overview-getting-started:
+
 Getting Started
 ---------------
 
