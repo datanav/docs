@@ -914,10 +914,13 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _ldap_source:
+
 The LDAP source
 ---------------
 
-The LDAP source provides entities from a ``LDAP catalog``. It supports the following properties:
+The LDAP source provides entities from a ``LDAP catalog`` configured by a :ref:`LDAP system <ldap_system>`.
+It supports the following properties:
 
 Prototype
 ^^^^^^^^^
@@ -927,16 +930,11 @@ Prototype
     {
         "name": "Name of source",
         "type": "source:ldap",
-        "host": "FQDN of LDAP host",
-        "port": 389,
-        "use_ssl": false,
-        "username": "authentication-username-here",
-        "password": "authentication-password-here",
+        "system": "ldap-system-id",
         "search_base": "*",
         "search_filter": "(objectClass=organizationalPerson)",
         "attributes": "*",
         "id_attribute": "cn",
-        "charset": "latin-1",
         "page_size": 500,
         "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
     }
@@ -954,33 +952,9 @@ Properties
      - Default
      - Req
 
-   * - ``host``
+   * - ``system``
      - String
-     - The fully qualified domain name (``FQDN``) of the LDAP host server
-     - "localhost"
-     -
-
-   * - ``port``
-     - Integer
-     - The TCP port of the LDAP service.
-     - 389
-     -
-
-   * - ``use_ssl``
-     - Boolean
-     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
-     - false
-     -
-
-   * - ``username``
-     - String
-     - The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
-     -
-     -
-
-   * - ``password``
-     - String
-     - The password to use for authenticating with the LDAP service. Required if ``username`` is set.
+     - ID of the LDAP system component to use
      -
      - Yes
 
@@ -1008,13 +982,6 @@ Properties
      - "cn"
      -
 
-   * - ``charset``
-     - String
-     - The charset used to encode strings in the LDAP database. Defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
-       as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing.
-     - "latin-1"
-     -
-
    * - ``page_size``
      - Integer
      - The default number of records to read at a time from the LDAP service.
@@ -1038,14 +1005,10 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:ldap",
             "name": "Bouvet LDAP server data",
-            "host": "dc1.bouvet.no",
-            "port": 389,
-            "username": "bouvet\\some-user",
-            "password": "********",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no",
+            "system": "bouvet_ldap",
+            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
         }
     }
-
 
 The system source
 -----------------
@@ -2617,6 +2580,95 @@ Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
 See the :ref:`example configuration <fake_system_example>` in the fake source section.
+
+.. _ldap_system:
+
+The LDAP system
+===============
+
+The LDAP system contains the configuration needed to commuicate with a LDAP system. It is used by
+:ref:`LDAP sources <ldap_source>` to stream entities from LDAP catalogs.
+
+It supports the following properties:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "host": "FQDN of LDAP host",
+        "port": 389,
+        "use_ssl": false,
+        "username": "authentication-username-here",
+        "password": "authentication-password-here",
+        "charset": "latin-1",
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``host``
+     - String
+     - The fully qualified domain name (``FQDN``) of the LDAP host server
+     - "localhost"
+     -
+
+   * - ``port``
+     - Integer
+     - The TCP port of the LDAP service.
+     - 389
+     -
+
+   * - ``use_ssl``
+     - Boolean
+     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
+     - false
+     -
+
+   * - ``username``
+     - String
+     - The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use for authenticating with the LDAP service. Required if ``username`` is set.
+     -
+     - Yes
+
+   * - ``charset``
+     - String
+     - The charset used to encode strings in the LDAP database. Defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
+       as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing.
+     - "latin-1"
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "bouvet_ldap",
+        "name": "Bouvet LDAP server",
+        "type": "system:ldap",
+        "host": "dc1.bouvet.no",
+        "port": 389,
+        "username": "bouvet\\some-user",
+        "password": "********"
+    }
 
 .. _task_section:
 
