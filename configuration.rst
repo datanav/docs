@@ -10,7 +10,7 @@ General
 =======
 
 The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the :doc:`API section <api>`). The main
-concepts to configure for a node is the systems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
+concepts to configure for a node is :tems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
 the Sesam Node is configured the same way.
 
 The node configuration is a *JSON array* of system and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
@@ -1962,14 +1962,17 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _smsmessage_sink:
+
 The SMS message sink
 --------------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
 templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity. Note that the only service supported
-by the sink is ``Twilio``.
+name can either be fixed in the configuration or given as part of the input entity. The SMS service to use must be
+configured separately as a :ref:`system <system_section>` and its ``_id`` property given in the ``system`` property.
+Currently, only the :ref:`Twilio provider <twilio_system>` is supported.
 
 Prototype
 ^^^^^^^^^
@@ -1979,6 +1982,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:sms",
+        "system": "sms-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
         "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
@@ -1986,9 +1990,6 @@ Prototype
         "recipients": "static,comma,separated,list,of,international,phonenumbers",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "from_number": "static-international-phone-number-to-use-as-from-number",
-        "account": "twilio-account-number",
-        "token": "twilio-api-token",
-        "max_per_hour": 1000
     }
 
 Properties
@@ -2057,29 +2058,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      - Yes
 
-   * - ``account``
-     - String
-     - The ``Twilio`` account number
-     -
-     - Yes
-
-   * - ``token``
-     - String
-     - The ``Twilio`` API token
-     -
-     - Yes
-
-   * - ``max_per_hour``
-     - Integer
-     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
-       development or testing. Note that any message not sent will be logged but discarded.
-     - 1000
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity. The
+examples assume a :ref:`system component <system_section>` (i.e. a :ref:`Twilio service <twilio_system>`) has been
+configured earlier:
 
 ::
 
@@ -2087,12 +2071,10 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:sms",
             "name": "Send SMS messages",
+            "system": "twilio_service",
             "body_template": "SMS message: {{ message_prop_id }}",
             "recipients": "+4799887766,+4788776655",
-            "from_number": "+4766554433",
-            "account": "12334567890",
-            "token": "ABCD-ADEF-FAA1-1234",
-            "max_per_hour": 100000
+            "from_number": "+4766554433"
         }
     }
 
@@ -2114,12 +2096,10 @@ An example where the template to use is included in the entity written to the si
         "sink": {
             "type": "sink:sms",
             "name": "Send SMS messages",
+            "system": "twilio_service",
             "body_template_property": "body_template_property_id",
             "recipients": "+4799887766,+4788776655",
-            "from_number": "+4766554433",
-            "account": "12334567890",
-            "token": "ABCD-ADEF-FAA1-1234",
-            "max_per_hour": 100000
+            "from_number": "+4766554433"
         }
     }
 
@@ -2584,7 +2564,7 @@ See the :ref:`example configuration <fake_system_example>` in the fake source se
 .. _ldap_system:
 
 The LDAP system
-===============
+---------------
 
 The LDAP system contains the configuration needed to communicate with a LDAP system. It is used by
 :ref:`LDAP sources <ldap_source>` to stream entities from LDAP catalogs.
@@ -2668,6 +2648,75 @@ Example configuration
         "port": 389,
         "username": "bouvet\\some-user",
         "password": "********"
+    }
+
+
+.. _twilio_system:
+
+The Twilio system
+-----------------
+
+The Twilio system is a ``SMS system`` used with :ref:`SMS message sinks <smsmessage_sink>` to construct
+and send SMS messages from entities. It has the following properties:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "system-id",
+        "name": "Service name",
+        "type": "system:twilio",
+        "account": "twilio-account-number",
+        "token": "twilio-api-token",
+        "max_per_hour": 1000
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``account``
+     - String
+     - The ``Twilio`` account number
+     -
+     - Yes
+
+   * - ``token``
+     - String
+     - The ``Twilio`` API token
+     -
+     - Yes
+
+   * - ``max_per_hour``
+     - Integer
+     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+         "_id": "twilio_service",
+         "type": "system:twilio",
+         "name": "Twilio Service",
+         "account": "12334567890",
+         "token": "ABCD-ADEF-FAA1-1234",
+         "max_per_hour": 100000
     }
 
 .. _task_section:
