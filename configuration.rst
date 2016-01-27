@@ -9,12 +9,14 @@ Component configuration guide
 General
 =======
 
-The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the :doc:`API section <api>`). The main
-concepts to configure for a node is :tems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
-the Sesam Node is configured the same way.
+The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the
+:doc:`API section <api>`). The main concepts to configure for a node is the :ref:`systems <system_section>` and the
+:ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within the Sesam Node is configured
+the same way.
 
-The node configuration is a *JSON array* of system and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
-of the Sesam Node. The configuration entities are *JSON objects* on the general form:
+The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`
+describing the flows into, within and out of the Sesam Node. The configuration :doc:`entities <entitymodel>` are
+*JSON objects* on the general form:
 
 ::
 
