@@ -1701,7 +1701,10 @@ The InfluxDB sink
 
 The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/.
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
-written to it. The expected form of an entity to be written to the sink is:
+written to it. You will have to configure and provide a :ref:`InfluxDB system <influxdb_system>` id in the ``system`` property.
+
+
+The expected form of an entity to be written to the sink is:
 
 ::
 
@@ -1726,16 +1729,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:influxdb",
-        "host": "localhost",
-        "port": 8086,
-        "username": "root",
-        "password": "root",
-        "database": "Sesam Node",
-        "ssl": false,
-        "verify_ssl": false,
-        "timeout": None,
-        "use_udp": false,
-        "udp_port": 4444
+        "system": "id-of-influxdb-system"
     }
 
 Properties
@@ -1751,64 +1745,11 @@ Properties
      - Default
      - Req
 
-   * - ``host``
+   * - ``system``
      - String
-     - The ``FQDN`` of the InfluxDB server
-     - "localhost"
+     - The id of the :ref:`InfluxDB system <influxdb_system>` component to use.
      -
-
-   * - ``port``
-     - Integer
-     - The TCP port of the InfluxDB service
-     - 8086
-     -
-
-   * - ``username``
-     - String
-     - The user to authenticate as against the InfluxDB service
-     - "root"
-     -
-
-   * - ``password``
-     - String
-     - The password to use for authenticating with the InfluxDB service
-     - "root"
-     -
-
-   * - ``database``
-     - String
-     - The name of the database to create and write into. Note that it will be created automatically
-       if it doesn't exist.
-     - "sesam_node"
-     -
-
-   * - ``verify_ssl``
-     - Boolean
-     - Flag to indicate that the client hould verify the server's ssl certificate before initiating
-       communication with it
-     - false
-     -
-
-   * - ``timeout``
-     - Integer
-     - If set, sets the timeout to a specified number of seconds. Default is not set and indicates
-       no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
-     -
-     -
-
-   * - ``use_udp``
-     - Boolean
-     - Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
-       The default is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
-       than TCP due to its simplicity
-     - false
-     -
-
-   * - ``udp_port``
-     - Integer
-     - The ``UDP`` port to use if ``use_udp`` is set to ``true``.
-     - 4444
-     -
+     - Yes
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1821,11 +1762,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:influxdb",
             "name": "InfluxDB sink",
-            "host": "localhost",
-            "port": 8086,
-            "username": "root",
-            "password": "root",
-            "database": "my_database",
+            "system": "my-influxdb-system"
         }
     }
 
@@ -2010,6 +1947,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Default
      - Req
 
+   * - ``system``
+     - String
+     - The id of the :ref:`Twilio provider <twilio_system>` component to use.
+     -
+     - Yes
+
    * - ``body_template``
      - String
      - Should contain a ``Jinja template`` to use for constructing messages. The template will have access to all entity properties by name.
@@ -2169,6 +2112,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`SMTP system <smtp_system>` to use.
+     -
+     - Yes
 
    * - ``body_template``
      - String
@@ -2516,6 +2465,124 @@ Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
 See the :ref:`example configuration <fake_system_example>` in the fake source section.
+
+.. _influxdb_system:
+
+The InfluxDB system
+-------------------
+
+The InfluxDB system represents a InfluxDB system and all the information needed to connect and write to it.
+It is used in conjunction with the :ref:`InfluxDB sink <influxdb_sink>` to write entities to a InfluxDB time series
+database.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "influxdb-system-id",
+        "name": "Name of InfluxDB system",
+        "type": "system:influxdb",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "Sesam Node",
+        "ssl": false,
+        "verify_ssl": false,
+        "timeout": None,
+        "use_udp": false,
+        "udp_port": 4444
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``host``
+     - String
+     - The ``FQDN`` of the InfluxDB server
+     - "localhost"
+     -
+
+   * - ``port``
+     - Integer
+     - The TCP port of the InfluxDB service
+     - 8086
+     -
+
+   * - ``username``
+     - String
+     - The user to authenticate as against the InfluxDB service
+     - "root"
+     -
+
+   * - ``password``
+     - String
+     - The password to use for authenticating with the InfluxDB service
+     - "root"
+     -
+
+   * - ``database``
+     - String
+     - The name of the database to create and write into. Note that it will be created automatically
+       if it doesn't exist.
+     - "sesam_node"
+     -
+
+   * - ``verify_ssl``
+     - Boolean
+     - Flag to indicate that the client hould verify the server's ssl certificate before initiating
+       communication with it
+     - false
+     -
+
+   * - ``timeout``
+     - Integer
+     - If set, sets the timeout to a specified number of seconds. Default is not set and indicates
+       no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+     -
+     -
+
+   * - ``use_udp``
+     - Boolean
+     - Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
+       The default is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
+       than TCP due to its simplicity
+     - false
+     -
+
+   * - ``udp_port``
+     - Integer
+     - The ``UDP`` port to use if ``use_udp`` is set to ``true``.
+     - 4444
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "my_influxdb_system",
+        "type": "system:influxdb",
+        "name": "My InfluxDB database",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "my_database",
+    }
 
 .. _ldap_system:
 
