@@ -2120,13 +2120,17 @@ and it also needs to have the properties references in the embedded template:
 You can also store the JINJA templates on disk and reference them in the same way via filenames instead of embedding
 the templates in config or the entities themselves.
 
+.. _mail_message_sink:
+
 The mail message sink
 ---------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
 templates`` (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity.
+name can either be fixed in the configuration or given as part of the input entity. The mail server settings have to
+be registered in a :ref:`SMTP system <smtp_system>` component in advance and its ``_id`` put in the ``system``
+property of the sink.
 
 Prototype
 ^^^^^^^^^
@@ -2136,11 +2140,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:mail",
-        "smtp_server": "localhost",
-        "smtp_port": 25,
-        "smtp_username": None,
-        "smtp_password": None,
-        "use_tls": false,
+        "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
         "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
@@ -2151,8 +2151,7 @@ Prototype
         "subject_template_file_property": "id-of-property-for-subject-template-filename",
         "recipients": "static,comma,separated,list,of,email,addresses",
         "recipients_property": "id-of-property-to-get-recipients-from",
-        "mail_from": "static@email.address",
-        "max_per_hour": 1000
+        "mail_from": "static@email.address"
     }
 
 Properties
@@ -2170,36 +2169,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Description
      - Default
      - Req
-
-   * - ``smtp_server``
-     - String
-     - Contains a ``FQDN`` of the ``SMTP service`` to use
-     - "localhost"
-     -
-
-   * - ``smtp_port``
-     - Integer
-     - The TCP port to use when talking to the ``SMTP service``
-     - 25
-     -
-
-   * - ``smtp_username``
-     - String
-     - The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
-     -
-     -
-
-   * - ``smtp_password``
-     - String
-     - The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
-     -
-     - Yes
-
-   * - ``use_tls``
-     - Boolean
-     - Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
-     - false
-     -
 
    * - ``body_template``
      - String
@@ -2281,13 +2250,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      - Yes
 
-   * - ``max_per_hour``
-     - Integer
-     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
-       development or testing. Note that any message not sent will be logged but discarded.
-     - 1000
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -2299,15 +2261,11 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:mail",
             "name": "Send mail messages",
-            "smtp_server": "localhost",
-            "smtp_port": 25,
-            "smtp_username": "some-user",
-            "smtp_password": "*********",
+            "system": "our-smtp-server",
             "body_template": "Mail message body: {{ message_prop_id }}",
             "subject_template": "Subject: {{ subject_prop_id }}",
             "recipients": "foo@bar.com,info@example.com",
-            "mail_from": "all@of.us",
-            "max_per_hour": 100000
+            "mail_from": "all@of.us"
         }
     }
 
@@ -2333,15 +2291,11 @@ Example of filenames referenced in the config:
         "sink": {
             "type": "sink:mail",
             "name": "Send mail messages",
-            "smtp_server": "localhost",
-            "smtp_port": 25,
-            "smtp_username": "some-user",
-            "smtp_password": "*********",
+            "system": "our-smtp-server",
             "body_template_file": "/path/to/file/bodytemplate.jinja",
             "subject_template_file": "/path/to/file/subjecttemplate.jinja",
             "recipients": "foo@bar.com,info@example.com",
-            "mail_from": "all@of.us",
-            "max_per_hour": 100000
+            "mail_from": "all@of.us"
         }
     }
 
@@ -2652,6 +2606,98 @@ Example configuration
         "password": "********"
     }
 
+
+.. _smtp_system:
+
+The SMTP system
+---------------
+
+The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in
+cojunction with the :ref:`mail message sink <mail_message_sink>` to construct and send emails based on the entities it
+receives.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:smtp",
+        "smtp_server": "localhost",
+        "smtp_port": 25,
+        "smtp_username": None,
+        "smtp_password": None,
+        "use_tls": false,
+        "max_per_hour": 1000
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``smtp_server``
+     - String
+     - Contains a ``FQDN`` of the ``SMTP service`` to use
+     - "localhost"
+     -
+
+   * - ``smtp_port``
+     - Integer
+     - The TCP port to use when talking to the ``SMTP service``
+     - 25
+     -
+
+   * - ``smtp_username``
+     - String
+     - The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
+     -
+     -
+
+   * - ``smtp_password``
+     - String
+     - The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
+     -
+     - Yes
+
+   * - ``use_tls``
+     - Boolean
+     - Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
+     - false
+     -
+
+   * - ``max_per_hour``
+     - Integer
+     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-smtp-server",
+        "type": "system:smtp",
+        "name": "Our SMTP Server",
+        "smtp_server": "localhost",
+        "smtp_port": 25,
+        "smtp_username": "some-user",
+        "smtp_password": "*********",
+        "max_per_hour": 100000
+    }
 
 .. _twilio_system:
 
