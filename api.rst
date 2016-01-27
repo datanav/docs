@@ -2,14 +2,123 @@
 API
 ===
 
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
+
 Introduction
 ============
 
 Sesam provides a RESTful API for controlling the service and also working with the data in the datahub.
 
+If you follow the :ref:`overview-getting-started` guide, the api will be served on the url http://localhost:9042 . The
+rest of this document will assume that the api can be found on this url.
 
-Services
-========
+You can explore the api with a web browser or with a commandline tool like `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
+or `wget <http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html>`_.
+
+The most important api urls are:
+
+`/pipes <http://localhost:9042/pipes>`_:
+
+This returns a list of pipes. For an explanation of what a pipe is, read the :ref:`concepts-pipes` concept definition.
+
+
+`/datasets <http://localhost:9042/datasets>`_:
+
+This returns a list of datasets. (For an explanation of what a dataset is, read the :ref:`concepts-datasets` concept definition).
+
+For a full description of the /pipes and /datasets endpoint, read the "Pipes" and
+"Dataset" sections in the :ref:`api-reference`.
+
+
+Examples
+--------
+
+In the following we will go through a few examples of what you can do with the api. We will use the `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
+command to interact with the api from the command line (If you are using MS Windows you can install for instance cygwin
+in order to use the curl command).
+
+
+
+
+Get the a list of all the pipes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    curl http://localhost:9042/pipes
+
+
+Get information about one specified pipe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To only get one specific pipe, add the pipe's "_id" attribute to the pipes-url. To get the pipe with the _id "Northwind:Products",
+you would do this::
+
+    curl http://localhost:9042/pipes/Northwind:Products
+
+Run operations on a pipe
+~~~~~~~~~~~~~~~~~~~~~~~~
+A pipe typically has a number of operations that can be triggered via the api. These are listed in the
+pipeinfo["runtime"]["supported-operations"] attribute. A typical value looks like this::
+
+   "supported-operations": [
+               "enable",
+               "disable",
+               "start",
+               "stop"
+           ]
+
+These operations are triggered by sending a POST-request to the url /pipes/{pipeID}/pump. For example: to disable the "Northwind:Products"
+pipe you would do this::
+
+   curl --data operation=disable http://localhost:9042/pipes/Northwind:Products/pump
+
+
+To manually start the pipe's pump, you would do this::
+
+   curl --data operation=start http://localhost:9042/pipes/Northwind:Products/pump
+
+To stop a running pump, you would do this::
+
+   curl --data operation=stop http://localhost:9042/pipes/Northwind:Products/pump
+
+
+Get a list of all the datasets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    curl http://localhost:9042/datasets
+
+
+Get information about one specific dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To only get one specific dataset, add the dataset's "_id" attribute to the dataset-url. To get the dataset with the _id "Northwind:Products",
+you would do this::
+
+    curl http://localhost:9042/datasets/Northwind:Products
+
+
+Get the content of the dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To see the entities in the dataset, add "/entities?limit=3" to the dataset's url, like this::
+
+    curl http://localhost:9042/datasets/Northwind:Products/entities?limit=3
+
+The "limit" parameter limits the number of returned entities to a managable number. Without this parameter, **all**
+the entities in the dataset would be returned. Depending on the size of the dataset, that could take a while, so it is
+generally a good idea to include a "limit"-parameter.
+
+
+
+.. _api-reference:
+
+API Reference
+=============
 
 .. contents::
    :local:
@@ -22,102 +131,3 @@ Services
              lake.node.webapp.api.datasets,
              lake.node.webapp.api.systems,
              lake.node.webapp.api.status
-
-
-How do I?
-=========
-
-Run a scheduled task now
-------------------------
-
-POST /scheduled-tasks/{scheduled-task-id} [empty body]
-
-If the scheduled task is not already running, the request returns a "201 (Created)" response with content-type "application/json". The "Location"-header contains a link to the new running job. The body contains a json-representation of the created task.
-
-If the scheduled task is already running, a "409 (Conflict)"-response will be returned. The content-type is "application/json" and the body contains a json-representation of the existing task.
-
-
-Disable a scheduled task
-------------------------
-
-fetch the representation of the scheduled task resource, set the value of the 'is-disabled' property to "true" and then PUT to that resource.
-
-The response to the PUT-request will be a "200 (Ok)"-response with the content-type "application/json" and the body contains a json-representation of the updated scheduled task.
-
-
-Enable a disabled scheduled task
---------------------------------
-
-fetch the representation of the scheduled task resource, set the value of the 'is-disabled' property to "false" and then PUT to that resource.
-
-The response to the PUT-request will be a "200 (Ok)"-response with the content-type "application/json" and the body contains a json-representation of the updated scheduled task.
-
-
-Stop a running task
--------------------
-
-DELETE /running-tasks/{task-id}
-
-or
-
-DELETE /schedules-tasks/{scheduled-task-id}/instance
-
-These request are equivalent. The "/schedules-tasks/{scheduled-task-id}/instance" url always points to the running instance (if any) of a scheduled task.
-
-The response to the DELETE-request will be a "200 (OK)"-response. If the task was still running, the request will have content-type "application/json" and the body will contain a json-representation of the task that was stopped. If the task was not running (i.e. it had already completed), the body will be empty.
-
-
-Disable a sync
---------------
-
-fetch the representation of the scheduled-task resource for the SyncTask, set the value of the 'is-disabled' property to 'true' and then PUT to that resource.
-
-The response to the PUT-request will be a "200 (Ok)"-response with the content-type "application/task+json" and the body contains a json-representation of the updated scheduled-task.
-
-
-Enable a sync
--------------
-
-fetch the representation of the scheduled-task resource for the SyncTask, set the value of the 'is-disabled' property to 'false' and then PUT to that resource.
-
-The response to the PUT-request will be a "200 (Ok)"-response with the content-type "application/json" and the body contains a json-representation of the updated scheduled-task.
-
-Start a fragments sync now
---------------------------
-
-POST /scheduled-tasks/{synctask-task-id}
-
-If the sync task is not already running, the request returns a "201 (Created)" response with content-type "application/json". The "Location"-header contains a link to the new running job. The body contains a json-representation of the created task.
-
-If the sync task is already running, a "409 (Conflict)"-response will be returned. The content-type is "application/json" and the body contains a json-representation of the existing task.
-
-
-Start a snapshot now
---------------------
-
-POST /scheduled-tasks/{snapshot-task-id}
-
-If the snapshot task is not already running, the request returns a "201 (Created)" response with content-type "application/json". The "Location"-header contains a link to the new running job. The body contains a json-representation of the created task.
-
-If the snapshot task is already running, a "409 (Conflict)"-response will be returned. The content-type is "application/json" and the body contains a json-representation of the existing task.
-
-
-
-Unset last change date
-----------------------
-
-fetch the representation of the synctask resource, update the value of the 'last-change' property and then PUT to that resource.
-
-
-
-Set last change date
---------------------
-
-fetch the representation of the synctask resource, update the value of the 'last-change' property and then PUT to that resource.
-
-
-
-Stop all sync tasks running on a sdshare client
------------------------------------------------
-
-client iterates and stops each one.

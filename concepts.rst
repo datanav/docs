@@ -30,6 +30,8 @@ The node has a configuration file, ```node-config.json``, that describe the set 
 
 The node stores entities in datasets. A node can have any number of these.
 
+.. _concepts-datasets:
+
 Datasets
 --------
 
@@ -45,11 +47,15 @@ A *system* is any database or API that could be used as a source of data for the
 The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how the node consumes or delivers data.
 
 
+.. _concepts-pipes:
+
 Pipes
 -----
 
 A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is the only way to specify how entities stream from dataset to dataset in a node.
 
+
+.. _concepts-sources:
 
 Sources
 =======
@@ -66,11 +72,15 @@ Each entity returned by a data source reader is a dictionary that maps keys to v
 Sesam offers a number of core built-in data sources but it is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints.
 
 
+.. _concepts-transforms:
+
 Transforms
 ==========
 
 Entities streaming through a pipe can be transformed on their way from the source to the sink. A transformation chain takes a stream of entities, transforms them, and creates a new stream of entities. A transform can query across many other datasets in order to enrich or create entities.
 
+
+.. _concepts-sinks:
 
 Sinks
 =====
@@ -78,6 +88,8 @@ Sinks
 A data *sink* is a components that can consume entities fed to them through 'Sink Writer' objects provided by a 'Data Sink' object. The sink writer has the resposibility to write these entites to the target, handle transactional
 boundaries and potentially batching of multiple entities if supported by the target system. The 'Sink Writer' object inherits its parent sink's configuration settings but is immutable to changes to this durings its life time.
 Several types of data sinks are supplied with the core service. Using the JSON push sink enables you to transfer entities to remote nodes.
+
+.. _concepts-pumps:
 
 Pumps
 =====
@@ -100,6 +112,8 @@ Retention Policies
 ------------------
 
 TODO: explain
+
+.. _concepts-dtl:
 
 The Data Transformation Language (DTL)
 --------------------------------------
