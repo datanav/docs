@@ -806,6 +806,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:rdf",
+       "system": "webserver-system-id",
        "url": "url-to-rdf-file",
        "format": "nt-ttl-or-xml"
     }
@@ -822,6 +823,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -871,6 +880,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:sdshare",
+       "system": "webserver-system-id",
        "url": "url-to-sdshare-fragments-feed",
        "supports_since": false
     }
@@ -887,6 +897,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -1100,6 +1118,7 @@ Prototype
 
     {
        "name": "Name of source",
+       "system": "webserver-system-id",
        "type": "source:json_remote",
        "url": "url-to-json-file"
     }
@@ -1116,6 +1135,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -1781,7 +1808,8 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:json_push",
-        "endpoint": "url-to-http-endpoint",
+        "system": "webserver-system-id",
+        "url": "url-to-http-endpoint",
         "batch_size": 1500
     }
 
@@ -1798,7 +1826,15 @@ Properties
      - Default
      - Req
 
-   * - ``endpoint``
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
+
+   * - ``url``
      - String
      - The full URL to HTTP service implementing the ``JSON push protocol`` described.
      -
@@ -1842,7 +1878,8 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:sdshare_push",
-        "endpoint": "url-to-http-endpoint",
+        "system":"webserver-system-id",
+        "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
         "prefixes": {
             "a-prefix": "the-expansion"
@@ -1862,7 +1899,15 @@ Properties
      - Default
      - Req
 
-   * - ``endpoint``
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       endpoint requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
+
+   * - ``url``
      - String
      - The full URL to HTTP service implementing the ``SDShare push protocol``.
      -
@@ -1892,7 +1937,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:sdshare_push",
             "name": "Local SDShare push service sink",
-            "endpoint": "http://localhost:8001/sdshare_push_service",
+            "url": "http://localhost:8001/sdshare_push_service",
             "prefixes": {
                 "dc": "http://purl.org/dc/elements/1.1/",
                 "foaf": "http://xmlns.com/foaf/0.1/",
@@ -2832,6 +2877,88 @@ Example configuration
          "account": "12334567890",
          "token": "ABCD-ADEF-FAA1-1234",
          "max_per_hour": 100000
+    }
+
+.. _webserver_system:
+
+The webserver system
+--------------------
+
+The webserver system represents a HTTP server serving requests from a base url. It can also represent local files
+either by just passing in a local path in its ``base_url`` property or using a ``file://`` protocol in the URL.
+It provides session handling, connection pooling and authentication services to sources and sinks which need to
+communicate with a HTTP server.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:webserver",
+        "base_url": "http://host:port/path",
+        "username": None,
+        "password": None,
+        "verify_ssl": false,
+        "authentication": "basic"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``base_url``
+     - String
+     - The full URL of the base url of the HTTP server.
+     -
+     - Yes
+
+   * - ``username``
+     - String
+     - The username to use when authenticating with the ``HTTP server``. If not set, no authentication is attempted.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use if ``username`` is set. It is mandatory if the ``username`` is provided.
+     -
+     - Yes
+
+   * - ``verify_ssl``
+     - Boolean
+     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
+       ``HTTP server`` over SSL/TLS.
+     - false
+     -
+
+   * - ``authentication``
+     - String
+     - What kind of authentication protocol to use when ``username`` is set. The default is basic authentication.
+     - "basic"
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-http-server",
+        "type": "system:webserver",
+        "name": "Our HTTP Server",
+        "base_url": "http://our.domain.com/files"
     }
 
 .. _task_section:
