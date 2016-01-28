@@ -12,7 +12,7 @@ API
 Introduction
 ============
 
-Sesam provides a RESTful API for controlling the service and also working with the data in the datahub.
+Sesam provides a RESTful API for controlling the service and for working with the data in the datahub.
 
 If you follow the :ref:`overview-getting-started` guide, the api will be served on the url http://localhost:9042 . The
 rest of this document will assume that the api can be found on this url.
