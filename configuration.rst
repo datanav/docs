@@ -1055,7 +1055,7 @@ Prototype
     {
         "name": "Name of source",
         "type": "source:json_file",
-        "filepath": "path-to-json-file(s)",
+        "path": "path-to-json-file(s)",
         "notify_read_errors": true
     }
 
@@ -1072,7 +1072,7 @@ Properties
      - Default
      - Req
 
-   * - ``filepath``
+   * - ``path``
      - String
      - A full path to a ``JSON`` file, or a path to a directory containing ``.json`` files
      -
@@ -1097,7 +1097,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:json_file",
             "name": "Test JSON source",
-            "filepath": "/sesam/data/test.json",
+            "path": "/sesam/data/test.json",
         }
     }
 
@@ -1161,7 +1161,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:json_remote",
             "name": "Test JSON source via HTTP",
-            "filepath": "https://server.com/sesam/data/test.json",
+            "path": "https://server.com/sesam/data/test.json",
         }
     }
 
