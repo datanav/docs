@@ -9,12 +9,14 @@ Component configuration guide
 General
 =======
 
-The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the :doc:`API section <api>`). The main
-concepts to configure for a node is the systems and the :ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within
-the Sesam Node is configured the same way.
+The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the
+:doc:`API section <api>`). The main concepts to configure for a node is the :ref:`systems <system_section>` and the
+:ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within the Sesam Node is configured
+the same way.
 
-The node configuration is a *JSON array* of system and :ref:`pipe configurations <pipe_section>` describing the flows into, within and out
-of the Sesam Node. The configuration entities are *JSON objects* on the general form:
+The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`
+describing the flows into, within and out of the Sesam Node. The configuration :doc:`entities <entitymodel>` are
+*JSON objects* on the general form:
 
 ::
 
@@ -804,6 +806,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:rdf",
+       "system": "webserver-system-id",
        "url": "url-to-rdf-file",
        "format": "nt-ttl-or-xml"
     }
@@ -820,6 +823,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -869,6 +880,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:sdshare",
+       "system": "webserver-system-id",
        "url": "url-to-sdshare-fragments-feed",
        "supports_since": false
     }
@@ -885,6 +897,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -914,10 +934,13 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _ldap_source:
+
 The LDAP source
 ---------------
 
-The LDAP source provides entities from a ``LDAP catalog``. It supports the following properties:
+The LDAP source provides entities from a ``LDAP catalog`` configured by a :ref:`LDAP system <ldap_system>`.
+It supports the following properties:
 
 Prototype
 ^^^^^^^^^
@@ -927,16 +950,11 @@ Prototype
     {
         "name": "Name of source",
         "type": "source:ldap",
-        "host": "FQDN of LDAP host",
-        "port": 389,
-        "use_ssl": false,
-        "username": "authentication-username-here",
-        "password": "authentication-password-here",
+        "system": "ldap-system-id",
         "search_base": "*",
         "search_filter": "(objectClass=organizationalPerson)",
         "attributes": "*",
         "id_attribute": "cn",
-        "charset": "latin-1",
         "page_size": 500,
         "attribute_blacklist": ["a","list","of","attributes","to","exclude"]
     }
@@ -954,33 +972,9 @@ Properties
      - Default
      - Req
 
-   * - ``host``
+   * - ``system``
      - String
-     - The fully qualified domain name (``FQDN``) of the LDAP host server
-     - "localhost"
-     -
-
-   * - ``port``
-     - Integer
-     - The TCP port of the LDAP service.
-     - 389
-     -
-
-   * - ``use_ssl``
-     - Boolean
-     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
-     - false
-     -
-
-   * - ``username``
-     - String
-     - The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
-     -
-     -
-
-   * - ``password``
-     - String
-     - The password to use for authenticating with the LDAP service. Required if ``username`` is set.
+     - ID of the LDAP system component to use
      -
      - Yes
 
@@ -1008,13 +1002,6 @@ Properties
      - "cn"
      -
 
-   * - ``charset``
-     - String
-     - The charset used to encode strings in the LDAP database. Defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
-       as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing.
-     - "latin-1"
-     -
-
    * - ``page_size``
      - Integer
      - The default number of records to read at a time from the LDAP service.
@@ -1038,14 +1025,10 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:ldap",
             "name": "Bouvet LDAP server data",
-            "host": "dc1.bouvet.no",
-            "port": 389,
-            "username": "bouvet\\some-user",
-            "password": "********",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no",
+            "system": "bouvet_ldap",
+            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
         }
     }
-
 
 The system source
 -----------------
@@ -1072,7 +1055,7 @@ Prototype
     {
         "name": "Name of source",
         "type": "source:json_file",
-        "filepath": "path-to-json-file(s)",
+        "path": "path-to-json-file(s)",
         "notify_read_errors": true
     }
 
@@ -1089,7 +1072,7 @@ Properties
      - Default
      - Req
 
-   * - ``filepath``
+   * - ``path``
      - String
      - A full path to a ``JSON`` file, or a path to a directory containing ``.json`` files
      -
@@ -1114,7 +1097,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:json_file",
             "name": "Test JSON source",
-            "filepath": "/sesam/data/test.json",
+            "path": "/sesam/data/test.json",
         }
     }
 
@@ -1135,6 +1118,7 @@ Prototype
 
     {
        "name": "Name of source",
+       "system": "webserver-system-id",
        "type": "source:json_remote",
        "url": "url-to-json-file"
     }
@@ -1151,6 +1135,14 @@ Properties
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
 
    * - ``url``
      - String
@@ -1169,7 +1161,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "source:json_remote",
             "name": "Test JSON source via HTTP",
-            "filepath": "https://server.com/sesam/data/test.json",
+            "path": "https://server.com/sesam/data/test.json",
         }
     }
 
@@ -1736,7 +1728,10 @@ The InfluxDB sink
 
 The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/.
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
-written to it. The expected form of an entity to be written to the sink is:
+written to it. You will have to configure and provide a :ref:`InfluxDB system <influxdb_system>` id in the ``system`` property.
+
+
+The expected form of an entity to be written to the sink is:
 
 ::
 
@@ -1761,16 +1756,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:influxdb",
-        "host": "localhost",
-        "port": 8086,
-        "username": "root",
-        "password": "root",
-        "database": "Sesam Node",
-        "ssl": false,
-        "verify_ssl": false,
-        "timeout": None,
-        "use_udp": false,
-        "udp_port": 4444
+        "system": "id-of-influxdb-system"
     }
 
 Properties
@@ -1786,64 +1772,11 @@ Properties
      - Default
      - Req
 
-   * - ``host``
+   * - ``system``
      - String
-     - The ``FQDN`` of the InfluxDB server
-     - "localhost"
+     - The id of the :ref:`InfluxDB system <influxdb_system>` component to use.
      -
-
-   * - ``port``
-     - Integer
-     - The TCP port of the InfluxDB service
-     - 8086
-     -
-
-   * - ``username``
-     - String
-     - The user to authenticate as against the InfluxDB service
-     - "root"
-     -
-
-   * - ``password``
-     - String
-     - The password to use for authenticating with the InfluxDB service
-     - "root"
-     -
-
-   * - ``database``
-     - String
-     - The name of the database to create and write into. Note that it will be created automatically
-       if it doesn't exist.
-     - "sesam_node"
-     -
-
-   * - ``verify_ssl``
-     - Boolean
-     - Flag to indicate that the client hould verify the server's ssl certificate before initiating
-       communication with it
-     - false
-     -
-
-   * - ``timeout``
-     - Integer
-     - If set, sets the timeout to a specified number of seconds. Default is not set and indicates
-       no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
-     -
-     -
-
-   * - ``use_udp``
-     - Boolean
-     - Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
-       The default is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
-       than TCP due to its simplicity
-     - false
-     -
-
-   * - ``udp_port``
-     - Integer
-     - The ``UDP`` port to use if ``use_udp`` is set to ``true``.
-     - 4444
-     -
+     - Yes
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1856,11 +1789,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:influxdb",
             "name": "InfluxDB sink",
-            "host": "localhost",
-            "port": 8086,
-            "username": "root",
-            "password": "root",
-            "database": "my_database",
+            "system": "my-influxdb-system"
         }
     }
 
@@ -1879,7 +1808,8 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:json_push",
-        "endpoint": "url-to-http-endpoint",
+        "system": "webserver-system-id",
+        "url": "url-to-http-endpoint",
         "batch_size": 1500
     }
 
@@ -1896,7 +1826,15 @@ Properties
      - Default
      - Req
 
-   * - ``endpoint``
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
+
+   * - ``url``
      - String
      - The full URL to HTTP service implementing the ``JSON push protocol`` described.
      -
@@ -1940,7 +1878,8 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:sdshare_push",
-        "endpoint": "url-to-http-endpoint",
+        "system":"webserver-system-id",
+        "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
         "prefixes": {
             "a-prefix": "the-expansion"
@@ -1960,7 +1899,15 @@ Properties
      - Default
      - Req
 
-   * - ``endpoint``
+   * - ``system``
+     - String
+     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       endpoint requires authentication, you will have to create a webserver system component explicitly.
+     -
+     -
+
+   * - ``url``
      - String
      - The full URL to HTTP service implementing the ``SDShare push protocol``.
      -
@@ -1990,7 +1937,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:sdshare_push",
             "name": "Local SDShare push service sink",
-            "endpoint": "http://localhost:8001/sdshare_push_service",
+            "url": "http://localhost:8001/sdshare_push_service",
             "prefixes": {
                 "dc": "http://purl.org/dc/elements/1.1/",
                 "foaf": "http://xmlns.com/foaf/0.1/",
@@ -1999,14 +1946,17 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _smsmessage_sink:
+
 The SMS message sink
 --------------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
 templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity. Note that the only service supported
-by the sink is ``Twilio``.
+name can either be fixed in the configuration or given as part of the input entity. The SMS service to use must be
+configured separately as a :ref:`system <system_section>` and its ``_id`` property given in the ``system`` property.
+Currently, only the :ref:`Twilio provider <twilio_system>` is supported.
 
 Prototype
 ^^^^^^^^^
@@ -2016,6 +1966,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:sms",
+        "system": "sms-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
         "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
@@ -2023,9 +1974,6 @@ Prototype
         "recipients": "static,comma,separated,list,of,international,phonenumbers",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "from_number": "static-international-phone-number-to-use-as-from-number",
-        "account": "twilio-account-number",
-        "token": "twilio-api-token",
-        "max_per_hour": 1000
     }
 
 Properties
@@ -2043,6 +1991,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Description
      - Default
      - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`Twilio provider <twilio_system>` component to use.
+     -
+     - Yes
 
    * - ``body_template``
      - String
@@ -2094,29 +2048,12 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      - Yes
 
-   * - ``account``
-     - String
-     - The ``Twilio`` account number
-     -
-     - Yes
-
-   * - ``token``
-     - String
-     - The ``Twilio`` API token
-     -
-     - Yes
-
-   * - ``max_per_hour``
-     - Integer
-     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
-       development or testing. Note that any message not sent will be logged but discarded.
-     - 1000
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity. The
+examples assume a :ref:`system component <system_section>` (i.e. a :ref:`Twilio service <twilio_system>`) has been
+configured earlier:
 
 ::
 
@@ -2124,12 +2061,10 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:sms",
             "name": "Send SMS messages",
+            "system": "twilio_service",
             "body_template": "SMS message: {{ message_prop_id }}",
             "recipients": "+4799887766,+4788776655",
-            "from_number": "+4766554433",
-            "account": "12334567890",
-            "token": "ABCD-ADEF-FAA1-1234",
-            "max_per_hour": 100000
+            "from_number": "+4766554433"
         }
     }
 
@@ -2151,12 +2086,10 @@ An example where the template to use is included in the entity written to the si
         "sink": {
             "type": "sink:sms",
             "name": "Send SMS messages",
+            "system": "twilio_service",
             "body_template_property": "body_template_property_id",
             "recipients": "+4799887766,+4788776655",
-            "from_number": "+4766554433",
-            "account": "12334567890",
-            "token": "ABCD-ADEF-FAA1-1234",
-            "max_per_hour": 100000
+            "from_number": "+4766554433"
         }
     }
 
@@ -2175,13 +2108,17 @@ and it also needs to have the properties references in the embedded template:
 You can also store the JINJA templates on disk and reference them in the same way via filenames instead of embedding
 the templates in config or the entities themselves.
 
+.. _mail_message_sink:
+
 The mail message sink
 ---------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
 templates`` (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity.
+name can either be fixed in the configuration or given as part of the input entity. The mail server settings have to
+be registered in a :ref:`SMTP system <smtp_system>` component in advance and its ``_id`` put in the ``system``
+property of the sink.
 
 Prototype
 ^^^^^^^^^
@@ -2191,11 +2128,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:mail",
-        "smtp_server": "localhost",
-        "smtp_port": 25,
-        "smtp_username": None,
-        "smtp_password": None,
-        "use_tls": false,
+        "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
         "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
@@ -2206,8 +2139,7 @@ Prototype
         "subject_template_file_property": "id-of-property-for-subject-template-filename",
         "recipients": "static,comma,separated,list,of,email,addresses",
         "recipients_property": "id-of-property-to-get-recipients-from",
-        "mail_from": "static@email.address",
-        "max_per_hour": 1000
+        "mail_from": "static@email.address"
     }
 
 Properties
@@ -2226,35 +2158,11 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Default
      - Req
 
-   * - ``smtp_server``
+   * - ``system``
      - String
-     - Contains a ``FQDN`` of the ``SMTP service`` to use
-     - "localhost"
-     -
-
-   * - ``smtp_port``
-     - Integer
-     - The TCP port to use when talking to the ``SMTP service``
-     - 25
-     -
-
-   * - ``smtp_username``
-     - String
-     - The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
-     -
-     -
-
-   * - ``smtp_password``
-     - String
-     - The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
+     - The id of the :ref:`SMTP system <smtp_system>` to use.
      -
      - Yes
-
-   * - ``use_tls``
-     - Boolean
-     - Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
-     - false
-     -
 
    * - ``body_template``
      - String
@@ -2336,13 +2244,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      - Yes
 
-   * - ``max_per_hour``
-     - Integer
-     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
-       development or testing. Note that any message not sent will be logged but discarded.
-     - 1000
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -2354,15 +2255,11 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:mail",
             "name": "Send mail messages",
-            "smtp_server": "localhost",
-            "smtp_port": 25,
-            "smtp_username": "some-user",
-            "smtp_password": "*********",
+            "system": "our-smtp-server",
             "body_template": "Mail message body: {{ message_prop_id }}",
             "subject_template": "Subject: {{ subject_prop_id }}",
             "recipients": "foo@bar.com,info@example.com",
-            "mail_from": "all@of.us",
-            "max_per_hour": 100000
+            "mail_from": "all@of.us"
         }
     }
 
@@ -2388,15 +2285,11 @@ Example of filenames referenced in the config:
         "sink": {
             "type": "sink:mail",
             "name": "Send mail messages",
-            "smtp_server": "localhost",
-            "smtp_port": 25,
-            "smtp_username": "some-user",
-            "smtp_password": "*********",
+            "system": "our-smtp-server",
             "body_template_file": "/path/to/file/bodytemplate.jinja",
             "subject_template_file": "/path/to/file/subjecttemplate.jinja",
             "recipients": "foo@bar.com,info@example.com",
-            "mail_from": "all@of.us",
-            "max_per_hour": 100000
+            "mail_from": "all@of.us"
         }
     }
 
@@ -2617,6 +2510,456 @@ Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
 See the :ref:`example configuration <fake_system_example>` in the fake source section.
+
+.. _influxdb_system:
+
+The InfluxDB system
+-------------------
+
+The InfluxDB system represents a InfluxDB system and all the information needed to connect and write to it.
+It is used in conjunction with the :ref:`InfluxDB sink <influxdb_sink>` to write entities to a InfluxDB time series
+database.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "influxdb-system-id",
+        "name": "Name of InfluxDB system",
+        "type": "system:influxdb",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "Sesam Node",
+        "ssl": false,
+        "verify_ssl": false,
+        "timeout": None,
+        "use_udp": false,
+        "udp_port": 4444
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``host``
+     - String
+     - The ``FQDN`` of the InfluxDB server
+     - "localhost"
+     -
+
+   * - ``port``
+     - Integer
+     - The TCP port of the InfluxDB service
+     - 8086
+     -
+
+   * - ``username``
+     - String
+     - The user to authenticate as against the InfluxDB service
+     - "root"
+     -
+
+   * - ``password``
+     - String
+     - The password to use for authenticating with the InfluxDB service
+     - "root"
+     -
+
+   * - ``database``
+     - String
+     - The name of the database to create and write into. Note that it will be created automatically
+       if it doesn't exist.
+     - "sesam_node"
+     -
+
+   * - ``verify_ssl``
+     - Boolean
+     - Flag to indicate that the client hould verify the server's ssl certificate before initiating
+       communication with it
+     - false
+     -
+
+   * - ``timeout``
+     - Integer
+     - If set, sets the timeout to a specified number of seconds. Default is not set and indicates
+       no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+     -
+     -
+
+   * - ``use_udp``
+     - Boolean
+     - Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
+       The default is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
+       than TCP due to its simplicity
+     - false
+     -
+
+   * - ``udp_port``
+     - Integer
+     - The ``UDP`` port to use if ``use_udp`` is set to ``true``.
+     - 4444
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "my_influxdb_system",
+        "type": "system:influxdb",
+        "name": "My InfluxDB database",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "my_database",
+    }
+
+.. _ldap_system:
+
+The LDAP system
+---------------
+
+The LDAP system contains the configuration needed to communicate with a LDAP system. It is used by
+:ref:`LDAP sources <ldap_source>` to stream entities from LDAP catalogs.
+
+It supports the following properties:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "host": "FQDN of LDAP host",
+        "port": 389,
+        "use_ssl": false,
+        "username": "authentication-username-here",
+        "password": "authentication-password-here",
+        "charset": "latin-1"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``host``
+     - String
+     - The fully qualified domain name (``FQDN``) of the LDAP host server
+     - "localhost"
+     -
+
+   * - ``port``
+     - Integer
+     - The TCP port of the LDAP service.
+     - 389
+     -
+
+   * - ``use_ssl``
+     - Boolean
+     - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
+     - false
+     -
+
+   * - ``username``
+     - String
+     - The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use for authenticating with the LDAP service. Required if ``username`` is set.
+     -
+     - Yes
+
+   * - ``charset``
+     - String
+     - The charset used to encode strings in the LDAP database. Defaults to ``"latin-1"`` aka ``"ISO-8859-1"``,
+       as ``"UTF-8"`` is usually not the default encoding in LDAP catalogs at the time of writing.
+     - "latin-1"
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "bouvet_ldap",
+        "name": "Bouvet LDAP server",
+        "type": "system:ldap",
+        "host": "dc1.bouvet.no",
+        "port": 389,
+        "username": "bouvet\\some-user",
+        "password": "********"
+    }
+
+
+.. _smtp_system:
+
+The SMTP system
+---------------
+
+The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in
+cojunction with the :ref:`mail message sink <mail_message_sink>` to construct and send emails based on the entities it
+receives.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:smtp",
+        "smtp_server": "localhost",
+        "smtp_port": 25,
+        "smtp_username": None,
+        "smtp_password": None,
+        "use_tls": false,
+        "max_per_hour": 1000
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``smtp_server``
+     - String
+     - Contains a ``FQDN`` of the ``SMTP service`` to use
+     - "localhost"
+     -
+
+   * - ``smtp_port``
+     - Integer
+     - The TCP port to use when talking to the ``SMTP service``
+     - 25
+     -
+
+   * - ``smtp_username``
+     - String
+     - The username to use when authenticating with the ``SMTP service``. If not set, no authentication is attempted.
+     -
+     -
+
+   * - ``smtp_password``
+     - String
+     - The password to use if ``smtp_username`` is set. It is mandatory if the ``smtp_username`` is provided.
+     -
+     - Yes
+
+   * - ``use_tls``
+     - Boolean
+     - Indicating to the client to use ``TLS encryption`` when communicating with the ``SMTP service``.
+     - false
+     -
+
+   * - ``max_per_hour``
+     - Integer
+     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-smtp-server",
+        "type": "system:smtp",
+        "name": "Our SMTP Server",
+        "smtp_server": "localhost",
+        "smtp_port": 25,
+        "smtp_username": "some-user",
+        "smtp_password": "*********",
+        "max_per_hour": 100000
+    }
+
+.. _twilio_system:
+
+The Twilio system
+-----------------
+
+The Twilio system is a ``SMS system`` used with :ref:`SMS message sinks <smsmessage_sink>` to construct
+and send SMS messages from entities. It has the following properties:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "system-id",
+        "name": "Service name",
+        "type": "system:twilio",
+        "account": "twilio-account-number",
+        "token": "twilio-api-token",
+        "max_per_hour": 1000
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``account``
+     - String
+     - The ``Twilio`` account number
+     -
+     - Yes
+
+   * - ``token``
+     - String
+     - The ``Twilio`` API token
+     -
+     - Yes
+
+   * - ``max_per_hour``
+     - Integer
+     - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
+       development or testing. Note that any message not sent will be logged but discarded.
+     - 1000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+         "_id": "twilio_service",
+         "type": "system:twilio",
+         "name": "Twilio Service",
+         "account": "12334567890",
+         "token": "ABCD-ADEF-FAA1-1234",
+         "max_per_hour": 100000
+    }
+
+.. _webserver_system:
+
+The webserver system
+--------------------
+
+The webserver system represents a HTTP server serving requests from a base url. It can also represent local files
+either by just passing in a local path in its ``base_url`` property or using a ``file://`` protocol in the URL.
+It provides session handling, connection pooling and authentication services to sources and sinks which need to
+communicate with a HTTP server.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:webserver",
+        "base_url": "http://host:port/path",
+        "username": None,
+        "password": None,
+        "verify_ssl": false,
+        "authentication": "basic"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``base_url``
+     - String
+     - The full URL of the base url of the HTTP server.
+     -
+     - Yes
+
+   * - ``username``
+     - String
+     - The username to use when authenticating with the ``HTTP server``. If not set, no authentication is attempted.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use if ``username`` is set. It is mandatory if the ``username`` is provided.
+     -
+     - Yes
+
+   * - ``verify_ssl``
+     - Boolean
+     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
+       ``HTTP server`` over SSL/TLS.
+     - false
+     -
+
+   * - ``authentication``
+     - String
+     - What kind of authentication protocol to use when ``username`` is set. The default is basic authentication.
+     - "basic"
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-http-server",
+        "type": "system:webserver",
+        "name": "Our HTTP Server",
+        "base_url": "http://our.domain.com/files"
+    }
 
 .. _task_section:
 
