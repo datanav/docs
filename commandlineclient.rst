@@ -2,19 +2,40 @@
 Command line client
 ===================
 
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
 Introduction
 ============
 
-Sesam provides a commandline client for controlling the service and also working with the data in the datahub.
-
-If you follow the :ref:`overview-getting-started` guide, the commandline client will be installed and available on the
-commandline as "sesam", and the sesam service will be running on the url http://localhost:9042 .
+Sesam provides a commandline client for controlling the service and for working with the data in the datahub.
 
 The commandline client works by sending http-requests to the Sesam (:ref:`api-top`). You can therefore in principle use
 for instance `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_ to do everything that you can do with
 the commandline client. The purpose of the commandline client is to make the api functionality easier accessable from
 the commandline.
 
+Installing the client
+=====================
+
+If you followed the :ref:`overview-getting-started` guide, the sesam service will be running on the url http://localhost:9042 .
+
+The commandline client is distributed as a python package, so you will need python (v3.4 or later) in order to install
+and run it:
+
+1. Download and install the latest version of python from https://www.python.org/downloads. Depending on your OS, the
+   installer might ask you if you want to add python to the machine's executable path. You want to answer yes to this.
+   For instance: the MS Windows installer has a checkbox called "Add Python 3.5 to PATH" that you need to check.
+2. Install the sesamclient package with python's package manager "pip". Open a new commandline window and run this command::
+
+   pip3 install sesamclient
+
+The sesam client will now be available on the commandline as "sesam".
+
+
+Commands overview
+=================
 The most important thing to know is the "help" option (-h), which is available for the commandline client as a whole, and
 for individual commands::
 
@@ -26,7 +47,6 @@ for individual commands::
 
 This will print out detailed usage instructions. This information is also available in
 the :ref:`commandline-client-reference` part of this document.
-
 
 
 The most important commands are::
@@ -42,8 +62,8 @@ This returns a list of pipes. For an explanation of what a pipe is, read the :re
 This returns a list of datasets. (For an explanation of what a dataset is, read the :ref:`concepts-datasets` concept definition).
 
 
-Example usage:
---------------
+Example usage
+=============
 
 In the following section we will go through a few examples of what you can do with the commandline client. For a complete
 description of all the commands and options, have a look at the :ref:`commandline-client-reference` section.
@@ -125,7 +145,7 @@ contains.
 .. _commandline-client-reference:
 
 Commandline client Reference
-----------------------------
+============================
 
 This section contains detailed reference documentation for the commandline client. All this information is also available
 from the commandline client itself, via the "-h" option. Examples::
