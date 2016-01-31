@@ -11,6 +11,12 @@ Introduction
 
 Sesam is a collector, manipulator and producer of data. It collects raw data from source systems and stores it in nodes in the form of datasets. Data transformations can be defined and executed to construct new datasets. Data from these datasets can be exposed and delivered to other systems.
 
+.. image:: images/datahub.jpg
+    :width: 800px
+    :align: center
+    :height: 600px
+    :alt: Sesam
+
 Sesam produces and consumes streams of data. Each stream contains a number of data entities each of whom consists of a number of key / property values and a special property called "_id".
 
 Components called data sources expose data from source systems such as REST APIs and relational databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks write the entities to datasets. A dataset is a log of entities supported by indexes for random access.
@@ -39,6 +45,13 @@ A dataset is the basic means of storage inside the node. A dataset is a log of :
 
 A ``dataset`` source exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
 
+.. image:: images/dataset.jpg
+    :width: 800px
+    :align: center
+    :height: 600px
+    :alt: DataSet
+
+
 Systems
 -------
 
@@ -54,6 +67,11 @@ Pipes
 
 A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is the only way to specify how entities stream from dataset to dataset in a node.
 
+.. image:: images/pipes.jpg
+    :width: 800px
+    :align: center
+    :height: 350px
+    :alt: Generic pipe concept
 
 .. _concepts-sources:
 
@@ -61,6 +79,12 @@ Sources
 =======
 
 A data *source* is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a relational database table, the rows in a CSV file, or data from an API.
+
+.. image:: images/datasource.png
+    :width: 800px
+    :align: center
+    :height: 450px
+    :alt: Generic pipe concept
 
 The source component offers an object called a Data Source Reader which has one capability which is 'getEntities'. This 'reader' object is immune to changes to the configuration of its parent source during its lifetime.
 
@@ -120,7 +144,13 @@ The Data Transformation Language (DTL)
 
 The Data Transformation Language is used to construct new data from existing data. DTL transforms can only be applied to data in a dataset. The result of a DTL transform is exposed via DTL provider.
 
-DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', 'merge' for
+DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'.
+
+.. image:: images/dtl.png
+    :width: 800px
+    :align: center
+    :height: 500px
+    :alt: DataSet 
 
 
 Sesam API
