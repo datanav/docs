@@ -1030,17 +1030,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-The system source
------------------
-
-The system source [TODO]
-
-Prototype
-^^^^^^^^^
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
 
 The JSON file source
 --------------------
