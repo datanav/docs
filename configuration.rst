@@ -74,7 +74,7 @@ Prototype
         "_id": "pipe-id",
         "name": "Name of pipe",
         "type": "pipe",
-        "short_config": "relational://system/table",
+        "short_config": "sql://system/table",
         "source": {
         },
         "transform": {
@@ -173,7 +173,7 @@ Example configuration
        "name": "Northwind customers",
        "type": "pipe",
        "source": {
-           "type": "source:relational",
+           "type": "source:sql",
            "system": "Northwind",
            "table": "Customers"
        },
@@ -248,9 +248,9 @@ Properties
    * - ``type``
      - String
      - The type of source, it is a enumeration with values from the list of supported sources. See the details in the
-       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a relational type
+       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a sql type
        source.
-     - "source:relational"
+     - "source:sql"
      - No
 
    * - ``supports_since``
@@ -500,12 +500,12 @@ configuration, which is omitted here for brevity:
         }
     }
 
-.. _relational_source:
+.. _sql_source:
 
-The relational database source
+The sql database source
 ------------------------------
 
-The relational database source is one of the most commonly used data sources. In short, it presents database ``relations``
+The sql database source is one of the most commonly used data sources. In short, it presents database ``relations``
 (i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
 their default values:
 
@@ -516,7 +516,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:relational",
+        "type": "source:sql",
         "system": "id-of-system",
         "table": "name-of-table",
         "primary_key": ["list","of","key","names"],
@@ -625,7 +625,7 @@ Example with a single table:
 
     {
         "source": {
-            "type": "source:relational",
+            "type": "source:sql",
             "system": "Northwind",
             "table": "Customers"
         }
@@ -638,7 +638,7 @@ in a column called ``updated``. This enables us to switch on ``since`` support:
 
     {
         "source": {
-            "type": "source:relational",
+            "type": "source:sql",
             "system": "my_system",
             "table": "my_table",
             "primary_key": "table_id",
@@ -653,7 +653,7 @@ Example with custom query:
 
     {
         "source": {
-            "type": "source:relational",
+            "type": "source:sql",
             "system": "Northwind",
             "query": "select * from Customers",
             "primary_key": "CustomerID"
@@ -667,7 +667,7 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 
     {
         "source": {
-            "type": "source:relational",
+            "type": "source:sql",
             "system": "my_system",
             "query": "select * from my_table",
             "primary_key": "table_id",
@@ -2321,13 +2321,13 @@ A system component represents a computer system that can provide data entities. 
 and services that can be used by several data sources, such as connection pooling, authentication settings,
 communication protocol settings and so on.
 
-.. _relational_system:
+.. _sql_system:
 
-The relational system
----------------------
+The SQL system
+--------------
 
-The relational system component represents a RDBMS and contains the necessary information to establish a connection
-to the RDBMS and manage these connections among the sources that read from it. The configuration of the relational
+The SQL system component represents a RDBMS and contains the necessary information to establish a connection
+to the RDBMS and manage these connections among the sources that read from it. The configuration of the sql
 system should be made available before any sources that use it. It can also provide source configurations for reading
 from all tables it can introspect from the RDBMS schema.
 
@@ -2337,8 +2337,8 @@ Prototype
 ::
 
     {
-        "_id": "relational_system_id",
-        "type": "system:relational",
+        "_id": "sql_system_id",
+        "type": "system:sql",
         "name": "The Foo Database",
         "connection_string": "foo://database/SID",
         "pool_size": 10,
@@ -2397,7 +2397,7 @@ Example SQL Lite configuration:
     {
         "_id": "northwind_db",
         "name": "Northwind example database",
-        "type": "system:relational",
+        "type": "system:sql",
         "connection_string": "sqlite:///lake/exampledata/Northwind.db"
     }
 
@@ -2408,7 +2408,7 @@ Example Oracle configuration:
     {
         "_id": "oracle_db",
         "name": "Oracle test database",
-        "type": "system:relational",
+        "type": "system:sql",
         "connection_string": "oracle://system:oracle@oracle:1521/XE?charset=utf8"
     }
 
@@ -2419,7 +2419,7 @@ Example MS SQL Server configuration:
     {
         "_id": "sqlserver_db",
         "name": "MS SQL Server test database",
-        "type": "system:relational",
+        "type": "system:sql",
         "connection_string": "mssql+pymssql://user:password@localhost:1433/testdb?charset=utf8"
     }
 
@@ -3146,7 +3146,7 @@ encountered usecase, we have condensed the information needed into a single url-
     [
         {
            "_id": "Northwind",
-           "type": "system:relational",
+           "type": "system:sql",
            "name": "Northwind SQLite database",
            "connection_string": "sqlite:///lake/exampledata/Northwind.db"
         },
@@ -3154,11 +3154,11 @@ encountered usecase, we have condensed the information needed into a single url-
            "_id": "Northwind:Orders",
            "type": "pipe",
            "name": "Orders from northwind",
-           "short_config": "relational://Northwind/Orders"
+           "short_config": "sql://Northwind/Orders"
         }
     ]
 
-Currently, only the :ref:`relational system <relational_system>` and :ref:`source <relational_source>` is supported
+Currently, only the :ref:`sql system <sql_system>` and :ref:`source <sql_source>` is supported
 though other short forms may be added at a later time. The above example using the ``short_config`` form is equivalent
 to this fully expanded pipe configuration:
 
@@ -3167,7 +3167,7 @@ to this fully expanded pipe configuration:
     [
         {
            "_id": "Northwind",
-           "type": "system:relational",
+           "type": "system:sql",
            "connection_string": "sqlite:///lake/exampledata/Northwind.db"
         },
         {
@@ -3175,7 +3175,7 @@ to this fully expanded pipe configuration:
            "type": "pipe",
            "source": {
                "name": "Orders from northwind - source",
-               "type": "relational",
+               "type": "sql",
                "system": "Northwind",
                "table": "Orders"
            },
@@ -3193,7 +3193,7 @@ to this fully expanded pipe configuration:
         }
     ]
 
-You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`relational source <relational_source>`
+You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`sql source <sql_source>`
 and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
 changing the pump schedule and startup flag:
 
@@ -3202,7 +3202,7 @@ changing the pump schedule and startup flag:
     [
         {
            "_id": "Northwind",
-           "type": "system:relational",
+           "type": "system:sql",
            "name": "Northwind SQLite database",
            "connection_string": "sqlite:///lake/exampledata/Northwind.db"
         },
@@ -3210,7 +3210,7 @@ changing the pump schedule and startup flag:
            "_id": "Northwind:Orders",
            "type": "pipe",
            "name": "Orders from northwind",
-           "short_config": "relational://Northwind/Orders",
+           "short_config": "sql://Northwind/Orders",
            "pump": {
                "schedule_interval": 60000,
                "run_at_startup": true

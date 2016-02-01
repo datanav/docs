@@ -15,7 +15,7 @@ Entities in the datasets can be processed using the Data Transformation Language
 
 The final piece of Sesam is to deliver data from a dataset to a sink. Sinks are used to write data into target systems or send it to service endpoints.
 
-Sesam provides implementations for many types of data sources, including relational databases, LDAP, and MongoDB. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
+Sesam provides implementations for many types of data sources, including relational databases, LDAP, and MongoDB. It also provides a number of core Sink implementations such as the sql database and HTTP Post sinks.
 
 Installation
 ------------

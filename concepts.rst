@@ -117,7 +117,7 @@ A data *source* is a component hosted in the Sesam Node that exposes a stream of
 The source component offers an object called a Data Source Reader which has one capability which is 'getEntities'. This 'reader' object is immune to changes to the configuration of its parent source during its lifetime.
 
 The 'getEntities' method can take an additional parameter that is an 'offset' token. This token can be used to only fetch the entities that have changed *since* that given offset. An offset is a opaque token that may take any form; it is interpreted
-by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be an index.
+by the data source only. For example; for a sql data source it might be a datestamp or for a log based source it might be an index.
 
 Each entity returned by a data source reader is a dictionary that maps keys to values. Values can be simple literals such as string, int, long, etc. They can also be lists or child entities. They can even be lists of entities. There are just three special or reserved keys within an entity, and they are; "_id", "_updated" and "_deleted". [TODO: all keys starting with '_' are reserved - grove] It is a requirement that every entity exposed by a provider has an "_id" property. This identifier should be unique within the set of entities being exposed by that source, but need not be globally unique across all entities.
 
