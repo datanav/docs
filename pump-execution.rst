@@ -1,25 +1,25 @@
-The task execution dataset
+The pump execution dataset
 ==========================
 
 .. contents:: Table of Contents
    :depth: 2
 
-The task execution dataset is a log which contains entities with
-information about a particular task's execution history. The dataset
-id is computed from the task's ``_id`` property as
-``system:task_execution:<task_id>``.
+The pump execution dataset is a log which contains entities with
+information about a particular pump's execution history. The dataset
+id is computed from the pump's ``_id`` property as
+``system:pump_execution:<pump_id>``.
 
-It will always contain at least two entities for each time the task
-runs. The first will have the id "task-started" and the last either
-"task-ended" *or* "task-completed". In between these entities,
+It will always contain at least two entities for each time the pump
+runs. The first will have the id "pump-started" and the last either
+"pump-ended" *or* "pump-completed". In between these entities,
 there may be entities recording read errors and/or write
-errors. Depending on the task settings, the write errors can then be
+errors. Depending on the pump settings, the write errors can then be
 retried one or more times during the next runs.
 
-The task-started entity
+The pump-started entity
 -----------------------
 
-The "task-started" is written to the task execution dataset when the task has started, but before any other processing
+The "pump-started" is written to the pump execution dataset when the pump has started, but before any other processing
 takes place.
 
 Prototype
@@ -28,18 +28,18 @@ Prototype
 ::
 
     {
-        "_id":  "task-started",
-        "event_type": "task-started",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
+        "_id":  "pump-started",
+        "event_type": "pump-started",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
         "start_time": "iso-timestamp-in-UTC",
         "source": {
             "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-task-started"
+            "the-source": "at-the-time-the-pump-started"
         },
         "sink": {
             "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-task-started"
+            "the-sink": "at-the-time-the-pump-started"
         },
     }
 
@@ -57,49 +57,49 @@ Properties
 
    * - ``_id``
      - String
-     - The ``_id`` value for task-started entities is fixed and will always be "task-started"
+     - The ``_id`` value for pump-started entities is fixed and will always be "pump-started"
 
    * - ``event_type``
      - String
-     - The ``event_type`` value for task-started entities is fixed and will always be "task-started"
+     - The ``event_type`` value for pump-started entities is fixed and will always be "pump-started"
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task
+     - The ``_id`` value of the pump configuration used to instantiate the pump
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance
+     - A GUID value representing the instantiated pump instance
 
    * - ``start_time``
      - String
-     - The ISO-formatted timestamp for the timestamp the task started ("YYYY-MM-DDTHH:mm:SS.fZ")
+     - The ISO-formatted timestamp for the timestamp the pump started ("YYYY-MM-DDTHH:mm:SS.fZ")
 
    * - ``source``
      - Object
-     - The full configuration for the source of the pipe the task is part of as it was when the task started
+     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
 
    * - ``sink``
      - String
-     - The full configuration for the sink of the pipe the task is part of as it was when the task started
+     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
 
-The task-completed entity
+The pump-completed entity
 -------------------------
 
-If the task completes successfully, it will write a "task-completed" entity to the execution log.
+If the pump completes successfully, it will write a "pump-completed" entity to the execution log.
 
 Prototype
 ^^^^^^^^^
 ::
 
     {
-        "_id":  "task-completed",
-        "event_type": "task-completed",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
-        "start_time": "task-started-timestamp-in-UTC",
-        "end_time": "task-ended-iso-timestamp-in-UTC",
-        "task_started_location": 1234,
+        "_id":  "pump-completed",
+        "event_type": "pump-completed",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
+        "start_time": "pump-started-timestamp-in-UTC",
+        "end_time": "pump-ended-iso-timestamp-in-UTC",
+        "pump_started_location": 1234,
         "retry_entities_exist": false,
         "entities_succeeded": 123,
         "entities_failed": 0
@@ -118,32 +118,32 @@ Properties
 
    * - ``_id``
      - String
-     - The ``_id`` value for task-completed entities is fixed and will always be "task-completed".
+     - The ``_id`` value for pump-completed entities is fixed and will always be "pump-completed".
 
    * - ``event_type``
      - String
-     - The ``event_type`` value for task-completed entities is fixed and will always be "task-completed".
+     - The ``event_type`` value for pump-completed entities is fixed and will always be "pump-completed".
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task.
+     - The ``_id`` value of the pump configuration used to instantiate the pump.
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance.
+     - A GUID value representing the instantiated pump instance.
 
    * - ``start_time``
      - String
-     - The ISO-formatted timestamp for the timestamp the task started ("YYYY-MM-DDTHH:mm:SS.fZ").
+     - The ISO-formatted timestamp for the timestamp the pump started ("YYYY-MM-DDTHH:mm:SS.fZ").
 
    * - ``end_time``
      - String
-     - The ISO-formatted timestamp for the timestamp the task ended ("YYYY-MM-DDTHH:mm:SS.fZ").
+     - The ISO-formatted timestamp for the timestamp the pump ended ("YYYY-MM-DDTHH:mm:SS.fZ").
 
-   * - ``task_started_location``
+   * - ``pump_started_location``
      - Integer
-     - The absolute index into the log where the corresponding "task-started" entity is located. It is used by
-       the task's retry mechanism to "rewind" the log to the last successfully completed run.
+     - The absolute index into the log where the corresponding "pump-started" entity is located. It is used by
+       the pump's retry mechanism to "rewind" the log to the last successfully completed run.
 
    * - ``retry_entities_exist``
      - Boolean
@@ -158,10 +158,10 @@ Properties
      - A counter with the number of entities that failed to be written to the pipe's sink during this run.
 
 
-The task-failed entity
+The pump-failed entity
 ----------------------
 
-If the task fails for some reason, it will write a "task-failed" entity when it terminates.
+If the pump fails for some reason, it will write a "pump-failed" entity when it terminates.
 
 Prototype
 ^^^^^^^^^
@@ -169,24 +169,24 @@ Prototype
 ::
 
     {
-        "_id":  "task-failed",
-        "event_type": "task-failed",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
-        "start_time": "task-started-timestamp-in-UTC",
-        "end_time": "task-ended-iso-timestamp-in-UTC",
-        "task_started_location": 1234,
+        "_id":  "pump-failed",
+        "event_type": "pump-failed",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
+        "start_time": "pump-started-timestamp-in-UTC",
+        "end_time": "pump-ended-iso-timestamp-in-UTC",
+        "pump_started_location": 1234,
         "retry_entities_exist": true,
         "entities_succeeded": 123,
         "entities_failed": 10,
         "reason_why_stopped": "traceback-info",
         "source": {
             "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-task-started"
+            "the-source": "at-the-time-the-pump-started"
         },
         "sink": {
             "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-task-started"
+            "the-sink": "at-the-time-the-pump-started"
         }
     }
 
@@ -203,32 +203,32 @@ Properties
 
    * - ``_id``
      - String
-     - The ``_id`` value for task-failed entities is fixed and will always be "task-failed".
+     - The ``_id`` value for pump-failed entities is fixed and will always be "pump-failed".
 
    * - ``event_type``
      - String
-     - The ``event_type`` value for task-failed entities is fixed and will always be "task-failed".
+     - The ``event_type`` value for pump-failed entities is fixed and will always be "pump-failed".
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task.
+     - The ``_id`` value of the pump configuration used to instantiate the pump.
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance.
+     - A GUID value representing the instantiated pump instance.
 
    * - ``start_time``
      - String
-     - The ISO-formatted timestamp for the timestamp the task started ("YYYY-MM-DDTHH:mm:SS.fZ").
+     - The ISO-formatted timestamp for the timestamp the pump started ("YYYY-MM-DDTHH:mm:SS.fZ").
 
    * - ``end_time``
      - String
-     - The ISO-formatted timestamp for the timestamp the task ended ("YYYY-MM-DDTHH:mm:SS.fZ").
+     - The ISO-formatted timestamp for the timestamp the pump ended ("YYYY-MM-DDTHH:mm:SS.fZ").
 
-   * - ``task_started_location``
+   * - ``pump_started_location``
      - Integer
-     - The absolute index into the log where the corresponding "task-started" entity is located. It is used by
-       the task's retry mechanism to "rewind" the log to the last successfully completed run.
+     - The absolute index into the log where the corresponding "pump-started" entity is located. It is used by
+       the pump's retry mechanism to "rewind" the log to the last successfully completed run.
 
    * - ``retry_entities_exist``
      - Boolean
@@ -244,15 +244,15 @@ Properties
 
    * - ``reason_why_stopped``
      - String
-     - Information about why the task failed. It contains among other things a stack trace of the execution failure.
+     - Information about why the pump failed. It contains among other things a stack trace of the execution failure.
 
    * - ``source``
      - Object
-     - The full configuration for the source of the pipe the task is part of as it was when the task started
+     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
 
    * - ``sink``
      - String
-     - The full configuration for the sink of the pipe the task is part of as it was when the task started
+     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
 
 The read-error entity
 ---------------------
@@ -268,15 +268,15 @@ Prototype
     {
         "_id":  "read-error:<GUID>",
         "event_type": "read-error",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
-        "exception": "traceback-info-from-task",
+        "exception": "traceback-info-from-pump",
         "underlying_exception": "the-exception-cast-by-source",
         "source": {
             "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-task-started"
+            "the-source": "at-the-time-the-pump-started"
         }
     }
 
@@ -300,13 +300,13 @@ Properties
      - String
      - The ``event_type`` value for read-error entities is fixed and will always be "read-error".
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task.
+     - The ``_id`` value of the pump configuration used to instantiate the pump.
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance.
+     - A GUID value representing the instantiated pump instance.
 
    * - ``error_code``
      - Integer
@@ -320,7 +320,7 @@ Properties
 
    * - ``exception``
      - String
-     - Information about from the task failure. It a stack trace of the execution failure.
+     - Information about from the pump failure. It a stack trace of the execution failure.
 
    * - ``underlying_exception``
      - String
@@ -329,7 +329,7 @@ Properties
 
    * - ``source``
      - Object
-     - The full configuration for the source of the pipe the task is part of as it was when the task started
+     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
 
 The write-error entity
 ----------------------
@@ -346,8 +346,8 @@ Prototype
     {
         "_id":  "write-error:<entity_id>",
         "event_type": "write-error",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
         "retry_attempts": 0,
@@ -357,11 +357,11 @@ Prototype
           "_id": "id-of-the-entity",
           "entity-property": "entity-value"
         },
-        "exception": "traceback-info-from-task",
+        "exception": "traceback-info-from-pump",
         "underlying_exception": "the-exception-cast-by-sink",
         "sink": {
             "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-task-started"
+            "the-sink": "at-the-time-the-pump-started"
         }
     }
 
@@ -385,13 +385,13 @@ Properties
      - String
      - The ``event_type`` value for write-error entities is fixed and will always be "write-error".
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task.
+     - The ``_id`` value of the pump configuration used to instantiate the pump.
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance.
+     - A GUID value representing the instantiated pump instance.
 
    * - ``error_code``
      - Integer
@@ -419,7 +419,7 @@ Properties
    * - ``dead``
      - Boolean
      - A flag indicating if the entity has been given up on, for example having exceeded some number of retries. If a
-       dead letter dataset is specified for the task, the "dead" entity will be written there and a final "write-error"
+       dead letter dataset is specified for the pump, the "dead" entity will be written there and a final "write-error"
        entity written to the execution with the ``dead`` flag set to ``true``. This entity will then never be retried
        again (until a new version comes along from the source).
 
@@ -429,7 +429,7 @@ Properties
 
    * - ``exception``
      - String
-     - Information about from the task failure. It a stack trace of the execution failure.
+     - Information about from the pump failure. It a stack trace of the execution failure.
 
    * - ``underlying_exception``
      - String
@@ -438,17 +438,17 @@ Properties
 
    * - ``sink``
      - Object
-     - The full configuration for the sink of the pipe the task is part of as it was when the task started
+     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
 
 The notification entity
 -----------------------
 
 Sources can emit special types of entities containing a reserved property ``_notification``. If such an entity is
-encountered by the task, a special entity is written to the execution log containing the emiotted entity as a child
+encountered by the pump, a special entity is written to the execution log containing the emiotted entity as a child
 entity. Note: *This entity is not written to the sink*.
 
 This type of entity is typically used to signal for example a entity warning or error that is not deemed
-serious enough to warrant a task termination (for example a fixable parse error in configuration JSON files on disk).
+serious enough to warrant a pump termination (for example a fixable parse error in configuration JSON files on disk).
 
 Prototype
 ^^^^^^^^^
@@ -458,8 +458,8 @@ Prototype
     {
         "_id":  "notification:<entity_id>",
         "event_type": "notification",
-        "task_definition": "task-configuration-id",
-        "task_instance": "task-instance-id",
+        "pump_definition": "pump-configuration-id",
+        "pump_instance": "pump-instance-id",
         "notification_time": "failure-ISO-timestamp-in-UTC",
         "entity": {
           "_id": "id-of-the-entity",
@@ -467,11 +467,11 @@ Prototype
         },
         "source": {
             "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-task-started"
+            "the-source": "at-the-time-the-pump-started"
         },
         "sink": {
             "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-task-started"
+            "the-sink": "at-the-time-the-pump-started"
         }
     }
 
@@ -495,13 +495,13 @@ Properties
      - String
      - The ``event_type`` value for notification entities is fixed and will always be "notification".
 
-   * - ``task_definition``
+   * - ``pump_definition``
      - String
-     - The ``_id`` value of the task configuration used to instantiate the task.
+     - The ``_id`` value of the pump configuration used to instantiate the pump.
 
-   * - ``task_instance``
+   * - ``pump_instance``
      - String
-     - A GUID value representing the instantiated task instance.
+     - A GUID value representing the instantiated pump instance.
 
    * - ``notification_time``
      - String
@@ -513,8 +513,8 @@ Properties
 
    * - ``source``
      - Object
-     - The full configuration for the source of the pipe the task is part of as it was when the task started
+     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
 
    * - ``sink``
      - Object
-     - The full configuration for the sink of the pipe the task is part of as it was when the task started
+     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started

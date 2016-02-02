@@ -58,8 +58,8 @@ a very efficient handling of entity streams within the Sesam Node.
 Pipes
 =====
 
-A pipe is a *quad* consisting of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and :ref:`datasync task <task_section>`.
-The task "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
+A pipe is a *quad* consisting of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
+The pump "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
 
 The configuration of a pipe has two forms; one *complete* form and one *short hand* form. Let's describe the *complete*
 form first and :ref:`revisit <pipes_revisited>` the *short hand* form after describing the various sinks and sources
@@ -81,7 +81,7 @@ Prototype
         },
         "sink": {
         },
-        "task": {
+        "pump": {
         }
     }
 
@@ -154,10 +154,10 @@ Properties
      -
      - No
 
-   * - ``task``
+   * - ``pump``
      - Object
-     - A configuration object for the :ref:`task definition <task_section>` component of the pipe. If omitted, it
-       defaults to a ``datasync`` task with its ``source`` and ``sink`` properties set to the
+     - A configuration object for the :ref:`pump <pump_section>` component of the pipe. If omitted, it
+       defaults to a ``datasync`` pump with its ``source`` and ``sink`` properties set to the
        respective ``_id`` properties of the source and sink respectively (possibly a computed value).
      -
      - No
@@ -181,7 +181,7 @@ Example configuration
            "type": "sink:dataset",
            "dataset": "Northwind:Customers"
        },
-       "task": {
+       "pump": {
            "type": "task:datasync",
            "schedule_interval": 30000
        }
@@ -1070,7 +1070,7 @@ Properties
    * - ``notify_read_errors``
      - Boolean
      - Indicates if the source should throw exceptions or parse errors, or produce special inline error-entities
-       instead (these can be interpreted by a datasync task without stopping the process). The flag is useful for
+       instead (these can be interpreted by a datasync pump without stopping the process). The flag is useful for
        reading configuration files from disk, for example.
      - true
      -
@@ -1231,7 +1231,7 @@ source you enable ``POST`` support at this endpoint.
    http://localhost:9042/pipes/mypipe/entities
 
 A pipe that references the ``HTTP endpoint`` source will not pump, in
-practice this means that a ``datasync`` task is not scheduled for the
+practice this means that a ``datasync`` pump is not configured for the
 pipe. This means that the only way to push entities through the pipe
 is by posting to the HTTP endpoint.
 
@@ -1832,7 +1832,7 @@ Properties
    * - ``batch_size``
      - Integer
      - The maximum number of entities to accumulate before posting. Note that the remainder of the internal buffer
-       is flushed and posted at the end of a pipe task even if the number of entities is less than this number.
+       is flushed and posted at the end of a pipe pump run even if the number of entities is less than this number.
      - 1000
      -
 
@@ -2950,16 +2950,16 @@ Example configuration
         "base_url": "http://our.domain.com/files"
     }
 
-.. _task_section:
+.. _pump_section:
 
-Tasks
+Pumps
 =====
 
-Tasks are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
-from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The task is also responsible
+Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
+from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The pump is also responsible
 for retrying failed writes of entities and logging its activity. It can also log ultimately failed entities to a "dead letter"
-dataset for manual inspection. Tasks log their :doc:`execution history <task-execution>` in a internal dataset with
-the id "system:task_execution:<task_id>". See the :doc:`chapter on the task execution dataset <task-execution>` for more
+dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
+the id "system:pump_execution:<pump_id>". See the :doc:`chapter on the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.
 
 Prototype
@@ -2968,8 +2968,8 @@ Prototype
 ::
 
     {
-        "_id": "task_id",
-        "type": "task:datasync",
+        "_id": "pump_id",
+        "type": "datasync",
         "name": "My Pipe pump",
         "schedule_interval": 15000,
         "cron_expression": "* * * * * *",
@@ -2986,8 +2986,8 @@ Prototype
 Properties
 ----------
 
-A note on the required properties: a task configuration needs to have either a ``schedule_interval`` *or* a
-``cron_expression`` property to govern when the task should be run. They are mutually exclusive with the
+A note on the required properties: a pump configuration needs to have either a ``schedule_interval`` *or* a
+``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
 ``cron_expression`` taking precedence if both are present.
 
 If you are unfamiliar with *cron expressions*, this `tutorial <http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger>`_
@@ -3012,60 +3012,60 @@ is a good resource for learning about how to format them correctly to achieve th
 
    * - ``cron_expression``
      - String
-     - A cron expression that indicates when the task should run. It is a required field if no ``schedule_interval`` is
+     - A cron expression that indicates when the pump should run. It is a required field if no ``schedule_interval`` is
        specified. It is mutually exclusive with the ``schedule_interval`` property.
      -
      - Yes
 
    * - ``rescan_run_count``
      - Integer
-     - How many times the task should run before scheduling a complete rescan of the source of the pipe that the task
+     - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
        is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
      -
      -
 
    * - ``rescan_cron_expression``
      - String
-     - A cron expression that indicates when the task should schedule a full rescan of the source of the pipe the task
+     - A cron expression that indicates when the pump should schedule a full rescan of the source of the pipe the pump
        is part of. It is mutually exclusive with the ``rescan_run_count`` property.
      -
      -
 
    * - ``run_at_startup``
      - Boolean
-     - A flag that indicates if the task should run when the Sesam Node starts up, in addition to the normal schedule
+     - A flag that indicates if the pump should run when the Sesam Node starts up, in addition to the normal schedule
        specified by the ``schedule_interval`` or ``cron_expression`` properties.
      - false
      -
 
    * - ``max_read_retries``
      - Integer
-     - A counter that indicates to the task how many times it should retry when failing to read a entity from a source.
+     - A counter that indicates to the pump how many times it should retry when failing to read a entity from a source.
        The default (0) means that it should not retry but log an error immediately when encountering read errors.
      - 0
      -
 
    * - ``max_retries_per_entity``
      - Integer
-     - A counter that indicates to the task how many times it should retry a failing entity when writing to a sink before
+     - A counter that indicates to the pump how many times it should retry a failing entity when writing to a sink before
        giving up on it, which in case it can optionally write it to a ``dead_letter_dataset`` (if specified).
      - 5
      -
 
    * - ``max_consecutive_write_errors``
      - Integer
-     - A counter that indicates to the task how many consecutive write errors it tolerates before terminating the
+     - A counter that indicates to the pump how many consecutive write errors it tolerates before terminating the
        current run. The default (1) means it will terminate after the first write error it encounters.
      - 1
      -
 
    * - ``max_write_errors_in_retry_dataset``
      - Integer
-     - A counter that indicates to the task how many write errors it accepts in its execution history dataset. If the number of
-       retryable and not "dead" failed entities in the dataset exceeds this number, the task will refuse to
+     - A counter that indicates to the pump how many write errors it accepts in its execution history dataset. If the number of
+       retryable and not "dead" failed entities in the dataset exceeds this number, the pump will refuse to
        write any more failed entities to the execution dataset and terminate, even if the ``max_retries_per_entity`` or
        ``max_retries_per_entity`` is not reached at that point. This purpose of this property is to limit the size of the
-       task execution dataset in the case where a target system is unrechable (or misconfigured). The default value (0) effectively
+       pump execution dataset in the case where a target system is unrechable (or misconfigured). The default value (0) effectively
        disables retries for write errors.
      - 0
      -
@@ -3075,61 +3075,57 @@ Example configuration
 
 The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
 
-A scheduled task running every 30 seconds, no retries or dead letter dataset:
+A scheduled pump running every 30 seconds, no retries or dead letter dataset:
 
 ::
 
     {
-        "task": {
-           "_id": "task_id",  # TODO: is this required / neccessary?
-           "type": "task:datasync",
+        "pump": {
+           "type": "datasync",
            "name": "My Pipe pump",
            "schedule_interval": 30000
        }
     }
 
-A cron task running every day at midnight with max 5 retries, maximum 100 retries in the execution log and a dead letter
+A cron pump running every day at midnight with max 5 retries, maximum 100 retries in the execution log and a dead letter
 dataset. Also max ten consecutive write failures allowed.
 
 ::
 
     {
-        "task": {
-           "_id": "task_id",
-           "type": "task:datasync",
+        "pump": {
+           "type": "datasync",
            "name": "My Pipe pump",
            "cron_expression": "0 0 0 * * *",
            "max_retries_per_entity": 5,
            "max_consecutive_write_errors": 10,
            "max_write_errors_in_retry_dataset": 100,
-           "dead_letter_dataset": "task-dead-letters"
+           "dead_letter_dataset": "pump-dead-letters"
        }
     }
 
-A scheduled task running every 30 seconds but do a full rescan of the source every full hour. No retries or dead letter
+A scheduled pump running every 30 seconds but do a full rescan of the source every full hour. No retries or dead letter
 datasets:
 
 ::
 
     {
-        "task": {
-           "_id": "task_id",
-           "type": "task:datasync",
+        "pump": {
+           "type": "datasync",
            "name": "My Pipe pump",
            "schedule_interval": 30000,
            "rescan_cron_expression": "0 0 * * * *"
        }
     }
 
-A scheduled task running every 5 minutes from 14:00 and ending at 14:55, AND fire every 5 minutes starting at
+A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fire every 5 minutes starting at
 18:00 and ending at 18:55, every day. No retries or dead letter datasets:
 
 ::
 
     {
-        "task": {
-           "_id": "task_id",
-           "type": "task:datasync",
+        "pump": {
+           "type": "datasync",
            "name": "My Pipe pump",
            "cron_expression": "0 0/5 14,18 * * ?"
        }
@@ -3188,9 +3184,8 @@ to this fully expanded pipe configuration:
                "type": "datset",
                "dataset": "Northwind:Orders"
            },
-           "task": {
-               "_id": "task:Northwind:Orders",
-               "name": "Orders from northwind - task",
+           "pump": {
+               "name": "Orders from northwind - pump",
                "schedule_interval": 15000,
                "source": "source:Northwind:Orders",
                "sink": "sink:Northwind:Orders"
@@ -3199,8 +3194,8 @@ to this fully expanded pipe configuration:
     ]
 
 You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`relational source <relational_source>`
-and specific :ref:`task <task_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
-changing the task schedule and startup flag:
+and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
+changing the pump schedule and startup flag:
 
 ::
 
@@ -3216,7 +3211,7 @@ changing the task schedule and startup flag:
            "type": "pipe",
            "name": "Orders from northwind",
            "short_config": "relational://Northwind/Orders",
-           "task": {
+           "pump": {
                "schedule_interval": 60000,
                "run_at_startup": true
            }
