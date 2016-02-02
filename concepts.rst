@@ -51,6 +51,11 @@ A ``dataset`` source exposes the entities from the dataset so that they can be s
     :height: 600px
     :alt: DataSet
 
+Retention Policies
+==================
+
+A dataset is an immutable log of data that would left unchecked grow forever. This problem is partly mitigated as entities are only written to the log if they are new or different (based on a hash comparison) from the currently stored version of that entity. To supplement this and ensure that a dataset does not consume all available disk space a retention policy can be defined. A rentention policy describes the general way in which the log should be compacted. The currently available policy is actually the best one and it is 'None'. 
+
 
 Systems
 -------
@@ -123,19 +128,12 @@ rescanning the data source from scratch at configurable points in time. If error
 writing an entity later. The retry strategy is configurable in several ways and if a end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
 
 Change tracking
----------------
+===============
 
-TODO: explain
+Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a datasource and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the datasource was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a datasource it may, if the datasource supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the datasource, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with any existnig version of that entity and only updated if they are different. The comparison is done by creating and comparing the hashes of the old and new entity. 
 
-Dependency Tracking
--------------------
 
-TODO: explain
 
-Retention Policies
-------------------
-
-TODO: explain
 
 .. _concepts-dtl:
 
@@ -151,6 +149,18 @@ DTL has a simple syntax and model where the user declares how to construct a new
     :align: center
     :height: 500px
     :alt: DataSet 
+
+Persisting the results of Transformation
+========================================
+
+In general DTL is applied to the entities in a dataset and the resulting entities are push into a sink that writes to a new dataset. The new dataset is then used as a datasource for sinks that write the data to external systems. 
+
+Dependency Tracking
+===================
+
+One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customer entities and a dataset of address entities. Each address has a property 'customer_id' that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new 'customer' structure that includes the address as a property. To do this they can use the hops function to connect the customer and address. This DTL transform forms part of  a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed? 
+
+This is in essence a cache invalidation of complex queries problem. With Sesam we have solved that problem. We are empowered to solve the problem as we have a dedicated transform langauge. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structrues and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.  
 
 
 Sesam API
