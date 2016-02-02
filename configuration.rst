@@ -503,7 +503,7 @@ configuration, which is omitted here for brevity:
 .. _sql_source:
 
 The sql database source
-------------------------------
+-----------------------
 
 The sql database source is one of the most commonly used data sources. In short, it presents database ``relations``
 (i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
@@ -2096,6 +2096,97 @@ and it also needs to have the properties references in the embedded template:
 
 You can also store the JINJA templates on disk and reference them in the same way via filenames instead of embedding
 the templates in config or the entities themselves.
+
+
+
+The SQL sink
+------------
+
+The SQL sink writes entities to a SQL database table. You will have to configure and provide a :ref:`SQL system <sql_system>` id in the ``system`` property.
+
+The expected form of an entity to be written to the sink is:
+
+::
+
+    {
+        "_id": "42",
+        "columnname1": value,
+        "columnname2": another_value,
+    }
+
+The ``_id`` property is expected to be a valid value for the target tables primary key column.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of sink",
+        "type": "sink:sql",
+        "system": "id-of-sql-system"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`SQL system <sql_system>` component to use.
+     -
+     - Yes
+
+   * - ``table``
+     - String
+     - Refers to a fully qualified table name in the database system, not including schema, which if needed must be
+       set separately.
+     -
+     - Yes
+
+   * - ``primary_key``
+     - List
+     - The value of this property must be a single string with the name of the column
+       that contains the ``primary key`` (PK) of the table or query, or a list of strings
+       if it is a compound primary key. If the property is not set the sql sink component will attempt to use
+       table metadata to deduce the PK to use.
+     -
+     - No
+
+   * - ``schema``
+     - String
+     - If a specific schema within a database is needed, you must provide its name in this property.
+       Do *not* use schema names in the ``table`` property.
+     -
+     - No
+
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "type": "sink:sql",
+            "name": "SQL sink",
+            "system": "my-sql-system",
+            "table": "customers"
+        }
+    }
+
+
 
 .. _mail_message_sink:
 
