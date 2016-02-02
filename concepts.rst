@@ -9,7 +9,9 @@ Concepts
 Introduction
 ------------
 
-Sesam is a collector, manipulator and producer of data. It collects raw data from source systems and stores it in nodes in the form of datasets. Data transformations can be defined and executed to construct new datasets. Data from these datasets can be exposed and delivered to other systems.
+Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems, transforming data, and providing data for target systems. 
+
+Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined that process the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam. 
 
 .. image:: images/datahub.jpg
     :width: 800px
@@ -17,33 +19,54 @@ Sesam is a collector, manipulator and producer of data. It collects raw data fro
     :height: 600px
     :alt: Sesam
 
-Sesam produces and consumes streams of data. Each stream contains a number of data entities each of whom consists of a number of key / property values and a special property called "_id".
 
-Components called data sources expose data from source systems such as REST APIs and relational databases. DataSync tasks run on regular intervals to pull data from a provider and push it to a sink. Datahub sinks write the entities to datasets. A dataset is a log of entities supported by indexes for random access.
+Sesam produces and consumes streams of data. Each stream contains a number of data entities. Each entity consists of a number of name-value pairs and with some special reserved property names. See the entity data model section for more details. The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
 
-Datasets also act as data sources. They can expose the data they contain. However, a more common usage is to transform the data from a dataset into a new shape or representation. This is done using the Data Transformation Language (DTL). The DTL is optimised for ease of use in stream and graph processing and the construction of new data entities. DTL transformations can use data from many datasets to construct new entities.
+::
 
-The results of applying a DTL transformation is a new stream of entities. These are exposed using a source and, like any other stream of entities, can be consumed into a sink. These sinks can either be another dataset sink or it can be a sink that connects to an target system. Systems can be databases, APIs, message queues, etc.
+    [
+        {
+            "_id": "1",
+            "name": "Bill",
+            "dob": "01-01-1980"
+        },
+        {
+            "_id": "2",
+            "name": "Jane",
+            "dob": "04-10-1992"
+        }
+    ]
+
+
+A key concept in Sesam is the *Pipe*. A pipe consists of a datasource, a sink and optionally a list transformations. Each pipe has an associated pump that is scheduled to run at intervals and pull data enties from the datasource, push them through any transformations and deliver the results into the sink.  
+
+*Datasources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each datasource is connected to a System. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the datasource is to convert the underlying data into a uniform representation; JSON, and if possible offer features such as only exposing the entities that have changed. Different datasources offer different levels of support for change detection. 
+
+When first pulling data from a datasource for an external system, such as a SQL database, the sink is a dataset sink. A dataset sink writes the data into a dataset. The dataset is just a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
+
+Datasets also act as data sources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
+
+The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks can either be another dataset sink or it can be a sink that connects to a target system. 
 
 These concepts are explored in more detail in the following sections.
 
-Node
-----
+Sesam Node
+----------
 
-A *node* is a running process that is capable of hosting instances of the components described below. In addition, each node instance exposes a service API and a graphical user interface. Nodes can be organised into clusters with one node acting as the master. In the case of a cluster the API and user interface is exposed from the master node.
+We use *Sesam* as the general name for a Sesam service instance. A given service instance is actually comprised of one of more *Sesam Nodes*. A *Sesam Node* is a running process that is capable of hosting components for collection, transforming and delivering data. In addition, each node instance can expose a service API endpoint and a graphical user interface. Nodes can be organised into clusters in order to share workloads. In the case of a cluster the API and user interface is exposed from nodes configured to be front-end nodes.
 
-The node has a configuration file, ```node-config.json``, that describe the set of components that should be instantiated and run by the node. These files are themselves just a serialised set of data entities. Each entity is the configuration for one component. Any changes to the file will result in a component being reconfigured but only if the data for actual component changes.
+The *Sesam Node* is provided as a Docker image called sesam/sesam-node. The node requires a configuration file, *nodeconfig.json*, that describe the set of pipes that should be created and managed by the node. Each pipe describes the flow of data from a *datasource* to a *sink*. Optionally, each pipe can also describe a transformation that should be applied to the data on its way through. 
 
-The node stores entities in datasets. A node can have any number of these.
+Data flowing into the *Sesam Node* can be stored in Datasets. The *Sesam Node* manages these datasets, and exposes them via the API. Datasets are used as the source for data transformation and also when delivering data to external target systems.   
 
 .. _concepts-datasets:
 
 Datasets
 --------
 
-A dataset is the basic means of storage inside the node. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A ``dataset`` sink can write entities to the dataset. The dataset stores the entity in the log if and only if it is new or if it is different from an existing entity with the same identity.
+A dataset is the basic means of storage inside the node. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A *dataset sink* can write entities to the dataset. The dataset appends the entity to the log if and only if it is new or if it is different from an existing entity with the same identity.
 
-A ``dataset`` source exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
+A *dataset source* exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
 
 .. image:: images/dataset.jpg
     :width: 800px
@@ -131,8 +154,6 @@ Change tracking
 ===============
 
 Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a datasource and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the datasource was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a datasource it may, if the datasource supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the datasource, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with any existnig version of that entity and only updated if they are different. The comparison is done by creating and comparing the hashes of the old and new entity. 
-
-
 
 
 .. _concepts-dtl:
