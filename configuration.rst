@@ -2048,12 +2048,10 @@ The expected form of an entity to be written to the sink is:
 ::
 
     {
-        "_id": "42",
         "columnname1": value,
         "columnname2": another_value,
     }
 
-The ``_id`` property is expected to be a valid value for the target tables primary key column.
 
 Prototype
 ^^^^^^^^^
@@ -2091,15 +2089,6 @@ Properties
        set separately.
      -
      - Yes
-
-   * - ``primary_key``
-     - List
-     - The value of this property must be a single string with the name of the column
-       that contains the ``primary key`` (PK) of the table or query, or a list of strings
-       if it is a compound primary key. If the property is not set the sql sink component will attempt to use
-       table metadata to deduce the PK to use.
-     -
-     - No
 
    * - ``schema``
      - String
