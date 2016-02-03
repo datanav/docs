@@ -93,7 +93,7 @@ The system component has a couple of uses. Firstly it can be used to introspect 
 Pipes
 -----
 
-A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is the only way to specify how entities stream from dataset to dataset in a node.
+A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
 
 .. image:: images/pipes.jpg
     :width: 800px
@@ -106,7 +106,7 @@ A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It
 Sources
 =======
 
-A data *source* is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a relational database table, the rows in a CSV file, or data from an API.
+A *data source* is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or json data from an API.
 
 .. image:: images/datasource.png
     :width: 800px
@@ -114,23 +114,17 @@ A data *source* is a component hosted in the Sesam Node that exposes a stream of
     :height: 450px
     :alt: Generic pipe concept
 
-The source component offers an object called a Data Source Reader which has one capability which is 'getEntities'. This 'reader' object is immune to changes to the configuration of its parent source during its lifetime.
+Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used simply to only ask for the entities that have changed since the last time it was asked. An offset is a opaque token that may take any form; it is interpreted by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be a location offset.
 
-The 'getEntities' method can take an additional parameter that is an 'offset' token. This token can be used to only fetch the entities that have changed *since* that given offset. An offset is a opaque token that may take any form; it is interpreted
-by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be an index.
-
-Each entity returned by a data source reader is a dictionary that maps keys to values. Values can be simple literals such as string, int, long, etc. They can also be lists or child entities. They can even be lists of entities. There are just three special or reserved keys within an entity, and they are; "_id", "_updated" and "_deleted". [TODO: all keys starting with '_' are reserved - grove] It is a requirement that every entity exposed by a provider has an "_id" property. This identifier should be unique within the set of entities being exposed by that source, but need not be globally unique across all entities.
-
-Sesam offers a number of core built-in data sources but it is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints.
-
+Sesam provides a number of out of the box *data source* types, such as SQL Database and LDAP. It is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
 .. _concepts-transforms:
 
 Transforms
 ==========
 
-Entities streaming through a pipe can be transformed on their way from the source to the sink. A transformation chain takes a stream of entities, transforms them, and creates a new stream of entities. A transform can query across many other datasets in order to enrich or create entities.
-
+Entities streaming through a pipe can be transformed on their way from the source to the sink. A transformation chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported: 
+	- Data Transformation Langauge Transform. This transform uses the DTL to join and transform data into new shapes.
 
 .. _concepts-sinks:
 

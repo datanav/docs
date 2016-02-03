@@ -9,61 +9,49 @@ Component configuration guide
 General
 =======
 
-The Sesam Node is configured using *JSON* structures, either on disk or by posting to the *API* (see the
-:doc:`API section <api>`). The main concepts to configure for a node is the :ref:`systems <system_section>` and the
-:ref:`flow <flow_section>` between them and the *Sesam Node*. Also flows within the Sesam Node is configured
-the same way.
+The *Sesam Node* is configured using one or more *JSON* files located in the node folder when starting the *Sesam Node*. 
 
-The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`
-describing the flows into, within and out of the Sesam Node. The configuration :doc:`entities <entitymodel>` are
-*JSON objects* on the general form:
+For example:
+
+::
+  docker run .... -v $PWD:/sesam
+
+Will look for a file called *nodeconfig.json* in the current directory.
+
+Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluser configuration is not requried when running just a single *Sesam Node*. 
+
+The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
+*JSON objects* of the form:
+
+It should be noted that all '_id' property values must be unique across across the solution. This means unique within the *nodeconfig.json* file but also across all files when a multiple file configuration is used.
 
 ::
 
     [
         {
-            "_id": "some-node-wide-unique-id",
+            "_id": "some-solution-wide-unique-id",
             "name": "Name of component",
             "type": "component-type:component-subtype",
             "some-property": "some value"
         },
         {
-            "_id": "some-other-node-wide-unique-id",
+            "_id": "some-other-solution-wide-unique-id",
             "name": "Name of other component",
             "type": "component-type:component-subtype",
             "some-other-property": "some other value"
         }
     ]
 
-.. _flow_section:
-
-Flows
-=====
-
-A *flow* is a set of :ref:`pipes <pipe_section>` describing the stream of :doc:`entities <entitymodel>` from a source
-:ref:`system <system_section>`, between *datasets* inside the Sesam Node and finally out of the Sesam Node to a
-target system. At the :ref:`sources <source_section>` of each individual pipe in such a flow, optional :ref:`transforms <transform_section>`
-can be specified that transforms the entities streaming from the source to a another form before :ref:`arriving at the destination <sink_section>`.
-
-This transform is described using a domain specific language called Data Transform Language (*DTL*) (see the :doc:`DTL section <DTLReferenceGuide>` for
-more detail). The transformed entities can be entirely or partially constructed from entities from other datasets,
-like joins in *SQL select* statements, with the main difference that the result is persisted for each pipe in the flow.
-
-The Sesam Node keeps track of the dependencies between datasets through DTL transforms in such a way that only changes
-are propagated along the flow based on what entities are changed at the ultimate source of the flows. This leads to
-a very efficient handling of entity streams within the Sesam Node.
-
 .. _pipe_section:
 
 Pipes
 =====
 
-A pipe is a *quad* consisting of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
-The pump "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
+A pipe defines the flow of data from a *datasource* to a *sink* on some schedule as defined by the pump settings. Optionally, a pipe may define an ordered list of transforms that are applied to entities as they flow from the *datasource* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. Let's describe the *complete*
-form first and :ref:`revisit <pipes_revisited>` the *short hand* form after describing the various sinks and sources
-available in the Sesam Node core:
+The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
+
+The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form first is described first and :ref:`revisit <pipes_revisited>` describes the *short hand* form.
 
 Prototype
 ---------
@@ -86,9 +74,7 @@ Prototype
     }
 
 
-Note that if no ``name`` property is explicitly set for the source, sink or task configurations one will be
-generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or
-"task" respectively).
+Note that if no ``name`` property is explicitly set for the source, sink or task configurations one will be generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or "task" respectively).
 
 Properties
 ----------
