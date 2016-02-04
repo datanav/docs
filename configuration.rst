@@ -795,7 +795,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:rdf",
-       "system": "webserver-system-id",
+       "system": "url-system-id",
        "url": "url-to-rdf-file",
        "format": "nt-ttl-or-xml"
     }
@@ -815,9 +815,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+     - The id of the :ref:`url system <url_system>` component to use. If not present, a URL system
        with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+       HTTP server requires authentication, you will have to create a URL system component explicitly.
      -
      -
 
@@ -869,7 +869,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "source:sdshare",
-       "system": "webserver-system-id",
+       "system": "url-system-id",
        "url": "url-to-sdshare-fragments-feed",
        "supports_since": false
     }
@@ -889,9 +889,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
        with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+       HTTP server requires authentication, you will have to create a URL system component explicitly.
      -
      -
 
@@ -1019,71 +1019,11 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-
-The JSON file source
---------------------
-
-The ``JSON`` file source can read entities from one or more ``JSON`` file(s).
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "name": "Name of source",
-        "type": "source:json_file",
-        "path": "path-to-json-file(s)",
-        "notify_read_errors": true
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``path``
-     - String
-     - A full path to a ``JSON`` file, or a path to a directory containing ``.json`` files
-     -
-     - Yes
-
-   * - ``notify_read_errors``
-     - Boolean
-     - Indicates if the source should throw exceptions or parse errors, or produce special inline error-entities
-       instead (these can be interpreted by a datasync pump without stopping the process). The flag is useful for
-       reading configuration files from disk, for example.
-     - true
-     -
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
-
-::
-
-    {
-        "source": {
-            "type": "source:json_file",
-            "name": "Test JSON source",
-            "path": "/sesam/data/test.json",
-        }
-    }
-
-The JSON remote source
-----------------------
+The JSON source
+---------------
 
 
-The remote ``JSON`` source can read entities from a ``JSON`` file available over HTTP.
+The `JSON`` source can read entities from a ``JSON`` file available either locally or over HTTP.
 
 If the ``supports_since`` property is set to *true*, then the
 ``since`` request parameter is added to the URL to signal that we want
@@ -1096,8 +1036,8 @@ Prototype
 
     {
        "name": "Name of source",
-       "system": "webserver-system-id",
-       "type": "source:json_remote",
+       "system": "url-system-id",
+       "type": "source:json",
        "url": "url-to-json-file"
     }
 
@@ -1116,9 +1056,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
        with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+       HTTP server requires authentication, you will have to create a URL system component explicitly.
      -
      -
 
@@ -1137,11 +1077,24 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:json_remote",
+            "type": "source:json",
             "name": "Test JSON source via HTTP",
-            "path": "https://server.com/sesam/data/test.json",
+            "url": "https://server.com/sesam/data/test.json",
         }
     }
+
+An example with a local file:
+
+::
+
+    {
+        "source": {
+            "type": "source:json",
+            "name": "Test JSON source via the local FS",
+            "url": "/sesam/data/test.json",
+        }
+    }
+
 
 The metrics source
 ------------------
@@ -1786,7 +1739,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:json_push",
-        "system": "webserver-system-id",
+        "system": "url-system-id",
         "url": "url-to-http-endpoint",
         "batch_size": 1500
     }
@@ -1806,9 +1759,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
        with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a webserver system component explicitly.
+       HTTP server requires authentication, you will have to create a URL system component explicitly.
      -
      -
 
@@ -1836,7 +1789,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "sink:json_push",
             "name": "Local JSON push service sink",
-            "endpoint": "http://localhost/json_push_service"
+            "url": "http://localhost/json_push_service"
         }
     }
 
@@ -1856,7 +1809,7 @@ Prototype
     {
         "name": "Name of sink",
         "type": "sink:sdshare_push",
-        "system":"webserver-system-id",
+        "system":"url-system-id",
         "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
         "prefixes": {
@@ -1879,9 +1832,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`webserver system <webserver_system>` component to use. If not present, a webserver system
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
        with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       endpoint requires authentication, you will have to create a webserver system component explicitly.
+       endpoint requires authentication, you will have to create a URL system component explicitly.
      -
      -
 
@@ -2948,12 +2901,12 @@ Example configuration
          "max_per_hour": 100000
     }
 
-.. _webserver_system:
+.. _url_system:
 
-The webserver system
---------------------
+The URL system
+--------------
 
-The webserver system represents a HTTP server serving requests from a base url. It can also represent local files
+The URL system represents a HTTP server serving requests from a base url. It can also represent local files
 either by just passing in a local path in its ``base_url`` property or using a ``file://`` protocol in the URL.
 It provides session handling, connection pooling and authentication services to sources and sinks which need to
 communicate with a HTTP server.
@@ -2966,7 +2919,7 @@ Prototype
     {
         "_id": "id-of-system",
         "name": "Name of system",
-        "type": "system:webserver",
+        "type": "system:url",
         "base_url": "http://host:port/path",
         "username": None,
         "password": None,
@@ -3025,7 +2978,7 @@ Example configuration
 
     {
         "_id": "our-http-server",
-        "type": "system:webserver",
+        "type": "system:url",
         "name": "Our HTTP Server",
         "base_url": "http://our.domain.com/files"
     }
