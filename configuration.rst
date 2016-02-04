@@ -55,6 +55,7 @@ The configuration of a pipe has two forms; one *complete* form and one *short ha
 
 Prototype
 ---------
+The following *json* snippet shows the general form of a pipe definition.
 
 ::
 
@@ -74,7 +75,7 @@ Prototype
     }
 
 
-Note that if no ``name`` property is explicitly set for the source, sink or task configurations one will be generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or "task" respectively).
+Note that if no ``name`` property is explicitly set for the source, sink or pump configurations one will be generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or "pump" respectively).
 
 Properties
 ----------
@@ -151,6 +152,8 @@ Properties
 
 Example configuration
 ---------------------
+
+The following example shows a pipe definition that exposes data from a SQL database table called ``customers``, and feeds it into a sink that writes the data into a dataset called ``Northwind:Customers```.
 
 ::
 
