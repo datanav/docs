@@ -132,4 +132,6 @@ API Reference
              lake.node.webapp.api.metadata,
              lake.node.webapp.api.datasets,
              lake.node.webapp.api.systems,
-             lake.node.webapp.api.status
+             lake.node.webapp.api.status,
+             lake.node.webapp.api.logs
+

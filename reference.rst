@@ -7,5 +7,5 @@ Reference
 
    Data Transformation Language Reference <DTLReferenceGuide>
    API Reference <api-reference>
-   Commandline Client Refernece <commandlineclient-reference>
+   Commandline Client Reference <commandline-client-reference>
 
