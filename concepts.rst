@@ -140,9 +140,9 @@ Several types of data sinks are supplied with the core service. Using the JSON p
 Pumps
 =====
 
-The data sync task handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or at a 'cron' schedule and attempts to read entities from a data source and write them to a data sink. It also is capable of
+The data sync task handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or at a 'cron' schedule and attempts to read entities from a data source and write them to a data sink. It's also capable of
 rescanning the data source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry
-writing an entity later. The retry strategy is configurable in several ways and if a end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
+writing an entity later. The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
 
 Change tracking
 ===============
