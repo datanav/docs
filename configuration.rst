@@ -234,7 +234,7 @@ Properties
    * - ``type``
      - String
      - The type of source, it is a enumeration with values from the list of supported sources. See the details in the
-       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a sql type
+       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a SQL
        source.
      - "source:sql"
      - No
@@ -1452,18 +1452,6 @@ Transformation Language before writing them to the
            }
        }
    }
-
-
-The properties transform
-------------------------
-
-This transform has the following capabilities:
-
-* Rename properties
-* Delete properties
-
-TODO: Add detailed docs plus examples.
-TODO: Not yet implemented.
 
 
 The JSON Schema validation transform

@@ -41,7 +41,7 @@ Now you can start the Sesam Node container:
 
 ::
 
-  docker run -it --rm -v /sesam/conf:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node -c https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/nodeconfig.json
+  docker run -it --rm -v /sesam/conf:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node start -c https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/nodeconfig.json
 
 This will start up the Sesam Node with a :doc:`node configuration file <configuration>` (`nodeconfig.json <https://github.com/sesam-io/tutorial/blob/master/intro/nodeconfig.json>`_) hosted on Github.
 
@@ -109,7 +109,7 @@ Now you can start the Sesam Node container:
 
 ::
 
-  docker run -it --rm -v $PWD:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node
+  docker run -it --rm -v $PWD:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node start
 
 The Sesam Node will reload the ``nodeconfig.json`` file at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. Try editing any of the files and see what happens.
 
