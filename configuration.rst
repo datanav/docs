@@ -184,14 +184,14 @@ Sources
 Sources provide *streams* of :doc:`entities <entitymodel>` as input to the :ref:`pipes <pipe_section>` which is the
 building blocks for the :ref:`flows <flow_section>` in the Sesam Node. These entities can take *any* shape (i.e. they
 can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
-a specific logical entity. There may however exist multiple *versions* of this entity within a flow.
+a specific logical entity. There may exist multiple *versions* of this entity within a flow, however.
 
 Continuation support
 --------------------
 
 Sources can optionally support a ``since`` moniker or marker which lets them pick up where the previous stream of
-entities left off, sort of like a bookmark in the entitiy stream. The ``since`` marker is opaque to the rest of the
-Sesam Node components, and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
+entities left off - like a "bookmark" in the entitiy stream. The ``since`` marker is opaque to the rest of the
+Sesam Node components and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
 in the ``_updated`` property if supported by its source.
 
 The Sesam Node supports a diverse set of core data sources:
@@ -200,7 +200,7 @@ Common properties
 -----------------
 
 All sources have certain properties in common. Some of these are omitted in the documentation of the individual types
-of sources except if the source has different default values for this propery (typically the ``supports_since`` property):
+of sources except if the source has different default values for this property (typically the ``supports_since`` property):
 
 Protoype
 ^^^^^^^^
@@ -491,12 +491,12 @@ configuration, which is omitted here for brevity:
 
 .. _sql_source:
 
-The sql database source
------------------------
+The SQL source
+--------------
 
-The sql database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
-their default values:
+The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
+(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which
+are presented below with their default values:
 
 Prototype
 ^^^^^^^^^
@@ -546,13 +546,14 @@ Properties
      - Yes
 
    * - ``primary_key``
-     - List
+     - List<String> or String
      - The value of this property can be a single string with the name of the column
        that contains the ``primary key`` (PK) of the table or query, or a list of strings
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used. TODO: are these names case sensitive?
+       the ``query`` property us used. The name(s) used in this propery are case sensitive and must
+       match the underlying database naming.
      -
      -
 
@@ -685,7 +686,7 @@ Prototype
        "auto_dialect": true,
        "dialect": "excel",
        "encoding": "utf-8",
-       "id_field": "what-column-name-to-use-as-id",
+       "primary_key": ["list","of","column","names"],
        "delimiter": ","
     }
 
@@ -711,6 +712,8 @@ Properties
    * - ``has_header``
      - Boolean
      - Flag that indicates to the source that the first row in the ``CSV`` file contains the names of the columns.
+       If this property is set to ``false``, you will have to provide a list of column names in the ``field_names``
+       property.
      - true
      -
 
@@ -736,13 +739,15 @@ Properties
 
    * - ``encoding``
      - String
-     - | The character set to used to encode the text in the CSV file
+     - The character set to used to encode the text in the CSV file
      - "UTF-8"
      -
 
-   * - ``id_field``
-     - String
-     - | The name of the column to use as ``_id`` in the generated entities.
+   * - ``primary_key``
+     - List<String> or String
+     - The name of the column(s) to use as ``_id`` in the generated entities. It can be either a list of strings
+       (if the identity is a compound value) or a single column name (i.e. a string). The column name(s) are case
+       sensitive and must match the contents of either ``field_names`` or the header of the CSV file.
      -
      - Yes
 
@@ -835,7 +840,7 @@ Properties
        an enumeration that can take following recognized values: ``"nt"`` for
        ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
        files.
-     - ``nt``
+     - "nt"
      -
 
 Example configuration
@@ -1172,10 +1177,10 @@ source you enable ``POST`` support at this endpoint.
 
    http://localhost:9042/pipes/mypipe/entities
 
-A pipe that references the ``HTTP endpoint`` source will not pump, in
-practice this means that a ``datasync`` pump is not configured for the
-pipe. This means that the only way to push entities through the pipe
-is by posting to the HTTP endpoint.
+A pipe that references the ``HTTP endpoint`` source will not pump any entities,
+in practice this means that a ``datasync`` pump is not configured for the
+pipe; the only way for entities to flow through the pipe is by posting them
+the HTTP endpoint.
 
 
 Prototype
@@ -1210,9 +1215,9 @@ The fake source
 ---------------
 
 This is a utility data source intended to be used to quickly mock up syntetic data for testing purposes.
-It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ package in conjunction with a entity
-template to produce custom entities that can be consumed by a sink. Fake sources that can be connected can be constructed
-by using the shared id pools of the related :ref:`Fake System <fake_system>` component.
+It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ python package in conjunction with a entity
+template to produce custom entities that can be consumed by a sink. Fake sources intended to be interconnected can be
+realised by using the *shared id pools* of the related :ref:`Fake System <fake_system>` component.
 
 Prototype
 ^^^^^^^^^
@@ -1294,12 +1299,22 @@ A source that generates a typical person entity via various `Fake Factory provid
         },
     }
 
-The general form of a template property is "property_name": "fake_factory_provider_name". For generating id properties
-from a fixed set (to be able to link entities from different sources together), a special syntax for the value part
-is used: "shared_id_propery": "system:<pool_id_from_fake_system_component>". These shared id pools are configured
-as part of the :ref:`Fake System <fake_system>` component, and you have to include its id in the ``system``
-property. Here's an example of two pipes with sources for fake employee and employer (company) entities using a shared pool
-of ids for the employer id:
+The general form of a template property is
+
+::
+
+    "property_name": "fake_factory_provider_name"
+
+For generating id properties from a fixed set (to be able to link entities from different sources together using
+:ref:`DTL transforms <dtl_transform>`), a special syntax for the value part is used:
+
+::
+
+    "shared_id_propery": "system:<pool_id_from_fake_system_component>".
+
+These shared *id pools* are configured as part of the :ref:`Fake System <fake_system>` component, and you have to include
+its id in the ``system`` property. Here's an example of two pipes with sources for fake employee- and employer (company)
+entities using a shared pool of ids for the employer id:
 
 .. _fake_system_example:
 
@@ -1389,6 +1404,7 @@ either a transform configuration object or a list of them.
        }
     }}
 
+.. _dtl_transform:
 
 The DTL transform
 -----------------
@@ -1724,12 +1740,14 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _json_push_sink:
+
 The JSON push sink
 ------------------
 
-The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are ``POST``ed as ``JSON``
-lists of objects to a HTTP endpoint. The protocol is described in additional detail here: [TODO]. The serialisation
-of entities as JSON is described in more detail here: [TODO].
+The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are ``POSTed`` as
+JSON lists of objects to a :ref:`HTTP endpoint <url_system>`. The protocol is described in additional detail here: [TODO].
+The serialisation of entities as JSON is described in more detail here: [TODO].
 
 Prototype
 ^^^^^^^^^
@@ -1793,13 +1811,14 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _sdshare_push_sink:
+
 The SDShare push sink
 ---------------------
 
-The SDShare push sink is similar to the ``JSON push sink``, but
-instead of posting ``JSON`` it translates the inbound entities to
-``RDF`` and ``POST``s them in ``NTriples`` form to the ``SDShare push
-protocol`` HTTP endpoint.
+The SDShare push sink is similar to the :ref:`JSON push sink <json_push_sink>`, but instead of posting JSON it
+translates the inbound entities to ``RDF`` and ``POSTs`` them in ``NTriples`` form to a :ref:`HTTP endpoint <url_system>`
+implementing the ``SDShare push protocol``.
 
 Prototype
 ^^^^^^^^^
@@ -1885,7 +1904,7 @@ The SMS message sink
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
 templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity. The SMS service to use must be
+name can either be inlined in the configuration or embedded in the input entity. The SMS service to use must be
 configured separately as a :ref:`system <system_section>` and its ``_id`` property given in the ``system`` property.
 Currently, only the :ref:`Twilio provider <twilio_system>` is supported.
 
@@ -1999,7 +2018,7 @@ configured earlier:
         }
     }
 
-For the example above the entities sent to the sink should have at least a single property ``message_prop_id``:
+In the above example the entities sent to the sink should have at least a single property ``message_prop_id``, i.e.:
 
 ::
 
@@ -2036,7 +2055,7 @@ and it also needs to have the properties references in the embedded template:
         "some_other_property": "Some other value"
     }
 
-You can also store the JINJA templates on disk and reference them in the same way via filenames instead of embedding
+You can also store the Jinja templates on disk and reference them in the same way via filenames instead of embedding
 the templates in config or the entities themselves.
 
 
@@ -2051,12 +2070,10 @@ The expected form of an entity to be written to the sink is:
 ::
 
     {
-        "_id": "42",
         "columnname1": value,
         "columnname2": another_value,
     }
 
-The ``_id`` property is expected to be a valid value for the target tables primary key column.
 
 Prototype
 ^^^^^^^^^
@@ -2095,15 +2112,6 @@ Properties
      -
      - Yes
 
-   * - ``primary_key``
-     - List
-     - The value of this property must be a single string with the name of the column
-       that contains the ``primary key`` (PK) of the table or query, or a list of strings
-       if it is a compound primary key. If the property is not set the sql sink component will attempt to use
-       table metadata to deduce the PK to use.
-     -
-     - No
-
    * - ``schema``
      - String
      - If a specific schema within a database is needed, you must provide its name in this property.
@@ -2138,7 +2146,7 @@ The mail message sink
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
 templates`` (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
-name can either be fixed in the configuration or given as part of the input entity. The mail server settings have to
+name can either be embedded in the configuration or in the input entity. The mail server settings have to
 be registered in a :ref:`SMTP system <smtp_system>` component in advance and its ``_id`` put in the ``system``
 property of the sink.
 
@@ -2285,7 +2293,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-For the example above the entities sent to the sink should have at least a single property ``message_prop_id``:
+In the above example the entities sent to the sink should have at least a single property ``message_prop_id``, i.e.:
 
 ::
 
@@ -2296,8 +2304,8 @@ For the example above the entities sent to the sink should have at least a singl
         "some_other_property": "Some other value"
     }
 
-As for the SMS sink, you can either supply a subject or body template embedded in the entities you write to the sink.
-You can also reference filenames either in the config or embedded in the entities.
+As for the :ref:`SMS sink <smsmessage_sink>`, you can either supply a subject or body template embedded in the entities you
+write to the sink. You can also reference filenames either in the config or embedded in the entities.
 
 Example of filenames referenced in the config:
 
@@ -3121,7 +3129,7 @@ A scheduled pump running every 30 seconds, no retries or dead letter dataset:
     }
 
 A cron pump running every day at midnight with max 5 retries, maximum 100 retries in the execution log and a dead letter
-dataset. Also max ten consecutive write failures allowed.
+dataset. Also max ten consecutive write failures allowed:
 
 ::
 
