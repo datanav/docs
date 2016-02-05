@@ -488,12 +488,12 @@ configuration, which is omitted here for brevity:
 
 .. _sql_source:
 
-The sql database source
------------------------
+The SQL source
+--------------
 
-The sql database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which are presented below with
-their default values:
+The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
+(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which
+are presented below with their default values:
 
 Prototype
 ^^^^^^^^^
@@ -543,13 +543,14 @@ Properties
      - Yes
 
    * - ``primary_key``
-     - List
+     - List<String> or String
      - The value of this property can be a single string with the name of the column
        that contains the ``primary key`` (PK) of the table or query, or a list of strings
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used. TODO: are these names case sensitive?
+       the ``query`` property us used. The name(s) used in this propery are case sensitive and must
+       match the underlying database naming.
      -
      -
 
@@ -682,7 +683,7 @@ Prototype
        "auto_dialect": true,
        "dialect": "excel",
        "encoding": "utf-8",
-       "id_field": "what-column-name-to-use-as-id",
+       "primary_key": ["list","of","column","names"],
        "delimiter": ","
     }
 
@@ -708,6 +709,8 @@ Properties
    * - ``has_header``
      - Boolean
      - Flag that indicates to the source that the first row in the ``CSV`` file contains the names of the columns.
+       If this property is set to ``false``, you will have to provide a list of column names in the ``field_names``
+       property.
      - true
      -
 
@@ -733,13 +736,15 @@ Properties
 
    * - ``encoding``
      - String
-     - | The character set to used to encode the text in the CSV file
+     - The character set to used to encode the text in the CSV file
      - "UTF-8"
      -
 
-   * - ``id_field``
-     - String
-     - | The name of the column to use as ``_id`` in the generated entities.
+   * - ``primary_key``
+     - List<String> or String
+     - The name of the column(s) to use as ``_id`` in the generated entities. It can be either a list of strings
+       (if the identity is a compound value) or a single column name (i.e. a string). The column name(s) are case
+       sensitive and must match the contents of either ``field_names`` or the header of the CSV file.
      -
      - Yes
 
