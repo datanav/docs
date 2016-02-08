@@ -2372,7 +2372,7 @@ Prototype
         "connection_string": "foo://database/SID",
         "pool_size": 10,
         "pool_timeout": 30,
-        "pool_max_overflow": 10,
+        "pool_max_overflow": 10
     }
 
 Properties
