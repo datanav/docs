@@ -810,7 +810,7 @@ entities on the form:
 ::
 
     {
-        "_id": "<subject>",
+        "_id": "subject",
         "<predicate>": "value"
     }
 
