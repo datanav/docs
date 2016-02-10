@@ -687,6 +687,8 @@ Prototype
        "dialect": "excel",
        "encoding": "utf-8",
        "primary_key": ["list","of","column","names"],
+       "whitelist": ["list","of","column","names", "to", "include"],
+       "blacklist": ["list","of","column","names", "to", "exclude"],
        "delimiter": ","
     }
 
@@ -750,6 +752,20 @@ Properties
        sensitive and must match the contents of either ``field_names`` or the header of the CSV file.
      -
      - Yes
+
+   * - ``whitelist``
+     - List<String>
+     - The names of the columns to include in the generated entities. If there is a ``blacklist`` also specified, the
+       whitelist will be filtered against the contents of the blacklist.
+     -
+     -
+
+   * - ``blacklist``
+     - List<String>
+     - The names of the columns to exclude from the generated entities. If there is a ``whitelist`` also specified, the
+       blacklist operates on the values of the whitelist (and not the whole columnset).
+     -
+     -
 
    * - ``delimiter``
      - String
