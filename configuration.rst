@@ -512,7 +512,8 @@ Prototype
         "query": "SQL query string",
         "updated_query": "SQL query string for 'since' support in queries",
         "updated_column": "column-name-for-since-support-in-tables",
-        "column_blacklist": ["columns","to","not","include"],
+        "whitelist": ["columns","to","include"],
+        "blacklist": ["columns","to","exclude"],
         "batch_size": 1000,
         "schema": "default-schema-name-if-included"
     }
@@ -592,9 +593,17 @@ Properties
      -
      -
 
-   * - ``column_blacklist``
-     - List
-     - A list of column names to exclude from the generated entity. TODO: are these names case sensitive?
+   * - ``whitelist``
+     - List<String>
+     - The names of the columns to include in the generated entities. If there is a ``blacklist`` also specified, the
+       whitelist will be filtered against the contents of the blacklist.
+     -
+     -
+
+   * - ``blacklist``
+     - List<String>
+     - The names of the columns to exclude from the generated entities. If there is a ``whitelist`` also specified, the
+       blacklist operates on the values of the whitelist (and not the whole columnset).
      -
      -
 
@@ -687,8 +696,8 @@ Prototype
        "dialect": "excel",
        "encoding": "utf-8",
        "primary_key": ["list","of","column","names"],
-       "whitelist": ["list","of","column","names", "to", "include"],
-       "blacklist": ["list","of","column","names", "to", "exclude"],
+       "whitelist": ["list","of","column","names","to","include"],
+       "blacklist": ["list","of","column","names","to","exclude"],
        "delimiter": ","
     }
 
