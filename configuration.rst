@@ -3144,8 +3144,8 @@ A note on the required properties: a pump configuration needs to have either a `
 ``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
 ``cron_expression`` taking precedence if both are present.
 
-If you are unfamiliar with *cron expressions*, this `tutorial <http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger>`_
-is a good resource for learning about how to format them correctly to achieve the schedule you want.
+If you are unfamiliar with `cron expressions <https://en.wikipedia.org/wiki/Cron>`_, you can read more of how
+they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
 .. list-table::
    :header-rows: 1
