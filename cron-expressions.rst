@@ -59,57 +59,54 @@ Examples
    * - Expression
      - Meaning
 
-   * - ``0 12 * * ?``
+   * - ``0 12 * * *``
      - Start at noon every day
 
-   * - ``15 10 ? * *``
+   * - ``15 10 * * *``
      - Start at 10:15 every day
 
-   * - ``15 10 * * ? *``
+   * - ``15 10 * * * *``
      - Start at 10:15 every day
 
-   * - ``15 10 * * ?``
-     - Start at 10:15 every day
-
-   * - ``15 10 * * ? 2016``
+   * - ``15 10 * * * 2016``
      - Start at 10:15 every day during the year 2016
 
-   * - ``* 14 * * ?``
+   * - ``* 14 * * *``
      - Start every minute starting at 14:00 and ending at 14:59, every day
 
-   * - ``0/5 14 * * ?``
+   * - ``0/5 14 * * *``
      - Start every 5 minutes starting at 14:00 and ending at 14::55, every day
 
-   * - ``0/5 14,18 * * ?``
+   * - ``0/5 14,18 * * *``
      - Start every 5 minutes starting at 14:00 and ending at 14:55, and also fire every 5 minutes starting at 18:00 and
        ending at 18:55, every day
 
-   * - ``0-5 14 * * ?``
+   * - ``0-5 14 * * *``
      - Start every minute starting at 14:00 and ending at 14:05, every day
 
-   * - ``10,44 14 ? 3 WED``
+   * - ``10,44 14 * 3 WED``
      - Start at 14:10 and at 14:44 every wednesday in March
 
-   * - ``15 10 ? * MON-FRI``
+   * - ``15 10 * * MON-FRI``
      - Start at 10:15 every monday to friday
 
-   * - ``15 10 15 * ?``
+   * - ``15 10 15 * *``
      - Start at 10:15 on the 15th day of every month
 
-   * - ``15 10 L * ?``
+   * - ``15 10 L * *``
      - Start at 10:15 on the last day of every month
 
-   * - ``15 10 ? * 6L``
+   * - ``15 10 * * 6L``
      - Start at 10:15 on the last friday of every month
 
-   * - ``15 10 ? * 6L 2002-2005``
+   * - ``15 10 * * 6L 2002-2005``
      - Start at 10:15 on every last friday of every month for the years 2002 to 2005
 
-   * - ``15 10 ? * 6#3``
+   * - ``15 10 * * 6#3``
      - Start at 10:15 on the third friday of every month
 
-   * - ``0 12 1/5 * ?``
+   * - ``0 12 1/5 * *``
      - Start at noon every 5 days every month, starting with the first day of the month
 
-   * - ``11 11 11 11 ?``
+   * - ``11 11 11 11 *``
      - Start every 11th of november at 11:11
