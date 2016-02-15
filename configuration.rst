@@ -695,6 +695,7 @@ Prototype
        "auto_dialect": true,
        "dialect": "excel",
        "encoding": "utf-8",
+       "decode_error_strategy": "strict-or-replace",
        "primary_key": ["list","of","column","names"],
        "whitelist": ["list","of","column","names","to","include"],
        "blacklist": ["list","of","column","names","to","exclude"],
@@ -752,6 +753,17 @@ Properties
      - String
      - The character set to used to encode the text in the CSV file
      - "UTF-8"
+     -
+
+   * - ``decode_error_strategy``
+     - String
+     - A enumeration of "strict" and "replace" that tells the character decoder how to deal with illegal characters
+       in the input data. The default is "strict" which raises an error and stops processing. The "replace" option
+       will log a warning and attempt to replace the offending character(s) with the unicode special character for
+       "replacement character", see https://en.wikipedia.org/wiki/Specials_%28Unicode_block%29 for more details.
+       Use the "replace" option with extreme care as it can lead to data loss if you're not absolutely sure of what
+       you are doing. The preferred option should always be to try the fix the data at the source.
+     - "strict"
      -
 
    * - ``primary_key``
