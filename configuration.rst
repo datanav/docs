@@ -18,12 +18,12 @@ For example:
 
 Will look for a file called *nodeconfig.json* in the current directory.
 
-Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluser configuration is not requried when running just a single *Sesam Node*.
+Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluser configuration is not required when running just a single *Sesam Node*.
 
 The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
 *JSON objects* of the form:
 
-It should be noted that all '_id' property values must be unique across across the solution. This means unique within the *nodeconfig.json* file but also across all files when a multiple file configuration is used.
+It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *nodeconfig.json* file but also across all files when a multiple file configuration is used.
 
 ::
 
@@ -31,13 +31,13 @@ It should be noted that all '_id' property values must be unique across across t
         {
             "_id": "some-solution-wide-unique-id",
             "name": "Name of component",
-            "type": "component-type:component-subtype",
+            "type": "component-type",
             "some-property": "some value"
         },
         {
             "_id": "some-other-solution-wide-unique-id",
             "name": "Name of other component",
-            "type": "component-type:component-subtype",
+            "type": "component-type",
             "some-other-property": "some other value"
         }
     ]
@@ -98,7 +98,7 @@ Properties
 
    * - ``name``
      - String
-     - A human redable name of the component.
+     - A human readable name of the component.
      -
      - Yes
 
@@ -113,7 +113,18 @@ Properties
      - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
        more information on the format of this property.
      -
-     - No
+     - 
+
+   * - ``batch_size``
+     - Integer
+     - The number of source entities to consume before writing to the sink. The batch size
+       can be used to buffer up entities so that they can be written together to the sink in
+       one go. The sink must support batch for the bulking to happen. This may increase the
+       throughput of the pipe, at the cost of a little extra memory usage. If the batch fails,
+       then entities will be retried individually. The pipe offset will be saved after each
+       batch if the source supports this.
+     - 100
+     - 
 
    * - ``source``
      - Object
@@ -122,7 +133,7 @@ Properties
        :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
        this case.
      -
-     - No
+     - 
 
    * - ``transform``
      - Object/List
@@ -132,14 +143,14 @@ Properties
        is passed as the input of the second, and so on. The output of the last transform is then passed to the
        sink. The first transform gets its input from the source.
      -
-     - No
+     - 
 
    * - ``sink``
      - Object
      - A configuration object for the :ref:`sink <sink_section>` component of the pipe. If omitted, it defaults to
        a :ref:`dataset sink <dataset_sink>` with its ``dataset`` property set to same as the pipe's ``_id`` property.
      -
-     - No
+     - 
 
    * - ``pump``
      - Object
@@ -147,7 +158,7 @@ Properties
        defaults to a ``datasync`` pump with its ``source`` and ``sink`` properties set to the
        respective ``_id`` properties of the source and sink respectively (possibly a computed value).
      -
-     - No
+     - 
 
 
 Example configuration
@@ -162,12 +173,12 @@ The following example shows a pipe definition that exposes data from a SQL datab
        "name": "Northwind customers",
        "type": "pipe",
        "source": {
-           "type": "source:sql",
+           "type": "sql",
            "system": "Northwind",
            "table": "Customers"
        },
        "sink": {
-           "type": "sink:dataset",
+           "type": "dataset",
            "dataset": "Northwind:Customers"
        },
        "pump": {
@@ -209,7 +220,7 @@ Protoype
 
     {
         "name": "Name of source",
-        "type": "source:type-of-source",
+        "type": "type-of-source",
         "supports_since": false,
         "source_specific": "properties",
     }
@@ -232,22 +243,22 @@ Properties
      - A human redable name of the component. It may be omitted as part of a pipe
        configuration, in case it will be generated based on the pipe's ``name`` property with a "source" postfix.
      -
-     - No
+     - 
 
    * - ``type``
      - String
      - The type of source, it is a enumeration with values from the list of supported sources. See the details in the
        documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a SQL
        source.
-     - "source:sql"
-     - No
+     - "sql"
+     - 
 
    * - ``supports_since``
      - Boolean
      - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
        the beginning each time or not.
      - false
-     - No
+     - 
 
 The dataset source
 ------------------
@@ -262,7 +273,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:dataset",
+        "type": "dataset",
         "dataset": "id-of-dataset",
         "supports_since": true,
         "include_previous_versions": false
@@ -303,7 +314,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:dataset",
+            "type": "dataset",
             "dataset": "northwind:customers",
             "supports_since": false,
             "include_previous_versions": true
@@ -331,7 +342,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:union_datasets",
+        "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
         "supports_since": true,
         "include_previous_versions": false
@@ -385,7 +396,7 @@ configuration, which is omitted here for brevity:
     {
         "source": {
             "name": "Customers and orders",
-            "type": "source:union_datasets",
+            "type": "union_datasets",
             "datasets": ["northwind:customers", "northwind:orders"],
             "supports_since": true,
             "include_previous_versions": true
@@ -412,7 +423,7 @@ Prototype
 
    {
        "name": "Name of source",
-       "type": "source:merge_datasets",
+       "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
        "strategy": "latest",
        "supports_since": true
@@ -483,7 +494,7 @@ configuration, which is omitted here for brevity:
     {
         "source": {
             "name": "Products with metadata",
-            "type": "source:merge_datasets",
+            "type": "merge_datasets",
             "datasets": ["products", "products-metadata"],
             "supports_since": true
         }
@@ -505,7 +516,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:sql",
+        "type": "sql",
         "system": "id-of-system",
         "table": "name-of-table",
         "primary_key": ["list","of","key","names"],
@@ -514,7 +525,7 @@ Prototype
         "updated_column": "column-name-for-since-support-in-tables",
         "whitelist": ["columns","to","include"],
         "blacklist": ["columns","to","exclude"],
-        "batch_size": 1000,
+        "fetch_size": 1000,
         "schema": "default-schema-name-if-included"
     }
 
@@ -607,9 +618,9 @@ Properties
      -
      -
 
-   * - ``batch_size``
+   * - ``fetch_size``
      - Integer
-     - The default size of the result sets (number of rows in a cursor fetch) to get from the database
+     - The fetch size of the result sets (number of rows in a cursor fetch) to get from the database
      - 1000
      -
 
@@ -624,7 +635,7 @@ Example with a single table:
 
     {
         "source": {
-            "type": "source:sql",
+            "type": "sql",
             "system": "Northwind",
             "table": "Customers"
         }
@@ -637,7 +648,7 @@ in a column called ``updated``. This enables us to switch on ``since`` support:
 
     {
         "source": {
-            "type": "source:sql",
+            "type": "sql",
             "system": "my_system",
             "table": "my_table",
             "primary_key": "table_id",
@@ -652,7 +663,7 @@ Example with custom query:
 
     {
         "source": {
-            "type": "source:sql",
+            "type": "sql",
             "system": "Northwind",
             "query": "select * from Customers",
             "primary_key": "CustomerID"
@@ -666,7 +677,7 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 
     {
         "source": {
-            "type": "source:sql",
+            "type": "sql",
             "system": "my_system",
             "query": "select * from my_table",
             "primary_key": "table_id",
@@ -688,7 +699,7 @@ Prototype
 
     {
        "name": "Name of source",
-       "type": "source:csv",
+       "type": "csv",
        "url": "url-to-csv-file",
        "has_header": true,
        "field_names": ["mappings","from","columns","to","properties"],
@@ -803,7 +814,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:csv",
+            "type": "csv",
             "name": "Country names from CSV source",
             "url": "http://blog.plsoucy.com/wp-content/uploads/2012/04/countries-20140629.csv",
             "id_field": "Code",
@@ -836,7 +847,7 @@ Prototype
 
     {
        "name": "Name of source",
-       "type": "source:rdf",
+       "type": "rdf",
        "system": "url-system-id",
        "url": "url-to-rdf-file",
        "format": "nt-ttl-or-xml"
@@ -889,7 +900,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:rdf",
+            "type": "rdf",
             "name": "Metadata about Elvis impersonators",
             "url": "http://www.snee.com/rdf/elvisimp.rdf",
             "format": "xml",
@@ -910,7 +921,7 @@ Prototype
 
     {
        "name": "Name of source",
-       "type": "source:sdshare",
+       "type": "sdshare",
        "system": "url-system-id",
        "url": "url-to-sdshare-fragments-feed",
        "supports_since": false
@@ -959,7 +970,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:sdshare",
+            "type": "sdshare",
             "name": "Metadata about norwegian companies",
             "url": "https://open.sesam.io/sdshare/server/1/fragments/enhetsregisteret"
         }
@@ -980,7 +991,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:ldap",
+        "type": "ldap",
         "system": "ldap-system-id",
         "search_base": "*",
         "search_filter": "(objectClass=organizationalPerson)",
@@ -1054,7 +1065,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:ldap",
+            "type": "ldap",
             "name": "Bouvet LDAP server data",
             "system": "bouvet_ldap",
             "search_base": "ou=Bouvet,dc=bouvet,dc=no"
@@ -1079,7 +1090,7 @@ Prototype
     {
        "name": "Name of source",
        "system": "url-system-id",
-       "type": "source:json",
+       "type": "json",
        "url": "url-to-json-file"
     }
 
@@ -1119,7 +1130,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:json",
+            "type": "json",
             "name": "Test JSON source via HTTP",
             "url": "https://server.com/sesam/data/test.json",
         }
@@ -1131,7 +1142,7 @@ An example with a local file:
 
     {
         "source": {
-            "type": "source:json",
+            "type": "json",
             "name": "Test JSON source via the local FS",
             "url": "/sesam/data/test.json",
         }
@@ -1151,7 +1162,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:metrics"
+        "type": "metrics"
     }
 
 Example configuration
@@ -1164,7 +1175,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "name": "Sesam Node Metrics"
-            "type": "source:metrics"
+            "type": "metrics"
         }
     }
 
@@ -1180,7 +1191,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:empty"
+        "type": "empty"
     }
 
 Example configuration
@@ -1192,7 +1203,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "source:empty",
+            "type": "empty",
             "name": "An empty source",
         }
     }
@@ -1242,7 +1253,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:http_endpoint"
+        "type": "http_endpoint"
     }
 
 Example configuration
@@ -1256,7 +1267,7 @@ configuration, which is omitted here for brevity:
     {
         "source": {
             "name": "Endpoint - events",
-            "type": "source:http_endpoint"
+            "type": "http_endpoint"
         },
     }
 
@@ -1278,7 +1289,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:fake",
+        "type": "fake",
         "entities": 1234,
         "system": "fake-system-id",
         "template": {
@@ -1337,7 +1348,7 @@ A source that generates a typical person entity via various `Fake Factory provid
     {
         "source": {
             "name": "Fake people",
-            "type": "source:fake",
+            "type": "fake",
             "entities": 100,
             "template": {
                 "_id": "uuid4",
@@ -1391,7 +1402,7 @@ entities using a shared pool of ids for the employer id:
             "type": "pipe",
             "source": {
                 "name": "Fake employees source",
-                "type": "source:fake",
+                "type": "fake",
                 "system": "employers_employees",
                 "entities": 100,
                 "template": {
@@ -1411,7 +1422,7 @@ entities using a shared pool of ids for the employer id:
             "type": "pipe",
             "source": {
                 "name": "Fake employers source",
-                "type": "source:fake",
+                "type": "fake",
                 "system": "employers_employees",
                 "entities": 100,
                 "template": {
@@ -1443,7 +1454,7 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "source:sparql",
+        "type": "sparql",
         "system": "url-system-id",
         "url": "sparql-endpoint",
         "fragments_query": "SPARQL select query",
@@ -1509,7 +1520,7 @@ configuration, which is omitted here for brevity.
     {
         "source": {
             "name": "SPARQL example",
-            "type": "source:sparql",
+            "type": "sparql",
             "url": "http://localhost:8890/sparql",
             "fragments_query": [
                 "PREFIX sdshare: <http://www.sdshare.org/2012/extension/>",
@@ -1582,7 +1593,7 @@ Transformation Language before writing them to the
        "name": "Customers with orders",
        "type": "pipe",
        "source": {
-          "type": "source:dataset",
+          "type": "dataset",
           "dataset": "Northwind:Customers"
        },
        "transform": {
@@ -1714,9 +1725,9 @@ Properties
    * - ``batch_size``
      - Integer
      - The maximum number of entities to POST in each request. If there are
-       more entities than this then they'll be split between different HTTP
+       more entities than this then they'll be split across multiple HTTP
        requests.
-     - 20
+     - 100
      -
 
 Example configuration
@@ -1989,7 +2000,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:dataset",
+        "type": "dataset",
         "dataset": "id-of-dataset"
     }
 
@@ -2022,7 +2033,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:dataset",
+            "type": "dataset",
             "name": "Northwind Customer dataset sink",
             "dataset": "Northwind:Customer",
         }
@@ -2060,7 +2071,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:influxdb",
+        "type": "influxdb",
         "system": "id-of-influxdb-system"
     }
 
@@ -2092,7 +2103,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:influxdb",
+            "type": "influxdb",
             "name": "InfluxDB sink",
             "system": "my-influxdb-system"
         }
@@ -2103,9 +2114,11 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The JSON push sink
 ------------------
 
-The JSON push sink implements a simple HTTP based protocol where entities or lists of entities are ``POSTed`` as
-JSON lists of objects to a :ref:`HTTP endpoint <url_system>`. The protocol is described in additional detail here: [TODO].
-The serialisation of entities as JSON is described in more detail here: [TODO].
+The JSON push sink implements a simple HTTP based protocol where
+individual entities or lists of entities are ``POSTed`` as JSON lists
+of objects to a :ref:`HTTP endpoint <url_system>`. The protocol is
+described in additional detail here: [TODO].  The serialisation of
+entities as JSON is described in more detail here: [TODO].
 
 Prototype
 ^^^^^^^^^
@@ -2114,10 +2127,9 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:json_push",
+        "type": "json_push",
         "system": "url-system-id",
-        "url": "url-to-http-endpoint",
-        "batch_size": 1500
+        "url": "url-to-http-endpoint"
     }
 
 Properties
@@ -2149,9 +2161,10 @@ Properties
 
    * - ``batch_size``
      - Integer
-     - The maximum number of entities to accumulate before posting. Note that the remainder of the internal buffer
-       is flushed and posted at the end of a pipe pump run even if the number of entities is less than this number.
-     - 1000
+     - The maximum number of entities to POST in each request. If there are
+       more entities than this then they'll be split across multiple HTTP
+       requests.
+     - 100
      -
 
 Example configuration
@@ -2163,7 +2176,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:json_push",
+            "type": "json_push",
             "name": "Local JSON push service sink",
             "url": "http://localhost/json_push_service"
         }
@@ -2185,7 +2198,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:sdshare_push",
+        "type": "sdshare_push",
         "system":"url-system-id",
         "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
@@ -2243,7 +2256,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:sdshare_push",
+            "type": "sdshare_push",
             "name": "Local SDShare push service sink",
             "url": "http://localhost:8001/sdshare_push_service",
             "prefixes": {
@@ -2273,7 +2286,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:sms",
+        "type": "sms",
         "system": "sms-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
@@ -2367,7 +2380,7 @@ configured earlier:
 
     {
         "sink": {
-            "type": "sink:sms",
+            "type": "sms",
             "name": "Send SMS messages",
             "system": "twilio_service",
             "body_template": "SMS message: {{ message_prop_id }}",
@@ -2392,7 +2405,7 @@ An example where the template to use is included in the entity written to the si
 
     {
         "sink": {
-            "type": "sink:sms",
+            "type": "sms",
             "name": "Send SMS messages",
             "system": "twilio_service",
             "body_template_property": "body_template_property_id",
@@ -2543,7 +2556,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:sql",
+        "type": "sql",
         "system": "id-of-sql-system"
     }
 
@@ -2578,7 +2591,7 @@ Properties
      - If a specific schema within a database is needed, you must provide its name in this property.
        Do *not* use schema names in the ``table`` property.
      -
-     - No
+     - 
 
 
 Example configuration
@@ -2590,7 +2603,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:sql",
+            "type": "sql",
             "name": "SQL sink",
             "system": "my-sql-system",
             "table": "customers"
@@ -2618,7 +2631,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:mail",
+        "type": "mail",
         "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
@@ -2744,7 +2757,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:mail",
+            "type": "mail",
             "name": "Send mail messages",
             "system": "our-smtp-server",
             "body_template": "Mail message body: {{ message_prop_id }}",
@@ -2774,7 +2787,7 @@ Example of filenames referenced in the config:
 
     {
         "sink": {
-            "type": "sink:mail",
+            "type": "mail",
             "name": "Send mail messages",
             "system": "our-smtp-server",
             "body_template_file": "/path/to/file/bodytemplate.jinja",
@@ -2797,7 +2810,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sink:null"
+        "type": "null"
     }
 
 Example configuration
@@ -2809,7 +2822,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sink:nill",
+            "type": "null",
             "name": "Sink that doesn't do anything",
         }
     }
@@ -3683,14 +3696,12 @@ to this fully expanded pipe configuration:
            },
            "sink": {
                "name": "Orders from northwind - sink",
-               "type": "datset",
+               "type": "dataset",
                "dataset": "Northwind:Orders"
            },
            "pump": {
                "name": "Orders from northwind - pump",
-               "schedule_interval": 15000,
-               "source": "source:Northwind:Orders",
-               "sink": "sink:Northwind:Orders"
+               "schedule_interval": 15000
            }
         }
     ]
