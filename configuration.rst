@@ -1723,16 +1723,234 @@ Example configuration
       }
 
 
-The RDF/CURIE transform
------------------------
+The properties to CURIEs transform
+----------------------------------
 
-This transform has the following capabilities:
+This transform can transform entity properties to `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames)
+based on wildcard patterns. It is used primarily when dealing with or preparing to output RDF data.
 
-* Add CURIE prefixes to properties
-* Collapse URIs into CURIEs
+Prototype
+^^^^^^^^^
 
-TODO: Add detailed docs plus examples.
+::
 
+    {
+        "type": "properties_to_curies",
+        "id_prefix": "id_prefix",
+        "prefixes": [
+          "some_prefix", ["some_pattern"]
+        ]
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``id_prefix``
+     - String
+     - The prefix to use for ``_id`` properties
+     -
+     - Yes
+
+   * - ``prefixes``
+     - List<(String, List<String>)>
+     - A list of String,List pairs that make up the rules for which properties should be assigned which prefixes.
+       See the example section below for a fuller explanation of this property.
+     -
+     - Yes
+
+Example
+^^^^^^^
+
+The "prefixes" property is a object with contains a list of string+list pairs, where the first item is the prefix
+to add and the second is the path expression that is used to match against. The number of elements in the list must
+be even.
+
+Path expressions are evaluated in order and the first matching path expression will win, so if a path expression
+matches the prefix will be assigned to the matching key.
+
+A path expression is a list of strings. The right-most string value is the most specific. "**" can be used to denote
+nestedness at an arbitrary depth. "*" can be used as a wildcard in the string values themselves.
+
+Given the configuration:
+
+::
+
+    {
+        "transform": [
+           {
+             "type": "properties_to_curies",
+             "id_prefix": "x",
+             "prefixes": [
+                  "c", ["status", "code"],
+                  "_", ["status"],
+                  "t", ["t_*"],
+                  "m", ["status", "**", "m*"],
+                  "s", ["status", "**"],
+                  "x", ["**"]
+             ]
+           }
+        ]
+    }
+
+And the input entity:
+
+::
+
+    {
+        "_id": "2",
+        "name": "John",
+        "born": "1980-01-23",
+        "code": "AB32",
+        "t_a": "A",
+        "status": {
+            "married": True,
+            "spouse": "Pam",
+            "code": 123,
+            "t_b": {
+                "t_c": "C",
+                "hello": "world",
+                "<s:hi>": "bye"
+            }
+        }
+    }
+
+The transform will output the following transformed entity:
+
+::
+
+    {
+        "_id": "<x:2>",
+        "<x:name>": "John",
+        "<x:born>": "1980-01-23",
+        "<x:code>": "AB32",
+        "<t:t_a>": "A",
+        "<_:status>": {
+            "<m:married>": True,
+            "<s:spouse>": "Pam",
+            "<c:code>": 123,
+            "<t:t_b>": {
+                "<t:t_c>": "C",
+                "<s:hello>": "world",
+                "<s:hi>": "bye"
+            }
+        }
+    }
+
+The URIs to CURIEs transform
+----------------------------
+
+This transform can transform entity properties containging URIs either in the keys or the values to a more compact form
+using `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames) based on wildcard patterns.
+It is used primarily when dealing with or reading RDF data.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "properties_to_curies",
+        "prefixes": {
+          "some_prefix": "some_uri"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``prefixes``
+     - Object
+     - A mapping of RDF prefixes (curies) to URIs. This is used to compress URI keys or properties to the form
+       "<foo:key_or_value>" or "~rfoo:key_or_value". The common RDF prefixes are built-in
+       and you don't have to provide the mapping for it. If no prefix mappings are given, the built-in and node-wide
+       prefixes are used instead.
+     -
+     -
+
+Example
+^^^^^^^
+
+Given the configuration:
+
+::
+
+    {
+        "transform": [
+           {
+             "type": "uris_to_curies",
+             "prefixes": {
+                 "test": "http://psi.test.com/",
+                 "foo": "http://psi.foo.com/"
+             }
+           }
+        ]
+    }
+
+And the input entity:
+
+::
+
+    {
+        "_id": "http://psi.test.com/2",
+        "http://psi.test.com/name": "John",
+        "born": "1980-01-23",
+        "http://psi.test.com/code": "AB32",
+        "status": {
+            "http://psi.foo.com/married": True,
+            "spouse": "Pam",
+            "url1": "~rhttp://www.foo.com",
+            "url2": "~rhttp://psi.foo.com/url2",
+            "code": 123,
+            "child": {
+                "t_c": "C",
+                "http://psi.test.com/hello": "http://psi.foo.com/world",
+                "http://psi.tests.com/s": "bye"
+            }
+        }
+    }
+
+The transform will output the following transformed entity:
+
+::
+
+    {
+        "_id": "<test:2>",
+        "<test:name>": "John",
+        "born": "1980-01-23",
+        "<test:code>": "AB32",
+        "status": {
+            "<foo:married>": True,
+            "spouse": "Pam",
+            "code": 123,
+            "url1": "~rhttp://www.foo.com",
+            "url2": "~rfoo:url2",
+            "child": {
+                "t_c": "C",
+                "<test:hello>": "<foo:world>",
+                "http://psi.tests.com/s": "bye"
+            }
+        }
+    }
 
 .. _sink_section:
 
