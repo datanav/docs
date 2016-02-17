@@ -2184,6 +2184,109 @@ You can also store the Jinja templates on disk and reference them in the same wa
 the templates in config or the entities themselves.
 
 
+The SPARQL sink
+---------------
+
+The SPARQL sink converts entities to RDF statements and writes them to a graph in a triplestore via a SPARQL compatible
+endpoint.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of sink",
+        "type": "sparql",
+        "system": "id-of-url-system"
+        "graph": "http://uri.of/graph",
+        "do_diff": false,
+        "write_sdshare_updated": true,
+        "prefixes": {
+            "some_prefix" : "http://some/uri/",
+            "other_prefix" : "http://another.uri/schema/"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``url``
+     - String
+     - The URL of the SPARQL endpoint to use.
+     -
+     - Yes
+
+   * - ``system``
+     - String
+     - The id of a :ref:`URL system <url_system>` component to use. If not given, one will be automatically generated
+       based on the ``url`` propery. Note that if the SPARQL endpoint uses authentication, you will have to create
+       a URL system to use.
+     -
+     -
+
+   * - ``graph``
+     - String
+     - A full URI for the graph to write the entities into.
+     -
+     - Yes
+
+   * - ``do_diff``
+     - Boolean
+     - Tell the sink to compute the difference between the target graph RDF statements and the RDF statements generated
+       by converting the input entity to RDF. This ensures the minimum number of write operations to the endpoint.
+       This does however come with the cost of (many) more read operations. Use this option if your entities are large
+       and/or there is large amounts of changes flowing through the sink on average.
+     -
+     - false
+
+   * - ``write_sdshare_updated``
+     - Boolean
+     - Tell the sink to automatically insert SDShare updated predicates with the generated RDF statements written to
+       the endpoint. Note that the local UTC time is currently used for this timestamp.
+     -
+     - true
+
+   * - ``prefixes``
+     - Object
+     - A mapping of RDF prefixes (curies) to URIs. This is used to expand properties on the form "<foo:property>" to
+       its full URI predicate ("http://example.com/foo/propery" for example). The common RDF prefixes are built-in
+       and you don't have to provide the mapping for it. If no prefix mappings are given, the built-in and node-wide
+       prefixes are used instead.
+     -
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "name": "Sink for inserting Fylke data into a remove triplestore",
+            "type": "sparql",
+            "url": "http://virtuoso-itest.cloudapp.net:8890/sparql",
+            "graph": "http://example.com/fylketest",
+            "do_diff": true,
+            "write_sdshare_updated": true,
+            "prefixes": {
+                "geo_fylke" : "http://psi.datanav.info/difi/geo/fylke/",
+                "geo" : "http://psi.datanav.info/difi/geo/schema/"
+            }
+    }
+
 
 The SQL sink
 ------------
