@@ -1864,9 +1864,9 @@ The transform will output the following transformed entity:
 The URIs to CURIEs transform
 ----------------------------
 
-This transform can transform entity properties containging URIs either in the keys or the values to a more compact form
-using `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames) based on wildcard patterns.
-It is used primarily when dealing with or reading RDF data.
+This transform can transform entity properties containing URIs in the keys and/or the values to a more compact form
+using `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames). It is used primarily when dealing with
+or reading RDF data.
 
 Prototype
 ^^^^^^^^^
@@ -1944,7 +1944,7 @@ And the input entity:
         }
     }
 
-The transform will output the following transformed entity:
+The transform will output the following compact/"compressed" transformed entity:
 
 ::
 
