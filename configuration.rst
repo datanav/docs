@@ -1210,6 +1210,21 @@ The ``POST`` endpoint will be available at the same location
 as where you can ``GET`` pipe entities. By using the ``HTTP endpoint``
 source you enable ``POST`` support at this endpoint.
 
+Accepted Content types
+^^^^^^^^^^^^^^^^^^^^^^
+
+The HTTP endpoint supports POSTs of both single JSON objects and lists of JSON objects. The requests ``content-type``
+header element must be set to ``application/json`` in this case.
+
+The endpoint also supports receiving RDF in NTriples form after the
+`SDShare Push specification <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_. In this case
+the URL parameters have to include at least one ``resource`` parameter describing which resources the NTriples
+payload contains statements about. If you include a ``resource`` parameter that there are no statements about in the
+NTriples body, an empty entity is generated with its ``_deleted`` flag set to ``true``. Note that the ``graph``
+parameter of the protocol is ignored - the destination of the entities generated from the NTriples payload must be
+configured in the pipe's ``sink`` section. This type of request expects the ``content-type``
+``application/n-triples`` or ``text/plain``.
+
 ::
 
    http://localhost:9042/pipes/mypipe/entities
