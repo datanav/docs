@@ -113,7 +113,7 @@ Properties
      - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
        more information on the format of this property.
      -
-     - 
+     -
 
    * - ``batch_size``
      - Integer
@@ -124,7 +124,7 @@ Properties
        then entities will be retried individually. The pipe offset will be saved after each
        batch if the source supports this.
      - 100
-     - 
+     -
 
    * - ``source``
      - Object
@@ -133,7 +133,7 @@ Properties
        :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
        this case.
      -
-     - 
+     -
 
    * - ``transform``
      - Object/List
@@ -143,14 +143,14 @@ Properties
        is passed as the input of the second, and so on. The output of the last transform is then passed to the
        sink. The first transform gets its input from the source.
      -
-     - 
+     -
 
    * - ``sink``
      - Object
      - A configuration object for the :ref:`sink <sink_section>` component of the pipe. If omitted, it defaults to
        a :ref:`dataset sink <dataset_sink>` with its ``dataset`` property set to same as the pipe's ``_id`` property.
      -
-     - 
+     -
 
    * - ``pump``
      - Object
@@ -158,7 +158,7 @@ Properties
        defaults to a ``datasync`` pump with its ``source`` and ``sink`` properties set to the
        respective ``_id`` properties of the source and sink respectively (possibly a computed value).
      -
-     - 
+     -
 
 
 Example configuration
@@ -243,7 +243,7 @@ Properties
      - A human redable name of the component. It may be omitted as part of a pipe
        configuration, in case it will be generated based on the pipe's ``name`` property with a "source" postfix.
      -
-     - 
+     -
 
    * - ``type``
      - String
@@ -251,14 +251,14 @@ Properties
        documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a SQL
        source.
      - "sql"
-     - 
+     -
 
    * - ``supports_since``
      - Boolean
      - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
        the beginning each time or not.
      - false
-     - 
+     -
 
 The dataset source
 ------------------
@@ -1978,6 +1978,129 @@ The transform will output the following compact/"compressed" transformed entity:
         }
     }
 
+The undirected graph transform
+------------------------------
+
+The undirected graph transform transforms a list of properties representing nodes in a graph into all its
+possible sets of edges, forming a complete graph. The transform will generate all possible edges in the
+graph, which will be twice the number of entities as there are values in the aggregate of the list of properties given.
+See the example section for an example.
+
+It is primarily used for generating bidirectional entity lookup datasets from RDF sameAs statements (to be used in
+another transform with with the DTL ``lookup`` function).
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "undirected_graph",
+        "nodes": ["_id", "sameAs"],
+        "from": "from-property",
+        "to": "to-property"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``nodes``
+     - List<String>
+     - A list of entity property names that should be used to pick the nodes of the graph. The properties must refer
+       to a value that is either a string or a URI, or a list of strings or URIs. No other value types are allowed in
+       the transform.
+     -
+     - ["_id", "sameAs"]
+
+   * - ``from``
+     - String
+     - The name of the property to use as "from" point in the generated entity for an edge in the graph.
+     -
+     - "from"
+
+   * - ``to``
+     - String
+     - The name of the property to use as the "to" point in the generated entity for an edge in the graph.
+     -
+     - "to"
+
+Example
+^^^^^^^
+
+Given the configuration:
+
+::
+
+    {
+        "transform": [
+           {
+             "type": "undirected_graph",
+             "nodes": ["_id", "map"],
+             "from": "from",
+             "to": "to"
+           }
+        ]
+    }
+
+And the input entity:
+
+::
+
+    {
+       "_id": "foo",
+       "map": ["bar", "zoo"]
+    }
+
+The transform will output the following edges of the graph as entities on its output stream:
+
+::
+
+   {
+       "_id": "foo.bar",
+       "from": "foo",
+       "to": "bar"
+   }
+
+   {
+       "_id": "foo.zoo",
+       "from": "foo",
+       "to": "zoo"
+   }
+
+   {
+       "_id": "bar.foo",
+       "from": "bar",
+       "to": "foo"
+   }
+
+   {
+       "_id": "bar.zoo",
+       "from": "bar",
+       "to": "zoo"
+   }
+
+   {
+       "_id": "zoo.foo",
+       "from": "zoo",
+       "to": "foo"
+   }
+
+   {
+       "_id": "zoo.bar",
+       "from": "zoo",
+       "to": "bar"
+   }
+
 .. _sink_section:
 
 Sinks
@@ -2591,7 +2714,7 @@ Properties
      - If a specific schema within a database is needed, you must provide its name in this property.
        Do *not* use schema names in the ``table`` property.
      -
-     - 
+     -
 
 
 Example configuration
