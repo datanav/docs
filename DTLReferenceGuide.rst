@@ -936,6 +936,65 @@ Hops
          addresses found.
 
 
+
+Entity lookups
+--------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``reference``
+     - | *Arguments:*
+       |   DATASET_ID(string{1})
+       |   ENTITY_IDS(value-expression{})
+       |
+       | Returns a URI that can be used to reference entities in the given
+         dataset. The DATASET_ID and ENTITY_IDS parts will be URI path
+         encoded. URIs of this type can be resolved using the ``lookup`` function.
+     - | ``["reference", "foo", "bar"]``
+       |
+       | Returns ``"~rsesam:foo/bar"`` (which is a value of the URI datatype)).
+       |
+       | ``["reference", "foo", ["list", "a", "b"]]``
+       |
+       | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
+
+   * - ``lookup``
+     - | *Arguments:*
+       |   DATASET_IDS(value-expression{0|1})
+       |   ENTITY_REFERENCES(value-expression{1})
+       |
+       | Returns an entity or a list of entities by resolving the strings or URIs in
+         ENTITY_REFERENCES. The URIs will be resolved by looking up entities by
+         id in the given datasets. Relative references will be resolved in the
+         current dataset or in the DATASET_IDS datasets if specified.
+     - | ``["lookup", "~rsesam:A/foo"]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset.
+       |
+       | ``["lookup", "A", ["list", "foo", "sesam:B/bar"]]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset and the ``bar``
+         entity in the ``B`` dataset.
+       |
+       | ``["lookup", "bar"]``
+       |
+       | Looks up the ``bar`` entity in the current dataset.
+       |
+       | ``["lookup",``
+       |   ``["list", "A", "B"],``
+       |   ``["list", "bar", "baz", "~rsesam:C/foo", "~rsesam:D/quux"]``
+       |
+       | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
+         ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
+         dataset because they are explicit entity references.
+
+
 Strings
 -------
 
