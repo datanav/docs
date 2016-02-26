@@ -1986,9 +1986,6 @@ possible sets of edges, forming a complete graph. The transform will generate al
 graph, which will be twice the number of entities as there are values in the aggregate of the list of properties given.
 See the example section for an example.
 
-It is primarily used for generating bidirectional entity lookup datasets from RDF sameAs statements (to be used in
-another transform with with the DTL ``lookup`` function).
-
 Prototype
 ^^^^^^^^^
 
@@ -2019,20 +2016,20 @@ Properties
      - A list of entity property names that should be used to pick the nodes of the graph. The properties must refer
        to a value that is either a string or a URI, or a list of strings or URIs. No other value types are allowed in
        the transform.
-     -
      - ["_id", "sameAs"]
+     -
 
    * - ``from``
      - String
      - The name of the property to use as "from" point in the generated entity for an edge in the graph.
-     -
      - "from"
+     -
 
    * - ``to``
      - String
      - The name of the property to use as the "to" point in the generated entity for an edge in the graph.
-     -
      - "to"
+     -
 
 Example
 ^^^^^^^
