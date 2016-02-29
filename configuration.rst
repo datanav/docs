@@ -201,7 +201,7 @@ Continuation support
 --------------------
 
 Sources can optionally support a ``since`` moniker or marker which lets them pick up where the previous stream of
-entities left off - like a "bookmark" in the entitiy stream. The ``since`` marker is opaque to the rest of the
+entities left off - like a "bookmark" in the entity stream. The ``since`` marker is opaque to the rest of the
 Sesam Node components and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
 in the ``_updated`` property if supported by its source.
 
@@ -506,7 +506,7 @@ The SQL source
 --------------
 
 The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entitiy stream to the Sesam Node. It has several options, all of which
+(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to the Sesam Node. It has several options, all of which
 are presented below with their default values:
 
 Prototype
@@ -1209,6 +1209,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     }
 
 
+.. _http_endpoint_source:
+
 The HTTP endpoint source
 ------------------------
 
@@ -1220,6 +1222,13 @@ posted.
 The ``POST`` endpoint will be available at the same location
 as where you can ``GET`` pipe entities. By using the ``HTTP endpoint``
 source you enable ``POST`` support at this endpoint.
+
+The protocol is described in additional detail in the :doc:`JSON Push
+Protocol <json-push>` document. The serialisation of entities as JSON
+is described in more detail :doc:`here <entitymodel>`.
+
+This source is compatible with :ref:`The JSON push sink
+<json_push_sink>`.
 
 Accepted Content types
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1234,7 +1243,7 @@ payload contains statements about. If you include a ``resource`` parameter that 
 NTriples body, an empty entity is generated with its ``_deleted`` flag set to ``true``. Note that the ``graph``
 parameter of the protocol is ignored - the destination of the entities generated from the NTriples payload must be
 configured in the pipe's ``sink`` section. This type of request expects the ``content-type``
-``application/n-triples`` or ``text/plain``.
+to be ``application/n-triples`` or ``text/plain``.
 
 ::
 
@@ -1278,7 +1287,7 @@ The fake source
 ---------------
 
 This is a utility data source intended to be used to quickly mock up syntetic data for testing purposes.
-It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ python package in conjunction with a entity
+It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ Python package in conjunction with a entity
 template to produce custom entities that can be consumed by a sink. Fake sources intended to be interconnected can be
 realised by using the *shared id pools* of the related :ref:`Fake System <fake_system>` component.
 
@@ -1597,7 +1606,7 @@ Transformation Language before writing them to the
           "dataset": "Northwind:Customers"
        },
        "transform": {
-           "type": "transform:dtl",
+           "type": "dtl",
            "name": "Join customers with their orders",
            "dataset": "Northwind:Customers",
            "transforms": {
@@ -2235,10 +2244,15 @@ The JSON push sink
 ------------------
 
 The JSON push sink implements a simple HTTP based protocol where
-individual entities or lists of entities are ``POSTed`` as JSON lists
-of objects to a :ref:`HTTP endpoint <url_system>`. The protocol is
-described in additional detail here: [TODO].  The serialisation of
-entities as JSON is described in more detail here: [TODO].
+individual entities or lists of entities are ``POSTed`` as JSON data
+to an :ref:`HTTP endpoint <url_system>`.
+
+The protocol is described in additional detail in the :doc:`JSON Push
+Protocol <json-push>` document. The serialisation of entities as JSON
+is described in more detail :doc:`here <entitymodel>`.
+
+This sink is compatible with :ref:`The HTTP endpoint source
+<http_endpoint_source>`.
 
 Prototype
 ^^^^^^^^^
@@ -2298,7 +2312,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "json_push",
             "name": "Local JSON push service sink",
-            "url": "http://localhost/json_push_service"
+            "url": "http://localhost:9042/pipes/foo/entities"
         }
     }
 
