@@ -2280,6 +2280,89 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+The databrowser sink
+--------------------
+
+The databrowser sink writes the entities it is given to a Solr index to be displayed by the Sesam Databrowser
+application. The input entitities are transformed to special Databrowser JSON documents before being sent off for
+indexing.
+
+TODO: where should this special form be documented?
+
+The configuration looks like:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of sink",
+        "type": "databrowser",
+        "system": "url-system-id",
+        "url": "url-to-solr-endpoint",
+        "commit_within": 1000,
+        "prefixes": {
+          "prefix": "http://expansionsion.com/foo",
+          "other_prefix": "http://other.expansionsion.com/bar"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       endpoint requires authentication, you will have to create a URL system component explicitly.
+     -
+     -
+
+   * - ``url``
+     - String
+     - The full URL to HTTP service implementing the ``SDShare push protocol``.
+     -
+     - Yes
+
+   * - ``commit_within``
+     - Integer
+     - Solr flag that tells it the number of milliseconds to wait before committing pending operations
+     -
+     -
+
+   * - ``prefixes``
+     - Dictionary
+     - A dictionary mapping prefix to their URI expansions. This prefix mapping
+       will be used to expand CURIES into full URIs.
+     -
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "type": "databrowser",
+            "name": "Index the Northwind customers",
+            "url": "http://localhost:8893/solr/my_index",
+        }
+    }
+
 The InfluxDB sink
 -----------------
 
