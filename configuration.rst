@@ -2676,6 +2676,85 @@ You can also store the Jinja templates on disk and reference them in the same wa
 the templates in config or the entities themselves.
 
 
+The Solr sink
+-------------
+
+The Solr sink writes the entities it is given to a Solr index. The input entity is converted to a JSON document and its
+``_id`` property is converted to a JSON ``id`` property automatically. If you include your own ``id`` propery, it will
+overwrite this generated property before being sent off for indexing.
+
+Limitations
+^^^^^^^^^^^
+
+Due to the limited JSON datastructure allowed by Solr, there are some restrictions on the form of the entities accepted
+by the sink:
+
+* only "flat" entities are allowed - any child entities must be removed or merged into the root entity before
+being sent to the sink.
+* Lists properties are supported, but they can only contain a single type of property.
+* Lists cannot contain other lists or entities.
+
+Any properties not adhering to these rules are ignored (this is logged as a warning).
+
+The configuration looks like:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of sink",
+        "type": "databrowser",
+        "system": "url-system-id",
+        "url": "url-to-solr-endpoint",
+        "commit_within": 1000,
+        "prefixes": {
+          "prefix": "http://expansionsion.com/foo",
+          "other_prefix": "http://other.expansionsion.com/bar"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
+       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
+       endpoint requires authentication, you will have to create a URL system component explicitly.
+     -
+     -
+
+   * - ``url``
+     - String
+     - The full URL to HTTP service implementing the ``SDShare push protocol``.
+     -
+     - Yes
+
+   * - ``commit_within``
+     - Integer
+     - Solr flag that tells it the number of milliseconds to wait before committing pending operations
+     -
+     -
+
+   * - ``prefixes``
+     - Dictionary
+     - A dictionary mapping prefix to their URI expansions. This prefix mapping
+       will be used to expand CURIES into full URIs.
+     -
+     -
+
 The SPARQL sink
 ---------------
 
