@@ -583,17 +583,17 @@ Properties
      - If the underlying relation contains information about updates, the data source is
        able to support ``since`` markers. You can provide the name of the column to use
        for such queries here. This must be a valid column name in the ``table`` or ``query``
-       result sets and it must be of a data type that supports larger than (">") and larger or equal (">=") tests
-       for the ``table`` case. TODO: are these names case sensitive?
+       result sets and it must be of a data type that supports larger or equal (">=") tests
+       for the ``table`` case.
      -
      -
 
    * - ``updated_query``
      - String
      - If the ``query`` property is set, the ``since`` support must be expressed by a
-       full query including any test needed. A single variable substitution
-       ``{{ since }}`` must be included somewhere in the query string - for example
-       "select * from view_name v where v.updates > '{{ since }}'".  TODO: are queries case sensitive?
+       full query including any test needed. A single variable binding
+       ``:since`` must be included somewhere in the query string - for example
+       "select * from view_name v where v.updates >= :since".
      -
      -
 
@@ -682,7 +682,7 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
             "query": "select * from my_table",
             "primary_key": "table_id",
             "updated_column": "updated",
-            "updated_query": "select * from my_table where updated >= {{ since }}",
+            "updated_query": "select * from my_table where updated >= :since",
             "supports_since": true
         }
     }
@@ -2990,6 +2990,7 @@ Prototype
         "type": "system:sql",
         "name": "The Foo Database",
         "connection_string": "foo://database/SID",
+        "timezone": "UTC",
         "pool_size": 10,
         "pool_timeout": 30,
         "pool_max_overflow": 10
@@ -3016,6 +3017,15 @@ Properties
        drivers.
      -
      - Yes
+
+   * - ``timezone``
+     - String
+     - The local timezone for the database server. It is used for any date(time) objects returned that doesn't have any
+       timezone information. The default is the UTC timezone. All the official timezone names are supported,
+       i.e. "UTC", "GMT", "EST" etc. You can also use the indirect "Continent/City" format, for example "Europe/Oslo"
+       (see `the complete list <http://twiki.org/cgi-bin/xtra/tzdatepick.html>`_ for which cities are supported).
+     - "UTC"
+     -
 
    * - ``pool_size``
      - Integer
