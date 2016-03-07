@@ -22,9 +22,9 @@ Installation
 
 The Sesam service is run as either a single Sesam node or as a cluster of Sesam nodes. Each node has the capability to collect, transform and deliver data. However, various topologies of nodes can be used to separate concerns where needed. A cluster of Sesam Nodes can be accessed via single API endpoint. All nodes expose the Sesam API as way to control and introspect the node. When used in a cluster the nodes can be configured to expose an API over all the nodes in the cluster.
 
-For getting started with Sesam a single node will suffice. The Sesam Node is available as a public docker image. If you install and use the docker node you are bound by the Sesam Node EULA agreement.
+For getting started with Sesam a single node will suffice. The Sesam Node is available as a public docker image. If you install and use the Sesam Node software, you are bound by the :ref:`eula`. Sesam Node uses a number of open source components. The licenses for these can be in the :ref:`open_source_licenses` document.
 
-Docker version 1.9.1 is required. Download Docker `here <http://www.docker.com/>`_.
+Docker version 1.9.1 is required. Download Docker `here <http://www.docker.com/>`_. We recommend using 'Docker Machine <https://www.docker.com/products/docker-machine>`_ to get up and running on Windows and Mac OSX.
 
 .. _overview-getting-started:
 
