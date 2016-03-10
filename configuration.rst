@@ -1676,25 +1676,54 @@ Example configuration
 
 ::
 
-  {
-      "_id": "men-validated",
-      "type": "pipe",
-      "source": {
-          "type": "dataset",
-          "dataset": "men"
-      },
-      "transform": {
-          "type": "json_schema",
-          "schema": {
-              "type" : "object",
-              "properties" : {
-                  "name" : {"type" : "string"},
-                  "born" : {"type" : "string"}
-              },
-              "required": ["name", "born"]
-          }
-      }
+   {
+       "_id": "men-validated",
+       "type": "pipe",
+       "source": {
+           "type": "dataset",
+           "dataset": "men"
+       },
+       "transform": {
+           "type": "json_schema",
+           "schema": {
+               "type" : "object",
+               "properties" : {
+                   "name" : {"type" : "string"},
+                   "born" : {"type" : "string"}
+               },
+               "required": ["name", "born"]
+           }
+       }
+   }
 
+If the following entities where pushed through the pipe:
+
+::
+
+   [
+    {"_id": "3",
+     "name": "Jim"},
+    {"_id": "5",
+     "name": "Bob",
+     "born": "1972-03-12"}
+   ]
+
+then these would come out:
+
+::
+
+   [
+    {"_id": "3",
+     "valid": false,
+     "errors": [
+       "'born' is a required property"
+     ],
+     "name": "Jim"},
+    {"_id": "5",
+     "valid": true,
+     "name": "Bob",
+     "born": "1972-03-12"}
+   ]
 
 The HTTP transform
 ------------------
