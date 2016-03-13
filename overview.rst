@@ -113,6 +113,20 @@ Now you can start the Sesam Node container:
 
 The Sesam Node will reload the ``nodeconfig.json`` file at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. Try editing any of the files and see what happens.
 
+What to do next?
+================
+
+There are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
+
+To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`node configuration <configuration>` section details the datasource component types and how to configure them.
+
+If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be consumed by the Sesam Node. The documentation on :doc:`developer extension points <extension-points>` has more examples and links to templates for C#, NodeJS, Java and Python.
+
+If you are looking to transform data into new shapes, or validate it against schema rules, please take a look at the different kinds of transforms that can be used in a pipe. :doc:`DTL <DTLReferenceGuide>` is a very powerful language that can reshape, and connect data from multiple datasets. 
+
+Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`node configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up sesam to push data to a custom service. 
+
+
 Troubleshooting
 ===============
 
