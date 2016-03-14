@@ -24,7 +24,7 @@ The Sesam service is run as either a single Sesam node or as a cluster of Sesam 
 
 For getting started with Sesam a single node will suffice. The Sesam Node is available as a public docker image. If you install and use the Sesam Node software, you are bound by the :ref:`eula`. Sesam Node uses a number of open source components. The licenses for these can be in the :ref:`open_source_licenses` document.
 
-Docker version 1.9.1 is required. Download Docker `here <http://www.docker.com/>`_. We recommend using 'Docker Machine <https://www.docker.com/products/docker-machine>`_ to get up and running on Windows and Mac OSX.
+Docker version 1.9.1 is required. Download Docker `here <http://www.docker.com/>`_. We recommend using `Docker Machine <https://www.docker.com/products/docker-machine>`_ to get up and running on Windows and Mac OSX.
 
 .. _overview-getting-started:
 
@@ -116,7 +116,7 @@ The Sesam Node will reload the ``nodeconfig.json`` file at regular intervals, so
 What to do next?
 ================
 
-There are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
+First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
 
 To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`node configuration <configuration>` section details the datasource component types and how to configure them.
 

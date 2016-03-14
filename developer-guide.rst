@@ -13,4 +13,5 @@ Developer Guide
    Command Line Client <commandlineclient>
    Cluster Configuration <cluster-config>
    JSON Push Protocol <json-push>
+   Developer Extension Points <extension-points>
 
