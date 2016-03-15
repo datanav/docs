@@ -972,7 +972,9 @@ Entity lookups
        | Returns an entity or a list of entities by resolving the strings or URIs in
          ENTITY_REFERENCES. The URIs will be resolved by looking up entities by
          id in the given datasets. Relative references will be resolved in the
-         current dataset or in the DATASET_IDS datasets if specified.
+         current dataset or in the DATASET_IDS datasets if specified. The returned
+         entities have an extra ``_dataset`` property containing the id of the dataset
+         where they came from.
      - | ``["lookup", "~rsesam:A/foo"]``
        |
        | Looks up the ``foo`` entity in the ``A`` dataset.
@@ -993,6 +995,91 @@ Entity lookups
        | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
          ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
          dataset because they are explicit entity references.
+
+   * - ``uri-expand``
+     - | *Arguments:*
+       |   ENTITIES(value-expression{1})
+       |
+       | Runs the given entities through the prefixing rules and the
+         prefix expansion mapping defined in the node metadata and in the
+         entities' dataset metadata. The given entities must have a
+         ``_dataset`` property containing the id of the dataset to which
+         they belong. This dataset id will be used to locate the prefix
+         rules and prefix expansion mapping.
+
+       | The main purpose of this function is to prepare entities for
+         translation into RDF form. See the :doc:`RDF support <rdf-support>`
+         document for more information about how this works.
+
+       | Example node metadata:
+
+         ::
+
+            {
+              "prefixes": {
+                "p": "http://example.org/person/",
+                "c": "http://example.org/company/"
+              }
+            }
+
+       | Example ``person`` dataset metadata:
+
+         ::
+
+            {
+              "prefixes": {
+                "p": "http://example.org/people/"
+              },
+              "prefix_rules": {
+                "id_prefix": "p",
+                "prefixes": [
+                    "p", ["name"],
+                    "c", ["Employer"],
+                    "_", ["**"]
+                ]
+              }
+            }
+
+       | Example input entity:
+
+         ::
+
+            {
+              "_id": "john_doe",
+              "name": "John Doe",
+              "employer": "Example org Ltd.",
+              "born": "1973-01-21"
+            }
+
+       | Given the above configuration you should expect the following URI-expanded
+         entity in the result:
+
+         ::
+
+            {
+              "_id": "<http://example.org/people/john_doe>",
+              "<http://example.org/people/name>": "John Doe",
+              "<http://example.org/company/employer>": "Example org Ltd.",
+              "<http://example.org/born>": "1973-01-21"
+            }
+
+       | Note that the dataset metadata takes precendence over the node metadata, so
+         the ``p`` prefix expansion is taken from the ``person`` dataset metadata and
+         not the node metadata. Prefix expansion rules, i.e. ``prefix_rules``, should
+         in general be specified in the dataset metadata.
+
+     - | ``["uri-expand", {"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity.
+       |
+       | ``["uri-expand", ["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
+         dataset, then URI expands them.
+       | ``["uri-expand", ["list", {"_id": "mary", "name": "Mary Jones"}]]``
+       |
+       | Returns an empty list because the ``mary`` entity is missing the ``_dataset`
+         property.
 
 
 Strings
