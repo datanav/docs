@@ -424,6 +424,24 @@ Transforms
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
 
+   * - ``comment``
+     - | *Arguments:*
+       |   COMMENTS(value-expression{>=0})
+       |
+       | A transform that does nothing except hold comments. Useful for
+         documenting the transforms, or just disabling transforms inside. Any
+         expressions inside the comment will not be evaluated.
+     - | ``["comment", "This is a comment"]``
+       |
+       | A single line comment.
+       |
+       | ``["comment",``
+       |      ``"First line",``
+       |      ``"Second line",``
+       |      ``"Third line"]``
+       |
+       | A comment that spans multiple lines.
+
    * - ``filter``
      - | *Arguments:*
        |   FILTER(boolean-expression{0|1})
