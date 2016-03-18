@@ -1014,6 +1014,30 @@ Entity lookups
          ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
          dataset because they are explicit entity references.
 
+URIs
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``curie``
+     - | *Arguments:*
+       |   PREFIX(string{1}),
+       |   VALUES(value-expression{1})
+       |
+       | Constructs new curies as URI objects based on a the PREFIX and VALUES arguments
+       | ``["curie", "foo", "bar"]``
+       |
+       | This will produce a URI object with the value "~rfoo:bar"
+       | ``["curie", "foo", ["list", "bar", "zoo"]]``
+       |
+       | This will produce a list of two URI objects with the values ["~rfoo:bar", "~rfoo:zoo"]
+
    * - ``uri-expand``
      - | *Arguments:*
        |   ENTITIES(value-expression{1})
