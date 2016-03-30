@@ -822,6 +822,83 @@ Data Types
        |
        | Returns a list of two URIs. The number is silently ignored because it is not a string.
 
+   * - ``string``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to strings.
+     - | ``["string", 1]``
+       |
+       | Returns one string: "1".
+       |
+       | ``["string", ["1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |
+       | Returns a list of strings.
+
+   * - ``integer``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to integers. If no default value expression is given, values that don't parse
+       | as integers will be silently ignored. If not, the evaluated value from the default expression will be used
+       | as a replacement value.
+       |
+     - | ``["integer", "1"]``
+       |
+       | Returns one integer: 1.
+       |
+       | ``["integer", ["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |
+       | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
+       |
+       | ``["integer", ["integer", 0], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       |
+       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the string value are replaced with the
+       | literal value 0
+       |
+       | ``["integer", ["string", "n/a"], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       |
+       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value and the string value are replaced with the
+       | literal value "n/a"
+       |
+       | ``["integer", ["string", "_."], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       |
+       | Returns a list of integers: [1, "http://www.bouvet.no/", "124.4", 12345]. The URI value and the string float value
+       | are replaced with the their respective string casts.
+
+   * - ``boolean``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to booleans. If no default value expression is given, values that don't parse
+       | as boolean values will be silently ignored. If not, the evaluated value from the default expression will be used
+       | as a replacement value. String literals are case insensitive, and the supported values are "true" and "false".
+       | null values are evaluated as false.
+       |
+     - | ``["boolean", "false"]``
+       |
+       | Returns one boolean: false.
+       |
+       | ``["boolean", ["list", "true", "~rhttp://www.bouvet.no/", "True", false, 1234]]``
+       |
+       | Returns a list of booleans: [true, true, false]. The URI and integer values are ignored.
+       |
+       | ``["boolean", ["boolean", false], ["list", "true", "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
+       |
+       | Returns a list of booleans: [true, false, false, false]. The URI value and the string value are replaced with the
+       | literal value: false
+       |
+       | ``["boolean", ["string", "n/a"], ["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and the string value are replaced with the
+       | literal value "n/a"
+       |
+       | ``["boolean", ["string", "_."], ["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
+       |
+       | Returns a list of integers: [true, "http://www.bouvet.no/", false]. The URI value is replaced with its string cast.
+
 
 Nested transformations
 ----------------------
