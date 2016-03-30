@@ -897,7 +897,49 @@ Data Types
        |
        | ``["boolean", ["string", "_."], ["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
        |
-       | Returns a list of integers: [true, "http://www.bouvet.no/", false]. The URI value is replaced with its string cast.
+       | Returns a list of booleans: [true, "http://www.bouvet.no/", false]. The URI value is replaced with its string cast.
+
+   * - ``float``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to floats. If no default value expression is given, values that don't parse
+       | as float values will be silently ignored. If not, the evaluated value from the default expression will be used
+       | as a replacement value.
+       |
+     - | ``["float", "1.0"]``
+       |
+       | Returns one float: 1.0
+       |
+       | ``["float", ["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "3.3", "one"]]``
+       |
+       | Returns a list of floats: [1.0, 2.2, 3.3]. The URI and float string value are ignored.
+       |
+       | ``["float", ["boolean", false], ["list", "1.0", "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
+       |
+       | Returns a list of floats: [1.0, false, 124.4, false]. The URI value and the string value are replaced with the
+       | literal value: false
+       |
+       | ``["float", ["string", "n/a"], ["list", "1.0", "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns a list of floats: [1.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a"
+       |
+       | ``["float", ["string", "_."], ["list", "1.0", "~rhttp://www.bouvet.no/", "2.5"]]``
+       |
+       | Returns a list of floats: [1.0, "http://www.bouvet.no/", 2.5]. The URI value is replaced with its string cast.
+
+   * - ``decimal``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to decimals (a fractional number with unlimited precision). If no default value
+       | expression is given, values that don't parse as decimal values will be silently ignored. If not, the evaluated
+       | value from the default expression will be used as a replacement value.
+       |
+     - | ``decimal`` has the exact same usage pattern as ``float``
 
 
 Nested transformations
