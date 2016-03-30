@@ -852,19 +852,19 @@ Data Types
        |
        | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
        |
-       | ``["integer", ["integer", 0], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       | ``["integer", ["integer", 0], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
        | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the string value are replaced with the
        | literal value 0
        |
-       | ``["integer", ["string", "n/a"], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       | ``["integer", ["string", "n/a"], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
        | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value and the string value are replaced with the
        | literal value "n/a"
        |
-       | ``["integer", ["string", "_."], ["list", "1", "~rhttp://www.bouvet.no/", "124.4", 12345]]``
+       | ``["integer", ["string", "_."], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, "http://www.bouvet.no/", "124.4", 12345]. The URI value and the string float value
+       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345]. The URI value and the string float value
        | are replaced with the their respective string casts.
 
    * - ``boolean``
