@@ -1285,7 +1285,7 @@ URIs
        |   PREFIX(string{1}),
        |   VALUES(value-expression{1})
        |
-       | Constructs new curies as URI objects based on a the PREFIX and VALUES arguments
+     - | Constructs new curies as URI objects based on a the PREFIX and VALUES arguments
        | ``["curie", "foo", "bar"]``
        |
        | This will produce a URI object with the value "~rfoo:bar"
@@ -1297,13 +1297,13 @@ URIs
      - | *Arguments:*
        |   ENTITIES(value-expression{1})
        |
-       | Runs the given entities through the prefixing rules and the
+     - | Runs the given entities through the prefixing rules and the
          prefix expansion mapping defined in the node metadata and in the
          entities' dataset metadata. The given entities must have a
          ``_dataset`` property containing the id of the dataset to which
          they belong. This dataset id will be used to locate the prefix
          rules and prefix expansion mapping.
-
+         
        | The main purpose of this function is to prepare entities for
          translation into RDF form. See the :doc:`RDF support <rdf-support>`
          document for more information about how this works.
@@ -1365,7 +1365,7 @@ URIs
          not the node metadata. Prefix expansion rules, i.e. ``prefix_rules``, should
          in general be specified in the dataset metadata.
 
-     - | ``["uri-expand", {"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
+       | ``["uri-expand", {"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
        |
        | Returns an URI expanded version of the ``mary`` entity.
        |
@@ -1683,15 +1683,15 @@ Values / collections
        |
        | Returns true.
        |
-     - | ``["in", "d", ["list", "a", "b", "c"]]``
+       | ``["in", "d", ["list", "a", "b", "c"]]``
        |
        | Returns false.
        |
-     - | ``["in", ["list", "a", "c"], ["list", "a", "b", "c"]]``
+       | ``["in", ["list", "a", "c"], ["list", "a", "b", "c"]]``
        |
        | Returns true.
        |
-     - | ``["in", ["list", "a", "c", "d"], ["list", "a", "b", "c"]]``
+       | ``["in", ["list", "a", "c", "d"], ["list", "a", "b", "c"]]``
        |
        | Returns false.
 
