@@ -865,19 +865,19 @@ Data Types
        | Boolean function that returns true if value is a string literal or if it is a list, that the first element
        | in the list is a string
        |
-     - | ``["is-uri", "foo:bar"]``
+     - | ``["is-string", "foo:bar"]``
        |
        | Returns true.
        |
-       | ``["is-uri", 1]``
+       | ``["is-string", 1]``
        |
        | Returns false.
        |
-       | ``["is-uri", ["list", "foo:bar", 12345]]``
+       | ``["is-string", ["list", "foo:bar", 12345]]``
        |
        | Returns true
        |
-       | ``["is-uri", ["list", 1, "foo:bar"]]``
+       | ``["is-string", ["list", 1, "foo:bar"]]``
        |
        | Returns false
 
@@ -920,23 +920,23 @@ Data Types
        | Boolean function that returns true if value is an integer literal or if it is a list, that the first element
        | in the list is an integer
        |
-     - | ``["is-uri", 1]``
+     - | ``["is-integer", 1]``
        |
        | Returns true.
        |
-       | ``["is-uri", "1"]``
+       | ``["is-integer", "1"]``
        |
        | Returns false.
        |
-       | ``["is-uri", ["list", 1, "12345"]]``
+       | ``["is-integer", ["list", 1, "12345"]]``
        |
        | Returns true
        |
-       | ``["is-uri", ["list", "1", 2]]``
+       | ``["is-integer", ["list", "1", 2]]``
        |
        | Returns false
        |
-       | ``["is-uri", ["list", ["integer", "1"], 2]]``
+       | ``["is-integer", ["list", ["integer", "1"], 2]]``
        |
        | Returns true
 
@@ -979,23 +979,23 @@ Data Types
        | Boolean function that returns true if value is a boolean literal or if it is a list, that the first element
        | in the list is a boolean
        |
-     - | ``["is-uri", false]``
+     - | ``["is-boolean", false]``
        |
        | Returns true.
        |
-       | ``["is-uri", "True"]``
+       | ``["is-boolean", "True"]``
        |
        | Returns false.
        |
-       | ``["is-uri", ["list", true, "12345"]]``
+       | ``["is-boolean", ["list", true, "12345"]]``
        |
        | Returns true
        |
-       | ``["is-uri", ["list", "True", 2]]``
+       | ``["is-boolean", ["list", "True", 2]]``
        |
        | Returns false
        |
-       | ``["is-uri", ["list", ["boolean", "FALSE"], 1234]]``
+       | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
        |
        | Returns true
 
@@ -1037,23 +1037,23 @@ Data Types
        | Boolean function that returns true if value is a float literal or if it is a list, that the first element
        | in the list is a float
        |
-     - | ``["is-uri", 1.0]``
+     - | ``["is-float", 1.0]``
        |
        | Returns true.
        |
-       | ``["is-uri", 1]``
+       | ``["is-float", 1]``
        |
        | Returns false.
        |
-       | ``["is-uri", ["list", 1.0, "12345"]]``
+       | ``["is-float", ["list", 1.0, "12345"]]``
        |
        | Returns true
        |
-       | ``["is-uri", ["list", "1.0", 2.0]]``
+       | ``["is-float", ["list", "1.0", 2.0]]``
        |
        | Returns false
        |
-       | ``["is-uri", ["list", ["float", "-1.0"], 1234]]``
+       | ``["is-float", ["list", ["float", "-1.0"], 1234]]``
        |
        | Returns true
 
