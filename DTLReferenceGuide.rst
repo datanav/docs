@@ -822,6 +822,29 @@ Data Types
        |
        | Returns a list of two URIs. The number is silently ignored because it is not a string.
 
+   * - ``is-uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a URI literal or if it is a list, that the first element
+       | in the list is a URI
+       |
+     - | ``["is-uri", ["uri", "foo:bar"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uri", "foo:bar"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
+       |
+       | Returns true
+       |
+       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
+       |
+       | Returns false
+
    * - ``string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -834,6 +857,29 @@ Data Types
        | ``["string", ["1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
        |
        | Returns a list of strings.
+
+   * - ``is-string``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a string literal or if it is a list, that the first element
+       | in the list is a string
+       |
+     - | ``["is-uri", "foo:bar"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uri", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-uri", ["list", "foo:bar", 12345]]``
+       |
+       | Returns true
+       |
+       | ``["is-uri", ["list", 1, "foo:bar"]]``
+       |
+       | Returns false
 
    * - ``integer``
      - | *Arguments:*
@@ -867,6 +913,33 @@ Data Types
        | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345]. The URI value and the string float value
        | are replaced with the their respective string casts.
 
+   * - ``is-integer``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is an integer literal or if it is a list, that the first element
+       | in the list is an integer
+       |
+     - | ``["is-uri", 1]``
+       |
+       | Returns true.
+       |
+       | ``["is-uri", "1"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uri", ["list", 1, "12345"]]``
+       |
+       | Returns true
+       |
+       | ``["is-uri", ["list", "1", 2]]``
+       |
+       | Returns false
+       |
+       | ``["is-uri", ["list", ["integer", "1"], 2]]``
+       |
+       | Returns true
+
    * - ``boolean``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -899,6 +972,33 @@ Data Types
        |
        | Returns a list of booleans: [true, "http://www.bouvet.no/", false]. The URI value is replaced with its string cast.
 
+   * - ``is-boolean``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a boolean literal or if it is a list, that the first element
+       | in the list is a boolean
+       |
+     - | ``["is-uri", false]``
+       |
+       | Returns true.
+       |
+       | ``["is-uri", "True"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uri", ["list", true, "12345"]]``
+       |
+       | Returns true
+       |
+       | ``["is-uri", ["list", "True", 2]]``
+       |
+       | Returns false
+       |
+       | ``["is-uri", ["list", ["boolean", "FALSE"], 1234]]``
+       |
+       | Returns true
+
    * - ``float``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -930,6 +1030,33 @@ Data Types
        |
        | Returns a list of floats: [1.0, "http://www.bouvet.no/", 2.5]. The URI value is replaced with its string cast.
 
+   * - ``is-float``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a float literal or if it is a list, that the first element
+       | in the list is a float
+       |
+     - | ``["is-uri", 1.0]``
+       |
+       | Returns true.
+       |
+       | ``["is-uri", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-uri", ["list", 1.0, "12345"]]``
+       |
+       | Returns true
+       |
+       | ``["is-uri", ["list", "1.0", 2.0]]``
+       |
+       | Returns false
+       |
+       | ``["is-uri", ["list", ["float", "-1.0"], 1234]]``
+       |
+       | Returns true
+
    * - ``decimal``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -941,6 +1068,15 @@ Data Types
        |
      - | ``decimal`` has the exact same usage pattern as ``float``
 
+
+   * - ``is-decimal``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a decimal literal or if it is a list, that the first element
+       | in the list is a decimal
+       |
+     - | ``is-decimal`` has the exact same usage pattern as ``is-float``
 
 Nested transformations
 ----------------------
@@ -1479,6 +1615,32 @@ Values / collections
        |
        | Returns ``["a", ["b"], "c"]``.
 
+   * - ``is-list``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a list
+       |
+     - | ``["is-list", ["list", "foo:bar"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-list", "foo:bar"]``
+       |
+       | Returns false.
+       |
+       | ``["is-list", ["list", ["uri", "foo:bar"], 12345]]``
+       |
+       | Returns true
+       |
+       | ``["is-list", ["dict", "1", 2]]``
+       |
+       | Returns false
+       |
+       | ``["is-list", ["items", ["dict", "1", 2]]]``
+       |
+       | Returns true
+
    * - ``first``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1866,6 +2028,21 @@ Dictionaries / Entities
        | ``["dict", ["list", "X", 123, ["A", 1]]``
        |
        | Returns ``{"A": 1}``.
+
+   * - ``is-dict``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
+       | in the list is a dictionary
+       |
+     - | ``["is-dict", ["dict", "1", 2]]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", "foo:bar"]``
+       |
+       | Returns false
 
    * - ``keys``
      - | *Arguments:*
