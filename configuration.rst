@@ -2197,6 +2197,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _databrowser_sink:
+
 The databrowser sink
 --------------------
 
@@ -2215,8 +2217,6 @@ Prototype
         "name": "Name of sink",
         "type": "databrowser",
         "system": "url-system-id",
-        "url": "url-to-solr-endpoint",
-        "commit_within": 1000,
         "prefixes": {
           "prefix": "http://expansionsion.com/foo",
           "other_prefix": "http://other.expansionsion.com/bar"
@@ -2238,23 +2238,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       endpoint requires authentication, you will have to create a URL system component explicitly.
-     -
-     -
-
-   * - ``url``
-     - String
-     - The full URL to HTTP service implementing the ``SDShare push protocol``.
+     - The id of the :ref:`Solr system <solr_system>` component to use.
      -
      - Yes
-
-   * - ``commit_within``
-     - Integer
-     - Solr flag that tells it the number of milliseconds to wait before committing pending operations
-     -
-     -
 
    * - ``prefixes``
      - Dictionary
@@ -2674,6 +2660,8 @@ You can also store the Jinja templates on disk and reference them in the same wa
 the templates in config or the entities themselves.
 
 
+.. _solr_sink:
+
 The Solr sink
 -------------
 
@@ -2705,8 +2693,6 @@ Prototype
         "name": "Name of sink",
         "type": "databrowser",
         "system": "url-system-id",
-        "url": "url-to-solr-endpoint",
-        "commit_within": 1000,
         "prefixes": {
           "prefix": "http://expansionsion.com/foo",
           "other_prefix": "http://other.expansionsion.com/bar"
@@ -2728,23 +2714,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       endpoint requires authentication, you will have to create a URL system component explicitly.
-     -
-     -
-
-   * - ``url``
-     - String
-     - The full URL to HTTP service implementing the ``SDShare push protocol``.
+     - The id of the :ref:`Solr system <solr_system>` component to use.
      -
      - Yes
-
-   * - ``commit_within``
-     - Integer
-     - Solr flag that tells it the number of milliseconds to wait before committing pending operations
-     -
-     -
 
    * - ``prefixes``
      - Dictionary
@@ -2752,6 +2724,8 @@ Properties
        will be used to expand CURIES into full URIs.
      -
      -
+
+.. _sparql_sink:
 
 The SPARQL sink
 ---------------
@@ -3646,6 +3620,74 @@ Example configuration
         "smtp_username": "some-user",
         "smtp_password": "*********",
         "max_per_hour": 100000
+    }
+
+.. _solr_system:
+
+The Solr system
+---------------
+
+The Solr system represents the information needed to connect to a Solr server for indexing json documents. It is used in
+cojunction with the :ref:`solr sink <solr_sink>` or the :ref:`databrowser sink <databrowser_sink>` simks.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:solr",
+        "url": "http://localhost:8983/solr/",
+        "commit_within": null,
+        "timeout": 30,
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``url``
+     - String
+     - Contains a full URL to the Solr dataset to read/write documents from
+     - "http://localhost:8983/solr/"
+     -
+
+   * - ``commit_within``
+     - Integer
+     - The number of milliseconds to wait until committing (default is to autocommit once per document). This is used
+       to set up commit batching. The default is null (i.e. not set) which means commit for each document.
+     - null
+     -
+
+   * - ``timeout``
+     - Integer
+     - The number of seconds to wait for a response from the Solr server when adding/committing data
+     - 30
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-smtp-server",
+        "type": "system:solr",
+        "name": "Our Solr Server",
+        "smtp_server": "http://localhost:8983/solr/ourdata/",
+        "commit_within": 3000,
+        "timeout": 60
     }
 
 .. _twilio_system:
