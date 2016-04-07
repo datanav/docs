@@ -3536,7 +3536,7 @@ The SMTP system
 ---------------
 
 The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in
-cojunction with the :ref:`mail message sink <mail_message_sink>` to construct and send emails based on the entities it
+conjunction with the :ref:`mail message sink <mail_message_sink>` to construct and send emails based on the entities it
 receives.
 
 Prototype
@@ -3627,8 +3627,8 @@ Example configuration
 The Solr system
 ---------------
 
-The Solr system represents the information needed to connect to a Solr server for indexing json documents. It is used in
-cojunction with the :ref:`solr sink <solr_sink>` or the :ref:`databrowser sink <databrowser_sink>` simks.
+The Solr system represents the information needed to connect to a Solr server for indexing JSON documents. It is used in
+conjunction with the :ref:`solr sink <solr_sink>` or the :ref:`databrowser sink <databrowser_sink>` simks.
 
 Prototype
 ^^^^^^^^^
@@ -3682,7 +3682,7 @@ Example configuration
 ::
 
     {
-        "_id": "our-smtp-server",
+        "_id": "our-solr-server",
         "type": "system:solr",
         "name": "Our Solr Server",
         "smtp_server": "http://localhost:8983/solr/ourdata/",
