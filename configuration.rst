@@ -1072,6 +1072,9 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+
+.. _json_source:
+
 The JSON source
 ---------------
 
@@ -1214,45 +1217,60 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The HTTP endpoint source
 ------------------------
 
-This is a special data source that registers an HTTP endpoint that one
-can ``POST`` entities to. Entities posted here will be written to the
-pipe's sink. Both individual entities and lists of entities can be
-posted.
+This is a special data source that registers an HTTP receiver endpoint
+that one can post entities to. Entities posted here will be written to
+the pipe's sink.
 
-The ``POST`` endpoint will be available at the same location
-as where you can ``GET`` pipe entities. By using the ``HTTP endpoint``
-source you enable ``POST`` support at this endpoint.
+A pipe that references the ``HTTP endpoint`` source will not pump any
+entities, in practice this means that a pump is not configured for the
+pipe; the only way for entities to flow through the pipe is by posting
+them to the HTTP endpoint.
 
-The protocol is described in additional detail in the :doc:`JSON Push
-Protocol <json-push>` document. The serialisation of entities as JSON
-is described in more detail :doc:`here <entitymodel>`.
+It exposes two URLs:
 
-This source is compatible with :ref:`The JSON push sink
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 60
+
+   * - URL
+     - Description
+
+   * - ``http://localhost:9042/receivers/mypipe/entities``
+     - JSON Push endpoint
+
+   * - ``http://localhost:9042/receivers/mypipe/sdshare-push-receiver``
+     - SDShare Push receiver endpoint
+
+JSON Push protocol
+^^^^^^^^^^^^^^^^^^
+
+The JSON Push protocol is described in additional detail in the
+:doc:`JSON Push Protocol <json-push>` document. The serialisation of
+entities as JSON is described in more detail :doc:`here
+<entitymodel>`. Both individual entities and lists of entities can be
+posted. This endpoint is compatible with :ref:`The JSON push sink
 <json_push_sink>`.
 
-Accepted Content types
-^^^^^^^^^^^^^^^^^^^^^^
+The JSON Push endpoint supports POSTs of both a single JSON object and
+a list of JSON objects. The request's ``content-type`` header element
+must be set to ``application/json`` in this case.
 
-The HTTP endpoint supports POSTs of both single JSON objects and lists of JSON objects. The requests ``content-type``
-header element must be set to ``application/json`` in this case.
+SDShare Push protocol
+^^^^^^^^^^^^^^^^^^^^^
 
-The endpoint also supports receiving RDF in NTriples form after the
-`SDShare Push specification <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_. In this case
-the URL parameters have to include at least one ``resource`` parameter describing which resources the NTriples
-payload contains statements about. If you include a ``resource`` parameter that there are no statements about in the
-NTriples body, an empty entity is generated with its ``_deleted`` flag set to ``true``. Note that the ``graph``
-parameter of the protocol is ignored - the destination of the entities generated from the NTriples payload must be
-configured in the pipe's ``sink`` section. This type of request expects the ``content-type``
-to be ``application/n-triples`` or ``text/plain``.
+The SDShare Push protocol is described `here
+<https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
 
-::
-
-   http://localhost:9042/pipes/mypipe/entities
-
-A pipe that references the ``HTTP endpoint`` source will not pump any entities,
-in practice this means that a ``datasync`` pump is not configured for the
-pipe; the only way for entities to flow through the pipe is by posting them
-the HTTP endpoint.
+The SDShare Push endpoint supports receiving RDF in NTriples form. In
+this case the URL parameters have to include at least one ``resource``
+parameter describing which resources the NTriples payload contains
+statements about. If you include a ``resource`` parameter that there
+are no statements about in the NTriples body, an empty entity is
+generated with its ``_deleted`` flag set to ``true``. Note that the
+``graph`` parameter of the protocol is ignored - the destination of
+the entities generated from the NTriples payload must be configured in
+the pipe's ``sink`` section. This type of request expects the
+``content-type`` to be ``application/n-triples`` or ``text/plain``.
 
 
 Prototype
@@ -1261,23 +1279,26 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
+        "name": "Name of endpoint",
         "type": "http_endpoint"
     }
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-The outermost object would be your :ref:`pipe <pipe_section>`
-configuration, which is omitted here for brevity:
+The pipe configuration given below will expose the
+``my-entities`` receiver endpoint and write any data it receives
+into the ``my-entities`` dataset:
 
 ::
 
     {
+        "_id": "my-entities",
+        "type": "pipe",
         "source": {
-            "name": "Endpoint - events",
+            "name": "My received entities endpoint",
             "type": "http_endpoint"
-        },
+        }
     }
 
 
@@ -2408,7 +2429,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "json_push",
             "name": "Local JSON push service sink",
-            "url": "http://localhost:9042/pipes/foo/entities"
+            "url": "http://localhost:9042/receivers/foo/entities"
         }
     }
 
@@ -3123,6 +3144,75 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "name": "Sink that doesn't do anything",
         }
     }
+
+
+.. _http_endpoint_sink:
+
+The HTTP endpoint sink
+----------------------
+
+This is a special data sink that registers an HTTP publisher endpoint
+that one can get entities from.
+
+A pipe that references the ``HTTP endpoint`` sink will not pump any
+entities, in practice this means that a pump is not configured for the
+pipe; the only way for entities to flow through the pipe is by
+retrieving them from the HTTP endpoint.
+
+It exposes three URLs:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 60
+
+   * - URL
+     - Description
+
+   * - ``http://localhost:9042/publishers/mypipe/entities``
+     - JSON entities endpoint
+
+   * - ``http://localhost:9042/publishers/mypipe/sdshare-collection``
+     - SDShare collections feed
+
+   * - ``http://localhost:9042/publishers/mypipe/sdshare-fragments``
+     - SDShare fragments feed
+
+The serialisation of entities as JSON is described in more detail
+:doc:`here <entitymodel>`. This endpoint is compatible with :ref:`The
+JSON source <json_source>`.
+
+The SDShare protocol is described `here
+<http://www.sdshare.org/spec/sdshare-v1.0.html>`_.
+
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "name": "Name of endpoint",
+        "type": "http_endpoint"
+    }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The pipe configuration given below will expose the ``my-entities``
+publisher endpoint and read the entities from the ``my-entities``
+dataset:
+
+::
+
+    {
+        "_id": "my-entities",
+        "type": "pipe",
+        "sink": {
+            "name": "My published entities endpoint",
+            "type": "http_endpoint"
+        }
+    }
+
 
 .. _system_section:
 

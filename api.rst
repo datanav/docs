@@ -129,9 +129,10 @@ API Reference
 .. cornice-autodoc::
    :modules: lake.node.webapp.api.root,
              lake.node.webapp.api.pipes,
+             lake.node.webapp.api.receivers,
+             lake.node.webapp.api.publishers,
              lake.node.webapp.api.metadata,
              lake.node.webapp.api.datasets,
              lake.node.webapp.api.systems,
              lake.node.webapp.api.status,
              lake.node.webapp.api.logs
-

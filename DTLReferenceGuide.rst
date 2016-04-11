@@ -32,7 +32,7 @@ An example using the 'add' transform:
 
 And composing functions:
 
-  ["add", "name", ["concat", ["_S.firstname", " ", "_S.lastname"]]]
+  ["add", "name", ["concat", ["list", "_S.firstname", " ", "_S.lastname"]]]
 
 Input Streams
 -------------
