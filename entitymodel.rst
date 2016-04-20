@@ -160,6 +160,11 @@ types that are not recognized will be treated as string values.
      - Uniform Resource Identifier (URI).
      - ``"~rhttp://www.sesam.io/"``
 
+   * - Date
+     - A date value. The valid range is from ``"~t0001-01-01"`` to
+       ``"~t9999-12-31"``.
+     - ``"~t2015-12-31"``
+
    * - Datetime
      - Date and time with up to nanoseconds precision. The valid range is
        from ``"~t0001-01-01T00:00:00Z"`` to
@@ -171,3 +176,11 @@ types that are not recognized will be treated as string values.
    * - Bytes
      - A base64 encoded binary value.
      - ``"~bAAECAwQF"``
+
+   * - UUID, 
+     - A Universally unique identifier formatted as hexadecimal text.
+     - ``"~u531a379e-31bb-4ce1-8690-158dceb64be6"``
+
+   * - Decimal
+     - A decimal number with arbitray precision.
+     - ``"~f12345678901234567890.1234567890"``
