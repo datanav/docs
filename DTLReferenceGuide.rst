@@ -215,6 +215,11 @@ Things to note:
 - The filter function can be used to stop transformation of individual
   entities, effectively filtering them out of the output stream.
 
+- When the DTL of a pipe is modified, the pipe's "last-seen" value must be
+  cleared in order to reprocess already seen entities with the new DTL.
+  This can be done by setting the "last-seen" value to an empty string with the
+  `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
+
 
 Variables
 =========

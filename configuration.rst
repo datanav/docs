@@ -4117,6 +4117,9 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
 Pipes revisited
 ===============
 
+Short-hand configuration
+------------------------
+
 As mentioned earlier, in the :ref:`pipe section <pipe_section>`, there is a special "short hand" configuration for
 one of the most used pipes; pipes pumping entities from RDBMS tables to an internal dataset. Since this is an often
 encountered usecase, we have condensed the information needed into a single url-style form:
@@ -4195,3 +4198,16 @@ changing the pump schedule and startup flag:
            }
         }
     ]
+
+
+Changing configuration on an existing pipe
+------------------------------------------
+
+When the configuration of a pipe is modified in such a way that the entities the pipe
+produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
+value must be cleared in order to reprocess already seen entities with the new pipe
+configuration.
+
+This can be done by setting the "last-seen" value to an empty string with the
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
+
