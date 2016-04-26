@@ -1372,7 +1372,7 @@ URIs
          dataset, then URI expands them.
        | ``["uri-expand", ["list", {"_id": "mary", "name": "Mary Jones"}]]``
        |
-       | Returns an empty list because the ``mary`` entity is missing the ``_dataset`
+       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
          property.
        | ``["uri-expand", ["string", "people"], {"_id": "mary", "_dataset": "employees", "name": "Mary Jones"}]``
        |
@@ -1726,21 +1726,21 @@ Values / collections
 
    * - ``flatten``
      - | *Arguments:*
-       |   VALUES(value-expression{>0})
+       |   VALUES(value-expression{1})
        |
        | Flattens its input values in VALUES. Note that it does *not* do so
          recursively. Constructs a new list.
-     - | ``["flatten", ["list", 1, 2], ["list", 3, 4]]``
+     - | ``["flatten", ["list", 1, 2, ["list", 3, 4]]]``
        |
        | Returns ``[1, 2, 3, 4]``.
        |
-       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]]]``
-       |
-       | Returns ``[1, 2, 3, [4]]``.
-       |
-       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]], 5]``
+       | ``["flatten", ["list", ["list", 1, 2], ["list", 3, ["list", 4], 5]]]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.
+       |
+       | ``["flatten", ["list", "_S.sisters", "_S.brothers"]]``
+       |
+       | Returns a list that contains the sisters and brothers.
 
    * - ``filter``
      - | *Arguments:*
