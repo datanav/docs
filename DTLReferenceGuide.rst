@@ -90,7 +90,7 @@ the target entity:
 
     {
         "dataset": "person",
-        "transforms": {
+        "rules": {
             "default": [
                 ["copy", "_id"],
                 ["add", "type", "customer"],
@@ -117,7 +117,7 @@ Explanation:
 1. | The DTL will read and transform source entities from the ``person``
      dataset.
 
-2. | There are two named ``transforms`` specified in the DTL document:
+2. | There are two named ``rules`` specified in the DTL document:
      ``default`` and ``order``. The ``default`` named transform is
      mandatory and is the one that is applied to the entities in the
      ``person`` dataset.
@@ -241,7 +241,7 @@ current value in functional expressions.
    * - ``_S``
      - Refers to the source entity. This is the entity on which the
        DTL transform operate. Note that with the ``apply`` function
-       you can apply nested transforms, where each of the values
+       you can apply nested transform rules, where each of the values
        given to ``apply`` is made a source entity for that nested
        transform.
      - | ``["gt", "_S.age", 42]``
@@ -1096,16 +1096,16 @@ Nested transformations
 
    * - ``apply``
      - | *Arguments:*
-       |   TRANSFORM_ID(string{1}),
+       |   RULE_ID(string{1}),
        |   VALUES(value-expression{1})
        |
-       | Applies the TRANSFORM_ID transform on the entities in VALUES.
-         TRANSFORM_ID must be the id of a transform in the current DTL
+       | Applies the RULE_ID transform rule on the entities in VALUES.
+         RULE_ID must be the id of a transform rule in the current DTL
          specification.
      - | ``["apply", "order", "_S.orders"]``
        |
        | This will transform the order entities in the source entity's
-         ``orders`` field using the ``order`` transform. The output is
+         ``orders`` field using the ``order`` transform rules. The output is
          the transformed order entities.
 
 
