@@ -1581,16 +1581,17 @@ Strings
        |   PATTERN(string{1})
        |   VALUES(value-expression{1})
        |
-       | Returns the values in VALUES that match the pattern in PATTERN. The '*' and '?'
-         wildcard characters can be used. Non-string values are ignored. If PATTERN contains
-         multiple string values then only the first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", "beta", "epsilon"]``
+       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
+         wildcard characters can be used. Non-string values are not matched and will cause the
+         function to return false. If PATTERN contains multiple string values then only the
+         first one is used.
+     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]``
        |
-       | Returns ``["alpha"]``.
+       | Returns ``true``.
        |
        | ``["matches", "*_sport", ".", "_S.tags"]]``
        |
-       | Returns the tags that have a "_sport" suffix.
+       | Returns true if all the tags that have a "_sport" suffix.
 
 
 Values / collections
