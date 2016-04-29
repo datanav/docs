@@ -1821,9 +1821,10 @@ Prototype
 
     {
         "type": "properties_to_curies",
-        "id_prefix": "id_prefix",
-        "prefixes": [
-          "some_prefix", ["some_pattern"]
+        "rule": "rdf-registry-entry"
+        "id": "optional-id-prefix",
+        "properties": [
+          "optional_some_prefix", ["optional_some_pattern"]
         ]
     }
 
@@ -1840,51 +1841,65 @@ Properties
      - Default
      - Req
 
-   * - ``id_prefix``
+   * - ``rule``
+     - String
+     - The id of the key in the RDF registry containting the prefix rules to to use for the transformation.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+     -
+     - Yes*
+
+   * - ``id``
      - String
      - The prefix to use for ``_id`` properties
      -
-     - Yes
+     - Yes*
 
-   * - ``prefixes``
+
+   * - ``properties``
      - List<(String, List<String>)>
      - A list of String,List pairs that make up the rules for which properties should be assigned which prefixes.
        See the example section below for a fuller explanation of this property.
      -
-     - Yes
+     - Yes*
+
+Note that ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present,
+``rule`` is given precedence and ``id`` and ``properties`` are ignored.
 
 Example
 ^^^^^^^
 
-The "prefixes" property is a object with contains a list of string+list pairs, where the first item is the prefix
-to add and the second is the path expression that is used to match against. The number of elements in the list must
-be even.
 
-Path expressions are evaluated in order and the first matching path expression will win, so if a path expression
-matches the prefix will be assigned to the matching key.
+The ``rule`` property references a RDF registry entry containing a ``prefix_rules`` object. See :doc:`RDF support
+<rdf-support>` for more information about the RDF registry and how to configure it. Alternatively, the contents of
+the ``prefix_rules`` entry (i.e. .the ``id`` and ``properties``) can be included inline in the transform configuration.
 
-A path expression is a list of strings. The right-most string value is the most specific. "**" can be used to denote
-nestedness at an arbitrary depth. "*" can be used as a wildcard in the string values themselves.
+Given a pre-existing RDF registry entry ``my_entry``:
 
-Given the configuration:
+::
+
+    "my_entry": {
+       ..
+       "prefix_rules": {
+           "id": "x",
+           "properties": [
+                "c", ["status", "code"],
+                "_", ["status"],
+                "t", ["t_*"],
+                "m", ["status", "**", "m*"],
+                "s", ["status", "**"],
+                "x", ["**"]
+           ]
+       }
+       ..
+    }
+
+And a transform configuration:
 
 ::
 
     {
-        "transform": [
-           {
-             "type": "properties_to_curies",
-             "id_prefix": "x",
-             "prefixes": [
-                  "c", ["status", "code"],
-                  "_", ["status"],
-                  "t", ["t_*"],
-                  "m", ["status", "**", "m*"],
-                  "s", ["status", "**"],
-                  "x", ["**"]
-             ]
-           }
-        ]
+        "type": "properties_to_curies",
+        "rule": "my_entry"
     }
 
 And the input entity:
@@ -1944,10 +1959,8 @@ Prototype
 ::
 
     {
-        "type": "properties_to_curies",
-        "prefixes": {
-          "some_prefix": "some_uri"
-        }
+        "type": "uris_to_curies",
+        "prefix_includes": ["entry1", "entry2"]
     }
 
 Properties
@@ -1963,12 +1976,13 @@ Properties
      - Default
      - Req
 
-   * - ``prefixes``
-     - Object
-     - A mapping of RDF prefixes (curies) to URIs. This is used to compress URI keys or properties to the form
-       "<foo:key_or_value>" or "~rfoo:key_or_value". The common RDF prefixes are built-in
-       and you don't have to provide the mapping for it. If no prefix mappings are given, the built-in and node-wide
-       prefixes are used instead.
+   * - ``prefix_includes``
+     - List<String>
+     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
+       The prefixes collected from the RDF registry will be used to compress full URIs to CURIES.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+       The common RDF prefixes are built-in and you don't have to provide the mapping for it (i.e. RDF, RDFS, OWL etc).
      -
      -
 
@@ -1983,12 +1997,21 @@ Given the configuration:
         "transform": [
            {
              "type": "uris_to_curies",
-             "prefixes": {
-                 "test": "http://psi.test.com/",
-                 "foo": "http://psi.foo.com/"
-             }
+             "prefix_includes": ["my_entry"]
            }
         ]
+    }
+
+The RDF registry entry:
+
+::
+
+    "my_entry": {
+       "prefixes": {
+          "foo": "http://psi.foo.com/"
+          "test": "http://psi.test.com/"
+       }
+       ..
     }
 
 And the input entity:
@@ -2238,10 +2261,7 @@ Prototype
         "name": "Name of sink",
         "type": "databrowser",
         "system": "url-system-id",
-        "prefixes": {
-          "prefix": "http://expansionsion.com/foo",
-          "other_prefix": "http://other.expansionsion.com/bar"
-        }
+        "prefix_includes": ["prefix_set1", "prefix_set2"]
     }
 
 Properties
@@ -2263,10 +2283,13 @@ Properties
      -
      - Yes
 
-   * - ``prefixes``
-     - Dictionary
-     - A dictionary mapping prefix to their URI expansions. This prefix mapping
-       will be used to expand CURIES into full URIs.
+   * - ``prefix_includes``
+     - List<String>
+     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
+       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
      -
      -
 
@@ -2282,6 +2305,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "type": "databrowser",
             "name": "Index the Northwind customers",
             "url": "http://localhost:8893/solr/my_index",
+            "prefix_includes": ["northwind"]
         }
     }
 
@@ -2453,9 +2477,7 @@ Prototype
         "system":"url-system-id",
         "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
-        "prefixes": {
-            "a-prefix": "the-expansion"
-        }
+        "prefix_includes": ["prefix_set1", "prefix_set2"]
     }
 
 Properties
@@ -2491,12 +2513,15 @@ Properties
      -
      - Yes
 
-   * - ``prefixes``
-     - Dictionary
-     - A dictionary mapping prefix to their URI expansions. This prefix mapping
-       will be used to expand CURIES into full URIs.
+   * - ``prefix_includes``
+     - List<String>
+     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
+       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
      -
-     - Yes
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -2510,11 +2535,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "type": "sdshare_push",
             "name": "Local SDShare push service sink",
             "url": "http://localhost:8001/sdshare_push_service",
-            "prefixes": {
-                "dc": "http://purl.org/dc/elements/1.1/",
-                "foaf": "http://xmlns.com/foaf/0.1/",
-                "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
-            }
+            "prefix_includes": ["dc", "foaf", "geo"]
         }
     }
 
@@ -2748,6 +2769,7 @@ Properties
 
 .. _sparql_sink:
 
+
 The SPARQL sink
 ---------------
 
@@ -2766,10 +2788,7 @@ Prototype
         "graph": "http://uri.of/graph",
         "do_diff": false,
         "write_sdshare_updated": true,
-        "prefixes": {
-            "some_prefix" : "http://some/uri/",
-            "other_prefix" : "http://another.uri/schema/"
-        }
+        "prefix_includes": ["prefix_set1", "prefix_set2"]
     }
 
 Properties
@@ -2821,12 +2840,13 @@ Properties
      -
      - true
 
-   * - ``prefixes``
-     - Object
-     - A mapping of RDF prefixes (curies) to URIs. This is used to expand properties on the form "<foo:property>" to
-       its full URI predicate ("http://example.com/foo/propery" for example). The common RDF prefixes are built-in
-       and you don't have to provide the mapping for it. If no prefix mappings are given, the built-in and node-wide
-       prefixes are used instead.
+   * - ``prefix_includes``
+     - List<String>
+     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
+       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
      -
      -
 
@@ -2845,12 +2865,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "graph": "http://example.com/fylketest",
             "do_diff": true,
             "write_sdshare_updated": true,
-            "prefixes": {
-                "geo_fylke" : "http://psi.datanav.info/difi/geo/fylke/",
-                "geo" : "http://psi.datanav.info/difi/geo/schema/"
-            }
+            "prefix_includes": ["geo_fylke"]
     }
-
 
 The SQL sink
 ------------

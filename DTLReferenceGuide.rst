@@ -1300,15 +1300,17 @@ URIs
 
    * - ``uri-expand``
      - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
        |   ENTITIES(value-expression{1})
        |
      - | Runs the given entities through the prefixing rules and the
-         prefix expansion mapping defined in the node metadata and in the
-         entities' dataset metadata. The given entities must have a
+         prefix expansion mapping defined in the node metadata RDF registry. The given entities must have a
          ``_dataset`` property containing the id of the dataset to which
-         they belong. This dataset id will be used to locate the prefix
-         rules and prefix expansion mapping.
-         
+         they belong *or* the key to look up the prefixes must be computed by the (optional) FUNCTION argument. The
+         result of the FUNCTION argument will override any ``_dataset`` property on the entity. The id given or
+         computed will be used to locate the prefix rules and prefix expansion mapping within the node RDF registry.
+         Note that the result of FUNCTION must be a single string value.
+
        | The main purpose of this function is to prepare entities for
          translation into RDF form. See the :doc:`RDF support <rdf-support>`
          document for more information about how this works.
@@ -1318,28 +1320,21 @@ URIs
          ::
 
             {
-              "prefixes": {
-                "p": "http://example.org/person/",
-                "c": "http://example.org/company/"
-              }
-            }
-
-       | Example ``person`` dataset metadata:
-
-         ::
-
-            {
-              "prefixes": {
-                "p": "http://example.org/people/"
-              },
-              "prefix_rules": {
-                "id_prefix": "p",
-                "prefixes": [
-                    "p", ["name"],
-                    "c", ["Employer"],
-                    "_", ["**"]
-                ]
-              }
+                "rdf": {
+                  "people": {
+                     "prefixes": {
+                       "p": "http://example.org/people/"
+                     },
+                     "prefix_rules": {
+                       "id": "p",
+                       "properties": [
+                          "p", ["name"],
+                          "c", ["Employer"],
+                          "_", ["**"]
+                       ]
+                     }
+                  }
+                }
             }
 
        | Example input entity:
@@ -1348,6 +1343,7 @@ URIs
 
             {
               "_id": "john_doe",
+              "_dataset": "people",
               "name": "John Doe",
               "employer": "Example org Ltd.",
               "born": "1973-01-21"
@@ -1360,15 +1356,11 @@ URIs
 
             {
               "_id": "<http://example.org/people/john_doe>",
+              "_dataset": "people",
               "<http://example.org/people/name>": "John Doe",
               "<http://example.org/company/employer>": "Example org Ltd.",
               "<http://example.org/born>": "1973-01-21"
             }
-
-       | Note that the dataset metadata takes precendence over the node metadata, so
-         the ``p`` prefix expansion is taken from the ``person`` dataset metadata and
-         not the node metadata. Prefix expansion rules, i.e. ``prefix_rules``, should
-         in general be specified in the dataset metadata.
 
        | ``["uri-expand", {"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
        |
@@ -1382,7 +1374,16 @@ URIs
        |
        | Returns an empty list because the ``mary`` entity is missing the ``_dataset`
          property.
+       | ``["uri-expand", ["string", "people"], {"_id": "mary", "_dataset": "employees", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes registered by the "people" key
+         in the node RDF registry (i.e. the ``_dataset`` value of "employees" is overriden by the computed value)
 
+       | ``["uri-expand", ["string", "_.type"], {"_id": "mary", "_dataset": "employees", "type": "person", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes registered by the "person" key
+         in the node RDF registry. The ``_dataset`` value of "employees" is overriden by the computed value (based on
+         the contents of the entity's ``type`` property in this example).
 
 Strings
 -------
