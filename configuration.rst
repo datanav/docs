@@ -183,7 +183,7 @@ The following example shows a pipe definition that exposes data from a SQL datab
        },
        "pump": {
            "type": "task:datasync",
-           "schedule_interval": 30000
+           "schedule_interval": 30
        }
    }
 
@@ -3755,7 +3755,7 @@ Properties
 
    * - ``commit_within``
      - Integer
-     - The number of milliseconds to wait until committing (default is to autocommit once per document). This is used
+     - The number of seconds to wait until committing (default is to autocommit once per document). This is used
        to set up commit batching. The default is null (i.e. not set) which means commit for each document.
      - null
      -
@@ -3951,7 +3951,7 @@ Prototype
         "_id": "pump_id",
         "type": "datasync",
         "name": "My Pipe pump",
-        "schedule_interval": 15000,
+        "schedule_interval": 15,
         "cron_expression": "* * * * * *",
         "rescan_run_count": 10,
         "rescan_cron_expression": "* * * * * *",
@@ -3985,7 +3985,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
    * - ``schedule_interval``
      - Integer
-     - The number of milliseconds between runs. It is a required field if no ``cron_expression`` is present. It is
+     - The number of seconds between runs. It is a required field if no ``cron_expression`` is present. It is
        mutually exclusive with the ``cron_expression`` property.
      -
      - Yes
@@ -4063,7 +4063,7 @@ A scheduled pump running every 30 seconds, no retries or dead letter dataset:
         "pump": {
            "type": "datasync",
            "name": "My Pipe pump",
-           "schedule_interval": 30000
+           "schedule_interval": 30
        }
     }
 
@@ -4093,7 +4093,7 @@ datasets:
         "pump": {
            "type": "datasync",
            "name": "My Pipe pump",
-           "schedule_interval": 30000,
+           "schedule_interval": 30,
            "rescan_cron_expression": "0 0 * * * *"
        }
     }
@@ -4169,7 +4169,7 @@ to this fully expanded pipe configuration:
            },
            "pump": {
                "name": "Orders from northwind - pump",
-               "schedule_interval": 15000
+               "schedule_interval": 15
            }
         }
     ]
@@ -4193,7 +4193,7 @@ changing the pump schedule and startup flag:
            "name": "Orders from northwind",
            "short_config": "sql://Northwind/Orders",
            "pump": {
-               "schedule_interval": 60000,
+               "schedule_interval": 60,
                "run_at_startup": true
            }
         }
