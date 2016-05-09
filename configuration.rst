@@ -544,8 +544,8 @@ Properties
 
    * - ``system``
      - String
-     - Must refer to a ``system`` component by ``id``. The role of this component is provide services like connection
-       pooling and authentication for the data sources using it
+     - Must refer to a :ref:`SQL system <sql_system>` component by ``id``. The role of this component is provide
+       services like connection pooling and authentication for the data sources using it
      -
      - Yes
 
@@ -3258,7 +3258,12 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:sql",
         "name": "The Foo Database",
-        "connection_string": "foo://database/SID",
+        "dbtype": "oracle|mssql|mysql|sqlite",
+        "username":"username",
+        "password":"secret",
+        "host":"host-name-or-ip",
+        "port": 1234,
+        "database": "name-of-database",
         "timezone": "UTC",
         "pool_size": 10,
         "pool_timeout": 30,
@@ -3278,12 +3283,40 @@ Properties
      - Default
      - Req
 
-   * - ``connection_string``
+   * - ``dbtype``
      - String
-     - Contains a SQLAlchemy connection URL used for establishing a connection to the RDBMS. See
-       http://docs.sqlalchemy.org/en/latest/core/engines.html for details of the formatting of this string for the
-       various databases supported. A Sesam Node currently supports SQLite, Oracle, MS SQL Server, MySQL and Postgresql
-       drivers.
+     - A string enum denoting the type of database to connect to. A Sesam Node currently supports SQLite, Oracle,
+        MS SQL Server and MySQL databases. The identifiers are "sqlite", "oracle", "mssql" and "mysql" respectively.
+     -
+     - Yes
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port
+     -
+     - Yes
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
      -
      - Yes
 
@@ -3326,7 +3359,8 @@ Example SQL Lite configuration:
         "_id": "northwind_db",
         "name": "Northwind example database",
         "type": "system:sql",
-        "connection_string": "sqlite:///lake/exampledata/Northwind.db"
+        "dbtype": "sqlite",
+        "database": "/lake/exampledata/Northwind.db"
     }
 
 Example Oracle configuration:
@@ -3337,7 +3371,12 @@ Example Oracle configuration:
         "_id": "oracle_db",
         "name": "Oracle test database",
         "type": "system:sql",
-        "connection_string": "oracle://system:oracle@oracle:1521/XE?charset=utf8"
+        "dbtype": "oracle",
+        "username": "system",
+        "password": "oracle",
+        "host": "oracle",
+        "port": 1521,
+        "database": "XE"
     }
 
 Example MS SQL Server configuration:
@@ -3348,7 +3387,11 @@ Example MS SQL Server configuration:
         "_id": "sqlserver_db",
         "name": "MS SQL Server test database",
         "type": "system:sql",
-        "connection_string": "mssql+pymssql://user:password@localhost:1433/testdb?charset=utf8"
+        "username": "user",
+        "password": "password",
+        "host": "localhost",
+        "port": 1433,
+        "database": "testdb"
     }
 
 .. _fake_system:
