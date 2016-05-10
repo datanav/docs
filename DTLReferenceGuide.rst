@@ -90,7 +90,7 @@ the target entity:
 
     {
         "dataset": "person",
-        "transforms": {
+        "rules": {
             "default": [
                 ["copy", "_id"],
                 ["add", "type", "customer"],
@@ -117,7 +117,7 @@ Explanation:
 1. | The DTL will read and transform source entities from the ``person``
      dataset.
 
-2. | There are two named ``transforms`` specified in the DTL document:
+2. | There are two named ``rules`` specified in the DTL document:
      ``default`` and ``order``. The ``default`` named transform is
      mandatory and is the one that is applied to the entities in the
      ``person`` dataset.
@@ -241,7 +241,7 @@ current value in functional expressions.
    * - ``_S``
      - Refers to the source entity. This is the entity on which the
        DTL transform operate. Note that with the ``apply`` function
-       you can apply nested transforms, where each of the values
+       you can apply nested transform rules, where each of the values
        given to ``apply`` is made a source entity for that nested
        transform.
      - | ``["gt", "_S.age", 42]``
@@ -357,7 +357,9 @@ of the argument. Here are some cardinalites that you'll come across:
      - Examples
 
    * - ``boolean-expression``
-     - | Refers to an expression that returns a single boolean value.
+     - | Refers to an expression that returns a single "boolean" value. Note that
+         ``false``, ``null`` and ``[]`` evaluate to false. All other values
+         evaluate to true.
      - | ``["eq", "_S.type", "person"]``
 
    * - ``value-expression``
@@ -647,16 +649,65 @@ Logical
        | The category field must contain "A" or "B".
 
    * - ``not``
-     - | *Arguments:* boolean-expression{1}
+     - | *Arguments:* boolean-expression{>0}
        |
-       | Takes a single boolean expression argument.
-         Returns the inverse boolean value.
+       | Takes at least one boolean expression argument.
+         Returns the inverse boolean value. It behaves like ``and``,
+         but returns the inverse.
      - | ``["not",``
        |   ``["or",``
        |      ``["eq", "_S.category", "A"],``
        |      ``["eq", "_S.category", "B"]]]``
        |
        | The category must contain neither "A" nor "B".
+
+   * - ``all``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | If FUNCTION is specified, then the function is evaluated for each value in
+         VALUES. Returns true if all arguments evaluate to true. 
+     - | ``["all",``
+       |    ``["list", 1, 2, 3]]``
+       |
+       | Returns true because all arguments evaluate to true.
+       |
+       | ``["all",``
+       |    ``["gt", 2, "_."],``
+       |    ``["list", 4, 5, 6]]``
+       |
+       | Returns true because all arguments are greater than 2.
+       |
+       | ``["all",``
+       |    ``["lt", 2, "_."],``
+       |    ``["list", 1, 3, 5]]``
+       |
+       | Returns false because not all arguments are less than 2.
+
+   * - ``any``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | If FUNCTION is specified, then the function is evaluated for each value in
+         VALUES. Returns true if at least one argument evaluates to true. 
+     - | ``["any",``
+       |    ``["list", 1, 2, 3]]``
+       |
+       | Returns true because all arguments evaluate to true.
+       |
+       | ``["any",``
+       |    ``["gt", 5, "_."]]``
+       |    ``["list", 4, 6, 8]]``
+       |
+       | Returns true because two of the arguments are greater than 5.
+       |
+       | ``["any",``
+       |    ``["lt", 2, "_."],``
+       |    ``["list", 6, 7, 8]]``
+       |
+       | Returns false because none of the arguments are less than 2.
 
 
 Comparisons
@@ -1096,16 +1147,16 @@ Nested transformations
 
    * - ``apply``
      - | *Arguments:*
-       |   TRANSFORM_ID(string{1}),
+       |   RULE_ID(string{1}),
        |   VALUES(value-expression{1})
        |
-       | Applies the TRANSFORM_ID transform on the entities in VALUES.
-         TRANSFORM_ID must be the id of a transform in the current DTL
+       | Applies the RULE_ID transform rule on the entities in VALUES.
+         RULE_ID must be the id of a transform rule in the current DTL
          specification.
      - | ``["apply", "order", "_S.orders"]``
        |
        | This will transform the order entities in the source entity's
-         ``orders`` field using the ``order`` transform. The output is
+         ``orders`` field using the ``order`` transform rules. The output is
          the transformed order entities.
 
 
@@ -1372,7 +1423,7 @@ URIs
          dataset, then URI expands them.
        | ``["uri-expand", ["list", {"_id": "mary", "name": "Mary Jones"}]]``
        |
-       | Returns an empty list because the ``mary`` entity is missing the ``_dataset`
+       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
          property.
        | ``["uri-expand", ["string", "people"], {"_id": "mary", "_dataset": "employees", "name": "Mary Jones"}]``
        |
@@ -1581,16 +1632,17 @@ Strings
        |   PATTERN(string{1})
        |   VALUES(value-expression{1})
        |
-       | Returns the values in VALUES that match the pattern in PATTERN. The '*' and '?'
-         wildcard characters can be used. Non-string values are ignored. If PATTERN contains
-         multiple string values then only the first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", "beta", "epsilon"]``
+       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
+         wildcard characters can be used. Non-string values are not matched and will cause the
+         function to return false. If PATTERN contains multiple string values then only the
+         first one is used.
+     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]``
        |
-       | Returns ``["alpha"]``.
+       | Returns ``true``.
        |
        | ``["matches", "*_sport", ".", "_S.tags"]]``
        |
-       | Returns the tags that have a "_sport" suffix.
+       | Returns true if all the tags that have a "_sport" suffix.
 
 
 Values / collections
@@ -1726,21 +1778,21 @@ Values / collections
 
    * - ``flatten``
      - | *Arguments:*
-       |   VALUES(value-expression{>0})
+       |   VALUES(value-expression{1})
        |
        | Flattens its input values in VALUES. Note that it does *not* do so
          recursively. Constructs a new list.
-     - | ``["flatten", ["list", 1, 2], ["list", 3, 4]]``
+     - | ``["flatten", ["list", 1, 2, ["list", 3, 4]]]``
        |
        | Returns ``[1, 2, 3, 4]``.
        |
-       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]]]``
-       |
-       | Returns ``[1, 2, 3, [4]]``.
-       |
-       | ``["flatten", ["list", 1, 2], ["list", 3, ["list", 4]], 5]``
+       | ``["flatten", ["list", ["list", 1, 2], ["list", 3, ["list", 4], 5]]]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.
+       |
+       | ``["flatten", ["list", "_S.sisters", "_S.brothers"]]``
+       |
+       | Returns a list that contains the sisters and brothers.
 
    * - ``filter``
      - | *Arguments:*
