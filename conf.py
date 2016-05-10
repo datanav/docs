@@ -19,7 +19,6 @@ sys.path.insert(0, os.path.abspath(cornice.__file__))
 
 # Add the sesamclient to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../client")))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../lake")))
 
 import pprint
 print ("sys.path:%s" % pprint.pformat(sys.path))
