@@ -658,6 +658,54 @@ Logical
        |
        | The category must contain neither "A" nor "B".
 
+   * - ``all``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | If FUNCTION is specified, then the function is evaluated for each value in
+         VALUES. Returns true if all arguments evaluate to true. 
+     - | ``["all",``
+       |    ``["list", 1, 2, 3]]``
+       |
+       | Returns true because all arguments evaluate to true.
+       |
+       | ``["all",``
+       |    ``["gt", 2, "_."],``
+       |    ``["list", 4, 5, 6]]``
+       |
+       | Returns true because all arguments are greater than 2.
+       |
+       | ``["all",``
+       |    ``["lt", 2, "_."],``
+       |    ``["list", 1, 3, 5]]``
+       |
+       | Returns false because not all arguments are less than 2.
+
+   * - ``any``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | If FUNCTION is specified, then the function is evaluated for each value in
+         VALUES. Returns true if at least one argument evaluates to true. 
+     - | ``["any",``
+       |    ``["list", 1, 2, 3]]``
+       |
+       | Returns true because all arguments evaluate to true.
+       |
+       | ``["any",``
+       |    ``["gt", 5, "_."]]``
+       |    ``["list", 4, 6, 8]]``
+       |
+       | Returns true because two of the arguments are greater than 5.
+       |
+       | ``["any",``
+       |    ``["lt", 2, "_."],``
+       |    ``["list", 6, 7, 8]]``
+       |
+       | Returns false because none of the arguments are less than 2.
+
 
 Comparisons
 -----------
