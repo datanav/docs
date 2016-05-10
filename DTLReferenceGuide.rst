@@ -357,7 +357,9 @@ of the argument. Here are some cardinalites that you'll come across:
      - Examples
 
    * - ``boolean-expression``
-     - | Refers to an expression that returns a single boolean value.
+     - | Refers to an expression that returns a single "boolean" value. Note that
+         ``false``, ``null`` and ``[]`` evaluate to false. All other values
+         evaluate to true.
      - | ``["eq", "_S.type", "person"]``
 
    * - ``value-expression``
@@ -647,10 +649,11 @@ Logical
        | The category field must contain "A" or "B".
 
    * - ``not``
-     - | *Arguments:* boolean-expression{1}
+     - | *Arguments:* boolean-expression{>0}
        |
-       | Takes a single boolean expression argument.
-         Returns the inverse boolean value.
+       | Takes at least one boolean expression argument.
+         Returns the inverse boolean value. It behaves like ``and``,
+         but returns the inverse.
      - | ``["not",``
        |   ``["or",``
        |      ``["eq", "_S.category", "A"],``
