@@ -143,8 +143,8 @@ Prototype
 Prefixes
 ^^^^^^^^
 
-Each entity referenced by these keys contain at least a single property `prefixes` which is a entity containing prefix
-to URI mappings for CURIE generation or expansion. These registry items can also contain a list property `prefix_includes`
+Each entity referenced by these keys contain at least a single property ``prefixes`` which is a entity containing prefix
+to URI mappings for CURIE generation or expansion. These registry items can also contain a list property ``prefix_includes``
 which must be references to existing RDF registry keys. When looking up items in the RDF registry, any prefix elements
 in this list will be recursively included. Take care that you don't have overlapping prefix names, as the final result
 will be undefined.
@@ -152,12 +152,12 @@ will be undefined.
 Prefix rules
 ^^^^^^^^^^^^
 
-The final property that can exist in an RDF registry item is `prefix_rules`. This element tells us how to create RDF
-CURIES from a plain entity: the `id` property contains the prefix to use for the `_id` property of the entity
-(i.e. the subject in RDF) and the `properties` property is a list of property pairs that encode the rules for what
+The final property that can exist in an RDF registry item is ``prefix_rules``. This element tells us how to create RDF
+CURIES from a plain entity: the ``id`` property contains the prefix to use for the ``_id`` property of the entity
+(i.e. the subject in RDF) and the ``properties`` property is a list of property pairs that encode the rules for what
 prefix to apply to which property of the entity.
 
-The `properties` format is tuples of string+list pairs, where the first item is the prefix to add and the second is
+The ``properties`` format is tuples of string+list pairs, where the first item is the prefix to add and the second is
 the path expression that is used to match against. The number of elements in the list must be even. Path expressions
 are evaluated in order and the first matching path expression will win, so if a path expression matches the prefix will
 be assigned to the matching key.
@@ -165,7 +165,7 @@ be assigned to the matching key.
 A path expression is a list of strings. The left-most string value is the most specific. "**" can be used to denote
 nestedness at an arbitrary depth. "*" can be used as a wildcard in the string values themselves.
 
-A complete example of how the `prefix_rules` property works; given a pre-existing RDF registry entry ``my_entry``:
+A complete example of how the ``prefix_rules`` property works; given a pre-existing RDF registry entry ``my_entry``:
 
 ::
 
@@ -259,7 +259,7 @@ All of these sources will provide entities on the general form:
 ::
 
    {
-       "_id": "<http://example.com/bar",
+       "_id": "<http://example.com/bar>",
        "<http://example.com/schema/some_predicate>": "Some literal",
        "<http://example.com/schema/other_predicate>": "~rhttp://example.com/zoo"
    }
@@ -280,7 +280,7 @@ to the pipe to achieve this:
            }
         ]
 
-Where `my_entry` in the RDF registry looks like:
+Where ``my_entry`` in the RDF registry looks like:
 
 ::
 
@@ -312,4 +312,17 @@ Sesam node has several ways of outputting RDF data:
 * The SDShare Push sink
 * A SDShare feed from a dataset
 * The Databrowser sink
+
+
+SDShare support
+===============
+
+Working with SDShare feeds
+--------------------------
+
+Working SDShare Push receivers
+------------------------------
+
+Working SDShare Push clients
+----------------------------
 
