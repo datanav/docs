@@ -1,3 +1,5 @@
+.. _DTLReferenceGuide:
+
 ===================
 DTL Reference Guide
 ===================

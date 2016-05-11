@@ -1,3 +1,5 @@
+.. _configuration:
+
 =============================
 Component configuration guide
 =============================
@@ -516,7 +518,6 @@ Prototype
 
     {
         "name": "Name of source",
-        "type": "sql",
         "system": "id-of-system",
         "table": "name-of-table",
         "primary_key": ["list","of","key","names"],
@@ -822,6 +823,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _rdf_source:
+
 The RDF source
 --------------
 
@@ -906,6 +909,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "format": "xml",
         }
     }
+
+.. _sdshare_source:
 
 The SDShare source
 ------------------
@@ -1945,6 +1950,8 @@ The transform will output the following transformed entity:
             }
         }
     }
+
+.. _uris_to_curies_transform:
 
 The URIs to CURIEs transform
 ----------------------------
