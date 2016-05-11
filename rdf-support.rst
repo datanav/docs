@@ -303,6 +303,10 @@ Will produce the following entity out of the pipe (i.e. before it is entered int
        "<foo_schema:other_predicate>": "~rfoo:zoo"
     }
 
+Transforming RDF data
+=====================
+
+
 RDF output
 ==========
 
