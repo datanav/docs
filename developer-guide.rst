@@ -14,4 +14,5 @@ Developer Guide
    Cluster Configuration <cluster-config>
    JSON Push Protocol <json-push>
    Developer Extension Points <extension-points>
+   RDF support <rdf-support>
 
