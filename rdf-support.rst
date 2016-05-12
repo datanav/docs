@@ -341,7 +341,7 @@ This transform will then produce the following entity:
 ::
 
     {
-       "_id": "~rfoo:bar",
+       "_id": "<foo:bar>",
        "<foo_schema:some_predicate>": "Some literal",
        "<foo_schema:other_predicate>": "~rfoo:zoo"
     }
@@ -405,8 +405,8 @@ other function) to its "full" form:
     {
       ..
       "<baz:expanded>": {
-          "_id": "http://example.com/foo/bob",
-          "http://example.com/foo/name": "Bob Jones"
+          "_id": "<http://example.com/foo/bob>",
+          "<http://example.com/foo/name>": "Bob Jones"
       }
       ..
     }
