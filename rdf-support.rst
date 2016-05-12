@@ -136,7 +136,7 @@ The "prototype" of a RDF registry entry ``entry_id`` look like:
            "baz" : "http://example.com/baz/",
            "bar" : "http://example.com/baz/"
         },
-        "include_properties": ["list_of", "other", "registry", "entries"],
+        "prefix_includes": ["list_of", "other", "registry", "entries"],
         "prefix_rules": {
             "id": "bar",
             "properties": [
