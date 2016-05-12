@@ -49,14 +49,14 @@ that is has a RDF ``type`` represented by the subject ``http://company.com/schem
 has a literal property "Bob" and is employed by a company represented by the subject ``http://company.com``.
 
 Now, this is fairly straight forward but perhaps a bit verbose in the long run. To alleviate this, we can use the
-concept of *prefixes* and `RDF curies <https://www.w3.org/TR/curie/>`_. A *prefix* is the "constant" part of a URL,
-i.e. everything up to a certain path-element (usually the last). Using CURIES means giving these common prefixes short
+concept of *prefixes* and `RDF CURIEs <https://www.w3.org/TR/curie/>`_. A *prefix* is the "constant" part of a URL,
+i.e. everything up to a certain path-element (usually the last). Using CURIEs means giving these common prefixes short
 hand names enabling us to rewrite the full URI to a shorter "prefix:path" form.
 
 Let us define some prefixes for the above example, and give them such short hand names. The example below is in
 `RDF Turtle format <https://www.w3.org/TR/turtle/>`_, which is a superset of NTriples. Turtle syntax supports prefixes
-and CURIES and is often used when writing RDF manually or intended to be read by humans. In general, it is considered
-ood practice to reduce full URIs to CURIES using prefixes whenever possible. When working with RDF in Sesam we try to
+and CURIEs and is often used when writing RDF manually or intended to be read by humans. In general, it is considered
+good practice to reduce full URIs to CURIEs using prefixes whenever possible. When working with RDF in Sesam we try to
 follow this rule:
 
 ::
@@ -159,7 +159,7 @@ Built-in prefixes
 ^^^^^^^^^^^^^^^^^
 
 The Sesam RDF registry has built-in support for the common prefixes in RDF, such as ``rdf``, ``rdfs`` and ``owl``.
-This means you don't have to define these yourself to use them in your CURIES. The full list of built-in prefixes is:
+This means you don't have to define these yourself to use them in your CURIEs. The full list of built-in prefixes is:
 
 ::
 
@@ -184,7 +184,7 @@ Prefix rules
 ^^^^^^^^^^^^
 
 The final property that can exist in a RDF registry item is ``prefix_rules``. This element tells us how to create RDF
-CURIES from a plain entity: the ``id`` property contains the prefix to use for the ``_id`` property of the entity
+CURIEs from a plain entity: the ``id`` property contains the prefix to use for the ``_id`` property of the entity
 (i.e. the subject in RDF) and the ``properties`` property is a list of property pairs that encode the rules for what
 prefix to apply to which property of the entity.
 
@@ -221,7 +221,7 @@ A complete example of how the ``prefix_rules`` property works; we want to transf
         }
     }
 
-to RDF form using CURIES. We start by defining the rules for this transformation in the RDF registry entry ``my_entry``:
+to RDF form using CURIEs. We start by defining the rules for this transformation in the RDF registry entry ``my_entry``:
 
 ::
 
@@ -242,7 +242,7 @@ to RDF form using CURIES. We start by defining the rules for this transformation
     }
 
 
-We then add a :ref:`properties to CURIES transform <properties_to_curies>` to the start of our pipe's
+We then add a :ref:`properties to CURIEs transform <properties_to_curies>` to the start of our pipe's
 ``transform`` section:
 
 ::
@@ -290,7 +290,7 @@ Sesam supports RDF input from several different sources:
 Additionally, you can set up a :ref:`HTTP endpoint source <http_endpoint_source>` which includes a `SDShare Push` capable
 HTTP endpoint where you can post RDF data in NTriples format in accordance with the ``SDShare Push protocol``.
 
-The URIs to CURIES transform
+The URIs to CURIEs transform
 ----------------------------
 
 All of these methods of RDF input will provide entities to your data flows on the general form:
@@ -348,10 +348,10 @@ RDF in transforms
 
 The Sesam DTL language features several functions that are useful when working with RDF data in your flow.
 
-Accessing CURIES properties
+Accessing CURIEs properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When addressing properties in CURIES form in DTL transform, you can simply use their names verbatim. For example:
+When addressing properties in CURIEs form in DTL transform, you can simply use their names verbatim. For example:
 
 ::
 
@@ -361,7 +361,7 @@ When addressing properties in CURIES form in DTL transform, you can simply use t
     ["add", "<rdfs:label>", "Bob"]
     ..
 
-You can also use the CURIES in path expressions in the same way as any other property name. If you want to add a URI
+You can also use the CURIEs in path expressions in the same way as any other property name. If you want to add a URI
 literal as part of your transformed entity you can use the DTL :ref:`curie function <curie_function>`, which takes
 a prefix and a value expression (i.e. a literal or a function) and produces a URI property value:
 
@@ -384,7 +384,7 @@ This will add a property that looks like:
 CURIE expansion in DTL
 ^^^^^^^^^^^^^^^^^^^^^^
 
-When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIES to full
+When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIEs to full
 URI form (for example if there are conflicting usages of prefixes). This can be done using the DTL
 :ref:`uri-expand <uri_expand_function>`:
 
@@ -408,7 +408,7 @@ other function) to its "full" form:
       ..
     }
 
-Note that expanding CURIES is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
+Note that expanding CURIEs is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
 However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
 you can use the ``uri-expand`` function to achieve the same functionality.
 
@@ -427,7 +427,7 @@ Consult the reference documentation for how to set up and use these sinks to pro
 Notes on the RDF output
 -----------------------
 
-When converting your CURIES prepared entities to RDF, some rules are applied:
+When converting your CURIEs prepared entities to RDF, some rules are applied:
 
  * Nested entites will be represented as `RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka BNodes),
  * List properties are represented by repeating the predicates as many times as there are entries in the lists
