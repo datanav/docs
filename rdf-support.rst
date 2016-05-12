@@ -155,6 +155,9 @@ which must be references to other existing RDF registry keys. When looking up it
 in this list will be recursively included. Take care that you don't have overlapping prefix names, as the final result
 will be undefined. Also make sure you don't create circular references using this property.
 
+
+.. _built_in_prefixes:
+
 Built-in prefixes
 ^^^^^^^^^^^^^^^^^
 

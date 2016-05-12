@@ -16,6 +16,7 @@ The *Sesam Node* is configured using one or more *JSON* files located in the nod
 For example:
 
 ::
+
   docker run .... -v $PWD:/sesam
 
 Will look for a file called *nodeconfig.json* in the current directory.
@@ -49,11 +50,17 @@ It should be noted that all ``_id`` property values must be unique across across
 Pipes
 =====
 
-A pipe defines the flow of data from a *datasource* to a *sink* on some schedule as defined by the pump settings. Optionally, a pipe may define an ordered list of transforms that are applied to entities as they flow from the *datasource* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities are transformed on their way to the sink.
+A pipe defines the flow of data from a *datasource* to a *sink* on some schedule as defined by the pump settings.
+Optionally, a pipe may define an ordered list of transforms that are applied to entities as they flow from the
+*datasource* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular
+or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities
+are transformed on their way to the sink.
 
-The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`, :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
+The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`,
+:ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form first is described first and :ref:`revisit <pipes_revisited>` describes the *short hand* form.
+The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form first is
+described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
 
 Prototype
 ---------
@@ -828,20 +835,26 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The RDF source
 --------------
 
-The RDF data source is able to read data in ``RDF NTriples``,
-``Turtle`` or ``RDF/XML`` format and turn this into entities.  It will
-transform triples on the form ``<subject> <predicate> "value"`` into
+The RDF data source is able to read data in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_,
+`Turtle <https://www.w3.org/TR/turtle/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn
+this into entities.
+
+See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
+
+It will transform triples on the form ``<subject-uri> <predicate-uri> "value" OR <object-uri>`` into
 entities on the form:
 
 ::
 
     {
-        "_id": "subject",
-        "<predicate>": "value"
+        "_id": "<subject-uri>",
+        "<predicate-uri>": "value" OR "~robject-uri"
     }
 
-RDF blank nodes will be turned into child entities. The configuration
-snippet for the RDF data source is:
+
+`RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka BNodes) will be turned into child entities.
+
+The configuration snippet for the RDF data source is:
 
 Prototype
 ^^^^^^^^^
@@ -915,9 +928,12 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The SDShare source
 ------------------
 
-The SDShare data source can read ``RDF`` from ``ATOM feeds`` after the
-``SDShare specification`` (http://sdshare.org). It has the following
-properties:
+The SDShare data source can read `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
+`SDShare specification <http://sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
+in Sesam.
+
+
+It has the following properties:
 
 Prototype
 ^^^^^^^^^
@@ -1266,16 +1282,15 @@ SDShare Push protocol
 The SDShare Push protocol is described `here
 <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
 
-The SDShare Push endpoint supports receiving RDF in NTriples form. In
-this case the URL parameters have to include at least one ``resource``
-parameter describing which resources the NTriples payload contains
-statements about. If you include a ``resource`` parameter that there
-are no statements about in the NTriples body, an empty entity is
-generated with its ``_deleted`` flag set to ``true``. Note that the
-``graph`` parameter of the protocol is ignored - the destination of
-the entities generated from the NTriples payload must be configured in
-the pipe's ``sink`` section. This type of request expects the
-``content-type`` to be ``application/n-triples`` or ``text/plain``.
+The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_
+in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
+parameters have to include at least one ``resource`` parameter describing which resources the
+NTriples payload contains statements about. If you include a ``resource`` parameter that there
+are no statements about in the NTriples body, an empty entity is generated with its ``_deleted``
+flag set to ``true``. Note that the ``graph`` parameter of the protocol is ignored - the destination
+of the entities generated from the NTriples payload must be configured in the pipe's ``sink``
+section. This type of request expects the ``content-type`` to be ``application/n-triples`` or
+``text/plain``. See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
 
 Prototype
@@ -1476,11 +1491,14 @@ entities using a shared pool of ids for the employer id:
 The SPARQL source
 -----------------
 
-The SPARQL source fetches data about subjects from a triplestore exposing a SPARQL complient endpoint. The endpoint of
-the source is configured either directly or implicitly by a :ref:`URL system <url_system>`. The source uses
+The SPARQL source fetches `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data about subjects from a
+`triplestore <https://en.wikipedia.org/wiki/Triplestore>`_ exposing a `SPARQL compliant <https://www.w3.org/TR/rdf-sparql-query/>`_ endpoint.
+The endpoint of the source is configured either directly or implicitly by a :ref:`URL system <url_system>`. The source uses
 two SPARQL queries to construct entities; the fragment query is a SPARQL ``SELECT`` query that gets a list of subjects
 to get data for and their modification times and a fragment query, which is a SPARQL ``CONSTRUCT`` query that
 gathers all relevant statements about a particular subject. The latter is then used to generate the stream of entities.
+
+See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
 Prototype
 ^^^^^^^^^
@@ -1818,8 +1836,9 @@ Example configuration
 The properties to CURIEs transform
 ----------------------------------
 
-This transform can transform entity properties to `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames)
-based on wildcard patterns. It is used primarily when dealing with or preparing to output RDF data.
+This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames)
+based on wildcard patterns. It is used primarily when dealing with or preparing to output
+`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data.
 
 Prototype
 ^^^^^^^^^
@@ -1850,7 +1869,7 @@ Properties
 
    * - ``rule``
      - String
-     - The id of the key in the RDF registry containting the prefix rules to to use for the transformation.
+     - The id of the key in the :ref:`RDF registry <rdf_registry>` containing the prefix rules to to use for the transformation.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
      -
      - Yes*
@@ -1876,9 +1895,10 @@ Example
 ^^^^^^^
 
 
-The ``rule`` property references a RDF registry entry containing a ``prefix_rules`` object. See :doc:`RDF support
-<rdf-support>` for more information about the RDF registry and how to configure it. Alternatively, the contents of
-the ``prefix_rules`` entry (i.e. .the ``id`` and ``properties``) can be included inline in the transform configuration.
+The ``rule`` property references a :ref:`RDF registry entry <rdf_registry>` containing a ``prefix_rules`` object.
+See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+Alternatively, the contents of the ``prefix_rules`` entry (i.e. .the ``id`` and ``properties``) can be included inline
+in the transform configuration.
 
 Given a pre-existing RDF registry entry ``my_entry``:
 
@@ -1959,8 +1979,8 @@ The URIs to CURIEs transform
 ----------------------------
 
 This transform can transform entity properties containing URIs in the keys and/or the values to a more compact form
-using `RDF curies <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames). It is used primarily when dealing with
-or reading RDF data.
+using `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames). It is used primarily when dealing with
+or reading RDF data. See the :doc:`rdf-support` document for more information about working with RDF data in Sesam.
 
 Prototype
 ^^^^^^^^^
@@ -1987,11 +2007,13 @@ Properties
 
    * - ``prefix_includes``
      - List<String>
-     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
-       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to compress full URIs to CURIES.
+     - A list of string keys to look up in the node-wide :ref:`RDF registry <rdf_registry>`. These keys reference
+       objects which contain RDF support structures such as CURIE prefixes (and possibly references to other prefix
+       sets to include).
+       The prefixes collected from the RDF registry will be used to compress full URIs to CURIEs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       The common RDF prefixes are built-in and you don't have to provide the mapping for it (i.e. RDF, RDFS, OWL etc).
+       The :ref:`common RDF prefixes <built_in_prefixes>` are built-in and you don't have to provide the mapping for it
+       (i.e. RDF, RDFS, OWL etc).
      -
      -
 
@@ -2294,11 +2316,12 @@ Properties
 
    * - ``prefix_includes``
      - List<String>
-     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+     - A list of string keys to look up in the node-wide :ref:`RDF registry <rdf_registry>`. These keys reference objects which contain
        RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
+       You do not need include any prefix sets to use the :ref:`common RDF prefixes <built_in_prefixes>` (i.e. RDF,
+       RDFS, OWL and so on).
      -
      -
 
@@ -2528,7 +2551,7 @@ Properties
      - List<String>
      - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
        RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
        You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
      -
@@ -2774,7 +2797,7 @@ Properties
    * - ``prefixes``
      - Dictionary
      - A dictionary mapping prefix to their URI expansions. This prefix mapping
-       will be used to expand CURIES into full URIs.
+       will be used to expand CURIEs into full URIs.
      -
      -
 
@@ -2855,7 +2878,7 @@ Properties
      - List<String>
      - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
        RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIES into full URIs.
+       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
        You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
      -
