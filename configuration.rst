@@ -20,7 +20,7 @@ For example:
 
 Will look for a file called *nodeconfig.json* in the current directory.
 
-Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluser configuration is not required when running just a single *Sesam Node*.
+Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluster configuration is not required when running just a single *Sesam Node*.
 
 The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
 *JSON objects* of the form:
@@ -195,7 +195,7 @@ Sources
 =======
 
 Sources provide *streams* of :doc:`entities <entitymodel>` as input to the :ref:`pipes <pipe_section>` which is the
-building blocks for the :ref:`flows <flow_section>` in the Sesam Node. These entities can take *any* shape (i.e. they
+building blocks for the data flows in Sesam. These entities can take *any* shape (i.e. they
 can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
 a specific logical entity. There may exist multiple *versions* of this entity within a flow, however.
 
@@ -204,10 +204,10 @@ Continuation support
 
 Sources can optionally support a ``since`` moniker or marker which lets them pick up where the previous stream of
 entities left off - like a "bookmark" in the entity stream. The ``since`` marker is opaque to the rest of the
-Sesam Node components and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
+Sesam components and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
 in the ``_updated`` property if supported by its source.
 
-The Sesam Node supports a diverse set of core data sources:
+Sesam supports a diverse set of core data sources:
 
 Common properties
 -----------------
@@ -265,8 +265,8 @@ Properties
 The dataset source
 ------------------
 
-The dataset source is one of the most commonly used datasources in a Sesam Node. It simply presents a stream of entities from a
-dataset stored in a Sesam Node. Its configuration is very simple and looks like:
+The dataset source is one of the most commonly used datasources in a Sesam installation. It simply presents a stream of entities from a
+dataset stored in Sesam. Its configuration is very simple and looks like:
 
 Prototype
 ^^^^^^^^^
@@ -508,7 +508,7 @@ The SQL source
 --------------
 
 The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to the Sesam Node. It has several options, all of which
+(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to Sesam. It has several options, all of which
 are presented below with their default values:
 
 Prototype
@@ -1160,7 +1160,7 @@ An example with a local file:
 The metrics source
 ------------------
 
-The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam Node as a list
+The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam installation as a list
 of ``JSON`` entities. It has no specific configuration:
 
 Prototype
@@ -1813,6 +1813,8 @@ Example configuration
       }
 
 
+.. _properties_to_curies:
+
 The properties to CURIEs transform
 ----------------------------------
 
@@ -2315,6 +2317,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "prefix_includes": ["northwind"]
         }
     }
+
+.. _influxdb_sink:
 
 The InfluxDB sink
 -----------------
@@ -3292,7 +3296,7 @@ Properties
 
    * - ``dbtype``
      - String
-     - A string enum denoting the type of database to connect to. A Sesam Node currently supports SQLite, Oracle,
+     - A string enum denoting the type of database to connect to. Sesam currently supports SQLite, Oracle,
         MS SQL Server and MySQL databases. The identifiers are "sqlite", "oracle", "mssql" and "mysql" respectively.
      -
      - Yes
@@ -4079,7 +4083,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
    * - ``run_at_startup``
      - Boolean
-     - A flag that indicates if the pump should run when the Sesam Node starts up, in addition to the normal schedule
+     - A flag that indicates if the pump should run when Sesam starts up, in addition to the normal schedule
        specified by the ``schedule_interval`` or ``cron_expression`` properties.
      - false
      -

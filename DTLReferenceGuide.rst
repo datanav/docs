@@ -1330,6 +1330,9 @@ Entity lookups
 URIs
 ----
 
+.. _curie_function:
+.. _uri_expand_function:
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -1337,6 +1340,7 @@ URIs
    * - Function
      - Description
      - Examples
+
 
    * - ``curie``
      - | *Arguments:*

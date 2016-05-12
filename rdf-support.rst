@@ -10,15 +10,15 @@ Working with RDF
 Introduction
 ============
 
-Sesam node has several features to facilitate working with RDF data both as input, when doing transforms and finally
+Sesam has several features to facilitate working with RDF data both as input, when doing transforms and finally
 when exposing or producing data for external consumption.
 
-In this document we will cover what you need to know when working with RDF data with the Sesam Node.
+In this document we will cover what you need to know when working with RDF data with Sesam.
 
 Core Concepts
 -------------
 
-First, a short recap of the core concepts when working with RDF, see the `RDF standard <https://www.w3.org/standards/techs/rdf#w3c_all>`_ for more detail:
+First, a short recap of the core concepts when working with RDF, see the `RDF standard <https://www.w3.org/standards/techs/rdf#w3c_all>`_ for more details:
 
 The RDF data model consists in essence of statements about a particular subject. This is given as a *triple*:
 
@@ -27,9 +27,11 @@ The RDF data model consists in essence of statements about a particular subject.
     subject predicate object
 
 
-Where subjects and predicates are URIs and object can be either a literal (i.e. a quoted string, representing dates,
+While subjects and predicates are always URIs, objects can be either a literal (i.e. a quoted string, representing dates,
 numbers, strings etc) or another subject (URI). There are other optional elements to these subjects such as language
-and/or datatype identifiers - again refer to the standard for more detail. You can have multiple statements for a single subject.
+and/or datatype identifiers - again refer to the standard for more detail.
+
+You can have multiple statements for a single subject.
 
 A common representation of such RDF triples is `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_,
 where each URI is enclosed in brackets and every statement (triple) ends with a punctuation mark. Semicolon can also be
@@ -46,12 +48,16 @@ Here we have three individual statements regarding the subject ``http://company.
 that is has a RDF ``type`` represented by the subject ``http://company.com/schema/employee`` and that this ``employee``
 has a literal property "Bob" and is employed by a company represented by the subject ``http://company.com``.
 
-Now, this is pretty straight forward albeit a bit verbose in the long run. Also, it is easy to get typos in the
-exact URI patterns we have used. Additionally, if you want to change one of the URI patterns, you will have to reload all
-your data. To alleviate this, we can use the concept of *prefixes* and `RDF curies <https://www.w3.org/TR/curie/>`_.
-A *prefix* is the "constant" part of a URL, i.e. everything up to a certain path-element (usually the last).
+Now, this is fairly straight forward but perhaps a bit verbose in the long run. To alleviate this, we can use the
+concept of *prefixes* and `RDF curies <https://www.w3.org/TR/curie/>`_. A *prefix* is the "constant" part of a URL,
+i.e. everything up to a certain path-element (usually the last). Using CURIES means giving these common prefixes short hand
+ names enabling us to rewrite the full URI to a shorter "prefix:path" form.
 
-Let us define some prefixes for the above example, and give them short form names:
+Let us define some prefixes for the above example, and give them such short hand names. The example below is in
+`RDF Turtle format <https://www.w3.org/TR/turtle/>`_, which is a superset of NTriples. Turtle syntax supports prefixes
+and CURIES and is often used when writing RDF manually or intended to be read by humans. In general, it is considered
+ood practice to reduce full URIs to CURIES using prefixes whenever possible. When working with RDF in Sesam we try to
+follow this rule:
 
 ::
 
@@ -75,8 +81,8 @@ reprocess or reload any of our data.
 The RDF registry
 ================
 
-When working with RDF data in the node, we would like to be able to define, maintain and share these RDF prefixes
-among our datasets and transforms. To achieve this, the Sesam node has a built-in *RDF registry* for this purpose.
+When working with RDF data in Sesam, we would like to be able to define, maintain and share these RDF prefixes
+among our datasets and DTL transforms. To achieve this, Sesam has a built-in *RDF registry* for this purpose.
 You configure the registry by including an entity in your configuration on the form:
 
 ::
@@ -113,7 +119,7 @@ You configure the registry by including an entity in your configuration on the f
           }
     }
 
-The key `rdf` above contains the configuration of the RDF registry. It contains keys which usually correspond
+The key ``rdf`` above contains the configuration of the RDF registry. It contains keys which usually correspond
 to dataset id's, although you can register any valid key here.
 
 RDF registry items
@@ -149,6 +155,12 @@ which must be references to existing RDF registry keys. When looking up items in
 in this list will be recursively included. Take care that you don't have overlapping prefix names, as the final result
 will be undefined.
 
+Built-in prefixes
+^^^^^^^^^^^^^^^^^
+
+The Sesam RDF registry has built-in support for the common prefixes in RDF, such as ``rdf``, ``rdfs`` and ``owl``.
+In other words, you do not have to define these to use them in your CURIES.
+
 Prefix rules
 ^^^^^^^^^^^^
 
@@ -157,44 +169,18 @@ CURIES from a plain entity: the ``id`` property contains the prefix to use for t
 (i.e. the subject in RDF) and the ``properties`` property is a list of property pairs that encode the rules for what
 prefix to apply to which property of the entity.
 
-The ``properties`` format is tuples of string+list pairs, where the first item is the prefix to add and the second is
+The ``properties`` format is tuples of string/list pairs, where the first item is the prefix to add and the second is
 the path expression that is used to match against. The number of elements in the list must be even. Path expressions
 are evaluated in order and the first matching path expression will win, so if a path expression matches the prefix will
 be assigned to the matching key.
 
-A path expression is a list of strings. The left-most string value is the most specific. "**" can be used to denote
-nestedness at an arbitrary depth. "*" can be used as a wildcard in the string values themselves.
+A path expression is a list of strings. The left-most string value is the most specific. ``**`` can be used to denote
+nestedness at an arbitrary depth. ``*`` can be used as a wildcard in the string values themselves.
 
-A complete example of how the ``prefix_rules`` property works; given a pre-existing RDF registry entry ``my_entry``:
+The property to CURIE transform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
-
-    "my_entry": {
-       ..
-       "prefix_rules": {
-           "id": "x",
-           "properties": [
-                "c", ["status", "code"],
-                "_", ["status"],
-                "t", ["t_*"],
-                "m", ["status", "**", "m*"],
-                "s", ["status", "**"],
-                "x", ["**"]
-           ]
-       }
-       ..
-    }
-
-And a DTL transform configuration:
-
-::
-
-    {
-        "type": "properties_to_curies",
-        "rule": "my_entry"
-    }
-
-And the input entity:
+A complete example of how the ``prefix_rules`` property works; we want to transform an entity that looks like:
 
 ::
 
@@ -216,7 +202,42 @@ And the input entity:
         }
     }
 
-The transform will output the following transformed entity. using the RDF registry entry above:
+To RDF form using CURIES. We start by defining the rules for this transformation in the RDF registry entry ``my_entry``:
+
+::
+
+    "my_entry": {
+       ..
+       "prefix_rules": {
+           "id": "x",
+           "properties": [
+                "c", ["status", "code"],
+                "_", ["status"],
+                "t", ["t_*"],
+                "m", ["status", "**", "m*"],
+                "s", ["status", "**"],
+                "x", ["**"]
+           ]
+       }
+       ..
+    }
+
+
+We then add a :ref:`properties to CURIES transform <properties_to_curies>` to the start of our pipe's
+``transform`` section:
+
+::
+
+    ..
+        "transform": [
+            {
+                "type": "properties_to_curies",
+                "rule": "my_entry"
+            }
+            ..
+        ]
+
+This transform will use our ``my_entry`` rules and produce the following transformed entity:
 
 ::
 
@@ -241,20 +262,19 @@ The transform will output the following transformed entity. using the RDF regist
 RDF input
 =========
 
-The Sesam Node supports RDF input from three different sources:
+Sesam supports RDF input from several different sources:
 
 * :ref:`The RDF source <rdf_source>`
-* :ref:`The SDShare source <rdf_source>`
+* :ref:`The SDShare source <sdshare_source>`
 * :ref:`The SPARQL source <sparql_source>`
 
-Additionally, you can set up a :ref:`HTTP endpoint source <_http_endpoint_source>` which includes a `SDShare Push` capable
-HTTP endpoint where you can post NTriples data to according to the SDShare Push protocol.
-
+Additionally, you can set up a :ref:`HTTP endpoint source <http_endpoint_source>` which includes a `SDShare Push` capable
+HTTP endpoint where you can post RDF data in NTriples format in accordance with the ``SDShare Push protocol``.
 
 The URIs to CURIES transform
 ----------------------------
 
-All of these sources will provide entities on the general form:
+All of these methods of RDF input will provide entities to your data flows on the general form:
 
 ::
 
@@ -264,7 +284,7 @@ All of these sources will provide entities on the general form:
        "<http://example.com/schema/other_predicate>": "~rhttp://example.com/zoo"
    }
 
-When processing this RDF data further, it is often convenient to transform these entities to CURIE form using the
+When processing this data in the flow, we would like to first transform these entities to CURIE form using the
 RDF registry to manage the prefixes. In the above example we can add a :ref:`URIs to CURIEs transform <uris_to_curies_transform>`
 to the pipe to achieve this:
 
@@ -280,7 +300,7 @@ to the pipe to achieve this:
            }
         ]
 
-Where ``my_entry`` in the RDF registry looks like:
+where the corresponding ``my_entry`` in the RDF registry looks like:
 
 ::
 
@@ -290,10 +310,11 @@ Where ``my_entry`` in the RDF registry looks like:
             "foo": "http://example.com/",
             "foo_schema": "http://example.com/schema/"
         }
+        ..
     }
     ..
 
-Will produce the following entity out of the pipe (i.e. before it is entered into any dataset):
+This transform will then produce the following entity:
 
 ::
 
@@ -303,30 +324,84 @@ Will produce the following entity out of the pipe (i.e. before it is entered int
        "<foo_schema:other_predicate>": "~rfoo:zoo"
     }
 
-Transforming RDF data
-=====================
+RDF in transforms
+=================
 
+The Sesam DTL language features several functions that are useful when working with RDF data in your flow.
+
+Accessing CURIES properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When addressing properties in CURIES form in DTL transform, you can simply use their names verbatim. For example:
+
+::
+
+    ..
+    ["rename", "<foo:third_predicate>", "<foo:some_predicate>"],
+    ["copy", "_S.<foo_schema:other_predicate>"],
+    ["add", "<rdfs:label>", "Bob"]
+    ..
+
+You can also use the CURIES in path expressions in the same way as any other property name. If you want to add a URI
+literal as part of your transformed entity you can use the DTL :ref:``curie function <curie_function>``, which takes
+a prefix and a value expression (i.e. a literal or a function) and produces a URI property value:
+
+::
+
+    ..
+    ["add", "<foo_schema:baz>", ["curie", "foo", "zoo"]]
+    ..
+
+This will add a property that looks like:
+
+::
+
+   {
+     ..
+     "<foo_schema:baz>": "~rfoo:zoo"
+     ..
+   }
+
+CURIE expansion in DTL
+^^^^^^^^^^^^^^^^^^^^^^
+
+When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIES to full
+URI form (for example if there are conflicting usages of prefixes). This can be done using the DTL
+:ref:``uri-expand <uri_expand_function>``:
+
+::
+
+    ..
+    ["add", "<baz:expanded>", ["uri-expand", ["string", "my_entry"], {"_id": "<foo:bob>", "<foo:name>": "Bob Jones"}]]
+    ..
+
+This will expand the properties of the entity (here shown inline, but typically will be from a ``hops`` join or some
+other function) to its "full" form:
+
+::
+
+    {
+      ..
+      "<baz:expanded>": {
+          "_id": "http://example.com/foo/bob",
+          "http://example.com/foo/name": "Bob Jones"
+      }
+      ..
+    }
+
+Note that expanding CURIES is normally done at the endpoint of your flow (i.e. the sink or a SDShare feed, see below).
+However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
+you can use the ``uri-expand`` function to achieve the same functionality.
 
 RDF output
 ==========
 
-Sesam node has several ways of outputting RDF data:
+Sesam has several ways of outputting RDF data:
 
-* The SPARQL sink
-* The SDShare Push sink
-* A SDShare feed from a dataset
-* The Databrowser sink
+* :ref:`The SPARQL sink <sparql_sink>`
+* :ref:`The SDShare Push sink <sdshare_push_sink>`
+* :ref:`The Databrowser sink <databrowser_sink>`
+* :ref:`The HTTP endpoint sink <http_endpoint_sink>`
 
-
-SDShare support
-===============
-
-Working with SDShare feeds
---------------------------
-
-Working SDShare Push receivers
-------------------------------
-
-Working SDShare Push clients
-----------------------------
+Consult the reference documentation for how to set up and use these sinks.
 
