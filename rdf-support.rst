@@ -349,7 +349,7 @@ RDF in transforms
 The Sesam DTL language features several functions that are useful when working with RDF data in your flow.
 
 Accessing CURIEs properties
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 When addressing properties in CURIEs form in DTL transform, you can simply use their names verbatim. For example:
 
@@ -382,7 +382,7 @@ This will add a property that looks like:
    }
 
 CURIE expansion in DTL
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIEs to full
 URI form (for example if there are conflicting usages of prefixes). This can be done using the DTL
