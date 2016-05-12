@@ -153,7 +153,7 @@ Each registry item must contain at least a single property ``prefixes`` which is
 to URI mappings for CURIE generation or expansion. The registry items can also contain a list property ``prefix_includes``
 which must be references to other existing RDF registry keys. When looking up items in the RDF registry, any prefix elements
 in this list will be recursively included. Take care that you don't have overlapping prefix names, as the final result
-will be undefined. Take care that you don't create circular references in this property.
+will be undefined. Also make sure you don't create circular references using this property.
 
 Built-in prefixes
 ^^^^^^^^^^^^^^^^^
