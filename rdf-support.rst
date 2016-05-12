@@ -423,3 +423,17 @@ Sesam has several ways of outputting RDF data:
 * :ref:`The HTTP endpoint sink <http_endpoint_sink>`
 
 Consult the reference documentation for how to set up and use these sinks to produce RDF output.
+
+Notes on the RDF output
+-----------------------
+
+When converting your CURIES prepared entities to RDF, some rules are applied:
+
+ * Nested entites will be represented as `RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka BNodes),
+ * List properties are represented by repeating the predicates as many times as there are entries in the lists
+ * RDF datatypes are automatically added based on the type of the property
+ * RDF language tags are currently not supported
+
+Note that many RDF capable receivers are unable to deal with BNodes, so be sure to check this before finalizing
+your flow configuration. If your data is nested and the receiver doesn't support BNodes, you must "flatten" your entity using a
+DTL transform before being sent to the sink (see the DTL :ref:`merge <merge_function>` and :ref:`merge-union <merge_union_function>` functions).

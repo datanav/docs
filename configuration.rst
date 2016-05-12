@@ -3296,8 +3296,8 @@ Properties
 
    * - ``dbtype``
      - String
-     - A string enum denoting the type of database to connect to. Sesam currently supports SQLite, Oracle,
-        MS SQL Server and MySQL databases. The identifiers are "sqlite", "oracle", "mssql" and "mysql" respectively.
+     - A string enum denoting the type of database to connect to. Sesam currently supports SQLite, Oracle, MS SQL Server
+       and MySQL databases. The identifiers are "sqlite", "oracle", "mssql" and "mysql" respectively.
      -
      - Yes
 

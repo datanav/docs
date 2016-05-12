@@ -400,6 +400,9 @@ of the argument. Here are some cardinalites that you'll come across:
        | ``["add", "type", "person"]``
 
 
+.. _merge_union_function:
+.. _merge_function:
+
 Transforms
 ==========
 
