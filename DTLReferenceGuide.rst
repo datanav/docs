@@ -299,6 +299,8 @@ There are three ways that one can access properties on entities:
    only access property on the dictionary/entity it operates on,
    including nested entities.
 
+.. _hops_function:
+
 3. **The "hops" function**:
 
    ::

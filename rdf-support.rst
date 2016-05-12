@@ -50,8 +50,8 @@ has a literal property "Bob" and is employed by a company represented by the sub
 
 Now, this is fairly straight forward but perhaps a bit verbose in the long run. To alleviate this, we can use the
 concept of *prefixes* and `RDF curies <https://www.w3.org/TR/curie/>`_. A *prefix* is the "constant" part of a URL,
-i.e. everything up to a certain path-element (usually the last). Using CURIES means giving these common prefixes short hand
- names enabling us to rewrite the full URI to a shorter "prefix:path" form.
+i.e. everything up to a certain path-element (usually the last). Using CURIES means giving these common prefixes short
+hand names enabling us to rewrite the full URI to a shorter "prefix:path" form.
 
 Let us define some prefixes for the above example, and give them such short hand names. The example below is in
 `RDF Turtle format <https://www.w3.org/TR/turtle/>`_, which is a superset of NTriples. Turtle syntax supports prefixes
@@ -82,8 +82,8 @@ The RDF registry
 ================
 
 When working with RDF data in Sesam, we would like to be able to define, maintain and share these RDF prefixes
-among our datasets and DTL transforms. To achieve this, Sesam has a built-in *RDF registry* for this purpose.
-You configure the registry by including an entity in your configuration on the form:
+among our datasets and DTL transforms. For this purpose Sesam has a built-in *RDF registry*.
+You can configure the registry by including an entity in your configuration on the form:
 
 ::
 
@@ -119,18 +119,18 @@ You configure the registry by including an entity in your configuration on the f
           }
     }
 
-The key ``rdf`` above contains the configuration of the RDF registry. It contains keys which usually correspond
-to dataset id's, although you can register any valid key here.
+The root key ``rdf`` above contains the entire configuration of the RDF registry. Its sub-keys will usually correspond
+to dataset ids, although you can register any valid key here.
 
 RDF registry items
 ------------------
 
-Prototype
+The "prototype" of a RDF registry entry ``entry_id`` look like:
 
 ::
 
     ..
-    "item_id": {
+    "entry_id": {
         "prefixes": {
            "foo" : "http://example.com/foo/",
            "baz" : "http://example.com/baz/",
@@ -149,22 +149,22 @@ Prototype
 Prefixes
 ^^^^^^^^
 
-Each entity referenced by these keys contain at least a single property ``prefixes`` which is a entity containing prefix
-to URI mappings for CURIE generation or expansion. These registry items can also contain a list property ``prefix_includes``
-which must be references to existing RDF registry keys. When looking up items in the RDF registry, any prefix elements
+Each registry item must contain at least a single property ``prefixes`` which is a object containing prefix
+to URI mappings for CURIE generation or expansion. The registry items can also contain a list property ``prefix_includes``
+which must be references to other existing RDF registry keys. When looking up items in the RDF registry, any prefix elements
 in this list will be recursively included. Take care that you don't have overlapping prefix names, as the final result
-will be undefined.
+will be undefined. Take care that you don't create circular references in this property.
 
 Built-in prefixes
 ^^^^^^^^^^^^^^^^^
 
 The Sesam RDF registry has built-in support for the common prefixes in RDF, such as ``rdf``, ``rdfs`` and ``owl``.
-In other words, you do not have to define these to use them in your CURIES.
+This means you don't have to define these yourself to use them in your CURIES.
 
 Prefix rules
 ^^^^^^^^^^^^
 
-The final property that can exist in an RDF registry item is ``prefix_rules``. This element tells us how to create RDF
+The final property that can exist in a RDF registry item is ``prefix_rules``. This element tells us how to create RDF
 CURIES from a plain entity: the ``id`` property contains the prefix to use for the ``_id`` property of the entity
 (i.e. the subject in RDF) and the ``properties`` property is a list of property pairs that encode the rules for what
 prefix to apply to which property of the entity.
@@ -202,7 +202,7 @@ A complete example of how the ``prefix_rules`` property works; we want to transf
         }
     }
 
-To RDF form using CURIES. We start by defining the rules for this transformation in the RDF registry entry ``my_entry``:
+to RDF form using CURIES. We start by defining the rules for this transformation in the RDF registry entry ``my_entry``:
 
 ::
 
@@ -343,7 +343,7 @@ When addressing properties in CURIES form in DTL transform, you can simply use t
     ..
 
 You can also use the CURIES in path expressions in the same way as any other property name. If you want to add a URI
-literal as part of your transformed entity you can use the DTL :ref:``curie function <curie_function>``, which takes
+literal as part of your transformed entity you can use the DTL :ref:`curie function <curie_function>`, which takes
 a prefix and a value expression (i.e. a literal or a function) and produces a URI property value:
 
 ::
@@ -367,7 +367,7 @@ CURIE expansion in DTL
 
 When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIES to full
 URI form (for example if there are conflicting usages of prefixes). This can be done using the DTL
-:ref:``uri-expand <uri_expand_function>``:
+:ref:`uri-expand <uri_expand_function>`:
 
 ::
 
@@ -375,7 +375,7 @@ URI form (for example if there are conflicting usages of prefixes). This can be 
     ["add", "<baz:expanded>", ["uri-expand", ["string", "my_entry"], {"_id": "<foo:bob>", "<foo:name>": "Bob Jones"}]]
     ..
 
-This will expand the properties of the entity (here shown inline, but typically will be from a ``hops`` join or some
+This will expand the properties of the entity (here shown inline, but typically will be from a :ref:`hops <hops_function>` join or some
 other function) to its "full" form:
 
 ::
@@ -389,7 +389,7 @@ other function) to its "full" form:
       ..
     }
 
-Note that expanding CURIES is normally done at the endpoint of your flow (i.e. the sink or a SDShare feed, see below).
+Note that expanding CURIES is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
 However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
 you can use the ``uri-expand`` function to achieve the same functionality.
 
@@ -403,5 +403,4 @@ Sesam has several ways of outputting RDF data:
 * :ref:`The Databrowser sink <databrowser_sink>`
 * :ref:`The HTTP endpoint sink <http_endpoint_sink>`
 
-Consult the reference documentation for how to set up and use these sinks.
-
+Consult the reference documentation for how to set up and use these sinks to produce RDF output.
