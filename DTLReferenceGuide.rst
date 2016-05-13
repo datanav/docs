@@ -1003,6 +1003,64 @@ Data Types
        |
        | Returns true
 
+   * - ``now``
+     - | *Arguments:*
+       |   NONE(value-expression{0})
+       |
+       | Returns the current time as a datetime value.
+       |
+     - | ``["now"]``
+       |
+       | Returns the current time as a datetime value, e.g. "~t2016-05-13T14:32:00.431Z".
+
+   * - ``datetime``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to datetime values. If no default value expression is given, values that don't parse
+       | as datetime values will be silently ignored. If not, the evaluated value from the default expression will be used
+       | as a replacement value.
+       |
+     - | ``["datetime", "2015-07-28T09:46:00.12345Z"]``
+       |
+       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z".
+       |
+       | ``["datetime", 1438076760123450000]``
+       |
+       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z". Note that integer values are treated as nanoseconds since epoch.
+       |
+       | ``["datetime", ["list", ["now"], ["now"], "hello"]]``
+       |
+       | Returns a list of two datetime values which both are the current time: [1, 124, 12345]. The "hello" string is ignored.
+       |
+       | ``["datetime", ["now"], "hello"]``
+       |
+       | Returns the current time as a datetime value, e.g. "~t2016-05-13T14:32:00.431Z". Note that this was created by the function argument.
+
+   * - ``is-datetime``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a datetime value or if it is a list, that the first element
+       | in the list is a datetime value.
+       |
+     - | ``["is-datetime", ["now"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-datetime", ["datetime", "2015-07-28T09:46:00.12345Z"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
+       |
+       | Returns false
+       |
+       | ``["is-datetime", ["list", "1", 2]]``
+       |
+       | Returns false
+
    * - ``boolean``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
