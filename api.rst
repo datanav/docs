@@ -116,6 +116,33 @@ the entities in the dataset would be returned. Depending on the size of the data
 generally a good idea to include a "limit"-parameter.
 
 
+.. _sdshare_feed_from_dataset:
+
+Get the content of the dataset as SDShare
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-----------
+
+To see the entities in the dataset as a SDShare feed, add "/sdshare-fragments" to the dataset's url, like this::
+
+    curl http://localhost:9042/datasets/Northwind:Products/sdshare-fragments
+
+Parameters such as ``limit`` also apply to this URL.
+
+The corresponding SDShare collection feed is available from:
+
+    curl http://localhost:9042/datasets/Northwind:Products/sdshare-collection
+
+This collection feed URL is usually the URL you need to supply in a SDShare client.
+
+Note that for the conversion of the entities to RDF to work, the entities must either:
+
+1) be pre-processed to consists of full URIs for all properties (including the ``_id`` property)
+
+or
+
+2) be pre-processed to CURIEs form **AND** the dataset id need to be registered as en entry in the :ref:`RDF registry <rdf_registry>`
+with appropriate prefix settings and prefix rules
+
+See :doc:`<rdf-support>` for more information on how to prepare your data for RDF output.
 
 .. _api-reference:
 
