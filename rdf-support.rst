@@ -440,3 +440,13 @@ When converting your CURIEs prepared entities to RDF, some rules are applied:
 Note that many RDF capable receivers are unable to deal with BNodes, so be sure to check this before finalizing
 your flow configuration. If your data is nested and the receiver doesn't support BNodes, you must "flatten" your entity using a
 DTL transform before being sent to the sink (see the DTL :ref:`merge <merge_function>` and :ref:`merge-union <merge_union_function>` functions).
+
+SDShare feeds from datasets
+---------------------------
+
+Datasets feature built-in support for SDShare feeds. CURIEs in the dataset entity properties or values will be
+subject to full URI expansion based on looking for an entry in the RDF registry matching the dataset's id. Note that if no
+matching entry in the RDF registry is found, and the ``_id`` property of the entities in the dataset is not a full URI
+then the returned feed will be empty.
+
+The SDShare feed from a dataset is available through the :ref:`Sesam REST API <sdshare_feed_from_dataset>`.
