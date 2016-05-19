@@ -674,7 +674,7 @@ Logical
        |   VALUES(value-expression{1})
        |
        | If FUNCTION is specified, then the function is evaluated for each value in
-         VALUES. Returns true if all arguments evaluate to true. 
+         VALUES. Returns true if all arguments evaluate to true.
      - | ``["all",``
        |    ``["list", 1, 2, 3]]``
        |
@@ -698,7 +698,7 @@ Logical
        |   VALUES(value-expression{1})
        |
        | If FUNCTION is specified, then the function is evaluated for each value in
-         VALUES. Returns true if at least one argument evaluates to true. 
+         VALUES. Returns true if at least one argument evaluates to true.
      - | ``["any",``
        |    ``["list", 1, 2, 3]]``
        |
@@ -1712,6 +1712,21 @@ Strings
        | ``["matches", "*_sport", ".", "_S.tags"]]``
        |
        | Returns true if all the tags that have a "_sport" suffix.
+
+   * - ``url-quote``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL quoted versions of any string or list of strings in the argument list. Any non-strings
+         are ignored and is not returned in the result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+     - | ``["url-quote", "foo bar"]``
+       |
+       | Returns ``foo%20bar``.
+       |
+     - | ``["url-quote", ["å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
+       |
+       | Returns ``["%C3%A5", "foo%20bar]``
 
 
 Values / collections
