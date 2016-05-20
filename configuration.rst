@@ -825,7 +825,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "type": "csv",
             "name": "Country names from CSV source",
             "url": "http://blog.plsoucy.com/wp-content/uploads/2012/04/countries-20140629.csv",
-            "id_field": "Code",
+            "primary_key": "Code",
             "encoding": "iso-8859-1"
         }
     }
