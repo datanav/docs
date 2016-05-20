@@ -1724,7 +1724,7 @@ Strings
        |
        | Returns ``foo%20bar``.
        |
-     - | ``["url-quote", ["å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
+       | ``["url-quote", ["å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
        |
        | Returns ``["%C3%A5", "foo%20bar]``
 
