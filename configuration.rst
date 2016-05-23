@@ -3292,7 +3292,7 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:sql",
         "name": "The Foo Database",
-        "dbtype": "oracle|mssql|mysql|sqlite",
+        "dbtype": "oracle|oracle_tns|mssql|mysql|sqlite",
         "username":"username",
         "password":"secret",
         "host":"host-name-or-ip",
@@ -3320,7 +3320,7 @@ Properties
    * - ``dbtype``
      - String
      - A string enum denoting the type of database to connect to. Sesam currently supports SQLite, Oracle, MS SQL Server
-       and MySQL databases. The identifiers are "sqlite", "oracle", "mssql" and "mysql" respectively.
+       and MySQL databases. The identifiers are "sqlite", "oracle", "oracle_tns", "mssql" and "mysql" respectively.
      -
      - Yes
 
@@ -3338,19 +3338,21 @@ Properties
 
    * - ``host``
      - String
-     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric. Note that this property is not
+       required when the "oracle_tns" ``dbtype`` is specified.
      -
-     - Yes
+     - Yes*
 
    * - ``port``
      - Integer
-     - Database IP port
+     - Database IP port. Note that this property is not required when the "oracle_tns" ``dbtype`` is specified.
      -
-     - Yes
+     - Yes*
 
    * - ``database``
      - String
-     - Name/id of database to connect to.
+     - Name/id of database to connect to. Note that when the "oracle_tns" ``dbtype`` is specified, this property should
+       contain the entire TNS record for the connection.
      -
      - Yes
 
@@ -3411,6 +3413,20 @@ Example Oracle configuration:
         "host": "oracle",
         "port": 1521,
         "database": "XE"
+    }
+
+Example Oracle TNS configuration:
+
+::
+
+    {
+        "_id": "oracle_db",
+        "name": "Oracle test database",
+        "type": "system:sql",
+        "dbtype": "oracle_tns",
+        "username": "system",
+        "password": "oracle",
+        "database": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
     }
 
 Example MS SQL Server configuration:
