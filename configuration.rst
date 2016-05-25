@@ -572,8 +572,7 @@ Properties
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used. The name(s) used in this propery are case sensitive and must
-       match the underlying database naming.
+       the ``query`` property us used.
      -
      -
 
@@ -608,7 +607,7 @@ Properties
    * - ``schema``
      - String
      - If a specific schema within a database is needed, you must provide its name in this property.
-       Do *not* use schema names in the ``table`` property. TODO: are these names case sensitive?
+       Do *not* use schema names in the ``table`` property.
      -
      -
 
@@ -2926,6 +2925,9 @@ Prototype
         "name": "Name of sink",
         "type": "sql",
         "system": "id-of-sql-system"
+        "primary_key": ["list","of","key","names"],
+        "table": "name-of-table",
+        "schema": "default-schema-name-if-included"
     }
 
 Properties
@@ -2953,6 +2955,15 @@ Properties
        set separately.
      -
      - Yes
+
+   * - ``primary_key``
+     - List<String> or String
+     - The value of this property can be a single string with the name of the column
+       that contains the ``primary key`` (PK) of the table, or a list of strings
+       if it is a compound primary key. If the property is not set the component will
+       attempt to use table metadata reflection to deduce the PK to use.
+     -
+     -
 
    * - ``schema``
      - String
