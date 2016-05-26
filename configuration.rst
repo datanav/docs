@@ -1255,10 +1255,10 @@ It exposes two URLs:
    * - URL
      - Description
 
-   * - ``http://localhost:9042/receivers/mypipe/entities``
+   * - ``http://localhost:9042/api/receivers/mypipe/entities``
      - JSON Push endpoint
 
-   * - ``http://localhost:9042/receivers/mypipe/sdshare-push-receiver``
+   * - ``http://localhost:9042/api/receivers/mypipe/sdshare-push-receiver``
      - SDShare Push receiver endpoint
 
 JSON Push protocol
@@ -2486,7 +2486,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "type": "json_push",
             "name": "Local JSON push service sink",
-            "url": "http://localhost:9042/receivers/foo/entities"
+            "url": "http://localhost:9042/api/receivers/foo/entities"
         }
     }
 
@@ -3229,13 +3229,13 @@ It exposes three URLs:
    * - URL
      - Description
 
-   * - ``http://localhost:9042/publishers/mypipe/entities``
+   * - ``http://localhost:9042/api/publishers/mypipe/entities``
      - JSON entities endpoint
 
-   * - ``http://localhost:9042/publishers/mypipe/sdshare-collection``
+   * - ``http://localhost:9042/api/publishers/mypipe/sdshare-collection``
      - SDShare collections feed
 
-   * - ``http://localhost:9042/publishers/mypipe/sdshare-fragments``
+   * - ``http://localhost:9042/api/publishers/mypipe/sdshare-fragments``
      - SDShare fragments feed
 
 The serialisation of entities as JSON is described in more detail

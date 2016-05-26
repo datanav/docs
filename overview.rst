@@ -59,31 +59,31 @@ See the contents of the ``customers`` dataset here:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/datasets/customers/entities>`_
+  `<http://localhost:9042/api/datasets/customers/entities>`_
 
 See the contents of the ``orders`` dataset here:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/datasets/orders/entities>`_
+  `<http://localhost:9042/api/datasets/orders/entities>`_
 
 After a little while you should be able to see the end result in the ``customers-with-orders`` dataset:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/datasets/customers-with-orders/entities>`_
+  `<http://localhost:9042/api/datasets/customers-with-orders/entities>`_
 
 You can also see the data as it is written to the pipe's sink. These entities have been read from the source and put through the DTL transform:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/pipes/customers-with-orders/entities>`_
+  `<http://localhost:9042/api/pipes/customers-with-orders/entities>`_
 
 It may also be useful to see what the entities look like before they are transformed, i.e. what they look like when read from the pipe's source:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/pipes/customers-with-orders/entities?transformed=false>`_
+  `<http://localhost:9042/api/pipes/customers-with-orders/entities?transformed=false>`_
 
 Make your own edits
 ===================

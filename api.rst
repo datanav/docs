@@ -14,7 +14,7 @@ Introduction
 
 Sesam provides a RESTful API for controlling the service and for working with the data in the datahub.
 
-If you follow the :ref:`overview-getting-started` guide, the api will be served on the url http://localhost:9042 . The
+If you follow the :ref:`overview-getting-started` guide, the api will be served on the url http://localhost:9042/api . The
 rest of this document will assume that the api can be found on this url.
 
 You can explore the api with a web browser or with a commandline tool like `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
@@ -22,12 +22,12 @@ or `wget <http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html>`_.
 
 The most important api urls are:
 
-`/pipes <http://localhost:9042/pipes>`_:
+`/api/pipes <http://localhost:9042/api/pipes>`_:
 
 This returns a list of pipes. For an explanation of what a pipe is, read the :ref:`concepts-pipes` concept definition.
 
 
-`/datasets <http://localhost:9042/datasets>`_:
+`/api/datasets <http://localhost:9042/api/datasets>`_:
 
 This returns a list of datasets. (For an explanation of what a dataset is, read the :ref:`concepts-datasets` concept definition).
 
@@ -50,7 +50,7 @@ Get the a list of all the pipes
 
 ::
 
-    curl http://localhost:9042/pipes
+    curl http://localhost:9042/api/pipes
 
 
 Get information about one specified pipe
@@ -59,7 +59,7 @@ Get information about one specified pipe
 To only get one specific pipe, add the pipe's "_id" attribute to the pipes-url. To get the pipe with the _id "Northwind:Products",
 you would do this::
 
-    curl http://localhost:9042/pipes/Northwind:Products
+    curl http://localhost:9042/api/pipes/Northwind:Products
 
 Run operations on a pipe
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,16 +76,16 @@ pipeinfo["runtime"]["supported-operations"] attribute. A typical value looks lik
 These operations are triggered by sending a POST-request to the url /pipes/{pipeID}/pump. For example: to disable the "Northwind:Products"
 pipe you would do this::
 
-   curl --data operation=disable http://localhost:9042/pipes/Northwind:Products/pump
+   curl --data operation=disable http://localhost:9042/api/pipes/Northwind:Products/pump
 
 
 To manually start the pipe's pump, you would do this::
 
-   curl --data operation=start http://localhost:9042/pipes/Northwind:Products/pump
+   curl --data operation=start http://localhost:9042/api/pipes/Northwind:Products/pump
 
 To stop a running pump, you would do this::
 
-   curl --data operation=stop http://localhost:9042/pipes/Northwind:Products/pump
+   curl --data operation=stop http://localhost:9042/api/pipes/Northwind:Products/pump
 
 
 Get a list of all the datasets
@@ -93,7 +93,7 @@ Get a list of all the datasets
 
 ::
 
-    curl http://localhost:9042/datasets
+    curl http://localhost:9042/api/datasets
 
 
 Get information about one specific dataset
@@ -102,14 +102,14 @@ Get information about one specific dataset
 To only get one specific dataset, add the dataset's "_id" attribute to the dataset-url. To get the dataset with the _id "Northwind:Products",
 you would do this::
 
-    curl http://localhost:9042/datasets/Northwind:Products
+    curl http://localhost:9042/api/datasets/Northwind:Products
 
 
 Get the content of the dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To see the entities in the dataset, add "/entities?limit=3" to the dataset's url, like this::
 
-    curl http://localhost:9042/datasets/Northwind:Products/entities?limit=3
+    curl http://localhost:9042/api/datasets/Northwind:Products/entities?limit=3
 
 The "limit" parameter limits the number of returned entities to a managable number. Without this parameter, **all**
 the entities in the dataset would be returned. Depending on the size of the dataset, that could take a while, so it is
@@ -122,13 +122,13 @@ Get the content of the dataset as SDShare
 
 To see the entities in the dataset as a SDShare feed, add "/sdshare-fragments" to the dataset's url, like this::
 
-    curl http://localhost:9042/datasets/Northwind:Products/sdshare-fragments
+    curl http://localhost:9042/api/datasets/Northwind:Products/sdshare-fragments
 
 Parameters such as ``limit`` also apply to this URL.
 
 The corresponding SDShare collection feed is available from::
 
-    curl http://localhost:9042/datasets/Northwind:Products/sdshare-collection
+    curl http://localhost:9042/api/datasets/Northwind:Products/sdshare-collection
 
 This collection feed URL is usually the URL you need to supply in a SDShare client.
 
