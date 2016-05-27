@@ -707,6 +707,7 @@ Prototype
     {
        "name": "Name of source",
        "type": "csv",
+       "system": "a-valid-url-system-id",
        "url": "url-to-csv-file",
        "has_header": true,
        "field_names": ["mappings","from","columns","to","properties"],
@@ -736,6 +737,12 @@ Properties
    * - ``url``
      - String
      - The URL of the ``CVS`` file to load.
+     -
+     - Yes
+
+   * - ``system``
+     - String
+     - The ID of the :ref:`URL system <url_system>` component to use.
      -
      - Yes
 
@@ -883,11 +890,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`url system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a URL system component explicitly.
+     - The id of the :ref:`url system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``url``
      - String
@@ -962,11 +967,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a URL system component explicitly.
+     - The id of the :ref:`URL system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``url``
      - String
@@ -1530,10 +1533,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of a :ref:`URL System <url_system>` component. If not specified, one will be automatically generated using
-       the base of the ``url`` property as the system's ``base_url``.
+     - The id of the :ref:`URL System <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``fragments_query``
      - List<String> or String
@@ -2455,11 +2457,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a URL system component explicitly.
+     - The id of the :ref:`URL system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``url``
      - String
@@ -2528,11 +2528,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       endpoint requires authentication, you will have to create a URL system component explicitly.
+     - The id of the :ref:`URL system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``url``
      - String
@@ -2845,11 +2843,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of a :ref:`URL system <url_system>` component to use. If not given, one will be automatically generated
-       based on the ``url`` propery. Note that if the SPARQL endpoint uses authentication, you will have to create
-       a URL system to use.
+     - The id of a :ref:`URL system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``graph``
      - String
