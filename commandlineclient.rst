@@ -68,6 +68,18 @@ Example usage
 In the following section we will go through a few examples of what you can do with the commandline client. For a complete
 description of all the commands and options, have a look at the :ref:`commandline-client-reference` section.
 
+Setting the API URL endpoint
+----------------------------
+
+You can either supply the URL to the API endpoint using the ``--server_base_url <URL>`` parameter (usually the last one on
+the command line), or you can set it permanently for the logged in user using:
+
+::
+
+  sesam config server.base_url <URL>
+
+If none of these options are used, the sesam client will fall back to a default value for the base URL of the API which
+is ``http://localhost:9042/api``.
 
 Get the a list of all the pipes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
