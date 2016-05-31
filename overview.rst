@@ -20,32 +20,83 @@ Sesam provides implementations for many types of data sources, including relatio
 Installation
 ------------
 
-The Sesam service is run as either a single Sesam node or as a cluster of Sesam nodes. Each node has the capability to collect, transform and deliver data. However, various topologies of nodes can be used to separate concerns where needed. A cluster of Sesam Nodes can be accessed via single API endpoint. All nodes expose the Sesam API as way to control and introspect the node. When used in a cluster the nodes can be configured to expose an API over all the nodes in the cluster.
-
-For getting started with Sesam a single node will suffice. The Sesam Node is available as a public docker image. If you install and use the Sesam Node software, you are bound by the :ref:`eula`. Sesam Node uses a number of open source components. The licenses for these can be in the :ref:`open_source_licenses` document.
-
-Docker version 1.9.1 is required. Download Docker `here <http://www.docker.com/>`_. We recommend using `Docker Machine <https://www.docker.com/products/docker-machine>`_ to get up and running on Windows and Mac OSX.
+`Installation instructions <https://beta.sesam.in/#installation>`_ can be found on the `Sesam Beta website <https://beta.sesam.in/#installation>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
 
 .. _overview-getting-started:
 
 Getting Started
 ---------------
 
-Once Docker is installed, pull the Sesam Node docker image, like this:
+Now that you have Sesam running, lets start using it. Sesam does not yet contain any configuration nor any data, so lets get hold of some. We've prepared a sample project that showcases some of the core features of Sesam. The files are hosted on Github.
+
+Check out the project files using ``git``:
+
+::
+   
+  git clone https://github.com/sesam-io/tutorial sesam-tutorial
+  cd sesam-tutorial/intro
+
+
+If you don't have a Git client, then you can download the project files as a zip-file using ``curl``:
 
 ::
 
-  docker pull sesam/sesam-node
+  curl -o sesam-tutorial.zip https://codeload.github.com/sesam-io/tutorial/zip/master
+  unzip sesam-tutorial.zip
+  mv tutorial-master sesam-tutorial
+  cd sesam-tutorial/intro
 
-Now you can start the Sesam Node container:
+The project contains three files. ``sesam.conf.json`` is the configuration file. ``customers.json`` and ``orders.json`` contain JSON data for customers and their orders.
+
+First we'll start an HTTP server to serve the JSON files containing the data. To do this we can use the built-in Python HTTP server that serves the files in the current directory. The Sesam service instance will then be able to download the data files from there.
+
+::
+   
+  $ ls -lh
+  total 24
+  -rw-r--r--  1 geir.gronmo  wheel   269B May 31 13:10 customers.json
+  -rw-r--r--  1 geir.gronmo  wheel   505B May 31 13:10 orders.json
+  -rw-r--r--  1 geir.gronmo  wheel   1.7K May 31 13:10 sesam.conf.json
+  
+  $ python3 -m http.server
+  Serving HTTP on 0.0.0.0 port 8000 ...
+
+Now we're serving the ``customers.json`` and ``orders.json`` files through the web server on port 8000.
+
+Before we import the Sesam service instances's we'll have to edit the ``sesam.conf.json``. Open the file in a text editor and replace ``YOUR-IP-HERE`` with the IP address of your machine, i.e. the IP address of the web server you just started. Hint: use the ``ifconfig`` or ``ipconfig`` command to find it.
+
+In order to import the configuration file(s) from the command line we'll have to install the ``sesam`` client command line tool. It can be installed with the ``pip3 install -U sesamclient`` command (Python3 only).
 
 ::
 
-  docker run -it --rm -v /sesam/conf:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node start -c https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/nodeconfig.json
+  $ pip3 install -U sesamclient
+  Collecting sesamclient
+  Requirement already up-to-date: PyInstaller==3.2 in /usr/local/lib/python3.5/site-packages (from sesamclient)
+  Requirement already up-to-date: pyyaml==3.11 in /usr/local/lib/python3.5/site-packages (from sesamclient)
+  Requirement already up-to-date: appdirs==1.4.0 in /usr/local/lib/python3.5/site-packages/appdirs-1.4.0-py3.5.egg (from sesamclient)
+  Requirement already up-to-date: nose==1.3.7 in /usr/local/lib/python3.5/site-packages/nose-1.3.7-py3.5.egg (from sesamclient)
+  Requirement already up-to-date: requests==2.10.0 in /usr/local/lib/python3.5/site-packages (from sesamclient)
+  Requirement already up-to-date: python-dateutil==2.5.3 in /usr/local/lib/python3.5/site-packages (from sesamclient)
+  Requirement already up-to-date: ijson==2.3 in /usr/local/lib/python3.5/site-packages (from sesamclient)
+  Requirement already up-to-date: setuptools in /usr/local/lib/python3.5/site-packages (from PyInstaller==3.2->sesamclient)
+  Requirement already up-to-date: six>=1.5 in /usr/local/lib/python3.5/site-packages (from python-dateutil==2.5.3->sesamclient)
+  Installing collected packages: sesamclient
+    Found existing installation: sesamclient 0.1.7
+      Uninstalling sesamclient-0.1.7:
+        Successfully uninstalled sesamclient-0.1.7
+  Successfully installed sesamclient-0.2.18
 
-This will start up the Sesam Node with a :doc:`node configuration file <configuration>` (`nodeconfig.json <https://github.com/sesam-io/tutorial/blob/master/intro/nodeconfig.json>`_) hosted on Github.
+Now that the ``sesam`` tool is installed we can use it to import the configuration file:
 
-The node configuration file contains two pipes that read data from `customers.json <https://github.com/sesam-io/tutorial/blob/master/intro/customers.json>`_ and  `orders.json <https://github.com/sesam-io/tutorial/blob/master/intro/orders.json>`_. Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the entities into datasets called ``customers`` and ``orders`` respectively.
+::
+   
+  $ sesam import *.conf.json
+  Read 4 config entities from these config-files:
+   sesam.conf.json
+
+This will import the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its service API.
+
+The configuration file contains two pipes that read data from ``customers.json`` and  ``orders.json``. Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the entities into datasets called ``customers`` and ``orders`` respectively.
 
 There is also a third pipe that reads the ``customers`` dataset and applies a :doc:`DTL <DTLReferenceGuide>` transform on the data. The transform will collect the orders for each customer, calculate the total sum for each order and the total sum for each customer. Customers with total order sum of less than 25.00 are filtered out. The resulting entities are then written to the ``customers-with-orders`` dataset.
 
@@ -53,7 +104,7 @@ There is also a third pipe that reads the ``customers`` dataset and applies a :d
 Let's look at the data
 ======================
 
-When the Sesam Node starts up it reads the configuration file and schedules the pumps. It will then start running the pumps at regular intervals. Use the links below to introspect the datasets and the pipes. Replace ``localhost`` with the hostname of your Docker service.
+When Sesam starts up it reads the configuration file and schedules the pumps. It will then start running the pumps at regular intervals. Use the links below to introspect the datasets and the pipes. Replace ``localhost`` with the hostname of Sesam service instance.
 
 See the contents of the ``customers`` dataset here:
 
@@ -88,48 +139,21 @@ It may also be useful to see what the entities look like before they are transfo
 Make your own edits
 ===================
 
-You may want to try to do some edits to the data files or the configuration file. To do this you must first download the files. Download them directly with ``curl``,
+You may want to try to do some edits to the data files or the configuration file.
 
-::
+The Sesam service will reload the data files at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. Try editing any of the files and see what happens.
 
-   curl -O https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/nodeconfig.json
-   curl -O https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/customers.json
-   curl -O https://raw.githubusercontent.com/sesam-io/tutorial/master/intro/orders.json
-  
-or check them out from Git:
-
-::
-   
-  git clone https://github.com/sesam-io/tutorial sesam-tutorial
-  cd sesam-tutorial/intro
-
-You can now stop the running Sesam Node, because we need to start it up again with some slightly different arguments. Press CTRL+C, or run ``docker rm -f sesam-node`` in another terminal window.
-
-Now you can start the Sesam Node container:
-
-::
-
-  docker run -it --rm -v $PWD:/sesam/conf -v /sesam/data:/sesam/data -v /sesam/logs:/sesam/logs -p 9042:9042 --name sesam-node sesam/sesam-node start
-
-The Sesam Node will reload the ``nodeconfig.json`` file at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. Try editing any of the files and see what happens.
+If you edit the configuration file, then you must reimport it.
 
 What to do next?
 ================
 
 First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
 
-To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`node configuration <configuration>` section details the datasource component types and how to configure them.
+To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`configuration <configuration>` section details the datasource component types and how to configure them.
 
-If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be consumed by the Sesam Node. The documentation on :doc:`developer extension points <extension-points>` has more examples and links to templates for C#, NodeJS, Java and Python.
+If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be consumed by Sesam. The documentation on :doc:`developer extension points <extension-points>` has more examples and links to templates for C#, Node.js, Java and Python.
 
 If you are looking to transform data into new shapes, or validate it against schema rules, please take a look at the different kinds of transforms that can be used in a pipe. :doc:`DTL <DTLReferenceGuide>` is a very powerful language that can reshape, and connect data from multiple datasets. 
 
-Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`node configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up sesam to push data to a custom service. 
-
-
-Troubleshooting
-===============
-
-The ``docker run`` command above binds the current working directory to the ``/sesam/conf`` volume inside of the container. For this to work the ``nodeconfig.json`` file must exist. When the Sesam Node starts it will create two directories ``data``, which contains the node's persistent state - including the datasets, and ``logs``, which contains the human readable log files.
-
-If you're on a Mac and use Virtualbox to host the docker service, then you won't be able to store the ``/sesam/data`` and ``/sesam/logs`` directory directly on the Mac's file system. Instead those files will have to be stored on the virtual machine where the docker daemon runs. Mounting the ``/sesam/conf`` through to the Mac's file system works though, because only read-only access is needed.
+Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up sesam to push data to a custom service. 
