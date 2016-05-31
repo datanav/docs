@@ -1003,6 +1003,29 @@ Data Types
        |
        | Returns true
 
+   * - ``is-null``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is null literal or if it is a list, that the first element
+       | in the list is a null literal.
+       |
+     - | ``["is-null", null]``
+       |
+       | Returns true.
+       |
+       | ``["is-null", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-null", ["list", null]]``
+       |
+       | Returns true
+       |
+       | ``["is-null", ["list", 1, "12345"]]``
+       |
+       | Returns false
+
    * - ``now``
      - | *Arguments:*
        |   NONE(value-expression{0})
