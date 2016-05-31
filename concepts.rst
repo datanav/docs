@@ -11,7 +11,7 @@ Introduction
 
 Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems, transforming data, and providing data for target systems. 
 
-Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined that process the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam. 
+Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined to process the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam. 
 
 .. image:: images/datahub.jpg
     :width: 800px
@@ -38,26 +38,27 @@ Sesam produces and consumes streams of data. Each stream contains a number of da
     ]
 
 
-A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a datasource, a sink and optionally a list transformations. Each pipe has an associated pump that is scheduled to run at intervals and pull data entities from the datasource, push them through any transformations and deliver the results into the sink.  
+A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a datasource, an optional list of transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data entities from the datasource, push them through any transformations and deliver the results into the sink.  
 
-*Datasources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each datasource is connected to a System. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the datasource is to convert the underlying data into a uniform representation; JSON, and if possible offer features such as only exposing the entities that have changed. Different datasources offer different levels of support for change detection. 
+*Datasources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each datasource is connected to a *System*. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the datasource is to convert the underlying data into a uniform representation; JSON. Some datasources offer features additional features such as only exposing the entities that have changed. Different datasources offer different levels of support for change detection. 
 
-When first pulling data from a datasource for an external system, such as a SQL database, the sink is a dataset sink. A dataset sink writes the data into a dataset. The dataset is just a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
+Data from a datasource for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
 
-Datasets also act as data sources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
+Datasets also act as datasources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities. 
 
 The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks can either be another dataset sink or it can be a sink that connects to a target system. 
 
-These concepts are explored in more detail in the following sections.
+Sesam provides a comprehensive API and UI for working with all aspects of Sesam.
 
-Sesam Node
-----------
+Sesam Service Instance
+----------------------
 
-We use *Sesam* as the general name for a Sesam service instance. A given service instance is actually comprised of one of more *Sesam Nodes*. A *Sesam Node* is a running process that is capable of hosting components for collection, transforming and delivering data. In addition, each node instance can expose a service API endpoint and a graphical user interface. Nodes can be organised into clusters in order to share workloads. In the case of a cluster the API and user interface is exposed from nodes configured to be front-end nodes.
+We use *Sesam* as the general name for a Sesam service instance. A given service instance exposes a single API endpoint and user interface. Internally, the service instance consists of configuration for all the pipe definitions, processes to execute the pumps and datasets for the storage of data.  
 
-The *Sesam Node* is provided as a Docker image called sesam/sesam-node. The node requires a configuration file, *nodeconfig.json*, that describe the set of pipes that should be created and managed by the node. Each pipe describes the flow of data from a *datasource* to a *sink*. Optionally, each pipe can also describe a transformation that should be applied to the data on its way through. 
+A service instance is configured via the API. Configuration in Sesam is quite cool. It is entity based. This means that we can track and understand if the configuration has changed in the same way we understand if any data has changed. 
 
-Data flowing into the *Sesam Node* can be stored in Datasets. The *Sesam Node* manages these datasets, and exposes them via the API. Datasets are used as the source for data transformation and also when delivering data to external target systems.   
+The API offers two ways to upload configuration. The first is via the 'config' endpoint. This allows a complete set of configuration to be upload and is typically used when bootstrapping a service instance in QA or production environments. The other way is to use the individual resources exposed via the API. Such as a post to the collection of pipes. 
+
 
 .. _concepts-datasets:
 
@@ -65,6 +66,8 @@ Datasets
 --------
 
 A dataset is the basic means of storage inside the node. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A *dataset sink* can write entities to the dataset. The dataset appends the entity to the log if and only if it is new or if it is different from the most recent version of the same entity.
+
+Each entity is given a hash value based on the complete set of values in that entity. This value is used to determine if an entity has changed over time.
 
 A *dataset source* exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
 
@@ -74,19 +77,28 @@ A *dataset source* exposes the entities from the dataset so that they can be str
     :height: 600px
     :alt: DataSet
 
+
+The datasets of service instance can be found using the API
+
+::
+
+http://service_url:9042/api/datasets
+
+
 Retention Policies
 ==================
 
-A dataset is an immutable log of data that would left unchecked grow forever. This problem is partly mitigated as entities are only written to the log if they are new or different (based on a hash comparison) from the most recent version of that entity. To supplement this and ensure that a dataset does not consume all available disk space a retention policy can be defined. A rentention policy describes the general way in which the log should be compacted. The currently available policy is actually the best one and it is 'None'. 
+A dataset is an immutable log of data that would, left unchecked, grow forever. This problem is partly mitigated as entities are only written to the log if they are new or different (based on a hash comparison) from the most recent version of that entity. To supplement this and ensure that a dataset does not consume all available disk space a retention policy can be defined. A rentention policy describes the general way in which the log should be compacted. The currently available policy is actually the best one and it is 'None'. 
 
 
 Systems
 -------
 
-A *system* is any database or API that could be used as a source of data for the node or as the target of entities coming out of the node. The system components in the node are a way to represent the actual systems being connected, or integrated.
+A *system* is any database or API that could be used as a source of data Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected, or integrated.
 
 The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how the node consumes or delivers data.
 
+The other use of the *system* is that it allow configuration that may apply to many *datasource* definitions, e.g. connection strings, to be located and managed in just one place. 
 
 .. _concepts-pipes:
 
@@ -101,12 +113,13 @@ A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It
     :height: 350px
     :alt: Generic pipe concept
 
+
 .. _concepts-sources:
 
 Sources
 =======
 
-A *data source* is a component hosted in the Sesam Node that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
+A *datasource* is a component hosted in Sesam that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
 .. image:: images/datasource.png
     :width: 800px
@@ -114,9 +127,11 @@ A *data source* is a component hosted in the Sesam Node that exposes a stream of
     :height: 450px
     :alt: Generic pipe concept
 
-Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used simply to only ask for the entities that have changed since the last time it was asked. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be a location offset.
+Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be a location offset.
 
-Sesam provides a number of out of the box *data source* types, such as SQL and LDAP. It is also easy for developers to expose a micro service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
+Sesam provides a number of out of the box *datasource* types, such as SQL and LDAP. It is also easy for developers to expose a micro-service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
+
+To help with this there are a number of template projects hosted on our github repository to make this process as easy as possible.
 
 .. _concepts-transforms:
 
@@ -130,18 +145,21 @@ Entities streaming through a pipe can be transformed on their way from the sourc
 Sinks
 =====
 
-A data *sink* is a components that can consume entities fed to them through 'Sink Writer' objects provided by a 'Data Sink' object. The sink writer has the resposibility to write these entites to the target, handle transactional
-boundaries and potentially batching of multiple entities if supported by the target system. The 'Sink Writer' object inherits its parent sink's configuration settings but is immutable to changes to this durings its life time.
-Several types of data sinks are supplied with the core service. Using the JSON push sink enables you to transfer entities to remote nodes.
+A data *sink* is a component that can consume entities fed to them by a pump. The sink has the resposibility to write these entites to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system. 
+
+Several types of data sinks, SQL Sink for example, are available. Using the JSON push sink enables entities to be pushed to custom micro-services or other Sesam service instances.
 
 .. _concepts-pumps:
 
 Pumps
 =====
 
-The scheduler handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or at a 'cron' schedule and reads entities from a data source and writes them to a data sink. It's also capable of
-rescanning the data source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry
-writing an entity later. The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
+A scheduler handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or on a 'cron' schedule and reads entities from a data source and writes them to a data sink. 
+
+It's also capable of rescanning the data source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry
+writing an entity later. 
+
+The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
 
 Change tracking
 ===============
@@ -156,7 +174,7 @@ The Data Transformation Language (DTL)
 
 The Data Transformation Language is used to construct new data from existing data. DTL transforms should only be applied to data in a dataset.
 
-DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'.
+DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'. That work on properties, list of values and complete entities.
 
 .. image:: images/dtl.png
     :width: 800px
@@ -180,6 +198,31 @@ This is in essence a cache invalidation of complex queries problem. With Sesam w
 Sesam API
 ---------
 
-The Sesam API is a RESTful API that exposes the current state of a Sesam Node or cluster and allows clients to manage tasks, register new DTL,
+The Sesam API is a RESTful API that exposes the current state of a Sesam service instance and allows clients to add and modify configuration, test DTL, introspect datasets, view logs and the operational state of pumps and pipes.
+
+The API can be found at:
+
+::
+
+http://service_endpoint:9042/api
+
+
+Sesam Management Studio
+-----------------------
+
+As well as the API there is a UI for working with Sesam. The UI exposes the pipes, datasets and operational information for a service instance.  
+
+The management studio can be found at:
+
+::
+
+http://service_endpoint:9042/gui
+
+
+Sesam Client
+------------
+
+The *sesamclient* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
+
 
 
