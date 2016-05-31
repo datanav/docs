@@ -11,22 +11,14 @@ Component configuration guide
 General
 =======
 
-The *Sesam Node* is configured using one or more *JSON* files located in the node folder when starting the *Sesam Node*.
+The *Sesam* service is configured using one or more *JSON* files. These configuration files can be imported through the service API, e.g. using the ``sesam`` command line client. They can also be created and edited using the Sesam Management Studio.
 
-For example:
+Conceptually, the configuration files contains definitions for *Systems* and *Pipes*.
 
-::
-
-  docker run .... -v $PWD:/sesam
-
-Will look for a file called *nodeconfig.json* in the current directory.
-
-Conceptually, the configuration files contains definitions for *Systems*, *Pipes* and *Clusters*. The cluster configuration is not required when running just a single *Sesam Node*.
-
-The node configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
+The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
 *JSON objects* of the form:
 
-It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *nodeconfig.json* file but also across all files when a multiple file configuration is used.
+It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *sesam.conf.json* file but also across all files when a multiple file configuration is used.
 
 ::
 
@@ -101,7 +93,7 @@ Properties
 
    * - ``_id``
      - String
-     - The id of the pipe, this should be unique within a Sesam Node.
+     - The id of the pipe, this should be unique within a Sesam service instance.
      -
      - Yes
 
@@ -1200,7 +1192,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "name": "Sesam Node Metrics"
+            "name": "Sesam Metrics"
             "type": "metrics"
         }
     }
@@ -2008,7 +2000,7 @@ Properties
 
    * - ``prefix_includes``
      - List<String>
-     - A list of string keys to look up in the node-wide :ref:`RDF registry <rdf_registry>`. These keys reference
+     - A list of string keys to look up in the instance-wide :ref:`RDF registry <rdf_registry>`. These keys reference
        objects which contain RDF support structures such as CURIE prefixes (and possibly references to other prefix
        sets to include).
        The prefixes collected from the RDF registry will be used to compress full URIs to CURIEs.
@@ -2546,7 +2538,7 @@ Properties
 
    * - ``prefix_includes``
      - List<String>
-     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+     - A list of string keys to look up in the instance-wide `RDF registry`. These keys reference objects which contain
        RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
        The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
@@ -2871,7 +2863,7 @@ Properties
 
    * - ``prefix_includes``
      - List<String>
-     - A list of string keys to look up in the node-wide `RDF registry`. These keys reference objects which contain
+     - A list of string keys to look up in the instance-wide `RDF registry`. These keys reference objects which contain
        RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
        The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
@@ -3550,7 +3542,7 @@ Prototype
         "port": 8086,
         "username": "root",
         "password": "root",
-        "database": "Sesam Node",
+        "database": "sesam_node",
         "ssl": false,
         "verify_ssl": false,
         "timeout": None,
