@@ -1029,6 +1029,33 @@ Data Types
        |
        | Returns false.
 
+   * - ``if-null``
+     - | *Arguments:*
+       |   VALUE(value-expression{1})
+       |   FALLBACK-VALUE(value-expression{1})
+       |
+       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise FALLBACK-VALUE is returned.
+       |
+     - | ``["if-null", null, 2]``
+       |
+       | Returns 2.
+       |
+       | ``["if-null", 1, 2]``
+       |
+       | Returns 1.
+       |
+       | ``["if-null", ["list", null], 2]``
+       |
+       | Returns 2.
+       |
+       | ``["if-null", ["list", null, 123], 2]``
+       |
+       | Returns 2.
+       |
+       | ``["is-null", ["list", 1, "12345"], 2]``
+       |
+       | Returns [1, "12345"].
+
    * - ``now``
      - | *Arguments:*
        |   NONE(value-expression{0})
