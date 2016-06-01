@@ -7,11 +7,11 @@ Developer Extension Points
    :depth: 2
    :local:
 
-There are many native components for collecting, transforming and using data. Sometimes however, there may be custom datasources, transforms and sinks that are needed. To help in these situations there are well defined patterns and integration points that can be used.
+There are many native Sesam components for collecting, transforming and using data. Sometimes however, there may be custom datasources, transforms and sinks that are needed. To help in these situations there are well defined patterns and integration points that can be used.
 
 Integration is done through standardised RESTful protocols. Services supporting these protocols can be built as micro-services that can be easily connected to Sesam.
 
-As well as writing services from scratch there are also a number of starter service implementations that can be copied and changed. These are open source and can be cloned from the Sesam open source repository.
+As well as writing services from scratch there are also a number of starter service implementations that can be copied and changed. These are open source and can be cloned from the Sesam open source repository. 
 
 Creating a Custom DataSource
 ----------------------------
@@ -112,33 +112,83 @@ To help write datasource components a set of starter templates have been created
 
 The templates that are relevant to building new datasources are:
 
-	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template using the latest version of asp.net 1.0 and .net core 1.0.
+	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template usese asp.net 1.0 and .net core 1.0, and is fully cross platform.
 
-	- The `nodeJS template <https://github.com/sesam-io/nodejs-datasource-template>`_.
+	- The `python template <https://github.com/sesam-io/python-datasource-template>`_. Requires python3 and uses the flask framework.
 
 
 Pushing Data Into The Hub
 -------------------------
 
-An alternative to getting Sesam to pull data is that a client can also push data to the hub.
+An alternative to getting Sesam to pull data is that a client can also push data to the hub. The steps for doing this are quite straight forward.
 
+The first step is to define a push receiver endpoint in Sesam. The * :ref:`HTTP Endpoint Source<sparql_sink>` should be configured to allow the custom service to push JSON data to Sesam. This endpoint supports the * :ref:`json push protocol <json_push_protocol>`. 
+
+An examples would be:
+
+::
+
+	{
+	    "_id": "my-endpoint",
+	    "type": "pipe",
+	    "source": {
+	        "type": "http_endpoint"
+	    }
+	}
+
+
+The the following URL can be used as an endpoint to receive JSON according to the json push protocol.
+
+::
+
+	http://localhost:9042/api/receivers/my-endpoint/entities
+
+
+Once this is configured any custom code, event handler, or queue reader can post data to Sesam. The data will be stored into a dataset called 'my-endpoint'. 
 
 
 Creating a Custom Transform
 ---------------------------
 
+DTL and the other transform types provide support for the majority of data transformation uses cases. However, there are times when a special kind of transform needs to be performed. Typically, this is a transform where some external service should be contacted in order to convert a value. In these cases it is possible to develop a micro-service that can be called synchronously from the transform pipeline.
 
+The custom transform is configured as an * :ref:`http transform <http_transform>`. This is defined as part of the transformation pipeline of a pipe. 
 
+The service that data is sent to as part of this transform is where the custom code should reside. To help build these transforms template projects for common languages are provided.
+
+The following templates are available:
+
+	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template usese asp.net 1.0 and .net core 1.0, and is fully cross platform.
+
+	- The `python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires python3 and uses the flask framework.
+
+The transform will stream an array of Json objects to the registered endpoint and expect back a list of entities.
+
+The result of the HTTP transform is passed along the transformation pipeline and into the sink.
 
 
 Creating a Custom Data Sink
 ---------------------------
 
+The last extension point is the ability to create custom sinks. These are not sinks that run in the sesam service but are micro-services to which a generic json push sink can send data. 
+
+To set up a custom sink a micro-service that implements the * :ref:`json push protocol <json_push_protocol>` should be developed and running. 
+
+Once this is running it is possible to define a pipe in Sesam where the sink is a JSON Push Sink. All data read from the pipe will be pushed to the sink. 
+
+Sinks can be used to sit in front of legacy systems for no Sesam adaptor exists. The main job of these sinks is to make the legacy system appear to be idempotent.
+
+To help build these transforms template projects for common languages are provided.
+
+The following templates are available:
+
+	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-sink-template>`_.  This template usese asp.net 1.0 and .net core 1.0, and is fully cross platform.
+
+	- The `python template <https://github.com/sesam-io/python-sink-template>`_. Requires python3 and uses the flask framework.
 
 
 
-Using the start templates
--------------------------
+
 
 
 
