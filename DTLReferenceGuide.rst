@@ -792,25 +792,24 @@ Comparisons
        | The source entity's ``age`` field must have a value less
          than or equal 42.
 
-   * - ``empty``
+   * - ``is-empty``
      - | *Arguments:* value-expression{1}
        |
        | Coerces the values returned from the value expressions into
          list. Returns *true* if the number of elements in the first
          argument is 0.
-     - | ``["empty", "_S.hobbies"]``
+     - | ``["is-empty", "_S.hobbies"]``
        |
        | Returns true of the source entity's ``hobbies`` field is
          empty (has no values).
 
-
-   * - ``not-empty``
+   * - ``is-not-empty``
      - | *Arguments:* value-expression{1}
        |
        | Coerces the values returned from the value expressions into
          list. Returns *true* if the number of elements in the first
          argument is greater than 0.
-     - | ``["not-empty", "_S.hobbies"]``
+     - | ``["is-not-empty", "_S.hobbies"]``
        |
        | Returns true of the source entity's ``hobbies`` field is not
          empty (has one or more values).
@@ -973,7 +972,7 @@ Data Types
        |
        | ``["integer", ["string", "_."], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345]. The URI value and the string float value
+       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345]. The URI value and the non-integer string value
        | are replaced with the their respective string casts.
 
    * - ``is-integer``
@@ -1020,11 +1019,42 @@ Data Types
        |
        | ``["is-null", ["list", null]]``
        |
-       | Returns true
+       | Returns true.
+       |
+       | ``["is-null", ["list", null, 123]]``
+       |
+       | Returns true. Note that the function only looks at the first value in the list.
        |
        | ``["is-null", ["list", 1, "12345"]]``
        |
-       | Returns false
+       | Returns false.
+
+   * - ``if-null``
+     - | *Arguments:*
+       |   VALUE(value-expression{1})
+       |   FALLBACK-VALUE(value-expression{1})
+       |
+       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise FALLBACK-VALUE is returned.
+       |
+     - | ``["if-null", null, 2]``
+       |
+       | Returns 2.
+       |
+       | ``["if-null", 1, 2]``
+       |
+       | Returns 1.
+       |
+       | ``["if-null", ["list", null], 2]``
+       |
+       | Returns 2.
+       |
+       | ``["if-null", ["list", null, 123], 2]``
+       |
+       | Returns 2.
+       |
+       | ``["is-null", ["list", 1, "12345"], 2]``
+       |
+       | Returns [1, "12345"].
 
    * - ``now``
      - | *Arguments:*
@@ -1143,64 +1173,6 @@ Data Types
        |
        | Returns true
 
-   * - ``float``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to floats. If no default value expression is given, values that don't parse
-       | as float values will be silently ignored. If not, the evaluated value from the default expression will be used
-       | as a replacement value.
-       |
-     - | ``["float", "1.0"]``
-       |
-       | Returns one float: 1.0
-       |
-       | ``["float", ["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "3.3", "one"]]``
-       |
-       | Returns a list of floats: [1.0, 2.2, 3.3]. The URI and float string value are ignored.
-       |
-       | ``["float", ["boolean", false], ["list", "1.0", "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
-       |
-       | Returns a list of floats: [1.0, false, 124.4, false]. The URI value and the string value are replaced with the
-       | literal value: false
-       |
-       | ``["float", ["string", "n/a"], ["list", "1.0", "~rhttp://www.bouvet.no/", "124.4"]]``
-       |
-       | Returns a list of floats: [1.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a"
-       |
-       | ``["float", ["string", "_."], ["list", "1.0", "~rhttp://www.bouvet.no/", "2.5"]]``
-       |
-       | Returns a list of floats: [1.0, "http://www.bouvet.no/", 2.5]. The URI value is replaced with its string cast.
-
-   * - ``is-float``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a float literal or if it is a list, that the first element
-       | in the list is a float
-       |
-     - | ``["is-float", 1.0]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", 1.0, "12345"]]``
-       |
-       | Returns true
-       |
-       | ``["is-float", ["list", "1.0", 2.0]]``
-       |
-       | Returns false
-       |
-       | ``["is-float", ["list", ["float", "-1.0"], 1234]]``
-       |
-       | Returns true
-
    * - ``decimal``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -1210,7 +1182,26 @@ Data Types
        | expression is given, values that don't parse as decimal values will be silently ignored. If not, the evaluated
        | value from the default expression will be used as a replacement value.
        |
-     - | ``decimal`` has the exact same usage pattern as ``float``
+     - | ``["decimal", "1.0"]``
+       |
+       | Returns one decimal value: 1.0
+       |
+       | ``["decimal", ["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |
+       | Returns a list of decimal values: [1.0, 2.2]. The URI and non-decimal string value are ignored.
+       |
+       | ``["decimal", ["boolean", false], ["list", "1.0", 2.1, "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the non-decimal string value are replaced with the literal value: false
+       |
+       | ``["decimal", ["string", "n/a"], ["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["decimal", ["string", "_."], ["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value is replaced with its string cast.
 
 
    * - ``is-decimal``
@@ -1220,7 +1211,29 @@ Data Types
        | Boolean function that returns true if value is a decimal literal or if it is a list, that the first element
        | in the list is a decimal
        |
-     - | ``is-decimal`` has the exact same usage pattern as ``is-float``
+     - | ``["is-decimal", 1.0]``
+       |
+       | Returns true.
+       |
+       | ``["is-decimal", ["decimal", "1.23"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-decimal", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", 1.0, "12345"]]``
+       |
+       | Returns true
+       |
+       | ``["is-decimal", ["list", "1.0", 2.0]]``
+       |
+       | Returns false
+       |
+       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
+       |
+       | Returns true
 
 Nested transformations
 ----------------------
