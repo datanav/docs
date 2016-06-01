@@ -792,25 +792,24 @@ Comparisons
        | The source entity's ``age`` field must have a value less
          than or equal 42.
 
-   * - ``empty``
+   * - ``is-empty``
      - | *Arguments:* value-expression{1}
        |
        | Coerces the values returned from the value expressions into
          list. Returns *true* if the number of elements in the first
          argument is 0.
-     - | ``["empty", "_S.hobbies"]``
+     - | ``["is-empty", "_S.hobbies"]``
        |
        | Returns true of the source entity's ``hobbies`` field is
          empty (has no values).
 
-
-   * - ``not-empty``
+   * - ``is-not-empty``
      - | *Arguments:* value-expression{1}
        |
        | Coerces the values returned from the value expressions into
          list. Returns *true* if the number of elements in the first
          argument is greater than 0.
-     - | ``["not-empty", "_S.hobbies"]``
+     - | ``["is-not-empty", "_S.hobbies"]``
        |
        | Returns true of the source entity's ``hobbies`` field is not
          empty (has one or more values).
@@ -1020,11 +1019,15 @@ Data Types
        |
        | ``["is-null", ["list", null]]``
        |
-       | Returns true
+       | Returns true.
+       |
+       | ``["is-null", ["list", null, 123]]``
+       |
+       | Returns true. Note that the function only looks at the first value in the list.
        |
        | ``["is-null", ["list", 1, "12345"]]``
        |
-       | Returns false
+       | Returns false.
 
    * - ``now``
      - | *Arguments:*
