@@ -2269,11 +2269,11 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _databrowser_sink:
 
-The databrowser sink
---------------------
+The Sesam DataBrowser sink
+--------------------------
 
 The databrowser sink writes the entities it is given to a Solr index to be displayed by the Sesam Databrowser
-application. The input entitities are transformed to special Databrowser JSON documents before being sent off for
+application. The input entities are transformed to special Databrowser JSON documents before being sent off for
 indexing.
 
 The configuration looks like:
@@ -2566,8 +2566,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _smsmessage_sink:
 
-The SMS message sink
---------------------
+The SMS message sink (Experimental)
+-----------------------------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
@@ -2587,8 +2587,6 @@ Prototype
         "system": "sms-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-for-body-template",
-        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
-        "body_template_file_property": "id-of-property-for-template-file-name",
         "recipients": "static,comma,separated,list,of,international,phonenumbers",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "from_number": "static-international-phone-number-to-use-as-from-number",
@@ -2983,8 +2981,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _mail_message_sink:
 
-The mail message sink
----------------------
+The Email Message sink (Experimental)
+-------------------------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
@@ -3004,12 +3002,8 @@ Prototype
         "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
-        "body_template_file": "/static/full/file-name/to/jinja-template/on-disk",
-        "body_template_file_property": "id-of-property-for-body-template-filename",
         "subject_template": "static jinja template as a string",
         "subject_template_property": "id-of-property-to-get-as-a-subject-template",
-        "subject_template_file": "/static/full/file-name/to/jinja-template/on-disk",
-        "subject_template_file_property": "id-of-property-for-subject-template-filename",
         "recipients": "static,comma,separated,list,of,email,addresses",
         "recipients_property": "id-of-property-to-get-recipients-from",
         "mail_from": "static@email.address"
@@ -3147,24 +3141,6 @@ In the above example the entities sent to the sink should have at least a single
         "some_other_property": "Some other value"
     }
 
-As for the :ref:`SMS sink <smsmessage_sink>`, you can either supply a subject or body template embedded in the entities you
-write to the sink. You can also reference filenames either in the config or embedded in the entities.
-
-Example of filenames referenced in the config:
-
-::
-
-    {
-        "sink": {
-            "type": "mail",
-            "name": "Send mail messages",
-            "system": "our-smtp-server",
-            "body_template_file": "/path/to/file/bodytemplate.jinja",
-            "subject_template_file": "/path/to/file/subjecttemplate.jinja",
-            "recipients": "foo@bar.com,info@example.com",
-            "mail_from": "all@of.us"
-        }
-    }
 
 The null sink
 -------------
@@ -3732,7 +3708,7 @@ Example configuration
 
 .. _smtp_system:
 
-The SMTP system
+The SMTP system 
 ---------------
 
 The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in
