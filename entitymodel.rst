@@ -91,6 +91,12 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+   * - ``_tracked``
+     - If ``true`` then the entity was added to the dataset by `dependency tracking <concepts.html#dependency-tracking>`_.
+
+       *This field is generated automatically by the dependency tracking.*
+     -
+
 
 Standard types
 ------------------

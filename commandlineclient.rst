@@ -29,7 +29,7 @@ and run it:
    For instance: the MS Windows installer has a checkbox called "Add Python 3.5 to PATH" that you need to check.
 2. Install the sesamclient package with python's package manager "pip". Open a new commandline window and run this command::
 
-   pip3 install sesamclient
+   pip3 install -U sesamclient
 
 The sesam client will now be available on the commandline as "sesam".
 

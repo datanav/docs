@@ -16,7 +16,6 @@ Sesam collects raw data from source systems and stores it in datasets. Data tran
 .. image:: images/datahub.jpg
     :width: 800px
     :align: center
-    :height: 600px
     :alt: Sesam
 
 
@@ -74,7 +73,6 @@ A *dataset source* exposes the entities from the dataset so that they can be str
 .. image:: images/dataset.jpg
     :width: 800px
     :align: center
-    :height: 600px
     :alt: DataSet
 
 
@@ -110,7 +108,6 @@ A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It
 .. image:: images/pipes.jpg
     :width: 800px
     :align: center
-    :height: 350px
     :alt: Generic pipe concept
 
 
@@ -124,7 +121,6 @@ A *datasource* is a component hosted in Sesam that exposes a stream of entities.
 .. image:: images/datasource.png
     :width: 800px
     :align: center
-    :height: 450px
     :alt: Generic pipe concept
 
 Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be a location offset.
@@ -179,7 +175,6 @@ DTL has a simple syntax and model where the user declares how to construct a new
 .. image:: images/dtl.png
     :width: 800px
     :align: center
-    :height: 500px
     :alt: DataSet 
 
 Persisting the results of Transformation

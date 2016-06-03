@@ -1,6 +1,6 @@
-========
+=======================
 Sesam Management Studio
-========
+=======================
 
 .. contents:: Table of Contents
    :depth: 2
@@ -19,7 +19,6 @@ And the home page looks like this:
 .. image:: images/management-studio.jpg
     :width: 800px
     :align: center
-    :height: 600px
     :alt: Sesam
 
 If you are familiar with the Sesam concepts then the UI should be quite intuitive. Contextual help and more documenantion are on the way. 
