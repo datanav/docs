@@ -109,6 +109,7 @@ You can configure the registry by including an entity in your configuration on t
                   "bar_schema": "http://example.com/bar/schema/"
               },
               "prefix_includes": ["dataset1"],
+              "quote_safe_characters": "",
               "prefix_rules": {
                   "id": "bar",
                   "properties": [
@@ -143,8 +144,16 @@ The "prototype" of a RDF registry entry ``entry_id`` look like:
                 "foo", ["some_prop"]
                 "baz", ["**"]
             ]
-        }
+        },
+        "quote_safe_characters": "/æåø",
     }
+
+Note that the ``quote_safe_characters`` is an optional property of the RDF registry entity. If specified, it should
+contains a string of characters that should be excluded from URL quoting when constructing CURIEs. It can also be
+specified on the :ref:`properties to CURIEs transform <properties_to_curies>` where, if specified, will take precedence
+over any value it might have in the RDF registry entry. This property defaults to "/" and would normally not need
+to be changed. A value of "" (the emtpy string) means "quote all characters". See below for more detail on the use of
+this transform.
 
 Prefixes
 ^^^^^^^^
@@ -198,6 +207,9 @@ be assigned to the matching key.
 
 A path expression is a list of strings. The left-most string value is the most specific. ``**`` can be used to denote
 nestedness at an arbitrary depth. ``*`` can be used as a wildcard in the string values themselves.
+
+
+.. _the_properties_to_curie_transform_local:
 
 The property to CURIE transform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1833,7 +1833,9 @@ The properties to CURIEs transform
 
 This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames)
 based on wildcard patterns. It is used primarily when dealing with or preparing to output
-`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data.
+`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data. Note that URL quoting is applied to the property names
+as part of the transform. Also note that by default the path separator character ("/) is not quoted, but the behaviour
+is configurable.
 
 Prototype
 ^^^^^^^^^
@@ -1842,7 +1844,8 @@ Prototype
 
     {
         "type": "properties_to_curies",
-        "rule": "rdf-registry-entry"
+        "rule": "rdf-registry-entry",
+        "quote_safe_characters": "/",
         "id": "optional-id-prefix",
         "properties": [
           "optional_some_prefix", ["optional_some_pattern"]
@@ -1868,6 +1871,15 @@ Properties
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
      -
      - Yes*
+
+   * - ``quote_safe_characters``
+     - String
+     - A string of characters that should be treated as "safe" from URL quoting by the transform. By default this is
+       the slash character ("/").  If this property is set to the empty string (""), all characters of the property name
+       will be URL quoted. This property can also be set at the RDF registry level, but this value will be overridden
+       if set directly on the transform configuration.
+     -
+     -
 
    * - ``id``
      - String
@@ -1929,11 +1941,12 @@ And the input entity:
 ::
 
     {
-        "_id": "2",
+        "_id": "foo/bar",
         "name": "John",
         "born": "1980-01-23",
         "code": "AB32",
         "t_a": "A",
+        "a/b": "A/B",
         "status": {
             "married": True,
             "spouse": "Pam",
@@ -1951,11 +1964,12 @@ The transform will output the following transformed entity:
 ::
 
     {
-        "_id": "<x:2>",
+        "_id": "<x:foo/bar>",
         "<x:name>": "John",
         "<x:born>": "1980-01-23",
         "<x:code>": "AB32",
         "<t:t_a>": "A",
+        "<x:a/b>": "A",
         "<_:status>": {
             "<m:married>": True,
             "<s:spouse>": "Pam",
@@ -1967,6 +1981,31 @@ The transform will output the following transformed entity:
             }
         }
     }
+
+Setting ``quote_safe_characters`` to "" would instead yield:
+
+::
+
+    {
+        "_id": "<x:foo%2Fbar>",
+        "<x:name>": "John",
+        "<x:born>": "1980-01-23",
+        "<x:code>": "AB32",
+        "<t:t_a>": "A",
+        "<x:a%2Fb>": "A",
+        "<_:status>": {
+            "<m:married>": True,
+            "<s:spouse>": "Pam",
+            "<c:code>": 123,
+            "<t:t_b>": {
+                "<t:t_c>": "C",
+                "<s:hello>": "world",
+                "<s:hi>": "bye"
+            }
+        }
+    }
+
+Notice that now "/" has also been URL quoted ("%2F")
 
 .. _uris_to_curies_transform:
 
@@ -2085,6 +2124,9 @@ The transform will output the following compact/"compressed" transformed entity:
             }
         }
     }
+
+
+Note that the transform will not attempt to unquote the remainder elements after the matched prefixes.
 
 The undirected graph transform
 ------------------------------
