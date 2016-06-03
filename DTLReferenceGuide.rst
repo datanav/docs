@@ -1081,11 +1081,11 @@ Data Types
        |
        | ``["datetime", 1438076760123450000]``
        |
-       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z". Note that integer values are treated as nanoseconds since epoch.
+       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z". Note that integer values are treated as nanoseconds since "1970-01-01T00:00:00Z". Negative integer values are interpreted as nanoseconds before that.
        |
        | ``["datetime", ["list", ["now"], ["now"], "hello"]]``
        |
-       | Returns a list of two datetime values which both are the current time: [1, 124, 12345]. The "hello" string is ignored.
+       | Returns a list of two datetime values which both are the current time. The "hello" string is ignored.
        |
        | ``["datetime", ["now"], "hello"]``
        |
@@ -1108,11 +1108,11 @@ Data Types
        |
        | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-datetime", ["list", "1", 2]]``
        |
-       | Returns false
+       | Returns false.
 
    * - ``boolean``
      - | *Arguments:*
@@ -1163,15 +1163,15 @@ Data Types
        |
        | ``["is-boolean", ["list", true, "12345"]]``
        |
-       | Returns true
+       | Returns true.
        |
        | ``["is-boolean", ["list", "True", 2]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
        |
-       | Returns true
+       | Returns true.
 
    * - ``decimal``
      - | *Arguments:*
@@ -1225,15 +1225,15 @@ Data Types
        |
        | ``["is-decimal", ["list", 1.0, "12345"]]``
        |
-       | Returns true
+       | Returns true.
        |
        | ``["is-decimal", ["list", "1.0", 2.0]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
        |
-       | Returns true
+       | Returns true.
 
 Nested transformations
 ----------------------
@@ -1650,7 +1650,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from both sides. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["strip", [" ab ", "cd ", "ef"]]``
+     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``["ab", "cd", "ef"]``.
        |
@@ -1662,7 +1662,7 @@ Strings
        |
        | Returns a stripped version of the source entity's name where whitespace is removed.
        |
-       | ``["strip", "x", ["123xxx", "xx456xx"]]``
+       | ``["strip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "456"]``.
 
@@ -1674,7 +1674,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from the left side. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["lstrip", [" ab ", "cd ", "ef"]]``
+     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``["ab ", "cd ", "ef"]``.
        |
@@ -1687,7 +1687,7 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the left.
        |
-       | ``["lstrip", "x", ["123xxx", "xx456xx"]]``
+       | ``["lstrip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123xxx", "456xx"]``.
 
@@ -1699,7 +1699,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from the right side. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["rstrip", [" ab ", "cd ", "ef"]]``
+     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``[" ab", "cd", "ef"]``.
        |
@@ -1712,7 +1712,7 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the right.
        |
-       | ``["rstrip", "x", ["123xxx", "xx456xx"]]``
+       | ``["rstrip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "xx456"]``.
 
@@ -1760,7 +1760,7 @@ Strings
        |
        | Returns ``foo%20bar``.
        |
-       | ``["url-quote", ["å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
+       | ``["url-quote", ["list", "å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
        |
        | Returns ``["%C3%A5", "foo%20bar]``
 
@@ -1813,11 +1813,11 @@ Values / collections
        |
        | ``["is-list", ["dict", "1", 2]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-list", ["items", ["dict", "1", 2]]]``
        |
-       | Returns true
+       | Returns true.
 
    * - ``first``
      - | *Arguments:*
