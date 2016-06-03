@@ -17,10 +17,10 @@ micro-services that can be easily connected to Sesam.
 As well as writing services from scratch there are also a number of starter service implementations that can be copied
 and changed. These are open source and can be cloned from the Sesam open source repository.
 
-Creating a Custom DataSource
-----------------------------
+Creating a Custom Data Source
+-----------------------------
 
-A DataSource service is one that exposes data from an existing system as a stream of JSON objects over HTTP.
+A data source service is one that exposes data from an existing system as a stream of JSON objects over HTTP.
 Data from the custom service can easily be consumed and written into a Dataset.
 
 The basic requirements on the custom service are very simple. The service must expose a single resource that returns all
@@ -210,6 +210,6 @@ To help build these transforms template projects for common languages are provid
 
 The following templates are available:
 
-	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-sink-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
 
-	- The `python template <https://github.com/sesam-io/python-sink-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+	- The `python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
