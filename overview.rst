@@ -54,8 +54,8 @@ If you don't have a Git client, then you can download the project files as a zip
 The project contains three files:
 
 * ``sesam.conf.json`` is the configuration file.
-* ``customers/customers.json`` contain customer data.
-* ``orders/orders.json`` contain order data.
+* ``customers/customers.json`` contains customer data.
+* ``orders/orders.json`` contains order data.
 
 ::
 
@@ -123,7 +123,7 @@ Now we're serving the ``customers.json`` and ``orders.json`` files through the w
        ]}
   ]
 
-As you you can see, the JSON files all contain arrays of objects, aka :doc:`entities <entitymodel>`.
+As you can see, the JSON files all contain arrays of objects, aka :doc:`entities <entitymodel>`.
 
 Install the ``sesam`` command line tool
 =======================================
@@ -171,7 +171,7 @@ Now that the ``sesam`` tool is installed we can use it to import the configurati
   Read 5 config entities from these config-files:
    sesam.conf.json
 
-The imports the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its `service API <api.html>`_ running at ``http://localhost:9042/api/``. As you can see from the output, five configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are `systems <concepts.html#systems>`_.
+This command imports the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its `service API <api.html>`_ running at ``http://localhost:9042/api/``. As you can see from the output, five configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are `systems <concepts.html#systems>`_.
 
 The configuration file contains two `pipes <concepts.html#pipes>`_ that read data from ``customers.json`` and  ``orders.json``. Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the entities into datasets called ``customers`` and ``orders`` respectively.
 
@@ -188,7 +188,7 @@ If you now look at the Sesam Management Studio you'll now see that there are two
 Let's look at the data
 ======================
 
-When Sesam starts up it reads the configuration file and schedules the pumps. It will then start running the pumps at regular intervals. Use the links below to introspect the datasets and the pipes. Replace ``localhost`` with the hostname of Sesam service instance.
+When pipe configuration is imported into Sesam it will schedule their pumps. It will then start running the pumps at regular intervals. Use the links below to introspect the datasets. Replace ``localhost`` with the hostname of Sesam service instance.
 
 See the contents of the ``customers`` dataset here:
 
@@ -303,7 +303,7 @@ See the contents of the ``orders`` dataset here:
 
 The customer and order data read into Sesam ended up in two datasets, ``customers`` and ``orders``. When entities are written into the dataset some extra metadata properties are added. You can see these in the output above. They all start with and underscore character ("``_``").
 
-* ``_id``: This is the *primary key* of the entity.
+* ``_id``: This is the *primary key* of the entity. It is always a string.
 * ``_deleted``: A boolean flag that says if the entity is deleted or not.
 * ``_hash``: A hash signature value that is generated from the entity data. This hash is used to find out if the entity has changed or not. When writing to a dataset only actual changes are written to it, so if the hash is the same then the entity is not updated.
 * ``_ts``: A real-world timestamp saying when the entity was added to the dataset (in milliseconds since January 1st).
@@ -421,7 +421,7 @@ Let's add a new order for the customer with id ``2`` (Maria Hawkins). Open ``ord
      ]}
 
 
-After the ``orders`` pump has run we can then see that the new order has been added to the ``orders``dataset:
+After the ``orders`` pump has run we can then see that the new order has been added to the ``orders`` dataset:
 
 ::
    
@@ -446,7 +446,7 @@ After the ``orders`` pump has run we can then see that the new order has been ad
       }
   ]
 
-What happens next is a little piece of magic. Sesam does something called `dependency tracking <concepts.html#dependency-tracking>`_. It figures out that Maria Hawkins has received a new order, and that her ``customers`` entity must be reprocessed. Dependency tracking adds her existing entity to the head of the dataset with ``_tracked`` property set to ``true``. It is able to do this because it can infer it from the DTL transformation rules in the ``customers-with-orders`` pipe.
+What happens next is a little piece of magic. Sesam does something called `dependency tracking <concepts.html#dependency-tracking>`_. It figures out that Maria Hawkins has received a new order, and that her ``customers`` entity must be reprocessed. Dependency tracking adds her existing ``customers`` entity to the head of the dataset with ``_tracked`` property set to ``true``. It is able to do this because it can infer it from the DTL transformation rules in the ``customers-with-orders`` pipe.
 
 ::
    
@@ -534,12 +534,12 @@ The result of this is then that the entity is processed by the ``customers-with-
       }
   ]
 
-The end result is that Maria Hawkins now have *two* orders. The ``total`` property has also been updated to reflect the fact that there is a new order. Note also that the ``_previous`` property now has a value. It points back to the previous version of the entity. This way Sesam can track the history of entities.
+The end result is that Maria Hawkins now has *two* orders. The ``total`` property has also been updated to reflect the fact that there is a new order. Note also that the ``_previous`` property now has a value. It points back to the previous version of the entity. This way Sesam can track the history of entities.
 
 What to do next?
 ================
 
-First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
+First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the Sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
 
 To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`configuration <configuration>` section details the datasource component types and how to configure them.
 
@@ -547,4 +547,4 @@ If you don't see one here that you need then you can also create your own simple
 
 If you are looking to transform data into new shapes, or validate it against schema rules, please take a look at the different kinds of transforms that can be used in a pipe. :doc:`DTL <DTLReferenceGuide>` is a very powerful language that can reshape, and connect data from multiple datasets. 
 
-Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up sesam to push data to a custom service. 
+Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up Sesam to push data to a custom service. 
