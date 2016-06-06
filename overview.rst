@@ -32,7 +32,7 @@ Now that you have Sesam running, lets start using it.
 Download project files
 ======================
 
-The Sesam service does not yet contain any configuration nor any data, so lets get hold of some. We've prepared a sample project that showcases some of the core features of Sesam. The files are hosted on Github.
+The Sesam service does not yet contain any configuration nor any data, so lets get hold of some. We've prepared a sample project that showcases some of the core features of Sesam. The files are hosted on GitHub.
 
 Check out the project files using ``git``:
 
@@ -171,7 +171,7 @@ Now that the ``sesam`` tool is installed we can use it to import the configurati
   Read 5 config entities from these config-files:
    sesam.conf.json
 
-This command imports the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its `service API <api.html>`_ running at ``http://localhost:9042/api/``. As you can see from the output, five configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are `systems <concepts.html#systems>`_.
+If the configuration file is not valid JSON it will be rejected by the server. This command imports the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its `service API <api.html>`_ running at ``http://localhost:9042/api/``. As you can see from the output, five configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are `systems <concepts.html#systems>`_.
 
 The configuration file contains two `pipes <concepts.html#pipes>`_ that read data from ``customers.json`` and  ``orders.json``. Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the entities into datasets called ``customers`` and ``orders`` respectively.
 
@@ -401,14 +401,10 @@ You can also see the data as it is written to the pipe's sink. These entities ha
 
   `<http://localhost:9042/api/pipes/customers-with-orders/entities>`_
 
-Make your own edits
-===================
+Adding a new order
+==================
 
-You may want to try to do some edits to the data files or the configuration file.
-
-The Sesam service will reload the data files at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. Try editing any of the files and see what happens.
-
-If you edit the configuration file, then you must reimport it.
+The Sesam service will reload the data files at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. If you edit the configuration file, then you must reimport it.
 
 Let's add a new order for the customer with id ``2`` (Maria Hawkins). Open ``orders.json`` in your favourite text editor and add the following at the end of the JSON array:
 
@@ -535,6 +531,147 @@ The result of this is then that the entity is processed by the ``customers-with-
   ]
 
 The end result is that Maria Hawkins now has *two* orders. The ``total`` property has also been updated to reflect the fact that there is a new order. Note also that the ``_previous`` property now has a value. It points back to the previous version of the entity. This way Sesam can track the history of entities.
+
+Pushing data out of Sesam
+=========================
+
+There are two ways that you can get the data out of Sesam. One way is to pull it out yourself by using the Service API. The other way is to have Sesam push it to an external service. In this section we'll set up a Python HTTP server that can accept entities pushed to it. The received entities will be written to individual files in a directory. The project is written in Python3 using the `Flask web framework <http://flask.pocoo.org/>`_. 
+
+First we'll have to checkout the project files using ``git``:
+
+::
+   
+  git clone https://github.com/sesam-io/python-datasink-template
+  cd python-datasink-template
+
+
+If you don't have a Git client, then you can download the project files as a zip-file using ``curl``:
+
+::
+
+  curl -o python-datasink-template.zip https://codeload.github.com/sesam-io/python-datasink-template/zip/master
+  unzip python-datasink-template.zip
+  mv python-datasink-template-master python-datasink-template
+  cd python-datasink-template
+
+Next we'll have to install the project's dependencies:
+
+::
+
+   pip3 install -r service/requirements.txt
+
+Now start up the service:
+
+::
+
+  $ python3 service/datasink-service.py
+   * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+   * Restarting with stat
+   * Debugger is active!
+   * Debugger pin code: 260-787-156
+
+The service is listening on port 5001. Entities pushed to it will be written to the ``./received`` directory.
+
+Next we'll have to define a pipe that reads the ``customers-with-orders`` dataset and writes the entities to a `JSON push sink <configuration.html#the-json-push-sink>`_. Add the following at the end of ``sesam.conf.json``. Replace the ``YOUR-IP_HERE`` token with the IP address of your machine.
+
+::
+   
+      {
+          "_id": "customer-receiver-system",
+          "type": "system:url",
+          "base_url": "http://YOUR-IP-HERE:5001/"
+      },
+      {
+          "_id": "push-customers-with-orders",
+          "type": "pipe",
+          "source": {
+              "type": "dataset",
+              "dataset": "customers-with-orders"
+          },
+          "sink": {
+              "type": "json_push",
+              "system": "customer-receiver-system",
+              "url": "receiver"
+          }
+      }
+
+Save the file and run the following command to import the updated configuration:
+
+::
+   
+  $ sesam import *.conf.json
+  Read 7 config entities from these config-files:
+   sesam.conf.json
+
+If the configuration file is not valid JSON it will be rejected by the server. Within 30 seconds or so you'll see some activity in the service's console:
+
+::
+
+  $ python3 service/datasink-service.py
+   * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+   * Restarting with stat
+   * Debugger is active!
+   * Debugger pin code: 260-787-156
+  Writing entity "1" to file '/private/tmp/python-datasink-template/received/1.json'
+  Writing entity "2" to file '/private/tmp/python-datasink-template/received/2.json'
+  10.1.100.41 - - [06/Jun/2016 08:16:16] "POST /receiver?is_first=true&is_full=true&request_id=1&sequence_id=d5b42172-b193-450a-b1f8-bdae59ee140b HTTP/1.1" 200 -
+  10.1.100.41 - - [06/Jun/2016 08:16:16] "POST /receiver?is_full=true&request_id=2&sequence_id=d5b42172-b193-450a-b1f8-bdae59ee140b&previous_request_id=1&is_last=true HTTP/1.1" 200 -
+
+As you can see, two entities have been pushed to it. Note that even though we have three entities in the ``customers-with-orders`` dataset, we only received two of them. By default the ``dataset`` source will not hand out old versions of entities. If you want all versions of entities pushed, set the ``include_previous_versions`` property to ``true`` on the ``dataset`` source. The ``dataset`` source will by default only hand out incremental changes. If you want all entities to be handed out on every pump run then set the ``supports_since`` property to ``false``. Any changes to ``customers-with-orders`` will be pushed to the service shortly after they appear.
+
+::
+
+  $ ls -l received/
+  -rw-r--r--  1 nobody  wheel  960 Jun  6 08:16 1.json
+  -rw-r--r--  1 nobody  wheel  769 Jun  6 08:16 2.json
+  
+  $ cat received/2.json
+  {
+      "_deleted": false,
+      "_hash": "ded8824e5ec508efc6bbbc036afa052e",
+      "_id": "2",
+      "_previous": 1,
+      "_ts": 1464936772791645,
+      "_updated": 2,
+      "name": "Maria Hawkins",
+      "order_count": 2,
+      "orders": [
+          {
+              "items": [
+                  {
+                      "ean": "978-0195367133",
+                      "price": "~f39.95",
+                      "quantity": 1
+                  }
+              ],
+              "total": "~f39.95"
+          },
+          {
+              "items": [
+                  {
+                      "ean": "978-0295332333",
+                      "price": "~f19.95",
+                      "quantity": 1
+                  }
+              ],
+              "total": "~f19.95"
+          }
+      ],
+      "total": "~f59.90",
+      "type": "customer"
+  }
+
+If you want to learn more about how to extend and integrate with Sesam, see the :doc:`Developer Extension Points <extension-points>` document.
+
+Make your own edits
+===================
+
+You may want to try to do some other edits to the data files or the configuration file yourself. Try editing any of the files and see what happens.
+
+Examples:
+
+* Change the name of "Maria Hawkins" to something else, and see that she gets updated in the ``customers`` and ``customers-with-orders`` datasets, and that we then gets pushed to your service once more.
+* Add a new customer. Then add a new $99 order for that customer. That customer will then get pushed to your service.
 
 What to do next?
 ================
