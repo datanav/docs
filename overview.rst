@@ -603,7 +603,14 @@ Save the file and run the following command to import the updated configuration:
   Read 7 config entities from these config-files:
    sesam.conf.json
 
-If the configuration file is not valid JSON it will be rejected by the server. Within 30 seconds or so you'll see some activity in the service's console:
+If the configuration file is not valid JSON it will be rejected by the server. In the overview page in the Sesam Management Studio you should now see that there are three systems. The new one has an arrow pointing out of the Datahub.
+
+.. image:: images/management-studio.png
+    :width: 800px
+    :align: center
+    :alt: Sesam Management Studio
+
+Within 30 seconds or so you'll see some activity in the service's console:
 
 ::
 

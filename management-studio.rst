@@ -16,11 +16,11 @@ As well as the API and Sesam Client, we also provide a web based UI for managing
 And the home page looks like this:
 
 
-.. image:: images/management-studio.jpg
+.. image:: images/management-studio.png
     :width: 800px
     :align: center
-    :alt: Sesam
+    :alt: Sesam Management Studio
 
-If you are familiar with the Sesam concepts then the UI should be quite intuitive. Contextual help and more documenantion are on the way. 
+If you are familiar with the Sesam concepts then the UI should be quite intuitive. Contextual help and more documentation are on the way.
 
 
