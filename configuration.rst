@@ -1644,9 +1644,7 @@ Transformation Language before writing them to the
        },
        "transform": {
            "type": "dtl",
-           "name": "Join customers with their orders",
-           "dataset": "Northwind:Customers",
-           "transforms": {
+           "rules": {
                "default": [
                    ["copy", "_id"],
                    ["add", "name", "_S.ContactName"],

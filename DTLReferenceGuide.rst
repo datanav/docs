@@ -393,7 +393,7 @@ of the argument. Here are some cardinalites that you'll come across:
    * - ``transforms``
      - | A single transform function, or a list of them.
      - | ``[["add", "type", "person"],``
-       |  ``["copy", ["name", "age"]]]]``
+       |  ``["copy", ["list", "name", "age"]]]]``
        |
        | or
        |
@@ -425,7 +425,7 @@ Transforms
          Note that THEN and ELSE can contain empty lists of transforms.
      - | ``["if", ["eq", "_S.type", "person"], [``
        |      ``["add", "type", "person"],``
-       |      ``["copy", ["name", "age"]]]]``
+       |      ``["copy", ["list", "name", "age"]]]]``
        |
        | If the source entity's ``type`` field is equal ``person`` then apply
          the ``add`` and ``copy`` transforms. There is no else clause given,
@@ -550,7 +550,7 @@ Transforms
        | Copies all properties starting with ``a`` from the source entity to the
          target entity, but not those starting with ``ab``.
        |
-       | ``["copy", ["a*", "b*"], ["ab*", "ba*"]]``
+       | ``["copy", ["list", "a*", "b*"], ["list", "ab*", "ba*"]]``
        |
        | Copies all properties starting with ``a`` or ``b`` from the source entity
          to the target entity, but not those starting with ``ab`` or ``ba``.
