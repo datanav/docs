@@ -123,11 +123,11 @@ A *datasource* is a component hosted in Sesam that exposes a stream of entities.
     :align: center
     :alt: Generic pipe concept
 
-Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a relational data source it might be a datestamp or for a log based source it might be a location offset.
+Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a SQL data source it might be a datestamp or for a log based source it might be a location offset.
 
 Sesam provides a number of out of the box *datasource* types, such as SQL and LDAP. It is also easy for developers to expose a micro-service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
-To help with this there are a number of template projects hosted on our github repository to make this process as easy as possible.
+To help with this there are a number of template projects hosted on our repository GitHub to make this process as easy as possible.
 
 .. _concepts-transforms:
 
@@ -141,7 +141,7 @@ Entities streaming through a pipe can be transformed on their way from the sourc
 Sinks
 =====
 
-A data *sink* is a component that can consume entities fed to them by a pump. The sink has the resposibility to write these entites to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system. 
+A data *sink* is a component that can consume entities fed to them by a pump. The sink has the responsibility to write these entites to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system. 
 
 Several types of data sinks, SQL Sink for example, are available. Using the JSON push sink enables entities to be pushed to custom micro-services or other Sesam service instances.
 

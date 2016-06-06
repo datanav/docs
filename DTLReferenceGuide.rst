@@ -423,17 +423,17 @@ Transforms
        | If CONDITION evaluates to *true* then apply the transforms in THEN.
          If CONDITION evaluates to *false* then apply the transforms in ELSE.
          Note that THEN and ELSE can contain empty lists of transforms.
-     - | ``["if", ["eq", "_S.type", "person"],``
-       |      ``[["add", "type", "person"],``
-       |       ``["copy", ["name", "age"]]]]``
+     - | ``["if", ["eq", "_S.type", "person"], [``
+       |      ``["add", "type", "person"],``
+       |      ``["copy", ["name", "age"]]]]``
        |
        | If the source entity's ``type`` field is equal ``person`` then apply
          the ``add`` and ``copy`` transforms. There is no else clause given,
          which is effectively the same as an empty list with no transforms.
        |
-       | ``["if", ["gt", "_S.age", 18],``
+       | ``["if", ["gt", "_S.age", 18], [``
        |      ``["add", "type", "adult"],``
-       |      ``["add", "type", "child"]]``
+       |      ``["add", "type", "child"]]]``
        |
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
@@ -598,7 +598,8 @@ Transforms
        | Copies the properties of the entities in ``_S.orders`` to the target.
          Merge the property values if the property already exists.
        |
-       | ``["merge-union", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+       | ``["merge-union",``
+       |   ``["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
 
@@ -880,17 +881,19 @@ Data Types
        |
        | Returns one URI.
        |
-       | ``["uri", ["list", "http://www.bouvet.no/", ""http://www.sesam.io/", 12345]]``
+       | ``["uri",``
+       |    ``["list", "http://www.bouvet.no/",``
+       |       ``"http://www.sesam.io/", 12345]]``
        |
-       | Returns a list of two URIs. The number is silently ignored because it is not a string.
+       | Returns a list of two URIs. The number is silently ignored because
+         it is not a string.
 
    * - ``is-uri``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a URI literal or if it is a list, that the first element
-       | in the list is a URI
-       |
+       | Boolean function that returns true if value is a URI literal or if it is
+         a list, that the first element in the list is a URI
      - | ``["is-uri", ["uri", "foo:bar"]]``
        |
        | Returns true.
@@ -924,7 +927,8 @@ Data Types
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a string literal or if it is a list, that the first element
+       | Boolean function that returns true if value is a string literal or if
+         it is a list, that the first element
        | in the list is a string
        |
      - | ``["is-string", "foo:bar"]``
@@ -948,39 +952,44 @@ Data Types
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to integers. If no default value expression is given, values that don't parse
-       | as integers will be silently ignored. If not, the evaluated value from the default expression will be used
-       | as a replacement value.
-       |
+       | Translates all input values to integers. If no default value expression
+         is given, values that don't parse as integers will be silently ignored.
+         If not, the evaluated value from the default expression will be used
+         as a replacement value.
      - | ``["integer", "1"]``
        |
        | Returns one integer: 1.
        |
-       | ``["integer", ["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       | ``["integer",``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
        |
        | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
        |
-       | ``["integer", ["integer", 0], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       | ``["integer", ["integer", 0],``
+       |    ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the string value are replaced with the
-       | literal value 0
+       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
+         string value are replaced with the literal value 0
        |
-       | ``["integer", ["string", "n/a"], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       | ``["integer", ["string", "n/a"],``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value and the string value are replaced with the
-       | literal value "n/a"
+       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
+         and the string value are replaced with the literal value "n/a"
        |
-       | ``["integer", ["string", "_."], ["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       | ``["integer", ["string", "_."],``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345]. The URI value and the non-integer string value
-       | are replaced with the their respective string casts.
+       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
+         The URI value and the non-integer string value are replaced with the
+         their respective string casts.
 
    * - ``is-integer``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is an integer literal or if it is a list, that the first element
-       | in the list is an integer
+       | Boolean function that returns true if value is an integer literal or
+         if it is a list, that the first element in the list is an integer
        |
      - | ``["is-integer", 1]``
        |
@@ -1006,8 +1015,8 @@ Data Types
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is null literal or if it is a list, that the first element
-       | in the list is a null literal.
+       | Boolean function that returns true if value is null literal or if it
+         is a list, that the first element in the list is a null literal.
        |
      - | ``["is-null", null]``
        |
@@ -1023,7 +1032,8 @@ Data Types
        |
        | ``["is-null", ["list", null, 123]]``
        |
-       | Returns true. Note that the function only looks at the first value in the list.
+       | Returns true. Note that the function only looks at the first value
+         in the list.
        |
        | ``["is-null", ["list", 1, "12345"]]``
        |
@@ -1034,7 +1044,8 @@ Data Types
        |   VALUE(value-expression{1})
        |   FALLBACK-VALUE(value-expression{1})
        |
-       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise FALLBACK-VALUE is returned.
+       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise
+         FALLBACK-VALUE is returned.
        |
      - | ``["if-null", null, 2]``
        |
@@ -1064,16 +1075,18 @@ Data Types
        |
      - | ``["now"]``
        |
-       | Returns the current time as a datetime value, e.g. "~t2016-05-13T14:32:00.431Z".
+       | Returns the current time as a datetime value, e.g.
+         "~t2016-05-13T14:32:00.431Z".
 
    * - ``datetime``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to datetime values. If no default value expression is given, values that don't parse
-       | as datetime values will be silently ignored. If not, the evaluated value from the default expression will be used
-       | as a replacement value.
+       | Translates all input values to datetime values. If no default value
+         expression is given, values that don't parse as datetime values will
+         be silently ignored. If not, the evaluated value from the default
+         expression will be used as a replacement value.
        |
      - | ``["datetime", "2015-07-28T09:46:00.12345Z"]``
        |
@@ -1081,22 +1094,27 @@ Data Types
        |
        | ``["datetime", 1438076760123450000]``
        |
-       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z". Note that integer values are treated as nanoseconds since epoch.
+       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z". Note that
+         integer values are treated as nanoseconds since "1970-01-01T00:00:00Z".
+         Negative integer values are interpreted as nanoseconds before that.
        |
        | ``["datetime", ["list", ["now"], ["now"], "hello"]]``
        |
-       | Returns a list of two datetime values which both are the current time: [1, 124, 12345]. The "hello" string is ignored.
+       | Returns a list of two datetime values which both are the current time.
+         The "hello" string is ignored.
        |
        | ``["datetime", ["now"], "hello"]``
        |
-       | Returns the current time as a datetime value, e.g. "~t2016-05-13T14:32:00.431Z". Note that this was created by the function argument.
+       | Returns the current time as a datetime value, e.g.
+         "~t2016-05-13T14:32:00.431Z". Note that this was created by the
+         function argument.
 
    * - ``is-datetime``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a datetime value or if it is a list, that the first element
-       | in the list is a datetime value.
+       | Boolean function that returns true if value is a datetime value or
+         if it is a list, that the first element in the list is a datetime value.
        |
      - | ``["is-datetime", ["now"]]``
        |
@@ -1108,50 +1126,60 @@ Data Types
        |
        | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-datetime", ["list", "1", 2]]``
        |
-       | Returns false
+       | Returns false.
 
    * - ``boolean``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to booleans. If no default value expression is given, values that don't parse
-       | as boolean values will be silently ignored. If not, the evaluated value from the default expression will be used
-       | as a replacement value. String literals are case insensitive, and the supported values are "true" and "false".
-       | null values are evaluated as false.
+       | Translates all input values to booleans. If no default value expression
+         is given, values that don't parse as boolean values will be silently
+         ignored. If not, the evaluated value from the default expression will
+         be used as a replacement value. String literals are case insensitive,
+         and the supported values are "true" and "false". null values are
+         evaluated as false.
        |
      - | ``["boolean", "false"]``
        |
        | Returns one boolean: false.
        |
-       | ``["boolean", ["list", "true", "~rhttp://www.bouvet.no/", "True", false, 1234]]``
+       | ``["boolean",``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |     ``"True", false, 1234]]``
        |
-       | Returns a list of booleans: [true, true, false]. The URI and integer values are ignored.
+       | Returns a list of booleans: [true, true, false]. The URI and integer
+         values are ignored.
        |
-       | ``["boolean", ["boolean", false], ["list", "true", "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
+       | ``["boolean", ["boolean", false],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
        |
-       | Returns a list of booleans: [true, false, false, false]. The URI value and the string value are replaced with the
-       | literal value: false
+       | Returns a list of booleans: [true, false, false, false]. The URI value
+         and the string value are replaced with the literal value: false
        |
-       | ``["boolean", ["string", "n/a"], ["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
+       | ``["boolean", ["string", "n/a"],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
        |
-       | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and the string value are replaced with the
-       | literal value "n/a"
+       | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and
+         the string value are replaced with the literal value "n/a"
        |
-       | ``["boolean", ["string", "_."], ["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
+       | ``["boolean", ["string", "_."],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
        |
-       | Returns a list of booleans: [true, "http://www.bouvet.no/", false]. The URI value is replaced with its string cast.
+       | Returns a list of booleans: [true, "http://www.bouvet.no/", false].
+         The URI value is replaced with its string cast.
 
    * - ``is-boolean``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a boolean literal or if it is a list, that the first element
-       | in the list is a boolean
+       | Boolean function that returns true if value is a boolean literal or if
+         it is a list, that the first element in the list is a boolean
        |
      - | ``["is-boolean", false]``
        |
@@ -1163,53 +1191,63 @@ Data Types
        |
        | ``["is-boolean", ["list", true, "12345"]]``
        |
-       | Returns true
+       | Returns true.
        |
        | ``["is-boolean", ["list", "True", 2]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
        |
-       | Returns true
+       | Returns true.
 
    * - ``decimal``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to decimals (a fractional number with unlimited precision). If no default value
-       | expression is given, values that don't parse as decimal values will be silently ignored. If not, the evaluated
-       | value from the default expression will be used as a replacement value.
+       | Translates all input values to decimals (a fractional number with
+         unlimited precision). If no default value expression is given,
+         values that don't parse as decimal values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value.
        |
      - | ``["decimal", "1.0"]``
        |
        | Returns one decimal value: 1.0
        |
-       | ``["decimal", ["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       | ``["decimal",``
+       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
        |
-       | Returns a list of decimal values: [1.0, 2.2]. The URI and non-decimal string value are ignored.
+       | Returns a list of decimal values: [1.0, 2.2]. The URI and
+         non-decimal string value are ignored.
        |
-       | ``["decimal", ["boolean", false], ["list", "1.0", 2.1, "~rhttp://www.bouvet.no/", "124.4", "FALSE"]]``
+       | ``["decimal", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
        |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the non-decimal string value are replaced with the literal value: false
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-decimal string value are replaced with the literal value: false
        |
-       | ``["decimal", ["string", "n/a"], ["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       | ``["decimal", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
        |
        | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
        | literal value "n/a".
        |
-       | ``["decimal", ["string", "_."], ["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       | ``["decimal", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
        |
-       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value is replaced with its string cast.
+       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+         is replaced with its string cast.
 
 
    * - ``is-decimal``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a decimal literal or if it is a list, that the first element
-       | in the list is a decimal
+       | Boolean function that returns true if value is a decimal literal or
+         if it is a list, that the first element in the list is a decimal
        |
      - | ``["is-decimal", 1.0]``
        |
@@ -1225,15 +1263,15 @@ Data Types
        |
        | ``["is-decimal", ["list", 1.0, "12345"]]``
        |
-       | Returns true
+       | Returns true.
        |
        | ``["is-decimal", ["list", "1.0", 2.0]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
        |
-       | Returns true
+       | Returns true.
 
 Nested transformations
 ----------------------
@@ -1420,7 +1458,8 @@ Entity lookups
        |
        | ``["lookup",``
        |   ``["list", "A", "B"],``
-       |   ``["list", "bar", "baz", "~rsesam:C/foo", "~rsesam:D/quux"]``
+       |   ``["list", "bar", "baz",``
+       |     ``"~rsesam:C/foo", "~rsesam:D/quux"]``
        |
        | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
          ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
@@ -1446,13 +1485,15 @@ URIs
        |   PREFIX(string{1}),
        |   VALUES(value-expression{1})
        |
-     - | Constructs new curies as URI objects based on a the PREFIX and VALUES arguments
+     - | Constructs new curies as URI objects based on a the PREFIX
+         and VALUES arguments
        | ``["curie", "foo", "bar"]``
        |
        | This will produce a URI object with the value "~rfoo:bar"
        | ``["curie", "foo", ["list", "bar", "zoo"]]``
        |
-       | This will produce a list of two URI objects with the values ["~rfoo:bar", "~rfoo:zoo"]
+       | This will produce a list of two URI objects with the
+         values ["~rfoo:bar", "~rfoo:zoo"]
 
    * - ``uri-expand``
      - | *Arguments:*
@@ -1460,11 +1501,13 @@ URIs
        |   ENTITIES(value-expression{1})
        |
      - | Runs the given entities through the prefixing rules and the
-         prefix expansion mapping defined in the node metadata RDF registry. The given entities must have a
-         ``_dataset`` property containing the id of the dataset to which
-         they belong *or* the key to look up the prefixes must be computed by the (optional) FUNCTION argument. The
-         result of the FUNCTION argument will override any ``_dataset`` property on the entity. The id given or
-         computed will be used to locate the prefix rules and prefix expansion mapping within the node RDF registry.
+         prefix expansion mapping defined in the node metadata RDF registry.
+         The given entities must have a ``_dataset`` property containing the
+         id of the dataset to which they belong *or* the key to look up the
+         prefixes must be computed by the (optional) FUNCTION argument. The
+         result of the FUNCTION argument will override any ``_dataset``
+         property on the entity. The id given or computed will be used to locate
+         the prefix rules and prefix expansion mapping within the node RDF registry.
          Note that the result of FUNCTION must be a single string value.
 
        | The main purpose of this function is to prepare entities for
@@ -1501,7 +1544,7 @@ URIs
               "_id": "john_doe",
               "_dataset": "people",
               "name": "John Doe",
-              "employer": "Example org Ltd.",
+              "employer": "Example Ltd.",
               "born": "1973-01-21"
             }
 
@@ -1514,31 +1557,40 @@ URIs
               "_id": "<http://example.org/people/john_doe>",
               "_dataset": "people",
               "<http://example.org/people/name>": "John Doe",
-              "<http://example.org/company/employer>": "Example org Ltd.",
+              "<http://example.org/company/employer>": "Example Ltd.",
               "<http://example.org/born>": "1973-01-21"
             }
 
-       | ``["uri-expand", {"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
+       | ``["uri-expand",``
+       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
        |
        | Returns an URI expanded version of the ``mary`` entity.
        |
-       | ``["uri-expand", ["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
+       | ``["uri-expand",``
+       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
        |
        | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
          dataset, then URI expands them.
-       | ``["uri-expand", ["list", {"_id": "mary", "name": "Mary Jones"}]]``
+       | ``["uri-expand",``
+       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
        |
        | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
          property.
-       | ``["uri-expand", ["string", "people"], {"_id": "mary", "_dataset": "employees", "name": "Mary Jones"}]``
+       | ``["uri-expand", ["string", "people"],``
+       |    ``{"_id": "mary", "_dataset": "employees",``
+       |      ``"name": "Mary Jones"}]``
        |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes registered by the "people" key
-         in the node RDF registry (i.e. the ``_dataset`` value of "employees" is overriden by the computed value)
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "people" key in the node RDF registry (i.e. the
+         ``_dataset`` value of "employees" is overriden by the computed value)
 
-       | ``["uri-expand", ["string", "_.type"], {"_id": "mary", "_dataset": "employees", "type": "person", "name": "Mary Jones"}]``
+       | ``["uri-expand", ["string", "_.type"],``
+       |   ``{"_id": "mary", "_dataset": "employees",``
+       |     ``"type": "person", "name": "Mary Jones"}]``
        |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes registered by the "person" key
-         in the node RDF registry. The ``_dataset`` value of "employees" is overriden by the computed value (based on
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "person" key in the node RDF registry. The ``_dataset``
+         value of "employees" is overriden by the computed value (based on
          the contents of the entity's ``type`` property in this example).
 
 Strings
@@ -1650,7 +1702,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from both sides. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["strip", [" ab ", "cd ", "ef"]]``
+     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``["ab", "cd", "ef"]``.
        |
@@ -1662,7 +1714,7 @@ Strings
        |
        | Returns a stripped version of the source entity's name where whitespace is removed.
        |
-       | ``["strip", "x", ["123xxx", "xx456xx"]]``
+       | ``["strip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "456"]``.
 
@@ -1674,7 +1726,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from the left side. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["lstrip", [" ab ", "cd ", "ef"]]``
+     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``["ab ", "cd ", "ef"]``.
        |
@@ -1687,7 +1739,7 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the left.
        |
-       | ``["lstrip", "x", ["123xxx", "xx456xx"]]``
+       | ``["lstrip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123xxx", "456xx"]``.
 
@@ -1699,7 +1751,7 @@ Strings
        | Returns a version of its input strings where characters in CHARACTERS are removed
          from the right side. Non-string values are ignored. The default value of
          CHARACTERS is all whitespace characters.
-     - | ``["rstrip", [" ab ", "cd ", "ef"]]``
+     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
        |
        | Returns ``[" ab", "cd", "ef"]``.
        |
@@ -1712,7 +1764,7 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the right.
        |
-       | ``["rstrip", "x", ["123xxx", "xx456xx"]]``
+       | ``["rstrip", "x", ["list", "123xxx", "xx456xx"]]``
        |
        | Returns ``["123", "xx456"]``.
 
@@ -1724,7 +1776,8 @@ Strings
        |
        | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
          are ignored.
-     - | ``["replace", "http://", "https://", "http://www.sesam.io/"]``
+     - | ``["replace", "http://", "https://",``
+       |   ``"http://www.sesam.io/"]``
        |
        | Returns ``"https://www.sesam.io/"``.
        |
@@ -1753,14 +1806,17 @@ Strings
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Returns the URL quoted versions of any string or list of strings in the argument list. Any non-strings
-         are ignored and is not returned in the result. Returns either a single string (if the input is a single
+       | Returns the URL quoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
          string literal) or a list (of strings).
      - | ``["url-quote", "foo bar"]``
        |
        | Returns ``foo%20bar``.
        |
-       | ``["url-quote", ["å", 1, 2, ["uri", "http://example.com"], "foo bar"]]``
+       | ``["url-quote",``
+       |   ``["list", "å", 1, 2,``
+       |     ``["uri", "http://example.com"], "foo bar"]]``
        |
        | Returns ``["%C3%A5", "foo%20bar]``
 
@@ -1813,11 +1869,11 @@ Values / collections
        |
        | ``["is-list", ["dict", "1", 2]]``
        |
-       | Returns false
+       | Returns false.
        |
        | ``["is-list", ["items", ["dict", "1", 2]]]``
        |
-       | Returns true
+       | Returns true.
 
    * - ``first``
      - | *Arguments:*
@@ -1854,8 +1910,9 @@ Values / collections
        |   VALUES(value-expression{1})
        |   ITEMS(value-expression{1})
        |
-       | Boolean function that returns true if VALUES exists in ITEMS. If VALUES is a sequence
-         of values, then all VALUES must exist in ITEMS. ITEMS must be a list, If VALUES or ITEMS is empty, then
+       | Boolean function that returns true if VALUES exists in ITEMS.
+         If VALUES is a sequence of values, then all VALUES must exist
+         in ITEMS. ITEMS must be a list, If VALUES or ITEMS is empty, then
          false is returned.
      - | ``["in", "a", ["list", "a", "b", "c"]]``
        |
@@ -1865,11 +1922,13 @@ Values / collections
        |
        | Returns false.
        |
-       | ``["in", ["list", "a", "c"], ["list", "a", "b", "c"]]``
+       | ``["in", ["list", "a", "c"],``
+       |   ``["list", "a", "b", "c"]]``
        |
        | Returns true.
        |
-       | ``["in", ["list", "a", "c", "d"], ["list", "a", "b", "c"]]``
+       | ``["in", ["list", "a", "c", "d"],``
+       |   ``["list", "a", "b", "c"]]``
        |
        | Returns false.
 
@@ -1906,7 +1965,9 @@ Values / collections
        |
        | Returns ``[1, 2, 3, 4]``.
        |
-       | ``["flatten", ["list", ["list", 1, 2], ["list", 3, ["list", 4], 5]]]``
+       | ``["flatten",``
+       |   ``["list", ["list", 1, 2],
+       |     ``["list", 3, ["list", 4], 5]]]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.
        |
@@ -1970,7 +2031,8 @@ Values / collections
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Returns the sum of the numeric values in VALUES. Any non-numeric values are ignored.
+       | Returns the sum of the numeric values in VALUES. Any non-numeric
+         values are ignored.
      - | ``["sum", ["list", 2, 4, 6]]``
        |
        | Returns ``12``.
@@ -2030,7 +2092,8 @@ Values / collections
        |
        | Returns ``[2, 3, 4, 4, 5]``.
        |
-       | ``["sorted", "_.age", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       | ``["sorted", "_.age",``
+       |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 20}, {"age": 30}, {"age": 50}]``.
        |
@@ -2053,7 +2116,8 @@ Values / collections
        |
        | Returns ``[5, 4, 4, 3, 2]``.
        |
-       | ``["sorted-descending", "_.age", ["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       | ``["sorted-descending", "_.age",``
+       |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 50}, {"age": 30}, {"age": 20}]``.
        |
@@ -2099,7 +2163,8 @@ Values / collections
          on them. Returns a dictionary, where the key is the
          group key and the value is the list of values in VALUES that were
          grouped under that key.
-     - | ``["group-by", ["length", "_.], ["list", "phi", "alpha", "rho"]]``
+     - | ``["group-by", ["length", "_.],``
+       |   ``["list", "phi", "alpha", "rho"]]``
        |
        | Returns ``{3: ["phi", "rho"], 5: ["alpha"]}``.
        |
