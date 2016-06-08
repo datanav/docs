@@ -392,12 +392,12 @@ of the argument. Here are some cardinalites that you'll come across:
 
    * - ``transforms``
      - | A single transform function, or a list of them.
-     - | ``[["add", "type", "person"],``
-       |  ``["copy", ["list", "name", "age"]]]]``
+     - | ``["add", "type", "person"]``
        |
        | or
        |
-       | ``["add", "type", "person"]``
+       | ``[["add", "type", "person"],``
+       |  ``["copy", ["list", "name", "age"]]]]``
 
 
 .. _merge_union_function:

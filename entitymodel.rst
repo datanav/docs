@@ -75,8 +75,8 @@ level, so child entities can have them.
 
    * - ``_previous``
      - A pointer back to the previous version of this entity. The
-       value refers to the ``_updated`` field of the previous
-       version. If the field is missing or the value is
+       value refers to the ``_updated`` field of the previous version
+       of the entity. If the field is missing or the value is
        ``null``, then there exists no previous version.
 
        *This field is generated automatically when writing an entity to a dataset.*
@@ -85,14 +85,15 @@ level, so child entities can have them.
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
        the datasource. The value is an integer representing the number
-       of seconds since epoch (January 1st 1970 UTC). This field is
+       of milliseconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
        
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
    * - ``_tracked``
-     - If ``true`` then the entity was added to the dataset by `dependency tracking <concepts.html#dependency-tracking>`_.
+     - If ``true`` then the entity was added to the dataset by
+       `dependency tracking <concepts.html#dependency-tracking>`_.
 
        *This field is generated automatically by the dependency tracking.*
      -
@@ -183,10 +184,10 @@ types that are not recognized will be treated as string values.
      - A base64 encoded binary value.
      - ``"~bAAECAwQF"``
 
-   * - UUID, 
+   * - UUID 
      - A Universally unique identifier formatted as hexadecimal text.
      - ``"~u531a379e-31bb-4ce1-8690-158dceb64be6"``
 
    * - Decimal
-     - A decimal number with arbitray precision.
+     - A decimal number with arbitrary precision.
      - ``"~f12345678901234567890.1234567890"``
