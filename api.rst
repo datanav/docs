@@ -162,3 +162,5 @@ API Reference
              lake.node.webapp.api.status,
              lake.node.webapp.api.logs,
              lake.node.webapp.api.config
+             lake.node.webapp.api.configcheck
+             lake.node.webapp.api.license
