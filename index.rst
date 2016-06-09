@@ -10,6 +10,3 @@ Sesam Data Integration Platform
    Developer Guide <developer-guide>
    Management Studio <management-studio>
    Example <northwind>
-
-
-

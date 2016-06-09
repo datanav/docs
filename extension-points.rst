@@ -40,39 +40,39 @@ Here is an example entity:
 
 ::
 
-	{
-		"_id" : "1",
-		"_deleted" : false,
-		"_updated" : 0
-	}
+    {
+        "_id" : "1",
+        "_deleted" : false,
+        "_updated" : 0
+    }
 
 and another one:
 
 ::
 
-	{
-		"_id" : "e-8786763",
-		"_deleted" : false,
-		"_updated" : "2016-03-03T00:00:00Z"
-	}
+    {
+        "_id" : "e-8786763",
+        "_deleted" : false,
+        "_updated" : "2016-03-03T00:00:00Z"
+    }
 
 A response must expose the entities as a JSON array. The following is a simple example of this:
 
 ::
 
-	[
-		{
-			"_id" : "1",
-			"_deleted" : false,
-			"_updated" : 0
-		},
+    [
+        {
+            "_id" : "1",
+            "_deleted" : false,
+            "_updated" : 0
+        },
 
-		{
-			"_id" : "2",
-			"_deleted" : false,
-			"_updated" : 1
-		}
-	]
+        {
+            "_id" : "2",
+            "_deleted" : false,
+            "_updated" : 1
+        }
+    ]
 
 
 The service can be run anywhere providing that it can be contacted over HTTP from the Sesam Service. To configure Sesam
@@ -87,7 +87,7 @@ Note that in the example below we have set ``supports_since`` to ``true``.
 
 ::
 
-	{
+    {
         "_id": "custom-remote-service",
         "name": "custom remote service",
         "type": "system:url",
@@ -105,19 +105,19 @@ Note that in the example below we have set ``supports_since`` to ``true``.
             "name": "custom-json-source",
             "supports_since" : true,
             "url": "entities"
-	    },
+        },
 
-	    "sink": {
-	        "type": "dataset",
-	        "name": "remote-objects-dataset",
-	        "dataset": "Custom:Objects"
-	    },
+        "sink": {
+            "type": "dataset",
+            "name": "remote-objects-dataset",
+            "dataset": "Custom:Objects"
+        },
 
-	    "pump": {
-	       "type": "datasync",
-	       "name": "custom-datasource-to-dataset-pump",
-	       "schedule_interval": 5
-	    }
+        "pump": {
+           "type": "datasync",
+           "name": "custom-datasource-to-dataset-pump",
+           "schedule_interval": 5
+        }
     }
 
 
@@ -128,9 +128,9 @@ custom service alongside Sesam.
 
 The templates that are relevant to building new datasources are:
 
-	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
 
-	- The `python template <https://github.com/sesam-io/python-datasource-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `python template <https://github.com/sesam-io/python-datasource-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
 
 
 Pushing Data Into The Hub
@@ -146,20 +146,20 @@ An examples would be:
 
 ::
 
-	{
-	    "_id": "my-endpoint",
-	    "type": "pipe",
-	    "source": {
-	        "type": "http_endpoint"
-	    }
-	}
+    {
+        "_id": "my-endpoint",
+        "type": "pipe",
+        "source": {
+            "type": "http_endpoint"
+        }
+    }
 
 
 The the following URL can be used as an endpoint to receive JSON according to the :doc:`JSON push protocol <json-push>`.
 
 ::
 
-	http://localhost:9042/api/receivers/my-endpoint/entities
+    http://localhost:9042/api/receivers/my-endpoint/entities
 
 
 Once this is configured any custom code, event handler, or queue reader can post data to Sesam. The data will be stored
@@ -182,9 +182,9 @@ transforms template projects for common languages are provided.
 
 The following templates are available:
 
-	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
 
-	- The `python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
 
 The transform will stream an array of JSON objects to the registered endpoint and expect back a list of entities.
 
@@ -210,6 +210,6 @@ To help build these transforms template projects for common languages are provid
 
 The following templates are available:
 
-	- The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
 
-	- The `python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.

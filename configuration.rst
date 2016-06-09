@@ -1,6 +1,5 @@
 .. _configuration:
 
-=============================
 Component configuration guide
 =============================
 
@@ -2780,8 +2779,7 @@ Limitations
 Due to the limited JSON datastructure allowed by Solr, there are some restrictions on the form of the entities accepted
 by the sink:
 
-* only "flat" entities are allowed - any child entities must be removed or merged into the root entity before
-being sent to the sink.
+* only "flat" entities are allowed - any child entities must be removed or merged into the root entity before being sent to the sink.
 * Lists properties are supported, but they can only contain a single type of property.
 * Lists cannot contain other lists or entities.
 
@@ -3748,7 +3746,7 @@ Example configuration
 
 .. _smtp_system:
 
-The SMTP system 
+The SMTP system
 ---------------
 
 The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in

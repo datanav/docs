@@ -1966,7 +1966,7 @@ Values / collections
        | Returns ``[1, 2, 3, 4]``.
        |
        | ``["flatten",``
-       |   ``["list", ["list", 1, 2],
+       |   ``["list", ["list", 1, 2],``
        |     ``["list", 3, ["list", 4], 5]]]``
        |
        | Returns ``[1, 2, 3, [4], 5]``.

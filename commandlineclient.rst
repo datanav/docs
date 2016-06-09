@@ -27,7 +27,9 @@ and run it:
 1. Download and install the latest version of python from https://www.python.org/downloads. Depending on your OS, the
    installer might ask you if you want to add python to the machine's executable path. You want to answer yes to this.
    For instance: the MS Windows installer has a checkbox called "Add Python 3.5 to PATH" that you need to check.
-2. Install the sesamclient package with python's package manager "pip". Open a new commandline window and run this command::
+2. Install the sesamclient package with python's package manager "pip". Open a new commandline window and run this command
+
+::
 
    pip3 install -U sesamclient
 
@@ -37,7 +39,9 @@ The sesam client will now be available on the commandline as "sesam".
 Commands overview
 =================
 The most important thing to know is the "help" option (-h), which is available for the commandline client as a whole, and
-for individual commands::
+for individual commands
+
+::
 
     sesam -h
 
@@ -49,7 +53,9 @@ This will print out detailed usage instructions. This information is also availa
 the :ref:`commandline-client-reference` part of this document.
 
 
-The most important commands are::
+The most important commands are
+
+::
 
    sesam get-pipes
 
