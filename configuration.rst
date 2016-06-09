@@ -3292,13 +3292,14 @@ communication protocol settings and so on.
 
 .. _sql_system:
 
-The SQL system
---------------
+The SQL systems
+---------------
 
-The SQL system component represents a RDBMS and contains the necessary information to establish a connection
-to the RDBMS and manage these connections among the sources that read from it. The configuration of the sql
-system should be made available before any sources that use it. It can also provide source configurations for reading
-from all tables it can introspect from the RDBMS schema.
+The SQL system components represents a RDBMS and contains the necessary information to establish a connection
+to the RDBMS and manage these connections among the sources that read from it. It can also provide source
+configurations for reading from all tables it can introspect from the RDBMS schema.
+
+The common properties for all SQL systems are:
 
 Prototype
 ^^^^^^^^^
@@ -3307,14 +3308,9 @@ Prototype
 
     {
         "_id": "sql_system_id",
-        "type": "system:sql",
+        "type": "system:oracle|oracle_tns|mssql|mysql",
         "name": "The Foo Database",
-        "dbtype": "oracle|oracle_tns|mssql|mysql|sqlite",
-        "username":"username",
-        "password":"secret",
-        "host":"host-name-or-ip",
-        "port": 1234,
-        "database": "name-of-database",
+        "db-type-specific-property":"some-value",
         "timezone": "UTC",
         "pool_size": 10,
         "pool_timeout": 30,
@@ -3333,45 +3329,6 @@ Properties
      - Description
      - Default
      - Req
-
-   * - ``dbtype``
-     - String
-     - A string enum denoting the type of database to connect to. Sesam currently supports SQLite, Oracle, MS SQL Server
-       and MySQL databases. The identifiers are "sqlite", "oracle", "oracle_tns", "mssql" and "mysql" respectively.
-     -
-     - Yes
-
-   * - ``username``
-     - String
-     - Username to use when connecting to the database.
-     -
-     - Yes
-
-   * - ``password``
-     - String
-     - Password to use when connecting to the database.
-     -
-     - Yes
-
-   * - ``host``
-     - String
-     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric. Note that this property is not
-       required when the "oracle_tns" ``dbtype`` is specified.
-     -
-     - Yes*
-
-   * - ``port``
-     - Integer
-     - Database IP port. Note that this property is not required when the "oracle_tns" ``dbtype`` is specified.
-     -
-     - Yes*
-
-   * - ``database``
-     - String
-     - Name/id of database to connect to. Note that when the "oracle_tns" ``dbtype`` is specified, this property should
-       contain the entire TNS record for the connection.
-     -
-     - Yes
 
    * - ``timezone``
      - String
@@ -3401,20 +3358,76 @@ Properties
      - 10
      -
 
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
+The specific SQL systems available are:
 
-Example SQL Lite configuration:
+.. _oracle_system:
+
+The Oracle system
+-----------------
+
+The Oracle SQL system represents a Oracle RDBMS available on the internet:
+
+Prototype
+^^^^^^^^^
 
 ::
 
     {
-        "_id": "northwind_db",
-        "name": "Northwind example database",
-        "type": "system:sql",
-        "dbtype": "sqlite",
-        "database": "/lake/exampledata/Northwind.db"
+        "_id": "sql_system_id",
+        "type": "system:oracle",
+        "name": "The Oracle Database",
+        "username":"username-here",
+        "password":"secret",
+        "host":"fqdn-or-ip-address-here",
+        "port": 1521,
+        "database": "database-name"
     }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port.
+     - 1521
+     -
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 Example Oracle configuration:
 
@@ -3423,14 +3436,68 @@ Example Oracle configuration:
     {
         "_id": "oracle_db",
         "name": "Oracle test database",
-        "type": "system:sql",
-        "dbtype": "oracle",
+        "type": "system:oracle",
         "username": "system",
         "password": "oracle",
         "host": "oracle",
-        "port": 1521,
         "database": "XE"
     }
+
+
+.. _oracle_tns_system:
+
+The Oracle TNS system
+---------------------
+
+The Oracle SQL system represents a Oracle RDBMS configured using a `TNS name <http://www.orafaq.com/wiki/Tnsnames.ora>`_
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "sql_system_id",
+        "type": "system:oracle_tns",
+        "name": "The Oracle Database",
+        "username":"username-here",
+        "password":"secret",
+        "tns_name": "tns-name-here"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``tns_name``
+     - String
+     - A fully qualified `Oracle TNS name <http://www.orafaq.com/wiki/Tnsnames.ora>`_
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 Example Oracle TNS configuration:
 
@@ -3439,12 +3506,81 @@ Example Oracle TNS configuration:
     {
         "_id": "oracle_db",
         "name": "Oracle test database",
-        "type": "system:sql",
-        "dbtype": "oracle_tns",
+        "type": "system:oracle_tns",
         "username": "system",
         "password": "oracle",
-        "database": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
+        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
     }
+
+
+.. _mssql_system:
+
+The MSSQL system
+----------------
+
+The MSSQL system represents a Microsoft SQL Server available over the internet:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "sql_system_id",
+        "type": "system:mssql",
+        "name": "The Microsoft SQL Server Database",
+        "username":"username-here",
+        "password":"secret",
+        "host":"fqdn-or-ip-address-here",
+        "port": 1433,
+        "database": "database-name"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port.
+     - 1433
+     -
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
 
 Example MS SQL Server configuration:
 
@@ -3453,11 +3589,95 @@ Example MS SQL Server configuration:
     {
         "_id": "sqlserver_db",
         "name": "MS SQL Server test database",
-        "type": "system:sql",
+        "type": "system:mssql",
         "username": "user",
         "password": "password",
         "host": "localhost",
         "port": 1433,
+        "database": "testdb"
+    }
+
+.. _mysql_system:
+
+The MySQL system
+----------------
+
+The MySQL system represents a MySQL database available over the internet:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "sql_system_id",
+        "type": "system:mysql",
+        "name": "The MySQL Database",
+        "username":"username-here",
+        "password":"secret",
+        "host":"fqdn-or-ip-address-here",
+        "port": 3306,
+        "database": "database-name"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port.
+     - 3306
+     -
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Example MySQL configuration:
+
+::
+
+    {
+        "_id": "sqlserver_db",
+        "name": "MySQL test database",
+        "type": "system:mysql",
+        "username": "user",
+        "password": "password",
+        "host": "localhost",
+        "port": 3306,
         "database": "testdb"
     }
 
