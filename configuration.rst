@@ -1,5 +1,6 @@
 .. _configuration:
 
+=============================
 Component configuration guide
 =============================
 
