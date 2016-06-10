@@ -2472,7 +2472,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "json_push",
+        "type": "json",
         "system": "url-system-id",
         "url": "url-to-http-endpoint"
     }
@@ -2519,7 +2519,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "json_push",
+            "type": "json",
             "name": "Local JSON push service sink",
             "url": "http://localhost:9042/api/receivers/foo/entities"
         }
@@ -2541,7 +2541,7 @@ Prototype
 
     {
         "name": "Name of sink",
-        "type": "sdshare_push",
+        "type": "sdshare",
         "system":"url-system-id",
         "url": "url-to-http-endpoint",
         "graph": "uri-of-graph-to-post-to",
@@ -2598,7 +2598,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "sdshare_push",
+            "type": "sdshare",
             "name": "Local SDShare push service sink",
             "url": "http://localhost:8001/sdshare_push_service",
             "prefix_includes": ["dc", "foaf", "geo"]

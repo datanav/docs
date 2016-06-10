@@ -589,7 +589,7 @@ Next we'll have to define a pipe that reads the ``customers-with-orders`` datase
               "dataset": "customers-with-orders"
           },
           "sink": {
-              "type": "json_push",
+              "type": "json",
               "system": "customer-receiver-system",
               "url": "receiver"
           }

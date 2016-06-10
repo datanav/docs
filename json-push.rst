@@ -13,7 +13,7 @@ endpoint. It supports splitting up the data into smaller batches, so
 that not all the data have to be sent in a single request.
 
 The protocol is supported by the ``http_endpoint`` source and the
-``json_push`` sink.
+``json`` sink.
 
 Requests
 --------
