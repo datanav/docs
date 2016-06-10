@@ -2922,7 +2922,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "sink": {
             "name": "Sink for inserting Fylke data into a remove triplestore",
             "type": "sparql",
-            "url": "http://virtuoso-itest.cloudapp.net:8890/sparql",
+            "url": "http://virtuoso.example.com:8890/sparql",
             "graph": "http://example.com/fylketest",
             "do_diff": true,
             "write_sdshare_updated": true,
