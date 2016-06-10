@@ -4022,15 +4022,16 @@ Properties
 
    * - ``username``
      - String
-     - The username to use when authenticating with the ``HTTP server``. If not set, no authentication is attempted.
+     - The username to use when authenticating with the ``HTTP server``. Note that you also have to specify
+       authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
      -
      -
 
    * - ``password``
      - String
-     - The password to use if ``username`` is set. It is mandatory if the ``username`` is provided.
+     - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
      -
-     - Yes
+     - Yes*
 
    * - ``verify_ssl``
      - Boolean
@@ -4041,8 +4042,10 @@ Properties
 
    * - ``authentication``
      - String
-     - What kind of authentication protocol to use when ``username`` is set. The default is basic authentication.
-     - "basic"
+     - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
+       authentication. No authentication set means means any ``username`` or ``password`` set will be ignored.
+       Allowed values is either "basic" or "digest".
+     -
      -
 
 Example configuration
