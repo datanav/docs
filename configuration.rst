@@ -568,11 +568,12 @@ Properties
      -
 
    * - ``query``
-     - String
+     - List<String> or String
      - Must be a valid query in the dialect of the ``RDBMS`` represented by the
        ``system`` property. You will also have to configure the primary key(s)
        of the query in the ``primary_key`` property. Note: mutually exclusive with the
-       ``table`` property with ``table`` taking precedence. TODO: are queries case sensitive?
+       ``table`` property with ``table`` taking precedence. If a list of strings is given, they will be
+       converted to a single string by concatenation with the newline character.
      -
      - Yes
 
@@ -587,11 +588,12 @@ Properties
      -
 
    * - ``updated_query``
-     - String
+     - List<String> or String
      - If the ``query`` property is set, the ``since`` support must be expressed by a
        full query including any test needed. A single variable binding
        ``:since`` must be included somewhere in the query string - for example
-       "select * from view_name v where v.updates >= :since".
+       "select * from view_name v where v.updates >= :since". If a list of strings is given, they will be
+       converted to a single string by concatenation with the newline character.
      -
      -
 
