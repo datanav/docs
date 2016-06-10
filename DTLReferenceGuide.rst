@@ -1109,6 +1109,58 @@ Data Types
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
 
+   * - ``datetime-parse``
+     - | *Arguments:*
+       |   FORMATSTRING(string{1})
+       |   VALUES(value-expression{})
+       |
+       | Translates all input values to datetime values. The values must be strings
+         matching the format string given. Any values that don't parse as datetime values will
+         be silently ignored.
+       |
+     - | ``["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "2015-07-28T09:46:00.12345Z"]``
+       |
+       | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z".
+       |
+       | ``["datetime-parse", "%d.%m.%Y", "28.07.2015"]``
+       |
+       | Returns one datetime value: "~t2015-07-28T00:00:00Z".
+       |
+       | ``["datetime-parse", "%d.%m.%Y", ["list", "28.07.2015", "01.01.1970"]``
+       |
+       | Returns two datetime values: ["~t2015-07-28T00:00:00Z", "~t1970-01-01T00:00:00Z"]
+       |
+       | The list of supported formatting tokens is:
+       |
+       |   %d - day of the month (01 to 31)
+       |   %e - day of the month (1 to 31)
+       |   %H - hour, using a 24-hour clock (00 to 23)
+       |   %I - hour, using a 12-hour clock (01 to 12)
+       |   %m - month (01 to 12)
+       |   %M - minute
+       |   %p - either am or pm according to the given time value
+       |   %S - second
+       |   %f - Microsecond as a decimal number, zero-padded on the left
+       |   %y - year without a century (range 00 to 99)
+       |   %Y - year including the century
+       |   %% - a literal % character
+
+   * - ``datetime-format``
+     - | *Arguments:*
+       |   FORMATSTRING(string{1})
+       |   VALUES(value-expression{})
+       |
+       | Translates all input datetime values to strings. The strings will be formattet according to the format string.
+         Any values that aren't datetime values will be silently ignored. Note that precision loss is possible since
+         ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
+         microseconds (using the seconds fraction token ``%f``).
+       |
+     - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ", ["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
+       |
+       | Returns one string: "2015-07-28T00:00:00Z".
+       |
+       | See ``datetime-parse`` for the supported tokens in the format string.
+
    * - ``is-datetime``
      - | *Arguments:*
        |   VALUES(value-expression{1})
