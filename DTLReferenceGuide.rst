@@ -12,7 +12,7 @@ DTL Reference Guide
 Introduction
 ============
 
-The Data Transformation Langauge (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets.
+The Data Transformation Language (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets.
 
 Core Concepts
 -------------
@@ -466,6 +466,24 @@ Transforms
          already emitted by ``create`` will not be stopped. If the FILTER argument
          is not given then the filter evaluates to false, so it effectively stops
          the processing of the source entity.
+       .. NOTE::
+
+          If the DTL transform's pipe's sink is a ``dataset`` sink
+          then the ``filter`` function will stop further processing,
+          set the ``_filtered`` property to ``true`` and then emit the
+          entity. For all other sinks the entity is not emitted. The
+          ``dataset`` sink will then delete the entity from the
+          dataset if the entity already exists and it is not already
+          deleted.
+
+          The rationale for this behaviour is so that entities that
+          have previous versions get deleted in the resulting dataset
+          when they no longer pass the filter.
+
+          If you would like to control how deletions happen, then you
+          should not use the ``filter`` function, but instead set the
+          ``_deleted`` property.
+
      - | ``["filter", ["gt", "_S.age", 42]]``
        |
        | Continue processing only if the source entity's age is greater than 42.
@@ -477,6 +495,7 @@ Transforms
        | ``["filter"]``
        |
        | Stop processing.
+       |
 
    * - ``add``
      - | *Arguments:*
@@ -507,12 +526,12 @@ Transforms
      - | ``["default", "age", 26]``
        |
        | Adds the ``age`` property with the value 26 to the target entity, if
-         the propery does not exists.
+         the property does not exists.
        |
        | ``["default", "upper_name", ["upper", "_S.name"]]``
        |
        | Adds the ``upper_name`` property to the target entity, if
-         the propery does not exists.. The value is
+         the property does not exists.. The value is
          the uppercased version of the source entity's ``name`` property.
 
    * - ``remove``
