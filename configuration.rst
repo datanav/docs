@@ -1295,8 +1295,8 @@ Prototype
 ::
 
     {
-        "name": "Name of endpoint",
         "type": "http_endpoint"
+        "prefix_includes": ["optional", "rdf-prefixes", "to", "use", "in", "sdshare"]
     }
 
 Example configuration
@@ -3259,9 +3259,35 @@ Prototype
 ::
 
     {
-        "name": "Name of endpoint",
-        "type": "http_endpoint"
+        "type": "http_endpoint",
+        "prefix_includes": ["prefixes", "to", "include", "in", "sdhare", "feed"]
     }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``prefix_includes``
+     - List<String>
+     - A list of string keys to look up in the instance-wide :ref:`RDF registry <rdf_registry>`. These keys reference
+       objects which contain RDF support structures such as CURIE prefixes (and possibly references to other prefix
+       sets to include).
+       The prefixes collected from the RDF registry will be used to compress full URIs to CURIEs.
+       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
+       The :ref:`common RDF prefixes <built_in_prefixes>` are built-in and you don't have to provide the mapping for it
+       (i.e. RDF, RDFS, OWL etc).
+     -
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3276,7 +3302,6 @@ dataset:
         "_id": "my-entities",
         "type": "pipe",
         "sink": {
-            "name": "My published entities endpoint",
             "type": "http_endpoint"
         }
     }
