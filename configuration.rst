@@ -3656,6 +3656,90 @@ Example MySQL configuration:
         "database": "testdb"
     }
 
+.. _postgresql_system:
+
+The PostgreSQL system
+---------------------
+
+The PostgreSQL system represents a PostgreSQL RDBMS available on the internet:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "sql_system_id",
+        "type": "system:postgresql,
+        "name": "The PostgreSQL Database",
+        "username":"username-here",
+        "password":"secret",
+        "host":"fqdn-or-ip-address-here",
+        "port": 5432,
+        "database": "database-name"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port.
+     - 5432
+     -
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Example PostgreSQL configuration:
+
+::
+
+    {
+        "_id": "postgresql_db",
+        "name": "PostgreSQL test database",
+        "type": "system:postgresql",
+        "username": "user",
+        "password": "pw",
+        "host": "test.postgresql.mydomain.com",
+        "database": "test"
+    }
+
+
 .. _fake_system:
 
 The fake system
