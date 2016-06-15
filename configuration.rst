@@ -220,7 +220,6 @@ Protoype
 ::
 
     {
-        "name": "Name of source",
         "type": "type-of-source",
         "supports_since": false,
         "source_specific": "properties",
@@ -273,7 +272,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "dataset",
         "dataset": "id-of-dataset",
         "supports_since": true,
@@ -342,7 +340,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
         "supports_since": true,
@@ -396,7 +393,6 @@ configuration, which is omitted here for brevity:
 
     {
         "source": {
-            "name": "Customers and orders",
             "type": "union_datasets",
             "datasets": ["northwind:customers", "northwind:orders"],
             "supports_since": true,
@@ -423,7 +419,6 @@ Prototype
 ::
 
    {
-       "name": "Name of source",
        "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
        "strategy": "latest",
@@ -494,7 +489,6 @@ configuration, which is omitted here for brevity:
 
     {
         "source": {
-            "name": "Products with metadata",
             "type": "merge_datasets",
             "datasets": ["products", "products-metadata"],
             "supports_since": true
@@ -516,7 +510,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "system": "id-of-system",
         "table": "name-of-table",
         "primary_key": ["list","of","key","names"],
@@ -699,7 +692,6 @@ Prototype
 ::
 
     {
-       "name": "Name of source",
        "type": "csv",
        "system": "a-valid-url-system-id",
        "url": "url-to-csv-file",
@@ -823,7 +815,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "csv",
-            "name": "Country names from CSV source",
             "url": "http://blog.plsoucy.com/wp-content/uploads/2012/04/countries-20140629.csv",
             "primary_key": "Code",
             "encoding": "iso-8859-1"
@@ -862,7 +853,6 @@ Prototype
 ::
 
     {
-       "name": "Name of source",
        "type": "rdf",
        "system": "url-system-id",
        "url": "url-to-rdf-file",
@@ -915,7 +905,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "rdf",
-            "name": "Metadata about Elvis impersonators",
             "url": "http://www.snee.com/rdf/elvisimp.rdf",
             "format": "xml",
         }
@@ -939,7 +928,6 @@ Prototype
 ::
 
     {
-       "name": "Name of source",
        "type": "sdshare",
        "system": "url-system-id",
        "url": "url-to-sdshare-fragments-feed",
@@ -988,7 +976,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "sdshare",
-            "name": "Metadata about norwegian companies",
             "url": "https://open.sesam.io/sdshare/server/1/fragments/enhetsregisteret"
         }
     }
@@ -1007,7 +994,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "ldap",
         "system": "ldap-system-id",
         "search_base": "*",
@@ -1083,7 +1069,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "ldap",
-            "name": "Bouvet LDAP server data",
             "system": "bouvet_ldap",
             "search_base": "ou=Bouvet,dc=bouvet,dc=no"
         }
@@ -1108,7 +1093,6 @@ Prototype
 ::
 
     {
-       "name": "Name of source",
        "system": "url-system-id",
        "type": "json",
        "url": "url-to-json-file"
@@ -1151,7 +1135,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "json",
-            "name": "Test JSON source via HTTP",
             "url": "https://server.com/sesam/data/test.json",
         }
     }
@@ -1163,7 +1146,6 @@ An example with a local file:
     {
         "source": {
             "type": "json",
-            "name": "Test JSON source via the local FS",
             "url": "/sesam/data/test.json",
         }
     }
@@ -1181,7 +1163,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "metrics"
     }
 
@@ -1194,7 +1175,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "name": "Sesam Metrics"
             "type": "metrics"
         }
     }
@@ -1210,7 +1190,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "empty"
     }
 
@@ -1223,8 +1202,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "source": {
-            "type": "empty",
-            "name": "An empty source",
+            "type": "empty"
         }
     }
 
@@ -1312,7 +1290,6 @@ into the ``my-entities`` dataset:
         "_id": "my-entities",
         "type": "pipe",
         "source": {
-            "name": "My received entities endpoint",
             "type": "http_endpoint"
         }
     }
@@ -1334,7 +1311,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "fake",
         "entities": 1234,
         "system": "fake-system-id",
@@ -1393,7 +1369,6 @@ A source that generates a typical person entity via various `Fake Factory provid
 
     {
         "source": {
-            "name": "Fake people",
             "type": "fake",
             "entities": 100,
             "template": {
@@ -1433,7 +1408,6 @@ entities using a shared pool of ids for the employer id:
         {
             "_id": "employers_employees",
             "type": "system:fake",
-            "name": "Employees and employers system",
             "id_pools": {
                 "employers": {
                     "seed": 1234,
@@ -1447,7 +1421,6 @@ entities using a shared pool of ids for the employer id:
             "name": "Employees",
             "type": "pipe",
             "source": {
-                "name": "Fake employees source",
                 "type": "fake",
                 "system": "employers_employees",
                 "entities": 100,
@@ -1467,7 +1440,6 @@ entities using a shared pool of ids for the employer id:
             "name": "Employers",
             "type": "pipe",
             "source": {
-                "name": "Fake employers source",
                 "type": "fake",
                 "system": "employers_employees",
                 "entities": 100,
@@ -1502,7 +1474,6 @@ Prototype
 ::
 
     {
-        "name": "Name of source",
         "type": "sparql",
         "system": "url-system-id",
         "url": "sparql-endpoint",
@@ -1567,7 +1538,6 @@ configuration, which is omitted here for brevity.
 
     {
         "source": {
-            "name": "SPARQL example",
             "type": "sparql",
             "url": "http://localhost:8890/sparql",
             "fragments_query": [
@@ -2269,7 +2239,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "dataset",
         "dataset": "id-of-dataset"
     }
@@ -2304,7 +2273,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "dataset",
-            "name": "Northwind Customer dataset sink",
             "dataset": "Northwind:Customer",
         }
     }
@@ -2326,7 +2294,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "databrowser",
         "system": "url-system-id",
         "prefix_includes": ["prefix_set1", "prefix_set2"]
@@ -2372,7 +2339,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "databrowser",
-            "name": "Index the Northwind customers",
             "url": "http://localhost:8893/solr/my_index",
             "prefix_includes": ["northwind"]
         }
@@ -2411,7 +2377,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "influxdb",
         "system": "id-of-influxdb-system"
     }
@@ -2445,7 +2410,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "influxdb",
-            "name": "InfluxDB sink",
             "system": "my-influxdb-system"
         }
     }
@@ -2472,7 +2436,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "json",
         "system": "url-system-id",
         "url": "url-to-http-endpoint"
@@ -2521,7 +2484,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "json",
-            "name": "Local JSON push service sink",
             "url": "http://localhost:9042/api/receivers/foo/entities"
         }
     }
@@ -2541,7 +2503,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "sdshare",
         "system":"url-system-id",
         "url": "url-to-http-endpoint",
@@ -2600,7 +2561,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "sdshare",
-            "name": "Local SDShare push service sink",
             "url": "http://localhost:8001/sdshare_push_service",
             "prefix_includes": ["dc", "foaf", "geo"]
         }
@@ -2624,7 +2584,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "sms",
         "system": "sms-system-id",
         "body_template": "static jinja template as a string",
@@ -2718,7 +2677,6 @@ configured earlier:
     {
         "sink": {
             "type": "sms",
-            "name": "Send SMS messages",
             "system": "twilio_service",
             "body_template": "SMS message: {{ message_prop_id }}",
             "recipients": "+4799887766,+4788776655",
@@ -2743,7 +2701,6 @@ An example where the template to use is included in the entity written to the si
     {
         "sink": {
             "type": "sms",
-            "name": "Send SMS messages",
             "system": "twilio_service",
             "body_template_property": "body_template_property_id",
             "recipients": "+4799887766,+4788776655",
@@ -2796,7 +2753,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "databrowser",
         "system": "url-system-id",
         "prefixes": {
@@ -2846,7 +2802,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "sparql",
         "system": "id-of-url-system"
         "graph": "http://uri.of/graph",
@@ -2921,7 +2876,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "name": "Sink for inserting Fylke data into a remove triplestore",
             "type": "sparql",
             "url": "http://virtuoso.example.com:8890/sparql",
             "graph": "http://example.com/fylketest",
@@ -2951,7 +2905,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "sql",
         "system": "id-of-sql-system"
         "primary_key": ["list","of","key","names"],
@@ -3012,7 +2965,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "sql",
-            "name": "SQL sink",
             "system": "my-sql-system",
             "table": "customers"
         }
@@ -3038,7 +2990,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "mail",
         "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
@@ -3162,7 +3113,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "mail",
-            "name": "Send mail messages",
             "system": "our-smtp-server",
             "body_template": "Mail message body: {{ message_prop_id }}",
             "subject_template": "Subject: {{ subject_prop_id }}",
@@ -3195,7 +3145,6 @@ Prototype
 ::
 
     {
-        "name": "Name of sink",
         "type": "null"
     }
 
@@ -3208,8 +3157,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
     {
         "sink": {
-            "type": "null",
-            "name": "Sink that doesn't do anything",
+            "type": "null"
         }
     }
 
@@ -3300,6 +3248,7 @@ dataset:
 
     {
         "_id": "my-entities",
+        "name": "My published entities endpoint",
         "type": "pipe",
         "sink": {
             "type": "http_endpoint"
@@ -4075,8 +4024,8 @@ Example configuration
 
     {
         "_id": "our-smtp-server",
-        "type": "system:smtp",
         "name": "Our SMTP Server",
+        "type": "system:smtp",
         "smtp_server": "localhost",
         "smtp_port": 25,
         "smtp_username": "some-user",
@@ -4145,8 +4094,8 @@ Example configuration
 
     {
         "_id": "our-solr-server",
-        "type": "system:solr",
         "name": "Our Solr Server",
+        "type": "system:solr",
         "smtp_server": "http://localhost:8983/solr/ourdata/",
         "commit_within": 3000,
         "timeout": 60
@@ -4213,8 +4162,8 @@ Example configuration
 
     {
          "_id": "twilio_service",
-         "type": "system:twilio",
          "name": "Twilio Service",
+         "type": "system:twilio",
          "account": "12334567890",
          "token": "ABCD-ADEF-FAA1-1234",
          "max_per_hour": 100000
@@ -4300,8 +4249,8 @@ Example configuration
 
     {
         "_id": "our-http-server",
-        "type": "system:url",
         "name": "Our HTTP Server",
+        "type": "system:url",
         "base_url": "http://our.domain.com/files"
     }
 
@@ -4325,7 +4274,6 @@ Prototype
     {
         "_id": "pump_id",
         "type": "datasync",
-        "name": "My Pipe pump",
         "schedule_interval": 15,
         "cron_expression": "* * * * * *",
         "rescan_run_count": 10,
@@ -4437,7 +4385,6 @@ A scheduled pump running every 30 seconds, no retries or dead letter dataset:
     {
         "pump": {
            "type": "datasync",
-           "name": "My Pipe pump",
            "schedule_interval": 30
        }
     }
@@ -4450,7 +4397,6 @@ dataset. Also max ten consecutive write failures allowed:
     {
         "pump": {
            "type": "datasync",
-           "name": "My Pipe pump",
            "cron_expression": "0 0 0 * * *",
            "max_retries_per_entity": 5,
            "max_consecutive_write_errors": 10,
@@ -4467,7 +4413,6 @@ datasets:
     {
         "pump": {
            "type": "datasync",
-           "name": "My Pipe pump",
            "schedule_interval": 30,
            "rescan_cron_expression": "0 0 * * * *"
        }
@@ -4481,7 +4426,6 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
     {
         "pump": {
            "type": "datasync",
-           "name": "My Pipe pump",
            "cron_expression": "0 0/5 14,18 * * ?"
        }
     }
@@ -4532,18 +4476,15 @@ to this fully expanded pipe configuration:
            "_id": "Northwind:Orders",
            "type": "pipe",
            "source": {
-               "name": "Orders from northwind - source",
                "type": "sql",
                "system": "Northwind",
                "table": "Orders"
            },
            "sink": {
-               "name": "Orders from northwind - sink",
                "type": "dataset",
                "dataset": "Northwind:Orders"
            },
            "pump": {
-               "name": "Orders from northwind - pump",
                "schedule_interval": 15
            }
         }
