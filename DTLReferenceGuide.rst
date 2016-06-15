@@ -2509,3 +2509,51 @@ Math
        | ``["mod", 3, 5]``
        |
        | Returns ``2``.
+
+   * - ``ceil``
+     - | *Arguments:*
+       |   DIGITS(numeric-expression{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and optionally rounds them to the number of DIGITS and then returns the nearest integer
+         that is larger than the value (adjusted for the number of digits specified, default is 0). Non-numeric
+         values are ignored.
+     - | ``["ceil", ["list", 2.2, 4.778, 6]]``
+       |
+       | Returns ``[3, 5, 6]``.
+       |
+       | ``["ceil", 1, ["list", 2.2, 4.778, 6]]``
+       |
+       | Returns ``[2.2, 4.8, 6]``.
+       |
+       | ``["ceil", 2, 2.299]``
+       |
+       | Returns ``2.30``.
+       |
+       | ``["ceil", 2.299]``
+       |
+       | Returns ``3``.
+
+   * - ``floor``
+     - | *Arguments:*
+       |   DIGITS(numeric-expression{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and optionally rounds them to the number of DIGITS and then returns the nearest integer
+         that is lower than the value (adjusted for the number of digits specified, default is 0). Non-numeric
+         values are ignored.
+     - | ``["floor", ["list", 2.2, 4.778, 6]]``
+       |
+       | Returns ``[2, 4, 6]``.
+       |
+       | ``["floor", 1, ["list", 2.2, 4.778, 6]]``
+       |
+       | Returns ``[2.2, 4.7, 6]``.
+       |
+       | ``["floor", 2, 2.299]``
+       |
+       | Returns ``2.29``.
+       |
+       | ``["floor", 2.299]``
+       |
+       | Returns ``2``.
