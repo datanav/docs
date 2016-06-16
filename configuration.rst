@@ -1,8 +1,8 @@
 .. _configuration:
 
-=============================
-Component configuration guide
-=============================
+===========================
+Service Configuration Guide
+===========================
 
 .. contents:: Table of Contents
    :depth: 2
@@ -4261,7 +4261,7 @@ Pumps
 
 Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
 from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The pump is also responsible
-for retrying failed writes of entities and logging its activity. It can also log ultimately failed entities to a "dead letter"
+for retrying failed writes of entities and logging its activity. It can also write ultimately failed entities to a "dead letter"
 dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
 the id "system:pump_execution:<pump_id>". See the :doc:`chapter on the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.

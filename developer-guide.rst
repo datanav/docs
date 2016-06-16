@@ -10,6 +10,8 @@ Developer Guide
    Data Transformation Language (DTL) <DTLReferenceGuide>
    Service API <api>
    Command Line Client <commandlineclient>
-   JSON Push Protocol <json-push>
    Developer Extension Points <extension-points>
+   JSON Push Protocol <json-push>
+   Pump Execution Dataset <pump-execution>
+   Cron Expressions <cron-expressions>
    RDF support <rdf-support>

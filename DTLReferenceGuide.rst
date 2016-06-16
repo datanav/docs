@@ -466,6 +466,7 @@ Transforms
          already emitted by ``create`` will not be stopped. If the FILTER argument
          is not given then the filter evaluates to false, so it effectively stops
          the processing of the source entity.
+
        .. NOTE::
 
           If the DTL transform's pipe's sink is a ``dataset`` sink

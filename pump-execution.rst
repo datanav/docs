@@ -1,4 +1,4 @@
-The pump execution dataset
+The Pump Execution Dataset
 ==========================
 
 .. contents:: Table of Contents
