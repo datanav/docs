@@ -20,7 +20,12 @@ Sesam provides implementations for many types of data sources, including relatio
 Installation
 ------------
 
-`Installation instructions <https://beta.sesam.in/#installation>`_ can be found on the `Sesam Beta website <https://beta.sesam.in/#installation>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
+`Installation instructions <https://portal.sesam.io/>`_ can be found in the `Sesam Portal <https://portal.sesam.io/>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
+
+License
+-------
+
+Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`_.
 
 .. _overview-getting-started:
 
@@ -28,6 +33,8 @@ Getting Started
 ---------------
 
 Now that you have Sesam running, lets start using it.
+
+(This documentation is also available under ``/docs`` in your local installation.)
 
 Download project files
 ======================
