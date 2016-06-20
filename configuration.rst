@@ -3340,7 +3340,7 @@ The specific SQL systems available are:
 The Oracle system
 -----------------
 
-The Oracle SQL system represents a Oracle RDBMS available on the internet:
+The Oracle SQL system represents a Oracle RDBMS available on the network:
 
 Prototype
 ^^^^^^^^^
@@ -3493,7 +3493,7 @@ Example Oracle TNS configuration:
 The MSSQL system
 ----------------
 
-The MSSQL system represents a Microsoft SQL Server available over the internet:
+The MSSQL system represents a Microsoft SQL Server available over the network:
 
 Prototype
 ^^^^^^^^^
@@ -3577,7 +3577,7 @@ Example MS SQL Server configuration:
 The MySQL system
 ----------------
 
-The MySQL system represents a MySQL database available over the internet:
+The MySQL system represents a MySQL database available over the network:
 
 Prototype
 ^^^^^^^^^
@@ -3661,7 +3661,7 @@ Example MySQL configuration:
 The PostgreSQL system
 ---------------------
 
-The PostgreSQL system represents a PostgreSQL RDBMS available on the internet:
+The PostgreSQL system represents a PostgreSQL RDBMS available on the network:
 
 Prototype
 ^^^^^^^^^
