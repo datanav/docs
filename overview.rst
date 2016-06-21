@@ -20,12 +20,12 @@ Sesam provides implementations for many types of data sources, including relatio
 Installation
 ------------
 
-`Installation instructions <https://portal.sesam.io/>`_ can be found in the `Sesam Portal <https://portal.sesam.io/>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
+`Installation instructions <https://portal.sesam.in/>`_ can be found in the `Sesam Portal <https://portal.sesam.in/>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
 
 License
 -------
 
-Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`_.
+Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.in/>`_.
 
 .. _overview-getting-started:
 
@@ -37,9 +37,9 @@ Now that you have Sesam running, lets start using it.
 (This documentation is also available under ``/docs`` in your local installation.)
 
 Pre-Requisites 
---------------
+==============
 
-The following guide assumes you have python 3.5 installed. If you don't have this already installed please visit `https://www.python.org/downloads/`_ and install python 3.5.x for your platform. In the examples below you may need to replace 'python3' with the correct name of the locally installed python executable e.g. on windows this will be just 'python'.
+The following guide assumes you have python 3.5 installed. If you don't have this already installed please visit the `Python Website <https://www.python.org/downloads/>`_ and install python 3.5.x for your platform. In the examples below you may need to replace 'python3' with the correct name of the locally installed python executable e.g. on windows this will be just 'python'.
 
 Also note that we reference the 'unzip' utility. This is a utility on Mac OSX, on windows you may need to install a third party tool, or use a windows explorer to expand the contents of .zip files.
 
