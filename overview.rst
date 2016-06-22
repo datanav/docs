@@ -15,7 +15,7 @@ Entities in the datasets can be processed using the Data Transformation Language
 
 The final piece of Sesam is to deliver data from a dataset to a sink. Sinks are used to write data into target systems or send it to service endpoints.
 
-Sesam provides implementations for many types of data sources, including relational databases and custom JSON streams. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
+Sesam provides implementations for many types of sources, including relational databases and custom JSON streams. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
 
 Installation
 ------------
@@ -812,7 +812,7 @@ What to do next?
 
 First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the Sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems. 
 
-To get more data into the hub take a look at the datasource component types that are natively supported. The :doc:`configuration <configuration>` section details the datasource component types and how to configure them.
+To get more data into the hub take a look at the source component types that are natively supported. The :doc:`configuration <configuration>` section details the source component types and how to configure them.
 
 If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be consumed by Sesam. The documentation on :doc:`developer extension points <extension-points>` has more examples and links to templates for C#, Node.js, Java and Python.
 

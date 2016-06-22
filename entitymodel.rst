@@ -60,7 +60,7 @@ level, so child entities can have them.
      - The sequence of the entity. The value must be either a string
        or an integer value. The value is used to tell the order of the
        entities. The value is meant to be opaque, and should not be
-       parsed or interpreted by other parties than the data source
+       parsed or interpreted by other parties than the source
        that produced it. The ``_updated`` value can be passed through
        to the ``since`` request parameter in HTTP endpoints.
      -
@@ -84,7 +84,7 @@ level, so child entities can have them.
 
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
-       the datasource. The value is an integer representing the number
+       the dataset. The value is an integer representing the number
        of milliseconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
        

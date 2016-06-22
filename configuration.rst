@@ -42,9 +42,9 @@ It should be noted that all ``_id`` property values must be unique across across
 Pipes
 =====
 
-A pipe defines the flow of data from a *datasource* to a *sink* on some schedule as defined by the pump settings.
+A pipe defines the flow of data from a *source* to a *sink* on some schedule as defined by the pump settings.
 Optionally, a pipe may define an ordered list of transforms that are applied to entities as they flow from the
-*datasource* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular
+*source* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular
 or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities
 are transformed on their way to the sink.
 
@@ -155,9 +155,7 @@ Properties
 
    * - ``pump``
      - Object
-     - A configuration object for the :ref:`pump <pump_section>` component of the pipe. If omitted, it
-       defaults to a ``datasync`` pump with its ``source`` and ``sink`` properties set to the
-       respective ``_id`` properties of the source and sink respectively (possibly a computed value).
+     - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
      -
 
@@ -183,7 +181,6 @@ The following example shows a pipe definition that exposes data from a SQL datab
            "dataset": "Northwind:Customers"
        },
        "pump": {
-           "type": "task:datasync",
            "schedule_interval": 30
        }
    }
@@ -263,7 +260,7 @@ Properties
 The dataset source
 ------------------
 
-The dataset source is one of the most commonly used datasources in a Sesam installation. It simply presents a stream of entities from a
+The dataset source is one of the most commonly used sources in a Sesam installation. It simply presents a stream of entities from a
 dataset stored in Sesam. Its configuration is very simple and looks like:
 
 Prototype
@@ -2279,7 +2276,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _databrowser_sink:
 
-The Sesam DataBrowser sink
+The Sesam Databrowser sink
 --------------------------
 
 The databrowser sink writes the entities it is given to a Solr index to be displayed by the Sesam Databrowser
@@ -2295,7 +2292,7 @@ Prototype
 
     {
         "type": "databrowser",
-        "system": "url-system-id",
+        "system": "solr-system-id",
         "prefix_includes": ["prefix_set1", "prefix_set2"]
     }
 
@@ -2739,7 +2736,7 @@ Limitations
 Due to the limited JSON datastructure allowed by Solr, there are some restrictions on the form of the entities accepted
 by the sink:
 
-* only "flat" entities are allowed - any child entities must be removed or merged into the root entity before being sent to the sink.
+* Only "flat" entities are allowed - any child entities must be removed or merged into the root entity before being sent to the sink.
 * Lists properties are supported, but they can only contain a single type of property.
 * Lists cannot contain other lists or entities.
 
@@ -2754,7 +2751,7 @@ Prototype
 
     {
         "type": "databrowser",
-        "system": "url-system-id",
+        "system": "solr-system-id",
         "prefixes": {
           "prefix": "http://expansionsion.com/foo",
           "other_prefix": "http://other.expansionsion.com/bar"
@@ -4123,7 +4120,7 @@ The Solr system
 ---------------
 
 The Solr system represents the information needed to connect to a Solr server for indexing JSON documents. It is used in
-conjunction with the :ref:`solr sink <solr_sink>` or the :ref:`databrowser sink <databrowser_sink>` simks.
+conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink <databrowser_sink>` sinks.
 
 Prototype
 ^^^^^^^^^
@@ -4347,7 +4344,7 @@ Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` 
 from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The pump is also responsible
 for retrying failed writes of entities and logging its activity. It can also write ultimately failed entities to a "dead letter"
 dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
-the id "system:pump_execution:<pump_id>". See the :doc:`chapter on the pump execution dataset <pump-execution>` for more
+the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.
 
 Prototype
@@ -4356,8 +4353,6 @@ Prototype
 ::
 
     {
-        "_id": "pump_id",
-        "type": "datasync",
         "schedule_interval": 15,
         "cron_expression": "* * * * * *",
         "rescan_run_count": 10,
@@ -4452,7 +4447,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
        retryable and not "dead" failed entities in the dataset exceeds this number, the pump will refuse to
        write any more failed entities to the execution dataset and terminate, even if the ``max_retries_per_entity`` or
        ``max_retries_per_entity`` is not reached at that point. This purpose of this property is to limit the size of the
-       pump execution dataset in the case where a target system is unrechable (or misconfigured). The default value (0) effectively
+       pump execution dataset in the case where a target system is unreachable (or misconfigured). The default value (0) effectively
        disables retries for write errors.
      - 0
      -
@@ -4468,7 +4463,6 @@ A scheduled pump running every 30 seconds, no retries or dead letter dataset:
 
     {
         "pump": {
-           "type": "datasync",
            "schedule_interval": 30
        }
     }
@@ -4480,7 +4474,6 @@ dataset. Also max ten consecutive write failures allowed:
 
     {
         "pump": {
-           "type": "datasync",
            "cron_expression": "0 0 0 * * *",
            "max_retries_per_entity": 5,
            "max_consecutive_write_errors": 10,
@@ -4496,7 +4489,6 @@ datasets:
 
     {
         "pump": {
-           "type": "datasync",
            "schedule_interval": 30,
            "rescan_cron_expression": "0 0 * * * *"
        }
@@ -4509,7 +4501,6 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
 
     {
         "pump": {
-           "type": "datasync",
            "cron_expression": "0 0/5 14,18 * * ?"
        }
     }
@@ -4609,5 +4600,5 @@ value must be cleared in order to reprocess already seen entities with the new p
 configuration.
 
 This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the Service API.
 

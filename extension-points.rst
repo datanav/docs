@@ -121,12 +121,12 @@ Note that in the example below we have set ``supports_since`` to ``true``.
     }
 
 
-To help write datasource components a set of starter templates have been created for several languages. Each template
+To help write data source components a set of starter templates have been created for several languages. Each template
 comes with a runnable service that exposes a simple set of in-memory objects as JSON using the protocol described above.
 Each service also comes with a `Dockerfile <https://www.docker.com/>`_ to allow quick packaging and deployment of the
 custom service alongside Sesam.
 
-The templates that are relevant to building new datasources are:
+The templates that are relevant to building new data sources are:
 
     - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
 

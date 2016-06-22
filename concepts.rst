@@ -37,13 +37,13 @@ Sesam produces and consumes streams of data. Each stream contains a number of da
     ]
 
 
-A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a datasource, an optional list of transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data entities from the datasource, push them through any transformations and deliver the results into the sink.
+A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a source, an optional list of transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data entities from the source, push them through any transformations and deliver the results into the sink.
 
-*Datasources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each datasource is connected to a *System*. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the datasource is to convert the underlying data into a uniform representation; JSON. Some datasources offer features additional features such as only exposing the entities that have changed. Different datasources offer different levels of support for change detection.
+*Sources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each source is connected to a *System*. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the source is to convert the underlying data into a uniform representation; JSON. Some sources offer features additional features such as only exposing the entities that have changed. Different sources offer different levels of support for change detection.
 
-Data from a datasource for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
+Data from a source for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
 
-Datasets also act as datasources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
+Datasets also act as sources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
 
 The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks can either be another dataset sink or it can be a sink that connects to a target system.
 
@@ -96,7 +96,7 @@ A *system* is any database or API that could be used as a source of data Sesam o
 
 The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how the node consumes or delivers data.
 
-The other use of the *system* is that it allow configuration that may apply to many *datasource* definitions, e.g. connection strings, to be located and managed in just one place.
+The other use of the *system* is that it allow configuration that may apply to many *source* definitions, e.g. connection strings, to be located and managed in just one place.
 
 .. _concepts-pipes:
 
@@ -116,16 +116,16 @@ A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It
 Sources
 =======
 
-A *datasource* is a component hosted in Sesam that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
+A *source* is a component hosted in Sesam that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
 .. image:: images/datasource.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Some datasources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a SQL data source it might be a datestamp or for a log based source it might be a location offset.
+Some sources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a SQL data source it might be a datestamp or for a log based source it might be a location offset.
 
-Sesam provides a number of out of the box *datasource* types, such as SQL and LDAP. It is also easy for developers to expose a micro-service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
+Sesam provides a number of out of the box *source* types, such as SQL and LDAP. It is also easy for developers to expose a micro-service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
 To help with this there are a number of template projects hosted on our repository GitHub to make this process as easy as possible.
 
@@ -160,7 +160,7 @@ The retry strategy is configurable in several ways and if an end state is reache
 Change tracking
 ===============
 
-Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a datasource and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the datasource was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a datasource it may, if the datasource supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the datasource, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
+Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a source and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the source was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a source it may, if the source supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
 
 
 .. _concepts-dtl:
@@ -180,7 +180,7 @@ DTL has a simple syntax and model where the user declares how to construct a new
 Persisting the results of Transformation
 ========================================
 
-In general DTL is applied to the entities in a dataset and the resulting entities are pushed into a sink that writes to a new dataset. The new dataset is then used as a datasource for sinks that write the data to external systems.
+In general DTL is applied to the entities in a dataset and the resulting entities are pushed into a sink that writes to a new dataset. The new dataset is then used as a source for sinks that write the data to external systems.
 
 Dependency Tracking
 ===================
