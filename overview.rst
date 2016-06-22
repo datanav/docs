@@ -154,6 +154,8 @@ In order to import the configuration file(s) from the command line we'll have to
   ...
   Successfully installed sesamclient-x.y.z
 
+You may need to open a new terminal or cmd prompt for the sesamclient to be available.
+
 Edit the configuration files
 ============================
 
