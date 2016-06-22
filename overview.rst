@@ -42,7 +42,7 @@ Pre-Requisites
 The following guide requires the use of Python 3.5.x/3.4.x, the Sesam client and a Git client.
 
 On Mac OSX
-~~~~~~~~~~
+^^^^^^^^^^
 
 We recommend using HomeBrew to install the pre-requisites. The following sequence can be used to get Python3 and the Sesam client installed.
 
@@ -93,7 +93,7 @@ Git client can be installed from:
 Curl is another utility that is natively available on Mac OSX and Linux. It is available in Powershell, but the command line options may differ. 
 
 On Linux
-~~~~~~~~
+^^^^^^^^
 
 Python 3.4.x or 3.5.x comes as standard on most modern Linux distributions. Ensure this is installed before proceeding -
 consult your distribution documentation for how to do this.
@@ -134,7 +134,7 @@ The git client can usually be installed by the distribution package manager:
   # For other distributions consult the documentation
 
 Running in a python virtual environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can run the sesam client inside a python virtual environment to avoid installing this package globally.
 However, to do this we need to install the ``virtualenv`` package first:
