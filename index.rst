@@ -9,3 +9,4 @@ Sesam Data Integration Platform
    Concepts <concepts>
    Developer Guide <developer-guide>
    Management Studio <management-studio>
+   Known Issues <known-issues>
