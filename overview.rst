@@ -42,7 +42,7 @@ Pre-Requisites
 The following guide requires the use of Python 3.5.x/3.4.x, the Sesam client and a Git client.
 
 On Mac OSX
-----------
+~~~~~~~~~~
 
 We recommend using HomeBrew to install the pre-requisites. The following sequence can be used to get Python3 and the Sesam client installed.
 
@@ -70,7 +70,7 @@ If you need Git it can be installed with:
 
 
 On Windows
-----------
+~~~~~~~~~~
 
 Python can be installed from `Python Website <https://www.python.org/downloads/>`_. Make sure you choose Python 3.5.x. 
 
@@ -93,7 +93,7 @@ Git client can be installed from:
 Curl is another utility that is natively available on Mac OSX and Linux. It is available in Powershell, but the command line options may differ. 
 
 On Linux
---------
+~~~~~~~~
 
 Python 3.4.x or 3.5.x comes as standard on most modern Linux distributions. Ensure this is installed before proceeding -
 consult your distribution documentation for how to do this.
@@ -134,7 +134,7 @@ The git client can usually be installed by the distribution package manager:
   # For other distributions consult the documentation
 
 Running in a python virtual environment
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can run the sesam client inside a python virtual environment to avoid installing this package globally.
 However, to do this we need to install the ``virtualenv`` package first:
@@ -304,7 +304,7 @@ Now that the ``sesam`` tool is installed we can use it to import the configurati
 
 ::
    
-  $ sesam import *.conf.json
+  $ sesam import sesam.conf.json
   Read 5 config entities from these config-files:
    sesam.conf.json
 
@@ -335,7 +335,7 @@ See the contents of the ``customers`` dataset here:
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -380,7 +380,7 @@ See the contents of the ``orders`` dataset here:
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -458,7 +458,7 @@ After a little while, when the datasets are loaded and the ``customers-with-orde
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -558,7 +558,7 @@ After the ``orders`` pump has run we can then see that the new order has been ad
 
 ::
    
-  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool
   [
       ...,
       {
@@ -583,7 +583,7 @@ What happens next is a little piece of magic. Sesam does something called `depen
 
 ::
    
-  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool
   [
       ...,
       {
@@ -604,7 +604,7 @@ The result of this is then that the entity is processed by the ``customers-with-
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool --sort-keys
+  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool
   [
       ...,
       {
@@ -726,7 +726,7 @@ Save the file and run the following command to import the updated configuration:
 
 ::
    
-  $ sesam import *.conf.json
+  $ sesam import sesam.conf.json
   Read 7 config entities from these config-files:
    sesam.conf.json
 
