@@ -39,12 +39,12 @@ Now that you have Sesam running, lets start using it.
 Pre-Requisites 
 ==============
 
-The following guide requires the use of Python 3.5.x, the Sesam client and a Git client.
+The following guide requires the use of Python 3.5.x/3.4.x, the Sesam client and a Git client.
 
 On Mac OSX
 ----------
 
-We recommened using HomeBrew to install the pre-requisites. The following sequence can be used to get Python3 and the Sesam client installed.
+We recommend using HomeBrew to install the pre-requisites. The following sequence can be used to get Python3 and the Sesam client installed.
 
 ::
 
@@ -57,7 +57,7 @@ We recommened using HomeBrew to install the pre-requisites. The following sequen
   # Install Pip
   python3 -m ensurepip
 
-  # Install the Sesam client
+  # Install the sesam client - see note below for how to install and run sesam in a virtual environment instead
   pip3 install -U sesamclient
 
 
@@ -80,6 +80,7 @@ To install the SesamClient run the following:
 
 ::
 
+  # Install the Sesam client - see note below for how to install and run sesam in a virtual environment instead
   pip install -U sesamclient
 
 
@@ -94,22 +95,98 @@ Curl is another utility that is natively available on Mac OSX and Linux. It is a
 On Linux
 --------
 
-Python 3.5.x comes as standard on many Linux distributions. Ensure this is installed before proceeding.
+Python 3.4.x or 3.5.x comes as standard on most modern Linux distributions. Ensure this is installed before proceeding -
+consult your distribution documentation for how to do this.
 
-The sesamclient is installed using Pip. With Python 3.5.x installed the following command can be used to install Pip.
+The sesam client is installed using Pip, the official python package manager.
 
-:: 
-
-  # Install Pip
-  python3 -m ensurepip
-
-
-To install the SesamClient run the following:
+Installing Pip:
 
 ::
 
+  # Install pip on Ubuntu/Debian
+  (sudo) apt-get install python3-pip
+
+::
+
+  # For other linux distributions running the latest python 3.5.x+ you can do:
+  (sudo) python3 -m ensurepip
+
+  # For other linux distributions running python 3.4.x, consult the distribution documentation
+  # for how to install pip
+
+
+To install the sesam client:
+
+::
+
+  # Install the sesam client - see note below for how to install and run sesam in a virtual environment instead
+  (sudo) pip3 install -U sesamclient
+
+
+The git client can usually be installed by the distribution package manager:
+
+::
+
+  # On ubuntu/debian
+  (sudo) apt-get install git
+
+  # For other distributions consult the documentation
+
+Running in a python virtual environment
+---------------------------------------
+
+You can run the sesam client inside a python virtual environment to avoid installing this package globally.
+However, to do this we need to install the ``virtualenv`` package first:
+
+::
+
+  # Linux
+  (sudo) pip3 install virtualenv
+
+  # OSX:
+  pip3 install virtualenv
+
+  # Windows
+  pip install virtualenv
+
+Then navigate to where you want the virtual environment to live and call:
+
+::
+
+  # Linux and OSX
+  virtualenv --python=python3 your-venv-folder
+
+  # Windows
+  virtualenv your-venv-folder
+
+
+Any time you want to use your new virtual environment in a shell prompt, you will need to initialize it:
+
+::
+
+  # Linux and OSX (it will be deactivated when you exit the shell session)
+  source your-venv-folder/bin/activate
+
+
+On windows:
+
+::
+
+  \path\to\your-venv-folder\Scripts\activate
+
+Note that this will work both in CMD and powershell. It will be deactivated if you close your CMD or poweshell session.
+You can call "deactivate" instead to deactivate the virtual environment from within the same CMD or PS shell.
+
+Now you can install the sesam client (and other python packages) into your active virtual environment:
+
+::
+
+  # Linux and OSX
   pip3 install -U sesamclient
 
+  # Windows
+  pip install -U sesamclient
 
 Download project files
 ======================
