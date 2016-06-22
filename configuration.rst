@@ -982,8 +982,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _ldap_source:
 
-The LDAP source
----------------
+The LDAP source (Experimental)
+------------------------------
 
 The LDAP source provides entities from a ``LDAP catalog`` configured by a :ref:`LDAP system <ldap_system>`.
 It supports the following properties:
@@ -2346,8 +2346,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _influxdb_sink:
 
-The InfluxDB sink
------------------
+The InfluxDB sink (Experimental)
+--------------------------------
 
 The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/.
 A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be

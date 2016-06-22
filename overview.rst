@@ -15,7 +15,7 @@ Entities in the datasets can be processed using the Data Transformation Language
 
 The final piece of Sesam is to deliver data from a dataset to a sink. Sinks are used to write data into target systems or send it to service endpoints.
 
-Sesam provides implementations for many types of data sources, including relational databases, LDAP, and MongoDB. It also provides a number of core Sink implementations such as the SQL and HTTP Post sinks.
+Sesam provides implementations for many types of data sources, including relational databases and custom JSON streams. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
 
 Installation
 ------------
@@ -39,11 +39,76 @@ Now that you have Sesam running, lets start using it.
 Pre-Requisites 
 ==============
 
-The following guide assumes you have python 3.5 installed. If you don't have this already installed please visit the `Python Website <https://www.python.org/downloads/>`_ and install python 3.5.x for your platform. In the examples below you may need to replace 'python3' with the correct name of the locally installed python executable e.g. on windows this will be just 'python'.
+The following guide requires the use of Python 3.5.x, the Sesam client and a Git client.
 
-Also note that we reference the 'unzip' utility. This is a utility on Mac OSX, on windows you may need to install a third party tool, or use a windows explorer to expand the contents of .zip files.
+On Mac OSX
+----------
+
+We recommened using HomeBrew to install the pre-requisites. The following sequence can be used to get Python3 and the Sesam client installed.
+
+::
+
+  # Install Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  # Install Python 3
+  brew install python3
+
+  # Install Pip
+  python3 -m ensurepip
+
+  # Install the Sesam client
+  pip3 install -U sesamclient
+
+
+If you need Git it can be installed with:
+
+::
+
+  # Install Git
+  brew install git
+
+
+On Windows
+----------
+
+Python can be installed from `Python Website <https://www.python.org/downloads/>`_. Make sure you choose Python 3.5.x. 
+
+In the examples below you may need to replace 'python3' with the correct name of the locally installed python executable e.g. on Windows this will be just 'python'.
+
+To install the SesamClient run the following:
+
+::
+
+  pip install -U sesamclient
+
+
+Git client can be installed from:
+
+::
+
+  https://desktop.github.com/
 
 Curl is another utility that is natively available on Mac OSX and Linux. It is available in Powershell, but the command line options may differ. 
+
+On Linux
+--------
+
+Python 3.5.x comes as standard on many Linux distributions. Ensure this is installed before proceeding.
+
+The sesamclient is installed using Pip. With Python 3.5.x installed the following command can be used to install Pip.
+
+:: 
+
+  # Install Pip
+  python3 -m ensurepip
+
+
+To install the SesamClient run the following:
+
+::
+
+  pip3 install -U sesamclient
 
 
 Download project files
@@ -56,16 +121,6 @@ Check out the project files using ``git``:
 ::
    
   git clone https://github.com/sesam-io/tutorial sesam-tutorial
-  cd sesam-tutorial/intro
-
-
-If you don't have a Git client, then you can download the project files as a zip-file using ``curl``:
-
-::
-
-  curl -o sesam-tutorial.zip https://codeload.github.com/sesam-io/tutorial/zip/master
-  unzip sesam-tutorial.zip
-  mv tutorial-master sesam-tutorial
   cd sesam-tutorial/intro
 
 The project contains three files:
@@ -141,20 +196,6 @@ Now we're serving the ``customers.json`` and ``orders.json`` files through the w
   ]
 
 As you can see, the JSON files all contain arrays of objects, aka :doc:`entities <entitymodel>`.
-
-Install the ``sesam`` command line tool
-=======================================
-
-In order to import the configuration file(s) from the command line we'll have to install the `sesam command line client <commandlineclient.html>`_ first. It can be installed with the ``pip3 install -U sesamclient`` command (Python3 only).
-
-::
-
-  $ pip3 install -U sesamclient
-  Collecting sesamclient
-  ...
-  Successfully installed sesamclient-x.y.z
-
-You may need to open a new terminal or cmd prompt for the sesamclient to be available.
 
 Edit the configuration files
 ============================
@@ -561,16 +602,6 @@ First we'll have to checkout the project files using ``git``:
 ::
    
   git clone https://github.com/sesam-io/python-datasink-template
-  cd python-datasink-template
-
-
-If you don't have a Git client, then you can download the project files as a zip-file using ``curl``:
-
-::
-
-  curl -o python-datasink-template.zip https://codeload.github.com/sesam-io/python-datasink-template/zip/master
-  unzip python-datasink-template.zip
-  mv python-datasink-template-master python-datasink-template
   cd python-datasink-template
 
 Next we'll have to install the project's dependencies:
