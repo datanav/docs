@@ -4134,6 +4134,8 @@ Prototype
         "url": "http://localhost:8983/solr/",
         "commit_within": null,
         "timeout": 30,
+        "batch_size": 100,
+        "keep_existing_solr_ids": false
     }
 
 Properties
@@ -4166,6 +4168,22 @@ Properties
      - Integer
      - The number of seconds to wait for a response from the Solr server when adding/committing data
      - 30
+     -
+
+   * - ``batch_size``
+     - Integer
+     - The maximum number of documents to post to solr in one http request
+     - 100
+     -
+
+   * - ``keep_existing_solr_ids``
+     - Boolean
+     - This can be set to True in order to try to reuse the existing solr-id of an entity, even if
+       the solr-ids of the entity no longer contains the solr-id that exists on the solr server.
+       The cons of doing this is that it requires a http-request to solr for *each and every*
+       entity, so it is *very* expensive. This option should therefore be set to false in
+       cases where the id-problem is not likely to occur.
+     - true
      -
 
 Example configuration
