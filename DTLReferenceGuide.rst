@@ -1138,7 +1138,9 @@ Data Types
          matching the format string given. Any values that don't parse as datetime values will
          be silently ignored.
        |
-     - | ``["datetime-parse", "%Y-%m-%dT%H:%M:%S.%fZ", "2015-07-28T09:46:00.12345Z"]``
+     - | ``["datetime-parse",``
+       |   ``"%Y-%m-%dT%H:%M:%S.%fZ",``
+       |   ``"2015-07-28T09:46:00.12345Z"]``
        |
        | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z".
        |
@@ -1146,7 +1148,8 @@ Data Types
        |
        | Returns one datetime value: "~t2015-07-28T00:00:00Z".
        |
-       | ``["datetime-parse", "%d.%m.%Y", ["list", "28.07.2015", "01.01.1970"]``
+       | ``["datetime-parse",``
+       |   ``"%d.%m.%Y", ["list", "28.07.2015", "01.01.1970"]``
        |
        | Returns two datetime values: ["~t2015-07-28T00:00:00Z", "~t1970-01-01T00:00:00Z"]
        |
@@ -1160,7 +1163,7 @@ Data Types
        |   %M - minute
        |   %p - either am or pm according to the given time value
        |   %S - second
-       |   %f - Microsecond as a decimal number, zero-padded on the left
+       |   %f - microsecond as a decimal number, zero-padded on the left
        |   %y - year without a century (range 00 to 99)
        |   %Y - year including the century
        |   %% - a literal % character
@@ -1175,7 +1178,8 @@ Data Types
          ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
          microseconds (using the seconds fraction token ``%f``).
        |
-     - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ", ["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
+     - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
        |
        | Returns one string: "2015-07-28T00:00:00Z".
        |
@@ -1192,7 +1196,8 @@ Data Types
        |
        | Returns true.
        |
-       | ``["is-datetime", ["datetime", "2015-07-28T09:46:00.12345Z"]]``
+       | ``["is-datetime",``
+       |   ``["datetime", "2015-07-28T09:46:00.12345Z"]]``
        |
        | Returns true.
        |
@@ -1470,7 +1475,7 @@ Hops
 
        | Join the source entity's ``address`` property with the
          ``Address``'s ``_id`` property, and then the ``Address``'s
-         ``country`` property with``Country``'s ``_id`` property.
+         ``country`` property with ``Country``'s ``_id`` property.
          Filter the addresses by type, so that only shipping and
          billing addresses are included in the result. Return the
          addresses found.

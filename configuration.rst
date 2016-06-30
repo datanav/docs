@@ -4255,10 +4255,7 @@ Example configuration
 The URL system
 --------------
 
-The URL system represents a HTTP server serving requests from a base url. It can also represent local files
-either by just passing in a local path in its ``base_url`` property or using a ``file://`` protocol in the URL.
-It provides session handling, connection pooling and authentication services to sources and sinks which need to
-communicate with a HTTP server.
+The URL system represents a HTTP server serving requests from a base url. It supports the ``http`` and ``https`` protocols. It provides session handling, connection pooling and authentication services to sources and sinks which need to communicate with a HTTP server.
 
 Prototype
 ^^^^^^^^^
@@ -4523,9 +4520,12 @@ encountered usecase, we have condensed the information needed into a single url-
     [
         {
            "_id": "Northwind",
-           "type": "system:sql",
-           "name": "Northwind SQLite database",
-           "connection_string": "sqlite:///lake/exampledata/Northwind.db"
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
         },
         {
            "_id": "Northwind:Orders",
@@ -4544,8 +4544,12 @@ to this fully expanded pipe configuration:
     [
         {
            "_id": "Northwind",
-           "type": "system:sql",
-           "connection_string": "sqlite:///lake/exampledata/Northwind.db"
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
         },
         {
            "_id": "Northwind:Orders",
@@ -4574,9 +4578,12 @@ changing the pump schedule and startup flag:
     [
         {
            "_id": "Northwind",
-           "type": "system:sql",
-           "name": "Northwind SQLite database",
-           "connection_string": "sqlite:///lake/exampledata/Northwind.db"
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
         },
         {
            "_id": "Northwind:Orders",

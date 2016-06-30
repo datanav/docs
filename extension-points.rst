@@ -8,7 +8,7 @@ Developer Extension Points
    :local:
 
 There are many native Sesam components for collecting, transforming and using data. Sometimes however, there may be
-custom :ref:`datasources <source_section>`, :ref:`transforms <transform_section>` and :ref:`sinks <sink_section>` that
+custom :ref:`data sources <source_section>`, :ref:`transforms <transform_section>` and :ref:`sinks <sink_section>` that
 are needed. To help in these situations there are well defined patterns and integration points that can be used.
 
 Integration is done through standardised RESTful protocols. Services supporting these protocols can be built as
@@ -128,9 +128,11 @@ custom service alongside Sesam.
 
 The templates that are relevant to building new data sources are:
 
-    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `python template <https://github.com/sesam-io/python-datasource-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-datasource-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+
+    - The `Java template <https://github.com/sesam-io/java-datasource-template>`_. Requires Java 8 and uses the `Spark <http://sparkjava.com/>`_ micro framework.
 
 
 Pushing Data Into The Hub
@@ -182,9 +184,9 @@ transforms template projects for common languages are provided.
 
 The following templates are available:
 
-    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `ASP.NET template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
 The transform will stream an array of JSON objects to the registered endpoint and expect back a list of entities.
 
@@ -210,6 +212,6 @@ To help build these transforms template projects for common languages are provid
 
 The following templates are available:
 
-    - The `asp.net 1.0 template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses asp.net 1.0 and .net core 1.0, and is fully cross platform.
+    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
