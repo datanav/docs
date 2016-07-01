@@ -2906,7 +2906,8 @@ Prototype
         "system": "id-of-sql-system"
         "primary_key": ["list","of","key","names"],
         "table": "name-of-table",
-        "schema": "default-schema-name-if-included"
+        "schema": "default-schema-name-if-included",
+        "batch_size": 100
     }
 
 Properties
@@ -2950,6 +2951,11 @@ Properties
        Do *not* use schema names in the ``table`` property.
      -
      -
+
+   * - ``batch_size``
+     - Integer
+     - The maximum number of rows to insert into the database table in one operation
+     - 100
 
 
 Example configuration
