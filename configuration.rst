@@ -2907,6 +2907,7 @@ Prototype
         "primary_key": ["list","of","key","names"],
         "table": "name-of-table",
         "schema": "default-schema-name-if-included",
+        "blacklist": ["columns","to","exclude"],
         "batch_size": 100
     }
 
@@ -2956,6 +2957,12 @@ Properties
      - Integer
      - The maximum number of rows to insert into the database table in one operation
      - 100
+
+   * - ``blacklist``
+     - List<String>
+     - The names of the columns to exclude from the generated entities.
+     -
+     -
 
 
 Example configuration
