@@ -450,7 +450,7 @@ Transforms
          the ``add`` and ``copy`` transforms. There is no else clause given,
          which is effectively the same as an empty list with no transforms.
        |
-       | ``["if", ["gt", "_S.age", 18], ``
+       | ``["if", ["gt", "_S.age", 18],``
        |      ``["add", "type", "adult"],``
        |      ``["add", "type", "child"]]``
        |
@@ -1475,37 +1475,65 @@ Hops
 
    * - ``hops``
      - | *Arguments:*
-       |   HOPS_SPEC(dict{1})
+       |   HOPS_SPEC(dict{>1})
        |
        | The HOPS_SPEC is a dictionary that takes the following keys:
 
        1. ``datasets``: A list of strings with the dataset id
           whitespace separated by the dataset alias. The database
-          aliases can be referenced in the ``where`` clause.
+          aliases can be referenced in the ``where`` clause. The list
+          must contain at least one element.
 
        2. ``where``: An expression or a list of expressions. If it is
           a list, then the expressions in the list will be wrapped
           with the ``and`` function. The expressions are then
           evaluated to perform the joins.
 
-       3. ``return``: OPTIONAL. A string, or an expression, or not
+       3. ``recurse``: OPTIONAL. A boolean. The default is false. If
+          true, then HOPS_SPEC should be traversed recursively. This
+          makes it possible for a hops expression to be recursive. The
+          output of one evaluation is fed as the input to the next
+          evaluation until there are no more output. At that point the
+          execution is moved on to the next HOPS_SPEC in the chain.
+
+       4. ``exclude_root``: OPTIONAL. A boolean. The default is
+          false. If true, then the original input to the recursion
+          will not be included in the final output. This property is
+          only meaningful on a HOP_SPEC where ``recurse`` is ``true``.
+
+       5. ``max_depth``: OPTIONAL. An integer. The default is
+          infinite, which means that the recursion will run until its
+          output is exhausted. The recursion will stop after the given
+          number of recursions. A value of ``2`` means that the
+          recursion will happen at most two times. This property is
+          only meaningful on a HOP_SPEC where ``recurse`` is ``true``.
+
+       6. ``return``: OPTIONAL. A string, or an expression, or not
           specified. If it is a string, then it should refer to a
           comma separated list of dataset aliases. In that case all
           the values of those aliases will be returned. If it is an
           expression then the expression is evaluated on the hops
           result and its result is returned. If not specified, then it
           will return the last dataset alias in the list. This is the
-          default.
+          default. It can only be specified on the last HOP_SPEC
+          argument. ``return`` cannot be used with ``recurse``.
 
-       4. ``track-dependencies``: OPTIONAL. A boolean. The default is
+       7. ``track-dependencies``: OPTIONAL. A boolean. The default is
           true. Can be used to disable dependency tracking for this
-          particular ``hops`` function.
+          particular ``hops`` function.  It can only be specified on the
+          last HOP_SPEC argument.
+
+       | If multiple HOP_SPEC arguments are given, then the output of
+         a HOP_SPEC is passed on as the input to the next. This is a
+         convenient way of chaining hops together. It is mostly useful
+         when at least one of the HOP_SPEC arguments use recursion.
 
        | The join criteria are described by using the
          ``eq`` function. All dataset aliases defined in the
          ``datasets`` key have to be joined and all must by navigable
          from the source entity. If that is not the case, then an error
-         will be raised.
+         will be raised at compile time.
+
        | The ``hops`` function produces a table inside, one column per
          dataset alias. This table is the projected down into a list
          of values by the ``return`` clause that is then returned by
@@ -1531,6 +1559,24 @@ Hops
          billing addresses are included in the result. Return the
          addresses found.
 
+       ::
+
+          ["hops", {
+            "datasets": ["Person p"],
+            "where": [
+              ["eq", "_S.children", "p._id"],
+              ["eq", "_p.gender", "female"]],
+            "recurse": true
+           },
+           {
+            "datasets": ["Hobby h"],
+            "where": ["eq", "_S.hobbies", "m._id"],
+            "return": "h.name"
+           }]
+
+       | Recursively retrieve the source entity's daughters (and
+         granddaughters and so on) and then return the names of all
+         their hobbies.
 
 
 Entity lookups
