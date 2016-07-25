@@ -212,7 +212,7 @@ All sources have certain properties in common. Some of these are omitted in the 
 of sources except if the source has different default values for this property (typically the ``supports_since`` property):
 
 Prototype
-^^^^^^^^
+^^^^^^^^^
 
 ::
 
