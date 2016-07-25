@@ -2957,6 +2957,7 @@ Properties
      - Integer
      - The maximum number of rows to insert into the database table in one operation
      - 100
+     -
 
    * - ``blacklist``
      - List<String>
