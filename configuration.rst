@@ -2215,6 +2215,38 @@ The transform will output the following edges of the graph as entities on its ou
        "to": "bar"
    }
 
+.. _emit_children_transform:
+
+The emit children transform
+---------------------------
+
+This transform will emit all child entities of its source
+entities. All entities in the ``$children`` property that have an
+``_id`` property will be emitted. The parent entity will not be
+emitted.
+
+Properties
+^^^^^^^^^^
+
+There are currently no properties on this transform.
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  {
+      "_id": "children",
+      "type": "pipe",
+      "source": {
+          "type": "dataset",
+          "dataset": "parents-with-children"
+      },
+      "transform": {
+          "type": "emit_children"
+      }
+
+
 .. _sink_section:
 
 Sinks
