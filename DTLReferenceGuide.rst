@@ -650,7 +650,7 @@ Transforms
        |
        | Note that the ``$children`` property is special. This function should
          really only be used when writing into a ``dataset`` sink with the
-         ``children_delta`` property set to ``true``.
+         ``track_children`` property set to ``true``.
        |
        | If an entity with a ``$children`` property is written to the ``dataset``
          sink then it will compare it against the value of the ``$children``

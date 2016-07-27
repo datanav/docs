@@ -2292,7 +2292,7 @@ Properties
      -
      - Yes
 
-   * - ``children_delta``
+   * - ``track_children``
      - Boolean
      - If ``true`` then the ``$children`` property will be compared against the previous
        version of the entity and a delta produced. This will cause the ``$children``
