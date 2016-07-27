@@ -648,15 +648,17 @@ Transforms
        | ``["add", "$children",``
        |   ``["union", "_T.$children", ...]]``
        |
-       | Note that the ``$children`` property is special.
+       | Note that the ``$children`` property is special. This function should
+         really only be used when writing into a ``dataset`` sink with the
+         ``children_delta`` property set to ``true``.
        |
        | If an entity with a ``$children`` property is written to the ``dataset``
          sink then it will compare it against the value of the ``$children``
          property in the previous version of the entity. It will detect deleted
          entities and add them to the property before storing the entity.
        |
-       | Note also that there is a ``emit-children`` transform that can be used
-         to expand the ``$children`` entities into standalone entities.
+       | Note also that there is an ``emit_children`` pipe transform that can be
+         used to expand the ``$children`` entities into standalone entities.
 
      - | ``["create-child", "_S.orders"]``
        |

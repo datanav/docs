@@ -2292,6 +2292,19 @@ Properties
      -
      - Yes
 
+   * - ``children_delta``
+     - Boolean
+     - If ``true`` then the ``$children`` property will be compared against the previous
+       version of the entity and a delta produced. This will cause the ``$children``
+       property to be updated on entities just before they are written to the dataset.
+
+       This is a special feature that can be used in combination with the
+       ``["create-child", ...]`` DTL function and the ``emit_children`` pipe transform.
+       The purpose is to be able to detect deleted children entities when doing
+       incremental syncs.
+     - ``false``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
