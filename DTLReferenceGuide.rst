@@ -638,6 +638,36 @@ Transforms
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
+   * - ``create-child``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | For each entity in VALUES add it to the ``$children`` property on the
+         target entity. This function is a convenience function for calling:
+       |
+       | ``["add", "$children",``
+       |   ``["union", "_T.$children", ...]]``
+       |
+       | Note that the ``$children`` property is special.
+       |
+       | If an entity with a ``$children`` property is written to the ``dataset``
+         sink then it will compare it against the value of the ``$children``
+         property in the previous version of the entity. It will detect deleted
+         entities and add them to the property before storing the entity.
+       |
+       | Note also that there is a ``emit-children`` transform that can be used
+         to expand the ``$children`` entities into standalone entities.
+
+     - | ``["create-child", "_S.orders"]``
+       |
+       | Adds the orders in the source entity's ``orders`` field to the "$children" property
+         on the target entity.
+       |
+       | ``["create", ["apply", "order", "_S.orders"]]``
+       |
+       | Emit the orders in the source entity's ``orders`` field as new entities,
+         but apply the ``order`` transform to them first.
+
 
 Expression language
 ===================
