@@ -1578,7 +1578,9 @@ either a transform configuration object or a list of them.
        },
        ..
        "transform": {
-           ...the transform configuration goes here...
+          "name": "name of transform (NOTE: deprecated)",
+          "description": "description of the transform (optional)"
+           ...the rest of the transform configuration goes here...
        }
     }}
 
