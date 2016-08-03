@@ -15,3 +15,4 @@ Developer Guide
    Pump Execution Dataset <pump-execution>
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>
+   Security <security>
