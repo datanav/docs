@@ -492,6 +492,108 @@ configuration, which is omitted here for brevity:
         }
     }
 
+The diff datasets source
+-------------------------
+
+The diff datasets source is similar to the ``merge dataset source``, except that
+it also compares the entities from the datasets. The comparison produces a diff and filters out
+entities that are equal.
+
+For each merged entity (same as the ``all`` strategy in ``merge dataset source``)
+an additional ``$diff`` property is also generated. The diff contains the datasets and values for
+ the properties that are not equal across all the datasets.
+
+Entity ids are not modified in any way.
+
+Prototype
+^^^^^^^^^
+
+::
+
+   {
+       "type": "diff_datasets",
+       "datasets": ["id-of-dataset1", "id-of-dataset2"],
+       "supports_since": true
+    }
+
+Properties
+^^^^^^^^^^
+
+The configuration only requires the property ``datasets`` which must
+be a list of datasets ids.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``datasets``
+     - List<String>
+     - A list of datasets ids.
+     -
+     - Yes
+
+   * - ``supports_since``
+     - Boolean
+     - Flag to indicate whether to use a ``since`` marker when reading
+       from the dataset, i.e. to start at the beginning each time or not.
+     - true
+     -
+
+   * - ``whitelist``
+     - List<String>
+     - The names of the properties to include in the comparison. If there is a
+       ``blacklist`` also specified, the whitelist will be filtered against the contents of the
+       blacklist.
+     -
+     -
+
+   * - ``blacklist``
+     - List<String>
+     - The names of the properties to exclude from the comparison. If there is a
+       ``whitelist`` also specified, the blacklist operates on the values of the whitelist (and not
+       the properties present in the entities).
+     -
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "source": {
+            "type": "diff_datasets",
+            "datasets": ["product", "other-products"],
+            "supports_since": true
+        }
+    }
+
+Example result
+^^^^^^^^^^^^^^
+
+::
+
+   {
+       "_id": "some-product",
+       "$diff": {
+           "price": {
+               "products": "price-from-products",
+               "other-products": "price-from-other-products",
+           }
+       }
+    }
+
+
+
 .. _sql_source:
 
 The SQL source
