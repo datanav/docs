@@ -3425,6 +3425,8 @@ A system component represents a computer system that can provide data entities. 
 and services that can be used by several data sources, such as connection pooling, authentication settings,
 communication protocol settings and so on.
 
+You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
+
 .. _sql_system:
 
 The SQL systems

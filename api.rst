@@ -163,4 +163,5 @@ API Reference
              lake.node.webapp.api.logs,
              lake.node.webapp.api.config,
              lake.node.webapp.api.configcheck,
-             lake.node.webapp.api.license
+             lake.node.webapp.api.license,
+             lake.node.webapp.api.secretsmanager
