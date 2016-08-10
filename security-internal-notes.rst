@@ -65,14 +65,14 @@ Authentication
 --------------
 
 We use auth0 for authentication, and for authentication only. All authorization is done by the Sesam Portal
-independently of auth0. All role/permission information is stored by the Sesam Portal in a separate database.
+independently of auth0. All authorization information is stored by the Sesam Portal in a separate database.
 
 
 -------------
 Authorization
 -------------
 
-All role/permission information is stored by the Sesam Portal in an external database. We want to use a
+All authorization information is stored by the Sesam Portal in an external database. We want to use a
 key/value store for this , since those are simple to deal with, and Azure supplies one (https://azure.microsoft.com/en-us/documentation/services/documentdb/).
 
 Each user has an entry in the key/value store (the key is the auth0 "userid" value).
@@ -92,77 +92,69 @@ The authorization values are stored under an "authorization" key, like this::
     ...
     "authorization": {
       "jernbaneverket": {
-        "roles": ["admin"]
+        "principals": ["group:Admin"]
       },
       "statnett": {
-        "roles": ["readonly-user"]
+        "principals": ["group:ReadonlyUser"]
       }
     }
     ...
 
-Users, roles and permissions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Users and principals
+~~~~~~~~~~~~~~~~~~~~
 
-We use a scheme where each user is given a set of roles in an organization. Each role is then assigned a set of
-permissions.
+We use a scheme where each user is given a set of principals in an organization.
 
-There is one global, hardcoded table of common role/permissions which specifies which permissions each role confers.
-The table looks something like this, where the first column contains the roles and the first row contains the
-permissions (this is just a small portion of the real table; in reality it contains several other roles and
-permissions):
+In the Sesam Node each action has a list of principals that are allowed to perform that action. There is one
+global, hardcoded mapping, but this can be overridden by the users.
 
-=============== ================== ========= =============== ===================== =========================
-Role\Permission create-delete-pipe edit-pipe start-stop-pump read-dataset-entities add-remove-role-from-user
---------------- ------------------ --------- --------------- --------------------- -------------------------
-Admin                x                 x            x                 x                         x
-User                                   x            x                 x
-Public                                                                x
-=============== ================== ========= =============== ===================== =========================
+There is one global, hardcoded table of action/principal which specifies which actions each principal can
+perform.
+The table looks something like this, where the first column contains the principal and the first row contains the
+actions (this is just a small portion of the real table; in reality it contains several other actions and
+principals):
 
-This table is hardcoded in the Sesam portal source-code. These are the global default settings, and should
-never need to change unless we implement some new functionality. It contains the permissions that are hardcoded
-in the Sesam portal and the Sesam node.
+================  ================== ========= =============== ===================== =========================
+Principal\Action  create-delete-pipe edit-pipe start-stop-pump read-dataset-entities add-remove-role-from-user
+----------------  ------------------ --------- --------------- --------------------- -------------------------
+group:Admin            x                 x            x                 x                         x
+group:User                               x            x                 x
+group:Public                                                            x
+================ ================== ========= =============== ====================== =========================
+
+This table is hardcoded in the Sesam Node source-code. These are the global default settings, and should
+never need to change unless we implement some new functionality.
 
 In addition to the global defaults, each organization can create its own roles and permissions for their own
 specialized purposes. These roles and permissions can be used to restrict access to particular datasets or pipes,
 or to give a user access to one specific dataset or pipe.
 
-Below is an example of how an organization-specific role/permission table might look something.
-The organization-specific stuff is displayed in bold. Note that the global hardcoded role/permissions mappings are
-displayed, but cannot be modified:
+Below is an example of how an organization-specific role/permission table might look.
+The organization-specific principals and settings are displayed in bold.
 
-================= =================== =============== ================== ========= =============== =====================
-Role\Permission   **Read dataset X**  **Start job Y** create-delete-pipe edit-pipe start-stop-pump read-dataset-entities
------------------ ------------------- --------------- ------------------ --------- --------------- ---------------------
-**Data fetcher**       **[x]**            **[ ]**             [ ]           [ ]         [x]                [ ]
-**Job Starter**        **[ ]**            **[x]**             [ ]           [ ]         [x]                [ ]
-Admin                  **[x]**            **[x]**              x             x           x                  x
-User                   **[x]**            **[x]**                                        x                  x
-Public                 **[ ]**            **[ ]**
-================= =================== =============== ================== ========= =============== =====================
+===================== ================== ========= =============== ===================== =========================
+Principal\Action      create-delete-pipe edit-pipe start-stop-pump read-dataset-entities add-remove-role-from-user
+--------------------- ------------------ --------- --------------- --------------------- -------------------------
+group:Admin                 [x]             [x]         [x]                [x]                     [x]
+group:User                  [ ]             [x]         [x]                [x]                     [ ]
+group:Public                [ ]             [ ]         [ ]              **[ ]**                   [ ]
+**group:DataFetcher**       [ ]             [ ]         [ ]                [x]                     [ ]
+**group:JobStarter**        [ ]             [ ]         [x]                [ ]                     [ ]
+===================== ================== ========= =============== ===================== =========================
 
-[Create new Role] [Create new Permission]
+[Create new Principal]
 
-On the Pipe, Dataset and System pages in the Sesam Management Studio, there is a "Permissions"-tab that can be used
-to assign organization-specific permissions to that Pipe, Dataset or System.
+On the Pipe, Dataset and System pages in the Sesam Management Studio, there is a "Principals"-tab that can be used
+to assign organization-specific principals to actions on that Pipe, Dataset or System.
 
-For a pipe with a custom "start-pump" permission this tab looks something like this:
+For a pipe with a custom "start-pump" principal this tab looks something like this:
 
 ================= =====================================================
-Action            Permissions
+Action            Principals
 ----------------- -----------------------------------------------------
-start-pump        **<Start job Y>**
-read-entities     <read-pump-entities (default)>
+start-pump        <group:JobStarter>
+read-entities     <group:User (default)>
 ================= =====================================================
-
-For a dataset with a custom "read-entities" permission this tab looks something like this:
-
-================= =========================================================
-Action            Permissions
------------------ ---------------------------------------------------------
-read-entities     **<Read dataset X>**
-update-last-seen  <update-dataset-last-seen (default)>
-================= =========================================================
 
 
 -------------------
@@ -174,22 +166,20 @@ JWT contains all the permissions that has been granted to the user in the Sesam 
 something like this::
 
    {
-    "authorization": {
+    "principals": {
+      "global": ["email:someone@example.org"],
       <subscriptionid1>: {
-        "permissions": ["create-delete-pipe", "edit-pipe", "start-stop-pump", "read-dataset-entities"]
+        "principals": ["group:Admin"]
       },
       <subscriptionid2>: {
-        "permissions": ["read-dataset-entities"]
+        "principals": ["group:User"]
       }
    }
 
-The "authorization" attribute is basically a flattened version of the "authorization" attribute in the
-user-data that is stored in the database. In the Sesam Portal, each user is assigned a set of roles, not permissions,
-since it is much easier to group permissions under roles that have to assign each permission separately. But in the
-JWT we are only interested in the resulting permissions.
-
-Also, in the Sesam Portal the user is assigned roles for an organization, not for a subscription. But in the JWT, we
-only care about the subscription id, since that is what the Sesam node uses.
+The "principals" attribute is basically a copy of the "principals" attribute in the
+user-data that is stored in the database. The main difference is that, in the Sesam Portal the user is assigned roles
+for an organization, not for a subscription. But in the JWT, we only care about the subscription id, since that is
+what the Sesam node uses.
 
 
 
@@ -214,17 +204,13 @@ Organization creation and membership management:
 
 Organization custom roles and permissions
 (https://jira.bouvet.no/browse/IS-3150)
-   * define a new custom role
-   * remove a custom role
-   * define a new custom permission
-   * remove a custom permission
-   * Assign a custom permission to a role
-   * Remove a custom permission from a role
+   * define a new custom principal
+   * remove a custom principal
 
 Organization user roles:
 (https://jira.bouvet.no/browse/IS-3151)
-   * add a role to a user
-   * remove a role from a user
+   * add a principal to a user
+   * remove a principal from a user
 
 
 SESAM Subscription:
@@ -255,7 +241,7 @@ If the user is not authenticated:
 7. server: Uses the authentication code to get the user's information from the auth0 server. Creates a http-session
    and stores the user-info in the session. Sends a redirect-response to "/" to the client.
 8. client: Loads the web-application from scratch: Return to step (2). But since the user is now authenticated,
-   we will end up on step 5b.
+   we will end up on in step 5 in the "If the user is already authenticated"-path.
 
 If the user is already authenticated:
 
@@ -270,6 +256,7 @@ If the user is already authenticated:
 -----------------------------------------------
 Sesam REST API authentication and authorization
 -----------------------------------------------
+
 The Sesam web API has two ways of authenticating the user. It can use either a cookie- and http-session based method,
 similar to the Sesam Portal, or it can use a JWT (JSON Web Token) supplied in the "Authentication" header in each
 http request.
@@ -282,6 +269,39 @@ Sesam Management Studio
 The management gui uses cookies and http sessions for authenticating the user in the same way as the Sesam Portal
 does it. The http session makes it possible for the user to directly access api services (for instance "/api/pipes")
 in the web-browser with out having to manually provide an authorization token.
+
+Here is a detailed description of how this works:
+
+1. Sesam node client: The user points a webbrowser at the root sesam node url (for instance http://localhost:9042)
+2. Sesam node server: The sesam node web server serves the Sesam Management Studio javascript web application.
+3. Sesam node client: The javascript calls the root api url: "/api"
+4. Sesam node server: returns a 401 "Authentication required" response if the user is not authenticated.
+
+If the user is not authenticated:
+
+5. Sesam node client: redirect the browser to the url
+   https://portal.sesam.io/?managementStudioLoginRedirectURL=http://localhost:9042/login
+
+6. Sesam portal client: If the user is not already authenticated in the portal, the portal shows the normal auth0-based
+   login and logs in the user. (The auth0 callback url will contain the 'managementStudioLoginRedirectURL'
+   parameter). If the user is authenticated
+
+7. Sesam Portal server: creates a new random authorization code and uses this as a key to
+   store the user's JWT in in-memory. Then it creates a new url based on the managementStudioLoginRedirectURL plus
+   the authorization code, and redirects the client to the resulting url.
+
+6. Sesam node server: Parses the JWT and verifies it using the Sesam Portal's public rsa key. Creates a http-session
+   and stores the user-info and permissions from the JWT in the session. Sends an "ok"-response to the client.
+
+7. client: Loads the "Dashboard" page and starts downloading more information from the server (as in step 5 in the
+   "If the user is already authenticated" path).
+
+If the user is already authenticated:
+
+5. client: Loads the "Dashboard" page and starts downloading more information from the server (pipes, etc).
+   At this point all requests to the server will contain a cookie with the session-id. The server will use the
+   user info stored in the http session to check user identity and permissions.
+
 
 
 
@@ -296,10 +316,10 @@ commandline argument when invoking a command, or stored as a permanent default v
 The authorization token can be obtained in several different ways:
  1. The user can run the "login" command, which will let the user log in using their existing Sesam Portal username
     and password. The sesam client will log on to the Sesam portal and download and store an authorization token.
- 2. The Sesam Portal has functionality for constructing authorization tokens with specific permissions baked in;
-    this can be useful to give other users a way to interact with the sesam commandline client without having their
-    own users in the Sesam Portal. Example: A read-only authorization token could be given to users who only need to
-    read data from the sesam node.
+ 2. The Sesam Portal has functionality for constructing authorization tokens with a specific subset of principals
+    baked in; this can be useful to give other users a way to interact with the sesam commandline client without
+    having their own users in the Sesam Portal. Example: A read-only authorization token could be given to users who
+    only need to read data from the sesam node.
 
 
 ----------------------------
@@ -312,45 +332,38 @@ Public dataset
 
 In this case, the entities from one specific dataset (call it "X") should be publicly available.
 
-By default, reading the entities of a dataset requires the "read-dataset-entities" permission, which is not assigned
-to the build-in "Public" role (the "Public" role represents anonymous users). But in this case we want to replace that
-permission-requirement with a new organization-specific permission.
-
-In the Sesam portal:
-1. Create a new organization-specific permission and give it a descriptive name. For instance: "Read dataset X".
-2. Assign the "Read dataset X" permission to the build-in "Public" role.
+By default, reading the entities of a dataset requires the "group:User" principal, which means that only authenticated
+users can read the data. But in this case we want to replace that principal-requirement with a new
+organization-specific value.
 
 In the Sesam management studio:
-Update the permission-checks on the "X" dataset from the default
+Update the principal-checks on the "X" dataset from the default
 
-    "read-dataset-entities (default)"
+    "group:User (default)"
 
 to
 
-    **"Read dataset X"**
+    "group:Public"
 
 
 Restricted dataset
 ~~~~~~~~~~~~~~~~~~
 
 In this case, the entities from one specific dataset (call it "Y") should be only be available for some specific users.
-By default all datasets are protected by the "read-dataset-entities" permission, which is given to all authenticated
+By default all datasets are protected by the "group:User" principal, which is given to all authenticated
 users.
 
 In the Sesam portal:
-1. Create a new organization-specific permission and give it a descriptive name. For instance: "Read dataset Y".
-2. Create a new organization-specific role and give it a descriptive name. For instance: "Trusted user".
-3. Assign the "Read dataset Y" permission to the "Trusted user" role.
-4. Assign the "Trusted user" role to the users that should be allowed to read the entities from dataset "Y".
+1. Create a new organization-specific principal and give it a descriptive name. For instance: "group:TrustedUser".
 
 In the Sesam management studio:
-Update the permission-checks on the "read-entities" action on the "Y" dataset from the default
+Update the principal-checks on the "read-entities" action on the "Y" dataset from the default
 
-    "read-dataset-entities (default)"
+    "group:User (default)"
 
 to
 
-    "read-dataset-entities (default)" **AND "Read dataset Y"**
+    "group:TrustedUser"
 
 
 
@@ -360,24 +373,21 @@ Restricted Pump
 In this case, we have one pipe "Z" where only some specific users should be able to start the pump. This is very similar
 to the `Restricted dataset`_. case.
 
-By default the "start"-operation on all pump are protected by the "start-stop-pump" permission, which is given to
+By default the "start"-operation on all pump are protected by the "group:User" permission, which is given to
 all authenticated users.
 
 In the Sesam portal:
-1. Create a new organization-specific permission and give it a descriptive name. For instance: "Start pump Z".
-2. Create a new organization-specific role and give it a descriptive name. For instance: "Z starter".
-3. Assign the "Start pump Z" permission to the "Z starter" role.
-4. Assign the "Z starter" role to the users that should be allowed to start pump "Z".
+1. Create a new organization-specific principal and give it a descriptive name. For instance: "group:ZStarter".
 
 In the Sesam management studio:
 
 Go to the "Pipes"-page, click on pipe "Z". On the "pipe Z" page, click on the "Permissions" tab.
 
-Update the permission-checks on the "start-pump"-action from the default
+Update the principal-checks on the "start-pump"-action from the default
 
-    "start-stop-pump (default)"
+    "group:User (default)"
 
 to
 
-    "start-stop-pump (default)" **AND "Start pump Z"**
+    "group:ZStarter"
 
