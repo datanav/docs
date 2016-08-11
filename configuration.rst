@@ -492,8 +492,8 @@ configuration, which is omitted here for brevity:
         }
     }
 
-The diff datasets source
--------------------------
+The diff datasets source (Experimental)
+---------------------------------------
 
 The diff datasets source is similar to the ``merge dataset source``, except that
 it also compares the entities from the datasets. The comparison produces a diff and filters out
@@ -559,6 +559,14 @@ be a list of datasets ids.
        ``whitelist`` also specified, the blacklist operates on the values of the whitelist (and not
        the properties present in the entities).
      -
+     -
+
+
+   * - ``treat_lists_as_sets``
+     - Boolean
+     - Flag to indicate if you want to ignore duplicates and ordering of lists in the entities
+       you are comparing. This option also affects lists nested deeper inside the entity.
+     - false
      -
 
 Example configuration
