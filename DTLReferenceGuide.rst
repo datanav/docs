@@ -226,10 +226,12 @@ Things to note:
 Variables
 =========
 
-There are three variables in the Data Transformation Language. These
-are ``_S``, ``_T`` and ``_``. They refer to the source entity, target
-entity and the current value respectively. ``_S`` and ``_T`` appear in
-pairs inside each applied transform. ``_`` is used to refer to the
+There are four built-in variables in the Data Transformation
+Language. These are ``_S``, ``_T``, ``_P`` and ``_``. They refer to
+the source entity, the target entity, the parent context and the
+current value respectively. ``_S`` and ``_T`` appear in pairs inside
+each applied transform. ``_P`` appears inside the ``apply`` function
+and refers to the parent context. ``_`` is used to refer to the
 current value in functional expressions.
 
 .. list-table::
@@ -255,10 +257,27 @@ current value in functional expressions.
        primary target entity of transforming the source entity. Note
        that the ``create`` transform can be used to emit entities
        in addition to just the target entity.
-     - | ``["length", "_T.description", 100]``
+     - | ``["gt", ["length", "_T.length"], 100]``
        |
        | The target entity's ``description`` field must have a length of
          more than 100 characters.
+
+   * - ``_P``
+     - A dict that contains the source entity and the
+       target entity of the parent context. If the parent context also has
+       a parent context, then that will also be available. The dict always
+       contains the ``_S``, ``_T`` variables, while the ``_P`` property is
+       optional. Note that the ``_P`` appears only inside the ``apply``
+       function.
+
+     - | ``["gt", "_P._S.age", 18]``
+       |
+       | The parent source entity's ``age`` field must be greater than 18.
+       |
+       | ``["lt", ["length", "_P._P._T.description"], 100]``
+       |
+       | The grandparent target entity's ``description`` field must have a
+         length of less than 100 characters.
 
    * - ``_``
      - Refers to the current entity. This variable is only available
