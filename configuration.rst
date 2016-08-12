@@ -3065,7 +3065,8 @@ Prototype
         "table": "name-of-table",
         "schema": "default-schema-name-if-included",
         "blacklist": ["columns","to","exclude"],
-        "batch_size": 100
+        "batch_size": 100,
+        "truncate_table_on_first_run": false
     }
 
 Properties
@@ -3114,6 +3115,15 @@ Properties
      - Integer
      - The maximum number of rows to insert into the database table in one operation
      - 100
+     -
+
+   * - ``truncate_table_on_first_run``
+     - Boolean
+     - A flag that indicates that the target table should be truncated/emptied the first time a pump runs
+       (for example on the first run, or when its offset has been set to zero manually). Please note that
+       the truncating operation is executed in a separate transaction, so if any subsequent inserts should fail
+       the truncating operation will not be rolled back.
+     - False
      -
 
    * - ``blacklist``
