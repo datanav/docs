@@ -37,6 +37,35 @@ It should be noted that all ``_id`` property values must be unique across across
         }
     ]
 
+Configuration environment variables
+-----------------------------------
+
+You can insert the values of environment variables into configuration using the syntax "$ENV(variable)" in place of
+property values. You can manage these environment variables using the Sesam client or the :ref:`Environment Manager API <api-reference>`.
+
+An example, given a uploaded environment variable JSON file containing:
+
+::
+
+    {
+       "server-ip": "10.10.10.1"
+    }
+
+
+You can refer to this property in your configuration by reference:
+
+::
+
+    {
+       "_id": "my-system",
+       "type": "oracle",
+       "host": "$ENV(server-ip)"
+       ..
+    }
+
+This applies to both System and Pipe configuration entities. Note that if the property contains a secret, you should use the
+:ref:`Secrets manager API <secrets_manager>` instead.
+
 .. _pipe_section:
 
 Pipes
