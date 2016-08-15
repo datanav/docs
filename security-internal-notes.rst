@@ -11,9 +11,15 @@ Security
 Introduction
 ------------
 
-NOTE: This document is just a suggestion on how we might handle security in SESAM. See the "Security in SESAM"
-epic for what the current state of affairs actually is: https://jira.bouvet.no/browse/IS-3098.
+* authentication is handled by a variety of third parties. Auth0, Azure AD, etc.
 
+* roles and permissions are defined in the portal.
+
+* authorisation for actions in a given service instance is configured 'locally' on that service.
+
+* rights checks are performed when using the API, adding or modifying config, and at run time for pipe execution.
+
+See the "Security in SESAM" epic for what the current state of affairs actually is: https://jira.bouvet.no/browse/IS-3098.
 
 
 -------------------
@@ -105,57 +111,38 @@ Users and principals
 
 We use a scheme where each user is given a set of principals in an organization.
 
-In the Sesam Node each action has a list of principals that are allowed to perform that action. There is one
-global, hardcoded mapping, but this can be overridden by the users.
+In the Sesam Node all Pipes, Datasets and Systems are protected by an ACL (Access Control List) that specified
+which operation the various principals are allowed to perform on the resource.
 
-There is one global, hardcoded table of action/principal which specifies which actions each principal can
-perform.
-The table looks something like this, where the first column contains the principal and the first row contains the
-actions (this is just a small portion of the real table; in reality it contains several other actions and
-principals):
+For each type of resource, there is one hardcoded ACL. This ACLs are hardcoded in the Sesam Node source-code, and
+should never need to change unless we implement some new functionality.
 
-================  ================== ========= =============== ===================== =========================
-Principal\Action  create-delete-pipe edit-pipe start-stop-pump read-dataset-entities add-remove-role-from-user
-----------------  ------------------ --------- --------------- --------------------- -------------------------
-group:Admin            x                 x            x                 x                         x
-group:User                               x            x                 x
-group:Public                                                            x
-================ ================== ========= =============== ====================== =========================
+In the Sesam Node a custom ACL can be assigned to each individual Pipe, Data and System. This custom ACL will then
+be evaluated before the default ACL for that item type.
 
-This table is hardcoded in the Sesam Node source-code. These are the global default settings, and should
-never need to change unless we implement some new functionality.
 
-In addition to the global defaults, each organization can create its own roles and permissions for their own
-specialized purposes. These roles and permissions can be used to restrict access to particular datasets or pipes,
-or to give a user access to one specific dataset or pipe.
-
-Below is an example of how an organization-specific role/permission table might look.
-The organization-specific principals and settings are displayed in bold.
-
-===================== ================== ========= =============== ===================== =========================
-Principal\Action      create-delete-pipe edit-pipe start-stop-pump read-dataset-entities add-remove-role-from-user
---------------------- ------------------ --------- --------------- --------------------- -------------------------
-group:Admin                 [x]             [x]         [x]                [x]                     [x]
-group:User                  [ ]             [x]         [x]                [x]                     [ ]
-group:Public                [ ]             [ ]         [ ]              **[ ]**                   [ ]
-**group:DataFetcher**       [ ]             [ ]         [ ]                [x]                     [ ]
-**group:JobStarter**        [ ]             [ ]         [x]                [ ]                     [ ]
-===================== ================== ========= =============== ===================== =========================
-
-[Create new Principal]
-
-On the Pipe, Dataset and System pages in the Sesam Management Studio, there is a "Principals"-tab that can be used
+On the Pipe, Dataset and System pages in the Sesam Management Studio, there is a "Permissions"-tab that can be used
 to assign organization-specific principals to actions on that Pipe, Dataset or System.
 
 For a pipe with a custom "start-pump" principal this tab looks something like this:
 
-================= =====================================================
-Action            Principals
------------------ -----------------------------------------------------
-start-pump        <group:JobStarter>
-read-entities     <group:User (default)>
-================= =====================================================
 
+Default settings:
+
+   ===== ================ ========== ========= ===========
+   Type  Principal        start-pump stop-pump read-config
+   ----- ---------------- ---------- --------- -----------
+   Allow group:User            [ ]       [ ]        [x]
+   Deny  group:Everyone        [x]       [x]        [x]
+   ===== ================ ========== ========= ===========
+
+Custom settings:
+
+   ===== ================ ========== ========= ===========
+   Type  Principal        start-pump stop-pump read-config
+   ----- ---------------- ---------- --------- -----------
+   Allow group:JobStarter     [x]       [ ]        [ ]
+   ===== ================ ========== ========= ===========
 
 -------------------
 The JSON Web Tokens
@@ -180,7 +167,6 @@ The "principals" attribute is basically a copy of the "principals" attribute in 
 user-data that is stored in the database. The main difference is that, in the Sesam Portal the user is assigned roles
 for an organization, not for a subscription. But in the JWT, we only care about the subscription id, since that is
 what the Sesam node uses.
-
 
 
 
@@ -321,6 +307,87 @@ The authorization token can be obtained in several different ways:
     having their own users in the Sesam Portal. Example: A read-only authorization token could be given to users who
     only need to read data from the sesam node.
 
+-----------------------------
+Resource Types and operations
+-----------------------------
+
+Node
+~~~~
+	- write-metadata
+	- read-metadata
+	- write-secret
+	- list-secrets
+	- write-envvars
+	- read-envvars
+
+
+Systems - systems collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- add item
+
+system-prototype - applies to all system instances
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- write-config
+	- read-config
+	- read-data
+	- write-data
+	- read-metadata
+	- write-metadata
+	- delete
+
+a system - a specific system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- as prototype
+
+datasets - datasets collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- add dataset (if a user is able to create datasets. useful if you only want people to create pipes from existing datasets to external systems)
+
+dataset-prototype - applies to all dataset instances
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- read-data      (if a user can use it as a source in a pipe)
+	- write-data     (if a user can use it as a sink for a pipe)
+	- delete         (if a user can delete this dataset)
+	- read-endpoint  (if a user can read the data over the http endpoint)
+	- read-metadata
+	- write-metadata
+
+a dataset - a specific dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- as prototype
+
+pipes - pipes collection
+~~~~~~~~~~~~~~~~~~~~~~~~
+	- add item
+
+pipe-prototype - applies to all pipe instances
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	- read-config
+	- write-config
+	- start-pump
+	- stop-pump
+	- disable-pump
+	- read-execution-log
+	- delete (if a user can delete this pipe)
+	- endpoint-read-data (if the pipe exposes a named endpoint as the 'sink')
+	- endpoint-write-data (if the pipe exposes a named endpoint as the 'source')
+	- read-metadata
+	- write-metadata
+
+a pipe - a specific pipe
+~~~~~~~~~~~~~~~~~~~~~~~~
+	- as prototype
+
+secrets collection
+~~~~~~~~~~~~~~~~~~
+	- add
+
+a secret
+~~~~~~~~
+	- read
+	- write
+	- delete
+
 
 ----------------------------
 Examples of common use cases
@@ -332,38 +399,35 @@ Public dataset
 
 In this case, the entities from one specific dataset (call it "X") should be publicly available.
 
-By default, reading the entities of a dataset requires the "group:User" principal, which means that only authenticated
-users can read the data. But in this case we want to replace that principal-requirement with a new
-organization-specific value.
 
 In the Sesam management studio:
-Update the principal-checks on the "X" dataset from the default
+Update the permissions-checks on the "X" dataset by adding the following ACE (access control entry)
 
-    "group:User (default)"
-
-to
-
-    "group:Public"
+   ===== ================ ========== ========== =============
+   Type  Principal        read-data  write-data read-endpoint
+   ----- ---------------- ---------- ---------- -------------
+   Allow group:Everyone      [ ]       [ ]           [x]
+   ===== ================ ========== ========== =============
 
 
 Restricted dataset
 ~~~~~~~~~~~~~~~~~~
 
 In this case, the entities from one specific dataset (call it "Y") should be only be available for some specific users.
-By default all datasets are protected by the "group:User" principal, which is given to all authenticated
-users.
 
 In the Sesam portal:
 1. Create a new organization-specific principal and give it a descriptive name. For instance: "group:TrustedUser".
 
 In the Sesam management studio:
-Update the principal-checks on the "read-entities" action on the "Y" dataset from the default
+Update the permission-checks on "Y" dataset by adding the following ACEs (access control entries):
 
-    "group:User (default)"
 
-to
-
-    "group:TrustedUser"
+   ===== ================= ========== ========== =============
+   Type  Principal         read-data  write-data read-endpoint
+   ----- ----------------- ---------- ---------- -------------
+   Allow group:TrustedUser    [ ]       [ ]           [x]
+   Deny  group:Everyone       [x]       [ ]           [x]
+   ===== ================= ========== ========== =============
 
 
 
@@ -373,9 +437,6 @@ Restricted Pump
 In this case, we have one pipe "Z" where only some specific users should be able to start the pump. This is very similar
 to the `Restricted dataset`_. case.
 
-By default the "start"-operation on all pump are protected by the "group:User" permission, which is given to
-all authenticated users.
-
 In the Sesam portal:
 1. Create a new organization-specific principal and give it a descriptive name. For instance: "group:ZStarter".
 
@@ -383,11 +444,25 @@ In the Sesam management studio:
 
 Go to the "Pipes"-page, click on pipe "Z". On the "pipe Z" page, click on the "Permissions" tab.
 
-Update the principal-checks on the "start-pump"-action from the default
+Update the permissions-checks by adding the following ACEs (access control entries)
 
-    "group:User (default)"
+   ===== ================ ========== ========= ===========
+   Type  Principal        start-pump stop-pump read-config
+   ----- ---------------- ---------- --------- -----------
+   Allow group:ZStarter       [x]       [ ]        [ ]
+   Deny  group:Everyone       [x]       [ ]        [ ]
+   ===== ================ ========== ========= ===========
 
-to
+---------------
+Run-time checks
+---------------
 
-    "group:ZStarter"
+When a user creates a pipe, the pipe-configuration's "principals"-list is set to the principals that the user has.
+
+At run-time this principals list is used to determine if the pipe's pump should be allowed to run.
+
+For a pump to run the pipe MUST have read permission on the datasource and write permission on the sink.
+In the case of a datasource for an external system it just needs read access for the system. When the source is a
+dataset the pipe needs read access for that dataset. Similarly on the way out, writing to a dataset needs explicit
+write to that dataset, writing to a system requires write permission for that system.
 
