@@ -250,7 +250,7 @@ current value in functional expressions.
        transform.
      - | ``["gt", "_S.age", 42]``
        |
-       | The source entity's ``age`` field must have a value greater than 26.
+       | The source entity's ``age`` field must have a value greater than 42.
 
    * - ``_T``
      - Refers to the target entity. This is the entity that is the
@@ -450,9 +450,9 @@ Transforms
          the ``add`` and ``copy`` transforms. There is no else clause given,
          which is effectively the same as an empty list with no transforms.
        |
-       | ``["if", ["gt", "_S.age", 18], [``
+       | ``["if", ["gt", "_S.age", 18], ``
        |      ``["add", "type", "adult"],``
-       |      ``["add", "type", "child"]]]``
+       |      ``["add", "type", "child"]]``
        |
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
@@ -753,13 +753,13 @@ Logical
        | Returns true because all arguments evaluate to true.
        |
        | ``["all",``
-       |    ``["gt", 2, "_."],``
+       |    ``["gt", "_.", 2],``
        |    ``["list", 4, 5, 6]]``
        |
        | Returns true because all arguments are greater than 2.
        |
        | ``["all",``
-       |    ``["lt", 2, "_."],``
+       |    ``["lt", "_.", 2],``
        |    ``["list", 1, 3, 5]]``
        |
        | Returns false because not all arguments are less than 2.
@@ -777,13 +777,13 @@ Logical
        | Returns true because all arguments evaluate to true.
        |
        | ``["any",``
-       |    ``["gt", 5, "_."]]``
+       |    ``["gt", "_.", 5]]``
        |    ``["list", 4, 6, 8]]``
        |
        | Returns true because two of the arguments are greater than 5.
        |
        | ``["any",``
-       |    ``["lt", 2, "_."],``
+       |    ``["lt", "_.", 2],``
        |    ``["list", 6, 7, 8]]``
        |
        | Returns false because none of the arguments are less than 2.
@@ -872,7 +872,7 @@ Comparisons
          argument is 0.
      - | ``["is-empty", "_S.hobbies"]``
        |
-       | Returns true of the source entity's ``hobbies`` field is
+       | Returns true if the source entity's ``hobbies`` field is
          empty (has no values).
 
    * - ``is-not-empty``
@@ -883,7 +883,7 @@ Comparisons
          argument is greater than 0.
      - | ``["is-not-empty", "_S.hobbies"]``
        |
-       | Returns true of the source entity's ``hobbies`` field is not
+       | Returns true if the source entity's ``hobbies`` field is not
          empty (has one or more values).
 
 
@@ -910,7 +910,7 @@ Conditionals
      - | ``["if", ["gt", "_S.age", 42], 1, 2]``
        |
        | Return 1 if the source entity's ``age`` field is greater
-         than 43, if not 2 is returned.
+         than 42, if not 2 is returned.
 
    * - ``coalesce``
      - | *Arguments:*
