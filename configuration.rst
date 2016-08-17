@@ -1249,11 +1249,9 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use. If not present, a URL system
-       with the ``_id`` set to the contents of the ``url`` property will be created automatically. Note that if the
-       HTTP server requires authentication, you will have to create a URL system component explicitly.
+     - The id of the :ref:`URL system <url_system>` component to use.
      -
-     -
+     - Yes
 
    * - ``url``
      - String
