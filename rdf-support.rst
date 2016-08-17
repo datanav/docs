@@ -113,7 +113,7 @@ You can configure the registry by including an entity in your configuration on t
               "prefix_rules": {
                   "id": "bar",
                   "properties": [
-                      "foo_schema", ["some_prop"]
+                      "foo_schema", ["some_prop"],
                       "bar_schema", ["**"]
                   ]
               }
@@ -141,7 +141,7 @@ The "prototype" of a RDF registry entry ``entry_id`` look like:
         "prefix_rules": {
             "id": "bar",
             "properties": [
-                "foo", ["some_prop"]
+                "foo", ["some_prop"],
                 "baz", ["**"]
             ]
         },
