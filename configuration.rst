@@ -3093,7 +3093,8 @@ Prototype
         "primary_key": ["list","of","key","names"],
         "table": "name-of-table",
         "schema": "default-schema-name-if-included",
-        "blacklist": ["columns","to","exclude"],
+        "whitelist": ["properties/columns","to","include"],
+        "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
         "truncate_table_on_first_run": false
     }
@@ -3155,9 +3156,16 @@ Properties
      - False
      -
 
+   * - ``whitelist``
+     - List<String>
+     - The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
+     - ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
+     -
+     -
+
    * - ``blacklist``
      - List<String>
-     - The names of the columns to exclude from the generated entities.
+     - The names of the properties (columns) to exclude from inserts into the target table.
      -
      -
 
