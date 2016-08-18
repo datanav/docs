@@ -4587,9 +4587,9 @@ Prototype
 
     {
         "schedule_interval": 15,
-        "cron_expression": "* * * * * *",
+        "cron_expression": "* * * * *",
         "rescan_run_count": 10,
-        "rescan_cron_expression": "* * * * * *",
+        "rescan_cron_expression": "* * * * *",
         "run_at_startup": false,
         "max_read_retries": 0,
         "max_retries_per_entity": 5,
@@ -4707,7 +4707,7 @@ dataset. Also max ten consecutive write failures allowed:
 
     {
         "pump": {
-           "cron_expression": "0 0 0 * * *",
+           "cron_expression": "0 0 * * *",
            "max_retries_per_entity": 5,
            "max_consecutive_write_errors": 10,
            "max_write_errors_in_retry_dataset": 100,
@@ -4723,7 +4723,7 @@ datasets:
     {
         "pump": {
            "schedule_interval": 30,
-           "rescan_cron_expression": "0 0 * * * *"
+           "rescan_cron_expression": "0 * * * *"
        }
     }
 
@@ -4734,7 +4734,7 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
 
     {
         "pump": {
-           "cron_expression": "0 0/5 14,18 * * ?"
+           "cron_expression": "0/5 14,18 * * ?"
        }
     }
 
