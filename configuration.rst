@@ -3504,7 +3504,8 @@ Prototype
         "timezone": "UTC",
         "pool_size": 10,
         "pool_timeout": 30,
-        "pool_max_overflow": 10
+        "pool_max_overflow": 10,
+        "case_sensitive": false
     }
 
 Properties
@@ -3546,6 +3547,13 @@ Properties
      - How many connections over the ``pool_size`` are allowed before refusing to establish a incoming connection. This
        means that the absolute hard limit of connections in a connection pool is ``pool_size`` + ``pool_max_overflow``.
      - 10
+     -
+
+   * - ``case_sensitive``
+     - Boolean
+     - A flag indicating if column lookups (primary key and updated column) should be case sensitive. The default is
+       not case sensitive (false).
+     - false
      -
 
 The specific SQL systems available are:
