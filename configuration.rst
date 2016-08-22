@@ -2234,6 +2234,128 @@ The transform will output the following compact/"compressed" transformed entity:
 
 Note that the transform will not attempt to unquote the remainder elements after the matched prefixes.
 
+.. _lower_keys_transform:
+
+The lower keys transform
+------------------------
+
+This transform transforms all the keys of an entity to lower case (optionally recursively).
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "lower_keys",
+        "recurse": false
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``recurse``
+     - Boolean
+     - An optional flag to indicate whether to do the case conversion recursively or not (default is false, which means
+       no recursion).
+     - false
+     -
+
+Example
+^^^^^^^
+
+With the default transform configuration:
+
+::
+
+    {
+        "type": "lower_keys",
+    }
+
+And given the the input entity:
+
+::
+
+    {
+        "_id": "http://psi.test.com/2",
+        "Born": "1980-01-23",
+        "CODE": "AB32",
+        "Status": {
+            "http://psi.foo.com/married": True,
+            "Spouse": "Pam",
+            "URL1": "~rhttp://www.foo.com",
+            "URL2": "~rhttp://psi.foo.com/url2",
+            "CODE": 123,
+            "Child": {
+                "t_c": "C",
+                "http://psi.test.com/hello": "http://psi.foo.com/world",
+                "http://psi.tests.com/S": "bye"
+            }
+        }
+    }
+
+The transform will output the following transformed entity:
+
+::
+
+    {
+        "_id": "http://psi.test.com/2",
+        "born": "1980-01-23",
+        "code": "AB32",
+        "status": {
+            "http://psi.foo.com/married": True,
+            "Spouse": "Pam",
+            "URL1": "~rhttp://www.foo.com",
+            "URL2": "~rhttp://psi.foo.com/url2",
+            "CODE": 123,
+            "Child": {
+                "t_c": "C",
+                "http://psi.test.com/hello": "http://psi.foo.com/world",
+                "http://psi.tests.com/S": "bye"
+            }
+        }
+    }
+
+Note that only the root keys are transformed. If the ``recurse`` property is set to ``true`` in the configuration,
+however, the result would instead become:
+
+::
+
+    {
+        "_id": "http://psi.test.com/2",
+        "born": "1980-01-23",
+        "code": "AB32",
+        "status": {
+            "http://psi.foo.com/married": True,
+            "spouse": "Pam",
+            "url1": "~rhttp://www.foo.com",
+            "url2": "~rhttp://psi.foo.com/url2",
+            "code": 123,
+            "child": {
+                "t_c": "C",
+                "http://psi.test.com/hello": "http://psi.foo.com/world",
+                "http://psi.tests.com/s": "bye"
+            }
+        }
+    }
+
+The upper keys transform
+------------------------
+
+This transform transforms all the keys of an entity to upper case (optionally recursively).
+The transform mirrors the :ref:`upper case transform <upper_keys_transform>` exactly except for the keys being
+transformed to upper case. See previous section for details.
+
 The undirected graph transform
 ------------------------------
 
