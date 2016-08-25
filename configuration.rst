@@ -4630,7 +4630,7 @@ Prototype
         "verify_ssl": false,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 6400
+        "read_timeout": 7200
     }
 
 Properties
