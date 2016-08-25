@@ -4691,7 +4691,7 @@ Properties
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - 6400
+     - 7200
      -
 
 
