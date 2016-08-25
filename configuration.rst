@@ -234,58 +234,6 @@ in the ``_updated`` property if supported by its source.
 
 Sesam supports a diverse set of core data sources:
 
-Common properties
------------------
-
-All sources have certain properties in common. Some of these are omitted in the documentation of the individual types
-of sources except if the source has different default values for this property (typically the ``supports_since`` property):
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "type-of-source",
-        "supports_since": false,
-        "source_specific": "properties",
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``name``
-     - String
-     - A human redable name of the component. It may be omitted as part of a pipe
-       configuration, in case it will be generated based on the pipe's ``name`` property with a "source" postfix.
-     -
-     -
-
-   * - ``type``
-     - String
-     - The type of source, it is a enumeration with values from the list of supported sources. See the details in the
-       documentation of each of the sources. If omitted from a pipe declaration, it is assumed to be a SQL
-       source.
-     - "sql"
-     -
-
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading from the dataset, i.e. to start at
-       the beginning each time or not.
-     - false
-     -
-
 The dataset source
 ------------------
 
@@ -300,7 +248,6 @@ Prototype
     {
         "type": "dataset",
         "dataset": "id-of-dataset",
-        "supports_since": true,
         "include_previous_versions": false
     }
 
@@ -341,7 +288,6 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         "source": {
             "type": "dataset",
             "dataset": "northwind:customers",
-            "supports_since": false,
             "include_previous_versions": true
         }
     }
@@ -368,7 +314,6 @@ Prototype
     {
         "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
-        "supports_since": true,
         "include_previous_versions": false
     }
 
@@ -394,13 +339,6 @@ source, except ``datasets`` can be a list of datasets ids.
      -
      - Yes
 
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading
-       from the dataset, i.e. to start at the beginning each time or not.
-     - true
-     -
-
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the
@@ -421,7 +359,6 @@ configuration, which is omitted here for brevity:
         "source": {
             "type": "union_datasets",
             "datasets": ["northwind:customers", "northwind:orders"],
-            "supports_since": true,
             "include_previous_versions": true
         }
     }
@@ -447,8 +384,7 @@ Prototype
    {
        "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
-       "strategy": "latest",
-       "supports_since": true
+       "strategy": "latest"
     }
 
 Properties
@@ -498,13 +434,6 @@ strategy.
      - "latest"
      -
 
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading
-       from the dataset, i.e. to start at the beginning each time or not.
-     - true
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -516,8 +445,7 @@ configuration, which is omitted here for brevity:
     {
         "source": {
             "type": "merge_datasets",
-            "datasets": ["products", "products-metadata"],
-            "supports_since": true
+            "datasets": ["products", "products-metadata"]
         }
     }
 
@@ -541,8 +469,7 @@ Prototype
 
    {
        "type": "diff_datasets",
-       "datasets": ["id-of-dataset1", "id-of-dataset2"],
-       "supports_since": true
+       "datasets": ["id-of-dataset1", "id-of-dataset2"]
     }
 
 Properties
@@ -566,13 +493,6 @@ be a list of datasets ids.
      - A list of datasets ids.
      -
      - Yes
-
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading
-       from the dataset, i.e. to start at the beginning each time or not.
-     - true
-     -
 
    * - ``whitelist``
      - List<String>
@@ -609,8 +529,7 @@ configuration, which is omitted here for brevity:
     {
         "source": {
             "type": "diff_datasets",
-            "datasets": ["product", "other-products"],
-            "supports_since": true
+            "datasets": ["product", "other-products"]
         }
     }
 
@@ -782,8 +701,7 @@ in a column called ``updated``. This enables us to switch on ``since`` support:
             "system": "my_system",
             "table": "my_table",
             "primary_key": "table_id",
-            "updated_column": "updated",
-            "supports_since": true
+            "updated_column": "updated"
         }
     }
 
@@ -812,8 +730,7 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
             "query": "select * from my_table",
             "primary_key": "table_id",
             "updated_column": "updated",
-            "updated_query": "select * from my_table where updated >= :since",
-            "supports_since": true
+            "updated_query": "select * from my_table where updated >= :since"
         }
     }
 
@@ -1067,7 +984,7 @@ Prototype
        "type": "sdshare",
        "system": "url-system-id",
        "url": "url-to-sdshare-fragments-feed",
-       "supports_since": false
+       "supports_since": true
     }
 
 Properties
@@ -1258,6 +1175,13 @@ Properties
      - The URL of the ``JSON`` file to load.
      -
      - Yes
+
+   * - ``supports_since``
+     - Boolean
+     - Flag to indicate whether to include ``since`` request parameter when
+       reading requesting the entities.
+     - true
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1660,6 +1584,13 @@ Properties
      - String
      - A string literal to use when querying the triplestore the first time.
      - "0001-01-01T00:00:00Z"
+     -
+
+   * - ``supports_since``
+     - Boolean
+     - Flag to indicate whether to use a ``since`` marker when reading from the source, i.e. to start at
+       the beginning each time or not.
+     - true
      -
 
 Example configuration
