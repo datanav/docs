@@ -4628,7 +4628,9 @@ Prototype
         "username": None,
         "password": None,
         "verify_ssl": false,
-        "authentication": "basic"
+        "authentication": "basic",
+        "connect_timeout": 60,
+        "read_timeout": 6400
     }
 
 Properties
@@ -4677,6 +4679,21 @@ Properties
        Allowed values is either "basic" or "digest".
      -
      -
+
+   * - ``connect_timeout``
+     - Integer
+     - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
+       wait indefinitely.
+     - 60
+     -
+
+   * - ``read_timeout``
+     - Integer
+     - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
+       means wait indefinitely.
+     - 6400
+     -
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
