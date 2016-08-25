@@ -12,14 +12,14 @@ DTL Reference Guide
 Introduction
 ============
 
-The Data Transformation Language (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on sets of data in order to create new datasets.
+The Data Transformation Language (DTL) has been created as a means to allow developers to clearly describe transformations that should be performed on streams of data in order to create new datasets.
 
 Core Concepts
 -------------
 
-DTL allows developers to describe a data transform. A DTL processor applies the transform to a stream of data. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.
+DTL allows developers to describe a data transform. The DTL processor applies the transform to a stream of entities. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.
 
-A DTL transform describes how to construct a new entity. It can assume that it is provided a 'source' entity from which it can use property values. A transform can also perform queries that range across data in the datahub. These queries must start from the source entity.
+A DTL transform describes how to construct new entities from the source entity. A transform can also perform hops that range across datasets in the datahub. These hops must start from the source entity.
 
 DTL consists of 'functions' that can pick and transform data and 'hops' that can traverse the data in the datahub. In combination these offer a powerful way to construct new data entities from existing data. DTL functions are composable and thus allowing complex computation to be expressed.
 
@@ -36,19 +36,6 @@ And composing functions:
 
   ["add", "name", ["concat", ["list", "_S.firstname", " ", "_S.lastname"]]]
 
-Input Streams
--------------
-
-For a DTL processor to produce new entities it must be supplied a stream of source entities. DTL can only be applied to entities being sourced from a datahub dataset. When defining a DTL transform it is possible to process entities from many streams.
-
-A DTL script must specify which datasets should be used as a source. This can be a list of datasets.
-
-::
-
-  {
-    "datasets": ["people"]
-  }
-
 
 Annotated Example
 =================
@@ -56,7 +43,7 @@ Annotated Example
 Lets say that we have two datasets ``person`` and ``orders``, and that
 we want to transform the *persons* by joining in their *orders* and
 apply a few other transform functions. In this section you'll find a
-complete DTL document that takes entities from the ``person`` dataset,
+complete DTL transform that takes entities from the ``person`` dataset,
 joins them with entities from the ``orders`` dataset and creates new
 entities from them.
 
@@ -85,13 +72,20 @@ We then want to transform it into the following *target entity*:
       "order_count": 2
     }
 
-Using the DTL document below we can transform the source entity into
-the target entity:
+A pipe with the ``dtl`` transform below lets us transform persons into
+persons with orders:
 
 ::
 
     {
-        "dataset": "person",
+      "_id": "person-with-orders",
+      "type": "pipe",
+      "source": {
+          "type": "dataset",
+          "dataset": "person"
+      },
+      "transform": {
+        "type": "dtl",
         "rules": {
             "default": [
                 ["copy", "_id"],
@@ -112,17 +106,23 @@ the target entity:
                 ["add", "amount", "_S.amount"]
             ]
         }
+      },
+      "sink": {
+          "type": "dataset",
+          "dataset": "person-with-orders"
+      }
     }
 
 Explanation:
 
-1. | The DTL will read and transform source entities from the ``person``
-     dataset.
+1. | The ``dtl`` transform will receive source entities from the
+     ``person`` dataset. It will transform them and they'll be written
+     to the ``person-with-orders`` dataset.
 
-2. | There are two named ``rules`` specified in the DTL document:
-     ``default`` and ``order``. The ``default`` named transform is
-     mandatory and is the one that is applied to the entities in the
-     ``person`` dataset.
+2. | There are two named ``rules`` specified in the DTL transform:
+     ``default`` and ``order``. The ``default`` rule is mandatory and
+     is the one that is applied to the entities in the ``person``
+     dataset.
 
 3. | ``["copy", "_id"]`` copies the ``_id`` property from the source
      entity to the target entity.
