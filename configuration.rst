@@ -530,7 +530,7 @@ entities that are equal.
 
 For each merged entity (same as the ``all`` strategy in ``merge dataset source``)
 an additional ``$diff`` property is also generated. The diff contains the datasets and values for
- the properties that are not equal across all the datasets.
+the properties that are not equal across all the datasets.
 
 Entity ids are not modified in any way.
 
@@ -2353,7 +2353,7 @@ The upper keys transform
 ------------------------
 
 This transform transforms all the keys of an entity to upper case (optionally recursively).
-The transform mirrors the :ref:`upper case transform <upper_keys_transform>` exactly except for the keys being
+The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
 transformed to upper case. See previous section for details.
 
 The undirected graph transform
@@ -3280,7 +3280,6 @@ Properties
      - List<String>
      - The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
      - ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
-     -
      -
 
    * - ``blacklist``
