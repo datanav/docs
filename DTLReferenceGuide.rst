@@ -918,7 +918,7 @@ Conditionals
        |   VALUES(value-expression{1})
        |
        | Returns the first value in VALUES that makes the FUNCTION expression
-         return a non-null value. The FUNCTION expression argument is optional,
+         return a trueish value. The FUNCTION expression argument is optional,
          so if it is not given the first non-null value in VALUES is returned.
      - | ``["coalesce", "_S.tags"]``
        |
