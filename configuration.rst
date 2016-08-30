@@ -136,7 +136,8 @@ Properties
 
    * - ``_id``
      - String
-     - The id of the pipe, this should be unique within a Sesam service instance.
+     - The id of the pipe, this should be unique within a Sesam service instance. The allowed characters you can use
+       are ``A-Z``, ``a-z``, ``0-9`` plus the characters ``_`` (underscore), ``-`` (single dash) and ``:`` (colon).
      -
      - Yes
 
@@ -3555,6 +3556,9 @@ and services that can be used by several data sources, such as connection poolin
 communication protocol settings and so on.
 
 You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
+
+Note: as with pipe components, the allowed characters you can use for a system ``_id`` property are ``A-Z``, ``a-z``,
+``0-9`` plus the characters ``_`` (underscore), ``-`` (single dash) and ``:`` (colon).
 
 .. _sql_system:
 
