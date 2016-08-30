@@ -104,8 +104,22 @@ The following *json* snippet shows the general form of a pipe definition.
         }
     }
 
-
 Note that if no ``name`` property is explicitly set for the source, sink or pump configurations one will be generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or "pump" respectively).
+
+.. _pipe_batching:
+
+Batching
+--------
+
+Pipes support batching if the sink supports batching. It does this by
+accumulating source entites in a buffer before writing the batch to
+transforms and the sink. The size of each batch can be specified using
+the ``batch_size`` property on the pipe. The default batch size
+is 100.
+
+Note that the sink may have its own ``batch_size`` property. This is
+useful if the pipe has transforms that produce more entities than the
+number of entities taken as input.
 
 Properties
 ----------
@@ -2444,8 +2458,14 @@ Example configuration
 Sinks
 =====
 
-Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a target system.
-Sinks can support batching by implementing specific methods and accumulating entites in a buffer before writing the batch.
+Sinks are at the receiving end of pipes and are responsible for
+writing entities into a internal dataset or a target system.
+
+Sinks can support batching by implementing specific methods and
+accumulating entites in a buffer before writing the batch. The size of
+each batch can be specified using the ``batch_size`` property on the
+pipe. See the section on :ref:`batching <pipe_batching>` for more
+information.
 
 .. _dataset_sink:
 
@@ -2664,6 +2684,8 @@ is described in more detail :doc:`here <entitymodel>`.
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
 
+This sink supports :ref:`batching <pipe_batching>`.
+
 Prototype
 ^^^^^^^^^
 
@@ -2672,7 +2694,8 @@ Prototype
     {
         "type": "json",
         "system": "url-system-id",
-        "url": "url-to-http-endpoint"
+        "url": "url-to-http-endpoint",
+        "batch_size": 100
     }
 
 Properties
@@ -3132,6 +3155,7 @@ The expected form of an entity to be written to the sink is:
         "columnname2": another_value,
     }
 
+This sink supports :ref:`batching <pipe_batching>`.
 
 Prototype
 ^^^^^^^^^
@@ -4391,6 +4415,8 @@ The Solr system
 
 The Solr system represents the information needed to connect to a Solr server for indexing JSON documents. It is used in
 conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink <databrowser_sink>` sinks.
+
+This sink supports :ref:`batching <pipe_batching>`.
 
 Prototype
 ^^^^^^^^^
