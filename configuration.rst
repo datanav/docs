@@ -83,6 +83,8 @@ The pipe configuration consists of a :ref:`source <source_section>`, :ref:`trans
 The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form first is
 described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
 
+Note that the forward slash character (``/``) is not allowed in the pipe ``_id`` property.
+
 Prototype
 ---------
 The following *json* snippet shows the general form of a pipe definition.
@@ -136,8 +138,8 @@ Properties
 
    * - ``_id``
      - String
-     - The id of the pipe, this should be unique within a Sesam service instance. The allowed characters you can use
-       are ``A-Z``, ``a-z``, ``0-9`` plus the characters ``_`` (underscore), ``-`` (single dash) and ``:`` (colon).
+     - The id of the pipe, this should be unique within a Sesam service instance. Note that you cannot use the ``/``
+       character in the id property.
      -
      - Yes
 
@@ -3558,8 +3560,7 @@ communication protocol settings and so on.
 
 You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
 
-Note: as with pipe components, the allowed characters you can use for a system ``_id`` property are ``A-Z``, ``a-z``,
-``0-9`` plus the characters ``_`` (underscore), ``-`` (single dash) and ``:`` (colon).
+Note: as with pipe components, you are not allowed to use the forward slash character (``/``) in system id's.
 
 .. _sql_system:
 
