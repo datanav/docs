@@ -1847,6 +1847,12 @@ Properties
      - Default
      - Req
 
+   * - ``system``
+     - String
+     - The id of the :ref:`URL system <url_system>` component to use.
+     -
+     - Yes
+
    * - ``url``
      - Object
      - The URL to HTTP POST entities to.
@@ -1867,6 +1873,11 @@ Example configuration
 ::
 
   {
+      "_id": "my-http-transform-service",
+      "type": "system:url",
+      "base_url": "http://localhost:8080/transforms/"
+  },
+  {
       "_id": "deduplicated-men",
       "type": "pipe",
       "source": {
@@ -1875,6 +1886,7 @@ Example configuration
       },
       "transform": {
           "type": "http",
+          "system":"my-http-transform-service",
           "url": "http://localhost:8080/transforms/deduplicate",
           "batch_size": 5
       }
