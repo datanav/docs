@@ -2501,7 +2501,8 @@ Properties
    * - ``dataset``
      - String
      - The id of the dataset to write entities into. Note: if it doesn't exist before
-       entities are written to the sink, it will be created on the fly.
+       entities are written to the sink, it will be created on the fly. Note that the dataset id cannot contain
+       forward slash characters (``/``).
      -
      - Yes
 
