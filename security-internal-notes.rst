@@ -154,7 +154,6 @@ something like this::
 
    {
     "principals": {
-      "global": ["email:someone@example.org"],
       <subscriptionid1>: {
         "principals": ["group:Admin"]
       },
