@@ -2439,7 +2439,7 @@ Dictionaries / Entities
      - | *Arguments:*
        |   DICTS(value-expression{1})
        |
-       | Takes a list of dictionaries in and outputs a single list of key+value tuples.
+       | Takes a list of dictionaries in and outputs a list of key+value tuples.
          For each key+value pair in the dictionaries one pair is added to the output
          list. Non-dictionary values are ignored. Note that entities are dictionaries,
          so you can use this function with them.
@@ -2456,7 +2456,7 @@ Dictionaries / Entities
      - | *Arguments:*
        |   ITEMS(value-expression{1})
        |
-       | Takes a list of key+value pair tuples and returns a single dictionary with
+       | Takes a list of key+value pair tuples and returns a dictionary with
          those tuples as keys and values. Note that the last key in the tuple list
          wins. Values are not two-element tuples are ignored.
      - | ``["dict",``
@@ -2490,7 +2490,7 @@ Dictionaries / Entities
      - | *Arguments:*
        |   DICTS(value-expression{1})
        |
-       | Takes a list of dictionaries in and outputs a single list of keys.
+       | Takes a list of dictionaries in and outputs a list of keys.
          For each key+value pair in the dictionaries one key is added to the output
          list. Non-dict values are ignored.
      - | ``["keys",``
@@ -2506,7 +2506,7 @@ Dictionaries / Entities
      - | *Arguments:*
        |   DICTS(value-expression{1})
        |
-       | Takes a list of dictionaries in and outputs a single list of values.
+       | Takes a list of dictionaries in and outputs a list of values.
          For each key+value pair in the dictionaries one value is added to the output
          list. Non-dict values are ignored.
      - | ``["values",``
@@ -2517,6 +2517,26 @@ Dictionaries / Entities
        | ``["values", ["list", "X", 123, {"A": 1}]]``
        |
        | Returns ``[1]``.
+
+   * - ``key-values``
+     - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a list of dictionaries with "key"
+         and "value" keys. For each key+value pair in the dictionaries one dict is added
+         to the output list. Non-dictionary values are ignored. Note that entities are
+         dictionaries, so you can use this function with them.
+     - | ``["key-values",``
+       |     ``["list", {"A": 1, "B": 2}, 123, {"C": 3, "A": 1}]]``
+       |
+       | Returns ``[{"key": "A", "value": 1},``
+       |            ``{"key": "B", "value": 2},``
+       |            ``{"key": "C", "value": 3},``
+       |            ``{"key": "A", "value": 1}]``.
+       |
+       | ``["key-values", {"hello": "world"}]``
+       |
+       | Returns ``{"key": "hello", "value": "world"}``.
 
 
 Math
