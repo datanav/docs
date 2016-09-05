@@ -3561,6 +3561,153 @@ dataset:
     }
 
 
+.. _csv_endpoint_sink:
+
+The CSV endpoint sink
+---------------------
+
+This is a data sink that registers an HTTP publisher endpoint
+that one can get entities in CSV format from.
+
+A pipe that references the ``CSV endpoint`` sink will not pump any
+entities, in practice this means that a pump is not configured for the
+pipe; the only way for entities to flow through the pipe is by
+retrieving them from the CSV endpoint.
+
+It exposes the URL:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 60
+
+   * - URL
+     - Description
+
+   * - ``http://localhost:9042/api/publishers/mypipe/csv``
+
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "csv_endpoint",
+        "columns": ["properties","to","use","as","columns"],
+        "quoting": "all|minimal|non-numeric|"none",
+        "delimiter": ","
+        "doublequote": true
+        "include_header": true,
+        "escapechar": null,
+        "lineterminator": "\r\n",
+        "quotechar": "\"",
+        "encoding": "utf-8"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``columns``
+     - List<String>
+     - A list of string keys to look up in the entity to construct the CSV columns. If ``include_header`` is set to
+       ``true`` (which is the default), this list will also be included as the first line of the CSV file.
+     - Yes
+     -
+
+   * - ``quoting``
+     - Enum<String>
+     - A string from the set of "all", "minimal", "non-numeric" and "none" that describes how the fields of the CSV
+       file will be quoted. A value of "all" means all fields will be quoted, even if they don't contain the ``quotechar``
+       or ``delimiter`` characters. A value of "non-numeric" means all non-numeric values will be quoted. The "minimal"
+       setting (the default) means only fields with contents that need to be quoted will be quoted. Finally, the ``none``
+       value means do not quote (note this can produce broken CSV files if there are values that have to be quoted).
+     -
+     - "minimal"
+
+   * - ``delimiter``
+     - String
+     - The character to use as field separator. It will also affect which fields will be quoted if the ``quoting`` setting
+       is set to ``minimal" (which is the default). The default value is to use the comma (``","``) character.
+     -
+     - ","
+
+   * - ``doublequote``
+     - Boolean
+     - Controls how instances of ``quotechar`` appearing inside a field should themselves be quoted. When set to
+       ``true`` (the default), the character is doubled (repeated). When set to ``false``, the ``escapechar`` property
+       setting is used as a prefix to the ``quotechar``. If ``doublequoting`` is set to ``true` but ``escapechar`` is
+       not set, the backward slash character (``\``) is used as prefix.
+     -
+     - true
+
+   * - ``include_header``
+     - Boolean
+     - Controls if the ``columns`` property should be included as the header of the CSV file produced.
+     -
+     - true
+
+   * - ``escapechar``
+     - String
+     - A one-character string used by the sink to escape ``delimiter`` characters in fields if ``quoting`` is set to
+       ``none`` and the ``quotechar`` if ``doublequote`` is set to ``false``. The default is ``null`` which disables
+       escaping (except if ``doublequote`` is set to ``true``, in which case the default is ``\``).
+     -
+     - null
+
+   * - ``lineterminator``
+     - String
+     - A character sequence to use as the EOL marker in the CSV output. The default is carriage return plus linefeed
+       (``"\r\n"``).
+     -
+     - "\r\n"
+
+  * - ``quotechar``
+     - String
+     - A one-character string that controls how to quote field values. The default is the double quote character. See
+       ``doublequote`` and ``escapechar`` for related settings.
+     -
+     - "\""
+
+  * - ``encoding``
+     - String
+     - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
+       `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
+       valid values.
+     -
+     - "utf-8"
+
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The pipe configuration given below will expose the ``my-entities``
+publisher endpoint and read the entities from the ``my-entities``
+dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the CSV file:
+
+::
+
+    {
+        "_id": "my-entities",
+        "name": "My published csv endpoint",
+        "type": "pipe",
+        "sink": {
+            "type": "csv_endpoint"
+            "columns": ["_id", "foo", "bar", "zoo"]
+        }
+    }
+
+The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
+
 .. _system_section:
 
 Systems
