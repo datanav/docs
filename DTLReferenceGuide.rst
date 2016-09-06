@@ -2656,6 +2656,10 @@ Math
        | ``["ceil", 2.299]``
        |
        | Returns ``3``.
+       |
+       | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
+       | it will be a decimal.
+
 
    * - ``floor``
      - | *Arguments:*
@@ -2680,3 +2684,6 @@ Math
        | ``["floor", 2.299]``
        |
        | Returns ``2``.
+       |
+       | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
+       | it will be a decimal.
