@@ -3578,10 +3578,9 @@ It exposes the URL:
 
 .. list-table::
    :header-rows: 1
-   :widths: 50, 60
+   :widths: 100
 
    * - URL
-     - Description
 
    * - ``http://localhost:9042/api/publishers/mypipe/csv``
 
@@ -3671,14 +3670,14 @@ Properties
      -
      - "\r\n"
 
-  * - ``quotechar``
+   * - ``quotechar``
      - String
      - A one-character string that controls how to quote field values. The default is the double quote character. See
        ``doublequote`` and ``escapechar`` for related settings.
      -
      - "\""
 
-  * - ``encoding``
+   * - ``encoding``
      - String
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
