@@ -1236,6 +1236,46 @@ Data Types
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
 
+   * - ``datetime-plus``
+     - | *Arguments:*
+       |   DATEPART(string{1})
+       |   VALUE(integer{1})
+       |   VALUES(value-expression{})
+       |
+       | Adds a fixed ``VALUE`` number (positive or negative) of ``DATEPART`` values to the the input values,
+       | producing new datetime objects. ``DATEPART`` can be one of the following values:
+       |
+       |   ``year``
+       |   ``month``
+       |   ``day``
+       |   ``hour``
+       |   ``minute``
+       |   ``second``
+       |   ``millisecond``
+       |   ``microsecond``
+       |   ``nanosecond``
+
+       |
+     - | ``["datetime-plus", "day", 1, ["datetime-parse",``
+       |   ``"%Y-%m-%d", "2015-07-28"]]``
+       |
+       | Returns one datetime value: ``"~t2015-07-29T00:00:00Z"``.
+       |
+       | ``["datetime-plus", "hour", -1, ["datetime-parse",``
+       |   ``"%Y-%m-%d", "2016-03-01"]]``
+       |
+       | Returns one datetime value: ``"~t2016-02-29T23:00:00Z"``.
+       |
+       | ``["datetime-plus", "year", 1,``
+       |     ``["list",``
+       |         ``["datetime-parse",``
+       |           ``"%Y-%m-%d", "1971-01-01"],``
+       |         ``["datetime-parse",``
+       |           ``"%Y-%m-%d", "1950-06-01"]]``
+       |
+       | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
+       |                               ``"~t1951-06-01T00:00:00Z"]``.
+
    * - ``is-datetime``
      - | *Arguments:*
        |   VALUES(value-expression{1})
