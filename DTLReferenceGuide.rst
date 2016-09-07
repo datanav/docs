@@ -1247,6 +1247,7 @@ Data Types
        |
        |   ``year``
        |   ``month``
+       |   ``week``
        |   ``day``
        |   ``hour``
        |   ``minute``
@@ -1275,6 +1276,54 @@ Data Types
        |
        | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
        |                               ``"~t1951-06-01T00:00:00Z"]``.
+
+   * - ``datetime-diff``
+     - | *Arguments:*
+       |   DATEPART(string{1})
+       |   STARTDATE(value-expression{1})
+       |   ENDDATE(value-expression{1})
+       |
+       | Computes the positive or negative number of ``DATEPART`` values between the end and start date input values
+       | ``DATEPART`` can be one of the following values:
+       |
+       |   ``year``
+       |   ``month``
+       |   ``week``
+       |   ``day``
+       |   ``hour``
+       |   ``minute``
+       |   ``second``
+       |   ``millisecond``
+       |   ``microsecond``
+       |   ``nanosecond``
+       |
+       | Note that the return values are rounded downwards to the nearest (absolute) integer value, i.e. +-11 months is
+       | 0 years and +-8 days is +-1 week.
+
+       |
+     - | ``["datetime-diff", "day",
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"]]``
+       |
+       | Returns one integer value: 1
+       |
+       | ``["datetime-diff", "day",
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
+       |
+       | Returns one integer value: -1
+       |
+       | ``["datetime-diff", "year",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
+       |
+       | Returns: 1
+       |
+       | ``["datetime-diff", "month",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
+       |
+       | Returns: 16
 
    * - ``is-datetime``
      - | *Arguments:*
