@@ -1266,7 +1266,7 @@ Data Types
        |
        | Returns one datetime value: ``"~t2016-02-29T23:00:00Z"``.
        |
-       | ``["datetime-plus", "year", 10,``
+       | ``["datetime-plus", "year", 1,``
        |     ``["list",``
        |         ``["datetime-parse",``
        |           ``"%Y-%m-%d", "1971-01-01"],``
