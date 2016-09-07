@@ -2368,6 +2368,31 @@ Values / collections
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
+   * - ``map-dict``
+     - | *Arguments:*
+       |   KEY_FUNCTION(function-expression(1}
+       |   VALUE_FUNCTION(function-expression(1}
+       |   VALUES(value-expression{1})
+       |
+       | For each dictionary in VALUES construct a new dictionary by applying
+         the KEY_FUNCTION function and the VALUE_FUNCTION to all its key+value
+         pairs. If the KEY_FUNCTION returns a non-string value then the key+value
+         pair is ignored. Empty dictionaries are not returned.
+     - | ``["map-dict",``
+       |     ``["upper", "_."], ["plus", 1, "_."],``
+       |     ``{"A": 1, "B": 2}]``
+       |
+       | Returns ``{"A": 2, "B": 3}``.
+       |
+       | ``["map-dict",``
+       |     ``["if", ["gt", ["length", "_."], 2],``
+       |         ``["concat", ["list", "x:", "_."]]], "_.",``
+       |     ``["list",``
+       |         ``{"abc": 1, "ab": 2, "abcd": 3},``
+       |         ``{"def": 4}, {"gh": 5}]]``
+       |
+       | Returns ``[{"x:abc": 1, "x:abcd": 3}, {"x:def": 4}]``.
+
    * - ``group-by``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
