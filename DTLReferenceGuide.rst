@@ -92,12 +92,12 @@ persons with orders:
                 ["add", "type", "customer"],
                 ["add", "name", ["upper", "_S.name"]],
                 ["add", "orders",
-                  ["sorted", "_.amount", ["apply", "order", ["hops", {
+                  ["sorted", "_.amount", ["apply-hops", "order", {
                     "datasets": ["orders o"],
                     "where": [
                       ["eq", "_S._id", "o.cust_id"]
                     ]
-                }]]]],
+                }]]],
                 ["add", "order_count", ["count", "_T.orders"]],
                 ["filter", ["gt", "_T.order_count", 10]]
             ],
@@ -137,21 +137,21 @@ Explanation:
    ::
 
        ["add", "orders",
-         ["sorted", "_.amount", ["apply", "order", ["hops", {
+         ["sorted", "_.amount", ["apply-hops", "order", {
            "datasets": ["orders o"],
            "where": [
              ["eq", "_S._id", "o.cust_id"]
            ]
-       }]]]]
+       }]]]
 
 6. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
      property with the ``cust_id`` property of entities in the
-     ``orders`` dataset. The join is done by the ``hops`` function,
-     which takes a list of ``datasets``, assigns aliases to them, which
-     then get exposed as variables that you can use in expressions in
-     the ``where`` clause. The result of the ``hops`` is a list of
-     order entities:
+     ``orders`` dataset. The join is done by the ``apply-hops`` function,
+     which takes a hops specification that contains list of ``datasets``,
+     assigns aliases to them, which then get exposed as variables that
+     you can use in expressions in the ``where`` clause. The result of
+     the join is a list of orders:
 
    ::
 
@@ -168,9 +168,8 @@ Explanation:
       "cust_id": "1"
     }]
 
-   | The ``order`` transform is then applied using the ``apply`` function.
-     The result of this is a list of orders with two properties: ``_id``
-     and ``amount``:
+   | Next, the ``order`` transform is then applied. The result of this
+     is a list of orders with two properties: ``_id`` and ``amount``:
 
    ::
 
@@ -317,8 +316,6 @@ There are three ways that one can access properties on entities:
    string or a list of strings. Note that the ``path`` function can
    only access property on the dictionary/entity it operates on,
    including nested entities.
-
-.. _hops_function:
 
 3. **The "hops" function**:
 
@@ -1493,6 +1490,8 @@ Data Types
 Nested transformations
 ----------------------
 
+.. _apply_function:
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -1514,6 +1513,33 @@ Nested transformations
        | This will transform the order entities in the source entity's
          ``orders`` field using the ``order`` transform rules. The output is
          the transformed order entities.
+
+   * - ``apply-hops``
+     - | *Arguments:*
+       |   RULE_ID(string{1}),
+       |   HOPS_SPEC(dict{>1})
+       |
+       | This function is a combined ``hops`` and ``apply`` function. It
+         evaluates the hops, and then passes the result through
+         the RULE_ID transform rule.
+
+       | See the :ref:`apply <apply_function>`
+         and the :ref:`hops <hops_function>` functions for more information
+         about the parts.
+         
+       | Use this function instead of ``apply`` if you use ``hops`` inside
+         the transformation rule. This is required so that dependency tracking
+         can work. Calling ``apply`` on a rule that contains ``hops`` or
+         ``apply-hops`` is not allowed.
+         
+     - | ``["apply-hops", "order", {``
+       |   ``"datasets": ["orders o"],``
+       |   ``"where": ["eq", "_S._id", "o.cust_id"]``
+       |  ``}]``
+       |
+       | This will retrieve orders from the hops expression and then
+         transform them using the ``order`` transformation rule. The output
+         is the transformed order entities.
 
 
 Paths
@@ -1553,6 +1579,8 @@ Paths
 
 Hops
 ----
+
+.. _hops_function:
 
 .. list-table::
    :header-rows: 1
