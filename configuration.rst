@@ -535,6 +535,18 @@ be a list of datasets ids.
      - false
      -
 
+
+   * - ``ignore_deletes``
+     - Boolean
+     - Flag to indicate if you want to ignore deleted entities during the comparison. By default
+       there will be produced a difference if one of the datasets contains a deleted entity while
+       the other datasets does not contain the deleted entity.
+
+       If ``true`` the deleted entities are treated as if they don't exist.
+     - false
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
