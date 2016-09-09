@@ -4866,7 +4866,8 @@ Prototype
         "max_retries_per_entity": 5,
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
-        "dead_letter_dataset": "dead-letter-dataset-id"
+        "dead_letter_dataset": "dead-letter-dataset-id",
+        "mode": "scheduled"
     }
 
 Properties
@@ -4954,6 +4955,21 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
        pump execution dataset in the case where a target system is unreachable (or misconfigured). The default value (0) effectively
        disables retries for write errors.
      - 0
+     -
+
+   * - ``mode``
+     - String
+     - The mode of operation. Valid options are "``scheduled``" (the default), "``manual``" and
+       "``off``".
+
+       Pumps in ``scheduled`` mode will follow the configured schedule and the scheduler can be
+       enabled and disabled at runtime.
+
+       Pumps in ``manual`` mode will not be scheduled and can only be operated manually through
+       the Service API.
+
+       Pumps in ``off`` mode cannot be started at all.
+     - "scheduled"
      -
 
 Example configuration
