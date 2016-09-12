@@ -1526,12 +1526,12 @@ Nested transformations
        | See the :ref:`apply <apply_function>`
          and the :ref:`hops <hops_function>` functions for more information
          about the parts.
-         
+
        | Use this function instead of ``apply`` if you use ``hops`` inside
          the transformation rule. This is required so that dependency tracking
          can work. Calling ``apply`` on a rule that contains ``hops`` or
          ``apply-hops`` is not allowed.
-         
+
      - | ``["apply-hops", "order", {``
        |   ``"datasets": ["orders o"],``
        |   ``"where": ["eq", "_S._id", "o.cust_id"]``
@@ -2829,3 +2829,98 @@ Math
        |
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
        | it will be a decimal.
+
+   * - ``pow``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |   EXPONENT(value-expression{1})
+       |
+       | Takes a list of VALUES and raises them to the power of EXPONENT. Non-numeric
+         values are ignored. If both arguments are integers, the result will be an integer.
+         If not, the result will be a decimal value.
+     - | ``["pow", ["list", 2, 4, 6], 2]``
+       |
+       | Returns ``[4, 16, 36]``.
+       |
+       | ``["pow", 3, 2]``
+       |
+       | Returns ``9``.
+       |
+       | ``["multiply", 2.3, 2]``
+       |
+       | Returns ``5.29``.
+
+   * - ``abs``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |
+       | Takes a list of VALUES and returns the absolute value. If the VALUE is an integer,
+         an integer will be returned. If not, a decimal.
+     - | ``["abs", ["list", -2, 4, -6]]``
+       |
+       | Returns ``[2, 4, 6]``.
+       |
+       | ``["abs", 2]``
+       |
+       | Returns ``2``.
+       |
+       | ``["abs", -2.23]``
+       |
+       | Returns ``2.23``.
+
+   * - ``sqrt``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |
+       | Takes a list of VALUES and returns the square root of the value. If the result is not a real number,
+         ``None`` is returned instead.
+     - | ``["sqrt", ["list", 4, 9, 16]]``
+       |
+       | Returns ``[2.0, 3.0, 4.0]``.
+       |
+       | ``["sqrt", -2]``
+       |
+       | Returns ``None``.
+       |
+       | ``["sqrt", 9.0]``
+       |
+       | Returns ``3.0``.
+
+   * - ``sin``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |
+       | Takes a list of VALUES and returns the sinus of the value, where value is in
+         radians.
+     - | ``["sin", ["list", 0, 3.14159265]]``
+       |
+       | Returns ``[0.0, ~0.0]``.
+       |
+       | ``["sin", 0.0]``
+       |
+       | Returns ``0.0``.
+
+   * - ``cos``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |
+       | Takes a list of VALUES and returns the cosinus of the value, where value is in
+         radians.
+     - | ``["cos", ["list", 0, 3.14159265]]``
+       |
+       | Returns ``[1.0, ~-1.0]``.
+       |
+       | ``["cos", 0.0]``
+       |
+       | Returns ``1.0``.
+
+   * - ``tan``
+     - | *Arguments:*
+       |   VALUE(numeric-expression{1})
+       |
+       | Takes a list of VALUES and returns the tangens of the value, where value is in
+         radians. Note that values approaching very close to multiples of PI/2 will be
+         undefined (+-infinite) and the result will be a ``None`` value.
+     - | ``["tan", ["list", 0, 3.14159265]]``
+       |
+       | Returns ``[0.0, ~0.0]``.
