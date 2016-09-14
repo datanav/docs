@@ -2830,26 +2830,6 @@ Math
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
        | it will be a decimal.
 
-   * - ``pow``
-     - | *Arguments:*
-       |   VALUE(numeric-expression{1})
-       |   EXPONENT(value-expression{1})
-       |
-       | Takes a list of VALUES and raises them to the power of EXPONENT. Non-numeric
-         values are ignored. If both arguments are integers, the result will be an integer.
-         If not, the result will be a decimal value.
-     - | ``["pow", ["list", 2, 4, 6], 2]``
-       |
-       | Returns ``[4, 16, 36]``.
-       |
-       | ``["pow", 3, 2]``
-       |
-       | Returns ``9``.
-       |
-       | ``["multiply", 2.3, 2]``
-       |
-       | Returns ``5.29``.
-
    * - ``abs``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
