@@ -2684,6 +2684,12 @@ Dictionaries / Entities
 Math
 ----
 
+The ``plus``, ``minus``, ``multiply``, ``divide`` and ``mod`` functions are ``map``-style functions that apply the first
+argument to one ore more values. For "natural order" math operators that operate on single numbers, use the symbolic
+equivalent functions ``+``, ``-``, ``*``, ``/`` and ``%``. If the argument(s) to the natural order functions
+are lists, the first value is extracted and used. If either argument evaluates to ``null`` , the result will also be
+``null``.
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -2697,7 +2703,7 @@ Math
        |   INCREMENT(numeric-expression{1})
        |   VALUES(value-expression{1})
        |
-       | Takes a list of VALUES and increments them by INCREMENT. Non-numeric
+       | Takes a list of ``VALUES`` and increments them by ``INCREMENT``. Non-numeric
          values are ignored.
      - | ``["plus", 10, ["list", 1, 2, 3]]``
        |
@@ -2707,12 +2713,26 @@ Math
        |
        | Returns ``20``.
 
+   * - ``+``
+     - | *Arguments:*
+       |   VALUE1(value-expression{1})
+       |   VALUE2(value-expression{1})
+       |
+       | Returns the result of ``VALUE1 + VALUE2``. The result is always a single number (or ``null``).
+     - | ``["+", 10, 3]``
+       |
+       | Returns ``10``.
+       |
+       | ``["plus", 10, ["list", 10, 20, 30]]``
+       |
+       | Returns ``20``.
+
    * - ``minus``
      - | *Arguments:*
        |   DECREMENT(numeric-expression{1})
        |   VALUES(value-expression{1})
        |
-       | Takes a list of VALUES and decrements them by DECREMENT. Non-numeric
+       | Takes a list of ``VALUES`` and decrements them by ``DECREMENT``. Non-numeric
          values are ignored.
      - | ``["minus", 1, ["list", 1, 2, 3]]``
        |
@@ -2722,12 +2742,27 @@ Math
        |
        | Returns ``2``.
 
+   * - ``-``
+     - | *Arguments:*
+       |   VALUE1(value-expression{1})
+       |   VALUE2(value-expression{1})
+       |
+       | Returns the result of ``VALUE1 - VALUE2``. The result is always a single number (or ``null``).
+
+     - | ``["-", 1, ["list", 1, 2, 3]]``
+       |
+       | Returns ``0``.
+       |
+       | ``["-", 10, 12]``
+       |
+       | Returns ``-2``.
+
    * - ``divide``
      - | *Arguments:*
        |   DIVISOR(numeric-expression{1})
-       |   VALUES(value-expression{1})
+       |   DIVIDENDS(value-expression{1})
        |
-       | Takes a list of VALUES and divides them by DIVISOR. Non-numeric
+       | Takes a list of ``DIVIDENDS`` and divides them by ``DIVISOR``. Non-numeric
          values are ignored.
      - | ``["divide", 2, ["list", 2, 4, 6]]``
        |
@@ -2737,16 +2772,42 @@ Math
        |
        | Returns ``2``.
        |
-       | ``["divide", 2, 3]``
+       | ``["divide", ["list", 2, 8], 3]``
        |
        | Returns ``1.5``.
+
+   * - ``/``
+     - | *Arguments:*
+       |   DIVIDEND(numeric-expression{1})
+       |   DIVISOR(value-expression{1})
+       |
+       | Returns the result of ``DIVIDEND / DIVISOR``. The result is always a single number (or ``null``).
+     - | ``["/", 2, ["list", 4, 6, 8]]``
+       |
+       | Returns ``0.5``.
+       |
+       | ``["/", 10, 20]``
+       |
+       | Returns ``2``.
+       |
+       | ``["/", ["list", -3, 10, 100], 2]``
+       |
+       | Returns ``-1.5``.
+       |
+       | ``["/", ["list", 3, 8], ["list", -2, 6]]``
+       |
+       | Returns ``1.5``.
+       |
+       | ``["/", 5, 0]``
+       |
+       | Returns ``null``.
 
    * - ``multiply``
      - | *Arguments:*
        |   MULTIPLIER(numeric-expression{1})
        |   VALUES(value-expression{1})
        |
-       | Takes a list of VALUES and multiplies them by MULTIPLIER. Non-numeric
+       | Takes a list of ``VALUES`` and multiplies them by ``MULTIPLIER``. Non-numeric
          values are ignored.
      - | ``["multiply", 2, ["list", 2, 4, 6]]``
        |
@@ -2760,13 +2821,31 @@ Math
        |
        | Returns ``4.6``.
 
+   * - ``*``
+     - | *Arguments:*
+       |   VALUE(value-expression{1})
+       |   MULTIPLIER(value-expression{1})
+       |
+       | Returns the result of the expression ``VALUE * MULTIPLIER``
+     - | ``["multiply", 2, ["list", 2, 4, 6]]``
+       |
+       | Returns ``4``.
+       |
+       | ``["multiply", 10, 20]``
+       |
+       | Returns ``200``.
+       |
+       | ``["multiply", ["list", 2.3, 14], 2]``
+       |
+       | Returns ``4.6``.
+
    * - ``mod``
      - | *Arguments:*
        |   DIVISOR(numeric-expression{1})
        |   VALUES(value-expression{1})
        |
-       | Takes a list of VALUES and finds the remainder of dividing them
-         by DIVISOR. Non-numeric values are ignored.
+       | Takes a list of ``VALUES`` and finds the remainder of dividing them
+         by ``DIVISOR``. Non-numeric values are ignored.
      - | ``["mod", 2, ["list", 2, 5, 6]]``
        |
        | Returns ``[0, 1, 0]``.
@@ -2774,6 +2853,68 @@ Math
        | ``["mod", 3, 5]``
        |
        | Returns ``2``.
+
+   * - ``%``
+     - | *Arguments:*
+       |   DIVIDEND(numeric-expression{1})
+       |   DIVISOR(value-expression{1})
+       |
+       | Takes a ``DIVIDEND`` value finds the remainder of dividing them by ``DIVISOR``:
+         ``DIVIDEND % DIVISOR``. Non-numeric values are ignored.
+     - | ``["%", 2, ["list", 2, 5, 6]]``
+       |
+       | Returns ``0``.
+       |
+       | ``["%", 5, 3]``
+       |
+       | Returns ``2``.
+       |
+       | ``["%", ["list", 5, 8, 9], 3]``
+       |
+       | Returns ``2``.
+       |
+       | ``["%", ["list", 5, 8, 9], ["list", 3, -2.3]]``
+       |
+       | Returns ``2``.
+
+   * - ``pow``
+     - | *Arguments:*
+       |   EXPONENT(numeric-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of ``VALUES`` and raises them to the power of ``EXPONENT``.
+         Non-numeric values are ignored.
+     - | ``["pow", 2, ["list", 2, 5, 6]]``
+       |
+       | Returns ``[4, 25, 36]``.
+       |
+       | ``["pow", 3, 10]``
+       |
+       | Returns ``1000``.
+
+   * - ``^``
+     - | *Arguments:*
+       |   VALUE(value-expression{1})
+       |   EXPONENT(value-expression{1})
+       |
+       | Takes a ``VALUE`` and raises it to the power of ``EXPONENT``:
+         ``VALUE^EXPONENT``. The result is always a single value (or ``null``).
+         Non-numeric values are ignored.
+     - | ``["^", 2, ["list", 2, 5, 6]]``
+       |
+       | Returns ``4``.
+       |
+       | ``["^", 5, 2]``
+       |
+       | Returns ``25``.
+       |
+       | ``["^", ["list", 2, 8, 9], 3]``
+       |
+       | Returns ``8``.
+       |
+       | ``["%", ["list", 2, 8, 9], ["list", 3, -2.3]]``
+       |
+       | Returns ``8``.
 
    * - ``ceil``
      - | *Arguments:*
