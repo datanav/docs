@@ -2723,7 +2723,7 @@ are lists, the first value is extracted and used. If either argument evaluates t
        |
        | Returns ``10``.
        |
-       | ``["plus", 10, ["list", 10, 20, 30]]``
+       | ``["+", 10, ["list", 10, 20, 30]]``
        |
        | Returns ``20``.
 
@@ -2788,7 +2788,7 @@ are lists, the first value is extracted and used. If either argument evaluates t
        |
        | ``["/", 10, 20]``
        |
-       | Returns ``2``.
+       | Returns ``0.5``.
        |
        | ``["/", ["list", -3, 10, 100], 2]``
        |
@@ -2796,7 +2796,7 @@ are lists, the first value is extracted and used. If either argument evaluates t
        |
        | ``["/", ["list", 3, 8], ["list", -2, 6]]``
        |
-       | Returns ``1.5``.
+       | Returns ``-1.5``.
        |
        | ``["/", 5, 0]``
        |
@@ -2827,15 +2827,15 @@ are lists, the first value is extracted and used. If either argument evaluates t
        |   MULTIPLIER(value-expression{1})
        |
        | Returns the result of the expression ``VALUE * MULTIPLIER``
-     - | ``["multiply", 2, ["list", 2, 4, 6]]``
+     - | ``["*", 2, ["list", 2, 4, 6]]``
        |
        | Returns ``4``.
        |
-       | ``["multiply", 10, 20]``
+       | ``["*", 10, 20]``
        |
        | Returns ``200``.
        |
-       | ``["multiply", ["list", 2.3, 14], 2]``
+       | ``["*", ["list", 2.3, 14], 2]``
        |
        | Returns ``4.6``.
 
@@ -2912,7 +2912,7 @@ are lists, the first value is extracted and used. If either argument evaluates t
        |
        | Returns ``8``.
        |
-       | ``["%", ["list", 2, 8, 9], ["list", 3, -2.3]]``
+       | ``["^", ["list", 2, 8, 9], ["list", 3, -2.3]]``
        |
        | Returns ``8``.
 
