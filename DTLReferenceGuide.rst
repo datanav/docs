@@ -2684,10 +2684,10 @@ Dictionaries / Entities
 Math
 ----
 
-The ``plus``, ``minus``, ``multiply``, ``divide`` and ``mod`` functions are ``map``-style functions that apply the first
-argument to one ore more values. For "natural order" math operators that operate on single numbers, use the symbolic
-equivalent functions ``+``, ``-``, ``*``, ``/`` and ``%``. If the argument(s) to the natural order functions
-are lists, the first value is extracted and used. If either argument evaluates to ``null`` , the result will also be
+The ``plus``, ``minus``, ``multiply``, ``divide``, ``mod`` and ``pow`` functions are ``map``-style functions that apply the first
+argument to one or more values. For "natural order" math operators that operate on single numbers, use the symbolic
+equivalents ``+``, ``-``, ``*``, ``/``, ``%`` and ``^``. If the argument(s) to the natural order functions
+are lists, the first value is used. If either argument evaluates to ``null``, the result will also be
 ``null``.
 
 .. list-table::
