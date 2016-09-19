@@ -175,6 +175,6 @@ from the command line client itself, via the "-h" option. Examples::
    sesam get-datasets -h
 
 .. argparse::
-   :module: sesamclient.main.main
+   :module: sesamclient.main
    :func: get_parser_used_by_sphinx_argparse_extension
    :prog: sesam
