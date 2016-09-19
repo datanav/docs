@@ -77,7 +77,9 @@ level, so child entities can have them.
      - A pointer back to the previous version of this entity. The
        value refers to the ``_updated`` field of the previous version
        of the entity. If the field is missing or the value is
-       ``null``, then there exists no previous version.
+       ``null``, then there exists no previous version. Note that the
+       previous version may not actually exist anymore as dataset compaction
+       may have reclaimed it.
 
        *This field is generated automatically when writing an entity to a dataset.*
      -
