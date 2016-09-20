@@ -1298,13 +1298,13 @@ Data Types
        | 0 years and +-8 days is +-1 week.
 
        |
-     - | ``["datetime-diff", "day",
+     - | ``["datetime-diff", "day",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"]]``
        |
        | Returns one integer value: 1
        |
-       | ``["datetime-diff", "day",
+       | ``["datetime-diff", "day",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
        |
