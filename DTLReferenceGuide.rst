@@ -1192,6 +1192,12 @@ Data Types
        |
        | Returns one datetime value: "~t2015-07-28T09:46:00.12345Z".
        |
+       | ``["datetime-parse",``
+       |   ``"%Y-%m-%dT%H:%M:%S%z",``
+       |   ``"2015-07-28T09:46:00+0200"]``
+       |
+       | Returns one datetime value: "~t2015-07-28T07:46:00Z".
+       |
        | ``["datetime-parse", "%d.%m.%Y", "28.07.2015"]``
        |
        | Returns one datetime value: "~t2015-07-28T00:00:00Z".
@@ -1214,6 +1220,7 @@ Data Types
        |   %f - microsecond as a decimal number, zero-padded on the left
        |   %y - year without a century (range 00 to 99)
        |   %Y - year including the century
+       |   %z - UTC offset in the form +HHMM, -HHMM, +HH:MM or -HH:MM. If present, this token must be the last token in the format string.
        |   %% - a literal % character
 
    * - ``datetime-format``
