@@ -1329,6 +1329,35 @@ Data Types
        |
        | Returns: 16
 
+   * - ``datetime-shift``
+     - | *Arguments:*
+       |   FROM_TIMEZONE(string{1})
+       |   TO_TIMEZONE(string{1})
+       |   VALUES(value-expression{})
+       |
+       | Shifts all the input datetime values from one timezone to another timezone. Any values that aren't datetime
+         values will be silently ignored. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
+       | Internally, SESAM stores datetimes as UTC, and timezone converting is usually done automatically by the datasources.
+         Sometimes, though, there is need to explicitly convert a timezone in a non-UTC timezone into some other timezone; An
+         example is if you are reading from a CSV-file where one of the columns is a date-string with no explicit timezone information,
+         but where you know that the dates are in some non-UTC timezone. In this case you could use the datetime-shift function
+         to convert the dates from the CSV-file into correct UTC datetimes. |
+     - | ``["datetime-shift", "Europe/Oslo", "UTC",``
+       |     ``["datetime-parse",``
+       |         ``"%Y/%m/%d %H:%M", "2015/07/28 09:46"]]``
+       |
+       | Returns one datetime value: ``"~t2015-07-28T07:46:00Z"``.
+       |
+       | ``["datetime-shift", "Europe/Oslo", "UTC",``
+       |     ``["list",``
+       |         ``["datetime-parse",``
+       |           ``"%Y/%m/%d %H:%M", "2015/07/28 09:46"],``
+       |         ``["datetime-parse",``
+       |           ``"%Y/%m/%d %H:%M", "2015/07/28 04:46"]]``
+       |
+       | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
+       |                               ``"~t2015-07-28T02:46Z:00"]``.
+
    * - ``is-datetime``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3052,3 +3081,15 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
      - | ``["tan", ["list", 0, 3.14159265]]``
        |
        | Returns ``[0.0, ~0.0]``.
+
+
+
+.. _supported_timezones:
+
+Supported timezones
+===================
+The ``datetime-shift`` dtl-function supports the following timezones:
+
+
+
+.. sesam-dtl-supported-timezonenames::

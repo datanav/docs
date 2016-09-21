@@ -10,7 +10,6 @@ import cornice
 import guzzle_sphinx_theme
 
 from lake import build_utils
-
 # import sphinx_rtd_theme
 
 
@@ -36,6 +35,7 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 # ones.
 extensions = ['cornice.ext.sphinxext',
               'sphinxarg.ext',
+              'lake.dtl.sphinxext'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
