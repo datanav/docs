@@ -177,25 +177,27 @@ We need somewhere to manage users and organizations. Probably as a part of the S
 
 Organization creation and membership management:
 (https://jira.bouvet.no/browse/IS-3134)
-   * add organization
-   * modify the organization's metadata (at least the name of the organization).
-   * delete the organization
-   * disable the organization
-   * list all users in the organization
-   * invite a new user to join the organization by entering the email of the new user. This should send an email to
-     the new user with instructions on how to sign up.
-   * remove a user from the organization
-   * disable a user in the organization (for temporarily stopping a user from doing anything)
+
+* add organization
+* modify the organization's metadata (at least the name of the organization).
+* delete the organization
+* disable the organization
+* list all users in the organization
+* invite a new user to join the organization by entering the email of the new user. This should send an email to the new user with instructions on how to sign up.
+* remove a user from the organization
+* disable a user in the organization (for temporarily stopping a user from doing anything)
 
 Organization custom roles and permissions
 (https://jira.bouvet.no/browse/IS-3150)
-   * define a new custom principal
-   * remove a custom principal
+
+* define a new custom principal
+* remove a custom principal
 
 Organization user roles:
 (https://jira.bouvet.no/browse/IS-3151)
-   * add a principal to a user
-   * remove a principal from a user
+
+* add a principal to a user
+* remove a principal from a user
 
 
 SESAM Subscription:

@@ -1145,6 +1145,7 @@ Data Types
        |
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z".
+
        .. _`datetime`:
 
    * - ``datetime``
@@ -1177,6 +1178,7 @@ Data Types
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
+
        .. _`datetime-parse`:
 
    * - ``datetime-parse``
@@ -1224,6 +1226,7 @@ Data Types
        |   %Y - year including the century
        |   %z - UTC offset in the form +HHMM, -HHMM, +HH:MM or -HH:MM. If present, this token must be the last token in the format string.
        |   %% - a literal % character
+
        .. _`datetime-format`:
 
    * - ``datetime-format``
@@ -1242,6 +1245,7 @@ Data Types
        | Returns one string: "2015-07-28T00:00:00Z".
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
+
        .. _`datetime-plus`:
 
    * - ``datetime-plus``
@@ -1263,8 +1267,8 @@ Data Types
        |   ``millisecond``
        |   ``microsecond``
        |   ``nanosecond``
-
        |
+
      - | ``["datetime-plus", "day", 1, ["datetime-parse",``
        |   ``"%Y-%m-%d", "2015-07-28"]]``
        |
@@ -1284,6 +1288,7 @@ Data Types
        |
        | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
        |                               ``"~t1951-06-01T00:00:00Z"]``.
+
        .. _`datetime-diff`:
 
    * - ``datetime-diff``
@@ -1333,6 +1338,7 @@ Data Types
        |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
        |
        | Returns: 16
+
        .. _`datetime-shift`:
 
    * - ``datetime-shift``
@@ -1363,6 +1369,7 @@ Data Types
        |
        | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
        |                               ``"~t2015-07-28T02:46Z:00"]``.
+
        .. _`is-datetime`:
 
    * - ``is-datetime``

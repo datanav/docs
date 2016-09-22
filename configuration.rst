@@ -3559,9 +3559,8 @@ Example configuration
 
 The pipe configuration given below will expose the ``my-entities``
 publisher endpoint and read the entities from the ``my-entities``
-dataset:
+dataset::
 
-::
 
     {
         "_id": "my-entities",
@@ -3648,7 +3647,7 @@ Properties
    * - ``delimiter``
      - String
      - The character to use as field separator. It will also affect which fields will be quoted if the ``quoting`` setting
-       is set to ``minimal" (which is the default). The default value is to use the comma (``","``) character.
+       is set to ``minimal"`` (which is the default). The default value is to use the comma (``","``) character.
      -
      - ","
 
