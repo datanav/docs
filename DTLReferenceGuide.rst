@@ -1457,7 +1457,7 @@ Data Types
        |
        | Returns true.
        |
-       | ``["is-boolean", ["list", "True", 2]]``
+       | ``["is-boolean", ["list", "12345", true]]``
        |
        | Returns false.
        |
@@ -2670,11 +2670,19 @@ Dictionaries / Entities
        | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
        | in the list is a dictionary
        |
-     - | ``["is-dict", ["dict", "1", 2]]``
+     - | ``["is-dict", "_S."]``
        |
        | Returns true.
        |
-       | ``["is-dict", "foo:bar"]``
+       | ``["is-dict", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", 123, {"a": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["is-dict", "abc"]``
        |
        | Returns false
 

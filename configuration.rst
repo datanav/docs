@@ -2564,9 +2564,12 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The Sesam Databrowser sink
 --------------------------
 
-The databrowser sink writes the entities it is given to a Solr index to be displayed by the Sesam Databrowser
-application. The input entities are transformed to special Databrowser JSON documents before being sent off for
-indexing.
+The databrowser sink writes the entities it is given to a Solr index
+to be displayed by the Sesam Databrowser application. The input
+entities are transformed to special Databrowser JSON documents before
+being sent off for indexing.
+
+This sink supports :ref:`batching <pipe_batching>`.
 
 The configuration looks like:
 
@@ -2578,7 +2581,11 @@ Prototype
     {
         "type": "databrowser",
         "system": "solr-system-id",
-        "prefix_includes": ["prefix_set1", "prefix_set2"]
+        "batch_size": 100,
+        "commit_within": null,
+        "commit_at_end": true,
+        "prefix_includes": ["prefix_set1", "prefix_set2"],
+        "keep_existing_solr_ids": false
     }
 
 Properties
@@ -2600,6 +2607,29 @@ Properties
      -
      - Yes
 
+   * - ``batch_size``
+     - Integer
+     - The maximum number of documents to post to solr in one http request
+     - 100
+     -
+   * - ``commit_within``
+     - Integer
+     - The number of seconds to wait until committing, i.e. invalidating the Solr
+       caches. This is used to set up commit batching. The default is null
+       (i.e. not set) which means that a commit will be issued at the end of the
+       sync if ``commit_at_end`` is true. Do not set this too low as it will cause
+       a lot of overhead on the Solr server.
+     - null
+     -
+
+   * - ``commit_at_end``
+     - Boolean
+     - If true, then the sink will issue a commit at the end of the sync. In general
+       it is best to rely on ``commit_within`` instead or just let the Solr server
+       itself decide the commit interval.
+     - true
+     -
+
    * - ``prefix_includes``
      - List<String>
      - A list of string keys to look up in the node-wide :ref:`RDF registry <rdf_registry>`. These keys reference objects which contain
@@ -2609,6 +2639,16 @@ Properties
        You do not need include any prefix sets to use the :ref:`common RDF prefixes <built_in_prefixes>` (i.e. RDF,
        RDFS, OWL and so on).
      -
+     -
+
+   * - ``keep_existing_solr_ids``
+     - Boolean
+     - This can be set to True in order to try to reuse the existing solr-id of an entity, even if
+       the solr-ids of the entity no longer contains the solr-id that exists on the solr server.
+       The cons of doing this is that it requires a http-request to solr for *each and every*
+       entity, so it is *very* expensive. This option should therefore be set to false in
+       cases where the id-problem is not likely to occur.
+     - false
      -
 
 Example configuration
@@ -3014,23 +3054,25 @@ the templates in config or the entities themselves.
 The Solr sink
 -------------
 
-The Solr sink writes the entities it is given to a Solr index. The input entity is converted to a JSON document and its
-``_id`` property is converted to a JSON ``id`` property automatically. If you include your own ``id`` propery, it will
-overwrite this generated property before being sent off for indexing.
+The Solr sink writes the entities it is given to a Solr index.
+
+The ``_id`` property is used as the document id. All other properties,
+except the ones at the root level matching ``_*`` or ``$*`` are added
+to the document. Notice the limitations described in the next section.
+
+This sink supports :ref:`batching <pipe_batching>`.
 
 Limitations
 ^^^^^^^^^^^
 
-Due to the limited JSON datastructure allowed by Solr, there are some restrictions on the form of the entities accepted
-by the sink:
+Due to the limited document structure allowed by Solr, there are some
+restrictions on the form of the entities accepted by the sink:
 
 * Only "flat" entities are allowed - any child entities must be removed or merged into the root entity before being sent to the sink.
 * Lists properties are supported, but they can only contain a single type of property.
 * Lists cannot contain other lists or entities.
 
-Any properties not adhering to these rules are ignored (this is logged as a warning).
-
-The configuration looks like:
+If the document does not adhere to these rules, then an error is raised.
 
 Prototype
 ^^^^^^^^^
@@ -3038,12 +3080,10 @@ Prototype
 ::
 
     {
-        "type": "databrowser",
+        "type": "solr",
         "system": "solr-system-id",
-        "prefixes": {
-          "prefix": "http://expansionsion.com/foo",
-          "other_prefix": "http://other.expansionsion.com/bar"
-        }
+        "commit_within": null,
+        "commit_at_end": true
     }
 
 Properties
@@ -3065,11 +3105,90 @@ Properties
      -
      - Yes
 
-   * - ``prefixes``
-     - Dictionary
-     - A dictionary mapping prefix to their URI expansions. This prefix mapping
-       will be used to expand CURIEs into full URIs.
+   * - ``commit_within``
+     - Integer
+     - The number of seconds to wait until committing, i.e. invalidating the Solr
+       caches. This is used to set up commit batching. The default is null
+       (i.e. not set) which means that a commit will be issued at the end of the
+       sync if ``commit_at_end`` is true. Do not set this too low as it will cause
+       a lot of overhead on the Solr server.
+     - null
      -
+
+   * - ``commit_at_end``
+     - Boolean
+     - If true, then the sink will issue a commit at the end of the sync. In general
+       it is best to rely on ``commit_within`` instead or just let the Solr server
+       itself decide the commit interval.
+     - true
+     -
+
+
+.. _elasticsearch_sink:
+
+The Elasticsearch sink
+----------------------
+
+The Elasticsearch sink writes the entities it is given to an
+Elasticsearch server/cluster.
+
+The ``_id`` property is used as the document id. All other properties,
+except the ones at the root level matching ``_*`` or ``$*`` are added
+to the document.
+
+If the input entity has the property ``$index`` then this is the index
+into which the document is written. The ``$type`` property is used as
+the document type. Note that default values for ``$index`` and
+``$type`` can be specified on the :ref:`Elasticsearch system
+<elasticsearch_system>`.
+
+This sink supports :ref:`batching <pipe_batching>`.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "elasticsearch",
+        "system": "elasticsearch-system-id",
+        "default_index": null,
+        "default_type": null
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`Elasticsearch system <elasticsearch_system>` component to use.
+     -
+     - Yes
+
+   * - ``default_index``
+     - String
+     - The index to insert the documents into. This the default value for
+       the ``$index`` property on the indexable entities. Note that this is
+       overridable on each entity.
+     - null
+     -
+
+   * - ``default_type``
+     - String
+     - The document type to use for the entities. This the default value for
+       the ``$type`` property on the indexable entities. Note that this is
+       overridable on each entity.
+     - null
      -
 
 .. _sparql_sink:
@@ -4598,10 +4717,10 @@ Example configuration
 The Solr system
 ---------------
 
-The Solr system represents the information needed to connect to a Solr server for indexing JSON documents. It is used in
-conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink <databrowser_sink>` sinks.
-
-This sink supports :ref:`batching <pipe_batching>`.
+The Solr system represents the information needed to connect to a Solr
+server for indexing JSON documents. It is used in conjunction with the
+:ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
+<databrowser_sink>` sinks.
 
 Prototype
 ^^^^^^^^^
@@ -4613,10 +4732,7 @@ Prototype
         "name": "Name of system",
         "type": "system:solr",
         "url": "http://localhost:8983/solr/",
-        "commit_within": null,
         "timeout": 30,
-        "batch_size": 100,
-        "keep_existing_solr_ids": false
     }
 
 Properties
@@ -4638,33 +4754,10 @@ Properties
      - "http://localhost:8983/solr/"
      -
 
-   * - ``commit_within``
-     - Integer
-     - The number of seconds to wait until committing (default is to autocommit once per document). This is used
-       to set up commit batching. The default is null (i.e. not set) which means commit for each document.
-     - null
-     -
-
    * - ``timeout``
      - Integer
-     - The number of seconds to wait for a response from the Solr server when adding/committing data
+     - The number of seconds to wait for a response from the Solr server.
      - 30
-     -
-
-   * - ``batch_size``
-     - Integer
-     - The maximum number of documents to post to solr in one http request
-     - 100
-     -
-
-   * - ``keep_existing_solr_ids``
-     - Boolean
-     - This can be set to True in order to try to reuse the existing solr-id of an entity, even if
-       the solr-ids of the entity no longer contains the solr-id that exists on the solr server.
-       The cons of doing this is that it requires a http-request to solr for *each and every*
-       entity, so it is *very* expensive. This option should therefore be set to false in
-       cases where the id-problem is not likely to occur.
-     - true
      -
 
 Example configuration
@@ -4676,9 +4769,60 @@ Example configuration
         "_id": "our-solr-server",
         "name": "Our Solr Server",
         "type": "system:solr",
-        "smtp_server": "http://localhost:8983/solr/ourdata/",
-        "commit_within": 3000,
-        "timeout": 60
+        "url": "http://localhost:8983/solr/"
+    }
+
+.. _elasticsearch_system:
+
+The Elasticsearch system
+------------------------
+
+The Elasticsearch system represents the information needed to connect
+to an Elasticsearch server/cluster for indexing JSON documents. It is
+used in conjunction with the :ref:`Elasticsearch sink
+<elasticsearch_sink>`.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:elasticsearch",
+        "hosts": ["localhost:9200"]
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``hosts``
+     - List<String>
+     - Contains a list of host+port pairs, or full URL to the Elasticsearch server(s)
+     - ``["localhost:9200"]``
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-elasticsearch-server",
+        "name": "Our Elasticsearch Server",
+        "type": "system:elasticsearch",
+        "hosts": ["localhost:9200"]
     }
 
 .. _twilio_system:
