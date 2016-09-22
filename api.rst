@@ -151,7 +151,7 @@ API Reference
    :local:
    :depth: 1
 
-.. cornice-autodoc::
+.. sesam-cornice-autodoc::
    :modules: lake.node.webapp.api.root,
              lake.node.webapp.api.pipes,
              lake.node.webapp.api.receivers,

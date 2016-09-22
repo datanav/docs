@@ -1145,6 +1145,7 @@ Data Types
        |
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z".
+       .. _`datetime`:
 
    * - ``datetime``
      - | *Arguments:*
@@ -1176,6 +1177,7 @@ Data Types
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
+       .. _`datetime-parse`:
 
    * - ``datetime-parse``
      - | *Arguments:*
@@ -1222,6 +1224,7 @@ Data Types
        |   %Y - year including the century
        |   %z - UTC offset in the form +HHMM, -HHMM, +HH:MM or -HH:MM. If present, this token must be the last token in the format string.
        |   %% - a literal % character
+       .. _`datetime-format`:
 
    * - ``datetime-format``
      - | *Arguments:*
@@ -1239,6 +1242,7 @@ Data Types
        | Returns one string: "2015-07-28T00:00:00Z".
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
+       .. _`datetime-plus`:
 
    * - ``datetime-plus``
      - | *Arguments:*
@@ -1280,6 +1284,7 @@ Data Types
        |
        | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
        |                               ``"~t1951-06-01T00:00:00Z"]``.
+       .. _`datetime-diff`:
 
    * - ``datetime-diff``
      - | *Arguments:*
@@ -1328,6 +1333,7 @@ Data Types
        |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
        |
        | Returns: 16
+       .. _`datetime-shift`:
 
    * - ``datetime-shift``
      - | *Arguments:*
@@ -1357,6 +1363,7 @@ Data Types
        |
        | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
        |                               ``"~t2015-07-28T02:46Z:00"]``.
+       .. _`is-datetime`:
 
    * - ``is-datetime``
      - | *Arguments:*
@@ -3088,7 +3095,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
 
 Supported timezones
 ===================
-The ``datetime-shift`` dtl-function supports the following timezones:
+The :ref:`datetime-shift<datetime-shift>` dtl-function supports the following timezones:
 
 
 

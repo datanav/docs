@@ -10,3 +10,4 @@ Sesam Data Integration Platform
    Developer Guide <developer-guide>
    Management Studio <management-studio>
    Known Issues <known-issues>
+   Changelog <changelog>
