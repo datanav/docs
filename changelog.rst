@@ -4,6 +4,9 @@ Changelog
 
 2016-09-22
 ----------
+* Added `index inspection on datasets <./api.html#/datasets/{dataset_id}/indexes-GET>`_.
+* Added new `analyze-dtl <./api.html#/datasets/{dataset_id}-POST>`_ operation.
+* Fixed automatic index creation for the `run-dtl <./api.html#/datasets/{dataset_id}-POST>`_ operation.
 * Linked to the changelog from the Management Studio.
 
 
@@ -21,3 +24,7 @@ Changelog
 * Fixed missing validation in the `/api/pipes/{pipe_id}/config "PUT" <./api.html#/pipes/{pipe_id}/config-PUT>`_ endpoint and added support for the "force" parameter.
 * Fixed missing validation in the `/api/systems "POST" <./api.html#/systems-POST>`_ endpoint and added support for the "force" parameter.
 * Fixed missing validation in the `/api/systems/{system_id}/config "PUT" <./api.html#/systems/{system_id}/config-PUT>`_ endpoint and added support for the "force" parameter.
+
+2016-09-16
+----------
+* Added `JSON reformatting API with code style support <./api.html#/reformat>`_.
