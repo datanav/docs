@@ -3973,6 +3973,7 @@ Prototype
         "username":"username-here",
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
+        "tds_version":"7.4",
         "port": 1433,
         "database": "database-name"
     }
@@ -4019,6 +4020,15 @@ Properties
      - Name/id of database to connect to.
      -
      - Yes
+
+   * - ``tds_version``
+     - String
+     - Version of TDS protocol to use for the driver. Note that the default is ``null`` which means it's not set.
+       This will tell the database driver to attempt to auto-detect the protocol version, which should work in most
+       cases. However, if you experience unknown or general connection errors, you can try to specify the TDS protocol
+       version string manually (typically on the form "7.0", "7.4" etc).
+     -
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
