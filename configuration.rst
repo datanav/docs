@@ -3631,8 +3631,8 @@ Properties
      - List<String>
      - A list of string keys to look up in the entity to construct the CSV columns. If ``include_header`` is set to
        ``true`` (which is the default), this list will also be included as the first line of the CSV file.
-     - Yes
      -
+     - Yes
 
    * - ``quoting``
      - Enum<String>
@@ -3641,15 +3641,15 @@ Properties
        or ``delimiter`` characters. A value of "non-numeric" means all non-numeric values will be quoted. The "minimal"
        setting (the default) means only fields with contents that need to be quoted will be quoted. Finally, the ``none``
        value means do not quote (note this can produce broken CSV files if there are values that have to be quoted).
-     -
      - "minimal"
+     -
 
    * - ``delimiter``
      - String
      - The character to use as field separator. It will also affect which fields will be quoted if the ``quoting`` setting
        is set to ``minimal"`` (which is the default). The default value is to use the comma (``","``) character.
-     -
      - ","
+     -
 
    * - ``doublequote``
      - Boolean
@@ -3657,44 +3657,44 @@ Properties
        ``true`` (the default), the character is doubled (repeated). When set to ``false``, the ``escapechar`` property
        setting is used as a prefix to the ``quotechar``. If ``doublequoting`` is set to ``true` but ``escapechar`` is
        not set, the backward slash character (``\``) is used as prefix.
-     -
      - true
+     -
 
    * - ``include_header``
      - Boolean
      - Controls if the ``columns`` property should be included as the header of the CSV file produced.
-     -
      - true
+     -
 
    * - ``escapechar``
      - String
      - A one-character string used by the sink to escape ``delimiter`` characters in fields if ``quoting`` is set to
        ``none`` and the ``quotechar`` if ``doublequote`` is set to ``false``. The default is ``null`` which disables
        escaping (except if ``doublequote`` is set to ``true``, in which case the default is ``\``).
-     -
      - null
+     -
 
    * - ``lineterminator``
      - String
      - A character sequence to use as the EOL marker in the CSV output. The default is carriage return plus linefeed
        (``"\r\n"``).
-     -
      - "\r\n"
+     -
 
    * - ``quotechar``
      - String
      - A one-character string that controls how to quote field values. The default is the double quote character. See
        ``doublequote`` and ``escapechar`` for related settings.
-     -
      - "\""
+     -
 
    * - ``encoding``
      - String
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
        valid values.
-     -
      - "utf-8"
+     -
 
 
 Example configuration
