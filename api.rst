@@ -162,8 +162,9 @@ API Reference
              lake.node.webapp.api.status,
              lake.node.webapp.api.logs,
              lake.node.webapp.api.config,
-             lake.node.webapp.api.configcheck,
              lake.node.webapp.api.license,
              lake.node.webapp.api.secretsmanager,
              lake.node.webapp.api.envvarsmanager,
-             lake.node.webapp.api.reformat
+             lake.node.webapp.api.utils_validate,
+             lake.node.webapp.api.utils_reformat
+

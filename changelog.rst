@@ -27,4 +27,4 @@ Changelog
 
 2016-09-16
 ----------
-* Added `JSON reformatting API with code style support <./api.html#/reformat>`_.
+* Added `JSON reformatting API with code style support <./api.html#/utils/reformat-config>`_.
