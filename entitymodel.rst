@@ -117,9 +117,14 @@ data types there is also limited support for `Transit
      - Description
      - Example
 
-   * - Entity (aka object)
+   * - Dict
      - Like a JSON object where keys are always strings.
      - ``{"a": 123}``
+
+   * - Entity
+     - Like a Dict, but with an ``_id`` property. The ``_id`` property must
+       be a string.
+     - ``{"_id", "person1", "a": 123}``
 
    * - List
      - A list of values. Values can be of any type.
