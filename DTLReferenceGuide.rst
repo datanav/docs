@@ -340,12 +340,6 @@ There are three ways that one can access properties on entities:
    will have to refer to variables from two different datasets.
 
 
-Dependency Tracking
-===================
-
-TODO: Explain how this works.
-
-
 Argument types
 ==============
 
@@ -1653,7 +1647,8 @@ Nested transformations
          about the parts.
 
        | Use this function instead of ``apply`` if you use ``hops`` inside
-         the transformation rule. This is required so that dependency tracking
+         the transformation rule. This is required so that
+         `dependency tracking <concepts.html#dependency-tracking>`_
          can work. Calling ``apply`` on a rule that contains ``hops`` or
          ``apply-hops`` is not allowed.
 
@@ -1761,7 +1756,8 @@ Hops
           argument. ``return`` cannot be used with ``recurse``.
 
        7. ``track-dependencies``: OPTIONAL. A boolean. The default is
-          true. Can be used to disable dependency tracking for this
+          true. Can be used to disable
+          `dependency tracking <concepts.html#dependency-tracking>`_ for this
           particular ``hops`` function.  It can only be specified on the
           last HOP_SPEC argument.
 
