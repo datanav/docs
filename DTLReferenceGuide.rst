@@ -476,22 +476,25 @@ Transforms
      - | *Arguments:*
        |   FILTER(boolean-expression{0|1})
        |
-       | If the evaluation of the FILTER expresion returns false, then stop
-         applying transformations. If the processing is stopped then *no*
-         target entity is emitted for the source entity. Note that any entities
-         already emitted by ``create`` will not be stopped. If the FILTER argument
-         is not given then the filter evaluates to false, so it effectively stops
-         the processing of the source entity.
+       | If the evaluation of the FILTER expression returns false, then stop
+         applying transformations. In this case *no* target entity is emitted
+         for the source entity. Note that any entities already emitted by
+         ``create`` will not be stopped.
+       |
+       | If the FILTER argument is not given then the filter evaluates to
+         false.
 
        .. NOTE::
 
-          If the DTL transform's pipe's sink is a ``dataset`` sink
-          then the ``filter`` function will stop further processing,
-          set the ``_filtered`` property to ``true`` and then emit the
-          entity. For all other sinks the entity is not emitted. The
-          ``dataset`` sink will then delete the entity from the
-          dataset if the entity already exists and it is not already
-          deleted.
+          If the DTL transform is used with a ``dataset`` sink then
+          the ``filter`` function will set the ``_filtered`` property
+          to ``true`` and emit the entity.
+
+          The reason for this is so that the ``dataset`` sink can
+          detect deleted entities even on incremental syncs, not just
+          on full syncs. Entities with the ``_filtered`` property set to
+          ``true`` will thus be deleted from the dataset if the entity
+          already exists and it is not already deleted.
 
           The rationale for this behaviour is so that entities that
           have previous versions get deleted in the resulting dataset
