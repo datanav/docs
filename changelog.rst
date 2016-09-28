@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2016-09-23
+2016-09-28
 ----------
 * Added Elasticsearch support, which includes a :ref:`system <elasticsearch_system>` and a :ref:`sink <elasticsearch_sink>`.
 * The :ref:`Solr sink <solr_sink>` now supports :ref:`batching <pipe_batching>`.
