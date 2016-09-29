@@ -66,6 +66,15 @@ it is digitally signed. JWTs can be signed using a secret (with the HMAC algorit
 pair using RSA."
 
 
+----------------------
+Sesam Portal datamodel
+----------------------
+
+
+
+
+
+
 --------------
 Authentication
 --------------

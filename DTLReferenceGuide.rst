@@ -608,22 +608,23 @@ Transforms
        | Copies the ``age`` field from the source entity and adds it as
          ``current_age`` on the target entity.
 
+       .. _`dtl_transform-merge`:
+
    * - ``merge``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES copy all the properties of the value onto the
-         target entity, unless the property already exists. This means that
-         properties from earlier value entities win over later ones.
+         target entity. If the property already exists, it will be overwritten. This means that
+         properties from later value entities win over earlier  ones.
      - | ``["merge", "_S.orders"]``
        |
-       | Copies the properties of the entities in ``_S.orders`` to the target,
-         unless the property exists already.
+       | Copies the properties of the entities in ``_S.orders`` to the target.
        |
        | ``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
-       | Add the properties ``a=1`` and ``b=3`` to the target entity. Note that
-         ``a=2`` is not added because the ``a`` property already exists.
+       | Add the properties ``a=2`` and ``b=3`` to the target entity. Note that
+         ``a=1`` is not added because it gets overwritten with ``a=2`` later.
 
    * - ``merge-union``
      - | *Arguments:*
