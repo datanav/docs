@@ -184,9 +184,7 @@ transforms template projects for common languages are provided.
 
 The following templates are available:
 
-    - The `ASP.NET template <https://github.com/sesam-io/aspnet-httptransform-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
-
-    - The `Python template <https://github.com/sesam-io/python-httptransform-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-transform-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
 The transform will stream an array of JSON objects to the registered endpoint and expect back a list of entities.
 
