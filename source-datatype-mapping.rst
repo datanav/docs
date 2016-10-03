@@ -48,7 +48,7 @@ column types should be both forwards and backwards compatible with older and fut
      -
 
    * - ``BIGINT``
-     - Integer
+     - Decimal
      -
 
    * - ``NUMERIC``
@@ -88,8 +88,8 @@ column types should be both forwards and backwards compatible with older and fut
      -
 
    * - ``DATE``
-     - String
-     - Converted to ``YYYY-MM-DD`` format (0-padded year-month-day components)
+     - Datetime
+     - Values with timezone will be shifted into UTC timezone on import.
 
    * - ``DATETIME``
      - Datetime
@@ -98,7 +98,7 @@ column types should be both forwards and backwards compatible with older and fut
    * - ``DATETIME2``
      - String
      - Converted by the driver to ``YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+|-]tz:offset`` ISO format (0-padded year-month-day
-       hour-minute-seconds components plus fraction of a second after the decimal marker and a timezone-offset
+       hour-minute-seconds components plus fraction of a second after the decimal marker and an optional timezone-offset
        at the end). You can use DTL ``datetime-parse`` to convert it to a native Datetime object.
 
    * - ``TIME``
@@ -139,7 +139,7 @@ the supported column types should be compatible with both older and newer versio
      -
 
    * - ``NUMBER``
-     - Integer or Decimal
+     - Float
      - Depending on the column definition
 
    * - ``BINARY_FLOAT``
@@ -177,11 +177,11 @@ the supported column types should be compatible with both older and newer versio
      -
 
    * - ``CLOB``
-     - Bytes
+     - String
      -
 
    * - ``NCLOB``
-     - Bytes
+     - String
      -
 
    * - ``RAW``
@@ -233,11 +233,11 @@ the supported column types should be compatible with both older and newer versio
      -
 
    * - ``REAL``
-     - Float
+     - Decimal
      -
 
    * - ``DOUBLE``
-     - Float
+     - Decimal
      -
 
    * - ``DECIMAL``
@@ -245,12 +245,12 @@ the supported column types should be compatible with both older and newer versio
      -
 
    * - ``BIT``
-     - Boolean
-     - ``0`` is ``true`` and ``1`` is ``false``
+     - Integer
+     - ``0`` or ``1``
 
    * - ``BOOLEAN``
-     - Boolean
-     -
+     - Integer
+     - ``0`` or ``1``
 
    * - ``CHAR``
      - String
@@ -262,6 +262,10 @@ the supported column types should be compatible with both older and newer versio
 
    * - ``VARCHAR``
      - String
+     -
+
+   * - ``VARBINARY``
+     - Bytes
      -
 
    * - ``TEXT``
@@ -278,13 +282,12 @@ the supported column types should be compatible with both older and newer versio
        Values with timezone will be shifted into UTC timezone on import.
 
    * - ``DATE``
-     - String
-     - Converted to ``YYYY-MM-DD`` format (0-padded year-month-day components)
+     - Datetime
+     - The time part of the Datetime object is set to midnight (i.e. ``00:00:00.00000``)
 
    * - ``YEAR``
-     - String
-     - Converted by the driver to ``YYYY`` format (0-padded four digit year, range is ``1901``to ``2155`` with ``0000``
-       denoting NULL values)
+     - Integer
+     - Range is ``1901``to ``2155``
 
    * - ``TIME``
      - String
@@ -391,7 +394,7 @@ the supported column types should be compatible with both older and newer versio
 
    * - ``TIME``
      - String
-     - Converted by the driver to ``hh:mm:ss[.nnnnnnn] [+|-]tz:offset`` ISO format (0-padded hour-minute-seconds
+     - Converted by the driver to ``hh:mm:ss[.nnnnnnn][+|-tz:offset]`` ISO format (0-padded hour-minute-seconds
        components plus fraction of a second after the decimal marker and a timezone-offset
        at the end).
 
@@ -404,7 +407,7 @@ the supported column types should be compatible with both older and newer versio
      - Based on enum type
 
    * - ``UUID``
-     - UUID
+     - String
      -
 
    * - ``XML``
