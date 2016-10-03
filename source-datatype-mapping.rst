@@ -1,0 +1,412 @@
+========================
+Source datatype mappings
+========================
+
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+
+
+Introduction
+============
+
+The Sesam :doc:`entity model <entitymodel>` defines a set of :ref:`supported data types <entity_data_types>` that any
+external types need to be mapped to. The various data sources have different schemas, and which types are supported and
+their current mappings to the Sesam types is listed in this document.
+
+.. _sql_types:
+
+SQL systems
+===========
+
+This section documents which native types are supported by the RDBMS systems and to what Sesam type they map to.
+Any unsupported column type will have to be blacklisted in the source configuration, or you will have to write a
+custom query that coerces the non-supported column to a supported type.
+
+.. _sql_server_types:
+
+SQL Server
+----------
+
+The following is the supported native types of Microsoft SQL server. We support SQL Server 2008, but most of these
+column types should be both forwards and backwards compatible with older and future SQL Server versions.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 30, 40
+
+   * - Native type
+     - Sesam type
+     - Comment
+
+   * - ``INT``
+     - Integer
+     -
+
+   * - ``TINYINT``
+     - Integer
+     -
+
+   * - ``BIGINT``
+     - Integer
+     -
+
+   * - ``NUMERIC``
+     - Decimal
+     -
+
+   * - ``FLOAT``
+     - Float
+     -
+
+   * - ``REAL``
+     - Float
+     -
+
+   * - ``DECIMAL``
+     - Decimal
+     -
+
+   * - ``CHAR``
+     - String
+     -
+
+   * - ``BIT``
+     - Boolean
+     - ``0`` is ``true`` and ``1`` is ``false``
+
+   * - ``VARCHAR``
+     - String
+     -
+
+   * - ``NVARCHAR``
+     - String
+     -
+
+   * - ``TEXT``
+     - String
+     -
+
+   * - ``DATE``
+     - String
+     - Converted to ``YYYY-MM-DD`` format (0-padded year-month-day components)
+
+   * - ``DATETIME``
+     - Datetime
+     - Values with timezone will be shifted into UTC timezone on import.
+
+   * - ``DATETIME2``
+     - String
+     - Converted by the driver to ``YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+|-]tz:offset`` ISO format (0-padded year-month-day
+       hour-minute-seconds components plus fraction of a second after the decimal marker and a timezone-offset
+       at the end). You can use DTL ``datetime-parse`` to convert it to a native Datetime object.
+
+   * - ``TIME``
+     - String
+     - Converted by the driver to ``hh:mm:ss[.nnnnnnn]`` format (0-padded hour-minute-seconds components plus fraction of
+       a second after the decimal marker (which is optional))
+
+   * - ``IMAGE``
+     - Bytes
+     -
+
+   * - ``UNIQUEIDENTIFIER``
+     - UUID
+     -
+
+   * - ``XML``
+     - String
+     -
+
+.. _oracle_types:
+
+Oracle
+------
+
+The following is the supported native types of Oracle RDBMS. The tested version of oracle is Oracle 11g, but most of
+the supported column types should be compatible with both older and newer versions of Oracle.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 30, 40
+
+   * - Native type
+     - Sesam type
+     - Comment
+
+   * - ``INTEGER``
+     - Integer
+     -
+
+   * - ``NUMBER``
+     - Integer or Decimal
+     - Depending on the column definition
+
+   * - ``BINARY_FLOAT``
+     - Float
+     -
+
+   * - ``BINARY_DOUBLE``
+     - Float
+     -
+
+   * - ``CHAR``
+     - String
+     -
+
+   * - ``VARCHAR``
+     - String
+     -
+
+   * - ``VARCHAR2``
+     - String
+     -
+
+   * - ``DATE``
+     - Datetime
+     - The range of this datatype is unlimited to nanosecond precision.
+       Values with timezone will be shifted into UTC timezone on import.
+
+   * - ``TIMESTAMP``
+     - Datetime
+     - The range of this datatype is unlimited to nanosecond precision.
+       Values with timezone will be shifted into UTC timezone on import.
+
+   * - ``BLOB``
+     - Bytes
+     -
+
+   * - ``CLOB``
+     - Bytes
+     -
+
+   * - ``NCLOB``
+     - Bytes
+     -
+
+   * - ``RAW``
+     - Bytes
+     -
+
+   * - ``LONG RAW``
+     - Bytes
+     -
+
+   * - ``XMLType``
+     - String
+     -
+
+.. _mysql_types:
+
+MySQL
+-----
+
+The following is the supported native types of MySQL. The tested version is 5.6, but most of
+the supported column types should be compatible with both older and newer versions of MySQL.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 30, 40
+
+   * - Native type
+     - Sesam type
+     - Comment
+
+   * - ``INT``
+     - Integer
+     -
+
+   * - ``TINYINT``
+     - Integer
+     -
+
+   * - ``BIGINT``
+     - Integer
+     -
+
+   * - ``NUMERIC``
+     - Decimal
+     -
+
+   * - ``FLOAT``
+     - Float
+     -
+
+   * - ``REAL``
+     - Float
+     -
+
+   * - ``DOUBLE``
+     - Float
+     -
+
+   * - ``DECIMAL``
+     - Decimal
+     -
+
+   * - ``BIT``
+     - Boolean
+     - ``0`` is ``true`` and ``1`` is ``false``
+
+   * - ``BOOLEAN``
+     - Boolean
+     -
+
+   * - ``CHAR``
+     - String
+     -
+
+   * - ``BINARY``
+     - Bytes
+     -
+
+   * - ``VARCHAR``
+     - String
+     -
+
+   * - ``TEXT``
+     - String
+     -
+
+   * - ``TINYTEXT``
+     - String
+     -
+
+   * - ``DATETIME``
+     - Datetime
+     - The range of this datatype is unlimited to nanosecond precision.
+       Values with timezone will be shifted into UTC timezone on import.
+
+   * - ``DATE``
+     - String
+     - Converted to ``YYYY-MM-DD`` format (0-padded year-month-day components)
+
+   * - ``YEAR``
+     - String
+     - Converted by the driver to ``YYYY`` format (0-padded four digit year, range is ``1901``to ``2155`` with ``0000``
+       denoting NULL values)
+
+   * - ``TIME``
+     - String
+     - Converted by the driver to ``hh:mm:ss[.nnnnnnn]`` format (0-padded hour-minute-seconds components plus fraction of
+       a second after the decimal marker (which is optional))
+
+   * - ``TIMESTAMP``
+     - Datetime
+     -
+
+   * - ``TINYBLOB``
+     - Bytes
+     -
+
+   * - ``MEDIUMBLOB``
+     - Bytes
+     -
+
+   * - ``BLOB``
+     - Bytes
+     -
+
+   * - ``LONGBLOB``
+     - Bytes
+     -
+
+   * - ``ENUM``
+     - Varying
+     - Based on enum type
+
+   * - ``SET``
+     - Varying
+     - List of values, based on set type
+
+
+.. _postgresql_types:
+
+PostgreSQL
+----------
+
+The following is the supported native types of PostgreSQL. The tested version is 9.5, but most of
+the supported column types should be compatible with both older and newer versions of PostgreSQL.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 30, 40
+
+   * - Native type
+     - Sesam type
+     - Comment
+
+   * - ``INTEGER``
+     - Integer
+     -
+
+   * - ``SMALLINT``
+     - Integer
+     -
+
+   * - ``BIGINT``
+     - Integer
+     -
+
+   * - ``NUMERIC``
+     - Decimal
+     -
+
+   * - ``REAL``
+     - Float
+     -
+
+   * - ``DOUBLE``
+     - Float
+     -
+
+   * - ``DECIMAL``
+     - Decimal
+     -
+
+   * - ``BOOLEAN``
+     - Boolean
+     -
+
+   * - ``CHAR``
+     - String
+     -
+
+   * - ``VARCHAR``
+     - String
+     -
+
+   * - ``TEXT``
+     - String
+     -
+
+   * - ``TIMESTAMP``
+     - Datetime
+     - The range of this datatype is unlimited to nanosecond precision.
+       Values with timezone will be shifted into UTC timezone on import.
+
+   * - ``DATE``
+     - String
+     - Converted to ``YYYY-MM-DD`` format (0-padded year-month-day components)
+
+   * - ``TIME``
+     - String
+     - Converted by the driver to ``hh:mm:ss[.nnnnnnn] [+|-]tz:offset`` ISO format (0-padded hour-minute-seconds
+       components plus fraction of a second after the decimal marker and a timezone-offset
+       at the end).
+
+   * - ``BYTEA``
+     - Bytes
+     -
+
+   * - ``ENUM``
+     - Varying
+     - Based on enum type
+
+   * - ``UUID``
+     - UUID
+     -
+
+   * - ``XML``
+     - String
+     -

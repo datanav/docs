@@ -585,8 +585,9 @@ The SQL source
 --------------
 
 The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to Sesam. It has several options, all of which
-are presented below with their default values:
+(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to Sesam.
+
+The SQL source has several options, all of which are presented below with their default values:
 
 Prototype
 ^^^^^^^^^
@@ -605,6 +606,16 @@ Prototype
         "fetch_size": 1000,
         "schema": "default-schema-name-if-included"
     }
+
+
+Column types
+^^^^^^^^^^^^
+
+See the :ref:`supported column types <sql_types>` list for a overview of which RDBMS column types
+are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`. Note that if your ``table`` or
+``query`` property refer to relations with unsupported column types, you will either have to use the ``blacklist``
+configuration property to ignore them, or write a custom ``query`` that coerces the non-supported column to a
+supported type.
 
 Properties
 ^^^^^^^^^^
@@ -3877,6 +3888,12 @@ Prototype
         "pool_max_overflow": 10
     }
 
+Column type mapping
+^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`supported column types <sql_types>` section for a overview of which column types are supported
+for each RDBMS system and how they are mapped to :ref:`Sesam types <entity_data_types>`.
+
 Properties
 ^^^^^^^^^^
 
@@ -3925,7 +3942,9 @@ The specific SQL systems available are:
 The Oracle system
 -----------------
 
-The Oracle SQL system represents a Oracle RDBMS available on the network:
+The Oracle SQL system represents a Oracle RDBMS available on the network.
+See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
+and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
 Prototype
 ^^^^^^^^^
@@ -4010,6 +4029,8 @@ The Oracle TNS system
 ---------------------
 
 The Oracle SQL system represents a Oracle RDBMS configured using a `TNS name <http://www.orafaq.com/wiki/Tnsnames.ora>`_
+See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
+and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
 Prototype
 ^^^^^^^^^
@@ -4078,7 +4099,9 @@ Example Oracle TNS configuration:
 The MSSQL system
 ----------------
 
-The MSSQL system represents a Microsoft SQL Server available over the network:
+The MSSQL system represents a Microsoft SQL Server available over the network.
+See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
+are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
 Prototype
 ^^^^^^^^^
@@ -4173,6 +4196,8 @@ The MySQL system
 ----------------
 
 The MySQL system represents a MySQL database available over the network:
+See the :ref:`supported column types <mysql_types>` list for a overview of which MySQL column types are supported and
+how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
 Prototype
 ^^^^^^^^^
@@ -4256,7 +4281,9 @@ Example MySQL configuration:
 The PostgreSQL system
 ---------------------
 
-The PostgreSQL system represents a PostgreSQL RDBMS available on the network:
+The PostgreSQL system represents a PostgreSQL RDBMS available on the network.
+See the :ref:`supported column types <postgresql_types>` list for a overview of which PostgreSQL column types are supported
+and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
 Prototype
 ^^^^^^^^^

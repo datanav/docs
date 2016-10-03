@@ -100,9 +100,10 @@ level, so child entities can have them.
        *This field is generated automatically by the dependency tracking.*
      -
 
+.. _entity_data_types:
 
 Standard types
-------------------
+--------------
 
 Entities are mapped to and from JSON objects, so they support the same
 data types as JSON does. Because JSON only supports a limited number of
@@ -135,12 +136,18 @@ data types there is also limited support for `Transit
      - ``"abc"``
 
    * - Integer
-     - An integer value.
+     - An integer value. The range of this data type is unlimited, i.e. it can store
+       any positive or negative integer value.
      - ``123``
 
    * - Decimal
-     - A decimal number. The valid range is the IEEE 754 binary 64 format,
-       because we're currently storing the value as a double-precision
+     - A decimal number. This data type has arbitrary precision. Use it instead of
+       ``Float`` when/if keeping precision is important to your application.
+     - ``123.456``
+
+   * - Float
+     - A floating point number. The valid range is the IEEE 754 binary 64 format,
+       because we're internally storing the value as a double-precision
        floating-point number. Note that you may loose precision when using
        this data type.
      - ``123.456``
@@ -154,7 +161,7 @@ data types there is also limited support for `Transit
      - ``null``
 
 Extension types
----------------------------------
+---------------
 
 `Transit <https://github.com/cognitect/transit-format>`_ encoded
 values are represented as strings in JSON. The value is prefixed by
