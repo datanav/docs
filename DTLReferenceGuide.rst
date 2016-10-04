@@ -3002,7 +3002,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns ``3``.
        |
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
-       | it will be a decimal.
+       | it will be a decimal or a float.
 
 
    * - ``floor``
@@ -3030,14 +3030,14 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns ``2``.
        |
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
-       | it will be a decimal.
+       | it will be a decimal or a float.
 
    * - ``abs``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
        |
        | Takes a list of VALUES and returns the absolute value. If the VALUE is an integer,
-         an integer will be returned. If not, a decimal.
+         an integer will be returned. If not, a decimal or a float.
      - | ``["abs", ["list", -2, 4, -6]]``
        |
        | Returns ``[2, 4, 6]``.
