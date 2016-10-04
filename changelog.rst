@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2016-10-04
+----------
+* Reworked DTL math functions to reflect that ``float`` is an allowed type in entities. If the function parameters are
+  of mixed types, the result will be coerced to the type that is the most precise. I.e. float+decimal=decimal,
+  int*float=float, int/div=decimal and so on. Not that this is a change in behaviour as entities that previously only
+  had ``decimal`` as types after using DTL math functions if the input was of type float, now may end up with values
+  that are floats instead. Use the dtl ``decimal`` cast-function to coerce the result to ``decimal`` if this is
+  important to the application.
+
 2016-09-28
 ----------
 * Added Elasticsearch support, which includes a :ref:`system <elasticsearch_system>` and a :ref:`sink <elasticsearch_sink>`.
