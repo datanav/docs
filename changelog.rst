@@ -9,6 +9,9 @@ Changelog
   had ``decimal`` as types after using DTL math functions if the input was of type float, now may end up with values
   that are floats instead. Use the dtl ``decimal`` cast-function to coerce the result to ``decimal`` if this is
   important to the application.
+* Added ``is-float`` and ``float`` DTL functions. Changed ``is-decimal`` function so it no longer returns ``true`` if
+  the argument is a ``float``. You will now have to add both a ``is-float`` and a ``is-decimal`` in an ``or`` clause
+  to test for both types.
 
 2016-09-28
 ----------
