@@ -1741,7 +1741,7 @@ Hops
            },
            {
             "datasets": ["Hobby h"],
-            "where": ["eq", "_S.hobbies", "m._id"],
+            "where": ["eq", "_S.hobbies", "h._id"],
             "return": "h.name"
            }]
 
