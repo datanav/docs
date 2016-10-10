@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-10-10
+----------
+* Added DTL Reference Guide section that explains how :ref:`joins <joins>` work.
+
 2016-10-04
 ----------
 * Reworked DTL math functions to reflect that ``float`` is an allowed type in entities. If the function parameters are

@@ -146,7 +146,8 @@ data types there is also limited support for `Transit
      - ``123.456``
 
    * - Float
-     - A floating point number. The valid range is the IEEE 754 binary 64 format,
+     - A `double-precision floating point number <https://en.wikipedia.org/wiki/Double-precision_floating-point_format>`_.
+       The valid range is the IEEE 754 binary 64 format,
        because we're internally storing the value as a double-precision
        floating-point number. Note that you may loose precision when using
        this data type.

@@ -329,7 +329,7 @@ There are three ways that one can access properties on entities:
            ]
        }]
 
-   The ``hops`` function can be used to perform joins across two or
+   The ``hops`` function can be used to perform :ref:`joins <joins>` across two or
    more datasets, so if you want to navigate beyond the current entity
    use ``hops``. This particular example will join the source entity
    with entities from the ``orders`` dataset using the ``["eq",
@@ -338,6 +338,50 @@ There are three ways that one can access properties on entities:
    will be treated as join expressions. All other function are treated
    as filter expressions. For an ``eq`` to be a join expression it
    will have to refer to variables from two different datasets.
+
+.. _joins:
+
+How joins work
+==============
+
+Given two entities ``A`` and ``B`` bound to the dataset aliases ``a``
+and ``b`` in the expressions below:
+
+::
+
+   {
+     "_id": "A",
+     "value": 1,
+     "values": [1, 2, 4, 5]
+   }
+
+::
+
+   {
+     "_id": "B",
+     "value": 1,
+     "values": [1, 3, 4, 6]
+   }
+
+There are four different kinds of joins:
+
+1. One-to-one join: ``["eq", "a.value", "b.value"]``
+
+2. One-to-many: ``["eq", "a.value", "b.values"]``
+
+3. Many-to-one: ``["eq", "a.values", "b.value"]``
+
+4. Many-to-many: ``["eq", "a.values", "b.values"]``
+
+The rule for joins is very simple: *if any of the values overlap,
+then the join succeeds*.
+
+All of the four joins given above succeed for the two entities because
+they all have overlapping values, i.e. the values ``1`` and ``4``.
+
+Join expressions that contain functional expressions work the same
+way, e.g. ``["eq", ["+", "a.value", 2], "b.value"]`` succeeds as ``3``
+is a value shared by both.
 
 
 Argument types
