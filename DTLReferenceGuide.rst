@@ -1591,23 +1591,23 @@ Data Types
        |
        | Returns true.
        |
-       | ``["is-decimal", ["decimal", "1.23"]]``
+       | ``["is-float", ["decimal", "1.23"]]``
        |
        | Returns false (it is a decimal literal).
        |
-       | ``["is-decimal", 1]``
+       | ``["is-float", 1]``
        |
        | Returns false.
        |
-       | ``["is-decimal", ["list", 1.0, "12345"]]``
+       | ``["is-float", ["list", 1.0, "12345"]]``
        |
        | Returns true.
        |
-       | ``["is-decimal", ["list", "1.0", 2.0]]``
+       | ``["is-float", ["list", "1.0", 2.0]]``
        |
        | Returns false.
        |
-       | ``["is-decimal", ["list", ["decimal", "-1.0"], 123.4]]``
+       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
        |
        | Returns false.
 
