@@ -1509,7 +1509,6 @@ Data Types
        | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
          is replaced with its string cast.
 
-
    * - ``is-decimal``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1519,7 +1518,7 @@ Data Types
        |
      - | ``["is-decimal", 1.0]``
        |
-       | Returns true.
+       | Returns false (it is a float literal).
        |
        | ``["is-decimal", ["decimal", "1.23"]]``
        |
@@ -1531,7 +1530,7 @@ Data Types
        |
        | ``["is-decimal", ["list", 1.0, "12345"]]``
        |
-       | Returns true.
+       | Returns false.
        |
        | ``["is-decimal", ["list", "1.0", 2.0]]``
        |
@@ -1540,6 +1539,78 @@ Data Types
        | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
        |
        | Returns true.
+
+   * - ``float``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to floats (a  IEEE 754 binary 64 format).
+         if no default value expression is given,
+         values that don't parse as float values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value. Note that if you cast decimals to floats
+         you can lose precision.
+       |
+     - | ``["float", "1.0"]``
+       |
+       | Returns one float value: 1.0
+       |
+       | ``["float",``
+       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |
+       | Returns a list of float values: [1.0, 2.2]. The URI and
+         non-numeric string value are ignored.
+       |
+       | ``["float", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-numeric string value are replaced with the literal value: false
+       |
+       | ``["float", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["float", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+         is replaced with its string cast.
+
+   * - ``is-float``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a float literal or
+         if it is a list, that the first element in the list is a float value
+       |
+     - | ``["is-float", 1.0]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["decimal", "1.23"]]``
+       |
+       | Returns false (it is a decimal literal).
+       |
+       | ``["is-float", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", 1.0, "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
+       |
+       | Returns false.
 
 Nested transformations
 ----------------------
@@ -3003,7 +3074,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns ``3``.
        |
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
-       | it will be a decimal.
+       | it will be a decimal or a float.
 
 
    * - ``floor``
@@ -3031,14 +3102,14 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns ``2``.
        |
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
-       | it will be a decimal.
+       | it will be a decimal or a float.
 
    * - ``abs``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
        |
        | Takes a list of VALUES and returns the absolute value. If the VALUE is an integer,
-         an integer will be returned. If not, a decimal.
+         an integer will be returned. If not, a decimal or a float.
      - | ``["abs", ["list", -2, 4, -6]]``
        |
        | Returns ``[2, 4, 6]``.
