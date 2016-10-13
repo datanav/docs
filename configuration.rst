@@ -3741,7 +3741,8 @@ Prototype
         "escapechar": null,
         "lineterminator": "\r\n",
         "quotechar": "\"",
-        "encoding": "utf-8"
+        "encoding": "utf-8",
+        "skip-deleted-entities": false
     }
 
 Properties
@@ -3824,6 +3825,12 @@ Properties
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
        valid values.
      - "utf-8"
+     -
+
+   * - ``skip-deleted-entities``
+     - Boolean
+     - This can be set to ``true`` to prevent deleted entities from appearing in the CSV output.
+     - false
      -
 
 
