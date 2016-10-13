@@ -3704,6 +3704,7 @@ dataset::
 
 .. _csv_endpoint_sink:
 
+
 The CSV endpoint sink
 ---------------------
 
@@ -3742,7 +3743,7 @@ Prototype
         "lineterminator": "\r\n",
         "quotechar": "\"",
         "encoding": "utf-8",
-        "skip-deleted-entities": false
+        "skip-deleted-entities": true
     }
 
 Properties
@@ -3826,11 +3827,16 @@ Properties
        valid values.
      - "utf-8"
      -
+      .. _csv_endpoint_sink_param_skip_deleted_entities:
 
    * - ``skip-deleted-entities``
      - Boolean
-     - This can be set to ``true`` to prevent deleted entities from appearing in the CSV output.
-     - false
+     - This can be set to ``false`` to make deleted entities appear in the CSV output. The default is that
+       deleted entities does not appear. If you set this to ``true`` you will also most likely want to include
+       the "_deleted" attribute in the ``columns`` list, so that rows that represents deleted entities can be
+       recognized. (If you need to rename or reformat the "_deleted" attribute you can do that by adding a
+       :ref:`DTL transform <dtl_transform>` to the pipe.)
+     - true
      -
 
 

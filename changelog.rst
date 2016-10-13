@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2016-10-13
+----------
+* Changed the :ref:`CSV endpoint sink <csv_endpoint_sink>` to not output deleted entities by default. Added a new
+  :ref:`skip-deleted-entities <csv_endpoint_sink_param_skip_deleted_entities>` config parameter that can be set
+  to ``false`` if one want deleted entities to appear in the CSV output.
+
 2016-10-10
 ----------
 * Added DTL Reference Guide section that explains how :ref:`joins <joins>` work.
