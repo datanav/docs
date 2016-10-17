@@ -3958,19 +3958,17 @@ expected is:
 ::
 
   {
-    "_id" : "1",
-    "name" : "Entitity 1",
-    "id" : "entity-1",
-    "<foo:tag>" : [
-		{
-			"id"  : "child",
-            "name" : "Child entity"
-			"<section>" : [
-				{ "<from>" : "0" }
-				{ "<to>"   : "999" }
-			]
-		}
-    ]
+    "_id": "1",
+    "name": "Entitity 1",
+    "id": "entity-1",
+    "<foo:tag>": [{
+        "id": "child",
+        "name": "Child entity",
+        "<section>": [
+          {"<from>": "0"},
+          {"<to>": "999"}
+        ]
+    }]
   }
 
 There must be exactly one property starting with '<' and ending with '>' in an entity, although it can contain
