@@ -2491,6 +2491,140 @@ Example configuration
       }
 
 
+
+The XML transform
+-----------------
+
+This transform will render entities on the form described in the :ref:`XML endpoint sink <xml_endpoint_sink>` to a string and
+embed it in the entity, which is then passed on to the transform chain.
+
+Prototype
+^^^^^^^^^
+
+The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`, except for the additional ``xml-property``:
+
+::
+
+    {
+        "type": "xml_endpoint",
+        "default-namespace": "http://www.example.org/ns1",
+        "wrapper": "wrapper-tag",
+        "namespace-decls": {
+           "foo": "http://www.example.org/ns2",
+           "bar": "http://www.example.org/ns3"
+        },
+        "xml-property": "xml-property-to-use",
+        "include-doctype-decl": false,
+        "skip-deleted-entities": true
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``default-namespace``
+     - String
+     - The default namespace of the XML document
+     -
+     -
+
+   * - ``quoting``
+     - Object<String, String>
+     - An object mapping namespaces to their full URLs
+     -
+     -
+
+   * - ``include-doctype-decl``
+     - Boolean
+     - If set to ``true`` includes a default XML header: ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>``
+     - false
+     -
+
+
+   * - ``wrapper``
+     - String
+     - If included, the XML produced from all entities will wrapped in a single top level tag with the value
+       of this property (``<wrapper-value>..entity-tags..</wrapper-value>``)
+     -
+     -
+
+   * - ``xml-property``
+     - String
+     - The property that will hold any XML generated
+     -
+     - Yes
+
+   * - ``skip-deleted-entities``
+     - Boolean
+     - This can be set to ``false`` to make deleted entities appear in the XML output. The default is that
+       deleted entities does not appear.
+     - true
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   {
+       "_id": "my-pipe",
+       "transform": {
+           "type": "xml",
+            "default-namespace": "http://www.example.org/ns1",
+            "wrapper": "baz",
+            "namespace-decls": {
+               "foo": "http://www.example.org/ns2"
+            },
+            "xml-property": "xml"
+       }
+   }
+
+With the input entity:
+
+::
+
+  {
+    "_id": "1",
+    "name": "Entitity 1",
+    "id": "entity-1",
+    "<foo:tag>": [{
+        "id": "child",
+        "name": "Child entity",
+        "<section>": [
+          {"<from>": "0"},
+          {"<to>": "999"}
+        ]
+    }]
+  }
+
+Will produce the transformed entity:
+
+::
+
+  {
+    "_id": "1",
+    "name": "Entitity 1",
+    "id": "entity-1",
+    "<foo:tag>": [{
+        "id": "child",
+        "name": "Child entity",
+        "<section>": [
+          {"<from>": "0"},
+          {"<to>": "999"}
+        ]
+    }],
+    "xml": "<baz><foo:tag xmlns=\"http://www.example.org/ns1\" .. </baz>"
+  }
+
 .. _sink_section:
 
 Sinks
@@ -3861,6 +3995,9 @@ dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the C
 
 The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
 
+
+.. _xml_endpoint_sink:
+
 The XML endpoint sink
 ---------------------
 
@@ -3868,7 +4005,7 @@ This is a data sink that registers an HTTP publisher endpoint
 that one can get the entities in XML format from.
 
 A pipe that references the ``XML endpoint`` sink will not pump any
-entities, in practice this means that a pump is not configured for the
+entities, in practice this means that`XML endpoint sink` a pump is not configured for the
 pipe; the only way for entities to flow through the pipe is by
 retrieving them from the XML endpoint.
 
