@@ -3861,6 +3861,163 @@ dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the C
 
 The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
 
+The XML endpoint sink
+---------------------
+
+This is a data sink that registers an HTTP publisher endpoint
+that one can get the entities in XML format from.
+
+A pipe that references the ``XML endpoint`` sink will not pump any
+entities, in practice this means that a pump is not configured for the
+pipe; the only way for entities to flow through the pipe is by
+retrieving them from the XML endpoint.
+
+It exposes the URL:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 100
+
+   * - URL
+
+   * - ``http://localhost:9042/api/publishers/mypipe/xml``
+
+Note that the shape of the entities must conform to certain criteria, see the example section.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "xml_endpoint",
+        "default-namespace": "http://www.example.org/ns1",
+        "wrapper": "wrapper-tag",
+        "namespace-decls": {
+           "foo": "http://www.example.org/ns2",
+           "bar": "http://www.example.org/ns3"
+        },
+        "include-doctype-decl": false,
+        "skip-deleted-entities": true
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``default-namespace``
+     - String
+     - The default namespace of the XML document
+     -
+     -
+
+   * - ``quoting``
+     - Object<String, String>
+     - An object mapping namespaces to their full URLs
+     -
+     -
+
+   * - ``include-doctype-decl``
+     - Boolean
+     - If set to ``true`` includes a default XML header: ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>``
+     - false
+     -
+
+
+   * - ``wrapper``
+     - String
+     - If included, the XML produced from all entities will wrapped in a single top level tag with the value
+       of this property (``<wrapper-value>..entity-tags..</wrapper-value>``)
+     -
+     -
+
+   * - ``skip-deleted-entities``
+     - Boolean
+     - This can be set to ``false`` to make deleted entities appear in the XML output. The default is that
+       deleted entities does not appear.
+     - true
+     -
+
+
+Expected entity shape
+^^^^^^^^^^^^^^^^^^^^^
+
+The entities must be transformed into a particular form before being piped to the XML endpoint sink. The general form
+expected is:
+
+::
+
+  {
+    "_id" : "1",
+    "name" : "Entitity 1",
+    "id" : "entity-1",
+    "<foo:tag>" : [
+		{
+			"id"  : "child",
+            "name" : "Child entity"
+			"<section>" : [
+				{ "<from>" : "0" }
+				{ "<to>"   : "999" }
+			]
+		}
+    ]
+  }
+
+There must be exactly one property starting with '<' and ending with '>' in an entity, although it can contain
+child entities in as many levels as you want (also in lists).
+
+All non-tag properties, except those beginning with a ``_`` letter will be included as attribute values on the tag
+specified. A "tag"-property value can either be a single literal, a single object or a list of objects.
+
+The property names must be valid XML attribute or tag names (QNames). All literal values in tags or
+attributes will be XML escaped. All namespaces used in tags must be declared explicitly in the configuration.
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The pipe configuration given below will expose the ``my-entities`` publisher endpoint and read the entities from the ``my-entities``
+dataset:
+
+::
+
+  "sink": {
+      "type": "xml_endpoint",
+      "default-namespace": "http://www.example.org/ns1",
+      "wrapper": "baz",
+      "namespace-decls": {
+         "foo": "http://www.example.org/ns2"
+      }
+  }
+
+The following output will be produced (here reformatted/pretty-printed):
+
+::
+
+    <baz>
+      <foo:tag xmlns="http://www.example.org/ns1"
+               xmlns:ns2="http://www.example.org/ns2"
+               name="Entity 1"
+               id="entity-1">
+         <section id="child"
+                  name="Child entity">
+            <from>0</from>
+            <to>999</to>
+         </section>
+      </foo:tag>
+    </baz>
+
+The XML document will be available at ``http://localhost:9042/api/publishers/my-entities/xml``
+
 .. _system_section:
 
 Systems
