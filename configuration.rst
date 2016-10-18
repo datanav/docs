@@ -581,6 +581,52 @@ Example result
     }
 
 
+.. _embedded_source:
+
+The embedded source
+-------------------
+
+This is a data source that lets you embed the data inside the configuration of the source. This is convenient when you have a small and static dataset. Do not use this source to hold a large number of entities.
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 30, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``entities``
+     - List<Entity>
+     - Contains the list of entities is to be served by the source.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+Example:
+
+::
+
+    {
+        "source": {
+            "type": "embedded",
+            "entities": [
+                {"_id": "a", "title": "A"},
+                {"_id": "b", "title": "B"},
+                {"_id": "c", "title": "C"}
+            ]
+        }
+    }
+
 
 .. _sql_source:
 
@@ -1859,7 +1905,7 @@ The endpoint must support lists of entities only, i.e. it should expect to recei
 anything other than a "2xx Success" `HTTP status code <https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>`_,
 the transform will raise an exception.
 
-The endpoint is free to decide how the entitites are transformed. It'll just have to produce a list of zero or more
+The endpoint is free to decide how the entities are transformed. It'll just have to produce a list of zero or more
 entities from the entities it was posted. This means that entities can be transformed, filtered out or new ones created.
 
 Properties
@@ -2591,7 +2637,7 @@ With the input entity:
 
   {
     "_id": "1",
-    "name": "Entitity 1",
+    "name": "Entity 1",
     "id": "entity-1",
     "<foo:tag>": [{
         "id": "child",
@@ -2609,7 +2655,7 @@ Will produce the transformed entity:
 
   {
     "_id": "1",
-    "name": "Entitity 1",
+    "name": "Entity 1",
     "id": "entity-1",
     "<foo:tag>": [{
         "id": "child",
@@ -4095,7 +4141,7 @@ expected is:
 
   {
     "_id": "1",
-    "name": "Entitity 1",
+    "name": "Entity 1",
     "id": "entity-1",
     "<foo:tag>": [{
         "id": "child",

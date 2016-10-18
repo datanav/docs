@@ -380,7 +380,7 @@ All of the four joins given above succeed for the two entities because
 they all have overlapping values, i.e. the values ``1`` and ``4``.
 
 Join expressions that contain functional expressions work the same
-way, e.g. ``["eq", ["+", "a.value", 2], "b.value"]`` succeeds as ``3``
+way, e.g. ``["eq", ["+", "a.value", 2], "b.values"]`` succeeds as ``3``
 is a value shared by both.
 
 
