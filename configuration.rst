@@ -2497,6 +2497,7 @@ Example configuration
       }
 
 
+.. _xml_transform:
 
 The XML transform
 -----------------
@@ -2514,7 +2515,6 @@ The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`
     {
         "type": "xml_endpoint",
         "default-namespace": "http://www.example.org/ns1",
-        "wrapper": "wrapper-tag",
         "namespace-decls": {
            "foo": "http://www.example.org/ns2",
            "bar": "http://www.example.org/ns3"
@@ -2555,14 +2555,6 @@ Properties
      - false
      -
 
-
-   * - ``wrapper``
-     - String
-     - If included, the XML produced from all entities will wrapped in a single top level tag with the value
-       of this property (``<wrapper-value>..entity-tags..</wrapper-value>``)
-     -
-     -
-
    * - ``xml-property``
      - String
      - The property that will hold any XML generated
@@ -2586,7 +2578,6 @@ Example configuration
        "transform": {
            "type": "xml",
             "default-namespace": "http://www.example.org/ns1",
-            "wrapper": "baz",
             "namespace-decls": {
                "foo": "http://www.example.org/ns2"
             },
@@ -2628,7 +2619,7 @@ Will produce the transformed entity:
           {"<to>": "999"}
         ]
     }],
-    "xml": "<baz><foo:tag xmlns=\"http://www.example.org/ns1\" .. </baz>"
+    "xml": "<foo:tag xmlns=\"http://www.example.org/ns1\" .. </foo:tag>"
   }
 
 .. _sink_section:
