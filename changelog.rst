@@ -3,6 +3,11 @@ Changelog
 
 2016-10-13
 ----------
+* Added the :ref:`XML transform <xml_transform>' and :ref:`XML endpoint sink <xml_endpoint_sink>`. These can be
+  used to generate XML documents inline in entities or published to external consumers, respectively.
+
+2016-10-13
+----------
 * Changed the :ref:`CSV endpoint sink <csv_endpoint_sink>` to not output deleted entities by default. Added a new
   :ref:`skip-deleted-entities <csv_endpoint_sink_param_skip_deleted_entities>` config parameter that can be set
   to ``false`` if one want deleted entities to appear in the CSV output.
