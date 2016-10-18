@@ -10,12 +10,9 @@ Changelog
 * Added the :ref:`Embedded source <embedded_source>`. This is a data source that lets you embed data inside the configuration of the source. This is convenient when you have a small and static dataset.
   
 2016-10-17
-----------
 * Added the :ref:`XML transform <xml_transform>` and :ref:`XML endpoint sink <xml_endpoint_sink>`. These can be
   used to generate XML documents inline in entities or published to external consumers, respectively.
 
-2016-10-13
-----------
 * Changed the :ref:`CSV endpoint sink <csv_endpoint_sink>` to not output deleted entities by default. Added a new
   :ref:`skip-deleted-entities <csv_endpoint_sink_param_skip_deleted_entities>` config parameter that can be set
   to ``false`` if one want deleted entities to appear in the CSV output.
