@@ -11,14 +11,14 @@ Service Configuration Guide
 General
 =======
 
-The *Sesam* service is configured using one or more *JSON* files. These configuration files can be imported through the service API, e.g. using the ``sesam`` command line client. They can also be created and edited using the Sesam Management Studio.
+The *Sesam* service is configured using one or more `JSON <https://en.wikipedia.org/wiki/JSON>`_ files.
+These configuration files can be imported through the service API, e.g. using the ``sesam``
+:doc:`command line client <commandlineclient>`. They can also be created and edited using the :doc:`Sesam Management Studio <management-studio>`.
 
 Conceptually, the configuration files contains definitions for *Systems* and *Pipes*.
 
 The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
 *JSON objects* of the form:
-
-It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *sesam.conf.json* file but also across all files when a multiple file configuration is used.
 
 ::
 
@@ -37,11 +37,14 @@ It should be noted that all ``_id`` property values must be unique across across
         }
     ]
 
+It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *sesam.conf.json* file but also across all files when a multiple file configuration is used.
+
 Configuration environment variables
 -----------------------------------
 
 You can insert the values of environment variables into configuration using the syntax "$ENV(variable)" in place of
-property values. You can manage these environment variables using the Sesam client or the :ref:`Environment Manager API <api-reference>`.
+property values. You can manage these environment variables using the :doc:`Sesam client <commandlineclient>` or
+using a HTTP client with the :ref:`Environment Manager API <api-reference>`.
 
 An example, given a uploaded environment variable JSON file containing:
 
@@ -73,17 +76,17 @@ Pipes
 
 A pipe defines the flow of data from a *source* to a *sink* on some schedule as defined by the pump settings.
 Optionally, a pipe may define an ordered list of transforms that are applied to entities as they flow from the
-*source* to the *sink*. The pump "pumps" data in the form of entities from the source to the sink at regular
-or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities
+*source* to the *sink*. As the name implies, a pump "pumps" data in the form of entities from the source to the
+sink at regular or scheduled intervals. A chain of transforms can be placed in between the source and the sink, so that entities
 are transformed on their way to the sink.
 
 The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`,
 :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form first is
+The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form is
 described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
 
-Note that the forward slash character (``/``) is not allowed in the pipe ``_id`` property.
+Note that the forward slash character ("``/``") is not allowed in the pipe ``_id`` property.
 
 Prototype
 ---------
@@ -584,8 +587,9 @@ Example result
 The SQL source
 --------------
 
-The SQL database source is one of the most commonly used data sources. In short, it presents database ``relations``
-(i.e. ``tables``, ``views`` or ``queries``) as a entity stream to Sesam.
+The `SQL <https://en.wikipedia.org/wiki/SQL>`_ database source is one of the most commonly used data sources.
+In short, it presents `database relations <https://en.wikipedia.org/wiki/Relation_(database)>`_ (i.e. ``tables``,
+``views`` or ``queries``) as a entity stream to Sesam.
 
 The SQL source has several options, all of which are presented below with their default values:
 
@@ -777,7 +781,10 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 The CSV source
 --------------
 
-The CSV data source translates the rows of files in ``CSV format`` to entities. The configuration options are:
+The CSV data source translates the rows of files in `CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_
+to entities.
+
+The configuration options are:
 
 Prototype
 ^^^^^^^^^
@@ -919,9 +926,9 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The RDF source
 --------------
 
-The RDF data source is able to read data in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_,
-`Turtle <https://www.w3.org/TR/turtle/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn
-this into entities.
+The RDF data source is able to read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data
+in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_ or
+`RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
 
 See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
@@ -1008,7 +1015,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The SDShare source
 ------------------
 
-The SDShare data source can read `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
+The SDShare data source can read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
 `SDShare specification <http://sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
 in Sesam.
 
@@ -1078,7 +1085,9 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The LDAP source (Experimental)
 ------------------------------
 
-The LDAP source provides entities from a ``LDAP catalog`` configured by a :ref:`LDAP system <ldap_system>`.
+The LDAP source provides entities from a `LDAP catalog <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_
+configured by a :ref:`LDAP system <ldap_system>`.
+
 It supports the following properties:
 
 Prototype
@@ -1174,11 +1183,11 @@ The JSON source
 ---------------
 
 
-The `JSON`` source can read entities from a ``JSON`` file available either locally or over HTTP.
+The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ file available either
+locally or over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
 
-If the ``supports_since`` property is set to *true*, then the
-``since`` request parameter is added to the URL to signal that we want
-only changes that happened after the since marker.
+If the ``supports_since`` property is set to *true*, then the ``since`` request parameter is added to the URL to
+signal that we want only changes that happened after the since marker.
 
 Prototype
 ^^^^^^^^^
@@ -1310,9 +1319,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The HTTP endpoint source
 ------------------------
 
-This is a special data source that registers an HTTP receiver endpoint
-that one can post entities to. Entities posted here will be written to
-the pipe's sink.
+This is a special data source that registers an `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_
+receiver endpoint that one can post entities to. Entities posted here will be written to the pipe's sink.
 
 A pipe that references the ``HTTP endpoint`` source will not pump any
 entities, in practice this means that a pump is not configured for the
@@ -1339,14 +1347,14 @@ JSON Push protocol
 
 The JSON Push protocol is described in additional detail in the
 :doc:`JSON Push Protocol <json-push>` document. The serialisation of
-entities as JSON is described in more detail :doc:`here
+entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :doc:`here
 <entitymodel>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
 <json_push_sink>`.
 
-The JSON Push endpoint supports POSTs of both a single JSON object and
-a list of JSON objects. The request's ``content-type`` header element
-must be set to ``application/json`` in this case.
+The JSON Push endpoint supports `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ of
+both a single JSON object and a list of JSON objects. The HTTP request's ``content-type``
+`header <https://en.wikipedia.org/wiki/List_of_HTTP_header_fields>`_ element must be set to ``application/json`` in this case.
 
 SDShare Push protocol
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1354,14 +1362,14 @@ SDShare Push protocol
 The SDShare Push protocol is described `here
 <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
 
-The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_
+The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_
 in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
 parameters have to include at least one ``resource`` parameter describing which resources the
 NTriples payload contains statements about. If you include a ``resource`` parameter that there
 are no statements about in the NTriples body, an empty entity is generated with its ``_deleted``
 flag set to ``true``. Note that the ``graph`` parameter of the protocol is ignored - the destination
 of the entities generated from the NTriples payload must be configured in the pipe's ``sink``
-section. This type of request expects the ``content-type`` to be ``application/n-triples`` or
+section. This type of HTTP request expects the ``content-type`` to be ``application/n-triples`` or
 ``text/plain``. See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
 
@@ -1557,7 +1565,7 @@ entities using a shared pool of ids for the employer id:
 The SPARQL source
 -----------------
 
-The SPARQL source fetches `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data about subjects from a
+The SPARQL source fetches `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data about subjects from a
 `triplestore <https://en.wikipedia.org/wiki/Triplestore>`_ exposing a `SPARQL compliant <https://www.w3.org/TR/rdf-sparql-query/>`_ endpoint.
 The endpoint of the source is configured either directly or implicitly by a :ref:`URL system <url_system>`. The source uses
 two SPARQL queries to construct entities; the fragment query is a SPARQL ``SELECT`` query that gets a list of subjects
@@ -1697,11 +1705,8 @@ either a transform configuration object or a list of them.
 The DTL transform
 -----------------
 
-This is a transform that lets you apply Data Transformation Language
+This is a transform that lets you apply :doc:`Data Transformation Language <DTLReferenceGuide>`
 transformations on the entities stream produced by the data source.
-
-See :doc:`DTLReferenceGuide` for more details on the transformation
-language itself.
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1746,9 +1751,8 @@ Transformation Language before writing them to the
 The JSON Schema validation transform
 ------------------------------------
 
-A transform that validates entities against a ``JSON Schema``
-(http://json-schema.org/) document. If the document is valid then the
-field referenced by ``key_valid`` will be set to true, otherwise
+A transform that validates entities against a `JSON Schema <http://json-schema.org/>`_ document.
+If the document is valid then the field referenced by ``key_valid`` will be set to true, otherwise
 false. Any validation error messages will be added to the field
 referenced by ``key_errors``.
 
@@ -1844,18 +1848,19 @@ then these would come out:
 The HTTP transform
 ------------------
 
-This transform POSTs entities to an HTTP endpoint, which transforms
-them and then returns them in the response. The HTTP endpoint must
-accept ``application/json`` and the response must be
-``application/json``. The endpoint must support lists of entities
-only, i.e. it should expect to receive a JSON array and it should
-always return a JSON array. If the endpoint returns a 4xx or 5xx HTTP
-response, then the transform will raise an exception.
+This transform performs `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ requests to a HTTP capable
+endpoint. The service at the endpoint then transforms the entities contained in the request body and returns them in
+the `HTTP response message <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message>`_ .
 
-The endpoint is free to decide how the entitites are
-transformed. It'll just have to produce a list of zero or more
-entities from the entities it was posted. This means that entities can
-be transformed, filtered out or new ones created.
+The HTTP endpoint must accept ``application/json`` and the response must also be ``application/json``.
+
+The endpoint must support lists of entities only, i.e. it should expect to receive a
+`JSON array <https://en.wikipedia.org/wiki/JSON>`_ and it should always return a JSON array. If the endpoint returns
+anything other than a "2xx Success" `HTTP status code <https://en.wikipedia.org/wiki/List_of_HTTP_status_codes>`_,
+the transform will raise an exception.
+
+The endpoint is free to decide how the entitites are transformed. It'll just have to produce a list of zero or more
+entities from the entities it was posted. This means that entities can be transformed, filtered out or new ones created.
 
 Properties
 ^^^^^^^^^^
@@ -1920,7 +1925,7 @@ Example configuration
 The properties to CURIEs transform
 ----------------------------------
 
-This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames)
+This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_)
 based on wildcard patterns. It is used primarily when dealing with or preparing to output
 `RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data. Note that URL quoting is applied to the property names
 as part of the transform. Also note that by default the path separator character ("/) is not quoted, but the behaviour
@@ -2102,8 +2107,9 @@ The URIs to CURIEs transform
 ----------------------------
 
 This transform can transform entity properties containing URIs in the keys and/or the values to a more compact form
-using `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of XML QNames). It is used primarily when dealing with
-or reading RDF data. See the :doc:`rdf-support` document for more information about working with RDF data in Sesam.
+using `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_).
+It is used primarily when dealing with or reading RDF data. See the :doc:`rdf-support` document for more information
+about working with `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data in Sesam.
 
 Prototype
 ^^^^^^^^^
@@ -3436,7 +3442,9 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The SQL sink
 ------------
 
-The SQL sink writes entities to a SQL database table. You will have to configure and provide a :ref:`SQL system <sql_system>` id in the ``system`` property.
+The `SQL <https://en.wikipedia.org/wiki/SQL>`_  sink writes entities to a
+`relational database <https://en.wikipedia.org/wiki/Relational_database>`_ `table <https://en.wikipedia.org/wiki/Table_(database)>`_.
+You will have to configure and provide a :ref:`SQL system <sql_system>` id in the ``system`` property.
 
 The expected form of an entity to be written to the sink is:
 
@@ -3842,13 +3850,13 @@ dataset::
 The CSV endpoint sink
 ---------------------
 
-This is a data sink that registers an HTTP publisher endpoint
-that one can get entities in CSV format from.
+This is a data sink that registers an HTTP publisher endpoint that one can get entities in
+`CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_ from.
 
 A pipe that references the ``CSV endpoint`` sink will not pump any
-entities, in practice this means that a pump is not configured for the
+entities. In practice this means that a pump is not configured for the
 pipe; the only way for entities to flow through the pipe is by
-retrieving them from the CSV endpoint.
+retrieving them from the CSV endpoint using a client that supports the HTTP protocol.
 
 It exposes the URL:
 
@@ -4005,9 +4013,7 @@ This is a data sink that registers an HTTP publisher endpoint
 that one can get the entities in XML format from.
 
 A pipe that references the ``XML endpoint`` sink will not pump any
-entities, in practice this means that`XML endpoint sink` a pump is not configured for the
-pipe; the only way for entities to flow through the pipe is by
-retrieving them from the XML endpoint.
+entities; the only way for entities to flow through the pipe is by retrieving them from the endpoint using the HTTP protocol.
 
 It exposes the URL:
 
@@ -4019,7 +4025,8 @@ It exposes the URL:
 
    * - ``http://localhost:9042/api/publishers/mypipe/xml``
 
-Note that the shape of the entities must conform to certain criteria, see the example section.
+Note that the shape of the entities must conform to certain criteria, see the :ref:`notes <expected_xml_entity_shape>`
+later in the section.
 
 Prototype
 ^^^^^^^^^
@@ -4054,13 +4061,13 @@ Properties
 
    * - ``default-namespace``
      - String
-     - The default namespace of the XML document
+     - The default `namespace <https://en.wikipedia.org/wiki/XML_namespace>`_ of the XML document
      -
      -
 
    * - ``quoting``
      - Object<String, String>
-     - An object mapping namespaces to their full URLs
+     - An object mapping `namespaces <https://en.wikipedia.org/wiki/XML_namespace>`_  to their full URLs
      -
      -
 
@@ -4086,9 +4093,10 @@ Properties
      -
 
 
+.. _expected_xml_entity_shape:
+
 Expected entity shape
 ^^^^^^^^^^^^^^^^^^^^^
-
 The entities must be transformed into a particular form before being piped to the XML endpoint sink. The general form
 expected is:
 
@@ -4114,8 +4122,9 @@ child entities in as many levels as you want (also in lists).
 All non-tag properties, except those beginning with a ``_`` letter will be included as attribute values on the tag
 specified. A "tag"-property value can either be a single literal, a single object or a list of objects.
 
-The property names must be valid XML attribute or tag names (QNames). All literal values in tags or
-attributes will be XML escaped. All namespaces used in tags must be declared explicitly in the configuration.
+The property names must be valid XML attribute or tag names (`QNames <https://en.wikipedia.org/wiki/QName>`_).
+All literal values in tags or attributes will be `XML escaped <https://www.liquid-technologies.com/XML/EscapingData.aspx>`_.
+All `namespaces <https://en.wikipedia.org/wiki/XML_namespace>`_ used in tags must be declared explicitly in the configuration.
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -4125,13 +4134,15 @@ dataset:
 
 ::
 
-  "sink": {
-      "type": "xml_endpoint",
-      "default-namespace": "http://www.example.org/ns1",
-      "wrapper": "baz",
-      "namespace-decls": {
-         "foo": "http://www.example.org/ns2"
-      }
+  {
+     "sink": {
+         "type": "xml_endpoint",
+         "default-namespace": "http://www.example.org/ns1",
+         "wrapper": "baz",
+         "namespace-decls": {
+            "foo": "http://www.example.org/ns2"
+         }
+     }
   }
 
 The following output will be produced (here reformatted/pretty-printed):
@@ -4164,16 +4175,17 @@ communication protocol settings and so on.
 
 You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
 
-Note: as with pipe components, you are not allowed to use the forward slash character (``/``) in system id's.
+Note: as with pipe components, you are not allowed to use the forward slash character ("``/``") in system id's.
 
 .. _sql_system:
 
 The SQL systems
 ---------------
 
-The SQL system components represents a RDBMS and contains the necessary information to establish a connection
-to the RDBMS and manage these connections among the sources that read from it. It can also provide source
-configurations for reading from all tables it can introspect from the RDBMS schema.
+The SQL system components represents a `RDBMS <https://en.wikipedia.org/wiki/Relational_database_management_system>`_
+and contains the necessary information to establish a connection to the RDBMS and manage these connections among the
+sources that read from it. It can also provide source configurations for reading from all tables it can introspect
+from the RDBMS `schema <https://en.wikipedia.org/wiki/Database_schema>`_.
 
 The common properties for all SQL systems are:
 
@@ -4247,7 +4259,7 @@ The specific SQL systems available are:
 The Oracle system
 -----------------
 
-The Oracle SQL system represents a Oracle RDBMS available on the network.
+The Oracle SQL system represents a `Oracle RDBMS <https://en.wikipedia.org/wiki/Oracle_Database>`_ available on the network.
 See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
 and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -4404,7 +4416,7 @@ Example Oracle TNS configuration:
 The MSSQL system
 ----------------
 
-The MSSQL system represents a Microsoft SQL Server available over the network.
+The MSSQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -4470,10 +4482,11 @@ Properties
 
    * - ``tds_version``
      - String
-     - Version of TDS protocol to use for the driver. Note that the default is ``null`` which means it's not set.
-       This will tell the database driver to attempt to auto-detect the protocol version, which should work in most
-       cases. However, if you experience unknown or general connection errors, you can try to specify the TDS protocol
-       version string manually (typically on the form "7.0", "7.4" etc).
+     - Version of the `TDS protocol <https://en.wikipedia.org/wiki/Tabular_Data_Stream>`_ to use for the driver.
+       Note that the default is ``null`` which means it's not set. This will tell the database driver to attempt to
+       auto-detect the protocol version, which should work in most cases. However, if you experience unknown or general
+       connection errors, you can try to specify the TDS protocol version string manually (typically on the
+       form "7.0", "7.4" etc).
      -
      -
 
@@ -4500,7 +4513,7 @@ Example MS SQL Server configuration:
 The MySQL system
 ----------------
 
-The MySQL system represents a MySQL database available over the network:
+The MySQL system represents a `MySQL database <https://en.wikipedia.org/wiki/MySQL>`_ available over the network:
 See the :ref:`supported column types <mysql_types>` list for a overview of which MySQL column types are supported and
 how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -4586,7 +4599,7 @@ Example MySQL configuration:
 The PostgreSQL system
 ---------------------
 
-The PostgreSQL system represents a PostgreSQL RDBMS available on the network.
+The PostgreSQL system represents a `PostgreSQL RDBMS <https://en.wikipedia.org/wiki/PostgreSQL>`_ available on the network.
 See the :ref:`supported column types <postgresql_types>` list for a overview of which PostgreSQL column types are supported
 and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -4749,9 +4762,9 @@ See the :ref:`example configuration <fake_system_example>` in the fake source se
 The InfluxDB system (Experimental)
 ----------------------------------
 
-The InfluxDB system represents a InfluxDB system and all the information needed to connect and write to it.
-It is used in conjunction with the :ref:`InfluxDB sink <influxdb_sink>` to write entities to a InfluxDB time series
-database.
+The InfluxDB system represents a `InfluxDB system <https://en.wikipedia.org/wiki/InfluxDB>`_ and all the information
+needed to connect and write to it. It is used in conjunction with the :ref:`InfluxDB sink <influxdb_sink>` to write
+entities to a InfluxDB time series database.
 
 Prototype
 ^^^^^^^^^
@@ -4867,8 +4880,11 @@ Example configuration
 The LDAP system
 ---------------
 
-The LDAP system contains the configuration needed to communicate with a LDAP system. It is used by
+The LDAP system contains the configuration needed to communicate with a
+`LDAP <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_ system. It is used by
 :ref:`LDAP sources <ldap_source>` to stream entities from LDAP catalogs.
+Note that `Microsoft ActiveDirectory <https://en.wikipedia.org/wiki/Active_Directory>`_ is also supported
+through its LDAP-compatible interface/API.
 
 It supports the following properties:
 
@@ -4957,9 +4973,9 @@ Example configuration
 The SMTP system (Experimental)
 ------------------------------
 
-The SMTP system represents the information needed to connect to a SMTP server for sending emails. It is used in
-conjunction with the :ref:`mail message sink <mail_message_sink>` to construct and send emails based on the entities it
-receives.
+The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
+server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_message_sink>` to construct
+and send emails based on the entities it receives.
 
 Prototype
 ^^^^^^^^^
@@ -5049,9 +5065,8 @@ Example configuration
 The Solr system
 ---------------
 
-The Solr system represents the information needed to connect to a Solr
-server for indexing JSON documents. It is used in conjunction with the
-:ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
+The Solr system represents the information needed to connect to a `Apache Solr <https://en.wikipedia.org/wiki/Apache_Solr>`_
+server for indexing JSON documents. It is used in conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
 <databrowser_sink>` sinks.
 
 Prototype
@@ -5110,9 +5125,8 @@ The Elasticsearch system
 ------------------------
 
 The Elasticsearch system represents the information needed to connect
-to an Elasticsearch server/cluster for indexing JSON documents. It is
-used in conjunction with the :ref:`Elasticsearch sink
-<elasticsearch_sink>`.
+to an `Elasticsearch <https://en.wikipedia.org/wiki/Elasticsearch>`_ server/cluster for indexing JSON documents. It is
+used in conjunction with the :ref:`Elasticsearch sink <elasticsearch_sink>`.
 
 Prototype
 ^^^^^^^^^
@@ -5162,8 +5176,10 @@ Example configuration
 The Twilio system (Experimental)
 --------------------------------
 
-The Twilio system is a ``SMS system`` used with :ref:`SMS message sinks <smsmessage_sink>` to construct
-and send SMS messages from entities. It has the following properties:
+The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
+:ref:`SMS message sinks <smsmessage_sink>` to construct and send SMS messages from entities.
+
+It has the following properties:
 
 Prototype
 ^^^^^^^^^
@@ -5230,7 +5246,10 @@ Example configuration
 The URL system
 --------------
 
-The URL system represents a HTTP server serving requests from a base url. It supports the ``http`` and ``https`` protocols. It provides session handling, connection pooling and authentication services to sources and sinks which need to communicate with a HTTP server.
+The URL system represents a `HTTP server <https://en.wikipedia.org/wiki/Web_server>`_ (i.e. a web server)
+serving `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url.
+It supports the ``HTTP`` and ``HTTPS`` protocols. It provides session handling, connection pooling and authentication
+services to sources and sinks which need to communicate with a HTTP server.
 
 Prototype
 ^^^^^^^^^
