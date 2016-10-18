@@ -2514,7 +2514,7 @@ The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`
            "bar": "http://www.example.org/ns3"
         },
         "xml-property": "xml-property-to-use",
-        "include-doctype-decl": false,
+        "include-xml-decl": false,
         "skip-deleted-entities": true
     }
 
@@ -2543,7 +2543,7 @@ Properties
      -
      -
 
-   * - ``include-doctype-decl``
+   * - ``include-xml-decl``
      - Boolean
      - If set to ``true`` includes a default XML header: ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>``
      - false
@@ -4034,7 +4034,7 @@ Prototype
            "foo": "http://www.example.org/ns2",
            "bar": "http://www.example.org/ns3"
         },
-        "include-doctype-decl": false,
+        "include-xml-decl": false,
         "skip-deleted-entities": true
     }
 
@@ -4064,7 +4064,7 @@ Properties
      -
      -
 
-   * - ``include-doctype-decl``
+   * - ``include-xml-decl``
      - Boolean
      - If set to ``true`` includes a default XML header: ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>``
      - false
