@@ -2491,7 +2491,7 @@ Example configuration
       }
 
 
-.. xml_transform:
+.. _xml_transform:
 
 The XML transform
 -----------------
