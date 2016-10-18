@@ -119,7 +119,7 @@ data types there is also limited support for `Transit
      - Example
 
    * - Dict
-     - Like a JSON object where keys are always strings.
+     - Like a JSON object where keys are always strings. This type is not *orderable*.
      - ``{"a": 123}``
 
    * - Entity
@@ -128,7 +128,7 @@ data types there is also limited support for `Transit
      - ``{"_id", "person1", "a": 123}``
 
    * - List
-     - A list of values. Values can be of any type.
+     - A list of values. Values can be of any type.  This type is not *orderable*.
      - ``["abc", 123, [4, 5], {"x": "y"}]``
 
    * - String
@@ -158,8 +158,10 @@ data types there is also limited support for `Transit
      - ``true``
 
    * - Null
-     - A null value. Typically used to represent a missing value.
+     - A null value. Typically used to represent a missing value. This type is not *orderable*.
      - ``null``
+
+.. _extension-types:
 
 Extension types
 ---------------

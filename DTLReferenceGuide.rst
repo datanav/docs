@@ -1024,18 +1024,83 @@ Data Types
        |
        | Returns false
 
+       .. _json_dtl_function:
+   * - ``json``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to JSON strings (not transit encoded).
+         The keys of dicts are sorted lexically.
+     - | ``["json", 1]``
+       |
+       | Returns one string: ``1``.
+       |
+       | ``["json", "hello"]``
+       |
+       | Returns one quoted string: ``"hello"``.
+       |
+       | ``["json",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+
+       .. _json_transit_dtl_function:
+   * - ``json-transit``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to transit encoded JSON strings.
+         The keys of dicts are sorted lexically. This function behaves like
+         the ``json`` function, except that it transit encodes values.
+     - | ``["json-transit", 1]``
+       |
+       | Returns one string: ``1``.
+       |
+       | ``["json-transit", "hello"]``
+       |
+       | Returns one quoted string: ``"hello"``.
+       |
+       | ``["json-transit",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"~rhttp://www.bouvet.no/", "124.4", "12345"]``.
+
    * - ``string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | Translates all input values to strings.
+
+       .. NOTE::
+
+          Complex types like list and dict are JSON encoded (no transit encoding).
      - | ``["string", 1]``
        |
-       | Returns one string: "1".
+       | Returns one string: ``1``.
        |
-       | ``["string", ["1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       | ``["string", "hello"]``
        |
-       | Returns a list of strings.
+       | Returns one string: ``hello``.
+       |
+       | ``["string",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
 
    * - ``is-string``
      - | *Arguments:*
@@ -2451,6 +2516,7 @@ Values / collections
        |
        | Returns the order entities that have an amount of more than 100.
 
+       .. _min_dtl_function:
    * - ``min``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -2461,14 +2527,28 @@ Values / collections
          value is used to for ordering to figure out what is the minimal value.
          Note that even though FUNCTION is given it is the value in VALUES that
          is returned.
+
+       .. NOTE::
+
+          Values of type ``dict``, ``list`` and ``null`` are not
+          orderable, and will thus not be considered. The function
+          will find the first orderable type and operate only on
+          values of this particular type.  Values of any other type
+          will not be part of the return value.
      - | ``["min", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``2``.
+       |
+       | ``["min", ["list", {"x": 1}, "b", 2, "a"]]``
+       |
+       | Returns ``"a``. ``{"x": 1}`` is not orderable. ``"b"`` is the
+         first orderable value, so only strings are considered.
        |
        | ``["min", "_.amount", "_S.orders"]]``
        |
        | Returns the order with the lowest amount.
 
+       .. _max_dtl_function:
    * - ``max``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -2479,9 +2559,22 @@ Values / collections
          value is used to for ordering to figure out what is the maximal value.
          Note that even though FUNCTION is given it is the value in VALUES that
          is returned.
+
+       .. NOTE::
+
+          Values of type ``dict``, ``list`` and ``null`` are not
+          orderable, and will thus not be considered. The function
+          will find the first orderable type and operate only on
+          values of this particular type.  Values of any other type
+          will not be part of the return value.
      - | ``["max", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``5``.
+       |
+       | ``["max", ["list", {"x": 1}, "b", 2, "a"]]``
+       |
+       | Returns ``"b``. ``{"x": 1}`` is not orderable. ``"b"`` is the
+         first orderable value, so only strings are considered.
        |
        | ``["max", "_.amount", "_S.orders"]]``
        |
@@ -2509,6 +2602,14 @@ Values / collections
      - | ``["count", ["list", 2, 4, 6]]``
        |
        | Returns ``3``.
+       |
+       | ``["count", null]]``
+       |
+       | Returns ``0``.
+       |
+       | ``["count", 123]]``
+       |
+       | Returns ``1``.
        |
        | ``["count", "_S.orders"]]``
        |
@@ -2555,6 +2656,7 @@ Values / collections
        | Returns a list of order lines, but only one per unique EAN, i.e. product
          number.
 
+       .. _sorted_dtl_function:
    * - ``sorted``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -2566,6 +2668,15 @@ Values / collections
          given it is the value in VALUES that is returned. Note that this function
          does *not* remove duplicates. Use ``distinct`` to do that. If VALUES is not
          a list, then VALUES is returned.
+
+       .. NOTE::
+
+          Values of type ``dict``, ``list`` and ``null`` are not
+          orderable, and will thus not be considered. The function
+          will find the first orderable type and operate only on
+          values of this particular type.  Values of any other type
+          will not be part of the return value.
+          
      - | ``["sorted", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[2, 3, 4, 4, 5]``.
@@ -2579,6 +2690,7 @@ Values / collections
        |
        | Returns the tags in ascending order.
 
+       .. _sorted_descending_dtl_function:
    * - ``sorted-descending``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -2590,6 +2702,14 @@ Values / collections
          given it is the value in VALUES that is returned. Note that this function
          does *not* remove duplicates. Use ``distinct`` to do that. If VALUES is not
          a list, then VALUES is returned.
+
+       .. NOTE::
+
+          Values of type ``dict``, ``list`` and ``null`` are not
+          orderable, and will thus not be considered. The function
+          will find the first orderable type and operate only on
+          values of this particular type.  Values of any other type
+          will not be part of the return value.
      - | ``["sorted-descending", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[5, 4, 4, 3, 2]``.
@@ -2657,19 +2777,35 @@ Values / collections
        |
        | Returns ``[{"x:abc": 1, "x:abcd": 3}, {"x:def": 4}]``.
 
+       .. _group_by_dtl_function:
    * - ``group-by``
      - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
+       |   KEY_FUNCTION(function-expression(0|1}
+       |   STRING_FUNCTION(function-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Groups the values in VALUES by the result of executing the FUNCTION function
-         on them. Returns a dictionary, where the key is the
+       | Groups the values in VALUES by the result of executing the KEY_FUNCTION
+         function on them. Returns a dictionary, where the key is the
          group key and the value is the list of values in VALUES that were
          grouped under that key.
-     - | ``["group-by", ["length", "_.],``
+
+       .. NOTE::
+
+          The keys in the returned dict are strings only. The reason
+          is that the :ref:`entity data model <entity_data_types>`
+          (and `JSON <http://json.org/>`_) only supports string keys.
+
+          The group keys are :ref:`transit encoded <extension-types>`
+          JSON strings, i.e. the same kind of strings generated by the
+          :ref:`json-transit <json_transit_dtl_function>` function.
+
+          If you do not want the keys to be transit encoded JSON, then you have the
+          option of specifying STRING_FUNCTION, a function that then will be used to
+          generate the string key.
+     - | ``["group-by", ["length", "_."],``
        |   ``["list", "phi", "alpha", "rho"]]``
        |
-       | Returns ``{3: ["phi", "rho"], 5: ["alpha"]}``.
+       | Returns ``{"3": ["phi", "rho"], "5": ["alpha"]}``.
        |
        | ``["group-by", "_.ean", "_S.orders.line_item"]]``
        |
@@ -2693,12 +2829,13 @@ Sets
 
    * - ``union``
      - | *Arguments:*
-       |   SET1(value-expression{1})
-       |   SET2(value-expression{1})
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
        |
-       | Returns the union of the two sets SET1 and SET2, i.e. the elements that
-         are either in SET1 or in SET2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the union operator.
+       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the elements that
+         are either in VALUES1 or in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the union operator. The
+         return type is a list of distinct values.
      - | ``["union",``
        |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
@@ -2710,12 +2847,13 @@ Sets
 
    * - ``intersection``
      - | *Arguments:*
-       |   SET1(value-expression{1})
-       |   SET2(value-expression{1})
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
        |
-       | Returns the intersection of the two sets SET1 and SET2, i.e. the elements
-         that are in both SET1 and SET2. The two arguments do not have to be real sets,
-         but will be coerced into sets before applying the intersection operator.
+       | Returns the intersection of the two sets VALUES1 and VALUES2, i.e. the elements
+         that are in both VALUES1 and VALUES2. The two arguments do not have to be real sets,
+         but will be coerced into sets before applying the intersection operator. The
+         return type is a list of distinct values.
      - | ``["intersection",``
        |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
@@ -2731,12 +2869,13 @@ Sets
 
    * - ``difference``
      - | *Arguments:*
-       |   SET1(value-expression{1})
-       |   SET2(value-expression{1})
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
        |
-       | Returns the difference of the two sets SET1 and SET2, i.e. the elements
-         that are in SET1, but not in SET2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the difference operator.
+       | Returns the difference of the two sets VALUES1 and VALUES2, i.e. the elements
+         that are in VALUES1, but not in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the difference operator. The
+         return type is a list of distinct values.
      - | ``["difference",``
        |    ``["list", "A", "B"], ["list", "B"]]``
        |

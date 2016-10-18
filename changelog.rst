@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2016-11-08
+----------
+* Added the :ref:`json <json_dtl_function>` and :ref:`json-transit <json_transit_dtl_function>` DTL functions.
+* The :ref:`group-by <group_by_dtl_function>` DTL function has been changed to always return string keys. The string keys are the JSON transit encoded (same type of string as the :ref:`json-transit <json_transit_dtl_function>` function produces). The reason is that the :ref:`entity data model <entity_data_types>` (and `JSON <http://json.org/>`_) only supports string keys. The ``group-by`` has also gotten an optional STRING_FUNCTION argument which lets you specify a custom function to creates the string keys.
+* The :ref:`sorted <sorted_dtl_function>`, :ref:`sorted_descending <sorted_descending_dtl_function>`, :ref:`min <min_dtl_function>`, :ref:`max <max_dtl_function>` DTL functions have been changed to ignore values that are not orderable (i.e. null, dict and list). The functions only consider values that are of the same type as the first orderable type in the input. All other values are ignored.
+
 2016-11-07
 ----------
 * Added the :ref:`microservice system <microservice_system>` (Experimental).
@@ -20,7 +26,7 @@ Changelog
 2016-10-18
 ----------
 * Added the :ref:`Embedded source <embedded_source>`. This is a data source that lets you embed data inside the configuration of the source. This is convenient when you have a small and static dataset.
-  
+
 2016-10-17
 ----------
 * Added the :ref:`XML transform <xml_transform>` and :ref:`XML endpoint sink <xml_endpoint_sink>`. These can be
