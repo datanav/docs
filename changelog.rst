@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-10-19
+----------
+* Added the :ref:`range <range_dtl_function>` DTL function.
+
 2016-10-18
 ----------
 * Added the :ref:`Embedded source <embedded_source>`. This is a data source that lets you embed data inside the configuration of the source. This is convenient when you have a small and static dataset.
