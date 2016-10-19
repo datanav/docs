@@ -4166,8 +4166,7 @@ dataset:
          "wrapper": "baz",
          "root-attributes": {
             "xmlns": "http://www.example.org/ns1",
-            "xmlsn:foo": "http://www.example.org/ns2",
-            "xmlns:bar": "http://www.example.org/ns3",
+            "xmlsn:foo": "http://www.example.org/foo",
             "xmlns:xsi": "http://www.w3.org/2000/10/XMLSchema-instance",
             "xsi:schemaLocation": "http://example.com/myschema.dtd",
             "zoo": "bar"
@@ -4180,7 +4179,7 @@ The following output will be produced (here reformatted/pretty-printed):
 ::
 
     <baz xmlns="http://www.example.org/ns1"
-         xmlns:ns2="http://www.example.org/ns2"
+         xmlns:foo="http://www.example.org/foo"
          xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
          xsi:schemaLocation="http://example.com/myschema.dtd"
          zoo="bar">
