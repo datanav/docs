@@ -2565,7 +2565,6 @@ The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`
            "xmlsn:foo": "http://www.example.org/ns2",
            "xmlns:bar": "http://www.example.org/ns3"
         },
-        "include-xml-decl": false,
         "xml-property": "xml-property-to-use",
         "include-xml-decl": false,
         "skip-deleted-entities": true
