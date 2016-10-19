@@ -4151,7 +4151,6 @@ specified. A "tag"-property value can either be a single literal, a single objec
 
 The property names must be valid XML attribute or tag names (`QNames <https://en.wikipedia.org/wiki/QName>`_).
 All literal values in tags or attributes will be `XML escaped <https://www.liquid-technologies.com/XML/EscapingData.aspx>`_.
-All `namespaces <https://en.wikipedia.org/wiki/XML_namespace>`_ used in tags must be declared explicitly in the configuration.
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -4182,8 +4181,8 @@ The following output will be produced (here reformatted/pretty-printed):
 
     <baz xmlns="http://www.example.org/ns1"
          xmlns:ns2="http://www.example.org/ns2"
-         "xmlns:xsi": "http://www.w3.org/2000/10/XMLSchema-instance"
-         "xsi:schemaLocation": "http://example.com/myschema.dtd"
+         xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+         xsi:schemaLocation="http://example.com/myschema.dtd"
          zoo="bar">
       <foo:tag name="Entity 1"
                id="entity-1">
