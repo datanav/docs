@@ -2560,11 +2560,12 @@ The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`
 
     {
         "type": "xml_endpoint",
-        "default-namespace": "http://www.example.org/ns1",
-        "namespace-decls": {
-           "foo": "http://www.example.org/ns2",
-           "bar": "http://www.example.org/ns3"
+        "root-attributes": {
+           "xmlns": "http://www.example.org/ns1",
+           "xmlsn:foo": "http://www.example.org/ns2",
+           "xmlns:bar": "http://www.example.org/ns3"
         },
+        "include-xml-decl": false,
         "xml-property": "xml-property-to-use",
         "include-xml-decl": false,
         "skip-deleted-entities": true
@@ -2583,15 +2584,10 @@ Properties
      - Default
      - Req
 
-   * - ``default-namespace``
-     - String
-     - The default namespace of the XML document
-     -
-     -
-
-   * - ``quoting``
-     - Object<String, String>
-     - An object mapping namespaces to their full URLs
+   * - ``root-attributes``
+     - Object
+     - An object containing the attributes to include on the root element. This is where you typically declare
+       your namespaces, schema and so on.
      -
      -
 
@@ -2623,9 +2619,9 @@ Example configuration
        "_id": "my-pipe",
        "transform": {
            "type": "xml",
-            "default-namespace": "http://www.example.org/ns1",
-            "namespace-decls": {
-               "foo": "http://www.example.org/ns2"
+            "root-attributes": {
+               "xmlns": "http://www.example.org/ns1",
+               "xmlns:foo": "http://www.example.org/ns2"
             },
             "xml-property": "xml"
        }
@@ -2665,7 +2661,7 @@ Will produce the transformed entity:
           {"<to>": "999"}
         ]
     }],
-    "xml": "<foo:tag xmlns=\"http://www.example.org/ns1\" .. </foo:tag>"
+    "xml": "<foo:tag xmlns=\"http://www.example.org/ns1\" xmlns:foo=\" .. </foo:tag>"
   }
 
 .. _sink_section:
@@ -4072,11 +4068,11 @@ Prototype
 
     {
         "type": "xml_endpoint",
-        "default-namespace": "http://www.example.org/ns1",
         "wrapper": "wrapper-tag",
-        "namespace-decls": {
-           "foo": "http://www.example.org/ns2",
-           "bar": "http://www.example.org/ns3"
+        "root-attributes": {
+           "xmlns": "http://www.example.org/ns1",
+           "xmlsn:foo": "http://www.example.org/ns2",
+           "xmlns:bar": "http://www.example.org/ns3"
         },
         "include-xml-decl": false,
         "skip-deleted-entities": true
@@ -4096,15 +4092,18 @@ Properties
      - Default
      - Req
 
-   * - ``default-namespace``
+   * - ``wrapper``
      - String
-     - The default `namespace <https://en.wikipedia.org/wiki/XML_namespace>`_ of the XML document
+     - If included, the XML produced from all entities will wrapped in a single top level tag with the value
+       of this property (``<wrapper-value>..entity-tags..</wrapper-value>``)
      -
      -
 
-   * - ``quoting``
-     - Object<String, String>
-     - An object mapping `namespaces <https://en.wikipedia.org/wiki/XML_namespace>`_  to their full URLs
+   * - ``root-attributes``
+     - Object
+     - An object containing the attributes to include on the root element (i.e. on the ``wrapper`` tag if it is defined,
+       or on the tag defined on the first entity level). This is where you typically declare your namespaces, schema
+       and so on.
      -
      -
 
@@ -4112,14 +4111,6 @@ Properties
      - Boolean
      - If set to ``true`` includes a default XML header: ``<?xml version="1.0" encoding="UTF-8" standalone="yes"?>``
      - false
-     -
-
-
-   * - ``wrapper``
-     - String
-     - If included, the XML produced from all entities will wrapped in a single top level tag with the value
-       of this property (``<wrapper-value>..entity-tags..</wrapper-value>``)
-     -
      -
 
    * - ``skip-deleted-entities``
@@ -4174,11 +4165,15 @@ dataset:
   {
      "sink": {
          "type": "xml_endpoint",
-         "default-namespace": "http://www.example.org/ns1",
          "wrapper": "baz",
-         "namespace-decls": {
-            "foo": "http://www.example.org/ns2"
-         }
+         "root-attributes": {
+            "xmlns": "http://www.example.org/ns1",
+            "xmlsn:foo": "http://www.example.org/ns2",
+            "xmlns:bar": "http://www.example.org/ns3",
+            "xmlns:xsi": "http://www.w3.org/2000/10/XMLSchema-instance",
+            "xsi:schemaLocation": "http://example.com/myschema.dtd",
+            "zoo": "bar"
+         },
      }
   }
 
@@ -4186,10 +4181,12 @@ The following output will be produced (here reformatted/pretty-printed):
 
 ::
 
-    <baz>
-      <foo:tag xmlns="http://www.example.org/ns1"
-               xmlns:ns2="http://www.example.org/ns2"
-               name="Entity 1"
+    <baz xmlns="http://www.example.org/ns1"
+         xmlns:ns2="http://www.example.org/ns2"
+         "xmlns:xsi": "http://www.w3.org/2000/10/XMLSchema-instance"
+         "xsi:schemaLocation": "http://example.com/myschema.dtd"
+         zoo="bar">
+      <foo:tag name="Entity 1"
                id="entity-1">
          <section id="child"
                   name="Child entity">
