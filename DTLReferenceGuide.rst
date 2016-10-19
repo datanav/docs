@@ -420,6 +420,10 @@ of the argument. Here are some cardinalites that you'll come across:
          evaluate to true.
      - | ``["eq", "_S.type", "person"]``
 
+   * - ``integer-expression``
+     - | Refers to an expression that returns a single "integer" value.
+     - | ``["+", 1, 2]``
+
    * - ``value-expression``
      - | Refers to an expression that returns null, a single value or a
          list of values.
@@ -2509,6 +2513,24 @@ Values / collections
        | ``["count", "_S.orders"]]``
        |
        | Returns the the number of orders.
+
+       .. _range_dtl_function:
+   * - ``range``
+     - | *Arguments:*
+       |   START(integer-expression{1})
+       |   STOP(integer-expression{1})
+       |   STEP(integer-expression{0|1})
+       |
+       | Returns a list of integers ranging from START (inclusive) to STOP (not
+         inclusive) in STEP increments. Note that STEP cannot be 0 and all
+         arguments must be integers or integer expressions.
+     - | ``["range", 0, 4]``
+       |
+       | Returns ``[0, 1, 2, 3]``.
+       |
+       | ``["range", 4, 0, -1]]``
+       |
+       | Returns ``[4, 3, 2, 1]``.
 
    * - ``distinct``
      - | *Arguments:*
