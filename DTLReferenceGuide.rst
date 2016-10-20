@@ -2395,7 +2395,7 @@ Values / collections
 
    * - ``nth``
      - | *Arguments:*
-       |   INDEX(value-expression{1})
+       |   INDEX(integer-expression{1})
        |   VALUES(value-expression{1})
        |
        | Returns the nth value in VALUES. If VALUES is not a sequence
@@ -2521,8 +2521,8 @@ Values / collections
        |   STOP(integer-expression{1})
        |   STEP(integer-expression{0|1})
        |
-       | Returns a list of integers ranging from START (inclusive) to STOP (not
-         inclusive) in STEP increments. Note that STEP cannot be 0 and all
+       | Returns a list of integers ranging from START (inclusive) to STOP
+         (exclusive) in STEP increments. Note that STEP cannot be 0 and all
          arguments must be integers or integer expressions.
      - | ``["range", 0, 4]``
        |
