@@ -80,7 +80,7 @@ You can also compose a property that consists of several environment variables:
      "..": ".."
    }
 
-Note that when using properties that contain multiple environment variables cou cannot nest them inside each other,
+Note that when using properties that contain multiple environment variables you cannot nest them inside each other,
 and the resulting property will always be a string.
 
 You can combine environment variables and *secrets*, but they cannot be nested within each other. For secret variables
