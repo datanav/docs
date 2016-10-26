@@ -99,3 +99,20 @@ using the "$SECRET(key)" syntax:
 
 The substituted secret values are only used as-needed during run time, and their values will never be exposed in
 the API (or log files).
+
+You can also compose a property that consists of several secrets:
+
+::
+
+   {
+     "_id": "my-system",
+     "type": "url",
+     "base_url": "http://$SECRET(my-system-username):$SECRET(my-system-password)@example.com",
+     "..": ".."
+   }
+
+Note that when using properties that contain multiple secrets, you cannot nest secret values inside each other, and the
+resulting property will always be a string. Secrets can be combined with environment variables, but they cannot be nested.
+See the chapter on :ref:`configuration environment variables <environment_variables>` for details.
+
+Secrets applies only to System configuration entities.

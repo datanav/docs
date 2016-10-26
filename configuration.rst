@@ -39,6 +39,9 @@ The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`
 
 It should be noted that all ``_id`` property values must be unique across across the solution. This means unique within the *sesam.conf.json* file but also across all files when a multiple file configuration is used.
 
+
+.. _environment_variables:
+
 Configuration environment variables
 -----------------------------------
 
@@ -66,8 +69,24 @@ You can refer to this property in your configuration by reference:
        ..
     }
 
-This applies to both System and Pipe configuration entities. Note that if the property contains a secret, you should use the
-:ref:`Secrets manager API <secrets_manager>` instead.
+You can also compose a property that consists of several environment variables:
+
+::
+
+   {
+     "_id": "my-system",
+     "type": "url",
+     "base_url": "http://$ENV(my-domain):$ENV(my-port)",
+     "..": ".."
+   }
+
+Note that when using properties that contain multiple environment variables cou cannot nest them inside each other,
+and the resulting property will always be a string.
+
+You can combine environment variables and *secrets*, but they cannot be nested within each other. For secret variables
+see the :ref:`Secrets manager API <secrets_manager>` for details on how to upload them and their syntax.
+
+Environment variables applies to both System and Pipe configuration entities.
 
 .. _pipe_section:
 
