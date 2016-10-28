@@ -151,18 +151,5 @@ API Reference
    :local:
    :depth: 1
 
-.. sesam-cornice-autodoc::
-   :modules: lake.node.webapp.api.root,
-             lake.node.webapp.api.pipes,
-             lake.node.webapp.api.receivers,
-             lake.node.webapp.api.publishers,
-             lake.node.webapp.api.metadata,
-             lake.node.webapp.api.datasets,
-             lake.node.webapp.api.systems,
-             lake.node.webapp.api.config,
-             lake.node.webapp.api.license,
-             lake.node.webapp.api.secretsmanager,
-             lake.node.webapp.api.envvarsmanager,
-             lake.node.webapp.api.utils_validate,
-             lake.node.webapp.api.utils_reformat
+.. openapi:: ../lake/node/webapp/swagger_public.yaml
 
