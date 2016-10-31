@@ -2578,7 +2578,7 @@ The properties are identical to the :ref:`XML endpoint sink <xml_endpoint_sink>`
 ::
 
     {
-        "type": "xml_endpoint",
+        "type": "xml",
         "root-attributes": {
            "xmlns": "http://www.example.org/ns1",
            "xmlsn:foo": "http://www.example.org/ns2",
@@ -2631,6 +2631,8 @@ Properties
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+This is how a XML transform would look like in the context of a pipe (source and sink configs omitted for brevity):
+
 ::
 
    {
@@ -2645,7 +2647,7 @@ Example configuration
        }
    }
 
-With the input entity:
+Given the input entity:
 
 ::
 
@@ -2663,7 +2665,7 @@ With the input entity:
     }]
   }
 
-Will produce the transformed entity:
+it will produce the transformed entity:
 
 ::
 
