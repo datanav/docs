@@ -4216,6 +4216,322 @@ The following output will be produced (here reformatted/pretty-printed):
 
 The XML document will be available at ``http://localhost:9042/api/publishers/my-entities/xml``
 
+.. _rest_sink:
+
+The REST sink (Experimental)
+----------------------------
+
+This is a data sink that can communicate with a REST service using HTTP requests.
+
+Note that the shape of the entities piped to this sink must conform to certain criteria, see the
+:ref:`notes <expected_rest_entity_shape>` later in the section.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "rest",
+        "system" : "url-system",
+        "operations": {
+            "delete-operation": {
+                "url" : "/a/service/that/supports/delete/{{ _id }}",
+                "method": "DELETE"
+            },
+            "put-operation": {
+                "url" : "/some/service/that/supports/put",
+                "method": "PUT",
+                "headers": {
+                    "Content-type": "application/json"
+                },
+                "payload-type": "json"
+            },
+            "post-operation": {
+                "url" : "/some/service/that/supports/post",
+                "method": "POST",
+                "payload-type": "form"
+            },
+            "patch-operation": {
+                "url" : "/some/service/that/supports/patch",
+                "headers": {
+                    "Content-type": "application/xml"
+                },
+                "method": "PATCH"
+            }
+        }
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``system``
+     - String
+     - The id of the :ref:`URL system <url_system>` to use.
+     -
+     - Yes
+
+   * - ``operations``
+     - Object
+     - An object containing the registered operations allowed for the REST service. See the next section for details.
+       At least one operation need to be registered for the sink.
+     -
+     - Yes
+
+
+Operation properties
+^^^^^^^^^^^^^^^^^^^^
+
+You can register as many named "operations" as you like with the sink (even using the same type of "method").
+A operation configuration looks like:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``url``
+     - String
+     - A string containing a absolute URL or relative path. The URL and/or path must match the URL system specified in the
+       sink. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
+       available to the templating context.
+     -
+     - Yes
+
+   * - ``method``
+     - String
+     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
+       that the operation should execute on the ``url`` specified.
+     -
+     - Yes
+
+   * - ``headers``
+     - Objects
+     - An optional object that contain key-value mappings for the HTTP request header.
+     -
+     -
+
+   * - ``params``
+     - Objects
+     - An optional object that contain key-value mappings for any HTTP parameters.
+     -
+     -
+
+   * - ``payload-type``
+     - String
+     - A enumeration of "json", "json-transit" and "form", that denotes how to treat the ``payload`` property of the
+       entity (see the :ref:`expected entity shape <expected_rest_entity_shape>` section for details). If you
+       specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
+       you will get a transit-encoded JSON document. If "form" is used, the contents will be used to construct a
+       HTML FORM for the request. In this case, if the property contains a list, the request will use a multi-part form.
+       If ``payload-type`` is omitted, the contents of the ``payload`` property will be assumed to be a string.
+     -
+     -
+
+
+.. _expected_rest_entity_shape:
+
+Expected entity shape
+^^^^^^^^^^^^^^^^^^^^^
+
+The entities must be transformed into a particular form before being piped to the RESTsink. The general form
+expected is:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``properties``
+     - Object
+     - Any non-payload properties you need should go into the toplevel child entity ``properties``. You can then address
+       these properties in the Jinja templates for operation ``url`` properties using the "{{ properties.key_name }}" syntax.
+     -
+     -
+
+   * - ``operation``
+     - String
+     - The contents of this property must refer to one of the named ``operations`` registered with the sink configuration.
+     -
+     - Yes
+
+   * - ``payload``
+     - String or Object
+     - The payload for the operation specified. It can be a string or an object. You can also omit it, in which case
+       the empty string will be used instead (for example for "DELETE" methods).
+     -
+     -
+
+
+Example entities:
+
+String as payload:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form" ):
+
+::
+
+  {
+    "_id": "2",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-other-operation",
+    "payload": {
+        "payload": "property",
+        "child": {
+          "foo": "bar"
+        }
+    }
+  }
+
+Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "json-transit" for this type of entity:
+
+::
+
+  {
+    "_id": "3",
+    "operation": "some-third-operation",
+    "payload": [
+      {
+        "foo": "bar"
+      },
+      {
+        "zoo": "foo"
+      }
+    ]
+  }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "type" : "pipe",
+        "sink" : {
+            "type" : "rest",
+            "system" : "url-system-1",
+            "operations": {
+                "delete-man": {
+                    "url" : "/men/{{ properties.collection_name }}/{{ _id }}",
+                    "method": "DELETE",
+                },
+                "delete-woman": {
+                    "url" : "/women/{{ properties.collection_name }}/{{ _id }}",
+                    "method": "DELETE"
+                },
+                "update-man": {
+                    "url" : "/men/{{ properties.collection_name }}/",
+                    "method": "POST",
+                    "headers": {
+                        "Content-type": "application/xml"
+                    }
+                },
+                "update-woman": {
+                    "url" : "/women/{{ properties.collection_name }}/",
+                    "method": "POST",
+                    "headers": {
+                        "Content-type": "application/json"
+                    },
+                    "payload-type": "json"
+                }
+            }
+        }
+    }
+
+Example input entities:
+
+::
+
+    [
+        {
+            "_id": "john",
+            "operation": "update-man",
+            "properties": {
+                "id": "john",
+                "age": 21,
+                "sex": "M",
+                "collection_name": "study-group-1"
+            },
+            "payload": "<man id=\"john\">john</man>"
+        },
+        {
+            "_id": "mary",
+            "operation": "update-woman",
+            "properties": {
+                "id": "mary",
+                "age": 23,
+                "sex": "F",
+                "collection_name": "study-group-2"
+            },
+            "payload": {
+              "id": "mary",
+              "age": 23
+            }
+        },
+        {
+            "_id": "bob",
+            "operation": "delete-man",
+            "properties": {
+                "collection_name": "study-group-1"
+            }
+        }
+    ]
+
+
 .. _system_section:
 
 Systems

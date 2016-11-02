@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-11-02
+----------
+* Added the :ref:`REST sink <rest_sink>` (Experimental).
+
 2016-10-19
 ----------
 * Added the :ref:`range <range_dtl_function>` DTL function.
