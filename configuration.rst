@@ -4395,7 +4395,8 @@ expected is:
    * - ``payload``
      - String or Object
      - The payload for the operation specified. It can be a string or an object. You can also omit it, in which case
-       the empty string will be used instead (for example for "DELETE" methods).
+       the empty string will be used instead (for example for "DELETE" methods). All string payloads will be encoded
+       as UTF-8.
      -
      -
 
