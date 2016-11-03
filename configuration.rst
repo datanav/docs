@@ -3884,8 +3884,7 @@ Properties
      - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
        ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
        compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
-       backward or forward slashes should be avoided. If this property is not set, a default value will be used.
-       For the JSON endpoint this will be "sesam_data.json". The default for the SDShare feed is "sesam_sdshare_fragments_feed.xml".
+       backward or forward slashes should be avoided. If this property is not set, the contents will be served inline.
      -
      -
 
@@ -4050,8 +4049,7 @@ Properties
      - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
        ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
        compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
-       backward or forward slashes should be avoided. If this property is not set, a default "sesam_data.csv" filename
-       will be used.
+       backward or forward slashes should be avoided. If this property is not set, the contents will be served inline.
      -
      -
 
@@ -4167,8 +4165,7 @@ Properties
      - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
        ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
        compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
-       backward or forward slashes should be avoided. If this property is not set, a default "sesam_data.xml" filename
-       will be used.
+       backward or forward slashes should be avoided. If this property is not set, the contents will be served inline.
      -
      -
 
