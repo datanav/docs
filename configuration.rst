@@ -3879,6 +3879,16 @@ Properties
      -
      -
 
+   * - ``filename``
+     - String
+     - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
+       ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
+       compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
+       backward or forward slashes should be avoided. If this property is not set, a default value will be used.
+       For the JSON endpoint this will be "sesam_data.json". The default for the SDShare feed is "sesam_sdshare_fragments_feed.xml".
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -3938,7 +3948,8 @@ Prototype
         "lineterminator": "\r\n",
         "quotechar": "\"",
         "encoding": "utf-8",
-        "skip-deleted-entities": true
+        "skip-deleted-entities": true,
+        "filename": "my_data.csv"
     }
 
 Properties
@@ -4034,6 +4045,15 @@ Properties
      - true
      -
 
+   * - ``filename``
+     - String
+     - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
+       ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
+       compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
+       backward or forward slashes should be avoided. If this property is not set, a default "sesam_data.csv" filename
+       will be used.
+     -
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -4051,7 +4071,8 @@ dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the C
         "sink": {
             "type": "csv_endpoint"
             "columns": ["_id", "foo", "bar", "zoo"]
-        }
+        },
+        "filename": "my_data.csv"
     }
 
 The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
@@ -4095,7 +4116,8 @@ Prototype
            "xmlns:bar": "http://www.example.org/ns3"
         },
         "include-xml-decl": false,
-        "skip-deleted-entities": true
+        "skip-deleted-entities": true,
+        "filename": "my_data.xml"
     }
 
 
@@ -4140,6 +4162,15 @@ Properties
      - true
      -
 
+   * - ``filename``
+     - String
+     - This property provides a hint to HTTP clients on what filename to use when downloading data (via the
+       ``Content-Disposition`` header property). Note that this property is not entirely standardized yet, so to be
+       compatible with most HTTP clients, the filename should be ASCII characters only. For the same reason, quotes or
+       backward or forward slashes should be avoided. If this property is not set, a default "sesam_data.xml" filename
+       will be used.
+     -
+     -
 
 .. _expected_xml_entity_shape:
 
@@ -4192,6 +4223,7 @@ dataset:
             "xsi:schemaLocation": "http://example.com/myschema.dtd",
             "zoo": "bar"
          },
+         "filename": "example.xml"
      }
   }
 
