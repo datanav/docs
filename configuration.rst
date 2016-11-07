@@ -5659,9 +5659,9 @@ Prototype
         "name": "Name of system",
         "type": "system:url",
         "base_url": "http://host:port/path",
+        "verify_ssl": false,
         "username": None,
         "password": None,
-        "verify_ssl": false,
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -5686,9 +5686,16 @@ Properties
      -
      - Yes
 
+   * - ``verify_ssl``
+     - Boolean
+     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
+       HTTP server over SSL/TLS.
+     - ``false``
+     -
+
    * - ``username``
      - String
-     - The username to use when authenticating with the ``HTTP server``. Note that you also have to specify
+     - The username to use when authenticating with the HTTP server. Note that you also have to specify
        authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
      -
      -
@@ -5698,13 +5705,6 @@ Properties
      - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
      -
      - Yes*
-
-   * - ``verify_ssl``
-     - Boolean
-     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
-       ``HTTP server`` over SSL/TLS.
-     - false
-     -
 
    * - ``authentication``
      - String
@@ -5718,14 +5718,14 @@ Properties
      - Integer
      - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
        wait indefinitely.
-     - 60
+     - ``60``
      -
 
    * - ``read_timeout``
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - 7200
+     - ``7200``
      -
 
 
@@ -5739,6 +5739,158 @@ Example configuration
         "name": "Our HTTP Server",
         "type": "system:url",
         "base_url": "http://our.domain.com/files"
+    }
+
+.. _microservice_system:
+
+The microservice system (Experimental)
+--------------------------------------
+
+The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
+
+The ``docker`` property lets one specify a Docker container that should be spun up. Note that the microservice system does not not have the ``base_url`` property. The reason is that it is able to figure out this itself.
+
+The microservice system supports private repositories.
+
+A microservice must communicate with the outside world using either the ``HTTP`` protocol (the default) or the ``HTTPS`` protocol. Set the ``use_https`` property to ``true`` to enable ``HTTPS``.
+
+The system provides session handling, connection pooling and authentication services to sources, transforms and sinks which need to communicate with the microservice.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-microservice",
+        "name": "Name of microservice",
+        "type": "system:microservice",
+        "docker": {
+            "image": "some-repo/some-image",
+            "port": 5000,
+            "username": None,
+            "password": None,
+            "environment": {
+                "SOME-VARIABLE": "SOME-VALUE"
+            }
+        },
+        "use_https": false,
+        "verify_ssl": false,
+        "username": None,
+        "password": None,
+        "authentication": "basic",
+        "connect_timeout": 60,
+        "read_timeout": 7200
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``docker.image``
+     - String
+     - The fully qualified name of a Docker image, e.g. ``sesam/file-share-service:latest`` or ``quay.io/someuser/someimage:1.2.3``.
+     -
+     - Yes
+
+   * - ``docker.port``
+     - Integer
+     - The port on which to talk to the microservice. This should be one of the ports that the Docker container exposes.
+     -
+     - Yes
+
+   * - ``docker.environment``
+     - Dict<String,String>
+     - The environment variables that should be passed to the microservice's Docker container.
+     -
+     -
+
+   * - ``docker.username``
+     - String
+     - If the Docker images is located in a private repository, then the username must be specified here.
+     -
+     -
+
+   * - ``docker.password``
+     - String
+     - If the Docker images is located in a private repository, then the password must be specified here.
+     -
+     -
+
+   * - ``use_https``
+     - String
+     - If set to true then the system will use the ``https`` protocol to communicate with the microservice.
+     - ``false``
+     -
+
+   * - ``verify_ssl``
+     - Boolean
+     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
+       microservice over SSL/TLS.
+     - ``false``
+     -
+
+   * - ``username``
+     - String
+     - The username to use when authenticating with the microservice. Note that you also have to specify
+       authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
+     -
+     - Yes*
+
+   * - ``authentication``
+     - String
+     - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
+       authentication. No authentication set means means any ``username`` or ``password`` set will be ignored.
+       Allowed values is either "basic" or "digest".
+     -
+     -
+
+   * - ``connect_timeout``
+     - Integer
+     - Number of seconds to wait for connecting to the microservice before timing out. A value of ``null`` means
+       wait indefinitely.
+     - ``60``
+     -
+
+   * - ``read_timeout``
+     - Integer
+     - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
+       means wait indefinitely.
+     - ``7200``
+     -
+
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-http-server",
+        "name": "My microservice",
+        "type": "system:microservice",
+        "docker": {
+            "image": "myrepo/myimage:1.0",
+            "port": 4444,
+            "environment": {
+               "USE_PORT": "4444"
+            }
+        }
     }
 
 .. _pump_section:

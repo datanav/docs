@@ -1,12 +1,13 @@
 Changelog
 =========
 
+2016-11-07
+----------
+* Added the :ref:`microservice system <microservice_system>` (Experimental).
+
 2016-11-03
 ----------
-* Added the ``filename`` property to the :ref:`HTTP endpoint sink <http_endpoint_sink>`,
-:ref:`XML endpoint sink <xml_endpoint_sink>` and :ref:`CSV endpoint sink <csv_endpoint_sink>`. This property
-provides a hint to HTTP clients on what filename to use when downloading data (via the ``Content-Disposition``
-header property).
+* Added the ``filename`` property to the :ref:`HTTP endpoint sink <http_endpoint_sink>`, :ref:`XML endpoint sink <xml_endpoint_sink>` and :ref:`CSV endpoint sink <csv_endpoint_sink>`. This property provides a hint to HTTP clients on what filename to use when downloading data (via the ``Content-Disposition`` header property).
 
 2016-11-02
 ----------
