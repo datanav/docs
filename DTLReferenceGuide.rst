@@ -2530,14 +2530,17 @@ Values / collections
 
        .. NOTE::
 
-          Values of type ``dict``, ``list`` and ``null`` are not
-          orderable, and will thus not be considered. The function
-          will find the first orderable type and operate only on
-          values of this particular type.  Values of any other type
-          will not be part of the return value.
+          Only values of the same type as the first value are
+          considered. All other values are ignored. Values of
+          type Dict and List are sorted using
+          :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["min", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``2``.
+       |
+       | ``["min", ["list", "b", 2, "a", 3]]``
+       |
+       | Returns ``"a"``.
        |
        | ``["min", ["list", {"x": 1}, "b", 2, "a"]]``
        |
@@ -2562,14 +2565,17 @@ Values / collections
 
        .. NOTE::
 
-          Values of type ``dict``, ``list`` and ``null`` are not
-          orderable, and will thus not be considered. The function
-          will find the first orderable type and operate only on
-          values of this particular type.  Values of any other type
-          will not be part of the return value.
+          Only values of the same type as the first value are
+          considered. All other values are ignored. Values of
+          type Dict and List are sorted using
+          :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["max", ["list", 4, 2, 5, 3]]``
        |
        | Returns ``5``.
+       |
+       | ``["max", ["list", "b", 2, "a", 3]]``
+       |
+       | Returns ``"a"``.
        |
        | ``["max", ["list", {"x": 1}, "b", 2, "a"]]``
        |
@@ -2671,15 +2677,17 @@ Values / collections
 
        .. NOTE::
 
-          Values of type ``dict``, ``list`` and ``null`` are not
-          orderable, and will thus not be considered. The function
-          will find the first orderable type and operate only on
-          values of this particular type.  Values of any other type
-          will not be part of the return value.
-          
+          Only values of the same type as the first value are
+          considered. All other values are ignored. Values of
+          type Dict and List are sorted using
+          :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["sorted", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[2, 3, 4, 4, 5]``.
+       |
+       | ``["sorted", ["list", "b", 2, "a", 4]]``
+       |
+       | Returns ``["a", "b"]``. Note that the integers are ignored.
        |
        | ``["sorted", "_.age",``
        |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
@@ -2705,14 +2713,17 @@ Values / collections
 
        .. NOTE::
 
-          Values of type ``dict``, ``list`` and ``null`` are not
-          orderable, and will thus not be considered. The function
-          will find the first orderable type and operate only on
-          values of this particular type.  Values of any other type
-          will not be part of the return value.
+          Only values of the same type as the first value are
+          considered. All other values are ignored. Values of
+          type Dict and List are sorted using
+          :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["sorted-descending", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[5, 4, 4, 3, 2]``.
+       |
+       | ``["sorted-descending", ["list", "b", 2, "a", 4]]``
+       |
+       | Returns ``["b", "a"]``. Note that the integers are ignored.
        |
        | ``["sorted-descending", "_.age",``
        |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``

@@ -208,3 +208,33 @@ types that are not recognized will be treated as string values.
    * - Decimal
      - A decimal number with arbitrary precision.
      - ``"~f12345678901234567890.1234567890"``
+
+.. _mixed_type_ordering:
+
+Mixed type ordering
+-------------------
+
+In situations where lists of values of multiple types have to be ordered then the following ordering is used:
+
+* Boolean
+
+* Integer, Float, Decimal
+
+* Bytes
+
+* String
+
+* URI
+
+* UUID
+
+* Date, Datetime
+
+* Dict
+
+* Tuple
+
+* Null
+
+Types under the same bullet point are internally orderable.
+
