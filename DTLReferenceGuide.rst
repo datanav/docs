@@ -2530,9 +2530,7 @@ Values / collections
 
        .. NOTE::
 
-          Only values of the same type as the first value are
-          considered. All other values are ignored. Values of
-          type Dict and List are sorted using
+          Values of different types are ordered using
           :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["min", ["list", 4, 2, 5, 3]]``
        |
@@ -2540,12 +2538,11 @@ Values / collections
        |
        | ``["min", ["list", "b", 2, "a", 3]]``
        |
+       | Returns ``2``.
+       |
+       | ``["min", ["list", {"x": 1}, "b", "a"]]``
+       |
        | Returns ``"a"``.
-       |
-       | ``["min", ["list", {"x": 1}, "b", 2, "a"]]``
-       |
-       | Returns ``"a``. ``{"x": 1}`` is not orderable. ``"b"`` is the
-         first orderable value, so only strings are considered.
        |
        | ``["min", "_.amount", "_S.orders"]]``
        |
@@ -2565,9 +2562,7 @@ Values / collections
 
        .. NOTE::
 
-          Only values of the same type as the first value are
-          considered. All other values are ignored. Values of
-          type Dict and List are sorted using
+          Values of different types are ordered using
           :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["max", ["list", 4, 2, 5, 3]]``
        |
@@ -2575,12 +2570,11 @@ Values / collections
        |
        | ``["max", ["list", "b", 2, "a", 3]]``
        |
-       | Returns ``"a"``.
+       | Returns ``"b"``.
        |
        | ``["max", ["list", {"x": 1}, "b", 2, "a"]]``
        |
-       | Returns ``"b``. ``{"x": 1}`` is not orderable. ``"b"`` is the
-         first orderable value, so only strings are considered.
+       | Returns ``{"x": 1}``.
        |
        | ``["max", "_.amount", "_S.orders"]]``
        |
@@ -2677,20 +2671,25 @@ Values / collections
 
        .. NOTE::
 
-          Only values of the same type as the first value are
-          considered. All other values are ignored. Values of
-          type Dict and List are sorted using
+          Values of different types are ordered using
           :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["sorted", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[2, 3, 4, 4, 5]``.
        |
-       | ``["sorted", ["list", "b", 2, "a", 4]]``
+       | ``["sorted", ["list", "b", 2, {"x": 1}, "a", 4]]``
        |
-       | Returns ``["a", "b"]``. Note that the integers are ignored.
+       | Returns ``[2, 4, "a", "b", {"x": 1}]``.
+       | Note that the values are sorted using :ref:`mixed type ordering <mixed_type_ordering>`.
+       |
+       | ``["sorted",``
+       |   ``["list", {"x": 1}, {"x": "abc"}, {"x": 2}]]``
+       |
+       | Returns ``[{"x": 1}, {"x": 2}, {"x": "abc"}]``
        |
        | ``["sorted", "_.age",``
-       |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       |   ``["list",``
+       |     ``{"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 20}, {"age": 30}, {"age": 50}]``.
        |
@@ -2713,20 +2712,25 @@ Values / collections
 
        .. NOTE::
 
-          Only values of the same type as the first value are
-          considered. All other values are ignored. Values of
-          type Dict and List are sorted using
+          Values of different types are ordered using
           :ref:`mixed type ordering <mixed_type_ordering>`.
      - | ``["sorted-descending", ["list", 4, 2, 5, 4, 3]]``
        |
        | Returns ``[5, 4, 4, 3, 2]``.
        |
-       | ``["sorted-descending", ["list", "b", 2, "a", 4]]``
+       | ``["sorted-descending", ["list", "b", 2, {"x": 1}, "a", 4]]``
        |
-       | Returns ``["b", "a"]``. Note that the integers are ignored.
+       | Returns ``[{"x": 1}, "b", "a", 4, 2]``.
+       | Note that the values are sorted using :ref:`mixed type ordering <mixed_type_ordering>`.
+       |
+       | ``["sorted-descending",``
+       |   ``["list", {"x": 1}, {"x": "abc"}, {"x": 2}]]``
+       |
+       | Returns ``[{"x": "abc"}, {"x": 2}, {"x": 1}]``
        |
        | ``["sorted-descending", "_.age",``
-       |   ``["list", {"age": 30}, {"age": 50}, {"age": 20}]]``
+       |   ``["list",``
+       |     ``{"age": 30}, {"age": 50}, {"age": 20}]]``
        |
        | Returns ``[{"age": 50}, {"age": 30}, {"age": 20}]``.
        |

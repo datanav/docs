@@ -214,27 +214,37 @@ types that are not recognized will be treated as string values.
 Mixed type ordering
 -------------------
 
-In situations where lists of values of multiple types have to be ordered then the following ordering is used:
+In situations where lists of values of multiple types have to be
+ordered then the following ordering is used:
+
+* Null
 
 * Boolean
 
 * Integer, Float, Decimal
 
-* Bytes
-
-* String
-
-* URI
+* Date, Datetime
 
 * UUID
 
-* Date, Datetime
+* URI
+
+* String
 
 * Dict
 
 * Tuple
 
-* Null
+* Bytes
 
-Types under the same bullet point are internally orderable.
+Types under the same bullet point are compatible and internally
+orderable. Values of incompatible types are sorted not by value but by
+the rank of their type (see the list above).
 
+Example: ``["sorted", ["list", 1.5, "b", 1, "a", 2]]`` returns ``[1, 1.5, 2, "a", "b"]``
+because the strings and integers are not compatible types. The
+integers are ordered before the strings. Decimals and integers are compatible,
+so they are sorted together.
+
+Note that values of the Dict type are ordered by sorting their keys
+and then comparing each key+value pair.
