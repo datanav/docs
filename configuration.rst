@@ -5766,7 +5766,7 @@ Prototype
         "name": "Name of microservice",
         "type": "system:microservice",
         "docker": {
-            "image": "some-repo/some-image",
+            "image": "some-repo/some-image:some-tag",
             "port": 5000,
             "username": None,
             "password": None,
