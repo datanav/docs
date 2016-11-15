@@ -1759,11 +1759,13 @@ Nested transformations
          and the :ref:`hops <hops_function>` functions for more information
          about the parts.
 
-       | Use this function instead of ``apply`` if you use ``hops`` inside
-         the transformation rule. This is required so that
-         `dependency tracking <concepts.html#dependency-tracking>`_
-         can work. Calling ``apply`` on a rule that contains ``hops`` or
-         ``apply-hops`` is not allowed.
+       .. NOTE::
+
+          Use this function instead of ``apply`` if you use ``hops`` inside
+          the transformation rule. This is required so that
+          `dependency tracking <concepts.html#dependency-tracking>`_
+          can work. Calling ``apply`` on a rule that contains ``hops`` or
+          ``apply-hops`` is not allowed.
 
      - | ``["apply-hops", "order", {``
        |   ``"datasets": ["orders o"],``
