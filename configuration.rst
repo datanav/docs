@@ -4262,33 +4262,7 @@ Prototype
 
     {
         "type": "rest",
-        "system" : "url-system",
-        "operations": {
-            "delete-operation": {
-                "url" : "/a/service/that/supports/delete/{{ _id }}",
-                "method": "DELETE"
-            },
-            "put-operation": {
-                "url" : "/some/service/that/supports/put",
-                "method": "PUT",
-                "headers": {
-                    "Content-type": "application/json"
-                },
-                "payload-type": "json"
-            },
-            "post-operation": {
-                "url" : "/some/service/that/supports/post",
-                "method": "POST",
-                "payload-type": "form"
-            },
-            "patch-operation": {
-                "url" : "/some/service/that/supports/patch",
-                "headers": {
-                    "Content-type": "application/xml"
-                },
-                "method": "PATCH"
-            }
-        }
+        "system" : "rest-system",
     }
 
 
@@ -4308,75 +4282,11 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` to use.
+     - The id of the :ref:`REST system <rest_system>` to use.
      -
      - Yes
 
-   * - ``operations``
-     - Object
-     - An object containing the registered operations allowed for the REST service. See the next section for details.
-       At least one operation need to be registered for the sink.
-     -
-     - Yes
-
-
-Operation properties
-^^^^^^^^^^^^^^^^^^^^
-
-You can register as many named "operations" as you like with the sink (even using the same type of "method").
-A operation configuration looks like:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-
-   * - ``url``
-     - String
-     - A string containing a absolute URL or relative path. The URL and/or path must match the URL system specified in the
-       sink. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
-       available to the templating context.
-     -
-     - Yes
-
-   * - ``method``
-     - String
-     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
-       that the operation should execute on the ``url`` specified.
-     -
-     - Yes
-
-   * - ``headers``
-     - Objects
-     - An optional object that contain key-value mappings for the HTTP request header.
-     -
-     -
-
-   * - ``params``
-     - Objects
-     - An optional object that contain key-value mappings for any HTTP parameters.
-     -
-     -
-
-   * - ``payload-type``
-     - String
-     - A enumeration of "json", "json-transit" and "form", that denotes how to treat the ``payload`` property of the
-       entity (see the :ref:`expected entity shape <expected_rest_entity_shape>` section for details). If you
-       specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
-       you will get a transit-encoded JSON document. If "form" is used, the contents will be used to construct a
-       HTML FORM for the request. In this case, if the property contains a list, the request will use a multi-part form.
-       If ``payload-type`` is omitted, the contents of the ``payload`` property will be assumed to be a string.
-     -
-     -
-
-
-.. _expected_rest_entity_shape:
+.. _rest_expected_rest_entity_shape:
 
 Expected entity shape
 ^^^^^^^^^^^^^^^^^^^^^
@@ -4417,7 +4327,7 @@ expected is:
 
    * - ``operation``
      - String
-     - The contents of this property must refer to one of the named ``operations`` registered with the sink configuration.
+     - The contents of this property must refer to one of the named ``operations`` registered with the sink's :ref:`REST system <rest_system>`.
      -
      - Yes
 
@@ -4447,7 +4357,7 @@ String as payload:
     "payload": "<some>string-value</some>"
   }
 
-Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form" ):
+Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form"  in the :ref:`REST system <rest_system>` the sink uses):
 
 ::
 
@@ -4487,38 +4397,15 @@ Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in these exapmles:
+
 ::
 
     {
         "type" : "pipe",
         "sink" : {
             "type" : "rest",
-            "system" : "url-system-1",
-            "operations": {
-                "delete-man": {
-                    "url" : "/men/{{ properties.collection_name }}/{{ _id }}",
-                    "method": "DELETE",
-                },
-                "delete-woman": {
-                    "url" : "/women/{{ properties.collection_name }}/{{ _id }}",
-                    "method": "DELETE"
-                },
-                "update-man": {
-                    "url" : "/men/{{ properties.collection_name }}/",
-                    "method": "POST",
-                    "headers": {
-                        "Content-type": "application/xml"
-                    }
-                },
-                "update-woman": {
-                    "url" : "/women/{{ properties.collection_name }}/",
-                    "method": "POST",
-                    "headers": {
-                        "Content-type": "application/json"
-                    },
-                    "payload-type": "json"
-                }
-            }
+            "system" : "our-rest-service",
         }
     }
 
@@ -5739,6 +5626,228 @@ Example configuration
         "name": "Our HTTP Server",
         "type": "system:url",
         "base_url": "http://our.domain.com/files"
+    }
+
+
+.. _rest_system:
+
+The REST system (Experimental)
+------------------------------
+
+The REST system represents a REST service (i.e. a web server) serving
+`HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
+vocabulary of GET, PUT, POST and PATCH.
+
+It is used by the :ref:`REST sink <rest_sink>`.
+
+It supports the ``HTTP`` and ``HTTPS`` protocols. It provides session handling, connection pooling and authentication
+services to sources and sinks which need to communicate with a HTTP server.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:rest",
+        "base_url": "http://host:port/path",
+        "verify_ssl": false,
+        "username": None,
+        "password": None,
+        "authentication": "basic",
+        "connect_timeout": 60,
+        "read_timeout": 7200,
+        "operations": {
+            "delete-operation": {
+                "url" : "/a/service/that/supports/delete/{{ _id }}",
+                "method": "DELETE"
+            },
+            "put-operation": {
+                "url" : "/some/service/that/supports/put",
+                "method": "PUT",
+                "headers": {
+                    "Content-type": "application/json"
+                },
+                "payload-type": "json"
+            },
+            "post-operation": {
+                "url" : "/some/service/that/supports/post",
+                "method": "POST",
+                "payload-type": "form"
+            },
+            "patch-operation": {
+                "url" : "/some/service/that/supports/patch",
+                "headers": {
+                    "Content-type": "application/xml"
+                },
+                "method": "PATCH"
+            }
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``base_url``
+     - String
+     - The full URL of the base url of the HTTP server.
+     -
+     - Yes
+
+   * - ``verify_ssl``
+     - Boolean
+     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
+       HTTP server over SSL/TLS.
+     - ``false``
+     -
+
+   * - ``username``
+     - String
+     - The username to use when authenticating with the HTTP server. Note that you also have to specify
+       authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
+     -
+     - Yes*
+
+   * - ``authentication``
+     - String
+     - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
+       authentication. No authentication set means means any ``username`` or ``password`` set will be ignored.
+       Allowed values is either "basic" or "digest".
+     -
+     -
+
+   * - ``connect_timeout``
+     - Integer
+     - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
+       wait indefinitely.
+     - ``60``
+     -
+
+   * - ``read_timeout``
+     - Integer
+     - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
+       means wait indefinitely.
+     - ``7200``
+     -
+
+   * - ``operations``
+     - Object
+     - An object containing the registered operations allowed for the REST service. See the next section for details.
+       At least one operation need to be registered for the system.
+     -
+     - Yes
+
+Operation properties
+^^^^^^^^^^^^^^^^^^^^
+
+You can register as many named "operations" as you like with the system (even using the same type of "method").
+A operation configuration looks like:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``url``
+     - String
+     - A string containing a absolute URL or relative path. The URL and/or path must match the ``base_url`` specified in the
+       system. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
+       available to the templating context.
+     -
+     - Yes
+
+   * - ``method``
+     - String
+     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
+       that the operation should execute on the ``url`` specified.
+     -
+     - Yes
+
+   * - ``headers``
+     - Objects
+     - An optional object that contain key-value mappings for the HTTP request header.
+     -
+     -
+
+   * - ``params``
+     - Objects
+     - An optional object that contain key-value mappings for any HTTP parameters.
+     -
+     -
+
+   * - ``payload-type``
+     - String
+     - A enumeration of "json", "json-transit" and "form", that denotes how to treat the ``payload`` property of the
+       entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>` section of the :ref:`REST sink <rest_sink>` for details). If you
+       specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
+       you will get a transit-encoded JSON document. If "form" is used, the contents will be used to construct a
+       HTML FORM for the request. In this case, if the property contains a list, the request will use a multi-part form.
+       If ``payload-type`` is omitted, the contents of the ``payload`` property will be assumed to be a string.
+     -
+     -
+
+
+.. _rest_system_example:
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-rest-service",
+        "name": "Our REST service",
+        "base_url": "http://our.domain.com/api"
+        "type" : "system:rest",
+        "operations": {
+           "delete-man": {
+               "url" : "/men/{{ properties.collection_name }}/{{ _id }}",
+               "method": "DELETE",
+           },
+           "delete-woman": {
+               "url" : "/women/{{ properties.collection_name }}/{{ _id }}",
+               "method": "DELETE"
+           },
+           "update-man": {
+               "url" : "/men/{{ properties.collection_name }}/",
+               "method": "POST",
+               "headers": {
+                   "Content-type": "application/xml"
+               }
+           },
+           "update-woman": {
+               "url" : "/women/{{ properties.collection_name }}/",
+               "method": "POST",
+               "headers": {
+                   "Content-type": "application/json"
+               },
+               "payload-type": "json"
+           }
+        }
     }
 
 .. _microservice_system:
