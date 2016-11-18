@@ -1322,35 +1322,6 @@ An example with a local file:
         }
     }
 
-
-The metrics source
-------------------
-
-The metrics data source provides the ``internal metrics`` (i.e. counters and statistics) of the Sesam installation as a list
-of ``JSON`` entities. It has no specific configuration:
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "metrics"
-    }
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
-
-::
-
-    {
-        "source": {
-            "type": "metrics"
-        }
-    }
-
 The empty source
 ----------------
 
@@ -2875,9 +2846,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 The InfluxDB sink (Experimental)
 --------------------------------
 
-The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/.
-A typical source for the entities written to it is the metrics data source, but any properly constructed entity can be
-written to it. You will have to configure and provide a :ref:`InfluxDB system <influxdb_system>` id in the ``system`` property.
+The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/. You will have to configure and provide a :ref:`InfluxDB system <influxdb_system>` id in the ``system`` property.
 
 
 The expected form of an entity to be written to the sink is:
