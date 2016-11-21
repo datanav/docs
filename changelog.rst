@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-11-21
+----------
+* The section on :ref:`Continuation Support <continuation_support>` has been extended. Each source now has a *Continuation support* table that shows the source's support for continuations.
+
 2016-11-09
 ----------
 * Added the :ref:`json <json_dtl_function>` and :ref:`json-transit <json_transit_dtl_function>` DTL functions.

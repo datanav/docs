@@ -258,20 +258,79 @@ The following example shows a pipe definition that exposes data from a SQL datab
 Sources
 =======
 
-Sources provide *streams* of :doc:`entities <entitymodel>` as input to the :ref:`pipes <pipe_section>` which is the
-building blocks for the data flows in Sesam. These entities can take *any* shape (i.e. they
-can also be nested), and have a single required property: **_id**. This ``_id`` field must be *unique within a flow* for
-a specific logical entity. There may exist multiple *versions* of this entity within a flow, however.
+Sources provide *streams* of :doc:`entities <entitymodel>` as input to
+the :ref:`pipes <pipe_section>` which is the building blocks for the
+data flows in Sesam. These entities can take *any* shape (i.e. they
+can also be nested), and have a single required property:
+**_id**. This ``_id`` field must be *unique within a flow* for a
+specific logical entity. There may exist multiple *versions* of this
+entity within a flow, however.
+
+.. _continuation_support:
 
 Continuation support
 --------------------
 
-Sources can optionally support a ``since`` moniker or marker which lets them pick up where the previous stream of
-entities left off - like a "bookmark" in the entity stream. The ``since`` marker is opaque to the rest of the
-Sesam components and is assumed to be interpretable *only by the source*. Within an entity, the marker is carried
-in the ``_updated`` property if supported by its source.
+Sources can optionally support a ``since`` marker which lets them pick
+up where the previous stream of entities left off - like a "bookmark"
+in the entity stream. The ``since`` marker is opaque to the rest of
+the Sesam components and it is assumed to be interpretable *only by
+the source*. Within an entity the marker is carried in the
+``_updated`` property if supported by its source.
 
-Sesam supports a diverse set of core data sources:
+Sesam supports a diverse set of core data sources. They are all
+described below.
+
+There are three characteristics that describe continuation
+support. All sources have these and there are three properties
+available to describe them. The properties can be fixed, have a
+default value or be calculated from other properties (aka dynamic) on
+the source. The table below explains them in detail.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Description
+
+   * - ``supports_since``
+     - Does the source make use of the 'since' parameter if it gets
+       passed one?
+
+       This property is typically used to disable the tracking of the
+       ``since`` marker. Sometimes it is not necessary to perform the
+       tracking as the source won't make use of it anyway.
+
+   * - ``is_chronological``
+     - Does the source hand out entities in chronological order, i.e.
+       in increasing order?
+
+       If the entities are sorted in chronological other, then the
+       pump can shift its ``since`` marker for each new entity in the
+       stream. It can also store it away more often. This is a good
+       characteristic to have as it makes the source able to continue
+       where it left off even though the previous run did not complete
+       fully. If the property is set to ``false`` then it can only
+       know at the end of the run what the new ``since`` marker is.
+
+   * - ``is_since_comparable``
+     - Can you compare two _updated values and decide their relative order?
+
+       This property is used to specify if the values of two
+       entities's ``_updated`` properties are always comparable. If
+       the property can contain values of two different types or
+       structures, then it may not be possible to use lexical/bytewise
+       comparison of the two values to decide order.
+
+If continuation support is enabled for a pipe then the ``since``
+marker is stored in the ``last-seen`` property on the pump. Note that
+one can use the pump's `update-last-seen
+<api.html#post--pipes-pipe_id-pump>`_ operation in the :doc:`api` to
+update or reset the ``last-seen`` value manually. This is useful in
+cases where one wants to reprocess the data from scratch for some
+reason. The :doc:`api` can also tell you what the current
+``last-seen`` value is.
 
 The dataset source
 ------------------
@@ -315,6 +374,27 @@ Properties
        version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -385,6 +465,27 @@ source, except ``datasets`` can be a list of datasets ids.
        any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -472,6 +573,27 @@ strategy.
        is more useful downstream.
      - "latest"
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -568,6 +690,27 @@ be a list of datasets ids.
      - false
      -
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -625,6 +768,27 @@ Properties
      - Contains the list of entities is to be served by the source.
      -
      - Yes
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``false`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -781,6 +945,27 @@ Properties
      - The fetch size of the result sets (number of rows in a cursor fetch) to get from the database
      - 1000
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Dynamic: ``true`` if ``updated_column`` set)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``true`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -970,6 +1155,27 @@ Properties
      - ","
      -
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``false`` (Default)
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1060,6 +1266,27 @@ Properties
      - "nt"
      -
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``false`` (Default)
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1130,6 +1357,27 @@ Properties
        reading from the fragments feed.
      - true
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1226,6 +1474,27 @@ Properties
      - []
      -
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1297,6 +1566,27 @@ Properties
      - true
      -
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``true`` (Default)
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1335,6 +1625,27 @@ Prototype
     {
         "type": "empty"
     }
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1419,6 +1730,27 @@ Prototype
         "prefix_includes": ["optional", "rdf-prefixes", "to", "use", "in", "sdshare"]
     }
 
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``false`` (Fixed)
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1498,6 +1830,27 @@ Properties
        Se the example configurations for more details on how this template works.
      -
      - Yes
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``false`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1676,6 +2029,27 @@ Properties
        the beginning each time or not.
      - true
      -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
+
+   * - ``is_since_comparable``
+     - ``true`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
