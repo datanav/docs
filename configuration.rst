@@ -310,7 +310,7 @@ the source. The table below explains them in detail.
        tracking as the source won't make use of it anyway.
 
        NOTE: If you set ``support_since`` to ``true`` then you should
-       also make sure that you set eith ``is_since_comparable`` to
+       also make sure that you set either ``is_since_comparable`` to
        ``true`` or ``is_chronological`` to ``true`` — or *both*
        depending on the strategy you want.
 
@@ -815,7 +815,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false`` (Fixed)
 
    * - ``is_since_comparable``
-     - ``false`` (Fixed)
+     - ``true`` (Fixed)
 
    * - ``is_chronological``
      - ``false`` (Fixed)
@@ -1201,7 +1201,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false`` (Default)
 
    * - ``is_since_comparable``
-     - ``false`` (Default)
+     - ``true`` (Default)
 
    * - ``is_chronological``
      - ``false`` (Default)
@@ -1312,7 +1312,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false`` (Default)
 
    * - ``is_since_comparable``
-     - ``false`` (Default)
+     - ``true`` (Default)
 
    * - ``is_chronological``
      - ``false`` (Default)
@@ -1776,7 +1776,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false`` (Fixed)
 
    * - ``is_since_comparable``
-     - ``false`` (Fixed)
+     - ``true`` (Fixed)
 
    * - ``is_chronological``
      - ``false`` (Fixed)
@@ -1877,7 +1877,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false`` (Fixed)
 
    * - ``is_since_comparable``
-     - ``false`` (Fixed)
+     - ``true`` (Fixed)
 
    * - ``is_chronological``
      - ``false`` (Fixed)
