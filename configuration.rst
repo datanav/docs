@@ -1401,7 +1401,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - Value
 
    * - ``supports_since``
-     - ``false`` (Default)
+     - ``true`` (Default)
 
    * - ``is_since_comparable``
      - ``true`` (Fixed)
@@ -2032,7 +2032,7 @@ Properties
      - A SPARQL ``SELECT`` query that should return exactly two bound variables: ``id`` which should contain a unique subject
        and ``updated`` which should contain its modification time in ISO UTC format (or "0001-01-01T00:00:00Z" if not
        available in the data). If the ``supports_since`` is set to true, you must include a filter based on the
-       ``updated`` content compared to the current since moniker. You must use a variable expansion "${since}" for this
+       ``updated`` content compared to the current since moniker. You must use a variable expansion ``${since}`` for this
        purpose. The query result set should always be ordered by the "?updated" variable. If a list of strings is given,
        they will be converted to a single string by concatenation with the newline character.
      -
@@ -2073,7 +2073,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - Value
 
    * - ``supports_since``
-     - ``false`` (Default)
+     - ``false`` (Dynamic: ``true`` if ``${since}`` in ``fragments_query``)
 
    * - ``is_since_comparable``
      - ``true`` (Default)

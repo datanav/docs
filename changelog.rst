@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2016-11-21
+2016-11-22
 ----------
 * The section on :ref:`Continuation Support <continuation_support>` has been extended. Each source now has a *Continuation support* table that shows the source's support for continuations.
 
