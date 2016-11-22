@@ -302,6 +302,16 @@ the source. The table below explains them in detail.
        ``since`` marker. Sometimes it is not necessary to perform the
        tracking as the source won't make use of it anyway.
 
+   * - ``is_since_comparable``
+     - Can you compare two _updated values using lexical/bytewise
+       comparison and decide their relative order?
+
+       This property is used to specify if the values of two
+       entities's ``_updated`` properties are always comparable. If
+       the property can contain values of different types or
+       structures, then it may not be possible to use lexical/bytewise
+       comparison of the two values to decide order.
+
    * - ``is_chronological``
      - Does the source hand out entities in chronological order, i.e.
        in increasing order?
@@ -314,14 +324,14 @@ the source. The table below explains them in detail.
        fully. If the property is set to ``false`` then it can only
        know at the end of the run what the new ``since`` marker is.
 
-   * - ``is_since_comparable``
-     - Can you compare two _updated values and decide their relative order?
+The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
-       This property is used to specify if the values of two
-       entities's ``_updated`` properties are always comparable. If
-       the property can contain values of two different types or
-       structures, then it may not be possible to use lexical/bytewise
-       comparison of the two values to decide order.
+
+1. If ``support_since`` is ``true`` and ``is_since_comparable`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
+
+2. If ``support_since`` is ``true`` and ``is_since_comparable`` is ``true`` then continuation support is enabled and the *max* strategy is chosen. This strategy will store the maximum ``_updated`` value seen in the run.
+
+3. If none of the above apply, then continuation support is disabled. No tracking of the ``since`` marker is then done.
 
 If continuation support is enabled for a pipe then the ``since``
 marker is stored in the ``last-seen`` property on the pump. Note that
@@ -390,10 +400,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``true`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``true`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``true`` (Fixed)
 
 Example configuration
@@ -481,10 +491,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``true`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``true`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``true`` (Fixed)
 
 Example configuration
@@ -589,10 +599,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``true`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``true`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``true`` (Fixed)
 
 Example configuration
@@ -705,10 +715,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``true`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``true`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``true`` (Fixed)
 
 
@@ -784,10 +794,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``false`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``false`` (Fixed)
 
 Example configuration
@@ -961,11 +971,11 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Dynamic: ``true`` if ``updated_column`` set)
 
-   * - ``is_chronological``
-     - ``false`` (Default)
-
    * - ``is_since_comparable``
      - ``true`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1170,10 +1180,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Default)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``false`` (Default)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``false`` (Default)
 
 Example configuration
@@ -1281,10 +1291,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Default)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``false`` (Default)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``false`` (Default)
 
 Example configuration
@@ -1373,11 +1383,11 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Default)
 
-   * - ``is_chronological``
-     - ``false`` (Default)
-
    * - ``is_since_comparable``
      - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1489,11 +1499,11 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Fixed)
 
-   * - ``is_chronological``
-     - ``false`` (Fixed)
-
    * - ``is_since_comparable``
      - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1581,11 +1591,11 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Default)
 
-   * - ``is_chronological``
-     - ``false`` (Default)
-
    * - ``is_since_comparable``
      - ``true`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1641,10 +1651,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``true`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``true`` (Fixed)
 
 Example configuration
@@ -1745,10 +1755,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``false`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``false`` (Fixed)
 
 Example configuration
@@ -1846,10 +1856,10 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Fixed)
 
-   * - ``is_chronological``
+   * - ``is_since_comparable``
      - ``false`` (Fixed)
 
-   * - ``is_since_comparable``
+   * - ``is_chronological``
      - ``false`` (Fixed)
 
 Example configuration
@@ -2045,11 +2055,11 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``supports_since``
      - ``false`` (Default)
 
-   * - ``is_chronological``
-     - ``false`` (Default)
-
    * - ``is_since_comparable``
      - ``true`` (Default)
+
+   * - ``is_chronological``
+     - ``false`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -4596,7 +4606,7 @@ The REST sink (Experimental)
 This is a data sink that can communicate with a REST service using HTTP requests.
 
 Note that the shape of the entities piped to this sink must conform to certain criteria, see the
-:ref:`notes <expected_rest_entity_shape>` later in the section.
+:ref:`notes <rest_expected_rest_entity_shape>` later in the section.
 
 Prototype
 ^^^^^^^^^
