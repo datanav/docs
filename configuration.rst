@@ -287,6 +287,13 @@ available to describe them. The properties can be fixed, have a
 default value or be calculated from other properties (aka dynamic) on
 the source. The table below explains them in detail.
 
+.. NOTE::
+
+   It is important that you do not to set any of these properties to
+   ``true`` unless the source actually have these
+   characteristics. Doing so can mean that the pump is not able track
+   changes properly.
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 80
@@ -302,6 +309,11 @@ the source. The table below explains them in detail.
        ``since`` marker. Sometimes it is not necessary to perform the
        tracking as the source won't make use of it anyway.
 
+       NOTE: If you set ``support_since`` to ``true`` then you should
+       also make sure that you set eith ``is_since_comparable`` to
+       ``true`` or ``is_chronological`` to ``true`` — or *both*
+       depending on the strategy you want.
+
    * - ``is_since_comparable``
      - Can you compare two _updated values using lexical/bytewise
        comparison and decide their relative order?
@@ -311,6 +323,10 @@ the source. The table below explains them in detail.
        the property can contain values of different types or
        structures, then it may not be possible to use lexical/bytewise
        comparison of the two values to decide order.
+
+       NOTE: If you set ``is_since_comparable`` to ``true`` then you
+       should also make sure that ``support_since`` is set to
+       ``true``.
 
    * - ``is_chronological``
      - Does the source hand out entities in chronological order, i.e.
@@ -323,6 +339,10 @@ the source. The table below explains them in detail.
        where it left off even though the previous run did not complete
        fully. If the property is set to ``false`` then it can only
        know at the end of the run what the new ``since`` marker is.
+
+       NOTE: If you set ``is_chronological`` to ``true`` then you
+       should also make sure that ``support_since`` is set to ``true``
+       and ``is_since_comparable`` is set to ``true``.
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
