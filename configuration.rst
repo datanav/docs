@@ -1352,8 +1352,7 @@ Prototype
     {
        "type": "sdshare",
        "system": "url-system-id",
-       "url": "url-to-sdshare-fragments-feed",
-       "supports_since": true
+       "url": "url-to-sdshare-fragments-feed"
     }
 
 Properties
@@ -1380,13 +1379,6 @@ Properties
      - The URL of the SDShare fragments feed to consume.
      -
      - Yes
-
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to include ``since`` request parameter when
-       reading from the fragments feed.
-     - true
-     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1588,13 +1580,6 @@ Properties
      - The URL of the ``JSON`` file to load.
      -
      - Yes
-
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to include ``since`` request parameter when
-       reading requesting the entities.
-     - true
-     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -2031,7 +2016,7 @@ Properties
      - List<String> or String
      - A SPARQL ``SELECT`` query that should return exactly two bound variables: ``id`` which should contain a unique subject
        and ``updated`` which should contain its modification time in ISO UTC format (or "0001-01-01T00:00:00Z" if not
-       available in the data). If the ``supports_since`` is set to true, you must include a filter based on the
+       available in the data). If you would like the source to have continuation support, then you must include a filter based on the
        ``updated`` content compared to the current since moniker. You must use a variable expansion ``${since}`` for this
        purpose. The query result set should always be ordered by the "?updated" variable. If a list of strings is given,
        they will be converted to a single string by concatenation with the newline character.
@@ -2051,13 +2036,6 @@ Properties
      - String
      - A string literal to use when querying the triplestore the first time.
      - "0001-01-01T00:00:00Z"
-     -
-
-   * - ``supports_since``
-     - Boolean
-     - Flag to indicate whether to use a ``since`` marker when reading from the source, i.e. to start at
-       the beginning each time or not.
-     - true
      -
 
 Continuation support
