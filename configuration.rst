@@ -4547,8 +4547,7 @@ There must be exactly one property starting with '<' and ending with '>' in an e
 child entities in as many levels as you want (also in lists).
 
 All non-tag properties, except those beginning with a ``_`` letter will be included as attribute values on the tag
-specified. A "tag"-property value can either be a single literal, a single object or a list of objects. Note that
-any non-object items in lists are ignored (i.e. lists, literals and null values).
+specified. A "tag"-property value can either be a single literal, a single object or a list of objects.
 
 The property names must be valid XML attribute or tag names (`QNames <https://en.wikipedia.org/wiki/QName>`_).
 All literal values in tags or attributes will be `XML escaped <https://www.liquid-technologies.com/XML/EscapingData.aspx>`_.
