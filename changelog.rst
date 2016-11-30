@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-11-30
+----------
+* The :ref:`url-quote <url_quote_dtl_function>`  DTL function now take an optional ``SAFE_CHARS`` argument. This is especially useful when you don't want to quote the ``/`` character.
+
 2016-11-22
 ----------
 * The section on :ref:`Continuation Support <continuation_support>` has been extended. Each source now has a *Continuation support* table that shows the source's support for continuations.

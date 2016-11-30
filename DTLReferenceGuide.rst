@@ -2329,23 +2329,35 @@ Strings
        |
        | Returns true if all the tags that have a "_sport" suffix.
 
+       .. _url_quote_dtl_function:
    * - ``url-quote``
      - | *Arguments:*
+       |   SAFE_CHARS(string{0|1})
        |   VALUES(value-expression{1})
        |
        | Returns the URL quoted versions of any string or list of strings in the
          argument list. Any non-strings are ignored and is not returned in the
          result. Returns either a single string (if the input is a single
          string literal) or a list (of strings).
-     - | ``["url-quote", "foo bar"]``
        |
-       | Returns ``foo%20bar``.
+       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
+         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
+         argument must be a string that contains zero or more ASCII characters that should
+         not be encoded. Note that this only is applicable for ASCII characters.
+     - | ``["url-quote", "/foo bar/baz"]``
+       |
+       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
+         To avoid this you can add the SAFE_CHARS argument:
+       |
+       | ``["url-quote", "/", "/foo bar/baz"]``
+       |
+       | Returns ``/foo%20bar/baz``.
        |
        | ``["url-quote",``
        |   ``["list", "å", 1, 2,``
        |     ``["uri", "http://example.com"], "foo bar"]]``
        |
-       | Returns ``["%C3%A5", "foo%20bar]``
+       | Returns ``["%C3%A5", "foo%20bar]``.
 
 
 Values / collections
