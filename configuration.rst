@@ -2295,7 +2295,7 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use.
+     - The id of the :ref:`URL system <url_system>` or :ref:`microservice system <microservice_system>` component to use.
      -
      - Yes
 
