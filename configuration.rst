@@ -6335,6 +6335,15 @@ Properties
      - ``7200``
      -
 
+Microservice APIs
+^^^^^^^^^^^^^^^^^
+
+The Microservice system exposes several API endpoints that can be used to access or gather information about the running
+service:
+
+* `Logs endpoint <./api.html#get--systems-system_id-logs>`_ - exposes the service's logs
+* `Status endpoint <./api.html#get--systems-system_id-status>`_ - runtime information about the provisioned service
+* `Proxy endpoint <./api.html#get--systems-system_id-proxy--path-relative_path->`_ - proxy for the microservice URL through the node API
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
