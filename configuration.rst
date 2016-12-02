@@ -6244,6 +6244,9 @@ Prototype
         "read_timeout": 7200
     }
 
+Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
+character and the only non-letter or number characters allowed in the rest of the string are "_", "." or "-".
+
 Properties
 ^^^^^^^^^^
 
@@ -6343,6 +6346,7 @@ service:
 
 * `Logs endpoint <./api.html#get--systems-system_id-logs>`_ - exposes the service's logs
 * `Status endpoint <./api.html#get--systems-system_id-status>`_ - runtime information about the provisioned service
+* `Reload endpoint <./api.html#post--systems-system_id-reload>`_ - pull new docker image and reload the microservice
 * `Proxy endpoint <./api.html#get--systems-system_id-proxy--path-relative_path->`_ - proxy for the microservice URL through the node API
 
 Example configuration
