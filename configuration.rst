@@ -6209,7 +6209,7 @@ The microservice system (Experimental)
 
 The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
 
-The ``docker`` property lets one specify a Docker container that should be spun up. Note that the microservice system does not not have the ``base_url`` property. The reason is that it is able to figure out this itself.
+The ``docker`` property lets one specify a Docker container that should be spun up. Note that the microservice system does not have the ``base_url`` property. The reason is that it is able to figure out this itself.
 
 The microservice system supports private repositories.
 

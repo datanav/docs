@@ -3,7 +3,7 @@ Changelog
 
 2016-11-30
 ----------
-* The :ref:`url-quote <url_quote_dtl_function>`  DTL function now take an optional ``SAFE_CHARS`` argument. This is especially useful when you don't want to quote the ``/`` character.
+* The :ref:`url-quote <url_quote_dtl_function>`  DTL function now takes an optional ``SAFE_CHARS`` argument. This is especially useful when you don't want to quote the ``/`` character.
 
 2016-11-22
 ----------
