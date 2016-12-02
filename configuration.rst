@@ -4227,6 +4227,9 @@ Properties
        See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
        The :ref:`common RDF prefixes <built_in_prefixes>` are built-in and you don't have to provide the mapping for it
        (i.e. RDF, RDFS, OWL etc).
+       Note: if you do not set this property, the sink will attempt to use the source's ``dataset`` property as lookup key
+       into the :ref:`RDF registry <rdf_registry>` entries. If this look up fails, or does not result in the correct
+       registry item, the resulting SDShare feed may be empty.
      -
      -
 
