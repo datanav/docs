@@ -6234,6 +6234,7 @@ Prototype
             "port": 5000,
             "username": None,
             "password": None,
+            "memory": 128,
             "environment": {
                 "SOME-VARIABLE": "SOME-VALUE"
             }
@@ -6292,6 +6293,12 @@ Properties
      - If the Docker images is located in a private repository, then the password must be specified here.
      -
      -
+
+   * - ``docker.memory``
+     - Integer
+     - The number of MB of RAM to allocate for the microservice.
+     - ``128``
+     - 
 
    * - ``use_https``
      - String
