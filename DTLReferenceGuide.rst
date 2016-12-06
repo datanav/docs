@@ -2173,9 +2173,10 @@ Strings
        |
        | Returns the length of the source entity's name.
 
+       .. _concat_dtl_function:
    * - ``concat``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
+       |   VALUES(value-expression{>1})
        |
        | Returns a concatenated string of its input strings.
          Non-string values are ignored.
@@ -2186,6 +2187,18 @@ Strings
        | ``["concat", "_S.tags"]``
        |
        | Returns a concatenated version of the source entity's tags.
+       |
+       | ``["concat", "Hello ", "_S.name", "!"]``
+       |
+       | Returns ``"Hello John!"`` if the ``name`` property is ``John``.
+       |
+       | ``["concat", "a", ["list", "b", "c"], "d", 123, ["list", "!"]]``
+       |
+       | Returns ``"abcd!"``.
+       |
+       | ``["concat", 123, 3.14]``
+       |
+       | Returns ``""``, because non-string values are ignored.
 
    * - ``join``
      - | *Arguments:*
