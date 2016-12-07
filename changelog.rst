@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-12-07
+----------
+* The documentation on :doc:`cron expressions <cron-expressions>` now makes it clear that they are evaluated in the `UTC <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`_ timezone.
+
 2016-12-06
 ----------
 * The :ref:`concat <concat_dtl_function>`  DTL function now takes a variable number of arguments. This avoids constructing unnecessary lists.
