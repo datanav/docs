@@ -4881,7 +4881,7 @@ Properties
 
    * - ``pool_timeout``
      - Integer
-     - The number of seconds to wait before a idle connection is terminated
+     - The number of seconds to wait before giving up on getting a connection from the connection pool.
      - 30
      -
 
