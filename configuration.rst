@@ -4193,6 +4193,8 @@ JSON source <json_source>`.
 The SDShare protocol is described `here
 <http://www.sdshare.org/spec/sdshare-v1.0.html>`_.
 
+The exposed URLs may support additional parameters such as ``since`` and ``limit`` - see
+the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`_ for the full details.
 
 Prototype
 ^^^^^^^^^
@@ -4283,6 +4285,9 @@ It exposes the URL:
    * - URL
 
    * - ``http://localhost:9042/api/publishers/mypipe/csv``
+
+The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
+the `API reference <./api.html#get--publishers-pipe_id-csv>`_ for the full details.
 
 
 Prototype
@@ -4453,6 +4458,9 @@ It exposes the URL:
 
 Note that the shape of the entities must conform to certain criteria, see the :ref:`notes <expected_xml_entity_shape>`
 later in the section.
+
+The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
+the `API reference <./api.html#get--publishers-pipe_id-xml>`_ for the full details.
 
 Prototype
 ^^^^^^^^^
