@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2016-12-15
+----------
+* Added a ``read_retry_delay`` property to pipe pumps. This is used in conjunction with ``max_read_retries`` when the source
+is known to be sporadically (non-transiently) unavailable. See the :ref:`Pump section <pump_section>` for details.
+
 2016-12-07
 ----------
 * The documentation on :doc:`cron expressions <cron-expressions>` now makes it clear that they are evaluated in the `UTC <https://en.wikipedia.org/wiki/Coordinated_Universal_Time>`_ timezone.

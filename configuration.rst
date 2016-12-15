@@ -6298,7 +6298,7 @@ Properties
      - Integer
      - The number of MB of RAM to allocate for the microservice.
      - ``128``
-     - 
+     -
 
    * - ``use_https``
      - String
@@ -6401,6 +6401,7 @@ Prototype
         "rescan_cron_expression": "* * * * *",
         "run_at_startup": false,
         "max_read_retries": 0,
+        "read_retry_delay": 0,
         "max_retries_per_entity": 5,
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
@@ -6467,6 +6468,16 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Integer
      - A counter that indicates to the pump how many times it should retry when failing to read a entity from a source.
        The default (0) means that it should not retry but log an error immediately when encountering read errors.
+       See also the `read_retry_delay` property.
+     - 0
+     -
+
+   * - ``read_retry_delay``
+     - Integer
+     - How many seconds to wait before retrying aftera a read error (i.e. only if `max_read_retries` is non-zero).
+       The default value is 0 which will retry immediately. If the reason for the read error is non-transient,
+       the number of retries set by `max_read_retries` will be exhausted quickly - in this case, set this property to
+       match the expected interval.
      - 0
      -
 
