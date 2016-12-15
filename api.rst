@@ -15,7 +15,9 @@ Introduction
 Sesam provides a RESTful API for controlling the service and for working with the data in the datahub.
 
 If you follow the :ref:`overview-getting-started` guide, the api will be served on the url http://localhost:9042/api . The
-rest of this document will assume that the api can be found on this url.
+rest of this document will assume that the api can be found on this url. The API documentation is also self-hosted
+and can be explored using the `Swagger <http://swagger.io>`_ user interface at "<host:port>/api/reference",
+i.e. http://localhost:9042/api/reference for a local installation.
 
 You can explore the api with a web browser or with a commandline tool like `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
 or `wget <http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html>`_.
