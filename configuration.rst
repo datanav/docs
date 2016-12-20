@@ -195,6 +195,13 @@ Properties
      - 100
      -
 
+   * - ``disable_set_last_seen``
+     - Boolean
+     - If this flag is set to 'true', it will no longer be possible to reset or set the 'last seen' parameter for this
+       pipe. The primary use case for this property is when you need to protect the pipe from accidental resets.
+     - False
+     -
+
    * - ``source``
      - Object
      - A configuration object for the :ref:`source <source_section>` component of the pipe. It can be omitted if

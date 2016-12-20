@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2016-12-19:
+-----------
+*  Added a ``disable_set_last_seen`` property to the :ref:`Pipe properties <pipe_section>`. If set to ``true``, it will
+not be possible to set or reset the ``last seen`` bookmark on the pipe using the API (i.e. protecting it from
+accidental changes by principals with write permission on the pipe).
+
 2016-12-15
 ----------
 * Added a ``read_retry_delay`` property to pipe pumps. This is used in conjunction with ``max_read_retries`` when the source
