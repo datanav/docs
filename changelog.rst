@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2016-12-20:
+-----------
+*  Added a ``uuid`` DTL function. It takes no parameters and returns a UUID object (type 4).
+
 2016-12-19:
 -----------
 *  Added a ``disable_set_last_seen`` property to the :ref:`Pipe properties <pipe_section>`. If set to ``true``, it will

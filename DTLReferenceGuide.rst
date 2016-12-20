@@ -1246,6 +1246,16 @@ Data Types
        |
        | Returns [1, "12345"].
 
+   * - ``uuid``
+     - | *Arguments:*
+       |   NONE(value-expression{0})
+       |
+       | Create a new UUID object.
+       |
+     - | ``["uuid"]``
+       |
+       | Returns a new UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+
    * - ``now``
      - | *Arguments:*
        |   NONE(value-expression{0})
