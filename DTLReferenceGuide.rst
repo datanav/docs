@@ -383,6 +383,11 @@ Join expressions that contain functional expressions work the same
 way, e.g. ``["eq", ["+", "a.value", 2], "b.values"]`` succeeds as ``3``
 is a value shared by both.
 
+.. NOTE::
+
+   It is only ``eq`` functions that reference a single dataset alias
+   in both left and right arguments that are considered join
+   functions.
 
 Argument types
 ==============

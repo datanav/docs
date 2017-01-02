@@ -1,16 +1,20 @@
 Changelog
 =========
 
-2016-01-04:
------------
+2017-01-06
+----------
+*  Added the :ref:`merge <merge_source>` source. This is a data source that is able to infer the sameness of entities across multiple datasets.
+
+2017-01-04
+----------
 *  Added an ``unhandled_template_variable_replacement`` property to the :ref:`Email Message sink <mail_message_sink>`.
 
-2016-12-20:
------------
+2016-12-20
+----------
 *  Added a ``uuid`` DTL function. It takes no parameters and returns a UUID object (type 4).
 
-2016-12-19:
------------
+2016-12-19
+----------
 *  Added a ``disable_set_last_seen`` property to the :ref:`Pipe properties <pipe_section>`. If set to ``true``, it will
 not be possible to set or reset the ``last seen`` bookmark on the pipe using the API (i.e. protecting it from
 accidental changes by principals with write permission on the pipe).

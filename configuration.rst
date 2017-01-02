@@ -448,6 +448,154 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _merge_source:
+
+The merge source (Experimental)
+-------------------------------
+
+The merge source is a source that is able to infer the sameness of
+entities across multiple datasets. The source uses a set of equality
+rules to figure out which entities are the same. Equality is resolved
+transitively, so if A is the same as B and B is the same as C then A,
+B and C are all considered the same.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "merge",
+        "datasets": ["one d1", "two d2", "three d3"],
+        "equality": [
+             ["eq", "d1.field1", "d2.field1"],
+             ["eq", "d2.field2", "d3.field2"]
+        ]
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``datasets``
+     - List<String{>=2}>
+     - A list of two or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
+     -
+     - Yes
+
+   * - ``equality``
+     - List<EqFunctions{>=1}>
+     - A list of one or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
+     - 
+     - Yes
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``true`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``true`` (Fixed)
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Below you'll find three datasets ``A``, ``B`` and ``C`` and a pipe configuration
+that uses the ``merge`` source.
+
+Dataset ``A``:
+
+::
+
+   [
+       {"_id": "a1", "f1": 1},
+       {"_id": "a2", "f1": 2}
+   ]
+
+Dataset ``B``:
+
+::
+
+   [
+       {"_id": "b1", "f1": 1, "f2": 2},
+       {"_id": "b2", "f1": 3}
+   ]
+
+Dataset ``C``:
+
+::
+
+   [
+       {"_id": "c1", "f3": 2}
+   ]
+
+
+Pipe configuration:
+
+::
+
+   {
+       "_id": "result",
+       "source": {
+           "type": "merge",
+           "datasets": ["A a", "B b", "C c"],
+           "equality": [
+               ["eq", "a.f1", "b.f1"],
+               ["eq", "b.f2", "c.f3"],
+           ]
+       }
+   }
+
+Given the above we should expect an output that looks like this:
+
+::
+
+   [
+       {'$ids': ['a1', 'b1', 'c1'],
+        '_id': '0',
+        '_updated': 0,
+        'f1': [1, 1],
+        'f2': 2,
+        'f3': 2},
+       {'$ids': ['a2'], '_id': '1', '_updated': 1, 'f1': 2},
+       {'$ids': ['b2'], '_id': '2', '_updated': 2, 'f1': 3},
+   ]
+
+The entities ``a1``, ``b1`` and ``c1`` have been merged. The entities
+``a2`` and ``b2`` did not match any other entities.
+
+The merged entities are combined so that the properties and their
+values are merged in the resulting entity. ``null`` values are kept
+intact. List values appear in a consistent order.
+
+Note that ``_id`` and ``_updated`` properties of the merged entities
+are the same. The ``_update`` property is a sequence number that
+increases every time a new entity is written to the sink. There are no
+guarantees for these two other than that they are unique and appear in
+chronological order.
+
 The union datasets source
 -------------------------
 
