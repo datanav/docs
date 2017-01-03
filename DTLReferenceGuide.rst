@@ -1172,51 +1172,87 @@ Data Types
        |
      - | ``["is-integer", 1]``
        |
-       | Returns true.
+       | Returns ``true``.
        |
        | ``["is-integer", "1"]``
        |
-       | Returns false.
+       | Returns ``false``.
        |
        | ``["is-integer", ["list", 1, "12345"]]``
        |
-       | Returns true
+       | Returns ``true``.
        |
        | ``["is-integer", ["list", "1", 2]]``
        |
-       | Returns false
+       | Returns ``false``.
        |
        | ``["is-integer", ["list", ["integer", "1"], 2]]``
        |
-       | Returns true
+       | Returns ``true``.
 
    * - ``is-null``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is null literal or if it
-         is a list, that the first element in the list is a null literal.
+       | Boolean function that returns ``true`` if value is either ``null``, an
+         empty list, or a list where the first element in the list is ``null``.
        |
      - | ``["is-null", null]``
        |
-       | Returns true.
+       | Returns ``true``.
        |
        | ``["is-null", 1]``
        |
-       | Returns false.
+       | Returns ``false``.
+       |
+       | ``["is-null", ["list"]]``
+       |
+       | Returns ``true``.
        |
        | ``["is-null", ["list", null]]``
        |
-       | Returns true.
+       | Returns ``true``.
        |
        | ``["is-null", ["list", null, 123]]``
        |
-       | Returns true. Note that the function only looks at the first value
+       | Returns ``true``. Note that the function only looks at the first value
          in the list.
        |
        | ``["is-null", ["list", 1, "12345"]]``
        |
-       | Returns false.
+       | Returns ``false``.
+
+   * - ``is-not-null``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns ``false`` if value is either ``null``, an
+         empty list, or a list where the first element in the list is ``null``.
+       |
+     - | ``["is-not-null", null]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", 1]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-not-null", ["list"]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", ["list", null]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", ["list", null, 123]]``
+       |
+       | Returns ``false``. Note that the function only looks at the first value
+         in the list.
+       |
+       | ``["is-not-null", ["list", 1, "12345"]]``
+       |
+       | Returns ``true``.
 
    * - ``if-null``
      - | *Arguments:*
@@ -1228,23 +1264,23 @@ Data Types
        |
      - | ``["if-null", null, 2]``
        |
-       | Returns 2.
+       | Returns ``2``.
        |
        | ``["if-null", 1, 2]``
        |
-       | Returns 1.
+       | Returns ``1``.
        |
        | ``["if-null", ["list", null], 2]``
        |
-       | Returns 2.
+       | Returns ``2``.
        |
        | ``["if-null", ["list", null, 123], 2]``
        |
-       | Returns 2.
+       | Returns ``2``.
        |
-       | ``["is-null", ["list", 1, "12345"], 2]``
+       | ``["if-null", ["list", 1, "12345"], 2]``
        |
-       | Returns [1, "12345"].
+       | Returns ``[1, "12345"]``.
 
    * - ``uuid``
      - | *Arguments:*
