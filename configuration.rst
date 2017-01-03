@@ -539,7 +539,7 @@ Dataset ``B``:
 ::
 
    [
-       {"_id": "b1", "f1": 1, "f2": 2},
+       {"_id": "b1", "f1": 1, "f2": "x"},
        {"_id": "b2", "f1": 3}
    ]
 
@@ -548,7 +548,9 @@ Dataset ``C``:
 ::
 
    [
-       {"_id": "c1", "f3": 2}
+       {"_id": "c1", "f3": "X"},
+       {"_id": "c2", "_deleted": True, "f3": "Y"},
+       {"_id": "c3", "_deleted": True, "f3": "X"},
    ]
 
 
@@ -563,7 +565,7 @@ Pipe configuration:
            "datasets": ["A a", "B b", "C c"],
            "equality": [
                ["eq", "a.f1", "b.f1"],
-               ["eq", "b.f2", "c.f3"],
+               ["eq", "b.f2", ["lower", "c.f3"]],
            ]
        }
    }
@@ -577,23 +579,29 @@ Given the above we should expect an output that looks like this:
         '_id': '0',
         '_updated': 0,
         'f1': [1, 1],
-        'f2': 2,
-        'f3': 2},
+        'f2': "x",
+        'f3': "X"},
        {'$ids': ['a2'], '_id': '1', '_updated': 1, 'f1': 2},
        {'$ids': ['b2'], '_id': '2', '_updated': 2, 'f1': 3},
+       {'$ids': ['c2'], '_deleted': True, '_id': '3', '_updated': 3, 'f3': "Y"},
+       {'$ids': ['c3'], '_deleted': True, '_id': '4', '_updated': 4, 'f3': "X"}
    ]
 
-The entities ``a1``, ``b1`` and ``c1`` have been merged. The entities
-``a2`` and ``b2`` did not match any other entities.
+Entities ``a1``, ``b1`` and ``c1`` have been merged. Entities ``a2``
+and ``b2`` did not match any other entities. Deleted entities, like
+``c2`` and ``c3``, are never merged with any other entities.
 
 The merged entities are combined so that the properties and their
 values are merged in the resulting entity. ``null`` values are kept
-intact. List values appear in a consistent order.
+intact. List values appear in a consistent order and may contain
+duplicate values.
 
 Note that ``_id`` and ``_updated`` properties of the merged entities
-are the same. The ``_update`` property is a sequence number that
-increases every time a new entity is written to the sink. There are no
-guarantees for these two other than that they are unique and appear in
+are the same. There are situations where they may be different, but
+that only happens when entities are *unmerged*. The ``_updated``
+property is a sequence number that increases every time a new entity
+is written to the sink. There are no guarantees for these two other
+than that they are unique and that ``_updated`` appear in
 chronological order.
 
 The union datasets source
