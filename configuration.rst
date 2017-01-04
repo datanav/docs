@@ -575,17 +575,13 @@ Given the above we should expect an output that looks like this:
 ::
 
    [
-       {'$ids': ['a1', 'b1', 'c1'],
-        '_id': '0',
-        '_updated': 0,
-        'f1': [1, 1],
-        'f2': "x",
-        'f3': "X"},
-       {'$ids': ['a2'], '_id': '1', '_updated': 1, 'f1': 2},
-       {'$ids': ['b2'], '_id': '2', '_updated': 2, 'f1': 3},
-       {'$ids': ['c2'], '_deleted': true, '_id': '3', '_updated': 3, 'f3': "Y"},
-       {'$ids': ['c3'], '_deleted': true, '_id': '4', '_updated': 4, 'f3': "X"}
-   ]
+       {"$ids": ["a1", "b1", "c1"], "_id": "0|a1|1|b1|2|c1", "_updated": 0,
+        "f1": [1, 1], "f2": "x", "f3": "X"},
+       {"$ids": ["a2"], "_id": "0|a2", "_updated": 1, "f1": 2},
+       {"$ids": ["b2"], "_id": "1|b2", "_updated": 2, "f1": 3},
+       {"$ids": ["c2"], "_deleted": true, "_id": "2|c2", "_updated": 3, "f3": "Y"},
+       {"$ids": ["c3"], "_deleted": true, "_id": "2|c3", "_updated": 4, "f3": "X"}
+   ]   
 
 Entities ``a1``, ``b1`` and ``c1`` have been merged. Entities ``a2``
 and ``b2`` did not match any other entities. Deleted entities, like
