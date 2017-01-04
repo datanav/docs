@@ -488,7 +488,7 @@ Properties
 
    * - ``datasets``
      - List<String{>=2}>
-     - A list of two or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
+     - A list of two or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
      -
      - Yes
 
