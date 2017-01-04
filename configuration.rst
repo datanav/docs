@@ -197,9 +197,9 @@ Properties
 
    * - ``disable_set_last_seen``
      - Boolean
-     - If this flag is set to 'true', it will no longer be possible to reset or set the 'last seen' parameter for this
+     - If this flag is set to ``true``, it will no longer be possible to reset or set the 'last seen' parameter for this
        pipe. The primary use case for this property is when you need to protect the pipe from accidental resets.
-     - False
+     - ``false``
      -
 
    * - ``source``
@@ -549,8 +549,8 @@ Dataset ``C``:
 
    [
        {"_id": "c1", "f3": "X"},
-       {"_id": "c2", "_deleted": True, "f3": "Y"},
-       {"_id": "c3", "_deleted": True, "f3": "X"},
+       {"_id": "c2", "_deleted": true, "f3": "Y"},
+       {"_id": "c3", "_deleted": true, "f3": "X"},
    ]
 
 
@@ -583,8 +583,8 @@ Given the above we should expect an output that looks like this:
         'f3': "X"},
        {'$ids': ['a2'], '_id': '1', '_updated': 1, 'f1': 2},
        {'$ids': ['b2'], '_id': '2', '_updated': 2, 'f1': 3},
-       {'$ids': ['c2'], '_deleted': True, '_id': '3', '_updated': 3, 'f3': "Y"},
-       {'$ids': ['c3'], '_deleted': True, '_id': '4', '_updated': 4, 'f3': "X"}
+       {'$ids': ['c2'], '_deleted': true, '_id': '3', '_updated': 3, 'f3': "Y"},
+       {'$ids': ['c3'], '_deleted': true, '_id': '4', '_updated': 4, 'f3': "X"}
    ]
 
 Entities ``a1``, ``b1`` and ``c1`` have been merged. Entities ``a2``
@@ -597,8 +597,8 @@ intact. List values appear in a consistent order and may contain
 duplicate values.
 
 Note that ``_id`` and ``_updated`` properties of the merged entities
-are the same. There are situations where they may be different, but
-that only happens when entities are *unmerged*. The ``_updated``
+are the same. There are situations where they may be different though,
+like when the merged entity is deleted or updated. The ``_updated``
 property is a sequence number that increases every time a new entity
 is written to the sink. There are no guarantees for these two other
 than that they are unique and that ``_updated`` appear in
@@ -2623,7 +2623,7 @@ And the input entity:
         "t_a": "A",
         "a/b": "A/B",
         "status": {
-            "married": True,
+            "married": true,
             "spouse": "Pam",
             "code": 123,
             "t_b": {
@@ -2646,7 +2646,7 @@ The transform will output the following transformed entity:
         "<t:t_a>": "A",
         "<x:a/b>": "A",
         "<_:status>": {
-            "<m:married>": True,
+            "<m:married>": true,
             "<s:spouse>": "Pam",
             "<c:code>": 123,
             "<t:t_b>": {
@@ -2669,7 +2669,7 @@ Setting ``quote_safe_characters`` to "" would instead yield:
         "<t:t_a>": "A",
         "<x:a%2Fb>": "A",
         "<_:status>": {
-            "<m:married>": True,
+            "<m:married>": true,
             "<s:spouse>": "Pam",
             "<c:code>": 123,
             "<t:t_b>": {
@@ -2765,7 +2765,7 @@ And the input entity:
         "born": "1980-01-23",
         "http://psi.test.com/code": "AB32",
         "status": {
-            "http://psi.foo.com/married": True,
+            "http://psi.foo.com/married": true,
             "spouse": "Pam",
             "url1": "~rhttp://www.foo.com",
             "url2": "~rhttp://psi.foo.com/url2",
@@ -2788,7 +2788,7 @@ The transform will output the following compact/"compressed" transformed entity:
         "born": "1980-01-23",
         "<test:code>": "AB32",
         "status": {
-            "<foo:married>": True,
+            "<foo:married>": true,
             "spouse": "Pam",
             "code": 123,
             "url1": "~rhttp://www.foo.com",
@@ -2861,7 +2861,7 @@ And given the the input entity:
         "Born": "1980-01-23",
         "CODE": "AB32",
         "Status": {
-            "http://psi.foo.com/married": True,
+            "http://psi.foo.com/married": true,
             "Spouse": "Pam",
             "URL1": "~rhttp://www.foo.com",
             "URL2": "~rhttp://psi.foo.com/url2",
@@ -2883,7 +2883,7 @@ The transform will output the following transformed entity:
         "born": "1980-01-23",
         "code": "AB32",
         "status": {
-            "http://psi.foo.com/married": True,
+            "http://psi.foo.com/married": true,
             "Spouse": "Pam",
             "URL1": "~rhttp://www.foo.com",
             "URL2": "~rhttp://psi.foo.com/url2",
@@ -2906,7 +2906,7 @@ however, the result would instead become:
         "born": "1980-01-23",
         "code": "AB32",
         "status": {
-            "http://psi.foo.com/married": True,
+            "http://psi.foo.com/married": true,
             "spouse": "Pam",
             "url1": "~rhttp://www.foo.com",
             "url2": "~rhttp://psi.foo.com/url2",
@@ -3363,7 +3363,7 @@ Properties
 
    * - ``keep_existing_solr_ids``
      - Boolean
-     - This can be set to True in order to try to reuse the existing solr-id of an entity, even if
+     - This can be set to ``true`` in order to try to reuse the existing solr-id of an entity, even if
        the solr-ids of the entity no longer contains the solr-id that exists on the solr server.
        The cons of doing this is that it requires a http-request to solr for *each and every*
        entity, so it is *very* expensive. This option should therefore be set to false in
@@ -4086,7 +4086,7 @@ Properties
    * - ``batch_size``
      - Integer
      - The maximum number of rows to insert into the database table in one operation
-     - 100
+     - ``100``
      -
 
    * - ``truncate_table_on_first_run``
@@ -4095,7 +4095,7 @@ Properties
        (for example on the first run, or when its offset has been set to zero manually). Please note that
        the truncating operation is executed in a separate transaction, so if any subsequent inserts should fail
        the truncating operation will not be rolled back.
-     - False
+     - ``false``
      -
 
    * - ``whitelist``
