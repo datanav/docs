@@ -3,7 +3,7 @@ Changelog
 
 2016-01-04:
 -----------
-*  Added an ``undefined_template_variable_replacement`` property to the :ref:`Email Message sink <mail_message_sink>`.
+*  Added an ``unhandled_template_variable_replacement`` property to the :ref:`Email Message sink <mail_message_sink>`.
 
 2016-12-20:
 -----------

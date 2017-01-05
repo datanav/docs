@@ -4103,7 +4103,7 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      - Yes
 
-   * - ``undefined_template_variable_replacement``
+   * - ``unhandled_template_variable_replacement``
      - String
      - Specifies how unhandled variables in the templates are handled. debug: the '{{variable_name}}'-string is kept.
        empty_string: {{variable_name}} is replaced with an empty string. strict: an error is raised.
