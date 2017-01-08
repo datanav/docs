@@ -483,9 +483,11 @@ Transforms
        |   THEN(transforms{1}),
        |   ELSE(transforms{0|1})
        |
-       | If CONDITION evaluates to *true* then apply the transforms in THEN.
-         If CONDITION evaluates to *false* then apply the transforms in ELSE.
-         Note that THEN and ELSE can contain empty lists of transforms.
+       | If CONDITION evaluates to *true* then apply the transforms in THEN,
+       | otherwise apply the transforms in ELSE.
+         
+       | Note that the THEN and ELSE arguments can either be a single transform
+         function or a list of transform functions. The list can be empty.
      - | ``["if", ["eq", "_S.type", "person"], [``
        |      ``["add", "type", "person"],``
        |      ``["copy", ["list", "name", "age"]]]]``
