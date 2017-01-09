@@ -1039,45 +1039,6 @@ Data Types
      - Description
      - Examples
 
-   * - ``uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to URIs. Only strings in VALUES will be
-         cast to URIs. Note that *no* URI escaping is done on the strings.
-     - | ``["uri", "http://www.bouvet.no/"]``
-       |
-       | Returns one URI.
-       |
-       | ``["uri",``
-       |    ``["list", "http://www.bouvet.no/",``
-       |       ``"http://www.sesam.io/", 12345]]``
-       |
-       | Returns a list of two URIs. The number is silently ignored because
-         it is not a string.
-
-   * - ``is-uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a URI literal or if it is
-         a list, that the first element in the list is a URI
-     - | ``["is-uri", ["uri", "foo:bar"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-uri", "foo:bar"]``
-       |
-       | Returns false.
-       |
-       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
-       |
-       | Returns true
-       |
-       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
-       |
-       | Returns false
-
        .. _json_dtl_function:
    * - ``json``
      - | *Arguments:*
@@ -2109,11 +2070,8 @@ Entity lookups
          ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
          dataset because they are explicit entity references.
 
-URIs
-----
-
-.. _curie_function:
-.. _uri_expand_function:
+Namespaced identifiers
+----------------------
 
 .. list-table::
    :header-rows: 1
@@ -2123,22 +2081,184 @@ URIs
      - Description
      - Examples
 
+       .. _ni_function:
+   * - ``ni``
+     - | *Arguments:*
+       |   NAMESPACE(string{0|1}),
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to namespaced identifiers. Only strings in VALUES
+         will be cast to namespaced identifiers. Note that no escaping is done on
+         the strings.
+     - | Constructs a new namespaced identifier.
+       |
+       | ``["ni", "foo", "bar"]``
+       |
+       | This will produce a namespaced identifier ``"~:foo:bar"``.
+       |
+       | ``["ni", "bar"]``
+       |
+       | This will produce a namespaced identifier in the global namespace; ``"~:bar"``.
+       |
+       | ``["ni", "foo", ["list", "bar", "x:y"]]``
+       |
+       | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``
 
+       .. _is_ni_function:
+   * - ``is-ni``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a namespaced
+         identifier literal, or if it is a list, that the first element
+         in the list is a namespaced identifier.
+     - | ``["is-ni", ["ni", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-ni", ["list", ["ni", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", ["list", 1, ["ni", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
+       .. _ni_ns_function:
+   * - ``ni-ns``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-ns", "~:foo:bar"]``
+       |
+       | Returns ``"foo"``.
+       |
+       | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["foo", "bar"]``
+
+       .. _ni_id_function:
+   * - ``ni-id``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace id part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-id", "~:foo:bar"]``
+       |
+       | Returns ``"bar"``.
+       |
+       | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["bar", "baz"]``
+
+URIs
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to URIs. Only strings in VALUES will be
+         cast to URIs. Note that *no* URI escaping is done on the strings.
+     - | ``["uri", "http://www.bouvet.no/"]``
+       |
+       | Returns one URI.
+       |
+       | ``["uri",``
+       |    ``["list", "http://www.bouvet.no/",``
+       |       ``"http://www.sesam.io/", 12345]]``
+       |
+       | Returns a list of two URIs. The number is silently ignored because
+         it is not a string.
+
+   * - ``is-uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a URI literal, or if it is
+         a list, that the first element in the list is a URI.
+     - | ``["is-uri", ["uri", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
+       .. _curie_function:
    * - ``curie``
      - | *Arguments:*
        |   PREFIX(string{1}),
        |   VALUES(value-expression{1})
        |
-     - | Constructs new curies as URI objects based on a the PREFIX
-         and VALUES arguments
+     - | Constructs new CURIEs as URI objects based on a the PREFIX
+         and VALUES arguments.
+       |
        | ``["curie", "foo", "bar"]``
        |
-       | This will produce a URI object with the value "~rfoo:bar"
+       | This will produce a URI object with the value ``"~rfoo:bar"``.
+       |
        | ``["curie", "foo", ["list", "bar", "zoo"]]``
        |
        | This will produce a list of two URI objects with the
-         values ["~rfoo:bar", "~rfoo:zoo"]
+         values ``["~rfoo:bar", "~rfoo:zoo"]``.
 
+       .. _url_quote_dtl_function:
+   * - ``url-quote``
+     - | *Arguments:*
+       |   SAFE_CHARS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL quoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+       |
+       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
+         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
+         argument must be a string that contains zero or more ASCII characters that should
+         not be encoded. Note that this only is applicable for ASCII characters.
+     - | ``["url-quote", "/foo bar/baz"]``
+       |
+       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
+         To avoid this you can add the SAFE_CHARS argument:
+       |
+       | ``["url-quote", "/", "/foo bar/baz"]``
+       |
+       | Returns ``/foo%20bar/baz``.
+       |
+       | ``["url-quote",``
+       |   ``["list", "å", 1, 2,``
+       |     ``["uri", "http://example.com"], "foo bar"]]``
+       |
+       | Returns ``["%C3%A5", "foo%20bar]``.
+
+       .. _uri_expand_function:
    * - ``uri-expand``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -2458,36 +2578,6 @@ Strings
        | ``["matches", "*_sport", ".", "_S.tags"]]``
        |
        | Returns true if all the tags that have a "_sport" suffix.
-
-       .. _url_quote_dtl_function:
-   * - ``url-quote``
-     - | *Arguments:*
-       |   SAFE_CHARS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns the URL quoted versions of any string or list of strings in the
-         argument list. Any non-strings are ignored and is not returned in the
-         result. Returns either a single string (if the input is a single
-         string literal) or a list (of strings).
-       |
-       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
-         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
-         argument must be a string that contains zero or more ASCII characters that should
-         not be encoded. Note that this only is applicable for ASCII characters.
-     - | ``["url-quote", "/foo bar/baz"]``
-       |
-       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
-         To avoid this you can add the SAFE_CHARS argument:
-       |
-       | ``["url-quote", "/", "/foo bar/baz"]``
-       |
-       | Returns ``/foo%20bar/baz``.
-       |
-       | ``["url-quote",``
-       |   ``["list", "å", 1, 2,``
-       |     ``["uri", "http://example.com"], "foo bar"]]``
-       |
-       | Returns ``["%C3%A5", "foo%20bar]``.
 
 
 Values / collections

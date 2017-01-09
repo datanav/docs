@@ -26,8 +26,9 @@ with. The following data prototype explains these special properties.
   }
 
 The entity data model supports a wide range of data types including,
-string, integer, decimal, boolean, URI, bytes and datetime. Over the
-wire both a binary and JSON representation is used.
+string, integer, decimal, boolean, URI, namespaced identifiers, bytes
+and datetime. Over the wire both a binary and JSON representation is
+used.
 
 Reserved fields
 ---------------
@@ -184,6 +185,10 @@ types that are not recognized will be treated as string values.
      - Uniform Resource Identifier (URI).
      - ``"~rhttp://www.sesam.io/"``
 
+   * - NI
+     - Namespaced Identifier (NI)
+     - ``"~:mynamespace:123"``
+
    * - Date
      - A date value. The valid range is from ``"~t0001-01-01"`` to
        ``"~t9999-12-31"``.
@@ -226,6 +231,8 @@ ordered then the following ordering is used:
 * Date, Datetime
 
 * UUID
+
+* Namespaced identifier (NI)
 
 * URI
 
