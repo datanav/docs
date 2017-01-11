@@ -5036,7 +5036,8 @@ Prototype
         "timezone": "UTC",
         "pool_size": 10,
         "pool_timeout": 30,
-        "pool_max_overflow": 10
+        "pool_max_overflow": 10,
+        "pool_recycle": 1800
     }
 
 Column type mapping
@@ -5084,6 +5085,14 @@ Properties
      - How many connections over the ``pool_size`` are allowed before refusing to establish a incoming connection. This
        means that the absolute hard limit of connections in a connection pool is ``pool_size`` + ``pool_max_overflow``.
      - 10
+     -
+
+   * - ``pool_recycle``
+     - Integer
+     - This configuration option prevents the pool from using a particular connection that has passed a certain age,
+       and is appropriate for database backends such as MySQL that automatically close connections that have been stale
+       after a particular period of time. Note that this doesn't affect any open/active connections.
+     - 1800
      -
 
 The specific SQL systems available are:

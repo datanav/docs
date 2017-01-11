@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-01-11
+----------
+*  Documented the ``pool_recycle`` option on :ref:`SQL systems <sql_system>` and changed its default from -1 (no recycling) to 1800 (30 minutes).
+
 2017-01-06
 ----------
 *  Added the :ref:`merge <merge_source>` source. This is a data source that is able to infer the sameness of entities across multiple datasets.
