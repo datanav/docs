@@ -4114,7 +4114,8 @@ Properties
    * - ``whitelist``
      - List<String>
      - The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
-     - ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
+       ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
+     -
      -
 
    * - ``blacklist``
