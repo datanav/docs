@@ -487,8 +487,8 @@ Properties
      - Req
 
    * - ``datasets``
-     - List<String{>=2}>
-     - A list of two or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
+     - List<String{>=1}>
+     - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
      -
      - Yes
 
@@ -612,10 +612,12 @@ already merged entities downstream.
 
 .. WARNING::
 
-   Do not remove or change the order of the datasets in the
-   ``datasets`` property. Doing so will lead to inconsistent
-   results. Adding or renaming datasets is OK though. If you need to
-   do this then you should rename the pipe and reset the sink.
+   Do not remove a dataset from the ``datasets`` property nor change
+   the order of the datasets in the ``datasets`` property. Doing so
+   may lead to inconsistent results. Adding or renaming datasets is OK
+   though as this won't affect the order of the datasets. If you need
+   to do this then you should reset the pipe and maybe also delete the
+   target dataset.
 
 The union datasets source
 -------------------------
