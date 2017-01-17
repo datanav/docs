@@ -156,13 +156,13 @@ Explanation:
    ::
 
     [{
-      "_id": 100,
+      "_id": "100",
       "amount": 320,
       "order_lines": [...],
       "cust_id": "1"
     },
     {
-      "_id": 200,
+      "_id": "200",
       "amount": 500
       "order_lines": [...],
       "cust_id": "1"
@@ -174,11 +174,11 @@ Explanation:
    ::
 
     [{
-      "_id": 100,
+      "_id": "100",
       "amount": 320
     },
     {
-      "_id": 200,
+      "_id": "200",
       "amount": 500
     }]
 
@@ -189,11 +189,11 @@ Explanation:
    ::
 
     [{
-      "_id": 100,
+      "_id": "100",
       "amount": 320
     },
     {
-      "_id": 200,
+      "_id": "200",
       "amount": 500
     }]
 
