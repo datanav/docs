@@ -156,14 +156,14 @@ Explanation:
    ::
 
     [{
-      "_id": 200,
-      "amount": 500
+      "_id": 100,
+      "amount": 320,
       "order_lines": [...],
       "cust_id": "1"
     },
     {
-      "_id": 100,
-      "amount": 320,
+      "_id": 200,
+      "amount": 500
       "order_lines": [...],
       "cust_id": "1"
     }]
@@ -174,12 +174,12 @@ Explanation:
    ::
 
     [{
-      "_id": 200,
-      "amount": 500
-    },
-    {
       "_id": 100,
       "amount": 320
+    },
+    {
+      "_id": 200,
+      "amount": 500
     }]
 
    | The order entites are then ``sorted`` by their ``amount``
@@ -212,6 +212,11 @@ Things to note:
 - Transform functions are applied in the order given. The order is
   significant, and one transform can use target entity properties
   created by earlier transform function.
+
+- the hops function is deterministic but not sorted (it produces deterministic order
+  based on the ``_id`` property of the entities within each dataset it processes).
+  You must apply the ``sorted`` function to the result of a hops join to achieve a
+  particular order.
 
 - The filter function can be used to stop transformation of individual
   entities, effectively filtering them out of the output stream.
@@ -1945,6 +1950,12 @@ Hops
          of values by the ``return`` clause that is then returned by
          the function.
 
+       | Note that the result of the ``hops`` function is deterministic based on the
+         ``_id`` property of the entities processed within each dataset. I.e.. re-running a DTL transform with
+         a ``hops`` function using the exact same entities in the source and in the datasets in the ``datasets`` property
+         will yield the same order of the result. You should apply a ``sorted*`` function to the result to get a
+         particular order (for example on a particular property, or if you use the ``return`` keyword).
+
      - ::
 
           ["hops", {
@@ -1982,7 +1993,8 @@ Hops
 
        | Recursively retrieve the source entity's daughters (and
          granddaughters and so on) and then return the names of all
-         their hobbies.
+         their hobbies. Please note that the result list is not automatically sorted on the ``name`` property - if order
+         matters, a ``sorted`` function must be applied before the result is used.
 
 
 Entity lookups
