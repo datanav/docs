@@ -2089,7 +2089,7 @@ Namespaced identifiers
        |
        | Translates input values to namespaced identifiers. Only strings in VALUES
          will be cast to namespaced identifiers. Note that no escaping is done on
-         the strings.
+         the strings. If NAMESPACE is omitted, then the global namespace is used.
      - | Constructs a new namespaced identifier.
        |
        | ``["ni", "foo", "bar"]``
