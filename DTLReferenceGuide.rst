@@ -474,6 +474,9 @@ of the argument. Here are some cardinalites that you'll come across:
 Transforms
 ==========
 
+A transform function is a function that has side-effects, typically
+modifiying the target entity, and has no return value.
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -481,6 +484,8 @@ Transforms
    * - Function
      - Description
      - Examples
+
+       .. _`dtl_transform-if`:
 
    * - ``if``
      - | *Arguments:*
@@ -508,6 +513,8 @@ Transforms
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
 
+       .. _`dtl_transform-comment`:
+
    * - ``comment``
      - | *Arguments:*
        |   COMMENTS(value-expression{>=0})
@@ -525,6 +532,8 @@ Transforms
        |      ``"Third line"]``
        |
        | A comment that spans multiple lines.
+
+       .. _`dtl_transform-filter`:
 
    * - ``filter``
      - | *Arguments:*
@@ -571,12 +580,14 @@ Transforms
        | Stop processing.
        |
 
+       .. _`dtl_transform-add`:
+
    * - ``add``
      - | *Arguments:*
-       |   PROPERTY(string{1})
+       |   PROPERTIES(string{1})
        |   VALUES(value-expression{1})
        |
-       | Adds the PROPERTY field to the target entity with the values returned
+       | Adds the PROPERTIES field(s) to the target entity with the values returned
          by evaluating the VALUES expression.
      - | ``["add", "age", 26]``
        |
@@ -586,13 +597,21 @@ Transforms
        |
        | Adds the ``upper_name`` property to the target entity. The value is
          the uppercased version of the source entity's ``name`` property.
+       |
+       | ``["add",``
+       |   ``["concat", "x-", "_S.key"], "_S.value"]``
+       |
+       | Adds the property returned by the ``concat`` function and assigns it the
+         value returned by ``_S.value``.
+
+       .. _`dtl_transform-default`:
 
    * - ``default``
      - | *Arguments:*
-       |   PROPERTY(string{1})
+       |   PROPERTIES(string{1})
        |   VALUES(value-expression{1})
        |
-       | Adds the PROPERTY field to the target entity with the values returned
+       | Adds the PROPERTIES field(s) to the target entity with the values returned
          by evaluating the VALUES expression, unless the property already exists.
          ``default`` behaves exactly like ``add``, except that it does not add
          the property if the property already exists on the target entity. If
@@ -607,6 +626,14 @@ Transforms
        | Adds the ``upper_name`` property to the target entity, if
          the property does not exists.. The value is
          the uppercased version of the source entity's ``name`` property.
+       |
+       | ``["default",``
+       |   ``["concat", "x-", "_S.key"], "_S.value"]``
+       |
+       | Adds the property returned by the ``concat`` function and assigns it the
+         value returned by ``_S.value``, if the property does not exists..
+
+       .. _`dtl_transform-remove`:
 
    * - ``remove``
      - | *Arguments:*
@@ -623,6 +650,8 @@ Transforms
        |
        | Removes all properties matching the ``temp_*`` wildcard pattern from
          the target entity.
+
+       .. _`dtl_transform-copy`:
 
    * - ``copy``
      - | *Arguments:*
@@ -643,10 +672,14 @@ Transforms
        | Copies all properties starting with ``a`` from the source entity to the
          target entity, but not those starting with ``ab``.
        |
-       | ``["copy", ["list", "a*", "b*"], ["list", "ab*", "ba*"]]``
+       | ``["copy",``
+       |   ``["list", "a*", "b*"],``
+       |   ``["list", "ab*", "ba*"]]``
        |
        | Copies all properties starting with ``a`` or ``b`` from the source entity
          to the target entity, but not those starting with ``ab`` or ``ba``.
+
+       .. _`dtl_transform-rename`:
 
    * - ``rename``
      - | *Arguments:*
@@ -661,6 +694,13 @@ Transforms
        |
        | Copies the ``age`` field from the source entity and adds it as
          ``current_age`` on the target entity.
+       |
+       | ``["rename",``
+       |   ``["concat", "in-", "_S.key"],``
+       |   ``["concat", "out-", "_S.key"]]``
+       |
+       | Copies the value of the property returned by the first ``concat`` function
+         and assigns it to the property returned by the second ``concat`` function.
 
        .. _`dtl_transform-merge`:
 
@@ -748,6 +788,8 @@ Transforms
 Expression language
 ===================
 
+An expression language function is a function that has no side-effects
+and returns a single value or a list of values.
 
 Logical
 -------
