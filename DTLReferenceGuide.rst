@@ -3071,12 +3071,21 @@ Dictionaries / Entities
 
    * - ``dict``
      - | *Arguments:*
-       |   ITEMS(value-expression{1})
+       |   EMPTY{0} or ITEMS(value-expression{1}) or (KEY, VALUE){>=0)
        |
-       | Takes a list of key+value pair tuples and returns a dictionary with
-         those tuples as keys and values. Note that the last key in the tuple list
-         wins. Values are not two-element tuples are ignored.
-     - | ``["dict",``
+       | If EMPTY, i.e. no arguments given, then an empty dict (``{}``) is returned.
+       |
+       | If ITEMS specified, then it takes a list of key+value pair tuples and
+         returns a dictionary with those tuples as keys and values. Note that
+         last key  wins. Values are not two-element tuples are ignored.
+       |
+       | If KEY+VALUE pairs are given, then a new dict with those pairs as keys and
+         values. Note that last key  wins.
+     - | ``["dict"]``
+       |
+       | Returns ``{}``.
+       |
+       | ``["dict",``
        |     ``["list",``
        |         ``["list", "A", 1],``
        |         ``["list", "B", 2],``
@@ -3084,9 +3093,15 @@ Dictionaries / Entities
        |
        | Returns ``{"A": 1, "B": 2, "C": 3}``.
        |
-       | ``["dict", ["list", "X", 123, ["A", 1]]``
+       | ``["dict", ["list", "X", 123, ["list", "A", 1]]``
        |
        | Returns ``{"A": 1}``.
+       |
+       | ``["dict",``
+       |   ``"a", ["upper", "a"],``
+       |   ``["lower", "B"], "B"]``
+       |
+       | Returns ``{"a": "A", "b": "B"}``.
 
    * - ``is-dict``
      - | *Arguments:*
