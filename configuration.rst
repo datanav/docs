@@ -3320,7 +3320,8 @@ Prototype
         "commit_within": null,
         "commit_at_end": true,
         "prefix_includes": ["prefix_set1", "prefix_set2"],
-        "keep_existing_solr_ids": false
+        "keep_existing_solr_ids": false,
+        "maintain_id_links": false
     }
 
 Properties
@@ -3383,7 +3384,16 @@ Properties
        The cons of doing this is that it requires a http-request to solr for *each and every*
        entity, so it is *very* expensive. This option should therefore be set to false in
        cases where the id-problem is not likely to occur.
-     - false
+     - true
+     -
+
+   * - ``maintain_id_links``
+     - Boolean
+     - This can be set to ``true`` in order to maintain links to documents in the Solr index. If the current
+       document doesn't exist in the solr index (via its ``id`` property), but there is a match in the ``ids`` property
+       of some other document(s), this setting will force the new document to use ab existing id from the index.
+       This makes sure any links to an existing document in the Solr index is kept (for example bookmarked documents).
+     - true
      -
 
 Example configuration
