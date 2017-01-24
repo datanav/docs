@@ -1976,6 +1976,16 @@ Hops
           particular ``hops`` function.  It can only be specified on the
           last HOP_SPEC argument.
 
+       7. ``trace``: OPTIONAL. A string. The default is not set.
+          If set, it is used to enable gathering of statistics for the execution of
+          the ``hops`` function during runtime. Currently this tracks the maximum
+          cardinality of the join statements in the ``hops``. This information
+          will be available in the pipe execution log in the ``pump-completed`` and
+          ``pump-failed`` entities. The value of the ``trace`` property
+          should be unique to the particular ``hops`` function as it
+          will be used to key the statistics gathered about its execution.
+          The ``trace`` property should only be specified on the last HOP_SPEC argument.
+
        | If multiple HOP_SPEC arguments are given, then the output of
          a HOP_SPEC is passed on as the input to the next. This is a
          convenient way of chaining hops together. It is mostly useful
