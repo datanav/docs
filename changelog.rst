@@ -3,7 +3,7 @@ Changelog
 
 2017-02-01
 ----------
-* Datasets are not scheduled for auto compaction once every 24 hours. The default is to keep the last 2 versions up until the current time.
+* Datasets are now scheduled for automatic compaction once every 24 hours. The default is to keep the last 2 versions up until the current time. It is possible to customize the automatic compaction. See documentation on :ref:`compaction <pipe_compaction>` for more information.
 
 2017-01-26
 ----------
