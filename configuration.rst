@@ -327,14 +327,25 @@ Properties
 
    * - ``compaction.keep_versions``
      - Integer
-     - The number of unique versions of an entity to keep around. The default is ``2``, which is the minimum value allowed.
+     - The number of unique versions of an entity to keep around. The default is ``2``,
+       which is the minimum value allowed.
      - ``2``
      - No
 
    * - ``compaction.time_threshold_hours``
      - Integer
-     - Specifies the threshold for how old entities must be before they are considered for compaction. This property is usually used when you want to keep entities around for a certain time.
+     - Specifies the threshold for how old entities must be before they are considered
+       for compaction. This property is usually used when you want to keep entities
+       around for a certain time.
      - ``null``
+     - No
+
+   * - ``compaction.time_threshold_hours_pump``
+     - Integer
+     - Same as ``compaction.time_threshold_hours``, but applies to the pipe's pump
+       execution dataset. Pump execution datasets are always trimmed by time.  The
+       default is 30 days, which is the minimum value allowed.
+     - ``720``
      - No
 
 
