@@ -1269,6 +1269,7 @@ Prototype
        "primary_key": ["list","of","column","names"],
        "whitelist": ["list","of","column","names","to","include"],
        "blacklist": ["list","of","column","names","to","exclude"],
+       "preserve_empty_strings": false,
        "delimiter": ","
     }
 
@@ -1362,6 +1363,12 @@ Properties
      - The names of the columns to exclude from the generated entities. If there is a ``whitelist`` also specified, the
        blacklist operates on the values of the whitelist (and not the whole columnset).
      -
+     -
+
+   * - ``preserve_empty_strings``
+     - Boolean
+     - If set to ``true`` will include column values that are empty strings. By default these are omitted.
+     - False
      -
 
    * - ``delimiter``

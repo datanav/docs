@@ -3,7 +3,9 @@ Changelog
 
 2017-01-26
 ----------
+<<<<<<< 0a3ac6eebfd8e6de9c41ea4f5063a87932600837
 * The SQL source no longer includes columns with null values by default. You can include them by setting the ``preserve_null_values`` property of the SQL source to ``true``. Note that this is a change of the previous default behaviour.
+* The CSV source no longer includes empty string values by default. You can include these by setting the CSV source property ``preserve_empty_strings`` to ``true``. Note that this is a change in the default behaviour.
 
 2017-01-23
 ----------
