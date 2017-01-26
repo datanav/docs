@@ -1045,6 +1045,7 @@ Prototype
         "whitelist": ["columns","to","include"],
         "blacklist": ["columns","to","exclude"],
         "fetch_size": 1000,
+        "preserve_null_values": false,
         "schema": "default-schema-name-if-included"
     }
 
@@ -1146,6 +1147,12 @@ Properties
      - The names of the columns to exclude from the generated entities. If there is a ``whitelist`` also specified, the
        blacklist operates on the values of the whitelist (and not the whole columnset).
      -
+     -
+
+   * - ``preserve_null_values``
+     - Boolean
+     - If set to ``true`` will include null values in the entities produces by this source. By default they are omitted.
+     - False
      -
 
    * - ``fetch_size``
