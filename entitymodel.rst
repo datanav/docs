@@ -26,7 +26,7 @@ with. The following data prototype explains these special properties.
   }
 
 The entity data model supports a wide range of data types including,
-string, integer, decimal, boolean, URI, namespaced identifiers, bytes
+string, integer, decimal, boolean, namespaced identifier, URI, bytes
 and datetime. Over the wire both a binary and JSON representation is
 used.
 
@@ -181,13 +181,13 @@ types that are not recognized will be treated as string values.
      - Description
      - Example
 
-   * - URI
-     - Uniform Resource Identifier (URI).
-     - ``"~rhttp://www.sesam.io/"``
-
    * - NI
      - Namespaced Identifier (NI)
      - ``"~:mynamespace:123"``
+
+   * - URI
+     - Uniform Resource Identifier (URI)
+     - ``"~rhttp://www.sesam.io/"``
 
    * - Date
      - A date value. The valid range is from ``"~t0001-01-01"`` to

@@ -234,6 +234,64 @@ Properties
      -
      -
 
+Namespaces
+----------
+
+Namespaces are used by identities, properties and namespaced identifier values. A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
+
+As an alternative to enabling namespaces on each pipe one can set the ``namespaces`` property to ``true`` in the service metadata.
+
+Example of an entity with namespaces:
+
+::
+
+  {
+    "_id": "users:123",
+    "user:username": "erica",
+    "user:first_name": "Erica",
+    "user:manager": "~:users:101"
+  }
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``namespaces``
+     - Object or Boolean
+     - If set to ``true`` then the pipe has a current namespace. The pipe's ``id`` property use then used for the pipe's current namespace. If ``namespaces`` is a dict, then the pipe will also have a current namespace, but has the specific identity and property namespaces specified in ``namespaces.identity`` and ``namespaces.property``.
+     - ``false``
+     -
+
+   * - ``namespaces.identity``
+     - String
+     - The namespace used for identifiers. The default value is the pipe's id.
+     - ``pipe.id``
+     -
+
+   * - ``namespaces.property``
+     - String
+     - The namespace used for properties. The default value is the pipe's id.
+     - ``pipe.id``
+     -
+
+   * - ``add_namespaces``
+     - Boolean
+     - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on input pipes.
+     - ``false``
+     -
+
+   * - ``remove_namespaces``
+     - Boolean
+     - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on output pipes.
+     - ``false``
+     -
+
 
 Example configuration
 ---------------------
