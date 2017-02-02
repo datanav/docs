@@ -239,7 +239,11 @@ Namespaces
 
 Namespaces are used by identities, properties and namespaced identifier values. A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
 
-As an alternative to enabling namespaces on each pipe one can set the ``namespaces`` property to ``true`` in the service metadata.
+.. NOTE::
+
+   Namespaced identifiers can be enabled by setting the
+   ``namespaced_identifiers`` property to ``true`` in the service
+   metadata.
 
 Example of an entity with namespaces:
 
@@ -262,12 +266,6 @@ Example of an entity with namespaces:
      - Default
      - Req
 
-   * - ``namespaces``
-     - Object or Boolean
-     - If set to ``true`` then the pipe has a current namespace. The pipe's ``id`` property use then used for the pipe's current namespace. If ``namespaces`` is a dict, then the pipe will also have a current namespace, but has the specific identity and property namespaces specified in ``namespaces.identity`` and ``namespaces.property``.
-     - ``false``
-     -
-
    * - ``namespaces.identity``
      - String
      - The namespace used for identifiers. The default value is the pipe's id.
@@ -283,13 +281,17 @@ Example of an entity with namespaces:
    * - ``add_namespaces``
      - Boolean
      - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on input pipes.
-     - ``false``
+
+       If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: ``csv``, ``fake``, ``ldap`` and ``sql``.
+     - Source default
      -
 
    * - ``remove_namespaces``
      - Boolean
      - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on output pipes.
-     - ``false``
+
+       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``: ``csv_endpoint``, ``elasticsearch``, ``influxdb``, ``mail``, ``rest``, ``sms``, ``solr`` and ``sql``.
+     - Sink default
      -
 
 
