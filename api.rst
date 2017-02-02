@@ -64,7 +64,7 @@ header property "Authorization" to the string "Bearer " concatenated with the to
 
 ::
 
-  curl -d @cred.txt http://localhost:9043/api/jwt
+  curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt
 
 This was built-in to the shell script snippet we used to set up the ``culrJWT`` alias previously; the
 "cred.txt" file contains the text "email=YOUR_EMAIL_ADDRESS&password=YOUR_PASSWORD" without the quotes and substituted

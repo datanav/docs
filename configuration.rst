@@ -4045,6 +4045,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "prefix_includes": ["geo_fylke"]
     }
 
+.. _sql_sink:
+
 The SQL sink
 ------------
 
