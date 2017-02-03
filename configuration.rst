@@ -265,7 +265,6 @@ Example of an entity with namespaces:
      - Description
      - Default
      - Req
-
    * - ``namespaces.identity``
      - String
      - The namespace used for identifiers. The default value is the pipe's id.
@@ -294,6 +293,61 @@ Example of an entity with namespaces:
      - Sink default
      -
 
+.. _pipe_compaction:
+
+Compaction
+----------
+
+Compaction deletes the oldest entities in a dataset and reclaims space for those
+entities in the dataset's indexes.
+
+Datasets that are written to by pipes using the
+:ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours. The
+default is to keep the last two versions of every entity up until the
+current time.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``compaction.automatic``
+     - Boolean
+     - If ``true`` then the dataset is a candidate for automatic compaction.
+     - ``true``
+     - No
+
+   * - ``compaction.keep_versions``
+     - Integer
+     - The number of unique versions of an entity to keep around. The default is ``2``,
+       which is the minimum value allowed.
+     - ``2``
+     - No
+
+   * - ``compaction.time_threshold_hours``
+     - Integer
+     - Specifies the threshold for how old entities must be before they are considered
+       for compaction. This property is usually used when you want to keep entities
+       around for a certain time.
+     - ``null``
+     - No
+
+   * - ``compaction.time_threshold_hours_pump``
+     - Integer
+     - Same as ``compaction.time_threshold_hours``, but applies to the pipe's pump
+       execution dataset. Pump execution datasets are always trimmed by time.  The
+       default is 30 days, which is the minimum value allowed.
+     - ``720``
+     - No
+
 
 Example configuration
 ---------------------
@@ -317,6 +371,10 @@ The following example shows a pipe definition that exposes data from a SQL datab
        },
        "pump": {
            "schedule_interval": 30
+       },
+       "compaction": {
+           "keep_versions": 2,
+           "time_threshold_hours": 48
        }
    }
 
