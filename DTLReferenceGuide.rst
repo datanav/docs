@@ -633,6 +633,28 @@ modifiying the target entity, and has no return value.
        | Adds the property returned by the ``concat`` function and assigns it the
          value returned by ``_S.value``, if the property does not exists..
 
+       .. _`dtl_transform-make-ni`:
+
+   * - ``make-ni``
+     - | *Arguments:*
+       |   NAMESPACE(string{1})
+       |   FROM_PROPERTY(string{1})
+       |   TO_PROPERTY(string{0|1})
+       |
+       | Adds the FROM_PROPERTY field to the target entity's TO_PROPERTY with
+         string values made into namespaced identifiers in the NAMESPACE namespace.
+         If none of the values can be made into namespaced identifiers then nothing is added. If
+         TO_PROPERTY is omitted then it defaults to FROM_PROPERTY + ``-ni``.
+     - | ``["make-ni", "soccer", "referee", "ref"]``
+       |
+       | Adds the ``ref`` property with the value ``~:soccer:john.doe`` to the
+         target entity, if the source property has the value "john.doe".
+       |
+       | ``["make-ni", "hockey", "players"]``
+       |
+       | Adds the ``players-ni`` property to the target entity, if
+         any namespaced identifiers were created.
+
        .. _`dtl_transform-remove`:
 
    * - ``remove``
