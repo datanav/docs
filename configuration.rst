@@ -3798,8 +3798,7 @@ Prototype
 Properties
 ^^^^^^^^^^
 
-The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
-``body_template_file_property``:
+The configuration must contain at most one of ``body_template`` or ``body_template_property``:
 
 .. list-table::
    :header-rows: 1
@@ -3828,21 +3827,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``
        or ``body_template_file*``
-     -
-     -
-
-   * - ``body_template_file``
-     - String
-     - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
-       from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
-     -
-     -
-
-   * - ``body_template_file_property``
-     - String
-     - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
-       on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
-       it is mutually exclusive in use.
      -
      -
 
@@ -4322,8 +4306,8 @@ Prototype
 Properties
 ^^^^^^^^^^
 
-The configuration must contain at most one of ``body_template``, ``body_template_property``, ``body_template_file`` or
-``body_template_file_property``. The same applies to ``subject_template``.
+The configuration must contain at most one of ``body_template`` or ``body_template_property``. The same applies to
+``subject_template`` and ``subject_template_property``.
 
 .. list-table::
    :header-rows: 1
@@ -4355,21 +4339,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      -
      -
 
-   * - ``body_template_file``
-     - String
-     - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the body message
-       from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
-     -
-     -
-
-   * - ``body_template_file_property``
-     - String
-     - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
-       on disk (i.e. inlining the body template filename in the entity). As with the other body template options,
-       it is mutually exclusive in use.
-     -
-     -
-
    * - ``subject_template``
      - String
      - Should contain a ``Jinja template`` to use for constructing subjects for the email messages. The template
@@ -4382,21 +4351,6 @@ The configuration must contain at most one of ``body_template``, ``body_template
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities). It should not be used at the same time as ``subject_template``
        or ``subject_template_file*``
-     -
-     -
-
-   * - ``subject_template_file``
-     - String
-     - Should refer to a text file on disk containing the ``Jinja template`` to use for constructing the message subject
-       from the incoming entity. It is mutually exclusive with the other ways of specifying a body template.
-     -
-     -
-
-   * - ``subject_template_file_property``
-     - String
-     - The ``id`` of a property in the incoming entity to use for looking up the file name of the ``Jinja template``
-       on disk (i.e. inlining the subject template filename in the entity). As with the other subject template options,
-       it is mutually exclusive in use.
      -
      -
 
