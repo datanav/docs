@@ -282,7 +282,7 @@ Example of an entity with namespaces:
      - Boolean
      - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on input pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: ``csv``, ``fake``, ``ldap`` and ``sql``.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: :ref:`csv <csv_source>`, :ref:`fake <fake_source>`, :ref:`ldap <ldap_source>`, :ref:`sql <sql_source>`, :ref:`embedded <embedded_source>`, :ref:`http_endpoint <http_endpoint_source>`, and :ref:`json <json_source>`.
      - Source default
      -
 
@@ -290,7 +290,7 @@ Example of an entity with namespaces:
      - Boolean
      - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on output pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``: ``csv_endpoint``, ``elasticsearch``, ``influxdb``, ``mail``, ``rest``, ``sms``, ``solr`` and ``sql``.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`influxdb <influxdb_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
      - Sink default
      -
 
@@ -1302,6 +1302,8 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
             "updated_query": "select * from my_table where updated >= :since"
         }
     }
+
+.. _csv_source:
 
 The CSV source
 --------------
@@ -3708,7 +3710,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _smsmessage_sink:
+.. _sms_message_sink:
 
 The SMS message sink (Experimental)
 -----------------------------------
@@ -4104,6 +4106,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "write_sdshare_updated": true,
             "prefix_includes": ["geo_fylke"]
     }
+
+.. _sql_sink:
 
 The SQL sink
 ------------
@@ -6107,7 +6111,7 @@ The Twilio system (Experimental)
 --------------------------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
-:ref:`SMS message sinks <smsmessage_sink>` to construct and send SMS messages from entities.
+:ref:`SMS message sinks <sms_message_sink>` to construct and send SMS messages from entities.
 
 It has the following properties:
 
