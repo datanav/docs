@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-02-06
+----------
+* Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_message_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
+
 2017-02-03
 ----------
 * For security reasons, the Mail and SMS sinks no longer support file-based templates. Note that this is a non-backwards compatible change. You can use :ref:`environment variables <environment_variables>` and upload your existing template files using the environment variable API or the corresponding Management Studio form.

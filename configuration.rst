@@ -4296,6 +4296,8 @@ Prototype
         "system": "smtp-system-id",
         "body_template": "static jinja template as a string",
         "body_template_property": "id-of-property-to-get-as-a-body-template",
+        "text_body_template": "static text only jinja template as a string",
+        "text_body_template_property": "id-of-property-to-get-as-a-text-body-template",
         "subject_template": "static jinja template as a string",
         "subject_template_property": "id-of-property-to-get-as-a-subject-template",
         "recipients": "static,comma,separated,list,of,email,addresses",
@@ -4334,8 +4336,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
    * - ``body_template_property``
      - String
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
-       (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``
-       or ``body_template_file*``
+       (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``.
      -
      -
 
@@ -4349,8 +4350,20 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
    * - ``subject_template_property``
      - String
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
-       (i.e for inlining the templates in the entities). It should not be used at the same time as ``subject_template``
-       or ``subject_template_file*``
+       (i.e for inlining the templates in the entities). It should not be used at the same time as ``subject_template``.
+     -
+     -
+
+   * - ``text_body_template``
+     - String
+     - Should contain a ``Jinja template`` to use for constructing plain-text messages. The template will have access to all entity properties by name.
+     -
+     -
+
+   * - ``text_body_template_property``
+     - String
+     - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
+       (i.e for inlining the templates in the entities) used to construct plain text messages. It should not be used at the same time as ``text_body_template``
      -
      -
 
@@ -4414,6 +4427,14 @@ In the above example the entities sent to the sink should have at least the prop
         "some_other_property": "Some other value"
     }
 
+A note on multi-part messages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To send multi-part email messages containing both a HTML and a plain-text version, you should provide templates for both
+``body_template`` (or ``body_template_property``) and ``text_body_template`` (or ``text_body_template_property``).
+The former should then contain your HTML message and the latter your plain-text version. If you omit the ``text_*``
+properties and the body template contains HTML, the sink will attempt to extract a text-only version of the HTML
+on a best-effort basis; i.e. this might not preserve the information contained in the HTML in the desired way.
 
 The null sink
 -------------
