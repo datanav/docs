@@ -9,23 +9,40 @@ Overview
 Introduction
 ------------
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems, transforming data, and pushing or providing data to target systems. Sesam stores data in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched from the source systems on a regular basis and the entities are stored in the log only if they have changed from the last time the entity was seen.
+Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data
+from :ref:`source <source_section>` :ref:`systems <system_section>` , :ref:`transforming data <transform_section>`, and :ref:`pushing or providing data <sink_section>`
+to target :ref:`systems <system_section>`. Sesam stores data in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched
+from the source systems on a regular basis and the :doc:`entities <entitymodel>` are stored in the log only if they have changed from the
+last time the entity was seen.
 
-Entities in the datasets can be processed using the Data Transformation Language. DTL takes a stream of entities as input and returns a new stream of transformed entities. It can join data from other datasets to create new entities. Data produced via DTL can be stored in new datasets to be exposed or sent to applications that need it.
+:doc:`Entities <entitymodel>` in the datasets can be processed using the :doc:`Data Transformation Language <DTLReferenceGuide>`.
+DTL takes a stream of entities as input and returns a new stream of transformed entities. It can join data from other
+datasets to create new entities. Data produced via DTL can be stored in new datasets to be exposed or sent to applications that need it.
 
-The final piece of Sesam is to deliver data from a dataset to a sink. Sinks are used to write data into target systems or send it to service endpoints.
+The final piece of Sesam is to deliver data from a dataset to a :ref:`sink <sink_section>`. Sinks are used to write data into target :ref:`systems <system_section>`
+or send it to service endpoints.
 
-Sesam provides implementations for many types of sources, including relational databases and custom JSON streams. It also provides a number of core Sink implementations such as the relational database and HTTP Post sinks.
+Sesam provides implementations for many types of :ref:`sources <source_section>`, including :ref:`relational databases <sql_source>` and custom JSON streams.
+It also provides a number of core Sink implementations such as the :ref:`relational database <sql_sink>` and :ref:`HTTP endpoint sinks <http_endpoint_sink>`.
 
 Installation
 ------------
 
-`Installation instructions <https://portal.sesam.in/>`_ can be found in the `Sesam Portal <https://portal.sesam.in/>`_. Once it is installed and running, you can check the Sesam Management Studio `here <http://localhost:9042/gui>`_.
+You must sign up using the `Sesam Portal <https://portal.sesam.in/>`_ to install Sesam. The default installation type is a cloud based installation,
+but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation.
+
+You can also access an existing Sesam installation by registering in the Sesam Portal and obtaining an invitation from someone with
+management permissions for the existing installation.
+
+Once you have have access to a running Sesam installation in the portal, you can access the Sesam Management Studio by
+clicking on its name on the home page in the Portal.
 
 License
 -------
 
-Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.in/>`_.
+Sesam requires a valid license to function. Without a valid license the pipes will stop running.
+Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.in/>`_.
+A three month trial license is available for evaluation purposes.
 
 .. _overview-getting-started:
 
@@ -33,8 +50,6 @@ Getting Started
 ---------------
 
 Now that you have Sesam running, lets start using it.
-
-(This documentation is also available under ``/docs`` in your local installation.)
 
 Pre-Requisites
 ==============
@@ -57,9 +72,11 @@ We recommend using HomeBrew to install the pre-requisites. The following sequenc
   # Install Pip
   python3 -m ensurepip
 
-  # Install the sesam client - see note below for how to install and run sesam in a virtual environment instead
+  # Install the sesam client
   pip3 install -U sesamclient
 
+See :ref:`note below <python_virtual_environment>` for how to install and run the sesam client inside a
+Python virtual environment instead (i.e. instead of a system-wide install).
 
 If you need Git it can be installed with:
 
@@ -80,9 +97,12 @@ To install the SesamClient run the following:
 
 ::
 
-  # Install the Sesam client - see note below for how to install and run sesam in a virtual environment instead
+  # Install the Sesam client
   pip install -U sesamclient
 
+
+See :ref:`note below <python_virtual_environment>` for how to install and run the sesam client inside a
+Python virtual environment instead (i.e. instead of a system-wide install).
 
 Git client can be installed from:
 
@@ -90,7 +110,24 @@ Git client can be installed from:
 
   https://desktop.github.com/
 
-Curl is another utility that is natively available on Mac OSX and Linux. It is available in Powershell, but the command line options may differ.
+
+Curl is another utility that is natively available on Mac OSX and Linux, and possible to run on windows as well.
+
+On windows, we recommend installing a proper ``bash`` shell environment either through the
+Microsoft `"Bash on Ubuntu on Windows" <https://msdn.microsoft.com/en-us/commandline/wsl/about>`_
+program or by installing  `Cygwin <http://cygwin.com>`_ . You can also run a Linux distribution through a virtual machine,
+for example using VMWare or VirtualBox. Finally, you can use a cloud provider such as Azure, AWS or Digital Ocean to
+provision and run a Linux VM for you. We recommend a recent Ubuntu LTS distribution, but any recent distribution
+that supports Python 3 (ideally 3.5+) will do.
+
+Installing ``curl`` on a "proper" Linux is usually straight forward. Consult the documentation for your Linux distribution
+for details. For Ubuntu based distributions you can issue the command::
+
+  (sudo) apt-get install curl
+
+You might or might not need the "sudo" command in front, depending on your privileges.
+
+In Cygwin on Windows, the "curl" package is available through its package management GUI.
 
 On Linux
 ^^^^^^^^
@@ -120,9 +157,12 @@ To install the sesam client:
 
 ::
 
-  # Install the sesam client - see note below for how to install and run sesam in a virtual environment instead
+  # Install the sesam client
   (sudo) pip3 install -U sesamclient
 
+
+See :ref:`note below <python_virtual_environment>` for how to install and run the sesam client inside a
+Python virtual environment instead (i.e. instead of a system-wide install).
 
 The git client can usually be installed by the distribution package manager:
 
@@ -132,6 +172,8 @@ The git client can usually be installed by the distribution package manager:
   (sudo) apt-get install git
 
   # For other distributions consult the documentation
+
+.. _python_virtual_environment:
 
 Running in a python virtual environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -165,11 +207,11 @@ Any time you want to use your new virtual environment in a shell prompt, you wil
 
 ::
 
-  # Linux and OSX (it will be deactivated when you exit the shell session)
+  # Windows bash shell, Linux and OSX (it will be deactivated when you exit the shell session)
   source your-venv-folder/bin/activate
 
 
-On windows:
+On windows (in CMD or Powershell):
 
 ::
 
@@ -219,21 +261,15 @@ The project contains three files:
   $ ls -l orders/
   -rw-r--r--  1 nobody  wheel  505 Jun  2 09:49 orders.json
 
-Serve data files
-================
+The data contents
+=================
 
-First we'll start an HTTP server to serve the JSON files containing the data. To do this we can use the built-in Python HTTP server that serves the files in the current directory. The Sesam service instance will then be able to download the data files from there.
-
-::
-
-  $ python3 -m http.server
-  Serving HTTP on 0.0.0.0 port 8000 ...
-
-Now we're serving the ``customers.json`` and ``orders.json`` files through the web server on port 8000. Look at what's being served by running the following ``curl`` command. Alternatively you can open the URLs in your web browser.
+Lets examine the contents of the ``customers.json`` and ``orders.json`` files; open them in your favourite text editor:
 
 ::
 
-  $ curl http://localhost:8000/customers/customers.json
+  customers.json:
+
   [
       {"_id": "1",
        "first_name": "John",
@@ -251,7 +287,9 @@ Now we're serving the ``customers.json`` and ``orders.json`` files through the w
 
 ::
 
-  $ curl http://localhost:8000/orders/orders.json
+  orders.json:
+
+
   [
       {"_id": "1000",
        "customer_id": "1",
@@ -274,76 +312,98 @@ Now we're serving the ``customers.json`` and ``orders.json`` files through the w
 
 As you can see, the JSON files all contain arrays of objects, aka :doc:`entities <entitymodel>`.
 
-Edit the configuration files
-============================
-
-Before we import the configuration into the Sesam service we'll have to edit the ``sesam.conf.json``. Open the file in a text editor and replace the two ``YOUR-IP-HERE`` tokens with the IP address of your machine, i.e. the IP address of the web server you just started.
-
-.. note::
-
-    If you are using the appliance you can find the host IP by running:
-
-    ``curl http://localhost:8042/``
-
-    If you are running sesam-node localy use the ``ifconfig`` (or ``ipconfig``) command to find it.
-
-If your IP address is ``10.4.100.94`` then the two ``customer-system`` and ``order-system`` URL `systems <concepts.html#systems>`_ entities should look like this:
-
-::
-
-    {
-        "_id": "customer-system",
-        "type": "system:url",
-        "base_url": "http://10.4.100.94:8000/customers/"
-    },
-
-::
-
-    {
-        "_id": "order-system",
-        "type": "system:url",
-        "base_url": "http://10.4.100.94:8000/orders/"
-    },
-
 Import the configuration file
 =============================
 
-Now that the ``sesam`` tool is installed we can use it to import the configuration file:
+Now that the ``sesam`` tool is installed we can use it to import the configuration file using the Sesam API.
+
+Setting the base url
+^^^^^^^^^^^^^^^^^^^^
+
+The api will be served on the url you find on the management studio "settings" page under the "Connection url" heading.
+For a cloud instance it will typically be on the form "https://instance-guid.sesam.cloud/api".
+
+You can register this URL with the Sesam client using the ``config`` command:
 
 ::
 
-  $ sesam import sesam.conf.json
+    sesam config server.base_url https://instance-guid.sesam.cloud/api
+
+Or you can supply the URL to all commands using a ``--server_base_url https://instance-guid.sesam.cloud/api`` argument.
+
+You can now import your configuration file to the Sesam instance:
+
+::
+
+  $ sesam import sesam.conf.json (--server_base_url https://instance-guid.sesam.cloud/api)
   Read 5 config entities from these config-files:
    sesam.conf.json
 
-If the configuration file is not valid JSON it will be rejected by the server. This command imports the ``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its `service API <api.html>`_ running at ``http://localhost:9042/api/``. As you can see from the output, five configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are `systems <concepts.html#systems>`_.
+If the configuration file is not valid JSON it will be rejected by the server. This command imports the
+``sesam.conf.json`` :doc:`configuration file <configuration>` into the Sesam service instance via its
+`service API <api.html>`_ running at ``https://instance-guid.sesam.cloud/api``. As you can see from the output, five
+configuration entities were imported. Of those, three are `pipes <concepts.html#pipes>`_ and two are
+`systems <concepts.html#systems>`_.
 
-The configuration file contains two `pipes <concepts.html#pipes>`_ that read data from ``customers.json`` and  ``orders.json``. Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the entities into datasets called ``customers`` and ``orders`` respectively.
+The configuration file contains two `pipes <concepts.html#pipes>`_ that will receive data from ``customers.json`` and  ``orders.json``.
+Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the received entities into datasets
+called ``customers`` and ``orders`` respectively.
 
-There is also a third pipe that reads the ``customers`` dataset and applies a :doc:`DTL <DTLReferenceGuide>` transform on the data. The transform will collect the orders for each customer, calculate the total sum for each order and the total sum for each customer. Customers with total order sum of less than 25.00 are filtered out. The resulting entities are then written to the ``customers-with-orders`` dataset.
+There is also a third pipe that reads the ``customers`` dataset and applies a :doc:`DTL <DTLReferenceGuide>` transform
+on the data. The transform will collect the orders for each customer, calculate the total sum for each order and the
+total sum for each customer. Customers with total order sum of less than 25.00 are filtered out.
+The resulting entities are then written to the ``customers-with-orders`` dataset.
 
-If you now look at the Sesam Management Studio you'll now see that there are two systems, ``order-system`` and ``customer-system``. They both point towards the *datahub*, which means that the data is flowing in that direction.
+If you now look at the Sesam Management Studio you'll now see that there are two systems,
+``order-system`` and ``customer-system``. They both point towards the *datahub*, which means that the data is flowing in that direction.
 
 .. image:: images/studio-after-import.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
+Uploading the data files
+========================
 
-Let's look at the data
-======================
+To upload the data files to a Sesam cloud installation, you can use a command line web client such as "curl".
+You will need to authenticate with the Sesam cloud service before you can upload your data.
+The rest of this document assumes you have done so, please follow the authentication steps outlined in
+the :doc:`API reference guide <api>` before continuing.
 
-When pipe configuration is imported into Sesam it will schedule their pumps. It will then start running the pumps at regular intervals. Use the links below to introspect the datasets. Replace ``localhost`` with the hostname of Sesam service instance.
+After obtaining a JWT token and using the ``curlJWT`` alias we established in the API reference guide document, we can
+post the contents of the ``customer.json`` and ``orders.json`` files to the endpoint receiver pipes we have defined.
+These pipes make available a HTTP REST endpoint on the form `<https://instance-guid.sesam.cloud/api/receivers/pipe-id/entities>`_,
+see the documentation for :ref:`HTTP endpoint source <http_endpoint_source>` for more details. After uploading our
+configuration, two new HTTP endpoints are available to us:
+
+.. parsed-literal::
+
+    `<https://instance-guid.sesam.cloud/api/receivers/customers/entities>`_
+    `<https://instance-guid.sesam.cloud/api/receivers/orders/entities>`_
+
+These endpoints accept JSON input. To upload a JSON document, we must create a HTTP POST request to these URLs.
+Issue the following command using hte ``curlJWT`` alias:
+
+::
+
+    curlJWT -X POST -H "Content-Type: application/json" --data @customer.json https://instance-guid.sesam.cloud/api/receivers/customers/entities
+    curlJWT -X POST -H "Content-Type: application/json" --data @orders.json https://instance-guid.sesam.cloud/api/receivers/orders/entities
+
+Let's look at the data in Sesam
+===============================
+
+When pipe configuration is imported into Sesam it will schedule their pumps. It will then start running the pumps at
+regular intervals. Use the links below to introspect the datasets.
 
 See the contents of the ``customers`` dataset here:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/api/datasets/customers/entities>`_
+  `<https://instance-guid.sesam.cloud/api/datasets/customers/entities>`_
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/customers/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -384,11 +444,11 @@ See the contents of the ``orders`` dataset here:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/api/datasets/orders/entities>`_
+  `<https://instance-guid.sesam.cloud/api/datasets/orders/entities>`_
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/orders/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -446,7 +506,9 @@ See the contents of the ``orders`` dataset here:
       }
   ]
 
-The customer and order data read into Sesam ended up in two datasets, ``customers`` and ``orders``. When entities are written into the dataset some extra metadata properties are added. You can see these in the output above. They all start with and underscore character ("``_``").
+The customer and order data posted into Sesam ended up in two datasets, ``customers`` and ``orders``. When entities are
+written into the dataset some extra metadata properties are added. You can see these in the output above.
+They all start with and underscore character ("``_``").
 
 * ``_id``: This is the *primary key* of the entity. It is always a string.
 * ``_deleted``: A boolean flag that says if the entity is deleted or not.
@@ -462,11 +524,11 @@ After a little while, when the datasets are loaded and the ``customers-with-orde
 
 .. parsed-literal::
 
-  `<http://localhost:9042/api/datasets/customers-with-orders/entities>`_
+  `<https://instance-guid.sesam.cloud/api/datasets/customers-with-orders/entities>`_
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/customers-with-orders/entities | python3 -m json.tool
   [
       {
           "_deleted": false,
@@ -538,20 +600,22 @@ It may also be useful to see what the entities look like before they are transfo
 
 .. parsed-literal::
 
-  `<http://localhost:9042/api/pipes/customers-with-orders/entities?transformed=false>`_
+  `<https://instance-guid.sesam.cloud/api/pipes/customers-with-orders/entities?transformed=false>`_
 
 You can also see the data as it is written to the pipe's sink. These entities have been read from the source and put through the DTL transform:
 
 .. parsed-literal::
 
-  `<http://localhost:9042/api/pipes/customers-with-orders/entities>`_
+  `<https://instance-guid.sesam.cloud/api/pipes/customers-with-orders/entities>`_
 
 Adding a new order
 ==================
 
-The Sesam service will reload the data files at regular intervals, so any edits you make to it will be picked up automatically. The pipes defined in the configuration will pump at regular intervals, so edits to ``customers.json`` and ``orders.json`` will also be reflected in the datasets. If you edit the configuration file, then you must reimport it.
+Any edits you make to the source data will need to be uploaded again using the HTTP POST request we did previously.
+Additionally, if you edit the configuration file, then you must reimport it.
 
-Let's add a new order for the customer with id ``2`` (Maria Hawkins). Open ``orders.json`` in your favourite text editor and add the following at the end of the JSON array:
+Let's add a new order for the customer with id ``2`` (Maria Hawkins). Open ``orders.json`` in your favourite text editor
+and add the following at the end of the JSON array:
 
 ::
 
@@ -562,11 +626,12 @@ Let's add a new order for the customer with id ``2`` (Maria Hawkins). Open ``ord
      ]}
 
 
-After the ``orders`` pump has run we can then see that the new order has been added to the ``orders`` dataset:
+After updating the data files, reposting them to the REST endpoints using curl, and after the ``orders`` pump has run
+we can then see that the new order has been added to the ``orders`` dataset:
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/orders/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/orders/entities | python3 -m json.tool
   [
       ...,
       {
@@ -587,11 +652,14 @@ After the ``orders`` pump has run we can then see that the new order has been ad
       }
   ]
 
-What happens next is a little piece of magic. Sesam does something called `dependency tracking <concepts.html#dependency-tracking>`_. It figures out that Maria Hawkins has received a new order, and that her ``customers`` entity must be reprocessed. Dependency tracking adds her existing ``customers`` entity to the head of the dataset with ``_tracked`` property set to ``true``. It is able to do this because it can infer it from the DTL transformation rules in the ``customers-with-orders`` pipe.
+What happens next is a little piece of magic. Sesam does something called `dependency tracking <concepts.html#dependency-tracking>`_.
+It figures out that Maria Hawkins has received a new order, and that her ``customers`` entity must be reprocessed.
+Dependency tracking adds her existing ``customers`` entity to the head of the dataset with ``_tracked`` property set to
+``true``. It is able to do this because it can infer it from the DTL transformation rules in the ``customers-with-orders`` pipe.
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/customers/entities | python3 -m json.tool
   [
       ...,
       {
@@ -608,11 +676,12 @@ What happens next is a little piece of magic. Sesam does something called `depen
       }
   ]
 
-The result of this is then that the entity is processed by the ``customers-with-orders`` pipe, effectively reprocessing the customer entity. The result of this will then look like this:
+The result of this is then that the entity is processed by the ``customers-with-orders`` pipe, effectively reprocessing
+the customer entity. The result of this will then look like this:
 
 ::
 
-  $ curl -s http://localhost:9042/api/datasets/customers-with-orders/entities | python3 -m json.tool
+  $ curlJWT -s https://instance-guid.sesam.cloud/api/datasets/customers-with-orders/entities | python3 -m json.tool
   [
       ...,
       {
@@ -675,133 +744,9 @@ The result of this is then that the entity is processed by the ``customers-with-
       }
   ]
 
-The end result is that Maria Hawkins now has *two* orders. The ``total`` property has also been updated to reflect the fact that there is a new order. Note also that the ``_previous`` property now has a value. It points back to the previous version of the entity. This way Sesam can track the history of entities.
-
-Pushing data out of Sesam
-=========================
-
-There are two ways that you can get the data out of Sesam. One way is to pull it out yourself by using the Service API. The other way is to have Sesam push it to an external service. In this section we'll set up a Python HTTP server that can accept entities pushed to it. The received entities will be written to individual files in a directory. The project is written in Python3 using the `Flask web framework <http://flask.pocoo.org/>`_.
-
-First we'll have to checkout the project files using ``git``:
-
-::
-
-  git clone https://github.com/sesam-io/python-datasink-template
-  cd python-datasink-template
-
-Next we'll have to install the project's dependencies:
-
-::
-
-   pip3 install -r service/requirements.txt
-
-Now start up the service:
-
-::
-
-  $ python3 service/datasink-service.py
-   * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
-   * Restarting with stat
-   * Debugger is active!
-   * Debugger pin code: 260-787-156
-
-The service is listening on port 5001. Entities pushed to it will be written to the ``./received`` directory.
-
-Next we'll have to define a pipe that reads the ``customers-with-orders`` dataset and writes the entities to a `JSON push sink <configuration.html#the-json-push-sink>`_. Add the following at the end of ``sesam.conf.json``. Replace the ``YOUR-IP_HERE`` token with the IP address of your machine.
-
-::
-
-      {
-          "_id": "customer-receiver-system",
-          "type": "system:url",
-          "base_url": "http://YOUR-IP-HERE:5001/"
-      },
-      {
-          "_id": "push-customers-with-orders",
-          "type": "pipe",
-          "source": {
-              "type": "dataset",
-              "dataset": "customers-with-orders"
-          },
-          "sink": {
-              "type": "json",
-              "system": "customer-receiver-system",
-              "url": "receiver"
-          }
-      }
-
-Save the file and run the following command to import the updated configuration:
-
-::
-
-  $ sesam import sesam.conf.json
-  Read 7 config entities from these config-files:
-   sesam.conf.json
-
-If the configuration file is not valid JSON it will be rejected by the server. In the overview page in the Sesam Management Studio you should now see that there are three systems. The new one has an arrow pointing out of the Datahub.
-
-.. image:: images/management-studio.png
-    :width: 800px
-    :align: center
-    :alt: Sesam Management Studio
-
-Within 30 seconds or so you'll see some activity in the service's console:
-
-::
-
-  $ python3 service/datasink-service.py
-   * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
-   * Restarting with stat
-   * Debugger is active!
-   * Debugger pin code: 260-787-156
-  Writing entity "1" to file '/private/tmp/python-datasink-template/received/1.json'
-  Writing entity "2" to file '/private/tmp/python-datasink-template/received/2.json'
-  10.1.100.41 - - [06/Jun/2016 08:16:16] "POST /receiver?is_first=true&is_full=true&request_id=1&sequence_id=d5b42172-b193-450a-b1f8-bdae59ee140b HTTP/1.1" 200 -
-  10.1.100.41 - - [06/Jun/2016 08:16:16] "POST /receiver?is_full=true&request_id=2&sequence_id=d5b42172-b193-450a-b1f8-bdae59ee140b&previous_request_id=1&is_last=true HTTP/1.1" 200 -
-
-As you can see, two entities have been pushed to it. Note that even though we have three entities in the ``customers-with-orders`` dataset, we only received two of them. By default the ``dataset`` source will not hand out old versions of entities. If you want all versions of entities pushed, set the ``include_previous_versions`` property to ``true`` on the ``dataset`` source. The ``dataset`` source will by default only hand out incremental changes. If you want all entities to be handed out on every pump run then set the ``supports_since`` property to ``false``. Any changes to ``customers-with-orders`` will be pushed to the service shortly after they appear.
-
-::
-
-  $ ls -l received/
-  -rw-r--r--  1 nobody  wheel  960 Jun  6 08:16 1.json
-  -rw-r--r--  1 nobody  wheel  769 Jun  6 08:16 2.json
-
-  $ cat received/2.json
-  {
-      "_deleted": false,
-      "_hash": "ded8824e5ec508efc6bbbc036afa052e",
-      "_id": "2",
-      "_previous": 1,
-      "_ts": 1464936772791645,
-      "_updated": 2,
-      "name": "Maria Hawkins",
-      "order_count": 2,
-      "orders": [
-          {
-              "items": [
-                  {
-                      "ean": "978-0195367133",
-                      "price": "~f39.95",
-                      "quantity": 1
-                  }
-              ],
-              "total": "~f39.95"
-          },
-          {
-              "items": [
-                  {
-                      "ean": "978-0295332333",
-                      "price": "~f19.95",
-                      "quantity": 1
-                  }
-              ],
-              "total": "~f19.95"
-          }
-      ],
-      "total": "~f59.90",
-      "type": "customer"
-  }
+The end result is that Maria Hawkins now has *two* orders. The ``total`` property has also been updated to reflect the
+fact that there is a new order. Note also that the ``_previous`` property now has a value. It points back to the
+previous version of the entity. This way Sesam can track the history of entities.
 
 If you want to learn more about how to extend and integrate with Sesam, see the :doc:`Developer Extension Points <extension-points>` document.
 
@@ -812,18 +757,30 @@ You may want to try to do some other edits to the data files or the configuratio
 
 Examples:
 
-* Change the name of "Maria Hawkins" to something else, and see that she gets updated in the ``customers`` and ``customers-with-orders`` datasets, and that we then gets pushed to your service once more.
-* Add a new customer. Then add a new $99 order for that customer. That customer will then get pushed to your service.
+* Change the name of "Maria Hawkins" to something else, and see that she gets updated in the ``customers`` and
+``customers-with-orders`` datasets.
+* Add a new customer. Then add a new $99 order for that customer.
+
+Remember to POST the changed JSON data to Sesam after you have saved the changes.
 
 What to do next?
 ================
 
-First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the Sesam way of thinking. Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems.
+First, we strongly recommend reading the :doc:`concepts section <concepts>` to understand the Sesam way of thinking.
+Then, there are three main things to 'do' with Sesam; get data in the hub, transform data, and get it out to other systems.
 
-To get more data into the hub take a look at the source component types that are natively supported. The :doc:`configuration <configuration>` section details the source component types and how to configure them.
+To get more data into the hub take a look at the source component types that are natively supported.
+The :doc:`configuration <configuration>` section details the source component types and how to configure them.
 
-If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be consumed by Sesam. The documentation on :doc:`developer extension points <extension-points>` has more examples and links to templates for C#, Node.js, Java and Python.
+If you don't see one here that you need then you can also create your own simple service to expose JSON data that can be
+consumed by Sesam. The documentation on :doc:`developer extension points <extension-points>` has more examples and links
+to templates for C#, Node.js, Java and Python.
 
-If you are looking to transform data into new shapes, or validate it against schema rules, please take a look at the different kinds of transforms that can be used in a pipe. :doc:`DTL <DTLReferenceGuide>` is a very powerful language that can reshape, and connect data from multiple datasets.
+If you are looking to transform data into new shapes, or validate it against schema rules, please take a look at the
+different kinds of transforms that can be used in a pipe. :doc:`DTL <DTLReferenceGuide>` is a very powerful language
+that can reshape, and connect data from multiple datasets.
 
-Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use the sink components. The :doc:`configuration <configuration>` has documentation on all the natively supported sinks. Again, if there is not a sink for a system you have it is straight forward to set up Sesam to push data to a custom service.
+Finally, when you have data you want to deliver out to other systems or just expose for them to consume it you can use
+the sink components. The :doc:`configuration <configuration>` has documentation on all the natively supported sinks.
+Again, if there is not a sink for a system you have it is straight forward to set up Sesam to push data to a
+custom service.
