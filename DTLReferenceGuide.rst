@@ -390,6 +390,11 @@ is a value shared by both.
 
 .. NOTE::
 
+   ``null`` values and deleted entities are not indexed, so they are
+   not traversed by joins.
+
+.. NOTE::
+
    It is only ``eq`` functions that reference a single dataset alias
    in both left and right arguments that are considered join
    functions.
