@@ -613,7 +613,7 @@ Properties
    * - ``equality``
      - List<EqFunctions{>=1}>
      - A list of one or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
-     - 
+     -
      - Yes
 
 Continuation support
@@ -699,7 +699,7 @@ Given the above we should expect an output that looks like this:
        {"$ids": ["b2"], "_id": "1|b2", "_updated": 2, "f1": 3},
        {"$ids": ["c2"], "_deleted": true, "_id": "2|c2", "_updated": 3, "f3": "Y"},
        {"$ids": ["c3"], "_deleted": true, "_id": "2|c3", "_updated": 4, "f3": "X"}
-   ]   
+   ]
 
 Entities ``a1``, ``b1`` and ``c1`` have been merged. Entities ``a2``
 and ``b2`` did not match any other entities. Deleted entities, like
@@ -6231,6 +6231,7 @@ Prototype
         "verify_ssl": false,
         "username": None,
         "password": None,
+        "jwt_token": None,
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -6274,6 +6275,12 @@ Properties
      - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
      -
      - Yes*
+
+   * - ``jwt_token``
+     - String
+     - The `JWT <https://jwt.io/>`_ token to use for authorization purposes towards the remote server.
+     -
+     - No
 
    * - ``authentication``
      - String

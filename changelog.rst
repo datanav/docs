@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-02-14
+----------
+* Added a ``jwt_token`` property to the :ref:`URL system <url_system>`
+
 2017-02-06
 ----------
 * Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_message_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
