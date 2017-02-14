@@ -3,7 +3,7 @@ Changelog
 
 2017-02-14
 ----------
-* Added a ``jwt_token`` property to the :ref:`URL system <url_system>`
+* Added a ``jwt`` authentication scheme and ``jwt_token`` property to the :ref:`URL system <url_system>`
 
 2017-02-06
 ----------

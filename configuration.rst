@@ -6278,15 +6278,16 @@ Properties
 
    * - ``jwt_token``
      - String
-     - The `JWT <https://jwt.io/>`_ token to use for authorization purposes towards the remote server.
+     - If ``authentication`` is set to ``jwt``, this property must hold the `JWT <https://jwt.io/>`_ token to use
+       towards the remote server.
      -
-     - No
+     -
 
    * - ``authentication``
      - String
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. No authentication set means means any ``username`` or ``password`` set will be ignored.
-       Allowed values is either "basic" or "digest".
+       authentication. Allowed values is either "basic" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
+       might be also required depending on the authentication scheme selected.
      -
      -
 
