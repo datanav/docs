@@ -4183,6 +4183,7 @@ Prototype
         "whitelist": ["properties/columns","to","include"],
         "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
+        "timestamp": "name-of-collumn-to-add-timestamp-into",
         "truncate_table_on_first_run": false
     }
 
@@ -4226,6 +4227,13 @@ Properties
      - If a specific schema within a database is needed, you must provide its name in this property.
        Do *not* use schema names in the ``table`` property.
      -
+     -
+
+   * - ``timestamp``
+     - String
+     - Defines a name of a property (column) that is added to each entity, containg a timestamp in utz.
+       If the corresponding column exist in the target table, the value will be writen to that column.
+     - ``sesam-timestamp`
      -
 
    * - ``batch_size``
