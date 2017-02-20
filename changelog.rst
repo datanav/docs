@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-02-20
+----------
+* Added ``url_pattern`` property to :ref:`URL system <url_system>`. This property gives you more control over how absolute URLs are produced. It can be used instead of the ``base_url`` property.
+
 2017-02-14
 ----------
 * Added a ``jwt`` authentication scheme and ``jwt_token`` property to the :ref:`URL system <url_system>`
