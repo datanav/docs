@@ -3414,6 +3414,28 @@ Properties
      - ``false``
      -
 
+   * - ``enable_optimistic_locking``
+     - Boolean
+     - If ``true`` then the ``_updated`` property in each entity will be compared against the previous
+       version of the entity. If the ``_updated`` property of at least one entity doesn't match, an error
+       will raised and no entities will be written to the target dataset.
+
+       The purpose is to be guard against two agents trying to update the same entity at the same time; in some
+       cases one doesn't want the last edit to "win" automatically. The typical usecase is a pipe with a
+       ``http_endpoint`` source where the http endpoint can be accessed by several independant processes
+       that use the sesam instance as a storage service. In this case the pipe should *not* have any transforms,
+       since the http_endpoint will send the resulting entity back to the calling process; if the entity has been
+       transformed by DTL or some other transform, the result might make little sense to the calling process.
+
+       NOTE: It can be very expensive (in terms of memory-usage) to enable this option, since it will cause the
+       sesam instance to load all the incoming entities into memory (since the "_update" attribute of all entities
+       must be checked before any entities can be written to the target dataset. This option should therefore only
+       be used when the number of entitites in each pipe-run is small.
+
+     - ``false``
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
