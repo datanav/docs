@@ -5505,6 +5505,93 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+.. _mssql-azure-dw_system:
+
+The Microsoft Azure SQL Data Warehouse system
+---------------------------------------------
+
+This system type represents a `Microsoft Azure SQL Data Warehouse server <https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is>`_ running in Azure.
+
+See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
+are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "sql_system_id",
+        "type": "system:mssql-azure-dw",
+        "name": "A Microsoft Azure SQL Data Warehouse server",
+        "username":"username-here",
+        "password":"secret",
+        "host":"fqdn-or-ip-address-here",
+        "port": 1433,
+        "database": "database-name"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``username``
+     - String
+     - Username to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``password``
+     - String
+     - Password to use when connecting to the database.
+     -
+     - Yes
+
+   * - ``host``
+     - String
+     - Host name or IP address to the database server. Must be DNS resolvable if non-numeric.
+     -
+     - Yes
+
+   * - ``port``
+     - Integer
+     - Database IP port.
+     - 1433
+     -
+
+   * - ``database``
+     - String
+     - Name/id of database to connect to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Example MS SQL Server configuration:
+
+::
+
+    {
+        "_id": "sqlserver_db",
+        "name": "MS Azure DW SQL Server test database",
+        "type": "system:mssql-azure-dw",
+        "username": "user",
+        "password": "password",
+        "host": "myserver.database.windows.net",
+        "port": 1433,
+        "database": "testdb"
+    }
+
 .. _mysql_system:
 
 The MySQL system
