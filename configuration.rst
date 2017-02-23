@@ -6409,7 +6409,7 @@ Properties
    * - ``authentication``
      - String
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. Allowed values is either "basic" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
+       authentication. Allowed values is either "basic", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
        might be also required depending on the authentication scheme selected.
      -
      -
@@ -6441,6 +6441,22 @@ Example configuration
         "type": "system:url",
         "base_url": "http://our.domain.com/files"
     }
+a
+
+Example with ntlm configuration:
+
+::
+
+    {
+        "_id": "our-http-server",
+        "name": "Our HTTP Server",
+        "type": "system:url",
+        "authentication": "ntlm",
+        "username": "domain\\user",
+        "password": "secret",
+        "base_url": "http://our.domain.com/files"
+    }
+
 
 
 .. _rest_system:
