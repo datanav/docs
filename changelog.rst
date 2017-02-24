@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-01
+----------
+* Added a :ref:`substring <substring_dtl_function>`  DTL function that returns a substring of another string given a start and end index.
+
 2017-02-28
 ----------
 * Added ``include_replaced`` property to the :ref:`dataset <dataset_source>` source. This property is used to filter out entities that are replaced by the :ref:`merge <merge_source>` source.

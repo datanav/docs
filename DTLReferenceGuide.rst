@@ -2589,6 +2589,23 @@ Strings
        |
        | Returns a date string where the colon has been replaced by a period.
 
+       .. _substring_dtl_function:
+   * - ``substring``
+     - | *Arguments:*
+       |   START_INDEX(integer{1})
+       |   END_INDEX(integer{1})
+       |   VALUES(value-expression{1})
+       |
+       | Extracts the substring between START_INDEX and END_INDEX. If START_INDEX or END_INDEX is negative
+         it is interpreted as 'from the start' or  'to the end'.
+     - | ``["substring", 2, 4, "abcdef"]``
+       |
+       | Returns ``"cd"``.
+       |
+       | ``["substring", 2, -1,  "abcdef"]``
+       |
+       | Returns ``"cdef"``.
+
    * - ``matches``
      - | *Arguments:*
        |   PATTERN(string{1})
