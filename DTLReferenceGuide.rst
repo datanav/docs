@@ -2593,16 +2593,16 @@ Strings
    * - ``substring``
      - | *Arguments:*
        |   START_INDEX(integer{1})
-       |   END_INDEX(integer{1})
+       |   END_INDEX(integer{0|1})
        |   VALUES(value-expression{1})
        |
-       | Extracts the substring between START_INDEX and END_INDEX. If START_INDEX or END_INDEX is negative
-         it is interpreted as 'from the start' or  'to the end'.
+       | Extracts the substring between START_INDEX and END_INDEX. If START_INDEX is negative
+         it is interpreted as 'from the start'. If END_INDEX is negative or missing it is interpreted as 'to the end'.
      - | ``["substring", 2, 4, "abcdef"]``
        |
        | Returns ``"cd"``.
        |
-       | ``["substring", 2, -1,  "abcdef"]``
+       | ``["substring", 2, "abcdef"]``
        |
        | Returns ``"cdef"``.
 
