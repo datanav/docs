@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-02-28
+----------
+* Added ``include_replaced`` property to the :ref:`dataset <dataset_source>` source. This property is used to filter out entities that are replaced by the :ref:`merge <merge_source>` source.
+
 2017-02-20
 ----------
 * Added ``url_pattern`` property to :ref:`URL system <url_system>`. This property gives you more control over how absolute URLs are produced. It can be used instead of the ``base_url`` property.
