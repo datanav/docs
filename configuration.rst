@@ -487,6 +487,8 @@ cases where one wants to reprocess the data from scratch for some
 reason. The :doc:`api` can also tell you what the current
 ``last-seen`` value is.
 
+.. _dataset_source:
+
 The dataset source
 ------------------
 
@@ -501,7 +503,8 @@ Prototype
     {
         "type": "dataset",
         "dataset": "id-of-dataset",
-        "include_previous_versions": false
+        "include_previous_versions": false,
+        "include_replaced": true
     }
 
 Properties
@@ -525,9 +528,15 @@ Properties
 
    * - ``include_previous_versions``
      - Boolean
-     - If set to ``false``, the data source will only return the latest
+     - If set to ``false``, the dataset source will only return the latest
        version of any entity for any unique ``_id`` value in the dataset. This is the default behaviour.
-     - false
+     - ``false``
+     -
+
+   * - ``include_replaced``
+     - Boolean
+     - If set to ``false``, the dataset source will filter out entities where the ``$replaced`` property is ``true``. This typically used when reading from datasets that have been produced by the :ref:`merge <merge_source>` source.
+     - ``true``
      -
 
 Continuation support
@@ -4253,9 +4262,9 @@ Properties
 
    * - ``timestamp``
      - String
-     - Defines a name of a property (column) that is added to each entity, containg a timestamp in utz.
-       If the corresponding column exist in the target table, the value will be writen to that column.
-     - ``sesam-timestamp`
+     - Defines a name of a property (column) that is added to each entity, containg a timestamp in UTC.
+       If the corresponding column exist in the target table, the value will be written to that column.
+     - ``sesam-timestamp``
      -
 
    * - ``batch_size``
@@ -6441,7 +6450,6 @@ Example configuration
         "type": "system:url",
         "base_url": "http://our.domain.com/files"
     }
-a
 
 Example with ntlm configuration:
 
