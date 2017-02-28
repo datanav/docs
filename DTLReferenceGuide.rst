@@ -2597,7 +2597,8 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Extracts the substring between START_INDEX and END_INDEX. If START_INDEX is negative
-         it is interpreted as 'from the start'. If END_INDEX is negative or missing it is interpreted as 'to the end'.
+         it is interpreted as 'from the start'. If END_INDEX is missing it is interpreted as 'to the end'.
+         If END_INDEX is negative it is interpreted as the index from the end.
      - | ``["substring", 2, 4, "abcdef"]``
        |
        | Returns ``"cd"``.
@@ -2605,6 +2606,10 @@ Strings
        | ``["substring", 2, "abcdef"]``
        |
        | Returns ``"cdef"``.
+       |
+       | ``["substring", 0, -1, "abcdef"]``
+       |
+       | Returns ``"abcde"``.
 
    * - ``matches``
      - | *Arguments:*
