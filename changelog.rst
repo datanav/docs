@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-02
+----------
+* Added a :ref:`conditional source <conditional_source>` that can pick from a list of candidate actual sources, typically controlled by an environment variable.
+
 2017-03-01
 ----------
 * Added a :ref:`substring <substring_dtl_function>`  DTL function that returns a substring of another string given a start and end index.
