@@ -399,6 +399,9 @@ is a value shared by both.
    in both left and right arguments that are considered join
    functions.
 
+   There must be exactly one unique dataset alias reference
+   in each ``eq`` argument.
+
 Argument types
 ==============
 
