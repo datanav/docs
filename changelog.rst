@@ -3,7 +3,7 @@ Changelog
 
 2017-03-02
 ----------
-* Added a :ref:`conditional source <conditional_source>` that can pick from a list of candidate actual sources, typically controlled by an environment variable.
+* Added a :ref:`conditional source <conditional_source>` and :ref:`conditional sink <conditional_sink>` that can pick from a list of actual candidates, typically controlled by an environment variable.
 
 2017-03-01
 ----------
