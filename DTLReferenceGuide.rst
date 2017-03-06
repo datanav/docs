@@ -559,7 +559,7 @@ modifiying the target entity, and has no return value.
 
           If used with a ``dataset`` sink then the ``filter`` function
           will set the ``_filtered`` property to ``true`` and emit the
-          entity, but only if it is the last transform if the pipe.
+          entity.
 
           The reason for this is so that the ``dataset`` sink can
           detect deleted entities even on incremental syncs, not just
@@ -570,6 +570,10 @@ modifiying the target entity, and has no return value.
           The rationale for this behaviour is so that entities that
           have previous versions get deleted in the resulting dataset
           when they no longer pass the filter.
+
+          If you have more than one transform then you may want to be
+          careful about how you process ``_filtered`` entities in
+          subsequent transforms.
 
           If you would like to control how deletions happen, then you
           should not use the ``filter`` function, but instead set the
