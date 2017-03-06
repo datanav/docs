@@ -557,9 +557,9 @@ modifiying the target entity, and has no return value.
 
        .. NOTE::
 
-          If the DTL transform is used with a ``dataset`` sink then
-          the ``filter`` function will set the ``_filtered`` property
-          to ``true`` and emit the entity.
+          If used with a ``dataset`` sink then the ``filter`` function
+          will set the ``_filtered`` property to ``true`` and emit the
+          entity, but only if it is the last transform if the pipe.
 
           The reason for this is so that the ``dataset`` sink can
           detect deleted entities even on incremental syncs, not just
