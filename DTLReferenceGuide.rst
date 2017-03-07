@@ -2640,9 +2640,9 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Encrypts the VALUES using the key in KEY
-     - | ``["encrypt", "secret" ["list", "a", "b", "c"]]``
+     - | ``["encrypt", "secret", ["list", "a", "b", "c"]]``
        |
-       | Returns an encrypted byte object.
+       | Returns an encrypted bytes object.
        |
        | Note that the key is stored in the configuration dataset so this is not
        | a end-to-end secure system of encryption. This also applies if a ``$SECRET(secret key)`` using the built-in
@@ -2656,7 +2656,7 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Decrypts the VALUES using the key in KEY - it is symmetric with ``encrypt`` if the same key is used.
-     - | ``["decrypt", "secret", ["encrypt", "secret" ["list", "a", "b", "c"]]``
+     - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]``
        |
        | Returns ``["a", "b", "c"]``
        |
