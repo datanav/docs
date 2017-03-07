@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-07
+----------
+* Added ``encrypt`` and ``decrypt`` DTL functions
+
 2017-03-02
 ----------
 * Added a :ref:`conditional source <conditional_source>` and :ref:`conditional sink <conditional_sink>` that can pick from a list of actual candidates, typically controlled by an environment variable.

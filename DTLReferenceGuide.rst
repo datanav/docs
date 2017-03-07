@@ -2634,6 +2634,33 @@ Strings
        |
        | Returns true if all the tags that have a "_sport" suffix.
 
+   * - ``encrypt``
+     - | *Arguments:*
+       |   KEY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Encrypts the VALUES using the key in KEY
+     - | ``["encrypt", "secret" ["list", "a", "b", "c"]]``
+       |
+       | Returns an encrypted byte object.
+       |
+       | Note that the key is stored in the configuration dataset so this is not
+       | a end-to-end secure system of encryption. This also applies if a ``$SECRET(secret key)`` using the built-in
+       | secret manager because if an attacker gains access to the running system and gains superuser privileges,
+       | the stored decryption key can be extracted and used to decrypt the values.
+       |
+
+   * - ``decrypt``
+     - | *Arguments:*
+       |   KEY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Decrypts the VALUES using the key in KEY - it is symmetric with ``encrypt`` if the same key is used.
+     - | ``["decrypt", "secret", ["encrypt", "secret" ["list", "a", "b", "c"]]``
+       |
+       | Returns ``["a", "b", "c"]``
+       |
+
 
 Values / collections
 --------------------
