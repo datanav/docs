@@ -2644,10 +2644,8 @@ Strings
        |
        | Returns an encrypted bytes object.
        |
-       | Note that the key is stored in the configuration dataset so this is not
-       | a end-to-end secure system of encryption. This also applies if a ``$SECRET(secret key)`` using the built-in
-       | secret manager because if an attacker gains access to the running system and gains superuser privileges,
-       | the stored decryption key can be extracted and used to decrypt the values.
+       | Note: This function does not offer an end-to-end secure system of encryption. 
+       | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
        |
 
    * - ``decrypt``
