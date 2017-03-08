@@ -2644,7 +2644,8 @@ Strings
        |
        | Returns an encrypted bytes object.
        |
-       | Note: This function does not offer an end-to-end secure system of encryption. 
+       | Note: This function by itself does not offer an end-to-end secure system of encryption 
+       | as the key is stored along with the encrypted data. 
        | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
        |
 
