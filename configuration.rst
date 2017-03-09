@@ -7041,7 +7041,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Integer
      - The number of seconds between runs. It is a required field if no ``cron_expression`` is present. It is
        mutually exclusive with the ``cron_expression`` property.
-     -
+     - 30
      - Yes
 
    * - ``cron_expression``
@@ -7244,7 +7244,7 @@ to this fully expanded pipe configuration:
                "dataset": "Northwind:Orders"
            },
            "pump": {
-               "schedule_interval": 15
+               "schedule_interval": 30
            }
         }
     ]
