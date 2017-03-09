@@ -1017,6 +1017,32 @@ Comparisons
        | Returns true if the source entity's ``hobbies`` field is not
          empty (has one or more values).
 
+       .. _is_changed_dtl_function:
+   * - ``is-changed``
+     - | *Arguments:*
+       |   FUNCTION(function-expression{1}),
+       |
+       | Returns true if the results of evaluating the FUNCTION expression on the current
+         version and the previous version of the source entity are different.
+       |
+       | If the previous version does not exist then the ``is-changed``
+       | function returns ``null``. This means that we don't know if it has changed.
+       |  
+       | If either the current or the previous version of the entity
+       | has ``_deleted`` set to ``true`` then the ``is-changed``
+       | function returns ``true``.
+     - | ``["is-changed", "_.name"]``
+       |
+       | Returns true if the source entity's ``name`` property changed.
+       |
+       | ``["is-changed", ["list", "_.height", "_.width"]]``
+       |
+       | Returns true if the source entity's ``height`` or ``width`` properties changed.
+       |
+       | ``["is-changed", ["-", "_.end", "_.start"]]``
+       |
+       | Returns true if the source entity's distance between ``start`` and ``end`` changed.
+
 
 Conditionals
 ------------
@@ -2817,10 +2843,10 @@ Values / collections
 
    * - ``filter``
      - | *Arguments:*
-       |   FILTER(boolean-expression(1}
+       |   FUNCTION(function-expression(1}
        |   VALUES(value-expression{1})
        |
-       | Filters out the the values in VALUES for which the FILTER expression
+       | Filters out the the values in VALUES for which the FUNCTION expression
          does *not* evaluate to *true*.
      - | ``["filter", ["gt", "_.age", 42],``
        |     ``["list", {"age": 30}, {"age": 50}, {"age": 40}]]``

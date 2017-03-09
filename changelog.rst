@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-09
+----------
+* Added the :ref:`is-changed <is_changed_dtl_function>` DTL function that can be used compare data from the current and the previous version of the source entity.
+
 2017-03-07
 ----------
 * Added ``encrypt`` and ``decrypt`` DTL functions
@@ -11,7 +15,7 @@ Changelog
 
 2017-03-01
 ----------
-* Added a :ref:`substring <substring_dtl_function>`  DTL function that returns a substring of another string given a start and end index.
+* Added a :ref:`substring <substring_dtl_function>` DTL function that returns a substring of another string given a start and end index.
 
 2017-02-28
 ----------
