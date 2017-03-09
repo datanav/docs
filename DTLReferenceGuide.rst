@@ -2821,6 +2821,41 @@ Values / collections
        |
        | Returns the second tag in the source entity's ``tags`` field.
 
+       .. _slice_dtl_function:
+   * - ``slice``
+     - | *Arguments:*
+       |   START(integer-expression{1})
+       |   END(integer-expression{0|1}}
+       |   STRIDE(integer-expression{0|1}}
+       |   VALUES(value-expression{1})
+       |
+       | Returns a slice of VALUES from START to END with STRIDE. If END is not specified, the slice will
+         continue to the end of VALUES. If no STRIDE is specified every element is returned (same as STRIDE=1).
+
+     - | ``["slice", 2, -2, 2, ["list", 0, 1, 2, 3, 4, 5, 6]]``
+       | Returns ``[2, 4]``
+       |
+       | ``["slice", 2, ["list", 0, 1, 2, 3, 4, 5, 6]]``
+       | Returns ``[2, 3, 4, 5, 6]``
+
+       .. _insert_dtl_function:
+   * - ``insert``
+     - | *Arguments:*
+       |   INDEX(integer-expression{1})
+       |   VALUES(value-expression{1})
+       |   OBJECT(value-expression{1})
+       |
+       | Inserts OBJECT at INDEX in VALUES. A negative INDEX means starting from the end.
+
+     - | ``["insert", 1, 2, 3]``
+       | Returns ``[2, 3]``
+       |
+       | ``["insert", 1, ["list", 1, 2], ["list", 3, 4]]``
+       | Returns ``[1, [3, 4], 2]``
+       |
+       | ``["insert", -2, ["list", 1, 2, 3], 4]``
+       | Returns ``[1, 4, 2, 3]``
+
    * - ``flatten``
      - | *Arguments:*
        |   VALUES(value-expression{1})

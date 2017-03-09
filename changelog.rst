@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-10
+----------
+* Added the :ref:`slice <slice_dtl_function>` and :ref:`insert <insert_dtl_function>` DTL functions that can be used to manipulate lists.
+
 2017-03-09
 ----------
 * Added the :ref:`is-changed <is_changed_dtl_function>` DTL function that can be used compare data from the current and the previous version of the source entity.
