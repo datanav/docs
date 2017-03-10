@@ -2856,6 +2856,19 @@ Values / collections
        | ``["insert", -2, ["list", 1, 2, 3], 4]``
        | Returns ``[1, 4, 2, 3]``
 
+       .. _combine_dtl_function:
+   * - ``combine``
+     - | *Arguments:*
+       |   VALUES(value-expression{>=2})
+       |
+       | Combines the values into a single list.
+
+     - | ``["combine", 1, 4]``
+       | Returns ``[1, 4]``
+       |
+       | ``["combine", ["list", 1, 2], ["list", 3, 4], 5]``
+       | Returns ``[1, 2, 3, 4, 5]``
+
    * - ``flatten``
      - | *Arguments:*
        |   VALUES(value-expression{1})
