@@ -3,7 +3,7 @@ Changelog
 
 2017-03-10
 ----------
-* Added the :ref:`slice <slice_dtl_function>` and :ref:`insert <insert_dtl_function>` DTL functions that can be used to manipulate lists.
+* Added the :ref:`slice <slice_dtl_function>`, :ref:`insert <insert_dtl_function>` and :ref:`combine <combine_dtl_function>` DTL functions that can be used to manipulate lists.
 
 2017-03-09
 ----------
