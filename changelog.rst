@@ -9,6 +9,10 @@ Changelog
 ----------
 * Added the :ref:`_R <r_variable>` variable, which can be used to refer to the root context in a DTL transform.
 
+2017-03-14
+----------
+* The ``base_url`` property of the :ref:`URL system <url_system>` and :ref:`REST system <rest_system>` has been deprecated. It has been superseded by the the ``url_pattern`` property.
+
 2017-03-10
 ----------
 * Added the :ref:`slice <slice_dtl_function>`, :ref:`insert <insert_dtl_function>` and :ref:`combine <combine_dtl_function>` DTL functions that can be used to manipulate lists.

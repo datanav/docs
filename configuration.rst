@@ -6478,7 +6478,7 @@ Prototype
         "_id": "id-of-system",
         "name": "Name of system",
         "type": "system:url",
-        "base_url": "http://host:port/path/",
+        "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
         "username": None,
         "password": None,
@@ -6501,17 +6501,17 @@ Properties
      - Default
      - Req
 
-   * - ``base_url``
-     - String
-     - The full URL of the base url of the HTTP server. Relative URLs are URL joined against this base URL to produce absolute URLs. Note that you may want a ``/`` at the end of the value. Use ``url_pattern`` instead if you want full control over how absolute URLs are produced.
-     -
-     - Yes[1]
-
    * - ``url_pattern``
      - String
      - Similar to ``base_url`` except one can use the ``%s`` token to tell where relative URLs are to be inserted into the ``url_pattern`` to produce absolute URLs. If ``%s`` is omitted then the relative URL is appended to the ``url_pattern``.
      -
-     - Yes[1]
+     - Yes
+
+   * - ``base_url``
+     - String
+     - Deprecated. Use the ``url_pattern`` property instead. The full URL of the base url of the HTTP server. Relative URLs are URL joined against this base URL to produce absolute URLs. Note that you may want a ``/`` at the end of the value.
+     -
+     -
 
    * - ``verify_ssl``
      - Boolean
@@ -6615,7 +6615,7 @@ Prototype
         "_id": "id-of-system",
         "name": "Name of system",
         "type": "system:rest",
-        "base_url": "http://host:port/path",
+        "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
         "username": None,
         "password": None,
@@ -6663,11 +6663,17 @@ Properties
      - Default
      - Req
 
-   * - ``base_url``
+   * - ``url_pattern``
      - String
-     - The full URL of the base url of the HTTP server.
+     - Similar to ``base_url`` except one can use the ``%s`` token to tell where relative URLs are to be inserted into the ``url_pattern`` to produce absolute URLs. If ``%s`` is omitted then the relative URL is appended to the ``url_pattern``.
      -
      - Yes
+
+   * - ``base_url``
+     - String
+     - Deprecated. Use the ``url_pattern`` property instead. The full URL of the base url of the HTTP server. Relative URLs are URL joined against this base URL to produce absolute URLs. Note that you may want a ``/`` at the end of the value.
+     -
+     -
 
    * - ``verify_ssl``
      - Boolean
