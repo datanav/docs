@@ -6844,7 +6844,11 @@ Prototype
             "password": None,
             "memory": 128,
             "environment": {
-                "SOME-VARIABLE": "SOME-VALUE"
+                "SOME-VARIABLE": "SOME-VALUE",
+                "OTHER-VARIABLE": {
+                    "key1": "value1",
+                    "key2": "value2"
+                }
             }
         },
         "use_https": false,
@@ -6885,8 +6889,10 @@ Properties
      - Yes
 
    * - ``docker.environment``
-     - Dict<String,String>
-     - The environment variables that should be passed to the microservice's Docker container.
+     - Dict<String,String|Object>
+     - The environment variables that should be passed to the microservice's Docker container. Note that string
+       literals are passed along to the docker container as-is, while other types of values are serialized to a string
+       in JSON format.
      -
      -
 
