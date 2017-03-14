@@ -352,7 +352,7 @@ Properties
 Example configuration
 ---------------------
 
-The following example shows a pipe definition that exposes data from a SQL database table called ``customers``, and feeds it into a sink that writes the data into a dataset called ``Northwind:Customers```.
+The following example shows a pipe definition that exposes data from a SQL database table called ``customers``, and feeds it into a sink that writes the data into a dataset called ``Northwind:Customers``.
 
 ::
 
