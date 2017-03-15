@@ -227,6 +227,8 @@ Things to note:
   `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
 
 
+.. _variables:
+
 Variables
 =========
 
@@ -246,6 +248,8 @@ current value in functional expressions.
      - Description
      - Examples
 
+       .. _s_variable:
+
    * - ``_S``
      - Refers to the source entity. This is the entity on which the
        DTL transform operate. Note that with the ``apply`` function
@@ -255,6 +259,8 @@ current value in functional expressions.
      - | ``["gt", "_S.age", 42]``
        |
        | The source entity's ``age`` field must have a value greater than 42.
+
+       .. _t_variable:
 
    * - ``_T``
      - Refers to the target entity. This is the entity that is the
@@ -266,13 +272,15 @@ current value in functional expressions.
        | The target entity's ``description`` field must have a length of
          more than 100 characters.
 
+       .. _p_variable:
+
    * - ``_P``
      - A dict that contains the source entity and the
        target entity of the parent context. If the parent context also has
        a parent context, then that will also be available. The dict always
-       contains the ``_S``, ``_T`` variables, while the ``_P`` property is
-       optional. Note that the ``_P`` appears only inside the ``apply``
-       function.
+       contains the ``_S`` and ``_T`` variables, while the ``_P`` property is
+       optional.  ``_P`` does not contain the ``_R`` variable. Note that
+       the ``_P`` appears only inside the ``apply`` function.
 
      - | ``["gt", "_P._S.age", 18]``
        |
@@ -282,6 +290,25 @@ current value in functional expressions.
        |
        | The grandparent target entity's ``description`` field must have a
          length of less than 100 characters.
+
+       .. _r_variable:
+
+   * - ``_R``
+     - A dict that contains the source entity and the
+       target entity of the root context. The root context is the outermost
+       context, which in practice is the context of the ``default`` rule. The
+       dict contains the ``_S`` and ``_T`` variables.
+
+     - | ``["lt", "_R._S.age", 18]``
+       |
+       | The root source entity's ``age`` field must be less than 18.
+       |
+       | ``["lt", ["length", "_R._T.description"], 50]``
+       |
+       | The root target entity's ``description`` field must have a
+         length of less than 50 characters.
+
+       .. _underscore_variable:
 
    * - ``_``
      - Refers to the current entity. This variable is only available
