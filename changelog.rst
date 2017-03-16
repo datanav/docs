@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-16
+----------
+* The :doc:`JSON Push Protocol <json-push>` document now contains :ref:`examples <json_push_examples>` of how to use ``curl`` to perform incremental and full syncs.
+
 2017-03-15
 ----------
 * Added the :ref:`_R <r_variable>` variable, which can be used to refer to the root context in a DTL transform.

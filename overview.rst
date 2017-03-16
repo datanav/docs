@@ -51,6 +51,8 @@ Getting Started
 
 Now that you have Sesam running, lets start using it.
 
+.. _overview-pre-requisites:
+
 Pre-Requisites
 ==============
 
