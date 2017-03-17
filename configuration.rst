@@ -434,10 +434,12 @@ the source. The table below explains them in detail.
        ``since`` marker. Sometimes it is not necessary to perform the
        tracking as the source won't make use of it anyway.
 
-       NOTE: If you set ``support_since`` to ``true`` then you should
-       also make sure that you set either ``is_since_comparable`` to
-       ``true`` or ``is_chronological`` to ``true`` — or *both*
-       depending on the strategy you want.
+       .. NOTE::
+
+          If you set ``support_since`` to ``true`` then you should
+          also make sure that you set either ``is_since_comparable`` to
+          ``true`` or ``is_chronological`` to ``true`` — or *both*
+          depending on the strategy you want.
 
    * - ``is_since_comparable``
      - Can you compare two _updated values using lexical/bytewise
@@ -449,9 +451,11 @@ the source. The table below explains them in detail.
        structures, then it may not be possible to use lexical/bytewise
        comparison of the two values to decide order.
 
-       NOTE: If you set ``is_since_comparable`` to ``true`` then you
-       should also make sure that ``support_since`` is set to
-       ``true``.
+       .. NOTE::
+
+          If you set ``is_since_comparable`` to ``true`` then you
+          should also make sure that ``support_since`` is set to
+          ``true``.
 
    * - ``is_chronological``
      - Does the source hand out entities in chronological order, i.e.
@@ -465,9 +469,11 @@ the source. The table below explains them in detail.
        fully. If the property is set to ``false`` then it can only
        know at the end of the run what the new ``since`` marker is.
 
-       NOTE: If you set ``is_chronological`` to ``true`` then you
-       should also make sure that ``support_since`` is set to ``true``
-       and ``is_since_comparable`` is set to ``true``.
+       .. NOTE::
+
+          If you set ``is_chronological`` to ``true`` then you
+          should also make sure that ``support_since`` is set to ``true``
+          and ``is_since_comparable`` is set to ``true``.
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
@@ -3530,8 +3536,12 @@ Properties
    * - ``dataset``
      - String
      - The id of the dataset to write entities into. Note: if it doesn't exist before
-       entities are written to the sink, it will be created on the fly. Note that the dataset id cannot contain
-       forward slash characters (``/``).
+       entities are written to the sink, it will be created on the fly.
+
+       .. NOTE::
+
+          The dataset id cannot contain forward slash characters (``/``) nor can it
+          reference a ``system:`` dataset.
      -
      - Yes
 
@@ -3561,10 +3571,12 @@ Properties
        since the http_endpoint will send the resulting entity back to the calling process; if the entity has been
        transformed by DTL or some other transform, the result might make little sense to the calling process.
 
-       NOTE: It can be very expensive (in terms of memory-usage) to enable this option, since it will cause the
-       sesam instance to load all the incoming entities into memory (since the "_update" attribute of all entities
-       must be checked before any entities can be written to the target dataset. This option should therefore only
-       be used when the number of entitites in each pipe-run is small.
+       .. NOTE::
+
+          It can be very expensive (in terms of memory-usage) to enable this option, since it will cause the
+          sesam instance to load all the incoming entities into memory (since the "_update" attribute of all entities
+          must be checked before any entities can be written to the target dataset. This option should therefore only
+          be used when the number of entitites in each pipe-run is small.
 
      - ``false``
      -
