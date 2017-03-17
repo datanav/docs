@@ -23,7 +23,7 @@ Changelog
 
 2017-03-07
 ----------
-* Added ``encrypt`` and ``decrypt`` DTL functions
+* Added :ref:`encrypt <encrypt_dtl_function>` and :ref:`decrypt <decrypt_dtl_function>` DTL functions
 
 2017-03-02
 ----------

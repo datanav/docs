@@ -2687,6 +2687,7 @@ Strings
        |
        | Returns true if all the tags that have a "_sport" suffix.
 
+       .. _encrypt_dtl_function:
    * - ``encrypt``
      - | *Arguments:*
        |   KEY(string{1})
@@ -2702,6 +2703,7 @@ Strings
        | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
        |
 
+       .. _decrypt_dtl_function:
    * - ``decrypt``
      - | *Arguments:*
        |   KEY(string{1})
