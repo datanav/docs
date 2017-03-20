@@ -1,0 +1,38 @@
+Strategy
+=======
+Objectives
+----------
+- Authenticate, allowing the users in that JWT to access and conduct tasks on that subscription.
+
+Scope
+=======
+Functional spec
+---------------
+- Allow user to add a token, choose users in that token by role or email and add a expiry date.
+- Allow user to view and delete tokens.
+
+
+Structure
+=======
+Information architecture
+------------------------
+### JWT
+UI for creating, viewing and deleting tokens should be under `Subscription > Settings > JWT`.
+
+
+
+Skeleton
+=======
+
+
+Surface
+=======
+
+Settings, JWT page, empty state and add JWT:
+![](./images-IS-4345/jwt_empty_state.png)
+
+Settings, JWT page, list of existing JWT:
+![](./images-IS-4345/jwt_added.png)
+
+Settings, JWT page, view and delete JWT:
+![](./images-IS-4345/jwt_view_and_delete.png)
