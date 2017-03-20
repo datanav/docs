@@ -2800,32 +2800,47 @@ Values / collections
        |
        | Returns the last tag in the source entity's ``tags`` field.
 
+       .. _in_dtl_function:
    * - ``in``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |   ITEMS(value-expression{1})
        |
-       | Boolean function that returns true if VALUES exists in ITEMS.
-         If VALUES is a sequence of values, then all VALUES must exist
-         in ITEMS. ITEMS must be a list, If VALUES or ITEMS is empty, then
-         false is returned.
+       | Boolean function that returns ``true`` if all values in VALUES exist in ITEMS,
+         i.e. if VALUES is a subset of ITEMS. Returns false if VALUES is null or empty.
      - | ``["in", "a", ["list", "a", "b", "c"]]``
        |
-       | Returns true.
+       | Returns ``true``.
        |
        | ``["in", "d", ["list", "a", "b", "c"]]``
        |
-       | Returns false.
+       | Returns ``false``.
+       |
+       | ``["in", ["list", 10], 10]``
+       |
+       | Returns ``true``.
+       |
+       | ``["in", ["list"], 10]``
+       |
+       | Returns ``false``.
+       |
+       | ``["in", null, ["list", null]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["in", ["list", null], ["list", 1, null, 2]]``
+       |
+       | Returns ``true``.
        |
        | ``["in", ["list", "a", "c"],``
        |   ``["list", "a", "b", "c"]]``
        |
-       | Returns true.
+       | Returns ``true``.
        |
        | ``["in", ["list", "a", "c", "d"],``
        |   ``["list", "a", "b", "c"]]``
        |
-       | Returns false.
+       | Returns ``false``.
 
 
    * - ``nth``
