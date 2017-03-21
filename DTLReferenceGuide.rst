@@ -852,8 +852,8 @@ Expression language
 An expression language function is a function that has no side-effects
 and returns a single value or a list of values.
 
-Logical
--------
+Boolean logic
+-------------
 
 .. list-table::
    :header-rows: 1
@@ -945,6 +945,86 @@ Logical
        |    ``["list", 6, 7, 8]]``
        |
        | Returns false because none of the arguments are less than 2.
+
+Booleans
+--------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``boolean``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to booleans. If no default value expression
+         is given, values that don't parse as boolean values will be silently
+         ignored. If not, the evaluated value from the default expression will
+         be used as a replacement value. String literals are case insensitive,
+         and the supported values are "true" and "false". null values are
+         evaluated as false.
+       |
+     - | ``["boolean", "false"]``
+       |
+       | Returns one boolean: false.
+       |
+       | ``["boolean",``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |     ``"True", false, 1234]]``
+       |
+       | Returns a list of booleans: [true, true, false]. The URI and integer
+         values are ignored.
+       |
+       | ``["boolean", ["boolean", false],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns a list of booleans: [true, false, false, false]. The URI value
+         and the string value are replaced with the literal value: false
+       |
+       | ``["boolean", ["string", "n/a"],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and
+         the string value are replaced with the literal value "n/a"
+       |
+       | ``["boolean", ["string", "_."],``
+       |   ``["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
+       |
+       | Returns a list of booleans: [true, "http://www.bouvet.no/", false].
+         The URI value is replaced with its string cast.
+
+   * - ``is-boolean``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a boolean literal or if
+         it is a list, that the first element in the list is a boolean
+       |
+     - | ``["is-boolean", false]``
+       |
+       | Returns true.
+       |
+       | ``["is-boolean", "True"]``
+       |
+       | Returns false.
+       |
+       | ``["is-boolean", ["list", true, "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-boolean", ["list", "12345", true]]``
+       |
+       | Returns false.
+       |
+       | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
+       |
+       | Returns true.
 
 
 Comparisons
@@ -1071,7 +1151,7 @@ Comparisons
        | Returns true if the source entity's distance between ``start`` and ``end`` changed.
 
 
-Conditionals
+If-then-else
 ------------
 
 .. list-table::
@@ -1096,27 +1176,8 @@ Conditionals
        | Return 1 if the source entity's ``age`` field is greater
          than 42, if not 2 is returned.
 
-   * - ``coalesce``
-     - | *Arguments:*
-       |   FUNCTION(function-expression{0|1}),
-       |   VALUES(value-expression{1})
-       |
-       | Returns the first value in VALUES that makes the FUNCTION expression
-         return a trueish value. The FUNCTION expression argument is optional,
-         so if it is not given the first non-null value in VALUES is returned.
-     - | ``["coalesce", "_S.tags"]``
-       |
-       | Returns the first value in the source entity's ``tags``
-         field that is not null.
-       |
-       | ``["coalesce",``
-       |     ``["gt", "_.expenses", 1000], "_S.hobbies"]``
-       |
-       | Returns the first hobby that has expenses greater than 1000.
-
-
-Data Types
-----------
+Nulls
+-----
 
 .. list-table::
    :header-rows: 1
@@ -1125,172 +1186,6 @@ Data Types
    * - Function
      - Description
      - Examples
-
-       .. _json_dtl_function:
-   * - ``json``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to JSON strings (not transit encoded).
-         The keys of dicts are sorted lexically.
-     - | ``["json", 1]``
-       |
-       | Returns one string: ``1``.
-       |
-       | ``["json", "hello"]``
-       |
-       | Returns one quoted string: ``"hello"``.
-       |
-       | ``["json",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
-
-       .. _json_transit_dtl_function:
-   * - ``json-transit``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to transit encoded JSON strings.
-         The keys of dicts are sorted lexically. This function behaves like
-         the ``json`` function, except that it transit encodes values.
-     - | ``["json-transit", 1]``
-       |
-       | Returns one string: ``1``.
-       |
-       | ``["json-transit", "hello"]``
-       |
-       | Returns one quoted string: ``"hello"``.
-       |
-       | ``["json-transit",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"~rhttp://www.bouvet.no/", "124.4", "12345"]``.
-
-   * - ``string``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to strings.
-
-       .. NOTE::
-
-          Complex types like list and dict are JSON encoded (no transit encoding).
-     - | ``["string", 1]``
-       |
-       | Returns one string: ``1``.
-       |
-       | ``["string", "hello"]``
-       |
-       | Returns one string: ``hello``.
-       |
-       | ``["string",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
-
-   * - ``is-string``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a string literal or if
-         it is a list, that the first element
-       | in the list is a string
-       |
-     - | ``["is-string", "foo:bar"]``
-       |
-       | Returns true.
-       |
-       | ``["is-string", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-string", ["list", "foo:bar", 12345]]``
-       |
-       | Returns true
-       |
-       | ``["is-string", ["list", 1, "foo:bar"]]``
-       |
-       | Returns false
-
-   * - ``integer``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to integers. If no default value expression
-         is given, values that don't parse as integers will be silently ignored.
-         If not, the evaluated value from the default expression will be used
-         as a replacement value.
-     - | ``["integer", "1"]``
-       |
-       | Returns one integer: 1.
-       |
-       | ``["integer",``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
-       |
-       | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
-       |
-       | ``["integer", ["integer", 0],``
-       |    ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
-         string value are replaced with the literal value 0
-       |
-       | ``["integer", ["string", "n/a"],``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
-         and the string value are replaced with the literal value "n/a"
-       |
-       | ``["integer", ["string", "_."],``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
-         The URI value and the non-integer string value are replaced with the
-         their respective string casts.
-
-   * - ``is-integer``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is an integer literal or
-         if it is a list, that the first element in the list is an integer
-       |
-     - | ``["is-integer", 1]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-integer", "1"]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-integer", ["list", 1, "12345"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-integer", ["list", "1", 2]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-integer", ["list", ["integer", "1"], 2]]``
-       |
-       | Returns ``true``.
 
    * - ``is-null``
      - | *Arguments:*
@@ -1384,15 +1279,253 @@ Data Types
        |
        | Returns ``[1, "12345"]``.
 
-   * - ``uuid``
+   * - ``coalesce``
      - | *Arguments:*
-       |   NONE(value-expression{0})
+       |   FUNCTION(function-expression{0|1}),
+       |   VALUES(value-expression{1})
        |
-       | Create a new UUID object.
+       | Returns the first value in VALUES that makes the FUNCTION expression
+         return a trueish value. The FUNCTION expression argument is optional,
+         so if it is not given the first non-null value in VALUES is returned.
+     - | ``["coalesce", "_S.tags"]``
        |
-     - | ``["uuid"]``
+       | Returns the first value in the source entity's ``tags``
+         field that is not null.
        |
-       | Returns a new UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       | ``["coalesce",``
+       |     ``["gt", "_.expenses", 1000], "_S.hobbies"]``
+       |
+       | Returns the first hobby that has expenses greater than 1000.
+
+Numbers
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``integer``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to integers. If no default value expression
+         is given, values that don't parse as integers will be silently ignored.
+         If not, the evaluated value from the default expression will be used
+         as a replacement value.
+     - | ``["integer", "1"]``
+       |
+       | Returns one integer: 1.
+       |
+       | ``["integer",``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |
+       | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
+       |
+       | ``["integer", ["integer", 0],``
+       |    ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
+         string value are replaced with the literal value 0
+       |
+       | ``["integer", ["string", "n/a"],``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
+         and the string value are replaced with the literal value "n/a"
+       |
+       | ``["integer", ["string", "_."],``
+       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
+         The URI value and the non-integer string value are replaced with the
+         their respective string casts.
+
+   * - ``is-integer``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is an integer literal or
+         if it is a list, that the first element in the list is an integer
+       |
+     - | ``["is-integer", 1]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", "1"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", 1, "12345"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", ["list", "1", 2]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", ["integer", "1"], 2]]``
+       |
+       | Returns ``true``.
+
+   * - ``decimal``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to decimals (a fractional number with
+         unlimited precision). If no default value expression is given,
+         values that don't parse as decimal values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value.
+       |
+     - | ``["decimal", "1.0"]``
+       |
+       | Returns one decimal value: 1.0
+       |
+       | ``["decimal",``
+       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |
+       | Returns a list of decimal values: [1.0, 2.2]. The URI and
+         non-decimal string value are ignored.
+       |
+       | ``["decimal", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-decimal string value are replaced with the literal value: false
+       |
+       | ``["decimal", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["decimal", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+         is replaced with its string cast.
+
+   * - ``is-decimal``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a decimal literal or
+         if it is a list, that the first element in the list is a decimal
+       |
+     - | ``["is-decimal", 1.0]``
+       |
+       | Returns false (it is a float literal).
+       |
+       | ``["is-decimal", ["decimal", "1.23"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-decimal", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", 1.0, "12345"]]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
+       |
+       | Returns true.
+
+   * - ``float``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to floats (a  IEEE 754 binary 64 format).
+         if no default value expression is given,
+         values that don't parse as float values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value. Note that if you cast decimals to floats
+         you can lose precision.
+       |
+     - | ``["float", "1.0"]``
+       |
+       | Returns one float value: 1.0
+       |
+       | ``["float",``
+       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |
+       | Returns a list of float values: [1.0, 2.2]. The URI and
+         non-numeric string value are ignored.
+       |
+       | ``["float", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-numeric string value are replaced with the literal value: false
+       |
+       | ``["float", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["float", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+         is replaced with its string cast.
+
+   * - ``is-float``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a float literal or
+         if it is a list, that the first element in the list is a float value
+       |
+     - | ``["is-float", 1.0]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["decimal", "1.23"]]``
+       |
+       | Returns false (it is a decimal literal).
+       |
+       | ``["is-float", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", 1.0, "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
+       |
+       | Returns false.
+
+
+Date and time
+-------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
 
    * - ``now``
      - | *Arguments:*
@@ -1655,217 +1788,609 @@ Data Types
        |
        | Returns false.
 
-   * - ``boolean``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to booleans. If no default value expression
-         is given, values that don't parse as boolean values will be silently
-         ignored. If not, the evaluated value from the default expression will
-         be used as a replacement value. String literals are case insensitive,
-         and the supported values are "true" and "false". null values are
-         evaluated as false.
-       |
-     - | ``["boolean", "false"]``
-       |
-       | Returns one boolean: false.
-       |
-       | ``["boolean",``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
-       |     ``"True", false, 1234]]``
-       |
-       | Returns a list of booleans: [true, true, false]. The URI and integer
-         values are ignored.
-       |
-       | ``["boolean", ["boolean", false],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns a list of booleans: [true, false, false, false]. The URI value
-         and the string value are replaced with the literal value: false
-       |
-       | ``["boolean", ["string", "n/a"],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
-       |
-       | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and
-         the string value are replaced with the literal value "n/a"
-       |
-       | ``["boolean", ["string", "_."],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
-       |
-       | Returns a list of booleans: [true, "http://www.bouvet.no/", false].
-         The URI value is replaced with its string cast.
+Strings
+-------
 
-   * - ``is-boolean``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a boolean literal or if
-         it is a list, that the first element in the list is a boolean
-       |
-     - | ``["is-boolean", false]``
-       |
-       | Returns true.
-       |
-       | ``["is-boolean", "True"]``
-       |
-       | Returns false.
-       |
-       | ``["is-boolean", ["list", true, "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-boolean", ["list", "12345", true]]``
-       |
-       | Returns false.
-       |
-       | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
-       |
-       | Returns true.
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
 
-   * - ``decimal``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to decimals (a fractional number with
-         unlimited precision). If no default value expression is given,
-         values that don't parse as decimal values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value.
-       |
-     - | ``["decimal", "1.0"]``
-       |
-       | Returns one decimal value: 1.0
-       |
-       | ``["decimal",``
-       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
-       |
-       | Returns a list of decimal values: [1.0, 2.2]. The URI and
-         non-decimal string value are ignored.
-       |
-       | ``["decimal", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-decimal string value are replaced with the literal value: false
-       |
-       | ``["decimal", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["decimal", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
-         is replaced with its string cast.
+   * - Function
+     - Description
+     - Examples
 
-   * - ``is-decimal``
+   * - ``string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a decimal literal or
-         if it is a list, that the first element in the list is a decimal
-       |
-     - | ``["is-decimal", 1.0]``
-       |
-       | Returns false (it is a float literal).
-       |
-       | ``["is-decimal", ["decimal", "1.23"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-decimal", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", 1.0, "12345"]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", "1.0", 2.0]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
-       |
-       | Returns true.
+       | Translates all input values to strings.
 
-   * - ``float``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to floats (a  IEEE 754 binary 64 format).
-         if no default value expression is given,
-         values that don't parse as float values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value. Note that if you cast decimals to floats
-         you can lose precision.
-       |
-     - | ``["float", "1.0"]``
-       |
-       | Returns one float value: 1.0
-       |
-       | ``["float",``
-       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
-       |
-       | Returns a list of float values: [1.0, 2.2]. The URI and
-         non-numeric string value are ignored.
-       |
-       | ``["float", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-numeric string value are replaced with the literal value: false
-       |
-       | ``["float", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["float", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
-         is replaced with its string cast.
+       .. NOTE::
 
-   * - ``is-float``
+          Complex types like list and dict are JSON encoded (no transit encoding).
+     - | ``["string", 1]``
+       |
+       | Returns one string: ``1``.
+       |
+       | ``["string", "hello"]``
+       |
+       | Returns one string: ``hello``.
+       |
+       | ``["string",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+
+   * - ``is-string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a float literal or
-         if it is a list, that the first element in the list is a float value
+       | Boolean function that returns true if value is a string literal or if
+         it is a list, that the first element
+       | in the list is a string
        |
-     - | ``["is-float", 1.0]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", ["decimal", "1.23"]]``
-       |
-       | Returns false (it is a decimal literal).
-       |
-       | ``["is-float", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", 1.0, "12345"]]``
+     - | ``["is-string", "foo:bar"]``
        |
        | Returns true.
        |
-       | ``["is-float", ["list", "1.0", 2.0]]``
+       | ``["is-string", 1]``
        |
        | Returns false.
        |
-       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
+       | ``["is-string", ["list", "foo:bar", 12345]]``
        |
-       | Returns false.
+       | Returns true
+       |
+       | ``["is-string", ["list", 1, "foo:bar"]]``
+       |
+       | Returns false
+
+   * - ``upper``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the uppercase version of its input strings.
+         Non-string values are ignored.
+     - | ``["upper", ["list", "a", "b", "c"]]``
+       |
+       | Returns ``["A", "B", "C"]``.
+       |
+       | ``["upper", "_S.name"]``
+       |
+       | Returns an uppercased version of the source entity's name.
+
+   * - ``lower``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the lowercase version of its input strings.
+         Non-string values are ignored.
+     - | ``["lower", ["list", "A", "B", "C"]]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["lower", "_S.name"]``
+       |
+       | Returns a lowercased version of the source entity's name.
+
+   * - ``length``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the length (number of characters) of its input strings.
+         Non-string values are ignored.
+     - | ``["length", ["list", "", "a", "bb", "ccc"]]``
+       |
+       | Returns ``[0, 1, 2, 3]``.
+       |
+       | ``["length", "_S.name"]``
+       |
+       | Returns the length of the source entity's name.
+
+       .. _concat_dtl_function:
+   * - ``concat``
+     - | *Arguments:*
+       |   VALUES(value-expression{>1})
+       |
+       | Returns a concatenated string of its input strings.
+         Non-string values are ignored.
+     - | ``["concat", ["list", "a", "b", "c"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["concat", "_S.tags"]``
+       |
+       | Returns a concatenated version of the source entity's tags.
+       |
+       | ``["concat", "Hello ", "_S.name", "!"]``
+       |
+       | Returns ``"Hello John!"`` if the ``name`` property is ``John``.
+       |
+       | ``["concat", "a", ["list", "b", "c"], "d", 123, ["list", "!"]]``
+       |
+       | Returns ``"abcd!"``.
+       |
+       | ``["concat", 123, 3.14]``
+       |
+       | Returns ``""``, because non-string values are ignored.
+
+   * - ``join``
+     - | *Arguments:*
+       |   SEPARATOR(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a string created by joining its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["join", "-", ["list", "a", "b", 123, "c"]]``
+       |
+       | Returns ``"a-b-c"``.
+       |
+       | ``["join", "-", "_S.tags"]``
+       |
+       | Returns a joined string of the source entity's tags separated by dashes.
+
+   * - ``split``
+     - | *Arguments:*
+       |   SEPARATOR(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a list of strings created by splitting its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["split", "-", "a-b-c"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
+       |
+       | Returns ``["a", "b", "c", "d", "e"]``.
+       |
+       | ``["split", "-", "_S.uuid"]``
+       |
+       | Returns a list of strings of the source entity's tags separated by dashes.
+
+   * - ``strip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from both sides. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab", "cd", "ef"]``.
+       |
+       | ``["strip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["strip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed.
+       |
+       | ``["strip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123", "456"]``.
+
+   * - ``lstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the left side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab ", "cd ", "ef"]``.
+       |
+       | ``["lstrip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["lstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the left.
+       |
+       | ``["lstrip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123xyx", "456yx"]``.
+
+   * - ``rstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the right side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``[" ab", "cd", "ef"]``.
+       |
+       | ``["rstrip", "  abc"]]``
+       |
+       | Returns ``"  abc"``.
+       |
+       | ``["rstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the right.
+       |
+       | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123", "xy456"]``.
+
+   * - ``replace``
+     - | *Arguments:*
+       |   OLD_STRING(string{1})
+       |   NEW_STRING(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
+         are ignored.
+     - | ``["replace", "http://", "https://",``
+       |   ``"http://www.sesam.io/"]``
+       |
+       | Returns ``"https://www.sesam.io/"``.
+       |
+       | ``["replace", ":", ".", "_S.date"]]``
+       |
+       | Returns a date string where the colon has been replaced by a period.
+
+       .. _substring_dtl_function:
+   * - ``substring``
+     - | *Arguments:*
+       |   START_INDEX(integer{1})
+       |   END_INDEX(integer{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Extracts the substring between START_INDEX and END_INDEX. If the indexes are negative they start from the end.
+
+     - | ``["substring", 2, 4, "abcdef"]``
+       |
+       | Returns ``"cd"``.
+       |
+       | ``["substring", 2, "abcdef"]``
+       |
+       | Returns ``"cdef"``.
+       |
+       | ``["substring", -3, -1, "abcdef"]``
+       |
+       | Returns ``"de"``.
+
+   * - ``matches``
+     - | *Arguments:*
+       |   PATTERN(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
+         wildcard characters can be used. Non-string values are not matched and will cause the
+         function to return false. If PATTERN contains multiple string values then only the
+         first one is used.
+     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]``
+       |
+       | Returns ``true``.
+       |
+       | ``["matches", "*_sport", ".", "_S.tags"]]``
+       |
+       | Returns true if all the tags that have a "_sport" suffix.
+
+       .. _encrypt_dtl_function:
+   * - ``encrypt``
+     - | *Arguments:*
+       |   KEY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Encrypts the VALUES using the key in KEY
+     - | ``["encrypt", "secret", ["list", "a", "b", "c"]]``
+       |
+       | Returns an encrypted bytes object.
+       |
+       | Note: This function by itself does not offer an end-to-end secure system of encryption 
+       | as the key is stored along with the encrypted data. 
+       | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
+       |
+
+       .. _decrypt_dtl_function:
+   * - ``decrypt``
+     - | *Arguments:*
+       |   KEY(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Decrypts the VALUES using the key in KEY - it is symmetric with ``encrypt`` if the same key is used.
+     - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]``
+       |
+       | Returns ``["a", "b", "c"]``
+       |
+
+
+JSON
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _json_dtl_function:
+   * - ``json``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to JSON strings (not transit encoded).
+         The keys of dicts are sorted lexically.
+     - | ``["json", 1]``
+       |
+       | Returns one string: ``1``.
+       |
+       | ``["json", "hello"]``
+       |
+       | Returns one quoted string: ``"hello"``.
+       |
+       | ``["json",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+
+       .. _json_transit_dtl_function:
+   * - ``json-transit``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to transit encoded JSON strings.
+         The keys of dicts are sorted lexically. This function behaves like
+         the ``json`` function, except that it transit encodes values.
+     - | ``["json-transit", 1]``
+       |
+       | Returns one string: ``1``.
+       |
+       | ``["json-transit", "hello"]``
+       |
+       | Returns one quoted string: ``"hello"``.
+       |
+       | ``["json-transit",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"~rhttp://www.bouvet.no/", "124.4", "12345"]``.
+
+URIs
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to URIs. Only strings in VALUES will be
+         cast to URIs. Note that *no* URI escaping is done on the strings.
+     - | ``["uri", "http://www.bouvet.no/"]``
+       |
+       | Returns one URI.
+       |
+       | ``["uri",``
+       |    ``["list", "http://www.bouvet.no/",``
+       |       ``"http://www.sesam.io/", 12345]]``
+       |
+       | Returns a list of two URIs. The number is silently ignored because
+         it is not a string.
+
+   * - ``is-uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a URI literal, or if it is
+         a list, that the first element in the list is a URI.
+     - | ``["is-uri", ["uri", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
+       .. _curie_function:
+   * - ``curie``
+     - | *Arguments:*
+       |   PREFIX(string{1}),
+       |   VALUES(value-expression{1})
+       |
+     - | Constructs new CURIEs as URI objects based on a the PREFIX
+         and VALUES arguments.
+       |
+       | ``["curie", "foo", "bar"]``
+       |
+       | This will produce a URI object with the value ``"~rfoo:bar"``.
+       |
+       | ``["curie", "foo", ["list", "bar", "zoo"]]``
+       |
+       | This will produce a list of two URI objects with the
+         values ``["~rfoo:bar", "~rfoo:zoo"]``.
+
+       .. _url_quote_dtl_function:
+   * - ``url-quote``
+     - | *Arguments:*
+       |   SAFE_CHARS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL quoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+       |
+       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
+         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
+         argument must be a string that contains zero or more ASCII characters that should
+         not be encoded. Note that this only is applicable for ASCII characters.
+     - | ``["url-quote", "/foo bar/baz"]``
+       |
+       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
+         To avoid this you can add the SAFE_CHARS argument:
+       |
+       | ``["url-quote", "/", "/foo bar/baz"]``
+       |
+       | Returns ``/foo%20bar/baz``.
+       |
+       | ``["url-quote",``
+       |   ``["list", "å", 1, 2,``
+       |     ``["uri", "http://example.com"], "foo bar"]]``
+       |
+       | Returns ``["%C3%A5", "foo%20bar]``.
+
+       .. _uri_expand_function:
+   * - ``uri-expand``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   ENTITIES(value-expression{1})
+       |
+     - | Runs the given entities through the prefixing rules and the
+         prefix expansion mapping defined in the node metadata RDF registry.
+         The given entities must have a ``_dataset`` property containing the
+         id of the dataset to which they belong *or* the key to look up the
+         prefixes must be computed by the (optional) FUNCTION argument. The
+         result of the FUNCTION argument will override any ``_dataset``
+         property on the entity. The id given or computed will be used to locate
+         the prefix rules and prefix expansion mapping within the node RDF registry.
+         Note that the result of FUNCTION must be a single string value.
+
+       | The main purpose of this function is to prepare entities for
+         translation into RDF form. See the :doc:`RDF support <rdf-support>`
+         document for more information about how this works.
+
+       | Example node metadata:
+
+         ::
+
+            {
+                "rdf": {
+                  "people": {
+                     "prefixes": {
+                       "p": "http://example.org/people/"
+                     },
+                     "prefix_rules": {
+                       "id": "p",
+                       "properties": [
+                          "p", ["name"],
+                          "c", ["Employer"],
+                          "_", ["**"]
+                       ]
+                     }
+                  }
+                }
+            }
+
+       | Example input entity:
+
+         ::
+
+            {
+              "_id": "john_doe",
+              "_dataset": "people",
+              "name": "John Doe",
+              "employer": "Example Ltd.",
+              "born": "1973-01-21"
+            }
+
+       | Given the above configuration you should expect the following URI-expanded
+         entity in the result:
+
+         ::
+
+            {
+              "_id": "<http://example.org/people/john_doe>",
+              "_dataset": "people",
+              "<http://example.org/people/name>": "John Doe",
+              "<http://example.org/company/employer>": "Example Ltd.",
+              "<http://example.org/born>": "1973-01-21"
+            }
+
+       | ``["uri-expand",``
+       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity.
+       |
+       | ``["uri-expand",``
+       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
+         dataset, then URI expands them.
+       | ``["uri-expand",``
+       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
+       |
+       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
+         property.
+       | ``["uri-expand", ["string", "people"],``
+       |    ``{"_id": "mary", "_dataset": "employees",``
+       |      ``"name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "people" key in the node RDF registry (i.e. the
+         ``_dataset`` value of "employees" is overriden by the computed value)
+
+       | ``["uri-expand", ["string", "_.type"],``
+       |   ``{"_id": "mary", "_dataset": "employees",``
+       |     ``"type": "person", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "person" key in the node RDF registry. The ``_dataset``
+         value of "employees" is overriden by the computed value (based on
+         the contents of the entity's ``type`` property in this example).
+
+UUIDs
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+   * - ``uuid``
+     - | *Arguments:*
+       |   NONE(value-expression{0})
+       |
+       | Create a new UUID object.
+       |
+     - | ``["uuid"]``
+       |
+       | Returns a new UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+
 
 Nested transformations
 ----------------------
@@ -2260,474 +2785,6 @@ Namespaced identifiers
        | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
        |
        | Returns ``["bar", "baz"]``
-
-URIs
-----
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-   * - ``uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates input values to URIs. Only strings in VALUES will be
-         cast to URIs. Note that *no* URI escaping is done on the strings.
-     - | ``["uri", "http://www.bouvet.no/"]``
-       |
-       | Returns one URI.
-       |
-       | ``["uri",``
-       |    ``["list", "http://www.bouvet.no/",``
-       |       ``"http://www.sesam.io/", 12345]]``
-       |
-       | Returns a list of two URIs. The number is silently ignored because
-         it is not a string.
-
-   * - ``is-uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a URI literal, or if it is
-         a list, that the first element in the list is a URI.
-     - | ``["is-uri", ["uri", "foo:bar"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-uri", "foo:bar"]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
-       |
-       | Returns ``false``.
-
-       .. _curie_function:
-   * - ``curie``
-     - | *Arguments:*
-       |   PREFIX(string{1}),
-       |   VALUES(value-expression{1})
-       |
-     - | Constructs new CURIEs as URI objects based on a the PREFIX
-         and VALUES arguments.
-       |
-       | ``["curie", "foo", "bar"]``
-       |
-       | This will produce a URI object with the value ``"~rfoo:bar"``.
-       |
-       | ``["curie", "foo", ["list", "bar", "zoo"]]``
-       |
-       | This will produce a list of two URI objects with the
-         values ``["~rfoo:bar", "~rfoo:zoo"]``.
-
-       .. _url_quote_dtl_function:
-   * - ``url-quote``
-     - | *Arguments:*
-       |   SAFE_CHARS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns the URL quoted versions of any string or list of strings in the
-         argument list. Any non-strings are ignored and is not returned in the
-         result. Returns either a single string (if the input is a single
-         string literal) or a list (of strings).
-       |
-       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
-         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
-         argument must be a string that contains zero or more ASCII characters that should
-         not be encoded. Note that this only is applicable for ASCII characters.
-     - | ``["url-quote", "/foo bar/baz"]``
-       |
-       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
-         To avoid this you can add the SAFE_CHARS argument:
-       |
-       | ``["url-quote", "/", "/foo bar/baz"]``
-       |
-       | Returns ``/foo%20bar/baz``.
-       |
-       | ``["url-quote",``
-       |   ``["list", "å", 1, 2,``
-       |     ``["uri", "http://example.com"], "foo bar"]]``
-       |
-       | Returns ``["%C3%A5", "foo%20bar]``.
-
-       .. _uri_expand_function:
-   * - ``uri-expand``
-     - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
-       |   ENTITIES(value-expression{1})
-       |
-     - | Runs the given entities through the prefixing rules and the
-         prefix expansion mapping defined in the node metadata RDF registry.
-         The given entities must have a ``_dataset`` property containing the
-         id of the dataset to which they belong *or* the key to look up the
-         prefixes must be computed by the (optional) FUNCTION argument. The
-         result of the FUNCTION argument will override any ``_dataset``
-         property on the entity. The id given or computed will be used to locate
-         the prefix rules and prefix expansion mapping within the node RDF registry.
-         Note that the result of FUNCTION must be a single string value.
-
-       | The main purpose of this function is to prepare entities for
-         translation into RDF form. See the :doc:`RDF support <rdf-support>`
-         document for more information about how this works.
-
-       | Example node metadata:
-
-         ::
-
-            {
-                "rdf": {
-                  "people": {
-                     "prefixes": {
-                       "p": "http://example.org/people/"
-                     },
-                     "prefix_rules": {
-                       "id": "p",
-                       "properties": [
-                          "p", ["name"],
-                          "c", ["Employer"],
-                          "_", ["**"]
-                       ]
-                     }
-                  }
-                }
-            }
-
-       | Example input entity:
-
-         ::
-
-            {
-              "_id": "john_doe",
-              "_dataset": "people",
-              "name": "John Doe",
-              "employer": "Example Ltd.",
-              "born": "1973-01-21"
-            }
-
-       | Given the above configuration you should expect the following URI-expanded
-         entity in the result:
-
-         ::
-
-            {
-              "_id": "<http://example.org/people/john_doe>",
-              "_dataset": "people",
-              "<http://example.org/people/name>": "John Doe",
-              "<http://example.org/company/employer>": "Example Ltd.",
-              "<http://example.org/born>": "1973-01-21"
-            }
-
-       | ``["uri-expand",``
-       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity.
-       |
-       | ``["uri-expand",``
-       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
-         dataset, then URI expands them.
-       | ``["uri-expand",``
-       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
-       |
-       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
-         property.
-       | ``["uri-expand", ["string", "people"],``
-       |    ``{"_id": "mary", "_dataset": "employees",``
-       |      ``"name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "people" key in the node RDF registry (i.e. the
-         ``_dataset`` value of "employees" is overriden by the computed value)
-
-       | ``["uri-expand", ["string", "_.type"],``
-       |   ``{"_id": "mary", "_dataset": "employees",``
-       |     ``"type": "person", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "person" key in the node RDF registry. The ``_dataset``
-         value of "employees" is overriden by the computed value (based on
-         the contents of the entity's ``type`` property in this example).
-
-Strings
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-   * - ``upper``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the uppercase version of its input strings.
-         Non-string values are ignored.
-     - | ``["upper", ["list", "a", "b", "c"]]``
-       |
-       | Returns ``["A", "B", "C"]``.
-       |
-       | ``["upper", "_S.name"]``
-       |
-       | Returns an uppercased version of the source entity's name.
-
-   * - ``lower``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the lowercase version of its input strings.
-         Non-string values are ignored.
-     - | ``["lower", ["list", "A", "B", "C"]]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       |
-       | ``["lower", "_S.name"]``
-       |
-       | Returns a lowercased version of the source entity's name.
-
-   * - ``length``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the length (number of characters) of its input strings.
-         Non-string values are ignored.
-     - | ``["length", ["list", "", "a", "bb", "ccc"]]``
-       |
-       | Returns ``[0, 1, 2, 3]``.
-       |
-       | ``["length", "_S.name"]``
-       |
-       | Returns the length of the source entity's name.
-
-       .. _concat_dtl_function:
-   * - ``concat``
-     - | *Arguments:*
-       |   VALUES(value-expression{>1})
-       |
-       | Returns a concatenated string of its input strings.
-         Non-string values are ignored.
-     - | ``["concat", ["list", "a", "b", "c"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["concat", "_S.tags"]``
-       |
-       | Returns a concatenated version of the source entity's tags.
-       |
-       | ``["concat", "Hello ", "_S.name", "!"]``
-       |
-       | Returns ``"Hello John!"`` if the ``name`` property is ``John``.
-       |
-       | ``["concat", "a", ["list", "b", "c"], "d", 123, ["list", "!"]]``
-       |
-       | Returns ``"abcd!"``.
-       |
-       | ``["concat", 123, 3.14]``
-       |
-       | Returns ``""``, because non-string values are ignored.
-
-   * - ``join``
-     - | *Arguments:*
-       |   SEPARATOR(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a string created by joining its input strings by SEPARATOR.
-         Non-string values are ignored.
-     - | ``["join", "-", ["list", "a", "b", 123, "c"]]``
-       |
-       | Returns ``"a-b-c"``.
-       |
-       | ``["join", "-", "_S.tags"]``
-       |
-       | Returns a joined string of the source entity's tags separated by dashes.
-
-   * - ``split``
-     - | *Arguments:*
-       |   SEPARATOR(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a list of strings created by splitting its input strings by SEPARATOR.
-         Non-string values are ignored.
-     - | ``["split", "-", "a-b-c"]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       |
-       | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
-       |
-       | Returns ``["a", "b", "c", "d", "e"]``.
-       |
-       | ``["split", "-", "_S.uuid"]``
-       |
-       | Returns a list of strings of the source entity's tags separated by dashes.
-
-   * - ``strip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from both sides. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``["ab", "cd", "ef"]``.
-       |
-       | ``["strip", "  abc"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["strip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed.
-       |
-       | ``["strip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123", "456"]``.
-
-   * - ``lstrip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from the left side. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``["ab ", "cd ", "ef"]``.
-       |
-       | ``["lstrip", "  abc"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["lstrip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed
-         from the left.
-       |
-       | ``["lstrip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123xyx", "456yx"]``.
-
-   * - ``rstrip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from the right side. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``[" ab", "cd", "ef"]``.
-       |
-       | ``["rstrip", "  abc"]]``
-       |
-       | Returns ``"  abc"``.
-       |
-       | ``["rstrip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed
-         from the right.
-       |
-       | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123", "xy456"]``.
-
-   * - ``replace``
-     - | *Arguments:*
-       |   OLD_STRING(string{1})
-       |   NEW_STRING(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
-         are ignored.
-     - | ``["replace", "http://", "https://",``
-       |   ``"http://www.sesam.io/"]``
-       |
-       | Returns ``"https://www.sesam.io/"``.
-       |
-       | ``["replace", ":", ".", "_S.date"]]``
-       |
-       | Returns a date string where the colon has been replaced by a period.
-
-       .. _substring_dtl_function:
-   * - ``substring``
-     - | *Arguments:*
-       |   START_INDEX(integer{1})
-       |   END_INDEX(integer{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Extracts the substring between START_INDEX and END_INDEX. If the indexes are negative they start from the end.
-
-     - | ``["substring", 2, 4, "abcdef"]``
-       |
-       | Returns ``"cd"``.
-       |
-       | ``["substring", 2, "abcdef"]``
-       |
-       | Returns ``"cdef"``.
-       |
-       | ``["substring", -3, -1, "abcdef"]``
-       |
-       | Returns ``"de"``.
-
-   * - ``matches``
-     - | *Arguments:*
-       |   PATTERN(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
-         wildcard characters can be used. Non-string values are not matched and will cause the
-         function to return false. If PATTERN contains multiple string values then only the
-         first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]``
-       |
-       | Returns ``true``.
-       |
-       | ``["matches", "*_sport", ".", "_S.tags"]]``
-       |
-       | Returns true if all the tags that have a "_sport" suffix.
-
-       .. _encrypt_dtl_function:
-   * - ``encrypt``
-     - | *Arguments:*
-       |   KEY(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Encrypts the VALUES using the key in KEY
-     - | ``["encrypt", "secret", ["list", "a", "b", "c"]]``
-       |
-       | Returns an encrypted bytes object.
-       |
-       | Note: This function by itself does not offer an end-to-end secure system of encryption 
-       | as the key is stored along with the encrypted data. 
-       | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
-       |
-
-       .. _decrypt_dtl_function:
-   * - ``decrypt``
-     - | *Arguments:*
-       |   KEY(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Decrypts the VALUES using the key in KEY - it is symmetric with ``encrypt`` if the same key is used.
-     - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]``
-       |
-       | Returns ``["a", "b", "c"]``
-       |
 
 
 Values / collections
