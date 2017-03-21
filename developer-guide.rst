@@ -16,4 +16,4 @@ Developer Guide
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>
    Security <security>
-   Profiling <profiling>
+   Low-level debugging <low-level-debugging>
