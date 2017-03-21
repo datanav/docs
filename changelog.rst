@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-20
+----------
+* Extended the :ref:`in <in_dtl_function>` DTL function to allow a single value in the second argument.
+
 2017-03-16
 ----------
 * The :doc:`JSON Push Protocol <json-push>` document now contains :ref:`examples <json_push_examples>` of how to use ``curl`` to perform incremental and full syncs.
