@@ -1942,8 +1942,9 @@ Paths
        |   VALUES(value-expression{1})
        |
        | Traverses the PROPERTY_PATH path for each of the entities in
-         VALUES. The result is a list of all the values at the end of
-         the traversal. PROPERTY_PATH is an expression that should resolve
+         VALUES. The result is all the values at the end of
+         the traversal. This may be a single value or a list of values.
+         PROPERTY_PATH is an expression that should resolve
          to a string or a list of strings. Those strings are treated as
          literals, i.e. property names, so no variables can be used. Only
          properties on the entity can be traversed. If you want to traverse
@@ -1958,6 +1959,19 @@ Paths
        | This will traverse from the source entity's orders to the
          order lines and then return their item names. The output is a
          list of product item names.
+       |
+       | ``["path", "age", {"age": 24}]``
+       |
+       | Returns ``24``.
+       |
+       | ``["path", "foo", {"bar": 123}]``
+       |
+       | Returns ``null``.
+       |
+       | ``["path", ["list", "a", "b"],``
+       |   ``["list", {"a": {"b": 1}}, {"a": [{"b": 2}, {"b": 3}]}]]``
+       |
+       | Returns ``[1, 2, 3]``.
 
 
 Hops
