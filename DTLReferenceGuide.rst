@@ -2578,7 +2578,7 @@ Strings
        |
        | Returns a stripped version of the source entity's name where whitespace is removed.
        |
-       | ``["strip", "x", ["list", "123xxx", "xx456xx"]]``
+       | ``["strip", "xy", ["list", "123xyx", "xy456yx"]]``
        |
        | Returns ``["123", "456"]``.
 
@@ -2603,9 +2603,9 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the left.
        |
-       | ``["lstrip", "x", ["list", "123xxx", "xx456xx"]]``
+       | ``["lstrip", "xy", ["list", "123xyx", "xy456yx"]]``
        |
-       | Returns ``["123xxx", "456xx"]``.
+       | Returns ``["123xyx", "456yx"]``.
 
    * - ``rstrip``
      - | *Arguments:*
@@ -2628,9 +2628,9 @@ Strings
        | Returns a stripped version of the source entity's name where whitespace is removed
          from the right.
        |
-       | ``["rstrip", "x", ["list", "123xxx", "xx456xx"]]``
+       | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
        |
-       | Returns ``["123", "xx456"]``.
+       | Returns ``["123", "xy456"]``.
 
    * - ``replace``
      - | *Arguments:*
@@ -3247,6 +3247,19 @@ Values / collections
        | ``["group-by", "_.gender", "_S.people"]]``
        |
        | Returns a dictionary of people grouped by their gender.
+       |
+       | ``["group-by",``
+       |   ``["upper", "_."], ["list", "a", "b"]]``
+       |
+       | Returns ``{"\"A\"": ["a"], "\"B\"": ["b"]}``. The keys are
+         transit-encoded JSON strings.
+       |
+       | ``["group-by",``
+       |   ``["upper", "_."],``
+       |   ``["string", "_."], ["list", "a", "b"]]``
+       |
+       | Returns ``{"A": ["a"], "B": ["b"]}``. Same as above, but we specify
+         a STRING_FUNCTION function that creates string keys.
 
 
 Sets
