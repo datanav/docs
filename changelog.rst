@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-03-24
+----------
+* Extended the :ref:`URL system <url_system>` and :ref:`REST system <rest_system>` to accept default custom request headers using the ``headers`` property. Also fixed the REST system schema to reflect authentication options and the ``jwt_token`` property.
+
 2017-03-20
 ----------
 * Extended the :ref:`in <in_dtl_function>` DTL function to allow a single value in the second argument.

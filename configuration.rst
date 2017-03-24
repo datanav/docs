@@ -6495,6 +6495,11 @@ Prototype
         "username": None,
         "password": None,
         "jwt_token": None,
+        "headers": {
+            "MY_HEADER": "some-value",
+            "MY_OTHER_HEADER": "$ENV(key-for-other-value)",
+            "MY_SECRET_HEADER": "$SECRET(secret-key)"
+        },
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -6552,10 +6557,18 @@ Properties
      -
      -
 
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set as defaults in request made using the URL system. Both keys and values must
+       evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
+       when using the ``jwt_token`` property.
+     -
+     -
+
    * - ``authentication``
      - String
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. Allowed values is either "basic", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
+       authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
        might be also required depending on the authentication scheme selected.
      -
      -
@@ -6632,6 +6645,7 @@ Prototype
         "username": None,
         "password": None,
         "authentication": "basic",
+        "jwt_token": None,
         "connect_timeout": 60,
         "read_timeout": 7200,
         "operations": {
@@ -6710,8 +6724,24 @@ Properties
    * - ``authentication``
      - String
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. No authentication set means means any ``username`` or ``password`` set will be ignored.
-       Allowed values is either "basic" or "digest".
+       authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
+       might be also required depending on the authentication scheme selected.
+     -
+     -
+
+   * - ``jwt_token``
+     - String
+     - If ``authentication`` is set to ``jwt``, this property must hold the `JWT <https://jwt.io/>`_ token to use
+       towards the remote server.
+     -
+     -
+
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set as defaults in request made using the URL system. Both keys and values must
+       evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
+       when using the ``jwt_token`` property. The default headers can also be overridden in the operation properties
+       on a per-method basis - see next section for detauks.
      -
      -
 
@@ -6769,8 +6799,9 @@ A operation configuration looks like:
      - Yes
 
    * - ``headers``
-     - Objects
-     - An optional object that contain key-value mappings for the HTTP request header.
+     - Dict<String,String>
+     - An optional object that contain key-value mappings for the HTTP request header. Entries in this dictionary
+       will override any default ``headers`` property defined on the system (see previous section).
      -
      -
 
