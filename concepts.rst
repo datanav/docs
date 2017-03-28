@@ -9,9 +9,13 @@ Concepts
 Introduction
 ------------
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems, transforming data, and providing data for target systems.
+Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data
+from source systems, transforming data, and providing data for target systems.
 
-Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined to process the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam.
+Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined to process
+the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new
+shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by
+the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam.
 
 .. image:: images/datahub.jpg
     :width: 800px
@@ -19,7 +23,9 @@ Sesam collects raw data from source systems and stores it in datasets. Data tran
     :alt: Sesam
 
 
-Sesam produces and consumes streams of data. Each stream contains a number of data entities. Each entity consists of a number of name-value pairs and with some special reserved property names. See the :doc:`entity data model <entitymodel>` section for more details. The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
+Sesam produces and consumes streams of data. Each stream contains a number of data entities. Each entity consists of a
+number of name-value pairs and with some special reserved property names. See the :doc:`entity data model <entitymodel>`
+section for more details. The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
 
 ::
 
@@ -37,15 +43,27 @@ Sesam produces and consumes streams of data. Each stream contains a number of da
     ]
 
 
-A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a source, an optional list of transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data entities from the source, push them through any transformations and deliver the results into the sink.
+A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a source, an optional list of
+transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data
+entities from the source, push them through any transformations and deliver the results into the sink.
 
-*Sources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases. Each source is connected to a *System*. A system represents some external system, such as a web server hosting an API endpoint or a SQL database. The job of the source is to convert the underlying data into a uniform representation; JSON. Some sources offer features additional features such as only exposing the entities that have changed. Different sources offer different levels of support for change detection.
+*Sources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases.
+Each source is connected to a *System*. A system represents some external system, such as a web server hosting an
+API endpoint or a SQL database. The job of the source is to convert the underlying data into a uniform representation; JSON.
+Some sources offer features additional features such as only exposing the entities that have changed.
+Different sources offer different levels of support for change detection.
 
-Data from a source for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new or has changed.
+Data from a source for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes
+data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some
+additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new
+or has changed.
 
-Datasets also act as sources. One of the main uses of a dataset is as a source to a transformation. Transformations are describeded using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
+Datasets also act as sources. One of the main uses of a dataset is as a source to a transformation. Transformations are
+described using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing
+for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
 
-The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks can either be another dataset sink or it can be a sink that connects to a target system.
+The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks
+can either be another dataset sink or it can be a sink that connects to a target system.
 
 Sesam provides a comprehensive API and UI for working with all aspects of Sesam.
 
