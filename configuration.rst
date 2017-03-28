@@ -1455,7 +1455,7 @@ Prototype
 
     {
        "type": "csv",
-       "system": "a-valid-url-system-id",
+       "system": "a-valid-url-or-microservice-system-id",
        "url": "url-to-csv-file",
        "has_header": true,
        "field_names": ["mappings","from","columns","to","properties"],
@@ -1491,7 +1491,7 @@ Properties
 
    * - ``system``
      - String
-     - The ID of the :ref:`URL system <url_system>` component to use.
+     - The ID of the :ref:`URL system <url_system>` or :ref:`microservice system <microservice_system>` component to use.
      -
      - Yes
 
@@ -1644,7 +1644,7 @@ Prototype
 
     {
        "type": "rdf",
-       "system": "url-system-id",
+       "system": "url--or-microservice-system-id",
        "url": "url-to-rdf-file",
        "format": "nt-ttl-or-xml"
     }
@@ -1664,7 +1664,7 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`url system <url_system>` component to use.
+     - The ID of the :ref:`URL system <url_system>` or :ref:`microservice system <microservice_system>` component to use.
      -
      - Yes
 
@@ -1740,7 +1740,7 @@ Prototype
 
     {
        "type": "sdshare",
-       "system": "url-system-id",
+       "system": "url-or-microservice-system-id",
        "url": "url-to-sdshare-fragments-feed"
     }
 
@@ -1759,7 +1759,7 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use.
+     - The ID of the :ref:`URL system <url_system>` or :ref:`microservice system <microservice_system>` component to use.
      -
      - Yes
 
