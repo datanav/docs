@@ -5311,6 +5311,63 @@ You can manage any secret property values you do not want to be exposed in the A
 
 Note: as with pipe components, you are not allowed to use the forward slash character ("``/``") in system id's.
 
+All systems share a number of common properties:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "a_system_id",
+        "type": "system:some-type-of-system",
+        "name": "The Foo System",
+        "worker_threads": 10,
+        "metadata": {
+           "some_key": "some_value"
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``_id``
+     - String
+     - A unique ID identifying the system. Any pipe sink or source that uses the system must have a corresponding
+       ``system`` property matching this value.
+     -
+     - Yes
+
+   * - ``name``
+     - String
+     - A human readable name for this system
+     -
+     -
+
+   * - ``metadata``
+     - Object<string, Object>
+     - A object providing metadata for the system. The keys are strings while the values can be any valid JSON object
+       (literals, lists or other objects).
+     -
+     -
+
+   * - ``worker_threads``
+     - Integer
+     - The maximum number of concurrent pipes running using this system
+     - 10
+     -
+
+
 .. _sql_system:
 
 The SQL systems
