@@ -3571,13 +3571,6 @@ Properties
        since the http_endpoint will send the resulting entity back to the calling process; if the entity has been
        transformed by DTL or some other transform, the result might make little sense to the calling process.
 
-       .. NOTE::
-
-          It can be very expensive (in terms of memory-usage) to enable this option, since it will cause the
-          sesam instance to load all the incoming entities into memory (since the "_update" attribute of all entities
-          must be checked before any entities can be written to the target dataset. This option should therefore only
-          be used when the number of entitites in each pipe-run is small.
-
      - ``false``
      -
 
