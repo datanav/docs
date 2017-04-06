@@ -35,7 +35,7 @@ would eventually fill up the disk.
 Profiling one specific Sesam API call
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Adding the special "SESAM_API_PROFILER" header to the Sesam APi request will make the Sesam instance return a file
+Adding the special "SESAM-API-PROFILER" header to the Sesam APi request will make the Sesam instance return a file
 containing the profile-information for the api-call. The "real" response from the api-call is discarded.
 
 A header-value of "pstats" will return a file that can be loaded with pythons `pstats module
@@ -46,9 +46,9 @@ A header-value of "calltree" will return a file that can be opened in `KCachegri
 
     Examples using curl::
 
-      curl -v -O -J -H "SESAM_API_PROFILER:calltree" http://localhost:9042/api/pipes
+      curl -v -O -J -H "SESAM-API-PROFILER:calltree" http://localhost:9042/api/pipes
 
-      curl -v -O -J -H "SESAM_API_PROFILER:pstats" http://localhost:9042/api/pipes
+      curl -v -O -J -H "SESAM-API-PROFILER:pstats" http://localhost:9042/api/pipes
 
 
 

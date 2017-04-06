@@ -2563,7 +2563,7 @@ Hops
           particular ``hops`` function.  It can only be specified on the
           last HOP_SPEC argument.
 
-       7. ``trace``: OPTIONAL. A string. The default is not set.
+       8. ``trace``: OPTIONAL. A string. The default is not set.
           If set, it is used to enable gathering of statistics for the execution of
           the ``hops`` function during runtime. Currently this tracks the maximum
           cardinality of the join statements in the ``hops``. This information

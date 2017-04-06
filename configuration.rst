@@ -5307,7 +5307,7 @@ Note: as with pipe components, you are not allowed to use the forward slash char
 All systems share a number of common properties:
 
 Prototype
-^^^^^^^^^
+---------
 
 ::
 
@@ -5322,7 +5322,7 @@ Prototype
     }
 
 Properties
-^^^^^^^^^^
+----------
 
 .. list-table::
    :header-rows: 1
