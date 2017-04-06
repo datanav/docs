@@ -1751,6 +1751,11 @@ Date and time
        |         ``"%Y/%m/%d %H:%M", "2015/07/28 09:46"]]``
        |
        | Returns one datetime value: ``"~t2015-07-28T07:46:00Z"``.
+       | ``["datetime-shift", "UTC", "Europe/Oslo",``
+       |     ``["datetime-parse",``
+       |         ``"%Y/%m/%d %H:%M", "2015/07/28 09:46"]]``
+       |
+       | Returns one datetime value: ``"~t2015-07-28T11:46:00Z"``.
        |
        | ``["datetime-shift", "Europe/Oslo", "UTC",``
        |     ``["list",``
