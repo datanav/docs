@@ -51,6 +51,18 @@ A header-value of "calltree" will return a file that can be opened in `KCachegri
       curl -v -O -J -H "SESAM-API-PROFILER:pstats" http://localhost:9042/api/pipes
 
 
+Profiling a pump run
+~~~~~~~~~~~~~~~~~~~~
+
+Adding a special "profiler" request parameter to the Sesam API request will make the Sesam instance write files
+containing the profile-information for the pump run. The profile files are written to the logs folder of the instance
+with a "*.pstat" and "*.calltree" extension. The filename also contains the id of the pipe and the start
+timestamp.
+
+    Examples using curl::
+
+      curl -s --data "profiler=true" --data "operation=start" http://localhost:9042/api/pipes/foo/pump
+
 
 ---------------------------------------------------
 Getting a stacktrace of all the threads in the node
