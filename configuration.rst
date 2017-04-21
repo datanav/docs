@@ -6939,9 +6939,10 @@ Prototype
         "docker": {
             "image": "some-repo/some-image:some-tag",
             "port": 5000,
-            "username": None,
-            "password": None,
+            "username": null,
+            "password": null,
             "memory": 128,
+            "data_folder": true,
             "environment": {
                 "SOME-VARIABLE": "SOME-VALUE",
                 "OTHER-VARIABLE": {
@@ -6952,8 +6953,8 @@ Prototype
         },
         "use_https": false,
         "verify_ssl": false,
-        "username": None,
-        "password": None,
+        "username": null,
+        "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -7010,6 +7011,13 @@ Properties
    * - ``docker.memory``
      - Integer
      - The number of MB of RAM to allocate for the microservice.
+     - ``128``
+     -
+
+   * - ``docker.data_folder``
+     - Boolean
+     - If set to true then a persistent folder will be created for the system and mounted as ``/data``
+       inside the container. Note that the folder will not be deleted unless the system is deleted.
      - ``128``
      -
 

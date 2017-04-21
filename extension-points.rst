@@ -134,6 +134,8 @@ The templates that are relevant to building new data sources are:
 
     - The `Java template <https://github.com/sesam-io/java-datasource-template>`_. Requires Java 8 and uses the `Spark <http://sparkjava.com/>`_ micro framework.
 
+    - The `NodeJS template <https://github.com/sesam-io/nodejs-datasource-template>`_. Requires NodeJS v4 or later.
+
 
 Pushing Data Into The Hub
 -------------------------
