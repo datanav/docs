@@ -370,7 +370,7 @@ The following example shows a pipe definition that exposes data from a SQL datab
            "dataset": "Northwind:Customers"
        },
        "pump": {
-           "schedule_interval": 30
+           "schedule_interval": 3600
        },
        "compaction": {
            "keep_versions": 2,
@@ -7108,7 +7108,7 @@ Prototype
 ::
 
     {
-        "schedule_interval": 15,
+        "schedule_interval": 30,
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
         "rescan_cron_expression": "* * * * *",
@@ -7125,12 +7125,17 @@ Prototype
 Properties
 ----------
 
-A note on the required properties: a pump configuration needs to have either a ``schedule_interval`` *or* a
+Note: A pump configuration needs to have either a ``schedule_interval`` *or* a
 ``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
-``cron_expression`` taking precedence if both are present.
+``cron_expression`` taking precedence if both are present. If neither property is set, the ``schedule_interval``
+will be set to a default value. For pipes with a :ref:`dataset sink <dataset_sink>` *and* a
+:ref:`dataset sink <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
+will be 900 seconds +/- 45 seconds. It is good practice to always set the ``cron_expression`` property
+on pipes that reads from or writes to external systems.
 
 If you are unfamiliar with `cron expressions <https://en.wikipedia.org/wiki/Cron>`_, you can read more of how
 they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
+
 
 .. list-table::
    :header-rows: 1
@@ -7143,16 +7148,15 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Req
 
    * - ``schedule_interval``
-     - Integer
-     - The number of seconds between runs. It is a required field if no ``cron_expression`` is present. It is
-       mutually exclusive with the ``cron_expression`` property.
-     - 30
+     - Number
+     - The number of seconds between runs. It is mutually exclusive with the ``cron_expression`` property.
+     - (see the note above)
      - Yes
 
    * - ``cron_expression``
      - String
-     - A cron expression that indicates when the pump should run. It is a required field if no ``schedule_interval`` is
-       specified. It is mutually exclusive with the ``schedule_interval`` property.
+     - A cron expression that indicates when the pump should run.
+       It is mutually exclusive with the ``schedule_interval`` property.
      -
      - Yes
 
@@ -7233,6 +7237,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
        Pumps in ``off`` mode cannot be started at all.
      - "scheduled"
      -
+
 
 Example configuration
 ---------------------
