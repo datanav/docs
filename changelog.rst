@@ -1,6 +1,18 @@
 Changelog
 =========
 
+2017-04-24
+----------
+* Changed the default value of the "schedule_interval" :ref:`pump <pump_section>` configuration property. Before, the
+  default value was 30 seconds for all pipes. The new default value for
+  pipes with a :ref:`dataset sink <dataset_sink>` *and* a :ref:`dataset sink <dataset_source>` is now
+  30 seconds +/- 1.5 seconds. For all other pipes, the default is 900 seconds +/- 45 seconds.
+  (The ``+/-`` part helps stagger the start-time of the pipes, so that we don't get lots of pipes starting at the
+  same instant.)
+* Added a warning in the GUI for non-internal pipes that don't have a "schedule_interval" or a "cron_expression"
+  attribute set.
+
+
 2017-03-30
 ----------
 * Extended all :ref:`systems <system_section>` to accept a new property ``worker_threads`` that limits the number of concurrent pipes that can run against a particular system. The default value is 10. For input pipes the source system is used and for output pipes the sink system is used. For internal pipes, the the pool has 50 worker threads (i.e. for dataset to dataset pipes or receiver/publisher endpoints).
