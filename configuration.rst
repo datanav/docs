@@ -7018,7 +7018,7 @@ Properties
      - Boolean
      - If set to true then a persistent folder will be created for the system and mounted as ``/data``
        inside the container. Note that the folder will not be deleted unless the system is deleted.
-     - ``128``
+     - ``false``
      -
 
    * - ``use_https``
