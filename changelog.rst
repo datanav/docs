@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-04-28
+----------
+* The ``equality`` property on the ``merge`` source is now optional.
+  
 2017-04-24
 ----------
 * Changed the default value of the "schedule_interval" :ref:`pump <pump_section>` configuration property. Before, the

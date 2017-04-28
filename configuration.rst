@@ -626,10 +626,10 @@ Properties
      - Yes
 
    * - ``equality``
-     - List<EqFunctions{>=1}>
-     - A list of one or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
+     - List<EqFunctions{>=0}>
+     - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
      -
-     - Yes
+     - No
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
