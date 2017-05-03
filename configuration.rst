@@ -6942,6 +6942,9 @@ Prototype
             "username": null,
             "password": null,
             "memory": 128,
+            "cpu_quota": 25,
+            "cpu_period": 100,
+            "cpu_set_cpus": null,
             "data_folder": true,
             "environment": {
                 "SOME-VARIABLE": "SOME-VALUE",
@@ -7012,6 +7015,34 @@ Properties
      - Integer
      - The number of MB of RAM to allocate for the microservice.
      - ``128``
+     -
+
+   * - ``docker.cpu_quota``
+     - Integer
+     - The percentage of CPU resources the container is allowed to consume. *Use with extreme care* as you can easily
+       starve other processes on the server for resources if you set this value incorrectly or suboptimally. See
+       `the Docker documentation <https://docs.docker.com/engine/reference/run/#cpu-period-constraint>`_ for details).
+       Note that the value is divided by 1000 with respects to the range in the Docker documentation. Also note that
+       the value represents the *sum* of CPU resources used across *all cores*. If the container is allowed to use more
+       than one CPU (by default it can use all of them) the number can exceed 100. I.e. for a 4 core CPU, 400 means
+       use all resources on all CPU cores.
+     - ``25``
+     -
+
+   * - ``docker.cpu_period``
+     - Integer
+     - The percentage of CPU time the OS scheduler is allowed use (see `the Docker documentation <https://docs.docker.com/engine/reference/run/#cpu-period-constraint>`_ for details).
+       Note that the value is divided by 1000 with respects to the range in the Docker documentation. You should not
+       normally change the default value.
+     - ``100``
+     -
+
+   * - ``docker.cpu_set_cpus``
+     - String
+     - A string expression representing the CPU cores the container is allowed to use, see ``docker.cpu_quota``.
+       The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
+       4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
+     - ``null``
      -
 
    * - ``docker.data_folder``
