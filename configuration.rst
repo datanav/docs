@@ -6944,7 +6944,7 @@ Prototype
             "memory": 128,
             "cpu_quota": 25,
             "cpu_period": 100,
-            "cpu_set_cpus": null,
+            "cpuset_cpus": null,
             "data_folder": true,
             "environment": {
                 "SOME-VARIABLE": "SOME-VALUE",
@@ -7037,7 +7037,7 @@ Properties
      - ``100``
      -
 
-   * - ``docker.cpu_set_cpus``
+   * - ``docker.cpuset_cpus``
      - String
      - A string expression representing the CPU cores the container is allowed to use, see ``docker.cpu_quota``.
        The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
