@@ -2286,14 +2286,20 @@ The general form of a template property is
 
 ::
 
-    "property_name": "fake_factory_provider_name"
+    "property_name": "fake_factory_provider_name arg1type:arg1value arg2type:arg2value ... argNtype:argNvalue"
+
+For adding literal string values the "literal:" prefix is used
+
+::
+
+    "string_property": "literal:This is a literal string.".
 
 For generating id properties from a fixed set (to be able to link entities from different sources together using
 :ref:`DTL transforms <dtl_transform>`), a special syntax for the value part is used:
 
 ::
 
-    "shared_id_propery": "system:<pool_id_from_fake_system_component>".
+    "shared_id_property": "system:<pool_id_from_fake_system_component>".
 
 These shared *id pools* are configured as part of the :ref:`Fake System <fake_system>` component, and you have to include
 its id in the ``system`` property. Here's an example of two pipes with sources for fake employee- and employer (company)
@@ -2330,7 +2336,8 @@ entities using a shared pool of ids for the employer id:
                     "address": "address",
                     "telephone": "phone_number",
                     "email": "email",
-                    "employer": "system:employers"
+                    "employer": "system:employers",
+                    "description": "text int:100"
                 }
             }
         },
