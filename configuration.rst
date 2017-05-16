@@ -436,7 +436,7 @@ the source. The table below explains them in detail.
 
        .. NOTE::
 
-          If you set ``support_since`` to ``true`` then you should
+          If you set ``supports_since`` to ``true`` then you should
           also make sure that you set either ``is_since_comparable`` to
           ``true`` or ``is_chronological`` to ``true`` — or *both*
           depending on the strategy you want.
@@ -454,7 +454,7 @@ the source. The table below explains them in detail.
        .. NOTE::
 
           If you set ``is_since_comparable`` to ``true`` then you
-          should also make sure that ``support_since`` is set to
+          should also make sure that ``supports_since`` is set to
           ``true``.
 
    * - ``is_chronological``
@@ -472,15 +472,15 @@ the source. The table below explains them in detail.
        .. NOTE::
 
           If you set ``is_chronological`` to ``true`` then you
-          should also make sure that ``support_since`` is set to ``true``
+          should also make sure that ``supports_since`` is set to ``true``
           and ``is_since_comparable`` is set to ``true``.
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
 
-1. If ``support_since`` is ``true`` and ``is_since_comparable`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
+1. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
 
-2. If ``support_since`` is ``true`` and ``is_since_comparable`` is ``true`` then continuation support is enabled and the *max* strategy is chosen. This strategy will store the maximum ``_updated`` value seen in the run.
+2. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` then continuation support is enabled and the *max* strategy is chosen. This strategy will store the maximum ``_updated`` value seen in the run.
 
 3. If none of the above apply, then continuation support is disabled. No tracking of the ``since`` marker is then done.
 
