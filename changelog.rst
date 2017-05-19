@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-05-19
+----------
+* Added the :ref:`tuples <tuples_dtl_function>` DTL function that can be used to create composite join keys.
+
 2017-04-28
 ----------
 * The ``equality`` property on the ``merge`` source is now optional.

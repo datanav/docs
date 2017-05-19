@@ -415,6 +415,11 @@ Join expressions that contain functional expressions work the same
 way, e.g. ``["eq", ["+", "a.value", 2], "b.values"]`` succeeds as ``3``
 is a value shared by both.
 
+If you need to do joins with composite keys then the :ref:`tuples
+<tuples_dtl_function>` DTL function is useful. Using composite keys is
+almost always a better choice than having multiple individual joins as
+the former will have better precision.
+
 .. NOTE::
 
    ``null`` values and deleted entities are not indexed, so they are
@@ -3565,6 +3570,47 @@ Dictionaries / Entities
        | ``["key-values", {"hello": "world"}]``
        |
        | Returns ``{"key": "hello", "value": "world"}``.
+
+
+Tuples
+------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _tuples_dtl_function:
+   * - ``tuples``
+     - | *Arguments:*
+       |   VALUES(value-expression{>0})
+       |
+       | Constructs a list of tuples, the product of the values given in the
+         arguments. The tuple length is equal to the number
+         of function arguments. ``null`` values are ignored.
+       |
+       | This function is a good choice when you need to do joins on
+         composite keys.
+     - | ``["tuples"]``
+       |
+       | Returns ``[]``.
+       |
+       | ``["tuples", "a", "b", "c"]``
+       |
+       | Returns ``[["a", "b", "c"]]``.
+       |
+       | ``["tuples", ["list", 1, 2], 3]``
+       |
+       | Returns ``[[1, 3], [2, 3]]``.
+       |
+       | ``["tuples",``
+       |   ``["list", 1, 2], ["list", 3, null, 4, 5]]``
+       |
+       | Returns ``[[1, 3], [1, 4], [1, 5],``
+       |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
 
 
 Math
