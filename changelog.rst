@@ -6,6 +6,7 @@ Changelog
 * The JSON push protocol has been simplified to make it easier to write receivers. It will now always
   send the entities as an array, even if it contains just a single object. The JSON push sink has been updated to
   reflect this. If you need single-object JSON POST/PUT operations, you should use the REST sink instead.
+* Systems now support environment variables in their config like pipes do
 
 2017-05-19
 ----------
