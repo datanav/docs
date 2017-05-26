@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-05-26
+----------
+* The JSON push protocol has been simplified to make it easier to write receivers. It will now always
+  send the entities as an array, even if it contains just a single object. The JSON push sink has been updated to
+  reflect this. If you need single-object JSON POST/PUT operations, you should use the REST sink instead.
+
 2017-05-19
 ----------
 * Added the :ref:`tuples <tuples_dtl_function>` DTL function that can be used to create composite join keys.
