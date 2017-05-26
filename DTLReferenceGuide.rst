@@ -2084,7 +2084,7 @@ Strings
          wildcard characters can be used. Non-string values are not matched and will cause the
          function to return false. If PATTERN contains multiple string values then only the
          first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]``
+     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]]``
        |
        | Returns ``true``.
        |
@@ -2115,7 +2115,7 @@ Strings
        |   VALUES(value-expression{1})
        |
        | Decrypts the VALUES using the key in KEY - it is symmetric with ``encrypt`` if the same key is used.
-     - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]``
+     - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]]``
        |
        | Returns ``["a", "b", "c"]``
        |
