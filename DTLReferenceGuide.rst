@@ -2088,7 +2088,7 @@ Strings
        |
        | Returns ``true``.
        |
-       | ``["matches", "*_sport", ".", "_S.tags"]]``
+       | ``["matches", "*_sport", "_S.tags"]``
        |
        | Returns true if all the tags that have a "_sport" suffix.
 
