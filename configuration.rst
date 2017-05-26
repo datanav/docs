@@ -281,7 +281,7 @@ Example of an entity with namespaces:
      - Boolean
      - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on input pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: :ref:`csv <csv_source>`, :ref:`ldap <ldap_source>`, :ref:`sql <sql_source>`, :ref:`embedded <embedded_source>`, :ref:`http_endpoint <http_endpoint_source>`, and :ref:`json <json_source>`.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: :ref:`csv <csv_source>`, :ref:`fake <fake_source>`, :ref:`ldap <ldap_source>`, :ref:`sql <sql_source>`, :ref:`embedded <embedded_source>`, :ref:`http_endpoint <http_endpoint_source>`, and :ref:`json <json_source>`.
      - Source default
      -
 
@@ -289,7 +289,7 @@ Example of an entity with namespaces:
      - Boolean
      - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on output pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`influxdb <influxdb_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
      - Sink default
      -
 
@@ -2173,6 +2173,192 @@ into the ``my-entities`` dataset:
     }
 
 
+.. _fake_source:
+
+The fake source
+---------------
+
+This is a utility data source intended to be used to quickly mock up syntetic data for testing purposes.
+It uses the `Fake Factory <http://fake-factory.readthedocs.org/en/latest/>`_ Python package in conjunction with a entity
+template to produce custom entities that can be consumed by a sink. Fake sources intended to be interconnected can be
+realised by using the *shared id pools* of the related :ref:`Fake System <fake_system>` component.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "fake",
+        "entities": 1234,
+        "system": "fake-system-id",
+        "template": {
+            "_id": "system:some_id_pool",
+            "some_property": "fake_factory_method_name"
+        }
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of a :ref:`Fake System <fake_system>` component. It is only required if the ``template`` property contain
+       fields using a "system:<pool_id>" value to generate id fields from a predefined population (i.e. so datasets can be
+       linked).
+     -
+     -
+
+   * - ``entities``
+     - Integer
+     - The number of entities to generate. Note that the shared ids in the :ref:`Fake System <fake_system>` component
+       should take this into account. If the pool size is less than the number of entities to generate, an error will
+       be raised.
+     -
+     - Yes
+
+   * - ``template``
+     - Object
+     - A entity template for the generation. It needs to contain at least a ``_id`` property for the entity to be valid.
+       Se the example configurations for more details on how this template works.
+     -
+     - Yes
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false`` (Fixed)
+
+   * - ``is_since_comparable``
+     - ``true`` (Fixed)
+
+   * - ``is_chronological``
+     - ``false`` (Fixed)
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity.
+
+A source that generates a typical person entity via various `Fake Factory providers <http://fake-factory.readthedocs.org/en/latest/providers/faker.providers.person.html>`_.
+
+::
+
+    {
+        "source": {
+            "type": "fake",
+            "entities": 100,
+            "template": {
+                "_id": "uuid4",
+                "last_name": "last_name",
+                "first_name": "first_name",
+                "address": "address",
+                "telephone": "phone_number",
+                "email": "email",
+                "employer": "company"
+            }
+        },
+    }
+
+The general form of a template property is
+
+::
+
+    "property_name": "fake_factory_provider_name arg1type:arg1value arg2type:arg2value ... argNtype:argNvalue"
+
+For adding literal string values the "literal:" prefix is used
+
+::
+
+    "string_property": "literal:This is a literal string.".
+
+For generating id properties from a fixed set (to be able to link entities from different sources together using
+:ref:`DTL transforms <dtl_transform>`), a special syntax for the value part is used:
+
+::
+
+    "shared_id_property": "system:<pool_id_from_fake_system_component>".
+
+These shared *id pools* are configured as part of the :ref:`Fake System <fake_system>` component, and you have to include
+its id in the ``system`` property. Here's an example of two pipes with sources for fake employee- and employer (company)
+entities using a shared pool of ids for the employer id:
+
+.. _fake_system_example:
+
+::
+
+    [
+        {
+            "_id": "employers_employees",
+            "type": "system:fake",
+            "id_pools": {
+                "employers": {
+                    "seed": 1234,
+                    "min": 1,
+                    "max": 1000
+                }
+            }
+        },
+        {
+            "_id": "employees",
+            "name": "Employees",
+            "type": "pipe",
+            "source": {
+                "type": "fake",
+                "system": "employers_employees",
+                "entities": 100,
+                "template": {
+                    "_id": "uuid4",
+                    "last_name": "last_name",
+                    "first_name": "first_name",
+                    "address": "address",
+                    "telephone": "phone_number",
+                    "email": "email",
+                    "employer": "system:employers",
+                    "description": "text int:100"
+                }
+            }
+        },
+        {
+            "_id": "employers",
+            "name": "Employers",
+            "type": "pipe",
+            "source": {
+                "type": "fake",
+                "system": "employers_employees",
+                "entities": 100,
+                "template": {
+                    "_id": "system:employers",
+                    "name": "company",
+                    "address": "address",
+                    "email": "company_email",
+                    "home_page": "uri"
+                }
+            }
+        }
+    ]
 
 .. _sparql_source:
 
@@ -3524,6 +3710,74 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "type": "databrowser",
             "url": "http://localhost:8893/solr/my_index",
             "prefix_includes": ["northwind"]
+        }
+    }
+
+.. _influxdb_sink:
+
+The InfluxDB sink (Experimental)
+--------------------------------
+
+The InfluxDB sink is able to write entities representing measurement values over time to the InfluxDB time series database https://influxdata.com/. You will have to configure and provide a :ref:`InfluxDB system <influxdb_system>` id in the ``system`` property.
+
+
+The expected form of an entity to be written to the sink is:
+
+::
+
+    {
+        "_id": "toplevel/sublevel/parent/measurement",
+        "property": value,
+        "another_property": another_value,
+    }
+
+The ``_id`` property is expected to be a path-style composite value consisting of a top level node, a sublevel node, a parent node
+and finally a measurement, for example "lake_node/sinks/test-sink/some-metric". The path components are used as ``tags``
+in the influxdb database so metrics can be easily searched for in for example Grafana http://grafana.org/.
+
+The rest of the properties on the entity should be on the form ``'string-key: numeric-value'``. There can be more than one
+measurement per metric, for example a histogram of multiple sliding window values.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "influxdb",
+        "system": "id-of-influxdb-system"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`InfluxDB system <influxdb_system>` component to use.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>` configuration, which is omitted here for brevity:
+
+::
+
+    {
+        "sink": {
+            "type": "influxdb",
+            "system": "my-influxdb-system"
         }
     }
 
@@ -5710,6 +5964,202 @@ Example PostgreSQL configuration:
         "password": "pw",
         "host": "test.postgresql.mydomain.com",
         "database": "test"
+    }
+
+
+.. _fake_system:
+
+The fake system
+---------------
+
+The fake component represents a generic fake data source. It is meant to be used in conjunction with the :ref:`fake source <fake_source>`
+to produce test data, and is responsible for providing fixed sets of ids so "fake" entities from different fake sources
+can be linked.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "fake_system_id",
+        "type": "system:fake",
+        "name": "The Fake System",
+        "id_pools": {
+            "pool1": {
+               "seed": 1234,
+               "min": 1,
+               "max": 10
+            },
+            "pool2": {
+               "seed": 1234,
+               "min": 100,
+               "max": 10000
+            }
+        }
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``id_pools``
+     - Object
+     - Contains a mapping of names pool objects that can be used by a :ref:`fake source <fake_source>` to draw
+       id values from. The values are integers (which is cast to a string for ``_id`` properties) and the maximum number
+       of entries in the set is given by ``max``-``min``. The number of ``entities`` of a fake source must not exceed
+       this number, or an error will be raised (i.e. it should be equal or less).
+     -
+     - Yes
+
+   * - ``seed``
+     - Integer
+     - A random seed to be used with the pool.
+     - 1234
+     -
+
+   * - ``min``
+     - Integer
+     - The minimum value in the pool set
+     - 0
+     -
+
+   * - ``max``
+     - Integer
+     - The maximum value in the pool set
+     - 100000000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`example configuration <fake_system_example>` in the fake source section.
+
+.. _influxdb_system:
+
+The InfluxDB system (Experimental)
+----------------------------------
+
+The InfluxDB system represents a `InfluxDB system <https://en.wikipedia.org/wiki/InfluxDB>`_ and all the information
+needed to connect and write to it. It is used in conjunction with the :ref:`InfluxDB sink <influxdb_sink>` to write
+entities to a InfluxDB time series database.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "influxdb-system-id",
+        "name": "Name of InfluxDB system",
+        "type": "system:influxdb",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "sesam_node",
+        "ssl": false,
+        "verify_ssl": false,
+        "timeout": None,
+        "use_udp": false,
+        "udp_port": 4444
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``host``
+     - String
+     - The ``FQDN`` of the InfluxDB server
+     - "localhost"
+     -
+
+   * - ``port``
+     - Integer
+     - The TCP port of the InfluxDB service
+     - 8086
+     -
+
+   * - ``username``
+     - String
+     - The user to authenticate as against the InfluxDB service
+     - "root"
+     -
+
+   * - ``password``
+     - String
+     - The password to use for authenticating with the InfluxDB service
+     - "root"
+     -
+
+   * - ``database``
+     - String
+     - The name of the database to create and write into. Note that it will be created automatically
+       if it doesn't exist.
+     - "sesam_node"
+     -
+
+   * - ``verify_ssl``
+     - Boolean
+     - Flag to indicate that the client hould verify the server's ssl certificate before initiating
+       communication with it
+     - false
+     -
+
+   * - ``timeout``
+     - Integer
+     - If set, sets the timeout to a specified number of seconds. Default is not set and indicates
+       no timeout (i.e. infitite wait). Note that this can result in hanging services if the server is not reachable.
+     -
+     -
+
+   * - ``use_udp``
+     - Boolean
+     - Indicate to the client to use the UDP protocol rather than TCP when talking to the InfluxDB server.
+       The default is ``false`` which means ``use TCP``. UDP can in certain high-volume scenarios be more efficient
+       than TCP due to its simplicity
+     - false
+     -
+
+   * - ``udp_port``
+     - Integer
+     - The ``UDP`` port to use if ``use_udp`` is set to ``true``.
+     - 4444
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "my_influxdb_system",
+        "type": "system:influxdb",
+        "name": "My InfluxDB database",
+        "host": "localhost",
+        "port": 8086,
+        "username": "root",
+        "password": "root",
+        "database": "my_database",
     }
 
 .. _ldap_system:
