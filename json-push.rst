@@ -51,8 +51,8 @@ The following HTTP request parameters can be used to indicate what is happening:
    * - is_last
      - A boolean. Included in the last request with the value 'true'.
 
-The HTTP body is JSON data, either a JSON object if it is a single
-entity or an JSON array of objects if it is a list of entities. The
+The HTTP body is JSON data which will always be in the form of a
+JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
 :doc:`here <entitymodel>`.
 
