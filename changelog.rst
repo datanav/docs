@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-05-29
+----------
+* The default value of the ``max_depth`` property in :ref:`hops <hops_function>` has been changed from ``null`` to ``10``. This means that the default is to stop the recursion at level 10.
+
 2017-05-26
 ----------
 * The JSON push protocol has been simplified to make it easier to write receivers. It will now always

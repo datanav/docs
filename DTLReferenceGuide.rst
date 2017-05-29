@@ -2551,11 +2551,12 @@ Hops
           only meaningful on a HOP_SPEC where ``recurse`` is ``true``.
 
        5. ``max_depth``: OPTIONAL. An integer. The default is
-          infinite, which means that the recursion will run until its
-          output is exhausted. The recursion will stop after the given
-          number of recursions. A value of ``2`` means that the
-          recursion will happen at most two times. This property is
-          only meaningful on a HOP_SPEC where ``recurse`` is ``true``.
+          ``10``. The recursion will stop after the given number of
+          recursion levels. A value of ``2`` means that the recursion will
+          happen at most two times. Set it to ``null`` if you want the
+          recursion will run until its output is exhausted. This
+          property is only meaningful on a HOP_SPEC where ``recurse``
+          is ``true``.
 
        6. ``return``: OPTIONAL. A string, or an expression, or not
           specified. If it is a string, then it should refer to a
