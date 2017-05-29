@@ -3,6 +3,7 @@ Changelog
 
 2017-05-29
 ----------
+* Added the ``indexes`` property to the :ref:`dataset <dataset_sink>` sink. If set to ``"$ids"`` then an index will be maintained for the ``$ids`` property. This index will then be used by the dataset browser to look up entities both by _id and $ids.
 * The default value of the ``max_depth`` property in :ref:`hops <hops_function>` has been changed from ``null`` to ``10``. This means that the default is to stop the recursion at level 10.
 
 2017-05-26

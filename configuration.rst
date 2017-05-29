@@ -3552,6 +3552,14 @@ Properties
      -
      - Yes
 
+   * - ``indexes``
+     - String
+     - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
+       maintained. This index will then be used by the dataset browser to look up
+       entities both by ``_id`` and ``$ids``.
+     - ``null``
+     - No
+
    * - ``track_children``
      - Boolean
      - If ``true`` then the ``$children`` property will be compared against the previous
