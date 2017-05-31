@@ -83,10 +83,6 @@ column types should be both forwards and backwards compatible with older and fut
      - String
      -
 
-   * - ``TEXT``
-     - String
-     -
-
    * - ``DATE``
      - Datetime
      - Values with timezone will be shifted into UTC timezone on import.
@@ -105,10 +101,6 @@ column types should be both forwards and backwards compatible with older and fut
      - String
      - Converted by the driver to ``hh:mm:ss[.nnnnnnn]`` format (0-padded hour-minute-seconds components plus fraction of
        a second after the decimal marker (which is optional))
-
-   * - ``IMAGE``
-     - Bytes
-     -
 
    * - ``UNIQUEIDENTIFIER``
      - UUID

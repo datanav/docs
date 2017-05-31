@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-05-31
+----------
+* Added support for bulk operations in the :ref:`SQL sink <sql_sink>`. Bulk operations are currently only
+  supported for the :ref:`MSSQL and Microsoft Azure SQL Data Warehouse <mssql-bulk-operations>`
+  systems.
+
 2017-05-29
 ----------
 * Added the ``indexes`` property to the :ref:`dataset <dataset_sink>` sink. If set to ``"$ids"`` then an index will be maintained for the ``$ids`` property. This index will then be used by the dataset browser to look up entities both by _id and $ids.

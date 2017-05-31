@@ -4105,6 +4105,7 @@ Prototype
         "whitelist": ["properties/columns","to","include"],
         "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
+        "use_bulk_operations": false,
         "timestamp": "name-of-collumn-to-add-timestamp-into",
         "truncate_table_on_first_run": false
     }
@@ -4158,10 +4159,20 @@ Properties
      - ``sesam-timestamp``
      -
 
+   * - ``use_bulk_operations``
+     - Boolean
+     - Some database types supports bulk upload of data. Bulk uploading is typically much faster than doing
+       updates with ``INSERT`` and ``UPDATE`` SQL statements, but may not be feasable in all cases (some bulk
+       operations requires Sesam to have extra permissions in the database, for instance). Only some
+       sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
+       details.
+     - ``false`` for now; will be changed to ``true`` at some future date.
+     -
+
    * - ``batch_size``
      - Integer
      - The maximum number of rows to insert into the database table in one operation
-     - ``100``
+     - ``1000`` or ``use_bulk_operations`` is ``true``, ``100`` otherwise.
      -
 
    * - ``truncate_table_on_first_run``
@@ -5548,6 +5559,31 @@ Example MS SQL Server configuration:
         "port": 1433,
         "database": "testdb"
     }
+
+.. _mssql-bulk-operations:
+
+Bulk operations in Microsoft SQL server and Azure SQL Data Warehouse systems
+----------------------------------------------------------------------------
+
+Both Microsoft SQL Server and Azure SQL Data Warehouse support bulk operations
+for uploading data. Sesam uses the
+`bcp utility <https://docs.microsoft.com/en-us/sql/tools/bcp-utility>`_ for bulk uploading.
+
+When a pipe has been configured with a :ref:`SQL sink <sql_sink>` that has the ``use_bulk_operations``
+parameter set to ``true``, this happens when the pipe runs:
+
+1. Sesam creates a temporary database table named "SESAM_BULK_TMP_<table>" (where ``<table>`` is the
+   name of the table the sink writes to).
+2. Sesam writes a temporary file to the local disk that is formatted in a way that the
+   bcp utility  understands.
+3. Sesam runs the bcp utility, which will upload the content of the file to the temporary table.
+4. Sesam runs a ``MERGE`` sql statement that updates the target table with the contents of the temporary table
+   (inserting and updating rows as required).
+5. Sesam drops the temporary database table.
+
+For this method to work, Sesam must have permissions to create and drop tables in the database. If
+for some reason that is not possible, the ``use_bulk_operations`` parameter in the sql sink can be
+set to ``false`` to make the sink use the (slower) ``INSERT`` and ``UPDATE`` sql statements to upload data.
 
 .. _mysql_system:
 
