@@ -13,7 +13,9 @@ It will always contain at least two entities for each time the pump
 runs. The first will have the id "pump-started" and the last either
 "pump-ended" *or* "pump-completed". In between these entities,
 there may be entities recording read errors and/or write
-errors. Depending on the pump settings, the write errors can then be
+errors. Other informational entities such as "pump-enabled"/"pump-disabled" or "pipe-offset-set" may also be present.
+
+Depending on the pump settings, the write errors can then be
 retried one or more times during the next runs.
 
 The pump-started entity
