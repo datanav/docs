@@ -9,5 +9,6 @@ Sesam Data Integration Platform
    Concepts <concepts>
    Developer Guide <developer-guide>
    Management Studio <management-studio>
+   Open Sesam <open-sesam>
    Known Issues <known-issues>
    Changelog <changelog>
