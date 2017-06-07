@@ -8,8 +8,7 @@ Known Issues
 
 The following issues are known issues with the beta release:
 
-  - Users on the same Open sesam segment (``A``, ``B``, etc.) share namespace for systems and pipes
-    and might hit naming collisions.
+  - Users on the same Open sesam segment (``A``, ``B``, etc.) share namespace for systems and pipes.
 
   - Chrome on Windows will occasionally display dropdowns at the wrong location
     when opening them. This only happens on an external screen, and is a
