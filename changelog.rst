@@ -1,6 +1,12 @@
 Changelog
 =========
 
+
+2017-06-08
+----------
+* The :doc:`Security <security>` document now contains a description of
+  :ref:`users, roles and permissions in Sesam.<security_subscriptions_users_roles_and_permissions>`
+
 2017-05-31
 ----------
 * Added support for bulk operations in the :ref:`SQL sink <sql_sink>`. Bulk operations are currently only

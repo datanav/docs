@@ -11,49 +11,74 @@ Security
 Introduction
 ------------
 
-TODO
+There are two different security domains in Sesam.
+
+1. The most visible one is the security-features that deal with
+:ref:`users, roles and permissions<security_subscriptions_users_roles_and_permissions>` in Sesam.
+These control which persons are allowed to do what. This is very similar to how the
+permissions-settings on most file-systems work.
+
+2. In addition to the user-centric security-features, we also have the concept of
+:ref:`secrets<secrets_manager>` in Sesam. Secrets are used for things like database passwords.
+
+These two domains are explained in more detail below.
+
+
+.. _security_subscriptions_users_roles_and_permissions:
 
 -------------------------------------------
 Subscriptions, Users, Roles and Permissions
 -------------------------------------------
 
-
 The ability to perform actions in the Sesam Portal is controlled by assigning Roles to Users.
 The Roles is assigned in the scope of a specific Subscription, so a User can have different Roles
 in different Subscriptions.
 
-The ability to perform actions in the Sesam node itself is controlled by assigning Permissions to Roles.
+The ability to perform actions in the Sesam node is controlled by assigning Permissions to Roles.
 This is assigned in the various "Permissions" pages in the GUI.
 
+When a user tries to perform an action on a Sesam node, they must first log in via the Sesam Portal.
+The Portal will generate a JSON Web Token for the user; this is a datastructure that identifies the user
+and that contains a list of all the roles of the user.
+
+Inside the node, each pipe, system and dataset can be protected by assigning permissions to roles. The
+permissions of each user in then determined by iterating over the user's roles and checking the
+permissions granted to each role.
 
 We will explain how the permissions checks is done via an example. Lets assume that a person wants to
-look at the contents of the dataset "askeladden-byer"
-in the subscription "Open-Sesam":
+look at the contents of the dataset "dataset1"
+in the subscription "subA":
 
   1. A person logs in to the Sesam Portal.
   2. The Sesam Portal backend checks that the email and password matches an existing User.
   3. The Sesam Portal backend examines the Roles the User has been assigned and sends the back a list of the 
      Subscriptions that the User has a Role in.
-  4. The person selects the Subscription "Open-Sesam" in the GUI
-  5. The GUI requests a JWT (Json Web Token) for the "Open-Sesam".
-  6. The Sesam Portal backend creates a JWT that contains the User's Roles in "Open-Sesam" and signs the JWT
+  4. The person selects the Subscription "subA" in the GUI
+  5. The GUI requests a JWT (Json Web Token) for the "subA".
+  6. The Sesam Portal backend creates a JWT that contains the User's Roles in "subA" and signs the JWT
      with the Sesam Portals private encryption key.
-  7. The GUI now connects to the Sesam node that is associated with "Open-Sesam" with the JWT in the
+  7. The GUI now connects to the Sesam node that is associated with "subA" with the JWT in the
      "Authorization" http request header.
   8. The Sesam node verifies that the JWT is valid by using the Sesam Portal's public encryption key to
      check that the signature on the JWT is ok. The Sesam node now knows which Roles the User has.
-  9. The person selects the "askeladden-byer" dataset in the GUI. The GUI sends a request to the
+  9. The person selects the "dataset1" dataset in the GUI. The GUI sends a request to the
      Sesam node asking for the content of the dataset.
   10. The Sesam node loads the ACL (Access Control List) that has been defined for the dataset. The
-      ACL consists of entries that looks like this:
-        <Allow|Deny>, <Roles>, <Permissions>
+      node looks through the ACL to figure out if the current User has been granted the "Read data"
+      permission.
+  11. If the current User has the required permission, the Sesam node return the contents of the dataset
+      in the http response. If not, the Sesam node sends a "403 Forbidden" http response instead.
 
 
+Sesam node runtime
+~~~~~~~~~~~~~~~~~~
+When a user creates a pipe, the pipe inherits the roles of that user. The list of roles is
+stored as part of the pipe-config. At runtime, a permission-check is made to check if the pipe is
+allowed to do what it is attempting to do. This includes checking if the pipe is allowed to read
+from its source system, and to write to its target system.
 
-https://beta.portal.sesam.in/unified/subscription/b5f58848-d732-4d6c-a36c-b72dac263bdd/datasets/dataset/askeladden-byer/view
-  
-  
-  
+If the permission checks fail, the pipe-run will fail and an error will be displayed on the pipe's
+page in the GUI.
 
 
 .. _secrets_manager:
