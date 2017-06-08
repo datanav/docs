@@ -51,9 +51,6 @@ Once signed up, they will have access to ``Open Sesam`` as well as a few selecte
 Selecting the open sesam service instance will show an empty data hub that can be used to consume, reshape and publish
 data. The other service instances are read only and show some typical usages of Sesam.
 
-Uploading Json Data
-~~~~~~~~~~~~~~~~~~~
-
 
 Creating an HTTP Endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~
