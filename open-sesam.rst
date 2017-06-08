@@ -52,11 +52,11 @@ Selecting the open sesam service instance will show an empty data hub that can b
 data. The other service instances are read only and show some typical usages of Sesam.
 
 Uploading Json Data
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 
 Creating an HTTP Endpoint
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To upload a dataset to Sesam it is first necessary to create an endpoint that can receive the data. This is done by defining an `Http DataSource <https://docs.sesam.io/configuration.html#the-http-endpoint-source>`_. This can be done either via the management studio or via the API. 
 
@@ -73,11 +73,8 @@ A new Http Endpoint go to can be added by creating a pipe with the following def
   }
 
 
-Click save to commit the configuration and create the endpoint.
-
-
 Your Json Data
-==============
+~~~~~~~~~~~~~~
 
 Data posted to Sesam should be in the form:
 
@@ -102,7 +99,7 @@ The only requirement is that each JSON object has a property called "_id" that c
 
 
 Sending the Data
-================
+~~~~~~~~~~~~~~~~
 
 Now this is setup you can use CURL to upload a JSON file from your computer:
 
@@ -151,7 +148,7 @@ Finally, use upload your JSON file with:
 More detailed information about how to publish data according to the :doc:`JSON Push Protocol <json-push>` can be found in these :ref:`examples <json_push_examples>`.
 
 Checking the Data
-=================
+~~~~~~~~~~~~~~~~~
 
 If this succeeds then a new dataset will be listed on your Open Sesam instance and will contain the uploaded entities. You can upload the JSON as many times as you want. Only changes will be reflected. 
 
