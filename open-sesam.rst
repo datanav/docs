@@ -111,15 +111,21 @@ Sesam is secure by default so to POST data to the endpoint you will need to auth
 
 Create a text-file with the email and password you use to log in to Sesam:
 
-echo "email=YOUR_EMAIL_ADDRESS&password=YOUR_PASSWORD" > cred.txt
+::
+
+  echo "email=YOUR_EMAIL_ADDRESS&password=YOUR_PASSWORD" > cred.txt
 
 Download the authorization token for the specified email and password and store it in an environment variable:
 
-export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt)"
+::
+
+  export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt)"
 
 Make an alias to run curl with the authorization token:
 
-alias curlJWT='curl -H "$SESAM_AUTH_HEADER"
+::
+
+  alias curlJWT='curl -H "$SESAM_AUTH_HEADER"
 
 
 The URL of the http endpoint is of the form:
@@ -133,11 +139,15 @@ Note that the 'mypipe' needs to be changed to match the '_id' of the http endpoi
 
 Then test you can talk to Sesam form curl with:
 
-curlJWT https://982ae5c5.sesam.cloud/api/pipes
+::
+
+  curlJWT https://982ae5c5.sesam.cloud/api/pipes
 
 Finally, use upload your JSON file with:
 
-curlJWT -X POST -H "Content-Type: application/json" --data @your-file.json https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
+::
+  
+  curlJWT -X POST -H "Content-Type: application/json" --data @your-file.json https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
 
 More detailed information about how to publish data according to the :doc:`JSON Push Protocol <json-push>` can be found in these :ref:`examples <json_push_examples>`.
 
