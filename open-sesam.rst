@@ -95,7 +95,9 @@ Data posted to Sesam should be in the form:
      {
         "_id" : "entity-id-1",
         ... any other valid json
-     },
+     }
+
+     ... more json objects ...
   ]
 
 
@@ -135,7 +137,7 @@ The URL of the http endpoint is of the form:
   https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
 
 
-Note that the 'mypipe' needs to be changed to match the '_id' of the http endpoint pipe created in the earlier step. The first part of the URL (982ae5c5) may also differ. Check your Open Sesam instance to see the correct value.
+Note that 'mypipe' needs to be changed to match the '_id' of the http endpoint pipe created in the earlier step. The first part of the URL (982ae5c5) may also differ. Check your Open Sesam instance to see the correct value.
 
 Then test you can talk to Sesam form curl with:
 
@@ -245,3 +247,4 @@ The user can then enrich this data and produce a new dataset that is intended to
 
 Note that every dataset is automatically published, including intermediate steps like ``mydatasetcopy``
 above. If you want to hide your data, you can set up a private subscription in the Sesam Portal.
+
