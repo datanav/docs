@@ -4259,7 +4259,7 @@ Each object is on the form:
 
     {
         "name": "name_of_column",
-        "type": "string|integer|decimal|bytes|datetime|date|time|uuid|boolean",
+        "type": "string|integer|decimal|float|bytes|datetime|date|time|uuid|boolean",
         "max_size|max_value": 1234,
         "min_size|min_value": 1234,
         "precision": 10,
@@ -4342,6 +4342,11 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - Any
      - decimal(precision,scale)
      -
+
+   * - ``float``
+     - 53 bit precision
+     - float
+     - Double precision IEEE-754 number
 
    * - ``datetime``
      - 0001-01-01T00:00:00.000000Z - 9999-12-31T23:59:59.999999Z
