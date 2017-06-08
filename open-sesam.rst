@@ -83,6 +83,8 @@ Your Json Data
 
 Data posted to Sesam should be in the form:
 
+::
+
 [
    {
       "_id" : "entity-id-0",
@@ -105,26 +107,17 @@ Now this is setup you can use CURL to upload a JSON file from your computer:
 
 Sesam is secure by default so to POST data to the endpoint you will need to authenticate against the portal to aquire a JWT token that can be used in a CURL request. The following steps guide you through doing this process.
 
-1. Create a text-file with the email and password you use to log in to Sesam:
-
-::
+Create a text-file with the email and password you use to log in to Sesam:
 
 echo "email=YOUR_EMAIL_ADDRESS&password=YOUR_PASSWORD" > cred.txt
 
-
-
-2. Download the authorization token for the specified email and password and store it in an environment variable:
-
-::
+Download the authorization token for the specified email and password and store it in an environment variable:
 
 export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt)"
 
-3. Make an alias to run curl with the authorization token:
-
-::
+Make an alias to run curl with the authorization token:
 
 alias curlJWT='curl -H "$SESAM_AUTH_HEADER"
-
 
 
 The URL of the http endpoint is of the form:
@@ -159,24 +152,25 @@ metadata configuration to the pipe config:
 
 ::
 
-   {
-       "_id": "myendpoint",
-       "type": "pipe",
-       "source": {
-           "type": "http_endpoint"
-       },
-       "sink": {
-           "type": "dataset",
-           "dataset": "mydataset"
-       }
-       "metadata": {
-           "registry": {
-               "description": "Solar power metering from my roof",
-               "keywords": [ "electricity", "solar" ],
-               "license": "CC"
-           }
+{
+   "_id": "myendpoint",
+   "type": "pipe",
+   "source": {
+       "type": "http_endpoint"
+   },
+   "sink": {
+       "type": "dataset",
+       "dataset": "mydataset"
+   }
+   "metadata": {
+       "registry": {
+           "description": "Solar power metering from my roof",
+           "keywords": [ "electricity", "solar" ],
+           "license": "CC"
        }
    }
+}
+
 
 Enriching data
 --------------
