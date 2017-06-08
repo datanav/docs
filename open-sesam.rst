@@ -67,13 +67,14 @@ A new Http Endpoint go to can be added by creating a pipe with the following def
 
 ::
 
-{
-    "_id": "mypipe",
-    "type": "pipe",
-    "source": {
-        "type": "http_endpoint"
-    }
-}
+  {
+      "_id": "mypipe",
+      "type": "pipe",
+      "source": {
+          "type": "http_endpoint"
+      }
+  }
+
 
 Click save to commit the configuration and create the endpoint.
 
@@ -85,17 +86,18 @@ Data posted to Sesam should be in the form:
 
 ::
 
-[
-   {
-      "_id" : "entity-id-0",
-      ... any other valid json
-   },
+  [
+     {
+        "_id" : "entity-id-0",
+        ... any other valid json
+     },
 
-   {
-      "_id" : "entity-id-1",
-      ... any other valid json
-   },
-]
+     {
+        "_id" : "entity-id-1",
+        ... any other valid json
+     },
+  ]
+
 
 The only requirement is that each JSON object has a property called "_id" that contains the entiity id. These id values are up to you to decide, but should be unique within a DataSet.
 
@@ -124,7 +126,7 @@ The URL of the http endpoint is of the form:
 
 ::
 
-https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
+  https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
 
 
 Note that the 'mypipe' needs to be changed to match the '_id' of the http endpoint pipe created in the earlier step. The first part of the URL (982ae5c5) may also differ. Check your Open Sesam instance to see the correct value.
@@ -152,24 +154,24 @@ metadata configuration to the pipe config:
 
 ::
 
-{
-   "_id": "myendpoint",
-   "type": "pipe",
-   "source": {
-       "type": "http_endpoint"
-   },
-   "sink": {
-       "type": "dataset",
-       "dataset": "mydataset"
-   }
-   "metadata": {
-       "registry": {
-           "description": "Solar power metering from my roof",
-           "keywords": [ "electricity", "solar" ],
-           "license": "CC"
-       }
-   }
-}
+  {
+     "_id": "myendpoint",
+     "type": "pipe",
+     "source": {
+         "type": "http_endpoint"
+     },
+     "sink": {
+         "type": "dataset",
+         "dataset": "mydataset"
+     }
+     "metadata": {
+         "registry": {
+             "description": "Solar power metering from my roof",
+             "keywords": [ "electricity", "solar" ],
+             "license": "CC"
+         }
+     }
+  }
 
 
 Enriching data
