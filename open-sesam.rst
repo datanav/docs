@@ -23,7 +23,11 @@ We encourage people to refine and enrich existing datasets with new data. Existi
 and transformed using the powerful data transformation language. The results of transformation is new
 datasets that are published and made available.
 
-The following sections provide detailed guidance on how to publish, discover and enrich using Open Sesam.
+The following sections provides some quick guides on how to publish, discover and enrich using Open Sesam. We
+also recommend reading the `Concepts <>`_ and `Getting Started <>`_ sections of the documentation as well. Full details 
+on all components can be found in the Configuration section of the documentation. 
+
+If you have questions or problems with Sesam then please contact `support <>`_ 
 
 Discovering data
 ----------------
@@ -47,11 +51,111 @@ To publish data to Sesam the user first needs to create an account on the `Sesam
 
 Once signed up, they will have access to ``Open Sesam`` as well as a few selected read-only tutorials.
 
-To publish data according to the :doc:`JSON Push Protocol <json-push>`, the user can follow these
-:ref:`examples <json_push_examples>`.
+Selecting the open sesam service instance will show an empty data hub that can be used to consume, reshape and publish
+data. The other service instances are read only and show some typical usages of Sesam.
+
+Uploading Json Data
+-------------------
+
+
+Creating an HTTP Endpoint
+=========================
+
+To upload a dataset to Sesam it is first necessary to create an endpoint that can receive the data. This is done by defining an `Http DataSource <https://docs.sesam.io/configuration.html#the-http-endpoint-source>`_. This can be done either via the management studio or via the API. 
+
+A new Http Endpoint go to can be added by creating a pipe with the following definition; but remember to change the "_id" property to be something more unique.
+
+::
+
+{
+    "_id": "mypipe",
+    "type": "pipe",
+    "source": {
+        "type": "http_endpoint"
+    }
+}
+
+Click save to commit the configuration and create the endpoint.
+
+
+Your Json Data
+==============
+
+Data posted to Sesam should be in the form:
+
+[
+   {
+      "_id" : "entity-id-0",
+      ... any other valid json
+   },
+
+   {
+      "_id" : "entity-id-1",
+      ... any other valid json
+   },
+]
+
+The only requirement is that each JSON object has a property called "_id" that contains the entiity id. These id values are up to you to decide, but should be unique within a DataSet.
+
+
+Sending the Data
+================
+
+Now this is setup you can use CURL to upload a JSON file from your computer:
+
+Sesam is secure by default so to POST data to the endpoint you will need to authenticate against the portal to aquire a JWT token that can be used in a CURL request. The following steps guide you through doing this process.
+
+1. Create a text-file with the email and password you use to log in to Sesam:
+
+::
+
+echo "email=YOUR_EMAIL_ADDRESS&password=YOUR_PASSWORD" > cred.txt
+
+
+
+2. Download the authorization token for the specified email and password and store it in an environment variable:
+
+::
+
+export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt)"
+
+3. Make an alias to run curl with the authorization token:
+
+::
+
+alias curlJWT='curl -H "$SESAM_AUTH_HEADER"
+
+
+
+The URL of the http endpoint is of the form:
+
+::
+
+https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
+
+
+Note that the 'mypipe' needs to be changed to match the '_id' of the http endpoint pipe created in the earlier step. The first part of the URL (982ae5c5) may also differ. Check your Open Sesam instance to see the correct value.
+
+Then test you can talk to Sesam form curl with:
+
+curlJWT https://982ae5c5.sesam.cloud/api/pipes
+
+Finally, use upload your JSON file with:
+
+curlJWT -X POST -H "Content-Type: application/json" --data @your-file.json https://982ae5c5.sesam.cloud/api/receivers/mypipe/entities
+
+More detailed information about how to publish data according to the :doc:`JSON Push Protocol <json-push>` can be found in these :ref:`examples <json_push_examples>`.
+
+Checking the Data
+=================
+
+If this succeeds then a new dataset will be listed on your Open Sesam instance and will contain the uploaded entities. You can upload the JSON as many times as you want. Only changes will be reflected. 
+
+Adding Metadata
+---------------
 
 Additional metadata for the dataset can be made available in the registry by adding the following
-metadata configuration:
+metadata configuration to the pipe config:
 
 ::
 
