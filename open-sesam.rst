@@ -24,10 +24,7 @@ and transformed using the powerful data transformation language. The results of 
 datasets that are published and made available.
 
 The following sections provides some quick guides on how to publish, discover and enrich using Open Sesam. We
-also recommend reading the `Concepts <>`_ and `Getting Started <>`_ sections of the documentation as well. Full details 
-on all components can be found in the Configuration section of the documentation. 
-
-If you have questions or problems with Sesam then please contact `support <>`_ 
+also recommend reading the `Concepts <https://docs.sesam.io/concepts.html>`_. and `Getting Started <https://docs.sesam.io/overview.html#getting-started>`_. sections of the documentation as well. 
 
 Discovering data
 ----------------
