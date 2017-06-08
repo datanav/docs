@@ -4106,6 +4106,8 @@ Prototype
         "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
         "use_bulk_operations": false,
+        "schema_definition": [],
+        "create_table_if_missing": false,
         "timestamp": "name-of-collumn-to-add-timestamp-into",
         "truncate_table_on_first_run": false
     }
@@ -4180,8 +4182,27 @@ Properties
      - A flag that indicates that the target table should be truncated/emptied the first time a pump runs
        (for example on the first run, or when its offset has been set to zero manually). Please note that
        the truncating operation is executed in a separate transaction, so if any subsequent inserts should fail
-       the truncating operation will not be rolled back.
+       the truncating operation will not be rolled back. Note that if combined with ``create_table_if_missing`` this
+       property will make the sink drop and then recreate the table on the first run.
      - ``false``
+     -
+
+   * - ``create_table_if_missing``
+     - Boolean
+     - A flag that indicates that the target table should be created if it is missing the first time a pump runs
+       (for example on the first run, or when its offset has been set to zero manually). If this property is ``true``
+       then a proper schema definition must be supplied in the ``schema_definition`` property. Note that this property
+       requires that the user defined in the :ref:`SQL system <sql_system>` have the necessary privileges to create and drop
+       tables in the target database/schema.
+     - ``false``
+     -
+
+   * - ``schema_definition``
+     - List<Object>
+     - A list of column definitions that guides the sink when creating a new table when the ``create_table_if_missing``
+       is set to ``true``. See :ref:`SQL sink schema definition format <sql_sink_schema_definition_format>` for more
+       details on how this element works.
+     -
      -
 
    * - ``whitelist``
@@ -4190,6 +4211,7 @@ Properties
        ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
      -
      -
+
 
    * - ``blacklist``
      - List<String>
@@ -4213,6 +4235,138 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+
+SQL sink schema definition format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _sql_sink_schema_definition_format:
+
+The schema definition format consists of a list of objects for each property that exists in the input entities. These
+objects are in essence column definitions and correspond directly to columns in the target table. The initial schema
+definition can be generated from analysing the entities produced by the pipe the sink belongs to by using the API or
+in the management studio. After being generated it can then be manually edited or augmented.
+
+If the entities in the source dataset changes shape, or you change the shape of the entities produced by the pipe
+by adding (or editing existing) DTL transforms attached to it, you may need to regenerate (or manually update) the
+schema definition accordingly.
+
+If the schema definition does not match the shape or value ranges of the entities that the sink is attempting to
+insert (or update) in the resulting table, the sink will generate run time errors in the pump execution log.
+
+Each object is on the form:
+
+::
+
+    {
+        "name": "name_of_column",
+        "type": "string|integer|decimal|bytes|datetime|date|time|uuid|boolean",
+        "max_size|max_value": 1234,
+        "min_size|min_value": 1234,
+        "precision": 10,
+        "scale": 2,
+        "allow_null": true|false,
+        "primary_key": true|false,
+        "index": true|false
+    }
+
+The ``name`` property must correspond to a property in the entities fed to the sink. In the case of the
+``primary_key`` set to ``true`` and/or ``allow_null`` set to ``false``, the property must exist in all entities.
+Note that at least one column definition in the schema definition list must have ``primary_key`` set to ``true``.
+
+The ``type`` property is automatically mapped to the appropriate target RDBMS column type, based on the information
+in the ``max_size``/``max_value`` and ``min_size``/``min_value`` properties. For example, an ``integer`` type may
+translate to a ``bigint`` if the value range is outside +-2^31 (i.e larger than 32 bits) or a ``tinyint`` if it fits within
+a unsigned byte range (0..255). The translation table for the currently supported systems is listed below.
+
+If the ``index`` property for a column definition is set to ``true``, the table creation will add a default type
+of index to the column for the particular target RDBMS system.
+
+The ``precision`` and ``scale`` properties are valid only for ``decimal`` type columns and define the total number
+of digits and the fractional digits respectively. I.e. the decimal number "10.3" would have a ``precision`` of "3"
+and an ``scale`` of "1".
+
+
+Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>`:
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 20, 20, 30
+
+   * - Type
+     - Range/size
+     - Column type
+     - Comment
+
+   * - ``string``
+     - <= 8000
+     - nvarchar(size)
+     - Unicode
+
+   * - ``string``
+     - > 8000
+     - nvarchar(MAX)
+     - Unicode
+
+   * - ``bytes``
+     - <= 8000
+     - varbinary(size)
+     -
+
+   * - ``bytes``
+     - > 8000
+     - varbinary(MAX)
+     -
+
+   * - ``integer``
+     - -9223372036854775808 - 9223372036854775808
+     - integer
+     - 64 bit/8 bytes
+
+   * - ``integer``
+     - -2147483648 - 2147483647
+     - int
+     - 32 bit/4 bytes
+
+   * - ``integer``
+     - -32768 - 32768
+     - smallint
+     - 16 bit/1 word/2 bytes
+
+   * - ``integer``
+     - 0 - 255
+     - tinyint
+     - 8 bit/1 byte
+
+   * - ``decimal``
+     - Any
+     - decimal(precision,scale)
+     -
+
+   * - ``datetime``
+     - 0001-01-01T00:00:00.000000Z - 9999-12-31T23:59:59.999999Z
+     - datetime2
+     -
+
+   * - ``date``
+     - 0001-01-01 - 9999-12-31
+     - date
+     - Coerced from ``datetime`` values or pre-formatted strings
+
+   * - ``time``
+     - 00:00:00.000000 - 23:59:59.999999
+     - time
+     - Coerced from ``datetime`` values or pre-formatted strings
+
+   * - ``boolean``
+     - true | false
+     - bit
+     - Coerced to ``0`` or ``1``
+
+   * - ``uuid``
+     - Any valid UUID
+     - uniqueidentifier
+     - Preformatted strings on the format ``xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`` can also be used
 
 
 .. _mail_message_sink:
