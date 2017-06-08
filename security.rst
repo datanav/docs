@@ -13,6 +13,49 @@ Introduction
 
 TODO
 
+-------------------------------------------
+Subscriptions, Users, Roles and Permissions
+-------------------------------------------
+
+
+The ability to perform actions in the Sesam Portal is controlled by assigning Roles to Users.
+The Roles is assigned in the scope of a specific Subscription, so a User can have different Roles
+in different Subscriptions.
+
+The ability to perform actions in the Sesam node itself is controlled by assigning Permissions to Roles.
+This is assigned in the various "Permissions" pages in the GUI.
+
+
+We will explain how the permissions checks is done via an example. Lets assume that a person wants to
+look at the contents of the dataset "askeladden-byer"
+in the subscription "Open-Sesam":
+
+  1. A person logs in to the Sesam Portal.
+  2. The Sesam Portal backend checks that the email and password matches an existing User.
+  3. The Sesam Portal backend examines the Roles the User has been assigned and sends the back a list of the 
+     Subscriptions that the User has a Role in.
+  4. The person selects the Subscription "Open-Sesam" in the GUI
+  5. The GUI requests a JWT (Json Web Token) for the "Open-Sesam".
+  6. The Sesam Portal backend creates a JWT that contains the User's Roles in "Open-Sesam" and signs the JWT
+     with the Sesam Portals private encryption key.
+  7. The GUI now connects to the Sesam node that is associated with "Open-Sesam" with the JWT in the
+     "Authorization" http request header.
+  8. The Sesam node verifies that the JWT is valid by using the Sesam Portal's public encryption key to
+     check that the signature on the JWT is ok. The Sesam node now knows which Roles the User has.
+  9. The person selects the "askeladden-byer" dataset in the GUI. The GUI sends a request to the
+     Sesam node asking for the content of the dataset.
+  10. The Sesam node loads the ACL (Access Control List) that has been defined for the dataset. The
+      ACL consists of entries that looks like this:
+        <Allow|Deny>, <Roles>, <Permissions>
+
+
+
+https://beta.portal.sesam.in/unified/subscription/b5f58848-d732-4d6c-a36c-b72dac263bdd/datasets/dataset/askeladden-byer/view
+  
+  
+  
+
+
 .. _secrets_manager:
 
 -------------------
