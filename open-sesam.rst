@@ -11,6 +11,11 @@ a way for people to host, enrich and publish data for free. The data they publis
 used by many others, it can be some samples that can demonstrate the value of Sesam, or just a simple way
 to expose structured data on the web.
 
+.. image:: images/open-sesam.png
+:width: 800px
+    :align: center
+      :alt: Data in Open Sesam
+
 When a user signs up for Sesam they automatically get an account in Open Sesam. This allows them to upload
 data, transform that data, connect it with any other data in open sesam and then publish that dataset for
 others to use.
@@ -57,7 +62,7 @@ Creating an HTTP Endpoint
 
 To upload a dataset to Sesam it is first necessary to create an endpoint that can receive the data. This is done by defining an `Http DataSource <https://docs.sesam.io/configuration.html#the-http-endpoint-source>`_. This can be done either via the management studio or via the API. 
 
-A new Http Endpoint go to can be added by creating a pipe with the following definition; but remember to change the "_id" property to be something more unique.
+A new Http Endpoint can be added by creating a pipe with the following definition; but remember to change the "_id" property to be something more unique.
 
 ::
 
@@ -112,13 +117,13 @@ Download the authorization token for the specified email and password and store 
 
 ::
 
-  export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://instance-guid.sesam.cloud/api/jwt)"
+  export SESAM_AUTH_HEADER="Authorization: Bearer $(curl -d @cred.txt https://982ae5c5.sesam.cloud/api/jwt)"
 
 Make an alias to run curl with the authorization token:
 
 ::
 
-  alias curlJWT='curl -H "$SESAM_AUTH_HEADER"
+  alias curlJWT='curl -H "$SESAM_AUTH_HEADER"'
 
 
 The URL of the http endpoint is of the form:
@@ -202,7 +207,7 @@ The user can then set up a pipe to fetch an existing dataset (the url is provide
        "source": {
            "type": "json",
            "system": "myregistry",
-           "url": "/data/b5f58848/mydataset"
+           "url": "/data/982ae5c5/mydataset"
        }
    }
 
@@ -223,7 +228,8 @@ The user can then enrich this data and produce a new dataset that is intended to
                "default": [
                    ["filter",
                        ["eq", "GOOD", "_S.quality"]
-                   ]
+                   ],
+                   ["copy", "*"]
                ]
            }
        },

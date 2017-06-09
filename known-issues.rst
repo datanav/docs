@@ -8,6 +8,9 @@ Known Issues
 
 The following issues are known issues with the beta release:
 
+  - Open Sesam is automatically upgraded every night, and the user might experience short disruptions of
+    service during the upgrade.
+
   - Users on the same Open sesam segment (``A``, ``B``, etc.) share namespace for systems and pipes.
 
   - Chrome on Windows will occasionally display dropdowns at the wrong location
