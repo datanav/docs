@@ -12,9 +12,9 @@ used by many others, it can be some samples that can demonstrate the value of Se
 to expose structured data on the web.
 
 .. image:: images/open-sesam.png
-:width: 800px
+    :width: 800px
     :align: center
-      :alt: Data in Open Sesam
+    :alt: Data in Open Sesam
 
 When a user signs up for Sesam they automatically get an account in Open Sesam. This allows them to upload
 data, transform that data, connect it with any other data in open sesam and then publish that dataset for
