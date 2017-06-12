@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017-06-12
+----------
+* Added a ``write_retry_delay`` property to pipe pumps. This is used in conjunction with
+  ``max_consecutive_write_errors`` when the system the pipe is writing to is known to be
+  sporadically (non-transiently) unavailable. See the :ref:`Pump section <pump_section>` for details.
 
 2017-06-08
 ----------
