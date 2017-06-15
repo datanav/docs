@@ -46,10 +46,10 @@ The following HTTP request parameters can be used to indicate what is happening:
        previous request. Included in all but the first request.
      
    * - is_first
-     - A boolean. Included in the first request with the value 'true'.
+     - A boolean. Included in the first request with the value ``true``.
      
    * - is_last
-     - A boolean. Included in the last request with the value 'true'.
+     - A boolean. Included in the last request with the value ``true``.
 
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
