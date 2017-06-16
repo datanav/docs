@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-06-16
+----------
+* Added a ``is_sorted`` property to the :ref:`RDF source <rdf_source>` to indicate that the input data is sorted
+  on subject, enabling the source to avoid loading the entire file into memory. Note that it only works for
+  ``nt`` (NTriples) format files without blank nodes.
+
 2017-06-12
 ----------
 * Added a ``write_retry_delay`` property to pipe pumps. This is used in conjunction with

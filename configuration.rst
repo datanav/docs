@@ -1685,6 +1685,16 @@ Properties
      - "nt"
      -
 
+   * - ``is_sorted``
+     - Boolean
+     - Indicates that the input data is sorted on RDF subject. If the ``is_sorted`` is set to ``true`` and the
+       ``format`` property is ``nt`` (NTriples), the RDF source will attempt to parse the input data sequentially and
+       emit a new entity when the RDF subject changes, without loading the entire RDF file into memory first.
+       Note that the input data cannot contain `RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka
+       BNodes) in this case. The property has no effect on formats other than ``nt``.
+     - false
+     -
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
