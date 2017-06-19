@@ -47,6 +47,7 @@ level, so child entities can have them.
      - Description
      - Required
 
+       .. _id_field:
    * - ``_id``
      - This is the primary key of the entity. The value is always a
        string.
@@ -181,6 +182,7 @@ types that are not recognized will be treated as string values.
      - Description
      - Example
 
+       .. _ni_data_type:
    * - NI
      - Namespaced Identifier (NI)
      - ``"~:mynamespace:123"``

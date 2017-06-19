@@ -159,7 +159,7 @@ Entities streaming through a pipe can be transformed on their way from the sourc
 Sinks
 =====
 
-A data *sink* is a component that can consume entities fed to them by a pump. The sink has the responsibility to write these entites to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system.
+A data *sink* is a component that can consume entities fed to them by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system.
 
 Several types of data sinks, SQL Sink for example, are available. Using the JSON push sink enables entities to be pushed to custom micro-services or other Sesam service instances.
 

@@ -1,8 +1,8 @@
 .. _DTLReferenceGuide:
 
-===================
-DTL Reference Guide
-===================
+=====================
+ DTL Reference Guide
+=====================
 
 .. contents:: Table of Contents
    :depth: 2
@@ -182,7 +182,7 @@ Explanation:
       "amount": 500
     }]
 
-   | The order entites are then ``sorted`` by their ``amount``
+   | The order entities are then ``sorted`` by their ``amount``
      property before being assigned to the ``orders`` property on the
      target entity:
 
@@ -628,11 +628,23 @@ modifiying the target entity, and has no return value.
 
    * - ``add``
      - | *Arguments:*
-       |   PROPERTIES(string{1})
+       |   PROPERTY(string{1})
        |   VALUES(value-expression{1})
        |
-       | Adds the PROPERTIES field(s) to the target entity with the values returned
+       | Adds the PROPERTY field(s) to the target entity with the values returned
          by evaluating the VALUES expression.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         
+         If namespaced identifiers are enabled,
+         then the property will be prefixed by the current
+         namespace. If the property is ``_id`` then the string values
+         will be prefixed by the identity namespace. All other
+         properties will have their name prefixed by the property
+         namespace.
+         
      - | ``["add", "age", 26]``
        |
        | Adds the ``age`` property with the value 26 to the target entity.
@@ -647,19 +659,54 @@ modifiying the target entity, and has no return value.
        |
        | Adds the property returned by the ``concat`` function and assigns it the
          value returned by ``_S.value``.
-
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["add", "age", 26]``
+       |
+       | Adds the ``bar:age`` property with the value 26 to the target entity.     
+       |
+       | ``["add", "person:age", 26]``
+       |
+       | Adds the ``person:age`` property with the value 26 to the target entity.     
+       |
+       | ``["add", "::age", 26]``
+       |
+       | Adds the ``age`` property with the value 26 to the target entity. Note
+         that if the PROPERTY arguments starts with ``::`` it will be interpreted
+         to mean add what ever is after the double colons.
+       
        .. _`dtl_transform-default`:
 
    * - ``default``
      - | *Arguments:*
-       |   PROPERTIES(string{1})
+       |   PROPERTY(string{1})
        |   VALUES(value-expression{1})
        |
-       | Adds the PROPERTIES field(s) to the target entity with the values returned
+       | Adds the PROPERTY field(s) to the target entity with the values returned
          by evaluating the VALUES expression, unless the property already exists.
          ``default`` behaves exactly like ``add``, except that it does not add
          the property if the property already exists on the target entity. If
          the property exists it does nothing.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+          
+         If namespaced identifiers are enabled,
+         then the property will be prefixed by the current
+         namespace. If the property is ``_id`` then the string values
+         will be prefixed by the identity namespace. All other
+         properties will have their name prefixed by the property
+         namespace.
      - | ``["default", "age", 26]``
        |
        | Adds the ``age`` property with the value 26 to the target entity, if
@@ -676,6 +723,26 @@ modifiying the target entity, and has no return value.
        |
        | Adds the property returned by the ``concat`` function and assigns it the
          value returned by ``_S.value``, if the property does not exists..
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["default", "age", 26]``
+       |
+       | If the target entity does not already have the ``bar:age`` property, then
+         the ``bar:age`` property with the value 26 is added to the target entity.
+       |
+       | ``["default", "person:age", 26]``
+       |
+       | If the target entity does not already have the ``person:age`` property, then
+         the ``person:age`` property with the value 26 is added to the target entity.
 
        .. _`dtl_transform-make-ni`:
 
@@ -689,15 +756,69 @@ modifiying the target entity, and has no return value.
          string values made into namespaced identifiers in the NAMESPACE namespace.
          If none of the values can be made into namespaced identifiers then nothing is added. If
          TO_PROPERTY is omitted then it defaults to FROM_PROPERTY + ``-ni``.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+          
+         If namespaced identifiers are enabled,
+         then the property will be prefixed by the current
+         namespace. If the property is ``_id`` then the string values
+         will be prefixed by the identity namespace. All other
+         properties will have their name prefixed by the property
+         namespace.
      - | ``["make-ni", "soccer", "referee", "ref"]``
        |
        | Adds the ``ref`` property with the value ``~:soccer:john.doe`` to the
-         target entity, if the source property has the value "john.doe".
+         target entity, if the source property has the value ``john.doe``.
        |
        | ``["make-ni", "hockey", "players"]``
        |
        | Adds the ``players-ni`` property to the target entity, if
          any namespaced identifiers were created.
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["make-ni", "soccer", "referee"]``
+       |
+       | Copies all ``referee`` properties in all namespaces from the source entity
+         to the target entity. Note that the target properties are suffixed by ``-ni``.
+         The values are converted into
+         NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
+       |
+       | ``["make-ni", "soccer", "referee", "ref"]``
+       |
+       | Copies all ``referee`` properties in all namespaces from the source entity
+         to the target entity. Note that the target properties are *not* suffixed by
+         ``-ni``. The properties keep their namespaces, but the identifier
+         part is replaced by ``ref``. The values are converted into
+         NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
+       |
+       | ``["make-ni", "soccer", "x:referee"]``
+       |
+       | Copies the ``x:referee`` property as ``x:referee-ni`` from the source entity
+         to the target entity. The values are converted into
+         NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
+       |
+       | ``["make-ni", "soccer", "x:referee", "ref"]``
+       |
+       | Copies the ``x:referee`` property as ``x:ref`` from the source entity
+         to the target entity. The values are converted into
+         NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
+       |
+       | ``["make-ni", "soccer", "x:referee", "y:ref"]``
+       |
+       | Copies the ``x:referee`` property as ``y:ref`` from the source entity
+         to the target entity. The values are converted into
+         NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
 
        .. _`dtl_transform-remove`:
 
@@ -708,6 +829,13 @@ modifiying the target entity, and has no return value.
        | Removes the PROPERTY field from the target entity. The PROPERTY can
          be pattern with ``*`` and ``?`` characters in it. The pattern must match
          the full property names.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+
+         The pattern in PROPERTY is namespace aware, so the last colon in the pattern
+         is considered to be the separator between the namespace and the identifier.
      - | ``["remove", "age"]``
        |
        | Removes the ``age`` property from the target entity.
@@ -716,6 +844,29 @@ modifiying the target entity, and has no return value.
        |
        | Removes all properties matching the ``temp_*`` wildcard pattern from
          the target entity.
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["remove", "age"]``
+       |
+       | Removes the ``age`` property in all namespaces from the target entity.
+       |
+       | ``["remove", "x*:age"]``
+       |
+       | Removes the ``age`` property in all namespaces starting with ``x``
+         from the target entity.
+       |
+       | ``["remove", "person:age"]``
+       |
+       | Removes the ``person:age`` property from the target entity.
 
        .. _`dtl_transform-copy`:
 
@@ -725,10 +876,17 @@ modifiying the target entity, and has no return value.
        |   EXCLUDE_PROPERTIES(wildcard-string-list{1})
        |
        | Copies properties in INCLUDE_PROPERTIES from the source entity to the
-         target entity. Any properties matching any ofthe EXCLUDE_PROPERTIES
+         target entity. Any properties matching any of the EXCLUDE_PROPERTIES
          patterns are not included. INCLUDE_PROPERTIES and EXCLUDE_PROPERTIES
          can be a single string or a list of strings, where the strings are
          patterns. ``*`` and ``?`` are valid pattern characters.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+
+         The pattern in PROPERTY is namespace aware, so the last colon in the pattern
+         is considered to be the separator between the namespace and the identifier.
      - | ``["copy", "age"]``
        |
        | Copies the ``age`` property from the source entity to the target entity.
@@ -744,6 +902,25 @@ modifiying the target entity, and has no return value.
        |
        | Copies all properties starting with ``a`` or ``b`` from the source entity
          to the target entity, but not those starting with ``ab`` or ``ba``.
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["copy", "a"]``
+       |
+       | Copies the ``a`` property in all namespaces to the target entity.
+       |
+       | ``["copy", "x*:*a", "b"]``
+       |
+       | Copies the properties ending with ``a`` in all namespaces starting with ``x``
+         to the target entity.
 
        .. _`dtl_transform-rename`:
 
@@ -756,6 +933,15 @@ modifiying the target entity, and has no return value.
          on the target entity. This is effectively a way to copy and rename
          properties from the source entity to the target entity. No wildcard
          patterns are supported.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+          
+         If namespaced identifiers are enabled,
+         then the renaming makes sure that any namespaces on the target entity either
+         keep their original namespaces or all values are collected into a single
+         property on the target.
      - | ``["rename", "age", "current_age"]``
        |
        | Copies the ``age`` field from the source entity and adds it as
@@ -767,6 +953,33 @@ modifiying the target entity, and has no return value.
        |
        | Copies the value of the property returned by the first ``concat`` function
          and assigns it to the property returned by the second ``concat`` function.
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["rename", "a", "b"]``
+       |
+       | Renames the ``a`` property in all namespaces to ``b`` in the same namespace.
+         In practice this renames the identifier part of the namespaced identifiers
+         from ``a`` to ``b``. If PROPERTY2 only contains the identifier part of
+         namespaced identifier, then the identifier part of PROPERTY1 will be renamed to this.
+       |
+       | ``["rename", "a", "x:b"]``
+       |
+       | Collects all the values in the ``a`` property in all namespaces into
+         the ``x:b`` property. If PROPERTY2 contains a fully qualified namespaced
+         identifier then all values in PROPERTY1 will be collected into this property.
+       |
+       | ``["rename", "y:a", "x:b"]``
+       |
+       | Renames the ``y:a`` property to ``x:b``.
 
        .. _`dtl_transform-merge`:
 
@@ -808,7 +1021,7 @@ modifiying the target entity, and has no return value.
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES emit them as new entities to the DTLs output
-         pipeline. Note that these new entites *must* have an ``_id`` property.
+         pipeline. Note that these new entities *must* have an ``_id`` property.
      - | ``["create", "_S.orders"]``
        |
        | Emit the orders in the source entity's ``orders`` field as new entities.
@@ -2375,24 +2588,6 @@ URIs
        |
        | Returns ``false``.
 
-       .. _curie_function:
-   * - ``curie``
-     - | *Arguments:*
-       |   PREFIX(string{1}),
-       |   VALUES(value-expression{1})
-       |
-     - | Constructs new CURIEs as URI objects based on a the PREFIX
-         and VALUES arguments.
-       |
-       | ``["curie", "foo", "bar"]``
-       |
-       | This will produce a URI object with the value ``"~rfoo:bar"``.
-       |
-       | ``["curie", "foo", ["list", "bar", "zoo"]]``
-       |
-       | This will produce a list of two URI objects with the
-         values ``["~rfoo:bar", "~rfoo:zoo"]``.
-
        .. _url_quote_dtl_function:
    * - ``url-quote``
      - | *Arguments:*
@@ -2422,105 +2617,6 @@ URIs
        |     ``["uri", "http://example.com"], "foo bar"]]``
        |
        | Returns ``["%C3%A5", "foo%20bar]``.
-
-       .. _uri_expand_function:
-   * - ``uri-expand``
-     - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
-       |   ENTITIES(value-expression{1})
-       |
-     - | Runs the given entities through the prefixing rules and the
-         prefix expansion mapping defined in the node metadata RDF registry.
-         The given entities must have a ``_dataset`` property containing the
-         id of the dataset to which they belong *or* the key to look up the
-         prefixes must be computed by the (optional) FUNCTION argument. The
-         result of the FUNCTION argument will override any ``_dataset``
-         property on the entity. The id given or computed will be used to locate
-         the prefix rules and prefix expansion mapping within the node RDF registry.
-         Note that the result of FUNCTION must be a single string value.
-
-       | The main purpose of this function is to prepare entities for
-         translation into RDF form. See the :doc:`RDF support <rdf-support>`
-         document for more information about how this works.
-
-       | Example node metadata:
-
-         ::
-
-            {
-                "rdf": {
-                  "people": {
-                     "prefixes": {
-                       "p": "http://example.org/people/"
-                     },
-                     "prefix_rules": {
-                       "id": "p",
-                       "properties": [
-                          "p", ["name"],
-                          "c", ["Employer"],
-                          "_", ["**"]
-                       ]
-                     }
-                  }
-                }
-            }
-
-       | Example input entity:
-
-         ::
-
-            {
-              "_id": "john_doe",
-              "_dataset": "people",
-              "name": "John Doe",
-              "employer": "Example Ltd.",
-              "born": "1973-01-21"
-            }
-
-       | Given the above configuration you should expect the following URI-expanded
-         entity in the result:
-
-         ::
-
-            {
-              "_id": "<http://example.org/people/john_doe>",
-              "_dataset": "people",
-              "<http://example.org/people/name>": "John Doe",
-              "<http://example.org/company/employer>": "Example Ltd.",
-              "<http://example.org/born>": "1973-01-21"
-            }
-
-       | ``["uri-expand",``
-       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity.
-       |
-       | ``["uri-expand",``
-       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
-         dataset, then URI expands them.
-       | ``["uri-expand",``
-       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
-       |
-       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
-         property.
-       | ``["uri-expand", ["string", "people"],``
-       |    ``{"_id": "mary", "_dataset": "employees",``
-       |      ``"name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "people" key in the node RDF registry (i.e. the
-         ``_dataset`` value of "employees" is overriden by the computed value)
-
-       | ``["uri-expand", ["string", "_.type"],``
-       |   ``{"_id": "mary", "_dataset": "employees",``
-       |     ``"type": "person", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "person" key in the node RDF registry. The ``_dataset``
-         value of "employees" is overriden by the computed value (based on
-         the contents of the entity's ``type`` property in this example).
 
 UUIDs
 -----
@@ -2626,6 +2722,16 @@ Paths
          literals, i.e. property names, so no variables can be used. Only
          properties on the entity can be traversed. If you want to traverse
          to other entities use the ``hops`` function instead.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+
+         If namespaced identifiers are enabled and the path element is not
+         a fully qualified namespaced identifier then all properties with
+         the path element as its identifier part will be part of the result.
+         In practice the result is the union of all those properties.
+         
      - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
        |
        | Traverses the ``age`` field of the VALUES entities.
@@ -2649,6 +2755,31 @@ Paths
        |   ``["list", {"a": {"b": 1}}, {"a": [{"b": 2}, {"b": 3}]}]]``
        |
        | Returns ``[1, 2, 3]``.
+       |
+       | Given the following namespaces:
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["path", "foo:a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``2`` as the path element ``foo:a`` is a fully qualified
+         namespaced identifier.
+       |
+       | ``["path", "a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``[1, 2, 3, 4]``, i.e. the union of all the values in all
+         the properties that have ``a`` in their identifiers part.
+       |
+       | ``["path", "::a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``1`` as ``::a`` uses the escape syntax to explicity
+         reference the unqualified ``a`` property.
 
 
 Hops

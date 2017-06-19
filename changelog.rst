@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017-09-06
+----------
+* Improved and expanded documentation on :ref:`namespaced identifiers <namespaces>` and the features related to it.
+* Moved the deprecations to a :ref:`separate document <deprecations>`.
+
 2017-09-05
 ----------
 * Added a ``track_dead_letters`` option to the pump configuration. If set to true, it will delete "dead" entities from the dead letter dataset if a later version of it is successfully written to the sink. Note that using this option incurs a performance cost so use with care.

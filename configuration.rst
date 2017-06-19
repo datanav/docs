@@ -42,8 +42,8 @@ It should be noted that all ``_id`` property values must be unique across across
 
 .. _environment_variables:
 
-Configuration environment variables
------------------------------------
+Environment variables
+=====================
 
 You can insert the values of environment variables into configuration using the syntax "$ENV(variable)" in place of
 property values. You can manage these environment variables using the :doc:`Sesam client <commandlineclient>` or
@@ -87,6 +87,78 @@ You can combine environment variables and *secrets*, but they cannot be nested w
 see the :ref:`Secrets manager API <secrets_manager>` for details on how to upload them and their syntax.
 
 Environment variables applies to both System and Pipe configuration entities.
+
+.. _service_metadata_section:
+
+Service metadata
+================
+
+There is an optional special configuration entity used to represent
+the service instance's metadata. The metadata is used to
+specify properties that apply to the service instance itself. This
+entity can either be added as a normal configuration entity, edited in
+the UI or updated with the Service API.
+
+Example:
+
+::
+
+   {
+      "_id": "node",
+      "type": "metadata",
+      "namespaced_identifiers": true,
+      "namespaces": {
+         "default": {
+           "example": "http://example.org/",
+           "fifa": "http://www.fifa.com/"
+         }
+      }
+   }
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``namespaced_identifiers``
+     - Boolean
+     - Flag used to enable namespaced identifers support for the service as a whole. Pipes inherit the value of the ``namespaced_identifiers`` property less explictly overridden.
+     - ``false``
+     -
+
+   * - ``namespaces.default``
+     - Dict
+     - A dictionary of namespace to URI expansions. This expansion
+       mapping is used to expand namespaced identifiers into fully
+       qualified URIs, e.g. by those components that provide RDF
+       support.
+
+       A few expansion mappings come built-into the system. These
+       are always available unless explicity overridden:
+
+       ::
+
+          "_": "http://example.org/",
+          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "owl": "http://www.w3.org/2002/07/owl#",
+          "foaf": "http://xmlns.com/foaf/0.1/",
+          "wgs84": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "dc": "http://purl.org/dc/elements/1.1/",
+          "skos": "http://www.w3.org/2004/02/skos/core#",
+          "dcterms": "http://purl.org/dc/terms/",
+          "gs": "http://www.opengis.net/ont/geosparql#",
+     -
+     - 
 
 .. _pipe_section:
 
@@ -136,7 +208,7 @@ Batching
 --------
 
 Pipes support batching if the sink supports batching. It does this by
-accumulating source entites in a buffer before writing the batch to
+accumulating source entities in a buffer before writing the batch to
 transforms and the sink. The size of each batch can be specified using
 the ``batch_size`` property on the pipe. The default batch size
 is 100.
@@ -234,16 +306,12 @@ Properties
      -
      -
 
+.. _namespaces:
+
 Namespaces
 ----------
 
-Namespaces are used by identities, properties and namespaced identifier values. A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
-
-.. NOTE::
-
-   Namespaced identifiers can be enabled by setting the
-   ``namespaced_identifiers`` property to ``true`` in the service
-   metadata.
+Namespaces can be used by :ref:`entity identifiers <id_field>`, entity property names and the :ref:`namespaced identifier datatype <ni_data_type>`. A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
 
 Example of an entity with namespaces:
 
@@ -256,6 +324,17 @@ Example of an entity with namespaces:
     "user:manager": "~:users:101"
   }
 
+.. NOTE::
+
+   Namespaced identifiers can be enabled by setting the
+   ``namespaced_identifiers`` property to ``true`` in the pipe
+   configuration (see below) or the service metadata. The former
+   enables it for just the one pipe. The latter enables it for all
+   pipes - except for those pipes that have explicitly disabled it.
+
+Properties
+^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 10, 60, 10, 3
@@ -265,6 +344,13 @@ Example of an entity with namespaces:
      - Description
      - Default
      - Req
+
+   * - ``namespaced_identifiers``
+     - Boolean
+     - Flag used to enable namespaced identifers support on the pipe. The default value is read from the service metadata. If not specified in the service metadata then the default value is ``false``.
+     - Service metadata default
+     -
+
    * - ``namespaces.identity``
      - String
      - The namespace used for identifiers. The default value is the pipe's id.
@@ -307,7 +393,7 @@ default is to keep the last two versions of every entity up until the
 current time.
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1635,8 +1721,6 @@ entities on the form:
 
 `RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka BNodes) will be turned into child entities.
 
-The configuration snippet for the RDF data source is:
-
 Prototype
 ^^^^^^^^^
 
@@ -2141,7 +2225,6 @@ Prototype
 
     {
         "type": "http_endpoint"
-        "prefix_includes": ["optional", "rdf-prefixes", "to", "use", "in", "sdshare"]
     }
 
 Continuation support
@@ -2621,310 +2704,6 @@ Example configuration
           "batch_size": 5
       }
 
-
-.. _properties_to_curies:
-
-The properties to CURIEs transform
-----------------------------------
-
-This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_)
-based on wildcard patterns. It is used primarily when dealing with or preparing to output
-`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data. Note that URL quoting is applied to the property names
-as part of the transform. Also note that by default the path separator character ("/) is not quoted, but the behaviour
-is configurable.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "properties_to_curies",
-        "rule": "rdf-registry-entry",
-        "quote_safe_characters": "/",
-        "id": "optional-id-prefix",
-        "properties": [
-          "optional_some_prefix", ["optional_some_pattern"]
-        ]
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``rule``
-     - String
-     - The id of the key in the :ref:`RDF registry <rdf_registry>` containing the prefix rules to to use for the transformation.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-     -
-     - Yes*
-
-   * - ``quote_safe_characters``
-     - String
-     - A string of characters that should be treated as "safe" from URL quoting by the transform. By default this is
-       the slash character ("/").  If this property is set to the empty string (""), all characters of the property name
-       will be URL quoted. This property can also be set at the RDF registry level, but this value will be overridden
-       if set directly on the transform configuration.
-     -
-     -
-
-   * - ``id``
-     - String
-     - The prefix to use for ``_id`` properties
-     -
-     - Yes*
-
-
-   * - ``properties``
-     - List<(String, List<String>)>
-     - A list of String,List pairs that make up the rules for which properties should be assigned which prefixes.
-       See the example section below for a fuller explanation of this property.
-     -
-     - Yes*
-
-Note that ``rule`` and ``id`` and ``properties`` are mutually exclusive. If all three are present,
-``rule`` is given precedence and ``id`` and ``properties`` are ignored.
-
-Example
-^^^^^^^
-
-
-The ``rule`` property references a :ref:`RDF registry entry <rdf_registry>` containing a ``prefix_rules`` object.
-See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-Alternatively, the contents of the ``prefix_rules`` entry (i.e. .the ``id`` and ``properties``) can be included inline
-in the transform configuration.
-
-Given a pre-existing RDF registry entry ``my_entry``:
-
-::
-
-    "my_entry": {
-       ..
-       "prefix_rules": {
-           "id": "x",
-           "properties": [
-                "c", ["status", "code"],
-                "_", ["status"],
-                "t", ["t_*"],
-                "m", ["status", "**", "m*"],
-                "s", ["status", "**"],
-                "x", ["**"]
-           ]
-       }
-       ..
-    }
-
-And a transform configuration:
-
-::
-
-    {
-        "type": "properties_to_curies",
-        "rule": "my_entry"
-    }
-
-And the input entity:
-
-::
-
-    {
-        "_id": "foo/bar",
-        "name": "John",
-        "born": "1980-01-23",
-        "code": "AB32",
-        "t_a": "A",
-        "a/b": "A/B",
-        "status": {
-            "married": true,
-            "spouse": "Pam",
-            "code": 123,
-            "t_b": {
-                "t_c": "C",
-                "hello": "world",
-                "<s:hi>": "bye"
-            }
-        }
-    }
-
-The transform will output the following transformed entity:
-
-::
-
-    {
-        "_id": "<x:foo/bar>",
-        "<x:name>": "John",
-        "<x:born>": "1980-01-23",
-        "<x:code>": "AB32",
-        "<t:t_a>": "A",
-        "<x:a/b>": "A",
-        "<_:status>": {
-            "<m:married>": true,
-            "<s:spouse>": "Pam",
-            "<c:code>": 123,
-            "<t:t_b>": {
-                "<t:t_c>": "C",
-                "<s:hello>": "world",
-                "<s:hi>": "bye"
-            }
-        }
-    }
-
-Setting ``quote_safe_characters`` to "" would instead yield:
-
-::
-
-    {
-        "_id": "<x:foo%2Fbar>",
-        "<x:name>": "John",
-        "<x:born>": "1980-01-23",
-        "<x:code>": "AB32",
-        "<t:t_a>": "A",
-        "<x:a%2Fb>": "A",
-        "<_:status>": {
-            "<m:married>": true,
-            "<s:spouse>": "Pam",
-            "<c:code>": 123,
-            "<t:t_b>": {
-                "<t:t_c>": "C",
-                "<s:hello>": "world",
-                "<s:hi>": "bye"
-            }
-        }
-    }
-
-Notice that now "/" has also been URL quoted ("%2F")
-
-.. _uris_to_curies_transform:
-
-The URIs to CURIEs transform
-----------------------------
-
-This transform can transform entity properties containing URIs in the keys and/or the values to a more compact form
-using `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_).
-It is used primarily when dealing with or reading RDF data. See the :doc:`rdf-support` document for more information
-about working with `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data in Sesam.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "uris_to_curies",
-        "prefix_includes": ["entry1", "entry2"]
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``prefix_includes``
-     - List<String>
-     - A list of string keys to look up in the instance-wide :ref:`RDF registry <rdf_registry>`. These keys reference
-       objects which contain RDF support structures such as CURIE prefixes (and possibly references to other prefix
-       sets to include).
-       The prefixes collected from the RDF registry will be used to compress full URIs to CURIEs.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       The :ref:`common RDF prefixes <built_in_prefixes>` are built-in and you don't have to provide the mapping for it
-       (i.e. RDF, RDFS, OWL etc).
-     -
-     -
-
-Example
-^^^^^^^
-
-Given the configuration:
-
-::
-
-    {
-        "transform": [
-           {
-             "type": "uris_to_curies",
-             "prefix_includes": ["my_entry"]
-           }
-        ]
-    }
-
-The RDF registry entry:
-
-::
-
-    "my_entry": {
-       "prefixes": {
-          "foo": "http://psi.foo.com/"
-          "test": "http://psi.test.com/"
-       }
-       ..
-    }
-
-And the input entity:
-
-::
-
-    {
-        "_id": "http://psi.test.com/2",
-        "http://psi.test.com/name": "John",
-        "born": "1980-01-23",
-        "http://psi.test.com/code": "AB32",
-        "status": {
-            "http://psi.foo.com/married": true,
-            "spouse": "Pam",
-            "url1": "~rhttp://www.foo.com",
-            "url2": "~rhttp://psi.foo.com/url2",
-            "code": 123,
-            "child": {
-                "t_c": "C",
-                "http://psi.test.com/hello": "http://psi.foo.com/world",
-                "http://psi.tests.com/s": "bye"
-            }
-        }
-    }
-
-The transform will output the following compact/"compressed" transformed entity:
-
-::
-
-    {
-        "_id": "<test:2>",
-        "<test:name>": "John",
-        "born": "1980-01-23",
-        "<test:code>": "AB32",
-        "status": {
-            "<foo:married>": true,
-            "spouse": "Pam",
-            "code": 123,
-            "url1": "~rhttp://www.foo.com",
-            "url2": "~rfoo:url2",
-            "child": {
-                "t_c": "C",
-                "<test:hello>": "<foo:world>",
-                "http://psi.tests.com/s": "bye"
-            }
-        }
-    }
-
-
-Note that the transform will not attempt to unquote the remainder elements after the matched prefixes.
-
 .. _lower_keys_transform:
 
 The lower keys transform
@@ -3330,7 +3109,7 @@ Sinks are at the receiving end of pipes and are responsible for
 writing entities into a internal dataset or a target system.
 
 Sinks can support batching by implementing specific methods and
-accumulating entites in a buffer before writing the batch. The size of
+accumulating entities in a buffer before writing the batch. The size of
 each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
@@ -3517,7 +3296,6 @@ Prototype
         "batch_size": 100,
         "commit_within": null,
         "commit_at_end": true,
-        "prefix_includes": ["prefix_set1", "prefix_set2"],
         "keep_existing_solr_ids": false,
         "maintain_id_links": false
     }
@@ -3564,17 +3342,6 @@ Properties
      - true
      -
 
-   * - ``prefix_includes``
-     - List<String>
-     - A list of string keys to look up in the node-wide :ref:`RDF registry <rdf_registry>`. These keys reference objects which contain
-       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       You do not need include any prefix sets to use the :ref:`common RDF prefixes <built_in_prefixes>` (i.e. RDF,
-       RDFS, OWL and so on).
-     -
-     -
-
    * - ``keep_existing_solr_ids``
      - Boolean
      - This can be set to ``true`` in order to try to reuse the existing solr-id of an entity, even if
@@ -3604,8 +3371,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "databrowser",
-            "url": "http://localhost:8893/solr/my_index",
-            "prefix_includes": ["northwind"]
+            "url": "http://localhost:8893/solr/my_index"
         }
     }
 
@@ -3704,8 +3470,7 @@ Prototype
         "type": "sdshare",
         "system":"url-system-id",
         "url": "url-to-http-endpoint",
-        "graph": "uri-of-graph-to-post-to",
-        "prefix_includes": ["prefix_set1", "prefix_set2"]
+        "graph": "uri-of-graph-to-post-to"
     }
 
 Properties
@@ -3739,16 +3504,6 @@ Properties
      -
      - Yes
 
-   * - ``prefix_includes``
-     - List<String>
-     - A list of string keys to look up in the instance-wide `RDF registry`. These keys reference objects which contain
-       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
-     -
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -3759,8 +3514,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "sink": {
             "type": "sdshare",
-            "url": "http://localhost:8001/sdshare_push_service",
-            "prefix_includes": ["dc", "foaf", "geo"]
+            "url": "http://localhost:8001/sdshare_push_service"
         }
     }
 
@@ -4067,8 +3821,7 @@ Prototype
         "system": "id-of-url-system"
         "graph": "http://uri.of/graph",
         "do_diff": false,
-        "write_sdshare_updated": true,
-        "prefix_includes": ["prefix_set1", "prefix_set2"]
+        "write_sdshare_updated": true
     }
 
 Properties
@@ -4118,16 +3871,6 @@ Properties
      -
      - true
 
-   * - ``prefix_includes``
-     - List<String>
-     - A list of string keys to look up in the instance-wide `RDF registry`. These keys reference objects which contain
-       RDF support structures such as CURIE prefixes (and possibly references to other prefix sets to include).
-       The prefixes collected from the RDF registry will be used to expand CURIEs into full URIs.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       You do not need include any prefix sets to use the built-in RDF prefixes (i.e. RDF, RDFS, OWL and so on).
-     -
-     -
-
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -4141,8 +3884,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "url": "http://virtuoso.example.com:8890/sparql",
             "graph": "http://example.com/fylketest",
             "do_diff": true,
-            "write_sdshare_updated": true,
-            "prefix_includes": ["geo_fylke"]
+            "write_sdshare_updated": true
     }
 
 .. _sql_sink:
@@ -4686,8 +4428,7 @@ Prototype
 ::
 
     {
-        "type": "http_endpoint",
-        "prefix_includes": ["prefixes", "to", "include", "in", "sdhare", "feed"]
+        "type": "http_endpoint"
     }
 
 
@@ -4703,21 +4444,6 @@ Properties
      - Description
      - Default
      - Req
-
-   * - ``prefix_includes``
-     - List<String>
-     - A list of string keys to look up in the instance-wide :ref:`RDF registry <rdf_registry>`. These keys reference
-       objects which contain RDF support structures such as CURIE prefixes (and possibly references to other prefix
-       sets to include).
-       The prefixes collected from the RDF registry will be used to compress full URIs to CURIEs.
-       See :doc:`RDF support <rdf-support>` for more information about the RDF registry and how to configure it.
-       The :ref:`common RDF prefixes <built_in_prefixes>` are built-in and you don't have to provide the mapping for it
-       (i.e. RDF, RDFS, OWL etc).
-       Note: if you do not set this property, the sink will attempt to use the source's ``dataset`` property as lookup key
-       into the :ref:`RDF registry <rdf_registry>` entries. If this look up fails, or does not result in the correct
-       registry item, the resulting SDShare feed may be empty.
-     -
-     -
 
    * - ``filename``
      - String
