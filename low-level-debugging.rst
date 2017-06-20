@@ -146,3 +146,68 @@ The node will periodically call its own "/api/health" endpoint and log the resul
 If the call to the "/api/health" endpoint fails, the health-checker thread will create a new "stacktrace.html"-file,
 just as if a SIGUSR1 signal had been sent to the node. If the node is misbehaving it is therefore worth having a
 look in the "logs" folder to check if there are any recent "stacktrace.html" files.
+
+
+-------------------------------------------
+Preventing pipes from automatically running
+-------------------------------------------
+
+Most pipes will be configured to run automatically at certain intervals. In some cases we want to prevent
+all such pipes from being started automatically.
+
+Examples of cases where this functionality can be useful:
+
+1. We suspect that one or more pipes are using a lot of memory, but it is hard to isolate the
+   problem because lots of pipes are being started by the taskmanager.
+
+2. The sesam node crashes on or soon after startup because of a problem with a pipe.
+
+
+Using the "Instance configuration" gui
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the easiest way of disabling the pump scheduler.
+
+   1. Log in to https://portal.sesam.io
+   2. Navigate to the subscription in question.
+   3. Go to the "Settings" => "Instance configuration" page.
+   4. Use the "Insert configuration" dropdown to add a "TaskManager settings" item and set the "disable_pump_scheduler"
+      property to "true". The resulting configuration should look something like this::
+
+         {
+           "_id": "node",
+           "type": "metadata",
+           "task_manager": {
+             "disable_pump_scheduler": true
+           }
+         }
+
+Upload a full node-config with a node metadata entity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to upload a full sesam node configuration and prevent any of the pipes in the config from starting
+automatically, you can add this entity in the configuration you are uploading::
+
+      {
+        "_id": "node",
+        "type": "metadata",
+        "task_manager": {
+          "disable_pump_scheduler": true
+        }
+      }
+
+Writing a "/sesam/node/data/startup_options.json" file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If GUI is not accessable for some reason (for example if the node crashes on start-up), it is also possible to
+disable the pump scheduler by creating a file in the sesam node's "data" folder.
+
+The file must be called "startup_options.json". It must be a valid json-file and look like this::
+
+   {
+        "task_manager": {
+          "disable_pump_scheduler": true
+        }
+   }
+
+The sesam node must be restarted in order for the file to take effect (use docker restart <node-container-name>).

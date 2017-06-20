@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-06-20
+----------
+* Added functionality for preventing *all* pipes from automatically running (useful in some debugging
+  scenarios). See the `Low level debugging <./low-level-debugging.html#preventing-pipes-from-automatically-running>`_ page for
+  details.
+
 2017-06-16
 ----------
 * Added a ``is_sorted`` property to the :ref:`RDF source <rdf_source>` to indicate that the input data is sorted
