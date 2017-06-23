@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-06-23
+----------
+* Added a :ref:`conditional transform <conditional_transform>`. This works the same way as conditional sinks and sources.
+
 2017-06-20
 ----------
 * Added functionality for preventing *all* pipes from automatically running (useful in some debugging
