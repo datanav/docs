@@ -1399,11 +1399,11 @@ Prototype
            "dev": {
                "type": "embedded",
                ..
-           }
+           },
            "test": {
                "type": "sql",
                ..
-           }
+           },
            "prod": {
                "type": "sql",
                ..
@@ -2506,14 +2506,14 @@ Prototype
            "dev": {
                "type": "dtl",
                ..
-           }
+           },
            "test": [
               {
                   "type": "dtl",
                   ..
               },
               ..
-           ]
+           ],
            "prod": {
                "type": "dtl",
                ..
@@ -3362,11 +3362,11 @@ Prototype
            "dev": {
                "type": "null",
                ..
-           }
+           },
            "test": {
                "type": "sql",
                ..
-           }
+           },
            "prod": {
                "type": "sql",
                ..
