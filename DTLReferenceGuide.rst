@@ -2183,6 +2183,48 @@ JSON
        | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"~rhttp://www.bouvet.no/", "124.4", "12345"]``.
 
+       .. _json_parse_dtl_function:
+   * - ``json-parse``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Parses a JSON string (not transit encoded) into a value.
+
+     - | ``["json-parse", "1"]``
+       |
+       | Returns one number: 1.
+       |
+       | ``["json-parse", "\"hello\""]``
+       |
+       | Returns one string: ``hello``.
+       |
+       | ``["json-parse", "{\"a\": 1, \"b\": 2}"``
+       |
+       | Returns a dictionary:
+       |
+       | ``{"a": 1, "b": 2}",``
+
+       .. _json_transit_dtl_function:
+   * - ``json-transit-parse``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Parses a transit encoded JSON string into a value.
+       | This function behaves like
+         the ``json-parse`` function, except that it transit decodes values.
+     - | ``["json-transit", "1"]``
+       |
+       | Returns one number: 1.
+       |
+       | ``["json-transit-parse", "\"hello\""]``
+       |
+       | Returns one string: ``"hello"``.
+       |
+       | ``["is-uri", ["json-transit-parse",``
+       |   ``"\"~rhttp://www.bouvet.no/\""]]``
+       |
+       | Returns ``true``.
+
 URIs
 ----
 
