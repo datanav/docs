@@ -3148,6 +3148,36 @@ Values / collections
        |
        | Returns ``[4, 3, 2, 1]``.
 
+       .. _enumerate_dtl_function:
+   * - ``enumerate``
+     - | *Arguments:*
+       |   START(integer-expression{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Enumerates the values by returning dictionaries with ``key``
+         and ``value`` keys. ``value`` contains the value and ``key`` the
+         enumerator count. The enumeration counter starts at START and uses an
+         increment of 1. The default value of START is 0.
+     - | ``["enumerate", "a"]``
+       |
+       | Returns ``{"key": 0, "value": "a"}``.
+       |
+       | ``["enumerate", 1, "a"]``
+       |
+       | Returns ``{"key": 1, "value": "a"}``.
+       |
+       | ``["enumerate", ["list", 17, 32, 21]]``
+       |
+       | Returns ``[{"key": 0, "value": 17},``
+       |    ``{"key": 1, "value": 32},``
+       |    ``{"key": 2, "value": 21}]``.
+       |
+       | ``["enumerate", 2, ["list", 17, 32, 21]]``
+       |
+       | Returns ``[{"key": 2, "value": 17},``
+       |   ``{"key": 3, "value": 32},``
+       |   ``{"key": 4, "value": 21}]``.
+
    * - ``distinct``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
