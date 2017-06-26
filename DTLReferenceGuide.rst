@@ -2204,7 +2204,7 @@ JSON
        |
        | ``{"a": 1, "b": 2}",``
 
-       .. _json_transit_dtl_function:
+       .. _json_transit_parse_dtl_function:
    * - ``json-transit-parse``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2212,7 +2212,7 @@ JSON
        | Parses a transit encoded JSON string into a value.
        | This function behaves like
          the ``json-parse`` function, except that it transit decodes values.
-     - | ``["json-transit", "1"]``
+     - | ``["json-transit-parse", "1"]``
        |
        | Returns one number: 1.
        |

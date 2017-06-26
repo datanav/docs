@@ -4,6 +4,7 @@ Changelog
 2017-06-26
 ----------
 * Added the :ref:`enumerate <enumerate_dtl_function>` DTL function that can be used to enumerate values, i.e. combine values with an enumeration count.
+* Added the :ref:`json-parse <json_parse_dtl_function>` and :ref:`json-transit-parse <json_transit_parse_dtl_function>` DTL functions.
 
 2017-06-23
 ----------
