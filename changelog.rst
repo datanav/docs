@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-06-29
+----------
+* When a pipe is reset then the pipe's retry queue is now also reset.
+* Bug fix: It is now possible to interrupt pumps that are performing retries.
+* Indexing of datasets changed so that each dataset is indexed for a maximum of five minutes in each iteration. This prevents some datasets from being blocked from indexing when there are other large datasets being indexed.
+
 2017-06-26
 ----------
 * Added the :ref:`enumerate <enumerate_dtl_function>` DTL function that can be used to enumerate values, i.e. combine values with an enumeration count.
