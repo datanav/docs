@@ -2507,13 +2507,10 @@ Prototype
                "type": "dtl",
                ..
            },
-           "test": [
-              {
-                  "type": "dtl",
-                  ..
+           "test": {
+               "type": "dtl",
+               ..
               },
-              ..
-           ],
            "prod": {
                "type": "dtl",
                ..
