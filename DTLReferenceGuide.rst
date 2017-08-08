@@ -34,7 +34,7 @@ An example using the 'add' transform:
 
 And composing functions:
 
-  ["add", "name", ["concat", ["list", "_S.firstname", " ", "_S.lastname"]]]
+  ["add", "name", ["concat", ["upper", "_S.lastname"], ", ", "_S.firstname"]]
 
 
 Annotated Example
@@ -3372,7 +3372,7 @@ Values / collections
        |
        | ``["map-dict",``
        |     ``["if", ["gt", ["length", "_."], 2],``
-       |         ``["concat", ["list", "x:", "_."]]], "_.",``
+       |         ``["concat", "x:", "_."]], "_.",``
        |     ``["list",``
        |         ``{"abc": 1, "ab": 2, "abcd": 3},``
        |         ``{"def": 4}, {"gh": 5}]]``
