@@ -1580,12 +1580,17 @@ Date and time
 
    * - ``datetime-parse``
      - | *Arguments:*
+       |   TIMEZONE_NAME(string{0|1})
        |   FORMATSTRING(string{1})
        |   VALUES(value-expression{})
        |
        | Translates all input values to datetime values. The values must be strings
          matching the format string given. Any values that don't parse as datetime values will
          be silently ignored.
+       |
+       | The timezone name defaults to "UTC". The datetime string will be interpreted
+         as being in this timezone. Click :ref:`here<supported_timezones>` to
+         see the list of supported timezones.
        |
      - | ``["datetime-parse",``
        |   ``"%Y-%m-%dT%H:%M:%S.%fZ",``
@@ -1608,6 +1613,12 @@ Date and time
        |
        | Returns two datetime values: ["~t2015-07-28T00:00:00Z", "~t1970-01-01T00:00:00Z"]
        |
+       | ``["datetime-parse", "Europe/Oslo"``
+       |   ``"%Y-%m-%dT%H:%M:%S",``
+       |   ``"2018-08-18T12:39:01"]``
+       |
+       | Returns one datetime value: "~t2018-08-08T10:39:01Z".
+       |
        | The list of supported formatting tokens is:
        |
        |   %d - day of the month (01 to 31)
@@ -1628,6 +1639,7 @@ Date and time
 
    * - ``datetime-format``
      - | *Arguments:*
+       |   TIMEZONE_NAME(string{0|1})
        |   FORMATSTRING(string{1})
        |   VALUES(value-expression{})
        |
@@ -1636,10 +1648,36 @@ Date and time
          ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
          microseconds (using the seconds fraction token ``%f``).
        |
+       | The timezone name defaults to "UTC". The datetime value will be translated to this timezone before it
+         is formatted. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
      - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
        |
        | Returns one string: "2015-07-28T00:00:00Z".
+       |
+       | ``["datetime-format",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]``
+       |
+       | Returns one string: "2018-08-08 12:39:01".
+       |
+       | ``["datetime-format", "Europe/Oslo",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]``
+       |
+       | Returns one string: "2018-08-08 14:39:01".
+       |
+       | ``["datetime-format", "Europe/Oslo",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse", "Europe/Oslo",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]``
+       |
+       | Returns one string: "2018-08-08 12:39:01".
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
 

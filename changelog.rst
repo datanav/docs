@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-08-08
+----------
+* The :ref:`datetime-parse <datetime-parse>` and :ref:`datetime-format <datetime-format>` DTL functions now accept an optional timezone argument. This makes it possible to parse datetime strings and format datetime values in specific timezones.
+
 2017-06-29
 ----------
 * When a pipe is reset then the pipe's retry queue is now also reset.
