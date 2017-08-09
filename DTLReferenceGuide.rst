@@ -535,7 +535,7 @@ modifiying the target entity, and has no return value.
        |
        | If CONDITION evaluates to *true* then apply the transforms in THEN,
        | otherwise apply the transforms in ELSE.
-         
+
        | Note that the THEN and ELSE arguments can either be a single transform
          function or a list of transform functions. The list can be empty.
      - | ``["if", ["eq", "_S.type", "person"], [``
@@ -1139,7 +1139,7 @@ Comparisons
        |
        | If the previous version does not exist then the ``is-changed``
        | function returns ``null``. This means that we don't know if it has changed.
-       |  
+       |
        | If either the current or the previous version of the entity
        | has ``_deleted`` set to ``true`` then the ``is-changed``
        | function returns ``true``.
@@ -1754,25 +1754,25 @@ Date and time
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"]]``
        |
-       | Returns one integer value: 1
+       | Returns one integer value: -1
        |
        | ``["datetime-diff", "day",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
        |
-       | Returns one integer value: -1
+       | Returns one integer value: 1
        |
        | ``["datetime-diff", "year",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
        |
-       | Returns: 1
+       | Returns: -1
        |
        | ``["datetime-diff", "month",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
        |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
        |
-       | Returns: 16
+       | Returns: -16
 
        .. _`datetime-shift`:
 
@@ -2141,8 +2141,8 @@ Strings
        |
        | Returns an encrypted bytes object.
        |
-       | Note: This function by itself does not offer an end-to-end secure system of encryption 
-       | as the key is stored along with the encrypted data. 
+       | Note: This function by itself does not offer an end-to-end secure system of encryption
+       | as the key is stored along with the encrypted data.
        | This applies even when using a ``$SECRET(secret key)`` via the secrets manager.
        |
 
