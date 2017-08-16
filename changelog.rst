@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-08-16
+----------
+* The :ref:`json-parse <json_parse_dtl_function>` and :ref:`json-transit-parse <json_transit_parse_dtl_function>` DTL functions now accept an optional default value expression. The default value expression is used when the input value is not valid JSON.
+
 2017-08-08
 ----------
 * The :ref:`datetime-parse <datetime-parse>` and :ref:`datetime-format <datetime-format>` DTL functions now accept an optional timezone argument. This makes it possible to parse datetime strings and format datetime values in specific timezones.
