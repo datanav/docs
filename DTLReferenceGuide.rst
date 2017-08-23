@@ -2713,8 +2713,7 @@ Hops
        7. ``track-dependencies``: OPTIONAL. A boolean. The default is
           true. Can be used to disable
           `dependency tracking <concepts.html#dependency-tracking>`_ for this
-          particular ``hops`` function.  It can only be specified on the
-          last HOP_SPEC argument.
+          particular HOP_SPEC.
 
        8. ``trace``: OPTIONAL. A string. The default is not set.
           If set, it is used to enable gathering of statistics for the execution of

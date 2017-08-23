@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-08-23
+----------
+* It is now possible to specify ``track-dependencies`` on all the HOPS_SPEC in a specific :ref:`hops <hops_function>` DTL function. This change was made so that one can disable tracking for any of the HOP_SPECs, not just the last one.
+
 2017-08-16
 ----------
 * The :ref:`json-parse <json_parse_dtl_function>` and :ref:`json-transit-parse <json_transit_parse_dtl_function>` DTL functions now accept an optional default value expression. The default value expression is used when the input value is not valid JSON.
