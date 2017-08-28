@@ -4911,9 +4911,9 @@ dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the C
         "type": "pipe",
         "sink": {
             "type": "csv_endpoint"
-            "columns": ["_id", "foo", "bar", "zoo"]
-        },
-        "filename": "my_data.csv"
+            "columns": ["_id", "foo", "bar", "zoo"],
+            "filename": "my_data.csv"
+        }
     }
 
 The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
