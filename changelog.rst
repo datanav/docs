@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-09-05
+----------
+* Added a ``track_dead_letters`` option to the pump configuration. If set to true, it will delete "dead" entities from the dead letter dataset if a later version of it is successfully written to the sink. Note that using this option incurs a performance cost so use with care.
+
 2017-08-23
 ----------
 * It is now possible to specify ``track-dependencies`` on all the HOPS_SPEC in a specific :ref:`hops <hops_function>` DTL function. This change was made so that one can disable tracking for any of the HOP_SPECs, not just the last one.
@@ -76,7 +80,7 @@ Changelog
 2017-04-28
 ----------
 * The ``equality`` property on the ``merge`` source is now optional.
-  
+
 2017-04-24
 ----------
 * Changed the default value of the "schedule_interval" :ref:`pump <pump_section>` configuration property. Before, the

@@ -6993,6 +6993,7 @@ Prototype
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
         "dead_letter_dataset": "dead-letter-dataset-id",
+        "track_dead_letters": false,
         "mode": "scheduled"
     }
 
@@ -7052,6 +7053,24 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Boolean
      - A flag that indicates if the pump should run when Sesam starts up, in addition to the normal schedule
        specified by the ``schedule_interval`` or ``cron_expression`` properties.
+     - false
+     -
+
+
+   * - ``dead_letter_dataset``
+     - String
+     - The id of the dataset to write any entities that fail retries. This can only happen if ``max_write_errors_in_retry_dataset``
+       is non-zero and ``max_retries_per_entity`` for the particular entity has been exceeded. Dead letter datasets
+       can be shared by more than one pipe.
+     -
+     -
+
+   * - ``track_dead_letters``
+     - Boolean
+     - A flag that indicates if the pump should delete any previously "dead letter" entities if a later version of it
+       is successfully written to the sink. It is only active if the "dead_letter_dataset" property is set and
+       retries are active. Note that enabling this option wil incur a performance cost because all successfully
+       written entities must be looked up in the execution log to determine if it has been previously marked as "dead".
      - false
      -
 
