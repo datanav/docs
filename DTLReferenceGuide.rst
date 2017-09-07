@@ -3840,6 +3840,26 @@ Sets
        |
        | Returns ``[]``.
 
+   * - ``intersects``
+     - | *Arguments:*
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
+       |
+       | Same as ``intersection``, but returns a boolean value. Returns true if the two
+         arguments have elements in common.
+     - | ``["intersects",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["intersects", "B", ["list", "B", "C"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["intersects", "A", ["list", "B", "C"]]``
+       |
+       | Returns ``false``.
+
    * - ``difference``
      - | *Arguments:*
        |   VALUES1(value-expression{1})
