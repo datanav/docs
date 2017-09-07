@@ -434,6 +434,46 @@ the former will have better precision.
    There must be exactly one unique dataset alias reference
    in each ``eq`` argument.
 
+.. _namespace_aware_functions:
+
+Namespaces
+==========
+
+The following functions are namespace aware: :ref:`add
+<dtl_transform-add>`, :ref:`default <dtl_transform-default>`,
+:ref:`make-ni <dtl_transform-make-ni>`, :ref:`remove
+<dtl_transform-remove>`, :ref:`copy <dtl_transform-copy>`,
+:ref:`rename <dtl_transform-rename>` and :ref:`path
+<path_function>`. This means they behave slightly differently when
+:ref:`namespaced identifiers <namespaces>` is enabled.
+
+- Function arguments that are of type ``wildcard-string`` will make
+  pattern matching aware of the boundary between the namespace and the
+  identifier parts of namespaced identifiers.
+
+- Function arguments that reference unqualified properties,
+  i.e. properties with only the identifier part, will in general match
+  that property in all namespaces.
+
+See the individual functions for more details.
+
+.. _ni_escape_syntax:
+
+NI escape syntax
+----------------
+
+``"foo:bar"`` is an example of a fully qualified namespaced
+identifier. ``"bar"`` is an unqualified one and consists of only the
+identifier part. There exists two special prefixes, ``":"`` and
+``"::"``.
+
+- If you want to make sure that the value is to be interpreted as-is
+  then use the ``"::"`` prefix, e.g. ``"::bar"``.
+
+- If you want the value to be relative to the current namespace,
+  i.e. identity or property namespace depending on the context, then use
+  the ``":"`` prefix, e.g. ``":bar"``.
+
 Argument types
 ==============
 
@@ -660,7 +700,7 @@ modifiying the target entity, and has no return value.
        | Adds the property returned by the ``concat`` function and assigns it the
          value returned by ``_S.value``.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -670,19 +710,32 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
+       | *Source entity:* ``{}``
+       |
        | ``["add", "age", 26]``
        |
-       | Adds the ``bar:age`` property with the value 26 to the target entity.     
+       | Result: ``{"bar:age": 26}``. Adds the ``bar:age`` property with the value
+         26 to the target entity.
        |
        | ``["add", "person:age", 26]``
        |
-       | Adds the ``person:age`` property with the value 26 to the target entity.     
+       | Result: ``{"person:age": 26}``. Adds the ``person:age`` property with the
+         value 26 to the target entity.
        |
        | ``["add", "::age", 26]``
        |
-       | Adds the ``age`` property with the value 26 to the target entity. Note
+       | Result: ``{"age": 26}``. Adds the ``age`` property with the value 26 to
+         the target entity. Note
          that if the PROPERTY arguments starts with ``::`` it will be interpreted
-         to mean add what ever is after the double colons.
+         to mean add what ever is after the double colons. See
+         :ref:`NI escape syntax <ni_escape_syntax>` for more details.
+       |
+       | ``["add", ":age", 26]``
+       |
+       | Result: ``{"bar:age": 26}``. Adds the ``bar:age`` property with the value
+         26 to the target entity.
+         Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to reference the current namespace.
        
        .. _`dtl_transform-default`:
 
@@ -724,7 +777,7 @@ modifiying the target entity, and has no return value.
        | Adds the property returned by the ``concat`` function and assigns it the
          value returned by ``_S.value``, if the property does not exists..
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -734,15 +787,36 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
+       | *Source entity:* ``{}``
+       |
        | ``["default", "age", 26]``
        |
-       | If the target entity does not already have the ``bar:age`` property, then
+       | Result: ``{"bar:age": 26}``. If the target entity does not already have
+         the ``bar:age`` property, then
          the ``bar:age`` property with the value 26 is added to the target entity.
        |
        | ``["default", "person:age", 26]``
        |
-       | If the target entity does not already have the ``person:age`` property, then
+       | Result: ``{"person:age": 26}``. If the target entity does not already have
+         the ``person:age`` property, then
          the ``person:age`` property with the value 26 is added to the target entity.
+       |
+       | ``["default", "::age", 26]``
+       |
+       | Result: ``{"age": 26}``. If the target entity does not already have the
+         ``age`` property, then
+       | the ``age`` property with the value 26 is added to the target entity. Note
+         that if the PROPERTY arguments starts with ``::`` it will be interpreted
+         to mean add what ever is after the double colons. See
+         :ref:`NI escape syntax <ni_escape_syntax>` for more details.
+       |
+       | ``["default", ":age", 26]``
+       |
+       | Result: ``{"bar:age": 26}``. If the target entity does not already have the
+         ``bar:age`` property, then
+         the ``bar:age`` property with the value 26 is added to the target entity.
+         Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to reference the current namespace.
 
        .. _`dtl_transform-make-ni`:
 
@@ -769,15 +843,15 @@ modifiying the target entity, and has no return value.
          namespace.
      - | ``["make-ni", "soccer", "referee", "ref"]``
        |
-       | Adds the ``ref`` property with the value ``~:soccer:john.doe`` to the
-         target entity, if the source property has the value ``john.doe``.
+       | If the source entity has ``{"referee": "john.doe"}`` then adds the ``ref``
+         property with the value ``~:soccer:john.doe`` to the target entity.
        |
        | ``["make-ni", "hockey", "players"]``
        |
        | Adds the ``players-ni`` property to the target entity, if
          any namespaced identifiers were created.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -787,8 +861,15 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
+       | *Source entity:*
+       | ``{"referee": "john.doe",``
+       |  ``"x:referee": "john.c.doe"}``
+       |
        | ``["make-ni", "soccer", "referee"]``
        |
+       | Result:
+       | ``{ "referee-ni": "~:soccer:john.doe"``
+       |   ``"x:referee-ni": "~:soccer:john.c.doe" }``.
        | Copies all ``referee`` properties in all namespaces from the source entity
          to the target entity. Note that the target properties are suffixed by ``-ni``.
          The values are converted into
@@ -796,6 +877,9 @@ modifiying the target entity, and has no return value.
        |
        | ``["make-ni", "soccer", "referee", "ref"]``
        |
+       | Result:
+       | ``{ "ref": "~:soccer:john.doe"``
+       |   ``"x:ref": "~:soccer:john.c.doe" }``.
        | Copies all ``referee`` properties in all namespaces from the source entity
          to the target entity. Note that the target properties are *not* suffixed by
          ``-ni``. The properties keep their namespaces, but the identifier
@@ -804,18 +888,24 @@ modifiying the target entity, and has no return value.
        |
        | ``["make-ni", "soccer", "x:referee"]``
        |
+       | Result:
+       | ``{ "x:referee-ni": "~:soccer:john.c.doe" }``.
        | Copies the ``x:referee`` property as ``x:referee-ni`` from the source entity
          to the target entity. The values are converted into
          NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
        |
        | ``["make-ni", "soccer", "x:referee", "ref"]``
        |
+       | Result:
+       | ``{ "x:ref": "~:soccer:john.c.doe" }``.
        | Copies the ``x:referee`` property as ``x:ref`` from the source entity
          to the target entity. The values are converted into
          NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
        |
        | ``["make-ni", "soccer", "x:referee", "y:ref"]``
        |
+       | Result:
+       | ``{ "y:ref": "~:soccer:john.c.doe" }``.
        | Copies the ``x:referee`` property as ``y:ref`` from the source entity
          to the target entity. The values are converted into
          NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
@@ -845,7 +935,7 @@ modifiying the target entity, and has no return value.
        | Removes all properties matching the ``temp_*`` wildcard pattern from
          the target entity.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -855,18 +945,26 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
+       | *Target entity:*
+       | ``{"age": 36,``
+       |  ``"x:age": 36}``
+       |  ``"y:age": 36}``
+       |
        | ``["remove", "age"]``
        |
+       | Result: ``{}``.
        | Removes the ``age`` property in all namespaces from the target entity.
        |
        | ``["remove", "x*:age"]``
        |
+       | Result: ``{"age": 36, "y:age": 36}``.
        | Removes the ``age`` property in all namespaces starting with ``x``
          from the target entity.
        |
-       | ``["remove", "person:age"]``
+       | ``["remove", "x:age"]``
        |
-       | Removes the ``person:age`` property from the target entity.
+       | Result: ``{"age": 36, "y:age": 36}``.
+       | Removes the ``x:age`` property from the target entity.
 
        .. _`dtl_transform-copy`:
 
@@ -903,7 +1001,7 @@ modifiying the target entity, and has no return value.
        | Copies all properties starting with ``a`` or ``b`` from the source entity
          to the target entity, but not those starting with ``ab`` or ``ba``.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -913,13 +1011,24 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
-       | ``["copy", "a"]``
+       | *Source entity:*
+       | ``{"age": 36,``
+       |  ``"x:age": 36}``
+       |  ``"xyz:age": 36}``
        |
-       | Copies the ``a`` property in all namespaces to the target entity.
+       | ``["copy", "age"]``
        |
-       | ``["copy", "x*:*a", "b"]``
+       | Result:
+       | ``{ "age": 36.``
+       |   ``"x:age": 36,``.
+       |   ``"xyz:age": 36}``.
+       | Copies the ``age`` property in all namespaces to the target entity.
        |
-       | Copies the properties ending with ``a`` in all namespaces starting with ``x``
+       | ``["copy", "x*:*e", "*y*:*e"]``
+       |
+       | Result: ``{ "x:age": 36 }``.
+       | Copies the properties ending with ``e`` in all namespaces starting with ``x``,
+         except those in a namespace that contains the character ``y``,
          to the target entity.
 
        .. _`dtl_transform-rename`:
@@ -954,7 +1063,7 @@ modifiying the target entity, and has no return value.
        | Copies the value of the property returned by the first ``concat`` function
          and assigns it to the property returned by the second ``concat`` function.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -964,22 +1073,35 @@ modifiying the target entity, and has no return value.
        |   ``}``
        | ``}``
        |
+       | *Source entity:*
+       | ``{"a": 1,``
+       |  ``"x:a": 2}``
+       |  ``"xyz:a": 3}``
+       |
        | ``["rename", "a", "b"]``
        |
+       | Result:
+       | ``{ "b": 1.``
+       |   ``"x:b": 2,``.
+       |   ``"xyz:b": 3}``.
        | Renames the ``a`` property in all namespaces to ``b`` in the same namespace.
          In practice this renames the identifier part of the namespaced identifiers
          from ``a`` to ``b``. If PROPERTY2 only contains the identifier part of
          namespaced identifier, then the identifier part of PROPERTY1 will be renamed to this.
        |
-       | ``["rename", "a", "x:b"]``
+       | ``["rename", "a", "z:b"]``
        |
+       | Result:
+       | ``{"z:b": [1, 2, 3]}``.
        | Collects all the values in the ``a`` property in all namespaces into
-         the ``x:b`` property. If PROPERTY2 contains a fully qualified namespaced
+         the ``z:b`` property. If PROPERTY2 contains a fully qualified namespaced
          identifier then all values in PROPERTY1 will be collected into this property.
        |
-       | ``["rename", "y:a", "x:b"]``
+       | ``["rename", "x:a", "x:b"]``
        |
-       | Renames the ``y:a`` property to ``x:b``.
+       | Result:
+       | ``{"x:b": 2}``.
+       | Renames the ``x:a`` property to ``x:b``.
 
        .. _`dtl_transform-merge`:
 
@@ -2709,6 +2831,7 @@ Paths
      - Description
      - Examples
 
+       .. _path_function:
    * - ``path``
      - | *Arguments:*
        |   PROPERTY_PATH(value-expression{1}),
@@ -2756,7 +2879,7 @@ Paths
        |
        | Returns ``[1, 2, 3]``.
        |
-       | Given the following namespaces:
+       | **With namespaced identifiers enabled:**
        |
        | ``{``
        |   ``"namespaced_identifiers": true,``
@@ -2768,7 +2891,7 @@ Paths
        |
        | ``["path", "foo:a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
        |
-       | Returns ``2`` as the path element ``foo:a`` is a fully qualified
+       | Returns ``2`` as the path element ``"foo:a"`` is a fully qualified
          namespaced identifier.
        |
        | ``["path", "a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
@@ -2778,8 +2901,13 @@ Paths
        |
        | ``["path", "::a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
        |
-       | Returns ``1`` as ``::a`` uses the escape syntax to explicity
-         reference the unqualified ``a`` property.
+       | Returns ``1`` as ``"::a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to explicity reference the unqualified ``a`` property.
+       |
+       | ``["path", ":a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to explicity reference the ``"a"`` property in the current namespace ``"bar"``.
 
 
 Hops

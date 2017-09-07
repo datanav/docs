@@ -332,6 +332,13 @@ Example of an entity with namespaces:
    enables it for just the one pipe. The latter enables it for all
    pipes - except for those pipes that have explicitly disabled it.
 
+.. NOTE::
+
+   Some of the DTL functions are namespace aware and they will behave
+   slightly differently when namespaces are enabled. See the section
+   on :ref:`namespaces <namespace_aware_functions>` in the DTL
+   reference guide for more details.
+
 Properties
 ^^^^^^^^^^
 
