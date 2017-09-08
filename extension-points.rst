@@ -82,7 +82,7 @@ The configuration defines a :ref:`URL system <url_system>` for the remote servic
 the service. This is helpful if the service is serving several different collections of data. Then if the service moves
 the base url can be updated in just one place.
 
-The pipe is defined as just as simple ``json`` pipe. It expects a resource containing JSON data packed in a JSON array.
+The pipe is defined as just a simple ``json`` pipe. It expects a resource containing JSON data packed in a JSON array.
 Note that in the example below we have set ``supports_since`` to ``true``.
 
 ::

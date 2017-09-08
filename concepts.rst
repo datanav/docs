@@ -74,7 +74,7 @@ We use *Sesam* as the general name for a Sesam service instance. A given service
 
 A service instance is configured via the API. Configuration in Sesam is quite cool. It is entity based. This means that we can track and understand if the configuration has changed in the same way we understand if any data has changed.
 
-The API offers two ways to upload configuration. The first is via the 'config' endpoint. This allows a complete set of configuration to be upload and is typically used when bootstrapping a service instance in QA or production environments. The other way is to use the individual resources exposed via the API. Such as a post to the collection of pipes.
+The API offers two ways to upload configuration. The first is via the 'config' endpoint. This allows a complete set of configuration to be uploaded and is typically used when bootstrapping a service instance in QA or production environments. The other way is to use the individual resources exposed via the API. Such as a post to the collection of pipes.
 
 
 .. _concepts-datasets:

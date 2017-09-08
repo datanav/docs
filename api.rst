@@ -91,7 +91,7 @@ In the following we will go through a few examples of what you can do with the a
 the ``curlJWT`` alias we created to interact with the api from the command line. If you are using MS Windows you can
 install for instance `Cygwin <http://cygwin.com>`_ in order to install and use the curl command (and create the ``curlJWT`` alias).
 
-Get the a list of all the pipes
+Get a list of all the pipes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With curl:

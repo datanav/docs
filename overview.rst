@@ -348,7 +348,7 @@ configuration entities were imported. Of those, three are `pipes <concepts.html#
 `systems <concepts.html#systems>`_.
 
 The configuration file contains two `pipes <concepts.html#pipes>`_ that will receive data from ``customers.json`` and  ``orders.json``.
-Each JSON file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the received entities into datasets
+Each JSON data file consists of an array of :doc:`entities <entitymodel>`. The pipes pump the received entities into datasets
 called ``customers`` and ``orders`` respectively.
 
 There is also a third pipe that reads the ``customers`` dataset and applies a :doc:`DTL <DTLReferenceGuide>` transform
@@ -373,7 +373,7 @@ The rest of this document assumes you have done so, please follow the authentica
 the :doc:`API reference guide <api>` before continuing.
 
 After obtaining a JWT token and using the ``curlJWT`` alias we established in the API reference guide document, we can
-post the contents of the ``customer.json`` and ``orders.json`` files to the endpoint receiver pipes we have defined.
+post the contents of the ``customers.json`` and ``orders.json`` files to the endpoint receiver pipes we have defined.
 These pipes make available a HTTP REST endpoint on the form `<https://instance-guid.sesam.cloud/api/receivers/pipe-id/entities>`_,
 see the documentation for :ref:`HTTP endpoint source <http_endpoint_source>` for more details. After uploading our
 configuration, two new HTTP endpoints are available to us:
@@ -388,7 +388,7 @@ Issue the following command using hte ``curlJWT`` alias:
 
 ::
 
-    curlJWT -X POST -H "Content-Type: application/json" --data @customer.json https://instance-guid.sesam.cloud/api/receivers/customers/entities
+    curlJWT -X POST -H "Content-Type: application/json" --data @customers.json https://instance-guid.sesam.cloud/api/receivers/customers/entities
     curlJWT -X POST -H "Content-Type: application/json" --data @orders.json https://instance-guid.sesam.cloud/api/receivers/orders/entities
 
 Let's look at the data in Sesam

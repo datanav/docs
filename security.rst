@@ -42,7 +42,7 @@ The Portal will generate a JSON Web Token for the user; this is a datastructure 
 and that contains a list of all the roles of the user.
 
 Inside the node, each pipe, system and dataset can be protected by assigning permissions to roles. The
-permissions of each user in then determined by iterating over the user's roles and checking the
+permissions of each user is then determined by iterating over the user's roles and checking the
 permissions granted to each role.
 
 We will explain how the permissions checks is done via an example. Lets assume that a person wants to

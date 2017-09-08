@@ -56,7 +56,7 @@ JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
 :doc:`here <entitymodel>`.
 
-If the sequence_id is not the same as the one that that is currently
+If the sequence_id is not the same as the one that is currently
 active, then it will replace the active one (full sync only). Only a
 single sequence_id should be active at any time. A sequence id goes
 out of scope when the 'is_last=true' request parameter is given. Note

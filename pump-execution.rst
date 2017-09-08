@@ -446,7 +446,7 @@ The notification entity
 -----------------------
 
 Sources can emit special types of entities containing a reserved property ``_notification``. If such an entity is
-encountered by the pump, a special entity is written to the execution log containing the emiotted entity as a child
+encountered by the pump, a special entity is written to the execution log containing the emitted entity as a child
 entity. Note: *This entity is not written to the sink*.
 
 This type of entity is typically used to signal for example a entity warning or error that is not deemed

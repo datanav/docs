@@ -97,13 +97,13 @@ Data posted to Sesam should be in the form:
   ]
 
 
-The only requirement is that each JSON object has a property called "_id" that contains the entiity id. These id values are up to you to decide, but should be unique within a DataSet.
+The only requirement is that each JSON object has a property called "_id" that contains the entity id. These id values are up to you to decide, but should be unique within a DataSet.
 
 
 Sending the Data
 ~~~~~~~~~~~~~~~~
 
-Now this is setup you can use CURL to upload a JSON file from your computer:
+Now you can use CURL to upload a JSON file from your computer:
 
 Sesam is secure by default so to POST data to the endpoint you will need to authenticate against the portal to aquire a JWT token that can be used in a CURL request. The following steps guide you through doing this process.
 

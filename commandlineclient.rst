@@ -19,7 +19,7 @@ the command line.
 Installing the client
 =====================
 
-If you followed the :ref:`overview-getting-started` guide, the sesam service will be running on the url http://localhost:9042/api .
+If you followed the :ref:`overview-getting-started` guide, the sesam service will be running on http://localhost:9042/api .
 
 The command line client is distributed as a python package, so you will need python (v3.4 or later) in order to install
 and run it:
@@ -87,7 +87,7 @@ the command line), or you can set it permanently for the logged in user using:
 If none of these options are used, the sesam client will fall back to a default value for the base URL of the API which
 is ``http://localhost:9042/api``.
 
-Get the a list of all the pipes
+Get a list of all the pipes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
