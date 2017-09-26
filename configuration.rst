@@ -3584,7 +3584,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``
        or ``body_template_file*``
-     -
+     - "body_template"
      -
 
    * - ``recipients``
@@ -3599,7 +3599,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - Should contain the id of the property to look up the recipients from the entity itself (i.e for inlining the
        recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory and the propery
        referenced by it must exists and be valid for all entities.
-     -
+     - "recipients"
      - Yes
 
    * - ``from_number``
@@ -4260,7 +4260,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - String
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities). It should not be used at the same time as ``body_template``.
-     -
+     - "body_template"
      -
 
    * - ``subject_template``
@@ -4274,7 +4274,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - String
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities). It should not be used at the same time as ``subject_template``.
-     -
+     - "subject_template"
      -
 
    * - ``text_body_template``
@@ -4287,7 +4287,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - String
      - Should contain a ``id`` of a property of the incoming entity to use for looking up the ``Jinja template``
        (i.e for inlining the templates in the entities) used to construct plain text messages. It should not be used at the same time as ``text_body_template``
-     -
+     - "text_body_template"
      -
 
    * - ``recipients``
@@ -4302,7 +4302,7 @@ The configuration must contain at most one of ``body_template`` or ``body_templa
      - Should contain the id of the property to look up the recpients from the entity itself (i.e for inlining the
        recpients). If ``recipients`` (see abowe) is not specified, this property is mandatory and the propery
        referenced by it must exists and be valid for all entities.
-     -
+     - "recipients"
      -
 
    * - ``mail_from``
