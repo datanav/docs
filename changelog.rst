@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-10-09
+----------
+* If a pipe is running and the pipe-config is modified, the pipe will no longer be stopped. Instead
+  a "An old version of the pipe is still running" warning will be displayed, and it is up to the user
+  if they want to stop the running pipe or not.
+
 2017-09-06
 ----------
 * Improved and expanded documentation on :ref:`namespaced identifiers <namespaces>` and the features related to it.
