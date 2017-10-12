@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-10-12
+----------
+* Documented the :doc:`JSON Pull Protocol <json-pull>`.
+
 2017-10-09
 ----------
 * If a pipe is running and the pipe-config is modified, the pipe will no longer be stopped. Instead
