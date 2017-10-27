@@ -3032,7 +3032,7 @@ Hops
             "datasets": ["Person p"],
             "where": [
               ["eq", "_S.children", "p._id"],
-              ["eq", "_p.gender", "female"]],
+              ["eq", "p.gender", "female"]],
             "recurse": true
            },
            {
