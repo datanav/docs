@@ -3409,6 +3409,9 @@ Prototype
         "type": "json",
         "system": "url-system-id",
         "url": "url-to-http-endpoint",
+        "headers": {
+            "some-header": "some-value"
+        },
         "batch_size": 100
     }
 
@@ -3445,6 +3448,13 @@ Properties
      - 100
      -
 
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set in HTTP request made using this sink. Both keys and values must
+       evaluate to strings.
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -3458,6 +3468,21 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "url": "http://localhost:9042/api/receivers/foo/entities"
         }
     }
+
+An example using a custom "application/json" content-type header needed by some non-standard compliant servers:
+
+::
+
+    {
+        "sink": {
+            "type": "json",
+            "url": "http://localhost:9042/api/receivers/foo/entities",
+            "headers": {
+                "content-type": "application/json; charset=UTF-8"
+            }
+        }
+    }
+
 
 .. _sdshare_push_sink:
 
@@ -6358,7 +6383,7 @@ Properties
      - A optional set of header values to set as defaults in request made using the URL system. Both keys and values must
        evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
        when using the ``jwt_token`` property. The default headers can also be overridden in the operation properties
-       on a per-method basis - see next section for detauks.
+       on a per-method basis - see next section for details.
      -
      -
 
