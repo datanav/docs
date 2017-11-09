@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2017-08-11
+2017-11-08
 ----------
 * The :ref:`JSON push sink  <json_push_sink>` now supports customizable HTTP headers via a ``headers`` property.
 
