@@ -1,6 +1,12 @@
 Changelog
 =========
 
+
+2017-11-13
+----------
+* The default value of the ``keep_existing_solr_ids`` configuration property in the :ref:`The Sesam Databrowser sink <databrowser_sink>`
+  has been changed from ``true`` to ``false``. 
+
 2017-11-08
 ----------
 * The :ref:`JSON push sink  <json_push_sink>` now supports customizable HTTP headers via a ``headers`` property.

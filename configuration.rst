@@ -3356,7 +3356,7 @@ Properties
        The cons of doing this is that it requires a http-request to solr for *each and every*
        entity, so it is *very* expensive. This option should therefore be set to false in
        cases where the id-problem is not likely to occur.
-     - true
+     - false
      -
 
    * - ``maintain_id_links``
@@ -3365,6 +3365,7 @@ Properties
        document doesn't exist in the solr index (via its ``id`` property), but there is a match in the ``ids`` property
        of some other document(s), this setting will force the new document to use ab existing id from the index.
        This makes sure any links to an existing document in the Solr index is kept (for example bookmarked documents).
+       The option only has an effect if the ``keep_existing_solr_ids`` option is set to ``true``.
      - true
      -
 
