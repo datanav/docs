@@ -158,7 +158,7 @@ Properties
           "dcterms": "http://purl.org/dc/terms/",
           "gs": "http://www.opengis.net/ont/geosparql#",
      -
-     - 
+     -
 
 .. _pipe_section:
 
@@ -6337,12 +6337,6 @@ Properties
      -
      - Yes
 
-   * - ``base_url``
-     - String
-     - Deprecated. Use the ``url_pattern`` property instead. The full URL of the base url of the HTTP server. Relative URLs are URL joined against this base URL to produce absolute URLs. Note that you may want a ``/`` at the end of the value.
-     -
-     -
-
    * - ``verify_ssl``
      - Boolean
      - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
@@ -6427,9 +6421,9 @@ A operation configuration looks like:
 
    * - ``url``
      - String
-     - A string containing a absolute URL or relative path. The URL and/or path must match the ``base_url`` specified in the
-       system. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
-       available to the templating context.
+     - A URL or URL part. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
+       available to the templating context. The expanded string is then substituted into the system's ``url_pattern`` property in
+       place of its ``%s`` placeholder marker to get the final URL to use for the operation.
      -
      - Yes
 
@@ -6475,26 +6469,26 @@ Example configuration
     {
         "_id": "our-rest-service",
         "name": "Our REST service",
-        "base_url": "http://our.domain.com/api"
+        "url_pattern": "http://our.domain.com/api/%s"
         "type" : "system:rest",
         "operations": {
            "delete-man": {
-               "url" : "/men/{{ properties.collection_name }}/{{ _id }}",
+               "url" : "men/{{ properties.collection_name }}/{{ _id }}",
                "method": "DELETE",
            },
            "delete-woman": {
-               "url" : "/women/{{ properties.collection_name }}/{{ _id }}",
+               "url" : "women/{{ properties.collection_name }}/{{ _id }}",
                "method": "DELETE"
            },
            "update-man": {
-               "url" : "/men/{{ properties.collection_name }}/",
+               "url" : "men/{{ properties.collection_name }}/",
                "method": "POST",
                "headers": {
                    "Content-type": "application/xml"
                }
            },
            "update-woman": {
-               "url" : "/women/{{ properties.collection_name }}/",
+               "url" : "women/{{ properties.collection_name }}/",
                "method": "POST",
                "headers": {
                    "Content-type": "application/json"
