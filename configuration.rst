@@ -4448,6 +4448,10 @@ The serialisation of entities as JSON is described in more detail
 :doc:`here <entitymodel>`. This endpoint is compatible with :ref:`The
 JSON source <json_source>`.
 
+Note that any URL parameters given to these endpoints are bound to a DTL variable named ``_B``
+and is availble to any DTL transform on the pipe in which the endpoint sink is a part, see
+:ref:`DTL Variables <variables>` for more details.
+
 The SDShare protocol is described `here
 <http://www.sdshare.org/spec/sdshare-v1.0.html>`_.
 

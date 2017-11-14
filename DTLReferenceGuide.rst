@@ -233,12 +233,15 @@ Variables
 =========
 
 There are four built-in variables in the Data Transformation
-Language. These are ``_S``, ``_T``, ``_P`` and ``_``. They refer to
-the source entity, the target entity, the parent context and the
+Language. These are ``_S``, ``_T``, ``_P``, ``_B`` and ``_``. They refer to
+the source entity, the target entity, the parent context, bound endpoint variables and the
 current value respectively. ``_S`` and ``_T`` appear in pairs inside
 each applied transform. ``_P`` appears inside the ``apply`` function
 and refers to the parent context. ``_`` is used to refer to the
-current value in functional expressions.
+current value in functional expressions. The ``_B`` variable is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>` to hold variables
+defined by URL parameters (i.e. a URL variable ``foo`` given to the endpoint API on the form
+``http://my_host:port/api/publishers/my_endpoint?foo=bar`` will be reflected in the ``_B`` map as a key ``foo`` with
+the value ``bar``). It is useful for parameterizing the transform on an endpoint sink.
 
 .. list-table::
    :header-rows: 1
@@ -677,14 +680,14 @@ modifiying the target entity, and has no return value.
        .. NOTE::
 
          This transform function is :ref:`namespaced identifiers <namespaces>` aware.
-         
+
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
          namespace. If the property is ``_id`` then the string values
          will be prefixed by the identity namespace. All other
          properties will have their name prefixed by the property
          namespace.
-         
+
      - | ``["add", "age", 26]``
        |
        | Adds the ``age`` property with the value 26 to the target entity.
@@ -736,7 +739,7 @@ modifiying the target entity, and has no return value.
          26 to the target entity.
          Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
          to reference the current namespace.
-       
+
        .. _`dtl_transform-default`:
 
    * - ``default``
@@ -753,7 +756,7 @@ modifiying the target entity, and has no return value.
        .. NOTE::
 
          This transform function is :ref:`namespaced identifiers <namespaces>` aware.
-          
+
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
          namespace. If the property is ``_id`` then the string values
@@ -834,7 +837,7 @@ modifiying the target entity, and has no return value.
        .. NOTE::
 
          This transform function is :ref:`namespaced identifiers <namespaces>` aware.
-          
+
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
          namespace. If the property is ``_id`` then the string values
@@ -1046,7 +1049,7 @@ modifiying the target entity, and has no return value.
        .. NOTE::
 
          This transform function is :ref:`namespaced identifiers <namespaces>` aware.
-          
+
          If namespaced identifiers are enabled,
          then the renaming makes sure that any namespaces on the target entity either
          keep their original namespaces or all values are collected into a single
@@ -2854,7 +2857,7 @@ Paths
          a fully qualified namespaced identifier then all properties with
          the path element as its identifier part will be part of the result.
          In practice the result is the union of all those properties.
-         
+
      - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
        |
        | Traverses the ``age`` field of the VALUES entities.
