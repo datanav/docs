@@ -1378,21 +1378,38 @@ Comparisons
      - Description
      - Examples
 
+       .. _eq_dtl_function:
    * - ``eq``
      - | *Arguments:* value-expression{2}
        |
        | Coerces the values returned from the value expressions into
-         list and compares those lists. Returns *true* if the two
+         lists and compares those lists. Returns ``true`` if the two
          arguments given are equal.
      - | ``["eq", "_S.age", 42]``
        |
-       | The source entity's age field must have the value 42.
+       | Returns ``true`` if the source entity's age field is ``42``.
+       |
+       | ``["eq", "_S.hobbies", ["list", "soccer", "tennis"]]``
+       |
+       | Returns ``true`` if the hobbies are exactly equal to ``["soccer", "tennis"]``.
+
+       .. WARNING::
+
+          Note that the ``eq`` function serves a dual purpose. It can
+          both be used for :ref:`join expressions <joins>` and it can
+          be used for :ref:`equality comparisons
+          <eq_dtl_function>`. These two are different in that a join
+          uses intersection (similar to the ``intersects`` function) and
+          the equality comparison is an exact match. Use the
+          :ref:`intersects <intersects_dtl_function>` function if you
+          want to check for intersection/overlap instead of an exact
+          match.
 
    * - ``neq``
      - | *Arguments:* value-expression{2}
        |
        | Coerces the values returned from the value expressions into
-         list and compares those lists. Returns *false* if the two
+         list and compares those lists. Returns ``false`` if the two
          arguments given are equal.
      - | ``["neq", "_S.age", 42]``
        |
@@ -3840,6 +3857,7 @@ Sets
        |
        | Returns ``[]``.
 
+       .. _intersects_dtl_function:
    * - ``intersects``
      - | *Arguments:*
        |   VALUES1(value-expression{1})
@@ -3911,7 +3929,7 @@ Dictionaries / Entities
        |
        | ``["items", ["list", "X", 123, {"A": 1}]]``
        |
-       | Returns ``[["A": 1]]``.
+       | Returns ``[["A", 1]]``.
 
    * - ``dict``
      - | *Arguments:*

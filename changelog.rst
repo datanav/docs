@@ -1,6 +1,35 @@
 Changelog
 =========
 
+2017-08-15
+----------
+* Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
+  
+* The DTL compiler will now issue a warning if you try to perform two
+  or more :ref:`join expressions <joins>` between the same two dataset
+  aliases. It is there to notify you of possible cardinality issues
+  and to tell you about the :ref:`tuples <tuples_dtl_function>`
+  function, which may be used to avoid cardinality issues.
+
+  When there are two or more join expressions between the same two
+  dataset aliases only the first one is treated as a join expression;
+  the rest of them are :ref:`equality comparisions
+  <eq_dtl_function>`. One can use the :ref:`tuples
+  <tuples_dtl_function>` function to combine them into one big join
+  expression at the cost of composite indexes being used.
+  
+  .. WARNING::
+
+     Note that the :ref:`eq <eq_dtl_function>`
+     function serves a dual purpose. It can both be used for
+     :ref:`join expressions <joins>` and it can be used for
+     :ref:`equality comparisions <eq_dtl_function>`. These two are
+     different in that a join uses intersection (similar to the
+     ``intersects`` function) and the equality comparison is an exact
+     match. Use the :ref:`intersects <intersects_dtl_function>`
+     function if you want to check for intersection/overlap instead of
+     an exact match.
+
 
 2017-11-13
 ----------
