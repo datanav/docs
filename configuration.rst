@@ -6771,26 +6771,28 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
+   :widths: 10, 10, 60, 10, 1
 
    * - Property
      - Type
      - Description
      - Default
-     - Req
+     -
+      .. _pump_param_schedule_interval:
 
    * - ``schedule_interval``
      - Number
      - The number of seconds between runs. It is mutually exclusive with the ``cron_expression`` property.
      - (see the note above)
-     - Yes
+     -
+      .. _pump_param_cron_expression:
 
    * - ``cron_expression``
      - String
      - A cron expression that indicates when the pump should run.
        It is mutually exclusive with the ``schedule_interval`` property.
      -
-     - Yes
+     -
 
    * - ``rescan_run_count``
      - Integer

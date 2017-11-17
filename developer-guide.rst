@@ -17,4 +17,5 @@ Developer Guide
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>
    Security <security>
+   Notifications <notifications>
    Low-level debugging <low-level-debugging>
