@@ -6536,7 +6536,6 @@ Prototype
             "cpu_quota": 25,
             "cpu_period": 100,
             "cpuset_cpus": null,
-            "data_folder": true,
             "environment": {
                 "SOME-VARIABLE": "SOME-VALUE",
                 "OTHER-VARIABLE": {
@@ -6634,13 +6633,6 @@ Properties
        The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
        4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
      - ``null``
-     -
-
-   * - ``docker.data_folder``
-     - Boolean
-     - If set to true then a persistent folder will be created for the system and mounted as ``/data``
-       inside the container. Note that the folder will not be deleted unless the system is deleted.
-     - ``false``
      -
 
    * - ``use_https``
