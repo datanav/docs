@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2017-08-15
+2017-11-15
 ----------
 * Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
   
