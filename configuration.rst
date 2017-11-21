@@ -685,6 +685,16 @@ rules to figure out which entities are the same. Equality is resolved
 transitively, so if A is the same as B and B is the same as C then A,
 B and C are all considered the same.
 
+Deletes will be output for entity ids that are no longer
+applicable. This typically happens when an entity is first merged with
+one entity and then later merged with some other entities, and the id
+of the resulting entity changes. Those entities will also have the
+``$replaced`` property set to ``true``.
+
+If an entity is deleted in its source dataset then the entity will not
+be merged, but instead output as a standalone entity with ``_deleted``
+set to ``true``.
+
 Prototype
 ^^^^^^^^^
 
@@ -754,9 +764,7 @@ Properties
          
        * ``"first"`` - Similar to the ``composite`` strategy, but uses
          the entity id of the first entity given the same ordering
-         rules as above. This strategy will output deleted entities
-         when a merged entity change id because of it being merged or
-         unmerged.
+         rules as above.
          
          Example: ``"one1"``. 
      - ``"composite"``
