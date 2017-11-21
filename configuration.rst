@@ -3852,6 +3852,8 @@ Prototype
     {
         "type": "sparql",
         "system": "id-of-url-system"
+        "url": "sparql",
+        "update_url": "sparql-update",
         "graph": "http://uri.of/graph",
         "do_diff": false,
         "write_sdshare_updated": true
@@ -3872,13 +3874,22 @@ Properties
 
    * - ``url``
      - String
-     - The URL of the SPARQL endpoint to use.
+     - The URL part of the SPARQL endpoint to use, see the ``url_pattern`` property of the :ref:`URL system <url_system>`
+       for how this is substituted into the System URL.
      -
      - Yes
 
+   * - ``update_url``
+     - String
+     - The URL part of the SPARQL endpoint to use for updates if it is different from ``url``. See the ``url_pattern``
+       property of the :ref:`URL system <url_system>` for how this is substituted into the System URL.
+     -
+     -
+
    * - ``system``
      - String
-     - The id of a :ref:`URL system <url_system>` component to use.
+     - The id of a :ref:`URL system <url_system>` component to use. Note that only ``basic`` and ``digest``
+       ``authentication`` schemes are supported by the SPARQL sink.
      -
      - Yes
 
@@ -3894,15 +3905,15 @@ Properties
        by converting the input entity to RDF. This ensures the minimum number of write operations to the endpoint.
        This does however come with the cost of (many) more read operations. Use this option if your entities are large
        and/or there is large amounts of changes flowing through the sink on average.
-     -
      - false
+     -
 
    * - ``write_sdshare_updated``
      - Boolean
      - Tell the sink to automatically insert SDShare updated predicates with the generated RDF statements written to
        the endpoint. Note that the local UTC time is currently used for this timestamp.
-     -
      - true
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
