@@ -112,7 +112,7 @@ When converting your entities to RDF, some rules are applied:
 
 Note that many RDF capable receivers are unable to deal with BNodes, so be sure to check this before finalizing
 your flow configuration. If your data is nested and the receiver doesn't support BNodes, you must "flatten" your entity using a
-DTL transform before being sent to the sink (see the DTL :ref:`merge <merge_function>` and :ref:`merge-union <merge_union_function>` functions).
+DTL transform before being sent to the sink (see the DTL :ref:`merge <dtl_transform-merge>` and :ref:`merge-union <dtl_transform-merge-union>` functions).
 
 SDShare feeds from datasets
 ---------------------------

@@ -551,9 +551,6 @@ of the argument. Here are some cardinalites that you'll come across:
        |  ``["copy", ["list", "name", "age"]]]]``
 
 
-.. _merge_union_function:
-.. _merge_function:
-
 Transforms
 ==========
 
@@ -1124,6 +1121,8 @@ modifiying the target entity, and has no return value.
        | Add the properties ``a=2`` and ``b=3`` to the target entity. Note that
          ``a=1`` is not added because it gets overwritten with ``a=2`` later.
 
+       .. _`dtl_transform-merge-union`:
+       
    * - ``merge-union``
      - | *Arguments:*
        |   VALUES(value-expression{1})

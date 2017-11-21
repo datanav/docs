@@ -692,6 +692,7 @@ Prototype
 
     {
         "type": "merge",
+        "version": 2,
         "datasets": ["one d1", "two d2", "three d3"],
         "equality": [
              ["eq", "d1.field1", "d2.field1"],
@@ -712,6 +713,12 @@ Properties
      - Default
      - Req
 
+   * - ``version``
+     - Number
+     - There are two different versions of the merge source. Note that the default value is ``1`` for compatibility reasons. Version ``1`` is deprecated. Use version ``2`` if this is a new pipe. 
+     - ``1``
+     - No
+
    * - ``datasets``
      - List<String{>=1}>
      - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
@@ -722,6 +729,74 @@ Properties
      - List<EqFunctions{>=0}>
      - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
      -
+     - No
+
+   * - ``identity``
+     - String
+     - Specifies the strategy for how to create the ``_id`` of the resulting entities.
+       
+       * ``"composite"`` - The default, which is to create an id
+         composed of all the ids of the entities involved and the
+         offset of the dataset from which they originates.
+
+         Example: ``"one1|0|two1|1|two2|1|three3|2"``. This particular
+         id consists of four entity ids from three datasets. If it is
+         the result of the prototypical merge source shown above, then
+         ``one1`` is the id of an entity from the ``d1`` dataset,
+         ``two1`` and ``two2`` are ids of entities from the ``d2``
+         dataset, and ``three3`` is the id of an entity from the
+         ``d3`` dataset.
+
+         The parts of the composite id are first ordered by the offset
+         of the dataset in the ``datasets`` property, then by the
+         entities' ``_id`` property. This results in a deterministic
+         entity id.
+         
+       * ``"first"`` - Similar to the ``composite`` strategy, but uses
+         the entity id of the first entity given the same ordering
+         rules as above. This strategy will output deleted entities
+         when a merged entity change id because of it being merged or
+         unmerged.
+         
+         Example: ``"one1"``. 
+     - ``"composite"``
+     - No
+
+   * - ``strategy``
+     - String
+     - The strategy to use to combine the properties of the merged
+       entities. This affects how the resulting entities look.
+
+       The examples below illustrate the results of merging the
+       following three entities in this particular order (ids omitted for brevity):
+       ``{"x":1}``, ``{"y": [2, 1]}``, ``{"y": 2, "z": [3, 3]}``
+       
+       * ``"default"`` - The default is to union all the values, which
+         results in all properties being lists of all the values from
+         all the entities. This is similar to how the
+         :ref:`merge-union <dtl_transform-merge-union>` DTL function
+         works. Duplicates are not removed.
+
+         Example: ``{"x": [1], "y": [2, 1, 2], "z": [3, 3]}``
+       
+       * ``"compact"`` - Similar to the default strategy, but tries to
+         compact the property values; duplicate values are removed,
+         properties with empty lists are dropped, and list properties
+         with a single value are turned into single valued properties.
+
+         Example: ``{"x": 1, "y": [2, 1], "z": 3}``
+       
+       * ``"list"`` - Returns an entity with a ``$merged`` property
+         which contains a list of the merged entities. This strategy
+         can be used to implement custom strategies.
+
+         | Example:
+         | ``{"$merged": [``
+         |   ``{"x": 1},``
+         |   ``{"y": [2, 1]},``
+         |   ``{"y": 2, "z": [3, 3]}]}``
+
+     - ``"default"``
      - No
 
 Continuation support
@@ -837,6 +912,8 @@ ids of the merge entities themselves. This is useful when merging
 already merged entities downstream.
 
 .. WARNING::
+
+   This applies only to merge sources using version ``1``.
 
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
