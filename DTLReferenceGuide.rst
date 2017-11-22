@@ -1407,6 +1407,7 @@ Comparisons
           want to check for intersection/overlap instead of an exact
           match.
 
+       .. _neq_dtl_function:
    * - ``neq``
      - | *Arguments:* value-expression{2}
        |
@@ -1417,6 +1418,7 @@ Comparisons
        |
        | The source entity's age field must *not* have the value 42.
 
+       .. _gt_dtl_function:
    * - ``gt``
      - | *Arguments:* value-expression{2}
        |
@@ -1428,6 +1430,7 @@ Comparisons
        | The source entity's ``age`` field must have a value greater
          than 42.
 
+       .. _gte_dtl_function:
    * - ``gte``
      - | *Arguments:* value-expression{2}
        |
@@ -1439,6 +1442,7 @@ Comparisons
        | The source entity's ``age`` field must have a value greater
          than or equal 42.
 
+       .. _lt_dtl_function:
    * - ``lt``
      - | *Arguments:* value-expression{2}
        |
@@ -1450,6 +1454,7 @@ Comparisons
        | The source entity's ``age`` field must have a value less
          than 42.
 
+       .. _lte_dtl_function:
    * - ``lte``
      - | *Arguments:* value-expression{2}
        |
@@ -1461,6 +1466,7 @@ Comparisons
        | The source entity's ``age`` field must have a value less
          than or equal 42.
 
+       .. _is_empty_dtl_function:
    * - ``is-empty``
      - | *Arguments:* value-expression{1}
        |
@@ -1472,6 +1478,7 @@ Comparisons
        | Returns true if the source entity's ``hobbies`` field is
          empty (has no values).
 
+       .. _is_not_empty_dtl_function:
    * - ``is-not-empty``
      - | *Arguments:* value-expression{1}
        |
@@ -1521,6 +1528,7 @@ If-then-else
      - Description
      - Examples
 
+       .. _if_dtl_function:
    * - ``if``
      - | *Arguments:*
        |   CONDITION(boolean-expression{1}),
@@ -1546,6 +1554,7 @@ Nulls
      - Description
      - Examples
 
+       .. _is_null_dtl_function:
    * - ``is-null``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1578,6 +1587,7 @@ Nulls
        |
        | Returns ``false``.
 
+       .. _is_not_null_dtl_function:
    * - ``is-not-null``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1610,6 +1620,7 @@ Nulls
        |
        | Returns ``true``.
 
+       .. _if_null_dtl_function:
    * - ``if-null``
      - | *Arguments:*
        |   VALUE(value-expression{1})
@@ -1638,6 +1649,7 @@ Nulls
        |
        | Returns ``[1, "12345"]``.
 
+       .. _coalesce_dtl_function:
    * - ``coalesce``
      - | *Arguments:*
        |   FUNCTION(function-expression{0|1}),
@@ -1705,6 +1717,7 @@ Numbers
          The URI value and the non-integer string value are replaced with the
          their respective string casts.
 
+       .. _is_integer_dtl_function:
    * - ``is-integer``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1732,6 +1745,7 @@ Numbers
        |
        | Returns ``true``.
 
+       .. _is_decimal_dtl_function:
    * - ``decimal``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -1772,6 +1786,7 @@ Numbers
        | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
          is replaced with its string cast.
 
+       .. _is_decimal_dtl_function:
    * - ``is-decimal``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1803,6 +1818,7 @@ Numbers
        |
        | Returns true.
 
+       .. _float_dtl_function:
    * - ``float``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -1844,6 +1860,7 @@ Numbers
        | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
          is replaced with its string cast.
 
+       .. _is_float_dtl_function:
    * - ``is-float``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1887,6 +1904,7 @@ Date and time
      - Description
      - Examples
 
+       .. _now_dtl_function:
    * - ``now``
      - | *Arguments:*
        |   NONE(value-expression{0})
@@ -2202,6 +2220,7 @@ Strings
      - Description
      - Examples
 
+       .. _string_dtl_function:
    * - ``string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2229,6 +2248,7 @@ Strings
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
 
+       .. _is_string_dtl_function:
    * - ``is-string``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2253,6 +2273,7 @@ Strings
        |
        | Returns false
 
+       .. _upper_dtl_function:
    * - ``upper``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2267,6 +2288,7 @@ Strings
        |
        | Returns an uppercased version of the source entity's name.
 
+       .. _lower_dtl_function:
    * - ``lower``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2281,6 +2303,7 @@ Strings
        |
        | Returns a lowercased version of the source entity's name.
 
+       .. _length_dtl_function:
    * - ``length``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2322,6 +2345,7 @@ Strings
        |
        | Returns ``""``, because non-string values are ignored.
 
+       .. _join_dtl_function:
    * - ``join``
      - | *Arguments:*
        |   SEPARATOR(string{1})
@@ -2337,6 +2361,7 @@ Strings
        |
        | Returns a joined string of the source entity's tags separated by dashes.
 
+       .. _split_dtl_function:
    * - ``split``
      - | *Arguments:*
        |   SEPARATOR(string{0|1})
@@ -2356,6 +2381,7 @@ Strings
        |
        | Returns a list of strings of the source entity's tags separated by dashes.
 
+       .. _strip_dtl_function:
    * - ``strip``
      - | *Arguments:*
        |   CHARACTERS(string{0|1})
@@ -2380,6 +2406,7 @@ Strings
        |
        | Returns ``["123", "456"]``.
 
+       .. _lstrip_dtl_function:
    * - ``lstrip``
      - | *Arguments:*
        |   CHARACTERS(string{0|1})
@@ -2405,6 +2432,7 @@ Strings
        |
        | Returns ``["123xyx", "456yx"]``.
 
+       .. _rstrip_dtl_function:
    * - ``rstrip``
      - | *Arguments:*
        |   CHARACTERS(string{0|1})
@@ -2430,6 +2458,7 @@ Strings
        |
        | Returns ``["123", "xy456"]``.
 
+       .. _replace_dtl_function:
    * - ``replace``
      - | *Arguments:*
        |   OLD_STRING(string{1})
@@ -2468,6 +2497,7 @@ Strings
        |
        | Returns ``"de"``.
 
+       .. _matches_dtl_function:
    * - ``matches``
      - | *Arguments:*
        |   PATTERN(string{1})

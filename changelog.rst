@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017-11-22
+----------
+* Added the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` notification rule type.
+
+
 2017-11-15
 ----------
 * Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
