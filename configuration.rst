@@ -4109,10 +4109,13 @@ Properties
    * - ``use_bulk_operations``
      - Boolean
      - Some database types supports bulk upload of data. Bulk uploading is typically much faster than doing
-       updates with ``INSERT`` and ``UPDATE`` SQL statements, but may not be feasable in all cases (some bulk
+       updates with ``INSERT`` and ``UPDATE`` SQL statements, but may not be feasible in all cases (some bulk
        operations requires Sesam to have extra permissions in the database, for instance). Only some
        sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
        details.
+
+       Note that setting this option to ``true`` also implies that ``truncate_table_on_first_run`` is treated as
+       always ``true``, even if explicitly set to ``false`` in the configuration.
      - ``false`` for now; will be changed to ``true`` at some future date.
      -
 
@@ -4129,6 +4132,9 @@ Properties
        the truncating operation is executed in a separate transaction, so if any subsequent inserts should fail
        the truncating operation will not be rolled back. Note that if combined with ``create_table_if_missing`` this
        property will make the sink drop and then recreate the table on the first run.
+
+       If ``use_bulk_operations`` is set to ``true`` this option is always treated as ``true``, even if
+       explicitly set to ``false``.
      - ``false``
      -
 
