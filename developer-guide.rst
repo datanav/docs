@@ -19,3 +19,4 @@ Developer Guide
    Security <security>
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
+   Databrowser <databrowser>
