@@ -24,19 +24,6 @@ This is a boolean value, with the following meaning:
   user's webbrowser to some external webpage that does the authentication
   and redirects back to the databrowser.
 
-If the external system managed to authenticate the user the call would
-end up in the "login\_complete\_view" function in the
-datanav-core/python/python3/databrowser/webapp/databrowser/views/authentication.py
-file.
-
-The login\_complete\_view-function will store the user's email address
-(which the external system will have added to the request) in the
-"email"-attribute of the session object.
-
-If the user authentication failed, the "login\_denied\_view"-function in
-the
-datanav-core/python/python3/databrowser/webapp/databrowser/views/authentication.py
-file will be called instead.
 
 | True:
 | Authentication is done by assuming that a valid username is present in
@@ -52,14 +39,12 @@ email-address like this:
    the fields specified in the X\_REMOTE\_USER\_USERNAME\_FIELDS
    config-variable (which is set by the
    "x\_remote\_user\_username\_psi"-value in the
-   "`authentication <#authentication>`__"-section in the
-   "databrowser.ini"-file).
+   "authentication"-section in the "databrowser.ini"-file).
 
 2. Look for fields in the found items using the fieldnames specified in
    the X\_REMOTE\_USER\_EMAIL\_FIELDS config-variable (which is set by
    the "x\_remote\_user\_email\_psi"-value in the
-   "`authentication <#authentication>`__"-section in the
-   "databrowser.ini"-file).
+   "authentication"-section in the "databrowser.ini"-file).
 
 If any email-addresses are found, one of them will be stored in the
 "email"-attribute of the session-object.
@@ -67,6 +52,8 @@ If any email-addresses are found, one of them will be stored in the
 If no email-addresses are found, and the username looks like an
 email-address, the username will be stored in the "email"-attribute of
 the session-object.
+
+.. _databrowser_authorization_via_solr:
 
 Authorization
 -------------
@@ -147,8 +134,8 @@ config-variable:
 Authentication and authorization via a JWT token
 ------------------------------------------------
 
-In addition to authenticating against Google or Microsoft Live and authrorizing
-based on the [data in solr](#solr-authorization), the databrowser supports authentication
+In addition to authenticating against Google or Microsoft Live and authorizing
+based on the :ref:`data in solr <databrowser_authorization_via_solr>`, the databrowser supports authentication
 and authorization with a `JWT <https://en.wikipedia.org/wiki/JSON_Web_Token>`_  authorization
 token created by the `Sesam portal <https://portal.sesam.io>`_.
 
@@ -171,7 +158,7 @@ A value of "*" means that JWTs from all subscriptions will be accepted by the da
 
 JWT authorization
 ~~~~~~~~~~~~~~~~~
-Once the user has been authenticated with a JWT, authorization is done by looking at the documents in the solr database (see the [Authorization](#solr-authorization) section for details).
+Once the user has been authenticated with a JWT, authorization is done by looking at the documents in the solr database (see the :ref:`Authorization <databrowser_authorization_via_solr>` section for details).
 
 In addition, if the JWT grants the user the "group:Admin" role, the user will be allowed to see all the solr documents and to edit the databrowser configuration.
 
