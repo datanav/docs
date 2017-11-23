@@ -32,12 +32,12 @@ sections (The "Hva"-section is configured in the default
 There are several ways of specifying what types of items should be
 displayed in each section:
 
--  :ref:`Via the itemdetail view <section_types_via_itemdetail_view>`.
--  :ref:`Via the databrowser.ini file <section_types_via_databrowser_ini>`.
--  :ref:`Via the "Data types" adminpage <section_types_via_datatypes_adminpage>`.
+-  :ref:`Via the itemdetail view <section_types_config_via_itemdetail_view>`.
+-  :ref:`Via the databrowser.ini file <section_types_config_via_databrowser_ini>`.
+-  :ref:`Via the "Data types" adminpage <section_types_config_via_datatypes_adminpage>`.
 
 
-.. _section_types_via_itemdetail_view:
+.. _section_types_config_via_itemdetail_view:
 
 Specifying what appears in the "Hvem"-section via the itemdetail view.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +91,7 @@ non-person items. Lets fix that.
 
 The "Hvem"-section will now only display persons.
 
-.. _section_types_via_databrowser_ini:
+.. _section_types_config_via_databrowser_ini:
 
 Specifying what appears in the "Hvor"-section via the "databrowser.ini" file.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,7 +117,7 @@ following lines to the "databrowser.ini"-file:
 Save the databrowser.ini file, restart the databrowser and go to the
 front page. The "Hvor"-section will now only display projects and tasks.
 
-.. _section_types_via_datatypes_adminpage:
+.. _section_types_config_via_datatypes_adminpage:
 
 Specifying what appears in the "Hva"-section via the "Data types" adminpage.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -159,12 +159,12 @@ ways: There are several ways of specifying what attributetypes should be
 displayed in each facetsection:
 
 
--  :ref:`Via the itemdetail view <facetsection_via_itemdetail_view>`.
--  :ref:`Via the databrowser.ini file <facetsection_via_databrowser_ini>`.
--  :ref:`Via the "Data types" adminpage <facetsection_via_datatypes_adminpage>`.
+-  :ref:`Via the itemdetail view <facetsection_config_via_itemdetail_view>`.
+-  :ref:`Via the databrowser.ini file <facetsection_config_via_databrowser_ini>`.
+-  :ref:`Via the "Data types" adminpage <facetsection_config_via_datatypes_adminpage>`.
 
 
-.. _facetsection_via_itemdetail_view:
+.. _facetsection_config_via_itemdetail_view:
 
 Specifying what appears in the "Hvor"-facetsection via the itemdetail view.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -195,7 +195,7 @@ values of the "departmentid" attribute.
 The "Hvem"-section will now display a "Hvor"-facetsection (in addition
 to the old "Hva"-facetsection).
 
-.. _facetsection_via_databrowser_ini:
+.. _facetsection_config_via_databrowser_ini:
 
 Specifying what appears in the "Hvordan"-facetsection via the "databrowser.ini" file.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -224,7 +224,7 @@ following lines:
 
 The "Hvem"-section will now display a "Hvordan"-facetsection.
 
-.. _facetsection_via_datatypes_adminpage:
+.. _facetsection_config_via_datatypes_adminpage:
 
 Specifying what appears in the "Hvem"-facetsection via the "Data types" adminpage.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -233,8 +233,8 @@ Lets assume that we want to have a "Hvem"-facetsection that displays the
 values of the "RES\_\_RES\_TEXT1"-attribute (whatever that is, I (knutj)
 just picked a random attribute that referred to another person).
 
-We could do this either via the :ref:`itemdetail view <facetsection_via_itemdetail_view>`
-or via the :ref:`the databrowser.ini file <facetsection_via_databrowser_ini>`, but instead
+We could do this either via the :ref:`itemdetail view <facetsection_config_via_itemdetail_view>`
+or via the :ref:`the databrowser.ini file <facetsection_config_via_databrowser_ini>`, but instead
 we will do it in a third way: via the "Data types" adminpage.
 
 -  Click on the "Admin pages"-link at the bottom of the screen. This
