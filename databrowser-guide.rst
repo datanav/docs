@@ -366,12 +366,6 @@ reached by clicking on the little person-icon in the top right corner.
 Configuration
 -------------
 
-(Note: this chapter is a less technical version of :doc:`the stand-alone configuration document <databrowser-configuration>`, which is targeted
-towards developers that has access to the configuration files (*.ini,
-*.yaml) and is configuring a new installation of the databrowser. This
-chapter is targeted towards end-users that use an already configured
-installation.)
-
 Specifying what appears in the "Who"-section.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

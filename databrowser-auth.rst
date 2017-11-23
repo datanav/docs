@@ -99,7 +99,7 @@ The config-variable can have these values:
 | AUTHORIZED:
 | Authenticated users have only access to items that has a
   :ref:`config.AUTH\_FIELDS <databrowser_ini_AUTH_FIELDS>` or
-  :ref:`config.ID\_FIELDS <databrowser_ini_ID_FIELDS>` field that contains one
+  config.ID\_FIELDS field that contains one
   of the values in the "psis"-value in the session object.
 
 .. _databrowser_ini_AUTH_FIELDS:
