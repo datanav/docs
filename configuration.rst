@@ -4113,9 +4113,6 @@ Properties
        operations requires Sesam to have extra permissions in the database, for instance). Only some
        sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
        details.
-
-       Note that setting this option to ``true`` also implies that ``truncate_table_on_first_run`` is treated as
-       always ``true``, even if explicitly set to ``false`` in the configuration.
      - ``false`` for now; will be changed to ``true`` at some future date.
      -
 
@@ -4133,8 +4130,8 @@ Properties
        the truncating operation will not be rolled back. Note that if combined with ``create_table_if_missing`` this
        property will make the sink drop and then recreate the table on the first run.
 
-       If ``use_bulk_operations`` is set to ``true`` this option is always treated as ``true``, even if
-       explicitly set to ``false``.
+       Note: combining this option with ``use_bulk_operations`` enables the sink to do a direct bulk copy operation to the
+       target table on first run, which is much faster than using a temporary table which is the default method.
      - ``false``
      -
 
