@@ -1,3 +1,6 @@
+This document is intended for administrators that has access to the "databrowser.ini"
+configuration file.
+
 Authentication and authorization via data
 =========================================
 

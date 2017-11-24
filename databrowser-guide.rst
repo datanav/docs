@@ -563,9 +563,11 @@ Admin pages
 
 In addition to the normal searchresults and itemdetail pages, the
 datebrowser also has some pages that is only visible for administrative
-user.
+users.
 
-These are reached by clicking on the "Admin pages"-link in the footer.
+These are reached by adding "/admin_index" to the databrower address in your browser.
+Example: if your databrowser is reached at "https://databrowser.example.com", the admin-pages
+will be at ""https://databrowser.example.com/admin_index".
 
 .. figure:: ./databrowser-guide-images/admin_index_page.png
    :width: 800 px
@@ -603,8 +605,10 @@ configuration from:
     configuration-changes via the gui, the changes are stored in this
     redis-server.
 
-By hovering the mouse-pointer above an attribute name, a tooltip (4)
-explaining what the field does is displayed.
+(4) Links for downloading and uploading all configuration-changes to the
+    redis server. See the :ref:`Redis configuration upload page <databrowser_configuration_redis_upload_page>`
+
+(5) A list of configuration attributes is displayed for each [section] in the databrowser.ini file.
 
 Data types page
 ^^^^^^^^^^^^^^^
@@ -683,3 +687,23 @@ tweak the search configuration.
    :alt: Searchresult explanation page screenshot
 
    Searchresult explanation page screenshot
+
+.. _databrowser_configuration_redis_upload_page:
+
+Redis configuration upload page
+-------------------------------
+
+.. figure:: ./databrowser-guide-images/configuration_redis_upload_page.png
+   :width: 800 px
+   :alt: Redis configuration upload page screenshot
+
+   Screenshot of Redis upload page
+
+This page lets you bulk-upload configuration settings directly to the Redis server.
+The current configuration is displayed in the textarea. You can either make changes to the existing
+configuration or copy/paste the config from somewhere else (for instance another databrowser
+instance).
+
+This is useful if you have more than one databrowser instance and you want to copy
+configuration from one instance to another (for instance from a test-instance to a
+-instance).
