@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017-11-23
+----------
+* Added :doc:`Databrowser documentation <databrowser>`.
+
+
 2017-11-22
 ----------
 * Added the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` notification rule type.
