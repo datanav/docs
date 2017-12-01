@@ -95,12 +95,12 @@ The config-variable can have these values:
   all users.
 
 | AUTHENTICATED:
-| All authenticated users have access so all items that does not have a
+| All authenticated users have access to all items that do not have a
   :ref:`config.AUTH\_FIELDS <databrowser_ini_AUTH_FIELDS>` field. Anonymous users
   haven't got access to any items.
 
 | AUTHORIZED:
-| Authenticated users have only access to items that has a
+| Authenticated users have only access to items that have a
   :ref:`config.AUTH\_FIELDS <databrowser_ini_AUTH_FIELDS>` or
   config.ID\_FIELDS field that contains one
   of the values in the "psis"-value in the session object.
