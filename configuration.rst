@@ -4051,6 +4051,8 @@ Prototype
         "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
         "use_bulk_operations": false,
+        "bulk_operation_timeout": 600,
+        "bulk_operation_queue_size": 3,
         "schema_definition": [],
         "create_table_if_missing": false,
         "timestamp": "name-of-collumn-to-add-timestamp-into",
@@ -4114,6 +4116,23 @@ Properties
        sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
        details.
      - ``false`` for now; will be changed to ``true`` at some future date.
+     -
+
+   * - ``bulk_operation_timeout``
+     - Integer
+     - The maximum number of seconds to wait for a bulk operation to finish. This is only applicable if both
+       ``truncate_table_on_first_run`` and ``use_bulk_operations`` is set to ``true`` (and the SQL system supports
+       bulk operations). This value should be set to the maximum number of seconds a bulk operation is expected to
+       use for a single batch. It will typically depend on both the size of the batches, the size of the data and the
+       performance of the receiving RDBM system.
+     - ``600``
+     -
+
+   * - ``bulk_operation_queue_size``
+     - Integer
+     - The maximum number of bulk operation batches to queue for upload at any given time. This shouldn't normally
+       be changed from the default. Higher numbers will consume more disk space.
+     - ``3``
      -
 
    * - ``batch_size``
