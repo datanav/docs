@@ -4225,6 +4225,7 @@ Each object is on the form:
 ::
 
     {
+        "source_property": "name_of_property",
         "name": "name_of_column",
         "type": "string|integer|decimal|float|bytes|datetime|date|time|uuid|boolean",
         "max_size|max_value": 1234,
@@ -4233,12 +4234,16 @@ Each object is on the form:
         "scale": 2,
         "allow_null": true|false,
         "primary_key": true|false,
-        "index": true|false
+        "index": true|false,
+        "default": "default-value"
     }
 
-The ``name`` property must correspond to a property in the entities fed to the sink. In the case of the
-``primary_key`` set to ``true`` and/or ``allow_null`` set to ``false``, the property must exist in all entities.
-Note that at least one column definition in the schema definition list must have ``primary_key`` set to ``true``.
+
+The ``name`` property must correspond to a column in the target table and the ``source_property`` is the corresponding
+property in the entity. In the case of the ``primary_key`` set to ``true`` and/or ``allow_null`` set to ``false``,
+the property must exist in all entities. Note that at least one column definition in the schema definition list must
+have ``primary_key`` set to ``true``. If you edit the ``name`` property, you must take care that it is an exact,
+case-sentitive match with the definiton in the schema for the table.
 
 The ``type`` property is automatically mapped to the appropriate target RDBMS column type, based on the information
 in the ``max_size``/``max_value`` and ``min_size``/``min_value`` properties. For example, an ``integer`` type may
@@ -4251,6 +4256,9 @@ of index to the column for the particular target RDBMS system.
 The ``precision`` and ``scale`` properties are valid only for ``decimal`` type columns and define the total number
 of digits and the fractional digits respectively. I.e. the decimal number "10.3" would have a ``precision`` of "3"
 and an ``scale`` of "1".
+
+The optional ``default`` property contains what value to use if the property is not present in the entity. If a
+default value for a particular column has been set in the table schema, this value should match the schema value.
 
 
 Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>`:
