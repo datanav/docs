@@ -4135,6 +4135,15 @@ Properties
      - ``3``
      -
 
+   * - ``bulk_operation_buffer_size``
+     - Integer
+     - The maximum number of bytes of the temporary bulk file to be held in memory before flushing it to disk.
+       You should not normally change this value. A higher value will consume more memory. If it set too high, it might
+       result in the system running out of memory. If it is set too low, it might slow down the writing of the temporary bulk
+       file resulting in poor performance. The default is 50 Mb.
+     - ``50000000``
+     -
+
    * - ``batch_size``
      - Integer
      - The maximum number of rows to insert into the database table in one operation
