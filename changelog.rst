@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2017-12-12
+----------
+* Added ``encrypt-pki`` and ``decrypt-pki`` DTL functions that can asymmetrically encrypt strings to bytes and decrypt
+  bytes to strings using a PKI public/private key-pair in DEM format (PKCSv8). The encryption is performed using RSA
+  2048 bits with sha-1 hashes and OAEP/MGF1 padding.
+
 2017-11-23
 ----------
 * Added :doc:`Databrowser documentation <databrowser>`.
