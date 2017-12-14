@@ -2603,8 +2603,8 @@ Strings
        |
        | Decrypts the bytes objects in VALUES using the private key in PRIVATE_KEY.
        |
-       | Note that this function requires the VALUES parameter to either be a single instance if or a list of
-       | bytes objects
+       | Note that this function requires the VALUES parameter to either be a single bytes object or a list of bytes
+       | objects.
        |
        | The PRIVATE_KEY parameter must be a RSA private key in PEM format (PKSv8, which starts with the header
        | "-----BEGIN RSA PRIVATE KEY-----"). The bytes data in VALUE is then decrypted to a string using the asymmetric
@@ -2630,7 +2630,7 @@ Strings
        | PASSPHRASE.
        |
        | Note that this function requires the VALUES parameter to either be a string or a list of strings in OpenPGP
-       | message format (these are ASCII string starting with the header "----BEGIN PGP MESSAGE..", see RFC4880,
+       | message format (these are ASCII strings starting with the header "----BEGIN PGP MESSAGE..", see RFC4880,
        | https://tools.ietf.org/html/rfc4880).
        |
        | The PRIVATE_KEY parameter must be a PGP private key which starts with the header
