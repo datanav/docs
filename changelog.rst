@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2017-12-15
+----------
+* The :ref:`JSON source  <json_source>` now supports the ``page_size`` property.
+
 2017-12-14
 ----------
 * Added ``encrypt-pgp`` and ``decrypt-pgp`` DTL functions that can encrypt strings to OpenPGP messages using a PGP

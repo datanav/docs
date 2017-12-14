@@ -2156,6 +2156,12 @@ Properties
      -
      - Yes
 
+   * - ``page_size``
+     - Integer (>1)
+     - If the page size is specified then the source will download the data across multiple requests until there is no more data left to download. The ``limit`` request parameter is passed to the endpoint to cap the number of entities in each response.
+     - No paging
+     - 
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
