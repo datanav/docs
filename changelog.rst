@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2017-12-14
+----------
+* Added ``encrypt-pgp`` and ``decrypt-pgp`` DTL functions that can encrypt strings to OpenPGP messages using a PGP
+  public key and decrypt these messages back to strings using a PGP private key and its associated password.
+
 2017-12-12
 ----------
 * Added ``encrypt-pki`` and ``decrypt-pki`` DTL functions that can asymmetrically encrypt strings to bytes and decrypt
@@ -20,7 +25,7 @@ Changelog
 2017-11-15
 ----------
 * Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
-  
+
 * The DTL compiler will now issue a warning if you try to perform two
   or more :ref:`join expressions <joins>` between the same two dataset
   aliases. It is there to notify you of possible cardinality issues
@@ -33,7 +38,7 @@ Changelog
   <eq_dtl_function>`. One can use the :ref:`tuples
   <tuples_dtl_function>` function to combine them into one big join
   expression at the cost of composite indexes being used.
-  
+
   .. WARNING::
 
      Note that the :ref:`eq <eq_dtl_function>`
@@ -50,7 +55,7 @@ Changelog
 2017-11-13
 ----------
 * The default value of the ``keep_existing_solr_ids`` configuration property in the :ref:`The Sesam Databrowser sink <databrowser_sink>`
-  has been changed from ``true`` to ``false``. 
+  has been changed from ``true`` to ``false``.
 
 2017-11-08
 ----------
