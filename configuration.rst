@@ -2114,8 +2114,7 @@ The JSON source
 ---------------
 
 
-The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ file available either
-locally or over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
+The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server). The data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
 
 If the ``supports_since`` property is set to *true*, then the ``since`` request parameter is added to the URL to
 signal that we want only changes that happened after the since marker.
@@ -2126,9 +2125,9 @@ Prototype
 ::
 
     {
-       "system": "url-system-id",
+       "system": "system-id",
        "type": "json",
-       "url": "url-to-json-file"
+       "url": "url-to-json-data"
     }
 
 Properties
@@ -2146,19 +2145,23 @@ Properties
 
    * - ``system``
      - String
-     - The id of the :ref:`URL system <url_system>` component to use.
+     - The id of the :ref:`URL system <url_system>` or :ref:`microservice system <microservice_system>` component to use.
      -
      - Yes
 
    * - ``url``
      - String
-     - The URL of the ``JSON`` file to load.
+     - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
      -
      - Yes
 
    * - ``page_size``
      - Integer (>1)
      - If the page size is specified then the source will download the data across multiple requests until there is no more data left to download. The ``limit`` request parameter is passed to the endpoint to cap the number of entities in each response.
+
+       .. NOTE::
+
+          Paging is only available if the source has ``supports_since``, ``is_chronological`` and ``is_since_comparable`` all set to ``true``.
      - No paging
      - 
 
@@ -2193,18 +2196,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "json",
-            "url": "https://server.com/sesam/data/test.json",
-        }
-    }
-
-An example with a local file:
-
-::
-
-    {
-        "source": {
-            "type": "json",
-            "url": "/sesam/data/test.json",
+            "system": "some-url-or-microservice-system",
+            "url": "test.json",
         }
     }
 
