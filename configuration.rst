@@ -1867,7 +1867,7 @@ Properties
      - If the ``sort_lists`` is set to ``true`` any resulting entity properties containing lists of values (due to
        them having the same RDF predicate) will be sorted, making the output predictable. This applies in a recursive
        fashion.
-     - false
+     - true
      -
 
    * - ``is_sorted``
@@ -1970,7 +1970,7 @@ Properties
      - If the ``sort_lists`` is set to ``true`` any resulting entity properties containing lists of values (due to
        them having the same RDF predicate) will be sorted, making the output predictable. This applies in a recursive
        fashion.
-     - false
+     - true
      -
 
 Continuation support
