@@ -1822,7 +1822,7 @@ Prototype
        "type": "rdf",
        "system": "url--or-microservice-system-id",
        "url": "url-to-rdf-file",
-       "sort_lists": false,
+       "sort_lists": true,
        "format": "nt-ttl-or-xml"
     }
 
@@ -1936,7 +1936,7 @@ Prototype
     {
        "type": "sdshare",
        "system": "url-or-microservice-system-id",
-       "sort_lists": false,
+       "sort_lists": true,
        "url": "url-to-sdshare-fragments-feed"
     }
 
