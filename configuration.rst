@@ -1822,6 +1822,7 @@ Prototype
        "type": "rdf",
        "system": "url--or-microservice-system-id",
        "url": "url-to-rdf-file",
+       "sort_lists": false,
        "format": "nt-ttl-or-xml"
     }
 
@@ -1859,6 +1860,14 @@ Properties
        ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
        files.
      - "nt"
+     -
+
+   * - ``sort_lists``
+     - Boolean
+     - If the ``sort_lists`` is set to ``true`` any resulting entity properties containing lists of values (due to
+       them having the same RDF predicate) will be sorted, making the output predictable. This applies in a recursive
+       fashion.
+     - false
      -
 
    * - ``is_sorted``
@@ -1927,6 +1936,7 @@ Prototype
     {
        "type": "sdshare",
        "system": "url-or-microservice-system-id",
+       "sort_lists": false,
        "url": "url-to-sdshare-fragments-feed"
     }
 
@@ -1954,6 +1964,14 @@ Properties
      - The URL of the SDShare fragments feed to consume.
      -
      - Yes
+
+   * - ``sort_lists``
+     - Boolean
+     - If the ``sort_lists`` is set to ``true`` any resulting entity properties containing lists of values (due to
+       them having the same RDF predicate) will be sorted, making the output predictable. This applies in a recursive
+       fashion.
+     - false
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^

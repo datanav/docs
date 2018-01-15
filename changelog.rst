@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-01-15
+----------
+* The :ref:`RDF source  <rdf_source>` and :ref:`SDShare source  <sdshare_source>` now supports the ``sort_lists`` property to automatically sort resulting properties containing lists (i.e. RDF statements having the same predicate). It is ``false`` by default to ensure backwards compatibility.
+
 2017-12-15
 ----------
 * The :ref:`JSON source  <json_source>` now supports the ``page_size`` property.
