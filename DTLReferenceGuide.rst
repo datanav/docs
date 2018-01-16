@@ -2891,6 +2891,25 @@ URIs
        |
        | Returns ``["%C3%A5", "foo%20bar]``.
 
+       .. _url_unquote_dtl_function:
+   * - ``url-unquote``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL unquoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+       |
+     - | ``["url-unquote", "%2Ffoo%20bar%2Fbaz"]``
+       |
+       | Returns ``/foo bar/baz``.
+       |
+       | ``["url-quote",``
+       |   ``["list", 1, "%C3%A5", ["uri", "http://example.com"], "foo%20bar"]``
+       |
+       | Returns ``["å", "foo bar"]``.
+
 UUIDs
 -----
 

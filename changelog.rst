@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-01-16
+----------
+* Added the :ref:`url-unquote <url_unquote_dtl_function>` function that URL unquotes any URL quoted characters in its input. See the related :ref:`url-quote <url_quote_dtl_function>` function.
+
 2018-01-15
 ----------
 * The :ref:`RDF source  <rdf_source>` and :ref:`SDShare source  <sdshare_source>` now supports the ``sort_lists`` property to automatically sort resulting properties containing lists (i.e. RDF statements having the same predicate). It is ``true`` by default.
