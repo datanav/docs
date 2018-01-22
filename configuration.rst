@@ -4579,7 +4579,7 @@ entities, in practice this means that a pump is not configured for the
 pipe; the only way for entities to flow through the pipe is by
 retrieving them from the HTTP endpoint.
 
-It exposes three URLs:
+It exposes these URLs:
 
 .. list-table::
    :header-rows: 1
@@ -4590,6 +4590,9 @@ It exposes three URLs:
 
    * - ``http://localhost:9042/api/publishers/mypipe/entities``
      - JSON entities endpoint
+
+   * - ``http://localhost:9042/api/publishers/mypipe/entities/some_filename.json``
+     - JSON entities endpoint - filename in URL variant
 
    * - ``http://localhost:9042/api/publishers/mypipe/sdshare-collection``
      - SDShare collections feed
@@ -4643,6 +4646,14 @@ Properties
      -
      -
 
+   * - ``content_disposition``
+     - String
+     - This property provides a hint to HTTP clients how to render the file data. The valid values are ``attachment``
+       and ``inline``. It is used in the ``Content-Disposition`` header and the behaviour is client specific.
+     - ``attachment``
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -4675,7 +4686,7 @@ entities. In practice this means that a pump is not configured for the
 pipe; the only way for entities to flow through the pipe is by
 retrieving them from the CSV endpoint using a client that supports the HTTP protocol.
 
-It exposes the URL:
+It exposes the URLs:
 
 .. list-table::
    :header-rows: 1
@@ -4684,10 +4695,13 @@ It exposes the URL:
    * - URL
 
    * - ``http://localhost:9042/api/publishers/mypipe/csv``
+   * - ``http://localhost:9042/api/publishers/mypipe/csv/some_filename.csv``
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
 the `API reference <./api.html#get--publishers-pipe_id-csv>`_ for the full details.
 
+Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
+the last path element of the URL.
 
 Prototype
 ^^^^^^^^^
@@ -4706,7 +4720,8 @@ Prototype
         "quotechar": "\"",
         "encoding": "utf-8",
         "skip-deleted-entities": true,
-        "filename": "my_data.csv"
+        "filename": "my_data.csv",
+        "content_disposition": "attachment"
     }
 
 Properties
@@ -4811,6 +4826,13 @@ Properties
      -
      -
 
+   * - ``content_disposition``
+     - String
+     - This property provides a hint to HTTP clients how to render the file data. The valid values are ``attachment``
+       and ``inline``. It is used in the ``Content-Disposition`` header and the behaviour is client specific.
+     - ``attachment``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -4831,7 +4853,8 @@ dataset, picking the ``_id``, ``foo`` and ``bar`` properties as columns in the C
         }
     }
 
-The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv``
+The data will be available at ``http://localhost:9042/api/publishers/my-entities/csv`` (or alternatively
+``http://localhost:9042/api/publishers/my-entities/csv/some_other_filename.csv``)
 
 
 .. _xml_endpoint_sink:
@@ -4854,12 +4877,16 @@ It exposes the URL:
    * - URL
 
    * - ``http://localhost:9042/api/publishers/mypipe/xml``
+   * - ``http://localhost:9042/api/publishers/mypipe/xml/some_filename.xml``
 
 Note that the shape of the entities must conform to certain criteria, see the :ref:`notes <expected_xml_entity_shape>`
 later in the section.
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
 the `API reference <./api.html#get--publishers-pipe_id-xml>`_ for the full details.
+
+Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
+the last path element of the URL.
 
 Prototype
 ^^^^^^^^^
@@ -4877,6 +4904,7 @@ Prototype
         "include-xml-decl": false,
         "skip-deleted-entities": true,
         "filename": "my_data.xml"
+        "content_disposition": "attachment"
     }
 
 
@@ -4929,6 +4957,14 @@ Properties
        backward or forward slashes should be avoided. If this property is not set, the contents will be served inline.
      -
      -
+
+   * - ``content_disposition``
+     - String
+     - This property provides a hint to HTTP clients how to render the file data. The valid values are ``attachment``
+       and ``inline``. It is used in the ``Content-Disposition`` header and the behaviour is client specific.
+     - ``attachment``
+     -
+
 
 .. _expected_xml_entity_shape:
 
@@ -5005,7 +5041,8 @@ The following output will be produced (here reformatted/pretty-printed):
       </foo:tag>
     </baz>
 
-The XML document will be available at ``http://localhost:9042/api/publishers/my-entities/xml``
+The XML document will be available at ``http://localhost:9042/api/publishers/my-entities/xml``  (or alternatively
+``http://localhost:9042/api/publishers/my-entities/xml/some_other_filename.xml``)
 
 .. _rest_sink:
 

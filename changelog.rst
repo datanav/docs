@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-01-22
+----------
+* Added a ``content_disposition`` configuration property to be able to specify the type in the ``Content-Dispositon`` HTTP response header to the :ref:`HTTP endpoint sinks <http_endpoint_sink>`.
+* Added the possibility to specify the ``filename`` of the :ref:`HTTP endpoint sinks <http_endpoint_sink>` as the last element of the URL (overrides any ``filename`` set in the configuration of the sink).
+
 2018-01-16
 ----------
 * Added the :ref:`url-unquote <url_unquote_dtl_function>` function that URL unquotes any URL quoted characters in its input. See the related :ref:`url-quote <url_quote_dtl_function>` function.
