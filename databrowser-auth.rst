@@ -134,6 +134,8 @@ config-variable:
      to the searchresults.
 
 
+.. _databrowser_ini_authorization_via_jwt_token:
+
 Authentication and authorization via a JWT token
 ------------------------------------------------
 
