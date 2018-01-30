@@ -10,5 +10,6 @@ Sesam Data Integration Platform
    Developer Guide <developer-guide>
    Management Studio <management-studio>
    Open Sesam <open-sesam>
+   GDPR portal <gdpr-portal>
    Known Issues <known-issues>
    Changelog <changelog>
