@@ -13,12 +13,12 @@ Note that this document assumes you are familiar with GDPR concepts and nomencla
 Configuring the GDPR data types and purposes
 ============================================
 
-Before the end users/customers can start using your GDPR portal, you must configure the
+Before the end users/customers can start using your GDPR platform, you must configure the
 data types, purposes and consents for your organisation.
 
 You do this by editing a :download:`GDPR Excel setup template file <files/GDPR setup data.xlsx>`. Download this template
 to you computer and edit it to reflect your needs. After it has been edited you can upload the result to the GDPR
-portal to configure it.
+platform to configure it.
 
 The spreadsheet contains two sheets; "Purpose" and "Data type".
 
@@ -27,7 +27,7 @@ The purpose sheet
 
 The purpose sheet contains information about your business activities and the legal grounds of why
 you are collecting this information. The data you enter here is used by the "Data types" sheet. The data in this
-sheet are information about the GDPR "purpose" and is visible to the user as a navigational "tab" in the data access
+sheet are information about the GDPR "purpose" and is visible to the user as a navigational "tab" in the GDPR data access
 portal user interface and, if the purpose is a consent type of purpose, as something the user can potentially opt in or out
 of.
 
@@ -144,7 +144,7 @@ The data type properties
 
    * - ``Contact``
      - An comma separated list of email-addresses for who should get notified when a GDPR data access request or change
-       request is received by the GDPR portal.
+       request is received by the GDPR platform.
 
    * - ``Purposes``
      - All columns to the right hand side is automatically generated from the "purposes" sheet. It creates a matrix
@@ -155,12 +155,12 @@ The data type properties
 Updating GDPR data types and purposes
 =====================================
 
-When the spreadsheet is filled out, you can upload it to the GDPR portal by navigating to the "GDPR" section on
+When the spreadsheet is filled out, you can upload it to the GDPR platform by navigating to the "GDPR" section on
 the right hand side of the management studio GUI. Here you can upload the setup excel file in the tab called "Data Types".
 
-After uploading the file, the portal data structures will be updated with this information and the data access portal
+After uploading the file, the platform data structures will be updated with this information and the data access portal
 user interface will reflect the purposes and data types defined in the spreadsheet (note that this process can take a
 few minutes after upload).
 
-In the management studio of the portal you can inspect the current configuration by navigating to the ``global-data-type``
+In the management studio for the GDPR platform datahub you can inspect the current configuration by navigating to the ``global-data-type``
 and ``global-purpose`` datasets.

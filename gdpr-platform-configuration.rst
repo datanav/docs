@@ -1,26 +1,38 @@
-.. _gdpr_portal_configuration:
+.. _gdpr_platform_configuration:
 
-=========================
-GDPR portal configuration
-=========================
+===========================
+GDPR platform configuration
+===========================
 
 .. contents:: Table of Contents
    :depth: 2
    :local:
 
-Logging into the portal
-=======================
+Overview
+========
 
-You can access the GDPR portal by logging into the `Sesam portal <https://portal.sesam.io>`_   and clicking
-on the GDPR portal subscription.
+The GDPR platform consist of three parts; the GDPR platform management interface (management studio), the GDPR platform
+datahub and the GDPR data access portal.
 
-This will open the management studio GUI for your GDPR portal. Before you can start using the GDPR portal,
+The management studio interface enables you to edit configuration settings of your GDPR platform and access its
+datahub where all your GDPR data is collected, connected and stored.
+
+The GDPR data access portal is the public facing interface of the GDPR platform - this is where the end user - data
+subject in GDPR lingo - can log in and manage their GDPR requests, data and consents.
+
+Logging into the platform
+=========================
+
+You can access the GDPR platform management studio by logging into the `Sesam portal <https://portal.sesam.io>`_   and clicking
+on your GDPR platform subscription.
+
+This will open the management studio GUI for your GDPR platform and datahub. Before you can start using your GDPR platform,
 there are a couple of configuration elements that you might want to set up first.
 
-Configuring the portal
-======================
+Configuring the platform
+========================
 
-There are some configuration properties that you might want to edit before starting to use the portal:
+There are some configuration properties that you might want to edit before starting to use the platform:
 
 * Default phone prefix (for SMS notifications)
 * Default language settings
@@ -63,7 +75,7 @@ in Norway, it would look like:
 Default language settings
 -------------------------
 
-The GDPR portal is configured with english and norwegian message text by default. You can choose which default
+The GDPR platform is configured with english and norwegian message text by default. You can choose which default
 language is used by setting it to either a full ISO country code (i.e. "country-dialect") or just
 the country code - for example:
 
@@ -79,7 +91,7 @@ or
 
 
 If your language is different than the default norwegian and english locale, you can add additional
-translations by editing the ``custom-translations`` pipe configuration. See the later chapter on custom message texts
+translations by editing the ``custom-translations`` pipe configuration in the GDPR platform datahub. See the later chapter on custom message texts
 for more details. These texts are keyed on ISO locale codes and correspond to this setting. If you for example have
 added german texts using the code "de-DE" (or just "de"), you can specify this as the default language here.
 
@@ -87,7 +99,7 @@ Setup file URL
 --------------
 
 If you have the setup file (see the :doc:`Datatypes and purposes configuration <gdpr-data-types-purposes-configuration>` section)
-somewhere where it can be reached using an URL, you can configure the GDPR portal to update the settings from this
+somewhere where it can be reached using an URL, you can configure the GDPR platform to update the settings from this
 file at regular intervals, for example:
 
 ::
@@ -96,7 +108,7 @@ file at regular intervals, for example:
 
 
 You configure how often it should be downloaded by editing a "Cron" expression. In this example, it will
-be downloaded every day at midnight and automatically update the GDPR portal setup:
+be downloaded every day at midnight and automatically update the GDPR platform setup:
 
 ::
 
