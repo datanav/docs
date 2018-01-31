@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Sesam'
-copyright = '2015, Sesam'
+copyright = '2018, Sesam'
 author = 'Graham Moore'
 
 # The version info for the project you're documenting, acts as replacement for
