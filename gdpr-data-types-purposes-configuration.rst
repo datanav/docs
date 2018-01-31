@@ -63,7 +63,7 @@ Processing activity
 
    * - ``PurposeDescription``
      - A longer description describing the purpose in more detail. It should be long enough that the end user can understand
-       the purpose. For example "Handling salary informastion for employees" or "To survey employee satisfaction".
+       the purpose. For example "Handling salary information for employees" or "To survey employee satisfaction".
 
    * - ``ThirdParties``
      - With which third party organisations or entities is information gathered for this purpose shared (leave blank
@@ -149,7 +149,7 @@ The data type properties
    * - ``Purposes``
      - All columns to the right hand side is automatically generated from the "purposes" sheet. It creates a matrix
        where putting in an "x" value for a specific purpose for a specific data type indicates that this data type
-       is covered by that specific purpose.
+       is covered by that purpose. You can put a mark in more than one purpose column.
 
 
 Updating GDPR data types and purposes

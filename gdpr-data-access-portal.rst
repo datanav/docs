@@ -31,7 +31,7 @@ The default URL to the data access portal will be this URL, with "api" substitut
 
 
 When accessing this page the user must first identify themselves by logging on using a predefined credential such
-as email or mobile hone number. After doing this, the user will be sent a one-time passcode to be used to log in.
+as email or mobile phone number. After doing this, the user will be sent a one-time passcode to be used to log in.
 This pass code will expire when the user ends their session or after a certain idle time. If the session expires
 the user has to log on again.
 
@@ -66,7 +66,7 @@ template.
 Note that none of the fields in the first "DataSubject" field should be changed manually - they are needed as-is when uploading
 the completed spreadsheet.
 
-The rest of sheets in the spreadsheet is enumerated by data type, one per system in the "Data type" sheet of the
+The rest of the sheets in the spreadsheet is enumerated by data type, one per system in the "Data type" sheet of the
 configuration setup spreadsheet, see :ref:`the previous section <gdpr-data-types-purposes-configuration>` for details.
 
 These are the sheets that must be filled out by the receiver of the template and uploaded when finished.
