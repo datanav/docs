@@ -1965,6 +1965,29 @@ Date and time
          as being in this timezone. Click :ref:`here<supported_timezones>` to
          see the list of supported timezones.
        |
+       |
+       | The supported formatting tokens are:
+       |
+       |   %d - day of the month (01 to 31)
+       |   %e - day of the month (1 to 31)
+       |   %H - hour, using a 24-hour clock (00 to 23)
+       |   %I - hour, using a 12-hour clock (01 to 12)
+       |   %m - month (01 to 12)
+       |   %M - minute
+       |   %p - either am or pm according to the given time value
+       |   %S - second
+       |   %f - microsecond as a decimal number, zero-padded on the left
+       |   %y - year without a century (range 00 to 99)
+       |   %Y - year including the century
+       |   %z - UTC offset in the form +HHMM, -HHMM, +HH:MM or -HH:MM. If present, this token must be the last token in the format string.
+       |   %% - a literal % character
+       |
+
+       .. NOTE::
+
+          When using ``%y``, then the two digits are converted
+          according to the POSIX and ISO C standards; 00-68 are mapped
+          to the years 2000-2068 and 69-99 are mapped to the years 1969-1999.
      - | ``["datetime-parse",``
        |   ``"%Y-%m-%dT%H:%M:%S.%fZ",``
        |   ``"2015-07-28T09:46:00.12345Z"]``
@@ -1991,22 +2014,6 @@ Date and time
        |   ``"2018-08-18T12:39:01"]``
        |
        | Returns one datetime value: "~t2018-08-08T10:39:01Z".
-       |
-       | The list of supported formatting tokens is:
-       |
-       |   %d - day of the month (01 to 31)
-       |   %e - day of the month (1 to 31)
-       |   %H - hour, using a 24-hour clock (00 to 23)
-       |   %I - hour, using a 12-hour clock (01 to 12)
-       |   %m - month (01 to 12)
-       |   %M - minute
-       |   %p - either am or pm according to the given time value
-       |   %S - second
-       |   %f - microsecond as a decimal number, zero-padded on the left
-       |   %y - year without a century (range 00 to 99)
-       |   %Y - year including the century
-       |   %z - UTC offset in the form +HHMM, -HHMM, +HH:MM or -HH:MM. If present, this token must be the last token in the format string.
-       |   %% - a literal % character
 
        .. _`datetime-format`:
 
@@ -2023,6 +2030,13 @@ Date and time
        |
        | The timezone name defaults to "UTC". The datetime value will be translated to this timezone before it
          is formatted. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
+
+       .. NOTE::
+
+          When using ``%y``, then the years are converted
+          according to the POSIX and ISO C standards; the years 2000-2068 are mapped to 00-68
+          and the years 1969-1999 are mapped to 69-99. For years outside of that range the
+          last two digits are used.
      - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ",``
        |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
        |
