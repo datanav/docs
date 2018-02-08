@@ -80,10 +80,20 @@ Legal grounds
      - Description
 
    * - ``LegalType``
-     - TODO
-
+     - These are the legal grounds for processing of personal data. Without any of these grounds, the processing is unlawful.
+       In addition to identifying the legal ground set out below, the processing of data must also be necessary in connection
+       with the given legal ground, i.e.:
+        * Consent
+        * Contract
+        * Legal obligation + law
+        * Vital interests
+        * Task carried out in public interest + law
+        * Exercise of official authority + law
+        * Legitimate interests that are not overridden by data subjects rights
    * - ``LegalDetail``
-     - TODO
+     - The contents/description of the applicable LegalType relevant for the particular case. E.g. contents of the consent:
+       Can we use your e-mailaddress to send you information about GDPR? In case of legal obligation + law: which law is
+       applicable for the neccessary processing of the data in question.
 
    * - ``DataSource``
      - Where the data stored is gathered from, and/or how it is gathered.
@@ -92,8 +102,8 @@ Legal grounds
      - The number of days the data stored for this purpose is stored.
 
    * - ``Criteria``
-     - TODO
-
+     - Criteria corresponds with LegalDays. Where the LegalType is contract what are our criterias for keeping the data
+       for a given number of days. Where the legal type is legal obligation + law the criteria will often be found in the law provision.
 
 The data type sheet
 -------------------
