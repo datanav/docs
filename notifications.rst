@@ -110,8 +110,8 @@ This is the number of seconds the pipe spent doing DTL and other types for trans
 
 .. _pipe_completed_property__original_error_message:
 
-Underlying error
-~~~~~~~~~~~~~~~~
+Original error
+~~~~~~~~~~~~~~
 
 When a pipe-run fails, this value contains an error message that describes the root cause of the error.
 This is the error-message that is displayed on the pipe's "Status" tab.
@@ -124,15 +124,15 @@ Example::
    requests.exceptions.ConnectionError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7aaa518>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
 
 
-Underlying traceback
-~~~~~~~~~~~~~~~~~~~~
+Original traceback
+~~~~~~~~~~~~~~~~~~
 
 When a pipe-run fails, this value contains the full stacktrace of the error.
 
 Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
 is intented to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
 
-Tip: It is usually better to use the :ref:`Underlying error <pipe_completed_property__original_error_message>` value
+Tip: It is usually better to use the :ref:`Original error <pipe_completed_property__original_error_message>` value
 instead, since that is less verbose while still usually containing the relevant error-message.
 
 Example::
@@ -194,13 +194,13 @@ Pattern match
 The purpose of this rule type is to alert the user if a pipe has failed with a specific error-message.
 
 The user can specify which value to examine, but the most common use case is the
-:ref:`Underlying error <pipe_completed_property__original_error_message>` value.
+:ref:`Original error <pipe_completed_property__original_error_message>` value.
 
 The pattern supports the "\*" and "?" wildcard characters. "\*" matches any number of characters.
 "?" matches one single character.
 
 Example:
-If the "Underlying error" looks like this::
+If the "Original error" looks like this::
 
    requests.exceptions.ConnectionError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7b32550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
 

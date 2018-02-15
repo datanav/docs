@@ -275,7 +275,7 @@ Prototype
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
         "exception": "traceback-info-from-pump",
-        "underlying_exception": "the-exception-cast-by-source",
+        "original_exception": "the-exception-cast-by-source",
         "source": {
             "the-full": "configuration-entity-of",
             "the-source": "at-the-time-the-pump-started"
@@ -324,7 +324,7 @@ Properties
      - String
      - Information about from the pump failure. It a stack trace of the execution failure.
 
-   * - ``underlying_exception``
+   * - ``original_exception``
      - String
      - Information about from the source about the read failure. It contains among other things a stack trace of the
        execution failure in the source.
@@ -360,7 +360,7 @@ Prototype
           "entity-property": "entity-value"
         },
         "exception": "traceback-info-from-pump",
-        "underlying_exception": "the-exception-cast-by-sink",
+        "original_exception": "the-exception-cast-by-sink",
         "sink": {
             "the-full": "configuration-entity-of",
             "the-sink": "at-the-time-the-pump-started"
@@ -433,7 +433,7 @@ Properties
      - String
      - Information about from the pump failure. It a stack trace of the execution failure.
 
-   * - ``underlying_exception``
+   * - ``original_exception``
      - String
      - Information about from the sink about the write failure. It contains among other things a stack trace of the
        execution failure in the sink.
