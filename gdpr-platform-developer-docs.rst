@@ -21,14 +21,16 @@ For automation of the GDPR platform, there are several APIs/integration points a
 * :ref:`GDPR data type <gdpr_data_type>`
 * :ref:`GDPR policy <gdpr_policy>`
 
-These APIs are datasets with a defined data-structure that can be integrated with existing systems:
+These APIs are datasets with a defined data-structure that can be integrated with existing systems and associated
+:ref:`input <http_endpoint_source>` and :ref:`output <http_endpoint_sink>` published endpoints for JSON input
+and/or consumption. The input and output endpoints conform to the :doc:`JSON Push Protocol <json-push>`.
 
 .. _gdpr_subject:
 
 GDPR subject
 ============
 
-The GDPR subject dataset (dataset name "gdpr-subject") contains entities about data subjects with the following datastructure:
+The GDPR subject dataset (dataset name ``gdpr-subject``) contains entities about data subjects with the following datastructure:
 
 Prototype
 ---------
@@ -66,12 +68,44 @@ Properties
      -
      - Yes
 
+Input API
+---------
+
+The input API for the ``gdpr-subject`` dataset is the ``gdpr-subject-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-subject-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-subject`` dataset is the ``gdpr-subject-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-subject-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-subject``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-subject`` dataset. The entites in this dataset are available externally through
+the output API pipe.
+
 .. _gdpr_consent:
 
 GDPR consent
 ============
 
-The GDPR consemt dataset (dataset name "gdpr-consent") contains entities with information about consent purposes with the following datastructure:
+The GDPR consemt dataset (dataset name ``gdpr-consent``) contains entities with information about consent purposes with the following datastructure:
 
 Prototype
 ---------
@@ -187,12 +221,44 @@ Properties
      -
      -
 
+Input API
+---------
+
+The input API for the ``gdpr-consent`` dataset is the ``gdpr-consent-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-consent-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-consent`` dataset is the ``gdpr-consent-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-consent-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-consent``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-consent`` dataset. The entites in this dataset are available externally through
+the output API pipe.
+
 .. _gdpr_subject_consent:
 
 GDPR subject consent
 ====================
 
-The GDPR subject consent dataset (dataset name "gdpr-subject-consent") is used to record the consent choices for each
+The GDPR subject consent dataset (dataset name ``gdpr-subject-consent``) is used to record the consent choices for each
 data subject. It contains entities with the following datastructure:
 
 Prototype
@@ -259,12 +325,44 @@ Properties
      -
      -
 
+Input API
+---------
+
+The input API for the ``gdpr-subject-consent`` dataset is the ``gdpr-subject-consent-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-subject-consent-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-subject-consent`` dataset is the ``gdpr-subject-consent-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-subject-consent-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-subject-consent``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-subject-consent`` dataset. The entites in this dataset are available externally through
+the output API pipe.
+
 .. _gdpr_purpose:
 
 GDPR purpose
 ============
 
-The GDPR purpose dataset (dataset name "gdpr-purpose") is used to record the purposes for which your organisation
+The GDPR purpose dataset (dataset name ``gdpr-purpose``) is used to record the purposes for which your organisation
 is collecting data. It contains entities with the following datastructure:
 
 Prototype
@@ -383,12 +481,44 @@ Properties
      -
      -
 
+Input API
+---------
+
+The input API for the ``gdpr-purpose`` dataset is the ``gdpr-purpose-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-purpose-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-purpose`` dataset is the ``gdpr-purpose-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-purpose-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-purpose``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-purpose`` dataset. The entites in this dataset are available externally through
+the output API pipe.
+
 .. _gdpr_purpose_type:
 
 GDPR purpose type
 =================
 
-The GDPR purpose type dataset (dataset name "gdpr-purpose-type") is used to record the types of purposes for which your organisation
+The GDPR purpose type dataset (dataset name ``gdpr-purpose-type``) is used to record the types of purposes for which your organisation
 is collecting data. It contains entities with the following datastructure:
 
 Prototype
@@ -444,13 +574,47 @@ Properties
      -
      -
 
+Input API
+---------
+
+The input API for the ``gdpr-purpose-type`` dataset is the ``gdpr-purpose-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-purpose-type-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-purpose-type`` dataset is the ``gdpr-purpose-type-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-purpose-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-purpose-type``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-purpose-type`` dataset. If the ``custom-purpose-type`` and ``gdpr-purpose-type-in`` dataset
+contain the same entity (i.e. with the same ``purpose-type-id``), the newest version will be chosen.
+
+The entites in this dataset are available externally through the output API pipe.
+
 
 .. _gdpr_data_type:
 
 GDPR data type
 ==============
 
-The GDPR data type dataset (dataset name "gdpr-data-type") is used to record the types of data your organisation
+The GDPR data type dataset (dataset name ``gdpr-data-type``) is used to record the types of data your organisation
 is collecting. It contains entities with the following datastructure:
 
 Prototype
@@ -535,12 +699,44 @@ Properties
      -
      -
 
+Input API
+---------
+
+The input API for the ``gdpr-data-type`` dataset is the ``gdpr-data-type-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-data-type-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-data-type`` dataset is the ``gdpr-data-type-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-data-type-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-data-type``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-data-type`` dataset. The entites in this dataset are available externally through
+the output API pipe.
+
 .. _gdpr_policy:
 
 GDPR policy
 ===========
 
-The GDPR policy dataset (dataset name "gdpr-policy") is used to record the types of policies for your organisation.
+The GDPR policy dataset (dataset name ``gdpr-policy``) is used to record the types of policies for your organisation.
 It contains entities with the following datastructure:
 
 Prototype
@@ -628,3 +824,35 @@ Properties
      - A datetime string in ISO 8601 format that specifies how long this policy is valid (optional)
      -
      -
+
+Input API
+---------
+
+The input API for the ``gdpr-policy`` dataset is the ``gdpr-policy-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-policy-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+----------
+
+The output API for the ``gdpr-policy`` dataset is the ``gdpr-policy-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-policy-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-policy``. This dataset is required to contain entities on the
+form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
+before being stored in the ``gdpr-policy`` dataset. The entites in this dataset are available externally through
+the output API pipe.
