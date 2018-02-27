@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-01-27
+----------
+* The :ref:`combine <combine_dtl_function>` DTL function now allows a single argument. This is useful when you want to turn an expression into a list of values. It is extra useful when you don't quite know if the value is a list or not. Example: ``["combine", "_S.x"]``
+
+
 2018-01-22
 ----------
 * Added a ``content_disposition`` configuration property to be able to specify the type in the ``Content-Dispositon`` HTTP response header to the :ref:`HTTP endpoint sinks <http_endpoint_sink>`.

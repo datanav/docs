@@ -3569,12 +3569,24 @@ Values / collections
        .. _combine_dtl_function:
    * - ``combine``
      - | *Arguments:*
-       |   VALUES(value-expression{>=2})
+       |   VALUES(value-expression{>=1})
        |
        | Combines the VALUES into a single list.
 
-     - | ``["combine", 1, 4]``
+     - | ``["combine", null]``
+       | Returns ``[]``
+       |
+       | ``["combine", 1]``
+       | Returns ``[1]``
+       |
+       | ``["combine", 1, 4]``
        | Returns ``[1, 4]``
+       |
+       | ``["combine", 1, ["list", 2, 3]]``
+       | Returns ``[1, 2, 3]``
+       |
+       | ``["combine", 1, ["list", 2, 3, ["list", 4]]]``
+       | Returns ``[1, 2, 3, [4]]``
        |
        | ``["combine", ["list", 1, 2], ["list", 3, 4], 5]``
        | Returns ``[1, 2, 3, 4, 5]``
