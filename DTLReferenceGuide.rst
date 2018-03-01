@@ -1145,7 +1145,11 @@ modifiying the target entity, and has no return value.
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES emit them as new entities to the DTLs output
-         pipeline. Note that these new entities *must* have an ``_id`` property.
+         pipeline.
+
+       | Note that these new entities *must* have an ``_id`` string property.
+         Values that are not entities will be ignored.
+
      - | ``["create", "_S.orders"]``
        |
        | Emit the orders in the source entity's ``orders`` field as new entities.
@@ -1160,7 +1164,10 @@ modifiying the target entity, and has no return value.
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES add it to the ``$children`` property on the
-         target entity. This function is a convenience function for calling:
+         target entity. Note that the entities *must* have an ``_id`` string property.
+         Values that are not entities will be ignored.
+       |
+       | This function is almost equivalent to:
        |
        | ``["add", "$children",``
        |   ``["union", "_T.$children", ...]]``
