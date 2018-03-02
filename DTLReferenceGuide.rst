@@ -3899,6 +3899,7 @@ Values / collections
        |
        | Returns list of tags sorted in descending order.
 
+       .. _map_dtl_function:
    * - ``map``
      - | *Arguments:*
        |   FUNCTION(function-expression(1}
@@ -3911,10 +3912,35 @@ Values / collections
        | Returns ``["a", "b", "c"]``.
        |
        | ``["map", ["distinct", "_."],``
-       |   ``["list", ["list", "A", "A"], ["list", "B", "C"]]]``
+       |   ``["list", ["list", "A", "A"],``
+       |     ``["list", "B", "C"]]]``
        |
        | Returns ``[["A"], ["B", "C"]]``.
 
+       .. _map_values_dtl_function:
+   * - ``map-values``
+     - | *Arguments:*
+       |   VALUE_FUNCTION(function-expression(1}
+       |   VALUES(value-expression{1})
+       |
+       | For each dictionary in VALUES apply the VALUE_FUNCTION to the
+         dictionary's values. The function maps over the values of dictionaries
+         and returns a list of mapped values. Non-dictionary values are ignored.
+     - | ``["map-values",``
+       |     ``["lower", "_."],``
+       |     ``{"key1": "A", "key2": "B"}]``
+       |
+       | Returns ``["a", "b"]``.
+       |
+       | ``["map-values",``
+       |     ``["lower", "_."],``
+       |     ``["list", {"key1": "A", "key2": "B"}, 100,``
+       |       ``{"key1": "B", "key2": "A", "key3": "C"}]]``
+       |
+       | Returns ``["a", "b", "b", "a", "c"]``.
+       |
+
+       .. _map_dict_dtl_function:
    * - ``map-dict``
      - | *Arguments:*
        |   KEY_FUNCTION(function-expression(1}
