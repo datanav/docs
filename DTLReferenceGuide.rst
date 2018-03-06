@@ -1752,7 +1752,7 @@ Numbers
        |
        | Returns ``true``.
 
-       .. _is_decimal_dtl_function:
+       .. _decimal_dtl_function:
    * - ``decimal``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -3315,9 +3315,16 @@ Namespaced identifiers
        |   NAMESPACE(string{0|1}),
        |   VALUES(value-expression{1})
        |
-       | Translates input values to namespaced identifiers. Only strings in VALUES
+       | Translates input values to namespaced identifiers. Strings and URIs in VALUES
          will be cast to namespaced identifiers. Note that no escaping is done on
-         the strings. If NAMESPACE is omitted, then the global namespace is used.
+         the strings.
+       |
+       | If NAMESPACE is omitted, then the global namespace is used.
+       |
+       | URIs can be passed as values in VALUES only when NAMESPACE is not specified.
+         The URIs will be collapsed, i.e. the prefix part of URIs will be collapsed into
+         a namespace. If the prefix has been declared as a :ref:`namespace <namespaces>`
+         then that namespace will be used, otherwise a generated namespace will be added.
      - | Constructs a new namespaced identifier.
        |
        | ``["ni", "foo", "bar"]``
@@ -3331,6 +3338,25 @@ Namespaced identifiers
        | ``["ni", "foo", ["list", "bar", "x:y"]]``
        |
        | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``
+       |
+       | ``["ni", "foo", ["uri, "http://example.org/"]]``
+       |
+       | Returns ``null`` because URIs are not supported when NAMESPACE is specified.
+       |
+       | ``["ni", ["uri, "http://example.org/bar"]]``
+       |
+       | Returns ``"~:_:bar"``, i.e. a NI with the ``_`` namespace and ``bar`` as identifier.
+         Note that the ``http://example.org/`` URI prefix is mapped to the  ``_`` namespace
+         by default.
+       |
+       | ``["ni", ["uri, "http://unknown.org/something/baz"]]``
+       |
+       | If the ``"http://unknown.org/something/"`` URI prefix has not been declared as a
+         namespace then it will return ``"~:your-pipe-1:baz"`` if the current pipe id is
+         ``your-pipe``. The ``-1`` part is a sequence counter, so if you introduce other
+         namespaces in your pipe they'll be assigned unique namespace ids. If the URI prefix
+         had already been mapped to the ``unknown`` namespace then the expression would have
+         returned ``"~:unknown:baz"``
 
        .. _is_ni_function:
    * - ``is-ni``
