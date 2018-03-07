@@ -1,7 +1,11 @@
 Changelog
 =========
 
-2018-01-27
+2018-03-05
+----------
+* Added the :ref:`map-values <map_values_dtl_function>` function. It maps over the values of dictionaries and returns a list of mapped values.
+
+2018-02-27
 ----------
 * The :ref:`combine <combine_dtl_function>` DTL function now allows a single argument. This is useful when you want to turn an expression into a list of values. It is extra useful when you don't quite know if the value is a list or not. Example: ``["combine", "_S.x"]``
 
