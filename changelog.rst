@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-03-07
+----------
+* Changed the default value of the node configuration setting "pipe_cleanup_after_deletion" to "true". This means the node will remove any pipe-related data when a pipe is deleted (execution logs, acls, pipe offsets etc)
+
 2018-03-05
 ----------
 * Added the :ref:`map-values <map_values_dtl_function>` function. It maps over the values of dictionaries and returns a list of mapped values.
