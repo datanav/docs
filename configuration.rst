@@ -6336,6 +6336,12 @@ Prototype
             "MY_OTHER_HEADER": "$ENV(key-for-other-value)",
             "MY_SECRET_HEADER": "$SECRET(secret-key)"
         },
+        "oauth2": {
+            "client_id": "my-client-id",
+            "client_secret": "$SECRET(client-secret)",
+            "token_url": "https://oath2-enabled-server:port/path/to/service/for/access/token",
+            "scope": ["scope1", "scope2"]
+        }
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -6406,6 +6412,18 @@ Properties
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
        authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
        might be also required depending on the authentication scheme selected.
+     -
+     -
+
+   * - ``oauth2``
+     - Dict<String,String>
+     - A optional set of properties that specifies support for automatic fetching of JWT access tokens from a oauth2
+       enabled provider. The profile supported is "client credentials", which means you will need a ``client_id`` and
+       ``client_secret`` from your oauth2 provider. Additionally, you must provide a ``token_url`` URL to a service which
+       generates JWT access tokens. Optionally you can define a list of scopes (in ``scope``) for your client. Note that
+       this option cannot be combined with ``JWT`` authentication or the ``jwt_token`` property. Also note that the
+       oauth2 specification mandates TLS secured transport for both the token endpoint and the target defined in
+       ``url_pattern``.
      -
      -
 

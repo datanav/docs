@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-03-20
+----------
+* Added oauth2 (BackendServerClient profile, aka "client credentials") option to the URL system
+
 2018-03-07
 ----------
 * Changed the default value of the node configuration setting "pipe_cleanup_after_deletion" to "true". This means the node will remove any pipe-related data when a pipe is deleted (execution logs, acls, pipe offsets etc)
