@@ -16,6 +16,9 @@ The user's permissions are specified by the documents in the solr database
 Authentication
 --------------
 
+Overview
+~~~~~~~~
+
 The USE\_X\_REMOTE\_USER\_HEADER\_AUTHENTICATION config-variable is set
 with the "use\_x\_remote\_user\_header" variable in the "[main]"-section
 of the "databrowser.ini" file.
@@ -23,10 +26,9 @@ of the "databrowser.ini" file.
 This is a boolean value, with the following meaning:
 
 | False:
-| User authentication is done via velruse. This works by redirecting the
-  user's webbrowser to some external webpage that does the authentication
-  and redirects back to the databrowser.
-
+| User authentication is done via an `OpenID connect <http://openid.net/connect/>`_
+  authentication provider. This works by redirecting the user's web browser to
+  some external webpage that does the authentication and redirects back to the databrowser.
 
 | True:
 | Authentication is done by assuming that a valid username is present in
@@ -55,6 +57,34 @@ If any email-addresses are found, one of them will be stored in the
 If no email-addresses are found, and the username looks like an
 email-address, the username will be stored in the "email"-attribute of
 the session-object.
+
+.. _databrowser_openid_connect_autentication_provider:
+
+OpenID connect authentication provider config
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the The USE\_X\_REMOTE\_USER\_HEADER\_AUTHENTICATION config-variable is set to `False`,
+the databrowser can be configured to authenticate with an `OpenID connect <http://openid.net/connect/>`_
+authentication provider. This is done by setting the "authentication_providers" config variable like this::
+
+    [authentication]
+    authentication_providers=
+        - provider_id: Auth0
+          consumer_key: GVJvGUHRuVkn1PdqPLWPrX9wX44rOy2J
+          consumer_secret: fXbqcwncYRFaTpTFyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
+          openid_configuration_url: https://dap-test.eu.auth0.com/.well-known/openid-configuration
+          allow_unverified_email: true
+
+The *provider_id* parameter is user-selectable and can be set to anything. The only requirement is that if there
+are more than one authentication_provider, each *provider_id* must be unique.
+
+The *consumer_key* and *consumer_secret* must be copied from the authentication provider itself.
+
+The *openid_configuration_url* parameter contains the url to the authentication provider's
+`configuration settings endpoint <http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig>`_.
+
+The *allow_unverified_email* setting can be set to True to allow users with unverified email addressed to log in.
+
 
 .. _databrowser_authorization_via_solr:
 
