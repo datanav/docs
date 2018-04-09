@@ -6341,6 +6341,10 @@ Prototype
             "client_secret": "$SECRET(client-secret)",
             "token_url": "https://oath2-enabled-server:port/path/to/service/for/access/token",
             "scope": ["scope1", "scope2"]
+            "extra": {
+               "some": "extra-params",
+               "to": "include-in-token-request"
+            }
         }
         "authentication": "basic",
         "connect_timeout": 60,
@@ -6423,7 +6427,7 @@ Properties
        generates JWT access tokens. Optionally you can define a list of scopes (in ``scope``) for your client. Note that
        this option cannot be combined with ``JWT`` authentication or the ``jwt_token`` property. Also note that the
        oauth2 specification mandates TLS secured transport for both the token endpoint and the target defined in
-       ``url_pattern``.
+       ``url_pattern``. You can add optional extra parameters to the token request in the ``extra`` subattribute.
      -
      -
 
