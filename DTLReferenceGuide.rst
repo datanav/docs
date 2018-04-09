@@ -4561,7 +4561,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |   VALUES(value-expression{1})
        |
        | Takes a list of VALUES and optionally rounds them to the number of DIGITS and then returns the nearest integer
-         that is larger than the value (adjusted for the number of digits specified, default is 0). Non-numeric
+         digit (adjusted for the number of digits specified, default is 0). Non-numeric
          values are ignored. In contrast to ``ceil`` or ``floor`` it uses the "half to even" rule to decide if to round
          up or down (see `this wikipedia article <https://en.wikipedia.org/wiki/Rounding#Round_half_to_even>`_ for details).
      - | ``["round", ["list", 2.2, 3.5, 4.5]]``
