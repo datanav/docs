@@ -4562,17 +4562,17 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Takes a list of VALUES and optionally rounds them to the number of DIGITS and then returns the nearest integer
          that is larger than the value (adjusted for the number of digits specified, default is 0). Non-numeric
-         values are ignored. In contrast to ``ceil`` or ``floor`` it uses the "half even" rule to decide if to round
-         up or down.
-     - | ``["round", ["list", 2.2, 4.778, 5.5]]``
+         values are ignored. In contrast to ``ceil`` or ``floor`` it uses the "half to even" rule to decide if to round
+         up or down (see `this wikipedia article <https://en.wikipedia.org/wiki/Rounding#Round_half_to_even>`_ for details).
+     - | ``["round", ["list", 2.2, 3.5, 4.5]]``
        |
-       | Returns ``[2, 5, 6]``.
+       | Returns ``[2, 4, 4]``.
        |
        | ``["round", 1, ["list", 2.2, 4.778, 6]]``
        |
        | Returns ``[2.2, 4.8, 6]``.
        |
-       | ``["round", 2, 2.255]``
+       | ``["round", 2, 2.299]``
        |
        | Returns ``2.30``.
        |
@@ -4580,7 +4580,16 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``3``.
        |
-       | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
+       | Note that the even/odd rule also applies to negative numbers:
+       | ``["round", -4.5]``
+       |
+       | Returns ``-4``.
+       |
+       | ``["round", -3.5]``
+       |
+       | Returns ``-4``.
+       |
+       | If ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
        | it will be a decimal or a float.
 
    * - ``ceil``
