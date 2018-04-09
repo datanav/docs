@@ -4555,6 +4555,34 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``8``.
 
+   * - ``round``
+     - | *Arguments:*
+       |   DIGITS(numeric-expression{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Takes a list of VALUES and optionally rounds them to the number of DIGITS and then returns the nearest integer
+         that is larger than the value (adjusted for the number of digits specified, default is 0). Non-numeric
+         values are ignored. In contrast to ``ceil`` or ``floor`` it uses the "half even" rule to decide if to round
+         up or down.
+     - | ``["round", ["list", 2.2, 4.778, 5.5]]``
+       |
+       | Returns ``[2, 5, 6]``.
+       |
+       | ``["round", 1, ["list", 2.2, 4.778, 6]]``
+       |
+       | Returns ``[2.2, 4.8, 6]``.
+       |
+       | ``["round", 2, 2.255]``
+       |
+       | Returns ``2.30``.
+       |
+       | ``["round", 2.299]``
+       |
+       | Returns ``3``.
+       |
+       | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
+       | it will be a decimal or a float.
+
    * - ``ceil``
      - | *Arguments:*
        |   DIGITS(numeric-expression{0|1})

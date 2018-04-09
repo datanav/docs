@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-04-09
+----------
+* Added the :ref:`round <round_dtl_function>` DTL function. It rounds to the nearest digit using the "round half to even" rule.
+
 2018-03-20
 ----------
 * Added oauth2 (BackendServerClient profile, aka "client credentials") option to the URL system
