@@ -4555,6 +4555,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``8``.
 
+       .. _round_dtl_function:
    * - ``round``
      - | *Arguments:*
        |   DIGITS(numeric-expression{0|1})
