@@ -25,6 +25,11 @@ These APIs are datasets with a defined data-structure that can be integrated wit
 :ref:`input <http_endpoint_source>` and :ref:`output <http_endpoint_sink>` published endpoints for JSON input
 and/or consumption. The input and output endpoints conform to the :doc:`JSON Push Protocol <json-push>`.
 
+For unstructured data such as documents, emails and so on the GDPR platform offers a content extraction and
+indexing service coupled with a semi-automatic workflow prior to making this data available to the data subject:
+
+* :ref:`Unstructured data integration <gdpr_unstructured_data>`
+
 .. _gdpr_subject:
 
 GDPR subject
@@ -856,3 +861,180 @@ The internal API must be a dataset with the id ``custom-policy``. This dataset i
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
 before being stored in the ``gdpr-policy`` dataset. The entites in this dataset are available externally through
 the output API pipe.
+
+.. _gdpr_unstructured_data:
+
+GDPR unstructured data support
+==============================
+
+The API described thus far is suited for structured/tabular data such as data from SQL servers, CSV files and so on.
+In practice, an organization will typically also have a lot of subject data in form of unstructured content such as
+emails, PDFs, word documents and so on. This data will often contain relevant information pertaining to a GDPR access request.
+Searching for relevant documents in unstructured data repositories, file systems etc can be time consuming and prone to errors of
+obmission. The Sesam GDPR platform supports automating this process.
+
+However, even if we automate the extraction, indexing and search process the last step before making the data (documents)
+available to the data subject in the data access portal will need human intervention. The reason for this is due to the
+nature of unstructured data, the automated system might misidentify documents ("false positives") or the document contents
+may contain private information about other data subjects as well as information about the data subject in question.
+Thus all search matches for a data subject's GDPR access request must be vetted manually and the contents delivered
+to the user may be withheld completely or partly and/or the content replaced by a reduced and/or redacted version.
+
+Overview of the solution
+------------------------
+
+The solution consists of several parts:
+
+* Document sources (microservices)
+* Internal dataset API
+* Content extractor service
+* Document index
+* Document search service
+* Manual vetting of search results
+* Content encryption service
+
+Document sources
+----------------
+
+The input to the system is in the form of one or more document sources. Document sources are microservices which
+deliver information and metadata about a particular repository of unstructured data (files), for example a file
+system document source or an email document source. See `https://github.com/sesam-community/file-share-service <https://github.com/sesam-community/file-share-service>`_  for
+an example of such a service.
+
+The document source delivers a stream of JSON documents on a particular format. If the output from the document source
+is not already in the required form, the pipe reading from this source has the responsibility to transform the input
+to match the following form:
+
+Prototype
+---------
+
+::
+
+    {
+      "gdpr-data-type:data-type-id": "source-data-type",
+      "gdpr-document:document_id": "source-prefix:unique-id-for-document",
+      "gdpr-document:extract-content": "~rhttp://address-to-source-microservice:port/where_to_download?file=the_file_binary",
+      "gdpr-document:filesize": 123456,
+      "gdpr-document:metadata": {"source-specific": "metadata", "properties":"here" },
+      "gdpr-document:mime-type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "gdpr-document:original-url": "~rhttp://original-url:port/to_where_to_download?file=the_file_binary"
+    }
+
+
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``gdpr-data-type:data-type-id``
+     - String
+     - The data-type ID for the document source. Note that this must match a properly registered GDPR data type in the
+       GDPR platform by filling out and uploading the :ref:`GDPR data types and purposes configuration <gdpr_data_types_purposes_configuration>`
+       spreadsheet (or using the ``GDPR data type`` API defined earlier in this document).
+     -
+     - Yes
+
+   * - ``gdpr-document:document_id``
+     - String
+     - A unique document ID for the document source - it should be prefixed with the ID of the system used
+     -
+     - Yes
+
+   * - ``gdpr-document:extract-content``
+     - String
+     - A URL to the document source microservice that produced the data. It should return the binary document data.
+       Note that it must NOT require any authentication or authorization. If any is needed, it must proxy this
+       to the backend system by itself. It should run in a local network context so it is reachable only by the GDPR
+       platform.
+     -
+     - Yes
+
+   * - ``gdpr-document:metadata``
+     - Object
+     - An optional dictionary object with metadata properties for the document, it can contain any valid JSON data
+     -
+     -
+
+   * - ``gdpr-document:filesize``
+     - Integer
+     - The size in bytes of the document file.
+     -
+     - Yes
+
+   * - ``gdpr-document:mime-type``
+     - String
+     - The mime type of the document.
+     -
+     - Yes
+
+   * - ``gdpr-document:original-url``
+     - String
+     - A URL to the original location for the document. It should return the binary document data.
+       Note that this URL should challenge for any authentication/authorization needed. The URL must be resolvable
+       for any human operator (within the correct network environment) that has the task to vet the document
+       search result for a GDPR access request.
+     -
+     - Yes
+
+
+Internal API
+------------
+
+The internal API must be a dataset with the id ``custom-documents``. This dataset is required to contain entities on the
+form outlined above. The ``custom-documents`` pipe is a merge pipe with the complete list of document source datasets
+that should be used by the indexing service.
+
+Content extractor service
+-------------------------
+
+The contents of the ``custom-documents`` dataset is fed to the content extractor service. This service will download
+the file pointed to by the "gdpr-document:extract-content" URL and attempt to extract all text information it can from the file.
+
+Document index
+--------------
+
+The extracted textual information is indexed together with the properties outline above (except ``gdpr-document:metadata``)
+and put into a search engine/index for indexing. The original file is *not* stored.
+
+Document search service
+-----------------------
+
+Whenever a new GDPR access request is created in the GDPR platform, a query is performed against the indexed documents
+using the configured subject data properties (email, phone-number, customer id's and so on). The result of this
+query, if any, is joined with the original data in ``custom-document`` and stored in the GDPR platform for the
+data subject associated with the access request.
+
+Manual vetting of search results
+--------------------------------
+
+No data is relayed to the GDPR data access portal before a human has vetted this search result. This is done by
+downloading :ref:`the data access request excel template <gdpr_data_access_request_template>`.
+
+The spreadsheet will contain one data sheet per document source data type with one row per matching search
+result. By downloading and inspecting the files linked to in the spreasheet and editing these rows the human operator
+vets the search result. To remove a document the row should be removed. If the file itself should not be delivered to
+the data subject, the link in ``gdpr-document:extract-content`` should be removed, and any redacted or partial text
+content should be entered into the "text" column for that row. In the same way, metadata can also be edited (or removed)
+as needed.
+
+When the vetting process is finished and all data sheets for all data types have been filled out, the spreadsheet should
+be uploaded to the GDPR portal, as described in the :ref:`GDPR data access request template <gdpr_data_access_request_template>` section.
+
+Content encryption service
+--------------------------
+
+Finally, after the vetted search result have been processed by the GDPR portal, the metadata aboit the document will be
+encrypted by the data subjects public key and then transmitted to the GDPR data access portal.
+
+Additionally, if there is a ``gdpr-document:extract-content`` property for the document, the file itself will be
+downloaded and encrypted before being transmitted to the GDPR data access portal. The "attachment" can then be decrypted
+and downloaded as a document/file by the data subject on the client side.
