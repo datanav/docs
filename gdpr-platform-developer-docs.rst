@@ -25,7 +25,7 @@ These APIs are datasets with a defined data-structure that can be integrated wit
 :ref:`input <http_endpoint_source>` and :ref:`output <http_endpoint_sink>` published endpoints for JSON input
 and/or consumption. The input and output endpoints conform to the :doc:`JSON Push Protocol <json-push>`.
 
-For unstructured data such as documents, emails and so on the GDPR platform offers a content extraction and
+For unstructured data such as documents and emails the GDPR platform offers a content extraction and
 indexing service coupled with a semi-automatic workflow prior to making this data available to the data subject:
 
 * :ref:`Unstructured data integration <gdpr_unstructured_data>`
@@ -869,16 +869,18 @@ GDPR unstructured data support
 
 The API described thus far is suited for structured/tabular data such as data from SQL servers, CSV files and so on.
 In practice, an organization will typically also have a lot of subject data in form of unstructured content such as
-emails, PDFs, word documents and so on. This data will often contain relevant information pertaining to a GDPR access request.
-Searching for relevant documents in unstructured data repositories, file systems etc can be time consuming and prone to errors of
-obmission. The Sesam GDPR platform supports automating this process.
+emails, PDFs and word documents. This data will often contain relevant information pertaining to a GDPR access request.
+Searching for relevant documents in email servers, archiving systems, file shares or other unstructured data repositories
+can be time consuming and prone to errors of omission. The Sesam GDPR platform supports automating this process.
 
 However, even if we automate the extraction, indexing and search process the last step before making the data (documents)
 available to the data subject in the data access portal will need human intervention. The reason for this is due to the
-nature of unstructured data, the automated system might misidentify documents ("false positives") or the document contents
-may contain private information about other data subjects as well as information about the data subject in question.
-Thus all search matches for a data subject's GDPR access request must be vetted manually and the contents delivered
-to the user may be withheld completely or partly and/or the content replaced by a reduced and/or redacted version.
+nature of unstructured data; the automated system might misidentify documents ("false positives") or the document contents
+may contain private information about other data subjects - i.e. not just information about the data subject in question.
+
+Thus all search matches for a data subject's GDPR access request must be manually vetted first. As a result of this
+vetting proxess, the contents delivered to the user may be withheld completely or partly and/or the textual content
+replaced by a reduced or redacted version.
 
 Overview of the solution
 ------------------------
@@ -897,13 +899,13 @@ Document sources
 ----------------
 
 The input to the system is in the form of one or more document sources. Document sources are microservices which
-deliver information and metadata about a particular repository of unstructured data (files), for example a file
-system document source or an email document source. See `https://github.com/sesam-community/file-share-service <https://github.com/sesam-community/file-share-service>`_  for
-an example of such a service.
+deliver information (metadata) about a particular repository of unstructured data (files), for example a file
+system document source or an email document source. It also has the responsibility of providing a HTTP API for
+delivering the file itself.
 
-The document source delivers a stream of JSON documents on a particular format. If the output from the document source
-is not already in the required form, the pipe reading from this source has the responsibility to transform the input
-to match the following form:
+The document source does this by delivering a stream of JSON documents on a particular format. If the output from the
+document source is not already in the required form, the pipe reading from this source has the responsibility to transform
+the input to match the following form:
 
 Prototype
 ---------
@@ -986,24 +988,28 @@ Properties
      - Yes
 
 
+See `https://github.com/sesam-community/file-share-service <https://github.com/sesam-community/file-share-service>`_  for
+an example of such a service.
+
 Internal API
 ------------
 
-The internal API must be a dataset with the id ``custom-documents``. This dataset is required to contain entities on the
-form outlined above. The ``custom-documents`` pipe is a merge pipe with the complete list of document source datasets
-that should be used by the indexing service.
+The internal API of the unstructured data framework is a dataset with the id ``custom-documents``. This dataset is
+required to contain entities on the form outlined above. The associated ``custom-documents`` pipe is a merge pipe with
+the complete list of document source datasets that should be used by the indexing service.
 
 Content extractor service
 -------------------------
 
 The contents of the ``custom-documents`` dataset is fed to the content extractor service. This service will download
-the file pointed to by the "gdpr-document:extract-content" URL and attempt to extract all text information it can from the file.
+the file pointed to by the ``gdpr-document:extract-content`` URL and attempt to extract all text information it can
+from the file.
 
 Document index
 --------------
 
 The extracted textual information is indexed together with the properties outline above (except ``gdpr-document:metadata``)
-and put into a search engine/index for indexing. The original file is *not* stored.
+and put into a search engine/index for indexing. The original file is *not* stored in this process.
 
 Document search service
 -----------------------
@@ -1012,6 +1018,10 @@ Whenever a new GDPR access request is created in the GDPR platform, a query is p
 using the configured subject data properties (email, phone-number, customer id's and so on). The result of this
 query, if any, is joined with the original data in ``custom-document`` and stored in the GDPR platform for the
 data subject associated with the access request.
+
+It is important to note that there is no automatic re-querying of previous document searches when new documents are added
+to the index. The query is a *point-in-time* query and as such reflects the state of the document index at that point
+in time. To update the search result, a new GDPR access request must be submitted by the data subject.
 
 Manual vetting of search results
 --------------------------------
@@ -1032,9 +1042,9 @@ be uploaded to the GDPR portal, as described in the :ref:`GDPR data access reque
 Content encryption service
 --------------------------
 
-Finally, after the vetted search result have been processed by the GDPR portal, the metadata aboit the document will be
-encrypted by the data subjects public key and then transmitted to the GDPR data access portal.
+Finally, after the vetted search result have been processed by the GDPR portal, the metadata about the document will be
+encrypted using the public key of the data subject and then transmitted to the GDPR data access portal.
 
 Additionally, if there is a ``gdpr-document:extract-content`` property for the document, the file itself will be
-downloaded and encrypted before being transmitted to the GDPR data access portal. The "attachment" can then be decrypted
+downloaded and encrypted before being transmitted to the GDPR data access portal. This "attachment" can then be decrypted
 and downloaded as a document/file by the data subject on the client side.
