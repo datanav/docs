@@ -441,6 +441,28 @@ Properties
      - ``720``
      - No
 
+.. _circuit_breakers_section:
+
+Circuit breakers
+----------------
+
+A circuit breaker is a safety mechanism that one can enable on the
+:ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if
+the number of entities written to a dataset in a pipe run exceeds a
+certain configurable limit.
+
+A tripped circuit breaker will prevent the pipe to being able to
+run. It can can either be rolled back or committed. Rolling it back
+will delete any entities that were written in the pipe run before the
+circuit breaker was tripped. Committing it will expose the uncommitted
+entities. Both operations resets the circuit breaker so that pipe can
+run again.
+
+Compaction will not be performed datasets with a tripped circuit
+breaker. It is also not possible to repost entities to these datasets.
+
+The `service API <api.html#post--datasets-dataset_id>`_ can be used to
+reset the circuit breaker.
 
 Example configuration
 ---------------------
@@ -3364,6 +3386,31 @@ Properties
 
      - ``false``
      -
+
+   * - ``circuit_breaker_threshold_factor``
+     - Decimal
+     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+       the pipe. It specifies a factor that is used to calculate the circuit breaker limit. Note
+       that this is a factor and not a percentage, e.g. ``0.32`` means 32% and ``1.5`` means 150%.
+       If the factor is ``0.5`` and the dataset already contains 100 entities, then the circuit
+       breaker will trip if it sees more than 50 new entities.
+     - ``null``
+     - No
+
+   * - ``circuit_breaker_threshold_count``
+     - Integer
+     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+       the pipe. The count specifies the circuit breaker limit directly. The limit defines how many
+       new entities can be written to the dataset before the circuit breaker trips. If this property
+       is set to ``100``, then 100 entities can be written before it trips.
+
+       .. NOTE::
+
+          If both ``circuit_breaker_threshold_factor`` and ``circuit_breaker_threshold_count`` are
+          specified then the maximum value of those two are used as the circuit breaker limit. The
+          count is in this case typically used to specify the lower limit.
+     - ``null``
+     - No
 
 
 Example configuration

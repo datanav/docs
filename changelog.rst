@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-04-19
+----------
+* Added support for :ref:`circuit breakers <circuit_breakers_section>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
+
 2018-04-09
 ----------
 * Added the :ref:`round <round_dtl_function>` DTL function. It rounds to the nearest digit using the "round half to even" rule.
