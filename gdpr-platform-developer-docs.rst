@@ -32,13 +32,78 @@ indexing service coupled with a semi-automatic workflow prior to making this dat
 
 Prior to using the APIs for automation purposes, the GDPR platform must be configured for automation. This is
 similar to the process described in the :ref:`GDPR data types and purposes configuration <>` document, but involves
-a couple of additional columns in the data type sheet of the setup spreadsheet. You can download a template with these
-additional columns `here <>`_.
+a couple of additional columns in the data type sheet of the setup spreadsheet. The purposes sheet is unchanged.
 
-The additional columns are ``identifiers`` and ``exclude``. In addition, the ``Level`` field takes on additional
+You can download a template with these additional columns `here <>`_.
+
+The additional columns are ``identifiers``, ``TypeID`` and ``exclude``. In addition, the ``Level`` field takes on special
 meaning when automating the subject data flow.
 
+The additional data type properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
+
+   * - Column
+     - Description
+
+   * - ``identifiers``
+     - One or more (comma separated), optionally namespaced, property names that will be used to uniquely identify
+       a subject for this data type (see :ref:`GDPR data type <gdpr_data_type>` and :ref:`GDPR subject <gdpr_subject>`)
+       when the ``level`` property is ``Personal``. If the ``level`` property is ``Related`` it will be matched to the
+       closest "parent" record with the top-most in such a chain being matched with subject record (a "Personal" level
+       data type". See below for a more detailed description.
+
+   * - ``exclude``
+     - One or more (comma separated), optionally namespaced, property names that will be used to filter out any
+       matching properties from the data typed by this data type.
+
+   * - ``TypeID``
+     - This is a unique type identifier that should match the dataset id where the data will reside in the GDPR
+       platform.
+
+The ``level`` property in automated flows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When the ``level`` property is set to ``Personal`` it means that the data type represents information directly
+pertaining to a data subject for example a person, customer, employee record. In this case, the ``identifiers`` property
+represents one or more properties in this record that uniquely identifies the subject (for example customer id, ssn,
+mobile phone number and/or email address).
+
+If the ``level`` property is set to ``Related``, the contents of ``identifiers`` should be a set of properties that will
+be matched to either another ``Related`` data type or to a ``Personal`` data type. There can be multiple data types
+of ``Related`` level that can be matched with each other in a "chain" where the topmost record should be matched to a
+subject id property.
+
+Example with customers, orders and order line records
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The best way yo illustrate the use of these properties is with a simple example. In this simplified usecase, we have set up
+pipes to get data about customers, their orders and the order lines of these orders into datasets named ``customers``
+``orders`` and ``order-lines`` respectively. The customer records contain two properties ``customer_id`` and ``email_address``
+that can be used to identify a customer, in addition to metadata about the customer. In addition to metadata about the order,
+the order records contain a reference to the customer (in the ``customer_id`` property) and a unique ``order_id`` property.
+Finally, order line records reference the order they belong to in a ``order_id`` property, in addition to information
+about the particular item in the order.
+
+To automate this flow, we first configure the GDPR platform for these data types by creating three new rows in the
+"data type" sheet; one for "customer", "order" and "order-line" (we also need to add at least one "Purpose" in the
+"purpose sheet" to explain why we have this data).
+
+The "customer" row should have the level ``Personal`` and the ``identifiers`` column should contain ``email_address`` (or
+``customer_id``). We set the "TypeID" column to match the dataset the data resides (here ``customers``).
+
+The "order" row will then have the type ``Related`` and the ``identifiers`` column should contain the value ``customer_id``.
+We set the "TypeID" column to match the dataset the data resides (``orders``).
+
+Finally, the "order-line" row also have level set to "Related" and the ``identifiers`` column set to ``order_id``.
+We set its "TypeID" column to match the dataset the data resides (``order-lines``).
+
+The final step is to register the ``customers``, ``orders`` and ``order-lines`` dataset in the pipe for the
+``custom-subject-data``. This pipe is merged with the internal dataset(s) for processing the GDPR data and ultimately
+link it with a GDPR access request from a matching data subject.
 
 .. _gdpr_subject:
 
@@ -106,6 +171,8 @@ Its URL is on the form:
     https://gdpr-platform-datahub-url/api/publishers/gdpr-subject-out/entities
 
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
+
+.. _gdpr_subject_internal_api:
 
 Internal API
 ------------
