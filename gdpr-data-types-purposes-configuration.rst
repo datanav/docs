@@ -146,12 +146,6 @@ The data type properties
      - The "level" of the data - it can be either "Personal" or "Related", i.e. directly about the data subject or
        indirectly (for example data about the customer such as address or orders for the customer, respectively)
 
-   * - ``Identifiers``
-     - TODO
-
-   * - ``Exclude``
-     - TODO
-
    * - ``Contact``
      - An comma separated list of email-addresses for who should get notified when a GDPR data access request or change
        request is received by the GDPR platform.
