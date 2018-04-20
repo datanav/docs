@@ -90,6 +90,7 @@ Legal grounds
         * Task carried out in public interest + law
         * Exercise of official authority + law
         * Legitimate interests that are not overridden by data subjects rights
+
    * - ``LegalDetail``
      - The contents/description of the applicable LegalType relevant for the particular case. E.g. contents of the consent:
        Can we use your e-mailaddress to send you information about GDPR? In case of legal obligation + law: which law is
@@ -104,6 +105,9 @@ Legal grounds
    * - ``Criteria``
      - Criteria corresponds with LegalDays. Where the LegalType is contract what are our criterias for keeping the data
        for a given number of days. Where the legal type is legal obligation + law the criteria will often be found in the law provision.
+
+   * - ``Language``
+     - A ISO code for the language used.
 
 The data type sheet
 -------------------
