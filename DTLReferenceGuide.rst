@@ -471,11 +471,13 @@ identifier part. There exists two special prefixes, ``":"`` and
 ``"::"``.
 
 - If you want to make sure that the value is to be interpreted as-is
-  then use the ``"::"`` prefix, e.g. ``"::bar"``.
+  then use the ``"::"`` prefix, e.g. ``"::bar"``. ``"::foo:bar"`` is
+  equivalent to ``"foo:bar"``.
 
 - If you want the value to be relative to the current namespace,
   i.e. identity or property namespace depending on the context, then use
-  the ``":"`` prefix, e.g. ``":bar"``.
+  the ``":"`` prefix, e.g. ``":bar"``. If the current property namespace
+  is ``"foo"`` then ``":bar"`` is equivalent to ``"foo:bar"``.
 
 Argument types
 ==============
