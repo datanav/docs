@@ -89,18 +89,13 @@ that the GDPR data access portal has been fully updated with the uploaded data b
 If there is more than one spreadsheet to be filled out (for example if there are multiple data types with multiple different
 contact persons), one notification email is sent each time a new filled-out spreadsheet is uploaded.
 
-Making a data deletion request
-==============================
-
-TODO
-
-
-Making a data change request
-============================
+Making a consent or data change request
+=======================================
 
 The GDPR data access portal can be configured so the subject is able to request specific changes to their data, for example
 a wrong address, correct spelling and so on. See the :doc:`Databrowser guide <databrowser-guide>` for how to configure
-which properties can be editable by the logged-in subject.
+which properties can be editable by the logged-in subject. A change request can also result from the user either
+granting or revoking a consent.
 
 Any such changes to the data by the subject result in a notification email sent to the contact registered for
 the particular data type where this data originated.
@@ -109,11 +104,26 @@ The notification email contains a link to a page in the GDPR platform where the 
 can download a list of requested changes. This list contains information such as subject id, data id(s), old data value,
 requested (new) value for the data, a timestamp for when the request was made and so on.
 
-If the request is accepted and the data is changed as per the request, the spreadsheet from where the changed data came
-from must be re-filled out and re-uploaded to reflect the change, see the
+If a consent is revoked, the data pertaining to that consent should be deleted.
+
+For a manually updated GDPR platform, when the change request is accepted and the data is changed or deleted as per the request,
+the spreadsheet from where the changed data came from must be re-filled out and re-uploaded to reflect the change, see the
 :ref:`data access request excel template <gdpr_data_access_request_template>` section for details on this process.
 
-Making a consent change request
-===============================
+For an automated GDPR platform, it is possible to process changes automatically by triggering changes or deletions
+directly in the source systems. See the :ref:`GDPR platform developer documentation <gdpr_platform_developer_docs>` for information about
+automation and the APIs offered for implementing such a mechanism.
 
-TODO
+Making a data deletion request
+==============================
+
+A data deletion request is treated by the GDPR platform as a revocation of all consents. It is essentially a special
+case of a change request as described in the previous section. For a manually updated GDPR platform it results in
+a notice being sent to the registered handlers of each data type, with a link to downloadable spreadsheet for the
+data types the handler should process. The handler then has to manually delete the data the revoked consent
+is linked to in the source systems, and then upload a updated spreadsheet for the data in the same way as with
+a ordinary access request.
+
+For an automated GDPR platform, it is possible to process deletion requests automatically by triggering deletions/changes
+directly in the source systems. See the :ref:`GDPR platform developer documentation <gdpr_platform_developer_docs>` for information about
+automation and the APIs offered for implementing such a mechanism.
