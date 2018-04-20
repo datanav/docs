@@ -84,17 +84,17 @@ subject id property.
 Example with customers, orders and order line records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The best way yo illustrate the use of these properties is with a simple example. In this simplified usecase, we have set up
+The best way to illustrate the use of these properties is with an example. In this simplified imagined usecase, we have set up
 pipes to get data about customers, their orders and the order lines of these orders into datasets named ``customers``
 ``orders`` and ``order-lines`` respectively. The customer records contain two properties ``customer_id`` and ``email_address``
-that can be used to identify a customer, in addition to metadata about the customer. In addition to metadata about the order,
-the order records contain a reference to the customer (in the ``customer_id`` property) and a unique ``order_id`` property.
-Finally, order line records reference the order they belong to in a ``order_id`` property, in addition to information
-about the particular item in the order.
+that can be used to identify a customer (in addition to metadata about the customer). In addition to properties about the order,
+the ``orders`` records contain a reference to the customer in the ``customer_id`` property, and a unique ``order_id`` property.
+Finally, ``order-lines`` records reference the order they belong to in a ``order_id`` property (in addition to information
+about the particular item in the order).
 
-To automate this flow, we first configure the GDPR platform for these data types by creating three new rows in the
-"data type" sheet; one for "customer", "order" and "order-line" (we also need to add at least one "Purpose" in the
-"purpose sheet" to explain why we have this data).
+To automate this flow, we first need to configure the GDPR platform for these data types by creating three new rows in the
+"data type" sheet; one row for "customer", "order" and "order-line". We also need to add at least one "Purpose" in the
+"purpose sheet" to explain why we have this data and link the data types to their purpose.
 
 The "customer" row should have the level ``Personal`` and the ``Identifiers`` column should contain ``email_address`` (or
 ``customer_id``). We set the "TypeID" column to match the dataset the data resides (here ``customers``).
@@ -105,9 +105,9 @@ We set the "TypeID" column to match the dataset the data resides (``orders``).
 Finally, the "order-line" row also have level set to "Related" and the ``Identifiers`` column set to ``order_id``.
 We set its "TypeID" column to match the dataset the data resides (``order-lines``).
 
-The final step is to register the ``customers``, ``orders`` and ``order-lines`` dataset in the pipe for the
-``custom-subject-data``. This pipe is merged with the internal dataset(s) for processing the GDPR data and ultimately
-link it with a GDPR access request from a matching data subject.
+The last step needed is to register the ``customers``, ``orders`` and ``order-lines`` dataset in the pipe for the
+``custom-subject-data``. The dataset from this pipe is merged with the internal dataset(s) for processing the GDPR data
+and ultimately link it with a GDPR access request from a matching data subject.
 
 .. _gdpr_subject:
 
