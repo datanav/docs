@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-04-23
+----------
+* Processing of namespaced identifiers have gotten a decent performance boost.
+* Regression: The ``make-ni`` DTL function will now return a sorted list of NIs. Earlier the sorting was done by sorting the keys of the source entity, which is a much expensive thing to do.
+
 2018-04-19
 ----------
 * Added support for :ref:`circuit breakers <circuit_breakers_section>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
