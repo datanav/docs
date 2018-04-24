@@ -175,9 +175,9 @@ text box:
     :align: center
     :alt: Custom localization strings
 
-Each line is on the form <language>-<string_id>=<localized value>. Multiline values must be indended with four spaces.
+Each line is on the form <language>-<string_id>=<localized value>. Multiline values must be indented with four spaces.
 
-To add support for a new language you must supply copy all the localization strings for one of the existing languages,
+To add support for a new language you must copy all the localization strings for one of the existing languages,
 replace the language-code (the "en"/"no" at the start) with your new language, and translate all the strings. Example of
 a german string::
 
@@ -205,8 +205,8 @@ variable like this::
     [authentication]
     authentication_providers=
         - provider_id: Auth0
-          consumer_key: GVJvGUHRuVkn1PdqPLWPrX9wX44rOy2J
-          consumer_secret: fXbqcwncYRFaTpTFyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
+          consumer_key: GVJvXYZCuVkn1PdqPLWPrX9wX44rOy2J
+          consumer_secret: hXbqasdfYRFaTpRRyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
           openid_configuration_url: https://dap-test.eu.auth0.com/.well-known/openid-configuration
           allow_unverified_email: false
 
