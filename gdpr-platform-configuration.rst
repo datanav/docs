@@ -57,7 +57,7 @@ Domain name
 
 The domain name is the internet address (DNS name) where your GDPR data access portal should be available to the users (data
 subjects in GDPR lingo). You can choose any name you want, as long as it's not already in use by someone else.
-Your GDPR data access portal will be avaible on the web as https://selected-domain-name.sesamdata.com
+Your GDPR data access portal will be available on the web as https://selected-domain-name.sesamdata.com
 
 .. _gdpr_platform_data_type_template:
 
@@ -149,4 +149,119 @@ in Norway, it would look like:
 
     +47
 
+.. _gdpr_access_portal_custom_text_and_translation:
+
+Custom text and translation
+---------------------------
+
+The static texts displayed in the data access portal are defined in the "[localization]"-section in the
+data access portal's configuration file.
+
+To see all the available localization strings, scroll down to the "Attributes in the [localization] section" part
+of the currently active configuration:
+
+.. image:: images/gdpr_dap_default_localization_strings.png
+    :width: 800px
+    :align: center
+    :alt: Default localization strings
+
+
+You can override the default localization strings by copying the desired strings from the
+"Attributes in the [localization] section" part of the currently active configuration into the "Configuration file"
+text box:
+
+.. image:: images/gdpr_dap_localization_strings.png
+    :width: 800px
+    :align: center
+    :alt: Custom localization strings
+
+Each line is on the form <language>-<string_id>=<localized value>. Multiline values must be indended with four spaces.
+
+To add support for a new language you must supply copy all the localization strings for one of the existing languages,
+replace the language-code (the "en"/"no" at the start) with your new language, and translate all the strings. Example of
+a german string::
+
+    de-sign_in_with_google_button_text=Mit Google
+
+
+.. _gdpr_access_portal_authentication_provider:
+
+Authentication provider
+-----------------------
+By default, the GDPR data access portal will ask end-users to authenticate themselves by supplying a phonenumber or and
+email address. A one time password is then sent to the phonenumber/email address, and the user can enter the password
+to log in.
+
+Sometimes this isn't the best way of authenticating the end-users. Perhaps you already have a login-system in place
+that you wish to use, or you wish to authenticate with something other than a phonenumber or email address.
+
+To handle such cases, the databrowser can be configured to authenticate with an `OpenID connect <https://en.wikipedia.org/wiki/OpenID_Connect>`_ authentication provider. OpenID connect is a authentication standard that is widely supported (
+for instance by Goodle and Facebook).
+
+To enabled openid connect authentication, you first need some external authentication service. You must then tell
+the data access portal to use the authentication service. This is done by setting the "authentication_providers" config
+variable like this::
+
+    [authentication]
+    authentication_providers=
+        - provider_id: Auth0
+          consumer_key: GVJvGUHRuVkn1PdqPLWPrX9wX44rOy2J
+          consumer_secret: fXbqcwncYRFaTpTFyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
+          openid_configuration_url: https://dap-test.eu.auth0.com/.well-known/openid-configuration
+          allow_unverified_email: false
+
+In this example we use the `Auth0 <https://auth0.com/>`_ authentication provider.
+
+The provider_id parameter is user-selectable and can be set to anything. The only requirement is that if there are
+more than one authentication_provider, each provider_id must be unique.
+
+The consumer_key and consumer_secret must be copied from the authentication provider itself. These values are typically
+on the management web-pages of the authentication provider service.
+
+The openid_configuration_url parameter contains the url to the authentication provider's configuration settings
+endpoint.
+
+The allow_unverified_email setting can be set to True to allow users with unverified email addresses to log in.
+
+
+.. _gdpr_access_portal_extra_access_request_fields:
+
+Extra access request fields
+---------------------------
+
+This is the list of extra fields that the user (aka the data subject) must fill in when making a
+gdpr access request.
+By default this list is empty, but in some cases it can be desirable to have the user add additional
+information.
+Example usecase: the user authenticate via a phonenumber, but has to also specify their
+date of birth when making an access request. This enables the data controller to double-check
+that the phonenumber is correct.
+
+Each field id must be some unique subject identifier. The field id will used to look up the field's
+"header" and "tooltip" texts in the [localization] section.
+
+Example configuration::
+
+    [gdpr]
+    extra_access_request_fields=
+        namespace1:field1
+        namespace1:field2
+
+    [localization]
+    no-namespace1:field1__header=Ekstra felt 1
+    no-namespace1:field1__tooltip=Dette er ekstra felt 1
+    en-namespace1:field1__header=Extra field 1
+    en-namespace1:field1__tooltip=This is extra field 1
+
+    no-namespace1:field2__header=Ekstra felt 2
+    no-namespace1:field2__tooltip=Dette er ekstra felt 2
+    en-namespace1:field2__header=Extra field 2
+    en-namespace1:field2__tooltip=This is extra field 2
+
+This will look like this in the end-user GUI:
+
+.. image:: images/gdpr_dap_extra_fields.png
+    :width: 800px
+    :align: center
+    :alt: Extra access request fields
 
