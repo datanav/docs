@@ -28,16 +28,16 @@ This is a boolean value, with the following meaning:
 | False:
 | User authentication is done via an `OpenID connect <http://openid.net/connect/>`_
   authentication provider. This works by redirecting the user's web browser to
-  some external webpage that does the authentication and redirects back to the databrowser.
+  some external webpage that does the authentication and redirects back to the data access portal.
 
 | True:
 | Authentication is done by assuming that a valid username is present in
   the "X-Remote-User"-header in the http-request, NOTE: Only enable this
-  if the databrowser webapp is safely hidden behind something (for
+  if the data access portal webapp is safely hidden behind something (for
   instance httpd or nginx) that handles authentication and sets the
   header accordingly.
 
-The databrowser will attempt to map the specified username to an
+The data access portal will attempt to map the specified username to an
 email-address like this:
 
 1. Do a solr-search to find all items that has the username in any of
@@ -64,7 +64,7 @@ OpenID connect authentication provider config
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the The USE\_X\_REMOTE\_USER\_HEADER\_AUTHENTICATION config-variable is set to `False`,
-the databrowser can be configured to authenticate with an `OpenID connect <http://openid.net/connect/>`_
+the data access portal can be configured to authenticate with an `OpenID connect <http://openid.net/connect/>`_
 authentication provider. This is done by setting the "authentication_providers" config variable like this::
 
     [authentication]
@@ -83,7 +83,7 @@ The *consumer_key* and *consumer_secret* must be copied from the authentication 
 The *openid_configuration_url* parameter contains the url to the authentication provider's
 `configuration settings endpoint <http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig>`_.
 
-The *allow_unverified_email* setting can be set to True to allow users with unverified email addressed to log in.
+The *allow_unverified_email* setting can be set to True to allow users with unverified email addresses to log in.
 
 
 .. _databrowser_authorization_via_solr:
@@ -170,12 +170,12 @@ Authentication and authorization via a JWT token
 ------------------------------------------------
 
 In addition to authenticating against Google or Microsoft Live and authorizing
-based on the :ref:`data in solr <databrowser_authorization_via_solr>`, the databrowser supports authentication
+based on the :ref:`data in solr <databrowser_authorization_via_solr>`, the data access portal supports authentication
 and authorization with a `JWT <https://en.wikipedia.org/wiki/JSON_Web_Token>`_  authorization
 token created by the `Sesam portal <https://portal.sesam.io>`_.
 
 This is used we want to be able to allow users to use their Sesam portal login credentials
-to log into the databrowser. This functionality is normally only used when the databrowser has
+to log into the data access portal. This functionality is normally only used when the data access portal has
 been provisioned via the Sesam portal, and in this case the required configuration will have
 been done automatically.
 
@@ -189,13 +189,13 @@ one or more subscription-ids. Example::
     jwt_authentication_subscription_ids =
         789f4d46-91fe-418a-8652-0e7582f00d18
 
-A value of "*" means that JWTs from all subscriptions will be accepted by the databrowser.
+A value of "*" means that JWTs from all subscriptions will be accepted by the data access portal.
 
 JWT authorization
 ~~~~~~~~~~~~~~~~~
 Once the user has been authenticated with a JWT, authorization is done by looking at the documents in the solr database (see the :ref:`Authorization <databrowser_authorization_via_solr>` section for details).
 
-In addition, if the JWT grants the user the "group:Admin" role, the user will be allowed to see all the solr documents and to edit the databrowser configuration.
+In addition, if the JWT grants the user the "group:Admin" role, the user will be allowed to see all the solr documents and to edit the data access portal configuration.
 
 Logging in with a JWT
 ~~~~~~~~~~~~~~~~~~~~~
@@ -205,5 +205,5 @@ The login is done via the databrower url "/jwt_login".
 
 A "GET"-request will display a simple html form where the user can paste in a JWT string and click a "Login" button.
 
-A "POST"-request will parse the specified JWT string, store the user's credentials in the (server-side) http session and redirect to the databrowser frontpage.
+A "POST"-request will parse the specified JWT string, store the user's credentials in the (server-side) http session and redirect to the data access portal frontpage.
 

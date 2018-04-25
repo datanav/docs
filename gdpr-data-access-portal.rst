@@ -13,21 +13,15 @@ Logging into the GDPR data access portal
 
 By default, the end user (subject) can log into the GDPR data access portal by accessing its public URL.
 For example, if your public URL is https://datahub-subscription_id.domain.com the data access portal URL should be
-https://gdpr-subscription_id.domain.com
+https://gdpr-dap-subscription_id.domain.com
 
-You can find the public URL of your GDPR platform by navigating to the "Subscription" section on the left hand
-side of the management studion and clicking on the "Network" tab. Under the heading "Default URL" you can find
-the public URL of the GDPR platform. It will look like:
-
-::
-
-   https://datahub-some_subscription.sesam.cloud/api
-
-The default URL to the data access portal will then be this URL (sans "/api" at the end and "datahub" replaced by "gdpr"):
+You can find the public URL of your GDPR platform by navigating to the "GDPR data access portal" section on the left hand
+side of the management studion and clicking on the "Network" tab. Under the heading "Data Access Portal backend"
+you can find the public URL of the GDPR data access portal. It will look something like this:
 
 ::
 
-   https://gdpr-some_subscription.sesam.cloud
+   https://gdpr-dap-subscription_id.sesam.cloud
 
 
 When accessing this page the user must first identify themselves by logging on using a predefined credential such
