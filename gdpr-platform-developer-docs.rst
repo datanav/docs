@@ -31,7 +31,7 @@ indexing service coupled with a semi-automatic workflow prior to making this dat
 * :ref:`Unstructured data integration <gdpr_unstructured_data>`
 
 Prior to using the APIs for automation purposes, the GDPR platform must be configured for automation. This is
-similar to the process described in the :ref:`GDPR data types and purposes configuration <>` document, but involves
+similar to the process described in the :ref:`GDPR data types and purposes configuration <gdpr_data_types_purposes_configuration>` document, but involves
 a couple of additional columns in the data type sheet of the setup spreadsheet. The purposes sheet is unchanged.
 
 You can download a template with these additional columns :download:`here <files/GDPR setup data automated.xlsx>`
