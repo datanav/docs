@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2018-04-26
+----------
+* The sink dataset and the dead-letter dataset will now be asserted when the pipe is loaded. Receiver datasets, i.e. sink datasets that are used in combination with the ``http_endpoint`` source, will be automatically populated at the same time. Note that it is possible to opt-out of this behaviour by setting ``auto_populate_dataset`` to ``false`` on the :ref:`http_endpoint <http_endpoint_source>` source. Dead-letter datasets are automatically populated, and it is not possible to opt-out.
+
+  Note that this is a change in behaviour, but in most situations it is the right thing to do. If the initial push to the receiver is a full sync, then it might be good to set ``auto_populate_dataset`` to ``false``. The reason why this is useful for full syncs is because pipes doing hops against the dataset will then wait until the sync is complete and the dataset is populated.
+
 2018-04-23
 ----------
 * Processing of namespaced identifiers have gotten a decent performance boost.
