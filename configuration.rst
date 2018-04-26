@@ -2358,6 +2358,28 @@ Prototype
         "type": "http_endpoint"
     }
 
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``auto_populate_dataset``
+     - Boolean
+     - If true (the default) the sink dataset will be marked as populated initially. This property can only be
+       specified if the sink is of type ``dataset``.
+     - ``true``
+     - No
+
+     
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
