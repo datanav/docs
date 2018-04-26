@@ -339,9 +339,9 @@ There are three ways that one can access properties on entities:
    operates on, including nested entities.
 
    One can also refer to the content of the variables themselves,
-   e.g. ``_S.`` would refer to the source entity itself (note the dot
-   after the variable name). ``_T.`` refers to the target entity, and
-   ``_.`` refers to the current value.
+   e.g. ``"_S."`` would refer to the source entity itself (note the dot
+   after the variable name). ``"_T."`` refers to the target entity, and
+   ``"_."`` refers to the current value.
 
 2. **The "path" function**: ``["path", "placed_by", ["sorted",
    "_.amount", "_S.orders"]]``, which will first evaluate the
@@ -350,7 +350,7 @@ There are three ways that one can access properties on entities:
    first argument is an expression that resolve to either a single
    string or a list of strings. Note that the ``path`` function can
    only access property on the dictionary/entity it operates on,
-   including nested entities.
+   including nested ones.
 
 3. **The "hops" function**:
 
@@ -467,8 +467,9 @@ NI escape syntax
 
 ``"foo:bar"`` is an example of a fully qualified namespaced
 identifier. ``"bar"`` is an unqualified one and consists of only the
-identifier part. There exists two special prefixes, ``":"`` and
-``"::"``.
+identifier part.
+
+There exists two special escape prefixes, ``":"`` and ``"::"``.
 
 - If you want to make sure that the value is to be interpreted as-is
   then use the ``"::"`` prefix, e.g. ``"::bar"``. ``"::foo:bar"`` is
