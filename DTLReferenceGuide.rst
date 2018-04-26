@@ -4322,6 +4322,35 @@ Tuples
        | Returns ``[[1, 3], [1, 4], [1, 5],``
        |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
 
+Hashing
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _hash128_dtl_function:
+   * - ``hash128``
+     - | *Arguments:*
+       |   ALGORITM("murmur3")
+       |   VALUES(value-expression{>0})
+       |
+       | Generates 128 bit integer hashes from bytes and strings. Values of
+         other types are ignored. This function can be used to generate
+         content hashes. The only supported algoritm is "murmur3"
+         (`MurmurHash3 <https://en.wikipedia.org/wiki/MurmurHash>`_).
+     - | ``["hash128", "murmur3", "abc"]``
+       |
+       | Returns ``79267961763742113019008347020647561319``.
+       | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]``
+       |
+       | Returns ``[[79267961763742113019008347020647561319,``
+       |           ``114697464648834432121201791580882983835]]``.
+
 
 Math
 ----

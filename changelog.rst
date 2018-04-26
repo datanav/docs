@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-04-27
+----------
+* Added the :ref:`hash128 <hash128_dtl_function>` DTL function. It generates 128 bit integer hashes from bytes and strings.
+
 2018-04-26
 ----------
 * The sink dataset and the dead-letter dataset will now be asserted when the pipe is loaded. Receiver datasets, i.e. sink datasets that are used in combination with the ``http_endpoint`` source, will be automatically populated at the same time. Note that it is possible to opt-out of this behaviour by setting ``auto_populate_dataset`` to ``false`` on the :ref:`http_endpoint <http_endpoint_source>` source. Dead-letter datasets are automatically populated, and it is not possible to opt-out.
