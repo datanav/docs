@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-04-30
+----------
+* A partial rescan can now be scheduled :ref:`on a pump <pump_section>` by specifying the two properties ``partial_rescan_count`` and ``partial_rescan_delta``.
+
 2018-04-27
 ----------
 * Added the :ref:`hash128 <hash128_dtl_function>` DTL function. It generates 128 bit integer hashes from bytes and strings.

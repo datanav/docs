@@ -7014,6 +7014,8 @@ Prototype
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
         "rescan_cron_expression": "* * * * *",
+        "partial_rescan_run_count": 5,
+        "partial_rescan_delta": 3600,
         "run_at_startup": false,
         "max_read_retries": 0,
         "read_retry_delay": 0,
@@ -7067,7 +7069,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
 
    * - ``rescan_run_count``
-     - Integer
+     - Integer(>1)
      - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
        is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
      -
@@ -7077,6 +7079,32 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - String
      - A cron expression that indicates when the pump should schedule a full rescan of the source of the pipe the pump
        is part of. It is mutually exclusive with the ``rescan_run_count`` property.
+     -
+     -
+
+   * - ``partial_rescan_run_count``
+     - Integer(>1)
+     - How many times the pump should run before scheduling a partial rescan of the
+       source of the pipe that the pump is part of. Any complete rescans will take
+       precedence if they both apply. If this property is specified then the
+       ``partial_rescan_delta`` must also be specified.
+     -
+     -
+
+   * - ``partial_rescan_delta``
+     - Integer(>1)
+     - This specifies the delta to perform a partial rescan of.
+
+       If the since value is an integer the value is substracted.
+
+       Example: If the since value is ``12637`` and the delta value is ``100``, then
+       the resulting since value will be shifted to ``12537``.
+
+       If the since value is a timestamp then the value in seconds is substracted.
+
+       Example: If the since value is
+       ``"~t2018-04-27T15:46:40Z"`` and the delta value is 3600, then the resulting
+       since value will be shifted one hour back to ``"~t2018-04-27T14:46:40Z"``.
      -
      -
 
