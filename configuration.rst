@@ -6836,6 +6836,9 @@ Prototype
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
 character and the only non-letter or number characters allowed in the rest of the string are "_", "." or "-".
 
+Its ``_id`` should also contain only lower-case letters to avoid DNS lookup errors when used via by HTTP requests, for example
+in a URL system or via its proxy API.
+
 Properties
 ^^^^^^^^^^
 
