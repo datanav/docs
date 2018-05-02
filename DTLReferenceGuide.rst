@@ -658,7 +658,7 @@ modifiying the target entity, and has no return value.
        |
        | Continue processing only if the source entity's age is greater than 42.
        |
-       | ``["filter", ["eq", "_S.type", "person]]``
+       | ``["filter", ["eq", "_S.type", "person"]]``
        |
        | Continue processing only if the source entity's type is ``person``.
        |
@@ -2481,6 +2481,50 @@ Strings
        | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
        |
        | Returns ``["123", "xy456"]``.
+
+       .. _ljust_dtl_function:
+   * - ``ljust``
+     - | *Arguments:*
+       |   WIDTH(integer-expression{1})
+       |   FILL_CHARACTER(character-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a left-justified version of its input strings. The WIDTH defines the minimum
+         length of the returned strings. If the input strings are longer than WIDTH, then the
+         input string is returned as-is. If the input string is shorter than WIDTH then it is
+         justified to the left using the FILL_CHARACTER.
+       |
+       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
+         not a single character then the function returns ``null``.
+     - | ``["ljust", 10, "0", "123"]``
+       |
+       | Returns ``"1230000000"``.
+       |
+       | ``["ljust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
+       |
+       | Returns ``["abc  ", "def  ", "ghijklm"]``.
+
+       .. _rjust_dtl_function:
+   * - ``rjust``
+     - | *Arguments:*
+       |   WIDTH(integer-expression{1})
+       |   FILL_CHARACTER(character-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a right-justified version of its input strings. The WIDTH defines the minimum
+         length of the returned strings. If the input strings are longer than WIDTH, then the
+         input string is returned as-is. If the input string is shorter than WIDTH then it is
+         justified to the right using the FILL_CHARACTER.
+       |
+       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
+         not a single character then the function returns ``null``.
+     - | ``["rjust", 10, "0", "123"]``
+       |
+       | Returns ``"0000000123"``.
+       |
+       | ``["rjust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
+       |
+       | Returns ``["  abc", "  def", "ghijklm"]``.
 
        .. _replace_dtl_function:
    * - ``replace``
