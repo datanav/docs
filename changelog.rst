@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-05-02
+----------
+* Added the :ref:`ljust <ljust_dtl_function>` and :ref:`rjust <rjust_dtl_function>` DTL functions. They can be used to left-justify and right-justify strings.
+
 2018-04-30
 ----------
 * A partial rescan can now be scheduled :ref:`on a pump <pump_section>` by specifying the two properties ``partial_rescan_count`` and ``partial_rescan_delta``.
