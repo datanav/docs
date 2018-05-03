@@ -184,6 +184,9 @@ a german string::
     de-sign_in_with_google_button_text=Mit Google
 
 
+The texts in SMS and email notifications are handled in another way and is stored in the GDPR plattform data hub
+as data. See the :ref:`developer guide <gdpr_custom_translations>` for the documentation on how to customize or translate these texts.
+
 .. _gdpr_access_portal_authentication_provider:
 
 Authentication provider

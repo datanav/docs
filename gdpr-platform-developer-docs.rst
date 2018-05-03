@@ -20,6 +20,7 @@ For automation of the GDPR platform, there are several APIs/integration points a
 * :ref:`GDPR purpose type <gdpr_purpose_type>`
 * :ref:`GDPR data type <gdpr_data_type>`
 * :ref:`GDPR policy <gdpr_policy>`
+* :ref:`GDPR custom translations <gdpr_custom_translations>`
 
 These APIs are datasets with a defined data-structure that can be integrated with existing systems and associated
 :ref:`input <http_endpoint_source>` and :ref:`output <http_endpoint_sink>` published endpoints for JSON input
@@ -117,7 +118,7 @@ GDPR subject
 The GDPR subject dataset (dataset name ``gdpr-subject``) contains entities about data subjects with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -128,7 +129,7 @@ Prototype
 
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -153,7 +154,7 @@ Properties
      - Yes
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-subject`` dataset is the ``gdpr-subject-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -165,7 +166,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-subject`` dataset is the ``gdpr-subject-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -179,7 +180,7 @@ The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 .. _gdpr_subject_internal_api:
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-subject``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -194,7 +195,7 @@ GDPR consent
 The GDPR consemt dataset (dataset name ``gdpr-consent``) contains entities with information about consent purposes with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -215,7 +216,7 @@ Prototype
     }
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -308,7 +309,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-consent`` dataset is the ``gdpr-consent-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -320,7 +321,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-consent`` dataset is the ``gdpr-consent-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -332,7 +333,7 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-consent``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -348,7 +349,7 @@ The GDPR subject consent dataset (dataset name ``gdpr-subject-consent``) is used
 data subject. It contains entities with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -363,7 +364,7 @@ Prototype
 
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -412,7 +413,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-subject-consent`` dataset is the ``gdpr-subject-consent-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -424,7 +425,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-subject-consent`` dataset is the ``gdpr-subject-consent-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -436,7 +437,7 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-subject-consent``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -452,7 +453,7 @@ The GDPR purpose dataset (dataset name ``gdpr-purpose``) is used to record the p
 is collecting data. It contains entities with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -473,7 +474,7 @@ Prototype
    }
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -568,7 +569,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-purpose`` dataset is the ``gdpr-purpose-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -580,7 +581,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-purpose`` dataset is the ``gdpr-purpose-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -592,7 +593,7 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-purpose``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -608,7 +609,7 @@ The GDPR purpose type dataset (dataset name ``gdpr-purpose-type``) is used to re
 is collecting data. It contains entities with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -622,7 +623,7 @@ Prototype
 
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -661,7 +662,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-purpose-type`` dataset is the ``gdpr-purpose-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -673,7 +674,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-purpose-type`` dataset is the ``gdpr-purpose-type-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -685,7 +686,7 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-purpose-type``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -704,7 +705,7 @@ The GDPR data type dataset (dataset name ``gdpr-data-type``) is used to record t
 is collecting. It contains entities with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -721,7 +722,7 @@ Prototype
    }
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -786,7 +787,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-data-type`` dataset is the ``gdpr-data-type-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -798,7 +799,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-data-type`` dataset is the ``gdpr-data-type-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -810,7 +811,7 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-data-type``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
@@ -826,7 +827,7 @@ The GDPR policy dataset (dataset name ``gdpr-policy``) is used to record the typ
 It contains entities with the following datastructure:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -843,7 +844,7 @@ Prototype
    }
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -912,7 +913,7 @@ Properties
      -
 
 Input API
----------
+^^^^^^^^^
 
 The input API for the ``gdpr-policy`` dataset is the ``gdpr-policy-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
 Its URL is on the form:
@@ -924,7 +925,7 @@ Its URL is on the form:
 The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
 
 Output API
-----------
+^^^^^^^^^^
 
 The output API for the ``gdpr-policy`` dataset is the ``gdpr-policy-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
 Its URL is on the form:
@@ -936,12 +937,171 @@ Its URL is on the form:
 The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API must be a dataset with the id ``custom-policy``. This dataset is required to contain entities on the
 form outlined above. Any entities from this dataset will be merged with any data posted to the input API endpoint
 before being stored in the ``gdpr-policy`` dataset. The entites in this dataset are available externally through
 the output API pipe.
+
+.. _gdpr_custom_translations:
+
+GDPR custom translations
+========================
+
+The text contents of SMS, email messages and some other static strings used in dynamic content generation in the
+GDPR plattform exists as data in the data hub. They can be customized by editing the pipe called ``custom-translations``.
+The pipe has an embedded source with entities containing translation information for a certain set of predefined
+keys. The structure of each of the entities in the embedded source is on the form:
+
+
+::
+
+    {
+        "_id": "translation-item-key",
+        "translations": {
+            "iso-code": {
+                "property-id": "Translation text here",
+                "other-property-id": "Other translation text here",
+            },
+            "other-iso-code": {
+                "property-id": "Other language translation text here",
+                "other-property-id": "Other language translation text for other-property-id here"
+            }
+            ..
+        }
+    }
+
+
+The ``iso-code`` should be a ISO language code on the form ``en`` or ``en-us``, and the actual property keys will
+wary from item to item.
+
+Description of the translation item keys:
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
+
+   * - Key
+     - Description
+
+   * - ``gdpr_welcome_text``
+     - This entity represents the text used by the "Welcome" screen in the GDPR Data Access portal.
+
+   * - ``access_request_mail``
+     - This entity represents the text used to send emails to accounts registered as being responsible for a particular
+       GDPR data type in the setup excel sheet. It is sent whenever a new GDPR Access Request is received from the
+       GDPR Data Access portal.
+
+   * - ``access_request_delete_mail``
+     - This entity represents the text used to send emails to accounts registered as being responsible for a particular
+       GDPR data type in the setup excel sheet. It is sent whenever a new GDPR Delete Request is received from the
+       GDPR Data Access portal.
+
+   * - ``change_request_mail``
+     - This entity represents the text used to send emails to accounts registered as being responsible for a particular
+       GDPR data type in the setup excel sheet. It is sent whenever a new GDPR Access Request for changing registered data
+       is received from the GDPR Data Access portal.
+
+   * - ``subject_data_available_mail``
+     - This entity represents the text used to send emails to a GDPR data subject that has previously requested data
+       via a GDPR Access Request. It is sent whenever someone responsible for a GDPR data type has filled out and
+       uploaded collected data in the data upload excel spread sheet (previously generated by the GDPR access request).
+
+The full list of standard items is (english and norwegian translations are provided by default):
+
+::
+
+    {
+      "_id": "gdpr_welcome_text",
+      "translations": {
+        "en": {
+          "rdf:title": "Welcome",
+          "rdfs:comment": "The goal of GDPR is transparency of what personal data is kept and what is is used for. This means you have the right to see all data we keep about you, even the data that is not obviosly understandable to you. The purposes of why we keep data should be well described. Please contact us if you have any questions about your data. Use this mail adress: info@sesam.io"
+        },
+        "no": {
+          "rdf:title": "Velkommen",
+          "rdfs:comment": "Målet for GDPR er åpenhet rundt hvilke personlige data som er lagret og hva det brukes til. Dette innebærer at du har rett til å se alle data vi har lagret om deg, selv de data som ikke er åpenbart forståelig for deg. Formålet for hvorfor vi har disse dataene skal være tydelig beskrevet. Ta kontakt med oss om du har noen spørsål om dine data. Bruk denne epost addressen: info@sesam.io"
+        }
+      }
+    }, {
+      "_id": "access_request_mail",
+      "translations": {
+        "en": {
+          "body_template": "A GDPR data access request from {{ contactinfo }} for data that you have been set as responsible for has been submitted to the GDPR portal. <br><br>You can download the Excel file to fill out at <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/access-requests?email={{ contact }}&id={{ requestId }}\"/>here</a>.",
+          "subject_template": "GDPR data access request submitted by {{ contactinfo }}",
+          "text_body_template": ""
+        },
+        "no": {
+          "body_template": "En GDPR data tilgangsforespørsel fra {{ contactinfo }} som du er oppgitt som ansvarlig for har blitt registrert i GDPR portalen.<br><br>Du kan laste ned en Excel mal som du kan fylle ut <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/access-requests?email={{ contact }}&id={{ requestId }}\"/>her</a>.",
+          "subject_template": "GDPR data tilgangsforespørsel mottatt fra {{ contactinfo }}",
+          "text_body_template": ""
+        }
+      }
+    }, {
+      "_id": "access_request_delete_mail",
+      "translations": {
+        "en": {
+          "body_template": "A GDPR data access request from {{ contactinfo }} for deletion of data that you have been set as responsible for has been submitted to the GDPR portal. <br><br>You can download the Excel file to fill out at <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/access-requests?email={{ contact }}&id={{ requestId }}\"/>here</a>.",
+          "subject_template": "GDPR data access data deletion request submitted by {{ contactinfo }}",
+          "text_body_template": ""
+        },
+        "no": {
+          "body_template": "En GDPR data sletting forespørsel fra {{ contactinfo }} som du er oppgitt som ansvarlig for har blitt registrert i GDPR portalen.<br><br>Du kan laste ned en Excel mal som du kan fylle ut <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/access-requests?email={{ contact }}&id={{ requestId }}\"/>her</a>.",
+          "subject_template": "GDPR data sletting forespørsel mottatt fra {{ contactinfo }}",
+          "text_body_template": ""
+        }
+      }
+    }, {
+      "_id": "change_request_mail",
+      "translations": {
+        "en": {
+          "body_template": "A GDPR data change request from {{ contactinfo }} for data that you have been set as responsible for has been submitted to the GDPR portal. <br><br>You can download a Excel file with a list of change requests <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/change-requests?email={{ recipients }}\"/>here</a>.",
+          "subject_template": "GDPR change request submitted by {{ contactinfo }}",
+          "text_body_template": ""
+        },
+        "no": {
+          "body_template": "En GDPR data endringsforespørsel fra {{ contactinfo }} for data som du er oppgitt som ansvarlig for har blitt registrert i GDPR portalen.<br><br>Du kan laste ned en oversikt i Excel format <a href=\"https://portal.sesam.io/unified/subscription/$ENV(subscription)/gdpr/change-requests?email={{ recipients }}\"/>her</a>.",
+          "subject_template": "GDPR endringsforespørsel mottatt fra {{ contactinfo }}",
+          "text_body_template": ""
+        }
+      }
+    }, {
+      "_id": "subject_data_available_mail",
+      "translations": {
+        "en": {
+          "body_template": "Your requested data is now available in the GDPR portal. <br><br>Please log in at <a href=\"$ENV(portal-url)\">GDPR portal</a> to see it.",
+          "subject_template": "GDPR data access request results available",
+          "text_body_template": ""
+        },
+        "no": {
+          "body_template": "Data du har forespurt er tilgjengelig i GDPR portalen.<br><br>Logg inn i <a href=\"$ENV(portal-url)\">GDPR portalen</a> for å se dem.",
+          "subject_template": "GDPR data tilgjengelig",
+          "text_body_template": ""
+        }
+      }
+    }, {
+      "_id": "subject_data_available_sms",
+      "translations": {
+        "en": {
+          "body_template": "Your requested data is now available in the GDPR portal. Please log in at $ENV(portal-url) to see it."
+        },
+        "no": {
+          "body_template": "Data du har forespurt er tilgjengelig i GDPR portalen. Logg inn i $ENV(portal-url) for å se dem."
+        }
+      }
+    }
+
+When customizing the content for a particular key you should always start with a copy from this official list.
+Place the copy into the embedded source's ``entities`` array and either change the texts as needed or add a new
+language key to add text for a new language. Please do not change the macros embedded in the text strings
+(within ``{{`` and ``}}`` blocks and the ``$ENV(..)`` variables).
+
+After saving the ``custom-translations`` pipe, make sure you press "start" on the pipe to update the GDPR platform
+contents. Note that the changes will not affect already emitted notifications or objects - only new ones.
 
 .. _gdpr_unstructured_data:
 
@@ -964,7 +1124,7 @@ vetting proxess, the contents delivered to the user may be withheld completely o
 replaced by a reduced or redacted version.
 
 Overview of the solution
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The solution consists of several parts:
 
@@ -977,7 +1137,7 @@ The solution consists of several parts:
 * Content encryption service
 
 Document sources
-----------------
+^^^^^^^^^^^^^^^^
 
 The input to the system is in the form of one or more document sources. Document sources are microservices which
 deliver information (metadata) about a particular repository of unstructured data (files), for example a file
@@ -989,7 +1149,7 @@ document source is not already in the required form, the pipe reading from this 
 the input to match the following form:
 
 Prototype
----------
+^^^^^^^^^
 
 ::
 
@@ -1006,7 +1166,7 @@ Prototype
 
 
 Properties
-----------
+^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -1073,27 +1233,27 @@ See `https://github.com/sesam-community/file-share-service <https://github.com/s
 an example of such a service.
 
 Internal API
-------------
+^^^^^^^^^^^^
 
 The internal API of the unstructured data framework is a dataset with the id ``custom-documents``. This dataset is
 required to contain entities on the form outlined above. The associated ``custom-documents`` pipe is a merge pipe with
 the complete list of document source datasets that should be used by the indexing service.
 
 Content extractor service
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The contents of the ``custom-documents`` dataset is fed to the content extractor service. This service will download
 the file pointed to by the ``gdpr-document:extract-content`` URL and attempt to extract all text information it can
 from the file.
 
 Document index
---------------
+^^^^^^^^^^^^^^
 
 The extracted textual information is indexed together with the properties outline above (except ``gdpr-document:metadata``)
 and put into a search engine/index for indexing. The original file is *not* stored in this process.
 
 Document search service
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Whenever a new GDPR access request is created in the GDPR platform, a query is performed against the indexed documents
 using the configured subject data properties (email, phone-number, customer id's and so on). The result of this
@@ -1105,7 +1265,7 @@ to the index. The query is a *point-in-time* query and as such reflects the stat
 in time. To update the search result, a new GDPR access request must be submitted by the data subject.
 
 Manual vetting of search results
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 No data is relayed to the GDPR data access portal before a human has vetted this search result. This is done by
 downloading :ref:`the data access request excel template <gdpr_data_access_request_template>`.
@@ -1121,7 +1281,7 @@ When the vetting process is finished and all data sheets for all data types have
 be uploaded to the GDPR portal, as described in the :ref:`GDPR data access request template <gdpr_data_access_request_template>` section.
 
 Content encryption service
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, after the vetted search result have been processed by the GDPR portal, the metadata about the document will be
 encrypted using the public key of the data subject and then transmitted to the GDPR data access portal.
