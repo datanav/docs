@@ -246,23 +246,26 @@ The value of the configuration option is a comma-separated list of the contact i
 specify. Possible values are "email" and "mobile_phone". If more than one type is listed, the user can choose
 which one to specify.
 
-    [localization]
-    en-contactinfo__header=Contact information
-    en-contactinfo__tooltip=Please enter a mobile phone number or an email address.
-    no-contactinfo__header=Kontaktinformasjon
-    no-contactinfo__tooltip=Vennligst tast inn et mobiltelefon nummer eller en epost addresse.
-
-
-Technical details: When the user enters a phone number, it is validated using the regular expression in the
-"otp_valid_mobile_phone_number_regexp" config option in the "authentication" section. Email addresses are
-validated using the "otp_valid_email_address_regexp" config option.
-
 This will look like this in the end-user GUI:
 
 .. image:: images/gdpr_dap_contactinfo_field.png
     :width: 800px
     :align: center
     :alt: Contactinfo access request field
+
+
+The header-text and the mouse-over tooltip for the contact information field can be customized by tweaking
+one or more of the following localization strings::
+
+    [localization]
+    en-contactinfo__header=Contact information
+    en-contactinfo__tooltip=Please enter a mobile phone number or an email address.
+    no-contactinfo__header=Kontaktinformasjon
+    no-contactinfo__tooltip=Vennligst tast inn et mobiltelefon nummer eller en epost addresse.
+
+Technical details: When the user enters a phone number, it is validated using the regular expression in the
+"otp_valid_mobile_phone_number_regexp" config option in the "authentication" section. Email addresses are
+validated using the "otp_valid_email_address_regexp" config option.
 
 
 .. _gdpr_access_portal_extra_access_request_fields:
