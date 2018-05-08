@@ -226,6 +226,47 @@ endpoint.
 
 The allow_unverified_email setting can be set to True to allow users with unverified email addresses to log in.
 
+.. _gdpr_access_portal_access_request_contactinfo:
+
+
+Custom contact info
+-------------------
+
+In some cases the authentication provider doesn't provide a phone number or email address that the user can be reached
+on. This can be the case when the user is authenticated via `BankID <https://bankid.no>`_. Since the GDPR platform needs
+a way to send notifications to the user, the GDPR data access portal can be configured to require the user to manually
+enter the contact information when making an data access request.
+
+This is done by setting the "access_request_contactinfo" option on the data access portal, like this::
+
+    [gdpr]
+    access_request_contactinfo=email,mobile_phone
+
+The value of the configuration option is a comma-separated list of the contact information types the user can
+specify. Possible values are "email" and "mobile_phone". If more than one type is listed, the user can choose
+which one to specify.
+
+This will look like this in the end-user GUI:
+
+.. image:: images/gdpr_dap_contactinfo_field.png
+    :width: 800px
+    :align: center
+    :alt: Contactinfo access request field
+
+
+The header-text and the mouse-over tooltip for the contact information field can be customized by tweaking
+one or more of the following localization strings::
+
+    [localization]
+    en-contactinfo__header=Contact information
+    en-contactinfo__tooltip=Please enter a mobile phone number or an email address.
+    no-contactinfo__header=Kontaktinformasjon
+    no-contactinfo__tooltip=Vennligst tast inn et mobiltelefon nummer eller en epost addresse.
+
+Technical details: When the user enters a phone number, it is validated using the regular expression in the
+"otp_valid_mobile_phone_number_regexp" config option in the "authentication" section. Email addresses are
+validated using the "otp_valid_email_address_regexp" config option.
+
 
 .. _gdpr_access_portal_extra_access_request_fields:
 
@@ -267,4 +308,3 @@ This will look like this in the end-user GUI:
     :width: 800px
     :align: center
     :alt: Extra access request fields
-
