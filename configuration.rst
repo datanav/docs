@@ -262,8 +262,7 @@ Properties
        can be used to buffer up entities so that they can be written together to the sink in
        one go. The sink must support batch for the bulking to happen. This may increase the
        throughput of the pipe, at the cost of a little extra memory usage. If the batch fails,
-       then entities will be retried individually. The pipe offset will be saved after each
-       batch if the source supports this.
+       then entities will be retried individually.
      - 100
      -
 
@@ -4820,14 +4819,14 @@ Properties
        or ``delimiter`` characters. A value of "non-numeric" means all non-numeric values will be quoted. The "minimal"
        setting (the default) means only fields with contents that need to be quoted will be quoted. Finally, the ``none``
        value means do not quote (note this can produce broken CSV files if there are values that have to be quoted).
-     - "minimal"
+     - ``"minimal"``
      -
 
    * - ``delimiter``
      - String
      - The character to use as field separator. It will also affect which fields will be quoted if the ``quoting`` setting
        is set to ``minimal"`` (which is the default). The default value is to use the comma (``","``) character.
-     - ","
+     - ``","``
      -
 
    * - ``doublequote``
@@ -4836,13 +4835,13 @@ Properties
        ``true`` (the default), the character is doubled (repeated). When set to ``false``, the ``escapechar`` property
        setting is used as a prefix to the ``quotechar``. If ``doublequoting`` is set to ``true` but ``escapechar`` is
        not set, the backward slash character (``\``) is used as prefix.
-     - true
+     - ``true``
      -
 
    * - ``include_header``
      - Boolean
      - Controls if the ``columns`` property should be included as the header of the CSV file produced.
-     - true
+     - ``true``
      -
 
    * - ``escapechar``
@@ -4850,21 +4849,21 @@ Properties
      - A one-character string used by the sink to escape ``delimiter`` characters in fields if ``quoting`` is set to
        ``none`` and the ``quotechar`` if ``doublequote`` is set to ``false``. The default is ``null`` which disables
        escaping (except if ``doublequote`` is set to ``true``, in which case the default is ``\``).
-     - null
+     - ``null``
      -
 
    * - ``lineterminator``
      - String
      - A character sequence to use as the EOL marker in the CSV output. The default is carriage return plus linefeed
        (``"\r\n"``).
-     - "\r\n"
+     - ``"\r\n"``
      -
 
    * - ``quotechar``
      - String
      - A one-character string that controls how to quote field values. The default is the double quote character. See
        ``doublequote`` and ``escapechar`` for related settings.
-     - "\""
+     - ``"\""``
      -
 
    * - ``encoding``
@@ -4872,7 +4871,7 @@ Properties
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
        valid values.
-     - "utf-8"
+     - ``"utf-8"``
      -
       .. _csv_endpoint_sink_param_skip_deleted_entities:
 
@@ -4883,7 +4882,7 @@ Properties
        the "_deleted" attribute in the ``columns`` list, so that rows that represents deleted entities can be
        recognized. (If you need to rename or reformat the "_deleted" attribute you can do that by adding a
        :ref:`DTL transform <dtl_transform>` to the pipe.)
-     - true
+     - ``true``
      -
 
    * - ``filename``
@@ -4899,7 +4898,7 @@ Properties
      - String
      - This property provides a hint to HTTP clients how to render the file data. The valid values are ``attachment``
        and ``inline``. It is used in the ``Content-Disposition`` header and the behaviour is client specific.
-     - ``attachment``
+     - ``"attachment"``
      -
 
 Example configuration
