@@ -65,26 +65,9 @@ OpenID connect authentication provider config
 
 If the The USE\_X\_REMOTE\_USER\_HEADER\_AUTHENTICATION config-variable is set to `False`,
 the data access portal can be configured to authenticate with an `OpenID connect <http://openid.net/connect/>`_
-authentication provider. This is done by setting the "authentication_providers" config variable like this::
+authentication provider.
 
-    [authentication]
-    authentication_providers=
-        - provider_id: Auth0
-          consumer_key: GVJvGUHRuVkn1PdqPLWPrX9wX44rOy2J
-          consumer_secret: fXbqcwncYRFaTpTFyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
-          openid_configuration_url: https://dap-test.eu.auth0.com/.well-known/openid-configuration
-          allow_unverified_email: true
-
-The *provider_id* parameter is user-selectable and can be set to anything. The only requirement is that if there
-are more than one authentication_provider, each *provider_id* must be unique.
-
-The *consumer_key* and *consumer_secret* must be copied from the authentication provider itself.
-
-The *openid_configuration_url* parameter contains the url to the authentication provider's
-`configuration settings endpoint <http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig>`_.
-
-The *allow_unverified_email* setting can be set to True to allow users with unverified email addresses to log in.
-
+.. include:: databrowser-authentication_providers_examples_and_docs-for_include.rst
 
 .. _databrowser_authorization_via_solr:
 

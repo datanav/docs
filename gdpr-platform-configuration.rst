@@ -187,10 +187,10 @@ a german string::
 The texts in SMS and email notifications are handled in another way and is stored in the GDPR plattform data hub
 as data. See the :ref:`developer guide <gdpr_custom_translations>` for the documentation on how to customize or translate these texts.
 
-.. _gdpr_access_portal_authentication_provider:
+.. _gdpr_access_portal_authentication_providers:
 
-Authentication provider
------------------------
+Authentication providers
+------------------------
 By default, the GDPR data access portal will ask end-users to authenticate themselves by supplying a phonenumber or and
 email address. A one time password is then sent to the phonenumber/email address, and the user can enter the password
 to log in.
@@ -201,30 +201,8 @@ that you wish to use, or you wish to authenticate with something other than a ph
 To handle such cases, the databrowser can be configured to authenticate with an `OpenID connect <https://en.wikipedia.org/wiki/OpenID_Connect>`_ authentication provider. OpenID connect is a authentication standard that is widely supported (
 for instance by Goodle and Facebook).
 
-To enabled openid connect authentication, you first need some external authentication service. You must then tell
-the data access portal to use the authentication service. This is done by setting the "authentication_providers" config
-variable like this::
+.. include:: databrowser-authentication_providers_examples_and_docs-for_include.rst
 
-    [authentication]
-    authentication_providers=
-        - provider_id: Auth0
-          consumer_key: GVJvXYZCuVkn1PdqPLWPrX9wX44rOy2J
-          consumer_secret: hXbqasdfYRFaTpRRyVQKfrxR8SKWfjfZpdajPXTBfmntVV4y2tR676WHC_5A3mHR
-          openid_configuration_url: https://dap-test.eu.auth0.com/.well-known/openid-configuration
-          allow_unverified_email: false
-
-In this example we use the `Auth0 <https://auth0.com/>`_ authentication provider.
-
-The provider_id parameter is user-selectable and can be set to anything. The only requirement is that if there are
-more than one authentication_provider, each provider_id must be unique.
-
-The consumer_key and consumer_secret must be copied from the authentication provider itself. These values are typically
-on the management web-pages of the authentication provider service.
-
-The openid_configuration_url parameter contains the url to the authentication provider's configuration settings
-endpoint.
-
-The allow_unverified_email setting can be set to True to allow users with unverified email addresses to log in.
 
 .. _gdpr_access_portal_access_request_contactinfo:
 
