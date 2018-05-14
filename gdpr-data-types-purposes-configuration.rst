@@ -136,12 +136,16 @@ The data type properties
 
    * - ``ID``
      - The ID of the data type - it is automatically computed from the other columns. Do not edit it manually.
+       Note that the maximum length of this field is 32 characters. If the computed contents is larger than 32 characters,
+       please limit the size of the "Type" and/or "System" field to stay within the 32 character limit.
 
    * - ``Type``
-     - A short description what type of data this is (for example "Customer" or "Employee")
+     - A short description what type of data this is (for example "Customer" or "Employee"). Note that the combination
+       of "Type" and "System" must be less than 32 characters (including whitespace).
 
    * - ``System``
-     - A short name of the system where the data is residing (for example "CRM" or "ActiveDirectory").
+     - A short name of the system where the data is residing (for example "CRM" or "ActiveDirectory"). Note that the combination
+       of "Type" and "System" must be less than 32 characters (including whitespace).
 
    * - ``Description``
      - A longer description of the type of data to make it easier for the data subject to understand what the data is
@@ -152,7 +156,8 @@ The data type properties
 
    * - ``Contact``
      - An comma separated list of email-addresses for who should get notified when a GDPR data access request or change
-       request is received by the GDPR platform.
+       request is received by the GDPR platform. The should be no whitespace before or after the comma, if the contents
+       contain a comma-separated list of email addresses.
 
    * - ``Purposes``
      - All columns to the right hand side is automatically generated from the "purposes" sheet. It creates a matrix
