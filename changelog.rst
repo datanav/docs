@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-05-29
+----------
+* Added the :ref:`checkpoint_interval <pipe_batching>` property to the pipe. The default has been changed from ``1`` to ``100``, which means that the pipe offset is now saved after every 100 batches instead of after every batch. The default is effectively every 10000 entities, but since it is dependent on ``batch_size`` the default value is ``100`` (i.e. 10000/``batch_size``). Note that the pipe offset is always saved at the end of every sync if it changed.
+* Pipes that perform deletion tracking will now have their pipe offset and deletion tracking state saved every 15 minutes or so. If a pipe is interrupted it will now be able to continue doing deletion tracking from where it last saved it's state.
+
 2018-05-02
 ----------
 * Added the :ref:`ljust <ljust_dtl_function>` and :ref:`rjust <rjust_dtl_function>` DTL functions. They can be used to left-justify and right-justify strings.

@@ -257,12 +257,23 @@ Properties
      -
 
    * - ``batch_size``
-     - Integer
+     - Integer (>1)
      - The number of source entities to consume before writing to the sink. The batch size
        can be used to buffer up entities so that they can be written together to the sink in
        one go. The sink must support batch for the bulking to happen. This may increase the
-       throughput of the pipe, at the cost of a little extra memory usage. If the batch fails,
+       throughput of the pipe, at the cost of extra memory usage. If the batch fails,
        then entities will be retried individually.
+     - 100
+     -
+
+   * - ``checkpoint_interval``
+     - Integer (>1)
+     - Specifies how often the pipe offset is saved. It says how many batches
+       must be processed before the pipe offset is saved the next time. Note that the pipe
+       offset is always saved at the end of the sync if it changed.
+
+       The default value is 10000/``batch_size`` = 100, i.e. the
+       checkpoint happens every 100 batches.
      - 100
      -
 
