@@ -74,3 +74,38 @@ The provider-info can contain the following optional parameters:
     scope:
       The openid scopes to request from the provider.
       Defaults to "openid profile email"
+
+
+Configuring an OpenId connect authentication provider service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a user wants to log in to the GDPR portal via an OpenID Connect authenticationservice, the following happens:
+  1. The GDPR portal redirects the user's webbrowser to the authenticationservice's login-page.
+  2. The user logs in (for instance via a norwegian BankID)
+  3. The authenticationservice redirect the user's webbrowser back to the GDPR portal with an authentication-code in the url.
+
+Most authenticationservices has a list of urls that can be used in step (3). For the GDPR portal, the url is on this form::
+
+    <Data Access Portal backend url>/login_callback/<provider_id>
+
+Example::
+
+    https://gdpr-dap-f65275bf.sesam.cloud/login_callback/BankID
+
+The "provider_id" is the id you specified in the "authentication_providers" configuration option.
+
+You can find the "Data Access Portal backend url" on the "Network"-tab on the "GDPR access portal" page:
+
+.. image:: images/gdpr_dap_backend_url.png
+    :width: 800px
+    :align: center
+    :alt: Data Access Portal backend url
+
+In addition, some authenticationservices has a list of urls that it is allowed to redirect back to after the user has
+logged out. For the GDPR portal, this url is on this form::
+
+    <Data Access Portal backend url>
+
+Example::
+
+    https://gdpr-dap-f65275bf.sesam.cloud
