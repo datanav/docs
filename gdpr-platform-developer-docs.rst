@@ -1264,7 +1264,7 @@ Properties
 
    * - ``gdpr-document:filename``
      - String
-     - The filename of the document file (OPTIONAL). Note that if the filename is not proviced the GDPR data access portal
+     - The filename of the document file (OPTIONAL). Note that if the filename is not provided the GDPR data access portal
        will attempt to generate one based on ``gdpr-document:document_id`` when the file is downloaded by the user.
      -
      -
