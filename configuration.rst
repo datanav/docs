@@ -257,7 +257,7 @@ Properties
      -
 
    * - ``batch_size``
-     - Integer (>1)
+     - Integer(>=1)
      - The number of source entities to consume before writing to the sink. The batch size
        can be used to buffer up entities so that they can be written together to the sink in
        one go. The sink must support batch for the bulking to happen. This may increase the
@@ -267,7 +267,7 @@ Properties
      -
 
    * - ``checkpoint_interval``
-     - Integer (>1)
+     - Integer(>=1)
      - Specifies how often the pipe offset is saved. It says how many batches
        must be processed before the pipe offset is saved the next time. Note that the pipe
        offset is always saved at the end of the sync if it changed.
@@ -2206,7 +2206,7 @@ Properties
      - Yes
 
    * - ``page_size``
-     - Integer (>1)
+     - Integer(>=1)
      - If the page size is specified then the source will download the data across multiple requests until there is no more data left to download. The ``limit`` request parameter is passed to the endpoint to cap the number of entities in each response.
 
        .. NOTE::
@@ -7085,7 +7085,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
 
    * - ``rescan_run_count``
-     - Integer(>1)
+     - Integer(>=1)
      - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
        is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
      -
@@ -7099,7 +7099,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
 
    * - ``partial_rescan_run_count``
-     - Integer(>1)
+     - Integer(>=1)
      - How many times the pump should run before scheduling a partial rescan of the
        source of the pipe that the pump is part of. Any complete rescans will take
        precedence if they both apply. If this property is specified then the
@@ -7108,7 +7108,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
 
    * - ``partial_rescan_delta``
-     - Integer(>1)
+     - Integer(>=1)
      - This specifies the delta to perform a partial rescan of.
 
        If the since value is an integer the value is substracted.
