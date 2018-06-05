@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-06-05:
+-----------
+* The old ``dead_letter_dataset`` :ref:`pump configuration <pump_section>` option (string) has been deprecated and replaced by ``use_dead_letter_dataset``, which is a boolean flag (false by default). If set to true, the id of the dead letter dataset is automatically genrated and linked to the parent pipe id (``system:dead-lette:pipe-id``). This new dataset will inherit the ACLs from its parent pipe (like pump execution datasets). If the pipe is removed, the automatically created dataset is also removed. The old ``dead_letter_dataset`` property will continue to work as before but will be removed at some future date.
+
 2018-05-29
 ----------
 * Added the :ref:`checkpoint_interval <pipe_batching>` property to the pipe. The default has been changed from ``1`` to ``100``, which means that the pipe offset is now saved after every 100 batches instead of after every batch. The default is effectively every 10000 entities, but since it is dependent on ``batch_size`` the default value is ``100`` (i.e. 10000/``batch_size``). Note that the pipe offset is always saved at the end of every sync if it changed.
