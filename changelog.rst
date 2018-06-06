@@ -3,7 +3,7 @@ Changelog
 
 2018-06-05:
 -----------
-* The old ``dead_letter_dataset`` :ref:`pump configuration <pump_section>` option (string) has been deprecated and replaced by ``use_dead_letter_dataset``, which is a boolean flag (false by default). If set to true, the id of the dead letter dataset is automatically generated and linked to the parent pipe id (``system:dead-lette:pipe-id``). This new dataset will inherit the ACLs from its parent pipe (like pump execution datasets). If the pipe is removed, the automatically created dataset is also removed. The old ``dead_letter_dataset`` property will continue to work as before but will be removed at some future date.
+* The old ``dead_letter_dataset`` :ref:`pump configuration <pump_section>` option (string) has been deprecated and replaced by ``use_dead_letter_dataset``, which is a boolean flag (false by default). If set to true, the id of the dead letter dataset is automatically generated and linked to the parent pipe id (``system:dead-letter:pipe-id``). Note that entities written to this new dataset will no longer have the pipe id as part of their ``_id`` property. This new dataset will inherit the ACLs from its parent pipe (like pump execution datasets). If the pipe is removed, the automatically created dataset is also removed. The old ``dead_letter_dataset`` property will continue to work as before but will be removed at some future date.
 
 2018-05-29
 ----------
