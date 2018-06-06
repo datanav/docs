@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-06-06
+----------
+* Changed default behaviour of the :ref:'CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
+
 2018-05-29
 ----------
 * Added the :ref:`checkpoint_interval <pipe_batching>` property to the pipe. The default has been changed from ``1`` to ``100``, which means that the pipe offset is now saved after every 100 batches instead of after every batch. The default is effectively every 10000 entities, but since it is dependent on ``batch_size`` the default value is ``100`` (i.e. 10000/``batch_size``). Note that the pipe offset is always saved at the end of every sync if it changed.
