@@ -3,7 +3,7 @@ Changelog
 
 2018-06-06
 ----------
-* The :ref:`is_chronological <sql_source>` property on the :ref:`SQL source <sql_source>` is now dynamic as it is ``true`` if the ``updated_column`` property is set.
+* The :ref:`is_chronological <sql_source>` property on the :ref:`SQL source <sql_source>` is now dynamic as it is ``true`` if the ``updated_column`` and ``table`` properties are set.
 * Added the :ref:`is_chronological_full <sql_source>` property to the :ref:`SQL source <sql_source>` . If explicity set to ``false`` then a full run will not consider the source to be chronological even though it is chronological in incremental runs. The default value is the value of the ``is_chronological``, but can be set to ``false``.
   
 2018-05-29

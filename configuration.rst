@@ -1523,7 +1523,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``true`` (Default)
 
    * - ``is_chronological``
-     - ``false`` (Dynamic: ``true`` if ``updated_column`` set)
+     - ``false`` (Dynamic: if ``table`` and ``updated_column`` set then defaults to ``true``, if ``query`` then it can be set explicitly)
 
    * - ``is_chronological_full``
      - ``false`` (Dynamic: ``true`` if ``is_chronological`` is effectively ``true`` and this property is not explicity set to ``false``)
