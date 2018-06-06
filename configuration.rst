@@ -1740,7 +1740,8 @@ Properties
 
    * - ``auto_dialect``
      - Boolean
-     - Flag that hints to the source that it should try to guess the dialect of the ``CSV`` file on its own.
+     - Flag that hints to the source that it should try to guess the dialect of the ``CSV`` file on its own. Note
+       that if ``dialect`` is explicitly set, ``auto_dialect`` is ignored.
      - true
      -
 
@@ -1748,7 +1749,8 @@ Properties
      - String
      - Encodes what type of CSV file the file is. This is basically presets of the other properties.
        The recognised values are ``"excel"``, ``"excel_tab"`` and ``"unix_dialect"``.
-       TODO: explain what they mean.
+       Note that if ``dialect`` is explicitly set, ``auto_dialect`` is ignored. If both ``auto_dialect`` is ``false`` and
+       no ``dialect`` has been explicitly set, the dialect chosen will be ``excel``.
      -
      -
 
