@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2018-06-06
+----------
+* Changed default behaviour of the :ref:'CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
+* The :ref:`is_chronological <sql_source>` property on the :ref:`SQL source <sql_source>` is now dynamic as it is ``true`` if the ``updated_column`` and ``table`` properties are set.
+* Added the :ref:`is_chronological_full <sql_source>` property to the :ref:`SQL source <sql_source>` . If explicity set to ``false`` then a full run will not consider the source to be chronological even though it is chronological in incremental runs. The default value is the value of the ``is_chronological``, but can be set to ``false``.
+
 2018-06-05:
 -----------
 * The old ``dead_letter_dataset`` :ref:`pump configuration <pump_section>` option (string) has been deprecated and replaced by ``use_dead_letter_dataset``, which is a boolean flag (false by default). If set to true, the id of the dead letter dataset is automatically generated and linked to the parent pipe id (``system:dead-letter:pipe-id``). Note that entities written to this new dataset will no longer have the pipe id as part of their ``_id`` property. This new dataset will inherit the ACLs from its parent pipe (like pump execution datasets). If the pipe is removed, the automatically created dataset is also removed. The old ``dead_letter_dataset`` property will continue to work as before but will be removed at some future date.

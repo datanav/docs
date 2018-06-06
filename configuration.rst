@@ -1523,7 +1523,26 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``true`` (Default)
 
    * - ``is_chronological``
-     - ``false`` (Default)
+     - ``false`` (Dynamic: if ``table`` and ``updated_column`` set then defaults to ``true``, if ``query`` then it can be set explicitly)
+
+   * - ``is_chronological_full``
+     - ``false`` (Dynamic: ``true`` if ``is_chronological`` is effectively ``true`` and this property is not explicity set to ``false``)
+
+       If this property is set to ``false`` then a full run will not
+       consider the source to be chronological even though it is
+       chronological in incremental runs.
+
+       .. NOTE::
+
+          In practice this avoids doing an order by when doing full runs,
+          but at the cost of not saving pipe offsets and supporting
+          incremental deletion tracking if it fails to complete.
+
+          We have seen SQL tables where only the latest rows have
+          an value in the updated column. In that case it is not that
+          useful to use order by and to save pipe offsets
+          incrementally.
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
