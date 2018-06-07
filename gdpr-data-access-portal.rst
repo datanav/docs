@@ -61,7 +61,7 @@ Note that none of the fields in the first "DataSubject" field should be changed 
 the completed spreadsheet.
 
 The rest of the sheets in the spreadsheet is enumerated by data type, one per system in the "Data type" sheet of the
-configuration setup spreadsheet, see :ref:`the previous section <gdpr-data-types-purposes-configuration>` for details.
+configuration setup spreadsheet, see :doc:`the previous section <gdpr-data-types-purposes-configuration>` for details.
 
 These are the sheets that must be filled out by the receiver of the template and uploaded when finished.
 
