@@ -1,6 +1,12 @@
 Changelog
 =========
 
+
+2018-06-07
+----------
+* Added support for having :ref:`secrets <secrets_manager>` that apply only to one specific System.
+
+
 2018-06-06
 ----------
 * Changed default behaviour of the :ref:'CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.

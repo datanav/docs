@@ -103,13 +103,28 @@ The secrets should be in a JSON document as either a list of objects or a single
     "another-secret-property": "another-secret-value"
   }
 
-You can upload your secrets using the command line client (or via the web API using a HTTP client such as ``curl`` or ``wget``):
+You can upload your secrets using the command line client (or via the web API using a HTTP client such as ``curl`` or ``wget``).
+
+You can either specify that the secrets should only be visible for one specific System by specifying the id of the System:
+
+::
+
+  sesam put-secrets my_system_id my-system-secrets.json
+
+, or you can make the secrets "global" and available for all systems:
 
 ::
 
   sesam put-secrets my-secrets.json
 
+
 You can also list which secrets the Sesam secret manager is currently aware of:
+
+::
+
+  sesam get-secrets my_system_id
+
+  ["system-secret-property", "another-system-secret-property"]
 
 ::
 
@@ -120,6 +135,16 @@ You can also list which secrets the Sesam secret manager is currently aware of:
 The values of the secrets are stored internally in a strongly encrypted form using a key that is unique to each instance
 of Sesam. Note that once uploaded to the Secrets manager, you cannot extract the original value(s) of the secret(s) so
 you must store them in a secure fashion off-site.
+
+
+The lifetime of secrets
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Global secrets lives until they are explicitly deleted.
+
+System secrets lives until they are explicitly deleted, or until the System is removed. So, if you delete and re-add
+a System, you have to upload all the System-local secrets again.
+
 
 Using secrets
 ~~~~~~~~~~~~~
