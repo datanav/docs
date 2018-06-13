@@ -9,3 +9,5 @@ GDPR Platform
    Datatypes and purposes configuration <gdpr-data-types-purposes-configuration>
    The GDPR data access portal <gdpr-data-access-portal>
    Developer documentation <gdpr-platform-developer-docs>
+   Changelog <gdpr-changelog>
+

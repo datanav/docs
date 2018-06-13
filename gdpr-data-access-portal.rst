@@ -43,13 +43,17 @@ The email contains a link to an Excel file that the recipient of the mail can do
 Once filled out, it can then be uploaded through the GDPR platform and the contained data will be made available to the
 subject through the GDPR data access portal interface.
 
+Note that the user that receives this email must also be registered as a user in the Sesam portal and be granted the
+"GDPR operations" role in the GDPR platform user-interface.
+
 .. _gdpr_data_access_request_template:
 
 The data access request excel template
 ======================================
 
 Each responsible person receiving the email about a data access request must be a member of the GDPR platform so they
-can log in to download the Excel template they need to fill out with the subject's data.
+can log in to download the Excel template they need to fill out with the subject's data. They must also be granted the
+"GDPR operations" role in the GDPR platform membership user-interface.
 
 The first sheet of the spreadsheet is called "DataSubject" and contains information about the subject of the data
 access request, such as "DataSubjectId" which should be a field containing a value that reflects the logged in user
@@ -104,6 +108,9 @@ The notification email contains a link to a page in the GDPR platform where the 
 can download a list of requested changes. This list contains information such as subject id, data id(s), old data value,
 requested (new) value for the data, a timestamp for when the request was made and so on.
 
+Note that the user that receives this email must be registered as a user in the Sesam portal and be granted the
+"GDPR operations" role in the GDPR platform user-interface.
+
 If a consent is revoked, the data pertaining to that consent should be deleted.
 
 For a manually updated GDPR platform, when the change request is accepted and the data is changed or deleted as per the request,
@@ -123,6 +130,9 @@ a notice being sent to the registered handlers of each data type, with a link to
 data types the handler should process. The handler then has to manually delete the data the revoked consent
 is linked to in the source systems, and then upload a updated spreadsheet for the data in the same way as with
 a ordinary access request.
+
+Note that the "contact" that receives such an email must be registered as a user in the Sesam portal and be granted the
+"GDPR operations" role in the GDPR platform user-interface.
 
 For an automated GDPR platform, it is possible to process deletion requests automatically by triggering deletions/changes
 directly in the source systems. See the :ref:`GDPR platform developer documentation <gdpr_platform_developer_docs>` for information about
