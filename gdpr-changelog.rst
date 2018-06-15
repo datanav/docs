@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2018-06-15
+----------
+* Added color pickers that can change the theming of the Data Access Portal. As of now, primary color will only change the header color.
 
 2018-06-13
 ----------
