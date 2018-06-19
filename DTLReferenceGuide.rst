@@ -2297,6 +2297,40 @@ Strings
        |
        | Returns false
 
+
+       .. _base64encode_dtl_function:
+   * - ``base64-encode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 encoded version of its input strings.
+         Non-string values are ignored.
+     - | ``["base64-encode", "abc"]``
+       |
+       | Returns ``"YWJj"``.
+       |
+       | ``["base64-encode", ["list", 1, "abc", 2, "def", 3]]``
+       |
+       | Returns ``["YWJj", "ZGVm"]``.
+       |
+
+
+       .. _base64decode_dtl_function:
+   * - ``base64-decode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 decoded version of its input strings.
+         Non-string values and non-base64 encoded values are ignored.
+     - | ``["base64-decode", "YWJj"]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["base64-encode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
+       |
+       | Returns ``["abc", "def"]``.
+       |
+
        .. _upper_dtl_function:
    * - ``upper``
      - | *Arguments:*

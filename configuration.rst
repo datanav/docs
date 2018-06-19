@@ -757,7 +757,7 @@ Properties
 
    * - ``version``
      - Number
-     - There are two different versions of the merge source. Note that the default value is ``1`` for compatibility reasons. Version ``1`` is deprecated. Use version ``2`` if this is a new pipe. 
+     - There are two different versions of the merge source. Note that the default value is ``1`` for compatibility reasons. Version ``1`` is deprecated. Use version ``2`` if this is a new pipe.
      - ``1``
      - No
 
@@ -776,7 +776,7 @@ Properties
    * - ``identity``
      - String
      - Specifies the strategy for how to create the ``_id`` of the resulting entities.
-       
+
        * ``"composite"`` - The default, which is to create an id
          composed of all the ids of the entities involved and the
          offset of the dataset from which they originates.
@@ -793,12 +793,12 @@ Properties
          of the dataset in the ``datasets`` property, then by the
          entities' ``_id`` property. This results in a deterministic
          entity id.
-         
+
        * ``"first"`` - Similar to the ``composite`` strategy, but uses
          the entity id of the first entity given the same ordering
          rules as above.
-         
-         Example: ``"one1"``. 
+
+         Example: ``"one1"``.
      - ``"composite"``
      - No
 
@@ -810,7 +810,7 @@ Properties
        The examples below illustrate the results of merging the
        following three entities in this particular order (ids omitted for brevity):
        ``{"x":1}``, ``{"y": [2, 1]}``, ``{"y": 2, "z": [3, 3]}``
-       
+
        * ``"default"`` - The default is to union all the values, which
          results in all properties being lists of all the values from
          all the entities. This is similar to how the
@@ -818,14 +818,14 @@ Properties
          works. Duplicates are not removed.
 
          Example: ``{"x": [1], "y": [2, 1, 2], "z": [3, 3]}``
-       
+
        * ``"compact"`` - Similar to the default strategy, but tries to
          compact the property values; duplicate values are removed,
          properties with empty lists are dropped, and list properties
          with a single value are turned into single valued properties.
 
          Example: ``{"x": 1, "y": [2, 1], "z": 3}``
-       
+
        * ``"list"`` - Returns an entity with a ``$merged`` property
          which contains a list of the merged entities. This strategy
          can be used to implement custom strategies.
@@ -2234,7 +2234,7 @@ Properties
 
           Paging is only available if the source has ``supports_since``, ``is_chronological`` and ``is_since_comparable`` all set to ``true``.
      - No paging
-     - 
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -2410,7 +2410,7 @@ Properties
      - ``true``
      - No
 
-     
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -3282,6 +3282,100 @@ it will produce the transformed entity:
         ]
     }],
     "xml": "<foo:tag xmlns=\"http://www.example.org/ns1\" xmlns:foo=\" .. </foo:tag>"
+  }
+
+
+.. _rdf_transform:
+
+The RDF transform
+-----------------
+
+This transform will render entities to a NTriples string and embed it in the entity, which is then passed on
+to the transform chain.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "rdf",
+        "rdf-property": "rdf-property-to-use"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``rdf-property``
+     - String
+     - The property that will hold any RDF generated
+     -
+     - Yes
+
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+This is how a RDF transform would look like in the context of a pipe (source and sink configs omitted for brevity):
+
+::
+
+   {
+       "_id": "my-pipe",
+       "transform": {
+           "type": "rdf",
+            "rdf-property": "rdf"
+       }
+   }
+
+Given the input entity:
+
+::
+
+  {
+    "_id": "x:1",
+    "x:name": "Entity 1",
+    "x:id": "entity-1",
+    "foo:prop": [{
+        "x:id": "child",
+    }]
+  }
+
+
+And these namespaces in the metadata configuration:
+
+::
+
+    "namespaces": {
+        "default": {
+            "x": "http://x.org/",
+            "foo": "http://foo.org/",
+        }
+    }
+
+
+it will produce the transformed entity:
+
+::
+
+  {
+    "_id": "x:1",
+    "x:name": "Entity 1",
+    "x:id": "entity-1",
+    "foo:child": [{
+        "x:id": "child",
+    }]
+    "rdf": "<http://x.org/1> <http://x.org/name> \"Entity 1\".\n<http://x.org/1> <http://x.org/id> \"entity-1\".\n<http://x.org/1> <http://foo.org/child> _:x1.\n_:x1 <http://x.org/id> \"child\".\n"
   }
 
 .. _sink_section:
