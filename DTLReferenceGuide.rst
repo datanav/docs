@@ -2281,7 +2281,7 @@ Strings
        |
      - | ``["bytes", "abc"]``
        |
-       | Returns one bytes object: ``~babc``.
+       | Returns one bytes object: ``~bYWJj``.
 
        .. _is_string_dtl_function:
    * - ``is-string``
