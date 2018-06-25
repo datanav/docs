@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-06-25
+----------
+* Changed the :ref:`base64-encode <base64encode_dtl_function>` and :ref:`base64-decode <base64decode_dtl_function>` DTL functions to only accept bytes and string input respectively.
+* Added support for bytes input to the :ref:`string <string_dtl_function>` casting function. The encoding used is ``utf-8``.
+* Added a :ref:`bytes <bytes_dtl_function>` casting function that casts strings to (``utf-8`` encoded) bytes representation.
 
 2018-06-19
 ----------

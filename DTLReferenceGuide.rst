@@ -2254,6 +2254,7 @@ Strings
        .. NOTE::
 
           Complex types like list and dict are JSON encoded (no transit encoding).
+          Bytes are decoded to strings using ``utf-8`` encoding.
      - | ``["string", 1]``
        |
        | Returns one string: ``1``.
@@ -2271,6 +2272,16 @@ Strings
        |
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+
+   * - ``bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input string values to bytes using ``utf-8`` encoding.
+       |
+     - | ``["bytes", "abc"]``
+       |
+       | Returns one bytes object: ``~babc``.
 
        .. _is_string_dtl_function:
    * - ``is-string``
@@ -2303,13 +2314,13 @@ Strings
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Returns the base64 encoded version of its input strings.
-         Non-string values are ignored.
-     - | ``["base64-encode", "abc"]``
+       | Returns the base64 encoded version of its input bytes.
+         Non-bytes values are ignored.
+     - | ``["base64-encode", ["bytes", "abc"]]``
        |
        | Returns ``"YWJj"``.
        |
-       | ``["base64-encode", ["list", 1, "abc", 2, "def", 3]]``
+       | ``["base64-encode", ["list", 1, ["bytes", "abc"], 2, ["bytes", "def"], 3]]``
        |
        | Returns ``["YWJj", "ZGVm"]``.
        |
@@ -2324,11 +2335,11 @@ Strings
          Non-string values and non-base64 encoded values are ignored.
      - | ``["base64-decode", "YWJj"]``
        |
-       | Returns ``"abc"``.
+       | Returns ``"~babc"``.
        |
        | ``["base64-encode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
        |
-       | Returns ``["abc", "def"]``.
+       | Returns ``["~bbabc", "~bdef"]``.
        |
 
        .. _upper_dtl_function:
