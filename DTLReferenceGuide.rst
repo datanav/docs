@@ -2337,10 +2337,12 @@ Strings
        |
        | Returns ``"~babc"``.
        |
-       | ``["base64-encode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
+       | ``["base64-decode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
        |
-       | Returns ``["~bbabc", "~bdef"]``.
+       | Returns ``["~bYWJj", "~bZGVm"]``.
        |
+       | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
+       | the similar looking output and input)
 
        .. _upper_dtl_function:
    * - ``upper``
