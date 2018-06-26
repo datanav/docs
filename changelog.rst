@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-06-26
+----------
+* Added the the :ref:`case-eq <case_eq_dtl_function>` and :ref:`case <case_dtl_function>` DTL functions. These can be used to express more complex conditional expressions. Earlier one had to nest ``if`` functions to achieve the same thing.
+
 2018-06-25
 ----------
 * Changed the :ref:`base64-encode <base64encode_dtl_function>` and :ref:`base64-decode <base64decode_dtl_function>` DTL functions to only accept bytes and string input respectively.
