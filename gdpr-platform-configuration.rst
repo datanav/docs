@@ -133,9 +133,8 @@ or
 
 
 If your language is different than the default norwegian and english locale, you can add additional
-translations by editing the ``custom-translations`` pipe configuration in the GDPR platform datahub. See the later chapter on custom message texts
-for more details. These texts are keyed on ISO locale codes and correspond to this setting. If you for example have
-added german texts using the code "de-DE" (or just "de"), you can specify this as the default language here.
+translations by using the :ref:`translation GUI<gdpr_custom_text_and_translation>`.
+
 
 .. _gdpr_data_access_portal_default_phone_prefix:
 
@@ -149,43 +148,22 @@ in Norway, it would look like:
 
     +47
 
-.. _gdpr_access_portal_custom_text_and_translation:
+.. _gdpr_custom_text_and_translation:
 
 Custom text and translation
 ---------------------------
 
-The static texts displayed in the data access portal are defined in the "[localization]"-section in the
-data access portal's configuration file.
+The static texts displayed in the data access portal can be customized on the GDPR translation page:
 
-To see all the available localization strings, scroll down to the "Attributes in the [localization] section" part
-of the currently active configuration:
-
-.. image:: images/gdpr_dap_default_localization_strings.png
+.. image:: images/gdpr_localization_strings.png
     :width: 800px
     :align: center
     :alt: Default localization strings
 
+Note that for some of the strings, changes will not affect already emitted notifications or data objects - only new ones.
 
-You can override the default localization strings by copying the desired strings from the
-"Attributes in the [localization] section" part of the currently active configuration into the "Configuration file"
-text box:
+To add support for a new language you first set the :ref:`default language <gdpr_data_access_portal_default_language>` to the new language. A column for the new language will then appear in the table of localization strings, and you can fill in the strings for the new language.
 
-.. image:: images/gdpr_dap_localization_strings.png
-    :width: 800px
-    :align: center
-    :alt: Custom localization strings
-
-Each line is on the form <language>-<string_id>=<localized value>. Multiline values must be indented with four spaces.
-
-To add support for a new language you must copy all the localization strings for one of the existing languages,
-replace the language-code (the "en"/"no" at the start) with your new language, and translate all the strings. Example of
-a german string::
-
-    de-sign_in_with_google_button_text=Mit Google
-
-
-The texts in SMS and email notifications are handled in another way and is stored in the GDPR plattform data hub
-as data. See the :ref:`developer guide <gdpr_custom_translations>` for the documentation on how to customize or translate these texts.
 
 .. _gdpr_access_portal_authentication_providers:
 

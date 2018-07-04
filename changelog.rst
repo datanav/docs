@@ -1,6 +1,11 @@
 Changelog
 =========
 
+
+2018-07-04
+----------
+* Added a :ref:`translation GUI<gdpr_custom_text_and_translation>` for the GDPR platform. This GUI makes is much easier to customize the various texts used by the GDPR portal.
+
 2018-06-26
 ----------
 * Added the the :ref:`case-eq <case_eq_dtl_function>` and :ref:`case <case_dtl_function>` DTL functions. These can be used to express more complex conditional expressions. Earlier one had to nest ``if`` functions to achieve the same thing.

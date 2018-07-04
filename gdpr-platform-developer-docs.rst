@@ -950,7 +950,11 @@ GDPR custom translations
 ========================
 
 The text contents of SMS, email messages and some other static strings used in dynamic content generation in the
-GDPR plattform exists as data in the data hub. They can be customized by editing the pipe called ``custom-translations``.
+GDPR plattform exists as data in the data hub.
+
+These text can be customized using the :ref:`Translation GUI<gdpr_custom_text_and_translation>`.
+
+The :ref:`GUI<gdpr_custom_text_and_translation>` is almost always the preferable way of editing the strings, but if you for some reason need to customize the strings programatically, you can do that by editing the configuration of the pipe called ``custom-translations``.
 The pipe has an embedded source with entities containing translation information for a certain set of predefined
 keys. The structure of each of the entities in the embedded source is on the form:
 
