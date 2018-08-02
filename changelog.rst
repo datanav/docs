@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2018-08-02
+----------
+* Added support in the :ref:`split <split_dtl_function>` DTL function to split string into characters using the empty separator.
 
 2018-07-04
 ----------
