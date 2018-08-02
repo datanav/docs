@@ -2497,6 +2497,9 @@ Strings
        | ``["split", "", "abc"]``
        |
        | Returns ``["a", "b", "c"]``.
+       | ``["split", "", ["list", "ab", "cd", "e"]]``
+       |
+       | Returns ``["a", "b", "c", "d", "e"]``.
        |
        | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
        |
