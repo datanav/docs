@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-08-10
+----------
+* Receiver and publisher pipes can now be disabled.
+
 2018-08-02
 ----------
 * Added support in the :ref:`split <split_dtl_function>` DTL function to split string into characters using the empty separator.
