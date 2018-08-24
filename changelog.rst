@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-08-24
+----------
+* Datasets that are not populated will no longer be compacted.
+
 2018-08-10
 ----------
 * Receiver and publisher pipes can now be disabled.
