@@ -1,6 +1,11 @@
 Changelog
 =========
 
+
+2018-08-24
+----------
+Added a ``fallback_to_single_entities_on_batch_fail`` boolean flag to the :ref:`pump configuration <pump_section>`. The default reflects the current behaviour (``true``). It can be usefuly to set to ``false`` if the cost of processing a single entity at a time is high and there is a lot of entities in a batch (for example in a typical MS SQL sink in initial bulk upload mode).
+
 2018-08-24
 ----------
 * Datasets that are not populated will no longer be compacted.

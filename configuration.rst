@@ -7169,6 +7169,7 @@ Prototype
         "max_retries_per_entity": 5,
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
+        "fallback_to_single_entities_on_batch_fail": true,
         "use_dead_letter_dataset": false,
         "track_dead_letters": false,
         "mode": "scheduled"
@@ -7333,6 +7334,14 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
        pump execution dataset in the case where a target system is unreachable (or misconfigured). The default value (0) effectively
        disables retries for write errors.
      - 0
+     -
+
+   * - ``fallback_to_single_entities_on_batch_fail``
+     - Boolean
+     - A flag that controls if the pipes should attempt to process a single entity at a time if a batch
+       write operation fails. This can be useful to turn off if the cost of processing a single entity at a time
+       is prohibitively high. This single-entity-at-a-time fallback is on by default (``true``).
+     - true
      -
 
    * - ``mode``
