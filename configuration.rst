@@ -4262,6 +4262,7 @@ Prototype
         "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
         "use_bulk_operations": false,
+        "keep_failed_bulk_operation_files": false,
         "bulk_operation_timeout": 600,
         "bulk_operation_queue_size": 3,
         "schema_definition": [],
@@ -4327,6 +4328,17 @@ Properties
        sql systems supports bulk operations, see :ref:`the documentation of the SQL systems <sql_system>` for
        details.
      - ``false`` for now; will be changed to ``true`` at some future date.
+     -
+
+   * - ``keep_failed_bulk_operation_files``
+     - Boolean
+     - Bulk operations typically involve writing some temporary files to disk. These files are normally
+       deleted when the bulk operation is finished, but while debugging a problem it can be useful to
+       keep the files when the bulk operation failes. This option can be set to ``true`` to keep all the
+       files that are relevant for the failing bulk operation. You have to have access to the server's
+       harddisk in order to see the files (the location of the bulk-files is written in the node's log-file).
+       Note: The files are written to a temporary folder, and are deleted the next time the node restarts.
+     - ``false``
      -
 
    * - ``bulk_operation_timeout``
