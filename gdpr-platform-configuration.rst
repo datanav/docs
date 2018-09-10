@@ -136,6 +136,22 @@ If your language is different than the default norwegian and english locale, you
 translations by using the :ref:`translation GUI<gdpr_custom_text_and_translation>`.
 
 
+.. _gdpr_data_access_portal_user_selectable_languages:
+
+User selectable languages
+-------------------------
+
+By default the GDPR platform doesn't allow the end users to select their preferred language. To allow this,
+a list of selectable languages must be added to the configuration of the data access portal, like this::
+
+  [i18n]
+  user_selectable_languages=
+      - language_code: en
+        display_name: English
+      - language_code: no
+        display_name: Norsk
+
+
 .. _gdpr_data_access_portal_default_phone_prefix:
 
 The default phone prefix

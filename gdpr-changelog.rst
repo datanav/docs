@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2018-09-10
+----------
+* Added a :ref:`User Selectable Languages<gdpr_data_access_portal_user_selectable_languages>` config option to
+  the Data Access Portal configuration.
+
 2018-06-15
 ----------
 * Added color pickers that can change the theming of the Data Access Portal. As of now, primary color will only change the header color.
