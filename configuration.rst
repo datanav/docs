@@ -5578,6 +5578,14 @@ Properties
        timezone information. The default is the UTC timezone. All the official timezone names are supported,
        i.e. "UTC", "GMT", "EST" etc. You can also use the indirect "Continent/City" format, for example "Europe/Oslo"
        (see `the complete list <http://twiki.org/cgi-bin/xtra/tzdatepick.html>`_ for which cities are supported).
+
+       .. WARNING::
+
+          Non-timezone datetime values that are read from  a ``sql``
+          source that uses the system will be shifted from the specified
+          timezone to UTC. Note that the ``_updated`` property will
+          not be shifted.
+          
      - "UTC"
      -
 
