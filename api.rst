@@ -275,5 +275,5 @@ API Reference
    :local:
    :depth: 1
 
-.. openapi:: ../lake/node/webapp/swagger_public.yaml
+.. openapi:: ./swagger_public.yaml
 
