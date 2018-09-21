@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-TAG=${TAG-rc}
+# TODO switch to :rc and let promotion job promote after testing it
+TAG=${TAG-latest}
 DOCKER_BUILD=${DOCKER_BUILD-1}
 DOCKER_BUILD_PUSH=${DOCKER_BUILD_PUSH-0}
 
