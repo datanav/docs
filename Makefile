@@ -1,6 +1,8 @@
 # Makefile for Sphinx documentation
 #
 
+DOCKER_PATH = docker
+
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
@@ -50,6 +52,7 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/*
+	rm -rf $(DOCKER_PATH)/dist
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
@@ -190,3 +193,10 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+docker: html
+	mkdir -p $(DOCKER_PATH)/dist
+	rm -rf $(DOCKER_PATH)/dist/*
+	cp -r $(BUILDDIR)/html $(DOCKER_PATH)/dist
+	cd $(DOCKER_PATH); ./build.sh
+	rm -rf $(DOCKER_PATH)/dist
