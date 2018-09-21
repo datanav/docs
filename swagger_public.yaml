@@ -1,0 +1,2131 @@
+
+swagger: '2.0'
+info:
+  version: 0.0.0
+  title: SESAM Node
+paths:
+  /pipes:
+    get:
+      description:
+        Returns a list of all the pipes
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array of pipes
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Pipe'
+
+    post:
+      description:
+        Creates one or more pipes
+      parameters:
+        - in: body
+          name: body
+          description: An array with configurations for the new pipes
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/PipeConfig"
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+
+      responses:
+        200:
+          description: An array containing the new pipes
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Pipe'
+
+  '/pipes/{pipe_id}':
+    get:
+      operationId: api.pipes.get_pipe
+      description:
+        Returns the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: The pipe
+          schema:
+            $ref: '#/definitions/Pipe'
+
+    delete:
+      operationId: api.pipes.delete_pipe
+      description:
+        Deletes the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+
+  '/pipes/{pipe_id}/config':
+    get:
+      operationId: api.pipes.get_pipe_config
+      description:
+        Returns the configuration of the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: The pipe configuration
+          schema:
+            $ref: '#/definitions/PipeConfig'
+
+    put:
+      operationId: api.pipes.put_pipe_config
+      description:
+        Updates the configuration of the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+        - in: body
+          name: body
+          description: The new pipe configuration
+          required: true
+          schema:
+            $ref: "#/definitions/PipeConfig"
+
+      responses:
+        200:
+          description: The updated pipe
+          schema:
+            $ref: '#/definitions/Pipe'
+
+
+  '/pipes/{pipe_id}/entities':
+    get:
+      operationId: api.view_utils._not_in_use_pipe_entities
+      description:
+        Returns the entities produced by the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: stage
+          in: query
+          required: false
+          type: string
+          default: sink
+          description:
+            Can be set to 'source', 'before-transforms', 'after-transforms' or 'sink' (default). 'source' returns
+            entities as they come out of the source. 'before-transforms' returns entities as they are fed into
+            the first transform. 'after-transforms' return entities as they look after the last transform.
+            'sink' returns entities as they look as they enter the sink.
+
+      responses:
+        200:
+          description: The entities
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PipeEntity'
+
+
+  '/pipes/{pipe_id}/generate-schema-definition':
+    get:
+      operationId: api.pipes.get_schema_definition
+      description:
+        Returns info about the schema of the entities processed by the pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: sample_size
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the number of entities to sample from the source
+
+        - name: keys_only
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            Specifies if only the array of keys should returned, or the whole schema
+
+      responses:
+        200:
+          description: OK
+
+
+  '/pipes/{pipe_id}/pump':
+    get:
+      operationId: api.pump.get
+      description:
+        Returns info about the pump of the specified pipe
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: The pump
+          schema:
+            $ref: '#/definitions/Pump'
+
+    post:
+      operationId: api.pump.post
+      consumes:
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      description: |
+        Runs some operation on the pump. The operation is specified by the 'operation' form parameter in the request.
+
+        The following operations exists:
+
+          "start":
+
+              Starts a new run of the pump. A pump is typically run automatically at scheduled intervals, but with this
+              operation a pump can be started manually.
+
+          "stop":
+
+              Stops the pump, if it is running. If the pump is not already running, this operation has no effect.
+
+          "enable":
+
+              Enables the pump. This means that the pump can be run automatically by the system (usually on some fixed
+              schedule).
+
+          "disable":
+
+              Disables the pump. This means that the pump cannot be run automatically by the system. Note that it is
+              still possible to start the pump manually with the "start"-operation.
+
+          .. _api-reference-pump-update-last-seen:
+
+          "update-last-seen":
+
+              Updates the "last-seen" value of the pump. This is the value the pump uses to figure out at which point
+              in the source-data it stopped at its last run. The format of the "last-seen" form parameter depends on
+              the source-system. It could be a date, and it could be some opaque binary value.
+
+              To clear the "last-seen" value of the pump, set the "last-seen" form parameter to an empty string. This
+              will make the pump behave as if it was running for the first time. This is useful in cases where one
+              wants to reprocess the data from scratch for some reason.
+
+          "set-last-seen-to-end":
+
+              Updates the "last-seen" value of the pump such that the pump thinks that it has seen all the source-data.
+              Not all source-types supports this operation.
+              NOTE: Doing this may result in data-loss, since any unread entities in the source will not be read. But
+                    it is sometimes useful during development and testing; for instance when one has a huge existing
+                    source-dataset, but only want to run the pipe against new entities.
+
+          "reset-tracking" (Experimental):
+
+              Resets the dependency tracking so that it will continue starting from the end of dependent datasets.
+
+              Note that tracking will continue from what is the end of the datasets at the point in time when the pump
+              runs, not the time at which this call is made.
+
+              Note that dependency tracking will then be skipped for untracked offsets, causing the output to be
+              potentially incorrect. Use this feature only during development, or when you intend to do a full sync
+              soon after the reset.
+
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: operation
+          in: formData
+          description: The operation to run (not all pumps support all operations).
+          required: true
+          type: string
+
+        - name: dont-wait-for-pump-to-start
+          in: formData
+          type: boolean
+          required: false
+          description: Deprecated! This is only supported for the 'start' operation on older versions of Sesam.
+
+        - name: last-seen
+          in: formData
+          required: false
+          type: string
+          description: This is only used for the 'update-last-seen' operation.
+
+        - name: relation
+          in: formData
+          required: false
+          type: string
+          description: Deprecated! This is only supported for the 'rename-relation' and 'delete-relation' operations on older versions of Sesam.
+
+
+      responses:
+        200:
+          description: The pump
+          schema:
+            $ref: '#/definitions/Pump'
+
+
+  /datasets:
+    get:
+      description:
+        Returns a list of all the datasets
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array of datasets
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Dataset'
+
+  '/datasets/{dataset_id}':
+    get:
+      operationId: api.datasets.get_dataset
+      description:
+        Returns the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: dataset_id
+          description: The id of the dataset
+          required: true
+          type: string
+      responses:
+        200:
+          description: The dataset
+          schema:
+            $ref: '#/definitions/Dataset'
+
+    delete:
+      operationId: api.datasets.delete_dataset
+      description:
+        Deletes the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: dataset_id
+          description: The id of the dataset
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+    post:
+      operationId: api.datasets.post_to_dataset
+      description:
+        Performs some operation on the specified dataset. The operation to do is specified
+        with the "operation" form parameter. Supported operations are "rollback-circuit-breaker"
+        and "commit-circuit-breaker".
+      consumes:
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: dataset_id
+          description: The id of the dataset
+          required: true
+          type: string
+        - name: operation
+          in: formData
+          description: The operation to run.
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+
+  '/datasets/{dataset_id}/entities':
+    get:
+      operationId: api.view_utils._not_in_use_dataset_entities
+      description:
+        Returns the entities in the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            An opaque value that can be used to efficiently skip already seen entities.
+
+        - name: history
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) all entities, including replaced ones, will be returned.
+            If this is false, only the latest version of the entities will be returned
+
+        - name: reverse
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is false (the default) the entities will be returned from the start of the dataset log.
+            If this is true, the entities will be returned from the end of the dataset log instead
+
+        - name: deleted
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) the entities marked as deleted will also be returned from the
+            dataset log. If this is false, the entities that are marked as deleted will not
+            included in result. If you request the complete history the deletes will always be included.
+
+        - name: populated
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is true the response will be 404 if the dataset has not yet been populated. It is not enough
+            for the dataset to have data, but the data that's there must reflect a complete view of the dataset's
+            source. In other words; the dataset must be fully populated. In practice this means that the pipe
+            that populates the dataset has not yet had a complete full run. Normally 404 is only returned when
+            the dataset does not exist.
+
+        - name: uncommited
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If true then the response may include uncommitted entities. This is only relevant if the pipe that
+            writes to the dataset have a circuit breaker enabled. Use this for debugging purposes only.
+
+        - name: subset
+          in: query
+          required: false
+          type: string
+          description:
+            "EXPERIMENTAL: If specified then the specified subset expression will be used to retrive entities in
+            the dataset via a secondary index. If the index does not exist, then 404 is returned."
+
+      responses:
+        200:
+          description: The entities
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/DatasetEntity'
+    options:
+      operationId: api.view_utils._not_in_use_dataset_entities_options
+      description:
+        Returns the OPTIONS with this endpoint
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            An opaque value that can be used to efficiently skip already seen entities.
+
+        - name: history
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) all entities, including replaced ones, will be returned.
+            If this is false, only the latest version of the entities will be returned
+
+        - name: reverse
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is false (the default) the entities will be returned from the start of the dataset log.
+            If this is true, the entities will be returned from the end of the dataset log instead
+
+        - name: deleted
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) the entities marked as deleted will also be returned from the
+            dataset log. If this is false, the entities that are marked as deleted will not
+            included in result. If you request the complete history the deletes will always be included.
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+
+    post:
+      operationId: api.datasets.post_dataset_entities
+      description: |
+        Puts the specified entities into the specified dataset
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+        - name: force
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If 'false', then the hashes of the posted entity and the previous version will be
+            compared before storing the entity. The entity will not be written to the dataset
+            if the hashes are the same. If 'true', then the entity will always be written to
+            the dataset. The default is 'false'.
+      responses:
+        200:
+          description: OK
+
+
+  '/datasets/{dataset_id}/entities/{rest_of_path}':
+    get:
+      operationId: api.datasets.get_dataset_entity_with_rest_of_path
+      description:
+        Deprecated. Use the /entity endpoint. Returns the specified entity in the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+        - name: rest_of_path
+          in: path
+          description: The id of the entity
+          required: true
+          type: string
+      responses:
+        200:
+          description: The entity
+          schema:
+            $ref: '#/definitions/DatasetEntity'
+
+  '/datasets/{dataset_id}/entity':
+    get:
+      operationId: api.datasets.get_dataset_entity
+      description:
+        Returns the specified entity in the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+        - name: entity_id
+          in: query
+          description: The id of the entity
+          required: true
+          type: string
+      responses:
+        200:
+          description: The entity
+          schema:
+            $ref: '#/definitions/DatasetEntity'
+
+  '/datasets/{dataset_id}/sdshare-collection':
+    get:
+      operationId: api.datasets.get_dataset_sdshare_feed_collection
+      description:
+        Returns a sdshare collection feed for the entities in the specified dataset
+      produces:
+        - application/atom+xml
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/datasets/{dataset_id}/sdshare-fragments':
+    get:
+      operationId: api.view_utils._not_in_use_dataset_sdshare_fragments
+      description:
+        Returns a sdshare fragments feed for the entities in the specified dataset
+      produces:
+        - application/atom+xml
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/datasets/{dataset_id}/sdshare-fragments/{rest_of_path}':
+    get:
+      operationId: api.datasets.get_dataset_sdshare_feed_fragment
+      produces:
+        - application/n-triples
+      description:
+        Returns a sdshare fragment for the specified entity in the specified dataset
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+        - name: rest_of_path
+          in: path
+          description: The id of the entity-id
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/datasets/{dataset_id}/indexes':
+    get:
+      operationId: api.datasets.get_dataset_indexes
+      description:
+        Returns the indexes on the specified dataset
+      produces:
+        - application/json
+      parameters:
+        - name: dataset_id
+          in: path
+          description: The id of the dataset
+          required: true
+          type: string
+      responses:
+        200:
+          description: The indexes of the dataset.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/DatasetIndex'
+
+  '/datasets/{dataset_id}/generate-schema-definition':
+    get:
+      operationId: api.datasets.get_schema_definition
+      description:
+        Returns info about the schema of the entities in the dataset
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: dataset_id
+        description: The id of the dataset
+        required: true
+        type: string
+
+      - name: sample_size
+        in: query
+        required: false
+        type: integer
+        description:
+          Specifies the number of entities to sample from the dataset
+
+      - name: keys_only
+        in: query
+        required: false
+        type: boolean
+        default: false
+        description:
+          Specifies if only the array of keys should returned, or the whole schema
+
+      responses:
+        200:
+          description: OK
+
+  '/config':
+    get:
+      description:
+        Returns the entire configuration of the node as an array of json objects, or as a zip-archive,
+        depending on the value of the 'Accepts' header.
+      produces:
+        - application/json
+        - application/zip
+      responses:
+        200:
+          description: The configuration
+          schema:
+            $ref: '#/definitions/ConfigEntity'
+
+    put:
+      description:
+        Overwrites the entire configuration of the node.
+      consumes:
+        - application/json
+        - application/zip
+        - multipart/form-data
+      responses:
+        200:
+          description: OK
+  '/':
+    get:
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    post:
+      consumes:
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+
+      produces:
+        - application/json
+
+      parameters:
+        - name: operation
+          in: formData
+          description: The operation to run.
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: OK
+
+  '/env':
+    get:
+      description:
+        Returns the currently defined environment variable values.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    post:
+      description:
+        Adds a variable or list of variables to the environment variable manager. If a variable
+        already exists, it is overwritten.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    put:
+      description:
+        Adds a variable or list of variables to the environment variable manager. If a variable
+        already exists, it is overwritten.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    patch:
+      description:
+        Adds a variable or list of variables to the environment variable manager. If a variable
+        already exists, it is overwritten.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+  '/env/{env_var}':
+    delete:
+      operationId: api.env.delete_variable_entity
+      description:
+        Deleted the specified environment variable.
+      produces:
+        - application/json
+      parameters:
+        - name: env_var
+          in: path
+          description: The name of the environment variable to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/secrets':
+    get:
+      description:
+        Returns the names of the currently defined secrets.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    put:
+      description:
+        Adds a secret or list of secrets to the secrets manager. If a secret
+        already exists, it is overwritten.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    post:
+      description:
+        Adds a secret or list of secrets to the secrets manager. If a secret
+        already exists, it is overwritten.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+  '/secrets/{secret_key}':
+    delete:
+      operationId: api.secrets.delete_secret_entity
+      description:
+        Deleted the specified secret.
+      produces:
+        - application/json
+      parameters:
+        - name: secret_key
+          in: path
+          description: The name of the secret to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+
+  '/health':
+    get:
+      description: Sesam api health information
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        500:
+          description: The sesam-node isn't feeling well.
+
+  '/license':
+    get:
+      description: Returns info about the current license
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/License'
+
+    put:
+      description: Upload a new license key. The new license will replace the old license if valid.
+      produces:
+        - application/json
+
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/License'
+
+  '/metadata':
+    get:
+      description:
+        Returns the service metadata
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServiceMetadata'
+    put:
+      description:
+        Updates the service metadata
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServiceMetadata'
+
+    delete:
+      description:
+        Deletes all service metadata
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ServiceMetadata'
+
+  '/publishers/{pipe_id}/sdshare-collection':
+    get:
+      operationId: api.publishers.get_sdshare_feed_collection
+      description:
+        publisher endpoint sdshare collection feed
+      produces:
+        - application/atom+xml
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/publishers/{pipe_id}/sdshare-fragments':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_sdshare_fragments
+      description:
+        publisher endpoint sdshare fragments feed
+      produces:
+        - application/atom+xml
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+  '/publishers/{pipe_id}/entities':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_entities
+      description:
+        publisher endpoint json entities
+      produces:
+        - application/json
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/entities/{filename}':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_entities_filename
+      description:
+        publisher endpoint json entities - filename in url version
+      produces:
+        - application/json
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: filename
+          in: path
+          description: The filename to use as attachment filename
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/csv':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_csv
+      description:
+        publisher csv endpoint
+      produces:
+        - text/csv
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: linked_excel_file
+          in: query
+          required: false
+          type: string
+          description:
+            Instead of returning a CSV file, return a Excel file with a "connection" link to the original CSV URL. This parameter contains the filename to use.
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/csv/':
+    options:
+      operationId: api.publishers.options_csv
+      description:
+        publisher csv endpoint OPTIONS (for office)
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/csv/{filename}':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_csv_filename
+      description:
+        publisher csv endpoint - filename in url version
+      produces:
+        - text/csv
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: filename
+          in: path
+          description: The filename to use as attachment filename
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: linked_excel_file
+          in: query
+          required: false
+          type: string
+          description:
+            Instead of returning a CSV file, return a Excel file with a "connection" link to the original CSV URL. This parameter contains the filename to use.
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/excel':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_excel
+      description:
+        publisher excel endpoint
+      produces:
+        - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/excel/':
+    options:
+      operationId: api.publishers.options_excel
+      description:
+        publisher excel endpoint OPTIONS (for office)
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/excel/{filename}':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_excel_filename
+      description:
+        publisher excel endpoint - filename in url version
+      produces:
+        - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: filename
+          in: path
+          description: The filename to use as attachment filename
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/xml':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_xml
+      description:
+        publisher xml endpoint
+      produces:
+        - application/xml
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+
+  '/publishers/{pipe_id}/xml/{filename}':
+    get:
+      operationId: api.view_utils._not_in_use_publishers_xml_filename
+      description:
+        publisher xml endpoint - filename in url version
+      produces:
+        - application/xml
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: filename
+          in: path
+          description: The filename to use as attachment filename
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the minimum since-value.
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+      responses:
+        200:
+          description: OK
+
+  '/publishers/{pipe_id}/xml/':
+    options:
+      operationId: api.publishers.options_xml
+      description:
+        publisher xml endpoint OPTIONS (for office)
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+
+
+  '/receivers/{pipe_id}/sdshare-push-receiver':
+    post:
+      operationId: api.receivers.post_endpoint_sdshare_push_receiver
+      description:
+        Sesam api receiver endpoint -
+        uses the `SDShare Push protocol <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
+        Pushes *n-triples* to the named pipe. This is only supported for pipes that have an 'http_endpoint' source.
+      produces:
+        - text/plain
+      consumes:
+        - application/n-triples
+        - text/plain
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: resource
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies the root resources
+
+        - name: body
+          in: body
+          description: |
+            The n-triples.
+          required: true
+          schema:
+            type: string
+
+      responses:
+        200:
+          description: OK
+
+  '/receivers/{pipe_id}/entities':
+    post:
+      operationId: api.receivers.post_endpoint_entities
+      description: |
+        Sesam api receiver endpoint - uses the :doc:`JSON Push protocol <json-push>`. Pushes JSON entities to
+        the named pipe. This is only supported for pipes that have an 'http_endpoint' source.
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: sequence_id
+          in: query
+          description:
+            A string token that is generated every time the data sync is started. Included in all requests.
+          required: false
+          type: string
+
+        - name: is_full
+          in: query
+          description:
+            A boolean. Has the value true if this is a full data sync, and false if not. Included in all
+            requests. The default value is false.
+          required: false
+          type: boolean
+
+        - name: request_id
+          in: query
+          description:
+            A string token that is generated for every request. Included in all requests.
+          required: false
+          type: string
+
+        - name: previous_request_id
+          in: query
+          description:
+            A string token referencing the request_id of the previous request. Included in all but the
+            first request.
+          required: false
+          type: string
+
+        - name: is_first
+          in: query
+          description: A boolean. Included in the first request with the value true.
+          required: false
+          type: boolean
+
+        - name: is_last
+          in: query
+          description: A boolean. Included in the last request with the value true.
+          required: false
+          type: boolean
+
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            additionalProperties: false
+            properties:
+              updated_entity:
+                allOf:
+                  - description:
+                      This property is only present when the pipe has a dataset sink with the 'enable_optimistic_locking'
+                      flag set, and exactly one entity was posted. This property contains the resulting entity of the
+                      post-request.
+                  - $ref: '#/definitions/DatasetEntity'
+
+              input_entity:
+                allOf:
+                  - description:
+                      This property is only present when the pipe has a dataset sink with the 'enable_optimistic_locking'
+                      flag set, and one of the posted entitis was 'stale', i.e. the '_updated'
+                      attribute in the input-entity didn't match the '_updated' attribute of the latest version of the
+                      entity in the dataset. This property contains the stale input-entity.
+                  - $ref: '#/definitions/DatasetEntity'
+
+              existing_entity:
+                allOf:
+                  - description:
+                      This property is only present when the pipe has a dataset sink with the 'enable_optimistic_locking'
+                      flag set, and one of the posted entities was 'stale', i.e. the '_updated'
+                      attribute in the input-entity didn't match the '_updated' attribute of the latest version of the
+                      entity in the dataset. This property contains the latest version of the stale input-entity.
+                  - $ref: '#/definitions/DatasetEntity'
+
+              common_ancestor_entity:
+                allOf:
+                  - description:
+                      This property is only present when the pipe has a dataset sink with the 'enable_optimistic_locking'
+                      flag set, and one of the posted entities was 'stale', i.e. the '_updated'
+                      attribute in the input-entity didn't match the '_updated' attribute of the latest version of the
+                      entity in the dataset. This property contains the original version of the stale input-entity.
+                      The idea is that the client can use the input_entity, existing_entity and common_ancestor_entity
+                      to do a three-way merge.
+                  - $ref: '#/definitions/DatasetEntity'
+
+
+  /systems:
+    get:
+      description:
+        Returns a list of all the systems
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array of systems
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/System'
+
+    post:
+      description:
+        Creates one or more systems
+      parameters:
+        - in: body
+          name: body
+          description: An array with configurations for the new systems
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/SystemConfig"
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+
+      responses:
+        200:
+          description: An array containing the new systems
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/System'
+
+  '/systems/{system_id}':
+    get:
+      operationId: api.systems.get_system
+      description:
+        Returns the specified system
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+      responses:
+        200:
+          description: The system
+          schema:
+            $ref: '#/definitions/System'
+
+    delete:
+      operationId: api.systems.delete_system
+      description:
+        Deletes the specified system
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+
+  '/systems/{system_id}/logs':
+    # WARNING: There is a hack to allow relative_path to be empty in swagger_internal.yaml
+    get:
+      operationId: api.systems.get_microservice_logs
+      description:
+        Returns the logs from the microservice. By default it returns the last 1000 lines.
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: string
+          description:
+            Specifies from which point in time to stream the logs. The value must be an ISO
+            datetime value, e.g. '2016-11-08T08:28:45.880594510Z'. Note that all log lines
+            after this point in the log will be returned.
+      responses:
+        200:
+          description: The microservice logs data
+
+
+  '/systems/{system_id}/status':
+    # WARNING: There is a hack to allow relative_path to be empty in swagger_internal.yaml
+    get:
+      operationId: api.systems.get_system_status
+      description:
+        Returns the status from the system (if microservice, then a subset of docker inspect)
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+      responses:
+        200:
+          description: The microservice status data
+
+  '/systems/{system_id}/reload':
+    post:
+      operationId: api.systems.post_microservice_reload
+      description:
+        Queues a operation tp pull a new docker image and recreate the microservice (i.e. asynchronously)
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+      responses:
+        202:
+          description: The result of the reload operarion
+
+  '/systems/{system_id}/proxy/{rest_of_path}':
+    get:
+      operationId: api.view_utils._not_in_use_microservice_proxy_get
+      description:
+        Passes the request through to the microservice and returns the response
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: rest_of_path
+          in: path
+          description: The relative path to access on the microservice
+          required: true
+          type: string
+      responses:
+        200:
+          description: The proxied response from the microservice
+
+    post:
+      operationId: api.view_utils._not_in_use_microservice_proxy_post
+      description:
+        Passes the request through to the microservice and returns the response
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: rest_of_path
+          in: path
+          description: The relative path to access on the microservice
+          required: true
+          type: string
+      responses:
+        200:
+          description: The proxied response from the microservice
+
+    put:
+      operationId: api.view_utils._not_in_use_microservice_proxy_put
+      description:
+        Passes the request through to the microservice and returns the response
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: rest_of_path
+          in: path
+          description: The relative path to access on the microservice
+          required: true
+          type: string
+      responses:
+        200:
+          description: The proxied response from the microservice
+
+    patch:
+      operationId: api.view_utils._not_in_use_microservice_proxy_patch
+      description:
+        Passes the request through to the microservice and returns the response
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: rest_of_path
+          in: path
+          description: The relative path to access on the microservice
+          required: true
+          type: string
+      responses:
+        200:
+          description: The proxied response from the microservice
+
+    delete:
+      operationId: api.view_utils._not_in_use_microservice_proxy_delete
+      description:
+        Passes the request through to the microservice and returns the response
+      parameters:
+        - name: system_id
+          in: path
+          description: The id of the system
+          required: true
+          type: string
+
+        - name: rest_of_path
+          in: path
+          description: The relative path to access on the microservice
+          required: true
+          type: string
+      responses:
+        200:
+          description: The proxied response from the microservice
+
+  '/systems/{system_id}/config':
+    get:
+      operationId: api.systems.get_system_config
+      description:
+        Returns the configuration of the specified system
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+      responses:
+        200:
+          description: The system configuration
+          schema:
+            $ref: '#/definitions/SystemConfig'
+
+    put:
+      operationId: api.systems.put_system_config
+      description:
+        This service lets the user update a system's configuration by sending a PUT-request with the new
+        configuration. The id of the system is specified by the '{system_id}' part of the url.
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+        - in: body
+          name: body
+          description: The new system configuration
+          required: true
+          schema:
+            $ref: "#/definitions/SystemConfig"
+
+      responses:
+        200:
+          description: The system configuration
+          schema:
+            $ref: '#/definitions/SystemConfig'
+
+
+  '/systems/{system_id}/secrets':
+    get:
+      operationId: api.systems.get_system_secrets
+      description:
+        Returns the names of the currently defined secrets for the specified system.
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SecretKeys'
+
+
+    put:
+      operationId: api.systems.put_system_secrets
+      description:
+        Overwrites the current secrets for the specified system.
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SecretValues'
+
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+    post:
+      operationId: api.systems.post_system_secrets
+      description:
+        Adds a secret or list of secrets to the secrets manager for the specified system. If a secret
+        already exists, it is overwritten.
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SecretValues'
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+
+  '/systems/{system_id}/secrets/{secret_key}':
+    delete:
+      operationId: api.systems.delete_system_secret
+      description:
+        Deleted the specified secret from the specified system
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: system_id
+          description: The id of the system
+          required: true
+          type: string
+        - name: secret_key
+          in: path
+          description: The name of the secret to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+definitions:
+  Pipe:
+    type: object
+    required:
+      - _id
+      - config
+    properties:
+      _id:
+        type: string
+        example: "my-pipe"
+
+      runtime:
+        description:
+          This contains various runtime information about the pipe.
+        type: object
+        required:
+          - is-running
+          - is-valid-config
+        properties:
+          dependencies:
+            description:
+              This contains a list of datasets that this pipe has dependencies on
+            type: array
+            items:
+              type: string
+              example: "dataset_A"
+          is-running:
+            type: boolean
+            example: false
+          is-valid-config:
+            type: boolean
+            example: true
+          is-disabled:
+            type: boolean
+            example: false
+          config-errors:
+            type: array
+            items:
+              $ref: '#/definitions/PipeConfigError'
+          queues:
+            type: object
+
+      config:
+        type: object
+        required:
+          - original
+          - effective
+        description:
+          "This contains two values. The first value is the 'original' configuraiton, which is the raw configuration as specified by the user.
+          The second value is the 'effective' configuration which is the configuration that is actually used by the
+          runtime components. This can be different from the original configuration, since environment
+          variables and shorthand config syntaxes get expanded."
+        properties:
+          original:
+            $ref: '#/definitions/PipeConfig'
+
+          effective:
+            type: object
+            required:
+              - _id
+              - source
+              - type
+              - pump
+              - sink
+            properties:
+              _id:
+                type: string
+                example: "my-pipe"
+              type:
+                type: string
+                enum: ["pipe"]
+                example: "pipe"
+
+              source:
+                type: object
+                required:
+                  - type
+                properties:
+                  type:
+                    type: string
+                    example: "dataset"
+                  dataset:
+                    type: "string"
+                    example: "my-source-dataset"
+
+              pump:
+                type: object
+
+              sink:
+                type: object
+                required:
+                  - type
+                properties:
+                  type:
+                    type: string
+                    example: "dataset"
+                  dataset:
+                    type: "string"
+                    example: "my-target-dataset"
+              principals:
+                type: array
+                items:
+                  type: string
+                  example: "group:Admin"
+
+  PipeConfig:
+    type: object
+    required:
+      - _id
+      - type
+    properties:
+      _id:
+        type: string
+        example: "my-pipe"
+      type:
+        type: string
+        enum: ["pipe"]
+        example: "pipe"
+
+
+  PipeConfigError:
+    type: object
+    required:
+      - elements
+      - msg
+      - level
+    properties:
+      elements:
+        description:
+          The JSON path of the json element in the configuration that caused the error.
+        type: string
+        example: "$['source']['type']"
+      level:
+        description:
+          The severity-level of the error.
+        type: string
+        enum: ["error", "warning"]
+        example: "error"
+
+      msg:
+        description:
+          A human-readable description of the error.
+        type: string
+        example: "'embeddded' is not one of dict_keys(['empty', '@function', 'metrics', 'diff_datasets', 'dataset', 'ldap', 'embedded', 'sdshare', 'rdf', '@json_nodeconfig', '@pipe_entities', 'http_endpoint', 'merge_datasets', 'union_datasets', 'fake', 'json', 'sql', 'sparql', 'csv'])"
+
+  Pump:
+    type: object
+
+  PipeEntity:
+    type: object
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+        example: "my-entity-1"
+
+  ConfigEntity:
+    type: object
+    required:
+      - _id
+      - type
+    properties:
+      _id:
+        type: string
+        example: "my-entity-1"
+      type:
+        type: string
+        example: "pipe"
+
+  System:
+    type: object
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+        example: "my-system-1"
+
+  SystemConfig:
+    type: object
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+        example: "my-system-1"
+
+  Dataset:
+    type: object
+    required:
+      - _id
+    properties:
+      _id:
+        type: string
+        example: "my-dataset-1"
+
+  DatasetEntity:
+    type: object
+    required:
+      - _id
+      - _updated
+    properties:
+      _id:
+        type: string
+        example: "my-entity-1"
+      _updated:
+        type: integer
+        description:
+          The dataset offset of this entity.
+        example: 12345
+
+  DatasetIndex:
+    type: object
+
+
+  License:
+    type: object
+
+  ServiceMetadata:
+    type: object
+
+
+  SecretKeys:
+    description:
+      A list of secret-keys
+    type: array
+    items:
+      type: string
+
+
+  SecretValues:
+    description:
+      A secret-key => secret-value mapping. Both keys and values is strings.
+    type:
+      object
