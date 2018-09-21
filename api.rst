@@ -275,5 +275,7 @@ API Reference
    :local:
    :depth: 1
 
+..
+   TODO pull swagger from somewhere instead of having a copy here
 .. openapi:: ./swagger_public.yaml
 
