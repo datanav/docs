@@ -4378,8 +4378,7 @@ Properties
      - A flag that indicates that the target table should be truncated/emptied the first time a pump runs
        (for example on the first run, or when its offset has been set to zero manually). Please note that
        the truncating operation is executed in a separate transaction, so if any subsequent inserts should fail
-       the truncating operation will not be rolled back. Note that if combined with ``create_table_if_missing`` this
-       property will make the sink drop and then recreate the table on the first run.
+       the truncating operation will not be rolled back.
 
        Note: combining this option with ``use_bulk_operations`` enables the sink to do a direct bulk copy operation to the
        target table on first run, which is much faster than using a temporary table which is the default method.
@@ -4393,6 +4392,14 @@ Properties
        then a proper schema definition must be supplied in the ``schema_definition`` property. Note that this property
        requires that the user defined in the :ref:`SQL system <sql_system>` have the necessary privileges to create and drop
        tables in the target database/schema.
+     - ``false``
+     -
+
+   * - ``recreate_table_on_first_run``
+     - Boolean
+     - If combined with ``create_table_if_missing`` this property will make the sink drop and then recreate the table
+       on the first run, or if the pipe is reset (based on the information in ``schema_definition`` which must also be
+       provided).
      - ``false``
      -
 
