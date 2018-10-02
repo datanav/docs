@@ -6710,6 +6710,8 @@ It is used by the :ref:`REST sink <rest_sink>`.
 It supports the ``HTTP`` and ``HTTPS`` protocols. It provides session handling, connection pooling and authentication
 services to sources and sinks which need to communicate with a HTTP server.
 
+The REST system is an extension of the URL system, so all configuration properties of the URL system can be used.
+
 Prototype
 ^^^^^^^^^
 
@@ -6768,68 +6770,10 @@ Properties
      - Default
      - Req
 
-   * - ``url_pattern``
-     - String
-     - Similar to ``base_url`` except one can use the ``%s`` token to tell where relative URLs are to be inserted into the ``url_pattern`` to produce absolute URLs. If ``%s`` is omitted then the relative URL is appended to the ``url_pattern``.
+   * - ``<any url system property>``
      -
-     - Yes
-
-   * - ``verify_ssl``
-     - Boolean
-     - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
-       HTTP server over SSL/TLS.
-     - ``false``
+     - The REST system extends the URL system, so any property from the URL system can be applied.
      -
-
-   * - ``username``
-     - String
-     - The username to use when authenticating with the HTTP server. Note that you also have to specify
-       authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
-     -
-     -
-
-   * - ``password``
-     - String
-     - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
-     -
-     - Yes*
-
-   * - ``authentication``
-     - String
-     - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
-       might be also required depending on the authentication scheme selected.
-     -
-     -
-
-   * - ``jwt_token``
-     - String
-     - If ``authentication`` is set to ``jwt``, this property must hold the `JWT <https://jwt.io/>`_ token to use
-       towards the remote server.
-     -
-     -
-
-   * - ``headers``
-     - Dict<String,String>
-     - A optional set of header values to set as defaults in request made using the URL system. Both keys and values must
-       evaluate to strings. Note that any "Authorization" header provided in this object is automatically overwritten
-       when using the ``jwt_token`` property. The default headers can also be overridden in the operation properties
-       on a per-method basis - see next section for details.
-     -
-     -
-
-   * - ``connect_timeout``
-     - Integer
-     - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
-       wait indefinitely.
-     - ``60``
-     -
-
-   * - ``read_timeout``
-     - Integer
-     - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
-       means wait indefinitely.
-     - ``7200``
      -
 
    * - ``operations``
