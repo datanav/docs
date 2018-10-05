@@ -10,12 +10,12 @@ Notifications
 Introduction
 ============
 
-SESAM lets uses specifiy "notification rules" that will trigger alerts when certain
+SESAM lets users specify "notification rules" that will trigger alerts when certain
 conditions occur.
 
 When a notification rule triggers, the user(s) get notified in the GUI and optionally by email.
 
-Notification rules are added on the "Notifications" tab on the "Pipe"-page in the GUI.
+Notification rules are added under the "Notifications" tab on the "Pipe"-page in the GUI.
 
 
 Pump completed / Pump failed notification rules
