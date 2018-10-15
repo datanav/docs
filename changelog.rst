@@ -1,12 +1,17 @@
 Changelog
 =========
 
+2018-10-16
+----------
+* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
+* The ``compaction.keep_versions`` property can now also be set to ``0`` and ``1``. The default value is ``2``; which is needed for dependency tracking to be fully able to find reprocessable entities. Setting it to a lower value means that dependency tracking is best effort only.
+  
 2018-09-24
 ----------
 * Added a new ``recreate_table_on_first_run`` boolean flag to the :ref:`sql sink <sql_sink>` - it controls if Sesam should recreate the table from ``schema_definiton`` when the pipe is reset or runs for the first time. Note that this requires the ``create_table_if_missing`` property to also be set to ``true`` to take effect.
 * Altered the way the PK is created on schema definition generation. If the sink type is ``sql`` and ``create_table_if_missing`` is set to ``true``, the default primary key is the ``_id`` property of the entities. Previously it would always look for a property with the same contents as ``_id`` (which is still the default for non-sql sink pipes).
 
-2018-08-24
+2018-09-03
 ----------
 * Added a ``fallback_to_single_entities_on_batch_fail`` boolean flag to the :ref:`pump configuration <pump_section>`. The default reflects the current behaviour (``true``). It can be usefuly to set to ``false`` if the cost of processing a single entity at a time is high and there is a lot of entities in a batch (for example in a typical MS SQL sink in initial bulk upload mode).
 
