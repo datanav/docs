@@ -430,8 +430,15 @@ Properties
 
    * - ``compaction.keep_versions``
      - Integer
-     - The number of unique versions of an entity to keep around. The default is ``2``,
-       which is the minimum value allowed.
+     - The number of unique versions of an entity to keep around. The default is ``2``.
+       The value must be greater than or equal to ``0``.
+
+       .. WARNING::
+
+          A value less than ``2`` means that dependency tracking is best effort only,
+          and it will not be able to find all reprocessable entities. Do full or partial
+          rescans as a counter measure.
+
      - ``2``
      - No
 
@@ -449,6 +456,14 @@ Properties
        execution dataset. Pump execution datasets are always trimmed by time.  The
        default is 30 days, which is the minimum value allowed.
      - ``720``
+     - No
+
+   * - ``compaction.growth_threshold``
+     - Float
+     - The growth factor required for the automatically scheduled compaction to kick
+       in. The default value is that there must have been 10% new offsets written to
+       the dataset since the last compaction. ``1.0`` is the minimum value allowed.
+     - ``1.10``
      - No
 
 .. _circuit_breakers_section:
