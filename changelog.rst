@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-10-25
+----------
+* Added the :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>`.
+
 2018-10-16
 ----------
 * Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
