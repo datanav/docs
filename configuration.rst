@@ -6276,7 +6276,8 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "port": 5432,
-        "database": "database-name"
+        "database": "database-name",
+        "sslmode": "prefer"
     }
 
 Properties
@@ -6321,6 +6322,14 @@ Properties
      - Name/id of database to connect to.
      -
      - Yes
+
+   * - ``sslmode``
+     - String
+     - The ssl mode to use. The value has to be one of "disable", "allow", "prefer", "require", "verify-ca" or "verify-full".
+       Please consult the `PostgreSQL documentation <https://www.postgresql.org/docs/10/static/libpq-ssl.html>`_  for
+       the full details of what these modes entail.
+     - ``"prefer"``
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-10-31
+----------
+* Added the ``sslmode`` property to the :ref:`PostgreSQL system <postgresql_system>`. Its default value (``prefer``) reflects the PostgreSQL client library default, hence you should only set this property if you need other behaviour than the default.
+
 2018-10-25
 ----------
 * Added the :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>`.
