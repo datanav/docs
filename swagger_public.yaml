@@ -864,7 +864,7 @@ paths:
 
     put:
       description:
-        Adds a secret or list of secrets to the secrets manager. If a secret
+        Adds a secret or dictionay of secrets to the secrets manager. If a secret
         already exists, it is overwritten.
       produces:
         - application/json
@@ -874,7 +874,7 @@ paths:
 
     post:
       description:
-        Adds a secret or list of secrets to the secrets manager. If a secret
+        Adds a secret or dictionary of secrets to the secrets manager. If a secret
         already exists, it is overwritten.
       produces:
         - application/json
