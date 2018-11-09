@@ -6461,8 +6461,8 @@ Prototype
         "type": "system:smtp",
         "smtp_server": "localhost",
         "smtp_port": 25,
-        "smtp_username": None,
-        "smtp_password": None,
+        "smtp_username": null,
+        "smtp_password": null,
         "use_tls": false,
         "max_per_hour": 1000
     }
@@ -6735,9 +6735,9 @@ Prototype
         "type": "system:url",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
-        "username": None,
-        "password": None,
-        "jwt_token": None,
+        "username": null,
+        "password": null,
+        "jwt_token": null,
         "headers": {
             "MY_HEADER": "some-value",
             "MY_OTHER_HEADER": "$ENV(key-for-other-value)",
@@ -6909,10 +6909,10 @@ Prototype
         "type": "system:rest",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
-        "username": None,
-        "password": None,
+        "username": null,
+        "password": null,
         "authentication": "basic",
-        "jwt_token": None,
+        "jwt_token": null,
         "connect_timeout": 60,
         "read_timeout": 7200,
         "operations": {
