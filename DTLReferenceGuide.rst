@@ -2254,8 +2254,8 @@ Date and time
        |         ``["datetime-parse",``
        |           ``"%Y/%m/%d %H:%M", "2015/07/28 04:46"]]``
        |
-       | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
-       |                               ``"~t2015-07-28T02:46Z:00"]``.
+       | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
+       |                               ``"~t2015-07-28T02:46:00Z"]``.
 
        .. _`is-datetime`:
 
@@ -2685,7 +2685,15 @@ Strings
        |
        | ``["matches", "*_sport", "_S.tags"]``
        |
-       | Returns true if all the tags that have a "_sport" suffix.
+       | Returns ``true``, unless ``_S.tags`` is empty or ``null``, if all the tags that have a "_sport" suffix.
+       |
+       | ``["matches", "*", null]``
+       |
+       | Returns ``false``.
+       |
+       | ``["matches", "*", ["list"]]``
+       |
+       | Returns ``false``.
 
        .. _encrypt_dtl_function:
    * - ``encrypt``
