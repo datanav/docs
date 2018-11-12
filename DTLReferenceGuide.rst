@@ -2254,8 +2254,8 @@ Date and time
        |         ``["datetime-parse",``
        |           ``"%Y/%m/%d %H:%M", "2015/07/28 04:46"]]``
        |
-       | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
-       |                               ``"~t2015-07-28T02:46Z:00"]``.
+       | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
+       |                               ``"~t2015-07-28T02:46:00Z"]``.
 
        .. _`is-datetime`:
 
