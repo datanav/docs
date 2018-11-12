@@ -10,6 +10,14 @@ paths:
         Returns a list of all the pipes
       produces:
         - application/json
+      parameters:
+        - in: query
+          name: verbose
+          type: boolean
+          default: false
+          required: false
+          description:
+            When set to true the pipe information will be more verbose.
       responses:
         200:
           description: An array of pipes
@@ -344,6 +352,14 @@ paths:
         Returns a list of all the datasets
       produces:
         - application/json
+      parameters:
+        - in: query
+          name: verbose
+          type: boolean
+          default: false
+          required: false
+          description:
+            When set to true the dataset information will be more verbose.
       responses:
         200:
           description: An array of datasets
@@ -558,7 +574,8 @@ paths:
           description: OK
 
     post:
-      operationId: api.datasets.post_dataset_entities
+      #operationId: api.datasets.post_dataset_entities
+      operationId: api.view_utils._not_in_use_post_dataset_entities
       description: |
         Puts the specified entities into the specified dataset
       produces:
@@ -855,7 +872,7 @@ paths:
   '/secrets':
     get:
       description:
-        Returns the names of the currently defined secrets.
+        Returns a list of the names of the defined secrets.
       produces:
         - application/json
       responses:
@@ -864,7 +881,8 @@ paths:
 
     put:
       description:
-        Adds a secret or list of secrets to the secrets manager. If a secret
+        Adds the secrets specified in the payload. The payload must be a JSON object where
+        the keys are the secret names and the values are the secret values. If a secret
         already exists, it is overwritten.
       produces:
         - application/json
@@ -874,8 +892,9 @@ paths:
 
     post:
       description:
-        Adds a secret or list of secrets to the secrets manager. If a secret
-        already exists, it is overwritten.
+        Adds the secrets specified in the payload. The payload must be a JSON object where
+        the keys are the secret names and the values are the secret values. If a secret
+        already exists, it is overwritten. Existing secrets are not deleted.
       produces:
         - application/json
       responses:
@@ -1416,7 +1435,7 @@ paths:
 
   '/receivers/{pipe_id}/entities':
     post:
-      operationId: api.receivers.post_endpoint_entities
+      operationId: api.view_utils._not_in_use_receivers_post_endpoint_entities
       description: |
         Sesam api receiver endpoint - uses the :doc:`JSON Push protocol <json-push>`. Pushes JSON entities to
         the named pipe. This is only supported for pipes that have an 'http_endpoint' source.
@@ -1813,7 +1832,7 @@ paths:
     get:
       operationId: api.systems.get_system_secrets
       description:
-        Returns the names of the currently defined secrets for the specified system.
+        Returns a list of the names of the defined secrets for the specified system.
       parameters:
         - in: path
           name: system_id
@@ -1832,7 +1851,8 @@ paths:
     put:
       operationId: api.systems.put_system_secrets
       description:
-        Overwrites the current secrets for the specified system.
+        Overwrites the secrets for the specified system. The payload must be a JSON object where
+        the keys are the secret names and the values are the secret values.
       parameters:
         - in: path
           name: system_id
@@ -1853,8 +1873,9 @@ paths:
     post:
       operationId: api.systems.post_system_secrets
       description:
-        Adds a secret or list of secrets to the secrets manager for the specified system. If a secret
-        already exists, it is overwritten.
+        Adds the secrets specified in the payload to the specified system. The payload must be a JSON object where
+        the keys are the secret names and the values are the secret values. If a secret
+        already exists, it is overwritten. Existing secrets are not deleted.
       parameters:
         - in: path
           name: system_id
@@ -1875,7 +1896,7 @@ paths:
     delete:
       operationId: api.systems.delete_system_secret
       description:
-        Deleted the specified secret from the specified system
+        Deletes the specified secret from the specified system
       produces:
         - application/json
       parameters:
