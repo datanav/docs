@@ -89,7 +89,7 @@ level, so child entities can have them.
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
        the dataset. The value is an integer representing the number
-       of milliseconds since epoch (January 1st 1970 UTC). This field is
+       of microseconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
        
        *This field is generated automatically when writing an entity to a dataset.*
