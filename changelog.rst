@@ -3,7 +3,7 @@ Changelog
 
 2018-12-03
 ----------
-* Added support for specifying SOCKS5 proxies for the :ref:`URL <url_system>` and :ref:`REST systems <rest_system>`.
+* Added support for specifying SOCKS5 proxies for the :ref:`URL <url_system>`, :ref:`REST <rest_system>` and :ref:`Twilio <twilio_system>` systems.
 
 2018-11-12
 ----------
