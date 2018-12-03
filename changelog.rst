@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2018-12-03
+----------
+* Added support for specifying SOCKS5 proxies for the :ref:`URL <url_system>` and :ref:`REST systems <rest_system>`.
+
 2018-11-12
 ----------
 * ``["matches", "x*", ["list"]]`` now returns ``false`` instead of ``true``. Note that this is a breaking change, but the old behaviour was considered a bug as it is both non-intuitive and most likely not what you want.

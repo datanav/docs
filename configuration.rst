@@ -6752,7 +6752,11 @@ Prototype
                "some": "extra-params",
                "to": "include-in-token-request"
             }
-        }
+        },
+        "proxies": {
+            "http": "socks5://mysocksproxy:1234",
+            "https": "socks5://user:password@mysslsocksproxy:1234",
+        },
         "authentication": "basic",
         "connect_timeout": 60,
         "read_timeout": 7200
@@ -6838,6 +6842,16 @@ Properties
      -
      -
 
+   * - ``proxies``
+     - Dict<String,String>
+     - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
+       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
+       secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
+     -
+     -
+
    * - ``connect_timeout``
      - Integer
      - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
@@ -6896,7 +6910,8 @@ It is used by the :ref:`REST sink <rest_sink>`.
 It supports the ``HTTP`` and ``HTTPS`` protocols. It provides session handling, connection pooling and authentication
 services to sources and sinks which need to communicate with a HTTP server.
 
-The REST system is an extension of the URL system, so all configuration properties of the URL system can be used.
+The REST system is an extension of the URL system, so all configuration properties of the :ref:`URL system <url_system>`
+apply. We'll only cover the REST system specific properties in this section.
 
 Prototype
 ^^^^^^^^^
