@@ -6665,7 +6665,8 @@ Prototype
         "type": "system:twilio",
         "account": "twilio-account-number",
         "token": "twilio-api-token",
-        "max_per_hour": 1000
+        "max_per_hour": 1000,
+        "proxy":  "socks5://user:password@socksproxy:1234"
     }
 
 Properties
@@ -6698,6 +6699,13 @@ Properties
      - The maximum number of messages to send for any hour. It is used for stopping run-away message sending in
        development or testing. Note that any message not sent will be logged but discarded.
      - 1000
+     -
+
+   * - ``proxy``
+     - String
+     - A optional property that specifies a SOCKS5 proxy for the system. If authentication is used, the embedded
+       username and passord should be put into system secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
+     -
      -
 
 Example configuration
