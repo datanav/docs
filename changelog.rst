@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2019-01-03
+----------
+* The :ref:`dataset <dataset_sink>` sink will now mark the sink dataset as populated when all input datasets are populated and all entities have been read from them. Earlier it marked the sink dataset as populated after the first completed run. This was typically not what you wanted as it caused the sink datasets to be prematurely populated, which then caused unnecessary dependency tracking.
+* Added the ``initial_datasets`` property to the :ref:`merge <merge_source>`,  :ref:`merge_datasets <merge_datasets_source>`,  :ref:`union_datasets <union_datasets_source>`, and  :ref:`diff_datasets <diff_datasets_source>` sources. This property should only be used if some of the input datasets will never be populated. The property should then list the datasets that have to be populated before the sink datasets should be populated.
+
 2018-12-07
 ----------
 * Casting decimal numbers containing a "scientific notation" shorthand (i.e. "1E-3", "10E14" etc) to a string using the :ref:`DTL string <string_dtl_function>` function will now expand the exponent to its full representation (i.e. "1E2" -> "100", "1E-3" -> "0.001"). This is a change in behaviour.

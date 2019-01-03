@@ -2323,6 +2323,7 @@ Strings
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
 
+       .. _bytes_dtl_function:
    * - ``bytes``
      - | *Arguments:*
        |   VALUES(value-expression{1})
