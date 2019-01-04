@@ -102,6 +102,48 @@ level, so child entities can have them.
        *This field is generated automatically by the dependency tracking.*
      -
 
+Special fields
+---------------
+
+Entity fields starting with ``$`` are semi-reserved. They have special
+meaning and will sometimes be produced and consumed by built-in
+components. These fields are normal fields that will be hashed and
+stored as part of the entity.
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 50, 10
+
+   * - Field
+     - Description
+     - Required
+
+       .. _dollar_ids_field:
+   * - ``$ids``
+     - This field can be used to hold all the identities of an entity. An entity
+       may have multiple identities, i.e. in addition to the one in ``_id``. The value type
+       is always :ref:`NI <ni_data_type>`. The :ref:`merge <merge_source>` source
+       will collect all the merged identities in this field.
+     - 
+
+       .. _dollar_children:
+   * - ``$children``
+     - The :ref:`create-child <create_child_dtl_transform>` DTL transform function
+       will add the created child entity as a value in the ``$children`` property of the
+       target entity. The :ref:`emit_children <emit_children_transform>` transform can
+       then later be used to expand the ``$children`` entities into standalone entities.
+     - 
+
+       .. _dollar_replaced:
+   * - ``$replaced``
+     - The :ref:`merge <merge_source>` source will set the ``$replaced`` field
+       to ``true`` if the output entity is being replaced with a new entity that has a
+       different entity id. This typically happens when the entity is being merged
+       with another entity where the id of the other entity takes precedence over
+       the current one.
+     - 
+
 .. _entity_data_types:
 
 Standard types
