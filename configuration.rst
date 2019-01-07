@@ -782,6 +782,12 @@ Properties
      -
      - Yes
 
+   * - ``initial_datasets``
+     - List<String{>=0}>
+     - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+     -
+     - 
+
    * - ``equality``
      - List<EqFunctions{>=0}>
      - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
@@ -977,6 +983,8 @@ already merged entities downstream.
    to do this then you should reset the pipe and maybe also delete the
    target dataset.
 
+.. _union_datasets_source:
+
 The union datasets source
 -------------------------
 
@@ -1024,6 +1032,12 @@ source, except ``datasets`` can be a list of datasets ids.
      -
      - Yes
 
+   * - ``initial_datasets``
+     - List<String{>=0}>
+     - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+     -
+     - 
+
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the
@@ -1068,6 +1082,8 @@ configuration, which is omitted here for brevity:
             "include_previous_versions": true
         }
     }
+
+.. _merge_datasets_source:
 
 The merge datasets source
 -------------------------
@@ -1115,6 +1131,12 @@ strategy.
      - A list of datasets ids.
      -
      - Yes
+
+   * - ``initial_datasets``
+     - List<String{>=0}>
+     - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+     -
+     - 
 
    * - ``strategy``
      - String
@@ -1176,6 +1198,9 @@ configuration, which is omitted here for brevity:
         }
     }
 
+
+.. _diff_datasets_source:
+
 The diff datasets source (Experimental)
 ---------------------------------------
 
@@ -1220,6 +1245,12 @@ be a list of datasets ids.
      - A list of datasets ids.
      -
      - Yes
+
+   * - ``initial_datasets``
+     - List<String{>=0}>
+     - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+     -
+     - 
 
    * - ``whitelist``
      - List<String>
