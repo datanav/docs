@@ -1162,6 +1162,7 @@ modifiying the target entity, and has no return value.
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
+       .. _create_child_dtl_transform:
    * - ``create-child``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1184,8 +1185,9 @@ modifiying the target entity, and has no return value.
          property in the previous version of the entity. It will detect deleted
          entities and add them to the property before storing the entity.
        |
-       | Note also that there is an ``emit_children`` pipe transform that can be
-         used to expand the ``$children`` entities into standalone entities.
+       | Note also that there is an :ref:`emit_children <emit_children_transform>`
+         transform that can be used to expand the ``$children`` entities into
+         standalone entities.
 
      - | ``["create-child", "_S.orders"]``
        |
