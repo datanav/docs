@@ -3700,6 +3700,16 @@ Properties
      - ``null``
      - No
 
+   * - ``deletion_tracking``
+     - Boolean
+     - If ``true`` (the default), then after a full run any entities that existed in the dataset before
+       the run but that weren't seen during the run will be deleted.
+
+       If ``false``, then any existing entities in the dataset will not be touched. This is only
+       useful in very special circumstances.
+     - ``true``
+     - No
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
