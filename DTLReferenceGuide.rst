@@ -1193,11 +1193,6 @@ modifiying the target entity, and has no return value.
        |
        | Adds the orders in the source entity's ``orders`` field to the "$children" property
          on the target entity.
-       |
-       | ``["create", ["apply", "order", "_S.orders"]]``
-       |
-       | Emit the orders in the source entity's ``orders`` field as new entities,
-         but apply the ``order`` transform to them first.
 
 
 Expression language
