@@ -404,10 +404,11 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the
-:ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours. The
-default is to keep the last two versions of every entity up until the
-current time.
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
+unless sink compaction is enabled. If sink compaction is enabled then
+compaction will happen incrementally as the pipe writes new entities
+to the dataset. The default is to keep the last two versions of every
+entity up until the current time.
 
 Properties
 ^^^^^^^^^^
@@ -428,10 +429,17 @@ Properties
      - ``true``
      - No
 
+   * - ``compaction.sink``
+     - Boolean
+     - EXPERIMENTAL. If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
+     - ``false``
+     - No
+
    * - ``compaction.keep_versions``
      - Integer
      - The number of unique versions of an entity to keep around. The default is ``2``.
-       The value must be greater than or equal to ``0``.
+       The value must be greater than or equal to ``0``. If set to ``0`` then a time
+       threshold must be set explicitly.
 
        .. WARNING::
 
@@ -3708,6 +3716,12 @@ Properties
        If ``false``, then any existing entities in the dataset will not be touched. This is only
        useful in very special circumstances.
      - ``true``
+     - No
+
+   * - ``bitset_commit_interval``
+     - Integer
+     - Specifies how often dataset bitsets and dataset compaction changes are written to disk. The higher the number the fewer writes, but at the cost of having to redo the work if the pipe fails before completion. The changes are always written to disk once the pipe completes.
+     - ``1000000``
      - No
 
 
