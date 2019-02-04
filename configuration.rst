@@ -680,6 +680,16 @@ Properties
      -
      - Yes
 
+   * - ``subset``
+     - Array
+     - | An ``eq`` DTL expression where the left hand side is the index expression and the right hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
+       |
+       | Example: ``["eq", "_S.category", "tank"]``
+
+       .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
+     -
+     - No
+
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the dataset source will only return the latest
@@ -2290,6 +2300,16 @@ Properties
      - No paging
      -
 
+   * - ``subset``
+     - Array
+     - | An ``eq`` DTL expression where the left hand side is the index expression and the right hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
+       |
+       | Example: ``["eq", "_S.category", "tank"]``
+
+       .. NOTE:: For this to work the source must support subsets.
+     -
+     - No
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -3647,11 +3667,14 @@ Properties
      - Yes
 
    * - ``indexes``
-     - String
+     - String or Array
      - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
        maintained. This index will then be used by the dataset browser to look up
        entities both by ``_id`` and ``$ids``.
-     - ``null``
+
+       If the value is an array then it can contain index expressions that should be
+       maintained on the sink dataset. This is typically used for declaring subset indexes.
+     - ``[]``
      - No
 
    * - ``track_children``
@@ -7194,7 +7217,7 @@ Prototype
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
-character and the only non-letter or number characters allowed in the rest of the string are "_", "." or "-".
+character and the only non-letter or number characters allowed in the rest of the string are "_" and "-".
 
 The microservice ``_id`` is exposed as domain names in the local network and is thus subject to domain name rules:
 the maximal size of an id is 63 characters and the minimal size is 2 characters.
