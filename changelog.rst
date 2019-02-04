@@ -1,6 +1,14 @@
 Changelog
 =========
 
+2019-02-04
+----------
+* There is now a new index implementation (version 2) that supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset. Index version 1 is currently the default. Nodes must be started with a special command line option in order to change the default value. Version 2 will be made the default at some point once we have enough experience with it.
+* The :ref:`dataset <dataset_source>` and :ref:`json <json_source>` sources now support the ``subset`` property. This property is used to specify a subset of the source dataset.
+* The :ref:`hops <hops_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions now support the ``prefilters`` property. This property is used to specify a subset of the dataset that it is hopped to.
+* The ``GET /api/datasets/{dataset_id}/indexes`` API endpoint now includes the indexes' version number.
+* The ``DELETE /datasets/{dataset_id}/indexes/{index_int_id}`` API endpoint has been added. It can be used to delete a dataset index.
+
 2019-01-28
 ----------
 * :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
