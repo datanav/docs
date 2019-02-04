@@ -3,7 +3,7 @@ Changelog
 
 2019-01-28
 ----------
-* :ref:`Compaction <pipe_compactions>` is now incremental, so it will continue from where it got to the last time.
+* :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
 * Compaction will be performed by the dataset sink if ``compaction.sink`` is set to ``true`` in the pipe configuration. This is only available for pipes using the :ref:`dataset <dataset_sink>` sink. If sink compaction is enabled no scheduled compaction will be done on the dataset as this is no longer neccessary. Index compaction will still require scheduled compaction, but this does not require a lock on the dataset. Note that sink compaction is currently experimental.
 * Automatic compaction will now kick if there are 10% or 10000 new dataset offsets since the last compaction. The 10000 cap is fixed for now.
 
