@@ -7194,7 +7194,7 @@ Prototype
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
-character and the only non-letter or number characters allowed in the rest of the string are "_", "." or "-".
+character and the only non-letter or number characters allowed in the rest of the string are "_" and "-".
 
 The microservice ``_id`` is exposed as domain names in the local network and is thus subject to domain name rules:
 the maximal size of an id is 63 characters and the minimal size is 2 characters.
