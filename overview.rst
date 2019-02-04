@@ -30,7 +30,7 @@ It also provides a number of core Sink implementations such as the :ref:`relatio
 Installation
 ------------
 
-You must sign up using the `Sesam Portal <https://portal.sesam.in/>`_ to install Sesam. The default installation type is a cloud based installation,
+You must sign up using the `Sesam Portal <https://portal.sesam.in/>`__ to install Sesam. The default installation type is a cloud based installation,
 but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation.
 
 You can also access an existing Sesam installation by registering in the Sesam Portal and obtaining an invitation from someone with
@@ -43,7 +43,7 @@ License
 -------
 
 Sesam requires a valid license to function. Without a valid license the pipes will stop running.
-Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`_.
+Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`__.
 A three month trial license is available for evaluation purposes.
 
 .. _overview-getting-started:
@@ -761,8 +761,7 @@ You may want to try to do some other edits to the data files or the configuratio
 
 Examples:
 
-* Change the name of "Maria Hawkins" to something else, and see that she gets updated in the ``customers`` and
-``customers-with-orders`` datasets.
+* Change the name of "Maria Hawkins" to something else, and see that she gets updated in the ``customers`` and ``customers-with-orders`` datasets.
 * Add a new customer. Then add a new $99 order for that customer.
 
 Remember to POST the changed JSON data to Sesam after you have saved the changes.

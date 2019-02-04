@@ -128,9 +128,9 @@ custom service alongside Sesam.
 
 The templates that are relevant to building new data sources are:
 
-    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasource-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
+    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasource-template>`__.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `Python template <https://github.com/sesam-io/python-datasource-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-datasource-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
     - The `Java template <https://github.com/sesam-io/java-datasource-template>`_. Requires Java 8 and uses the `Spark <http://sparkjava.com/>`_ micro framework.
 
@@ -186,7 +186,7 @@ transforms template projects for common languages are provided.
 
 The following templates are available:
 
-    - The `Python template <https://github.com/sesam-io/python-transform-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-transform-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
 The transform will stream an array of JSON objects to the registered endpoint and expect back a list of entities.
 
@@ -212,6 +212,6 @@ To help build these transforms template projects for common languages are provid
 
 The following templates are available:
 
-    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasink-template>`_.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
+    - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasink-template>`__.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
-    - The `Python template <https://github.com/sesam-io/python-datasink-template>`_. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
+    - The `Python template <https://github.com/sesam-io/python-datasink-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.

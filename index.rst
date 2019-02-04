@@ -12,4 +12,6 @@ Sesam Data Integration Platform
    Open Sesam <open-sesam>
    GDPR platform <gdpr-platform>
    Known Issues <known-issues>
+   Deprecated features <deprecations>
+   Open source licences <open-source-licenses>
    Changelog <changelog>

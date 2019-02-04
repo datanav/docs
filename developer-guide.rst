@@ -20,3 +20,5 @@ Developer Guide
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
    Databrowser <databrowser>
+   Cluster Configuration <cluster-config>
+   Source datatype mapping <source-datatype-mapping>
