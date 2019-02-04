@@ -361,7 +361,7 @@ The "user object" is the item that represents the currently logged-in
 user. This item will not be displayed in any searchresults, but can be
 reached by clicking on the little person-icon in the top right corner.
 
-.. _configuration:
+.. _databrowser_configuration:
 
 Configuration
 -------------

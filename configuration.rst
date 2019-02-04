@@ -2421,7 +2421,7 @@ SDShare Push protocol
 ^^^^^^^^^^^^^^^^^^^^^
 
 The SDShare Push protocol is described `here
-<https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
+<https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`__.
 
 The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_
 in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
@@ -4987,10 +4987,10 @@ and is available to any DTL transform on the pipe in which the endpoint sink is 
 :ref:`DTL Variables <variables>` for more details.
 
 The SDShare protocol is described `here
-<http://www.sdshare.org/spec/sdshare-v1.0.html>`_.
+<http://www.sdshare.org/spec/sdshare-v1.0.html>`__.
 
 The exposed URLs may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`_ for the full details.
+the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`__ for the full details.
 
 Prototype
 ^^^^^^^^^
@@ -5076,7 +5076,7 @@ It exposes the URLs:
    * - ``http://localhost:9042/api/publishers/mypipe/csv/some_filename.csv``
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-csv>`_ for the full details.
+the `API reference <./api.html#get--publishers-pipe_id-csv>`__ for the full details.
 
 Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
 the last path element of the URL.
@@ -7806,5 +7806,5 @@ value must be cleared in order to reprocess already seen entities with the new p
 configuration.
 
 This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the Service API.
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
 

@@ -117,7 +117,6 @@ todo_include_todos = False
 # html_theme = "sphinx_rtd_theme"
 
 # Adds an HTML table visitor to apply Bootstrap table classes
-html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
 html_theme_path = guzzle_sphinx_theme.html_theme_path()
 html_theme = 'guzzle_sphinx_theme'
 

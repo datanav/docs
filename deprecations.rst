@@ -19,9 +19,9 @@ Transformations
 The properties to CURIEs transform
 ----------------------------------
 
-This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`_ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_)
+This transform can transform entity properties to `RDF CURIEs <https://www.w3.org/TR/curie/>`__ (a superset of `XML QNames <https://en.wikipedia.org/wiki/QName>`_)
 based on wildcard patterns. It is used primarily when dealing with or preparing to output
-`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`_ data. Note that URL quoting is applied to the property names
+`RDF <https://www.w3.org/standards/techs/rdf#w3c_all>`__ data. Note that URL quoting is applied to the property names
 as part of the transform. Also note that by default the path separator character ("/) is not quoted, but the behaviour
 is configurable.
 
