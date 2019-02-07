@@ -7695,8 +7695,8 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
    * - ``notification_granularity``
      - int
-     - This property lets the pipe "override" the ``log_events_noop_runs`` property and force the pipe to log at
-       runs at regular intervals, even if it was a "noop" run. The value is in seconds. The default value
+     - This property lets the pipe "override" the ``log_events_noop_runs`` property and force the pipe to log a run
+       at regular intervals, even if it was a "noop" run. The value is in seconds. The default value
        is ``999999999999999`` and means "never". A value of 900 means always log a pipe run if the last logged
        "completed" event is older than 15 minutes). Note that any errors or retries will always imply logging to the
        execution dataset.
