@@ -44,7 +44,7 @@ License
 
 Sesam requires a valid license to function. Without a valid license the pipes will stop running.
 Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`__.
-A three month trial license is available for evaluation purposes.
+A month trial license is available for evaluation purposes.
 
 .. _overview-getting-started:
 
