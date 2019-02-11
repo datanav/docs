@@ -7483,7 +7483,10 @@ Prototype
         "fallback_to_single_entities_on_batch_fail": true,
         "use_dead_letter_dataset": false,
         "track_dead_letters": false,
-        "mode": "scheduled"
+        "mode": "scheduled",
+        "log_events_noop_runs": false,
+        "log_events_noop_runs_changes_only": true,
+        "notification_granularity": 99999999999
     }
 
 Properties
@@ -7668,6 +7671,36 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
        Pumps in ``off`` mode cannot be started at all.
      - "scheduled"
+     -
+
+   * - ``log_events_noop_runs``
+     - Boolean
+     - A flag that controls if a "noop" ("no-operation") pipe run should be logged in the pipe execution log or not. The default
+       value ``false`` means that runs that results in no processed or changed entities (the semantic depends on the type of sink)
+       will never be logged. See also the ``log_events_noop_runs_changes_only`` property which controls if the source or
+       the sink decides if a run is considered a "noop" or not. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - false
+     -
+
+   * - ``log_events_noop_runs_changes_only``
+     - Boolean
+     - A flag that controls what kind of metric is used to determine if a pipe run was a "noop" ("no-operation") run or not.
+       The default setting ``true`` means that a run is considered a "noop" run if the sink reported that no entities
+       was changed, even if the source produced entities. If it is set to ``false`` then all runs which yielded no
+       new entities from the source is considered a "noop" run. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - true
+     -
+
+   * - ``notification_granularity``
+     - int
+     - This property lets the pipe "override" the ``log_events_noop_runs`` property and force the pipe to log a run
+       at regular intervals, even if it was a "noop" run. The value is in seconds. The default value
+       is ``999999999999999`` and means "never". A value of 900 means always log a pipe run if the last logged
+       "completed" event is older than 15 minutes). Note that any errors or retries will always imply logging to the
+       execution dataset.
+     - true
      -
 
 

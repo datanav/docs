@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-02-07
+----------
+* We've changed the default strategy for pipe execution logging. By default, we now will never log any runs which resulted in no processed/changed entities. You can opt-in to the previous behaviour by editing the ``log_events_noop_runs``, ``log_events_noop_runs_changes_only`` and ``notification_granularity`` :ref:`pump properties <pump_section>`.
+
 2019-02-04
 ----------
 * There is now a new index implementation (version 2) that supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset. Index version 1 is currently the default. Nodes must be started with a special command line option in order to change the default value. Version 2 will be made the default at some point once we have enough experience with it.
