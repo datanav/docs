@@ -1250,6 +1250,8 @@ modifiying the target entity, and has no return value.
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
 
+       .. _dtl_transform_create:
+
    * - ``create``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1269,7 +1271,8 @@ modifiying the target entity, and has no return value.
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
-       .. _create_child_dtl_transform:
+       .. _dtl_transform_create_child:
+
    * - ``create-child``
      - | *Arguments:*
        |   VALUES(value-expression{1})

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-04-01
+----------
+* The :ref:`"dtl" transform <dtl_transform>` will now fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform_create>` and  :ref:`"create-child" <dtl_transform_create_child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. This is a change in default behaviour, but it is possible to opt-out of this new behaviour by setting the ``id_required`` property to ``false``. It would make it easier to discover logic errors.
+
 2019-03-26
 ----------
 * The ``track_children`` property on the :ref:`dataset sink <dataset_sink>` is now inferred to be ``true`` if any of the pipe's transforms use the ``create-child`` DTL function. It is possible to override this by setting the property's value to ``false``.
