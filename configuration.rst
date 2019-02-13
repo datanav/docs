@@ -5902,7 +5902,8 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "port": 1521,
-        "database": "database-name"
+        "database": "database-name",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -5948,6 +5949,15 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5962,7 +5972,8 @@ Example Oracle configuration:
         "username": "system",
         "password": "oracle",
         "host": "oracle",
-        "database": "XE"
+        "database": "XE",
+        "coerce_to_decimal": true
     }
 
 
@@ -5986,7 +5997,8 @@ Prototype
         "name": "The Oracle Database",
         "username":"username-here",
         "password":"secret",
-        "tns_name": "tns-name-here"
+        "tns_name": "tns-name-here",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -6020,6 +6032,16 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -6033,7 +6055,8 @@ Example Oracle TNS configuration:
         "type": "system:oracle_tns",
         "username": "system",
         "password": "oracle",
-        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
+        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))"",
+        "coerce_to_decimal": true
     }
 
 
