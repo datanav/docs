@@ -6032,7 +6032,7 @@ Properties
      -
      - Yes
 
-  * - ``coerce_to_decimal``
+   * - ``coerce_to_decimal``
      - Boolean
      - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
        and scale information). What type the column data ends up as is not clearly defined by the current oracle
