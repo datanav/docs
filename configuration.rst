@@ -7226,6 +7226,10 @@ Prototype
                     "key1": "value1",
                     "key2": "value2"
                 }
+            },
+            "hosts": {
+                "myhost1.mydomain.io": "157.240.20.34",
+                "myhost2.mydomain.io": "157.240.20.35"
             }
         },
         "use_https": false,
@@ -7323,6 +7327,13 @@ Properties
        The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
        4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
      - ``null``
+     -
+
+       .. _microservices_system_docker_hosts:
+   * - ``docker.hosts``
+     - Dict<String,String>
+     - A mapping between domain names/hostnames and IP adresses. These custom hostnames will be resolvable inside the microservice container.
+     - ``{}``
      -
 
    * - ``use_https``
