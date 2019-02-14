@@ -827,3 +827,96 @@ other function) to its "full" form:
 Note that expanding CURIEs is normally done at the endpoint of your flow (i.e. by the sink or a SDShare feed, see below).
 However, if the sink you are using to output the final data is not RDF aware (i.e. supports automatic prefix expansion)
 you can use the ``uri-expand`` function to achieve the same functionality.
+
+
+Pipes
+=====
+
+Short-hand configuration
+------------------------
+
+As mentioned earlier, in the :ref:`pipe section <pipe_section>`, there is a special "short hand" configuration for
+one of the most used pipes; pipes pumping entities from RDBMS tables to an internal dataset. Since this is an often
+encountered usecase, we have condensed the information needed into a single url-style form:
+
+::
+
+    [
+        {
+           "_id": "Northwind",
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
+        },
+        {
+           "_id": "Northwind:Orders",
+           "type": "pipe",
+           "name": "Orders from northwind",
+           "short_config": "sql://Northwind/Orders"
+        }
+    ]
+
+Currently, only the :ref:`sql system <sql_system>` and :ref:`source <sql_source>` is supported
+though other short forms may be added at a later time. The above example using the ``short_config`` form is equivalent
+to this fully expanded pipe configuration:
+
+::
+
+    [
+        {
+           "_id": "Northwind",
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
+        },
+        {
+           "_id": "Northwind:Orders",
+           "type": "pipe",
+           "source": {
+               "type": "sql",
+               "system": "Northwind",
+               "table": "Orders"
+           },
+           "sink": {
+               "type": "dataset",
+               "dataset": "Northwind:Orders"
+           },
+           "pump": {
+               "schedule_interval": 30
+           }
+        }
+    ]
+
+You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`sql source <sql_source>`
+and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
+changing the pump schedule and startup flag:
+
+::
+
+    [
+        {
+           "_id": "Northwind",
+           "type": "system:mysql",
+           "name": "Northwind database",
+           "username": "northwind",
+           "password": "secret",
+           "host": "mydb.example.org",
+           "database": "Northwind"
+        },
+        {
+           "_id": "Northwind:Orders",
+           "type": "pipe",
+           "name": "Orders from northwind",
+           "short_config": "sql://Northwind/Orders",
+           "pump": {
+               "schedule_interval": 60,
+               "run_at_startup": true
+           }
+        }
+    ]

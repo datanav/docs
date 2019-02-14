@@ -174,9 +174,6 @@ are transformed on their way to the sink.
 The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`,
 :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form is
-described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
-
 Note that the forward slash character ("``/``") is not allowed in the pipe ``_id`` property.
 
 Prototype
@@ -189,7 +186,6 @@ The following *json* snippet shows the general form of a pipe definition.
         "_id": "pipe-id",
         "name": "Name of pipe",
         "type": "pipe",
-        "short_config": "sql://system/table",
         "source": {
         },
         "transform": {
@@ -249,13 +245,6 @@ Properties
      -
      - Yes
 
-   * - ``short_config``
-     - String
-     - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
-       more information on the format of this property.
-     -
-     -
-
    * - ``batch_size``
      - Integer(>=1)
      - The number of source entities to consume before writing to the sink. The batch size
@@ -286,12 +275,9 @@ Properties
 
    * - ``source``
      - Object
-     - A configuration object for the :ref:`source <source_section>` component of the pipe. It can be omitted if
-       ``short_config`` is present and contains enough information to infer the source configuration. See the
-       :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
-       this case.
+     - A configuration object for the :ref:`source <source_section>` component of the pipe.
      -
-     -
+     - Yes
 
    * - ``transform``
      - Object/List
@@ -496,6 +482,18 @@ breaker. It is also not possible to repost entities to these datasets.
 
 The `service API <api.html#post--datasets-dataset_id>`_ can be used to
 reset the circuit breaker.
+
+Resetting
+---------
+
+When the configuration of a pipe is modified in such a way that the entities the pipe
+produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
+value must be cleared in order to reprocess already seen entities with the new pipe
+configuration.
+
+This can be done by setting the "last-seen" value to an empty string with the
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
+
 
 Example configuration
 ---------------------
@@ -7779,111 +7777,3 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
            "cron_expression": "0/5 14,18 * * ?"
        }
     }
-
-
-.. _pipes_revisited:
-
-Pipes revisited
-===============
-
-Short-hand configuration
-------------------------
-
-As mentioned earlier, in the :ref:`pipe section <pipe_section>`, there is a special "short hand" configuration for
-one of the most used pipes; pipes pumping entities from RDBMS tables to an internal dataset. Since this is an often
-encountered usecase, we have condensed the information needed into a single url-style form:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders"
-        }
-    ]
-
-Currently, only the :ref:`sql system <sql_system>` and :ref:`source <sql_source>` is supported
-though other short forms may be added at a later time. The above example using the ``short_config`` form is equivalent
-to this fully expanded pipe configuration:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "source": {
-               "type": "sql",
-               "system": "Northwind",
-               "table": "Orders"
-           },
-           "sink": {
-               "type": "dataset",
-               "dataset": "Northwind:Orders"
-           },
-           "pump": {
-               "schedule_interval": 30
-           }
-        }
-    ]
-
-You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`sql source <sql_source>`
-and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
-changing the pump schedule and startup flag:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders",
-           "pump": {
-               "schedule_interval": 60,
-               "run_at_startup": true
-           }
-        }
-    ]
-
-
-Changing configuration on an existing pipe
-------------------------------------------
-
-When the configuration of a pipe is modified in such a way that the entities the pipe
-produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
-value must be cleared in order to reprocess already seen entities with the new pipe
-configuration.
-
-This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
-
