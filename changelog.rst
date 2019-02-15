@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2019-02-15
+----------
+* Made the :ref:`URL system <url_system>` throw an error if it received an invalid 'Content-Length' response header value.
+  The URL system used to ignore such errors; the new ``ignore_invalid_content_length_response_header``
+  property can be set to get the old behaviour.
+
 2019-02-14
 ----------
 * Added the :ref:`docker.hosts <microservices_system_docker_hosts>` property to the :ref:`microservice system <microservice_system>`. This allow adding custom hostname to IP address mappings to the microservice container.
