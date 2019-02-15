@@ -6973,6 +6973,14 @@ Properties
      - ``7200``
      -
 
+   * - ``ignore_invalid_content_length_response_header``
+     - Boolean
+     - Normally, the URL system will throw an error if the ``Content-Length`` header is present and
+       contains an invalid value. The ``ignore_invalid_content_length_response_header`` property can be set to
+       ``true`` in order to attempt to ignore such errors.
+     - ``false``
+     -
+
 [1] Exactly one of ``base_url`` and ``url_pattern`` must be specified.
 
 Example configuration
