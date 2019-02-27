@@ -4,6 +4,7 @@ Changelog
 2019-02-27
 ----------
 * Added the :ref:`discard <dtl_transform-discard>` DTL transform which can be used to discard the target entity. It is similar to :ref:`filter <dtl_transform-filter>`, but will drop the target entity on the floor and not send it to the sink for deletion.
+* Added the :ref:`case <dtl_transform-case>` and :ref:`case-eq <dtl_transform-case-eq>` DTL transforms. These are the sisters of the identically named DTL functions.
 
 2019-02-15
 ----------
