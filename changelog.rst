@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-02-27
+----------
+* Added the :ref:`discard <dtl_transform-discard>` DTL transform which can be used to discard the target entity. It is similar to :ref:`filter <dtl_transform-filter>`, but will drop the target entity on the floor and not send it to the sink for deletion.
+
 2019-02-15
 ----------
 * Made the :ref:`URL system <url_system>` throw an error if it received an invalid 'Content-Length' response header value.
