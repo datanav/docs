@@ -7536,7 +7536,7 @@ Note: A pump configuration needs to have either a ``schedule_interval`` *or* a
 ``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
 ``cron_expression`` taking precedence if both are present. If neither property is set, the ``schedule_interval``
 will be set to a default value. For pipes with a :ref:`dataset sink <dataset_sink>` *and* a
-:ref:`dataset sink <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
+:ref:`dataset source <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
 will be 900 seconds +/- 45 seconds. It is good practice to always set the ``cron_expression`` property
 on pipes that reads from or writes to external systems.
 

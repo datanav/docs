@@ -620,14 +620,15 @@ modifiying the target entity, and has no return value.
 
    * - ``filter``
      - | *Arguments:*
-       |   FILTER(boolean-expression{0|1})
+       |   UNLESS_CONDITION(boolean-expression{0|1})
        |
-       | If the evaluation of the FILTER expression returns false, then stop
+       | If the evaluation of the UNLESS_CONDITION expression returns false, then stop
          applying transformations. In this case *no* target entity is emitted
          for the source entity. Note that any entities already emitted by
-         ``create`` will not be stopped.
+         ``create`` will not be stopped. If you want then make sure that you don't
+         create them before the ``filter``.
        |
-       | If the FILTER argument is not given then the filter evaluates to
+       | If the UNLESS_CONDITION argument is not given then the filter evaluates to
          false.
 
        .. NOTE::
@@ -665,6 +666,44 @@ modifiying the target entity, and has no return value.
        | ``["filter"]``
        |
        | Stop processing.
+       |
+
+       .. _`dtl_transform-discard`:
+
+   * - ``discard``
+     - | *Arguments:*
+       |   UNLESS_CONDITION(boolean-expression{0|1})
+       |
+       | This transform is almost identical to ``filter``, but will drop the target
+         entity on the floor. Use it with care as the discarded entity will not be
+         deleted in the sink.
+       |
+       | If the evaluation of the UNLESS_CONDITION expression returns false, then stop
+         applying transformations. In this case *no* target entity is emitted
+         for the source entity. Note that any entities already emitted by
+         ``create`` will not be stopped. If you want then make sure that you don't
+         create them before the ``discard``.
+       |
+       | If the UNLESS_CONDITION argument is not given then the target entity will be discarded.
+
+       .. WARNING::
+
+          Only use this transform when you know that you've never sent an entity
+          with the same ``_id`` to the sink before. The reason is that that the entity will
+          then not be deleted in the sink. If you want it to be deleted then use the
+          ``filter`` transform instead.
+
+     - | ``["discard", ["gt", "_S.age", 42]]``
+       |
+       | Discard the target entity unless the source entity's age is greater than 42.
+       |
+       | ``["discard", ["eq", "_S.type", "person"]]``
+       |
+       | Discard the target entity unless the source entity's type is ``person``.
+       |
+       | ``["discard"]``
+       |
+       | Discard the target entity unconditionally.
        |
 
        .. _`dtl_transform-add`:
