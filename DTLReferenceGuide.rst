@@ -581,6 +581,16 @@ modifiying the target entity, and has no return value.
 
        | Note that the THEN and ELSE arguments can either be a single transform
          function or a list of transform functions. The list can be empty.
+
+       .. NOTE::
+
+          If you need to specify multiple transforms then wrap them in a list.
+
+          | ``["if", ["gt", "_S.age", 18],``
+          |      ``[["add", "type", "adult"],``
+          |       ``["add", "is_adult", true]],``
+          |      ``["add", "type", "child"]]``
+
      - | ``["if", ["eq", "_S.type", "person"], [``
        |      ``["add", "type", "person"],``
        |      ``["copy", ["list", "name", "age"]]]]``
@@ -595,6 +605,64 @@ modifiying the target entity, and has no return value.
        |
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
+
+       .. _dtl_transform-case-eq:
+   * - ``case-eq``
+     - | *Arguments:*
+       |   VALUE(value-expression{1}),
+       |   (VALUE_N(value-expression{1},
+       |    THEN(transforms{1}))+,
+       |   ELSE(transforms{0\|1})
+       |
+       | Evaluates the first THEN for which VALUE is equal to VALUE_N. If there is no
+         match, then ELSE is evaluated. If there is no ELSE, then it is a no-op.
+
+       .. NOTE::
+
+          If you need to specify multiple transforms then wrap them in a list.
+
+     - | ``["case-eq", "_S.country",``
+       |   ``"NO", ["add", "country", "Norway"],``
+       |   ``"SE", ["add", "country", "Sweden"],``
+       |   ``["add", "country", "Other"]]``
+       |
+       | Given then value of ``_S.country``, adds ``{"country": "Norway"}`` if the value is ``"NO"``
+         and ``{"country": "Sweden"}`` if the value is ``"SE"``, otherwise ``{"country": "Other"}`` is added.
+       |
+       | ``["case-eq", "_S.dialing_code",``
+       |   ``45, ["add", "country_code", "DK"],``
+       |   ``46, ["add", "country_code", "SE"],``
+       |   ``47, ["add", "country_code", "NO"]]``
+       |
+       | Given the value of ``_S.dialing_code``, adds ``{"country": "DK"}`` if the value is
+         ``45`` and ``{"country": "SE"}`` if the value  is ``46`` and ``{"country": "NO"}`` if the value is ``47``,
+         otherwise it is a no-op.
+
+       .. _dtl_transform-case:
+   * - ``case``
+     - | *Arguments:*
+       |   (VALUE(value-expression{1},
+       |    THEN(transforms{1}))+,
+       |   ELSE(transforms{0\|1})
+       |
+       | Evaluates the first THEN for which VALUE is true. If there is no
+         match, then ELSE is evaluated. If there is no ELSE, then it is a no-op.
+
+       .. NOTE::
+
+          If you need to specify multiple transforms then wrap them in a list.
+
+     - | ``["case",``
+       |   ``["gte", "_S.age", 18], ["add", "group", "adult"]],``
+       |   ``["gte", "_S.age", 13], ["add", "group", "teenager"],``
+       |   ``["gte", "_S.age", 2], ["add", "group", "toddler"],``
+       |   ``["lt", "_S.age", 2], ["add", "group", "baby"],``
+       |   ``["add", "group", "unknown"]]``
+       |
+       | Adds ``{"group": "adult"}`` if the value of ``_S.age`` is greater than or equal to ``18``,
+       | or ``{"group": "teenager"}`` if the value of ``_S.age`` is greater than or equal to ``13``,
+       | or ``{"group": "toddler"}`` if the value of ``_S.age`` is less than ``2``,
+       | otherwise ``{"group": "unknown"}``.
 
        .. _`dtl_transform-comment`:
 
@@ -620,14 +688,15 @@ modifiying the target entity, and has no return value.
 
    * - ``filter``
      - | *Arguments:*
-       |   FILTER(boolean-expression{0|1})
+       |   UNLESS_CONDITION(boolean-expression{0|1})
        |
-       | If the evaluation of the FILTER expression returns false, then stop
+       | If the evaluation of the UNLESS_CONDITION expression returns false, then stop
          applying transformations. In this case *no* target entity is emitted
          for the source entity. Note that any entities already emitted by
-         ``create`` will not be stopped.
+         ``create`` will not be stopped. If you want then make sure that you don't
+         create them before the ``filter``.
        |
-       | If the FILTER argument is not given then the filter evaluates to
+       | If the UNLESS_CONDITION argument is not given then the filter evaluates to
          false.
 
        .. NOTE::
@@ -665,6 +734,44 @@ modifiying the target entity, and has no return value.
        | ``["filter"]``
        |
        | Stop processing.
+       |
+
+       .. _`dtl_transform-discard`:
+
+   * - ``discard``
+     - | *Arguments:*
+       |   UNLESS_CONDITION(boolean-expression{0|1})
+       |
+       | This transform is almost identical to ``filter``, but will drop the target
+         entity on the floor. Use it with care as the discarded entity will not be
+         deleted in the sink.
+       |
+       | If the evaluation of the UNLESS_CONDITION expression returns false, then stop
+         applying transformations. In this case *no* target entity is emitted
+         for the source entity. Note that any entities already emitted by
+         ``create`` will not be stopped. If you want then make sure that you don't
+         create them before the ``discard``.
+       |
+       | If the UNLESS_CONDITION argument is not given then the target entity will be discarded.
+
+       .. WARNING::
+
+          Only use this transform when you know that you've never sent an entity
+          with the same ``_id`` to the sink before. The reason is that that the entity will
+          then not be deleted in the sink. If you want it to be deleted then use the
+          ``filter`` transform instead.
+
+     - | ``["discard", ["gt", "_S.age", 42]]``
+       |
+       | Discard the target entity unless the source entity's age is greater than 42.
+       |
+       | ``["discard", ["eq", "_S.type", "person"]]``
+       |
+       | Discard the target entity unless the source entity's type is ``person``.
+       |
+       | ``["discard"]``
+       |
+       | Discard the target entity unconditionally.
        |
 
        .. _`dtl_transform-add`:
@@ -1162,6 +1269,7 @@ modifiying the target entity, and has no return value.
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
+       .. _create_child_dtl_transform:
    * - ``create-child``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1184,18 +1292,14 @@ modifiying the target entity, and has no return value.
          property in the previous version of the entity. It will detect deleted
          entities and add them to the property before storing the entity.
        |
-       | Note also that there is an ``emit_children`` pipe transform that can be
-         used to expand the ``$children`` entities into standalone entities.
+       | Note also that there is an :ref:`emit_children <emit_children_transform>`
+         transform that can be used to expand the ``$children`` entities into
+         standalone entities.
 
      - | ``["create-child", "_S.orders"]``
        |
        | Adds the orders in the source entity's ``orders`` field to the "$children" property
          on the target entity.
-       |
-       | ``["create", ["apply", "order", "_S.orders"]]``
-       |
-       | Emit the orders in the source entity's ``orders`` field as new entities,
-         but apply the ``order`` transform to them first.
 
 
 Expression language
@@ -2254,8 +2358,8 @@ Date and time
        |         ``["datetime-parse",``
        |           ``"%Y/%m/%d %H:%M", "2015/07/28 04:46"]]``
        |
-       | Returns two datetime values: ``["~t2015-07-28T07:46Z:00",``
-       |                               ``"~t2015-07-28T02:46Z:00"]``.
+       | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
+       |                               ``"~t2015-07-28T02:46:00Z"]``.
 
        .. _`is-datetime`:
 
@@ -2323,6 +2427,7 @@ Strings
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
 
+       .. _bytes_dtl_function:
    * - ``bytes``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2685,7 +2790,15 @@ Strings
        |
        | ``["matches", "*_sport", "_S.tags"]``
        |
-       | Returns true if all the tags that have a "_sport" suffix.
+       | Returns ``true``, unless ``_S.tags`` is empty or ``null``, if all the tags that have a "_sport" suffix.
+       |
+       | ``["matches", "*", null]``
+       |
+       | Returns ``false``.
+       |
+       | ``["matches", "*", ["list"]]``
+       |
+       | Returns ``false``.
 
        .. _encrypt_dtl_function:
    * - ``encrypt``
@@ -3107,8 +3220,6 @@ UUIDs
 Nested transformations
 ----------------------
 
-.. _apply_function:
-
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -3117,6 +3228,7 @@ Nested transformations
      - Description
      - Examples
 
+       .. _apply_function:
    * - ``apply``
      - | *Arguments:*
        |   RULE_ID(string{1}),
@@ -3131,6 +3243,7 @@ Nested transformations
          ``orders`` field using the ``order`` transform rules. The output is
          the transformed order entities.
 
+       .. _apply_hops_function:
    * - ``apply-hops``
      - | *Arguments:*
        |   RULE_ID(string{1}),
@@ -3255,8 +3368,6 @@ Paths
 Hops
 ----
 
-.. _hops_function:
-
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -3265,6 +3376,7 @@ Hops
      - Description
      - Examples
 
+       .. _hops_function:
    * - ``hops``
      - | *Arguments:*
        |   HOPS_SPEC(dict{>1})
@@ -3325,6 +3437,12 @@ Hops
           should be unique to the particular ``hops`` function as it
           will be used to key the statistics gathered about its execution.
           The ``trace`` property should only be specified on the last HOP_SPEC argument.
+
+       9. ``prefilters``: OPTIONAL. A dict where the keys must be dataset aliases
+          specified in the ``datasets`` property. The values must be valid subset
+          expressions, i.e. an ``eq`` DTL expression where the left hand side is
+          the index expression and the right hand side is the value that represents
+          the subset. Example: ``["eq", "_S.category", 72]``
 
        | If multiple HOP_SPEC arguments are given, then the output of
          a HOP_SPEC is passed on as the input to the next. This is a
@@ -3387,7 +3505,23 @@ Hops
          granddaughters and so on) and then return the names of all
          their hobbies. Please note that the result list is not automatically sorted on the ``name`` property - if order
          matters, a ``sorted`` function must be applied before the result is used.
+       |
 
+       ::
+
+          ["hops", {
+            "datasets": ["orders o", "product p"],
+            "where": [
+              ["eq", "_S._id", "o.customer_id"]
+              ["eq", "o.lines.product_id", "p.product_id"]
+            ],
+            "prefilters": {
+              "o": ["eq", "_S.webshop_id", "myshop"]
+            }
+           }]
+
+       | Find the products that the customer has bought from a specific web shop. This example uses the ``prefilters``
+         property to reference a subset of the ``orders`` dataset, i.e. the orders placed in the ``myshop`` web shop.
 
 Entity lookups
 --------------

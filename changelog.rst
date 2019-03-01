@@ -1,12 +1,79 @@
 Changelog
 =========
 
+2019-02-27
+----------
+* Added the :ref:`discard <dtl_transform-discard>` DTL transform which can be used to discard the target entity. It is similar to :ref:`filter <dtl_transform-filter>`, but will drop the target entity on the floor and not send it to the sink for deletion.
+* Added the :ref:`case <dtl_transform-case>` and :ref:`case-eq <dtl_transform-case-eq>` DTL transforms. These are the sisters of the identically named DTL functions.
+
+2019-02-15
+----------
+* Made the :ref:`URL system <url_system>` throw an error if it received an invalid 'Content-Length' response header value.
+  The URL system used to ignore such errors; the new ``ignore_invalid_content_length_response_header``
+  property can be set to get the old behaviour.
+
+2019-02-14
+----------
+* Added the :ref:`docker.hosts <microservices_system_docker_hosts>` property to the :ref:`microservice system <microservice_system>`. This allow adding custom hostname to IP address mappings to the microservice container.
+
+2019-02-13
+----------
+* Added a new `coerce_to_decimal` property to the :ref:`Oracle <oracle_system>` and :ref:`Oracle TNS <oracle_tns_system>` systems. If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision and scale information). Currently what type the column data ends up as is not clearly defined by the oracle backend driver so in some cases it may yield a float value instead of a decimal value. This property should always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+
+2019-02-07
+----------
+* We've changed the default strategy for pipe execution logging. By default, we now will never log any runs which resulted in no processed/changed entities. You can opt-in to the previous behaviour by editing the ``log_events_noop_runs``, ``log_events_noop_runs_changes_only`` and ``notification_granularity`` :ref:`pump properties <pump_section>`.
+
+2019-02-04
+----------
+* There is now a new index implementation (version 2) that supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset. Index version 1 is currently the default. Nodes must be started with a special command line option in order to change the default value. Version 2 will be made the default at some point once we have enough experience with it.
+* The :ref:`dataset <dataset_source>` and :ref:`json <json_source>` sources now support the ``subset`` property. This property is used to specify a subset of the source dataset.
+* The :ref:`hops <hops_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions now support the ``prefilters`` property. This property is used to specify a subset of the dataset that it is hopped to.
+* The ``GET /api/datasets/{dataset_id}/indexes`` API endpoint now includes the indexes' version number.
+* The ``DELETE /datasets/{dataset_id}/indexes/{index_int_id}`` API endpoint has been added. It can be used to delete a dataset index.
+
+2019-01-28
+----------
+* :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
+* Compaction will be performed by the dataset sink if ``compaction.sink`` is set to ``true`` in the pipe configuration. This is only available for pipes using the :ref:`dataset <dataset_sink>` sink. If sink compaction is enabled no scheduled compaction will be done on the dataset as this is no longer neccessary. Index compaction will still require scheduled compaction, but this does not require a lock on the dataset. Note that sink compaction is currently experimental.
+* Automatic compaction will now kick if there are 10% or 10000 new dataset offsets since the last compaction. The 10000 cap is fixed for now.
+
+2019-01-03
+----------
+* The :ref:`dataset <dataset_sink>` sink will now mark the sink dataset as populated when all input datasets are populated and all entities have been read from them. Earlier it marked the sink dataset as populated after the first completed run. This was typically not what you wanted as it caused the sink datasets to be prematurely populated, which then caused unnecessary dependency tracking.
+* Added the ``initial_datasets`` property to the :ref:`merge <merge_source>`,  :ref:`merge_datasets <merge_datasets_source>`,  :ref:`union_datasets <union_datasets_source>`, and  :ref:`diff_datasets <diff_datasets_source>` sources. This property should only be used if some of the input datasets will never be populated. The property should then list the datasets that have to be populated before the sink datasets should be populated.
+
+2018-12-07
+----------
+* Casting decimal numbers containing a "scientific notation" shorthand (i.e. "1E-3", "10E14" etc) to a string using the :ref:`DTL string <string_dtl_function>` function will now expand the exponent to its full representation (i.e. "1E2" -> "100", "1E-3" -> "0.001"). This is a change in behaviour.
+
+2018-12-03
+----------
+* Added support for specifying SOCKS5 proxies for the :ref:`URL <url_system>`, :ref:`REST <rest_system>` and :ref:`Twilio <twilio_system>` systems.
+
+2018-11-12
+----------
+* ``["matches", "x*", ["list"]]`` now returns ``false`` instead of ``true``. Note that this is a breaking change, but the old behaviour was considered a bug as it is both non-intuitive and most likely not what you want.
+
+2018-10-31
+----------
+* Added the ``sslmode`` property to the :ref:`PostgreSQL system <postgresql_system>`. Its default value (``prefer``) reflects the PostgreSQL client library default, hence you should only set this property if you need other behaviour than the default.
+
+2018-10-25
+----------
+* Added the :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>`.
+
+2018-10-16
+----------
+* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
+* The ``compaction.keep_versions`` property can now also be set to ``0`` and ``1``. The default value is ``2``; which is needed for dependency tracking to be fully able to find reprocessable entities. Setting it to a lower value means that dependency tracking is best effort only.
+  
 2018-09-24
 ----------
 * Added a new ``recreate_table_on_first_run`` boolean flag to the :ref:`sql sink <sql_sink>` - it controls if Sesam should recreate the table from ``schema_definiton`` when the pipe is reset or runs for the first time. Note that this requires the ``create_table_if_missing`` property to also be set to ``true`` to take effect.
 * Altered the way the PK is created on schema definition generation. If the sink type is ``sql`` and ``create_table_if_missing`` is set to ``true``, the default primary key is the ``_id`` property of the entities. Previously it would always look for a property with the same contents as ``_id`` (which is still the default for non-sql sink pipes).
 
-2018-08-24
+2018-09-03
 ----------
 * Added a ``fallback_to_single_entities_on_batch_fail`` boolean flag to the :ref:`pump configuration <pump_section>`. The default reflects the current behaviour (``true``). It can be usefuly to set to ``false`` if the cost of processing a single entity at a time is high and there is a lot of entities in a batch (for example in a typical MS SQL sink in initial bulk upload mode).
 

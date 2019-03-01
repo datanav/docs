@@ -1,4 +1,4 @@
-.. _gdpr_data_types_purposes_configuration:
+.. _gdpr_data_access_portal_configuration:
 
 =======================
 GDPR data access portal
