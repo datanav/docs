@@ -131,7 +131,7 @@ Properties
    * - ``namespaced_identifiers``
      - Boolean
      - Flag used to enable namespaced identifers support for the service as a whole. Pipes inherit the value of the ``namespaced_identifiers`` property less explictly overridden.
-     - ``false``
+     - ``true``
      -
 
    * - ``namespaces.default``
