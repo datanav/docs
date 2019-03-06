@@ -314,10 +314,10 @@ Example of an entity with namespaces:
 ::
 
   {
-    "_id": "users:123",
+    "_id": "user:123",
     "user:username": "erica",
     "user:first_name": "Erica",
-    "user:manager": "~:users:101"
+    "user:manager": "~:user:101"
   }
 
 .. NOTE::

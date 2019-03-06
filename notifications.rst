@@ -10,7 +10,7 @@ Notifications
 Introduction
 ============
 
-SESAM lets uses specify "notification rules" that will trigger alerts when certain
+SESAM lets users specify "notification rules" that will trigger alerts when certain
 conditions occur.
 
 When a notification rule triggers, the user(s) get notified in the GUI and optionally by email.
