@@ -83,6 +83,7 @@ Legal grounds
      - These are the legal grounds for processing of personal data. Without any of these grounds, the processing is unlawful.
        In addition to identifying the legal ground set out below, the processing of data must also be necessary in connection
        with the given legal ground, i.e.:
+
         * Consent
         * Contract
         * Legal obligation + law

@@ -10,7 +10,7 @@ Notifications
 Introduction
 ============
 
-SESAM lets uses specify "notification rules" that will trigger alerts when certain
+SESAM lets users specify "notification rules" that will trigger alerts when certain
 conditions occur.
 
 When a notification rule triggers, the user(s) get notified in the GUI and optionally by email.
@@ -31,6 +31,7 @@ is too high or too low.
 
 
 .. _pipe_completed_metric__entities_last_run:
+
 Entities processed
 ~~~~~~~~~~~~~~~~~~
 This is the total number of entities that was read from the pipe's source.
@@ -146,23 +147,27 @@ How can it be monitored?
 Each of the metric described above can be monitored in a number of different ways.
 
 .. _pump_completed_value_too_low_notification_rule:
+
 Value too low
 ~~~~~~~~~~~~~
 This rule type triggers a notification if a metric was below a specified value.
 
 .. _pump_completed_value_too_high_notification_rule:
+
 Value too high
 ~~~~~~~~~~~~~~
 This rule type triggers a notification if a metric was above a specified value.
 
 
 .. _pump_completed_value_too_low_over_time_notification_rule:
+
 Value too low over time
 ~~~~~~~~~~~~~~~~~~~~~~~
 This rule type triggers a notification if a metric has been below a specified value for a
 specified period of time.
 
 .. _pump_completed_value_too_high_over_time_notification_rule:
+
 Value too high over time
 ~~~~~~~~~~~~~~~~~~~~~~~~
 This rule type triggers a notification if a metric has been above a specified value for a
@@ -170,6 +175,7 @@ specified period of time.
 
 
 .. _pump_started_overdue_notification_rule:
+
 Pump started overdue
 ====================
 

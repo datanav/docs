@@ -174,9 +174,6 @@ are transformed on their way to the sink.
 The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`,
 :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form is
-described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
-
 Note that the forward slash character ("``/``") is not allowed in the pipe ``_id`` property.
 
 Prototype
@@ -189,7 +186,6 @@ The following *json* snippet shows the general form of a pipe definition.
         "_id": "pipe-id",
         "name": "Name of pipe",
         "type": "pipe",
-        "short_config": "sql://system/table",
         "source": {
         },
         "transform": {
@@ -249,13 +245,6 @@ Properties
      -
      - Yes
 
-   * - ``short_config``
-     - String
-     - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
-       more information on the format of this property.
-     -
-     -
-
    * - ``batch_size``
      - Integer(>=1)
      - The number of source entities to consume before writing to the sink. The batch size
@@ -286,12 +275,9 @@ Properties
 
    * - ``source``
      - Object
-     - A configuration object for the :ref:`source <source_section>` component of the pipe. It can be omitted if
-       ``short_config`` is present and contains enough information to infer the source configuration. See the
-       :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
-       this case.
+     - A configuration object for the :ref:`source <source_section>` component of the pipe.
      -
-     -
+     - Yes
 
    * - ``transform``
      - Object/List
@@ -328,10 +314,10 @@ Example of an entity with namespaces:
 ::
 
   {
-    "_id": "users:123",
+    "_id": "user:123",
     "user:username": "erica",
     "user:first_name": "Erica",
-    "user:manager": "~:users:101"
+    "user:manager": "~:user:101"
   }
 
 .. NOTE::
@@ -404,10 +390,11 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the
-:ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours. The
-default is to keep the last two versions of every entity up until the
-current time.
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
+unless sink compaction is enabled. If sink compaction is enabled then
+compaction will happen incrementally as the pipe writes new entities
+to the dataset. The default is to keep the last two versions of every
+entity up until the current time.
 
 Properties
 ^^^^^^^^^^
@@ -428,10 +415,17 @@ Properties
      - ``true``
      - No
 
+   * - ``compaction.sink``
+     - Boolean
+     - EXPERIMENTAL. If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
+     - ``false``
+     - No
+
    * - ``compaction.keep_versions``
      - Integer
      - The number of unique versions of an entity to keep around. The default is ``2``.
-       The value must be greater than or equal to ``0``.
+       The value must be greater than or equal to ``0``. If set to ``0`` then a time
+       threshold must be set explicitly.
 
        .. WARNING::
 
@@ -488,6 +482,18 @@ breaker. It is also not possible to repost entities to these datasets.
 
 The `service API <api.html#post--datasets-dataset_id>`_ can be used to
 reset the circuit breaker.
+
+Resetting
+---------
+
+When the configuration of a pipe is modified in such a way that the entities the pipe
+produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
+value must be cleared in order to reprocess already seen entities with the new pipe
+configuration.
+
+This can be done by setting the "last-seen" value to an empty string with the
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
+
 
 Example configuration
 ---------------------
@@ -671,6 +677,16 @@ Properties
      - | A dataset id
      -
      - Yes
+
+   * - ``subset``
+     - Array
+     - | An ``eq`` DTL expression where the left hand side is the index expression and the right hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
+       |
+       | Example: ``["eq", "_S.category", "tank"]``
+
+       .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
+     -
+     - No
 
    * - ``include_previous_versions``
      - Boolean
@@ -2282,6 +2298,16 @@ Properties
      - No paging
      -
 
+   * - ``subset``
+     - Array
+     - | An ``eq`` DTL expression where the left hand side is the index expression and the right hand side is the value that represents the subset. If the subset is specified then only entities that are in that subset will be read from the source.
+       |
+       | Example: ``["eq", "_S.category", "tank"]``
+
+       .. NOTE:: For this to work the source must support subsets.
+     -
+     - No
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -2413,7 +2439,7 @@ SDShare Push protocol
 ^^^^^^^^^^^^^^^^^^^^^
 
 The SDShare Push protocol is described `here
-<https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`_.
+<https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`__.
 
 The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_
 in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
@@ -3639,11 +3665,14 @@ Properties
      - Yes
 
    * - ``indexes``
-     - String
+     - String or Array
      - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
        maintained. This index will then be used by the dataset browser to look up
        entities both by ``_id`` and ``$ids``.
-     - ``null``
+
+       If the value is an array then it can contain index expressions that should be
+       maintained on the sink dataset. This is typically used for declaring subset indexes.
+     - ``[]``
      - No
 
    * - ``track_children``
@@ -3698,6 +3727,22 @@ Properties
           specified then the maximum value of those two are used as the circuit breaker limit. The
           count is in this case typically used to specify the lower limit.
      - ``null``
+     - No
+
+   * - ``deletion_tracking``
+     - Boolean
+     - If ``true`` (the default), then after a full run any entities that existed in the dataset before
+       the run but that weren't seen during the run will be deleted.
+
+       If ``false``, then any existing entities in the dataset will not be touched. This is only
+       useful in very special circumstances.
+     - ``true``
+     - No
+
+   * - ``bitset_commit_interval``
+     - Integer
+     - Specifies how often dataset bitsets and dataset compaction changes are written to disk. The higher the number the fewer writes, but at the cost of having to redo the work if the pipe fails before completion. The changes are always written to disk once the pipe completes.
+     - ``1000000``
      - No
 
 
@@ -4963,10 +5008,10 @@ and is available to any DTL transform on the pipe in which the endpoint sink is 
 :ref:`DTL Variables <variables>` for more details.
 
 The SDShare protocol is described `here
-<http://www.sdshare.org/spec/sdshare-v1.0.html>`_.
+<http://www.sdshare.org/spec/sdshare-v1.0.html>`__.
 
 The exposed URLs may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`_ for the full details.
+the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`__ for the full details.
 
 Prototype
 ^^^^^^^^^
@@ -5052,7 +5097,7 @@ It exposes the URLs:
    * - ``http://localhost:9042/api/publishers/mypipe/csv/some_filename.csv``
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-csv>`_ for the full details.
+the `API reference <./api.html#get--publishers-pipe_id-csv>`__ for the full details.
 
 Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
 the last path element of the URL.
@@ -5855,7 +5900,8 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "port": 1521,
-        "database": "database-name"
+        "database": "database-name",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -5901,6 +5947,15 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5915,7 +5970,8 @@ Example Oracle configuration:
         "username": "system",
         "password": "oracle",
         "host": "oracle",
-        "database": "XE"
+        "database": "XE",
+        "coerce_to_decimal": true
     }
 
 
@@ -5939,7 +5995,8 @@ Prototype
         "name": "The Oracle Database",
         "username":"username-here",
         "password":"secret",
-        "tns_name": "tns-name-here"
+        "tns_name": "tns-name-here",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -5973,6 +6030,16 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5986,7 +6053,8 @@ Example Oracle TNS configuration:
         "type": "system:oracle_tns",
         "username": "system",
         "password": "oracle",
-        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
+        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))"",
+        "coerce_to_decimal": true
     }
 
 
@@ -6905,6 +6973,14 @@ Properties
      - ``7200``
      -
 
+   * - ``ignore_invalid_content_length_response_header``
+     - Boolean
+     - Normally, the URL system will throw an error if the ``Content-Length`` header is present and
+       contains an invalid value. The ``ignore_invalid_content_length_response_header`` property can be set to
+       ``true`` in order to attempt to ignore such errors.
+     - ``false``
+     -
+
 [1] Exactly one of ``base_url`` and ``url_pattern`` must be specified.
 
 Example configuration
@@ -7158,6 +7234,10 @@ Prototype
                     "key1": "value1",
                     "key2": "value2"
                 }
+            },
+            "hosts": {
+                "myhost1.mydomain.io": "157.240.20.34",
+                "myhost2.mydomain.io": "157.240.20.35"
             }
         },
         "use_https": false,
@@ -7170,7 +7250,7 @@ Prototype
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
-character and the only non-letter or number characters allowed in the rest of the string are "_", "." or "-".
+character and the only non-letter or number characters allowed in the rest of the string are "_" and "-".
 
 The microservice ``_id`` is exposed as domain names in the local network and is thus subject to domain name rules:
 the maximal size of an id is 63 characters and the minimal size is 2 characters.
@@ -7255,6 +7335,13 @@ Properties
        The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
        4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
      - ``null``
+     -
+
+       .. _microservices_system_docker_hosts:
+   * - ``docker.hosts``
+     - Dict<String,String>
+     - A mapping between domain names/hostnames and IP adresses. These custom hostnames will be resolvable inside the microservice container.
+     - ``{}``
      -
 
    * - ``use_https``
@@ -7436,7 +7523,10 @@ Prototype
         "fallback_to_single_entities_on_batch_fail": true,
         "use_dead_letter_dataset": false,
         "track_dead_letters": false,
-        "mode": "scheduled"
+        "mode": "scheduled",
+        "log_events_noop_runs": false,
+        "log_events_noop_runs_changes_only": true,
+        "notification_granularity": 99999999999
     }
 
 Properties
@@ -7446,7 +7536,7 @@ Note: A pump configuration needs to have either a ``schedule_interval`` *or* a
 ``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
 ``cron_expression`` taking precedence if both are present. If neither property is set, the ``schedule_interval``
 will be set to a default value. For pipes with a :ref:`dataset sink <dataset_sink>` *and* a
-:ref:`dataset sink <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
+:ref:`dataset source <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
 will be 900 seconds +/- 45 seconds. It is good practice to always set the ``cron_expression`` property
 on pipes that reads from or writes to external systems.
 
@@ -7623,6 +7713,36 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - "scheduled"
      -
 
+   * - ``log_events_noop_runs``
+     - Boolean
+     - A flag that controls if a "noop" ("no-operation") pipe run should be logged in the pipe execution log or not. The default
+       value ``false`` means that runs that results in no processed or changed entities (the semantic depends on the type of sink)
+       will never be logged. See also the ``log_events_noop_runs_changes_only`` property which controls if the source or
+       the sink decides if a run is considered a "noop" or not. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - false
+     -
+
+   * - ``log_events_noop_runs_changes_only``
+     - Boolean
+     - A flag that controls what kind of metric is used to determine if a pipe run was a "noop" ("no-operation") run or not.
+       The default setting ``true`` means that a run is considered a "noop" run if the sink reported that no entities
+       was changed, even if the source produced entities. If it is set to ``false`` then all runs which yielded no
+       new entities from the source is considered a "noop" run. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - true
+     -
+
+   * - ``notification_granularity``
+     - int
+     - This property lets the pipe "override" the ``log_events_noop_runs`` property and force the pipe to log a run
+       at regular intervals, even if it was a "noop" run. The value is in seconds. The default value
+       is ``999999999999999`` and means "never". A value of 900 means always log a pipe run if the last logged
+       "completed" event is older than 15 minutes). Note that any errors or retries will always imply logging to the
+       execution dataset.
+     - true
+     -
+
 
 Example configuration
 ---------------------
@@ -7676,111 +7796,3 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
            "cron_expression": "0/5 14,18 * * ?"
        }
     }
-
-
-.. _pipes_revisited:
-
-Pipes revisited
-===============
-
-Short-hand configuration
-------------------------
-
-As mentioned earlier, in the :ref:`pipe section <pipe_section>`, there is a special "short hand" configuration for
-one of the most used pipes; pipes pumping entities from RDBMS tables to an internal dataset. Since this is an often
-encountered usecase, we have condensed the information needed into a single url-style form:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders"
-        }
-    ]
-
-Currently, only the :ref:`sql system <sql_system>` and :ref:`source <sql_source>` is supported
-though other short forms may be added at a later time. The above example using the ``short_config`` form is equivalent
-to this fully expanded pipe configuration:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "source": {
-               "type": "sql",
-               "system": "Northwind",
-               "table": "Orders"
-           },
-           "sink": {
-               "type": "dataset",
-               "dataset": "Northwind:Orders"
-           },
-           "pump": {
-               "schedule_interval": 30
-           }
-        }
-    ]
-
-You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`sql source <sql_source>`
-and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
-changing the pump schedule and startup flag:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders",
-           "pump": {
-               "schedule_interval": 60,
-               "run_at_startup": true
-           }
-        }
-    ]
-
-
-Changing configuration on an existing pipe
-------------------------------------------
-
-When the configuration of a pipe is modified in such a way that the entities the pipe
-produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
-value must be cleared in order to reprocess already seen entities with the new pipe
-configuration.
-
-This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the Service API.
-

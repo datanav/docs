@@ -291,8 +291,8 @@ paths:
               Updates the "last-seen" value of the pump such that the pump thinks that it has seen all the source-data.
               Not all source-types supports this operation.
               NOTE: Doing this may result in data-loss, since any unread entities in the source will not be read. But
-                    it is sometimes useful during development and testing; for instance when one has a huge existing
-                    source-dataset, but only want to run the pipe against new entities.
+              it is sometimes useful during development and testing; for instance when one has a huge existing
+              source-dataset, but only want to run the pipe against new entities.
 
           "reset-tracking" (Experimental):
 
@@ -1662,7 +1662,7 @@ paths:
     post:
       operationId: api.systems.post_microservice_reload
       description:
-        Queues a operation tp pull a new docker image and recreate the microservice (i.e. asynchronously)
+        Queues a operation to pull a new docker image and recreate the microservice (i.e. asynchronously)
       parameters:
         - name: system_id
           in: path
@@ -1915,6 +1915,29 @@ paths:
           description: OK
 
 definitions:
+  CachedResponseInfo:
+    type: object
+    description:
+      In a multinode setting the aggragator-node's API might in some cases return cached information about a
+      subnode, instead of a live response from the subnode. This happens if the subnode is temporarily not
+      responding.
+      If this happens, a 'cached_response_info' property will be added to the item in order to notifiy the user
+      that the information might not be up-to-date.
+    required:
+      - age
+      - timestamp
+    additionalProperties: false
+    properties:
+      timestamp:
+        type: string
+        description:
+          The date and time the information was cached.
+      age:
+        type: number
+        description:
+          The age (in seconds) of the cached information. This information can be derived from the "cache_time"
+          property, but is included as a debug-aid.
+
   Pipe:
     type: object
     required:
@@ -2019,6 +2042,9 @@ definitions:
                   type: string
                   example: "group:Admin"
 
+      cached_response_info:
+        $ref: '#/definitions/CachedResponseInfo'
+
   PipeConfig:
     type: object
     required:
@@ -2092,6 +2118,8 @@ definitions:
       _id:
         type: string
         example: "my-system-1"
+      cached_response_info:
+        $ref: '#/definitions/CachedResponseInfo'
 
   SystemConfig:
     type: object
@@ -2110,6 +2138,8 @@ definitions:
       _id:
         type: string
         example: "my-dataset-1"
+      cached_response_info:
+        $ref: '#/definitions/CachedResponseInfo'
 
   DatasetEntity:
     type: object

@@ -7,5 +7,4 @@ services:
 install:
   - pip install -r requirements.txt
 script:
-  - make html
-  - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$SESAMCI_DOCKER_PASSWORD" | docker login -u "$SESAMCI_DOCKER_USERNAME" --password-stdin; make docker; fi
+  - make html && if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$SESAMCI_DOCKER_PASSWORD" | docker login -u "$SESAMCI_DOCKER_USERNAME" --password-stdin; make docker; fi

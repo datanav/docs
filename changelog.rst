@@ -1,6 +1,43 @@
 Changelog
 =========
 
+2019-02-27
+----------
+* Added the :ref:`discard <dtl_transform-discard>` DTL transform which can be used to discard the target entity. It is similar to :ref:`filter <dtl_transform-filter>`, but will drop the target entity on the floor and not send it to the sink for deletion.
+* Added the :ref:`case <dtl_transform-case>` and :ref:`case-eq <dtl_transform-case-eq>` DTL transforms. These are the sisters of the identically named DTL functions.
+
+2019-02-15
+----------
+* Made the :ref:`URL system <url_system>` throw an error if it received an invalid 'Content-Length' response header value.
+  The URL system used to ignore such errors; the new ``ignore_invalid_content_length_response_header``
+  property can be set to get the old behaviour.
+
+2019-02-14
+----------
+* Added the :ref:`docker.hosts <microservices_system_docker_hosts>` property to the :ref:`microservice system <microservice_system>`. This allow adding custom hostname to IP address mappings to the microservice container.
+
+2019-02-13
+----------
+* Added a new `coerce_to_decimal` property to the :ref:`Oracle <oracle_system>` and :ref:`Oracle TNS <oracle_tns_system>` systems. If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision and scale information). Currently what type the column data ends up as is not clearly defined by the oracle backend driver so in some cases it may yield a float value instead of a decimal value. This property should always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+
+2019-02-07
+----------
+* We've changed the default strategy for pipe execution logging. By default, we now will never log any runs which resulted in no processed/changed entities. You can opt-in to the previous behaviour by editing the ``log_events_noop_runs``, ``log_events_noop_runs_changes_only`` and ``notification_granularity`` :ref:`pump properties <pump_section>`.
+
+2019-02-04
+----------
+* There is now a new index implementation (version 2) that supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset. Index version 1 is currently the default. Nodes must be started with a special command line option in order to change the default value. Version 2 will be made the default at some point once we have enough experience with it.
+* The :ref:`dataset <dataset_source>` and :ref:`json <json_source>` sources now support the ``subset`` property. This property is used to specify a subset of the source dataset.
+* The :ref:`hops <hops_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions now support the ``prefilters`` property. This property is used to specify a subset of the dataset that it is hopped to.
+* The ``GET /api/datasets/{dataset_id}/indexes`` API endpoint now includes the indexes' version number.
+* The ``DELETE /datasets/{dataset_id}/indexes/{index_int_id}`` API endpoint has been added. It can be used to delete a dataset index.
+
+2019-01-28
+----------
+* :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
+* Compaction will be performed by the dataset sink if ``compaction.sink`` is set to ``true`` in the pipe configuration. This is only available for pipes using the :ref:`dataset <dataset_sink>` sink. If sink compaction is enabled no scheduled compaction will be done on the dataset as this is no longer neccessary. Index compaction will still require scheduled compaction, but this does not require a lock on the dataset. Note that sink compaction is currently experimental.
+* Automatic compaction will now kick if there are 10% or 10000 new dataset offsets since the last compaction. The 10000 cap is fixed for now.
+
 2019-01-03
 ----------
 * The :ref:`dataset <dataset_sink>` sink will now mark the sink dataset as populated when all input datasets are populated and all entities have been read from them. Earlier it marked the sink dataset as populated after the first completed run. This was typically not what you wanted as it caused the sink datasets to be prematurely populated, which then caused unnecessary dependency tracking.
