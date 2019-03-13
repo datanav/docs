@@ -588,7 +588,7 @@ the source. The table below explains them in detail.
           depending on the strategy you want.
 
    * - ``is_since_comparable``
-     - Can you compare two _updated values using lexical/bytewise
+     - Can you compare two ``_updated`` values using lexical/bytewise
        comparison and decide their relative order?
 
        This property is used to specify if the values of two
@@ -618,17 +618,68 @@ the source. The table below explains them in detail.
        .. NOTE::
 
           If you set ``is_chronological`` to ``true`` then you
-          should also make sure that ``supports_since`` is set to ``true``
-          and ``is_since_comparable`` is set to ``true``.
+          should also make sure that ``supports_since`` is set to
+          ``true``.
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
 
-1. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
+1. If ``supports_since`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
 
 2. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` then continuation support is enabled and the *max* strategy is chosen. This strategy will store the maximum ``_updated`` value seen in the run.
 
 3. If none of the above apply, then continuation support is disabled. No tracking of the ``since`` marker is then done.
+
+The table below shows which strategy is chosen depending on the value of the properties:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 25, 25, 25
+
+   * - ``supports_since``
+     - ``is_since_comparable``
+     - ``is_chronological``
+     - Strategy
+
+   * - ``false``
+     - ``false``
+     - ``false``
+     - None
+
+   * - ``false``
+     - ``false``
+     - ``true``
+     - None
+
+   * - ``false``
+     - ``true``
+     - ``false``
+     - None
+
+   * - ``false``
+     - ``true``
+     - ``true``
+     - None
+
+   * - ``true``
+     - ``false``
+     - ``false``
+     - None
+
+   * - ``true``
+     - ``false``
+     - ``true``
+     - Chronological
+
+   * - ``true``
+     - ``true``
+     - ``false``
+     - Max
+
+   * - ``true``
+     - ``true``
+     - ``true``
+     - Chronological
 
 If continuation support is enabled for a pipe then the ``since``
 marker is stored in the ``last-seen`` property on the pump. Note that
