@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-03-14
+----------
+* The valid characters in pipe and system ids have been restricted to be valid DNS name components. In practice this means that the first character must be a letter or a digit and the rest must be letters, digits and hyphens. The maximum length is 62. Invalid ids will trigger a validation warning.
+
 2019-03-13
 ----------
 * A source that has ``supports_since=true``, ``is_since_comparable=false`` and ``is_chronological=True`` will now use the *chronological* :ref:`continuation strategy <continuation_support>`. Earlier it used no continutation strategy. 
