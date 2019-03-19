@@ -470,8 +470,8 @@ A circuit breaker is a safety mechanism that one can enable on the
 the number of entities written to a dataset in a pipe run exceeds a
 certain configurable limit.
 
-A tripped circuit breaker will prevent the pipe to being able to
-run. It can can either be rolled back or committed. Rolling it back
+A tripped circuit breaker will prevent the pipe from running.
+It can either be rolled back or committed. Rolling it back
 will delete any entities that were written in the pipe run before the
 circuit breaker was tripped. Committing it will expose the uncommitted
 entities. Both operations resets the circuit breaker so that pipe can
