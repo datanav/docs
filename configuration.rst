@@ -174,9 +174,6 @@ are transformed on their way to the sink.
 The pipe configuration consists of a :ref:`source <source_section>`, :ref:`transform <transform_section>`,
 :ref:`sink <sink_section>` and a :ref:`pump <pump_section>`.
 
-The configuration of a pipe has two forms; one *complete* form and one *short hand* form. The  *complete* form is
-described first and we will later :ref:`revisit pipes <pipes_revisited>` and look at an additional *short hand* form.
-
 Note that the forward slash character ("``/``") is not allowed in the pipe ``_id`` property.
 
 Prototype
@@ -189,7 +186,6 @@ The following *json* snippet shows the general form of a pipe definition.
         "_id": "pipe-id",
         "name": "Name of pipe",
         "type": "pipe",
-        "short_config": "sql://system/table",
         "source": {
         },
         "transform": {
@@ -249,13 +245,6 @@ Properties
      -
      - Yes
 
-   * - ``short_config``
-     - String
-     - A connection string-like short form of the configuration, see the :ref:`pipes revisited <pipes_revisited>` for
-       more information on the format of this property.
-     -
-     -
-
    * - ``batch_size``
      - Integer(>=1)
      - The number of source entities to consume before writing to the sink. The batch size
@@ -286,12 +275,9 @@ Properties
 
    * - ``source``
      - Object
-     - A configuration object for the :ref:`source <source_section>` component of the pipe. It can be omitted if
-       ``short_config`` is present and contains enough information to infer the source configuration. See the
-       :ref:`pipes revisited <pipes_revisited>` for more information about how the source configuration is inferred in
-       this case.
+     - A configuration object for the :ref:`source <source_section>` component of the pipe.
      -
-     -
+     - Yes
 
    * - ``transform``
      - Object/List
@@ -328,10 +314,10 @@ Example of an entity with namespaces:
 ::
 
   {
-    "_id": "users:123",
+    "_id": "user:123",
     "user:username": "erica",
     "user:first_name": "Erica",
-    "user:manager": "~:users:101"
+    "user:manager": "~:user:101"
   }
 
 .. NOTE::
@@ -484,8 +470,8 @@ A circuit breaker is a safety mechanism that one can enable on the
 the number of entities written to a dataset in a pipe run exceeds a
 certain configurable limit.
 
-A tripped circuit breaker will prevent the pipe to being able to
-run. It can can either be rolled back or committed. Rolling it back
+A tripped circuit breaker will prevent the pipe from running.
+It can either be rolled back or committed. Rolling it back
 will delete any entities that were written in the pipe run before the
 circuit breaker was tripped. Committing it will expose the uncommitted
 entities. Both operations resets the circuit breaker so that pipe can
@@ -496,6 +482,18 @@ breaker. It is also not possible to repost entities to these datasets.
 
 The `service API <api.html#post--datasets-dataset_id>`_ can be used to
 reset the circuit breaker.
+
+Resetting
+---------
+
+When the configuration of a pipe is modified in such a way that the entities the pipe
+produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
+value must be cleared in order to reprocess already seen entities with the new pipe
+configuration.
+
+This can be done by setting the "last-seen" value to an empty string with the
+`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
+
 
 Example configuration
 ---------------------
@@ -590,7 +588,7 @@ the source. The table below explains them in detail.
           depending on the strategy you want.
 
    * - ``is_since_comparable``
-     - Can you compare two _updated values using lexical/bytewise
+     - Can you compare two ``_updated`` values using lexical/bytewise
        comparison and decide their relative order?
 
        This property is used to specify if the values of two
@@ -620,17 +618,68 @@ the source. The table below explains them in detail.
        .. NOTE::
 
           If you set ``is_chronological`` to ``true`` then you
-          should also make sure that ``supports_since`` is set to ``true``
-          and ``is_since_comparable`` is set to ``true``.
+          should also make sure that ``supports_since`` is set to
+          ``true``.
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
 
-1. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
+1. If ``supports_since`` is ``true`` and ``is_chronological`` is ``true`` then continuation support is enabled and the *chronological* strategy is chosen. This strategy will store ``_updated`` values in the order we see them.
 
 2. If ``supports_since`` is ``true`` and ``is_since_comparable`` is ``true`` then continuation support is enabled and the *max* strategy is chosen. This strategy will store the maximum ``_updated`` value seen in the run.
 
 3. If none of the above apply, then continuation support is disabled. No tracking of the ``since`` marker is then done.
+
+The table below shows which strategy is chosen depending on the value of the properties:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 25, 25, 25
+
+   * - ``supports_since``
+     - ``is_since_comparable``
+     - ``is_chronological``
+     - Strategy
+
+   * - ``false``
+     - ``false``
+     - ``false``
+     - None
+
+   * - ``false``
+     - ``false``
+     - ``true``
+     - None
+
+   * - ``false``
+     - ``true``
+     - ``false``
+     - None
+
+   * - ``false``
+     - ``true``
+     - ``true``
+     - None
+
+   * - ``true``
+     - ``false``
+     - ``false``
+     - None
+
+   * - ``true``
+     - ``false``
+     - ``true``
+     - Chronological
+
+   * - ``true``
+     - ``true``
+     - ``false``
+     - Max
+
+   * - ``true``
+     - ``true``
+     - ``true``
+     - Chronological
 
 If continuation support is enabled for a pipe then the ``since``
 marker is stored in the ``last-seen`` property on the pump. Note that
@@ -5902,7 +5951,8 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "port": 1521,
-        "database": "database-name"
+        "database": "database-name",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -5948,6 +5998,15 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -5962,7 +6021,8 @@ Example Oracle configuration:
         "username": "system",
         "password": "oracle",
         "host": "oracle",
-        "database": "XE"
+        "database": "XE",
+        "coerce_to_decimal": true
     }
 
 
@@ -5986,7 +6046,8 @@ Prototype
         "name": "The Oracle Database",
         "username":"username-here",
         "password":"secret",
-        "tns_name": "tns-name-here"
+        "tns_name": "tns-name-here",
+        "coerce_to_decimal": false
     }
 
 Properties
@@ -6020,6 +6081,16 @@ Properties
      -
      - Yes
 
+   * - ``coerce_to_decimal``
+     - Boolean
+     - If set to `true`, it will force the use of the decimal type for all "numeric" types (i.e. numbers with precision
+       and scale information). What type the column data ends up as is not clearly defined by the current oracle
+       backend driver so in some cases it may yield a float value instead of a decimal value. This property should
+       always be set to `true` if your flows care if numeric values are floats or decimals. The default value is `false`.
+     - ``false``
+     -
+
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -6033,7 +6104,8 @@ Example Oracle TNS configuration:
         "type": "system:oracle_tns",
         "username": "system",
         "password": "oracle",
-        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))""
+        "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))"",
+        "coerce_to_decimal": true
     }
 
 
@@ -6952,6 +7024,14 @@ Properties
      - ``7200``
      -
 
+   * - ``ignore_invalid_content_length_response_header``
+     - Boolean
+     - Normally, the URL system will throw an error if the ``Content-Length`` header is present and
+       contains an invalid value. The ``ignore_invalid_content_length_response_header`` property can be set to
+       ``true`` in order to attempt to ignore such errors.
+     - ``false``
+     -
+
 [1] Exactly one of ``base_url`` and ``url_pattern`` must be specified.
 
 Example configuration
@@ -7205,6 +7285,10 @@ Prototype
                     "key1": "value1",
                     "key2": "value2"
                 }
+            },
+            "hosts": {
+                "myhost1.mydomain.io": "157.240.20.34",
+                "myhost2.mydomain.io": "157.240.20.35"
             }
         },
         "use_https": false,
@@ -7302,6 +7386,13 @@ Properties
        The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
        4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
      - ``null``
+     -
+
+       .. _microservices_system_docker_hosts:
+   * - ``docker.hosts``
+     - Dict<String,String>
+     - A mapping between domain names/hostnames and IP adresses. These custom hostnames will be resolvable inside the microservice container.
+     - ``{}``
      -
 
    * - ``use_https``
@@ -7483,7 +7574,10 @@ Prototype
         "fallback_to_single_entities_on_batch_fail": true,
         "use_dead_letter_dataset": false,
         "track_dead_letters": false,
-        "mode": "scheduled"
+        "mode": "scheduled",
+        "log_events_noop_runs": false,
+        "log_events_noop_runs_changes_only": true,
+        "notification_granularity": 99999999999
     }
 
 Properties
@@ -7493,7 +7587,7 @@ Note: A pump configuration needs to have either a ``schedule_interval`` *or* a
 ``cron_expression`` property to govern when the pump should be run. They are mutually exclusive with the
 ``cron_expression`` taking precedence if both are present. If neither property is set, the ``schedule_interval``
 will be set to a default value. For pipes with a :ref:`dataset sink <dataset_sink>` *and* a
-:ref:`dataset sink <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
+:ref:`dataset source <dataset_source>` the default will be 30 seconds +/- 1.5 seconds. For all other pipes, the default
 will be 900 seconds +/- 45 seconds. It is good practice to always set the ``cron_expression`` property
 on pipes that reads from or writes to external systems.
 
@@ -7670,6 +7764,36 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - "scheduled"
      -
 
+   * - ``log_events_noop_runs``
+     - Boolean
+     - A flag that controls if a "noop" ("no-operation") pipe run should be logged in the pipe execution log or not. The default
+       value ``false`` means that runs that results in no processed or changed entities (the semantic depends on the type of sink)
+       will never be logged. See also the ``log_events_noop_runs_changes_only`` property which controls if the source or
+       the sink decides if a run is considered a "noop" or not. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - false
+     -
+
+   * - ``log_events_noop_runs_changes_only``
+     - Boolean
+     - A flag that controls what kind of metric is used to determine if a pipe run was a "noop" ("no-operation") run or not.
+       The default setting ``true`` means that a run is considered a "noop" run if the sink reported that no entities
+       was changed, even if the source produced entities. If it is set to ``false`` then all runs which yielded no
+       new entities from the source is considered a "noop" run. Note that any errors or retries will always imply logging
+       to the execution dataset.
+     - true
+     -
+
+   * - ``notification_granularity``
+     - int
+     - This property lets the pipe "override" the ``log_events_noop_runs`` property and force the pipe to log a run
+       at regular intervals, even if it was a "noop" run. The value is in seconds. The default value
+       is ``999999999999999`` and means "never". A value of 900 means always log a pipe run if the last logged
+       "completed" event is older than 15 minutes). Note that any errors or retries will always imply logging to the
+       execution dataset.
+     - true
+     -
+
 
 Example configuration
 ---------------------
@@ -7723,111 +7847,3 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
            "cron_expression": "0/5 14,18 * * ?"
        }
     }
-
-
-.. _pipes_revisited:
-
-Pipes revisited
-===============
-
-Short-hand configuration
-------------------------
-
-As mentioned earlier, in the :ref:`pipe section <pipe_section>`, there is a special "short hand" configuration for
-one of the most used pipes; pipes pumping entities from RDBMS tables to an internal dataset. Since this is an often
-encountered usecase, we have condensed the information needed into a single url-style form:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders"
-        }
-    ]
-
-Currently, only the :ref:`sql system <sql_system>` and :ref:`source <sql_source>` is supported
-though other short forms may be added at a later time. The above example using the ``short_config`` form is equivalent
-to this fully expanded pipe configuration:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "source": {
-               "type": "sql",
-               "system": "Northwind",
-               "table": "Orders"
-           },
-           "sink": {
-               "type": "dataset",
-               "dataset": "Northwind:Orders"
-           },
-           "pump": {
-               "schedule_interval": 30
-           }
-        }
-    ]
-
-You can combine the short form with properties from the :ref:`dataset sink <dataset_sink>`, :ref:`sql source <sql_source>`
-and specific :ref:`pump <pump_section>` properties, as long as the ``_id`` and ``type`` properties aren't overridden, for example
-changing the pump schedule and startup flag:
-
-::
-
-    [
-        {
-           "_id": "Northwind",
-           "type": "system:mysql",
-           "name": "Northwind database",
-           "username": "northwind",
-           "password": "secret",
-           "host": "mydb.example.org",
-           "database": "Northwind"
-        },
-        {
-           "_id": "Northwind:Orders",
-           "type": "pipe",
-           "name": "Orders from northwind",
-           "short_config": "sql://Northwind/Orders",
-           "pump": {
-               "schedule_interval": 60,
-               "run_at_startup": true
-           }
-        }
-    ]
-
-
-Changing configuration on an existing pipe
-------------------------------------------
-
-When the configuration of a pipe is modified in such a way that the entities the pipe
-produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
-value must be cleared in order to reprocess already seen entities with the new pipe
-configuration.
-
-This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
-
