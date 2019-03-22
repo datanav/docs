@@ -3549,39 +3549,20 @@ Entity lookups
        | ``["reference", "foo", ["list", "a", "b"]]``
        |
        | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
+       |
 
-   * - ``lookup``
+       .. _lookup_entity_function:
+   * - ``lookup-entity``
      - | *Arguments:*
-       |   DATASET_IDS(value-expression{0|1})
-       |   ENTITY_REFERENCES(value-expression{1})
+       |   DATASET_ID(string{1})
+       |   ENTITY_ID(string{1})
        |
-       | Returns an entity or a list of entities by resolving the strings or URIs in
-         ENTITY_REFERENCES. The URIs will be resolved by looking up entities by
-         id in the given datasets. Relative references will be resolved in the
-         current dataset or in the DATASET_IDS datasets if specified. The returned
-         entities have an extra ``_dataset`` property containing the id of the dataset
-         where they came from.
-     - | ``["lookup", "~rsesam:A/foo"]``
+       | Returns an entity in the given dataset.
+     - | ``["lookup-entity", "code-table", "foo"]``
        |
-       | Looks up the ``foo`` entity in the ``A`` dataset.
-       |
-       | ``["lookup", "A", ["list", "foo", "sesam:B/bar"]]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset and the ``bar``
-         entity in the ``B`` dataset.
-       |
-       | ``["lookup", "bar"]``
-       |
-       | Looks up the ``bar`` entity in the current dataset.
-       |
-       | ``["lookup",``
-       |   ``["list", "A", "B"],``
-       |   ``["list", "bar", "baz",``
-       |     ``"~rsesam:C/foo", "~rsesam:D/quux"]``
-       |
-       | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
-         ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
-         dataset because they are explicit entity references.
+       | Looks up the entity with the ``_id`` property value of ``foo`` in the ``code-table`` dataset.
+       | Note that the dataset referenced has to be populated before the DTL transform can run.
+       | If the entity doesn't exist in the dataset, ``null`` is returned.
 
 Namespaced identifiers
 ----------------------

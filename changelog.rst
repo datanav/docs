@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-03-22
+----------
+* The ``lookup`` DTl function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
+
 2019-03-14
 ----------
 * The valid characters in pipe and system ids have been restricted to be valid DNS name components. In practice this means that the first character must be a letter or a digit and the rest must be letters, digits and hyphens. The maximum length is 62. Invalid ids will trigger a validation warning.
