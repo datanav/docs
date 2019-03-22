@@ -1961,8 +1961,7 @@ The RDF source
 --------------
 
 The RDF data source is able to read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data
-in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_ or
-`RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
+in `N-Triples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_, `N3 <https://www.w3.org/TeamSubmission/n3/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
 
 See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
@@ -2023,8 +2022,7 @@ Properties
      - String
      - The type of ``RDF`` file referenced by the ``url`` property. It is
        an enumeration that can take following recognized values: ``"nt"`` for
-       ``NTriples``, ``"ttl"`` for ``Turtle`` form or ``"xml"`` for ``RDF/XML``
-       files.
+       N-Triples, ``"ttl"`` for Turtle, ``"n3"`` for N3 or ``"xml"`` for ``RDF/XML`` files.
      - "nt"
      -
 
@@ -2039,7 +2037,7 @@ Properties
    * - ``is_sorted``
      - Boolean
      - Indicates that the input data is sorted on RDF subject. If the ``is_sorted`` is set to ``true`` and the
-       ``format`` property is ``nt`` (NTriples), the RDF source will attempt to parse the input data sequentially and
+       ``format`` property is ``nt`` (N-Triples), the RDF source will attempt to parse the input data sequentially and
        emit a new entity when the RDF subject changes, without loading the entire RDF file into memory first.
        Note that the input data cannot contain `RDF Blank Nodes <https://en.wikipedia.org/wiki/Blank_node>`_ (aka
        BNodes) in this case. The property has no effect on formats other than ``nt``.
@@ -2493,12 +2491,12 @@ The SDShare Push protocol is described `here
 <https://github.com/SesamResearch/sdshare-push/blob/master/spec.md>`__.
 
 The SDShare Push endpoint supports receiving `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_
-in `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
+in `N-Triples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_ form. In this case the URL
 parameters have to include at least one ``resource`` parameter describing which resources the
-NTriples payload contains statements about. If you include a ``resource`` parameter that there
-are no statements about in the NTriples body, an empty entity is generated with its ``_deleted``
+N-Triples payload contains statements about. If you include a ``resource`` parameter that there
+are no statements about in the N-Triples body, an empty entity is generated with its ``_deleted``
 flag set to ``true``. Note that the ``graph`` parameter of the protocol is ignored - the destination
-of the entities generated from the NTriples payload must be configured in the pipe's ``sink``
+of the entities generated from the N-Triples payload must be configured in the pipe's ``sink``
 section. This type of HTTP request expects the ``content-type`` to be ``application/n-triples`` or
 ``text/plain``. See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
 
@@ -3508,7 +3506,7 @@ it will produce the transformed entity:
 The RDF transform
 -----------------
 
-This transform will render entities to a NTriples string and embed it in the entity, which is then passed on
+This transform will render entities to a N-Triples string and embed it in the entity, which is then passed on
 to the transform chain.
 
 Prototype
@@ -4024,7 +4022,7 @@ The SDShare push sink
 ---------------------
 
 The SDShare push sink is similar to the :ref:`JSON push sink <json_push_sink>`, but instead of posting JSON it
-translates the inbound entities to ``RDF`` and ``POSTs`` them in ``NTriples`` form to a :ref:`HTTP endpoint <url_system>`
+translates the inbound entities to ``RDF`` and ``POSTs`` them in N-Triples form to a :ref:`HTTP endpoint <url_system>`
 implementing the ``SDShare push protocol``.
 
 Prototype
@@ -7217,12 +7215,12 @@ Example configuration
     {
         "_id": "our-rest-service",
         "name": "Our REST service",
-        "url_pattern": "http://our.domain.com/api/%s"
-        "type" : "system:rest",
+        "url_pattern": "http://our.domain.com/api/%s",
+        "type": "system:rest",
         "operations": {
            "delete-man": {
                "url" : "men/{{ properties.collection_name }}/{{ _id }}",
-               "method": "DELETE",
+               "method": "DELETE"
            },
            "delete-woman": {
                "url" : "women/{{ properties.collection_name }}/{{ _id }}",
