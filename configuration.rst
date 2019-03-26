@@ -3734,7 +3734,12 @@ Properties
        ``["create-child", ...]`` DTL function and the ``emit_children`` pipe transform.
        The purpose is to be able to detect deleted children entities when doing
        incremental syncs.
-     - ``false``
+
+       The effective value of this property is inferred to be ``true``
+       if any of the pipe's transforms use the ``create-child`` DTL
+       function. It is possible to override this by setting the
+       property's value to ``false``.
+     - Inferred
      -
 
    * - ``enable_optimistic_locking``

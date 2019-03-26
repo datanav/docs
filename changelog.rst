@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-03-26
+----------
+* The ``track_children`` property on the :ref:`dataset sink <dataset_sink>` is now inferred to be ``true`` if any of the pipe's transforms use the ``create-child`` DTL function. It is possible to override this by setting the property's value to ``false``.
+
 2019-03-22
 ----------
 * The ``lookup`` DTl function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
