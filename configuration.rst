@@ -2831,6 +2831,31 @@ The DTL transform
 This is a transform that lets you apply :doc:`Data Transformation Language <DTLReferenceGuide>`
 transformations on the entities stream produced by the data source.
 
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 3, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``rules``
+     - Object
+     - The named rules of the DTL transform. The ``default`` named rule is required and is the rule that will be applied on the source entity. The other rules can be applied via the :ref:`apply <apply_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions.
+     -
+     - Yes
+
+   * - ``id_required``
+     - Boolean
+     - If ``true`` then the DTL transform will fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform_create>` and  :ref:`"create-child" <dtl_transform_create_child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. If the value is ``false`` then it will not fail in these situation. Instead the values will be ignored.
+     - ``true``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -2902,14 +2927,14 @@ Properties
      - String
      - The field to store the validation result. This is a boolean value,
        which is true if the entity is valid, otherwise false.
-     - ``valid``
+     - ``"valid"``
      -
 
    * - ``key_errors``
      - String
      - The field to store the validation error messages. The error messages
        is a list of strings. The field is only added if the entity is invalid.
-     - ``errors``
+     - ``"errors"``
      -
 
 Example configuration
