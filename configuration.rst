@@ -1446,13 +1446,13 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - Value
 
    * - ``supports_since``
-     - ``false`` (Fixed)
+     - ``false`` (Default)
 
    * - ``is_since_comparable``
-     - ``true`` (Fixed)
+     - ``true`` (Default)
 
    * - ``is_chronological``
-     - ``false`` (Fixed)
+     - ``false`` (Default)
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
