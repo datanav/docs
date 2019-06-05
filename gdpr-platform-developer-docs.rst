@@ -192,7 +192,7 @@ the output API pipe.
 GDPR consent
 ============
 
-The GDPR consemt dataset (dataset name ``gdpr-consent``) contains entities with information about consent purposes with the following datastructure:
+The GDPR consent dataset (dataset name ``gdpr-consent``) contains entities with information about consent purposes with the following datastructure:
 
 Prototype
 ^^^^^^^^^
