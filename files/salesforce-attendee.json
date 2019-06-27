@@ -1,0 +1,42 @@
+{
+  "_id": "salesforce-attendee",
+  "type": "pipe",
+  "source": {
+    "type": "embedded",
+    "entities": [{
+      "_id": "0",
+      "CustomerId": "123123",
+      "Date": "05.03.19",
+      "Endtime": "12:30",
+      "Location": "Meeting room Savannah, 1st floor.",
+      "Phone_number": "14483792",
+      "Starttime": "11:00"
+    }, {
+      "_id": "1",
+      "CustomerId": "9879087",
+      "Date": "05.03.19",
+      "Endtime": "15:00",
+      "Location": "Meeting room Thundra, 3rd floor.",
+      "Phone_number": "29398319",
+      "Starttime": "14:00"
+    }]
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "salesforce", "attendee"]
+        ],
+        ["make-ni", "salesforce-contact", "CustomerId"]
+      ]
+    }
+  },
+  "pump": {
+    "cron_expression": "0 0 1 1 ?"
+  },
+  "metadata": {
+    "tags": ["attendee", "embedded"]
+  }
+}

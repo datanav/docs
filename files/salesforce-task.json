@@ -1,0 +1,58 @@
+{
+  "_id": "salesforce-task",
+  "type": "pipe",
+  "source": {
+    "type": "embedded",
+    "entities": [{
+      "_id": "1",
+      "Address": "Helmers vei 242",
+      "Customerid": "1",
+      "EmailAddress": "<INSERT YOUR EMAIL HERE>",
+      "FirstName": "Torjus",
+      "Gender": "male",
+      "LastName": "Sand",
+      "PostalCode": "5163",
+      "SSN": "23072451376",
+      "Username": "MyUsername"
+    }, {
+      "_id": "2",
+      "Address": "Addresseveien 1",
+      "Customerid": "2",
+      "EmailAddress": "user@mail.com",
+      "FirstName": "Emil",
+      "Gender": "male",
+      "LastName": "Jensen",
+      "PostalCode": "4120",
+      "SSN": "12052427741",
+      "Username": "Username1"
+    }, {
+      "_id": "3",
+      "Address": "Road Street 1",
+      "Customerid": "3",
+      "EmailAddress": "user2@mail.com",
+      "FirstName": "Aleksander",
+      "Gender": "male",
+      "LastName": "Ommundsen",
+      "PostalCode": "0291",
+      "SSN": "02023688018",
+      "Username": "Username2"
+    }]
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "salesforce", "task"]
+        ]
+      ]
+    }
+  },
+  "pump": {
+    "mode": "manual"
+  },
+  "metadata": {
+    "tags": ["embedded", "person"]
+  }
+}
