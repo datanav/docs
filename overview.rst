@@ -30,7 +30,7 @@ It also provides a number of core Sink implementations such as the :ref:`relatio
 Installation
 ------------
 
-You must sign up using the `Sesam Portal <https://portal.sesam.in/>`__ to install Sesam. The default installation type is a cloud based installation,
+You must sign up using the `Sesam Portal <https://portal.sesam.io/>`__ to install Sesam. The default installation type is a cloud based installation,
 but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation.
 
 You can also access an existing Sesam installation by registering in the Sesam Portal and obtaining an invitation from someone with
