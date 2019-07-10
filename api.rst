@@ -14,7 +14,7 @@ Introduction
 
 Sesam provides a RESTful API for controlling the service and for working with the data in the datahub.
 
-If you follow the :ref:`overview-getting-started` guide, the api will be served on the url you find on the
+If you follow the :ref:`getting-started` guide, the api will be served on the url you find on the
 management studio "settings" page under the "Connection url" heading. For a cloud instance it will typically be on
 the form "https://instance-guid.sesam.cloud/api".
 

@@ -19,7 +19,7 @@ the command line.
 Installing the client
 =====================
 
-If you followed the :ref:`overview-getting-started` guide, the sesam service will be running on http://localhost:9042/api .
+If you followed the :ref:`getting-started` guide, the sesam service will be running on http://localhost:9042/api .
 
 The command line client is distributed as a python package, so you will need python (v3.4 or later) in order to install
 and run it:
