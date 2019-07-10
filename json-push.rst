@@ -95,7 +95,7 @@ Examples
 This section contains three examples that illustrates how you can use
 the JSON push protocol to push data to Sesam using incremental and
 full syncs. The examples use the ``curl`` command line utility. See
-the :ref:`Pre-Requisites <overview-pre-requisites>` section in the
+the :ref:`Pre-Requisites <getting-started-pre-requisites>` section in the
 :doc:`Overview <overview>` for information on how to install this
 tool.
 

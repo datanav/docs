@@ -6,6 +6,7 @@ Sesam Data Integration Platform
    :maxdepth: 2
 
    Overview <overview>
+   Getting started <getting-started>
    Concepts <concepts>
    Developer Guide <developer-guide>
    Management Studio <management-studio>
