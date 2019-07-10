@@ -204,7 +204,7 @@ Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=das
 
 Once you've signed up you'll see this page. Click on Request private trail.
 
-.. image:: images/docsImg/dashboard-view.png
+.. image:: images/getting-started/dashboard-view.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -217,7 +217,7 @@ The first thing you need to do is to download the `training config json <https:/
 
 Go into you Dev Node. Click on **Datahub** in the left menu, and select the **Tools tab**.
 
-.. image:: images/docsImg/importdata.png
+.. image:: images/getting-started/importdata.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -232,7 +232,7 @@ We have created some test data for you. Go to the **Variables** tab and paste th
 
 Select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
 
-.. image:: images/docsImg/running_pipe.gif
+.. image:: images/getting-started/running_pipe.gif
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -246,12 +246,12 @@ Go into the new Sesam node.
 
 Navigate to the **Pipes** view and click **New pipe**. 
 
-.. image:: images/docsImg/new_pipe.gif
+.. image:: images/getting-started/new_pipe.gif
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-.. image:: images/docsImg/pipe_config_first_pipe.png
+.. image:: images/getting-started/pipe_config_first_pipe.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -272,7 +272,7 @@ If you click **Start** on the pipe it will run with the config you have created.
 
 When de-bugging, make sure you **restart** the pipe as well. The restart button can be found at **Pipes/< pipe-name >** ... at the top of the web page. 
 
-.. image:: images/docsImg/reset-pipe.png
+.. image:: images/getting-started/reset-pipe.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -350,7 +350,7 @@ Merging sources
 ^^^^^^^^^^^^^^^
 We can create an aggregated dataset source that contains all the data from multiple dataset through using source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 
 
-.. image:: images/docsImg/db-table-after-merge.png
+.. image:: images/getting-started/db-table-after-merge.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -551,7 +551,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
     } 
  }
 
-.. image:: images/docsImg/add_applyhops.png
+.. image:: images/getting-started/add_applyhops.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -592,7 +592,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
   } 
  } 
 
-.. image:: images/docsImg/merge_applyhops.png
+.. image:: images/getting-started/merge_applyhops.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -638,7 +638,7 @@ In this next chapter we will walk you through the steps of using a SQL database 
 
 Once you've set up you account click on details in the left menu. It should look like this: 
 
-.. image:: images/docsImg/Elephant_SQL.png
+.. image:: images/getting-started/Elephant_SQL.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -657,7 +657,7 @@ In the **"_id"** you'll create the name of the system (the same as creating a pi
 
 Using secrets
 ^^^^^^^^^^^^^
-.. image:: images/docsImg/new_system3.png
+.. image:: images/getting-started/new_system3.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -670,7 +670,7 @@ Creating a table in the database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Until now your database has been empty. If you are not familiar with SQL, do not worry. We have created some sample data for you. In ElephantSQL, click on **browser** in the left menu.
 
-.. image:: images/docsImg/elephantQuery.png
+.. image:: images/getting-started/elephantQuery.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -708,7 +708,7 @@ Then click on **Execute**. We have now created a sample table with some properti
 
 Head back to your Dev node. Now you can create a new pipe that pulls this table from the database.
 
-.. image:: images/docsImg/new-pipe-db.png
+.. image:: images/getting-started/new-pipe-db.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -719,14 +719,14 @@ You are now free to transform the data as you want, but it is not needed and wil
 
 Creating out CSV sink
 ^^^^^^^^^^^^^^^^^^^^^
-.. image:: images/docsImg/csv-endpoint.png
+.. image:: images/getting-started/csv-endpoint.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
 There are multiple ways of viewing the data. The simplest is to download the file and opening it with Excel or any text editor. (If you are familiar with cURL you can copy the link and past it in terminal/command.)
 
-.. image:: images/docsImg/csv-sink.png
+.. image:: images/getting-started/csv-sink.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -735,7 +735,7 @@ Click **Download**. Open a new Excel document. Go to **Data** then select **From
 
 Select as shown in figures below:
 
-.. image:: images/docsImg/csv-test.png
+.. image:: images/getting-started/csv-test.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1056,7 +1056,7 @@ Microservices
 -------------
 The DTL in Sesam is a powerful tool to transform our data. But sometimes we need to do something with our data that is outside the scope of the DTL. We can then create a microservice that does what we need and run it inside Sesam to serve those needs. We can also use a microservice when we need to connect to an external system where the connection point is not compatible with the Sesam source systems. The microservice can be made according to our preferrences and in any language.
 
-.. image:: images/docsImg/MS-types.jpg
+.. image:: images/getting-started/MS-types.jpg
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1067,7 +1067,7 @@ Workflow
 ========
 Microservices in Sesam run in docker containers. These containers run on our Sesam-node in what we call a system. Below is a visual representation of the flow of hosting our microservice in Sesam.
 
-.. image:: images/docsImg/workflow-ms.png
+.. image:: images/getting-started/workflow-ms.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1083,7 +1083,7 @@ Getting started with microservices
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
 
-.. image:: images/docsImg/Docker-repo.png
+.. image:: images/getting-started/Docker-repo.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1092,7 +1092,7 @@ Then download `Docker Desktop <https://www.docker.com/get-started>`__.
 
 You now need to download Python. Here we're using Python 3.6 but you can use any version after 3.5. Then install pip and flask. If you need help with this, follow the instructions `here <https://docs.sesam.io/overview.html#installing-software>`__.
 
-.. image:: images/docsImg/flaskInstall.png
+.. image:: images/getting-started/flaskInstall.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1121,7 +1121,7 @@ Inside your Demo_MicroserviceProject folder create a new text file called Docker
 
 Then create a new folder called service inside your project root folder.
 
-.. image:: images/docsImg/MSproject.png
+.. image:: images/getting-started/MSproject.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1169,7 +1169,7 @@ Then create a python file, also in the "service" folder, named "DemoMicroservice
   if __name__ == '__main__': 
       app.run(debug=True, host='0.0.0.0', port=5000)
 
-.. image:: images/docsImg/DemoService.png
+.. image:: images/getting-started/DemoService.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1226,7 +1226,7 @@ To check that the you have created image run the command:
 
 Go to hub.docker.com and check that you can see the tagname in you repository.
 
-.. image:: images/docsImg/docker-push.png
+.. image:: images/getting-started/docker-push.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1244,14 +1244,14 @@ Create a new system in your node. Choose **microservice prototype** as template.
     "port":5000 
  } 
 
-.. image:: images/docsImg/systemconfigms.png
+.. image:: images/getting-started/systemconfigms.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
 Save it and click on **Status**. Click **Pull** and **restart**, then **Refresh** and **Check health**. You can also hit **Refresh** in the log so you see that it's running as it should.
 
-.. image:: images/docsImg/system-microservice.gif
+.. image:: images/getting-started/system-microservice.gif
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -1265,12 +1265,12 @@ Then create a new pipe. Because our dataset does not have an **"_id"** property 
 
 This creates a new rule where we can add the **"_id"**. Since the **"id"** in the microservice is an integer and Sesam only accepts string values for the **"_id"** we convert it with the **["string"]** function.
 
-.. image:: images/docsImg/remade-pipe.png
+.. image:: images/getting-started/remade-pipe.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-.. image:: images/docsImg/pipe-orders-ms-output.png
+.. image:: images/getting-started/pipe-orders-ms-output.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
