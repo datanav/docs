@@ -19,6 +19,91 @@ Sesam is an Integration Platform that uses a unique Datahub approach for collect
 If you want to jump straight into Sesam and get hands-on, you can go right  to the :ref:`Labs section <getting-started-labs>`.
 
 
+.. _getting-started-setting-up-our-sesam-node:
+
+Setting up our Sesam node
+-------------------------
+You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
+
+The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
+
+.. _getting-started-sign-up:
+
+Sign up
+=======
+
+Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and sign up.
+
+Once you've signed up you'll see this page. Click on Request private trail.
+
+.. image:: images/getting-started/dashboard-view.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Once you get the access from the Sesam team you'll get your own Dev Node card in the Dashboard.
+
+.. _getting-started-import-data:
+
+Import data
+===========
+Eventually, your Sesam node might contain many different pipes and systems depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
+
+Go into you Dev Node. Click on **Datahub** in the left menu, and select the **Tools tab**.
+
+.. image:: images/getting-started/importdata.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Upload the file. Check the box "**Force upload (ignore validation errors)**"
+
+We have created some test data for you. Go to the **Variables** tab and paste the code below inside the curly brackets.
+
+::
+
+  "node-env": "test"
+
+You should now have several pipes available. As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
+
+.. image:: images/getting-started/running_pipe.gif
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Repeat step 5 for **azure-person**, **firebase-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
+
+.. _getting-started-sesam-overview:
+
+Sesam overview
+--------------
+We will now give a short ovewview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
+
+In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this perticular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node ans the tab :ref:`Systems <concepts-systems>` displays the different microservices you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
+
+The following picture shows the general setup of a Sesam node.
+
+
+.. image:: images/getting-started/sesam_overview.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+The data is supplied to our pipe via different sources. These sources might be databases such as SQL or CSV files. Sometimes, the data available might not be compatible with the Sesam requirements, or you might wish to extract data from an API. The Python scrips performing these tasks are called microservices, and they act as **Systems** in the Sesam node. Since not all sources have their data updated at the same time, every pipe has a **Pump** which tells the pipe how often to run send the data from the source to a **Sink**. A **Sink** writes the final result to a target.  
+
+The picture below shows is looking closer into the different tabs when working on a pipe.   
+
+.. image:: images/getting-started/pipe_tabs.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+The first five tabs are the most used ones, and the ones will will put some focus on in this section.
+
+The **Dashboard** tab gives you an overview of the different pipes connected to this specific pipe. The **Config** tab displays the **DTL** code in which we transform the data into the performed format and setup. The **Input** and **Output** tabs shows the data before and after being sent through the pipe, respectively. The **Execution log** is a helpful tool when debugging your code. This tab will display the different error messages. 
+
+.. _getting-started-glossary:
+
 Glossary
 --------
 **Datasets:** Sesam stores its data as datasets that consist of entities. Datasets are used as sources for data transformation and stored as new datasets and sources for delivering data to target systems (endpoints).
@@ -37,97 +122,21 @@ Glossary
 
 **Transformations:** These are described using the Data Transformation Language (DTL). It is here you transform your data from many datasets to construct new entities into new datasets.
 
-.. _getting-started-pre-requisites:
 
-Pre-requisites for installation
--------------------------------
-You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purshase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
+.. _getting-started-pipes:
 
-The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
-
-Setting up our Sesam node
--------------------------
-
-Sign up
-=======
-
-Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and sign up.
-
-Once you've signed up you'll see this page. Click on Request private trail.
-
-.. image:: images/getting-started/dashboard-view.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Once you get the access from the Sesam team you'll get your own Dev Node card in the Dashboard.
-
-Import data
-===========
-The first thing you need to do is to download the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
-
-Go into you Dev Node. Click on **Datahub** in the left menu, and select the **Tools tab**.
-
-.. image:: images/getting-started/importdata.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Upload the file. Check the box "**Force upload (ignore validation errors)**"
-
-We have created some test data for you. Go to the **Variables** tab and paste the code below inside the curly brackets.
-
-::
-
-  "node-env": "test"
-
-Select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
-
-.. image:: images/getting-started/running_pipe.gif
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Repeat step 5 for **azure-person**, **firebase-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
-
-
-Creating our first pipe
+Pipes
 -----------------------
-Go into the new Sesam node.
+In this section we will go futher into what pipes are, how they work and what we can do with them. 
 
-Navigate to the **Pipes** view and click **New pipe**. 
+When we analyze the different data available to us, we might not have the need for all of it. Some of that data might be abundant due to multiple occurences, i.e. the name of an employee occuring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. The pipes are responsible for the transformation of the source data from one setup to an other with the purpose of adding structure to the data. 
 
-.. image:: images/getting-started/new_pipe.gif
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
 
-.. image:: images/getting-started/pipe_config_first_pipe.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
+The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
 
-Select System **system:sesam-node** and Provider **crm-person**, then click Replace to add a pipe configuration from template
+Before we go further into the details, we wish to say a few words regarding pipe naming conventions. 
 
-Change the value of the **"_id"** property in the pipe config to **crm-person-myfirstpipe** in the pipe config.
-
-Click **Add DTL transform** to add a transform property to your config. 
-
-Hit **ctrl + Enter** to preview the result of the config and observe that the **"_id"** of the entity seen in the **Source data** is the same as the one in in the **Result**.
-
-Click **Save**
-
-We have now made our first pipe! Feel free to browse the different tabs of this pipe and explore. We can always find the pipe in the pipe list of our **Pipes view**.
-
-If you click **Start** on the pipe it will run with the config you have created. After this you can find all the resulting entities in the **Output** tab of the pipe.
-
-When de-bugging, make sure you **restart** the pipe as well. The restart button can be found at **Pipes/< pipe-name >** ... at the top of the web page. 
-
-.. image:: images/getting-started/reset-pipe.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
+.. _getting-started-naming-conventions:
 
 Naming conventions
 ==================
@@ -141,15 +150,27 @@ To ensure we have a structured set of pipes that stay manageable in a bigger sys
 
   * **Outgoing**:  < name-of-object >-< name-of-sink >
 
-  * **Internal pipe**:  < name-og-object >-< name-of-sink >-endpoint 
+  * **Internal pipe**:  < name-of-object >-< name-of-sink >-endpoint 
 
-Basic functions
----------------
+.. _getting-started-basic-dtl-functions:
 
-.. _getting-started-transformations:
+Basic DTL and functions
+=======================
+Sesam utilizes DTL (Data Transformation Language) which enables the user to easily apply logical operations on the data. In this section we will go through the most common functions available in DTL. For a more extensive walk-through, visit the :ref:`DTL reference guide <DTLReferenceGuide>`.
+
+DTL scripts are written inside the config tab when selecting a pipe in your Sesam node. The scripts consists of five sections: 
+
+	* **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
+	* **Provider**: We need to tell DTL which source/sources to get the data from. 
+	* **Transform**: Next we need to specify the rules with which we wish to transform the data.
+	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
+	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
+
 
 Transformations
 ===============
+There are many different ways of transforming the source data. In this section will will encounter some of the more frequently used operations. For a full technical overview of the available operations visit the :ref:`DTL reference guide <DTLReferenceGuide>`.
+
 ::
 
   "transform": { 
@@ -171,7 +192,7 @@ Transformations
         } 
     } 
 
-Here we have the same system setup as before, but we have added some functions inside the transform. 
+The above DTL snippet displays the **add** function as well as the **concat**, **lower** and the **substring** functions inside the transform. 
 
   * The first **["add"]** creates a new property named **"Type"** that has the value **"customer"**.
 
@@ -185,21 +206,16 @@ Here we have the same system setup as before, but we have added some functions i
 
   * The **["remove"]** function removes the selected property.
 
-Notice the **"_S.[property1]"** and **"_T.[property2]"**. The **_S** and **_T** are called variables and refer to the source and the target respectively.
+Notice the **"_S.[property1]"** and **"_T.[property2]"**. The **_S** and **_T** are called variables, and refer to the source and the target respectively.
 
-
-Check out the lab
-=================
+Lab 1-2
+^^^^^^^^^^^^^^^^^
 The :ref:`Labs section <getting-started-labs>` helps us get more hands on with Sesam. Head over there and do the first two labs to get more experience transforming data. 
 
 
-Merge
-=====
-Merging gives us an aggregated representation of two or more datasets​​. 
-
 Merging sources
 ^^^^^^^^^^^^^^^
-We can create an aggregated dataset source that contains all the data from multiple dataset through using source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 
+Merging gives us an aggregated representation of two or more datasets​​. We can create an aggregated dataset source that contains all the data from multiple dataset through using source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 
 
 .. image:: images/getting-started/db-table-after-merge.png
     :width: 800px
@@ -300,6 +316,10 @@ We can merge entities in the transform section (DTL) with the **["merge"]** func
         ] 
 
 We will later see the use of the **["merge"]** function in combination with functions that fetch entities from other datasets.
+
+Apply
+=====
+The **["apply"]** operation applies an own-specified function to an entity. I.e. the call ["apply", "SomeFunc", "_S.orders"] applied the function "SomeFunc" to the source "_S.orders".  
 
 Hops
 ====
@@ -903,6 +923,12 @@ The complete URL could look like this ``https://datahub-425aagcte.sesam.cloud/ap
 
 All of these templates provide the data from the HTTP endpoint as a JSON-formatted string object named **entities**. We can now replace the printing of this string with our own implementation to make use of the data.
 
+.. _getting-started-pumps:
+
+Pumps
+-----
+The pumps specify the schedule with which the pipe runs. This can be done through a sceduled interval specified either pr.seconds, hours, days, weeks or months. A pump can be added to a pipe through the **Schedule** template. 
+
 Microservices
 -------------
 The DTL in Sesam is a powerful tool to transform our data. But sometimes we need to do something with our data that is outside the scope of the DTL. We can then create a microservice that does what we need and run it inside Sesam to serve those needs. We can also use a microservice when we need to connect to an external system where the connection point is not compatible with the Sesam source systems. The microservice can be made according to our preferrences and in any language.
@@ -1241,3 +1267,4 @@ Scope : Publishing data to CSV-endpoint
   * Create new pipe. Source from lab 6. Add transform and sink.​
 
 Hint: Look `here  <https://docs.sesam.io/getting-started.html#csv-endpoint-sink>`__ for help
+
