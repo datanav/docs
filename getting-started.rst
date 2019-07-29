@@ -71,15 +71,15 @@ You should now have several pipes available. As a sanity check you can select **
     :align: center
     :alt: Generic pipe concept
 
-Repeat step 5 for **azure-person**, **firebase-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
+Repeat these steps for **azure-person**, **firebase-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
 
 .. _getting-started-sesam-overview:
 
 Sesam overview
 --------------
-We will now give a short ovewview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
+We will now give a short overview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
 
-In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this perticular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node ans the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
+In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this perticular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
 
 The following picture shows the general setup of a Sesam node.
 
@@ -91,7 +91,7 @@ The following picture shows the general setup of a Sesam node.
 
 The data is supplied to our pipe via different :ref:`sources <concepts-sources>`. These sources might be databases such as SQL or CSV files. Sometimes, the data available might not be compatible with the Sesam requirements, or you might wish to extract data from an API. The Python scrips performing these tasks are called microservices, and they act as **Systems** in the Sesam node. Since not all sources have their data updated at the same time, every pipe has a :ref:`pump <concepts-pumps>` which tells the pipe how often to run send the data from the source to a :ref:`sink <concepts-sinks>`. A **Sink** writes the final result to a target.  
 
-The picture below shows is looking closer into the different tabs when working on a pipe.   
+The picture below shows the different tabs when working on a pipe.   
 
 .. image:: images/getting-started/pipe_tabs.png
     :width: 800px
@@ -106,7 +106,7 @@ The **Dashboard** tab gives you an overview of the different pipes connected to 
 
 Glossary
 --------
-:ref:`Datasets <concepts-datasets>`: Sesam stores its data as datasets that consist of entities. Datasets are used as sources for data transformation and stored as new datasets and sources for delivering data to target systems (endpoints).
+:ref:`Datasets <concepts-datasets>`: Sesam stores its data as datasets consisting of entities. Datasets are used as sources for data transformation and stored as new datasets and sources for delivering data to target systems (endpoints).
 
 :doc:`Entities <entitymodel>`: Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
 
@@ -129,7 +129,7 @@ Pipes
 -----------------------
 In this section we will go futher into what pipes are, how they work and what we can do with them. 
 
-When we analyse the different data available to us, we discover many opportunities to use it and increase it’s value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances, we want to see all data about same thing in one place, thus we need to join data from different sources or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to an other, with the purpose of adding structure to the data. These pipe generates new datasets with new and transformed data ready to be used by other systems.
+When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to an other, with the purpose of adding structure to the data. These pipe generates new datasets with new and transformed data ready to be used by other systems.
 
 The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
 
@@ -193,7 +193,7 @@ There are many different ways of transforming the source data. In this section w
         } 
     } 
 
-The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as well as the :ref:`concat <concat_dtl_function>`, :ref:`add <lower_dtl_function>` and the :ref:`substring <substring_dtl_function>` functions inside the transform. 
+The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as well as the  :ref:`concat <concat_dtl_function>`, :ref:`add <lower_dtl_function>`, :ref:`substring <substring_dtl_function>` and the :ref:`remove <dtl_transform-remove>` function inside the transform. 
 
   * The first **["add"]** creates a new property named **"Type"** that has the value **"customer"**.
 
@@ -216,7 +216,7 @@ The :ref:`Labs section <getting-started-labs>` helps us get more hands on with S
 
 Merging sources
 ^^^^^^^^^^^^^^^
-Merging gives us an aggregated representation of two or more datasets​​. We can create an aggregated dataset source that contains all the data from multiple dataset through using source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 
+Merging gives us an aggregated representation of two or more datasets​​. We can create an aggregated dataset source that contains all the data from multiple datasets by using the source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 
 
 .. image:: images/getting-started/db-table-after-merge.png
     :width: 800px
@@ -1154,6 +1154,78 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
     :width: 800px
     :align: center
     :alt: Generic pipe concept
+
+.. _getting-started-microservices-example1:
+
+REST APIs
+============
+Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website to either extract information of to post information. A REST, or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
+
+We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
+
+Authentication
+^^^^^^^^^^^^^^
+Often when we wish to communicate with an API we need to establish who we are, and what we are allowed to do. There as many different ways of doing this, and the way forward depends on the API you wich to communicate with. Most APIs have easily accessible documentation which explain how to authenticate and authorize for that specific API. For these specific websites, you can access the information only after you have authenticated yourself. 
+
+Power BI example
+^^^^^^^^^^^^^^^^
+We will now show an example of how we can extract data from an API and use it as a source in our pipe. In this example we will use the Power BI API to collect data, and then use this data as a sources in one of our Sesam nodes. 
+First, we need to authenticate ourselves. Power BI uses JWT (Json Web Token) security, which contains both authentication and authorization information. To generate our JWT we use the following code:
+
+:: 
+
+ import requests
+ import json
+ import adal
+
+ def get_token(client_id, client_secret, tenant_id):
+     """
+     Authenticate using service principal w/ key.
+     """
+     authority_host_uri = 'https://login.microsoftonline.com'
+     authority_uri = authority_host_uri + '/' + tenant_id
+     resource_uri = 'https://analysis.windows.net/powerbi/api'
+
+     context = adal.AuthenticationContext(authority_uri, api_version=None)
+     access_token = context.acquire_token_with_client_credentials(resource_uri, client_id, client_secret)
+     return access_token  
+
+We can now authenticate ourselves to the Power BI API using the JWT as follows:
+
+::
+
+ from flask import Flask, request, jsonify
+ import json
+ import requests
+ from authentification.create_jwt import get_token
+ from authentification.auth_helpers import *
+ 
+ app = Flask(__name__)
+
+ @app.route('/get_data', methods=['GET'])
+ def getting_data():
+     token = get_token(client_id, client_secret, tenant_id)
+     headers = {'Authorization': "Bearer {}".format(token['accessToken'])}
+     response = requests.get("https://api.powerbi.com/v1.0/myorg/datasets", headers=headers)
+     
+     return jsonify(response.json()) 
+
+ if __name__ == '__main__':
+    # This is used when running locally. Gunicorn is used to run the
+    # application on Google App Engine. See entrypoint in app.yaml.
+    app.run(host='127.0.0.1', port=5000, debug=True, threaded=True)
+
+Is this code we import the **get_token** method from above as well as the **client_id**, **client_secret** and **tenant_id**, which are personal information required to authenticate yourself to Power BI. The **client_id** and the **client_secret** can be accessed when registering a Power Bi account. The **tenant_id** is the id of the AAD directory in which you created the application. 
+
+Indide the **getting_data** method we start by getting the token from our **get_token** method from above. We then insert this token into a json object called **header**. We then send a get-request to the Power BI API asking for the **datasets** information, using our header as authentication, as explained in the `Power Bi REST API documentation <https://docs.microsoft.com/en-us/rest/api/power-bi/>`__.    
+
+Some response prints?
+
+Some docker lines?
+
+Some DTL/Sesam lines? Both the ms sytsem and the pipe. Ingoing and outgoing.
+
+DO MORE WHEN THE METHOD WORKS! ;D
 
 .. _getting-started-labs:
 
