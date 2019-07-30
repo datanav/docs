@@ -1155,21 +1155,50 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
     :align: center
     :alt: Generic pipe concept
 
-.. _getting-started-microservices-example1:
+.. _getting-started-microservices-restAPI:
 
 REST APIs
 ============
-Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website to either extract information of to post information. A REST, or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
+Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website to either extract information of to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
 
+.. _getting-started-microservices-restAPI-Authentication:
+
 Authentication
 ^^^^^^^^^^^^^^
-Often when we wish to communicate with an API we need to establish who we are, and what we are allowed to do. There as many different ways of doing this, and the way forward depends on the API you wich to communicate with. Most APIs have easily accessible documentation which explain how to authenticate and authorize for that specific API. For these specific websites, you can access the information only after you have authenticated yourself. 
+Often when we wish to communicate with an API, we need to establish who we are, and what we are allowed to do. There as many different ways of doing this, and the way forward depends on the API you wich to communicate with. Most APIs have easily accessible documentation which explain how to authenticate and authorize for that specific API. For these specific websites, you can access the information only after you have authenticated yourself. 
+
+.. _getting-started-microservices-restAPI-JWT:
+
+JSON Web Tokens
+^^^^^^^^^^^^^^^
+When we authenticate ourselves to a server we often utilize something calles a **JSON Web Token** (**JWT**). A JWT is a string that consists of a **header**, a **payload** and a **signature** to form the string **header.payload.signature**.
+
+	* **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
+	* **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
+	* **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
+
+A JWT is used when we need to make sure that the sent data actually originates from an authentic source, to make sure no second hand party has tempered with the data. When we sign in to an app, i.e. google we first communicate wqith the app's authentication server. This server sends us a JWT back which we can use to communicate with the app's API. 
+
+.. figure:: images/getting-started/JWT.png
+    :width: 800px
+    :align: center
+
+.. _getting-started-microservices-restAPI-requests:
+
+Requests methods
+^^^^^^^^^^^^^^^^
+When communicating with the API we use requests methods such as **GET**, **POST**. For more request methods read `this <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods>`__.
+
+	* **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
+	* **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
+
+.. _getting-started-microservices-restAPI-PowerBI:
 
 Power BI example
 ^^^^^^^^^^^^^^^^
-We will now show an example of how we can extract data from an API and use it as a source in our pipe. In this example we will use the Power BI API to collect data, and then use this data as a sources in one of our Sesam nodes. 
+We will now show an example of how we can extract data from an API and use it as a source in our pipe. In this example we will use the Power BI API to collect data from Sesam. We therefore need to create a microservice which connects to Sesam and gathers the necessary data. The microservice then need to post this data to Power BI using the Power BI API so that we might visualize the Sesam data through Power BI.  
 First, we need to authenticate ourselves. Power BI uses JWT (Json Web Token) security, which contains both authentication and authorization information. To generate our JWT we use the following code:
 
 :: 
@@ -1215,9 +1244,9 @@ We can now authenticate ourselves to the Power BI API using the JWT as follows:
     # application on Google App Engine. See entrypoint in app.yaml.
     app.run(host='127.0.0.1', port=5000, debug=True, threaded=True)
 
-Is this code we import the **get_token** method from above as well as the **client_id**, **client_secret** and **tenant_id**, which are personal information required to authenticate yourself to Power BI. The **client_id** and the **client_secret** can be accessed when registering a Power Bi account. The **tenant_id** is the id of the AAD directory in which you created the application. 
+Is this code we import the **get_token** method from above as well as the **client_id**, **client_secret** and **tenant_id** from a script I called **auth_helpers**, which are personal information required to authenticate yourself to Power BI. The **client_id** and the **client_secret** can be accessed when registering a Power Bi account. The **tenant_id** is the id of the AAD directory in which you created the application. 
 
-Indide the **getting_data** method we start by getting the token from our **get_token** method from above. We then insert this token into a json object called **header**. We then send a get-request to the Power BI API asking for the **datasets** information, using our header as authentication, as explained in the `Power Bi REST API documentation <https://docs.microsoft.com/en-us/rest/api/power-bi/>`__.    
+Indide the **getting_data** method we start by getting the token from our **get_token** method from above. We then insert this token into a json object called **header**. We then send a get-request to the Power BI API asking for the **datasets** information, using our header as authentication, as explained in the `Power BI REST API documentation <https://docs.microsoft.com/en-us/rest/api/power-bi/>`__.    
 
 Some response prints?
 
