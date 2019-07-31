@@ -141,15 +141,28 @@ Naming conventions
 ==================
 To ensure we have a structured set of pipes that stay manageable in a bigger system we need to stick to a convention when naming them. Below is our recommended way of naming pipes.
 
-  * **Input pipe**: < name-of-source >-< name-of-object >
+General rules
+^^^^^^^^^^^^^
+  * Lower case letters
+  * Use dash **-** as delimiter
 
-  * **Internal pipe**: global-< name-of-object >
+Systems
+^^^^^^^
+  * Name the system after the service you integrate with, not the technology used (e.g. **salesforce** instead of **mysql**).
+  * If multiple systems are required to talk to a system, postfixc them with a qualifier (e.g. **salesforce-out**).
 
-  * **Internal pipe**:  < purpose>-< name-of-object >
+Pipes
+^^^^^
+  * Name input pipes with the system they read from, and postfix with the type of content (e.g. **salesforce-sale**).
+  * Do not use plural names (e.g. **salesforce-sale**, not **salesforce-sales**).
+  * Prefix merge pipes with **merged-** (e.g. **merged-sale**).
+  * Prefix global pipes with **global-** (e.g. **global-sale**).
+  * Name intermediate output pipes with the type of the content and the name of the system to send to (e.g. **sale-bigquery**).
+  * Name outgoing pipes by postfixing the intermediate output with **-endpoint** (e.g. **sale-bigquery-endpoint**).
 
-  * **Outgoing**:  < name-of-object >-< name-of-sink >
-
-  * **Internal pipe**:  < name-of-object >-< name-of-sink >-endpoint 
+Datasets
+^^^^^^^^
+  * Name them the same as the pipe that produced it (the default).
 
 .. _getting-started-basic-dtl-functions:
 
@@ -952,13 +965,13 @@ Microservices in Sesam run in docker containers. These containers run on our Ses
     :align: center
     :alt: Generic pipe concept
 
-We build a Docker image that is the blueprint for creating a container with our microservice. This image is not a container itself, but merely the recipe for creating the container. We can create and run as many containers as we want from the same image.
+We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice. We can create and run as many containers as we want from the same image.
 
 The Docker image is then pushed up to a repostory on Dockerhub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
 
-Finally we pull the image from our Dockerhub repository and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Dockerhub in our Sesam system configuration and the contaner is spun up automatically.
+Finally we pull the image from our Dockerhub repository and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Dockerhub in our Sesam system configuration and the contaner is spun up automatically. 
 
-Getting started with microservices
+Microservices with Docker
 ==================================
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
@@ -1159,7 +1172,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
 
 REST APIs
 ============
-Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website to either extract information of to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
+Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
 
@@ -1167,7 +1180,7 @@ We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ lib
 
 Authentication
 ^^^^^^^^^^^^^^
-Often when we wish to communicate with an API, we need to establish who we are, and what we are allowed to do. There as many different ways of doing this, and the way forward depends on the API you wich to communicate with. Most APIs have easily accessible documentation which explain how to authenticate and authorize for that specific API. For these specific websites, you can access the information only after you have authenticated yourself. 
+Often when we wish to communicate with an API, we need to establish who we are, and what we are allowed to do. There as many different ways of doing this, and the way forward depends on the API you wish to communicate with. Most APIs have easily accessible documentation which explain how to authenticate and authorize for that specific API. For these specific websites, you can access the information only after you have authenticated yourself. 
 
 .. _getting-started-microservices-restAPI-JWT:
 
