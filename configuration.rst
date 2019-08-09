@@ -852,6 +852,8 @@ Properties
    * - ``initial_datasets``
      - List<String{>=0}>
      - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+
+       See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
      - 
 
@@ -1102,6 +1104,8 @@ source, except ``datasets`` can be a list of datasets ids.
    * - ``initial_datasets``
      - List<String{>=0}>
      - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+
+       See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
      - 
 
@@ -1202,6 +1206,8 @@ strategy.
    * - ``initial_datasets``
      - List<String{>=0}>
      - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+
+       See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
      - 
 
@@ -1316,6 +1322,8 @@ be a list of datasets ids.
    * - ``initial_datasets``
      - List<String{>=0}>
      - By default the source will be considered populated if all the datasets in the ``datasets``  property have been populated. If some of these datasets will never be populated then this property can be used to list the datasets that must be populated before the source is considered populated. You should normally not have to use this property.
+
+       See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
      - 
 
@@ -3738,6 +3746,24 @@ Properties
      -
      - Yes
 
+   * - ``set_initial_offset``
+     - Enum<String>
+     - This property specifies when the sink should set the initial offset on its dataset.
+
+       When the initial offset is set then the dataset is considered to be *populated*.
+
+       - ``if-source-populated`` (the default) means that the pipe will set the initial offset
+         when the source is populated and the pipe has consumed all the source entities. This
+         is a very useful default as the populated flag will propagate automatically downstream once
+         datasets get populated upstream.
+       - ``never`` means that the pipe will never set the initial offset.
+       - ``always`` means that the pipe will always set the initial offset when the pipe completed
+         successfully.
+       - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+
+     - ``if-source-populated``
+     -
+
    * - ``indexes``
      - String or Array
      - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
@@ -3747,7 +3773,7 @@ Properties
        If the value is an array then it can contain index expressions that should be
        maintained on the sink dataset. This is typically used for declaring subset indexes.
      - ``[]``
-     - No
+     -
 
    * - ``track_children``
      - Boolean
