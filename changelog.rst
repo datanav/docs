@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-08-12
+----------
+* The :ref:`dataset sink <dataset_sink>` now has a property called ``set_initial_offset`` that specifies how the sink should set the initial offset on the sink dataset (a.k.a. the populated flag).
+
 2019-04-23
 ----------
 * The :ref:`embedded <embedded_source>` source now has configurable continuation properties, i.e. ``supports_since``, ``is_chronological`` and ``is_since_comparable``.
@@ -15,7 +19,7 @@ Changelog
 
 2019-03-22
 ----------
-* The ``lookup`` DTl function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
+* The ``lookup`` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
 
 2019-03-14
 ----------
