@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-08-19
+----------
+* :ref:`Pipes <automatic_reprocessing>` now have a property called ``reprocessing_policy`` that can be set to cause automatic resets when external factors indicate that the pipe should be reset.
+
 2019-08-12
 ----------
 * The :ref:`dataset sink <dataset_sink>` now has a property called ``set_initial_offset`` that specifies how the sink should set the initial offset on the sink dataset (a.k.a. the populated flag).

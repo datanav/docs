@@ -494,6 +494,37 @@ configuration.
 This can be done by setting the "last-seen" value to an empty string with the
 `update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
 
+.. _automatic_reprocessing:
+
+Automatic reprocessing
+----------------------
+
+Datasets that are input to a pipe or datasets that are hop-ed to by a pipe may be deleted. When this happens the data output by a pipe is no longer in sync with the input data. By default a pipe will not reset automatically if this happens, but it will maintain a list of datasets that are out of sync. Alternatively one can set the reprocessing policy to ``automatic`` so that such resets happen automatically.
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``reprocessing_policy``
+     - Enum<String> 
+     - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
+
+       - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
+
+       - ``automatic`` means that the pipe will automatically reset the pipe when it finds that there are factors that indicate that the pipe should be reset. The rationale for resetting the pipe is so that input entities can the reprocessed so that the output is correct.
+     - ``continue``
+     - No
+
 
 Example configuration
 ---------------------
