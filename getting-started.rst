@@ -105,7 +105,7 @@ The **Dashboard** tab gives you an overview of the different pipes connected to 
 .. _getting-started-glossary:
 
 Glossary
---------
+========
 :ref:`Datasets <concepts-datasets>`: Sesam stores its data as datasets consisting of entities. Datasets are used as sources for data transformation and stored as new datasets and sources for delivering data to target systems (endpoints).
 
 :doc:`Entities <entitymodel>`: Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
@@ -121,19 +121,6 @@ Glossary
 :ref:`Systems <concepts-systems>`: A system component represents a computer system that can provide data entities. Its task is to provide common properties and services that can be used by several data sources, such as connection pooling, authentication settings, communication protocol settings and so on.
 
 :ref:`Transformations <concepts-transforms>`: These are described using the Data Transformation Language (DTL). It is here you transform your data from many datasets to construct new entities into new datasets.
-
-
-.. _getting-started-pipes:
-
-Pipes
------------------------
-In this section we will go futher into what pipes are, how they work and what we can do with them. 
-
-When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to an other, with the purpose of adding structure to the data. These pipe generates new datasets with new and transformed data ready to be used by other systems.
-
-The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
-
-Before we go further into the details, we wish to say a few words regarding pipe-naming conventions. 
 
 .. _getting-started-naming-conventions:
 
@@ -163,6 +150,20 @@ Pipes
 Datasets
 ^^^^^^^^
   * Name them the same as the pipe that produced it (the default).
+  
+.. _getting-started-pipes:
+
+Pipes
+-----------------------
+In this section we will go futher into what pipes are, how they work and what we can do with them. 
+
+When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to an other, with the purpose of adding structure to the data. These pipe generates new datasets with new and transformed data ready to be used by other systems.
+
+The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
+
+Before we go further into the details, we wish to say a few words regarding pipe-naming conventions. 
+
+
 
 .. _getting-started-basic-dtl-functions:
 
@@ -1206,68 +1207,6 @@ When communicating with the API we use requests methods such as **GET**, **POST*
 
 	* **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
 	* **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
-
-.. _getting-started-microservices-restAPI-PowerBI:
-
-Power BI example
-^^^^^^^^^^^^^^^^
-We will now show an example of how we can extract data from an API and use it as a source in our pipe. In this example we will use the Power BI API to collect data from Sesam. We therefore need to create a microservice which connects to Sesam and gathers the necessary data. The microservice then need to post this data to Power BI using the Power BI API so that we might visualize the Sesam data through Power BI.  
-First, we need to authenticate ourselves. Power BI uses JWT (Json Web Token) security, which contains both authentication and authorization information. To generate our JWT we use the following code:
-
-:: 
-
- import requests
- import json
- import adal
-
- def get_token(client_id, client_secret, tenant_id):
-     """
-     Authenticate using service principal w/ key.
-     """
-     authority_host_uri = 'https://login.microsoftonline.com'
-     authority_uri = authority_host_uri + '/' + tenant_id
-     resource_uri = 'https://analysis.windows.net/powerbi/api'
-
-     context = adal.AuthenticationContext(authority_uri, api_version=None)
-     access_token = context.acquire_token_with_client_credentials(resource_uri, client_id, client_secret)
-     return access_token  
-
-We can now authenticate ourselves to the Power BI API using the JWT as follows:
-
-::
-
- from flask import Flask, request, jsonify
- import json
- import requests
- from authentification.create_jwt import get_token
- from authentification.auth_helpers import *
- 
- app = Flask(__name__)
-
- @app.route('/get_data', methods=['GET'])
- def getting_data():
-     token = get_token(client_id, client_secret, tenant_id)
-     headers = {'Authorization': "Bearer {}".format(token['accessToken'])}
-     response = requests.get("https://api.powerbi.com/v1.0/myorg/datasets", headers=headers)
-     
-     return jsonify(response.json()) 
-
- if __name__ == '__main__':
-    # This is used when running locally. Gunicorn is used to run the
-    # application on Google App Engine. See entrypoint in app.yaml.
-    app.run(host='127.0.0.1', port=5000, debug=True, threaded=True)
-
-Is this code we import the **get_token** method from above as well as the **client_id**, **client_secret** and **tenant_id** from a script I called **auth_helpers**, which are personal information required to authenticate yourself to Power BI. The **client_id** and the **client_secret** can be accessed when registering a Power Bi account. The **tenant_id** is the id of the AAD directory in which you created the application. 
-
-Indide the **getting_data** method we start by getting the token from our **get_token** method from above. We then insert this token into a json object called **header**. We then send a get-request to the Power BI API asking for the **datasets** information, using our header as authentication, as explained in the `Power BI REST API documentation <https://docs.microsoft.com/en-us/rest/api/power-bi/>`__.    
-
-Some response prints?
-
-Some docker lines?
-
-Some DTL/Sesam lines? Both the ms sytsem and the pipe. Ingoing and outgoing.
-
-DO MORE WHEN THE METHOD WORKS! ;D
 
 .. _getting-started-labs:
 
