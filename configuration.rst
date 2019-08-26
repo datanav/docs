@@ -526,6 +526,14 @@ Properties
      - No
 
 
+.. _completeness:
+
+Completeness
+------------
+
+When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+
+
 Example configuration
 ---------------------
 
@@ -769,6 +777,12 @@ Properties
        .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
      -
      - No
+
+   * - ``completeness``
+     - Boolean
+     - If set to ``true``, the dataset source completeness filtering feature is enabled. This will instruct the source to only return source entities that have a ``_ts`` value that is older than or equal to the completeness timestamp value of the source dataset.
+     - ``false``
+     -
 
    * - ``include_previous_versions``
      - Boolean
