@@ -110,6 +110,10 @@ Example:
            "example": "http://example.org/",
            "fifa": "http://www.fifa.com/"
          }
+      },
+      "global_defaults": {
+         "use_signalling_internally": false,
+         "use_signalling_externally": false
       }
    }
 
@@ -156,6 +160,34 @@ Properties
           "dcterms": "http://purl.org/dc/terms/",
           "gs": "http://www.opengis.net/ont/geosparql#",
      -
+     -
+
+   * - ``global_defaults.use_signalling_internally`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
+       Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
+       installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
+       :ref:`dataset source <dataset_source>` (including variants like
+       :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
+       :ref:`merge datasets <merge_datasets_source>` sources).
+     - ``false``
+     -
+
+   * - ``global_defaults.use_signalling_externally`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support in json sources reading from Sesam datasets via the REST API. If enabled,
+       a HTTP request will be issued from the upstream Sesam installation to a special endpoint in the receiving
+       Sesam service each time the source dataset changes. This endpoint will then automatically schedule a pipe run
+       (it does not interrupt any already running pipes). Setting this option to ``true`` will enable signalling for all
+       :ref:`JSON sources <json_source>` in the installation. You can turn on this feature per source by setting its
+       ``supports_signalling`` flag. Note that in multibox/multinode environments this option requires additional
+       settings to be turned on server side (including a redeployment of the configuration). Contact Sesam support for
+       details. Also note that turning on this feature globally can potentially generate a lot of HTTP traffic in large
+       multinode/multibox environments. It should be reserved primareily for flows where low(er) latency is paramount.
+       The signalling support is best-efforts only; signals are not persisted so delivery is not guaranteed. For this
+       reason, pipes in such flows should always have scheduled or cron-based triggers as a "backup".
+     - ``false``
      -
 
 .. _pipe_section:
@@ -765,7 +797,8 @@ Prototype
         "type": "dataset",
         "dataset": "id-of-dataset",
         "include_previous_versions": false,
-        "include_replaced": true
+        "include_replaced": true,
+        "supports_signalling": false
     }
 
 Properties
@@ -815,6 +848,14 @@ Properties
      - If set to ``false``, the dataset source will filter out entities where the ``$replaced`` property is ``true``. This typically used when reading from datasets that have been produced by the :ref:`merge <merge_source>` source.
      - ``true``
      -
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
+     - ``false``
+     -
+
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -885,7 +926,8 @@ Prototype
         "equality": [
              ["eq", "d1.field1", "d2.field1"],
              ["eq", "d2.field2", "d3.field2"]
-        ]
+        ],
+        "supports_signalling": false
     }
 
 Properties
@@ -992,6 +1034,13 @@ Properties
 
      - ``"default"``
      - No
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - false
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1140,7 +1189,8 @@ Prototype
     {
         "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
-        "include_previous_versions": false
+        "include_previous_versions": false,
+        "supports_signalling": false
     }
 
 Properties
@@ -1180,6 +1230,14 @@ source, except ``datasets`` can be a list of datasets ids.
        any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - false
+     -
+
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1241,7 +1299,8 @@ Prototype
    {
        "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
-       "strategy": "latest"
+       "strategy": "latest",
+       "supports_signalling": false
     }
 
 Properties
@@ -1297,6 +1356,13 @@ strategy.
        transform, so that only the entity can be shaped in a way that
        is more useful downstream.
      - "latest"
+     -
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - false
      -
 
 Continuation support
@@ -2381,7 +2447,8 @@ Prototype
     {
        "system": "system-id",
        "type": "json",
-       "url": "url-to-json-data"
+       "url": "url-to-json-data",
+       "supports_signalling": false
     }
 
 Properties
@@ -2408,6 +2475,15 @@ Properties
      - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
      -
      - Yes
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable signalling support in json sources reading from sesam datasets via the REST API. If enabled,
+       a HTTP request will be issued from the upstream Sesam installation to a special endpoint in the receiving
+       Sesam service each time the source dataset changes. This endpoint will then schedule a pipe run (it does not
+       interrupt any already running pipes)
+     - ``false``
+     -
 
    * - ``page_size``
      - Integer(>=1)

@@ -57,6 +57,10 @@ Changelog
 ----------
 * The :ref:`dataset sink <dataset_sink>` now has a property called ``set_initial_offset`` that specifies how the sink should set the initial offset on the sink dataset (a.k.a. the populated flag).
 
+2019-05-31
+----------
+* Added experimental support for automatic scheduling of internal (dataset to dataset) pipes and JSON pipes that read from external Sesam datasets via the REST API. See the ``supports_signalling`` property of these sources and the global ``use_signalling_internally`` and ``use_signalling_externally`` options in service metadata section. Please note the limitations and usage notes.
+
 2019-04-23
 ----------
 * The :ref:`embedded <embedded_source>` source now has configurable continuation properties, i.e. ``supports_since``, ``is_chronological`` and ``is_since_comparable``.
