@@ -282,6 +282,14 @@ Portal API Reference
    TODO pull swagger from somewhere instead of having a copy here
 .. openapi:: ./swagger_portal.yaml
 
+Databrowser API Reference
+=========================
+
+..
+   TODO pull swagger from somewhere instead of having a copy here
+.. openapi:: ./swagger.yaml
+
+
 Swagger Files
 =============
 
