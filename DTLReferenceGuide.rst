@@ -326,6 +326,8 @@ the value ``bar``). It is useful for parameterizing the transform on an endpoint
          refers to the individual order entities, one at a time.
 
 
+.. _path_expressions_and_hops:
+
 Path Expressions and Hops
 =========================
 
@@ -343,6 +345,12 @@ There are three ways that one can access properties on entities:
    after the variable name). ``"_T."`` refers to the target entity, and
    ``"_."`` refers to the current value.
 
+   You can have periods in path elements if you quote them. Example:
+   ``"_S.foo.'john.doe''s'.bar"`` is equivalent to
+   ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path
+   element must begin and end with a single quote. Single quotes can
+   be escaped with ``''``.
+   
 2. **The "path" function**: ``["path", "placed_by", ["sorted",
    "_.amount", "_S.orders"]]``, which will first evaluate the
    rightmost expression. Then it will traverse the path given in the

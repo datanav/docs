@@ -3,6 +3,7 @@ Changelog
 
 2019-08-27
 ----------
+* DTL :ref:`property path strings <path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``. 
 * Extended the :doc:`JSON Pull Protocol <json-pull>` document with information about response headers and an example using dataset subsets.
 
 2019-08-26
