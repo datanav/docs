@@ -41,8 +41,8 @@ paths:
     post:
       operationId: index.post_data
       description:
-        A POST request to the base url expects some data about the user from a 3rd party in it's body. This
-        data is saved in the session and communicated to the client.
+        A POST request to the base url in a browser context (an HTML form POST action) will redirect the browser to the databrowser. After user authentication 
+        the databrowser will automatically send an access request on behalf of the user.
       produces:
         - text/html
       consumes:
