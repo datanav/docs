@@ -19,7 +19,6 @@ to retrieve entities.
 Requests
 ========
 
-
 The following HTTP request parameters are supported:
 
 .. list-table::
@@ -29,9 +28,9 @@ The following HTTP request parameters are supported:
    * - Parameter
      - Description
 
-   * - since
+   * - ``since``
      - A token that tells the endpoint
-       after what location in the stream to start streaming entities.
+       after what offset in the stream to start streaming entities.
 
        This token references the ``_updated`` property in entities.
 
@@ -40,7 +39,10 @@ The following HTTP request parameters are supported:
        the ``_updated`` property in the last entity in the previous
        request can used.
 
-   * - limit
+       If the ``since`` request parameter is not given it means that
+       entities from the beginning should be returned.
+
+   * - ``limit``
      - An integer. Tells the server to cap the response to this many
        entities. By using limit one can split the entities stream
        across multiple requests.
@@ -49,17 +51,56 @@ The following HTTP request parameters are supported:
        will be returned. Note that an endpoint may implement a
        different default.
 
+   * - ``subset``
+     - If specified then the specified JSON encoded subset expression
+       will be used to retrieve a subset of entities. If the
+       subset does not exist, then 404 is returned. This is an optional
+       feature and the endpoint may not support subsets at all. In that
+       case it may ignore the request parameter entirely.
+
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
 :doc:`here <entitymodel>`.
 
+
+Response headers
+================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 80
+
+   * - Header
+     - Description
+
+   * - ``X-Dataset-Populated``
+     - This header contains the dataset's populated flag. It is ``true`` if the dataset is populated and ``false`` if it is not. If the header is missing then the populated flag should be considered to be unknown.
+
+   * - ``X-Dataset-Max-Updated``
+     - This is the highest committed offset in the dataset. If you ask for all the entities then the last entity you receive should have this offset in its ``_updated`` property. The value is JSON encoded.
+
+   * - ``X-Dataset-Filtered``
+     - This will be set to ``true`` if the source entity stream is filtered. In general you aren't guaranteed to see the entity at the ``X-Dataset-Max-Updated`` offset in this case. One example of where you'll see this is if you have a :ref:`publisher pipe <http_endpoint_sink>` that has a transform.
+
+   * - ``X-Dataset-Generation``
+     - When a dataset is created it is assigned a UUID. If the dataset is deleted and then recreated it will get a new generation UUID.
+
+   * - ``X-Dataset-Restore-Uuid``
+     - When a dataset is restored [from a backup] then it is assigned a UUID.
+
+   * - ``X-Dataset-Restore-Offset``
+     - This the highest committed offset in the dataset at the point when it was last restored. The value is JSON encoded.
+
+The :ref:`automatic reprocessing <automatic_reprocessing>` feature makes use of several of these headers to know when to rewind or reset a pipe.
+
+
 .. _json_pull_examples:
 
-Examples
-========
+Example: published endpoint
+===========================
 
-In the examples we'll use two pipes. The first loads letters into the
+In this example we'll use two pipes. The first loads letters into the
 ``letters`` dataset:
 
 ::
@@ -298,3 +339,115 @@ And then 3 entities since 23.
     }
   ]
 
+Example: dataset subset
+=======================
+
+In this example we'll use one pipe. It is almost the same as the one in the previous section, but this time we've identified the vowels and also declared an index on the :ref:`dataset sink <dataset_sink>`. This index can be used to retrieve a subset from the ``letters`` dataset:
+
+::
+
+   {
+       "_id": "letters",
+       "type": "pipe",
+       "source": {
+           "type": "embedded",
+           "entities": [
+               {"_id": "A", "vowel": true},
+               {"_id": "B"},
+               {"_id": "C"},
+               {"_id": "D"},
+               {"_id": "E", "vowel": true},
+               {"_id": "F"},
+               {"_id": "G"},
+               {"_id": "H"},
+               {"_id": "I", "vowel": true},
+               {"_id": "J"},
+               {"_id": "K"},
+               {"_id": "L"},
+               {"_id": "M"},
+               {"_id": "N"},
+               {"_id": "O", "vowel": true},
+               {"_id": "P"},
+               {"_id": "Q"},
+               {"_id": "R"},
+               {"_id": "S"},
+               {"_id": "T"},
+               {"_id": "U", "vowel": true},
+               {"_id": "V"},
+               {"_id": "W"},
+               {"_id": "X"},
+               {"_id": "Y", "vowel": true},
+               {"_id": "Z"}
+           ]
+       },
+       "sink": {
+           "indexes": ["_S.vowel"]
+       }
+   }
+
+   
+Now we can use the `dataset endpoint <./api.html#get--datasets-dataset_id-entities>`_,
+``/api/datasets/letters/entities``, which supports the
+JSON Pull protocol, to retrieve the subset. The subset is expressed as an equality expression, ``["eq", "_S.vowel", true]``, with the index expression in the left side and the subset value on the right side. Note that all request parameters must be URL encoded, and in the case of the subset expression this makes it look garbled.
+
+::
+
+    $ curl -s -H "$AUTH_HEADER" 'http://localhost:9042/api/datasets/letters/entities?subset=%5B%22eq%22%2C+%22_S.vowel%22%2C+true%5D' | jq .
+    [
+      {
+        "vowel": true,
+        "_id": "A",
+        "_deleted": false,
+        "_updated": 0,
+        "_previous": null,
+        "_ts": 1566889765658992,
+        "_hash": "bd43d289d45c8dccffda0aa05d9e39cf"
+      },
+      {
+        "vowel": true,
+        "_id": "E",
+        "_deleted": false,
+        "_updated": 4,
+        "_previous": null,
+        "_ts": 1566889765659581,
+        "_hash": "36d1cfe98ee07d463c82d356cac55c35"
+      },
+      {
+        "vowel": true,
+        "_id": "I",
+        "_deleted": false,
+        "_updated": 8,
+        "_previous": null,
+        "_ts": 1566889765660099,
+        "_hash": "0f46df8330b95f661d1165eba5a141ac"
+      },
+      {
+        "vowel": true,
+        "_id": "O",
+        "_deleted": false,
+        "_updated": 14,
+        "_previous": null,
+        "_ts": 1566889765660912,
+        "_hash": "0a02eda8f99d6bf81f49e63a059f95fa"
+      },
+      {
+        "vowel": true,
+        "_id": "U",
+        "_deleted": false,
+        "_updated": 20,
+        "_previous": null,
+        "_ts": 1566889765661476,
+        "_hash": "c50c560caac61b289a605a8f23e044ce"
+      },
+      {
+        "vowel": true,
+        "_id": "Y",
+        "_deleted": false,
+        "_updated": 24,
+        "_previous": null,
+        "_ts": 1566889765661751,
+        "_hash": "82bb94970ffea2b08cc15de9d26dd4f6"
+      }
+    ]
+    
+Note that subsets can also be exposed via a published endpoint, but then the ``subset`` property must be specified on the :ref:`dataset source <dataset_source>`. In that case the ``subset`` request parameter is not neccessary as only this one specific subset is published.

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-08-27
+----------
+* Extended the :doc:`JSON Pull Protocol <json-pull>` document with information about response headers and an example using dataset subsets.
+
 2019-08-26
 ----------
 * We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
