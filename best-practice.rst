@@ -1,4 +1,4 @@
-0.. _getting-started:
+.. _best-practice:
 
 ===============
 Best Practice
@@ -40,7 +40,7 @@ The data model in Sesam can be described in short as connect, collect, share.
 
 In other words, different sources are connected to Sesam. The data is then copied into Sesam, stored in JSON format. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
 
-.. image:: iimages/best-practice/global-datamodel.png
+.. image:: images/best-practice/global-datamodel.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -64,30 +64,30 @@ There are three sources containing person data as shown below. If any target sys
 
 ::
 
-HR system
-{
-   "_id": "hrsystem-person:02023688018",
-  "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "hrsystem-person:Gender": "male",
+  HR system
+  {
+     "_id": "hrsystem-person:02023688018",
+    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hrsystem-person:Gender": "male",
   }
 
-CRM
-{
-  "_id": "crm-person:100",
-    "crm-person:EmailAddress": IsakEikeland@teleworm.us,
-    "crm-person:ID:”100”
-    "crm-person:SSN": "02023688018",
-    "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
-  "}
+  CRM
+  {
+    "_id": "crm-person:100",
+      "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+      "crm-person:ID:”100”
+      "crm-person:SSN": "02023688018",
+      "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
+    "}
 
-ERP
-{
-    "_id": "erp-person:0202",
-    "erp-person:SSN": "02023688018",
-   "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
-   "erp-person:ID:”0202”
-   "erp-person:country":"NO"
-}
+  ERP
+  {
+     "_id": "erp-person:0202",
+     "erp-person:SSN": "02023688018",
+     "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
+     "erp-person:ID:”0202”
+     "erp-person:country":"NO"
+  }
 
 
 
@@ -95,38 +95,23 @@ The dataset below is what a global dataset of the above three datasets looks lik
 
 ::
 
-{
-
-"$ids": [
-
-"~:crm-person:100",
-
-"~:hrsystem-person:02023688018",
-
-"~:erp-person:0202"
-
-],
-
-"_id": "crm-person:100",
-
-"hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-
-"hrsystem-person:Gender": "male", "crm-person:EmailAddress": IsakEikeland@teleworm.us,
-
-"crm-person:ID:”100”
-
-"crm-person:SSN": "02023688018",
-
-"crm-person:SSN-ni": "~:hrsystem-person:02023688018",
-
-"erp-person:SSN": "02023688018",
-
-"erp-person:SSN-ni": "~:hrsystem-person:02023688018",
-
-"erp-person:ID”:”0202”
-
-"erp-person:country":"NO" 
-}
+  {
+    "$ids": [
+    "~:crm-person:100",
+    "~:hrsystem-person:02023688018",
+    "~:erp-person:0202"
+    ],
+    "_id": "crm-person:100",
+    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hrsystem-person:Gender": "male", "crm-person:EmailAddress": IsakEikeland@teleworm.us,
+    "crm-person:ID:”100”
+    "crm-person:SSN": "02023688018",
+    "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
+    "erp-person:ID”:”0202”
+    "erp-person:country":"NO" 
+  }
 
 Positive effects of global datasets
 ===================================
@@ -147,7 +132,7 @@ A data model without global datasets might look like the figure below. This is e
 
 As shown in the figure below, a Sesam node containing global datasets results in fewer connections, making it both tidier and easier to manage.
 
-.. image:: iimages/best-practice/global-datamodel.png
+.. image:: images/best-practice/global-datamodel.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
@@ -377,27 +362,27 @@ In the example below, all three sources provide a zip-code, such that some prope
 
 ::
 
-{
-  "$ids": [
-    "~:crm-person:100",
-    "~:hrsystem-person:02023688018",
-    "~:erp-person:0202"
-  ],
+  {
+    "$ids": [
+      "~:crm-person:100",
+      "~:hrsystem-person:02023688018",
+      "~:erp-person:0202"
+    ],
 
-  "_id": "crm-person:100",
-  "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "hrsystem-person:Gender": "male",
- "hrsystem-person:ZipCode": null,
-  "crm-person:EmailAddress": IsakEikeland@teleworm.us,
-  "crm-person:ID:”100”
-  "crm-person:SSN": "02023688018",
-  "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
- "crm-person:PostalCode": "3732",
-  "erp-person:SSN": "02023688018",
-  "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
-  "erp-person:ID:”0202”,
- “erp-person:ZipCode”: “5003”,
- "global-person:zipcode": "3732"
+    "_id": "crm-person:100",
+    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hrsystem-person:Gender": "male",
+   "hrsystem-person:ZipCode": null,
+    "crm-person:EmailAddress": IsakEikeland@teleworm.us,
+    "crm-person:ID:”100”
+    "crm-person:SSN": "02023688018",
+    "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
+   "crm-person:PostalCode": "3732",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
+    "erp-person:ID:”0202”,
+   “erp-person:ZipCode”: “5003”,
+   "global-person:zipcode": "3732"
    }
 
 
