@@ -188,8 +188,34 @@ configuration setting.
 
 When the pipe finishes running, the next expected starttime is calculated again.
 
-If the current expected starttime is ever reached without the pipe having started again, an alert
+If the current expected starttime is passed by more than 5 minutes without the pipe having started again, an alert
 is generated.
+
+The "Grace period" parameter can be used to extent the timeout by specifying an addition number
+of seconds the pipe-run can be overdue. The number of seconds in the "Grace period" parameter is added to the
+'built-in' grace-period of 300 seconds.
+
+.. _pump_finished_overdue_notification_rule:
+
+Pump finished overdue
+=====================
+
+The purpose of this rule type is to alert the user if a pipe hasn't finished running by the
+time it is supposed to.
+
+The "Limit" parameter specified the number of seconds that the pipe is allowed to run before an alert is generated.
+The number of seconds in the "Limit" parameter is added to the 'built-in' limit of 300 seconds.
+
+
+.. _pump_failed_notification_rule:
+
+Pump failed
+===========
+
+This ruletype checks if the pipe failed the last time it ran, for any reason.
+
+If more control of when the notification rule triggers is needed, the
+:ref:`Pattern match <pump_completed_pattern_match_notification_rule>` can be used instead.
 
 
 .. _pump_completed_pattern_match_notification_rule:
