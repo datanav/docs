@@ -191,7 +191,7 @@ When the pipe finishes running, the next expected starttime is calculated again.
 If the current expected starttime is passed by more than 5 minutes without the pipe having started again, an alert
 is generated.
 
-The "Grace period" parameter can be used to extent the timeout by specifying an addition number
+The "Grace period" parameter can be used to extend the timeout by specifying an addition number
 of seconds the pipe-run can be overdue. The number of seconds in the "Grace period" parameter is added to the
 'built-in' grace-period of 300 seconds.
 
