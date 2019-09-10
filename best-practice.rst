@@ -29,7 +29,9 @@ Data model
 ----------
 The data model in Sesam can be described in short as connect, collect, share.
 
-In other words, different sources are connected to Sesam. The data is then copied into Sesam, stored in datasets which consists of entities in JSON. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
+On  the  wire  it  is  JSON  ,  internally  Entities with properties and values.
+
+In other words, different sources are connected to Sesam. The data is then copied into Sesam in JSON format, in other words dtasets with entities consisting of properties and values. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
@@ -455,3 +457,168 @@ Manage source code
 Sesam usually uses a Git based source control service to collaborate and have version control on source code.
 
 Git: an open source version control system used to manage code (DTL when working in Sesam). When working in project the code is updated constantly and released in new versions, so Git helps manage this. As with all projects, it’s up to the project itself to decide how to manage the source code, and what kind of service to use. It is not required to use a source control service, but it is highly recommended.
+
+Examples of real global datasets
+-------------------------------
+
+Below is an example from one oSesam customer:
+
+global-workorder
+
+global-vehicle
+
+global-sale
+
+global-reporting
+
+global-reading
+
+global-project
+
+global-poweroutage
+
+global-person
+
+global-meterpoint
+
+global-location
+
+global-invoicemain
+
+global-invoicedetail
+
+global-invoice
+
+global-grid
+
+global-fault
+
+global-customer
+
+global-contract
+
+global-communication
+
+global-classification
+
+global-asset
+
+global-account
+
+Another organization’s data model with 13 global datasets:
+
+global-subscription
+
+global-skills
+
+global-site
+
+global-sesam-product
+
+global-person
+
+global-paymentmethod
+
+global-machine
+
+global-event
+
+global-department-employee
+
+global-department
+
+global-CV
+
+global-company
+
+global-customer
+
+A public sector company’s growing list of global datasets:
+
+global-klassifisering
+
+global-organisasjon
+
+global-person
+
+global-prosjekt
+
+global-prosjektoekonomi
+
+global-soeknad
+
+global-statistikk
+
+An energy company’s list of global datasets:
+
+global-asset
+
+global-catalogue
+
+global-classification
+
+global-consumption
+
+global-contract
+
+global-customer
+
+global-document
+
+global-exportobjects
+
+global-facility
+
+global-grid
+
+global-inventory
+
+global-invoice
+
+global-job
+
+global-location
+
+global-market
+
+global-meterpoint
+
+global-sale
+
+global-timeseries
+
+global-vendor
+
+global-workorder
+
+
+Another public sector company’s list of global datasets:
+
+global-access
+
+global-address
+
+global-asset
+
+global-case
+
+global-classification
+
+global-company
+
+global-contract
+
+global-course
+
+global-document
+
+global-file
+
+global-order
+
+global-person
+
+global-project
+
+global-task
+
