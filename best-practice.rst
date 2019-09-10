@@ -124,7 +124,7 @@ A data model without global datasets might look like the figure below. This exam
 
 As shown in the figure below, a Sesam node containing global datasets results in fewer connections, making it both tidier and easier to manage.
 
-.. image:: images/best-practice/Global.png
+.. image:: images/best-practice/global.png
     :width: 400px
     :align: center
     :alt: Generic pipe concept
@@ -166,7 +166,7 @@ A namespace identifier may take the following form:
 
   "namespace:propertyName":"namespaced-identifier:value"
 
-Using namespace identifiers is a recommended way of referring to datasets for matching properties during transformations to ease connection of data. If you have three different person datasets, and you want to merge on some common property, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier, based on common SSN properties between datasets **"crm-person"** and **"erp-person"** during transformation inside DTL of **"crm-person"**. In a similar way, we need to create a namespace identifier between **"hrsystem-person"** and **"erp-person"** datasets so that we can refer to them during merging.
+Using namespace identifiers is a recommended way of referring to datasets for matching properties during transformations to ease connection of data. If you have three different person datasets, and you want to merge on a common property, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"crm-person"** and **"erp-person"** during transformation inside DTL of **"crm-person"**. In a similar way, we need to create a namespace identifier between **"hrsystem-person"** and **"erp-person"** datasets so that we can refer to them during merging.
 
 ::
 
