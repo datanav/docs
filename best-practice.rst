@@ -418,11 +418,14 @@ Raw input
 
 When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifire on the source pipe to keep track of where the data comes from.
 
-Benefits
+Benefits:
+
 • Not configured specifically for any project or use-case, therefore much easier to re-use the data over time
+
 • No decisions have to be made before the data is imported
 
-Drawbacks
+Drawbacks:
+
 • Increased storage use if not all the data is needed
 
 Data flow
