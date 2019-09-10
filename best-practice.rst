@@ -29,9 +29,7 @@ Data model
 ----------
 The data model in Sesam can be described in short as connect, collect, share.
 
-On  the  wire  it  is  JSON  ,  internally  Entities with properties and values.
-
-In other words, different sources are connected to Sesam. The data is then copied into Sesam in JSON format, in other words dtasets with entities consisting of properties and values. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
+In other words, different sources are connected to Sesam. The data is then copied into Sesam in JSON format, in other words datasets with entities consisting of properties and values. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
@@ -459,9 +457,9 @@ Sesam usually uses a Git based source control service to collaborate and have ve
 Git: an open source version control system used to manage code (DTL when working in Sesam). When working in project the code is updated constantly and released in new versions, so Git helps manage this. As with all projects, it’s up to the project itself to decide how to manage the source code, and what kind of service to use. It is not required to use a source control service, but it is highly recommended.
 
 Examples of real global datasets
--------------------------------
+--------------------------------
 
-Below is an example from one oSesam customer:
+**Below is an example from a Sesam customer:**
 
 global-workorder
 
@@ -505,7 +503,7 @@ global-asset
 
 global-account
 
-Another organization’s data model with 13 global datasets:
+**Another organization’s data model with 13 global datasets:**
 
 global-subscription
 
@@ -533,7 +531,7 @@ global-company
 
 global-customer
 
-A public sector company’s growing list of global datasets:
+**A public sector company’s growing list of global datasets:**
 
 global-klassifisering
 
@@ -549,7 +547,7 @@ global-soeknad
 
 global-statistikk
 
-An energy company’s list of global datasets:
+**An energy company’s list of global datasets:**
 
 global-asset
 
@@ -592,7 +590,7 @@ global-vendor
 global-workorder
 
 
-Another public sector company’s list of global datasets:
+**Another public sector company’s list of global datasets:**
 
 global-access
 
