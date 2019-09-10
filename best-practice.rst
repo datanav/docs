@@ -416,7 +416,7 @@ Below are principles of doing data modelling in Sesam.
 Raw input
 ^^^^^^^^^
 
-When reading data into Sesam it is best practice to copy it and npt start changing it. This wasy we ha a dataset whis is identical or close to identical to source data. It is, however, common practice to add namespaced identifire on the source pipe to keep track of where data comes from.
+When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifire on the source pipe to keep track of where the data comes from.
 
 Benefits
 • Not configured specifically for any project or use-case, therefore much easier to re-use the data over time
