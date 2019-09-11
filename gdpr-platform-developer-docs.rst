@@ -1173,9 +1173,9 @@ Prototype
     {
       "gdpr-access-request:access-request-id": "unique-ID-for-access-request",
       "gdpr-access-request:title": "A descriptive title for the access request",
-      "gdpr-access-request:user-id": "unique-identifier-for-the-user-the-request-is-about"
-      "gdpr-access-request:contactinfo": "email-or-phone-number-to-contact-user"
-      "gdpr-access-request:contactinfo-type": "email|phone_number"
+      "gdpr-access-request:user-id": "unique-identifier-for-the-user-the-request-is-about",
+      "gdpr-access-request:contactinfo": "email-or-phone-number-to-contact-user",
+      "gdpr-access-request:contactinfo-type": "email|phone_number",
       "gdpr-access-request:delete-request": "true|false",
       "gdpr-access-request:lang": "iso-code",
       "gdpr-access-request:public-key": "-----BEGIN PGP PUBLIC KEY BLOCK----- <key data> -----END PGP PUBLIC KEY BLOCK-----\r\n\r\n",
