@@ -11,7 +11,7 @@ Best Practice
 
 
 Summary
---------
+-------
 Sesam is an Integration Platform using a unique Datahub approach for **collecting**, **connecting** and **sharing** data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the systems that own the original data. In this way all the valuable data within your company will be available for the whole organization.
 
 Because Sesam has a unique approach for integrating data, there was a growing need for best practice to see how to best work in Sesam.
@@ -436,11 +436,11 @@ In Sesam data is collected, connected, enriched and transformed from the dataset
 Enrich data
 ^^^^^^^^^^^
 
-There are multiple ways to enrich the original source data, the most common one is to do a transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”, that consists of both. This will be stored in the global data set (in addition to the two original properties), and will be available for future integrations that might need the same transformation.
+There are multiple ways to enrich the original source data, the most common one is to do a transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”, that consists of both. This will be stored in the global dataset (in addition to the two original properties), and will be available for future integrations that might need the same transformation.
 
 Another way to enrich data, is to derive it based on the original property. One example of this can be a “map-coordinate” property that is stored in the coordinate system that google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems. These are then added to the global dataset in addition to the original one, giving future integrations more options if needed.
 
-The last common way to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system. This adds the mapped properties to the global data set in addition to the original properties, making it possible for integrations to chose between a standard information model or the native information model of the source system.
+The last common way to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system. This adds the mapped properties to the global dataset in addition to the original properties, making it possible for integrations to chose between a standard information model or the native information model of the source system.
 
 Output data (late binding)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
