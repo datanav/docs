@@ -14,7 +14,7 @@ Summary
 -------
 Sesam is an Integration Platform using a unique Datahub approach for **collecting**, **connecting** and **sharing** data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the systems that own the original data. In this way all the valuable data within your company will be available for the whole organization.
 
-Because Sesam has a unique approach for integrating data, there was a growing need for best practice to see how to best work in Sesam.
+Because Sesam has a unique approach for integrating data and is a very generic platform, there was a growing need for a best practice to describe and teach how to best utilize the great possibilities of Sesam.
 
 As the amount of data in a Sesam node grows, the need for an optimized dataset structure increases. Without proper structure, each added system results in more time spent on connecting and joining the corresponding raw data. 
 
@@ -27,14 +27,14 @@ Global datasets are key to getting the most out of using Sesam. This means less 
 
 Data model
 ----------
-The data model in Sesam can be described in short as connect, collect, share.
-
-In other words, different sources are connected to Sesam. The data is then copied into Sesam in JSON format, in other words datasets with entities consisting of properties and values. When copying data into Sesam, it is best to keep it as close to original raw data as possible. Once inside it is available to be joined and transformed with data from other sources. It is then available for systems connected to Sesam either as new and transformed datasets or as is. All the data from all the systems is connected and available as a single shared resource.
+The data model in Sesam can be described in short as connect, collect, share. The different sources are connected to Sesam with connectors, the data is then imported into datasets inside Sesam. Once imported, all data within Sesam is in the same format (json), which means data can now be connected and merged independent of the source system. When importing data into Sesam, there is two important Sesam principles to keep in mind, always try to get as much of the data as possible (i.e if importing a sql table, do select star/ select all). The second principle is to keep the data as close to the original as possible, do not implement any transforms or change the semantics unless its necessary. The next step is to create the global datasets, these consists of data from the "raw" imported datasets, categorized and connected (if possible). Two principles to keep in mind when creating the global datasets, ALL the data must be available through global datasets, which means all the raw datasets need to be imported into a global dataset. The second principle is to always try to merge data with existing data in the global dataset which is about the same thing. The goal of doing it this way, is to make it easy to consume and reuse the data inside Sesam, which is in line with our bold vision; "All the data from all the systems, connected and available as a single shared resource".
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept    
+
+To read about the main concepts and how to get started in Sesam, please click `here <https://docs.sesam.io/getting-started.html#glossary>`__
 
 Global datasets
 ----------------
@@ -132,7 +132,7 @@ As shown in the figure below, a Sesam node containing global datasets results in
 What do you have to take into account, and what are the challenges of global datasets?
 ======================================================================================
 
-Global datasets will most likely grow and become lagre. If the configuration or logic is changed, this means the whole dataset needs to be updated. This can potentially be a big job and will take time.
+Global datasets will most likely grow and become lagre. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
 
 As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, the company is required to store as well, the total data objects sum up to 30 000 000. One way of managing this large data amount is to divide the data into different global datasets. In this case, the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
 
@@ -342,7 +342,7 @@ The datasets might be organized like this, please see below. As seen no changes 
 **global-person**
 
 .. image:: images/best-practice/global-person2.png
-    :width: 800px
+    :width: 600px
     :align: center
     :alt: Generic pipe concep
 
@@ -352,7 +352,7 @@ The second could contain data concerning projects. This might orders, project nu
 **global-project**
 
 .. image:: images/best-practice/global-project.png
-    :width: 800px
+    :width: 600px
     :align: center
     :alt: Generic pipe concep
 
@@ -364,7 +364,7 @@ Additional Sesam tips
 Golden record
 =============
 
-A golden record is a single, well-defined version of all the data entities in an organizational ecosystem. In this context, a golden record is sometimes called the **"single version of the truth"**, where **"truth"** is understood to mean the reference to which data users can turn when they want to ensure that they have the correct version of a piece of information.  
+A golden record is a single, well-defined version of all the data entities in an organizational ecosystem. In this context, a golden record is sometimes called the **"single version of the truth"**, where **"truth"** is understood to mean the reference to which data users can to turn when they want to ensure that they have the correct version of a piece of information.  
 
 In the example below, all three sources provide a **zip-code**, such that some properties in a global dataset might be duplicates from different sources. In this case it could be fitting to add a **"global-person:zipcode"** property to the global dataset. This property should contain the most reliable zip-code value of the three sources and will be the property we access when we want the person's zip-code. This global property becomes a part of a **"golden record"** which ensures a single, well-defined representation of the person.
 
@@ -416,7 +416,8 @@ Below are principles of doing data modelling in Sesam.
 Raw input
 ^^^^^^^^^
 
-When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifire on the source pipe to keep track of where the data comes from.
+When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifiers
+ on the source pipe to keep track of where the data comes from.
 
 Benefits:
 
