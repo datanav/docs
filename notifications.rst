@@ -295,7 +295,7 @@ Example::
 
     curl 'https://portal.sesam.io/api/notifications' -H 'Authorization: bearer <JWT-for-the-subscription-12345644-2a04-4ff1-9d77-7b3eb615974c>'
 
-This endpoint implements the :doc:`JSON Pull Protocol <json-pull>`, and the result of the above call will look like this::
+will result in a response that looks like this::
 
     [
       {
