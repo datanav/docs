@@ -27,7 +27,7 @@ Global datasets are key to getting the most out of using Sesam. This means less 
 
 Data model
 ----------
-The data model in Sesam can be described in short as connect, collect, share. The different sources are connected to Sesam with connectors, the data is then imported into datasets inside Sesam. Once imported, all data within Sesam is in the same format (json), which means data can now be connected and merged independent of the source system. When importing data into Sesam, there is two important Sesam principles to keep in mind, always try to get as much of the data as possible (i.e if importing a sql table, do select star/ select all). The second principle is to keep the data as close to the original as possible, do not implement any transforms or change the semantics unless its necessary. The next step is to create the global datasets, these consists of data from the "raw" imported datasets, categorized and connected (if possible). Two principles to keep in mind when creating the global datasets, ALL the data must be available through global datasets, which means all the raw datasets need to be imported into a global dataset. The second principle is to always try to merge data with existing data in the global dataset which is about the same thing. The goal of doing it this way, is to make it easy to consume and reuse the data inside Sesam, which is in line with our bold vision; "All the data from all the systems, connected and available as a single shared resource".
+The data model in Sesam can be described in short as connect, collect, share. The different sources are connected to Sesam with connectors, the data is then imported into datasets inside Sesam. Once imported, all data within Sesam is in the same format (JSON), which means data can now be connected and merged independent of the source system. When importing data into Sesam, there are two important Sesam principles to keep in mind, always try to get as much of the data as possible (i.e if importing a sql table, do select star/ select all). The second principle is to keep the data as close to the original as possible, do not implement any transforms or change the semantics unless it's necessary. The next step is to create the global datasets, these consist of data from the "raw" imported datasets, categorized and connected (if possible). Two principles to keep in mind when creating the global datasets, ALL the data must be available through global datasets, which means all the raw datasets need to be imported into a global dataset. The second principle is to always try to merge data with existing data in the global dataset which is about the same thing. The goal of doing it this way, is to make it easy to consume and reuse the data inside Sesam, which is in line with our bold vision; "All the data from all the systems, connected and available as a single shared resource".
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
@@ -109,8 +109,8 @@ Positive effects of global datasets
 ===================================
 
 • By decoupling data from original sources, point-to-point integrations within Sesam can be avoided, thus fewer connections results in lower maintenance costs. In addition, data is available without concern for the original source
-• All logic related to connecting and enriching data is only done once. 
-• Data in Global datasets are re-used, which saves work and makes adding new integrations easier.
+• All logic related to connecting and enriching data is only done once 
+• Data in Global datasets are re-used, which saves work and makes adding new integrations easier
 • Only one look-up, instead of having to “look for data” in various datasets
 • Input datasets can be kept raw and as similar to the real source as possible, independent of how the data will be used, thus avoiding “early binding”
 • Adding additional integrations further refines the global datasets, and therefore continuously improves the data quality
@@ -132,7 +132,7 @@ As shown in the figure below, a Sesam node containing global datasets results in
 What do you have to take into account, and what are the challenges of global datasets?
 ======================================================================================
 
-Global datasets will most likely grow and become lagre. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
+Global datasets will most likely grow and become large. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
 
 As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, the company is required to store as well, the total data objects sum up to 30 000 000. One way of managing this large data amount is to divide the data into different global datasets. In this case, the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
 
@@ -142,7 +142,7 @@ Namespace and namespaced identifiers
 Namespace 
 =========
 
-A namespace consists of two parts: a namespace and a property. The namespace part can consist of any character, ending with a colon. The property part can consist of any character except colons.
+A namespace consists of two parts: a namespace and a property. The namespace part can consist of any characters, ending with a colon. The property part can consist of any character except colons.
 In the example below, **"crm-person"** and **"hrsystem-person"** are namespaces and **"SSN"** is the property.
 
 E.g.
@@ -156,9 +156,9 @@ E.g.
 Namespaced identifiers
 ======================
 
-Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. Namespace identifiers provide the same functionality as foreign keys in databases. These references are usually added in the input pipe.
+Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. Namespaced identifiers provide the same functionality as foreign keys in databases. These references are usually added in the input pipe.
 
-A namespace identifier may take the following form:
+A namespaced identifier may take the following form:
 
 ::
 
@@ -237,7 +237,7 @@ Tips for global datasets
 ------------------------
 
 • All datasets should go into a global dataset
-• In most data models, between 10–20 global datasets are sufficient. This is based on experience on various size of projects at Sesam. The smaller  projects could have close to 10, and some of the bigger projects has over 20 global datasets, with over hundreds of pipes connected to them. To identify how many global datasets a project might need it is important to perform a proper analysis. For instance, and if a company’s needs are met by five global datasets, then they don’t have to have at least ten. This is only for best practice, but we do have examples of larger data models with less than ten global datasets
+• In most data models, between 10–20 global datasets are sufficient. This is based on experience on various size of projects at Sesam. The smaller  projects could have close to 10, and some of the bigger projects has over 20 global datasets, with hundreds of pipes connected to them. To identify how many global datasets a project might need it is important to perform a proper analysis. For instance, if a company’s needs are met by five global datasets, then they don’t have to have at least ten. This is only for best practice, but we do have examples of larger data models with less than ten global datasets
 • Start general with big “buckets” and re-arrange and split into smaller global datasets if necessary
 • Think less property and more “what it is”, e.g. person vs user. Something that stops being a user might not stop being a person
 • Keep it generic
@@ -265,7 +265,7 @@ Global-organization
 
 Global-task
 
-This is only the first part of the analysis. The second part is how to enrich data in the global datasets, and to determine which aggregated datasets there is a need for. These are questions that needs to be asked in order to make the enriched datasets as useful as possible.
+This is only the first part of the analysis. The second part is how to enrich data in the global datasets, and to determine which aggregated datasets there is a need for. These are questions that need to be asked in order to make the enriched datasets as useful as possible.
 
 Recipe for generating global datasets
 -------------------------------------
@@ -281,11 +281,11 @@ It is impossible to make a universal recipe for all integration projects using S
 
 In many cases however, it does make sense to merge the data, such as person data as shown earlier, which was merged on SSN, email etc.
 
-7.  Some data may need to be processed before added to global dataset. This involves e.g. selecting what we use as ID, converting data type, change property names etc.
+7.  Some data may need to be processed before being added to a global dataset. This involves e.g. selecting what we use as ID, converting data type, change property names etc.
 8.  When the global datasets are set up, the data can either be re-used as is, or undergo further transformations. This might encompass filtering specific data and joining with other datasets etc. to enhance quality and usefulness.
 9.  Based on the target systems and your requirements, adapting data to target systems is done as late as possible in the data flow and as close to target as possible (late binding.)
 
-Let’s start with simplified example to demonstrate. Below we have four datasets from three different sources; **"hrsystem"**, **"crm"** and **"erp"**:
+Let’s start with simplified example to demonstrate. Below we have four datasets from two different sources; **"crm"** and **"erp"**:
 
 erp-person
 
@@ -356,7 +356,7 @@ The second could contain data concerning projects. This might orders, project nu
     :align: center
     :alt: Generic pipe concep
 
-It is important to emphasize that this is only a suggestion on how it might be logical organize the datasets. The end result is highly individual and will most likely vary. This does however give an idea on how architecture in Sesam is build and developed generating using global datasets.    
+It is important to emphasize that this is only a suggestion on how it might be logical to organize the datasets. The end result is highly individual and will most likely vary. This does however give an idea on how architecture in Sesam is built and developed using global datasets.    
 
 Additional Sesam tips
 ---------------------
@@ -432,16 +432,16 @@ Drawbacks:
 Data flow
 ^^^^^^^^^
 
-In Sesam data is collected, connected, enriched and transformed from the datasets formed from retrieving data from the source systems. This is done by compiling data from multiple datasets, transforming data into new data formats or standards, and adapting the data to new target systems. In this way, new values are created for the re-use and use of data. This is done in the global dataset where the main purpose is that one should not need to look up multiple datasets and compile data for each time one needs it, but rather make the connecting and enriching once and look up one place.
+In Sesam data is collected, connected, enriched and transformed from the datasets formed from retrieving data from the source systems. This is done by compiling data from multiple datasets, transforming data into new data formats or standards, and adapting the data to new target systems. In this way, new values are created for the re-use and use of data. This is done in the global dataset where the main purpose is that one should not need to look up multiple datasets and compile data for each time one needs it, but rather make the connecting and enriching once and look up in one place.
 
 Enrich data
 ^^^^^^^^^^^
 
 There are multiple ways to enrich the original source data, the most common one is to do a transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”, that consists of both. This will be stored in the global dataset (in addition to the two original properties), and will be available for future integrations that might need the same transformation.
 
-Another way to enrich data, is to derive it based on the original property. One example of this can be a “map-coordinate” property that is stored in the coordinate system that google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems. These are then added to the global dataset in addition to the original one, giving future integrations more options if needed.
+Another way to enrich data, is to derive it based on the original property. One example of this can be a “map-coordinate” property that is stored in the coordinate system that Google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems. These are then added to the global dataset in addition to the original one, giving future integrations more options if needed.
 
-The last common way to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system. This adds the mapped properties to the global dataset in addition to the original properties, making it possible for integrations to chose between a standard information model or the native information model of the source system.
+Yet another example on how to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system. This adds the mapped properties to the global dataset in addition to the original properties, making it possible for integrations to chose between a standard information model or the native information model of the source system.
 
 Output data (late binding)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
