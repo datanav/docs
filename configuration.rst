@@ -7515,6 +7515,21 @@ Properties
      - ``{}``
      -
 
+   * - ``docker.skip_pull``
+     - Boolean
+     - If set to true then the system will will never try to pull a new version of the docker image. If this is
+       set to false (the default), the system will attempt to pull a new version of the docker image every time
+       the microservice docker container is restarted (for instance when a new config has been specified).
+     - ``false``
+     -
+
+   * - ``docker.pull_image_cron_expression``
+     - String
+     - A cron expression that indicates when the system will attempt to pull a new version of the docker image.
+       If a newer version of the docker image is pulled, the microservice docker container will restart.
+     - ``null``
+     -
+
    * - ``use_https``
      - Boolean
      - If set to true then the system will use the ``https`` protocol to communicate with the microservice.
@@ -7561,21 +7576,6 @@ Properties
      - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
      - ``7200``
-     -
-
-   * - ``skip_pull``
-     - Boolean
-     - If set to true then the system will will never try to pull a new version of the docker image. If this is
-       set to false (the default), the system will attempt to pull a new version of the docker image every time
-       the microservice docker container is restarted (for instance when a new config has been specified).
-     - ``false``
-     -
-
-   * - ``pull_image_cron_expression``
-     - String
-     - A cron expression that indicates when the system will attempt to pull a new version of the docker image.
-       If a newer version of the docker image is pulled, the microservice docker container will restart.
-     - ``null``
      -
 
 Microservice APIs
