@@ -7409,7 +7409,9 @@ Prototype
             "hosts": {
                 "myhost1.mydomain.io": "157.240.20.34",
                 "myhost2.mydomain.io": "157.240.20.35"
-            }
+            },
+            "skip_pull": false,
+            "pull_image_cron_expression": "0 0 * * *"
         },
         "use_https": false,
         "verify_ssl": false,
