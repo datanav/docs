@@ -21,8 +21,8 @@ If you want to jump straight into Sesam and get hands-on, you can go right  to t
 
 .. _getting-started-setting-up-our-sesam-node:
 
-Setting up our Sesam node
--------------------------
+Setting up our Sesam instance
+-----------------------------
 You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
 
 The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
@@ -47,7 +47,7 @@ Once you get the access from the Sesam team you'll get your own Dev Node card in
 
 Import data
 ===========
-Eventually, your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
+Eventually, your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
 
 Go into you 'Dev Node'. Click on **Datahub** in the left menu, and select the **Tools tab**.
 
@@ -79,7 +79,7 @@ Sesam overview
 --------------
 We will now give a short overview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
 
-In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this perticular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
+In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this particular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
 
 The following picture shows the general setup of a Sesam node.
 
@@ -317,7 +317,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 3 <getting
 
 Merging with DTL
 ^^^^^^^^^^^^^^^^
-We can merge entities in the DTL script transform section with the :ref:`merge <dtl_transform-merge>` function. This will combine its input properties (for example Age, CellNumber and salary) into the target dataset.
+We can merge entities in the DTL transform section with the :ref:`merge <dtl_transform-merge>` function. This will combine its input properties (for example Age, CellNumber and salary) into the target dataset.
 
 ::
 
@@ -334,7 +334,7 @@ We will later see the use of the **["merge"]** function in combination with func
 
 Apply
 =====
-The :ref:`apply <apply_function>` operation applies an own-specified function to an entity. I.e. the call ["apply", "SomeFunc", "_S.orders"] applied the function "SomeFunc" to the source "_S.orders".  
+The :ref:`apply <apply_function>` operation applies an own-specified rule to an entity. I.e. the call ["apply", "SomeRule", "_S.orders"] applied the rule "SomeFunc" to the source "_S.orders".  
 
 Hops
 ====
@@ -968,9 +968,9 @@ Microservices in Sesam run in docker containers. These containers run on our Ses
 
 We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice. We can create and run as many containers as we want from the same image.
 
-The Docker image is then pushed up to a repostory on Dockerhub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
+The Docker image is then pushed up to a repostory on Docker Hub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
 
-Finally we pull the image from our Dockerhub repository and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Dockerhub in our Sesam system configuration and the contaner is spun up automatically. 
+Finally we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the contaner is spun up automatically. 
 
 Microservices with Docker
 ==================================
@@ -1082,7 +1082,7 @@ To check that the you have created image run the command:
 
 Testing
 ^^^^^^^
-To test that you can run a container from your image locally you can run it in command line/terminal. First we need to login to Docker. Run the command docker login and enter your Dockerhub **username** and **password** when prompted.
+To test that you can run a container from your image locally you can run it in command line/terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 
 Next we'll need to run the image to create the container.
 
@@ -1108,8 +1108,8 @@ To stop the container running locally you can run:
 
  docker stop container name or container id <
 
-Push to Dockerhub
-^^^^^^^^^^^^^^^^^
+Push to Docker Hub
+^^^^^^^^^^^^^^^^^^
 Now we need to push the image to the repository:
 
 To check that the you have created image run the command:
@@ -1173,7 +1173,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
 
 REST APIs
 ============
-Sometimes we have to connect to a websites API to extract data for our pipe. A websites API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses http requests to POST, GET PUT and DELETE data. 
+Sometimes we have to connect to a websites API to extract data for our pipe. A website's API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses HTTP requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
 
