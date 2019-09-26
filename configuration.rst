@@ -937,7 +937,7 @@ Properties
          composed of all the ids of the entities involved and the
          offset of the dataset from which they originates.
 
-         Example: ``"one1|0|two1|1|two2|1|three3|2"``. This particular
+         Example: ``"0|one1|1|two1|1|two2|2|three3"``. This particular
          id consists of four entity ids from three datasets. If it is
          the result of the prototypical merge source shown above, then
          ``one1`` is the id of an entity from the ``d1`` dataset,

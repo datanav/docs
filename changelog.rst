@@ -3,6 +3,10 @@ Changelog
 
 2019-09-04
 ----------
+* Index version 2 is now the default version for dataset indexes. This index implementation (version 2) supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset.
+
+2019-09-04
+----------
 * Added new :ref:`Pump finished overdue <pump_finished_overdue_notification_rule>` notification rule type.
 * Added new :ref:`Pump failed <pump_failed_notification_rule>` notification rule type.
 
