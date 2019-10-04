@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-10-07
+----------
+* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+
 2019-09-04
 ----------
 * Index version 2 is now the default version for dataset indexes. This index implementation (version 2) supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset.

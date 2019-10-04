@@ -294,7 +294,7 @@ paths:
               it is sometimes useful during development and testing; for instance when one has a huge existing
               source-dataset, but only want to run the pipe against new entities.
 
-          "reset-tracking" (Experimental):
+          "reset-tracking" (EXPERIMENTAL):
 
               Resets the dependency tracking so that it will continue starting from the end of dependent datasets.
 
@@ -535,7 +535,7 @@ paths:
           required: false
           type: string
           description:
-            "EXPERIMENTAL: If specified then the specified JSON encoded subset expression will be used to retrieve
+            "If specified then the specified JSON encoded subset expression will be used to retrieve
             entities from a dataset subset. If the subset does not exist, then 404 is returned."
 
       responses:
@@ -596,7 +596,7 @@ paths:
           required: false
           type: string
           description:
-            "EXPERIMENTAL: If specified then the specified JSON encoded subset expression will be used to retrieve entities
+            "If specified then the specified JSON encoded subset expression will be used to retrieve entities
             from a dataset subset. If the subset does not exist, then 404 is returned."
 
         - name: webhook
@@ -676,7 +676,7 @@ paths:
           required: false
           type: string
           description:
-            "EXPERIMENTAL: If specified then the specified JSON encoded subset expression will be used to retrieve the
+            "If specified then the specified JSON encoded subset expression will be used to retrieve the
             entity from a dataset subset. If the subset does not exist, then 404 is returned."
       responses:
         200:
@@ -709,7 +709,7 @@ paths:
           required: false
           type: string
           description:
-            "EXPERIMENTAL: If specified then the specified JSON encoded subset expression will be used to retrieve the
+            "If specified then the specified JSON encoded subset expression will be used to retrieve the
             entity from a dataset subset. If the subset does not exist, then 404 is returned."
       responses:
         200:
@@ -1025,6 +1025,15 @@ paths:
           description: OK
         500:
           description: The sesam-node isn't feeling well.
+
+  '/ping':
+    get:
+      description: Sesam api probe API
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
 
   '/license':
     get:
@@ -2383,7 +2392,7 @@ definitions:
       created_ts:
         type: string
         description:
-          Unix timestamp when the shareable link was created (nanoseconds) 
+          Unix timestamp when the shareable link was created (nanoseconds)
       description:
         type: string
         description:

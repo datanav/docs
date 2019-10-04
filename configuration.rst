@@ -417,7 +417,7 @@ Properties
 
    * - ``compaction.sink``
      - Boolean
-     - EXPERIMENTAL. If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
+     - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
      - ``false``
      - No
 
@@ -856,8 +856,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _merge_source:
 
-The merge source (Experimental)
--------------------------------
+The merge source
+----------------
 
 The merge source is a source that is able to infer the sameness of
 entities across multiple datasets. The source uses a set of equality
@@ -5616,8 +5616,8 @@ The XML document will be available at ``http://localhost:9042/api/publishers/my-
 
 .. _rest_sink:
 
-The REST sink (Experimental)
-----------------------------
+The REST sink
+-------------
 
 This is a data sink that can communicate with a REST service using HTTP requests.
 
@@ -7184,8 +7184,8 @@ Example with ntlm configuration:
 
 .. _rest_system:
 
-The REST system (Experimental)
-------------------------------
+The REST system
+---------------
 
 The REST system represents a REST service (i.e. a web server) serving
 `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
@@ -7368,8 +7368,8 @@ Example configuration
 
 .. _microservice_system:
 
-The microservice system (Experimental)
---------------------------------------
+The microservice system
+-----------------------
 
 The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
 
