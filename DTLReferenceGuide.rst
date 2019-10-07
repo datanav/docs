@@ -3545,23 +3545,6 @@ Entity lookups
      - Description
      - Examples
 
-   * - ``reference``
-     - | *Arguments:*
-       |   DATASET_ID(string{1})
-       |   ENTITY_IDS(value-expression{})
-       |
-       | Returns a URI that can be used to reference entities in the given
-         dataset. The DATASET_ID and ENTITY_IDS parts will be URI path
-         encoded. URIs of this type can be resolved using the ``lookup`` function.
-     - | ``["reference", "foo", "bar"]``
-       |
-       | Returns ``"~rsesam:foo/bar"`` (which is a value of the URI datatype)).
-       |
-       | ``["reference", "foo", ["list", "a", "b"]]``
-       |
-       | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
-       |
-
        .. _lookup_entity_function:
    * - ``lookup-entity``
      - | *Arguments:*
@@ -3574,6 +3557,13 @@ Entity lookups
        | Looks up the entity with the ``_id`` property value of ``foo`` in the ``code-table`` dataset.
        | Note that the dataset referenced has to be populated before the DTL transform can run.
        | If the entity doesn't exist in the dataset, ``null`` is returned.
+
+       .. WARNING::
+
+          This function does not support dependency tracking, so if
+          the entity that is looked up changes then you may want to
+          reset the pipe. This will not happen automatically.
+
 
 Namespaced identifiers
 ----------------------
