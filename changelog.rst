@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2019-10-07
+----------
+* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_message_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_message_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+* The :ref:`reference <reference_function>` DTL function has been deprecated.
+* The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
+  
 2019-09-04
 ----------
 * Index version 2 is now the default version for dataset indexes. This index implementation (version 2) supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset.
@@ -42,7 +48,7 @@ Changelog
 
 2019-03-22
 ----------
-* The ``lookup`` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
+* The :ref:`lookup <lookup_function>` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
 
 2019-03-14
 ----------
