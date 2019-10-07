@@ -11,8 +11,288 @@ Deprecations
 This document contains deprecated sections from the documentation. Do
 not make use of these features.
 
-Transformations
-===============
+
+DTL Functions
+=============
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _curie_function:
+   * - ``curie``
+     - | *Arguments:*
+       |   PREFIX(string{1}),
+       |   VALUES(value-expression{1})
+       |
+     - | Constructs new CURIEs as URI objects based on a the PREFIX
+         and VALUES arguments.
+       |
+       | ``["curie", "foo", "bar"]``
+       |
+       | This will produce a URI object with the value ``"~rfoo:bar"``.
+       |
+       | ``["curie", "foo", ["list", "bar", "zoo"]]``
+       |
+       | This will produce a list of two URI objects with the
+         values ``["~rfoo:bar", "~rfoo:zoo"]``.
+
+       .. _uri_expand_function:
+   * - ``uri-expand``
+     - | *Arguments:*
+       |   FUNCTION(function-expression(0|1}
+       |   ENTITIES(value-expression{1})
+       |
+     - | Runs the given entities through the prefixing rules and the
+         prefix expansion mapping defined in the node metadata RDF registry.
+         The given entities must have a ``_dataset`` property containing the
+         id of the dataset to which they belong *or* the key to look up the
+         prefixes must be computed by the (optional) FUNCTION argument. The
+         result of the FUNCTION argument will override any ``_dataset``
+         property on the entity. The id given or computed will be used to locate
+         the prefix rules and prefix expansion mapping within the node RDF registry.
+         Note that the result of FUNCTION must be a single string value.
+
+       | The main purpose of this function is to prepare entities for
+         translation into RDF form. See the :doc:`RDF support <rdf-support>`
+         document for more information about how this works.
+
+       | Example node metadata:
+
+         ::
+
+            {
+                "rdf": {
+                  "people": {
+                     "prefixes": {
+                       "p": "http://example.org/people/"
+                     },
+                     "prefix_rules": {
+                       "id": "p",
+                       "properties": [
+                          "p", ["name"],
+                          "c", ["Employer"],
+                          "_", ["**"]
+                       ]
+                     }
+                  }
+                }
+            }
+
+       | Example input entity:
+
+         ::
+
+            {
+              "_id": "john_doe",
+              "_dataset": "people",
+              "name": "John Doe",
+              "employer": "Example Ltd.",
+              "born": "1973-01-21"
+            }
+
+       | Given the above configuration you should expect the following URI-expanded
+         entity in the result:
+
+         ::
+
+            {
+              "_id": "<http://example.org/people/john_doe>",
+              "_dataset": "people",
+              "<http://example.org/people/name>": "John Doe",
+              "<http://example.org/company/employer>": "Example Ltd.",
+              "<http://example.org/born>": "1973-01-21"
+            }
+
+       | ``["uri-expand",``
+       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity.
+       |
+       | ``["uri-expand",``
+       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
+         dataset, then URI expands them.
+       | ``["uri-expand",``
+       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
+       |
+       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
+         property.
+       | ``["uri-expand", ["string", "people"],``
+       |    ``{"_id": "mary", "_dataset": "employees",``
+       |      ``"name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "people" key in the node RDF registry (i.e. the
+         ``_dataset`` value of "employees" is overriden by the computed value)
+
+       | ``["uri-expand", ["string", "_.type"],``
+       |   ``{"_id": "mary", "_dataset": "employees",``
+       |     ``"type": "person", "name": "Mary Jones"}]``
+       |
+       | Returns an URI expanded version of the ``mary`` entity using the prefixes
+         registered by the "person" key in the node RDF registry. The ``_dataset``
+         value of "employees" is overriden by the computed value (based on
+         the contents of the entity's ``type`` property in this example).
+
+       .. _lookup_function:
+   * - ``lookup``
+     - | *Arguments:*
+       |   DATASET_IDS(value-expression{0|1})
+       |   ENTITY_REFERENCES(value-expression{1})
+       |
+       | Returns an entity or a list of entities by resolving the strings or URIs in
+         ENTITY_REFERENCES. The URIs will be resolved by looking up entities by
+         id in the given datasets. Relative references will be resolved in the
+         current dataset or in the DATASET_IDS datasets if specified. The returned
+         entities have an extra ``_dataset`` property containing the id of the dataset
+         where they came from.
+     - | ``["lookup", "~rsesam:A/foo"]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset.
+       |
+       | ``["lookup", "A", ["list", "foo", "sesam:B/bar"]]``
+       |
+       | Looks up the ``foo`` entity in the ``A`` dataset and the ``bar``
+         entity in the ``B`` dataset.
+       |
+       | ``["lookup", "bar"]``
+       |
+       | Looks up the ``bar`` entity in the current dataset.
+       |
+       | ``["lookup",``
+       |   ``["list", "A", "B"],``
+       |   ``["list", "bar", "baz",``
+       |     ``"~rsesam:C/foo", "~rsesam:D/quux"]``
+       |
+       | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
+         ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
+         dataset because they are explicit entity references.
+
+       .. _reference_function:
+   * - ``reference``
+     - | *Arguments:*
+       |   DATASET_ID(string{1})
+       |   ENTITY_IDS(value-expression{})
+       |
+       | Returns a URI that can be used to reference entities in the given
+         dataset. The DATASET_ID and ENTITY_IDS parts will be URI path
+         encoded. URIs of this type can be resolved using the ``lookup`` function.
+     - | ``["reference", "foo", "bar"]``
+       |
+       | Returns ``"~rsesam:foo/bar"`` (which is a value of the URI datatype)).
+       |
+       | ``["reference", "foo", ["list", "a", "b"]]``
+       |
+       | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
+       |
+
+
+Sources
+=======
+
+.. _kafka_source:
+
+The Kafka source
+-----------------
+
+The Kafka source consumes data from a Kafka topic. The consumer stores the offset in the pipe, and does not commit the consumer offset back to Kafka.
+
+The entities emitted from this source has offset, partition, timestamp, value and key as properties. Message keys in Kafka can be any bytes, but the source will try to utf-8 decode the key and add that as the ``_id`` property.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "kafka",
+        "system": "kafka-system-id",
+        "topic": "some-topic"
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`Kafka System <kafka_system>` component to use.
+     -
+     - Yes
+
+   * - ``topic``
+     - String
+     - The topic to consume from.
+     -
+     - Yes
+
+   * - ``partitions``
+     - List<Integer>
+     - Manual assignment of partitions if only a subset of the topic is to be consumed by this pipe. In Azure Event Hubs this property
+       has to be set for assignment to work for now.
+     - <All>
+     - No (Yes for Event Hubs)
+
+   * - ``seek_to_beginning``
+     - Boolean
+     - If the consumer should start from the beginning of the topic or only consume new messages. This only applies to the first run,
+       subsequent runs will continue where it left off unless the pipe is reset.
+     - false
+     -
+
+   * - ``ignore_null_keys``
+     - Boolean
+     - If the consumer should drop messages that does not have keys.
+     - true
+     -
+
+   * - ``consumer_timeout_ms``
+     - Integer
+     - The pipe will consume all available messages from the topic. Once all messages has been consumed it will wait for this period of
+       time until it will complete. Note that for topics that receives new messages more often than this interval the pipe will never
+       complete.
+     - 60000
+     -
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity.
+
+::
+
+    {
+        "source": {
+            "type": "kafka",
+            "system": "my-kafka",
+            "consumer_timeout_ms": 5000,
+            "ignore_null_keys": false,
+            "partitions": [0, 1],
+            "seek_to_beginning": true,
+            "topic": "foo"
+        },
+    }
+
+
+Transforms
+==========
 
 .. _properties_to_curies:
 
@@ -318,187 +598,6 @@ The transform will output the following compact/"compressed" transformed entity:
 Note that the transform will not attempt to unquote the remainder elements after the matched prefixes.
 
 
-DTL Functions
-=============
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _curie_function:
-   * - ``curie``
-     - | *Arguments:*
-       |   PREFIX(string{1}),
-       |   VALUES(value-expression{1})
-       |
-     - | Constructs new CURIEs as URI objects based on a the PREFIX
-         and VALUES arguments.
-       |
-       | ``["curie", "foo", "bar"]``
-       |
-       | This will produce a URI object with the value ``"~rfoo:bar"``.
-       |
-       | ``["curie", "foo", ["list", "bar", "zoo"]]``
-       |
-       | This will produce a list of two URI objects with the
-         values ``["~rfoo:bar", "~rfoo:zoo"]``.
-
-       .. _uri_expand_function:
-   * - ``uri-expand``
-     - | *Arguments:*
-       |   FUNCTION(function-expression(0|1}
-       |   ENTITIES(value-expression{1})
-       |
-     - | Runs the given entities through the prefixing rules and the
-         prefix expansion mapping defined in the node metadata RDF registry.
-         The given entities must have a ``_dataset`` property containing the
-         id of the dataset to which they belong *or* the key to look up the
-         prefixes must be computed by the (optional) FUNCTION argument. The
-         result of the FUNCTION argument will override any ``_dataset``
-         property on the entity. The id given or computed will be used to locate
-         the prefix rules and prefix expansion mapping within the node RDF registry.
-         Note that the result of FUNCTION must be a single string value.
-
-       | The main purpose of this function is to prepare entities for
-         translation into RDF form. See the :doc:`RDF support <rdf-support>`
-         document for more information about how this works.
-
-       | Example node metadata:
-
-         ::
-
-            {
-                "rdf": {
-                  "people": {
-                     "prefixes": {
-                       "p": "http://example.org/people/"
-                     },
-                     "prefix_rules": {
-                       "id": "p",
-                       "properties": [
-                          "p", ["name"],
-                          "c", ["Employer"],
-                          "_", ["**"]
-                       ]
-                     }
-                  }
-                }
-            }
-
-       | Example input entity:
-
-         ::
-
-            {
-              "_id": "john_doe",
-              "_dataset": "people",
-              "name": "John Doe",
-              "employer": "Example Ltd.",
-              "born": "1973-01-21"
-            }
-
-       | Given the above configuration you should expect the following URI-expanded
-         entity in the result:
-
-         ::
-
-            {
-              "_id": "<http://example.org/people/john_doe>",
-              "_dataset": "people",
-              "<http://example.org/people/name>": "John Doe",
-              "<http://example.org/company/employer>": "Example Ltd.",
-              "<http://example.org/born>": "1973-01-21"
-            }
-
-       | ``["uri-expand",``
-       |   ``{"_id": "mary", "_dataset": "people", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity.
-       |
-       | ``["uri-expand",``
-       |   ``["lookup", ["list", "~rsesam:A/foo"], "bar"]]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset and ``bar`` in the current
-         dataset, then URI expands them.
-       | ``["uri-expand",``
-       |   ``["list", {"_id": "mary", "name": "Mary Jones"}]]``
-       |
-       | Returns an empty list because the ``mary`` entity is missing the ``_dataset``
-         property.
-       | ``["uri-expand", ["string", "people"],``
-       |    ``{"_id": "mary", "_dataset": "employees",``
-       |      ``"name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "people" key in the node RDF registry (i.e. the
-         ``_dataset`` value of "employees" is overriden by the computed value)
-
-       | ``["uri-expand", ["string", "_.type"],``
-       |   ``{"_id": "mary", "_dataset": "employees",``
-       |     ``"type": "person", "name": "Mary Jones"}]``
-       |
-       | Returns an URI expanded version of the ``mary`` entity using the prefixes
-         registered by the "person" key in the node RDF registry. The ``_dataset``
-         value of "employees" is overriden by the computed value (based on
-         the contents of the entity's ``type`` property in this example).
-
-       .. _lookup_function:
-   * - ``lookup``
-     - | *Arguments:*
-       |   DATASET_IDS(value-expression{0|1})
-       |   ENTITY_REFERENCES(value-expression{1})
-       |
-       | Returns an entity or a list of entities by resolving the strings or URIs in
-         ENTITY_REFERENCES. The URIs will be resolved by looking up entities by
-         id in the given datasets. Relative references will be resolved in the
-         current dataset or in the DATASET_IDS datasets if specified. The returned
-         entities have an extra ``_dataset`` property containing the id of the dataset
-         where they came from.
-     - | ``["lookup", "~rsesam:A/foo"]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset.
-       |
-       | ``["lookup", "A", ["list", "foo", "sesam:B/bar"]]``
-       |
-       | Looks up the ``foo`` entity in the ``A`` dataset and the ``bar``
-         entity in the ``B`` dataset.
-       |
-       | ``["lookup", "bar"]``
-       |
-       | Looks up the ``bar`` entity in the current dataset.
-       |
-       | ``["lookup",``
-       |   ``["list", "A", "B"],``
-       |   ``["list", "bar", "baz",``
-       |     ``"~rsesam:C/foo", "~rsesam:D/quux"]``
-       |
-       | Looks up the ``bar`` and ``baz`` entities in the ``A`` and ``B`` datasets.
-         ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
-         dataset because they are explicit entity references.
-         
-       .. _reference_function:
-   * - ``reference``
-     - | *Arguments:*
-       |   DATASET_ID(string{1})
-       |   ENTITY_IDS(value-expression{})
-       |
-       | Returns a URI that can be used to reference entities in the given
-         dataset. The DATASET_ID and ENTITY_IDS parts will be URI path
-         encoded. URIs of this type can be resolved using the ``lookup`` function.
-     - | ``["reference", "foo", "bar"]``
-       |
-       | Returns ``"~rsesam:foo/bar"`` (which is a value of the URI datatype)).
-       |
-       | ``["reference", "foo", ["list", "a", "b"]]``
-       |
-       | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
-       |
-
-
 Sinks
 =====
 
@@ -528,6 +627,130 @@ The ``prefix_includes`` property has been deprecated for the :ref:`sparql <sparq
        RDFS, OWL and so on).
      -
      -
+
+
+.. _kafka_sink:
+
+The Kafka sink
+--------------
+
+The Kafka sink produces data to a Kafka topic.
+
+Entities sent to this sink will use the key, value and partition properties if present, otherwise the key will be utf-8 encoded version of ``_id`` and the value will be the entire entity. If partition is not specified, the partitioning will be based on the key.
+
+The properties used matches the properties emitted by the :ref:`Kafka source <kafka_source>`. This means that it should be possible to consume a topic and produce to a new topic in a pipe with no DTL.
+
+The sink will flush to Kafka after every batch.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "kafka",
+        "system": "kafka-system-id",
+        "topic": "some-topic"
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``system``
+     - String
+     - The id of the :ref:`Kafka System <kafka_system>` component to use.
+     -
+     - Yes
+
+   * - ``topic``
+     - String
+     - The topic to send to.
+     -
+     - Yes
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The outermost object would be your :ref:`pipe <pipe_section>`
+configuration, which is omitted here for brevity.
+
+::
+
+    {
+        "sink": {
+            "type": "kafka",
+            "system": "my-kafka",
+            "topic": "foo"
+        },
+    }
+
+
+Systems
+=======
+
+.. _kafka_system:
+
+The Kafka system
+----------------
+
+This system can be used to read and write data from `Apache Kafka <https://kafka.apache.org>`_ as well as `Azure Event Hubs for Apache Kafka <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview>`_.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "_id": "id-of-system",
+        "name": "Name of system",
+        "type": "system:kafka",
+        "bootstrap_servers": "localhost:9092,otherhost:9092",
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``bootstrap_servers``
+     - String
+     - Comma separated list of bootstrap servers with hostname and port. For Azure Event Hubs this should be set to ``<fqdn>:9093``.
+     -
+     - Yes
+
+   * - ``sasl_username``
+     - String
+     - Username to use when authentication against a SASL enabled Kafka cluster. If username is set, authentication will be performed.
+       For Azure Event Hubs this property must be set to ``$ConnectionString`` and the connection string should be passed as the
+       password.
+     -
+     - No
+
+
+   * - ``sasl_password``
+     - String
+     - Password to use when authentication against a SASL enabled Kafka cluster. For Azure Event Hubs this should be set to ``Endpoint=sb://[...]``.
+     -
+     - No
 
 
 .. _rdf_registry:

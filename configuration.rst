@@ -2248,8 +2248,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _ldap_source:
 
-The LDAP source (Experimental)
-------------------------------
+The LDAP source
+---------------
 
 The LDAP source provides entities from a `LDAP catalog <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_
 configured by a :ref:`LDAP system <ldap_system>`.
@@ -2764,100 +2764,6 @@ configuration, which is omitted here for brevity.
                 "  ?subject ?property ?value .",
                 "} FILTER (?subject = <${uri}>)",
             ]
-        },
-    }
-
-.. _kafka_source:
-
-The Kafka source
------------------
-
-The Kafka source consumes data from a Kafka topic. The consumer stores the offset in the pipe, and does not commit the consumer offset back to Kafka.
-
-The entities emitted from this source has offset, partition, timestamp, value and key as properties. Message keys in Kafka can be any bytes, but the source will try to utf-8 decode the key and add that as the ``_id`` property.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "kafka",
-        "system": "kafka-system-id",
-        "topic": "some-topic"
-    }
-
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``system``
-     - String
-     - The id of the :ref:`Kafka System <kafka_system>` component to use.
-     -
-     - Yes
-
-   * - ``topic``
-     - String
-     - The topic to consume from.
-     -
-     - Yes
-
-   * - ``partitions``
-     - List<Integer>
-     - Manual assignment of partitions if only a subset of the topic is to be consumed by this pipe. In Azure Event Hubs this property
-       has to be set for assignment to work for now.
-     - <All>
-     - No (Yes for Event Hubs)
-
-   * - ``seek_to_beginning``
-     - Boolean
-     - If the consumer should start from the beginning of the topic or only consume new messages. This only applies to the first run,
-       subsequent runs will continue where it left off unless the pipe is reset.
-     - false
-     -
-
-   * - ``ignore_null_keys``
-     - Boolean
-     - If the consumer should drop messages that does not have keys.
-     - true
-     -
-
-   * - ``consumer_timeout_ms``
-     - Integer
-     - The pipe will consume all available messages from the topic. Once all messages has been consumed it will wait for this period of
-       time until it will complete. Note that for topics that receives new messages more often than this interval the pipe will never
-       complete.
-     - 60000
-     -
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>`
-configuration, which is omitted here for brevity.
-
-::
-
-    {
-        "source": {
-            "type": "kafka",
-            "system": "my-kafka",
-            "consumer_timeout_ms": 5000,
-            "ignore_null_keys": false,
-            "partitions": [0, 1],
-            "seek_to_beginning": true,
-            "topic": "foo"
         },
     }
 
@@ -4206,8 +4112,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sms_message_sink:
 
-The SMS message sink (Experimental)
------------------------------------
+The SMS message sink
+--------------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
@@ -4947,8 +4853,8 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
 
 .. _mail_message_sink:
 
-The Email Message sink (Experimental)
--------------------------------------
+The Email Message sink
+----------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
@@ -5817,73 +5723,6 @@ Example input entities:
         }
     ]
 
-.. _kafka_sink:
-
-The Kafka sink
------------------
-
-The Kafka sink produces data to a Kafka topic.
-
-Entities sent to this sink will use the key, value and partition properties if present, otherwise the key will be utf-8 encoded version of ``_id`` and the value will be the entire entity. If partition is not specified, the partitioning will be based on the key.
-
-The properties used matches the properties emitted by the :ref:`Kafka source <kafka_source>`. This means that it should be possible to consume a topic and produce to a new topic in a pipe with no DTL.
-
-The sink will flush to Kafka after every batch.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "kafka",
-        "system": "kafka-system-id",
-        "topic": "some-topic"
-    }
-
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``system``
-     - String
-     - The id of the :ref:`Kafka System <kafka_system>` component to use.
-     -
-     - Yes
-
-   * - ``topic``
-     - String
-     - The topic to send to.
-     -
-     - Yes
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>`
-configuration, which is omitted here for brevity.
-
-::
-
-    {
-        "sink": {
-            "type": "kafka",
-            "system": "my-kafka",
-            "topic": "foo"
-        },
-    }
-
-
 
 .. _system_section:
 
@@ -6713,8 +6552,8 @@ Example configuration
 
 .. _smtp_system:
 
-The SMTP system (Experimental)
-------------------------------
+The SMTP system
+---------------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
 server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_message_sink>` to construct
@@ -6916,8 +6755,8 @@ Example configuration
 
 .. _twilio_system:
 
-The Twilio system (Experimental)
---------------------------------
+The Twilio system
+-----------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
 :ref:`SMS message sinks <sms_message_sink>` to construct and send SMS messages from entities.
@@ -7608,59 +7447,6 @@ Example configuration
             }
         }
     }
-
-.. _kafka_system:
-
-The Kafka system (Experimental)
---------------------------------------
-
-This system can be used to read and write data from `Apache Kafka <https://kafka.apache.org>`_ as well as `Azure Event Hubs for Apache Kafka <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview>`_.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "_id": "id-of-system",
-        "name": "Name of system",
-        "type": "system:kafka",
-        "bootstrap_servers": "localhost:9092,otherhost:9092",
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``bootstrap_servers``
-     - String
-     - Comma separated list of bootstrap servers with hostname and port. For Azure Event Hubs this should be set to ``<fqdn>:9093``.
-     -
-     - Yes
-
-   * - ``sasl_username``
-     - String
-     - Username to use when authentication against a SASL enabled Kafka cluster. If username is set, authentication will be performed.
-       For Azure Event Hubs this property must be set to ``$ConnectionString`` and the connection string should be passed as the
-       password.
-     -
-     - No
-
-
-   * - ``sasl_password``
-     - String
-     - Password to use when authentication against a SASL enabled Kafka cluster. For Azure Event Hubs this should be set to ``Endpoint=sb://[...]``.
-     -
-     - No
 
 .. _pump_section:
 
