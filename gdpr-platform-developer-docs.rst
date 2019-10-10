@@ -1220,7 +1220,7 @@ Properties
      - A string value containing either an email address or a phone number for the user. It is used to send
        messages to the user about processing of their access request.
      -
-     - Yes
+     -
 
    * - ``gdpr-access-request:contactinfo-type``
      - String (enum)
@@ -1238,7 +1238,7 @@ Properties
      - String
      - A descriptive title for the access request
      -
-     - Yes
+     -
 
    * - ``gdpr-access-request:lang``
      - String
