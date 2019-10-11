@@ -21,6 +21,7 @@ For automation of the GDPR platform, there are several APIs/integration points a
 * :ref:`GDPR data type <gdpr_data_type>`
 * :ref:`GDPR policy <gdpr_policy>`
 * :ref:`GDPR custom translations <gdpr_custom_translations>`
+* :ref:`GDPR access request <gdpr_access_request>`
 
 These APIs are datasets with a defined data-structure that can be integrated with existing systems and associated
 :ref:`input <http_endpoint_source>` and :ref:`output <http_endpoint_sink>` published endpoints for JSON input
@@ -1155,6 +1156,132 @@ language key to add text for a new language. Please do not change the macros emb
 
 After saving the ``custom-translations`` pipe, make sure you press "start" on the pipe to update the GDPR platform
 contents. Note that the changes will not affect already emitted notifications or objects - only new ones.
+
+
+.. _gdpr_access_request:
+
+GDPR access request
+===================
+
+The GDPR access request dataset contains entities about access requests with the following datastructure:
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+      "gdpr-access-request:access-request-id": "unique-ID-for-access-request",
+      "gdpr-access-request:title": "A descriptive title for the access request",
+      "gdpr-access-request:user-id": "unique-identifier-for-the-user-the-request-is-about",
+      "gdpr-access-request:contactinfo": "email-or-phone-number-to-contact-user",
+      "gdpr-access-request:contactinfo-type": "email|phone_number",
+      "gdpr-access-request:delete-request": "true|false",
+      "gdpr-access-request:lang": "iso-code",
+      "gdpr-access-request:public-key": "-----BEGIN PGP PUBLIC KEY BLOCK----- <key data> -----END PGP PUBLIC KEY BLOCK-----\r\n\r\n",
+    }
+
+
+Any additional properties not part of the defined set of input properties will be passed through to the outgoing API.
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``gdpr-access-request:access-request-id``
+     - String
+     - A unique ID for the access request
+     -
+     - Yes
+
+   * - ``gdpr-access-request:user-id``
+     - String
+     - A string value to match this access request data subject to other access requests from the same data subject.
+     -
+     - Yes
+
+   * - ``gdpr-access-request:public-key``
+     - String
+     - A string value containing the PGP Public Key (PK) for the user. It is used to encrypt user-data collected about
+       the user before it is stored and further processed by the GDPR platform. The user can then download and
+       decrypt his or her data using their corresponding Private Key.
+     -
+     - Yes
+
+   * - ``gdpr-access-request:contactinfo``
+     - String
+     - A string value containing either an email address or a phone number for the user. It is used to send
+       messages to the user about processing of their access request.
+     -
+     -
+
+   * - ``gdpr-access-request:contactinfo-type``
+     - String (enum)
+     - A string value containing either ``email`` or ``phone_number``. It's used to determine the method of contacting the user (optional)
+     - ``email``
+     -
+
+   * - ``gdpr-access-request:delete-request``
+     - String (boolean)
+     - A string value containing either ``false`` or ``true``. It's used to determine if the access request is a delete request or not (optional)
+     - ``false``
+     -
+
+   * - ``gdpr-access-request:title``
+     - String
+     - A descriptive title for the access request
+     -
+     -
+
+   * - ``gdpr-access-request:timestamp``
+     - String
+     - A ISO date (in UTC time zone) with the time the access request was registered in the GDPR DAP. Note that this property only exists
+       in the outgoing API - if present in the incoming data, it will be overwritten.
+     -
+     -
+
+   * - ``gdpr-access-request:lang``
+     - String
+     - A ISO code specifying the language of the access request (for example "en" or "en-GB").
+       It is a concatenation of the two-letter ISO 639 language code with the two letter ISO 3166 country code,
+       using a hyphen (``"-"``) character as a separator. The ISO 3166 part is optional. It is among other things used to determine the
+       language used in generated messages sent to the user by the GDPR Data Access Portal (via email or SMS) (optional). If not
+       set, the default value used is configured in the GDPR Data Access Portal.
+     -
+     -
+
+Input API
+^^^^^^^^^
+
+The input API for the gdpr access request dataset is the ``gdpr-access-request-in`` :ref:`HTTP endpoint <http_endpoint_source>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/receivers/gdpr-access-request-in/entities
+
+The endpoint expects JSON data on the form outlined above and implements the :doc:`JSON Push Protocol <json-push>` (receiver/sink).
+
+Output API
+^^^^^^^^^^
+
+The output API for the gdpr access request dataset is the ``gdpr-access-request-out`` :ref:`HTTP endpoint <http_endpoint_sink>` pipe.
+Its URL is on the form:
+
+::
+
+    https://gdpr-platform-datahub-url/api/publishers/gdpr-access-request-out/entities
+
+The endpoint implements the :doc:`JSON Push Protocol <json-push>` (source).
 
 .. _gdpr_unstructured_data:
 
