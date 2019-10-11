@@ -1182,6 +1182,8 @@ Prototype
     }
 
 
+Any additional properties not part of the defined set of input properties will be passed through to the outgoing API.
+
 Properties
 ^^^^^^^^^^
 
@@ -1234,9 +1236,16 @@ Properties
      - ``false``
      -
 
-   * - ``gdpr-policy:title``
+   * - ``gdpr-access-request:title``
      - String
      - A descriptive title for the access request
+     -
+     -
+
+   * - ``gdpr-access-request:timestamp``
+     - String
+     - A ISO date (in UTC time zone) with the time the access request was registered in the GDPR DAP. Note that this property only exists
+       in the outgoing API - if present in the incoming data, it will be overwritten.
      -
      -
 
