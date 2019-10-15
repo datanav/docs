@@ -6,6 +6,7 @@ Overview
    :depth: 2
    :local:
 
+.. _overview-introduction:
 
 Introduction
 ------------
@@ -19,6 +20,7 @@ The final piece of Sesam is to deliver data from a dataset to a :ref:`sink <sink
 
 Sesam provides implementations for many types of :ref:`sources <source_section>`, including :ref:`relational databases <sql_source>` and custom JSON streams. It also provides a number of core Sink implementations such as the :ref:`relational database <sql_sink>` and :ref:`HTTP endpoint sinks <http_endpoint_sink>`.
 
+.. _overview-installation:
 
 Installation
 ------------
@@ -27,6 +29,8 @@ You must sign up using the `Sesam Portal <https://portal.sesam.io/>`__ to instal
 You can also access an existing Sesam installation by registering in the Sesam Portal and obtaining an invitation from someone with management permissions for the existing installation.
 
 Once you have have access to a running Sesam installation in the portal, you can access the Sesam Management Studio by clicking on its name on the home page in the Portal.
+
+.. _overview-license:
 
 License
 -------
