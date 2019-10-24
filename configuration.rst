@@ -3822,6 +3822,12 @@ Properties
      - ``1000000``
      - No
 
+   * - ``prevent_multiple_versions``
+     - Boolean
+     - If ``true`` then the pipe will fail if a new version of an existing entity is attempted written to the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written to the sink dataset.
+     - ``false``
+     - No
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^

@@ -5,6 +5,7 @@ Changelog
 ----------
 * Added the :ref:`hex <hex_dtl_function>` DTL function.
 * Updated the :ref:`integer <integer_dtl_function>` DTL function to parse hexadecimal values.
+* The :ref:`dataset sink <dataset_sink>` now has a property called ``prevent_multiple_versions`` that makes the pipe fail if an entity already exists in the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written.
 
 2019-10-07
 ----------
