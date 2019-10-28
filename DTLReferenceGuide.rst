@@ -1864,6 +1864,9 @@ Numbers
          is given, values that don't parse as integers will be silently ignored.
          If not, the evaluated value from the default expression will be used
          as a replacement value.
+       |
+       | Values that starts with ``"0x"`` are parsed as hexadecimal values in two's complement
+         format.
      - | ``["integer", "1"]``
        |
        | Returns one integer: 1.
@@ -1891,6 +1894,16 @@ Numbers
        | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
          The URI value and the non-integer string value are replaced with the
          their respective string casts.
+       |
+       | ``["integer", "0x00ff"]``
+       |
+       | Returns one integer: 255.
+       |
+       |
+       | ``["integer", "0xff"]``
+       |
+       | Returns one integer: -1.
+       |
 
        .. _is_integer_dtl_function:
    * - ``is-integer``
@@ -2066,6 +2079,31 @@ Numbers
        | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
        |
        | Returns false.
+
+       .. _hex_dtl_function:
+   * - ``hex``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to a string containing an hexadecimal representation of the value
+         in two's complement format.
+       | Values that don't parse as integers will be silently ignored.
+     - | ``["hex", 1]``
+       |
+       | Returns one string: ``"0x01"``.
+       |
+       | ``["hex", 255]``
+       |
+       | Returns one string: ``"0x00ff"``.
+       |
+       | ``["hex", -1]``
+       |
+       | Returns one string: ``"0xff"``.
+       |
+       | ``["hex",``
+       |   ``["list", 1, "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |
+       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
 
 
 Date and time
