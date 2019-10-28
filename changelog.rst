@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2010-10-28
+----------
+* Added the :ref:`hex <hex_dtl_function>` DTL function.
+* Updated the :ref:`integer <integer_dtl_function>` DTL function to parse hexadecimal values.
+
 2019-10-07
 ----------
 * :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_message_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_message_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
