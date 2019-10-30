@@ -3822,6 +3822,18 @@ Properties
      - ``1000000``
      - No
 
+   * - ``prevent_multiple_versions``
+     - Boolean
+     - If ``true`` then the pipe will fail if a new version of an existing entity is attempted written to the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written to the sink dataset.
+     - ``false``
+     - No
+
+   * - ``suppress_filtered``
+     - Boolean
+     - The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``true`` [*]. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
+     - ``false`` [*]
+     - No
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
