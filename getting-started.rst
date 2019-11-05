@@ -71,7 +71,7 @@ You should now have several pipes available. As a sanity check you can select **
     :align: center
     :alt: Generic pipe concept
 
-Repeat these steps for **azure-person**, **firebase-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
+Repeat these steps for **hr-system**, **azure-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
 
 .. _getting-started-sesam-overview:
 
@@ -279,17 +279,17 @@ Example of an entity with namespaces:
    "user:manager": "~:users:101" 
    } 
 
-Namespace identifiers are recommended way for referring datasets for matching properties during transformations. Suppose, if you have three different person datasets and you want to merge on some common properties, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier, based on common SSN properties between datasets **"crm-person"** and **"firebase-person"** during transformation inside DTL of **"crm-person"**. Same way, we need to create a namespace identifier between **"azure-person"** and **"firebase-person"** datasets so that we can refer them during merging.
+Namespace identifiers are recommended way for referring datasets for matching properties during transformations. Suppose, if you have three different person datasets and you want to merge on some common properties, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier, based on common SSN properties between datasets **"crm-person"** and **"erp-person"** during transformation inside DTL of **"crm-person"**. Same way, we need to create a namespace identifier between **"hr-person"** and **"erp-person"** datasets so that we can refer them during merging.
 
 ::
 
-  ["make-ni", "firebase-person", "SSN"],
+  ["make-ni", "erp-person", "SSN"],
 
 This will produce the following output:
 
 ::
 
-  "crm-person:SSN-ni": "~:firebase-person:23072451376",
+  "crm-person:SSN-ni": "~:erp-person:23072451376",
 
 Now, you have unique namespace identifiers based on SSN, which you can refer now.
 
@@ -300,16 +300,16 @@ Now, you have unique namespace identifiers based on SSN, which you can refer now
     "type": "pipe", 
     "source": { 
         "type": "merge", 
-        "datasets": ["crm-person cp", "azure-person ap", "firebase-person fp"], 
+        "datasets": ["crm-person cp", "hr-person hp", "erp-person ep"], 
         "equality": [ 
-            ["eq", "cp.SSN-ni", "fp.$ids"], 
-            ["eq", "ap.SSN-ni", "fp.$ids"] 
+            ["eq", "cp.SSN-ni", "ep.$ids"], 
+            ["eq", "hp.SSN-ni", "ep.$ids"] 
         ], 
         "identity": "first", 
         "version": 2 
     }
 
-In the above code we are connecting the foreign keys, **"SSN-ni"** of **"azure-person"** and **"crm-person"** with the primary key, **"$ids"**, of **"firebase-person"**. You do not need to add the third equality between **"azure-person"** and **"crm-person"** as it will happen automatically.
+In the above code we are connecting the foreign keys, **"SSN-ni"** of **"hr-person"** and **"crm-person"** with the primary key, **"$ids"**, of **"erp-person"**. You do not need to add the third equality between **"hr-person"** and **"crm-person"** as it will happen automatically.
 
 Labs 3
 ^^^^^^
@@ -414,7 +414,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
                     "datasets": ["difi-postnummer dip"], 
                     "where": [ 
                         ["or", 
-                            ["eq", "_S.azure-person:ZipCode", "dip.postnummer"], 
+                            ["eq", "_S.hr-person:ZipCode", "dip.postnummer"], 
                             ["eq", "_S.crm-person:PostalCode", "dip.postnummer"] 
                         ] 
                     ] 
@@ -425,8 +425,8 @@ As you can see in the examples below we want to add the "City" and "Municipality
             Basically we prioritize the order on most trusted values."], 
             ["add", "zipcode", 
                 ["coalesce", 
-                    ["list", "_S.azure-person:ZipCode", "_S.crm-person:PostalCode", 
-                    "_S.firebase-person:ZipCode"] 
+                    ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", 
+                    "_S.erp-person:ZipCode"] 
                 ] 
             ] 
         ], 
@@ -456,7 +456,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
                       "datasets": ["difi-postnummer dip"], 
                       "where": [ 
                           ["or", 
-                              ["eq", "_S.azure-person:ZipCode", "dip.postnummer"], 
+                              ["eq", "_S.hr-person:ZipCode", "dip.postnummer"], 
                               ["eq", "_S.crm-person:PostalCode", "dip.postnummer"] 
                           ] 
                       ] 
@@ -466,8 +466,8 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
               dataset ,if it is null then it goes to crm-person dataset and so 
               on.basically we prioritize the order on most trusted values."], 
               ["add", "zipcode", 
-                  ["coalesce", ["list", "_S.azure-person:ZipCode", 
-                  "_S.crm-person:PostalCode", "_S.firebase-person:ZipCode"] 
+                  ["coalesce", ["list", "_S.hr-person:ZipCode", 
+                  "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"] 
               ] 
           ] 
       ], 
