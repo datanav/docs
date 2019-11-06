@@ -29,10 +29,10 @@ User accounts
 =============
 
 In order to use the Management Studio you first need to log in with your user credentials. You can either
-authenticate via a third party authentication provider (as for example Google or Microsoft Live), or create
+authenticate via a third party authentication provider (as for example Google or Azure), or create
 a user-account directly in the Management Studio.
 
-Your user account is uniquely identified by the email-address. That means that it is possible to use multiple
+Your user-account is uniquely identified by the email-address. That means that it is possible to use multiple
 authentication providers to log in as the same user, as long as the user credentials from the various authentication
 providers contain the same email address.
 
