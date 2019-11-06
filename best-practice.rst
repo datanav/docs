@@ -57,7 +57,7 @@ There are three sources containing person data as shown below. If any target sys
 
   HR system
   {
-     "_id": "hrsystem-person:02023688018",
+     "_id": "hr-person:02023688018",
     "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
     "hrsystem-person:Gender": "male",
   }
@@ -68,14 +68,14 @@ There are three sources containing person data as shown below. If any target sys
       "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
       "crm-person:ID:”100”
       "crm-person:SSN": "02023688018",
-      "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
+      "crm-person:SSN-ni": "~:hr-person:02023688018",
     }
 
   ERP
   {
      "_id": "erp-person:0202",
      "erp-person:SSN": "02023688018",
-     "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
+     "erp-person:SSN-ni": "~:hr-person:02023688018",
      "erp-person:ID:”0202”
      "erp-person:country":"NO"
   }
@@ -89,12 +89,12 @@ The dataset below is what a global dataset of the above three datasets looks lik
   {
     "$ids": [
     "~:crm-person:100",
-    "~:hrsystem-person:02023688018",
+    "~:hr-person:02023688018",
     "~:erp-person:0202"
     ],
     "_id": "crm-person:100",
-    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hrsystem-person:Gender": "male",
+    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hr-person:Gender": "male",
     "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
     "crm-person:ID:”100”
     "crm-person:SSN": "02023688018",
@@ -143,7 +143,7 @@ Namespace
 =========
 
 A namespace consists of two parts: a namespace and a property. The namespace part can consist of any characters, ending with a colon. The property part can consist of any character except colons.
-In the example below, **"crm-person"** and **"hrsystem-person"** are namespaces and **"SSN"** is the property.
+In the example below, **"crm-person"** and **"hr-person"** are namespaces and **"SSN"** is the property.
 
 E.g.
 
@@ -151,7 +151,7 @@ E.g.
    
   "crm-person:ssn"
 
-  "hrsystem-person:ssn"
+  "hr-person:ssn"
 
 Namespaced identifiers
 ======================
@@ -162,21 +162,21 @@ A namespaced identifier may take the following form:
 
 ::
 
-  "hrsystem-person:SSN-ni":"~:hrsystem-person:18057653453"
+  "hr-person:SSN-ni":"~:hr-person:18057653453"
 
   "namespace:propertyName":"namespaced-identifier:value"
 
-Using namespace identifiers is a recommended way of referring to datasets for matching properties during transformations to ease connection of data. If you have three different person datasets, and you want to merge on a common property, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"crm-person"** and **"erp-person"** during transformation inside DTL of **"crm-person"**. In a similar way, we need to create a namespace identifier between **"hrsystem-person"** and **"erp-person"** datasets so that we can refer to them during merging.
+Using namespace identifiers is a recommended way of referring to datasets for matching properties during transformations to ease connection of data. If you have three different person datasets, and you want to merge on a common property, like e-mail or SSN, then we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"crm-person"** and **"erp-person"** during transformation inside DTL of **"crm-person"**. In a similar way, we need to create a namespace identifier between **"hr-person"** and **"erp-person"** datasets so that we can refer to them during merging.
 
 ::
 
-["make-ni", "hrsystem-person", "SSN"],
+["make-ni", "hr-person", "SSN"],
 
 This will produce the following output:
 
 ::
 
-  "crm-person:SSN-ni": "~:hrsystem-person:23072451376",
+  "crm-person:SSN-ni": "~:hr-person:23072451376",
 
 Now, you have unique namespace identifiers based on SSN, which you can refer now.
 
@@ -187,7 +187,7 @@ Now, you have unique namespace identifiers based on SSN, which you can refer now
     "type": "pipe", 
     "source": { 
         "type": "merge", 
-        "datasets": ["crm-person cp", "hrsystem-person hr", "erp-person ep"], 
+        "datasets": ["crm-person cp", "hr-person hr", "erp-person ep"], 
         "equality": [ 
             ["eq", "cp.SSN-ni", "hr.$ids"], 
             ["eq", "ep.SSN-ni", "hr.$ids"] 
@@ -197,7 +197,7 @@ Now, you have unique namespace identifiers based on SSN, which you can refer now
     }
 
 In the above code we are connecting the foreign keys **"SSN-ni"** of **"erp-person"** and **"crm-person"** with the primary key **"$ids"** of 
-**"hrsystem-person"**. You do not need to add the third equality between **"erp-person"** and **"crm-person"** as it will happen automatically.
+**"hr-person"**. You do not need to add the third equality between **"erp-person"** and **"crm-person"** as it will happen automatically.
 
 By default, namespaced identifiers are stripped from the output.
 
@@ -373,13 +373,13 @@ In the example below, all three sources provide a **zip-code**, such that some p
   {
     "$ids": [
     "~:crm-person:100",
-    "~:hrsystem-person:02023688018",
+    "~:hr-person:02023688018",
     "~:erp-person:0202"
     ],
     "_id": "crm-person:100",
-    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hrsystem-person:Gender": "male",
-    "hrsystem-person:ZipCode": "null",
+    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hr-person:Gender": "male",
+    "hr-person:ZipCode": "null",
     "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
     "crm-person:ID":"100",
     "crm-person:SSN": "02023688018",
@@ -396,7 +396,7 @@ In addition to the zip-code from the 3 different data sources, the "global-perso
 
 ::
 
-"hrsystem-person:ZipCode": null,
+"hr-person:ZipCode": null,
 "crm-person:PostalCode": "3732",
 "erp-person:ZipCode": "5003",
 "global-person:zipcode": "3732"
