@@ -470,7 +470,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
                   "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"] 
               ] 
           ] 
-      ], 
+      ],  
       "foobar": [ 
           ["add", "Municipality", "_S.kommunenavn"], 
           ["add", "City", "_S.poststed"] 
