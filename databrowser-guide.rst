@@ -707,3 +707,13 @@ instance).
 This is useful if you have more than one databrowser instance and you want to copy
 configuration from one instance to another (for instance from a test-instance to a
 -instance).
+
+Databrowser API Reference
+-------------------------
+
+..
+   TODO pull swagger from somewhere instead of having a copy here
+.. openapi:: ./swagger.yaml
+
+
+

@@ -1864,6 +1864,9 @@ Numbers
          is given, values that don't parse as integers will be silently ignored.
          If not, the evaluated value from the default expression will be used
          as a replacement value.
+       |
+       | Values that starts with ``"0x"`` are parsed as hexadecimal values in two's complement
+         format.
      - | ``["integer", "1"]``
        |
        | Returns one integer: 1.
@@ -1891,6 +1894,16 @@ Numbers
        | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
          The URI value and the non-integer string value are replaced with the
          their respective string casts.
+       |
+       | ``["integer", "0x00ff"]``
+       |
+       | Returns one integer: 255.
+       |
+       |
+       | ``["integer", "0xff"]``
+       |
+       | Returns one integer: -1.
+       |
 
        .. _is_integer_dtl_function:
    * - ``is-integer``
@@ -2066,6 +2079,31 @@ Numbers
        | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
        |
        | Returns false.
+
+       .. _hex_dtl_function:
+   * - ``hex``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to a string containing an hexadecimal representation of the value
+         in two's complement format.
+       | Values that don't parse as integers will be silently ignored.
+     - | ``["hex", 1]``
+       |
+       | Returns one string: ``"0x01"``.
+       |
+       | ``["hex", 255]``
+       |
+       | Returns one string: ``"0x00ff"``.
+       |
+       | ``["hex", -1]``
+       |
+       | Returns one string: ``"0xff"``.
+       |
+       | ``["hex",``
+       |   ``["list", 1, "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |
+       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
 
 
 Date and time
@@ -3545,23 +3583,6 @@ Entity lookups
      - Description
      - Examples
 
-   * - ``reference``
-     - | *Arguments:*
-       |   DATASET_ID(string{1})
-       |   ENTITY_IDS(value-expression{})
-       |
-       | Returns a URI that can be used to reference entities in the given
-         dataset. The DATASET_ID and ENTITY_IDS parts will be URI path
-         encoded. URIs of this type can be resolved using the ``lookup`` function.
-     - | ``["reference", "foo", "bar"]``
-       |
-       | Returns ``"~rsesam:foo/bar"`` (which is a value of the URI datatype)).
-       |
-       | ``["reference", "foo", ["list", "a", "b"]]``
-       |
-       | Returns ``["~rsesam:foo/a", "~rsesam:foo/b"]``.
-       |
-
        .. _lookup_entity_function:
    * - ``lookup-entity``
      - | *Arguments:*
@@ -3574,6 +3595,13 @@ Entity lookups
        | Looks up the entity with the ``_id`` property value of ``foo`` in the ``code-table`` dataset.
        | Note that the dataset referenced has to be populated before the DTL transform can run.
        | If the entity doesn't exist in the dataset, ``null`` is returned.
+
+       .. WARNING::
+
+          This function does not support dependency tracking, so if
+          the entity that is looked up changes then you may want to
+          reset the pipe. This will not happen automatically.
+
 
 Namespaced identifiers
 ----------------------
@@ -4620,7 +4648,7 @@ Hashing
      - | ``["hash128", "murmur3", "abc"]``
        |
        | Returns ``79267961763742113019008347020647561319``.
-       | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]``
+       | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]]``
        |
        | Returns ``[[79267961763742113019008347020647561319,``
        |           ``114697464648834432121201791580882983835]]``.

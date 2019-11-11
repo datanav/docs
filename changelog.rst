@@ -1,6 +1,29 @@
 Changelog
 =========
 
+2019-10-28
+----------
+* Added the :ref:`hex <hex_dtl_function>` DTL function.
+* Updated the :ref:`integer <integer_dtl_function>` DTL function to parse hexadecimal values.
+* The :ref:`dataset sink <dataset_sink>` now has a property called ``prevent_multiple_versions`` that makes the pipe fail if an entity already exists in the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written.
+* The :ref:`dataset sink <dataset_sink>` now has a property called ``suppress_filtered``. The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false``. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
+  
+2019-10-07
+----------
+* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_message_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_message_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+* The :ref:`reference <reference_function>` DTL function has been deprecated.
+* The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
+  
+2019-09-04
+----------
+* Index version 2 is now the default version for dataset indexes. This index implementation (version 2) supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset.
+
+2019-09-04
+----------
+* Added new :ref:`Pump finished overdue <pump_finished_overdue_notification_rule>` notification rule type.
+* Added new :ref:`Pump failed <pump_failed_notification_rule>` notification rule type.
+
+
 2019-08-27
 ----------
 * DTL :ref:`property path strings <path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``. 
@@ -32,7 +55,7 @@ Changelog
 
 2019-03-22
 ----------
-* The ``lookup`` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
+* The :ref:`lookup <lookup_function>` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
 
 2019-03-14
 ----------
