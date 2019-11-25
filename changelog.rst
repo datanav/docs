@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2019-11-25
+----------
+* The :ref:`RDF source <rdf_source>` will no longer add the ``<rdflibtoplevelelement>`` root wrapper element to literals with datatype ``http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral``. This is a breaking change.
+
+
 2019-10-28
 ----------
 * Added the :ref:`hex <hex_dtl_function>` DTL function.
