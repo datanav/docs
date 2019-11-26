@@ -12,8 +12,7 @@ General
 =======
 
 The *Sesam* service is configured using one or more `JSON <https://en.wikipedia.org/wiki/JSON>`_ files.
-These configuration files can be imported through the service API, e.g. using the ``sesam``
-:doc:`command line client <commandlineclient>`. They can also be created and edited using the :doc:`Sesam Management Studio <management-studio>`.
+These configuration files can be imported through the service API. They can also be created and edited using the :doc:`Sesam Management Studio <management-studio>`.
 
 Conceptually, the configuration files contains definitions for *Systems* and *Pipes*.
 
@@ -46,8 +45,7 @@ Environment variables
 =====================
 
 You can insert the values of environment variables into configuration using the syntax "$ENV(variable)" in place of
-property values. You can manage these environment variables using the :doc:`Sesam client <commandlineclient>` or
-using a HTTP client with the :ref:`Environment Manager API <api-reference>`.
+property values. You can manage these environment variables using a HTTP client with the :ref:`Environment Manager API <api-reference>`.
 
 An example, given a uploaded environment variable JSON file containing:
 
