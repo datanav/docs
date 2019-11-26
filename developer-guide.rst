@@ -9,7 +9,6 @@ Developer Guide
    Entity Data Model <entitymodel>
    Data Transformation Language (DTL) <DTLReferenceGuide>
    Service API <api>
-   Command Line Client <commandlineclient>
    Developer Extension Points <extension-points>
    JSON Pull Protocol <json-pull>
    JSON Push Protocol <json-push>

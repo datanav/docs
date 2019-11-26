@@ -26,15 +26,6 @@ at "<host:port>/api/reference".
 
 Most API calls will require you to authenticate using a `JWT token <https://jwt.io/>`_ .
 
-When using the :doc:`Sesam command line client <commandlineclient>`  you can get a token using its ``login`` command:
-
-::
-
-  sesam login --server_base_url https://instance-guid.sesam.cloud/api
-
-This will prompt you for your username and password, download a JWT token and store it locally. All subsequent
-``sesam client`` commands will then use this token.
-
 .. _using_jwt_token:
 
 You can also use a commandline tool like `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
