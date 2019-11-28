@@ -34,7 +34,7 @@ Sign up
 
 Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and sign up.
 
-Once you've signed up you'll see this page. Click on Request private trail.
+Once you've signed up you'll see this page. Click on Request private trial.
 
 .. image:: images/getting-started/dashboard-view.png
     :width: 800px
@@ -347,7 +347,7 @@ The :ref:`hops <hops_function>` function joins two datasets and returns the enti
         "rules": {​ 
             "default": [​ 
                 ["copy", "*"],​
-                ["add", "order-data"​ 
+                ["add", "order-data"​, 
                     ["hops", {​ 
                         "datasets": ["global-orders glo"],​ 
                         "where": [​ 
@@ -369,7 +369,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 4 <getting
 
 Apply-hops
 ==========
-There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined **["apply"]** and **["hops"]** function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the **["apply"]** function here. 
+There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined **["apply"]** and **["hops"]** function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the **["apply"]** function :ref:`here <hops_function>` 
 
 ::
 
@@ -420,7 +420,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
                     ] 
                 }] 
             ], 
-            ["comment", "Below code will first check zipcode in azure-person 
+            ["comment", "Below code will first check zipcode in hr-person 
             dataset ,if it is null then it goes to crm-person dataset and so on. 
             Basically we prioritize the order on most trusted values."], 
             ["add", "zipcode", 
@@ -462,7 +462,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
                       ] 
                   }] 
               ], 
-              ["comment", "Below code will first check zipcode in azure-person 
+              ["comment", "Below code will first check zipcode in hr-person 
               dataset ,if it is null then it goes to crm-person dataset and so 
               on.basically we prioritize the order on most trusted values."], 
               ["add", "zipcode", 
