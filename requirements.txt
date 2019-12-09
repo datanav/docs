@@ -3,7 +3,7 @@ CommonMark==0.7.4
 
 # We must install guzzle_sphinx_theme from source, since we need a 'Sphinx.set_translator'-related fix that isn't
 # available in the version on pypy. If a new version is released on pypy we should switch back to that instead.
-git+git://github.com/guzzle/guzzle_sphinx_theme.git@06a0a1dc923f70b2d4058fb8abc5a30c5f5eff84
+cdgit+git://github.com/guzzle/guzzle_sphinx_theme.git@06a0a1dc923f70b2d4058fb8abc5a30c5f5eff84
 
 sesamclient==0.2.68
 sphinx-argparse==0.2.1
