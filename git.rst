@@ -4,52 +4,183 @@
 How to deal with different git scenarios
 ========================================
 
-
 Set up a new git project for Sesam
 ----------------------------------
 
 Initial repository setup
 ========================
-
-The initial repo should contain two main branches with an infinite lifetime.
+The initial repository should contain two main branches with an infinite lifetime.
 Parallel to the master branch, another branch should exist, called develop.
-master
-develop
+
+**master**
+
+**develop**
 
 We consider origin/master to be the main branch where the source code always reflects a production-ready state.
 We consider origin/develop to be the main branch where the source code always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”.
-When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master branch and then tagged with a release number.
-Therefore, each time when changes are merged back into master, this is a new production release by definition. We are very strict at this to follow this practice.
 
-Supporting branches: 
+When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master branch and then tagged with a release number.
+
+Therefore, each time when changes are merged back into master, this is a new production release by definition. 
+We are very strict at this to follow this practice.
+
+**Supporting branches**
+
 Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems.
+
 Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.
 
 The different types of branches we may use are:
 
-Feature branches
-Release branches
-Hotfix branches
+*Feature branches*
+
+*Release branches*
+
+*Hotfix branches*
 
 Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets. 
 
-                            May branch off from:       Must merge back into:          Branch naming convention:
++-----------------+----------+-----------+-----------------------+-----------------------------------------------------------+
+| Branch Type     | May branch off from  | Must merge back into  |  Branch naming convention                                 |
++-----------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Feature branches | develop              |  develop              | Aything except master, develop, release-*, or hotfix-*    |
++-----------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Release branches | develop              |develop and master     | release-*                                                 |
++-----------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Hotfix branches  | master               | develop and master    | hotfix-*                                                  |
++-----------------+----------------------+-----------------------+-----------------------------------------------------------+
 
-Feature branches            develop                     develop                       anything except master, develop, release-*, or hotfix-*
+**One exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.**
 
-Release branches            develop                     develop and master            release-*
-
-Hotfix branches             master                      develop and master            hotfix-*
-
-The one exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.
-
-Feature branches
--------------------------------
+**feature branches**
 
 Creation :
-            $ git checkout -b myfeature develop
-            Switched to a new branch "myfeature"
+::
+        $ git checkout -b myfeature develop
+        
+        Switched to a new branch "myfeature"
 
+Incorporating a finished feature on develop :
+::
+        $ git checkout develop
+        
+        Switched to branch 'develop'
+        
+        $ git merge --no-ff myfeature
+        
+        Updating ea1b82a..05e9557
+        
+        (Summary of changes)
+        
+        $ git branch -d myfeature
+        
+        Deleted branch myfeature (was 05e9557).
+        
+        $ git push origin develop
+
+Tip :The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
+
+**Release branches**
+
+Creation :
+::
+        $ git checkout -b release-1.2 develop
+        
+        Switched to a new branch "release-1.2"
+        
+        $ ./bump-version.sh 1.2
+        
+        Files modified successfully, version bumped to 1.2.  
+        
+        (Here, bump-version.sh is a fictional shell script that changes some files in the working copy to reflect the new version. (This          can of course be a manual change—the point being that some files change.) Then, the bumped version number is committed.))
+        
+        $ git commit -a -m "Bumped version number to 1.2"
+        
+        [release-1.2 74d9424] Bumped version number to 1.2
+        
+        1 files changed, 1 insertions(+), 1 deletions(-)
+
+Finishing a release branch :
+::
+        $ git checkout master
+        
+        Switched to branch 'master'
+        
+        $ git merge --no-ff release-1.2
+        
+        Merge made by recursive.
+        
+        (Summary of changes)
+        
+        $ git tag -a 1.2
+    
+The release is now done, and tagged for future reference.To keep the changes made in the release branch, we need to merge those back into develop, though. In Git:
+::
+        $ git checkout develop
+        
+        Switched to branch 'develop'
+        
+        $ git merge --no-ff release-1.2
+        
+        Merge made by recursive.
+        
+        (Summary of changes)
+
+        This step may well lead to a merge conflict (probably even, since we have changed the version number). If so, fix it and commit.
+        Now we are really done and the release branch may be removed, since we don’t need it anymore:
+
+        $ git branch -d release-1.2
+    
+        Deleted branch release-1.2 (was ff452fe).
+
+**Hotfix branches**
+
+Creation:
+::
+          $ git checkout -b hotfix-1.2.1 master
+          
+          Switched to a new branch "hotfix-1.2.1"
+          
+          $ ./bump-version.sh 1.2.1
+          
+          Files modified successfully, version bumped to 1.2.1.
+          
+          $ git commit -a -m "Bumped version number to 1.2.1"
+          
+          [hotfix-1.2.1 41e61bb] Bumped version number to 1.2.1
+          1 files changed, 1 insertions(+), 1 deletions(-)
+
+Finishing a hotfix branch :
+::
+           $ git checkout master
+          
+          Switched to branch 'master'
+          
+          $ git merge --no-ff hotfix-1.2.1
+          
+          Merge made by recursive.
+          
+          (Summary of changes)
+          
+          $ git tag -a 1.2.1
+
+          Next, include the bugfix in develop, too:
+    
+          $ git checkout develop
+          
+          Switched to branch 'develop'
+          
+          $ git merge --no-ff hotfix-1.2.1
+          
+          Merge made by recursive.
+          
+          (Summary of changes)
+
+Important : The one exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.
+::
+          $ git branch -d hotfix-1.2.1
+          
+          Deleted branch hotfix-1.2.1 (was abbe5d6).
 
 Now, Let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
 Actual steps:
@@ -155,7 +286,6 @@ When doing this, you might encounter conflicts. To resolve these, go to the ment
 When this is done, you should push your latest changes to github or similar and create a pull request with their GUI.
 
 
-
 Deploy a new feature
 --------------------
 
@@ -170,7 +300,6 @@ When you can't deploy everything in develop into master
 
     git checkout master -b revert/my_feature_branch
     ----
-
 
 
 branch from master, checkout files or cherry pick commits in develop you want to get into master
@@ -231,4 +360,3 @@ To fix it directly in production, use the following steps:
 1. Create an new hotfix branch from master:  ``git checkout master -b hotfix_for_my_feature``
 2. Do your changes and commit it to the hotfix branch.
 3. Create a PR for both master (production) and develop (to get the correct version for future development)
-
