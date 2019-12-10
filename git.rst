@@ -11,11 +11,48 @@ Set up a new git project for Sesam
 Initial repository setup
 ========================
 
-Development should be in a develop branch
-Master is generally the production environment and should only get changes through releases
+The initial repo should contain two main branches with an infinite lifetime.
+Parallel to the master branch, another branch should exist, called develop.
+master
+develop
 
-These steps are based on that you already have a directory with sesam config you want to put into a repo
-Actual steps
+We consider origin/master to be the main branch where the source code always reflects a production-ready state.
+We consider origin/develop to be the main branch where the source code always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”.
+When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master branch and then tagged with a release number.
+Therefore, each time when changes are merged back into master, this is a new production release by definition. We are very strict at this to follow this practice.
+
+Supporting branches: 
+Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems.
+Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.
+
+The different types of branches we may use are:
+
+Feature branches
+Release branches
+Hotfix branches
+
+Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets. 
+
+                            May branch off from:       Must merge back into:          Branch naming convention:
+
+Feature branches            develop                     develop                       anything except master, develop, release-*, or hotfix-*
+
+Release branches            develop                     develop and master            release-*
+
+Hotfix branches             master                      develop and master            hotfix-*
+
+The one exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.
+
+Feature branches
+-------------------------------
+
+Creation :
+            $ git checkout -b myfeature develop
+            Switched to a new branch "myfeature"
+
+
+Now, Let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
+Actual steps:
 The optimal directory structure of Sesam Node project should look like this:
 ::
 
@@ -42,10 +79,12 @@ Push your local repo to github::
 
     git push -u origin master
 
+    (Tip: Sometimes you need to first add and commit README.md file, to make your first push to remote repo.)
+
 
 Set up branches for development
 ===============================
-Since we want to use the master branch as the production branch, we need to setup a new branch called *￿develop* to use for development.
+Since we want to use the master branch as the production branch, we need to setup a new branch called *develop* to use for development.
 To do this we need to type the following in terminal::
 
     git checkout -b develop
@@ -57,7 +96,7 @@ This creates a new branch called develop that mirrors master. To push it to gith
 Now you should have two branches in github. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
 
 More information about pull requests can be read BELOW...
-
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
 
 
 Automatic tests
