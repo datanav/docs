@@ -40,17 +40,18 @@ The different types of branches we may use are:
 
 Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets. 
 
-+-----------------+----------+-----------+-----------------------+-----------------------------------------------------------+
-| Branch Type     | May branch off from  | Must merge back into  |  Branch naming convention                                 |
-+-----------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Feature branches | develop              |  develop              | Aything except master, develop, release-*, or hotfix-*    |
-+-----------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Release branches | develop              |develop and master     | release-*                                                 |
-+-----------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Hotfix branches  | master               | develop and master    | hotfix-*                                                  |
-+-----------------+----------------------+-----------------------+-----------------------------------------------------------+
++-------------+----------+-----------+-----------------------+-----------------------------------------------------------+
+| Branch Type | May branch off from  | Must merge back into  |  Branch naming convention                                 |
++-------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Feature      | develop              |  develop              | Aything except master, develop, release-*, or hotfix-*    |
++-------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Release      | master               |develop and master     | release-*                                                 |
++-------------+----------------------+-----------------------+-----------------------------------------------------------+
+|Hotfix       | master               | develop and master    | hotfix-*                                                  |
++-------------+----------------------+-----------------------+-----------------------------------------------------------+
 
 **One exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.**
+
 
 **feature branches**
 
@@ -84,21 +85,29 @@ Tip :The --no-ff flag causes the merge to always create a new commit object, eve
 
 Creation :
 ::
-        $ git checkout -b release-1.2 develop
+        $ git checkout -b release-1.0.0 master
         
-        Switched to a new branch "release-1.2"
+        Switched to a new branch "release-1.1.0"
         
-        $ ./bump-version.sh 1.2
+        $ ./bump-version.sh 1.1.0
         
-        Files modified successfully, version bumped to 1.2.  
+        Files modified successfully, version bumped to 1.1.0  
         
-        (Here, bump-version.sh is a fictional shell script that changes some files in the working copy to reflect the new version. (This          can of course be a manual change—the point being that some files change.) Then, the bumped version number is committed.))
+        (Here, bump-version.sh is a fictional shell script that changes some files in the working copy to reflect the new version. 
+        (This can of course be a manual change—the point being that some files change.) Then, the bumped version number is committed.))
+    
+        $ git commit -a -m "Bumped version number to 1.1.0"
         
-        $ git commit -a -m "Bumped version number to 1.2"
-        
-        [release-1.2 74d9424] Bumped version number to 1.2
+        [release-1.2 74d9424] Bumped version number to 1.1.0
         
         1 files changed, 1 insertions(+), 1 deletions(-)
+You must use `semantic versioning <https://semver.org>`_ for any of your releases to production. 
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards compatible manner, and
+3. PATCH version when you make backwards compatible bug fixes
 
 Finishing a release branch :
 ::
@@ -106,7 +115,7 @@ Finishing a release branch :
         
         Switched to branch 'master'
         
-        $ git merge --no-ff release-1.2
+        $ git merge --no-ff release-1.1.0
         
         Merge made by recursive.
         
@@ -120,7 +129,7 @@ The release is now done, and tagged for future reference.To keep the changes mad
         
         Switched to branch 'develop'
         
-        $ git merge --no-ff release-1.2
+        $ git merge --no-ff release-1.1.0
         
         Merge made by recursive.
         
@@ -129,25 +138,25 @@ The release is now done, and tagged for future reference.To keep the changes mad
         This step may well lead to a merge conflict (probably even, since we have changed the version number). If so, fix it and commit.
         Now we are really done and the release branch may be removed, since we don’t need it anymore:
 
-        $ git branch -d release-1.2
+        $ git branch -d release-1.1.0
     
-        Deleted branch release-1.2 (was ff452fe).
+        Deleted branch release-1.1.0 (was ff452fe).
 
 **Hotfix branches**
 
 Creation:
 ::
-          $ git checkout -b hotfix-1.2.1 master
+          $ git checkout -b hotfix-1.1.1 master
           
-          Switched to a new branch "hotfix-1.2.1"
+          Switched to a new branch "hotfix-1.1.1"
           
-          $ ./bump-version.sh 1.2.1
+          $ ./bump-version.sh 1.1.1
           
-          Files modified successfully, version bumped to 1.2.1.
+          Files modified successfully, version bumped to 1.1.1.
           
-          $ git commit -a -m "Bumped version number to 1.2.1"
+          $ git commit -a -m "Bumped version number to 1.1.1"
           
-          [hotfix-1.2.1 41e61bb] Bumped version number to 1.2.1
+          [hotfix-1.1.1 41e61bb] Bumped version number to 1.1.1
           1 files changed, 1 insertions(+), 1 deletions(-)
 
 Finishing a hotfix branch :
@@ -156,13 +165,13 @@ Finishing a hotfix branch :
           
           Switched to branch 'master'
           
-          $ git merge --no-ff hotfix-1.2.1
+          $ git merge --no-ff hotfix-1.1.1
           
           Merge made by recursive.
           
           (Summary of changes)
           
-          $ git tag -a 1.2.1
+          $ git tag -a 1.1.1
 
           Next, include the bugfix in develop, too:
     
@@ -170,7 +179,7 @@ Finishing a hotfix branch :
           
           Switched to branch 'develop'
           
-          $ git merge --no-ff hotfix-1.2.1
+          $ git merge --no-ff hotfix-1.1.1
           
           Merge made by recursive.
           
@@ -178,9 +187,9 @@ Finishing a hotfix branch :
 
 Important : The one exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.
 ::
-          $ git branch -d hotfix-1.2.1
+          $ git branch -d hotfix-1.1.1
           
-          Deleted branch hotfix-1.2.1 (was abbe5d6).
+          Deleted branch hotfix-1.1.1 (was abbe5d6).
 
 Now, Let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
 Actual steps:
@@ -189,6 +198,7 @@ The optimal directory structure of Sesam Node project should look like this:
 
     my-project-directory
       ├ node
+      | ├ expected
       | ├ pipes
       | ├ systems
       | └ variables
@@ -226,7 +236,7 @@ This creates a new branch called develop that mirrors master. To push it to gith
 
 Now you should have two branches in github. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
 
-More information about pull requests can be read BELOW...
+More information about pull requests can be read below.
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
 
 
