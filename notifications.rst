@@ -108,14 +108,12 @@ Transform time
 ~~~~~~~~~~~~~~
 This is the number of seconds the pipe spent doing DTL and other types for transforms.
 
+.. _pipe_completed_property__reason_why_stopped:
 
-.. _pipe_completed_property__original_error_message:
+Reason why stopped
+~~~~~~~~~~~~~~~~~~
 
-Original error
-~~~~~~~~~~~~~~
-
-When a pipe-run fails, this value contains an error message that describes the root cause of the error.
-This is the error-message that is displayed on the pipe's "Status" tab.
+When a pipe-run fails, this value contains an error message that describes the problem.
 
 Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
 is intended to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
@@ -125,20 +123,53 @@ Example::
    requests.exceptions.ConnectionError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7aaa518>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
 
 
-Original traceback
-~~~~~~~~~~~~~~~~~~
+.. _pipe_completed_property__traceback:
 
-When a pipe-run fails, this value contains the full stacktrace of the error.
+Traceback
+~~~~~~~~~
+
+When a pipe-run fails, this value contains the stacktrace of the error.
 
 Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
 is intended to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
 
-Tip: It is usually better to use the :ref:`Original error <pipe_completed_property__original_error_message>` value
+Tip: It is usually better to use the :ref:`Original error <pipe_completed_property__reason_why_stopped>` value
 instead, since that is less verbose while still usually containing the relevant error-message.
 
 Example::
 
    Traceback (most recent call last):\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connection.py\", line 142, in _new_conn\n    (self.host, self.port), self.timeout, **extra_kw)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/util/connection.py\", line 67, in create_connection\n    for res in socket.getaddrinfo(host, port, 0, socket.SOCK_STREAM):\n  File \"/usr/lib/python3.6/socket.py\", line 745, in getaddrinfo\n    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):\nsocket.gaierror: [Errno -3] Temporary failure in name resolution\n\nDuring handling of the above exception, another exception occurred:\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connectionpool.py\", line 578, in urlopen\n    chunked=chunked)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connectionpool.py\", line 362, in _make_request\n    conn.request(method, url, **httplib_request_kw)\n  File \"/usr/lib/python3.6/http/client.py\", line 1239, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n  File \"/usr/lib/python3.6/http/client.py\", line 1285, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n  File \"/usr/lib/python3.6/http/client.py\", line 1234, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n  File \"/usr/lib/python3.6/http/client.py\", line 1026, in _send_output\n    self.send(msg)\n  File \"/usr/lib/python3.6/http/client.py\", line 964, in send\n    self.connect()\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connection.py\", line 167, in connect\n    conn = self._new_conn()\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connection.py\", line 151, in _new_conn\n    self, \"Failed to establish a new connection: %s\" % e)\nrequests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7a954a8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution\n\nDuring handling of the above exception, another exception occurred:\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.6/dist-packages/requests/adapters.py\", line 403, in send\n    timeout=timeout\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/connectionpool.py\", line 623, in urlopen\n    _stacktrace=sys.exc_info()[2])\n  File \"/usr/local/lib/python3.6/dist-packages/requests/packages/urllib3/util/retry.py\", line 281, in increment\n    raise MaxRetryError(_pool, url, error or ResponseError(cause))\nrequests.packages.urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7a954a8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))\n\nDuring handling of the above exception, another exception occurred:\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.6/dist-packages/lake/sources/json.py\", line 31, in getEntities\n    with self.system.getStream(session, absolute_url, params=params) as stream:\n  File \"/usr/local/lib/python3.6/dist-packages/lake/systems/url.py\", line 189, in getStream\n    session=session, url=url, params=params, headers=headers)\n  File \"/usr/local/lib/python3.6/dist-packages/lake/systems/url.py\", line 182, in getStreamAndContentLength\n    r, content_length = self.getRequestAndContentLength(session, url, params=params, headers=headers)\n  File \"/usr/local/lib/python3.6/dist-packages/lake/systems/url.py\", line 160, in getRequestAndContentLength\n    verify=self.verify_ssl, timeout=self.timeout)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/sessions.py\", line 487, in get\n    return self.request('GET', url, **kwargs)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/sessions.py\", line 475, in request\n    resp = self.send(prep, **send_kwargs)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/sessions.py\", line 585, in send\n    r = adapter.send(request, **kwargs)\n  File \"/usr/local/lib/python3.6/dist-packages/requests/adapters.py\", line 467, in send\n    raise ConnectionError(e, request=request)\nrequests.exceptions.ConnectionError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7a954a8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+
+
+
+
+
+
+
+.. _pipe_completed_property__original_error_message:
+
+Additional low-level errormessage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a pipe-run fails, this value can in some cases contain an additional
+low-level description of what went wrong. Note: If no additional information is available, this
+property will be empty.
+
+Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
+is intended to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
+
+
+Additional low-level traceback
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a pipe-run fails, this value can in some cases contain an additional low-level stacktrace of the
+error. Note: If no additional information is available, this value will be empty.
+
+Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
+is intended to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
+
+Tip: It is usually better to use the :ref:`Additional low-level errormessage <pipe_completed_property__original_error_message>` value
+instead of this value, since that is less verbose while still usually containing the relevant error-message.
 
 
 How can it be monitored?
@@ -226,13 +257,13 @@ Pattern match
 The purpose of this rule type is to alert the user if a pipe has failed with a specific error-message.
 
 The user can specify which value to examine, but the most common use case is the
-:ref:`Original error <pipe_completed_property__original_error_message>` value.
+:ref:`Reason why stopped <pipe_completed_property__reason_why_stopped>` value.
 
 The pattern supports the "\*" and "?" wildcard characters. "\*" matches any number of characters.
 "?" matches one single character.
 
 Example:
-If the "Original error" looks like this::
+If the "Reason why stopped" looks like this::
 
    requests.exceptions.ConnectionError: HTTPConnectionPool(host='testsystem', port=9999): Max retries exceeded with url: /sludder (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f12b7b32550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
 
