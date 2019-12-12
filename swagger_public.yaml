@@ -852,7 +852,8 @@ paths:
   '/config':
     get:
       description:
-        Returns the entire configuration of the node as an array of json objects, or as a zip-archive,
+        Returns the all configuration of the node in the default (i.e empty) config-group.
+        The config is returned as an array of json objects, or as a zip-archive,
         depending on the value of the 'Accepts' header.
       produces:
         - application/json
@@ -861,11 +862,70 @@ paths:
         200:
           description: The configuration
           schema:
-            $ref: '#/definitions/ConfigEntity'
+            type: array
+            items:
+              $ref: '#/definitions/ConfigEntity'
 
     put:
       description:
-        Overwrites the entire configuration of the node.
+        Overwrites all configuration of the node in the default (i.e empty) config-group.
+      consumes:
+        - application/json
+        - application/zip
+        - multipart/form-data
+      parameters:
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+      responses:
+        200:
+          description: OK
+
+  '/config/{config-group}':
+    get:
+      operationId: api.config.get_config_from_config_group
+      description:
+        Returns all configuration that has been tagged by by the specified config-group.
+      parameters:
+        - name: config-group
+          in: path
+          description: The id of the config-group to get the config from.
+          required: true
+          type: string
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+      produces:
+        - application/json
+        - application/zip
+      responses:
+        200:
+          description: The configuration
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ConfigEntity'
+
+    put:
+      operationId: api.config.put_config_to_config_group
+      description:
+        Overwrites all configuration that has been tagged by the specified config-group'.
+      parameters:
+        - name: config-group
+          in: path
+          description: The id of the config-group to post the config to.
+          required: true
+          type: string
       consumes:
         - application/json
         - application/zip
@@ -873,6 +933,7 @@ paths:
       responses:
         200:
           description: OK
+
   '/':
     get:
       produces:
@@ -888,6 +949,24 @@ paths:
       responses:
         200:
           description: OK
+          schema:
+            type: object
+            properties:
+              status:
+                type: object
+                properties:
+                  teamcity-buildnumber:
+                    type: string
+                    description:
+                      This is an internal value that refers to the build-job that produced this version of the
+                      sesam portal.
+
+                  git-revision:
+                    type: string
+                    description:
+                      This is an internal value that refers to the git revision that was used to build this
+                      version of the sesam portal.
+
 
     post:
       consumes:
@@ -2240,6 +2319,14 @@ definitions:
         type: string
         enum: ["pipe"]
         example: "pipe"
+      metadata:
+        type: object
+        properties:
+          $config-group:
+            type: string
+            description:
+              This can be set to specify that this pipe belongs to the specified config-group. If this value is
+              not set, the pipe belongs to the default config-group. See also the '/config/{config-group}' endpoint.
 
 
   PipeConfigError:
@@ -2311,6 +2398,14 @@ definitions:
       _id:
         type: string
         example: "my-system-1"
+      metadata:
+        type: object
+        properties:
+          $config-group:
+            type: string
+            description:
+              This can be set to specify that this pipe belongs to the specified config-group. If this value is
+              not set, the pipe belongs to the default config-group. See also the '/config/{config-group}' endpoint.
 
   Dataset:
     type: object
