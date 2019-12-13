@@ -133,7 +133,7 @@ When a pipe-run fails, this value contains the stacktrace of the error.
 Since this is not a numeric value, it cannot be used with the "Value too high/low" rule types. It
 is intended to be used with the :ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule.
 
-Tip: It is usually better to use the :ref:`Original error <pipe_completed_property__reason_why_stopped>` value
+Tip: It is usually better to use the :ref:`Reason why stopped <pipe_completed_property__reason_why_stopped>` value
 instead, since that is less verbose while still usually containing the relevant error-message.
 
 Example::
