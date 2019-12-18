@@ -112,8 +112,7 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false,
-         "use_signalling_externally": false
+         "use_signalling_internally": false
       }
    }
 
@@ -162,31 +161,19 @@ Properties
      -
      -
 
-   * - ``global_defaults.use_signalling_internally`` (experimental)
+   * - ``global_defaults.use_signalling_internally``
      - Boolean
-     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+     - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
        Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
        installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
        :ref:`dataset source <dataset_source>` (including variants like
        :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
-       :ref:`merge datasets <merge_datasets_source>` sources).
-     - ``false``
-     -
-
-   * - ``global_defaults.use_signalling_externally`` (experimental)
-     - Boolean
-     - Flag used to enable signalling support in json sources reading from Sesam datasets via the REST API. If enabled,
-       a HTTP request will be issued from the upstream Sesam installation to a special endpoint in the receiving
-       Sesam service each time the source dataset changes. This endpoint will then automatically schedule a pipe run
-       (it does not interrupt any already running pipes). Setting this option to ``true`` will enable signalling for all
-       :ref:`JSON sources <json_source>` in the installation. You can turn on this feature per source by setting its
-       ``supports_signalling`` flag. Note that in multibox/multinode environments this option requires additional
-       settings to be turned on server side (including a redeployment of the configuration). Contact Sesam support for
-       details. Also note that turning on this feature globally can potentially generate a lot of HTTP traffic in large
-       multinode/multibox environments. It should be reserved primareily for flows where low(er) latency is paramount.
-       The signalling support is best-efforts only; signals are not persisted so delivery is not guaranteed. For this
-       reason, pipes in such flows should always have scheduled or cron-based triggers as a "backup".
+       :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
+       delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
+       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
+       be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
+       on the pipe source it will be turned on regardless of the pump schedule.
      - ``false``
      -
 
@@ -849,10 +836,17 @@ Properties
      - ``true``
      -
 
-   * - ``supports_signalling`` (experimental)
+   * - ``supports_signalling``
      - Boolean
-     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
      - ``false``
      -
 
@@ -1035,10 +1029,17 @@ Properties
      - ``"default"``
      - No
 
-   * - ``supports_signalling`` (experimental)
+   * - ``supports_signalling``
      - Boolean
-     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
      - false
      -
 
@@ -1231,10 +1232,17 @@ source, except ``datasets`` can be a list of datasets ids.
      - false
      -
 
-   * - ``supports_signalling`` (experimental)
+   * - ``supports_signalling``
      - Boolean
-     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
      - false
      -
 
@@ -1358,10 +1366,17 @@ strategy.
      - "latest"
      -
 
-   * - ``supports_signalling`` (experimental)
+   * - ``supports_signalling``
      - Boolean
-     - Flag used to enable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset(s) changes (it does not interrupt any already running pipes).
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
      - false
      -
 
@@ -2478,10 +2493,8 @@ Properties
 
    * - ``supports_signalling`` (experimental)
      - Boolean
-     - Flag used to enable signalling support in json sources reading from sesam datasets via the REST API. If enabled,
-       a HTTP request will be issued from the upstream Sesam installation to a special endpoint in the receiving
-       Sesam service each time the source dataset changes. This endpoint will then schedule a pipe run (it does not
-       interrupt any already running pipes)
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
      - ``false``
      -
 
