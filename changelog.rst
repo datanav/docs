@@ -5,7 +5,7 @@ Changelog
 ----------
 * The :ref:`The JSON push sink <json_push_sink>` and :ref:`REST sink <rest_sink>` no longer includes header values or entity data in the traceback details of the execution log on failures.
 * The execution log and dead letter entities no longer includes copies of the ``source`` or ``sink`` configuration properties of the pipe.
-* The properties of the event entities in the execution log are now truncated at 10Mb to avoid excessive event entity sizes. Note that this cut-off value might be decreased further in the future.
+* The properties of the event entities in the execution log are now truncated at 10 mb to avoid excessive event entity sizes. Note that this cut-off value might be decreased further in the future.
 * If the pump fails due to exceeding retry limits, the entity in question is no longer included in the traceback properties. Instead it's put in a separate ``exception_entity`` property. Note that this property is not included in the monitoring data, so you cannot devise notification rules that refer to it.
 
 2019-12-17
