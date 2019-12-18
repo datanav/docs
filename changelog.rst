@@ -3,6 +3,11 @@ Changelog
 
 2019-12-18
 ----------
+* Updated the documentation for the ``supports_signalling`` property on dataset sources and the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section.
+
+
+2019-12-18
+----------
 * The :ref:`The JSON push sink <json_push_sink>` and :ref:`REST sink <rest_sink>` no longer includes header values or entity data in the traceback details of the execution log on failures.
 * The execution log and dead letter entities no longer includes copies of the ``source`` or ``sink`` configuration properties of the pipe.
 * The properties of the event entities in the execution log are now truncated at 10 mb to avoid excessive event entity sizes. Note that this cut-off value might be decreased further in the future.
@@ -56,6 +61,10 @@ Changelog
 2019-08-12
 ----------
 * The :ref:`dataset sink <dataset_sink>` now has a property called ``set_initial_offset`` that specifies how the sink should set the initial offset on the sink dataset (a.k.a. the populated flag).
+
+2019-05-31
+----------
+* Added experimental support for automatic scheduling of internal (dataset to dataset) pipes and JSON pipes that read from external Sesam datasets via the REST API. See the ``supports_signalling`` property of these sources and the global ``use_signalling_internally`` and ``use_signalling_externally`` options in service metadata section. Please note the limitations and usage notes.
 
 2019-04-23
 ----------

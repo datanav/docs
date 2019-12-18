@@ -110,6 +110,9 @@ Example:
            "example": "http://example.org/",
            "fifa": "http://www.fifa.com/"
          }
+      },
+      "global_defaults": {
+         "use_signalling_internally": false
       }
    }
 
@@ -156,6 +159,22 @@ Properties
           "dcterms": "http://purl.org/dc/terms/",
           "gs": "http://www.opengis.net/ont/geosparql#",
      -
+     -
+
+   * - ``global_defaults.use_signalling_internally``
+     - Boolean
+     - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
+       Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
+       installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
+       :ref:`dataset source <dataset_source>` (including variants like
+       :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
+       :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
+       delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
+       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
+       be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
+       on the pipe source it will be turned on regardless of the pump schedule.
+     - ``false``
      -
 
 .. _pipe_section:
@@ -765,7 +784,8 @@ Prototype
         "type": "dataset",
         "dataset": "id-of-dataset",
         "include_previous_versions": false,
-        "include_replaced": true
+        "include_replaced": true,
+        "supports_signalling": false
     }
 
 Properties
@@ -815,6 +835,21 @@ Properties
      - If set to ``false``, the dataset source will filter out entities where the ``$replaced`` property is ``true``. This typically used when reading from datasets that have been produced by the :ref:`merge <merge_source>` source.
      - ``true``
      -
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - ``false``
+     -
+
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -885,7 +920,8 @@ Prototype
         "equality": [
              ["eq", "d1.field1", "d2.field1"],
              ["eq", "d2.field2", "d3.field2"]
-        ]
+        ],
+        "supports_signalling": false
     }
 
 Properties
@@ -992,6 +1028,20 @@ Properties
 
      - ``"default"``
      - No
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1140,7 +1190,8 @@ Prototype
     {
         "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
-        "include_previous_versions": false
+        "include_previous_versions": false,
+        "supports_signalling": false
     }
 
 Properties
@@ -1180,6 +1231,21 @@ source, except ``datasets`` can be a list of datasets ids.
        any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
      -
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
+     -
+
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1241,7 +1307,8 @@ Prototype
    {
        "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
-       "strategy": "latest"
+       "strategy": "latest",
+       "supports_signalling": false
     }
 
 Properties
@@ -1297,6 +1364,20 @@ strategy.
        transform, so that only the entity can be shaped in a way that
        is more useful downstream.
      - "latest"
+     -
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
      -
 
 Continuation support
@@ -2381,7 +2462,8 @@ Prototype
     {
        "system": "system-id",
        "type": "json",
-       "url": "url-to-json-data"
+       "url": "url-to-json-data",
+       "supports_signalling": false
     }
 
 Properties
@@ -2408,6 +2490,13 @@ Properties
      - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
      -
      - Yes
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+     - ``false``
+     -
 
    * - ``page_size``
      - Integer(>=1)
