@@ -2787,11 +2787,13 @@ Strings
        .. _replace_dtl_function:
    * - ``replace``
      - | *Arguments:*
-       |   OLD_STRING(string{1})
-       |   NEW_STRING(string{1})
+       |   (REPLACEMENTS(dict{1}) or
+            (OLD_STRING(string{1})
+             NEW_STRING(string{1})))
        |   VALUES(value-expression{1})
        |
-       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES. Non-string values
+       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES, or replaces the keys
+         in the REPLACEMENT dict with the respective values. Non-string values
          are ignored.
      - | ``["replace", "http://", "https://",``
        |   ``"http://www.sesam.io/"]``
@@ -2801,6 +2803,14 @@ Strings
        | ``["replace", ":", ".", "_S.date"]]``
        |
        | Returns a date string where the colon has been replaced by a period.
+       |
+       | ``["replace", {"Hello": "HELLO", "world": "WORLD"}, "Hello world!"]]``
+       |
+       | Returns ``"HELLO WORLD!"``.
+       |
+       | ``["replace", ["dict", "a", "A", "b", "B"], "abc"]]``
+       |
+       | Returns ``"ABc"``.
 
        .. _substring_dtl_function:
    * - ``substring``
