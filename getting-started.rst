@@ -34,7 +34,7 @@ Sign up
 
 Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and sign up.
 
-Once you've signed up you'll see this page. Click on Request private trail.
+Once you've signed up you'll see this page. Click on Request private trial.
 
 .. image:: images/getting-started/dashboard-view.png
     :width: 800px
@@ -47,16 +47,19 @@ Once you get the access from the Sesam team you'll get your own Dev Node card in
 
 Import data
 ===========
-Eventually, your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
 
-Go into you 'Dev Node'. Click on **Datahub** in the left menu, and select the **Tools tab**.
+Before we describe how to import data into your node, we need to emphasise an important issue. If you will work on a sesam node that already contains configurations and data, you should NOT import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. You then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
+
+When you are setting up your node for the first time your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
+
+Go into you 'Dev Node'. Click on **Datahub** in the left menu and select the **Tools tab**.
 
 .. image:: images/getting-started/importdata.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Upload the file. Check the box "**Force upload (ignore validation errors)**"
+Upload the file. As seen on picture above, make sure you check the box "**Force upload (ignore validation errors)**".
 
 We have created some test data for you. Go to the **Variables** tab and paste the code below inside the curly brackets.
 
@@ -64,14 +67,16 @@ We have created some test data for you. Go to the **Variables** tab and paste th
 
   "node-env": "test"
 
-You should now have several pipes available. As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
+You should now have several pipes available.
+
+As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run pipe to check output. The **config** contains the actual data transformations and pumps. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
 
 .. image:: images/getting-started/running_pipe.gif
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Repeat these steps for **hr-system**, **azure-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
+Repeat these steps for **hr-system**, **erp-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
 
 .. _getting-started-sesam-overview:
 
@@ -79,7 +84,7 @@ Sesam overview
 --------------
 We will now give a short overview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
 
-In the image above we see five main tabs under the "Training Node" section on the right hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this particular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
+In the image above we see five main tabs under the "Training Node" section on the left-hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this particular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` and source systems you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
 
 The following picture shows the general setup of a Sesam node.
 
@@ -98,7 +103,7 @@ The picture below shows the different tabs when working on a pipe.
     :align: center
     :alt: Generic pipe concept
 
-The first five tabs are the most used ones, and the ones will will put some focus on in this section.
+The first five tabs are the most used ones, and the ones we will focus on in this section.
 
 The **Dashboard** tab gives you an overview of the different pipes connected to this specific pipe. The **Config** tab displays the **DTL** code in which we transform the data into the performed format and setup. The **Input** and **Output** tabs shows the data before and after being sent through the pipe, respectively. The **Execution log** is a helpful tool when debugging your code. This tab will display the different error messages. 
 
@@ -110,7 +115,7 @@ Glossary
 
 :doc:`Entities <entitymodel>`: Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
 
-:ref:`Pipes <concepts-pipes>`: Defines the flow of data in Sesam. They consist of a source, and can also have a list of transformations and a sink. In addition every pipe has a pump that is scheduled to run at selected intervals and pull data entities from the source, through the transformations and put the results into the sink.
+:ref:`Pipes <concepts-pipes>`: Defines the flow of data in Sesam. They consist of a source and can also have a list of transformations and a sink. In addition, every pipe has a pump that is scheduled to run at selected intervals and pull data entities from the source, through the transformations and put the results into the sink.
 
 :ref:`Pumps <concepts-pumps>`: A scheduler that handles the mechanics of sending data from a source to a sink. It runs periodically or on a 'cron' schedule and reads entities from a data source and writes them to a data sink.
 
@@ -141,9 +146,9 @@ Systems
 Pipes
 ^^^^^
   * Name input pipes with the system they read from, and postfix with the type of content (e.g. **salesforce-sale**).
-  * Do not use plural names (e.g. **salesforce-sale**, not **salesforce-sales**).
-  * Prefix merge pipes with **merged-** (e.g. **merged-sale**).
-  * Prefix global pipes with **global-** (e.g. **global-sale**).
+  * Do not use plural names (e.g. **crm-store**, not **crm-stores**).
+  * Prefix merge pipes with **merged-** (e.g. **merged-person**).
+  * Prefix global pipes with **global-** (e.g. **global-person**).
   * Name intermediate output pipes with the type of the content and the name of the system to send to (e.g. **sale-bigquery**).
   * Name outgoing pipes by postfixing the intermediate output with **-endpoint** (e.g. **sale-bigquery-endpoint**).
 
@@ -155,15 +160,11 @@ Datasets
 
 Pipes
 -----------------------
-In this section we will go futher into what pipes are, how they work and what we can do with them. 
+In this section we will go further into what pipes are, how they work and what we can do with them. 
 
-When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to an other, with the purpose of adding structure to the data. These pipe generates new datasets with new and transformed data ready to be used by other systems.
+When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to another, with the purpose of adding structure to the data. These pipes generate new datasets with new and transformed data ready to be used by other systems.
 
 The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
-
-Before we go further into the details, we wish to say a few words regarding pipe-naming conventions. 
-
-
 
 .. _getting-started-basic-dtl-functions:
 
@@ -171,7 +172,7 @@ Basic DTL and functions
 =======================
 Sesam utilizes :ref:`DTL <concepts-dtl>` (Data Transformation Language) which enables the user to easily apply logical operations on the data. In this section we will go through the most common functions available in DTL. For a more extensive walk-through, visit the :ref:`DTL reference guide <DTLReferenceGuide>`.
 
-DTL scripts are written inside the config tab when selecting a pipe in your Sesam node. The scripts consists of five sections: 
+DTL scripts are written inside the config tab when selecting a pipe in your Sesam node. The scripts consist of five sections: 
 
 	* **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
 	* **Provider**: We need to tell DTL which source/sources to get the data from. 
@@ -213,7 +214,7 @@ The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as we
 
   * The second **["add"]** creates a new property named **"Firstname"** which is constructed by using the function concatenate (**["concat"]**).
 
-  * The third **["add"]** uses the function **["lower"]** to make all characters lower case..
+  * The third **["add"]** uses the function **["lower"]** to make all characters lower case.
 
   * The fourth **["add"]** uses the function **["substring"]** to make a substring of the **"FirstName"**.
 
@@ -237,9 +238,9 @@ Merging gives us an aggregated representation of two or more datasets​​. We 
     :align: center
     :alt: Generic pipe concept
 
-When merging datasets we need to combine entities through identical values across datasets. In the image above we merge datasets A and B through their "lastname" properties, and B and C through their "email" properties. As we can see, the resulting dataset will have "null" values in the fields that can not be populated through entities with matching values.
+When merging datasets we need to combine entities through identical values across datasets. In the image above we merge datasets A and B through their "lastname" properties, and B and C through their "email" properties. As we can see, the resulting dataset will have "null" values in the fields that cannot be populated through entities with matching values.
 
-This way you can for example, combine a customer dataset with an another customer dataset through the **"lastname"** and work with a entity that contains more customer info.
+This way you can for example, combine a customer dataset with another customer dataset through the **"lastname"** and work with an entity that contains more customer info.
 
 ::
  
@@ -347,7 +348,7 @@ The :ref:`hops <hops_function>` function joins two datasets and returns the enti
         "rules": {​ 
             "default": [​ 
                 ["copy", "*"],​
-                ["add", "order-data"​ 
+                ["add", "order-data"​, 
                     ["hops", {​ 
                         "datasets": ["global-orders glo"],​ 
                         "where": [​ 
@@ -369,7 +370,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 4 <getting
 
 Apply-hops
 ==========
-There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined **["apply"]** and **["hops"]** function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the **["apply"]** function here. 
+There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined **["apply"]** and **["hops"]** function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the **["apply"]** function :ref:`here <hops_function>` 
 
 ::
 
@@ -402,6 +403,12 @@ Should I "add" or "merge" an apply-hops?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 As you can see in the examples below we want to add the "City" and "Municipality" from another dataset to the source. In the two examples we have the same source but the difference is in how we use the **["apply-hops"]**. In the first case we **["add"]** a new property called "difi-data" which you can see in the results creates a dictionary containing "City" and "Municipality" in **"difi-data"**.
 
+ When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding **"_S"** in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
+
+  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <variables>`.
+
+
+
 ::
 
  "transform": { 
@@ -420,8 +427,8 @@ As you can see in the examples below we want to add the "City" and "Municipality
                     ] 
                 }] 
             ], 
-            ["comment", "Below code will first check zipcode in azure-person 
-            dataset ,if it is null then it goes to crm-person dataset and so on. 
+            ["comment", "Below code will first check zipcode in hr-person 
+            dataset, if it is null then it goes to crm-person dataset and so on. 
             Basically we prioritize the order on most trusted values."], 
             ["add", "zipcode", 
                 ["coalesce", 
@@ -462,9 +469,9 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
                       ] 
                   }] 
               ], 
-              ["comment", "Below code will first check zipcode in azure-person 
+              ["comment", "Below code will first check zipcode in hr-person 
               dataset ,if it is null then it goes to crm-person dataset and so 
-              on.basically we prioritize the order on most trusted values."], 
+              on. basically, we prioritize the order on most trusted values."], 
               ["add", "zipcode", 
                   ["coalesce", ["list", "_S.hr-person:ZipCode", 
                   "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"] 
@@ -491,7 +498,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 6 <getting
 
 Sinks
 -----
-Sinks are at the receiving end of pipes and are responsible for writing entities into a internal dataset or a target system.
+Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
 Sinks can support batching by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation.
 
@@ -522,7 +529,7 @@ SQL database to CSV file output step by step
 ============================================
 In this next chapter we will walk you through the steps of using a SQL database as a source and create a CSV endpoint. First, if you don't have access to a SQL server you can sign up at `ElephantSQL <https://api.elephantsql.com>`__ and select a free trial.
 
-Once you've set up you account click on details in the left menu. It should look like this: 
+Once you've set up your account click on details in the left menu. It should look like this: 
 
 .. image:: images/getting-started/Elephant_SQL.png
     :width: 800px
@@ -531,7 +538,7 @@ Once you've set up you account click on details in the left menu. It should look
 
 Now you are ready to create a new system. In **Sesam** go to Systems and select **New system**. In the **Choose template** select **postgresql prototype** (Because we're using ElephantSQL. Will be different for other sources).
 
-To fill inn the **"database"**, **"host"**, **"password"** and **"username"** go to your ElephantSQL and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
+To fill in the **"database"**, **"host"**, **"password"** and **"username"** go to your ElephantSQL and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
 
 In the **"_id"** you'll create the name of the system (the same as creating a pipe).
 
@@ -549,7 +556,7 @@ Using secrets
     :alt: Generic pipe concept
 
 
-As you can see we are using :ref:`secrets <secrets_manager>` for the database, password and username. To do this go into the **Secrets** tab, click **Add secret**, give it a name (e.g. "password" for the password and "username" for the username) and paste the values from ElephantSQL. Read more about secrets `here <https://docs.sesam.io/security.html>`__.
+As you can see, we are using :ref:`secrets <secrets_manager>` for the database, password and username. To do this go into the **Secrets** tab, click **Add secret**, give it a name (e.g. "password" for the password and "username" for the username) and paste the values from ElephantSQL. Read more about secrets `here <https://docs.sesam.io/security.html>`__.
 
 
 Creating a table in the database
@@ -587,7 +594,7 @@ Delete the old text and copy/paste the following:
   (3,'Hannah', 'Jackson','10-12-1982','East road 5',60000,'Production'), 
   (4,'Phillip', 'Blackstone','08-02-1978','Sourt Street 23',49000,'Sales'), 
   (5,'Otto', 'Greene','03-20-1969','North street 65',48000,'HR'), 
-  '(6,'Siri', 'Stone','03-05-1989','Middle street 5',62000, 'Marketing'), 
+  (6,'Siri', 'Stone','03-05-1989','Middle street 5',62000, 'Marketing'), 
   (7,'Olav', 'Olsen','11-30-1989','Down street 2',54000, 'Accounting');
 
 Then click on **Execute**. We have now created a sample table with some properties with values.
@@ -942,13 +949,13 @@ All of these templates provide the data from the HTTP endpoint as a JSON-formatt
 
 Pumps
 -----
-The pumps specify the schedule with which the pipe runs. This can be done through a sceduled interval specified either pr.seconds, hours, days, weeks or months. A pump can be added to a pipe through the **Schedule** template. 
+The pumps specify the schedule with which the pipe runs. This can be done through a scheduled interval specified either pr.seconds, hours, days, weeks or months. A pump can be added to a pipe through the **Schedule** template. 
 
 .. _getting-started-microservices:
 
 Microservices
 -------------
-The DTL in Sesam is a powerful tool to transform our data. But sometimes we need to do something with our data that is outside the scope of the DTL. We can then create a microservice that does what we need and run it inside Sesam to serve those needs. We can also use a microservice when we need to connect to an external system where the connection point is not compatible with the Sesam source systems. The microservice can be made according to our preferrences and in any language.
+The DTL in Sesam is a powerful tool to transform our data. But sometimes we need to do something with our data that is outside the scope of the DTL. We can then create a microservice that does what we need and run it inside Sesam to serve those needs. We can also use a microservice when we need to connect to an external system where the connection point is not compatible with the Sesam source systems. The microservice can be made according to our preferences and in any language.
 
 .. image:: images/getting-started/MS-types.jpg
     :width: 800px
@@ -968,9 +975,9 @@ Microservices in Sesam run in docker containers. These containers run on our Ses
 
 We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice. We can create and run as many containers as we want from the same image.
 
-The Docker image is then pushed up to a repostory on Docker Hub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
+The Docker image is then pushed up to a repository on Docker Hub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
 
-Finally we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the contaner is spun up automatically. 
+Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. 
 
 Microservices with Docker
 ==================================
@@ -995,7 +1002,7 @@ Now you are ready to create the microservice.
 
 Create a new project in Pycharm (or your preferred text editor). This tutorial will be using Pycharm. Name your project “Demo_MicroserviceProject”.
 
-Inside your Demo_MicroserviceProject folder create a new text file called Dockerfile and paste:
+Inside your Demo_MicroserviceProject folder create a new file called Dockerfile and paste:
 
 ::
 
@@ -1150,7 +1157,7 @@ Save it and click on **Status**. Click **Pull** and **restart**, then **Refresh*
     :align: center
     :alt: Generic pipe concept
 
-Then create a new pipe. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities. So we use this function:
+Then create a new pipe. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities and that reason we use this function:
 
 ::
 
@@ -1187,13 +1194,13 @@ Often when we wish to communicate with an API, we need to establish who we are, 
 
 JSON Web Tokens
 ^^^^^^^^^^^^^^^
-When we authenticate ourselves to a server we often utilize something calles a **JSON Web Token** (**JWT**). A JWT is a string that consists of a **header**, a **payload** and a **signature** to form the string **header.payload.signature**.
+When we authenticate ourselves to a server, we often utilize something called a **JSON Web Token** (**JWT**). A JWT is a string that consists of a **header**, a **payload** and a **signature** to form the string **header.payload.signature**.
 
 	* **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
 	* **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
 	* **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
 
-A JWT is used when we need to make sure that the sent data actually originates from an authentic source, to make sure no second hand party has tempered with the data. When we sign in to an app, i.e. google we first communicate wqith the app's authentication server. This server sends us a JWT back which we can use to communicate with the app's API. 
+A JWT is used when we need to make sure that the sent data actually originates from an authentic source, to make sure no secondhand party has tempered with the data. When we sign into an app, i.e. google we first communicate with the app's authentication server. This server sends us a JWT back which we can use to communicate with the app's API. 
 
 .. figure:: images/getting-started/JWT.png
     :width: 800px
@@ -1231,7 +1238,7 @@ Scope: Transforming data.
   * Use the **"crm-person"** as source.
   * Name it "[yourname]-crm-person".
   * Create a new property called "FullName" by using the functions **["add"]** and **["concat"]**.
-  * Run pipe and look at dataset.​ ​
+  * Run pipe and look at ​dataset.
 
 *If you need a hint on how to do this, look for the ["concat"] function in the "global-person" pipe.*
 
@@ -1259,8 +1266,8 @@ Scope: Merge multiple datasets in source to create a global.​
 
   * Create New pipe. Call this pipe <your_name>-global-person.
   * Select source system: system:sesam-node.
-  * Select provider type: merge prototype.​
-  * List these four datasets in the source, with aliases: **"crm-person cp"**, **"firebase-person fp"**, **"azure-person ap"** and **"salesforce-userprofile sup"**.
+  * Select provider type: merge prototype.
+  * List these four datasets in the source, with aliases: **"crm-person cp"**, **"erp-person ep"**, **"hr-person hp"** and **"salesforce-userprofile sup"**.
   * Use **["equality"]** to merge the datasets on matching values.
   * Set **"identity"** to **"first"**.
   * Set **"version"** to 2​.
@@ -1276,7 +1283,7 @@ Lab 4
 Scope: Hops
 
   * In the same pipe that we created in lab 3 we want to 'hop' to another dataset with the **["hops"]** function.
-  * Add a new property called difi-data. Inside the add, use **["hops"]** to join on the "zipcode" from **azure-person** OR **"PostalCode"** from crm-person with **"postnummer"** of "difi-postnummer".
+  * Add a new property called difi-data. Inside the add, use **["hops"]** to join on the "zipcode" from **hr-person** OR **"PostalCode"** from crm-person with **"postnummer"** of "difi-postnummer".
 
 *Hint: Look up hops in the Getting started guide, the "person-crm" pipe or the documentation. You will also find the "or" function in the documentation.*
 
