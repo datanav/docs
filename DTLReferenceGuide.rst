@@ -5068,6 +5068,29 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns ``[0.0, ~0.0]``.
 
 
+Misc
+----
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _fail_dtl_function:
+   * - ``fail!``
+     - | *Arguments:*
+       |   MESSAGE(string{1})
+       |
+       | A function that makes the pump fail. It can be used to conditionally fail the pump. A string error message can be specified in the first argument.
+     - | ``["fail!", "Processing stopped because of invalid input. Please review."]``
+       |
+       | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
+
+
 
 .. _supported_timezones:
 
