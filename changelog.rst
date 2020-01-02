@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2019-12-23
+----------
+* Added the :ref:`fail! <fail_dtl_function>` DTL function.
+
 2019-12-19
 ----------
 * The :ref:`replace <replace_dtl_function>` DTL function now takes a dict argument that lets one specify more than one string replacement.
