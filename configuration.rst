@@ -6975,7 +6975,7 @@ Prototype
         },
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Properties
@@ -7079,7 +7079,7 @@ Properties
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
    * - ``ignore_invalid_content_length_response_header``
@@ -7153,7 +7153,7 @@ Prototype
         "authentication": "basic",
         "jwt_token": null,
         "connect_timeout": 60,
-        "read_timeout": 7200,
+        "read_timeout": 1800,
         "operations": {
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -7357,7 +7357,7 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -7515,7 +7515,7 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
 Microservice APIs
