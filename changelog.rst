@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2020-01-08
+----------
+* The default value of the ``read_timeout`` property has been changed from 7200 seconds to 1800 seconds for the
+  :ref:`URL system <url_system>` and the :ref:`Microservice system <microservice_system>`.
+
 2019-12-23
 ----------
 * Added the :ref:`fail! <fail_dtl_function>` DTL function.
