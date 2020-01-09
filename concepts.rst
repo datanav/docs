@@ -241,5 +241,108 @@ Sesam Client
 
 The *sesamclient* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
 
+So what is it used for? It is manily a command line tool for testing and deploying a Sesam configuration to and from a Git repository. 
+
+After we have installed Sesam client via pip, we need to configure it as seen below.
+
+## Configuration
+```
+$ sesam init
+Username: foo
+Password:
+Available subscriptions:
+1. My dev node (11aa76...)
+2. My test node (44bb11...)
+Subscription to use? 2
+Config stored in .sesam/config.
+```
+
+
+## Usage
+
+There are various ways of using the Sesam client.
+A typical workflow bellow shows how to upload code, download it to make changes to it on local node.After code is edited test are run and once passed code is deplyed.
+
+Typical workflow:
+
+```
+$ sesam clean
+
+$ sesam upload
+
+Node config replaced with local config
+
+## edit stuff in Sesam Management Studio
+
+$ sesam download
+
+Local config replaced by node config
+
+$ sesam status
+
+Node config is up-to-date with local config
+
+$ sesam run
+
+Run completed
+
+$ sesam update
+
+Current output stored as expected output
+
+$ sesam verify
+
+Verifying output...passed!
+```
+
+You an also run the full test cycle (typical CI setup)
+```
+$ sesam test
+Node config replaced with local config.
+Run completed.
+Verifying output (1/3)...passed!
+Run completed.
+Verifying output (2/3)...passed!
+Run completed.
+Verifying output (3/3)...passed!
+```
+
+### DTL parameters
+
+If you need to pass various variations of bound parameters to the DTL, you just create multiple .test.json files for each combination of parameters.
+
+
+This will compare the output of ``/publishers/foo/xml`` with the contents of ``foo.xml``.
+
+### Blacklisting
+
+If the data contains values that are not deterministic (e.g. timestamp added during the run) they can be filtered out using the blacklist.
+  
+### Avoid ignore and blacklist
+
+It is recommended to avoid ignoring or blacklisting as much as possible as this creates a false sense of correctness. Tests will pass, but deviations are silently ignored. A better solution is to avoid these properties in the output if possible.
+
+### Scheduler customization
+
+By default the upload command will add a test-friendly scheduler as part of the configuration. The ``_id`` for this micro service system is ``scheduler``, but it can be overridden with the flag "--scheduler-id my-scheduler-id" if you need to override this.
+ 
+If you want to configure a custom scheduler manually as part of the configuration you need to enable the ``--custom-scheduler`` flag.
+
+This custom scheduler needs to implement the following: 
+
+1. POST /start (the tool will call this when the scheduler should start)
+2. GET / (the tool will then poll this until it returns with state 'success' or 'failure')
+
+## Installing
+
+Prebuilt binaries for common platforms can be downloaded from [Github Releases](https://github.com/sesam-io/sesam/releases/).
+
+## Building from source
+
+1
+## Known issues
+
+* JSON encoder escapes <, > and & as \uxxxx
+
 
 
