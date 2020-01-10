@@ -431,7 +431,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
             ], 
             ["comment", "Below code will first check zipcode in hr-person 
             dataset, if it is null then it goes to crm-person dataset and so on. 
-            Basically we prioritize the order on most trusted values."], 
+            Basically we prioritize the order on most trusted values"], 
             ["add", "zipcode", 
                 ["coalesce", 
                     ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", 
@@ -473,7 +473,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
               ], 
               ["comment", "Below code will first check zipcode in hr-person 
               dataset ,if it is null then it goes to crm-person dataset and so 
-              on. basically, we prioritize the order on most trusted values."], 
+              on. basically, we prioritize the order on most trusted values"], 
               ["add", "zipcode", 
                   ["coalesce", ["list", "_S.hr-person:ZipCode", 
                   "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"] 

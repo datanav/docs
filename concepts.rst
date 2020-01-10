@@ -235,6 +235,7 @@ The management studio can be found at:
 
     http://service_endpoint:9042/gui
 
+Read more about The managment studio, please click `here <https://docs.sesam.io/getting-started.html#html#id11>`__
 
 Sesam Client
 ------------
@@ -263,7 +264,7 @@ Usage
 =====
 
 There are various ways of using the Sesam client.
-A typical workflow bellow shows how to upload code, download it to make changes to it on local node.After code is edited test are run and once passed code is deplyed.
+A typical workflow bellow shows how to upload code, download it to make changes to it on local node. After code is edited test are run and once passed code is deplyed.
 
 Typical workflow:
 =================
@@ -285,7 +286,7 @@ Typical workflow:
     $ sesam verify
     Verifying output...passed!
 
-You an also run the full test cycle (typical CI setup)
+You can also run the full test cycle (typical CI setup)
 
 ::
 
@@ -304,7 +305,7 @@ Configuring tests
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 10, 10, 30
+   :widths: 10, 25, 10, 10, 30
 
    * - Property
      - Description
@@ -492,7 +493,7 @@ Avoid ignore and blacklist
 It is recommended to avoid ignoring or blacklisting as much as possible as this creates a false sense of correctness. Tests will pass, but deviations are silently ignored. A better solution is to avoid these properties in the output if possible.
 
 Scheduler customization
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 By default the upload command will add a test-friendly scheduler as part of the configuration. The ``_id`` for this micro service system is ``scheduler``, but it can be overridden with the flag "--scheduler-id my-scheduler-id" if you need to override this.
  
