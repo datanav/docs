@@ -1348,7 +1348,7 @@ Prototype
 
 Any additional properties not part of the defined set of input properties will be passed through for processing.
 
-Note that The data posted to this endpoint will be encrypted using the subject's Public Key as registered with the
+Note that the data posted to this endpoint will be encrypted using the subject's Public Key as registered with the
 access request before being processed by the Sesam GDPR platform - there is therefore no corresponding output API
 since the data is only decryptable by the user using their private key on the originating device connected to the
 Data Access Portal.
