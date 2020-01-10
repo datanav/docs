@@ -492,7 +492,7 @@ Avoid ignore and blacklist
 It is recommended to avoid ignoring or blacklisting as much as possible as this creates a false sense of correctness. Tests will pass, but deviations are silently ignored. A better solution is to avoid these properties in the output if possible.
 
 Scheduler customization
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 By default the upload command will add a test-friendly scheduler as part of the configuration. The ``_id`` for this micro service system is ``scheduler``, but it can be overridden with the flag "--scheduler-id my-scheduler-id" if you need to override this.
  
@@ -526,6 +526,8 @@ Building from source
      go get github.com/sesam-io/sesam
  
 4. Verify that it works
+
+::
 
     $ sesam -version
 
