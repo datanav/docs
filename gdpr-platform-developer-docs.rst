@@ -1399,8 +1399,8 @@ Properties
      - Yes
 
    * - ``gdpr-access-request-subject-data:entity-data``
-     - String (boolean)
-     - A object with keys representing property types and values representing the corresponding value
+     - Object
+     - An object with keys representing properties and values representing the corresponding value
      -
      - Yes
 
