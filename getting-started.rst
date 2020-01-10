@@ -571,7 +571,7 @@ Until now your database has been empty. If you are not familiar with SQL, do not
     :alt: Generic pipe concept
 
 
-Cope/paste the following
+Copy/paste the following
 
 ::
 

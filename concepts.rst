@@ -236,7 +236,7 @@ The management studio can be found at:
     http://service_endpoint:9042/gui
 
 
-esam Client
+Sesam Client
 ------------
 
 The *sesamclient* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
@@ -250,23 +250,14 @@ Configuration
 
 ::
 
-$ sesam init
-
-Username: foo
-
-Password:
-
-Available subscriptions:
-
-1. My dev node (11aa76...)
-
-2. My test node (44bb11...)
-
-Subscription to use? 2
-
-Config stored in .sesam/config.
-
-
+    $ sesam init
+    Username: foo
+    Password:
+    Available subscriptions:
+    1. My dev node (11aa76...)
+    2. My test node (44bb11...)
+    Subscription to use? 2
+    Config stored in .sesam/config.
 
 Usage
 =====
@@ -279,54 +270,33 @@ Typical workflow:
 
 ::
 
-$ sesam clean
-
-$ sesam upload
-
-Node config replaced with local config.
-
-## edit stuff in Sesam Management Studio
-
-$ sesam download
-
-Local config replaced by node config.
-
-$ sesam status
-
-Node config is up-to-date with local config.
-
-$ sesam run
-
-Run completed.
-
-$ sesam update
-
-Current output stored as expected output.
-
-$ sesam verify
-
-Verifying output...passed!
-
+    $ sesam clean
+    $ sesam upload
+    Node config replaced with local config.
+    ## edit stuff in Sesam Management Studio
+    $ sesam download
+    Local config replaced by node config.
+    $ sesam status
+    Node config is up-to-date with local config.
+    $ sesam run
+    Run completed.
+    $ sesam update
+    Current output stored as expected output.
+    $ sesam verify
+    Verifying output...passed!
 
 You an also run the full test cycle (typical CI setup)
 
 ::
 
-$ sesam test
-
-Node config replaced with local config.
-
-Run completed.
-
-Verifying output (1/3)...passed!
-
-Run completed.
-
-Verifying output (2/3)...passed!
-
-Run completed.
-
-Verifying output (3/3)...passed!
+    $ sesam test
+    Node config replaced with local config.
+    Run completed.
+    Verifying output (1/3)...passed!
+    Run completed.
+    Verifying output (2/3)...passed!
+    Run completed.
+    Verifying output (3/3)...passed!
 
 
 Configuring tests
@@ -354,18 +324,62 @@ Configuring tests
      - |  No
      - |  Test
 
+   * - ``description``
+     - | A description of the test.
+     - | ``string``
+     - |  No
+     - |  
+
+   * - ``ignore``
+     - | If the output should be ignored during tests.
+     - | ``boolean``
+     - |   No
+     - | ``false``
+
+   * - ``endpoint``
+     - | If the output should be fetched from a published endpoint instead.
+     - | ``string``
+     - |   No
+     - | By default the json is grabbed from ``/pipes/<my-pipe>/entities``
+
+   * - ``file``
+     - | File that contains the expected results.
+     - | ``string``
+     - |   No
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json)
+
+   * - ``pipe``
+     - | Pipe that contains the output to test.
+     - | ``string``
+     - |   No
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json)
+
+   * - ``blacklist``
+     - | Properties to ignore in the output.
+     - | ``Array of strings``
+     - |   No
+     - | ``[]``
+
+   * - ``parameters``
+     - | Which parameters to pass as bound parameters. Note that parameters only works for published endpoints.
+     - | ``Object``
+     - |   No
+     - | ``{}``
+
 Example: 
 
 ::
 
-$ cat foo.test.json
-{
-  "_id": "foo",
-  "type": "test",
-  "file": "foo.json"
-  "blacklist": ["my-last-updated-ts"],
-  "ignore": false
-}
+    {
+     $ cat foo.test.json
+        {
+     "pipe": "foo",
+      "file": "foo-A.xml",
+      "endpoint": "xml",
+      "parameters": {
+      "my-param": "A"
+        }
+    }
 
 DTL parameters
 ==============
@@ -375,36 +389,37 @@ If you need to pass various variations of bound parameters to the DTL, you just 
 Example:
 
 ::
-$ cat foo-A.test.json
-{
-  "pipe": "foo",
-  "file": "foo-A.xml",
-  "endpoint": "xml",
-  "parameters": {
-    "my-param": "A"
-  }
-}
-$ cat foo-B.test.json
-{
-  "pipe": "foo",
-  "file": "foo-B.xml",
-  "endpoint": "xml",
-  "parameters": {
-    "my-param": "B"
-  }
-}
+    
+    {
+      $ cat foo-A.test.json
+    {
+      "pipe": "foo",
+      "file": "foo-A.xml",
+      "endpoint": "xml",
+      "parameters": {
+      "my-param": "A"
+      }
+    }
 
-::
+    $ cat foo-B.test.json
+    {
+      "pipe": "foo",
+      "file": "foo-B.xml",
+      "endpoint": "xml",
+      "parameters": {
+      "my-param": "B"
+      }
+    }
 
 This will compare the output of ``/publishers/foo/xml?my-param=A`` with the contents of ``foo-A.xml`` and ``/publishers/foo/xml?my-param=B`` with the contents of ``foo-B.xml``.
 
 Internal properties
-===================
+^^^^^^^^^^^^^^^^^^^
 
 All internal properties except ``_id`` and ``_deleted`` are removed from the output. Entities that has ``_deleted`` set to ``false`` will also be removed.
 
 Endpoints
-=========
+^^^^^^^^^
 
 By default the entities are fetched from ``/pipes/<my-pipe>/entities``, but if endpoint is set it will be fetched from
 ``/publishers/<my-pipe>/<endpoint-type>`` based on the endpoint type specified. Note that the pipe needs to be configured to publish to this endpoint.
@@ -413,17 +428,17 @@ Example:
 
 ::
 
-{
-  "_id": "foo",
-  "type": "test",
-  "endpoint": "xml",
-  "file": "foo.xml"
-}
+    {
+      "_id": "foo",
+      "type": "test",
+      "endpoint": "xml",
+      "file": "foo.xml"
+    }
 
 This will compare the output of ``/publishers/foo/xml`` with the contents of ``foo.xml``.
 
 Blacklisting
-============
+^^^^^^^^^^^^
 
 If the data contains values that are not deterministic (e.g. timestamp added during the run) they can be filtered out using the blacklist.
  
@@ -431,11 +446,11 @@ Example:
 
 ::
 
-{
-  "_id": "foo",
-  "type": "test",
-  "blacklist": ["foo", "ns1:bar"]
-}
+    {
+      "_id": "foo",
+      "type": "test",
+      "blacklist": ["foo", "ns1:bar"]
+    }
 
 This will filter out properties called ``foo`` and ``ns1:bar`` (namespaced).
  
@@ -447,37 +462,37 @@ Example:
 
 ::
 
-{
-  "_id": "foo",
-  "foos": {
-    "A": {
+    {
+      "_id": "foo",
+      "foos": {
+      "A": {
       "bar": "baz",
       "foobar": "foo"
+        }
+      }
     }
-  }
-}
 
 
 Will end up as the following (with ``"blacklist": ["foos.*.bar"]``):
 
 ::
 
-{
-  "_id": "foo",
-  "foos": {
-    "A": {
+    {{
+      "_id": "foo",
+      "foos": {
+      "A": {
       "foobar": "foo"
+        }
+      }
     }
-  }
-}
 
 Avoid ignore and blacklist
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is recommended to avoid ignoring or blacklisting as much as possible as this creates a false sense of correctness. Tests will pass, but deviations are silently ignored. A better solution is to avoid these properties in the output if possible.
 
 Scheduler customization
-=======================
+^^^^^^^^^^^^^^^^^^^^^^^
 
 By default the upload command will add a test-friendly scheduler as part of the configuration. The ``_id`` for this micro service system is ``scheduler``, but it can be overridden with the flag "--scheduler-id my-scheduler-id" if you need to override this.
  
@@ -490,9 +505,9 @@ This custom scheduler needs to implement the following:
 
 ::
 
-{
-  "state": "?|success|failure" 
-}
+    {
+      "state": "?|success|failure" 
+    }
 
 Installing
 ==========
@@ -506,15 +521,17 @@ Building from source
 2. Make sure ``GOPATH`` is set and ``PATH`` includes ``$GOPATH/bin``
 3. Download and build the package:
  
- ::
- $ go get github.com/sesam-io/sesam
+::
+
+     go get github.com/sesam-io/sesam
  
 4. Verify that it works
 
-$ sesam -version
+    $ sesam -version
 
-sesam version 0.0.8
+    sesam version 0.0.8
 
 Known issues
+============
 
 **JSON encoder escapes <, > and & as \uxxxx**
