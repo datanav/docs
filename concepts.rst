@@ -269,6 +269,8 @@ A typical workflow bellow shows how to upload code, download it to make changes 
 Typical workflow:
 =================
 
+.. rst-class:: content-collapse
+
 ::
 
     $ sesam clean
