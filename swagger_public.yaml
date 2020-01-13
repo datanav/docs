@@ -4,6 +4,85 @@ info:
   version: 0.0.0
   title: SESAM Node
 paths:
+  /models:
+    get:
+      description:
+        "EXPERIMENTAL: Returns a list of all the models"
+      produces:
+        - application/json
+      responses:
+        200:
+          description: An array of models
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Model'
+    post:
+      description:
+        "EXPERIMENTAL: Adds one or more models to the list of models"
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: An array containing the new models
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Model"
+        - in: query
+          name: force
+          type: boolean
+          default: false
+          required: false
+          description:
+            When this is set to "true" it forces the server to accept configuration errors and
+            do a best-effort attempt to apply the new configuration. This is rarely a good idea.
+      responses:
+        200:
+          description: An array of models
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Model'
+
+  '/models/{model_id}':
+    get:
+      operationId: api.models.get_model
+      description:
+        "EXPERIMENTAL: Returns the specified model"
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: model_id
+          description: The id of the model
+          required: true
+          type: string
+      responses:
+        200:
+          description: The model
+          schema:
+            $ref: '#/definitions/Model'
+    delete:
+      operationId: api.models.delete_model
+      description:
+        "EXPERIMENTAL: Deletes the specified model"
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: model_id
+          description: The id of the model
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
   /pipes:
     get:
       description:
@@ -368,6 +447,40 @@ paths:
           description: OK
         404:
           description: Unknown webhook or pipe
+
+  '/pipes/{pipe_id}/entity-types/source':
+    get:
+      operationId: api.pipes.get_pipe_entity_type_source
+      description:
+        Returns the pipe's source entity type
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+
+  '/pipes/{pipe_id}/entity-types/sink':
+    get:
+      operationId: api.pipes.get_pipe_entity_type_sink
+      description:
+        Returns the pipe's sink entity type
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: pipe_id
+          description: The id of the pipe
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
 
   /datasets:
     get:
@@ -2441,6 +2554,9 @@ definitions:
     type: object
 
   Namespaces:
+    type: object
+
+  Model:
     type: object
 
   ServiceMetadata:
