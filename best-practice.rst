@@ -233,6 +233,248 @@ Datasets
 
 • name them the same as the pipe that produced it (the default and does not need to be specified)
 
+Workflow for transforming data in Sesam
+---------------------------------------
+
+Most Sesam projects will have a set flow that the data goes through.
+
+The data fed into Sesam through input pipes where namespaced identity is added in order to keep exsisting data model with joins intact, RDF type for future filetring and classification, global_ids used for joining and set different environments through conditions
+
+Merge pipe merges data beloning together to generate global datasets, transforms and Metadata Global true
+
+Outging pipes is where merged datasets are ennriched with more context from other datasets 
+
+Endpoint pipes has no logic and basically sends data to endpoint
+
+.. image:: images/best-practice/Sesam-workflow.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept  
+
+Input pipes
+===========
+
+Input pipes are the pipes directly connected to the source systems, i.e. the pipes which yields the input data to the node. The implementation of input pipes deviate from the implementation of merge pipes or pipes when we enrich data in the sense that we wish the number of transformations to be at a minimum. The data from the input pipes should reflect the source data as much as possible. This does not mean we can not transform the data, but we should not remove any information from the data at this stage, only add information.
+
+First property we should add in input pipe, is an "_id" we can use for joining. Let's say wee have person data from three sources about person data: crm-person, erp-person and hr-person.
+
+Next step is to find id’s to match i.e. to find equalities and in this case we have the following three:
+
+::
+
+  “Crm-person: customer-number”: “1234”
+  “Hr-person: _id”: “1234”
+  “Erp-person employee-number”: “1234”
+
+In this we match on value only as property name varies. It can become messy and one can assume these values will be used for doing more joins. Solution will be to generate a “global-person:employee_id” as early as possible in the flow, i.e. here in the input pipe. It is now ready to be used to generate the global-person dataset and can be re-used for other joins. This “global-person:employee_id” will be stored in $id and makes joining data both easier and more tidy. 
+
+
+Another issue to avoid complications further down stream in the integrations, there are some standard transformations and applications we recommend users to apply inside input pipes. One common issue we can solve in the input pipe is; who is allowed to talk directly to the source system? As an example, we use a customer who has 2 different environments for their personell data; one for produciton and one for test. The customers production environment includes all the personal data for the individuals working for the company. This data is sensitive, and only one IP-address is allowed to access that specific database.
+
+The customer's test environment also contains sensitive personal data. Therefore only one IP-address from the Sesam portal may have access. There are several issues connected to this setup. First, what do we do when several consultants work with the same project? Who get’s the firewall access? Second, what about minor changes to code that we would like to test out, without having to changes data in the customers test environment? 
+
+These issues are solved with the conditional source setting in the input pipes DTL code, and we will go through how to do this below.
+
+BIn the DTL-code below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; ’Prod’ and ’Dev’.
+In this case, the ’Prod’ environment should talk directly to the source data, in this case a csv-file. Inside the conditional ’Prod’-definition we specify all the information we need in order to collect the source data.
+
+The ’Dev’ environment should not talk directly to any source, since many people will be using it. Instead we use ’embedded data’, which is data on the same format as the source data in ’Prod’, but anonymized such that many people can use it.
+We specify which Sesam node belongs to ’Dev’ and which belongs to ’Prod’ by inside the ’Variables’-tab under ’Settings’ - ’Datahub’ inside each node. In the DTL-code window we specify a variable named ’node-env’ which takes the value correlated to the specific environment that node should be associated with.
+
+::
+
+  "node-env": "prod" or "node-env": "dev"
+
+  Depending on which we use.
+
+  Imaage
+
+::
+
+  { 
+  "_id": "hr-person", 
+  "type": "pipe", 
+  "source": { 
+    ´´"type": "conditional"´´, 
+    "alternatives": { 
+      "Prod": { 
+        "type": "csv", 
+        "system": "hr", 
+        "blacklist": ["Password"], 
+        "delimiter": ",", 
+        "encoding": "utf-8", 
+        "primary_key": "SSN", 
+        "url": "/file/sesam-training/data/test_people_sesam_training1.csv" 
+      }, 
+      "Dev": { 
+        "type": "embedded", 
+        "entities": [{ 
+          "_id": "23072451376", 
+          "Country": "NO", 
+          "EmailAddress": "TorjusSand@einrot.com", 
+          "Gender": "male", 
+          "GivenName": "Torjus", 
+          "MiddleInitial": "M", 
+          "Number": "1", 
+          "SSN": "23072451376", 
+          "StreetAddress": "Helmers vei 242", 
+          "Surname": "Sand", 
+          "Title": "Mr.", 
+          "Username": "Unjudosely", 
+          "ZipCode": "5163" 
+        }, { 
+          "_id": "09046987892", 
+          "Country": "NO", 
+          "EmailAddress": "LarsEvjen@rhyta.com", 
+          "Gender": "male", 
+          "GivenName": "Lars", 
+          "MiddleInitial": "A", 
+          "Number": "2", 
+          "SSN": "09046987892", 
+          "StreetAddress": "Frognerveien 60", 
+          "Surname": "Evjen", 
+          "Title": "Mr.", 
+          "Username": "Wimen1979", 
+          "ZipCode": "3121" 
+        }, { 
+          "_id": "07033589977", 
+          "Country": "NO", 
+          "EmailAddress": "DennisOlsen@dayrep.com", 
+          "Gender": "male", 
+          "GivenName": "Dennis", 
+          "MiddleInitial": "L", 
+          "Number": "3", 
+          "SSN": "07033589977", 
+          "StreetAddress": "Gydas gate 227", 
+          "Surname": "Olsen", 
+          "Title": "Mr.", 
+          "Username": "Gotin1984", 
+          "ZipCode": "3732" 
+        }, { 
+          "_id": "14032975433", 
+          "Country": "NO", 
+          "EmailAddress": "Emiliestby@teleworm.us", 
+          "Gender": "female", 
+          "GivenName": "Emilie", 
+          "MiddleInitial": "T", 
+          "Number": "4", 
+          "SSN": "14032975433", 
+          "StreetAddress": "Landeroveien 83", 
+          "Surname": "Østby", 
+          "Title": "Mrs.", 
+          "Username": "Slin1956", 
+          "ZipCode": "0672" 
+        }, { 
+          "_id": "20116430180", 
+          "Country": "NO", 
+          "EmailAddress": "JonasHaile@jourrapide.com", 
+          "Gender": "male", 
+          "GivenName": "Jonas", 
+          "MiddleInitial": "E", 
+          "Number": "5", 
+          "SSN": "20116430180", 
+          "StreetAddress": "Indre Løkkavei 3", 
+          "Surname": "Haile", 
+          "Title": "Mr.", 
+          "Username": "Firejus", 
+          "ZipCode": "3515" 
+        }, { 
+          "_id": "03045865306", 
+          "Country": "NO", 
+          "EmailAddress": "MartineJohansson@gustr.com", 
+          "Gender": "female", 
+          "GivenName": "Martine", 
+          "MiddleInitial": "J", 
+          "Number": "6", 
+          "SSN": "03045865306", 
+          "StreetAddress": "Statsråd Kroghs veg 222", 
+          "Surname": "Johansson", 
+          "Title": "Mrs.", 
+          "Username": "Somper", 
+          "ZipCode": "7021" 
+        }, { 
+          "_id": "12062922598", 
+          "Country": "NO", 
+          "EmailAddress": "DavidTnder@superrito.com", 
+          "Gender": "male", 
+          "GivenName": "David", 
+          "MiddleInitial": "N", 
+          "Number": "7", 
+          "SSN": "12062922598", 
+          "StreetAddress": "H.A.Reinerts gate 159", 
+          "Surname": "Tønder", 
+          "Title": "Mr.", 
+          "Username": "Zably1991", 
+          "ZipCode": "1524" 
+        }, { 
+          "_id": "01112962070", 
+          "Country": "NO", 
+          "EmailAddress": "JulieNordeng@teleworm.us", 
+          "Gender": "female", 
+          "GivenName": "Julie", 
+          "MiddleInitial": "A", 
+          "Number": "8", 
+          "SSN": "01112962070", 
+          "StreetAddress": "Sandbrekketoppen 63", 
+          "Surname": "Nordeng", 
+          "Title": "Mrs.", 
+          "Username": "Hicar1971", 
+          "ZipCode": "5224" 
+        }, { 
+          "_id": "14085111225", 
+          "Country": "NO", 
+          "EmailAddress": "ErikaOlsen@jourrapide.com", 
+          "Gender": "female", 
+          "GivenName": "Erika", 
+          "MiddleInitial": "L", 
+          "Number": "9", 
+          "SSN": "14085111225", 
+          "StreetAddress": "Fürstlia 148", 
+          "Surname": "Olsen", 
+          "Title": "Mrs.", 
+          "Username": "Whavillat", 
+          "ZipCode": "1367" 
+        }, { 
+          "_id": "12052427741", 
+          "Country": "NO", 
+          "EmailAddress": "AleksanderOmmundsen@rhyta.com", 
+          "Gender": "male", 
+          "GivenName": "Aleksander", 
+          "MiddleInitial": "M", 
+          "Number": "10", 
+          "SSN": "12052427741", 
+          "StreetAddress": "Rømers gate 182", 
+          "Surname": "Ommundsen", 
+          "Title": "Mr.", 
+          "Username": "Grale1949", 
+          "ZipCode": "7030" 
+        }}] 
+      } 
+    }, 
+    "condition": "$ENV(node-env)" 
+  }, 
+  "transform": { 
+    "type": "dtl", 
+    "rules": { 
+      "default": [ 
+        ["copy", "*"], 
+        ["comment", "below we will add  a namespaced identifier and 'rdf:type' for easy filtering later"], 
+        ["add", "rdf:type", 
+          ["ni", "hr", "person"] 
+        ] 
+      ] 
+    } 
+  }, 
+  "pump": { 
+    "mode": "manual" 
+  }, 
+  "metadata": { 
+    "tags": ["embedded", "person"] 
+  } 
+} 
+  
+
+
 Tips for global datasets
 ------------------------
 

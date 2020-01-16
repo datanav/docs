@@ -166,6 +166,23 @@ In this section we will go further into what pipes are, how they work and what w
 
 When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to another, with the purpose of adding structure to the data. These pipes generate new datasets with new and transformed data ready to be used by other systems.
 
+A pipe in Sesam typically consists of nad each block is available as a template to make writing pipes easier and quicker. For source and targets we can chooes available systems and press replace to add values to pipe. Same with pump and transforms.
+
+::
+    {
+  "_id": 
+   "type": "pipe"
+   "source"
+  "sink":
+  "transform": 
+  "pump": 
+}
+
+.. image:: images/getting-started/templates.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
 The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
 
 .. _getting-started-basic-dtl-functions:
@@ -514,7 +531,7 @@ We will first look at setting up a sink to expose the output for a .csv (comma s
 
  "sink": {
    "type": "csv_endpoint",
-   "columns": ["_id", "lastname", address"],
+   "columns": ["_id", "lastname", "address"],
  }
 
 The sink config can include more parameters, but their default values are OK for our example and do not need to be listed and changed. For example **"delimiter"** is set as **","** by default. Look up other parameters in the documentation if needed. The values listed in **"columns"** correspond to values in the output of the DTL.
@@ -740,7 +757,7 @@ Let's look at an example:
       "primary_key": false,
       "source_property": "department"
     }, {
-      "type": "string",
+      "type": "integer",
       "name": "salary",
       "default": "",
       "allow_null": true,
@@ -748,7 +765,7 @@ Let's look at an example:
       "max_size": 50,
       "min_size": 0,
       "primary_key": false,
-      "source_property": "sallary"
+      "source_property": "salary"
     }, {
       "type": "string",
       "name": "address",
@@ -770,7 +787,7 @@ Let's look at an example:
     "rules": {
       "default": [
         ["copy",
-          ["list", "id", "firstname", "lastname", "dateofbirth", "department", "sallary", "address"]
+          ["list", "id", "firstname", "lastname", "dateofbirth", "department", "salary", "address"]
         ]
       ]
     }
