@@ -798,7 +798,8 @@ Properties
 
    * - ``gdpr-data-type:contact``
      - String
-     - A mail address for the responsible contact for this data type (optional)
+     - An email address for the responsible contact for this data type. It can be multiple contacts, expressed as a
+       comma separated list of email addresses (with no whitespaces) (optional)
      -
      -
 
