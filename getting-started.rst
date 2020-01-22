@@ -23,7 +23,7 @@ If you want to jump straight into Sesam and get hands-on, you can go right  to t
 
 Setting up our Sesam instance
 -----------------------------
-You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
+You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment if you consider this option, please be free to contact us on info@sesam.io for further information). This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
 
 The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
 
@@ -166,17 +166,12 @@ In this section we will go further into what pipes are, how they work and what w
 
 When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to another, with the purpose of adding structure to the data. These pipes generate new datasets with new and transformed data ready to be used by other systems.
 
-A pipe in Sesam typically consists of nad each block is available as a template to make writing pipes easier and quicker. For source and targets we can chooes available systems and press replace to add values to pipe. Same with pump and transforms.
+.. image:: images/getting-started/pipe-struckture.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
 
-::
-    {
-  "_id": 
-   "type": "pipe"
-   "source"
-  "sink":
-  "transform": 
-  "pump": 
-}
+As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can chooes available systems and press replace to add values to pipe. Same with pump and transforms.
 
 .. image:: images/getting-started/templates.png
     :width: 800px
