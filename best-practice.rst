@@ -12,32 +12,30 @@ Best Practice
 
 Summary
 -------
-Sesam is an Integration Platform using a unique Datahub approach for **collecting**, **connecting** and **sharing** data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the systems that own the original data. In this way all the valuable data within your company will be available for the whole organization.
+Sesam is an Integration Platform using a unique Datahub approach for collecting, connecting and sharing data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the legacy systems that own the original data. Making all the valuable data within your company available for the whole organization. 
 
-Because Sesam has a unique approach for integrating data and is a very generic platform, there was a growing need for a best practice to describe and teach how to best utilize the great possibilities of Sesam.
+As many systems, Sesam can become complex and difficult to maintain when misused. To mitigate this, it is important to follow a small set of simple rules when starting on your journey. Adhering to these guidelines early will give your system solid foundations making it future proof and sparing you numerous headaches when time will come to connect more external systems and get even more out of your data. 
 
-As the amount of data in a Sesam node grows, the need for an optimized dataset structure will increase. Without proper structure, each added system results in more time spent on connecting and joining the corresponding raw data. 
-
-When working in a sequential way to process data, i.e. many pipes which further add to point-to-point connections inside Sesam, locating and re-using data is significantly more time consuming.
-
-These challenges may be solved by grouping data of the same type or concept in what we call **“global datasets”**.
-
-Global datasets are essential for getting the most out of using Sesam. This means less connections within Sesam, and more re-usable datasets. In addition, it makes it easier to find required data as it is now grouped in one location, e.g. invoice or employee. This will also make it easier adding new integrations for consuming data when connecting to ready-to-use enriched datasets in the existing global datasets. 
+As the amount of data in a Sesam node grows, an optimized dataset structure will become necessary. For example, rather than approach each data flow sequentially and individually—where a single entry will lead to single merger or alteration followed by sinking the data to a recipient external system—it helps to favour aggregations of data with similar type or pertaining to the same concept. These aggregations are called “global datasets” and can be seen as authoritative datasets—e.g. the one stop shop for customer data, where the freshest and most accurate data can unequivocally be found. 
 
 
-Data model
-----------
-The data model in Sesam can be described in short as connect, collect, share. The different sources are connected to Sesam with connectors, the data is then imported into datasets inside Sesam. Once imported, all data within Sesam is in the same format (JSON), which means data can now be connected independent of the source system.  
-When importing data into Sesam, there are two important Sesam principles to keep in mind; 
+Data handling philosophy
+------------------------
+The data handling philosophy in Sesam can be described in short as connect, collect, share. Sesam uses connectors to fetch data from external systems. The internal data representation uses JSON, allowing to work with data from heterogeneous sources indistinctively of their system of origin.
 
-1. Always try to get as much of the data as possible (i.e. if importing a table from a relational database, do select asterix/ select all).  
-2. The second principle is to keep the data as close to the original as possible, do not implement any transforms or change the semantics unless it's necessary. 
+We recommend to apply a few principles when importing data into Sesam:
 
-The next step is to create the global datasets, these consist of data from the "raw" imported datasets, categorized and connected (if possible).  
-There are two principles to keep in mind when creating the global datasets;  
+1)  Collect data comprehensively, it is preferable to have unused data in Sesam than to re-engineer the connector should the data elements become necessary. 
+2)  Keep the data as faithful to the original as possible, transforms are generally not necessary at this stage and can be looked into later.
 
-1. ALL the data must be available through global datasets, which means all the raw datasets need to be imported into a global dataset.  
-2. The second principle is to always try to merge data with existing data in the global dataset which is about the same thing. The goal of doing it this way, is to make it easy to consume and reuse the data within Sesam, which is aligned with our bold vision; "All the data from all the systems, connected and available as a single shared resource". 
+The next step is to create the global datasets, these consist of data from the imported datasets, categorized and connected when possible. 
+We also recommend considering the following principles when creating the global datasets: 
+
+1)  The entirety of the imported data should be in at least one global dataset. That means all the raw datasets need to be imported into a global dataset. 
+2)  Try to merge the data into the global dataset referring to the same concept. This semantic approach to global datasets will facilitate the consumption and improve the reusability of the data within Sesam.
+
+Following the aforementioned principles when importing data and creating global datasets will establish good foundations for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource".
+
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
@@ -53,16 +51,19 @@ Sesam organizes entities by storing them in global datasets.
 Definition
 ==========
 
-A global dataset is a collection or combination of data of the same type or concept from different sources. In other words, a global dataset combines data from sources with logically linked data to provide one common place to retrieve this data from when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
+A global dataset is a collection of data pertaining to a same concept from different sources. In other words, a global dataset combines data from sources semantically linked to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
 
-A global dataset is generated by merging data from various sources. The data merge can be performed by simply merging datasets together, or by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained `here <https://docs.sesam.io/getting-started.html#merge>`__ It is also possible to simply add datasets to a global dataset without merging.
+Global datasets can be populated: 
 
-It  is important to remember that a global dataset requires knowledge or understanding of the basic data from the different sources. Only by locating the logically linked data is it possible to effectively structure it into global datasets. 
+- simply add datasets to a global dataset without merging, 
+- merging data from various sources without modifications,  
+- selectively merge data, by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained `here <https://docs.sesam.io/getting-started.html#merge>`__ 
+
+It is important to remember that a global dataset requires either business knowledge or a sound understanding of the data from the different sources. Global datasets will work to their fullest potential if they include all of the semantically linked data elements relating to the subject matter. 
 
 Example:
 
-There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each of the root datasets every time. However, through the creation of a **global-person** dataset, information can be easily fetched from one single location.
-
+There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each of the root datasets every time. However, through the creation of a **global-person** dataset, information can be easily fetched from one single location.
 ::
 
   HR system
@@ -256,7 +257,7 @@ Outging pipes is where merged datasets are ennriched with more context from othe
 
 Endpoint pipes has no logic and basically sends data to endpoint
 
-.. image:: images/best-practice/Sesam-workflow.png
+.. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
@@ -514,9 +515,9 @@ Below the actual merge, or **«equality»** rules are set.  Further down, in the
     "_id": "global-person", 
     "type": "pipe", 
     "source": { 
-      **"type": "merge",** 
+      "type": "merge",
       "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"], 
-     ** "equality"**: [ 
+      "equality": [ 
         ["eq", "ep.$ids", "cp.SSN "], 
         ["eq", "ep. .$ids ", "hr.$ids"], 
         ["eq", "ep.Username", "su.Username"] 
@@ -524,7 +525,7 @@ Below the actual merge, or **«equality»** rules are set.  Further down, in the
       "identity": "first", 
       "version": 2 
     }, 
-   ** "transform"**: { 
+   "transform": { 
       "type": "dtl", 
       "rules": { 
         "default": [ 
@@ -583,7 +584,7 @@ The first property that greets us in a global data set is called $ids and is a l
       "~:crm-person:100", 
       "~:salesforce-userprofile:Mays1944", 
       "~:hr-person:02023688018" 
-    ], 
+    ]
  
  The $ids are generated automatically when the merge-pipe is run, and they always show up on top for the global dataset.  
  
@@ -593,9 +594,86 @@ Collection identifier, $ids, is a list of primary keys or global ID used in data
 Another perspective is to see this as a primary key of global IDs, when merging data from several sources. 
  
 
-Outgoing pipes
-==============
+Transformation and Enrichment Pipes (TEPs) 
+==========================================
+
+In order to utilize aggregated data in Sesam residing in global dataset, data often must be transformed and/or enriched before data can be delivered to targets. The actual deliverance of data is done through another concept of Sesam – Sinks. Sinks are discussed in more detail in another section of this document.
+Transforming and enriching data to be ready for deliverance, is implemented through TEPs. 
+
+TEPs are implemented by using aggregated entities from global datasets within Sesam. These global datasets are not necessarily ready to be delivered to targets systems directly. In TEPs only the necessary data for the Endpoint are extracted from the global datasets. This data is extracted by filtering on the metadata tags. RDF type tends to be most used as it contains source system and table/ data type.
+
+As an example, if only require person data from crm system residing in the global-person dataset, metadata tag “rdf type” become useful. We can pop on following filter in this pipe:
+
  
+:: 
+  ["filter",  
+            ["eq", "_S.rdf:type", "crm:person"]  
+          ] 
+ 
+ 
+This will give output from crm-person only. 
+ 
+Filter is set under transforms and there are several transforms we can do in a Transformation and Enrichment Pipe. Other metadata tags can be used for further filtering if required. 
+ 
+Additional data can also be added to the enriched datasets. This can be more fixed data or parametric data. I.e. in a global dataset only the zip code or country code are stored. The TEPs can then hop to other datasets to retrieve data for city associated with the zip code or the full name of a country associated with the country code from the global dataset. Data in such data sets can be fixed/parametric or as “difi-postnummer” dataset contains all zip codes with city name in Norway.
+The resulting dataset from a TEPs is produced and can be finalized into the correct format specified for the endpoint. The final transformation before deliverance is performed in the sink and the corresponding microservice (XML, EDIFACT or an SQL statement towards IBM DB2).
+ 
+Lastly to have specification on target endpoint format is important: 
+
+1. Mandatory – Must have  
+2. Parametric options 
+3. MUTEX – Mutual Exclusive data – i.e. for bank account you can either use BBAN or IBAN, not both at the same time 
+ 
+See example below: 
+
+::
+  "_id": "example-hops-apply-rule", 
+  "type": "pipe", 
+  "source": { 
+    "type": "embedded", 
+    "entities": [{ 
+      "_id": "apply-rule", 
+      "name": { 
+        "firstname": "Ola", 
+        "lastname": "Nordmann" 
+      }, 
+      "zipcode": "9982" 
+    }] 
+  }, 
+  "transform": { 
+    "type": "dtl", 
+    "rules": { 
+      "default": [ 
+        ["add", "address-info", 
+          ["hops", { 
+            "datasets": ["global-location gl"], 
+            "where": [ 
+              ["eq", "_S.zipcode", "gl.postnummer"] 
+            ] 
+          }] 
+        ], 
+        ["merge", 
+          ["apply", "address", "_T.address-info"] 
+        ], 
+        ["remove", "address-info"] 
+      ], 
+      "address": [ 
+        ["add", "city", "_S.poststed"], 
+        ["add", "municipality", "_S.kommunenavn"] 
+      ] 
+    } 
+  }, 
+  "pump": { 
+    "mode": "manual" 
+  }, 
+  "metadata": { 
+    "tags": ["location"] 
+  } 
+ 
+Endpoint
+========
+
+
 Tips for global datasets
 ------------------------
 

@@ -67,7 +67,7 @@ We have created some test data for you. Go to the **Variables** tab and paste th
 
   "node-env": "test"
 
-You should now have several pipes available. Pipes are available in the **config** tab. Config is a term used losely and might vary. In order to avoid confusion it means following in Sesam: it is a tab in Sesam management studion where the DTL describes the configuration, i.e. the logic or DTL code is added to the data to be able to connect, enrich and transform the data. So when talking about config is uploaded or downloaded, tested or ran, it means source code in DTL.
+You should now have several pipes available. Pipes are available in the **config** tab. Config is a term used loosely and its' menaning might vary. In order to avoid confusion it means following in Sesam: it is a tab in Sesam management studion where the DTL describes the configuration, i.e. the logic or DTL code is added to the data to be able to connect, enrich and transform the data. So when talking about config is uploaded or downloaded, tested or ran, it means source code in DTL.
 
 
 As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run pipe to check output. The **config** contains the actual data transformations and pumps. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
@@ -287,6 +287,7 @@ A namespaced identifier consists of two parts; a namespace and an identifier. Th
 Example of an entity with namespaces:
 
 ::
+
    { 
    "_id": "users:123", 
    "user:username": "erica", 
