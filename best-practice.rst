@@ -21,9 +21,9 @@ As the amount of data in a Sesam node grows, an optimized dataset structure will
 
 Data handling philosophy
 ------------------------
-The data handling philosophy in Sesam can be described in short as connect, collect, share. Sesam uses connectors to fetch data from external systems. The internal data representation uses JSON, allowing to work with data from heterogeneous sources indistinctively of their system of origin.
 
-We recommend to apply a few principles when importing data into Sesam:
+The data handling philosophy in Sesam can be described in short as connect, collect, share. Sesam uses connectors to fetch data from external systems. The internal data representation uses JSON, allowing to work with data from heterogeneous sources indistinctively of their system of origin.
+We recommend applying a few principles when importing data into Sesam:
 
 1)  Collect data comprehensively, it is preferable to have unused data in Sesam than to re-engineer the connector should the data elements become necessary. 
 2)  Keep the data as faithful to the original as possible, transforms are generally not necessary at this stage and can be looked into later.
@@ -34,8 +34,7 @@ We also recommend considering the following principles when creating the global 
 1)  The entirety of the imported data should be in at least one global dataset. That means all the raw datasets need to be imported into a global dataset. 
 2)  Try to merge the data into the global dataset referring to the same concept. This semantic approach to global datasets will facilitate the consumption and improve the reusability of the data within Sesam.
 
-Following the aforementioned principles when importing data and creating global datasets will establish good foundations for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource".
-
+Following the aforementioned principles when importing data and creating global datasets will establish good foundations for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource».
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
@@ -64,6 +63,7 @@ It is important to remember that a global dataset requires either business knowl
 Example:
 
 There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each of the root datasets every time. However, through the creation of a **global-person** dataset, information can be easily fetched from one single location.
+
 ::
 
   HR system
@@ -293,11 +293,11 @@ We specify which Sesam node belongs to ’Dev’ and which belongs to ’Prod’
   Depending on which we use. 
  
  
-Another two things seen in input pipe below are: 
+Another two things that we recommend adding in input pipe are: 
  
-RDF type; a meta data tag put on for filtering purposes. It consists of source system and column or property. Eg. crm:person. This need to be done in input pipe as after they go into global dataset, we need to make sure we have metadata tags to be able to filter them out. We can also add other metadata tags if required, but RDF type is the one recommended to always put in the input pipe. 
+RDF type; a meta data tag put on for filtering purposes. It consists of source system and column or property. E.g. crm:person. This needs to be done in input pipe as after they go into global dataset, we need to make sure we have metadata tags to be able to filter them out. We can also add other metadata tags if required, but RDF type is the one recommended to always put in the input pipe. 
  
-Last property added in the input pipe is existing joins. This is to keep existing data model and existing joins and we do this by making NIs (namespaced identifiers)or foreign keys.
+Last property added in the input pipe is existing joins. This is to keep existing data model and existing joins and we do this by making NIs (namespaced identifiers) or foreign keys.
  
  
 :: 
@@ -586,7 +586,7 @@ The first property that greets us in a global data set is called $ids and is a l
       "~:hr-person:02023688018" 
     ]
  
- The $ids are generated automatically when the merge-pipe is run, and they always show up on top for the global dataset.  
+The $ids are generated automatically when the merge-pipe is run, and they always show up on top for the global dataset.  
  
 So, what is **$id**? Basically, it is a collection identifier (Collection ID), $ids, is a concept in Sesam to keep track of different global identifiers from raw datasets (or global datasets) when two or more datasets are merged into a global dataset or enriched datasets. 
  
@@ -673,6 +673,22 @@ See example below:
 Endpoint
 ========
 
+Endpoints are targets for Sesam to send data to. Communication with Endpoints can be implemented and performed in several manners. A recommended practice from Sesam´s point-of-view, is to survey your endpoints and how they work. Endpoints can be of several technologies, figure them out. It is also recommended that you figure out which data is mandatory, optional and mutual exclusive. You should also take into account encoding conversions. With this knowledge you can plan your approach for a full dataflow, transformation and enrichment that must be implemented from pull data from sources until data is ready for delivery to targets.  
+
+Microservices (connectors) will have to be used to communicate with both source and target endpoints. Some connectors are included as a part of Sesam, others would have to be implemented as special customizations.  
+
+Sending data out of Sesam can only done by using Sinks. A Sink is a special kind of pipes that pushes data out of Sesam towards Target Endpoints or Systems and should not have any transformation. A sink will utilize specialized connectors (microservices) for the technical communication with the targets. Such connectors can be a part of Sesam core or extra included features but can also be developed for special cases and technology if needed. Connectors will be discussed in more details in another section. But one can look upon them as technical device drivers. 
+
+Transformations can be of several types. What we care about in this stage is basically two types: 
+1) Data transformation – transformation or enrichment of data content. 
+2) Format transformation – technical transformation to adapt to the endpoints technical abilities to receive data input. 
+
+At this point, any data transformation or enrichment must be omitted. Outgoing sinks should never transform or enrich data, but corresponding system (connector) might do format or technical transformation, encrypt or add parameters that enables the endpoint within a target system to receive data sent from Sesam. However, when it comes to Format Transformation, the answer is different. Data in Sesam are stored as JSON datasets, in some cases these datasets can be sent directly to target systems. But however, in other cases these datasets (from TEPs – Transformation and Enrichment Pipes) must be technical transformed into formats the actual endpoint understands. These are not data transformations but format transformations. And should be performed as a microservice or part of a microservice. 
+
+Same goes for filtering of data. At this stage data should be ready to be sent to the targets without further tampering or filtering. Endpoint sinks and connectors shall not do data transformation or filtering, only format transformation to make the targets able to understand data received from Sesam. 
+
+Metadata is data about the other data. All datasets created in Open Sesam are discoverable through the Sesam Open Data Registry. This registry has metadata about all datasets, including license information, name, description, when it was published, and tags. Each dataset has a dataset page that has links to the actual data and a sample of the data. This could for example be timestamp when the dataset is sent to an Endpoint or a key to ensure duplication control. Metadata can be on individual entity or even on a single data tag (data field). But at this late stage just before sending to an Endpoint, adding metadata to an entity or field should be regarded as a data transformation. And as mention previously data transformation should not happen during processing for sending to an Endpoint. 
+ 
 
 Tips for global datasets
 ------------------------
