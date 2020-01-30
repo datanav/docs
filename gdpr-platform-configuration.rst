@@ -8,18 +8,6 @@ GDPR platform configuration
    :depth: 2
    :local:
 
-Overview
-========
-
-The GDPR platform consist of three parts; the GDPR platform management interface (management studio), the GDPR platform
-datahub and the GDPR data access portal.
-
-The management studio interface enables you to edit configuration settings of your GDPR platform and access its
-datahub where all your GDPR data is collected, connected and stored.
-
-The GDPR data access portal is the public facing interface of the GDPR platform - this is where the end user - data
-subject in GDPR lingo - can log in and manage their GDPR requests, data and consents.
-
 Logging into the GDPR platform
 ==============================
 
