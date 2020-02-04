@@ -9,12 +9,19 @@ Getting started with Sesam's GDPR Platform
 Introduction
 ============
 
-With Sesam's GDPR Platform you can handle your company's GDPR responsibilities. This guide will show you how to set up processing of incoming data requests from the company's data subjects.
+With Sesam's GDPR Platform you can handle many of your company's GDPR responsibilities.
+For more details read about `Sesam and privacy <https://sesam.io/privacy/>`_ and
+`Data Subject rights that the Sesam platform delivers on <https://sesam.io/privacy/howitworks/technical-features.html>`_.
+Here you will also find information about pricing. 
+
+You can contact `info(at)sesam.io <mailto:info@sesam.io>`_ if 
+you want to talk about what Sesam GDPR Platform can do for your organization. Use https://support.sesam.io/ for 
+support questions. 
 
 Setup
 ============
 
-1. Go to `http://portal.sesam.io <http://portal.sesam.io/>`_ and click on sign up.
+1. Go to `https://portal.sesam.io <https://portal.sesam.io/>`_ and click on sign up.
 2. Once you have signed up click on ``New GDPR portal``.
 3. Fill in your contact and payment information.
 4. You will then see your GDPR portal on the dashboard. From here you can add members to your site and administrate your subscription as shown in the picture below. 
@@ -44,11 +51,31 @@ The domain name is the internet address (DNS) where your GDPR data access portal
 
 7. You can customize you portal by uploading your own logo and selecting colors further down the page.
 
-Purposes
-^^^^^^^^
-You need to identify what are your systems, which types of personal data are in those systems and what purposes gives you the right to have the personal data. 
+Purposes and Data types
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Navigate to the Purposes tab and create populate it with your purposes for having the data in your systems. The creation webform provides explanations for what each field represents. Below is an image of the purpose creation template. Make sure to fill in all fields marked with a star (*).
+Purposes and Data types are entities in Sesam GDPR portal that describe personal data in your systems and for what
+purposes it can be processed given proper legal grounds.
+
+This information must be correctly filled out for the GDPR portal to work. There are two ways of filling out this
+information. You can fill out an Excel template and upload it or fill out dialogs in the GDPR section of the 
+Sesam Management studio.
+
+For a simple manual workflow, the dialogs are simple and a good choice. For more complex and for automated
+handling of GDPR requests, the Excel template is recommended. The excel file can be part of you documentation for 
+internal GDPR control and serve as a master when you do changes.
+
+You should not mix the two. Chose excel templates or dialogs.
+
+Purposes - dialogs
+^^^^^^^^
+You need to identify your systems, which types of personal data are in those systems and what purposes 
+gives you the right to have the personal data. 
+
+Navigate to the Purposes tab and populate it with your purposes for having the data in your systems. 
+The creation webform provides explanations for what each field represents. Explanation is shown for the
+field that is edited. Below is an image of the purpose creation template. Make sure to fill in all fields
+marked with a star (*).
 
 .. image:: images/gdpr-getting-started/purpose-creation.png
     :width: 800px
@@ -62,10 +89,12 @@ When a data access request has been processed the purpose is displayed to the da
     :align: center
     :alt: Purpose displayed to data subject
 
-Data types
+Data types - dialogs
 ^^^^^^^^^^
 
-Next, go to Data Types and fill in the data you have in your systems. Make sure to fill in all fields marked with a star (*). In the ``Purposes`` field you select the purposes you have created that apply to the data in question. The email-address(es) supplied in ``Contact`` will receive an email when somebody makes a request for this data.
+Next, go to Data Types and fill in the data you have in your systems. Make sure to fill in all fields marked with a 
+star (*). In the ``Purposes`` field you select the purposes you have created that apply to the data in question. 
+The email-address(es) supplied in ``Contact`` will receive an email when somebody makes a request for this data.
 
 .. image:: images/gdpr-getting-started/data-type-creation.png
     :width: 800px
@@ -84,11 +113,13 @@ Your GDPR portal is now ready for use.
 Excel-template alternative
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Alternatively you can choose to upload the purposes and data types from an Excel-sheet. The sheet will have to contain the same info as you would input through the Sesam portal user interface.
+Alternatively you can choose to upload the purposes and data types from an Excel-sheet. The sheet will have to 
+contain the same info as you would input through the Sesam portal user interface.
 
 1. Download the :download:`GDPR Excel setup template file <files/GDPR setup data.xlsx>`. 
 
-2. Fill in the Excel template. There are examples in it for you to follow. Please note that there are three sheets in the file. Remember to fill in the contact information for the person responsible for the data in each system.
+2. Fill in the Excel template. There are examples in it for you to follow. Please note that there are three sheets 
+in the file. Remember to fill in the contact information for the person responsible for the data in each system.
 
 .. image:: images/gdpr-getting-started/excel-data-type-example.png
     :width: 800px
@@ -97,7 +128,8 @@ Alternatively you can choose to upload the purposes and data types from an Excel
 
 3. Navigate to ``GDPR`` in the left column and then to ``Setup``. 
 
-4. Upload the GDPR setup data Excel file in the ``Upload data type template`` section after you have filled in the necessary information. 
+4. Upload the GDPR setup data Excel file in the ``Upload data type template`` section after you have filled in 
+the necessary information. 
 
 Data access request
 ===================
