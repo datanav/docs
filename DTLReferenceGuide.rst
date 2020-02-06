@@ -3277,11 +3277,11 @@ UUIDs
        |
        | Returns a new random UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
        |
-       |``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
+       | ``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
        |
        | Returns a new UUID object cast from the input argument: "~uabc98f65-ddf5-1234-a8f5-82f6d8e69726".
        |
-       |``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
+       | ``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
        |
        | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
        | Note that the mismatched input argument ``2`` is ignored.
