@@ -350,7 +350,7 @@ There are three ways that one can access properties on entities:
    ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path
    element must begin and end with a single quote. Single quotes can
    be escaped with ``''``.
-   
+
 2. **The "path" function**: ``["path", "placed_by", ["sorted",
    "_.amount", "_S.orders"]]``, which will first evaluate the
    rightmost expression. Then it will traverse the path given in the
@@ -1682,7 +1682,7 @@ If-then-else
        |   ``"NO", "Norway",``
        |   ``"SE", "Sweden",``
        |   ``"Other"]``
-       |     
+       |
        |
        | Given then value of ``_S.country``, returns ``"Norway"`` if the value is ``"NO"``
          and ``"Sweden"`` if the value is ``"SE"``, otherwise ``"Other"`` is returned.
@@ -1691,7 +1691,7 @@ If-then-else
        |   ``45, "DK",``
        |   ``46, "SE",``
        |   ``47, "NO"]``
-       |     
+       |
        |
        | Given the value of ``_S.dialing_code``, returns ``"DK"`` if the value is
          ``45`` and ``"SE"`` if the value  is ``46`` and ``"NO"`` if the value is ``47``,
@@ -1717,7 +1717,7 @@ If-then-else
        | or ``"teenager"`` if the value of ``_S.age`` is greater than or equal to ``13``,
        | or ``"toddler"`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``"unknown"``.
-       
+
 Nulls
 -----
 
@@ -3265,15 +3265,26 @@ UUIDs
      - Description
      - Examples
 
+       .. _uuid_dtl_function:
    * - ``uuid``
      - | *Arguments:*
-       |   NONE(value-expression{0})
+       |   VALUES(value-expression{0|1})
        |
-       | Create a new UUID object.
+       | Create a new UUID object. It can optionally cast a single string or list of string UUID representations to
+         UUID objects. Any input that can't be cast to a UUID object will be ignored.
        |
      - | ``["uuid"]``
        |
-       | Returns a new UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       | Returns a new random UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       |
+       |``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
+       |
+       | Returns a new UUID object cast from the input argument: "~uabc98f65-ddf5-1234-a8f5-82f6d8e69726".
+       |
+       |``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
+       |
+       | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
+       | Note that the mismatched input argument ``2`` is ignored.
 
 
 Nested transformations
