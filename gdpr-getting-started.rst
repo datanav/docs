@@ -24,7 +24,8 @@ Setup
 1. Go to `https://portal.sesam.io <https://portal.sesam.io/>`_ and click on sign up.
 2. Once you have signed up click on ``New GDPR portal``.
 3. Fill in your contact and payment information.
-4. You will then see your GDPR portal on the dashboard. From here you can add members to your site and administrate your subscription as shown in the picture below. 
+4. You will then see your GDPR portal on the dashboard. From here you can add members to your site and 
+administrate your subscription as shown in the picture below. 
 
 .. image:: images/gdpr-getting-started/gdpr-node.png
     :width: 800px
@@ -32,7 +33,8 @@ Setup
     :alt: GDPR node in portal dasboard
 
 
-5. When inside settings, set ``name`` of your GDPR portal and add a ``description`` that will be seen by the data subject. 
+5. When inside settings, set ``name`` of your GDPR portal and add a ``description`` that will be seen by the data 
+subject. 
 
 .. image:: images/gdpr-getting-started/name-and-description.png
     :width: 800px
@@ -47,9 +49,14 @@ Setup
     :align: center
     :alt: GDPR setup page
 
-The domain name is the internet address (DNS) where your GDPR data access portal should be available to the data subjects. You can choose any name you want, as long as it's not already in use by someone else. Your GDPR data access portal will then be available on the web (e.g. https://your-selected-name.sesamdata.com).
+The domain name is the internet address (DNS) where your GDPR data access portal should be available to the 
+data subjects. You can choose any name you want, as long as it's not already in use by someone else. Your GDPR 
+data access portal will then be available on the web (e.g. https://your-selected-name.sesamdata.com).
 
 7. You can customize you portal by uploading your own logo and selecting colors further down the page.
+
+8. System owners must be added as users in the Sesam portal be granted the "GDPR operations" role in order to 
+download data requests and uploaded user data. 
 
 Purposes and Data types
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -58,7 +65,7 @@ Purposes and Data types are entities in Sesam GDPR portal that describe personal
 purposes it can be processed given proper legal grounds.
 
 This information must be correctly filled out for the GDPR portal to work. There are two ways of filling out this
-information. You can fill out an Excel template and upload it or fill out dialogs in the GDPR section of the 
+information. You can fill out an Excel template and upload it, or fill out dialogs in the GDPR section of the 
 Sesam Management studio.
 
 For a simple manual workflow, the dialogs are simple and a good choice. For more complex and for automated
@@ -67,10 +74,16 @@ internal GDPR control and serve as a master when you do changes.
 
 You should not mix the two. Chose excel templates or dialogs.
 
+For details see :ref:`Data types and purposes configuration <gdpr-data-types-purposes-configuration>`
+
 Purposes - dialogs
 ^^^^^^^^
 You need to identify your systems, which types of personal data are in those systems and what purposes 
 gives you the right to have the personal data. 
+
+Purposes will show up in the Purpos-section of the Data Access Portal.
+
+.. image:: images/gdpr-getting-started/purpose-dap.png ???not created
 
 Navigate to the Purposes tab and populate it with your purposes for having the data in your systems. 
 The creation webform provides explanations for what each field represents. Explanation is shown for the
@@ -82,7 +95,8 @@ marked with a star (*).
     :align: center
     :alt: Purpose creation webform
 
-When a data access request has been processed the purpose is displayed to the data subject like in the following image:
+When a data access request has been processed the purpose is displayed to the data subject like in the following 
+image:
 
 .. image:: images/gdpr-getting-started/purpose-displayed.png
     :width: 800px
@@ -93,8 +107,9 @@ Data types - dialogs
 ^^^^^^^^^^
 
 Next, go to Data Types and fill in the data you have in your systems. Make sure to fill in all fields marked with a 
-star (*). In the ``Purposes`` field you select the purposes you have created that apply to the data in question. 
-The email-address(es) supplied in ``Contact`` will receive an email when somebody makes a request for this data.
+star (*). Like for Purposes, the creation webform provides explanations.In the ``Purposes`` field you select the 
+purposes you have created that apply to the data in question. The email-address(es) supplied in ``Contact`` 
+will receive an email when somebody makes a request for this data.
 
 .. image:: images/gdpr-getting-started/data-type-creation.png
     :width: 800px
@@ -107,6 +122,11 @@ The data related to the data subject can then be displayed like this when a data
     :width: 800px
     :align: center
     :alt: Data displayed to data subject
+
+
+Data types will show up in the Your data-section of the Data Access Portal as filters
+
+.. image:: images/gdpr-getting-started/data-types-your-data-dap.png ???not created
 
 Your GDPR portal is now ready for use.
 
@@ -133,6 +153,8 @@ the necessary information.
 
 Data access request
 ===================
+
+For details see :ref:`The GDPR data access portal <gdpr-data-access-portal>'.
 
 Request data as data subject
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
