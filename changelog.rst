@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-02-12
+----------
+* Added support for ``create_table_if_missing`` SQL sink property for the Oracle, Oracle TNS and MySQL systems. Previously only the MS SQL and PostgreSQL systems supported this option.
+
 2020-02-06
 ----------
 * Added support for optional string cast value(s) as argument to the :ref:`uuid <uuid_dtl_function>` DTL function
