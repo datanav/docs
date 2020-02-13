@@ -5,7 +5,8 @@ First focus is the "Getting started" section.
 
 ## TODO
     [x] Ask for GDPR dev node
-    [] Harmonize with general "Getting started with Sesam" and sesam.io
+    [ ] Mention Data Protection Official/Officer (personvernombud) (or should this be in https://sesam.io/privacy/ ?)
+    [ ] Harmonize with general "Getting started with Sesam" and sesam.io
         [x] Mirror structure: Overview, Getting started, detailed thematic sections
         [x] https://sesam.io/privacy https://sesam.io/privacy/howitworks/technical-features.html info@sesam.io https://support.sesam.io
         [x] sureway.no and other partner solutions? https://sesam.io/privacy/partners/
@@ -16,7 +17,7 @@ First focus is the "Getting started" section.
     [ ] all required fields in webforms and excel templates should be documented. Effects. (But in getting-started?)
     [ ] modify examples to be easier to relate to common GDPR tasks and better "flow" in names. Describe example case/objectives first?
     [ ] images/gdpr-getting-started/purpose-creation.png update to show ALL required fields.
-    [ ] images/gdpr-getting-started/data-type-creation.png update to show ALL required fields.
+    [ ] images/gdpr-getting-started/data-type-creation.png update to show ALL required fields. (fields reqired for automation are missing)
     [ ] images/excel-data-type-example.png show sheet in template for data types too
     [ ] image that map side effects of adding Purposes and Data types.
     [ ] Short about default GDPR rolls
@@ -31,6 +32,12 @@ First focus is the "Getting started" section.
     [x] rapport problems with webforms. Filled out fields get blanked out in overview lists and i fields if you try to edit with webform.
     [ ] info about the Data browser? How to make data editable to user (change request)
     [ ] Write that "forced" naming of purpose, "<Type> for <System>", might lead to "strange" purpose title if <Type> not carefully selected.
+    [ ] how to test portal as admin (challenges and tricks)
+        [ ] delay
+        [ ] cookies in browser
+        [ ] SMS
+        [ ] email
+        [ ] The query is a point-in-time query and as such reflects the state of the document index at that point in time. To update the search result, a new GDPR access request must be submitted by the data subject.
 
 ## CHECK
     [ ] Documentation as marketing?
@@ -53,6 +60,8 @@ First focus is the "Getting started" section.
     [ ] Identifiers and TypeID fields are missing from Create new data type dialog.
     [ ] Valid data type levels in excel templates are Personal and Related. The webform also have Sensitive.
     [ ] How do you clean up node after testing examples and you want to set up your own node from scratch? Ask support for a reset? Many pipes can not be edited or started/restarted without portal admin powers.
+    [ ] mixing access requests with email and phone number as id
+    [ ] MUST use explicit country code for request with phone number as ID?? Phone_number in entity MUST be with country code?? (that is how I made it work in portal, or was it delay "magic"?)
 
 ## Open questions
     [ ] Distinction of products?
@@ -68,3 +77,4 @@ First focus is the "Getting started" section.
     If the level property is Related it will be matched to the closest "parent" record with the top-most in such a chain being matched with subject record (a "Personal" level data type".""" What does this mean?
     [ ] The Sensitive level is not mentioned in Getting started - should it? It is a choice in webform.
     What is the anonymizedEmail in GDPR Access request?
+    [ ] https://docs.sesam.io/gdpr-getting-started.html#gdpr-unstructured-data-handling what about
