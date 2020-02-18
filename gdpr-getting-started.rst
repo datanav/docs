@@ -154,7 +154,7 @@ the necessary information.
 Data access request
 ===================
 
-For details see :ref:`The GDPR data access portal <gdpr-data-access-portal>'.
+For details see :ref:`The GDPR data access portal <gdpr-data-access-portal>`.
 
 Request data as data subject
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

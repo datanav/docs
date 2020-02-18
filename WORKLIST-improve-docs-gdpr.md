@@ -5,6 +5,12 @@ First focus is the "Getting started" section.
 
 ## TODO
     [x] Ask for GDPR dev node
+    [x] Test all examples
+    [ ] Get examples working
+        [ ] Basic (manual workflow) with webforms (reported error with update of values from set data fields in webform)
+        [x] Basic with excel template
+        [ ] Advanced (automated) with webforms (missing fields, must be set manual as extra fields)
+        [ ] Advanced with excel template ()
     [ ] Mention Data Protection Official/Officer (personvernombud) (or should this be in https://sesam.io/privacy/ ?)
     [ ] Harmonize with general "Getting started with Sesam" and sesam.io
         [x] Mirror structure: Overview, Getting started, detailed thematic sections
@@ -27,7 +33,7 @@ First focus is the "Getting started" section.
     [ ] explain/introduce Policies tab related to Purpose (But in getting-started?)
     [ ] explain/introduce Translations (But in getting-started?)
     [ ] explain/introduce 
-    [ ] Advanced example: Sesam GDPR node to support export anatomized data sets for analysis.(But in getting-started?)
+    [ ] Advanced example: Sesam GDPR node to support export anonimized data sets for analysis.(But in getting-started?)
     [ ] "Handle data request as system owner" - specify where sheet names come from
     [x] rapport problems with webforms. Filled out fields get blanked out in overview lists and i fields if you try to edit with webform.
     [ ] info about the Data browser? How to make data editable to user (change request)
@@ -38,6 +44,8 @@ First focus is the "Getting started" section.
         [ ] SMS
         [ ] email
         [ ] The query is a point-in-time query and as such reflects the state of the document index at that point in time. To update the search result, a new GDPR access request must be submitted by the data subject.
+    [ ] "Move" feature description to gdpr documentation - Privacy Portal Features https://sesam.io/privacy/howitworks/technical-features.html
+    [ ] Split gdpr getting started. Basic and advanced.
 
 ## CHECK
     [ ] Documentation as marketing?
@@ -62,6 +70,7 @@ First focus is the "Getting started" section.
     [ ] How do you clean up node after testing examples and you want to set up your own node from scratch? Ask support for a reset? Many pipes can not be edited or started/restarted without portal admin powers.
     [ ] mixing access requests with email and phone number as id
     [ ] MUST use explicit country code for request with phone number as ID?? Phone_number in entity MUST be with country code?? (that is how I made it work in portal, or was it delay "magic"?)
+    [ ] WILL upload of config files from regular sesam getting started erase GDPR configs???
 
 ## Open questions
     [ ] Distinction of products?
@@ -78,3 +87,11 @@ First focus is the "Getting started" section.
     [ ] The Sensitive level is not mentioned in Getting started - should it? It is a choice in webform.
     What is the anonymizedEmail in GDPR Access request?
     [ ] https://docs.sesam.io/gdpr-getting-started.html#gdpr-unstructured-data-handling what about
+
+## Policies for documentation/information
+- The word Privacy to be used instead of GDPR unless strictly GDPR specific.
+- Manual solution is the basic solution
+- Automated solution is advanced because of need for Sesam data integration
+- Information about the solution should be in the documentation, and sesam.io pages can direct to these pages and not the other way around.
+- No "marketing" in documentation
+- The privacy solution examples should tie up with other examples in the documentation
