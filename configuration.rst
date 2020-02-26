@@ -2437,8 +2437,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "ldap",
-            "system": "bouvet_ldap",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
+            "system": "example_ldap",
+            "search_base": "ou=Example,dc=example,dc=org"
         }
     }
 
@@ -6639,12 +6639,12 @@ Example configuration
 ::
 
     {
-        "_id": "bouvet_ldap",
-        "name": "Bouvet LDAP server",
+        "_id": "example_ldap",
+        "name": "Example LDAP server",
         "type": "system:ldap",
-        "host": "dc1.bouvet.no",
+        "host": "ldap.example.org",
         "port": 389,
-        "username": "bouvet\\some-user",
+        "username": "example\\some-user",
         "password": "********"
     }
 
