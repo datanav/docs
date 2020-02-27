@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-02-27
+----------
+* The transform function :ref:`add <dtl_transform-rename>` will now rename properties with a null value. The old behaviour ignored such properties, but that was considered to be a bug.
+
 2020-02-12
 ----------
 * Added support for ``create_table_if_missing`` SQL sink property for the Oracle, Oracle TNS and MySQL systems. Previously only the MS SQL and PostgreSQL systems supported this option.
