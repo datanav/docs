@@ -1,9 +1,9 @@
 Changelog
 =========
 
-2020-02-27
+2020-03-03
 ----------
-* The transform function :ref:`add <dtl_transform-rename>` will now rename properties with a null value. The old behaviour ignored such properties, but that was considered to be a bug.
+* The transform function :ref:`rename <dtl_transform-rename>` will now rename properties with a null value. The old behaviour ignored such properties, but that was considered to be a bug.
 
 2020-02-12
 ----------
