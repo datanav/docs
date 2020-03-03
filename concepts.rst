@@ -235,8 +235,6 @@ The management studio can be found at:
 
     http://service_endpoint:9042/gui
 
-Read more about The managment studio, please click `here <https://docs.sesam.io/getting-started.html#html#id11>`__
-
 Sesam Client
 ------------
 
@@ -264,12 +262,10 @@ Usage
 =====
 
 There are various ways of using the Sesam client.
-A typical workflow bellow shows how to upload code, download it to make changes to it on local node. After code is edited test are run and once passed code is deplyed.
+A typical workflow below shows how to upload code, download it to make changes to it on local node. After code is edited tests are run and once passed code is deplyed.
 
 Typical workflow:
 =================
-
-.. rst-class:: content-collapse
 
 ::
 
@@ -345,17 +341,23 @@ Configuring tests
      - |   No
      - | By default the json is grabbed from ``/pipes/<my-pipe>/entities``
 
+   * - ``stage``
+     - | In which pipe stage to get the entities (source/before-transform/after-transform/sink).
+     - | ``string``
+     - |   No
+     - | By default the stage is ``sink``
+
    * - ``file``
      - | File that contains the expected results.
      - | ``string``
      - |   No
-     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json)
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json).
 
    * - ``pipe``
      - | Pipe that contains the output to test.
      - | ``string``
      - |   No
-     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json)
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json).
 
    * - ``blacklist``
      - | Properties to ignore in the output.
@@ -376,11 +378,11 @@ Example:
     {
      $ cat foo.test.json
         {
-     "pipe": "foo",
-      "file": "foo-A.xml",
-      "endpoint": "xml",
-      "parameters": {
-      "my-param": "A"
+      "_id": "foo",
+      "type": "test",
+      "file": "foo.json"
+      "blacklist": ["my-last-updated-ts"],
+      "ignore": false
         }
     }
 
@@ -440,6 +442,19 @@ Example:
 
 This will compare the output of ``/publishers/foo/xml`` with the contents of ``foo.xml``.
 
+Example:
+
+::
+
+    {
+      "_id": "foo",
+      "type": "test",
+      "endpoint": "json",
+      "stage": "source"
+    }
+
+This will compare the output of ``/pipes/foo/entities?stage=source`` with the contents of ``foo.json``, useful when the pipe's sink strips away the "_id" property for example.    
+
 Blacklisting
 ^^^^^^^^^^^^
 
@@ -480,7 +495,7 @@ Will end up as the following (with ``"blacklist": ["foos.*.bar"]``):
 
 ::
 
-    {{
+    {
       "_id": "foo",
       "foos": {
       "A": {
@@ -515,28 +530,29 @@ This custom scheduler needs to implement the following:
 Installing
 ==========
 
-Prebuilt binaries for common platforms can be downloaded from [Github Releases](https://github.com/sesam-io/sesam/releases/).
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/tombech/sesam-py/releases/>`__ 
 
-Building from source
-====================
-
-1. Install [Go](https://golang.org)
-2. Make sure ``GOPATH`` is set and ``PATH`` includes ``$GOPATH/bin``
-3. Download and build the package:
+To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
  
 ::
 
-     go get github.com/sesam-io/sesam
- 
-4. Verify that it works
+    $ cd sesam
+    $ virtualenv --python=python3 venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python sesam.py -version
+    sesam version 1.0.0
 
+To create a sesam client binary with pyinstaller on Linux/OSX (python 3.5+ required):
+ 
 ::
 
-    $ sesam -version
+    $ cd sesam
+    $ virtualenv --python=python3 venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt
+    $ pyinstaller --onefile sesam.py
+    $ dist/sesam -version
+    sesam version 1.0.0
 
-    sesam version 0.0.8
 
-Known issues
-============
-
-**JSON encoder escapes <, > and & as \uxxxx**

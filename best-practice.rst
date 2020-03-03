@@ -56,14 +56,14 @@ Global datasets can be populated:
 
 - simply add datasets to a global dataset without merging, 
 - merging data from various sources without modifications,  
-- selectively merge data, by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained `here <https://docs.sesam.io/getting-started.html#merge>`__ 
+- selectively merge data, by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained `here <https://docs.sesam.io/getting-started.html#merge>`__ 
 
 It is important to remember that a global dataset requires either business knowledge or a sound understanding of the data from the different sources. Global datasets will work to their fullest potential if they include all of the semantically linked data elements relating to the subject matter. 
 
 Example:
 
-There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each of the root datasets every time. However, through the creation of a **global-person** dataset, information can be easily fetched from one single location.
-
+There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each of the root datasets every time. However, through the creation a  **global-person**  dataset, information can be easily fetched from one single location.
+of
 ::
 
   HR system
@@ -90,8 +90,6 @@ There are three sources containing person data as shown below. If any target sys
      "erp-person:ID:”0202”
      "erp-person:country":"NO"
   }
-
-
 
 The dataset below is what a global dataset of the above three datasets looks like in Sesam when merging on equality of social security number (SSN).
 
@@ -251,11 +249,11 @@ Most Sesam projects will have a set flow that the data goes through.
 
 The data fed into Sesam through input pipes where namespaced identity is added in order to keep exsisting data model with joins intact, RDF type for future filetring and classification, global_ids used for joining and set different environments through conditions
 
-Merge pipe merges data beloning together to generate global datasets, transforms and Metadata Global true
+Global pipes merge data beloning together to generate global datasets, transforms and Metadata Global true
 
-Outging pipes is where merged datasets are ennriched with more context from other datasets 
+Preparation pipes is where merged datasets are prepared for receiveing systems. It is here most of logic is added. It could include ennriching with more context from other datasets, structuring data into other formats, adding new fileds and other transformations. Goal is to get data ready for target system.
 
-Endpoint pipes has no logic and basically sends data to endpoint
+Output pipes has no logic and basically sends data to endpoint.
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
@@ -265,401 +263,111 @@ Endpoint pipes has no logic and basically sends data to endpoint
 Input pipes
 ===========
 
-Input pipes are the mechanism to extract data from source system into Sesam. Input pipes utilize the concepts of systems within Sesam. Systems can be described as the connection mechanism towards source systems. Some of them are a part of core functionality of Sesam, some are provided as extensions ready for you to use, others have to be programmed to enable a connection. This is done by implementation of microservices compatible with Docker. After a microservice for Sesam is installed, Sesam can utilize this as a system it can connect to. Microservices and how to build those for Sesam will be discussed in more detail in a later section of this document. But in some cases, microservices must contain more logic to convert data into a more readable form for input pipes. An example could be decompressing files or EDI interpretation of a certain EDIFACT file, which can be quite difficult to achieve within the input pipe itself.  
- 
-When implementing an input pipe, one has to define which system it should operate towards. After defining which system an input pipe should extract data from, the data model of the source system should be studied and understood whether it is an API or a table within a relational database. 
- 
-The implementation of input pipes deviates from merging and enrichment pipes. Results from input pipes are stored as raw data sets. Transformation in inputs should be kept at an absolute minimum. The raw data should be kept as is, but one could add extra data information necessary for utilizing the raw data in future for creating merged and/or enriched data sets. We add properties to the raw data, including an “ID” – commonly called global-id. It is like a primary/foreign key in a relational database – but not entirely. It is used as a key to merge two or more raw data sets into one data set. 
- 
-An example to illustrate what an ID (global-id) is, we retrieve data from a table in a system that contains a field that contains employee-number. Employee number can be the primary key in this table. At the same time, we also retrieve data from the sales system, the primary key is perhaps customer-no. Instead of comparing employee-number and customer-no, we create a global employee id property for both raw data sets based on the primary key of each raw data sets. It can be messy, difficult to maintain and rest assure such values will often be used for more joins and queries down the future. By creating such global IDs as early as possible in the input pipes, making global data sets will be easier and simpler. And making additional merging of newly added raw data sets into a global data set simpler with less effort, and more maintainable. Ids or global ids can be regarded as the Sesam way of a Primary Key, but not for just one data set, but for all similar data set. 
- 
-Another issue to avoid complications further downstream in the integrations, there are some standard transformations and applications we recommend users to apply inside input pipes. One common issue we can solve in the input pipe is; who can talk directly to the source system? As an example, we use a customer who has 2 different environments (it is recommended by ISTQB, ITIL and other standardized frameworks, to have one for development, one for test (system/acceptance and one finally for production) for their personnel data; one for production and one for test. The customers production environment includes all the personal data for the individuals working for the company. This data is sensitive, and only one IP-address is allowed to access that specific database. 
- 
-The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access. There are several issues connected to this setup. First, what do we do when several consultants work with the same project? Who gets the firewall access? Second, what about minor changes to code that we would like to test out, without having to changes data in the customers test environment?  
- 
-These issues are solved with the conditional source setting in the input pipes DTL code (DTL = Data Transformation Language by Sesam), and we will go through how to do this below. 
- 
-In the DTL-code below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; ’Prod’ and ’Dev’. 
-In this case, the ’Prod’ environment should talk directly to the source data, in this case a csv-file. Inside the conditional ’Prod’-definition we specify all the information we need in order to collect the source data. 
- 
-The ’Dev’ environment should not talk directly to any Production source, since many people will be using it. Instead we use ’embedded data’, which is data on the same format as the source data in ’Prod’ but anonymized such that many people can use it. 
-Embedded data, or embedded datasets can also be used for parameters (fixed data), like rules for interpreting other data. Eg. Translation of a code/abbreviation in input to a more understandable/readable format for humans. 
-We specify which Sesam node belongs to ’Dev’ and which belongs to ’Prod’ by inside the ’Variables’-tab under ’Settings’ - ’Datahub’ inside each node. In the DTL-code window we specify a variable named ’node-env’ which takes the value correlated to the specific environment that node should be associated with. 
- 
+Input pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the input pipes. Data filtering, transformation and consolidation will be done at a later stage. 
+
+IDs
+^^^
+Because records will be augmented and consolidated through merges and data transformation, it is important to uniquely identify them upon ingestion into Sesam. To this end, we introduced an internal identifier that will uniquely identify the record through its Sesam life. By convention, the internal identifier is referred to as “_id”. The “_id” cannot be null and cannot have duplicates. 
+
+o	An example to illustrate the benefits of using global-id, we retrieve data from a table in a system that contains a field employee-number. Employee number can be the primary key in this table. We also retrieve data from the sales system, the primary key there could be customer-no. Instead of comparing employee-number and customer-no, we create a global employee id property for both raw datasets based on the primary key of each raw datasets. This can add complexity, will be difficult to maintain and such values will often be used for more joins and queries down the future. By creating global IDs as early as possible in the input pipes, making global data sets will be easier and simpler. Also making additional merging of new datasets into a global dataset simpler and more maintainable. Ids or global ids will be the entry point of an abstract concept, here an employee, the abstract concept should hold all employee related datasets
+
+Conditional input pipes and embedded data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using conditional pipes is a way to define two distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment? 
+
+These issues are solved with the conditional source setting in the input pipes DTL code (DTL = Data Transformation Language by Sesam), and we will go through how to do this below.
+
+In the DTL-code below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
+
+The “Dev“ environment does not connect directly to any external source. Instead we use “embedded data“, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.
+
+We specify the environment, “Dev“ or “Prod“, in the “Variables“-tab under “Settings“ - “Datahub“ inside each node. In the DTL-code window we specify a variable named “node-env“ which will hold the environment value that the node is to run within.
+
 :: 
  
   "node-env": "prod" or "node-env": "dev" 
  
-  Depending on which we use. 
- 
- 
-Another two things that we recommend adding in input pipe are: 
- 
-RDF type; a meta data tag put on for filtering purposes. It consists of source system and column or property. E.g. crm:person. This needs to be done in input pipe as after they go into global dataset, we need to make sure we have metadata tags to be able to filter them out. We can also add other metadata tags if required, but RDF type is the one recommended to always put in the input pipe. 
- 
-Last property added in the input pipe is existing joins. This is to keep existing data model and existing joins and we do this by making NIs (namespaced identifiers) or foreign keys.
- 
- 
-:: 
- 
-  {  
-  "_id": "hr-person",  
-  "type": "pipe",  
-  "source": {  
-    ´´"type": "conditional"´´,  
-    "alternatives": {  
-      "Prod": {  
-        "type": "csv",  
-        "system": "hr",  
-        "blacklist": ["Password"],  
-        "delimiter": ",",  
-        "encoding": "utf-8",  
-        "primary_key": "SSN",  
-        "url": "/file/sesam-training/data/test_people_sesam_training1.csv"  
-      },  
-      "Dev": {  
-        "type": "embedded",  
-        "entities": [{  
-          "_id": "23072451376",  
-          "Country": "NO",  
-          "EmailAddress": "TorjusSand@einrot.com",  
-          "Gender": "male",  
-          "GivenName": "Torjus",  
-          "MiddleInitial": "M",  
-          "Number": "1",  
-          "SSN": "23072451376",  
-          "StreetAddress": "Helmers vei 242",  
-          "Surname": "Sand",  
-          "Title": "Mr.",  
-          "Username": "Unjudosely",  
-          "ZipCode": "5163"  
-        }, {  
-          "_id": "09046987892",  
-          "Country": "NO",  
-          "EmailAddress": "LarsEvjen@rhyta.com",  
-          "Gender": "male",  
-          "GivenName": "Lars",  
-          "MiddleInitial": "A",  
-          "Number": "2",  
-          "SSN": "09046987892",  
-          "StreetAddress": "Frognerveien 60",  
-          "Surname": "Evjen",  
-          "Title": "Mr.",  
-          "Username": "Wimen1979",  
-          "ZipCode": "3121"  
-        }, {  
-          "_id": "07033589977",  
-          "Country": "NO",  
-          "EmailAddress": "DennisOlsen@dayrep.com",  
-          "Gender": "male",  
-          "GivenName": "Dennis",  
-          "MiddleInitial": "L",  
-          "Number": "3",  
-          "SSN": "07033589977",  
-          "StreetAddress": "Gydas gate 227",  
-          "Surname": "Olsen",  
-          "Title": "Mr.",  
-          "Username": "Gotin1984",  
-          "ZipCode": "3732"  
-        }, {  
-          "_id": "14032975433",  
-          "Country": "NO",  
-          "EmailAddress": "Emiliestby@teleworm.us",  
-          "Gender": "female",  
-          "GivenName": "Emilie",  
-          "MiddleInitial": "T",  
-          "Number": "4",  
-          "SSN": "14032975433",  
-          "StreetAddress": "Landeroveien 83",  
-          "Surname": "Østby",  
-          "Title": "Mrs.",  
-          "Username": "Slin1956",  
-          "ZipCode": "0672"  
-        }, {  
-          "_id": "20116430180",  
-          "Country": "NO",  
-          "EmailAddress": "JonasHaile@jourrapide.com",  
-          "Gender": "male",  
-          "GivenName": "Jonas",  
-          "MiddleInitial": "E",  
-          "Number": "5",  
-          "SSN": "20116430180",  
-          "StreetAddress": "Indre Løkkavei 3",  
-          "Surname": "Haile",  
-          "Title": "Mr.",  
-          "Username": "Firejus",  
-          "ZipCode": "3515"  
-        }, {  
-          "_id": "03045865306",  
-          "Country": "NO",  
-          "EmailAddress": "MartineJohansson@gustr.com",  
-          "Gender": "female",  
-          "GivenName": "Martine",  
-          "MiddleInitial": "J",  
-          "Number": "6",  
-          "SSN": "03045865306",  
-          "StreetAddress": "Statsråd Kroghs veg 222",  
-          "Surname": "Johansson",  
-          "Title": "Mrs.",  
-          "Username": "Somper",  
-          "ZipCode": "7021"  
-        }, {  
-          "_id": "12062922598",  
-          "Country": "NO",  
-          "EmailAddress": "DavidTnder@superrito.com",  
-          "Gender": "male",  
-          "GivenName": "David",  
-          "MiddleInitial": "N",  
-          "Number": "7",  
-          "SSN": "12062922598",  
-          "StreetAddress": "H.A.Reinerts gate 159",  
-          "Surname": "Tønder",  
-          "Title": "Mr.",  
-          "Username": "Zably1991",  
-          "ZipCode": "1524"  
-        }, {  
-          "_id": "01112962070",  
-          "Country": "NO",  
-          "EmailAddress": "JulieNordeng@teleworm.us",  
-          "Gender": "female",  
-          "GivenName": "Julie",  
-          "MiddleInitial": "A",  
-          "Number": "8",  
-          "SSN": "01112962070",  
-          "StreetAddress": "Sandbrekketoppen 63",  
-          "Surname": "Nordeng",  
-          "Title": "Mrs.",  
-          "Username": "Hicar1971",  
-          "ZipCode": "5224"  
-        }, {  
-          "_id": "14085111225",  
-          "Country": "NO",  
-          "EmailAddress": "ErikaOlsen@jourrapide.com",  
-          "Gender": "female",  
-          "GivenName": "Erika",  
-          "MiddleInitial": "L",  
-          "Number": "9",  
-          "SSN": "14085111225",  
-          "StreetAddress": "Fürstlia 148",  
-          "Surname": "Olsen",  
-          "Title": "Mrs.",  
-          "Username": "Whavillat",  
-          "ZipCode": "1367"  
-        }, {  
-          "_id": "12052427741",  
-          "Country": "NO",  
-          "EmailAddress": "AleksanderOmmundsen@rhyta.com",  
-          "Gender": "male",  
-          "GivenName": "Aleksander",  
-          "MiddleInitial": "M",  
-          "Number": "10",  
-          "SSN": "12052427741",  
-          "StreetAddress": "Rømers gate 182",  
-          "Surname": "Ommundsen",  
-          "Title": "Mr.",  
-          "Username": "Grale1949",  
-          "ZipCode": "7030"  
-        }}]  
-      }  
-    },  
-    "condition": "$ENV(node-env)"  
-  },  
-  "transform": {  
-    "type": "dtl",  
-    "rules": {  
-      "default": [  
-        ["copy", "*"],  
-        ["comment", "below we will add  a namespaced identifier and 'rdf:type' for easy filtering later"],  
-        ["add", "rdf:type",  
-          ["ni", "hr", "person"]  
-        ]  
-      ]  
-    }  
-  },  
-  "pump": {  
-    "mode": "manual"  
-  },  
-  "metadata": {  
-    "tags": ["embedded", "person"]  
-  }  
-    
+Depending on which we use. 
 
-Merge-pipe and global datasets
-==============================
-
-By using merge pipes, two or more datasets can be joined/merged into a resulting dataset. This allows us to add several sources into a dataset. We can choose not to joining or transform any datasets which means they are simply “put into” the global dataset. The ones who will be joined and transformed you can read more about below. 
- 
-A resulting dataset can be a new dataset, but also an existing dataset where one wants to add more data from new sources when they become available for Sesam. This is done by adding source datasets to a “merge pipe”. The new data will be added to the dataset (can be compared to the use of alter table/update of a relational database – but in one single operation). 
- 
-In the merge pipe we want to add a metadata tag to show this is a merge pipe going into a global dataset, so we set the following code into pipe: 
- 
-:: 
-   
-   "metadata": { 
-    "global": true }  
-
- 
-In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it simple to see this is a global dataset straight away. (Show image) 
- 
-As a general rule when it comes to transformations, we wish to use reusable properties; i.e. global_ids we generated in input pipe or other global properties generated in the global dataset. This gives us opportunity to track data from start to end of flow through Sesam.  
- 
-In order to prioritize which ids we want to use, we use “coalesce” function. If the global id is null “coalesce” gives us the opportunity to choose which is the next best option. This, in turn gives us the opportunity to use the golden record, which you can read about here: https://docs.sesam.io/best-practice.html#id19  
- 
-Below we see an example of a merge-pipe called global-person.  At top the type of pipe is set to **“merge“** enabling us to add 4 datasets that we wish to merge. 
- 
-Below the actual merge, or **«equality»** rules are set.  Further down, in the **“transform”** section the use of **coalesce** becomes obvious when choosing which properties got get values from. 
- 
-:: 
- 
-  { 
-    "_id": "global-person", 
-    "type": "pipe", 
-    "source": { 
-      "type": "merge",
-      "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"], 
-      "equality": [ 
-        ["eq", "ep.$ids", "cp.SSN "], 
-        ["eq", "ep. .$ids ", "hr.$ids"], 
-        ["eq", "ep.Username", "su.Username"] 
-      ], 
-      "identity": "first", 
-      "version": 2 
-    }, 
-   "transform": { 
-      "type": "dtl", 
-      "rules": { 
-        "default": [ 
-          ["copy", "*"], 
-          ["add", "zipcode", 
-            ["coalesce", 
-              ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"] 
-            ] 
-          ], 
-          ["add", "email", 
-            ["coalesce", "_S.EmailAddress"] 
-          ], 
-          ["add", "firstname", 
-            ["coalesce", 
-              ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"] 
-            ] 
-          ], 
-          ["add", "lastname", 
-            ["coalesce", 
-              ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"] 
-            ] 
-          ], 
-          ["add", "fullname2", 
-            ["concat", "_T.global-person:firstname", " ", 
-              ["coalesce", 
-                ["not", 
-                  ["matches", "*.", "_."] 
-                ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"] 
-          ], 
-          ["add", "fullname", 
-            ["concat", "_T.global-person:firstname", " ", 
-              ["filter", 
-                ["neq", "_.", ". "], 
-                ["concat", 
-                  ["coalesce", 
-                    ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"] 
-                  ], ". "] 
-              ], "_T.global-person:lastname"] 
-          ] 
-        ] 
-      } 
-    }, 
-    "metadata": { 
-      "global": true 
-    } 
-  } 
- 
-When running the merge-pipe, the result is a “global-dataset” consisting of entities with joined data that has been through the listed transformations. 
- 
-The first property that greets us in a global data set is called $ids and is a list of namespace identities from the sources in the merge pipe. Typically looking like below. 
- 
-:: 
- 
-  "$ids": [ 
-      "~:erp-person:02023688018", 
-      "~:crm-person:100", 
-      "~:salesforce-userprofile:Mays1944", 
-      "~:hr-person:02023688018" 
-    ]
- 
-The $ids are generated automatically when the merge-pipe is run, and they always show up on top for the global dataset.  
- 
-So, what is **$id**? Basically, it is a collection identifier (Collection ID), $ids, is a concept in Sesam to keep track of different global identifiers from raw datasets (or global datasets) when two or more datasets are merged into a global dataset or enriched datasets. 
- 
-Collection identifier, $ids, is a list of primary keys or global ID used in dataset, pipes (DTL programs within Sesam or used by core functions in Sesam DataHUB. 
-Another perspective is to see this as a primary key of global IDs, when merging data from several sources. 
- 
-
-Transformation and Enrichment Pipes (TEPs) 
-==========================================
-
-In order to utilize aggregated data in Sesam residing in global dataset, data often must be transformed and/or enriched before data can be delivered to targets. The actual deliverance of data is done through another concept of Sesam – Sinks. Sinks are discussed in more detail in another section of this document.
-Transforming and enriching data to be ready for deliverance, is implemented through TEPs. 
-
-TEPs are implemented by using aggregated entities from global datasets within Sesam. These global datasets are not necessarily ready to be delivered to targets systems directly. In TEPs only the necessary data for the Endpoint are extracted from the global datasets. This data is extracted by filtering on the metadata tags. RDF type tends to be most used as it contains source system and table/ data type.
-
-As an example, if only require person data from crm system residing in the global-person dataset, metadata tag “rdf type” become useful. We can pop on following filter in this pipe:
-
- 
-:: 
-  ["filter",  
-            ["eq", "_S.rdf:type", "crm:person"]  
-          ] 
- 
- 
-This will give output from crm-person only. 
- 
-Filter is set under transforms and there are several transforms we can do in a Transformation and Enrichment Pipe. Other metadata tags can be used for further filtering if required. 
- 
-Additional data can also be added to the enriched datasets. This can be more fixed data or parametric data. I.e. in a global dataset only the zip code or country code are stored. The TEPs can then hop to other datasets to retrieve data for city associated with the zip code or the full name of a country associated with the country code from the global dataset. Data in such data sets can be fixed/parametric or as “difi-postnummer” dataset contains all zip codes with city name in Norway.
-The resulting dataset from a TEPs is produced and can be finalized into the correct format specified for the endpoint. The final transformation before deliverance is performed in the sink and the corresponding microservice (XML, EDIFACT or an SQL statement towards IBM DB2).
- 
-Lastly to have specification on target endpoint format is important: 
-
-1. Mandatory – Must have  
-2. Parametric options 
-3. MUTEX – Mutual Exclusive data – i.e. for bank account you can either use BBAN or IBAN, not both at the same time 
- 
-See example below: 
+Our pipe:
 
 ::
-  "_id": "example-hops-apply-rule", 
+
+ { 
+  "_id": "hr-person", 
   "type": "pipe", 
   "source": { 
-    "type": "embedded", 
-    "entities": [{ 
-      "_id": "apply-rule", 
-      "name": { 
-        "firstname": "Ola", 
-        "lastname": "Nordmann" 
+    ´´"type": "conditional"´´, 
+    "alternatives": { 
+      "Prod": { 
+        "type": "csv", 
+        "system": "hr", 
+        "blacklist": ["Password"], 
+        "delimiter": ",", 
+        "encoding": "utf-8", 
+        "primary_key": "SSN", 
+        "url": "/file/sesam-training/data/test_people_sesam_training1.csv" 
       }, 
-      "zipcode": "9982" 
-    }] 
+
+      "Dev": { 
+        "type": "embedded", 
+        "entities": [{ 
+          "_id": "23072451376", 
+          "Country": "NO", 
+          "EmailAddress": "TorjusSand@einrot.com", 
+          "Gender": "male", 
+          "GivenName": "Torjus", 
+          "MiddleInitial": "M", 
+          "Number": "1", 
+          "SSN": "23072451376", 
+          "StreetAddress": "Helmers vei 242", 
+          "Surname": "Sand", 
+          "Title": "Mr.", 
+          "Username": "Unjudosely", 
+          "ZipCode": "5163" 
+        }, { 
+          "_id": "09046987892", 
+          "Country": "NO", 
+          "EmailAddress": "LarsEvjen@rhyta.com", 
+          "Gender": "male", 
+          "GivenName": "Lars", 
+          "MiddleInitial": "A", 
+          "Number": "2", 
+          "SSN": "09046987892", 
+          "StreetAddress": "Frognerveien 60", 
+          "Surname": "Evjen", 
+          "Title": "Mr.", 
+          "Username": "Wimen1979", 
+          "ZipCode": "3121" 
+        }, { 
+          "_id": "12052427741", 
+          "Country": "NO", 
+          "EmailAddress": "AleksanderOmmundsen@rhyta.com", 
+          "Gender": "male", 
+          "GivenName": "Aleksander", 
+          "MiddleInitial": "M", 
+          "Number": "10", 
+          "SSN": "12052427741", 
+          "StreetAddress": "Rømers gate 182", 
+          "Surname": "Ommundsen", 
+          "Title": "Mr.", 
+          "Username": "Grale1949", 
+          "ZipCode": "7030" 
+        }}] 
+      } 
+    }, 
+    "condition": "$ENV(node-env)" 
   }, 
   "transform": { 
     "type": "dtl", 
     "rules": { 
       "default": [ 
-        ["add", "address-info", 
-          ["hops", { 
-            "datasets": ["global-location gl"], 
-            "where": [ 
-              ["eq", "_S.zipcode", "gl.postnummer"] 
-            ] 
-          }] 
-        ], 
-        ["merge", 
-          ["apply", "address", "_T.address-info"] 
-        ], 
-        ["remove", "address-info"] 
-      ], 
-      "address": [ 
-        ["add", "city", "_S.poststed"], 
-        ["add", "municipality", "_S.kommunenavn"] 
+        ["copy", "*"], 
+        ["comment", "below we will add a namespaced identifier and 'rdf:type' for easy filtering later"], 
+        ["add", "rdf:type", 
+          ["ni", "hr", "person"] 
+        ] 
       ] 
     } 
   }, 
@@ -667,28 +375,243 @@ See example below:
     "mode": "manual" 
   }, 
   "metadata": { 
-    "tags": ["location"] 
+    "tags": ["embedded", "person"] 
   } 
- 
-Endpoint
-========
+   
+Note that embedded data, or embedded datasets can also be used as parameter, rules to interpret other data. E.g.: A hash-table that would translate a code/abbreviation into more a readable human format.
 
-Endpoints are targets for Sesam to send data to. Communication with Endpoints can be implemented and performed in several manners. A recommended practice from Sesam´s point-of-view, is to survey your endpoints and how they work. Endpoints can be of several technologies, figure them out. It is also recommended that you figure out which data is mandatory, optional and mutual exclusive. You should also take into account encoding conversions. With this knowledge you can plan your approach for a full dataflow, transformation and enrichment that must be implemented from pull data from sources until data is ready for delivery to targets.  
+RDF type and namespaces
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Microservices (connectors) will have to be used to communicate with both source and target endpoints. Some connectors are included as a part of Sesam, others would have to be implemented as special customizations.  
+The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used as mentioned to relate and filter like you would use a foreign key. Note that the namespace identifier is prefixed by convention by a ‘~:’, e.g. ~:crm:person, use the function make-ni to create it.
 
-Sending data out of Sesam can only done by using Sinks. A Sink is a special kind of pipes that pushes data out of Sesam towards Target Endpoints or Systems and should not have any transformation. A sink will utilize specialized connectors (microservices) for the technical communication with the targets. Such connectors can be a part of Sesam core or extra included features but can also be developed for special cases and technology if needed. Connectors will be discussed in more details in another section. But one can look upon them as technical device drivers. 
+Systems
+^^^^^^^
 
-Transformations can be of several types. What we care about in this stage is basically two types: 
-1) Data transformation – transformation or enrichment of data content. 
-2) Format transformation – technical transformation to adapt to the endpoints technical abilities to receive data input. 
+Systems can be described as the connection mechanism to external entities. They rely on an interface to the external system. The most frequently used ones have been integrated into Sesam as core functionalities, while more specific ones are provided as extensions callable from the system. A framework is available to facilitate the implementation of new interfaces, called microservices. Once the new microservice has been developed, it can be accessed from Sesam via a system.
 
-At this point, any data transformation or enrichment must be omitted. Outgoing sinks should never transform or enrich data, but corresponding system (connector) might do format or technical transformation, encrypt or add parameters that enables the endpoint within a target system to receive data sent from Sesam. However, when it comes to Format Transformation, the answer is different. Data in Sesam are stored as JSON datasets, in some cases these datasets can be sent directly to target systems. But however, in other cases these datasets (from TEPs – Transformation and Enrichment Pipes) must be technical transformed into formats the actual endpoint understands. These are not data transformations but format transformations. And should be performed as a microservice or part of a microservice. 
+Global pipes
+============
 
-Same goes for filtering of data. At this stage data should be ready to be sent to the targets without further tampering or filtering. Endpoint sinks and connectors shall not do data transformation or filtering, only format transformation to make the targets able to understand data received from Sesam. 
+By using merge pipes, two or more datasets can be joined/merged into a resulting dataset. This allows us to add several sources into a dataset. We can choose not to join or transform any datasets which means they are simply “put into” the global dataset. The ones who will be joined and transformed you can read more about below.
 
-Metadata is data about the other data. All datasets created in Open Sesam are discoverable through the Sesam Open Data Registry. This registry has metadata about all datasets, including license information, name, description, when it was published, and tags. Each dataset has a dataset page that has links to the actual data and a sample of the data. This could for example be timestamp when the dataset is sent to an Endpoint or a key to ensure duplication control. Metadata can be on individual entity or even on a single data tag (data field). But at this late stage just before sending to an Endpoint, adding metadata to an entity or field should be regarded as a data transformation. And as mention previously data transformation should not happen during processing for sending to an Endpoint. 
- 
+A resulting dataset can be a new dataset, but also an existing dataset where one wants to add more data from new sources when they become available for Sesam. This is done by adding source datasets to a “merge pipe”. The new data will be added to the dataset (can be compared to the use of alter table/update of a relational database – but in one single operation).
+
+In the merge pipe we want to add a metadata tag to show this is a merge pipe going into a global dataset, so we set the following code into pipe:
+
+::
+
+  "metadata": {
+  "global": true
+ }
+
+In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
+
+.. image:: images/global_true.png
+    :width: 600px
+    :align: center
+    :alt: Generic pipe concept  
+
+
+As a general rule when it comes to transformations, we wish to use reusable properties; i.e. global_ids we generated in input pipe or other global properties generated in the global dataset. This gives us opportunity to track data from start to end of flow through Sesam. 
+
+In order to prioritize which ids we want to use, we use `coalesce <https://docs.sesam.io/DTLReferenceGuide.html#nulls>`__ . If the global id is null, “Coalesce” gives us the opportunity to choose which is the next best option. This, in turn gives us the opportunity to use the golden record, which you can read about `here <https://docs.sesam.io/best-practice.html#golden-record>`__ 
+
+Below we see an example of a global pipe called global-person. At top the type of pipe is set to **“merge“** enabling us to add 4 datasets that we wish to merge.
+
+Below the actual merge, or **“equality“** rules are set.  Further down, in the **“transform”** section the use of **coalesce** becomes obvious when choosing which properties got get values from.
+
+::
+
+  {
+  "_id": "global-person",
+  "type": "pipe",
+  "source": {
+    "type": "merge",    "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+       "equality": [
+      ["eq", "ep.$ids", "cp.SSN "],
+      ["eq", "ep. .$ids ", "hr.$ids"],
+      ["eq", "ep.Username", "su.Username"]
+    ],
+    "identity": "first",
+    "version": 2
+  },
+    "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "zipcode",
+          ["coalesce",
+            ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"]
+          ]
+        ],
+        ["add", "email",
+          ["coalesce", "_S.EmailAddress"]
+        ],
+        ["add", "firstname",
+          ["coalesce",
+            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+          ]
+        ],
+        ["add", "lastname",
+          ["coalesce",
+            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+          ]
+        ],
+        ["add", "fullname2",
+          ["concat", "_T.global-person:firstname", " ",
+            ["coalesce",
+              ["not",
+                ["matches", "*.", "_."]
+              ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"]
+        ],
+        ["add", "fullname",
+          ["concat", "_T.global-person:firstname", " ",
+            ["filter",
+              ["neq", "_.", ". "],
+              ["concat",
+                ["coalesce",
+                  ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"]
+                ], ". "]
+            ], "_T.global-person:lastname"]
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "global": true
+  }
+  }
+
+When running the global-pipe, the result is a “global-dataset” consisting of entities with joined data that has been through the listed transformations.
+
+The first property that greets us in a global data set is called **"$ids"** and is a list of namespaced identifiers from the sources in the global pipe. Typically looking like below.
+
+::
+
+  "$ids": [
+    "~:erp-person:02023688018",
+    "~:crm-person:100",
+    "~:salesforce-userprofile:Mays1944",
+    "~:hr-person:02023688018"
+  ]
+
+The **"$ids"** are generated automatically when the global pipe is run, and they always show up on top for the global dataset.
+
+So, what is **"$id"**? Basically, it is a collection identifier (Collection ID). "$ids", is a concept in Sesam to keep track of different global identifiers from raw datasets (or global datasets) when two or more datasets are merged into a global dataset or enriched datasets.
+
+So "$ids", is a list of primary keys or global IDs used in dataset and pipes (DTL programs within Sesam or used by core functions in Sesam DataHUB).
+
+Another perspective is to see this as a primary key of global IDs, when merging data from several sources.
+
+Below is a whole entity of the above global pipe and as seen, it gives an aggregated dataset from 4 sources with **$ids**, **RDF types** and **global properties**.
+
+::
+
+  {
+  "$ids": [
+    "~:erp-person:02023688018",
+    "~:crm-person:100",
+    "~:salesforce-userprofile:Mays1944",
+    "~:hr-person:02023688018"
+  ],
+  "crm-person:Address": "Ørneveien 40",
+  "crm-person:Customerid": "100",
+  "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+  "crm-person:FirstName": "Isak",
+  "crm-person:Gender": "male",
+  "crm-person:LastName": "Eikeland",
+  "crm-person:MiddleInitial": "E",
+  "crm-person:PostalCode": "1357",
+  "crm-person:SSN": "02023688018",
+  "crm-person:Username": "Mays1944",
+  "erp-person:Country": "NO",
+  "erp-person:EmailAddress": "IsakEikeland@teleworm.us",
+  "erp-person:Firstname": "Isak",
+  "erp-person:Gender": "male",
+  "erp-person:Lastname": "Eikeland",
+  "erp-person:MiddleInitial": "E",
+  "erp-person:MoneyUsed": "19392",
+  "erp-person:Number": "100",
+  "erp-person:SSN": "02023688018",
+  "erp-person:SSN-ni": "~:crm-person:02023688018",
+  "erp-person:StreetAddress": "Frodegaten gate",
+  "erp-person:TimesOrdered": "16",
+  "erp-person:Title": "Mr.",
+  "erp-person:Username": "Mays1944",
+  "erp-person:ZipCode": "4017",
+  "erp-person:subscriptions": [
+    {
+      "erp-person:active": true,
+      "erp-person:category": "Types of Drink",
+      "erp-person:hash": "cd821925a05449c7d5b907157d00fe4b",
+      "erp-person:items-ordered": 8,
+      "erp-person:received": 20,
+      "erp-person:specials": 15,
+      "erp-person:start-date": "~t2005-05-02T05:17:30.6196185Z",
+      "erp-person:subscription-psuedo-name": "Alpha"
+    },
+    {
+      "erp-person:active": true,
+      "erp-person:category": "Foreign Cities",
+      "erp-person:hash": "02f30f1fd084eef209c64bcbb577c66d",
+      "erp-person:items-ordered": 19,
+      "erp-person:received": 21,
+      "erp-person:specials": 10,
+      "erp-person:start-date": "~t2007-07-01T07:17:30.6196185Z",
+      "erp-person:subscription-psuedo-name": "Delta"
+    },
+    {
+      "erp-person:active": false,
+      "erp-person:category": "Something You're Afraid Of",
+      "erp-person:end-date": "~t2006-12-26T12:17:30.6196185Z",
+      "erp-person:hash": "f0145edebae47eccd463a2dec9ac7485",
+      "erp-person:items-ordered": 21,
+      "erp-person:received": 49,
+      "erp-person:specials": 23,
+      "erp-person:start-date": "~t2005-12-26T12:17:30.6196185Z",
+      "erp-person:subscription-psuedo-name": "Beta"
+    }
+  ],
+  "global-person:email": "IsakEikeland@teleworm.us",
+  "global-person:firstname": "Isak",
+  "global-person:fullname": "Isak E. Eikeland",
+  "global-person:fullname2": "Isak E. Eikeland",
+  "global-person:lastname": "Eikeland",
+  "global-person:zipcode": "1357",
+  "hr-person:Country": "NO",
+  "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+  "hr-person:Gender": "male",
+  "hr-person:GivenName": "Isak",
+  "hr-person:MiddleInitial": "E",
+  "hr-person:Number": "100",
+  "hr-person:SSN": "02023688018",
+  "hr-person:StreetAddress": "Nadderudåsen 186",
+  "hr-person:Surname": "Eikeland",
+  "hr-person:Title": "Mr.",
+  "hr-person:Username": "Mays1944",
+  "hr-person:ZipCode": "1357",
+  **"rdf:type"**: [
+    "~:erp:person",
+    "~:crm:person",
+    "~:salesforce:userprofile",
+    "~:hr:person"
+  ],
+  "salesforce-userprofile:EmailAddress": "IsakEikeland@teleworm.us",
+  "salesforce-userprofile:Username": "Mays1944",
+  "salesforce-userprofile:phone_number": 24887159
+    }
+
+Preparation pipes
+==================
+
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
+
+Output pipes 
+============
+
+The output pipe is the input pipe counterpart. While the input pipe is used solely to import data into Sesam, the output pipe sole function will be to export the data. As mentioned in the Input pipe section, the focus of the input pipe will be on its source component/property, the output pipe, on the other end, will be built around its sink. Similarly, the output pipe will use a system to interface with external entities. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
 
 Tips for global datasets
 ------------------------
@@ -860,11 +783,6 @@ In addition to the zip-code from the 3 different data sources, the "global-perso
       
 Now, the most trusted zip-code value can be accessed without evaluating all three at every inquiry.
 
-RDF types
-=========
-
-In central datasets a property for classification is sometimes added. In Sesam, this is called **"rdf type”**. This is used if one wants to extract a specific data type from the global dataset.
-
 Data modelling
 ==============
 
@@ -873,8 +791,7 @@ Below are principles of doing data modelling in Sesam.
 Raw input
 ^^^^^^^^^
 
-When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifiers
- on the source pipe to keep track of where the data comes from.
+When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaced identifiers on the input  pipe to keep track of where the data comes from. It is also advisable to add, as mentioned earlier RDF type and other metadata tags if required, global id to use for joining later  in data flow and embedded data set used for test data.
 
 Benefits:
 

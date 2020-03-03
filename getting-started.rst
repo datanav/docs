@@ -509,13 +509,48 @@ Lab 6
 ^^^^^
 Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 6 <getting-started-labs-6>`.
 
+.. _getting-started-Dependency-tracking-and-resetting-a-pipe:
+
+Dependency-tracking and resetting a pipe
+========================================
+
+We have now started to create dependencies between datasets. In `lab 5 <https://docs.sesam.io/getting-started.html#id4>`__  you created a pipe called **<your_name>-global-person** and in `lab 6 <https://docs.sesam.io/getting-started.html#id5>`__ you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
+
+In order to make sure that only entities that has changed since last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit `here <https://docs.sesam.io/concepts.html#dependency-tracking>`__ 
+
+We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in `lab 9 <https://docs.sesam.io/getting-started.html#id4>`__ . 
+
+Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the hops function. 
+
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+
+Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
+
+So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. If we make changes in a Sesam pipe, changes that will affect the end result (such as adding extra data), the entities that has already been processed will not by them self be reprocessed, thus only changed data or new data will be populated with the extra information. 
+
+To remedy this, every time we make changes in a pipe that will affect the output data, we must manually **reset** and **start** the pipe. When we reset a pipe, all the entities from the source will be reprocessed. This can be done by clicking on the three dots next to the pipe name at the top of your pipe.
+
+.. image:: images/pipesmenu.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+
+Some of the alternatives presented are **“Restart”**, **“Start”** and **“Reset”**. **“Restart”** is simply a combination of **“Reset”** followed by **“Start”**. This will send all the entities from the source dataset through the pipe and populate them with the extra data you have specified through your DTL config. 
+
+In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . This functionality could be more efficient. In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
+
+Similarly, imagine you work on a global pipe which merges data from 3 different sources. Two of these sources contain millions of entities, and one only a few. Let’s say you wish to change the output containing data from the source with only a few entities. Resetting the whole pipe in this case is unnecessary since we only need to reprocess a few entities, The **Update last seen** option also supports resetting the data from several sources at different times, thus if you need to reprocess the entities from the "small" dataset, you may do so without sending through all the other million entities, which will in either case be unaffected by your DTL changes. 
+
+Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 9 <getting-started-labs-9>` for examples and to play around with data and see how it works.
+
 .. _getting-started-sinks:
 
 Sinks
 -----
 Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
-Sinks can support batching by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation.
+Sinks can support batching by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation and "Best practice" ofr best ways of working with the. 
 
 .. _getting-started-csv-endpoint:
 
@@ -542,7 +577,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 7 <getting
 
 SQL database to CSV file output step by step
 ============================================
-In this next chapter we will walk you through the steps of using a SQL database as a source and create a CSV endpoint. First, if you don't have access to a SQL server you can sign up at `ElephantSQL <https://api.elephantsql.com>`__ and select a free trial.
+In this next chapter we will walk you through the steps of using a SQL database as a source and create a CSV endpoint. First, if you don't have access to a SQL server you can sign up at `ElephantSQL <https://www.elephantsql.com>`__ and select a free trial.
 
 Once you've set up your account click on details in the left menu. It should look like this: 
 
@@ -553,7 +588,7 @@ Once you've set up your account click on details in the left menu. It should loo
 
 Now you are ready to create a new system. In **Sesam** go to Systems and select **New system**. In the **Choose template** select **postgresql prototype** (Because we're using ElephantSQL. Will be different for other sources).
 
-To fill in the **"database"**, **"host"**, **"password"** and **"username"** go to your ElephantSQL and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
+To fill in the **"database"**, **"host"**, **"password"** and **"username"** go to your *ElephantSQL* and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
 
 In the **"_id"** you'll create the name of the system (the same as creating a pipe).
 
@@ -570,9 +605,7 @@ Using secrets
     :align: center
     :alt: Generic pipe concept
 
-
 As you can see, we are using :ref:`secrets <secrets_manager>` for the database, password and username. To do this go into the **Secrets** tab, click **Add secret**, give it a name (e.g. "password" for the password and "username" for the username) and paste the values from ElephantSQL. Read more about secrets `here <https://docs.sesam.io/security.html>`__.
-
 
 Creating a table in the database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -995,7 +1028,7 @@ The Docker image is then pushed up to a repository on Docker Hub. This repositor
 Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. 
 
 Microservices with Docker
-==================================
+==========================
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
 
@@ -1345,4 +1378,40 @@ Scope : Publishing data to CSV-endpoint
   * Create new pipe. Source from lab 6. Add transform and sink.​
 
 Hint: Look `here  <https://docs.sesam.io/getting-started.html#csv-endpoint-sink>`__ for help
+
+Lab 9
+=====
+.. _getting-started-labs-9:
+
+Start from your pipe from lab 5. 
+
+* Add another property in the apply-hops rule and start the pipe again and look at the output. 
+
+.. image:: images/getting-started/DT-03.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+* What can you see? Probably, you do not notice anything different, even though you just told the pipe to add another line with data to your entities. Why didn’t the outcome changes when you added a new property?
+
+* In the outcome, locate an entity which has the properties "City" and "Municipality".
+
+.. image:: images/getting-started/DT-05.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+*  Note down it’s sequence number (_updated value). 
+
+* click on the three dots next to your pipe name and choose the option "Update last seen". Write down the sequency number you noted down and start the pipe again. 
+
+.. image:: images/getting-started/DT-06.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+* Has the output changed? Why/why not? Did all the entities in the outcome change? Why/why not?
+* What is the difference between the "Update last seen" option and the "Reset", "Restart" and "Start" options?
+
+*Hint: check "Dependency-tracking and resetting a pipe"*
 

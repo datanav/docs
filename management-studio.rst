@@ -22,7 +22,129 @@ And the home page looks like this:
     :align: center
     :alt: Sesam Management Studio
 
-If you are familiar with the Sesam concepts then the UI should be quite intuitive.
+If you are familiar with the Sesam concepts then the UI should be quite intuitive. But let us take closer look at the user interface.
+
+When choosing the specific node you require, it takes you into the management studio for that node. The first thing that meets you, is the overview.
+
+Overview
+========
+
+When pressing the Overview, it shows the Sesam integration for the particular node you are looking at. The figure illustrates which systems are connected, number of ingoing and outgoing pipes, deleted entities and history.
+
+.. image:: images/overview.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+Datasets
+========
+
+This contains a list of each dataset in this node. By clicking on a dataset, it takes you into the entities this dataset consists of. From here you can “Go to pipe” which takes you straight to pipe used to generate this dataset. You can also “delete” this dataset” by pressing “delete“ button. If the pipe has recently been running, you can press “Refresh” to get latest update. 
+
+.. image:: images/Datasets.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+
+At bottom of page you find the “Compare” button which allows you to compare current dataset to previous version.
+
+Pressing “…” after the name of dataset, you get two options” as seen in image below:
+
+.. image:: images/datasets_menu.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+By pressing “create a downstream pipe” it means to create next step in dataflow. Pressing this it takes you into “new pipe” with dataset and current data set as source.
+By pressing “Go to pipe” it takes you to the pipe that produced the current dataset. 
+
+Pipes
+=====
+
+The pipes page contains a list of pipes generated for a particular node. 
+
+.. image:: images/pipes.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+Double clicking on a pipe it takes you into this pipes working area.
+
+By pressing **"..."** to the right of the pipe name, a menu with various options appear. We are going to go through the most commonly used.
+
+.. image:: images/pipesmenu.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+When pressing **“Disable”** in menu this will stop the pipe from running according to schedule. If a pipe is running, it will finish running but not run again even if schedule tells it to. If you want the pipe to run again according to schedule, you press “Enable” and pipe will start running again according to schedule. You can manually start a pipe that’s disabled by pressing **“Restart”** or **"Start"**. 
+
+The relationship between starting and restarting pipe, requires some explanation. When clicking **"Start"**, the pipe continues to read from its last seen sequence number.
+So, if the pipe has previously read 100 entities  (sequence 0 to 99), clicking **"Start"** will have it read from sequence 100.
+
+When clicking **"Restart"**, the pipe will start from the beginning., i.e. at entiry number 0. 
+
+So, if the pipe has read 100 entities , clicking **"Restart"** will have it read from sequence 0, effectively reprocessing all entities .
+
+To see examples and to get more context on this, please click HERE.
+
+**“Duplicate”** is useful if you want to generate a similar pipe to the one currently open. It generates a copy of the pipe. Then edit the current config and press **“Save”** to save you from creating pipe from scratch. 
+
+**“Delete”** deletes the pipe. 
+
+**“Create downstream pipe”** automatically takes you to new pipe with current dataset as source.
+
+**"Go to sink"** takes you straight to sink dataset from current pipe.
+
+**"Update last seen”** sets the sequence of entities  you wish to reprocess, starting with the sequence number specified up to the latest sequence number.  Using this function you are able to specify where you want the pipe to start processing. The eitities sequence numbers can be found in the entities "_updated" value in the pipe output.
+
+To read more about how this function is used, please click HERE
+
+Systems
+=======
+
+When pressing Systems, it gives list of various systems connected to this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, a mssql, url or rest.
+
+By pressing one of the systems, it takes you into the config for particular system. You find six tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
+
+As with pipes and datasets, you can press "..." at the of system name and from this menu you can delete or duplicate config for the system.
+
+.. image:: images/systems.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+Flows
+=====
+In Sesam, a "flow" can be defined as a collection of pipes on one path, either from a global to an endpoint or vice versa.
+
+On the Flows page you can get information about a flow as a whole, whether any pipe is disabled/errored out, as well as you get a total number of queues in a flow, for example.
+
+.. image:: images/dataflow.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+Settings
+========
+
+Lastly, we have “Settings” for both Datahub and your Subscription.
+
+Settings for datahub manages queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
+
+.. image:: images/settings_datahub.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+For subscription we have settings for e.g. license, JWT token and Network. 
+
+.. image:: images/settings_subscription.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
 
 
 User accounts
