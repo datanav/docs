@@ -1246,6 +1246,11 @@ source, except ``datasets`` can be a list of datasets ids.
      - false
      -
 
+   * - ``prefix_ids``
+     - Boolean
+     - If set to ``false``, then the entity ids will not be prefixed with the dataset id.
+     - true
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
