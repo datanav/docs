@@ -1269,6 +1269,13 @@ Labs
 ----
 These tasks will make you familiar with the basics of data transformation with Sesam. We recommend keeping the `documentation <https://docs.sesam.io/DTLReferenceGuide.html>`__ at hand to look up syntax and concepts when needed.
 
+Definition of commonly used transforms and functionalities
+==========================================================
+
+Before we dive into the labs, let us quickly define and explain some commonly used functions in DTL:
+
+* 
+
 To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following the :ref:`Getting started <getting-started>` with Sesam guide you are ready to do these labs.
 
 We recommend having a go at this by yourself, but there are clues provided below each lab on where to look for guidance if needed.
