@@ -3,7 +3,7 @@ Changelog
 
 2020-03-05
 ----------
-* The :ref:`union_datasets <union_datasets_source>` source now as a `prefix_ids` property that can be set to `false` to not add the dataset id as the prefix on entity ids.
+* The :ref:`union_datasets <union_datasets_source>` source now as a ``prefix_ids`` property that can be set to `false` to not add the dataset id as the prefix on entity ids.
 
 2020-03-03
 ----------
