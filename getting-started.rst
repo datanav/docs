@@ -1137,6 +1137,7 @@ To check that the you have created image run the command:
 
 Testing
 ^^^^^^^
+
 To test that you can run a container from your image locally you can run it in command line/terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 
 Next we'll need to run the image to create the container.
@@ -1274,7 +1275,90 @@ Definition of commonly used transforms and functionalities
 
 Before we dive into the labs, let us quickly define and explain some commonly used functions in DTL:
 
-* 
+
+But first of all, let us brieflly explain **key-value pair**. It is quite simplye property with a value. E.g.:
+
+    ``"firstname": "Ole"``
+
+.. image:: images/getting-started/key_value_pair.png
+    :width: 600px
+    :align: center
+    :alt: Generic pipe concept
+
+The following transforms **add**, **copy** and **concat** will be explained using following example.
+
+.. image:: images/getting-started/DTL_source_target.png
+    :width: 600px
+    :align: center
+    :alt: Generic pipe concept
+
+In source or input data we have three key-value pairs. We want to add two new ones; a greeting and a property called "fullname". To do that, we need to add some logic to the DTL. First of all, we want to use the whole source data, so we use "copy" and a "*". This basically tells you to copy all.
+
+To get the two new key-values or new properties, we use the "add" transform.
+
+Let us look at "fullname" first. We add "fullname" then we need to tell Sesam where to get the value from. In this case we have the value in the source: “firstname" and "lastname". To put these together, we use the "concat" function, which will concatenate the values from the two properties.
+
+For "greeting" we use same principle.; we concatenate. So, we pick newly made key called "fullname" from "target" ("_T.") and simply add rest of greeting 
+
+::
+
+  ["add" ["concat", "Hi,","_T.fullname", "!"]]
+
+"coalece" is used when we want to prioritize which ids we want to use for example, we use **coalesce** . So when is this useful and how is it used? Say are adding "lastname". This key-value is found in three systems. We want to make sure we use the most trusted value, we use **coalesce** to state order which Sesam checks for values. If the hr-person "lastname" is null, “Coalesce” gives us the opportunity to choose which is the next best option. "Coalece is used together with **"list"** function, which basically is a list of values. If you need a list of key-value pairs, in other words a list of properties with values, you need to make a dictionary using the **"dict"** function.
+
+::
+
+  ["comment", "Below code will first check "lastname" in hr-person 
+              dataset ,if it is null then it goes to crm-person dataset and so 
+              on. basically, we prioritize the order on most trusted values"], 
+              ["add", "zipcode", 
+                  ["coalesce", ["list", "_S.hr-person:lastname", 
+                  "_S.crm-person:name", "_S.erp-person:surname"] 
+              ] 
+          ] 
+  ] 
+
+To illustrate the difference let us look at some DTL in a pipe
+
+::
+  
+  {
+  "_id": "global-person",
+  "type": "pipe",
+  "source": {
+  "type": "merge",
+  "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+  "equality": [
+      ["eq", "ep.SSN", "cp.SSN"],
+      ["eq", "ep.SSN", "hr.SSN"],
+      ["eq", "ep.Username", "su.Username"]
+    ],
+    "identity": "first",
+    "version": 2
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "firstname",
+          ["coalesce",
+            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+          ]
+        ],
+        ["add", "lastname",
+          ["coalesce",
+            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+          ]
+        ],
+  ["add", "fields",
+          ["dict", "SSN", "_S.ssn", "contact", "_S.emailaddress", 
+  "Origin", "_S.birth_place "]
+        ]
+
+As seen above the dictionary contains key and where to access value. A list could be a list of items separated by commas.
+
+
 
 To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following the :ref:`Getting started <getting-started>` with Sesam guide you are ready to do these labs.
 
