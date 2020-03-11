@@ -161,7 +161,7 @@ Datasets
 .. _getting-started-pipes:
 
 Pipes
------------------------
+-----
 In this section we will go further into what pipes are, how they work and what we can do with them. 
 
 When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to another, with the purpose of adding structure to the data. These pipes generate new datasets with new and transformed data ready to be used by other systems.
@@ -193,6 +193,15 @@ DTL scripts are written inside the config tab when selecting a pipe in your Sesa
 	* **Transform**: Next we need to specify the rules with which we wish to transform the data.
 	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
 	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
+
+Next, let us brieflly explain **key-value pair**. It is quite simplye property with a value. E.g.:
+
+    ``"firstname": "Ole"``
+
+.. image:: images/getting-started/key_value_pair.png
+    :width: 600px
+    :align: center
+    :alt: Generic pipe concept
 
 
 .. _getting-started-transformations:
@@ -239,7 +248,7 @@ The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as we
 Notice the **"_S.[property1]"** and **"_T.[property2]"**. The **_S** and **_T** are called variables, and refer to the source and the target respectively.
 
 Lab 1-2
-^^^^^^^^^^^^^^^^^
+^^^^^^^^
 The :ref:`Labs section <getting-started-labs>` helps us get more hands on with Sesam. Head over there and do the first two labs to get more experience transforming data. 
 
 
@@ -254,7 +263,12 @@ Merging gives us an aggregated representation of two or more datasets​​. We 
 
 When merging datasets we need to combine entities through identical values across datasets. In the image above we merge datasets A and B through their "lastname" properties, and B and C through their "email" properties. As we can see, the resulting dataset will have "null" values in the fields that cannot be populated through entities with matching values.
 
-This way you can for example, combine a customer dataset with another customer dataset through the **"lastname"** and work with an entity that contains more customer info.
+This way you can for example, combine a customer dataset with another customer dataset through the **"lastname"** property and work with an entity that contains more customer info. In the configuration below we have given the datasets **aliases** in the source config. This is for easy referencing later in the source configuration. We see the alisases 
+here:
+
+**["customerA a", "customerB b"]**
+
+In the equality rule we simply put **"a.lastname" and "b.lastname"** to specify which dataset and which key we use. IF we were not using aliases, it would look like this **"customerA.lastname", "customerB.lastname"** so aliases make it easier and tidier to write DTL.
 
 ::
  
@@ -274,7 +288,99 @@ The **“identity”** property specifies the ID of the resulting entity. Set to
 
 The **”version”** property refers to the version of the merge source. The default value is 1, but version 1 is deprecated. Set this to **2**.
 
-In the configuration above we have given the datasets aliases in the source config for easy referencing later in the source configuration. As we added the store-customer dataset as **“store-customer c”** we can then later reference the ID of that dataset simply as **“c.id”**.
+Coalesce, list and other useful DTL functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**"Coalesce"** means to join or combine. In SQL it is commonly used together with "is-null" to return the first non-null value in a list. In DTL, when we need to prioritize which keys we want to use to pick a value, we use **"Coalesce"**. So, when is this useful and how is it used?
+
+Say we want to add a property or a key called "lastname". This key-value is found in three systems. We want to make sure we use the most trusted value, we use **"Coalesce"** to state order which Sesam checks for values. If the hr-person "lastname" is null, **"Coalesce"** gives us the opportunity to choose which is the next best option.
+
+::
+
+  ["comment", "Below code will first check "lastname" in hr-person 
+              dataset ,if it is null then it goes to crm-person dataset and so 
+              on. basically, we prioritize the order on most trusted values"], 
+              ["add", "zipcode", 
+                  ["Coalesce", ["list", "_S.hr-person:lastname", 
+                  "_S.crm-person:name", "_S.erp-person:surname"] 
+              ] 
+          ] 
+  ] 
+
+
+**"Coalesce"** is used together with **"list"** function, which basically is a list of values. We need **"list"** to list the order of which keys to pick values from. 
+
+If you need a list of key-value pairs, in other words a list of properties with values, you need to make a dictionary using the **"dict"** function.
+
+To illustrate the difference let us look at some DTL in a pipe
+
+
+::
+  
+  {
+  "_id": "global-person",
+  "type": "pipe",
+  "source": {
+  "type": "merge",
+  "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+  "equality": [
+      ["eq", "ep.SSN", "cp.SSN"],
+      ["eq", "ep.SSN", "hr.SSN"],
+      ["eq", "ep.Username", "su.Username"]
+    ],
+    "identity": "first",
+    "version": 2
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "firstname",
+          ["coalesce",
+            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+          ]
+        ],
+        ["add", "lastname",
+          ["coalesce",
+            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+          ]
+        ],
+  ["add", "fields",
+          ["dict", "SSN", "_S.ssn", "contact", "_S.emailaddress", 
+  "Origin", "_S.birth_place "]
+        ]
+
+As seen in pipe above, the dictionary contains key and where to access value i.e. **["dict","SSN", "_S.ssn"].** A list could be a list of items separated by commas i.e.      **["list","_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"].**
+
+The **"if"** condition is a function in DTL that works by evaluating a statement and by performing different actions depending on the outcome of the evaluation. 
+
+In everyday life we might say "if you're 50 years old or older, then you're entitled to a longer vacation". If not, then you have the standard number of weeks set aside for vacation. 
+
+In DTL this would be utilized in the following way:
+
+First we need to be able to assort the different people into two separate groups, e.g. group_1 is the group containing people with normal vacation (under 50 years of age) and group_2 is the group with people with extended vacation. Now let's assume that every person has an attribute named "age". Assuming that the person entity is the source entity we could define our evaluating statement as the following: ["gte", "_S.age", "50"], which will be true if the person is 50 years old or older, and false otherwise. We use the **"gte"** function which is used to get values greater than or equal to. In comparison **"gt"** simply means greater than. Now we can construct our complete if-statement:
+
+::
+
+  ["if",
+      ["gte", "_S.age", "50"], 
+      ["add", "age_group", "group_1"],
+      ["add", "age_group", "group_2"]
+  ]
+
+The third line is activated if the statement if true, and the fourth line if the statement i false.
+
+Another handy function is "return" which allows us to specify which values we want returned from source when doing hops.
+
+"Tuples" is mainly used when we need to make several equalities between two datasets in one hops. Let us say you have two properties in dataset A that will match two properties in dataset B, it will be done as follows:
+
+::
+
+  ["eq",
+    ["tuples", "A.prop1", "A.prop2"],
+    ["tuples", "B.prop1", "B.prop2"]
+  ]
 
 Global datasets
 ^^^^^^^^^^^^^^^
@@ -1269,96 +1375,6 @@ When communicating with the API we use requests methods such as **GET**, **POST*
 Labs
 ----
 These tasks will make you familiar with the basics of data transformation with Sesam. We recommend keeping the `documentation <https://docs.sesam.io/DTLReferenceGuide.html>`__ at hand to look up syntax and concepts when needed.
-
-Definition of commonly used transforms and functionalities
-==========================================================
-
-Before we dive into the labs, let us quickly define and explain some commonly used functions in DTL:
-
-
-But first of all, let us brieflly explain **key-value pair**. It is quite simplye property with a value. E.g.:
-
-    ``"firstname": "Ole"``
-
-.. image:: images/getting-started/key_value_pair.png
-    :width: 600px
-    :align: center
-    :alt: Generic pipe concept
-
-The following transforms **add**, **copy** and **concat** will be explained using following example.
-
-.. image:: images/getting-started/DTL_source_target.png
-    :width: 600px
-    :align: center
-    :alt: Generic pipe concept
-
-In source or input data we have three key-value pairs. We want to add two new ones; a greeting and a property called "fullname". To do that, we need to add some logic to the DTL. First of all, we want to use the whole source data, so we use "copy" and a "*". This basically tells you to copy all.
-
-To get the two new key-values or new properties, we use the "add" transform.
-
-Let us look at "fullname" first. We add "fullname" then we need to tell Sesam where to get the value from. In this case we have the value in the source: “firstname" and "lastname". To put these together, we use the "concat" function, which will concatenate the values from the two properties.
-
-For "greeting" we use same principle.; we concatenate. So, we pick newly made key called "fullname" from "target" ("_T.") and simply add rest of greeting 
-
-::
-
-  ["add" ["concat", "Hi,","_T.fullname", "!"]]
-
-"coalece" is used when we want to prioritize which ids we want to use for example, we use **coalesce** . So when is this useful and how is it used? Say are adding "lastname". This key-value is found in three systems. We want to make sure we use the most trusted value, we use **coalesce** to state order which Sesam checks for values. If the hr-person "lastname" is null, “Coalesce” gives us the opportunity to choose which is the next best option. "Coalece is used together with **"list"** function, which basically is a list of values. If you need a list of key-value pairs, in other words a list of properties with values, you need to make a dictionary using the **"dict"** function.
-
-::
-
-  ["comment", "Below code will first check "lastname" in hr-person 
-              dataset ,if it is null then it goes to crm-person dataset and so 
-              on. basically, we prioritize the order on most trusted values"], 
-              ["add", "zipcode", 
-                  ["coalesce", ["list", "_S.hr-person:lastname", 
-                  "_S.crm-person:name", "_S.erp-person:surname"] 
-              ] 
-          ] 
-  ] 
-
-To illustrate the difference let us look at some DTL in a pipe
-
-::
-  
-  {
-  "_id": "global-person",
-  "type": "pipe",
-  "source": {
-  "type": "merge",
-  "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
-  "equality": [
-      ["eq", "ep.SSN", "cp.SSN"],
-      ["eq", "ep.SSN", "hr.SSN"],
-      ["eq", "ep.Username", "su.Username"]
-    ],
-    "identity": "first",
-    "version": 2
-  },
-  "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "*"],
-        ["add", "firstname",
-          ["coalesce",
-            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
-          ]
-        ],
-        ["add", "lastname",
-          ["coalesce",
-            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
-          ]
-        ],
-  ["add", "fields",
-          ["dict", "SSN", "_S.ssn", "contact", "_S.emailaddress", 
-  "Origin", "_S.birth_place "]
-        ]
-
-As seen above the dictionary contains key and where to access value. A list could be a list of items separated by commas.
-
-
 
 To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following the :ref:`Getting started <getting-started>` with Sesam guide you are ready to do these labs.
 
