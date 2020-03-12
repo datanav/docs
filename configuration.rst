@@ -166,6 +166,7 @@ Properties
           "skos": "http://www.w3.org/2004/02/skos/core#",
           "dcterms": "http://purl.org/dc/terms/",
           "gs": "http://www.opengis.net/ont/geosparql#",
+
      -
      -
 
@@ -8140,6 +8141,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
      -
 
+       .. _pump_rescan_run_count:
    * - ``rescan_run_count``
      - Integer(>=1)
      - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
@@ -8147,6 +8149,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
      -
 
+       .. _pump_rescan_cron_expression:
    * - ``rescan_cron_expression``
      - String
      - A cron expression that indicates when the pump should schedule a full rescan of the source of the pipe the pump
@@ -8377,3 +8380,89 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
            "cron_expression": "0/5 14,18 * * ?"
        }
     }
+
+
+Rescans
+-------
+
+Definition of terms:
+
+Incremental run:
+  This is what a pump does when it is started when the stored "last_seen" value is set to a non-empty value,
+  i.e. the pipe will only process source-entities that has appeared after the previous run of the pipe. This is
+  the most common way to run a pipe.
+
+Rescan:
+  This is what a pump does when it is started by the :ref:`rescan_cron_expression <pump_rescan_cron_expression>` or
+  :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
+  "rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
+
+Reset/Full run:
+  This is what a pump does when the user has explicitly reset the pipe. It will process all the source-entities,
+  and do deletion tracking when finished.
+
+The use-case for rescans is that the user wants new entities to flow through the pipe as quickly as possible,
+but the user also wants to reprocess *all* the source entities. The latter can be very time-consuming, and sometimes
+it is not an option to simply reset the pipe to reprocess everything, since that would prevent any new entities from
+flowing through the pipe until all the old entities have been processed.
+
+Example: The pipe reads from a sql database-table that has an "last_modified_time"-column, but no "deleted" column;
+new and modified rows can be selected with a an appropriate sql-statement, but there is no way to query the sql
+database for deleted rows. In this case a rescan can be used to detect deleted rows, while incremental runs can
+be used to process new rows at the same time.
+
+There are two different "flavors" of rescans:
+
+1. The entities produced by the incremental runs are known to be correct. This is the case if the user has just
+   changed the DTL of a pipe.
+
+   If one or more incremental run has been started while a rescan was in progress, the rescan will stop processing
+   entities when it reaches the "last_seen" offset used by the first incremental run.
+
+   If no incremental run has been started, the rescan will proceed past the "last_seen" offset and start to update
+   the stored "last_seen" value.  It is not possible to start an incremental run if a rescan is running and it has
+   already passed the "last_seen" offset.
+
+   The rescan will not overwrite any entities that have been written by an incremental run.
+   At the end of the rescan, the recan will do deletion-tracking, but will not delete any entities that were output
+   by the incremental run(s).
+
+   Caveats of doing rescan+incremental runs:
+
+   * The order of the resulting entities can be different that it would be in a normal "reset"-run.
+   * Since the rescan can't overwrite entities that has been output by the incremental run, the pipe may not output
+     all the versions of an entity that it would in a normal run. This can happen for instance if the pipe has a
+     :ref:`dataset source <dataset_source>` with the ``include_previous_versions`` property set to true; once the
+     incremental run has output entity "A", any older versions of "A" that is produces by the rescan will be ignored.
+
+2. The entities produced by the incremental run may not be correct in all cases. This is the case if the pipe has
+   a "merge"-source, and the user has changed the configuration of the merge-source.
+
+   In this case the incremental run will use the old version of the merge-source, which may produce erronous results.
+   The entities from the incremental run will not be put into the sink's seen-tracker. The incremental run will not
+   overwrite any entities that have been produced by the rescan run.
+
+   Once the rescan finishes, any incremental run in progress will be stopped. The rescan will then process any entities
+   that have appeared since the start of the rescan. Once that is done, the rescan will do deletion-tracking. This will
+   delete any erronous entities that was emitted by the incremental run.
+
+   Caveats of doing rescan+incremental runs:
+
+   * The order of the resulting entities can be different that it would be in a normal "reset"-run.
+   * The output can temporarily contain erronous entities (produced by the incremental runs).
+     Such entities will deleted once the rescan has finished.
+
+Only one incremental run can be active at once, but once an incremental run has finished a new incremental run can be
+started. A rescan run can also be started while an incremental run is in progress.
+
+The incremental runs will not do retries, since the rescan will reprocess any previously failed entities.
+The incremental runs will do dependency tracking.
+
+
+
+Caveats of doing rescan+incremental runs:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The order of the entities the pipe produces may be different from the order that the pipe would produce in a
+normal run, since newer entities can be processed by the incremental run before the same entities are processed by the
+rescan.
+
