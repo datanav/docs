@@ -324,7 +324,7 @@ subscription have triggered (for instance to create a status-board website).
 
 Example::
 
-    curl 'https://portal.sesam.io/api/notifications' -H 'Authorization: bearer <JWT-for-the-subscription-12345644-2a04-4ff1-9d77-7b3eb615974c>'
+    curl 'https://portal.sesam.io/api/notifications-summary' -H 'Authorization: bearer <JWT-for-the-subscription-12345644-2a04-4ff1-9d77-7b3eb615974c>'
 
 will result in a response that looks like this::
 
