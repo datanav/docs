@@ -112,7 +112,8 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false
+         "use_signalling_internally": false,
+         "default_compaction_type": "background"
       }
    }
 
@@ -175,6 +176,12 @@ Properties
        be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
        on the pipe source it will be turned on regardless of the pump schedule.
      - ``false``
+     -
+
+   * - ``global_defaults.default_compaction_type``
+     - Enum<String>
+     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
+     - ``"background"``
      -
 
 .. _pipe_section:
