@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-03-18
+----------
+* Added the ``global_defaults.default_compaction_type`` property to :ref:`service metadata <service_metadata_section>`.
+
 2020-03-05
 ----------
 * The :ref:`union_datasets <union_datasets_source>` source now as a ``prefix_ids`` property that can be set to `false` to not add the dataset id as the prefix on entity ids.
