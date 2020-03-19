@@ -181,7 +181,6 @@ Change tracking
 
 Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a source and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the source was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a source it may, if the source supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
 
-
 .. _concepts-dtl:
 
 The Data Transformation Language (DTL)
@@ -211,7 +210,6 @@ One of the really smart things that Sesam can do is to understand complex depend
 
 This is in essence a cache invalidation of complex queries problem. With Sesam we have solved that problem. We are empowered to solve the problem as we have a dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
 
-
 Sesam API
 ---------
 
@@ -222,7 +220,6 @@ The API can be found at:
 ::
 
     http://service_endpoint:9042/api
-
 
 Sesam Management Studio
 -----------------------
@@ -235,14 +232,65 @@ The management studio can be found at:
 
     http://service_endpoint:9042/gui
 
+
+To read more about Sesam Management Studio and the UI, please click here `here <https://docs.sesam.io/management-studio.html>`__ 
+
 Sesam Client
 ------------
 
-The *sesamclient* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
+The *Sesam client* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
 
 So what is it used for? It is manily a command line tool for testing and deploying a Sesam configuration to and from a Git repository. 
 
-After we have installed Sesam client via pip, we need to configure it as seen below.
+When applying a new solution to a project, there is a need to perform tests on the results of your solution. If applying the solution without testing the impact of new or modified integrations, we risk affecting the data quality of other integrations connected to the pipe/pipes in question.
+
+The Sesam client allows us to, in a quick and easy manner, to run new DTL configurations and observing the changes in output throughout the whole node. This results in both a more qualitative monitoring of changes to be implemented, but also saves time, as the Sesam client compares new output data with the old output data automatically, giving us an efficient way of testing all the potential connections inside the node. The tests are performed inside your own private Sesam instance, instead of the project instance, which enables us to test new implementations without risking the integrity of the project data.
+
+As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
+
+How to use the Sesam client
+===========================
+
+Before you start using the Sesam client make sure you have the following ready:
+
+•   Sesam client is available on github (https://github.com/tombech/sesam-py). Read about Installation and configuration further down
+•   A personal Sesam node for testing
+•   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
+•   A git clone of the repository you wish to work on
+•   Initial test setup (task "setting up tests in new projects” in Teams. text to be written)
+•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The config should be on the form;
+
+    ``node=’https://<node-id>.sesam.cloud’
+    JWT=’<your-JWT>’``
+
+The "node-id" of your private Sesam node can be found between the node name and the "Overview" link inside your node.
+
+.. image:: images/Node_ID.png
+    :width: 800px
+    :align: center
+    :alt: DataSet
+
+The JWT token can be generated inside your private node under *"Settings" ----> "Subsctiption" ---> "JWT"* (see above).
+
+Then add another folder named "expected" in the same folder as the ".syncconfig" file.
+
+After we have installed Sesam client via pip, we need to configure it. You can read about this here as seen below.
+
+Installation
+============
+
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/tombech/sesam-py/releases/>`__ 
+
+To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
+ 
+::
+
+    $ cd sesam
+    $ virtualenv --python=python3 venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python sesam.py -version
+    sesam version 1.0.0
 
 Configuration
 =============
@@ -257,46 +305,6 @@ Configuration
     2. My test node (44bb11...)
     Subscription to use? 2
     Config stored in .sesam/config.
-
-Usage
-=====
-
-There are various ways of using the Sesam client.
-A typical workflow below shows how to upload code, download it to make changes to it on local node. After code is edited tests are run and once passed code is deplyed.
-
-Typical workflow:
-=================
-
-::
-
-    $ sesam clean
-    $ sesam upload
-    Node config replaced with local config.
-    ## edit stuff in Sesam Management Studio
-    $ sesam download
-    Local config replaced by node config.
-    $ sesam status
-    Node config is up-to-date with local config.
-    $ sesam run
-    Run completed.
-    $ sesam update
-    Current output stored as expected output.
-    $ sesam verify
-    Verifying output...passed!
-
-You can also run the full test cycle (typical CI setup)
-
-::
-
-    $ sesam test
-    Node config replaced with local config.
-    Run completed.
-    Verifying output (1/3)...passed!
-    Run completed.
-    Verifying output (2/3)...passed!
-    Run completed.
-    Verifying output (3/3)...passed!
-
 
 Configuring tests
 =================
@@ -455,104 +463,35 @@ Example:
 
 This will compare the output of ``/pipes/foo/entities?stage=source`` with the contents of ``foo.json``, useful when the pipe's sink strips away the "_id" property for example.    
 
-Blacklisting
-^^^^^^^^^^^^
+Typical workflow 
+================
 
-If the data contains values that are not deterministic (e.g. timestamp added during the run) they can be filtered out using the blacklist.
- 
-Example:
+•   Start with making sure your GitHub repository is up-to-date.
+•   Run the **"sesam test -use-internal-scheduler"** command to ensure that the results from the local repository matches the output of the configuration files. The "-use-internal-scheduler" tag ensures a faster test than without since without it the Sesam client needs to run several operations "behind-the-scene" to execute all pipes. 
+• The **"sesam test"** command actually runs three different commands:
 
-::
+    ◦ **"sesam upload"**: loads the local configs to the private Sesam node
 
-    {
-      "_id": "foo",
-      "type": "test",
-      "blacklist": ["foo", "ns1:bar"]
-    }
+    ◦ **"sesam run"**: runs the configs inside the local Sesam node and populates the datasets
 
-This will filter out properties called ``foo`` and ``ns1:bar`` (namespaced).
- 
-If the data is not located at the top level, a dotted notation is supported ``foo.bar``. This will remove the ``bar`` property from the object (or list of objects) located under the ``foo`` property. If you need to blacklist a property that actually contains a dot, the dot can be escaped like this ``foo\.bar``
+    ◦ **"sesam verify’"**: matches the output from the current configurations in the private Sesam node with the output in the "expected" folder on the local repository
 
-If you need to ignore a property on a list of objects, you can also use this notation ``foos.*.bar``. This will remove the ``bar`` property from all the objects located under ``foos``.
+•   When this is done, create a new local git branch where you can store your future changes
+•   Make changes to the configs inside your Sesam node
+•   When you are content with your changes, run the command **"sesam download"**. This will pull all the current configs on your node down to the local repository, which you   will need when updating the git repository (explained further down)
+•   To check changes in output, run the command **"sesam test -user-internal-scheduler"** again
+•   If the changes in output are expected/acceptable, run the command **"sesam update"** to update the output in the "expected" folder to the current output in the private Sesam node. If the output is not expected/acceptable, go back to the private Sesam node and make the necessary adjustments and repeat the last three point (starting with "sesam download")
+•   Commit changes and push them [link to git-section?] to the corresponding git repository
 
-Example:
+Other useful commands:
 
-::
+    •   Adding either -v, -vv or -vvv after your command will yield further information regarging the workings of the Sesam client. **-v** will yield some extra information, **-vv** will yield some more extra information while **-vvv** will yield maximum information.
+    •   **"status"** will test if the local configs are up-to-date with the node configs.
+    •   **"wipe"** will wipe your private repository clean of configs
+    •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.  
 
-    {
-      "_id": "foo",
-      "foos": {
-      "A": {
-      "bar": "baz",
-      "foobar": "foo"
-        }
-      }
-    }
+For further commands available through the Sesam client, run the command **"sesam -h"**
 
 
-Will end up as the following (with ``"blacklist": ["foos.*.bar"]``):
-
-::
-
-    {
-      "_id": "foo",
-      "foos": {
-      "A": {
-      "foobar": "foo"
-        }
-      }
-    }
-
-Avoid ignore and blacklist
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It is recommended to avoid ignoring or blacklisting as much as possible as this creates a false sense of correctness. Tests will pass, but deviations are silently ignored. A better solution is to avoid these properties in the output if possible.
-
-Scheduler customization
-^^^^^^^^^^^^^^^^^^^^^^^
-
-By default the upload command will add a test-friendly scheduler as part of the configuration. The ``_id`` for this micro service system is ``scheduler``, but it can be overridden with the flag "--scheduler-id my-scheduler-id" if you need to override this.
- 
-If you want to configure a custom scheduler manually as part of the configuration you need to enable the ``--custom-scheduler`` flag.
-
-This custom scheduler needs to implement the following: 
-
-1. POST /start (the tool will call this when the scheduler should start)
-2. GET / (the tool will then poll this until it returns with state 'success' or 'failure')
-
-::
-
-    {
-      "state": "?|success|failure" 
-    }
-
-Installing
-==========
-
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/tombech/sesam-py/releases/>`__ 
-
-To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
- 
-::
-
-    $ cd sesam
-    $ virtualenv --python=python3 venv
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    $ python sesam.py -version
-    sesam version 1.0.0
-
-To create a sesam client binary with pyinstaller on Linux/OSX (python 3.5+ required):
- 
-::
-
-    $ cd sesam
-    $ virtualenv --python=python3 venv
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    $ pyinstaller --onefile sesam.py
-    $ dist/sesam -version
-    sesam version 1.0.0
 
 
