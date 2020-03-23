@@ -184,6 +184,12 @@ Properties
      - ``"background"``
      -
 
+   * - ``global_defaults.max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
+
 .. _pipe_section:
 
 Pipes
@@ -3932,6 +3938,12 @@ Properties
      - The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false`` [*]. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
      - ``false`` [*]
      - No
+
+   * - ``max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
 
 
 Example configuration
