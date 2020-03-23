@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2020-03-23
+----------
+* Added the ``max_entity_bytes_size`` property to the :ref:`dataset sink <dataset_sink>`.
+* Added the ``global_defaults.max_entity_bytes_size`` property to :ref:`service metadata <service_metadata_section>`.
+
 2020-03-18
 ----------
 * Added the ``global_defaults.default_compaction_type`` property to :ref:`service metadata <service_metadata_section>`.
