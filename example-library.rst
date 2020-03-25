@@ -50,61 +50,67 @@ Expected output you can see below. As seen Property "Full name" is added to the 
 
     DTL:
 
-  {
-  "_id": "testpipe",
-  "type": "pipe",
-  "source": {
-    "type": "sql",
-    "system": "crm",
-    "table": "customer"
-  },
-  "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "_id"],
-        ["add", "Fullname",
-          ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+    ::
+
+    {
+    "_id": "testpipe",
+    "type": "pipe",
+    "source": {
+      "type": "sql",
+      "system": "crm",
+      "table": "customer"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "Fullname",
+            ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+      }
     }
   }
-}
 
 
 Expected output:
 
-If we choose to copy all ["copy", "*"], it will loook like below.
+If we choose to copy all ["copy", "*"], it will loook like below
 
-{
-  "_deleted": false,
-  "_hash": "24a142c9c6be2fe119b0cc2dff3452d5",
-  "_id": "testpipe:77",
-  "_previous": 275,
-  "_ts": 1585123420716638,
-  "_updated": 375,
-  "testpipe:Address": "Eventyrvegen 44",
-  "testpipe:Customerid": "77",
-  "testpipe:EmailAddress": "SivertAsp@dayrep.com",
-  "testpipe:FirstName": "Sivert",
-  "testpipe:Fullname": "Sivert Asp",
-  "testpipe:Gender": "male",
-  "testpipe:LastName": "Asp",
-  "testpipe:MiddleInitial": "N",
-  "testpipe:PostalCode": "2815",
-  "testpipe:SSN": "01065237389",
-  "testpipe:Username": "Altond"
-}
+::
+
+  {
+    "_deleted": false,
+    "_hash": "24a142c9c6be2fe119b0cc2dff3452d5",
+    "_id": "testpipe:77",
+    "_previous": 275,
+    "_ts": 1585123420716638,
+    "_updated": 375,
+    "testpipe:Address": "Eventyrvegen 44",
+    "testpipe:Customerid": "77",
+    "testpipe:EmailAddress": "SivertAsp@dayrep.com",
+    "testpipe:FirstName": "Sivert",
+    "testpipe:Fullname": "Sivert Asp",
+    "testpipe:Gender": "male",
+    "testpipe:LastName": "Asp",
+    "testpipe:MiddleInitial": "N",
+    "testpipe:PostalCode": "2815",
+    "testpipe:SSN": "01065237389",
+    "testpipe:Username": "Altond"
+  }
 
 However in this example all we needed is the name, so we choose to copy the id only ["copy", "_id"] and to add "Full name". Now we get the data we need only, see output below:
 
-{
-  "_deleted": false,
-  "_hash": "4b3c775f6821422299269b6608ca421e",
-  "_id": "testpipe:77",
-  "_previous": 375,
-  "_ts": 1585123695287529,
-  "_updated": 475,
-  "testpipe:Fullname": "Sivert Asp"
-}
+::
+
+  {
+    "_deleted": false,
+    "_hash": "4b3c775f6821422299269b6608ca421e",
+    "_id": "testpipe:77",
+    "_previous": 375,
+    "_ts": 1585123695287529,
+    "_updated": 475,
+    "testpipe:Fullname": "Sivert Asp"
+  }
 
 
 
