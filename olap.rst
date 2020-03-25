@@ -1,3 +1,4 @@
+.. _OLAP:
 
 ===============
 Online Analytical Processing - OLAP
