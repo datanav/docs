@@ -48,9 +48,10 @@ Expected output you can see below. As seen Property "Full name" is added to the 
     :alt: Generic pipe concept
 
 
-    DTL:
+DTL Input
+==========
 
-    ::
+::
 
     {
     "_id": "testpipe",
