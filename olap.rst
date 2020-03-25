@@ -30,7 +30,9 @@ SQL Database - sesam connector
 ------------------
 Use standard Sesam SQL connectors. The SQL database can be on a cloud service or on premises but must be reachable from Sesam and reporting tool. 
 https://docs.sesam.io/configuration.html#the-sql-systems
+
     PRO: Relatively easy to set up. Works well with Power BI and other reporting tools. Affordable. Handles relatively large datasets. Works well with Microsoft Power query.
+
     CON: You need to set up a tabular schema for your data in Sesam. You can use a simple generic schema and insert json in the table, but than this must be handled in reporting tool [1]. The database has an upper limit on how much data it can store. 
 
 Azure SQL - sesam connector
