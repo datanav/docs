@@ -3842,9 +3842,9 @@ it will produce the transformed entity:
 The REST transform
 -----------------
 
-This is a data sink that can communicate with a REST service using HTTP requests.
+This transform can communicate with a REST service using HTTP requests.
 
-Note that the shape of the entities piped to this sink must conform to certain criteria, see the
+Note that the shape of the entities piped to this transform must conform to certain criteria, see the
 :ref:`notes <rest_expected_rest_entity_shape>` later in the section.
 
 Prototype
@@ -3883,7 +3883,7 @@ Properties
 Expected entity shape
 ^^^^^^^^^^^^^^^^^^^^^
 
-The entities must be transformed into a particular form before being piped to the RESTsink. The general form
+The entities must be transformed into a particular form before being piped to the REST transform. The general form
 expected is:
 
 ::
@@ -4010,33 +4010,9 @@ Example input entities:
             "_id": "john",
             "operation": "get-man",
             "properties": {
-                "id": "john",
-                "age": 21,
-                "sex": "M",
-                "collection_name": "study-group-1"
+                "id": "john"
             },
             "payload": "<man id=\"john\">john</man>"
-        },
-        {
-            "_id": "mary",
-            "operation": "update-woman",
-            "properties": {
-                "id": "mary",
-                "age": 23,
-                "sex": "F",
-                "collection_name": "study-group-2"
-            },
-            "payload": {
-              "id": "mary",
-              "age": 23
-            }
-        },
-        {
-            "_id": "bob",
-            "operation": "delete-man",
-            "properties": {
-                "collection_name": "study-group-1"
-            }
         }
     ]
 
