@@ -101,6 +101,74 @@ To see examples and to get more context on this, please click HERE.
 
 To read more about how this function is used, please click HERE
 
+New Pipe
+--------
+
+When pressing the button **"New Pipe"**, it takes you into template for generating a pipe from scratch.
+
+Working with template for new pipes
+===================================
+
+First we have to add value to "_id" or pipe cannot be saved. The naming conventions of pipe or the "id" can be found here: :ref:`Naming conventions <getting-started-Naming conventions>`
+
+As seen below, we have several tabs called "Panels" in Sesam. Press **"Templates"** and the available templates for each part of the pipe is available.
+
+ .. image:: images/new-pipe-1.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+
+Starting at top; **"Source"** needs to be defined. Frist menu available is **"System"** and we get available options for sources.
+Choose correct *source* for this pipe; .i.e. what is the source of data for this particular pipe you are working on.
+
+Next you will choose your own node then appropriate pipe as source and in **"Provider"** (this is which table you're collecting data from) you chose "**Person"** The press **Replace** and template DTL is pasted into your config as seen below.
+
+ .. image:: images/new-pipe-2.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+
+    Next step is template for **transforms**. Press **Add DTL transform** and template for adding transforms to your pipe appears.
+
+    .. image:: images/new-pipe-3.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Please visit :ref:`DTL reference guide <DTLReferenceGuide>` for most common transforms and functions and how they are used.
+
+All pipes have a default sink that points to / creates a dataset with the same name as the pipe. You can specify your own sink with a template if required. This is done at bottom of template under **"Target"**. This is where we specify where want to send the data to; which :ref:`Sinks <concepts-sinks>. This is specified in **"System"** and **"Sink"**. Press **Replace** and once again template pops into your config.
+
+Now press **"Save"** then **"Start"**. To see progress and to make sure pipe is finished, press **"Refresh"**. To see result, go to **"Output"** tab.
+
+To see an exampe please visit LINK exmape
+
+Schema
+^^^^^^
+
+Next to **Templates** tab, we find **Schema**. When pressing it, the **Schema** for this pipe shows up on right hand side of interface. A **"schema"** generally tells something about the *structure of the data*, i.e. metadata. Examples of metadata that the schema shows are e.g. whether a value is a string, Boolean, or an integer (text, true / false, or number).
+
+.. image:: images/new-pipe-schema.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Editor Preferences
+^^^^^^^^^^^^^^^^^
+
+The tab to the far right takes you to page where you can choose some preferences on **code style**.
+
+As you can see below you have some choices (and short explanation on what they mean) like *"Automatic auto completion"*, *"Close nested array on new line"* amongst others. Please have a look and click on the ones you would like to implement.
+
+To the right side of the interface there is a list of available **keyboard shortcuts** which makes working in Sesam easier. 
+
+.. image:: images/new-pipe-editorpref.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
 Systems
 =======
 
@@ -144,8 +212,6 @@ For subscription we have settings for e.g. license, JWT token and Network.
     :width: 600px
     :align: center
     :alt: DataSet
-
-
 
 User accounts
 =============
