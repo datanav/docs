@@ -19,7 +19,7 @@ Examples of Reporting tools
     * Apache Superset
     * Tablea
     * Microsoft Excel 
-    * Python/Jupyter
+    * Python/Jupyter/Plotly/Dash
     * R/R studio/Shiny
 
 Examples of data stores with focus on Power BI/Power query
@@ -48,7 +48,7 @@ This is a specialized service for high performance data warehouse and analysis.
 
 Azure Power Power BI/Power query - sesam http endpoint
 --------------------
-You can use a sesam http endpoint as a data source in a Power query. In practice this is only a good choice if the endpoint only have relatively little data since it will be read in its entirety or you will have to implement "since" (sesam) logic in Power query. 
+You can use a sesam http endpoint as a data source in a Power query. This is NOT a good practice for sensitive data! In practice this is only a good choice if the endpoint only have relatively little data since it will be read in its entirety or you will have to implement "since" (sesam) logic in Power query. Remember to filter "_deleted" entities in Sesam if you don't want them to be part of the data sent. You must use an anonymous Web connection in Power query (from Web in Data tab in Excel) and a shareable link from Sesam http endpoint output.
     PRO: Very direct and simple import. Can be combined with other data sources in a Power query data model. Can be done with only Sesam and Excel. 
     CON: Only a full read in practice. Keys in files, danger off sharing keys by mistake if you share eg. Power BI file or Excel file. 
 
