@@ -7641,7 +7641,7 @@ A operation configuration looks like:
 
    * - ``method``
      - String
-     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
+     - A enumeration of "GET", "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
        that the operation should execute on the ``url`` specified.
      -
      - Yes
