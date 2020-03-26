@@ -61,22 +61,22 @@ In this example in the **crm system** the name is split into **"First name"** an
   ["add", "Fullname", 
                   ["concat","_S.FirstName"," ","_S.LastName"]]
 
-  
- .. image:: images/new-pipe-transform.png
+ .. image:: images/images/new-pipe-transform.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Generic pipe concept  
+
 
 
 Expected output you can see below. As seen Property "Full name" is added to the dataset. **Testpipe** is the **namespace** and is added automatically to output.
-The **"_id"** is a **"system attribute"** it will not automatically show in the output. In order to see these attributes, so you need to click tick box at bottom of screen to.
+The **"_id"** is a **"system attribute"** it will not automatically show in the output. In order to see these attributes, you need to click tick box at bottom of screen.
 
-.. image:: images/new-pipe-no-sys-output.png
+ .. image:: images/new-pipe-no-sys-output.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-As you can see on bottom of screen, the box with **"Show system attributes"** is ticked. The **"_id"** is now part of output together with a handfull of other system attributes.
+As you can see on bottom of screen, the box with **"Show system attributes"** is ticked. The **"_id"** is now part of output together with a handful of other system attributes.
 
  .. image:: images/new-pipe-output.png
     :width: 800px
@@ -141,7 +141,7 @@ If we choose to copy all **["copy", "*"]**, it will loook like below
 
 The final step is to add the **target system**. Not all pipes have this, so a seperate example will be shown.
 
-When add the *Target* you choose values for **"system"** and **"sink"**.
+When you add the *Target* you choose values for **"system"** and **"sink"**.
 
 ::
    "sink": {
