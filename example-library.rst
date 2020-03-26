@@ -62,7 +62,7 @@ In this example in the **crm system** the name is split into **"First name"** an
                   ["concat","_S.FirstName"," ","_S.LastName"]]
 
   
-    .. image:: images/new-pipe-transform.png
+ .. image:: images/new-pipe-transform.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
