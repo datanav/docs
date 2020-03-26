@@ -51,17 +51,16 @@ Next block of the pipe is **"transform"** where we add functions to transform or
  
 **"Rules"** contain the various functions or rules for transforms. They are listed in the **square brackets** of **"Default"**
 
-The first transform is decideing which data do we need from the source.  In this case it is only *name* we need to send, so we nedo not need to copy whole dataset. 
+The first transform is deciding which data do we need from the source.  In this case it is only *name* we need to send, so we need not need to copy whole dataset. 
 
-The**id** is always useful so we copy the "_id" by adding following code: ``["copy", "_id"]`` in the **deafult** part of pipe.
+The**id** is always useful so we copy the "_id" by adding following code: ``["copy", "_id"]`` in the **default** part of pipe.
 
-In this example in the **crm system** the name is split into **"First name"** and **"Last name"** and in erp system the value is "Full name". To fix this we have to add a transform to add "Full name" and tell Sesam where to pick up data and how to "assemble" or "concatinate" the new peoperty. We can do this by adding following code after the ["copy", "_id] *seperated by comma*.
+In this example in the **crm system** the name is split into **"First name"** and **"Last name"** and in erp system the value is "Full name". To fix this we have to add a transform to add "Full name" and tell Sesam where to pick up data and how to "assemble" or "concatenate" the new property. We can do this by adding following code after the ["copy", "_id] *separated by comma*.
 
 
   ["add", "Fullname", 
                   ["concat","_S.FirstName"," ","_S.LastName"]]
 
-Pipe will look like this:
   
     .. image:: images/new-pipe-transform.png
     :width: 800px
