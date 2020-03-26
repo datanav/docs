@@ -14,33 +14,42 @@ Example library
 Introduction
 ------------
 
-In this chapter all examples with belonging config for you to use, is gathered.
-Each example has context with belong cpde for you to copy into your node and test. The expected result is also included for you to see task is completed correctly.
+In this chapter all examples with belonging config for you to use, is gathered. Each example has context with belonging code for you to copy into your node and test. The expected result is also included for you to see task is completed correctly.
 
 Generating a new pipe
 =====================
 
-Below is an example of sending master data from from crm system to antoher system that needs this data. You can do this using the *"New pipe"* *template*.
+Below is an example of sending master data from crm system to another system that needs this data. In order to do this you need to generate a new pipe. You can do this using the *"New pipe"* *template*.
 
-In order to do this you need to generate a new pipe with information on *where does the data in question come from*, *does it need any changes*; i.e. does it need to be transformed to fit with target system and lastly you need to specify *where are we sending it to*.
+The pipe needs information on *where does the data in question come from*, *does it need any changes*; i.e. does it need to be transformed to fit with target system and lastly you need to specify *where we are sending it to*.
 
-Using the template we add *the source* chosing which system and which specific dataset we are using (called **"Provider"**).
+Using the template we add *the source* choosing which system and which specific dataset we are using (called **"Provider"**).
 
-Next blokc of the pipe is **"transforms"** where we add functions to transform or change the data as appropriate.
 
- "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "_id"],
-        ["add", "Fullname",
-          ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+::
+
+ "source": {
+    "type": "sql",
+    "system": "crm",
+    "table": "person"
+  }
+
+Next block of the pipe is **"transform"** where we add functions to transform or change the data as appropriate.
+
+::
+
+   "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "Fullname",
+            ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+      }
     }
   }
-}
- Type: "dtl"
-
-Rules contains the various functions or rules for transforms. They are listed in the **square brackets** of **"Default"**
+ 
+**"Rules"** contain the various functions or rules for transforms. They are listed in the **square brackets** of **"Default"**
 
 The first transform is decideing which data do we need from the source.  In this case it is only *name* we need to send, so we nedo not need to copy whole dataset. 
 
@@ -113,7 +122,7 @@ Expected output using code above
     "testpipe:Fullname": "Sivert Asp"
   }
 
-If we choose to copy all ["copy", "*"], it will loook like below
+If we choose to copy all **["copy", "*"]**, it will loook like below
 
 ::
 
@@ -135,6 +144,13 @@ The final step is to add the **target system**. Not all pipes have this, so a se
 
 When add the *Target* you choose values for **"system"** and **"sink"**.
 
+::
+   "sink": {
+    "type": "json",
+    "system": "erp",
+    "url": ""
+  }
+
 In this example we are sending to *erp* so we pick that as **system value**. For sink we chose **json prototype**.
 
 When adding **sink** to the config, the output interface changes a little. Please see below.
@@ -147,33 +163,35 @@ When adding **sink** to the config, the output interface changes a little. Pleas
 DTL config with sink
 ^^^^^^^^^^^^^^^^^^^^
 
-{
-  "_id": "testpipe",
-  "type": "pipe",
-  "source": {
-    "type": "sql",
-    "system": "crm",
-    "table": "person"
-  },
-  "sink": {
-    "type": "json",
-    "system": "erp",
-    "url": ""
-  },
-  "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "_id"],
-        ["add", "Fullname",
-          ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+::
+
+  {
+    "_id": "testpipe",
+    "type": "pipe",
+    "source": {
+      "type": "sql",
+      "system": "crm",
+      "table": "person"
+    },
+    "sink": {
+      "type": "json",
+      "system": "erp",
+      "url": ""
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "Fullname",
+            ["concat", "_S.FirstName", " ", "_S.LastName"]]]
+      }
     }
   }
-}
 
 
 Expected output
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Expected output when adding **sink** to the *config*, the output should look like this:
 
