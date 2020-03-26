@@ -1331,6 +1331,7 @@ Prototype
       "gdpr-access-request-subject-data:reporter": "foo@bar.com",
       "gdpr-access-request-subject-data:entities": [{
         "gdpr-access-request-subject-data:entity-id": "1",
+        "gdpr-access-request-subject-data:entity-title": "title for entity 1",
         "gdpr-access-request-subject-data:entity-data": {
           "data-type-namespace:property1": "value1",
           "data-type-namespace:property2": "value2",
@@ -1338,6 +1339,7 @@ Prototype
         }
       }, {
         "gdpr-access-request-subject-data:entity-id": "2",
+        "gdpr-access-request-subject-data:entity-title": "title for entity 2",
         "gdpr-access-request-subject-data:entity-data": {
           "data-type-namespace:property1": "value4",
           "data-type-namespace:property2": "value5",
@@ -1398,6 +1400,13 @@ Properties
      - A unique id for the data entry
      -
      - Yes
+
+   * - ``gdpr-access-request-subject-data:entity-title``
+     - String
+     - An optional (unique) title for the data entry - if not present, one will be generated based on a combination of
+       the data-type-id and the entity-id
+     -
+     -
 
    * - ``gdpr-access-request-subject-data:entity-data``
      - Object
