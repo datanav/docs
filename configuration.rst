@@ -113,7 +113,14 @@ Example:
       },
       "global_defaults": {
          "use_signalling_internally": false,
-         "default_compaction_type": "background"
+         "default_compaction_type": "background",
+      },
+      "dependency_tracking": {
+         "dependency_warning_threshold": 10000,
+         "dependency_error_threshold": 50000,
+         "dependency_warning_threshold_total_bytes": 33554432,
+         "dependency_error_threshold_total_bytes": 134217728,
+         "enable_hops_thresholds": true
       }
    }
 
@@ -188,6 +195,46 @@ Properties
      - Enum<String>
      - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
      - ``104857600`` (100MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold:
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``10000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold:
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.
+     - ``50000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``33554432`` (32MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.
+     - ``134217728`` (128MB)
+     -
+
+       .. _service_metadata_dependency_tracking_enable_hops_thresholds:
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions.
+     - ``false``
      -
 
 .. _pipe_section:
@@ -330,6 +377,36 @@ Properties
      - Object
      - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold>`.
+     - ``10000``
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.
+     - ``50000``
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes>`.
+     - ``33554432`` (32MB)
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.
+     - ``134217728`` (128MB)
+     -
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`.
+     - ``false``
      -
 
 .. _namespaces:
