@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-03-27
+----------
+* Added the ``dependency_tracking`` property to :ref:`service metadata <service_metadata_section>`. It can be used to specify various dependency tracking related properties.
+
 2020-03-23
 ----------
 * Added the ``max_entity_bytes_size`` property to the :ref:`dataset sink <dataset_sink>`.
