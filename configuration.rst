@@ -209,7 +209,7 @@ Properties
 
    * - ``dependency_tracking.dependency_error_threshold``
      - Integer
-     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. Do not set this value too high as it may cause excessive memory usage.
      - ``50000``
      -
 
@@ -225,7 +225,7 @@ Properties
 
    * - ``dependency_tracking.dependency_error_threshold_total_bytes``
      - Integer
-     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.  Do not set this value too high as it may cause excessive memory usage.
      - ``134217728`` (128MB)
      -
 
@@ -233,7 +233,7 @@ Properties
 
    * - ``dependency_tracking.enable_hops_thresholds``
      - Boolean
-     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions.
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. It is recommended that you set this property to ``true`` in development environments.
      - ``false``
      -
 
@@ -387,7 +387,7 @@ Properties
 
    * - ``dependency_tracking.dependency_error_threshold``
      - Integer
-     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.  Do not set this value too high as it may cause excessive memory usage.
      - ``50000``
      -
 
@@ -399,13 +399,13 @@ Properties
 
    * - ``dependency_tracking.dependency_error_threshold_total_bytes``
      - Integer
-     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.  Do not set this value too high as it may cause excessive memory usage.
      - ``134217728`` (128MB)
      -
 
    * - ``dependency_tracking.enable_hops_thresholds``
      - Boolean
-     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`.
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`. It is recommended that you set this property to ``true`` in development environments.
      - ``false``
      -
 
