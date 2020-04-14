@@ -14,12 +14,25 @@ Example library
 Introduction
 ------------
 
-In this chapter all examples with belonging config for you to use, is gathered. Each example has context with belonging code for you to copy into your node and test. The expected result is also included for you to see task is completed correctly.
+In this chapter you can obtain copies of all samples and build them on your own node. Each example has context with sample code for you to copy into your node and test. The expected result is also included for you to see task is completed correctly.
+
+Examples
+--------
+
+Below you find examples with code for you to run on your own node.
 
 Generating a new pipe
 =====================
 
-Below is an example of sending master data from crm system to another system that needs this data. In order to do this you need to generate a new pipe. You can do this using the *"New pipe"* *template*.
+What does this sample code do?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It demonstrates how to build a new pipe from scratch to send a paropert from on system to another.
+
+How is this sample set up?
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is an example of sending master data from crm system to another system that needs this data. In order to do this you need to generate a new pipe. You can do this using the *"New pipe"* *template*.
 
 The pipe needs information on *where does the data in question come from*, *does it need any changes*; i.e. does it need to be transformed to fit with target system and lastly you need to specify *where we are sending it to*.
 
@@ -61,7 +74,7 @@ In this example in the **crm system** the name is split into **"First name"** an
   ["add", "Fullname", 
                   ["concat","_S.FirstName"," ","_S.LastName"]]
 
- .. image:: images/images/new-pipe-transform.png
+ .. image:: images/new-pipe-transform.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
@@ -121,7 +134,7 @@ Expected output using code above
     "testpipe:Fullname": "Sivert Asp"
   }
 
-If we choose to copy all **["copy", "*"]**, it will loook like below
+If we choose to copy all **["copy", "*"]**, it will loook like below.
 
 ::
 
@@ -144,6 +157,7 @@ The final step is to add the **target system**. Not all pipes have this, so a se
 When you add the *Target* you choose values for **"system"** and **"sink"**.
 
 ::
+
    "sink": {
     "type": "json",
     "system": "erp",
@@ -190,7 +204,7 @@ DTL config with sink
 
 
 Expected output
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Expected output when adding **sink** to the *config*, the output should look like this:
 
