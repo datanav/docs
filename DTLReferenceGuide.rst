@@ -227,7 +227,7 @@ Things to note:
   `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
 
 
-.. _variables:
+.. _DTLReferenceGuide-variables:
 
 Variables
 =========
@@ -326,7 +326,7 @@ the value ``bar``). It is useful for parameterizing the transform on an endpoint
          refers to the individual order entities, one at a time.
 
 
-.. _path_expressions_and_hops:
+.. _DTLReferenceGuide-variables-path_expressions_and_hops:
 
 Path Expressions and Hops
 =========================
@@ -372,7 +372,7 @@ There are three ways that one can access properties on entities:
            ]
        }]
 
-   The ``hops`` function can be used to perform :ref:`joins <joins>` across two or
+   The ``hops`` function can be used to perform :ref:`joins <DTLReferenceGuide-variables-joins>` across two or
    more datasets, so if you want to navigate beyond the current entity
    use ``hops``. This particular example will join the source entity
    with entities from the ``orders`` dataset using the ``["eq",
@@ -382,7 +382,7 @@ There are three ways that one can access properties on entities:
    as filter expressions. For an ``eq`` to be a join expression it
    will have to refer to variables from two different datasets.
 
-.. _joins:
+.. _DTLReferenceGuide-variables-joins:
 
 How joins work
 ==============
@@ -445,7 +445,7 @@ the former will have better precision.
    There must be exactly one unique dataset alias reference
    in each ``eq`` argument.
 
-.. _namespace_aware_functions:
+.. _DTLReferenceGuide-variables-namespace_aware_functions:
 
 Namespaces
 ==========
@@ -468,7 +468,7 @@ The following functions are namespace aware: :ref:`add
 
 See the individual functions for more details.
 
-.. _ni_escape_syntax:
+.. _DTLReferenceGuide-variables-ni_escape_syntax:
 
 NI escape syntax
 ----------------
@@ -846,13 +846,13 @@ modifiying the target entity, and has no return value.
          the target entity. Note
          that if the PROPERTY arguments starts with ``::`` it will be interpreted
          to mean add what ever is after the double colons. See
-         :ref:`NI escape syntax <ni_escape_syntax>` for more details.
+         :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>` for more details.
        |
        | ``["add", ":age", 26]``
        |
        | Result: ``{"bar:age": 26}``. Adds the ``bar:age`` property with the value
          26 to the target entity.
-         Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         Note that this example uses the :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>`
          to reference the current namespace.
 
        .. _`dtl_transform-default`:
@@ -926,14 +926,14 @@ modifiying the target entity, and has no return value.
        | the ``age`` property with the value 26 is added to the target entity. Note
          that if the PROPERTY arguments starts with ``::`` it will be interpreted
          to mean add what ever is after the double colons. See
-         :ref:`NI escape syntax <ni_escape_syntax>` for more details.
+         :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>` for more details.
        |
        | ``["default", ":age", 26]``
        |
        | Result: ``{"bar:age": 26}``. If the target entity does not already have the
          ``bar:age`` property, then
          the ``bar:age`` property with the value 26 is added to the target entity.
-         Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         Note that this example uses the :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>`
          to reference the current namespace.
 
        .. _`dtl_transform-make-ni`:
@@ -1523,7 +1523,7 @@ Comparisons
        .. WARNING::
 
           Note that the ``eq`` function serves a dual purpose. It can
-          both be used for :ref:`join expressions <joins>` and it can
+          both be used for :ref:`join expressions <DTLReferenceGuide-variables-joins>` and it can
           be used for :ref:`equality comparisons
           <eq_dtl_function>`. These two are different in that a join
           uses intersection (similar to the ``intersects`` function) and
@@ -1718,6 +1718,8 @@ If-then-else
        | or ``"toddler"`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``"unknown"``.
        
+.. _DTLReferenceGuide-variables-Nulls:
+
 Nulls
 -----
 
@@ -3415,12 +3417,12 @@ Paths
        |
        | ``["path", "::a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
        |
-       | Returns ``1`` as ``"::a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+       | Returns ``1`` as ``"::a"`` uses the :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>`
          to explicity reference the unqualified ``a`` property.
        |
        | ``["path", ":a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
        |
-       | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+       | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <DTLReferenceGuide-variables-ni_escape_syntax>`
          to explicity reference the ``"a"`` property in the current namespace ``"bar"``.
 
 
