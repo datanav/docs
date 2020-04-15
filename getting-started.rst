@@ -527,7 +527,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
 
  When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding **"_S"** in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
 
-  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <DTLReferenceGuide-variables>`.
+  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <variables>`.
 
 
 

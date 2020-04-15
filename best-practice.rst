@@ -503,7 +503,7 @@ In addition, it gives the dataset a “global symbol” in the graph tab as seen
 
 As a general rule when it comes to transformations, we wish to use reusable properties; e.g. global properties generated in the global dataset. This gives us opportunity to track data from start to end of flow through Sesam. 
 
-In order to prioritize which ids we want to use, we use :ref:`coalesce <DTLReferenceGuide-variables-Nulls>`.  If the global id is null, **“Coalesce”** gives us the opportunity to choose which is the next best option. This, in turn gives us the opportunity to use the golden record, which you can read about :ref:`here <best-practice-golden-record>`.
+In order to prioritize which ids we want to use, we use :ref:`coalesce <nulls>`.  If the global id is null, **“Coalesce”** gives us the opportunity to choose which is the next best option. This, in turn gives us the opportunity to use the golden record, which you can read about :ref:`here <best-practice-golden-record>`.
 
 Below we see an example of a global pipe called "global-person". At top the type of pipe is set to **“merge“** enabling us to add 4 datasets that we wish to merge.
 

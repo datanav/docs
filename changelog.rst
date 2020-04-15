@@ -51,7 +51,7 @@ Changelog
 
 2019-08-27
 ----------
-* DTL :ref:`property path strings <DTLReferenceGuide-variables-path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``. 
+* DTL :ref:`property path strings <path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``. 
 * Extended the :doc:`JSON Pull Protocol <json-pull>` document with information about response headers and an example using dataset subsets.
 
 2019-08-26
@@ -311,7 +311,7 @@ Changelog
 * Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
 
 * The DTL compiler will now issue a warning if you try to perform two
-  or more :ref:`join expressions <DTLReferenceGuide-variables-joins>` between the same two dataset
+  or more :ref:`join expressions <joins>` between the same two dataset
   aliases. It is there to notify you of possible cardinality issues
   and to tell you about the :ref:`tuples <tuples_dtl_function>`
   function, which may be used to avoid cardinality issues.
@@ -327,7 +327,7 @@ Changelog
 
      Note that the :ref:`eq <eq_dtl_function>`
      function serves a dual purpose. It can both be used for
-     :ref:`join expressions <DTLReferenceGuide-variables-joins>` and it can be used for
+     :ref:`join expressions <joins>` and it can be used for
      :ref:`equality comparisions <eq_dtl_function>`. These two are
      different in that a join uses intersection (similar to the
      ``intersects`` function) and the equality comparison is an exact
@@ -609,7 +609,7 @@ Changelog
 
 2016-10-10
 ----------
-* Added DTL Reference Guide section that explains how :ref:`joins <DTLReferenceGuide-variables-joins>` work.
+* Added DTL Reference Guide section that explains how :ref:`joins <joins>` work.
 
 2016-10-04
 ----------

@@ -349,7 +349,7 @@ Example of an entity with namespaces:
 
    Some of the DTL functions are namespace aware and they will behave
    slightly differently when namespaces are enabled. See the section
-   on :ref:`namespaces <DTLReferenceGuide-variables-namespace_aware_functions>` in the DTL
+   on :ref:`namespaces <namespace_aware_functions>` in the DTL
    reference guide for more details.
 
 Properties
@@ -959,7 +959,7 @@ Properties
 
    * - ``equality``
      - List<EqFunctions{>=0}>
-     - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <DTLReferenceGuide-variables-joins>` in DTL.
+     - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
      -
      - No
 
@@ -5181,7 +5181,7 @@ JSON source <json_source>`.
 
 Note that any URL parameters given to these endpoints are bound to a DTL variable named ``_B``
 and is available to any DTL transform on the pipe in which the endpoint sink is a part, see
-:ref:`DTL Variables <DTLReferenceGuide-variables>` for more details.
+:ref:`DTL Variables <variables>` for more details.
 
 The SDShare protocol is described `here
 <http://www.sdshare.org/spec/sdshare-v1.0.html>`__.
