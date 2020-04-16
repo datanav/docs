@@ -72,7 +72,7 @@ By pressing **"..."** to the right of the pipe name, a menu with various options
 Pipe Menu
 ^^^^^^^^^
 
-. list-table::
+.. list-table::
    :header-rows: 1
    :widths: 10, 30
 
