@@ -343,7 +343,7 @@ which page you are currently at.
 Logging in
 ----------
 
-TODO: explain how authentication works: 
+TODO: explain how authentication works:
 
 Authentication with google
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -516,7 +516,7 @@ There are three different kinds of search-fields:
    boost searchresults relevant to the current user.
 
 .. _item_attributes:
-   
+
 Item attributes
 ^^^^^^^^^^^^^^^
 
@@ -713,7 +713,4 @@ Databrowser API Reference
 
 ..
    TODO pull swagger from somewhere instead of having a copy here
-.. openapi:: ./swagger.yaml
-
-
-
+.. openapi:: ./swagger_databrowser.yaml
