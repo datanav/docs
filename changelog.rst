@@ -5,6 +5,10 @@ Changelog
 ----------
 * Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
 
+2020-05-28
+----------
+* Added the :ref:`Restore completed <restore_completed_notification_rule>` and :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule types.
+
 2020-03-27
 ----------
 * Added the ``dependency_tracking`` property to :ref:`service metadata <service_metadata_section>`. It can be used to specify various dependency tracking related properties.
