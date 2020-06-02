@@ -269,7 +269,16 @@ Commit messages
 ===============
 * Start the commit message with a task/issue id
 * Use the imperative mood in the subject line https://chris.beams.io/posts/git-commit/#imperative
-    Explain more here
+
+There are some simple rules to follow. A properly formed Git commit subject line should always be able to complete the following sentence:
+If applied, this commit will <your subject line here>
+
+I.E
+If applied, this commit will <update the rdf:type in proarc-document pipe>
+
+Try to avoid having commit messages like: Fixed bug with Y. This is a non-imperative form and when we apply the imperative mood to the text "Fixed bug with Y" the sentence will result into:
+If, applied, this commit will Fixed bug with Y.
+
 
 ::
 
