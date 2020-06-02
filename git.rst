@@ -256,14 +256,13 @@ Working on a new feature/change
 Branching
 =========
 
-When you want to start working on a new feature, you should start by creating a new feature branch. When checking out the new branch, make sure that you have the latest version of the source branch. Generally new feature branches should be checkout out from the develop branch. Generally we want feature branches to be named after the relevant task/issue id. TODO: LINK
+When you want to start working on a new feature, you should start by creating a new feature branch. When checking out the new branch, make sure that you have the latest version of the source branch. Generally new feature branches should be checkout out from the develop branch. Generally we want feature branches to be named after the relevant task/issue id. :ref:`Branch Naming`
 ::
 
     git checkout master
     git pull
     git checkout -b <issue_id>
 
-The feature branch should be named after the corresponding task/issue id.
 Now you have a feature branch to start working on. Next you should proceed to read about how to write commit messages.
 
 Commit messages
@@ -281,17 +280,17 @@ In this example AB-123 is the issue id. When this pattern is utilized, it makes 
 Pull request
 ============
 
-At this point you should a feature branch with some changes that you would like merge into your develop branch. If you've been working on your feature branch for a while, it might be a good idea to rebase the develop branch into your feature branch before creating the pull request.
+At this point you should a feature branch with some changes that you would like merge into your develop branch. If you've been working on your feature branch for a while, it might be a good idea to merge the develop branch into your feature branch before creating the pull request.
 ::
 
     git fetch develop
-    git rebase develop
+    git merge develop
 
 When doing this, you might encounter conflicts. To resolve these, go to the mentioned files and look to see what version of the code is the one that should be kept. Edit out the code that shouldn't be kept and add the files:
 ::
 
     git add <my_file_with_conflict>
-    git rebase --continue
+    git merge --continue
 
 When this is done, you should push your latest changes to github or similar and create a pull request with their GUI.
 
@@ -319,6 +318,7 @@ TODO
 
 Branch naming/release tagging
 -----------------------------
+.. _Branch Naming:
 Branch naming
 =============
 When we're creating a new feature branch, we want the branch to be named after the relevant issue/task id. Lets say we have a ticket called AB-123. Then you would create your branch like this:
