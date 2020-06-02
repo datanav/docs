@@ -256,7 +256,7 @@ Working on a new feature/change
 Branching
 =========
 
-When you want to start working on a new feature, you should start by creating a new feature branch. When checking out the new branch, make sure that you have the latest version of the source branch. Generally new feature branches should be checkout out from the develop branch. Generally we want feature branches to be named after the relevant task/issue id. :ref:`Branch Naming`
+When you want to start working on a new feature, you should start by creating a new feature branch. When checking out the new branch, make sure that you have the latest version of the source branch. Generally new feature branches should be checkout out from the develop branch. Generally we want feature branches to be named after the relevant task/issue id. You can read more about how to name the branches correctly in :ref:`Branch naming <branch-naming>`.
 ::
 
     git checkout master
@@ -318,7 +318,7 @@ TODO
 
 Branch naming/release tagging
 -----------------------------
-.. _Branch Naming:
+.. _branch-naming:
 Branch naming
 =============
 When we're creating a new feature branch, we want the branch to be named after the relevant issue/task id. Lets say we have a ticket called AB-123. Then you would create your branch like this:
