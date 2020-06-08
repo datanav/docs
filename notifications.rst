@@ -246,7 +246,7 @@ Pump failed
 This ruletype checks if the pipe failed the last time it ran, for any reason.
 
 If more control of when the notification rule triggers is needed, the
-:ref:`Pattern match <pump_completed_pattern_match_notification_rule>` can be used instead.
+:ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule can be used instead.
 
 
 .. _pump_completed_pattern_match_notification_rule:
@@ -281,8 +281,13 @@ or::
 
 , depending on which part(s) of the errormessage the user is interested in.
 
-Note that there is no need for wildcards at the start and/or end of the patterns; if the pattern matches
+Tip: there is no need for wildcards at the start and/or end of the pattern; if the pattern matches
 *anywhere* in the value the notification-rule will trigger.
+
+Note: If the value is missing or empty, the pattern will *never* match.
+
+If the intention is to get a notification whenever a pipe fails, it is better to use the
+:ref:`Pump failed <pump_failed_notification_rule>` rule instead.
 
 
 Node heartbeat overdue
