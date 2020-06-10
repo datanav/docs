@@ -214,12 +214,223 @@ https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/cr
 
 
 Automatic tests
-===============
+---------------
+
+Automatic tests are needed to verify that your pull request does not break any existing pipes/flows inside sesam.
+To perform these types of tests we need to set up automatic tests. Since there are a few different CI/CD tools, we are going to explain a few of the most common ones.
+
+Jenkins
+=======
+This section describes how to set up Jenkins build with GCloud.
+
+Jenkins is a CI/CD tool that does not support single build pipeline. The reason for the need of single build pipeline is that we upload node config to a single node, if there are mulitple builds running at the same time there will be pushed multiple configs to the one node, which will result into tests not completing.
+
+To set up builds in jenkins, you will need to add  a few file to your repository
+my-project-directory
+::
+
+  my-project-directory
+    ├ deployment
+    | ├ jenkins
+    | | └ jobs
+    | |   └ build
+    | |     ├ dm-pod.yaml
+    | |     └ Jenkinsfile
+    | └ sesam
+    |   ├ cloudbuild.yaml
+    |   ├ Dockerfile
+    |   └ Readme.md
+    ├ node
+    | └ ++
+    └ ++
+
+dm-pod.yaml:
+
+Describes what type of container that should be used in the build process.
+::
+
+    apiVersion: v1
+    kind: Pod
+    spec:
+
+      containers:
+      - name: sesam-ci-container
+        image: eu.gcr.io/<your_gcr_repo>/sesam:<version_of_sesam_client>
+        tty: true
+        command:
+        - cat
+        resources:
+          limits:
+            memory: 6Gi
+            cpu: 1.7
+
+Jenkinsfile:
+
+The Jenkinsfile contains the stages that are supposed to run when the tests are running. The three default stages are:
+
+- Set environment variables for container
+
+- Verify usage of correct Sesam client version.
+
+- Running the tests and printing scheduler logs to see error messages in output.
+
+::
+
+  #!groovy
+
+  pipeline {
+      options {
+          disableConcurrentBuilds()
+      }
+      agent {
+          kubernetes {
+              label "dm-${BRANCH_NAME}-${BUILD_ID}"
+              defaultContainer 'jnlp'
+              yamlFile 'deployment/jenkins/jobs/build/dm-pod.yaml'
+          }
+      }
+      environment {
+          Sesam_CI_node_jwt = credentials('Sesam_CI_node_jwt')
+      }
+      stages {
+          stage('Set Sesam env vars') {
+              steps {
+                  script {
+                      env.Sesam_CI_node = "datahub-****.sesam.cloud"
+                  }
+              }
+          }
+          stage("Verify Sesam version") {
+              steps {
+                  dir('') {
+                      container('sesam-ci-container') {
+                          sh "/./sesam -version"
+                      }
+                  }
+              }
+          }
+          stage("Run Sesam tests") {
+              steps {
+                  dir('') {
+                      container('sesam-ci-container') {
+                          sh "export NODE='${env.Sesam_CI_node}'; export JWT='$Sesam_CI_node_jwt'; cd node && /./sesam -vv test  -print-scheduler-log"
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+
+The files under the sesam folder here describes the files that should exist in the repository where jenkins is configured. Usually you do not have access to this repository, but you will need to provide these files.
+
+cloudbuild.yaml:
+
+cloudbuild.yaml A build config file defines the fields that are needed for Cloud Build to perform your tasks. You'll need a build config file if you're starting builds using the gcloud command-line tool or build triggers. You can write the build config file using the YAML or the JSON syntax.
+
+::
+
+  steps:
+    - name: 'gcr.io/cloud-builders/docker'
+      args: [
+        'build',
+        '-t', 'eu.gcr.io/<your_gcr_repo>/sesam:latest',
+        '-t', 'eu.gcr.io/<your_gcr_repo>/sesam:1.15.41',
+        '.'
+      ]
+  images:
+    - 'eu.gcr.io/<your_gcr_repo>/sesam'
+  tags:
+    - '1.15.41'
+    - 'latest'
+
+Dockerfile:
+
+The dockerfile describes the contianer that should run when the build process is executed. This container should be deployed to the repository that is used
+
+::
+
+  FROM debian:9.9-slim
+  MAINTAINER Ashkan Vahidishams "ashkan.vahidishams@sesam.io"
+
+  ARG SESAM_CI_VERSION=1.15.41
+
+  SHELL ["/bin/bash", "-c"]
+
+  RUN apt-get update
+  RUN apt-get install -y wget
+
+  RUN set -x
+  RUN wget -O sesam.tar.gz https://github.com/tombech/sesam-py/releases/download/$SESAM_CI_VERSION/sesam-linux-$SESAM_CI_VERSION.tar.gz
+  RUN tar -xf sesam.tar.gz
+  RUN rm sesam.tar.gz
+
+This dockerfile builds a container with the sesam client that is needed to execute the build.
+
+Azure DevOps
+============
+Azure DevOps is a bit easier to set up with single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
+
+::
+
+  # Sesam AzureDevops Pipeline
+
+  trigger: none
+
+  pool:
+    vmImage: 'ubuntu-latest'
+
+  steps:
+  - script: |
+      wget -O sesam.tar.gz https://github.com/tombech/sesam-py/releases/download/$(sesam_cli_version)/sesam-linux-$(sesam_cli_version).tar.gz
+      tar -xf sesam.tar.gz
+      rm sesam.tar.gz
+    displayName: 'Download Sesam CLI'
+
+  - script: ./sesam -version
+    displayName: 'Verify Sesam CLI version'
+
+  - script: |
+      export NODE='$(node)'
+      export JWT='$(node_jwt)'
+      cd node
+      .././sesam -vv test  -print-scheduler-log
+    displayName: 'Run Tests'
+
+You will also have to add variables
+
+::
+
+  sesam_cli_version = 1.15.41 (version of the CLI used in your project)
+  node              = datahub-***.sesam.cloud (the node url to the CI server used in your project)
+  node_jwt          = bearer ****** (jwt for the CI server used in your project)
+
+
+Branch permissions are also needed to not be able to merge a Pull Request unless the tests have completed successfully. These permissions needs to be set under
+
+``Repos->Branches->More->Branch Policies->Add Build Policy``
+
+Use the default settings.
+
+You will also need to turn on ``Require a minimum number of reviewers``, and set it to ``1`` and ``Check for linked work items``. This makes it Easier to trace and close the tasks/issues for the Pull Request.
+
+These settings are required for your main branches ``develop`` and ``master``.
+
+Since the ``trigger`` parameter is set to ``none``, the build process will only trigger on PR's. There is no need to build ``master`` and ``develop`` after merge.
+
+Your configuration will end up beeing in your repository under the main directory:
+::
+
+  my-project-directory
+    ├ node
+    | ├ pipes
+    | ├ systems
+    | ├ expected
+    | └ ++
+    └ azure-pipelines.yml
 
 Required checks
  TODO: Explain required checks for a sesam project
-
-Setup
 
 Local git hooks (pre commit checks)
 
@@ -408,7 +619,12 @@ Release naming
 ==============
 When you want to create a new release to deploy, we want releases to use semantic version numbers. This makes it easier to determine what type of change a release involves.
 To determine the next version number, you can follow this diagram:
-TODO: insert diagram
+
+.. image:: images/se-ver.png
+  :width: 600
+
+.. image:: images/se-ver2.png
+  :width: 600
 
 .. _resolve-common-problems
 Resolve common problems
