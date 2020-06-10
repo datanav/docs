@@ -50,6 +50,8 @@ Pressing **“...”** after the name of dataset, you get two options as seen in
 The option “**Create a downstream pipe”** means to create next step in dataflow. Pressing this it takes you into *“new pipe”* with current dataset as source.
 By pressing **“Go to pipe”** it takes you to the pipe that produced the current dataset. 
 
+.. _management-studio-pipes:
+
 Pipes
 =====
 
@@ -68,6 +70,8 @@ By pressing **"..."** to the right of the pipe name, a menu with various options
     :width: 600px
     :align: center
     :alt: DataSet
+
+.. _management-studio-pipe-menu:
 
 Pipe Menu
 ^^^^^^^^^
@@ -98,13 +102,15 @@ Pipe Menu
      - | It generates a copy of the pipe. Then edit the current config and press ``Save``. This means you do not have to create a pipe from scratch
 
    * - ``Create downstream pipe``
-     - | automatically takes you to new pipe with current dataset as source
+     - | Automatically takes you to new pipe with current dataset as source
 
    * - ``Go to sink``
-     - | takes you straight to sink dataset from current pipe
+     - | Takes you straight to sink dataset from current pipe
 
    * - ``Update last seen``
-     - | sets the sequence of entities  you wish to reprocess, starting with the sequence number specified up to the latest sequence number.  Using this function you are able to specify where you want the pipe to start processing. The eitities sequence numbers can be found in the entities "_updated" value in the pipe output
+     - | Sets the sequence of entities  you wish to reprocess, starting with the sequence number specified up to the latest sequence number.  Using this function you are able to specify where you want the pipe to start processing. The eitities sequence numbers can be found in the entities "_updated" value in the pipe output
+
+.. _management-studio-new-pipe:
 
 New Pipe
 ^^^^^^^^
