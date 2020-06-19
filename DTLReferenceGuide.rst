@@ -3269,7 +3269,7 @@ UUIDs
      - | *Arguments:*
        |   VALUES(value-expression{0|1})
        |
-       | Create a new UUID object. It can optionally cast a single string or list of string UUID representations to
+       | Create a new UUID object (version 4 ). It can optionally cast a single string or list of string UUID representations to
          UUID objects. Any input that can't be cast to a UUID object will be ignored.
        |
      - | ``["uuid"]``
