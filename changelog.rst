@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-06-19
+----------
+* Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
+
 2020-03-27
 ----------
 * Added the ``dependency_tracking`` property to :ref:`service metadata <service_metadata_section>`. It can be used to specify various dependency tracking related properties.
