@@ -170,7 +170,7 @@ When we analyse the different data available to us, we discover many opportuniti
     :align: center
     :alt: Generic pipe concept
 
-As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can chooes available systems and press replace to add values to pipe. Same with pump and transforms.
+As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can choose available systems and press replace to add values to pipe. Same with pump and transforms.
 
 .. image:: images/getting-started/templates.png
     :width: 800px
