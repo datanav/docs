@@ -54,7 +54,7 @@ Definition
 
 A global dataset is a collection of data pertaining to a same concept from different sources. In other words, a global dataset combines data from sources semantically linked to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
 
-Global datasets can be populated: 
+Global datasets can be populated by: 
 
 - simply add datasets to a global dataset without merging, 
 - merging data from various sources without modifications,  
@@ -169,7 +169,7 @@ E.g.
 Namespaced identifiers
 ======================
 
-Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. Namespaced identifiers provide the same functionality as foreign keys in databases. These references are usually added in the input pipe.
+Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the input pipe.
 
 A namespaced identifier takes the following form:
 
@@ -179,7 +179,9 @@ A namespaced identifier takes the following form:
 
   "namespace:propertyName":"namespaced-identifier:value"
 
-Namespace identifiers is a recommended way of referring to datasets for matching properties during transformations. This will ease the connection of data.  Namecpaced identifiers are generated to keep existing joins so we are able to keep the data model from source,
+Namespace identifiers is a recommended way of referring to datasets for matching properties during transformations. This will ease the connection of data. Namespaced identifiers are generated to keep existing joins so we are able to keep the data model from source. 
+
+By default, namespaced identifiers are stripped from the endpoint entities.
 
 If you have two different person datasets, and you want to merge on a common property, like SSN, we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"hr-person"** and **"erp-person"**. In other words we need to create a namespace identifier between **"hr-person"** and **"erp-person"** datasets so that we can refer to them during merging.
 
@@ -193,10 +195,10 @@ The main reason for generating NI's is to match the **$ids** they point to so yo
       "default": [
         ["copy", "*"],
         ["add", "SSN",
-      ["ni", "hr-person", "_S._id"]
-      ]
+          ["ni", "hr-person", "_S._id"]
+        ]
 
-This will produce the following output. We see the ["NI"] we hadded in code above; 
+This will produce the following output. We see the ["ni"] we added in code above; 
 
 ::
 
@@ -219,14 +221,6 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
       "identity": "first",
       "version": 2
       },
-      "transform": {
-        "type": "dtl",
-        "rules": {
-          "default": [
-            ["copy", "*"]
-          ]
-        }
-      },
       "metadata": {
         "global": true,
         "tags": ["people"]
@@ -236,34 +230,48 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
 In the above code we are connecting the foreign keys **SSN** of **"erp-person"** with the primary key **"$ids"** of 
 **"hr-person"**. 
 
-By default, namespaced identifiers are stripped from the endpoint entities.
-
 Output from the example code above as seen below with a join to hr-system:
 
 
-``"erp-person:SSN": "~:hr-person:erp-person:12032920177"``
+``"erp-person:SSN": "~:hr-person:12032920177"``
 
 ::
 
   {
-  "$ids": [
-    "~:erp-person:12032920177"
-  ],
-  "erp-person:Country": "NO",
-  "erp-person:EmailAddress": "CaspianNygard@einrot.com",
-  "erp-person:Firstname": "Caspian",
-  "erp-person:Gender": "male",
-  "erp-person:Lastname": "Nygård",
-  "erp-person:MiddleInitial": "I",
-  "erp-person:MoneyUsed": "11923",
-  "erp-person:Number": "93",
-  "erp-person:SSN": "~:hr-person:docs-erp-person:12032920177",
-  "erp-person:StreetAddress": "Lindøy Løkkavei",
-  "erp-person:TimesOrdered": "12",
-  "erp-person:Title": "Mr.",
-  "erp-person:Username": "Aney1996",
-  "erp-person:ZipCode": "2213"
-  
+    "$ids": [
+      "~:erp-person:12032920177",
+      "~:hr-person:12032920177"
+    ],
+    "erp-person:Country": "NO",
+    "erp-person:EmailAddress": "CaspianNygard@einrot.com",
+    "erp-person:Firstname": "Caspian",
+    "erp-person:Gender": "male",
+    "erp-person:Lastname": "Nygård",
+    "erp-person:MiddleInitial": "I",
+    "erp-person:MoneyUsed": "11923",
+    "erp-person:Number": "93",
+    "erp-person:SSN": "~:hr-person:docs-erp-person:12032920177",
+    "erp-person:StreetAddress": "Lindøy Løkkavei",
+    "erp-person:TimesOrdered": "12",
+    "erp-person:Title": "Mr.",
+    "erp-person:Username": "Aney1996",
+    "erp-person:ZipCode": "2213",
+    "hr-person:Country": "NO",
+    "hr-person:EmailAddress": "CaspianNygard@einrot.com",
+    "hr-person:Gender": "male",
+    "hr-person:GivenName": "Caspian",
+    "hr-person:MiddleInitial": "I",
+    "hr-person:Number": "100",
+    "hr-person:SSN": "12032920177",
+    "hr-person:StreetAddress": "Lindøy Løkkavei",
+    "hr-person:Surname": "Nygård",
+    "hr-person:Title": "Mr.",
+    "hr-person:Username": "Mays1944",
+    "hr-person:ZipCode": "2213",
+    **"rdf:type"**: [
+      "~:erp:person",
+      "~:hr:person"
+    ]  
   }
 
 .. _best-practice-naming:
@@ -348,6 +356,7 @@ Embedded data can be used when we need extra information about data that is not 
     "source": {
       "type": "embedded",
       "entities": [{
+        "_id": "an id",
         "some-abbreviation": "abbreviation meaning",
         "some-code": "code meaning",
         "some-hash": "hash meaning"
@@ -360,26 +369,23 @@ Embedded data can be used when we need extra information about data that is not 
 Embedded data for testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define two distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
+Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
  
 These issues are solved with the conditional source setting in the pipe config, and we will go through how to do this below.
  
 In the pipe config below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
  
-The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.
- 
- 
-We specify the environment, “Dev“ or “Prod“, in the “Variables“-tab under “Settings“ - “Datahub“ inside each node. In the pipe config we specify a variable named “node-env“ which will hold the environment value that the node is to run within.
- 
+The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.  
+
+Which condition is used, should be determined by an environment variable and not by the configuration, so that we can upload the same configuration to several nodes, but determine which condition to be used independently of the node. Adding environment variables is done in the "Variables"-tab under the "Settings"-section for the Datahub.
+
+In this example, we should create an environment variable specifying which environment the node is running, let us call the variable "node-env" and set it to either "prod" or "dev" depending on which we use:
+
 :: 
  
-  "node-env": "prod" or "node-env": "dev" 
- 
-Depending on which we use. 
+  "node-env": "prod" or "node-env": "dev".
 
-The corresponding *env variables* are used name the ``condition property`` in the pipe.
-
-It is added inside the "Source" curly brackets of the pipe as seen in example below.
+The corresponding env variable are used in the condition property in the pipe. It is added inside the "Source" curly brackets of the pipe as seen in example below.
 
 ``"condition": "$ENV(node-env)"``
 
@@ -467,7 +473,7 @@ The RDF type is metadata used to relate data and give some semantic context. Whe
 Namespaces
 ^^^^^^^^^^^
 
-The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the function ``make-ni`` to create it.
+The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
 
 Systems
 ^^^^^^^
@@ -575,7 +581,7 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
 
-The first property that greets us in a global dataset is called **"$ids"** and is a list of **namespaced identifiers** from the source datasets in the global pipe. Typically looking like below.
+The first property that greets us in a global dataset is called **"$ids"**, which will be a list of **namespaced identifiers**. When an entity is merged into another entity in a merge pipe, the pipe will add the _id of the merged entity to the **"$ids"** property. Thus, the **ids** property contains all the _id's in a merged entity, typically looking like below.
 
 ::
 
@@ -900,11 +906,14 @@ In Sesam data is collected, connected, enriched and transformed from the dataset
 Enrich data
 ^^^^^^^^^^^
 
-There are multiple ways to enrich the original source data, the most common one is to do a transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”, that consists of both. This will be stored in the global dataset (in addition to the two original properties) and will be available for future integrations that might need the same transformation.
+There are multiple ways to enrich the original source data, the most common one is to do a DTL transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”. 
 
-Another way to enrich data, is to derive it based on the original property. One example of this can be a “map-coordinate” property that is stored in the coordinate system that Google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems. These are then added to the global dataset in addition to the original one, giving future integrations more options if needed.
+Another way to enrich data, is to derive it based on the original properties. One example of this can be a “map-coordinate” property that is stored in the coordinate system that Google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems.
 
-Yet another example on how to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system. This adds the mapped properties to the global dataset in addition to the original properties, making it possible for integrations to choose between a standard information model or the native information model of the source system.
+Yet another example on how to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system.
+
+Doing these enrichments in a global pipe and storing the enriched data in the global dataset means that the enriched data will be available for future integrations and dataflows that might need the same enrichment.
+
 
 Output data (late binding)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -930,160 +939,10 @@ Examples of real global datasets
 
 global-workorder
 
-global-vehicle
-
-global-sale
-
-global-reporting
-
-global-reading
-
-global-project
-
-global-poweroutage
-
-global-person
-
-global-meterpoint
-
-global-location
-
-global-invoicemain
-
-global-invoicedetail
-
-global-invoice
-
-global-grid
-
-global-fault
-
 global-customer
-
-global-contract
-
-global-communication
 
 global-classification
-
-global-asset
-
-global-account
-
-**Another organization’s data model with 13 global datasets:**
-
-global-subscription
-
-global-skills
-
-global-site
-
-global-sesam-product
-
-global-person
-
-global-paymentmethod
-
-global-machine
-
-global-event
-
-global-department-employee
-
-global-department
-
-global-CV
-
-global-company
-
-global-customer
-
-**A public sector company’s growing list of global datasets:**
-
-global-klassifisering
-
-global-organisasjon
-
-global-person
-
-global-prosjekt
-
-global-prosjektoekonomi
-
-global-soeknad
-
-global-statistikk
-
-**An energy company’s list of global datasets:**
-
-global-asset
-
-global-catalogue
-
-global-classification
-
-global-consumption
-
-global-contract
-
-global-customer
 
 global-document
 
-global-exportobjects
-
-global-facility
-
-global-grid
-
-global-inventory
-
-global-invoice
-
-global-job
-
 global-location
-
-global-market
-
-global-meterpoint
-
-global-sale
-
-global-timeseries
-
-global-vendor
-
-global-workorder
-
-
-**Another public sector company’s list of global datasets:**
-
-global-access
-
-global-address
-
-global-asset
-
-global-case
-
-global-classification
-
-global-company
-
-global-contract
-
-global-course
-
-global-document
-
-global-file
-
-global-order
-
-global-person
-
-global-project
-
-global-task
-

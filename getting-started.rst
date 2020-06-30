@@ -195,7 +195,7 @@ DTL scripts are written inside the config tab when selecting a pipe in your Sesa
 	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
 	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
 
-Next, let us brieflly explain **key-value pair**. It is quite simplye property with a value. E.g.:
+Next, let us briefly explain key-value pair. It is quite simply a property with a value. E.g.:
 
     ``"firstname": "Ole"``
 
@@ -302,7 +302,7 @@ Say we want to add a property or a key called "lastname". This key-value is foun
               dataset ,if it is null then it goes to crm-person dataset and so 
               on. basically, we prioritize the order on most trusted values"], 
               ["add", "zipcode", 
-                  ["Coalesce", ["list", "_S.hr-person:lastname", 
+                  ["coalesce", ["list", "_S.hr-person:lastname", 
                   "_S.crm-person:name", "_S.erp-person:surname"] 
               ] 
           ] 
@@ -370,7 +370,7 @@ First we need to be able to assort the different people into two separate groups
       ["add", "age_group", "group_2"]
   ]
 
-The third line is activated if the statement if true, and the fourth line if the statement i false.
+The third line is activated if the statement is true, and the fourth line if the statement is false.
 
 Another handy function is "return" which allows us to specify which values we want returned from source when doing hops.
 
@@ -623,13 +623,13 @@ Dependency-tracking and resetting a pipe
 
 We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
 
-In order to make sure that only entities that has changed since last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit `here <https://docs.sesam.io/concepts.html#dependency-tracking>`__ 
+In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit `here <https://docs.sesam.io/concepts.html#dependency-tracking>`__ 
 
 We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
 
 Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
 
-If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
 
 Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
 
@@ -901,8 +901,8 @@ Let's look at an example:
       "default": "",
       "allow_null": true,
       "index": false,
-      "max_size": 50,
-      "min_size": 0,
+      "max_value": 10000000,
+      "min_value": 0,
       "primary_key": false,
       "source_property": "salary"
     }, {

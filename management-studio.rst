@@ -47,8 +47,7 @@ Pressing **“...”** after the name of dataset, you get two options as seen in
     :align: center
     :alt: DataSet
 
-The option “**Create a downstream pipe”** means to create next step in dataflow. Pressing this it takes you into *“new pipe”* with current dataset as source.
-By pressing **“Go to pipe”** it takes you to the pipe that produced the current dataset. 
+The option “Create a downstream pipe” means to create the next step in the dataflow. Pressing this takes you into “new pipe” with the current dataset as source. By pressing **“Go to pipe”** it takes you to the pipe that produced the current dataset. 
 
 Pipes
 =====
@@ -60,7 +59,7 @@ The pipes page contains a list of pipes generated for a particular node.
     :align: center
     :alt: DataSet
 
-Double clicking on a pipe takes you into this pipes working area.
+Double clicking on a pipe takes you into this pipe's working area.
 
 By pressing **"..."** to the right of the pipe name, a menu with various options appear. We are going to go through the most commonly used.
 
@@ -86,10 +85,10 @@ Pipe Menu
      - | Consist of two functions; reset and start. he relationship between starting and restarting pipe, requires some explanation. When clicking ``Start``, the pipe continues to read from its last seen sequence number. So, if the pipe has previously read 100 entities  (sequence 0 to 99), clicking ``Start`` will have it read from sequence 100. When clicking ``Restart``, the pipe will start from the beginning., i.e. at entiry number 0. To see examples and to get more context on this, please click :ref:`Dependency-tracking <concepts-dependency_tracking>`
 
    * - ``Disable``
-     - | Stops the pipe from running according to schedule. If a pipe is running, it will finish running but not run again even if schedule tells it to
+     - | Stops the pipe from running according to schedule. If a pipe is running, it will finish running but not run again even if schedule tells it to. You can manually start a pipe that’s disabled by pressing ``Start``
 
    * - ``Enable``
-     - | Pipe will start running again according to schedule. You can manually start a pipe that’s disabled by pressing ``Start``
+     - | Pipe will start running again according to schedule.
 
    * - ``Delete``
      - | Deletes the pipe
@@ -104,7 +103,7 @@ Pipe Menu
      - | takes you straight to sink dataset from current pipe
 
    * - ``Update last seen``
-     - | sets the sequence of entities  you wish to reprocess, starting with the sequence number specified up to the latest sequence number.  Using this function you are able to specify where you want the pipe to start processing. The eitities sequence numbers can be found in the entities "_updated" value in the pipe output
+     - | enables you to update the last seen index of the pipe. This is useful if you need to reprocess a certain number of entities back in time, but not necessarily all the entities. Depending on the pipe this value could either be a sequence number, a date and time value given in epoch or a list of either separated by comma. The sequence number for an entity can be found in the "_updated" property on the entity.
 
 New Pipe
 ^^^^^^^^
@@ -144,7 +143,7 @@ All pipes have a default sink that points to / creates a dataset with the same n
 
 Now press **"Save"** then **"Start"**. To see progress and to make sure pipe is finished, press **"Refresh"**. To see result, go to **"Output"** tab.
 
-To see an exampe please visit LINK exmape
+To see an example please visit LINK example
 
 Schema
 ^^^^^^
@@ -173,7 +172,7 @@ To the right side of the interface there is a list of available **keyboard short
 Systems
 =======
 
-When pressing Systems, it gives list of various systems connected to this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, a mssql, url or rest.
+When pressing Systems, it gives a list of various systems defined on this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, a mssql, url or rest.
 
 By pressing one of the systems, it takes you into the config for a particular system. You find six tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
 
