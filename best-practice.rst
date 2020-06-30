@@ -475,11 +475,6 @@ Namespaces
 
 The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
 
-Systems
-^^^^^^^
-
-Systems can be described as the connection mechanism to external entities. They rely on an interface to the external system. The most frequently used ones have been integrated into Sesam as core functionalities, while more specific ones are provided as extensions callable from the system. A framework is available to facilitate the implementation of new interfaces, called microservices. Once the new microservice has been developed, it can be accessed from Sesam via a system.
-
 Global pipes
 ============
 
