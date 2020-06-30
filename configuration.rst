@@ -112,7 +112,15 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false
+         "use_signalling_internally": false,
+         "default_compaction_type": "background",
+      },
+      "dependency_tracking": {
+         "dependency_warning_threshold": 10000,
+         "dependency_error_threshold": 50000,
+         "dependency_warning_threshold_total_bytes": 33554432,
+         "dependency_error_threshold_total_bytes": 134217728,
+         "enable_hops_thresholds": true
       }
    }
 
@@ -174,6 +182,58 @@ Properties
        Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
        be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
        on the pipe source it will be turned on regardless of the pump schedule.
+     - ``false``
+     -
+
+   * - ``global_defaults.default_compaction_type``
+     - Enum<String>
+     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
+     - ``"background"``
+     -
+
+   * - ``global_defaults.max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold:
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``10000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold:
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``33554432`` (32MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+       .. _service_metadata_dependency_tracking_enable_hops_thresholds:
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. It is recommended that you set this property to ``true`` in development environments.
      - ``false``
      -
 
@@ -317,6 +377,36 @@ Properties
      - Object
      - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold>`.
+     - ``10000``
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes>`.
+     - ``33554432`` (32MB)
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`. It is recommended that you set this property to ``true`` in development environments.
+     - ``false``
      -
 
 .. _namespaces:
@@ -1246,6 +1336,11 @@ source, except ``datasets`` can be a list of datasets ids.
      - false
      -
 
+   * - ``prefix_ids``
+     - Boolean
+     - If set to ``false``, then the entity ids will not be prefixed with the dataset id.
+     - true
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -2437,8 +2532,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "ldap",
-            "system": "bouvet_ldap",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
+            "system": "example_ldap",
+            "search_base": "ou=Example,dc=example,dc=org"
         }
     }
 
@@ -3920,6 +4015,12 @@ Properties
      - The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false`` [*]. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
      - ``false`` [*]
      - No
+
+   * - ``max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
 
 
 Example configuration
@@ -6639,12 +6740,12 @@ Example configuration
 ::
 
     {
-        "_id": "bouvet_ldap",
-        "name": "Bouvet LDAP server",
+        "_id": "example_ldap",
+        "name": "Example LDAP server",
         "type": "system:ldap",
-        "host": "dc1.bouvet.no",
+        "host": "ldap.example.org",
         "port": 389,
-        "username": "bouvet\\some-user",
+        "username": "example\\some-user",
         "password": "********"
     }
 
@@ -6975,7 +7076,7 @@ Prototype
         },
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Properties
@@ -7079,7 +7180,7 @@ Properties
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
    * - ``ignore_invalid_content_length_response_header``
@@ -7153,7 +7254,7 @@ Prototype
         "authentication": "basic",
         "jwt_token": null,
         "connect_timeout": 60,
-        "read_timeout": 7200,
+        "read_timeout": 1800,
         "operations": {
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -7357,7 +7458,7 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -7515,7 +7616,7 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
 Microservice APIs
