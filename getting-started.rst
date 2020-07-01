@@ -1138,7 +1138,7 @@ The Docker image is then pushed up to a repository on Docker Hub. This repositor
 Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. 
 
 Microservices with Docker
-==========================
+=========================
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
 
@@ -1338,7 +1338,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
 .. _getting-started-microservices-restAPI:
 
 REST APIs
-============
+=========
 Sometimes we have to connect to a websites API to extract data for our pipe. A website's API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses HTTP requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
