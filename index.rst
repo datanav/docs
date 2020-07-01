@@ -18,4 +18,3 @@ Sesam Data Integration Platform
    Deprecated features <deprecations>
    Open source licences <open-source-licenses>
    Changelog <changelog>
-   Examples <example-library>
