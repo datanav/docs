@@ -156,7 +156,7 @@ Next to **Templates** tab, we find **Schema**. When pressing it, the **Schema** 
     :alt: Generic pipe concept
 
 Editor Preferences
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 The tab to the far right takes you to page where you can choose some preferences on **code style**.
 
