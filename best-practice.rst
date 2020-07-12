@@ -1,8 +1,8 @@
 .. _best-practice:
 
-===============
+=============
 Best Practice
-===============
+=============
 
 
 .. contents:: Table of Contents
@@ -46,7 +46,7 @@ To read about the main concepts and how to get started in Sesam, please click :r
 .. _best-practice-global:
 
 Global datasets
-----------------
+---------------
 Sesam organizes entities by storing them in global datasets.
 
 Definition
@@ -150,7 +150,7 @@ As an example, an energy company has 700 000 customers, and each customer has a 
 .. _best-practice-namespace:
 
 Namespace and namespaced identifiers
--------------------------------------
+------------------------------------
 
 Namespace 
 =========
@@ -336,7 +336,7 @@ Embedded data and Conditional input pipes
 Embedded data is data that does not originate from an external source but are manually put into a pipe. Embedded data can be used for different purposes, two of which we will explain below.
 
 Embedded data as extra information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Embedded data can be used when we need extra information about data that is not available from the source providing the data. The source data could contain codes or abbreviations which need to be translated to a more readable format. Using embedded data we can create a dataset which interprets these codes and abbreviations in order to extract more information than provided by the source data, see example below.
 
@@ -460,12 +460,12 @@ Our pipe:
      
 
 RDF type  
-^^^^^^^^^^
+^^^^^^^^
 
 The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 Namespaces
-^^^^^^^^^^^
+^^^^^^^^^^
 
 The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the function ``make-ni`` to create it.
 
@@ -689,7 +689,7 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
     }
 
 Preparation pipes
-==================
+=================
 
 The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
 
