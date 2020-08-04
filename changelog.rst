@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-08-04
+----------
+* Documented the ``instance`` property of the  :ref:`MS SQL <mssql_system>` system. Please note the the potential consequences for firewall rules when using this property.
+
 2020-06-19
 ----------
 * Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
