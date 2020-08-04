@@ -623,7 +623,7 @@ Properties
      - Req
 
    * - ``reprocessing_policy``
-     - Enum<String> 
+     - Enum<String>
      - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
@@ -1045,7 +1045,7 @@ Properties
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``equality``
      - List<EqFunctions{>=0}>
@@ -1312,7 +1312,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``include_previous_versions``
      - Boolean
@@ -1435,7 +1435,7 @@ strategy.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``strategy``
      - String
@@ -1565,7 +1565,7 @@ be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``whitelist``
      - List<String>
@@ -6055,7 +6055,7 @@ Properties
           source that uses the system will be shifted from the specified
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
-          
+
      - "UTC"
      -
 
@@ -6290,6 +6290,7 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
+        "instance": "named-instance",
         "port": 1433,
         "database": "database-name"
     }
@@ -6325,9 +6326,18 @@ Properties
      -
      - Yes
 
+   * - ``instance``
+     - String
+     - The name of the SQL Server "named instance", if applicable. Note that if ``instance`` is set, ``port`` will be
+       ignored as SQL Server will assign a "named instance" a random port by default. Be aware that using such
+       "port-less" named instances potentially has consequences for the configuration of firewall rules as well
+       (i.e. for both TCP and UDP port ranges, please consult the SQL Server DBA or SQL Server manual for details).
+     -
+     -
+
    * - ``port``
      - Integer
-     - Database IP port.
+     - Database IP port. Note: ignored if ``instance`` is set, see the previous section.
      - 1433
      -
 
