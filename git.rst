@@ -22,7 +22,7 @@ We consider origin/develop to be the main branch where the source code always re
 When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master branch and then tagged with a release number.
 
 Therefore, each time when changes are merged back into master, this is a new production release by definition.
-We are very strict at this to follow this practice.
+We follow this practice very strictly.
 
 **Supporting branches**
 
@@ -45,7 +45,7 @@ Each of these branches have a specific purpose and are bound to strict rules as 
 +-------------+----------------------+-----------------------+-----------------------------------------------------------+
 |Feature      | develop              | develop               | Aything except master, develop, release-*, or hotfix-*    |
 +-------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Release      | master               |develop and master     | release-*                                                 |
+|Release      | master               | develop and master    | release-*                                                 |
 +-------------+----------------------+-----------------------+-----------------------------------------------------------+
 |Hotfix       | master               | develop and master    | hotfix-*                                                  |
 +-------------+----------------------+-----------------------+-----------------------------------------------------------+
@@ -210,6 +210,7 @@ This creates a new branch called develop that mirrors master. To push it to gith
 Now you should have two branches in github. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
 
 More information about pull requests can be read below.
+:ref:`Pull Request<pull-request>`
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
 
 
@@ -476,6 +477,7 @@ In this example AB-123 is the issue id. When this pattern is utilized, it makes 
 
 Pull request
 ============
+.. _pull-request:
 
 At this point you should a feature branch with some changes that you would like merge into your develop branch. If you've been working on your feature branch for a while, it might be a good idea to merge the develop branch into your feature branch before creating the pull request.
 ::
