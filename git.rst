@@ -419,6 +419,16 @@ These settings are required for your main branches ``develop`` and ``master``.
 
 Since the ``trigger`` parameter is set to ``none``, the build process will only trigger on PR's. There is no need to build ``master`` and ``develop`` after merge.
 
+Note if there is support for parallel builds on the agent pool you will need to disable this so that only one build process runs and the second build is queued up. This can be done by adding capability on the build agent. You will also need to add a this in the yaml file to enable this.
+Add user capabilities in the agent pool (key value pair), key = Limit and value = DisAbleParallel
+
+Your yaml file:
+::
+
+  pool:
+    name: {agent pool name}
+    demands: Limit -equals DisAbleParallel
+
 Your configuration will end up beeing in your repository under the main directory:
 ::
 
