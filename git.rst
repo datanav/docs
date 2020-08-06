@@ -640,6 +640,7 @@ To determine the next version number, you can follow this diagram:
   :width: 600
 
 .. _resolve-common-problems:
+
 Resolve common problems
 -----------------------
 
