@@ -92,6 +92,7 @@ Creation :
     $ git commit -a -m "Bumped version number to 1.1.0"
     [release-1.2 74d9424] Bumped version number to 1.1.0
     1 files changed, 1 insertions(+), 1 deletions(-)
+
 You must use `semantic versioning <https://semver.org>`_ for any of your releases to production.
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
