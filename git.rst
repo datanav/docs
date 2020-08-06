@@ -4,6 +4,10 @@
 How to deal with different git scenarios
 ========================================
 
+.. contents:: Table of Contents
+   :depth: 3
+   :local:
+
 Set up a new git project for Sesam
 ----------------------------------
 
