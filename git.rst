@@ -639,7 +639,7 @@ To determine the next version number, you can follow this diagram:
 .. image:: images/se-ver2.png
   :width: 600
 
-.. _resolve-common-problems
+.. _resolve-common-problems:
 Resolve common problems
 -----------------------
 
