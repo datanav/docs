@@ -516,9 +516,9 @@ Usually you would have feature releases as minor releases, while major releases 
 
 Hotfixes
 ========
-Hotfixes are used to deploy critical changes to production. It also includes small fixes to pipes (as long as it is something that already is deployed to production*). When creating a hotfix you should branch off from master branch, merge into master and back to develop so that both of the main branches gets the update.
+Hotfixes are used to deploy critical changes to production. It also includes small fixes to pipes (as long as it is something that already is deployed to production\*). When creating a hotfix you should branch off from master branch, merge into master and back to develop so that both of the main branches gets the update.
 
-*Small fixes will often be forgotten, and end up in develop branch without beeing added to a release. This validates having small fixes/changes to pipes/systems as a hotfix and not only beeing added as a part of a release.
+\*Small fixes will often be forgotten, and end up in develop branch without beeing added to a release. This validates having small fixes/changes to pipes/systems as a hotfix and not only beeing added as a part of a release.
 
 Tagging
 =======
