@@ -1,18 +1,13 @@
-.. _git:
 
-========================================
-How to deal with different git scenarios
-========================================
 
-.. contents:: Table of Contents
-   :depth: 3
-   :local:
+Git - How to deal with different git scenarios
+----------------------------------------------
 
 Set up a new git project for Sesam
-----------------------------------
+==================================
 
 Initial repository setup
-========================
+^^^^^^^^^^^^^^^^^^^^^^^^
 The initial repository should contain two main branches with an infinite lifetime.
 Parallel to the master branch, another branch should exist, called develop.
 
@@ -202,7 +197,7 @@ Push your local repo to github::
 
 
 Set up branches for development
-===============================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Since we want to use the master branch as the production branch, we need to setup a new branch called *develop* to use for development.
 To do this we need to type the following in terminal::
 
@@ -220,13 +215,13 @@ https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/cr
 
 
 Automatic tests
----------------
+===============
 
 Automatic tests are needed to verify that your pull request does not break any existing pipes/flows inside sesam.
 To perform these types of tests we need to set up automatic tests. Since there are a few different CI/CD tools, we are going to explain a few of the most common ones.
 
 Jenkins
-=======
+^^^^^^^
 This section describes how to set up Jenkins build with GCloud.
 
 Jenkins is a CI/CD tool that does not support single build pipeline. The reason for the need of single build pipeline is that we upload node config to a single node, if there are mulitple builds running at the same time there will be pushed multiple configs to the one node, which will result into tests not completing.
@@ -374,7 +369,7 @@ The dockerfile describes the contianer that should run when the build process is
 This dockerfile builds a container with the sesam client that is needed to execute the build.
 
 Azure DevOps
-============
+^^^^^^^^^^^^
 Azure DevOps is a bit easier to set up with single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
 
 ::
@@ -451,10 +446,10 @@ Required checks
 Local git hooks (pre commit checks)
 
 Working on a new feature/change
--------------------------------
+===============================
 
 Branching
-=========
+^^^^^^^^^
 
 When you want to start working on a new feature, you should start by creating a new feature branch. When checking out the new branch, make sure that you have the latest version of the source branch. Generally new feature branches should be checkout out from the develop branch. Generally we want feature branches to be named after the relevant task/issue id. You can read more about how to name the branches correctly in :ref:`Branch naming <branch-naming>`.
 ::
@@ -466,7 +461,7 @@ When you want to start working on a new feature, you should start by creating a 
 Now you have a feature branch to start working on. Next you should proceed to read about how to write commit messages.
 
 Commit messages
-===============
+^^^^^^^^^^^^^^^
 * Start the commit message with a task/issue id
 * Use the imperative mood in the subject line https://chris.beams.io/posts/git-commit/#imperative
 
@@ -491,7 +486,7 @@ If, applied, this commit will Fixed bug with Y.
 In this example AB-123 is the issue id. When this pattern is utilized, it makes it much easier to determine why a commit where applied regardless of branch.
 
 Pull request
-============
+^^^^^^^^^^^^
 .. _pull-request:
 
 At this point you should a feature branch with some changes that you would like merge into your develop branch. If you've been working on your feature branch for a while, it might be a good idea to merge the develop branch into your feature branch before creating the pull request.
@@ -510,30 +505,30 @@ When this is done, you should push your latest changes to github or similar and 
 
 
 Deploy a new feature
---------------------
+====================
 Creating a release
-==================
+^^^^^^^^^^^^^^^^^^
 Release branches contain production ready new features and bug fixes that come from stable develop branch. In most cases, master branch is always behind develop branch because development goes on develop branch. After finishing release branches, they get merged back into develop and master branches so as a result both of these branches will match each other eventually.
 
 We can split a release into two different categories. minor releases and major releases. These two different release types are defined by how big the change to master is.
 Usually you would have feature releases as minor releases, while major releases would include big changes like restructuring pipe-combinations and merge rules.
 
 Hotfixes
-========
+^^^^^^^^
 Hotfixes are used to deploy critical changes to production. It also includes small fixes to pipes (as long as it is something that already is deployed to production\*). When creating a hotfix you should branch off from master branch, merge into master and back to develop so that both of the main branches gets the update.
 
 \*Small fixes will often be forgotten, and end up in develop branch without beeing added to a release. This validates having small fixes/changes to pipes/systems as a hotfix and not only beeing added as a part of a release.
 
 Tagging
-=======
+^^^^^^^
 Tags are a simple aspect of Git, they allow you to identify specific release versions of your code. You can think of a tag as a branch that doesn't change. Once it is created, it loses the ability to change the history of commits.
 In Sesam perspective we add tags if we need to revert to a previous version, if we figure out that a release or hotfix is not working as expected.
 
 Tags are also a good way to have different versions of config in different environments. A good example of this is if there are done multiple releases, but one version has not been tested to the full extent. You can run one tag in the staging environment, and another in the production environment.
 For tags we use semantic versioning. You can read more about semantic versioning here `semantic versioning <https://semver.org>`_.
 
-variables
-=========
+Variables
+^^^^^^^^^
 Variable files are often added to git so that we are able to track and keep control of existing environment variables. Environment variables should exist in the repository under the folder node->variables.
 you should have 3 files.
 
@@ -547,12 +542,12 @@ These three files should reflect what the variables are in your/the projects nod
 When creating a release you must remember to add the updated files to your release branch.
 
 Secrets
-=======
+^^^^^^^
 Secrets should ideally be saved in a keymanager.
 More info to come.
 
 When you want to deploy all changes in develop into master
-==========================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 First off we will need to create a ticket for your release so we get a task number. This is done in your projects issuetracker. In this case the ticket created is named AB-2324
 
 When you are ready to deploy your changes to production, you will have to create a release to master.
@@ -585,7 +580,7 @@ When the merge is completed you can now tag your release in your version control
 
 
 When you can't deploy everything in develop into master
-=======================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When you can't deploy everything from develop into production, and you would like to release some feature that is completed. you will need to find the config files manually.
 you will need to figure out what pipes/systems that are ready for deploy, but you would still need to go through the same process as noted in the "When you want to deploy all changes in develop into master" stage.
@@ -622,18 +617,18 @@ You are now ready to merge back to develop.
 Often you might end up having merge conflicts when you merge back to develop. You can read more about this in :ref:`Resolve common problems <resolve-common-problems>`
 
 Branch naming/release tagging
------------------------------
+=============================
 .. _branch-naming:
 
 Branch naming
-=============
+^^^^^^^^^^^^^
 When we're creating a new feature branch, we want the branch to be named after the relevant issue/task id. Lets say we have a ticket called AB-123. Then you would create your branch like this:
 ::
 
     git checkout develop -b AB-123
 
 Release naming
-==============
+^^^^^^^^^^^^^^
 When you want to create a new release to deploy, we want releases to use semantic version numbers. This makes it easier to determine what type of change a release involves.
 To determine the next version number, you can follow this diagram:
 
@@ -646,10 +641,10 @@ To determine the next version number, you can follow this diagram:
 .. _resolve-common-problems:
 
 Resolve common problems
------------------------
+=======================
 
 Merging back to develop creates merge conflicts
-===============================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 When you have worked on a Release, there will be cases when your develop and master branch diverges. Lets say you have not created a relase in a long time. You will end up having a lot of new features in your develop branch that does not exist in master.
 Even though new pipes and systems will not have a merge conflict, you will have cases where your global pipes have many new features in dev that does not exist in master. You will need to fix the Release so that you only add the feature you want to release. An example of this follows:
 
@@ -692,7 +687,7 @@ You can see that the order is changed in develop to match what is in master.
 .. _git-we-found-a-bug-in-recently-merged-pr:
 
 We found a bug in recently merged PR
-====================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The following strategy will revert a merge commit. This can be used in any branch where you want to undo a merge.
 ::
 
@@ -716,7 +711,7 @@ Now you have a branch where the reverted changes have been re-applied. Now you c
 When your changes are done, you can treat this branch as a regular feature branch and create a new pull request to merge your changes.
 
 We found a critical bug in production
-=====================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 When this happens, you most likely have two choices. Either revert the change (see :ref:`We found a bug in recently merged PR <git-we-found-a-bug-in-recently-merged-pr>` or fix it directly in production with a hofix branch.
 To fix it directly in production, use the following steps:
 
