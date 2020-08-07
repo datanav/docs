@@ -624,3 +624,5 @@ global-project
 
 global-task
 
+
+.. include:: git.rst
