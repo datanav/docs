@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2020-08-13
+----------
+* The encrypt-pki, encrypt-pgp and their corresponding decrypt DTL functions now support using '$SECRET()' syntax in their key and password parameters
+
 2020-08-04
 ----------
 * Documented the ``instance`` property of the  :ref:`MS SQL <mssql_system>` system. Please note the the potential consequences for firewall rules when using this property.
