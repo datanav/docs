@@ -10,6 +10,7 @@ Sesam Data Integration Platform
    Concepts <concepts>
    Developer Guide <developer-guide>
    Best Practice <best-practice>
+   Project Exercises <project-exercises>
    Management Studio <management-studio>
    Open Sesam <open-sesam>
    GDPR platform <gdpr-platform>
