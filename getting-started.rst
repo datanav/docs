@@ -18,6 +18,34 @@ Sesam is an Integration Platform that uses a unique Datahub approach for collect
 
 If you want to jump straight into Sesam and get hands-on, you can go right  to the :ref:`Labs section <getting-started-labs>`.
 
+.. raw:: html
+
+   <details>
+   <summary><a>first example</a></summary>
+
+.. code-block:: python
+
+  "transform": { 
+      "type": "dtl", 
+      "rules": { 
+          "default": [ 
+              ["copy", "*"], 
+              ["add", "Type", "customer"], 
+              ["add", "Fullname", 
+                  ["concat","_S.FirstName"," ","_S.LastName"]], 
+              ["add","Firstname-lower", 
+                  ["lower","_S.FirstName"]], 
+              ["add", "part-of-string", 
+                  ["substring",0,4,"_S.FirstName"]], 
+              ["add", "fullname-lower-case", 
+                  ["concat","_T.Firstname-lower"," ","_S.LastName"]], 
+              ["remove", "Username"] 
+          ] 
+        } 
+    } 
+.. raw:: html
+
+   </details>
 
 .. _getting-started-setting-up-our-sesam-node:
 
