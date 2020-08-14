@@ -13,15 +13,69 @@ Project exercises
 Dependency tracking differences
 ===============================
 
-In this exercise we will look further into dependency tracking; how it is used inside Sesam and the effects of having it activated vs. not activated. You can read more about dependency tracking here [link to Akanksha’s and Tarjei’s text]
-The motivation behind dependency tracking is to make sure that we never process more data than needed inside Sesam whilst ensuring that data is updated even when related data outside the main flow changes when related data outside the main flow changes. As an example, we could have a main flow that processes employee personal information between two HR systems. In addition to personal information, we might want to connect logged working hours originating from yet an other system. To do this we connect the logged working hours data to the data processed between the two HR systems. But what if a person changes their working hours? How can we make sure that the resulting data is kept up-to-date with connected data outside the main data flow? 
-In this example we will show the effects of both keeping and not keeping dependency tracking on your data. Below you will find three basic scrips. Instead of fetching data from an external system we will simply use embedded data.
+In this exercise we will assimilate
+
+   * How dependency tracking is used inside of Sesam 
+   * Affect of having it *activated* vs *not activated*
+
+.. admonition:: info
+   
+   You can read more about dependency tracking here [link to Akanksha’s and Tarjei’s text]
+
+*Why is dependency tracking needed?*
+The motivation behind dependency tracking is to make sure that we never process more data than what is needed inside Sesam. Thus ensuring that it is updated when related data outside the main flow changes. 
+  
+To illustrate, we could have two different systems providing employee information. Employee personal information and Time sheet management system.
+We could have a main flow that processes employee personal information between two systems. In addition to personal information, we might want to connect logged working hours originating from yet another system.To do this we connect the logged working hours data to the data processed between the two HR systems
+
+|
+
+.. graphviz::
+    :align: center
+
+    digraph D {
+      node [style=rounded]
+      rankdir=LR
+    
+      A [label="{Hours Worked |{empid = 1 | hours = 37.5}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="steelblue4"]
+      B [label="{Employee\nInformation | {empid = 1 |personal\ndata}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="steelblue4"]
+      C [label="{{empid = 1 | hours = 37.5}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="steelblue4"]
+
+      A -> C [style=solid arrowhead=vee color=steelblue4]
+      B -> C [style=solid arrowhead=vee color=steelblue4]  
+    }
+  
+| 
+
+But what if a person changes their working hours? How can we make sure that the resulting data is kept up-to-date with connected data outside the main data flow? 
+
+|
+
+.. graphviz::
+    :align: center
+
+    digraph D {
+      node [style=rounded]
+      rankdir=LR
+      align= center
+    
+      A [label="{Hours Worked |{empid = 1 | hours = 40}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="steelblue4"]
+      B [label="{Employee\nInformation | {empid = 1 |personal\ndata}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="steelblue4"]
+      C [label="{{empid = 1 | hours = 40}}" shape=record fontname="Sans serif" fontsize="10" color="steelblue4" fontcolor="red"]
+
+      A -> C [style=solid arrowhead=vee color=steelblue4]
+      B -> C [style=solid arrowhead=vee color=steelblue4]
+    }
+
+|
+
+In the example below we will show the effects of both keeping and not keeping dependency tracking on your data. Below you will find three scripts. Instead of fetching data from an external system we will simply use embedded data.
 The first two pipes creates the source data for logged working hours for two employees as well as personal information data from the same employees. First we create the ’hours’ pipe.
 
 .. raw:: html
 
    <details>
-   <summary><a>hours</a></summary>
+   <summary><a>hours</a></summary><i><font color="grey">Copy the code into a new pipe in your Sesam dev-node and start it.</font></i>
 
 .. code-block:: python
 
@@ -55,12 +109,12 @@ The first two pipes creates the source data for logged working hours for two emp
 
    </details>
 
-Copy this code into a new pipe in your Sesam dev-node and start it. The second pipe, ’HR1’, contains personal information data from two employees.
+The second pipe, ’HR1’, contains personal information data from two employees.
 
 .. raw:: html
 
    <details>
-   <summary><a>HR1</a></summary>
+   <summary><a>HR1</a></summary><i><font color="grey">Copy the code into a new pipe in your Sesam dev-node and start it.</font></i>
 
 .. code-block:: python
 
@@ -107,14 +161,14 @@ Copy this code into a new pipe in your Sesam dev-node and start it. The second p
 
    </details>
 
-Copy this code into a new pipe in your Sesam dev-node and start it.
 
-The third pipe connect these two resulting datasets through a :ref:`hops <hops_function>` where we match data based on employeenr. We use the data from ’HR1’ as our master data. 
+
+The third pipe connects these two resulting datasets through a :ref:`hops <hops_function>` where we match data based on employeenr. We use the data from ’HR1’ as our master data. 
 
 .. raw:: html
 
    <details>
-   <summary><a>HR1-hours</a></summary>
+   <summary><a>HR1-hours</a></summary><i><font color="grey">Copy the code into a new pipe in your Sesam dev-node and start it.</font></i>
 
 .. code-block:: python
 
@@ -148,7 +202,7 @@ The third pipe connect these two resulting datasets through a :ref:`hops <hops_f
 
    </details>
 
-Copy this code into a new pipe in your Sesam dev-node and start it.
+
 
 From the results from pipe ’HR1-hours’ you will see that in addition to the employee personal data we now also have working hour data from the 'hours' dataset. 
 Now, if we change the value of the hours-worked for employee number 1 inside the pipe ’hours’ and start the pipe, we will see the resulting output for ’hours’ being updated.
@@ -242,9 +296,9 @@ For the pipe containing the data from 'company-addresses', in the transform, ove
 
 Next create an intermediate pipe based on the dataset from the embedded-customer-details output. Inside this pipe you should use the :ref:`hops <hops_function>` function to merge the data from embedded-customer details with the data from embedded-customer-addresses and with the data from embedded customer-employee. 
 
-The goal of this exercise is to create a pipe which only processes the minimum needed entities to ensure a up-to-date output. The final result for 'Burger King' should look similar to this, and the scripts should incoorporate different ways of implementing the :ref:`track-dependencies <hops_function>` tag.
+The **goal** of this exercise is to create a pipe which only processes the minimum needed entities to ensure a up-to-date output. The final result for 'Burger King' should look similar to this, and the scripts should incoorporate different ways of implementing the :ref:`track-dependencies <hops_function>` tag.
 
 .. image:: images/project-exercises/pic8.png
-    :width: 800px
+    :width: 600px
     :align: center
     :alt: Generic pipe concept

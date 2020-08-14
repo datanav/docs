@@ -33,7 +33,8 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinxarg.ext',
-              'sphinxcontrib.openapi'
+              'sphinxcontrib.openapi',
+              'sphinx.ext.graphviz'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -94,6 +95,8 @@ exclude_patterns = ['_build', os.path.basename(os.environ['VIRTUAL_ENV'])]
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
+# -- GraphViz configuration ----------------------------------
+graphviz_output_format = 'svg'
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
