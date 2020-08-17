@@ -7172,8 +7172,9 @@ Properties
    * - ``proxies``
      - Dict<String,String>
      - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
-       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
-       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
+       or .``http(s)://username:password@domain_or_ip:port``
        The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
        secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
      -
