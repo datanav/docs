@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _2020_08_17:
+
+2020-08-17
+----------
+* The :ref:`dataset sink <dataset_sink>` property ``set_initial_offset`` now accepts the ``onload`` enum value. This enum value sets the sink dataset's initial offset when the pipe is loaded / configured.
+
 2020-08-13
 ----------
 * The encrypt-pki, encrypt-pgp and their corresponding decrypt DTL functions now support using '$SECRET()' syntax in their key and password parameters
