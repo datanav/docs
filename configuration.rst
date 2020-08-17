@@ -3914,6 +3914,7 @@ Properties
        - ``always`` means that the pipe will always set the initial offset when the pipe completed
          successfully.
        - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+       - ``onload`` means that the initial offset will be set when the pipe is loaded / configured.
 
      - ``if-source-populated``
      -
