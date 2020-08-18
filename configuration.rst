@@ -623,7 +623,7 @@ Properties
      - Req
 
    * - ``reprocessing_policy``
-     - Enum<String> 
+     - Enum<String>
      - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
@@ -1045,7 +1045,7 @@ Properties
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``equality``
      - List<EqFunctions{>=0}>
@@ -1312,7 +1312,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``include_previous_versions``
      - Boolean
@@ -1435,7 +1435,7 @@ strategy.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``strategy``
      - String
@@ -1565,7 +1565,7 @@ be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``whitelist``
      - List<String>
@@ -3914,6 +3914,7 @@ Properties
        - ``always`` means that the pipe will always set the initial offset when the pipe completed
          successfully.
        - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+       - ``onload`` means that the initial offset will be set when the pipe is loaded / configured.
 
      - ``if-source-populated``
      -
@@ -6055,7 +6056,7 @@ Properties
           source that uses the system will be shifted from the specified
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
-          
+
      - "UTC"
      -
 
@@ -6290,6 +6291,7 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
+        "instance": "named-instance",
         "port": 1433,
         "database": "database-name"
     }
@@ -6325,9 +6327,18 @@ Properties
      -
      - Yes
 
+   * - ``instance``
+     - String
+     - The name of the SQL Server "named instance", if applicable. Note that if ``instance`` is set, ``port`` will be
+       ignored as SQL Server will assign a "named instance" a random port by default. Be aware that using such
+       "port-less" named instances potentially has consequences for the configuration of firewall rules as well
+       (i.e. for both TCP and UDP port ranges, please consult the SQL Server DBA or SQL Server manual for details).
+     -
+     -
+
    * - ``port``
      - Integer
-     - Database IP port.
+     - Database IP port. Note: ignored if ``instance`` is set, see the previous section.
      - 1433
      -
 
@@ -7162,8 +7173,9 @@ Properties
    * - ``proxies``
      - Dict<String,String>
      - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
-       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
-       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
+       or .``http(s)://username:password@domain_or_ip:port``
        The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
        secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
      -

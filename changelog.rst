@@ -1,9 +1,27 @@
 Changelog
 =========
 
+.. _2020_08_17:
+
+2020-08-17
+----------
+* The :ref:`dataset sink <dataset_sink>` property ``set_initial_offset`` now accepts the ``onload`` enum value. This enum value sets the sink dataset's initial offset when the pipe is loaded / configured.
+
+2020-08-13
+----------
+* The encrypt-pki, encrypt-pgp and their corresponding decrypt DTL functions now support using '$SECRET()' syntax in their key and password parameters
+
+2020-08-04
+----------
+* Documented the ``instance`` property of the  :ref:`MS SQL <mssql_system>` system. Please note the the potential consequences for firewall rules when using this property.
+
 2020-06-19
 ----------
 * Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
+
+2020-05-28
+----------
+* Added the :ref:`Restore completed <restore_completed_notification_rule>` and :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule types.
 
 2020-03-27
 ----------

@@ -2901,6 +2901,10 @@ Strings
        | ``["encrypt-pki", "RSA_PEM_public_key", "secret-passphrase"]``
        |
        | Returns a single bytes object: ``"~bDHAERS.."``
+       |
+       | ``["encrypt-pki", "$SECRET(key-secret-name)", "$SECRET(secret-passphrase-name)"]``
+       |
+       | Returns a single bytes object: ``"~bDHAERS.."``
 
    * - ``encrypt-pgp``
      - | *Arguments:*
@@ -2926,6 +2930,10 @@ Strings
        | ``["encrypt-pgp", "OpenPGP_public_key", "secret-message"]``
        |
        | Returns a single OpenPGP message in ASCII format: ``"----BEGIN PGP MESSAGE.."``
+       |
+       | ``["encrypt-pgp", "$SECRET(key-secret-name)", "secret-message"]``
+       |
+       | Returns a single OpenPGP message in ASCII format: ``"----BEGIN PGP MESSAGE.."``
 
        .. _decrypt_dtl_function:
    * - ``decrypt``
@@ -2937,6 +2945,10 @@ Strings
        | function, i.e. it is symmetric with ``encrypt`` if the same key is used:
        |
      - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]]``
+       |
+       | Returns ``["a", "b", "c"]``
+       |
+       | ``["decrypt", "$SECRET(secret-name)", ["encrypt", "$SECRET(secret-name)", ["list", "a", "b", "c"]]]``
        |
        | Returns ``["a", "b", "c"]``
        |
@@ -2964,7 +2976,13 @@ Strings
 
        | Returns ``["a", "b", "c"]``
        |
+       | ``["json-transit-parse",``
+       |    ``["decrypt-pki", "$SECRET(private-key-name)",``
+       |       ``["encrypt-pki", "-----BEGIN PUBLIC KEY-----..-----END PUBLIC KEY-----",``
+       |           ``["json-transit", ["list", ["list", "a", "b", "c"]]]]]``
 
+       | Returns ``["a", "b", "c"]``
+       |
    * - ``decrypt-pgp``
      - | *Arguments:*
        |   PRIVATE_KEY(string{1})
@@ -2987,6 +3005,11 @@ Strings
        | Returns a list: ``["data", "data2"]``
        |
        | ``["decrypt-pgp", "-----BEGIN PGP PRIVATE KEY..", "valid-password",``
+       |    ``["encrypt-pgp", "-----BEGIN PGP PUBLIC KEY..", "secret message"]]``
+       |
+       | Returns a string: ``"secret message"``
+       |
+       | ``["decrypt-pgp", "$SECRET(private-key-name)", "$SECRET(password-name)",``
        |    ``["encrypt-pgp", "-----BEGIN PGP PUBLIC KEY..", "secret message"]]``
        |
        | Returns a string: ``"secret message"``
