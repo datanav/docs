@@ -71,17 +71,18 @@ There are three sources containing person data as shown below. If any target sys
   HR system
   {
      "_id": "hr-person:02023688018",
-    "hrsystem-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hrsystem-person:Gender": "male",
+    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hr-person:Gender": "male",
+    "hr-person:SSN": "02023688018"
   }
 
   CRM
   {
     "_id": "crm-person:100",
       "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-      "crm-person:ID:”100”
+      "crm-person:ID:”100”,
       "crm-person:SSN": "02023688018",
-      "crm-person:SSN-ni": "~:hr-person:02023688018",
+      "crm-person:SSN-ni": "~:hr-person:02023688018"
     }
 
   ERP
@@ -89,7 +90,7 @@ There are three sources containing person data as shown below. If any target sys
      "_id": "erp-person:0202",
      "erp-person:SSN": "02023688018",
      "erp-person:SSN-ni": "~:hr-person:02023688018",
-     "erp-person:ID:”0202”
+     "erp-person:ID:”0202”,
      "erp-person:country":"NO"
   }
 
@@ -99,20 +100,21 @@ The dataset below is what a global dataset of the above three datasets looks lik
 
   {
     "$ids": [
-    "~:crm-person:100",
-    "~:hr-person:02023688018",
-    "~:erp-person:0202"
+      "~:crm-person:100",
+      "~:hr-person:02023688018",
+      "~:erp-person:0202"
     ],
     "_id": "crm-person:100",
     "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
     "hr-person:Gender": "male",
+    "hr-person:SSN": "02023688018",
     "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "crm-person:ID:”100”
+    "crm-person:ID:”100”,
     "crm-person:SSN": "02023688018",
     "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
     "erp-person:SSN": "02023688018",
     "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
-    "erp-person:ID”:”0202”
+    "erp-person:ID”:”0202”,
     "erp-person:country":"NO" 
   }
 

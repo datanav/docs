@@ -998,7 +998,7 @@ We will use Apache HttpClient to create a GET request and will need the followin
     <version>4.5.4</version>
  </dependency> 
 
-**Jaca class**:
+**Java class**:
 
 ::
 
