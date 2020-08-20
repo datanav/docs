@@ -16,7 +16,7 @@ Dependency tracking differences
 In this exercise we will assimilate
 
    * How dependency tracking is used inside of Sesam 
-   * Affect of having it *activated* vs *not activated*
+   * Effect of having it *activated* vs *not activated*
 
 .. admonition:: info
    
@@ -25,8 +25,7 @@ In this exercise we will assimilate
 *Why is dependency tracking needed?*
 The motivation behind dependency tracking is to make sure that we never process more data than what is needed inside Sesam. Thus ensuring that it is updated when related data outside the main flow changes. 
   
-To illustrate, we could have two different systems providing employee information. Employee personal information and Time sheet management system.
-We could have a main flow that processes employee personal information between two systems. In addition to personal information, we might want to connect logged working hours originating from yet another system.To do this we connect the logged working hours data to the data processed between the two HR systems
+To illustrate, let's say we have two different systems providing employee information; an Employee personal information system and a Time sheet management system. We want to create a main flow that processes employee personal information between these two systems. In addition to the information from these two systems, we might want to connect logged working hours originating from yet another system. To do this we connect the logged working hours data to the data processed between the two HR systems
 
 |
 
@@ -165,6 +164,7 @@ The second pipe, ’HR1’, contains personal information data from two employee
 
 The third pipe connects these two resulting datasets through a :ref:`hops <hops_function>` where we match data based on employeenr. We use the data from ’HR1’ as our master data. 
 
+
 .. raw:: html
 
    <details>
@@ -266,6 +266,7 @@ For the purpose of this exercise we can see what happens if we turn dependency t
 
    </details>
 
+
 We can now simulate yet an other updated 'hours-worked' value to employee 1 inside the ’hours’ pipe and start it.
 
 .. image:: images/project-exercises/pic3.png
@@ -292,7 +293,7 @@ Create three embedded source pipes based on the following tables:
 
 Note that there is no '_id' column, which embedded entities need inside Sesam. You must therefore add this to the embedded data for each entity to enable Sesam to process them.
 
-For the pipe containing the data from 'company-addresses', in the transform, overwrite the '_id'-value to be the concatination of 'CompanyName' and the string value of the current time stamp. The reason for this is to simulate a constantly updated entity, since every time you run the pipe all entities will be new entities. This means that every time you run this pipe, there will always be new entities in the outcome, even though the data itself has not changed.
+For the pipe containing the data from 'company-addresses', in the transform, overwrite the '_id'-value to be the concatination of 'CompanyName' and the string value of the :ref:`current time stamp <now_dtl_function>`. The reason for this is to simulate a constantly updated entity, since every time you run the pipe all entities will be new entities. This means that every time you run this pipe, there will always be new entities in the outcome, even though the data itself has not changed.
 
 Next create an intermediate pipe based on the dataset from the embedded-customer-details output. Inside this pipe you should use the :ref:`hops <hops_function>` function to merge the data from embedded-customer details with the data from embedded-customer-addresses and with the data from embedded customer-employee. 
 
