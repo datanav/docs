@@ -262,6 +262,8 @@ The following *json* snippet shows the general form of a pipe definition.
     {
         "_id": "pipe-id",
         "name": "Name of pipe",
+        "description": "This is a description of the pipe",
+        "comment": "This is a comment",
         "type": "pipe",
         "source": {
         },
@@ -314,7 +316,19 @@ Properties
      - String
      - A human readable name of the component.
      -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
      - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
+     -
+     -
 
    * - ``type``
      - String
@@ -703,6 +717,47 @@ can also be nested), and have a single required property:
 **_id**. This ``_id`` field must be *unique within a flow* for a
 specific logical entity. There may exist multiple *versions* of this
 entity within a flow, however.
+
+Prototype
+---------
+
+The following *json* snippet shows the general form of a source definition.
+
+::
+
+    {
+        "type": "a-source-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the source, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the source (optional).
+     -
+     -
+
 
 .. _continuation_support:
 
@@ -2978,6 +3033,7 @@ either a transform configuration object or a list of them.
        ..
        "transform": {
           "name": "name of transform (NOTE: deprecated)",
+          "comment": "This is a comment",
           "description": "description of the transform (optional)"
            ...the rest of the transform configuration goes here...
        }
@@ -3795,6 +3851,45 @@ each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
 
+Prototype
+---------
+
+The following *json* snippet shows the general form of a sink definition.
+
+::
+
+    {
+        "type": "a-sink-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the sink, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the sink (optional).
+     -
+     -
 
 .. _conditional_sink:
 
@@ -5949,6 +6044,8 @@ Prototype
         "_id": "a_system_id",
         "type": "system:some-type-of-system",
         "name": "The Foo System",
+        "description": "This is a description of the system",
+        "comment": "This is a comment",
         "worker_threads": 10,
         "metadata": {
            "some_key": "some_value"
@@ -5978,6 +6075,18 @@ Properties
    * - ``name``
      - String
      - A human readable name for this system
+     -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
      -
      -
 
@@ -7678,6 +7787,7 @@ Prototype
 ::
 
     {
+        "comment": "This is a comment",
         "schedule_interval": 30,
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
@@ -7725,6 +7835,12 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Default
      -
       .. _pump_param_schedule_interval:
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the pump (optional).
+     -
+     -
 
    * - ``schedule_interval``
      - Number

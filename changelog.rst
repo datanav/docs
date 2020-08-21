@@ -3,6 +3,11 @@ Changelog
 
 .. _2020_08_17:
 
+2020-08-21
+----------
+* Added an optional ``description`` property to pipes and systems - it can be either a string or a list of strings.
+* Added an optional ``comment`` property to pipes, systems, sources, sinks, pumps and transforms - - it can be either a string or a list of strings.
+
 2020-08-17
 ----------
 * The :ref:`dataset sink <dataset_sink>` property ``set_initial_offset`` now accepts the ``onload`` enum value. This enum value sets the sink dataset's initial offset when the pipe is loaded / configured.
