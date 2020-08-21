@@ -257,7 +257,7 @@ How to use the Sesam client
 
 Before you start using the Sesam client make sure you have the following ready:
 
-•   Sesam client is available on github (https://github.com/tombech/sesam-py). Read about Installation and configuration further down
+•   Sesam client is available on github (https://github.com/sesam-community/sesam-py). Read about Installation and configuration further down
 •   A personal Sesam node for testing
 •   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
 •   A git clone of the repository you wish to work on
@@ -283,7 +283,7 @@ After we have installed Sesam client via pip, we need to configure it. You can r
 Installation
 ============
 
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/tombech/sesam-py/releases/>`__ 
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
 
 To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
  
