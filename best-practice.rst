@@ -153,6 +153,8 @@ E.g.
 
   "hr-person:ssn"
 
+.. _best-practice-namespaced-identifiers:
+
 Namespaced identifiers
 ======================
 
@@ -200,6 +202,8 @@ In the above code we are connecting the foreign keys **"SSN-ni"** of **"erp-pers
 **"hr-person"**. You do not need to add the third equality between **"erp-person"** and **"crm-person"** as it will happen automatically.
 
 By default, namespaced identifiers are stripped from the output.
+
+.. _best-practice-naming-conventions:
 
 Naming conventions
 ------------------
