@@ -113,7 +113,7 @@ Example:
       },
       "global_defaults": {
          "use_signalling_internally": false,
-         "default_compaction_type": "background",
+         "default_compaction_type": "sink",
       },
       "dependency_tracking": {
          "dependency_warning_threshold": 10000,
@@ -188,7 +188,7 @@ Properties
    * - ``global_defaults.default_compaction_type``
      - Enum<String>
      - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
-     - ``"background"``
+     - ``"sink"``
      -
 
    * - ``global_defaults.max_entity_bytes_size``
@@ -511,10 +511,10 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
-unless sink compaction is enabled. If sink compaction is enabled then
-compaction will happen incrementally as the pipe writes new entities
-to the dataset. The default is to keep the last two versions of every
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are compacted incrementally as
+the pipe writes new entities to the dataset by default (compaction type "sink" enabled). If sink compaction is disabled,
+the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
+compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
 
 Properties
@@ -539,7 +539,7 @@ Properties
    * - ``compaction.sink``
      - Boolean
      - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
-     - ``false``
+     - ``true``
      - No
 
    * - ``compaction.keep_versions``
