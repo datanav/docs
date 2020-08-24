@@ -23,7 +23,7 @@ If you want to jump straight into Sesam and get hands-on, you can go right  to t
 
 Setting up our Sesam instance
 -----------------------------
-You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
+You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. If you consider this option, please be free to contact us on info@sesam.io for further information). This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
 
 The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
 
@@ -48,7 +48,7 @@ Once you get the access from the Sesam team you'll get your own Dev Node card in
 Import data
 ===========
 
-Before we describe how to import data into your node, we need to emphasise an important issue. If you will work on a sesam node that already contains configurations and data, you should NOT import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. You then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
+Before we describe how to import data into your node, we need to emphasize an important issue. If you will work on a Sesam node that already contains configurations and data, you should NOT import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. You then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
 
 When you are setting up your node for the first time your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
 
@@ -67,7 +67,7 @@ We have created some test data for you. Go to the **Variables** tab and paste th
 
   "node-env": "test"
 
-You should now have several pipes available.
+You should now have several pipes available. Pipes are available in the **pipes** tab. Click on a pipe in the list to see details on how it's configured.
 
 As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run pipe to check output. The **config** contains the actual data transformations and pumps. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
 
@@ -127,6 +127,7 @@ Glossary
 
 :ref:`Transformations <concepts-transforms>`: These are described using the Data Transformation Language (DTL). It is here you transform your data from many datasets to construct new entities into new datasets.
 
+
 .. _getting-started-naming-conventions:
 
 Naming conventions
@@ -159,12 +160,26 @@ Datasets
 .. _getting-started-pipes:
 
 Pipes
------------------------
+-----
 In this section we will go further into what pipes are, how they work and what we can do with them. 
 
 When we analyse the different data available to us, we discover many opportunities to use it and increase its value. For example, we might not have the need for all of it. Some of that data might be abundant due to multiple occurrences, i.e. the name of an employee occurring in several sources. Some data might have to be split up into different categories, i.e. the personal vs public information of an employee. In other instances we wish to display all the data about a specific object in one place, thus we need to join data from different sources, or enrich data either by adding new properties, or by adding properties existing in different datasets. The pipes are responsible for the transformation of the source data (either from one or several sources) from one setup to another, with the purpose of adding structure to the data. These pipes generate new datasets with new and transformed data ready to be used by other systems.
 
+.. image:: images/getting-started/pipe-struckture.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can choose available systems and press replace to add values to pipe. Same with pump and transforms.
+
+.. image:: images/getting-started/templates.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
 The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
+
+For more details on how to use the templates when making a new pipe from scratch, please click here LINK.
 
 .. _getting-started-basic-dtl-functions:
 
@@ -180,12 +195,21 @@ DTL scripts are written inside the config tab when selecting a pipe in your Sesa
 	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
 	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
 
+Next, let us briefly explain key-value pair. It is quite simply a property with a value. E.g.:
+
+    ``"firstname": "Ole"``
+
+.. image:: images/getting-started/key_value_pair.png
+    :width: 600px
+    :align: center
+    :alt: Generic pipe concept
+
 
 .. _getting-started-transformations:
 
 Transformations
 ===============
-There are many different ways of transforming the source data. In this section will will encounter some of the more frequently used operations. For a full technical overview of the available operations visit the :ref:`DTL reference guide <DTLReferenceGuide>`.
+There are many different ways of transforming the source data. In this section will will encounter some of the more frequently used operations. For a full technical overview of the available operations visit the :ref:`DTL reference guide <DTLReferenceGuide>`.   
 
 ::
 
@@ -225,7 +249,7 @@ The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as we
 Notice the **"_S.[property1]"** and **"_T.[property2]"**. The **_S** and **_T** are called variables, and refer to the source and the target respectively.
 
 Lab 1-2
-^^^^^^^^^^^^^^^^^
+^^^^^^^^
 The :ref:`Labs section <getting-started-labs>` helps us get more hands on with Sesam. Head over there and do the first two labs to get more experience transforming data. 
 
 
@@ -240,7 +264,12 @@ Merging gives us an aggregated representation of two or more datasets​​. We 
 
 When merging datasets we need to combine entities through identical values across datasets. In the image above we merge datasets A and B through their "lastname" properties, and B and C through their "email" properties. As we can see, the resulting dataset will have "null" values in the fields that cannot be populated through entities with matching values.
 
-This way you can for example, combine a customer dataset with another customer dataset through the **"lastname"** and work with an entity that contains more customer info.
+This way you can for example, combine a customer dataset with another customer dataset through the **"lastname"** property and work with an entity that contains more customer info. In the configuration below we have given the datasets **aliases** in the source config. This is for easy referencing later in the source configuration. We see the alisases 
+here:
+
+**["customerA a", "customerB b"]**
+
+In the equality rule we simply put **"a.lastname" and "b.lastname"** to specify which dataset and which key we use. IF we were not using aliases, it would look like this **"customerA.lastname", "customerB.lastname"** so aliases make it easier and tidier to write DTL.
 
 ::
  
@@ -260,7 +289,99 @@ The **“identity”** property specifies the ID of the resulting entity. Set to
 
 The **”version”** property refers to the version of the merge source. The default value is 1, but version 1 is deprecated. Set this to **2**.
 
-In the configuration above we have given the datasets aliases in the source config for easy referencing later in the source configuration. As we added the store-customer dataset as **“store-customer c”** we can then later reference the ID of that dataset simply as **“c.id”**.
+Coalesce, list and other useful DTL functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**"Coalesce"** means to join or combine. In SQL it is commonly used together with "is-null" to return the first non-null value in a list. In DTL, when we need to prioritize which keys we want to use to pick a value, we use **"Coalesce"**. So, when is this useful and how is it used?
+
+Say we want to add a property or a key called "lastname". This key-value is found in three different systems. We want to make sure we use the most trusted value, we use **"Coalesce"** to state order which Sesam checks for values. If the hr-person "lastname" is null, **"Coalesce"** gives us the opportunity to choose which is the next best option.
+
+::
+
+  ["comment", "Below code will first check "lastname" in hr-person 
+              dataset ,if it is null then it goes to crm-person dataset and so 
+              on. basically, we prioritize the order on most trusted values"], 
+              ["add", "zipcode", 
+                  ["coalesce", ["list", "_S.hr-person:lastname", 
+                  "_S.crm-person:name", "_S.erp-person:surname"] 
+              ] 
+          ] 
+  ] 
+
+
+**"Coalesce"** is used together with **"list"** function, which basically is a list of values. We need **"list"** to list the order of which keys to pick values from. 
+
+If you need a list of key-value pairs, in other words a list of properties *and* values, you need to make a dictionary using the **"dict"** function.
+
+To illustrate the difference let us look at some DTL in a pipe
+
+
+::
+  
+  {
+  "_id": "global-person",
+  "type": "pipe",
+  "source": {
+  "type": "merge",
+  "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+  "equality": [
+      ["eq", "ep.SSN", "cp.SSN"],
+      ["eq", "ep.SSN", "hr.SSN"],
+      ["eq", "ep.Username", "su.Username"]
+    ],
+    "identity": "first",
+    "version": 2
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "firstname",
+          ["coalesce",
+            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+          ]
+        ],
+        ["add", "lastname",
+          ["coalesce",
+            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+          ]
+        ],
+  ["add", "fields",
+          ["dict", "SSN", "_S.ssn", "contact", "_S.emailaddress", 
+  "Origin", "_S.birth_place "]
+        ]
+
+As seen in pipe above, the dictionary contains key and where to access value i.e. **["dict","SSN", "_S.ssn"].** A list could be a list of items separated by commas i.e.  **["list","_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"].**
+
+The **"if"** condition is a function in DTL that works by evaluating a statement and by performing different actions depending on the outcome of the evaluation. 
+
+In everyday life we might say "if you're 50 years old or older, then you're entitled to a longer vacation". If not, then you have the standard number of weeks set aside for vacation. 
+
+In DTL this would be utilized in the following way:
+
+First we need to be able to assort the different people into two separate groups, e.g. group_1 is the group containing people with normal vacation (under 50 years of age) and group_2 is the group with people with extended vacation. Now let's assume that every person has an attribute named "age". Assuming that the person entity is the source entity we could define our evaluating statement as the following: ["gte", "_S.age", "50"], which will be true if the person is 50 years old or older, and false otherwise. We use the **"gte"** function which is used to get values greater than or equal to. In comparison **"gt"** simply means greater than. Now we can construct our complete if-statement:
+
+::
+
+  ["if",
+      ["gte", "_S.age", "50"], 
+      ["add", "age_group", "group_1"],
+      ["add", "age_group", "group_2"]
+  ]
+
+The third line is activated if the statement is true, and the fourth line if the statement is false.
+
+Another handy function is "return" which allows us to specify which values we want returned from source when doing hops.
+
+"Tuples" is mainly used when we need to make several equalities between two datasets in one hops. Let us say you have two properties in dataset A that will match two properties in dataset B, it will be done as follows:
+
+::
+
+  ["eq",
+    ["tuples", "A.prop1", "A.prop2"],
+    ["tuples", "B.prop1", "B.prop2"]
+  ]
 
 Global datasets
 ^^^^^^^^^^^^^^^
@@ -273,6 +394,7 @@ A namespaced identifier consists of two parts; a namespace and an identifier. Th
 Example of an entity with namespaces:
 
 ::
+
    { 
    "_id": "users:123", 
    "user:username": "erica", 
@@ -429,7 +551,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
             ], 
             ["comment", "Below code will first check zipcode in hr-person 
             dataset, if it is null then it goes to crm-person dataset and so on. 
-            Basically we prioritize the order on most trusted values."], 
+            Basically we prioritize the order on most trusted values"], 
             ["add", "zipcode", 
                 ["coalesce", 
                     ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", 
@@ -471,7 +593,7 @@ In the second example, instead of adding the **["apply-hops"]**, we use **["merg
               ], 
               ["comment", "Below code will first check zipcode in hr-person 
               dataset ,if it is null then it goes to crm-person dataset and so 
-              on. basically, we prioritize the order on most trusted values."], 
+              on. basically, we prioritize the order on most trusted values"], 
               ["add", "zipcode", 
                   ["coalesce", ["list", "_S.hr-person:ZipCode", 
                   "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"] 
@@ -494,13 +616,51 @@ Lab 6
 ^^^^^
 Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 6 <getting-started-labs-6>`.
 
+.. _getting-started-Dependency-tracking-and-resetting-a-pipe:
+
+Dependency-tracking and resetting a pipe
+========================================
+
+We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
+
+In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit `here <https://docs.sesam.io/concepts.html#dependency-tracking>`__ 
+
+We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
+
+Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
+
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+
+Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
+
+So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. If we make changes in a Sesam pipe, changes that will affect the end result (such as adding extra data), the entities that has already been processed will not by them self be reprocessed, thus only changed data or new data will be populated with the extra information. 
+
+To remedy this, every time we make changes in a pipe that will affect the output data, and if we want all old entities to have that extra information, we must manually **reset** and **start** the pipe. When we reset a pipe, all the entities from the source will be reprocessed. This can be done by clicking on the three dots next to the pipe name at the top of your pipe.
+
+.. image:: images/pipesmenu.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+
+Some of the alternatives presented are **“Restart”**, **“Start”** and **“Reset”**. **“Restart”** is simply a combination of **“Reset”** followed by **“Start”**. This will send all the entities from the source dataset through the pipe and populate them with the extra data you have specified through your DTL config. 
+
+In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . This functionality could be more efficient. In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
+
+Similarly, imagine you work on a global pipe which merges data from 3 different sources. Two of these sources contain millions of entities, and one only a few. Let’s say you wish to change the output containing data from the source with only a few entities. Resetting the whole pipe in this case is unnecessary since we only need to reprocess a few entities, The **Update last seen** option also supports resetting the data from several sources at different times, thus if you need to reprocess the entities from the "small" dataset, you may do so without sending through all the other million entities, which will in either case be unaffected by your DTL changes. 
+
+There are other reasons both to reprocess all the data and only some of it, but the main point is to assess every situation individually.
+
+Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 9 <getting-started-labs-9>` for examples and to play around with data and see how it works.
+
 .. _getting-started-sinks:
 
 Sinks
 -----
+
 Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
-Sinks can support batching by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation.
+Sinks can support `batching <https://docs.sesam.io/configuration.html#batching>`__ by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation and "Best practice" for  best ways of working with them.
 
 .. _getting-started-csv-endpoint:
 
@@ -512,7 +672,7 @@ We will first look at setting up a sink to expose the output for a .csv (comma s
 
  "sink": {
    "type": "csv_endpoint",
-   "columns": ["_id", "lastname", address"],
+   "columns": ["_id", "lastname", "address"],
  }
 
 The sink config can include more parameters, but their default values are OK for our example and do not need to be listed and changed. For example **"delimiter"** is set as **","** by default. Look up other parameters in the documentation if needed. The values listed in **"columns"** correspond to values in the output of the DTL.
@@ -527,7 +687,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 7 <getting
 
 SQL database to CSV file output step by step
 ============================================
-In this next chapter we will walk you through the steps of using a SQL database as a source and create a CSV endpoint. First, if you don't have access to a SQL server you can sign up at `ElephantSQL <https://api.elephantsql.com>`__ and select a free trial.
+In this next chapter we will walk you through the steps of using a SQL database as a source and create a CSV endpoint. First, if you don't have access to a SQL server you can sign up at `ElephantSQL <https://www.elephantsql.com>`__ and select a free trial.
 
 Once you've set up your account click on details in the left menu. It should look like this: 
 
@@ -538,7 +698,7 @@ Once you've set up your account click on details in the left menu. It should loo
 
 Now you are ready to create a new system. In **Sesam** go to Systems and select **New system**. In the **Choose template** select **postgresql prototype** (Because we're using ElephantSQL. Will be different for other sources).
 
-To fill in the **"database"**, **"host"**, **"password"** and **"username"** go to your ElephantSQL and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
+To fill in the **"database"**, **"host"**, **"password"** and **"username"** go to your *ElephantSQL* and select **details**. From the figure above you'll see that you have the **Server**, **User & Default database** and **Password**.
 
 In the **"_id"** you'll create the name of the system (the same as creating a pipe).
 
@@ -555,9 +715,7 @@ Using secrets
     :align: center
     :alt: Generic pipe concept
 
-
 As you can see, we are using :ref:`secrets <secrets_manager>` for the database, password and username. To do this go into the **Secrets** tab, click **Add secret**, give it a name (e.g. "password" for the password and "username" for the username) and paste the values from ElephantSQL. Read more about secrets `here <https://docs.sesam.io/security.html>`__.
-
 
 Creating a table in the database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -569,7 +727,7 @@ Until now your database has been empty. If you are not familiar with SQL, do not
     :alt: Generic pipe concept
 
 
-Cope/paste the following
+Copy/paste the following
 
 ::
 
@@ -738,15 +896,15 @@ Let's look at an example:
       "primary_key": false,
       "source_property": "department"
     }, {
-      "type": "string",
+      "type": "integer",
       "name": "salary",
       "default": "",
       "allow_null": true,
       "index": false,
-      "max_size": 50,
-      "min_size": 0,
+      "max_value": 10000000,
+      "min_value": 0,
       "primary_key": false,
-      "source_property": "sallary"
+      "source_property": "salary"
     }, {
       "type": "string",
       "name": "address",
@@ -768,7 +926,7 @@ Let's look at an example:
     "rules": {
       "default": [
         ["copy",
-          ["list", "id", "firstname", "lastname", "dateofbirth", "department", "sallary", "address"]
+          ["list", "id", "firstname", "lastname", "dateofbirth", "department", "salary", "address"]
         ]
       ]
     }
@@ -840,7 +998,7 @@ We will use Apache HttpClient to create a GET request and will need the followin
     <version>4.5.4</version>
  </dependency> 
 
-**Jaca class**:
+**Java class**:
 
 ::
 
@@ -980,7 +1138,7 @@ The Docker image is then pushed up to a repository on Docker Hub. This repositor
 Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. 
 
 Microservices with Docker
-==================================
+=========================
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
 
@@ -1089,6 +1247,7 @@ To check that the you have created image run the command:
 
 Testing
 ^^^^^^^
+
 To test that you can run a container from your image locally you can run it in command line/terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 
 Next we'll need to run the image to create the container.
@@ -1179,7 +1338,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
 .. _getting-started-microservices-restAPI:
 
 REST APIs
-============
+=========
 Sometimes we have to connect to a websites API to extract data for our pipe. A website's API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses HTTP requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 
@@ -1330,4 +1489,40 @@ Scope : Publishing data to CSV-endpoint
   * Create new pipe. Source from lab 6. Add transform and sink.​
 
 Hint: Look `here  <https://docs.sesam.io/getting-started.html#csv-endpoint-sink>`__ for help
+
+Lab 9
+=====
+.. _getting-started-labs-9:
+
+Start from your pipe from lab 5. 
+
+* Add another property in the apply-hops rule and start the pipe again and look at the output. 
+
+.. image:: images/getting-started/DT-03.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+* What can you see? Probably, you do not notice anything different, even though you just told the pipe to add another line with data to your entities. Why didn’t the outcome changes when you added a new property?
+
+* In the outcome, locate an entity which has the properties "City" and "Municipality".
+
+.. image:: images/getting-started/DT-05.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+*  Note down it’s sequence number (_updated value). 
+
+* click on the three dots next to your pipe name and choose the option "Update last seen". Write down the sequency number you noted down and start the pipe again. 
+
+.. image:: images/getting-started/DT-06.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+* Has the output changed? Why/why not? Did all the entities in the outcome change? Why/why not?
+* What is the difference between the "Update last seen" option and the "Reset", "Restart" and "Start" options?
+
+*Hint: check "Dependency-tracking and resetting a pipe"*
 

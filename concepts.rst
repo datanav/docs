@@ -181,7 +181,6 @@ Change tracking
 
 Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a source and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the source was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a source it may, if the source supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
 
-
 .. _concepts-dtl:
 
 The Data Transformation Language (DTL)
@@ -202,7 +201,7 @@ Persisting the results of Transformation
 In general DTL is applied to the entities in a dataset and the resulting entities are pushed into a sink that writes to a new dataset. The new dataset is then used as a source for sinks that write the data to external systems.
 
 
-.. _dependency_tracking:
+.. _concepts-dependency_tracking:
 
 Dependency Tracking
 ===================
@@ -226,7 +225,6 @@ The API can be found at:
 
     http://service_endpoint:9042/api
 
-
 Sesam Management Studio
 -----------------------
 
@@ -239,10 +237,266 @@ The management studio can be found at:
     http://service_endpoint:9042/gui
 
 
+To read more about Sesam Management Studio and the UI, please click here `here <https://docs.sesam.io/management-studio.html>`__ 
+
 Sesam Client
 ------------
 
-The *sesamclient* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
+The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
+
+So what is it used for? When working with a Sesam project, the Sesam client is an invaluable tool for testing purposes, as well as for making the configuration available for interactions with a source control system, such as a Git repository. Note that the Sesam client itself does not contain any functionality to talk with a Git repository for instance.
+
+When applying a new solution to a project, there is a need to perform tests on the results of your solution. If applying the solution without testing the impact of new or modified integrations, we risk affecting the data quality of other integrations connected to the pipe/pipes in question.
+
+The Sesam client allows us to, in a quick and easy manner, to run new DTL configurations and observing the changes in output throughout the whole node. This results in both a more qualitative monitoring of changes to be implemented, but also saves time, as the Sesam client compares new output data with the old output data automatically, giving us an efficient way of testing all the potential connections inside the node. The tests are performed inside your own private Sesam instance, instead of the project instance, which enables us to test new implementations without risking the integrity of the project data.
+
+As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
+
+How to use the Sesam client
+===========================
+
+Before you start using the Sesam client make sure you have the following ready:
+
+•   Sesam client is available on github (https://github.com/sesam-community/sesam-py). Read about Installation and configuration further down
+•   A personal Sesam node for testing
+•   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
+•   A git clone of the repository you wish to work on
+•   Initial test setup (task "setting up tests in new projects” in Teams. text to be written)
+•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The content of the file should be on the form;
+
+    ``node=’https://<node-id>.sesam.cloud’
+    JWT=’<your-JWT>’``
+
+The "node-id" of your private Sesam node can be found between the node name and the "Overview" link inside your node.
+
+.. image:: images/Node_ID.png
+    :width: 800px
+    :align: center
+    :alt: DataSet
+
+The JWT token can be generated inside your private node under *"Settings" ----> "Subsctiption" ---> "JWT"* (see above).
+
+Then add another folder named "expected" in the same folder as the ".syncconfig" file.
+
+After we have installed Sesam client via pip, we need to configure it. You can read about this here as seen below.
+
+Installation
+============
+
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
+
+To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
+ 
+::
+
+    $ cd sesam
+    $ virtualenv --python=python3 venv
+    $ . venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python sesam.py -version
+    sesam version 1.0.0
+
+Configuration
+=============
+
+::
+
+    •   When running the sesam client for the first time, use this commando:
+
+        $ sesam init
+
+    •   Enter your Sesam username and press enter, enter your passord and press enter.
+    •   You will then get a list of the various Sesam subscriptions you are a member of.
+        The Sesam client will then ask which Subscription to use?
+        Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
+    •   The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
+
+Configuring tests
+=================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 25, 10, 10, 30
+
+   * - Property
+     - Description
+     - Type
+     - Required 
+     - Default 
+
+   * - ``_id``
+     - | Name of the test.
+     - | ``string``
+     - |  No
+     - |  Name of the ``.test.json file``
+
+   * - ``type``
+     - | Config type so that this later can just be part of the rest of the config.
+     - | ``string``
+     - |  No
+     - |  Test
+
+   * - ``description``
+     - | A description of the test.
+     - | ``string``
+     - |  No
+     - |  
+
+   * - ``ignore``
+     - | If the output should be ignored during tests.
+     - | ``boolean``
+     - |   No
+     - | ``false``
+
+   * - ``endpoint``
+     - | If the output should be fetched from a published endpoint instead.
+     - | ``string``
+     - |   No
+     - | By default the json is grabbed from ``/pipes/<my-pipe>/entities``
+
+   * - ``stage``
+     - | In which pipe stage to get the entities (source/before-transform/after-transform/sink).
+     - | ``string``
+     - |   No
+     - | By default the stage is ``sink``
+
+   * - ``file``
+     - | File that contains the expected results.
+     - | ``string``
+     - |   No
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json).
+
+   * - ``pipe``
+     - | Pipe that contains the output to test.
+     - | ``string``
+     - |   No
+     - | Name of the .test.json file without .test (e.g. foo.test.json looks for foo.json).
+
+   * - ``blacklist``
+     - | Properties to ignore in the output.
+     - | ``Array of strings``
+     - |   No
+     - | ``[]``
+
+   * - ``parameters``
+     - | Which parameters to pass as bound parameters. Note that parameters only works for published endpoints.
+     - | ``Object``
+     - |   No
+     - | ``{}``
+
+Example: 
+
+::
+
+    {
+     $ cat foo.test.json
+        {
+      "_id": "foo",
+      "type": "test",
+      "file": "foo.json"
+      "blacklist": ["my-last-updated-ts"],
+      "ignore": false
+        }
+    }
+
+DTL parameters
+==============
+
+If you need to pass various variations of bound parameters to the DTL, you just create multiple .test.json files for each combination of parameters.
+
+Example:
+
+::
+    
+    {
+      $ cat foo-A.test.json
+    {
+      "pipe": "foo",
+      "file": "foo-A.xml",
+      "endpoint": "xml",
+      "parameters": {
+      "my-param": "A"
+      }
+    }
+
+    $ cat foo-B.test.json
+    {
+      "pipe": "foo",
+      "file": "foo-B.xml",
+      "endpoint": "xml",
+      "parameters": {
+      "my-param": "B"
+      }
+    }
+
+This will compare the output of ``/publishers/foo/xml?my-param=A`` with the contents of ``foo-A.xml`` and ``/publishers/foo/xml?my-param=B`` with the contents of ``foo-B.xml``.
+
+Internal properties
+^^^^^^^^^^^^^^^^^^^
+
+All internal properties except ``_id`` and ``_deleted`` are removed from the output. Entities that has ``_deleted`` set to ``false`` will also be removed.
+
+Endpoints
+^^^^^^^^^
+
+By default the entities are fetched from ``/pipes/<my-pipe>/entities``, but if endpoint is set it will be fetched from
+``/publishers/<my-pipe>/<endpoint-type>`` based on the endpoint type specified. Note that the pipe needs to be configured to publish to this endpoint.
+ 
+Example:
+
+::
+
+    {
+      "_id": "foo",
+      "type": "test",
+      "endpoint": "xml",
+      "file": "foo.xml"
+    }
+
+This will compare the output of ``/publishers/foo/xml`` with the contents of ``foo.xml``.
+
+Example:
+
+::
+
+    {
+      "_id": "foo",
+      "type": "test",
+      "endpoint": "json",
+      "stage": "source"
+    }
+
+This will compare the output of ``/pipes/foo/entities?stage=source`` with the contents of ``foo.json``, useful when the pipe's sink strips away the "_id" property for example.    
+
+Typical workflow 
+================
+
+•   Start with making sure your GitHub repository is up-to-date.
+•   Run the **"sesam test -use-internal-scheduler"** command to ensure that the results from the local repository matches the output of the configuration files. The "-use-internal-scheduler" tag ensures a faster test than without since without it the Sesam client needs to run several operations "behind-the-scene" to execute all pipes. 
+• The **"sesam test"** command actually runs three different commands:
+
+    ◦ **"sesam upload"**: loads the local configs to the private Sesam node
+
+    ◦ **"sesam run"**: runs the configs inside the local Sesam node and populates the datasets
+
+    ◦ **"sesam verify’"**: matches the output from the current configurations in the private Sesam node with the output in the "expected" folder on the local repository
+
+•   When this is done, create a new local git branch where you can store your future changes
+•   Make changes to the configs inside your Sesam node
+•   When you are content with your changes, run the command **"sesam download"**. This will pull all the current configs on your node down to the local repository, which you   will need when updating the git repository (explained further down)
+•   To check changes in output, run the command **"sesam test -user-internal-scheduler"** again
+•   If the changes in output are expected/acceptable, run the command **"sesam update"** to update the output in the "expected" folder to the current output in the private Sesam node. If the output is not expected/acceptable, go back to the private Sesam node and make the necessary adjustments and repeat the last three point (starting with "sesam download")
+•   Commit changes and push them [link to git-section?] to the corresponding git repository
+
+Other useful commands:
+
+    •   Adding either -v, -vv or -vvv after your command will yield further information regarging the workings of the Sesam client. **-v** will yield some extra information, **-vv** will yield some more extra information while **-vvv** will yield maximum information.
+    •   **"status"** will test if the local configs are up-to-date with the node configs.
+    •   **"wipe"** will wipe your private node clean of configs
+    •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.  
+
+For further commands available through the Sesam client, run the command **"sesam -h"**
+
 
 
 
