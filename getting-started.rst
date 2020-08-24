@@ -229,7 +229,7 @@ There are many different ways of transforming the source data. In this section w
               ["add","Firstname-lower", 
                   ["lower","_S.FirstName"]], 
               ["add", "part-of-string", 
-                  ["substring",0,4,"_S.FirstName"]], 
+                  ["substring", 0, 4,"_S.FirstName"]], 
               ["add", "fullname-lower-case", 
                   ["concat","_T.Firstname-lower"," ","_S.LastName"]], 
               ["remove", "Username"] 
@@ -241,7 +241,7 @@ The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as we
 
   * The first ``["add"]``  creates a new property named **"Type"** that has the value **"customer"**.
 
-  * The second ``["add"]`` creates a new property named **"Firstname"** which is constructed by using the function concatenate (``["concat"]``).
+  * The second ``["add"]`` creates a new property named **"Fullname"** which is constructed by using the function concatenate (``["concat"]``).
 
   * The third ``["add"]`` uses the function ``["lower"]`` to make all characters lower case.
 
@@ -251,7 +251,7 @@ The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as we
 
   * The ``["remove"]`` function removes the selected property.
 
-Notice the ``["_S.[property1]"`` and ``["_T.[property2]"``. The **_S** and **_T** are called variables, and refer to the source and the target respectively.
+Notice the ``["_S.[property1]"`` and ``["_T.[property2]"``. The **_S** and **_T** are called variables, and refer to the source and the target entity respectively.
 
 Rules
 ^^^^^
@@ -1247,11 +1247,11 @@ Dead letters
 
 "Pump" is also the part of the pipe where more advanced settings for keeping control of dead letters are configured.
 
-A general definition of "dead letter" is a letter sent to unknown address, in other words "failed delivery". Transferring this to Sesam, a dead letter is an entity in a dataset that fails to write when a pipe runs. Hence a "failed delivery" to the dataset it is supposed to be written to. 
+A general definition of "dead letter" is a letter sent to unknown address, in other words "failed delivery". Transferring this to Sesam, a dead letter is an entity in a dataset that fails to write when a pipe runs. Hence a "failed delivery" to the target system it is supposed to be written to. 
 
 If a pipe fails, Sesam provides a function which allows failed entities to be written to a "dead letter" dataset. If the entities can be transferred later on, they are flagged as "ok" in the dead letter dataset. Sesam can be configured to keep trying to write the entities to appropriate dataset.
 
-Once pipe has run, go into **Dataset**. On top go to column **"Origin"** and click **"system"**. This filter shows on the systems datasets and it is here you will find you dead letter datasets. So for pipes with configuration to use **dead letters** on pump, a dataset prefix ``system:dead-letter:`` followed by pipe name will be generated. If no entities failed, the dataset will be empty. Those entities that failed, will be listed in this dataset.
+Once pipe has run, go into **Dataset**. On top go to column **"Origin"** and click **"system"**. This filter shows on the systems datasets and it is here you will find you dead letter datasets. So for pipes configurated to use **dead letters**, a dataset prefix ``system:dead-letter:`` followed by the pipe name will be generated. If no entities failed, the dataset will be empty. Those entities that failed, will be listed in this dataset.
 
 .. image:: images/how-to-dl-dataset.png
     :width: 600px
@@ -1354,7 +1354,7 @@ Flask is a web framework used by Pything to develop web services nad pip is a de
 
 First things first, we need to decice which IDE (integrated development environment) you want to use. In this exercise we will use *Pycharm*, but there are various other options so if you are currently using another one, that is not a problem.
 
-You are now ready to create the microservice. We will generate a folder and a couple of files that a microservice always need to run. Firstly we need to create a **Dockerfile**. A `Dockerfile <https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>`__ is a text file that Docker reads in from top to bottom. It contains instructions which informs Docker *how* the Docker image should get built. To read more about Docker, Docker image, Docker build, it is helpful to browse the `Docer documentation <https://docs.docker.com>`__ . In addition we need to generate the actual program which is stored in a python file (.py). 
+You are now ready to create the microservice. We will generate a folder and a couple of files that a microservice always need to run. Firstly we need to create a **Dockerfile**. A `Dockerfile <https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>`__ is a text file that Docker reads in from top to bottom. It contains instructions which informs Docker *how* the Docker image should get built. To read more about Docker, Docker image, Docker build, it is helpful to browse the `Docker documentation <https://docs.docker.com>`__ . In addition we need to generate the actual program which is stored in a python file (.py). 
 
 This is the program that actually runs inside Sesam and tells the system that it is connected to what needs to be done. In this example, it only sends 3 entities with embedded order data. In other cases, the MS must contain authentication to the system (eg basic auth or sql database), or in some cases we have to extract the data in the correct format (such as retrieving OData). All of these .py files (must not be .py, these are only python programs. It could have been .java for java programs, for example) are the "programs" that are running.
 
@@ -1402,7 +1402,7 @@ Next step is to create the "requirements.txt" inside the "service" folder and pa
 
  Flask==1.0.2
 
- If you have a newr version of Flask, you put that in instead of 1.0.2.
+ If you have a newer version of Flask, you put that in instead of 1.0.2.
 
 Final part is the actual program. FOr this we create a python file, also in the "service" folder, named "DemoMicroservice.py" with the following code:
 
@@ -1461,7 +1461,7 @@ To check that the you have created image run the command:
 Testing
 ^^^^^^^
 
-To test that you can run a container from your image locally you can run it directly in the tterminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
+To test that you can run a container from your image locally you can run it directly in the terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 
 Next we'll need to run the image to create the container.
 
@@ -1471,7 +1471,7 @@ To check that you have created the image run the command:
 
   docker run -p <local_port>:<container_port> <docker_username>/<your_repository_name>:<tagname>
 
-Set **local_port** to 5000 and the container_port to the same as the one you specify in the Dockerfile.
+Set **local_port** to 5000 and the container_port to the same as the one you specified in the Dockerfile.
 
 Now you can either go to the url in the browser or do:
 

@@ -317,7 +317,7 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The data fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition **RDF type** for future filtering and classification is added in the input pipe. 
+The data is fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the input pipe for future filtering and classification. 
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
 
@@ -327,9 +327,9 @@ The data fed into Sesam through **input pipes** where namespaced identity is add
     "global": true
  }
 
-**Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for target system.
+**Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
-**Output pipes** has no logic and basically sends data to endpoint.
+**Output pipes** basically sends data to an endpoint and should normally have no logic.
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
@@ -494,7 +494,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
 
   "metadata": {
     "global": true
- }
+ }dc
 
 In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
 
