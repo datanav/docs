@@ -1,6 +1,67 @@
 Changelog
 =========
 
+.. _2020_08_17:
+
+2020-08-21
+----------
+* Added an optional ``description`` property to pipes and systems - it can be either a string or a list of strings.
+* Added an optional ``comment`` property to pipes, systems, sources, sinks, pumps and transforms - - it can be either a string or a list of strings.
+
+2020-08-17
+----------
+* The :ref:`dataset sink <dataset_sink>` property ``set_initial_offset`` now accepts the ``onload`` enum value. This enum value sets the sink dataset's initial offset when the pipe is loaded / configured.
+
+2020-08-13
+----------
+* The encrypt-pki, encrypt-pgp and their corresponding decrypt DTL functions now support using '$SECRET()' syntax in their key and password parameters
+
+2020-08-04
+----------
+* Documented the ``instance`` property of the  :ref:`MS SQL <mssql_system>` system. Please note the the potential consequences for firewall rules when using this property.
+
+2020-06-19
+----------
+* Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
+
+2020-05-28
+----------
+* Added the :ref:`Restore completed <restore_completed_notification_rule>` and :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule types.
+
+2020-03-27
+----------
+* Added the ``dependency_tracking`` property to :ref:`service metadata <service_metadata_section>`. It can be used to specify various dependency tracking related properties.
+
+2020-03-23
+----------
+* Added the ``max_entity_bytes_size`` property to the :ref:`dataset sink <dataset_sink>`.
+* Added the ``global_defaults.max_entity_bytes_size`` property to :ref:`service metadata <service_metadata_section>`.
+
+2020-03-18
+----------
+* Added the ``global_defaults.default_compaction_type`` property to :ref:`service metadata <service_metadata_section>`.
+
+2020-03-05
+----------
+* The :ref:`union_datasets <union_datasets_source>` source now as a ``prefix_ids`` property that can be set to `false` to not add the dataset id as the prefix on entity ids.
+
+2020-03-03
+----------
+* The transform function :ref:`rename <dtl_transform-rename>` will now rename properties with a null value. The old behaviour ignored such properties, but that was considered to be a bug.
+
+2020-02-12
+----------
+* Added support for ``create_table_if_missing`` SQL sink property for the Oracle, Oracle TNS and MySQL systems. Previously only the MS SQL and PostgreSQL systems supported this option.
+
+2020-02-06
+----------
+* Added support for optional string cast value(s) as argument to the :ref:`uuid <uuid_dtl_function>` DTL function
+
+2020-01-08
+----------
+* The default value of the ``read_timeout`` property has been changed from 7200 seconds to 1800 seconds for the
+  :ref:`URL system <url_system>` and the :ref:`Microservice system <microservice_system>`.
+
 2019-12-23
 ----------
 * Added the :ref:`fail! <fail_dtl_function>` DTL function.
@@ -32,13 +93,13 @@ Changelog
 * Updated the :ref:`integer <integer_dtl_function>` DTL function to parse hexadecimal values.
 * The :ref:`dataset sink <dataset_sink>` now has a property called ``prevent_multiple_versions`` that makes the pipe fail if an entity already exists in the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written.
 * The :ref:`dataset sink <dataset_sink>` now has a property called ``suppress_filtered``. The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false``. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
-  
+
 2019-10-07
 ----------
 * :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_message_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_message_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
 * The :ref:`reference <reference_function>` DTL function has been deprecated.
 * The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
-  
+
 2019-09-04
 ----------
 * Index version 2 is now the default version for dataset indexes. This index implementation (version 2) supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset.
@@ -51,12 +112,12 @@ Changelog
 
 2019-08-27
 ----------
-* DTL :ref:`property path strings <DTLReferenceGuide-variables-path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``. 
+* DTL :ref:`property path strings <path_expressions_and_hops>` can now be quoted. In practice this means that you can have periods in path elements if you quote them. Example: ``"_S.foo.'john.doe''s'.bar"`` is now equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``.
 * Extended the :doc:`JSON Pull Protocol <json-pull>` document with information about response headers and an example using dataset subsets.
 
 2019-08-26
 ----------
-* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``. 
+* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 2019-08-19
 ----------
@@ -92,7 +153,7 @@ Changelog
 
 2019-03-13
 ----------
-* A source that has ``supports_since=true``, ``is_since_comparable=false`` and ``is_chronological=True`` will now use the *chronological* :ref:`continuation strategy <continuation_support>`. Earlier it used no continutation strategy. 
+* A source that has ``supports_since=true``, ``is_since_comparable=false`` and ``is_chronological=True`` will now use the *chronological* :ref:`continuation strategy <continuation_support>`. Earlier it used no continutation strategy.
 
 2019-02-27
 ----------
@@ -160,7 +221,7 @@ Changelog
 ----------
 * Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
 * The ``compaction.keep_versions`` property can now also be set to ``0`` and ``1``. The default value is ``2``; which is needed for dependency tracking to be fully able to find reprocessable entities. Setting it to a lower value means that dependency tracking is best effort only.
-  
+
 2018-09-24
 ----------
 * Added a new ``recreate_table_on_first_run`` boolean flag to the :ref:`sql sink <sql_sink>` - it controls if Sesam should recreate the table from ``schema_definiton`` when the pipe is reset or runs for the first time. Note that this requires the ``create_table_if_missing`` property to also be set to ``true`` to take effect.
@@ -311,7 +372,7 @@ Changelog
 * Added the :ref:`intersects <intersects_dtl_function>` DTL function. This boolean function returns true if there is an overlap between the values in the two arguments.
 
 * The DTL compiler will now issue a warning if you try to perform two
-  or more :ref:`join expressions <DTLReferenceGuide-variables-joins>` between the same two dataset
+  or more :ref:`join expressions <joins>` between the same two dataset
   aliases. It is there to notify you of possible cardinality issues
   and to tell you about the :ref:`tuples <tuples_dtl_function>`
   function, which may be used to avoid cardinality issues.
@@ -327,7 +388,7 @@ Changelog
 
      Note that the :ref:`eq <eq_dtl_function>`
      function serves a dual purpose. It can both be used for
-     :ref:`join expressions <DTLReferenceGuide-variables-joins>` and it can be used for
+     :ref:`join expressions <joins>` and it can be used for
      :ref:`equality comparisions <eq_dtl_function>`. These two are
      different in that a join uses intersection (similar to the
      ``intersects`` function) and the equality comparison is an exact
@@ -609,7 +670,7 @@ Changelog
 
 2016-10-10
 ----------
-* Added DTL Reference Guide section that explains how :ref:`joins <DTLReferenceGuide-variables-joins>` work.
+* Added DTL Reference Guide section that explains how :ref:`joins <joins>` work.
 
 2016-10-04
 ----------

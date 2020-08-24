@@ -210,6 +210,10 @@ One of the really smart things that Sesam can do is to understand complex depend
 
 This is in essence a cache invalidation of complex queries problem. With Sesam we have solved that problem. We are empowered to solve the problem as we have a dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
 
+.. NOTE::
+
+   Only pipes that use the :ref:`dataset source <dataset_source>` supports dependency tracking. The primary reason for that is a technical one; the tracked entities need to be looked up by id before a specific point in time and feed through the pipe. This is currently only implemented for the ``dataset`` source type. It is unlikely that it can be implemented for other source types as those have latency and ambiguity issues.
+
 Sesam API
 ---------
 
@@ -238,9 +242,9 @@ To read more about Sesam Management Studio and the UI, please click here `here <
 Sesam Client
 ------------
 
-The *Sesam client* is a command line tool for interacting with Sesam service instances. It provides a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
+The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
 
-So what is it used for? It is manily a command line tool for testing and deploying a Sesam configuration to and from a Git repository. 
+So what is it used for? When working with a Sesam project, the Sesam client is an invaluable tool for testing purposes, as well as for making the configuration available for interactions with a source control system, such as a Git repository. Note that the Sesam client itself does not contain any functionality to talk with a Git repository for instance.
 
 When applying a new solution to a project, there is a need to perform tests on the results of your solution. If applying the solution without testing the impact of new or modified integrations, we risk affecting the data quality of other integrations connected to the pipe/pipes in question.
 
@@ -253,12 +257,12 @@ How to use the Sesam client
 
 Before you start using the Sesam client make sure you have the following ready:
 
-•   Sesam client is available on github (https://github.com/tombech/sesam-py). Read about Installation and configuration further down
+•   Sesam client is available on github (https://github.com/sesam-community/sesam-py). Read about Installation and configuration further down
 •   A personal Sesam node for testing
 •   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
 •   A git clone of the repository you wish to work on
 •   Initial test setup (task "setting up tests in new projects” in Teams. text to be written)
-•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The config should be on the form;
+•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The content of the file should be on the form;
 
     ``node=’https://<node-id>.sesam.cloud’
     JWT=’<your-JWT>’``
@@ -279,7 +283,7 @@ After we have installed Sesam client via pip, we need to configure it. You can r
 Installation
 ============
 
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/tombech/sesam-py/releases/>`__ 
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
 
 To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
  
@@ -297,14 +301,15 @@ Configuration
 
 ::
 
-    $ sesam init
-    Username: foo
-    Password:
-    Available subscriptions:
-    1. My dev node (11aa76...)
-    2. My test node (44bb11...)
-    Subscription to use? 2
-    Config stored in .sesam/config.
+    •   When running the sesam client for the first time, use this commando:
+
+        $ sesam init
+
+    •   Enter your Sesam username and press enter, enter your passord and press enter.
+    •   You will then get a list of the various Sesam subscriptions you are a member of.
+        The Sesam client will then ask which Subscription to use?
+        Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
+    •   The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
 
 Configuring tests
 =================
@@ -487,7 +492,7 @@ Other useful commands:
 
     •   Adding either -v, -vv or -vvv after your command will yield further information regarging the workings of the Sesam client. **-v** will yield some extra information, **-vv** will yield some more extra information while **-vvv** will yield maximum information.
     •   **"status"** will test if the local configs are up-to-date with the node configs.
-    •   **"wipe"** will wipe your private repository clean of configs
+    •   **"wipe"** will wipe your private node clean of configs
     •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.  
 
 For further commands available through the Sesam client, run the command **"sesam -h"**
