@@ -1,12 +1,20 @@
 Changelog
 =========
 
-.. _2020_08_17:
+.. _2020_08_24:
+
+2020-08-24
+----------
+* Changed default compaction type to ``sink``. To go back to the previous default, you can set sink compaction to ``false`` on individual pipes or set the global default property ``default_compaction_type`` to ``background`` in the :ref:`service metadata <service_metadata_section>`.
+
+.. _2020_08_21:
 
 2020-08-21
 ----------
 * Added an optional ``description`` property to pipes and systems - it can be either a string or a list of strings.
 * Added an optional ``comment`` property to pipes, systems, sources, sinks, pumps and transforms - - it can be either a string or a list of strings.
+
+.. _2020_08_17:
 
 2020-08-17
 ----------
