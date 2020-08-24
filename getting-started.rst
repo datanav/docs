@@ -174,7 +174,7 @@ When we analyse the different data available to us, we discover many opportuniti
     :align: center
     :alt: Generic pipe concept
 
-As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can chooes available systems and press replace to add values to pipe. Same with pump and transforms.
+As seen above a pipe in Sesam typically consists of five blocks and each block is available as a template to make writing pipes easier and quicker. For source and targets we can choose available systems and press replace to add values to pipe. Same with pump and transforms.
 
 .. image:: images/getting-started/templates.png
     :width: 800px
@@ -199,7 +199,7 @@ DTL scripts are written inside the config tab when selecting a pipe in your Sesa
 	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
 	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
 
-Next, let us brieflly explain **key-value pair**. It is quite simplye property with a value. E.g.:
+Next, let us briefly explain key-value pair. It is quite simply a property with a value. E.g.:
 
     ``"firstname": "Ole"``
 
@@ -380,7 +380,7 @@ Say we want to add a property or a key called "lastname". This key-value is foun
               dataset ,if it is null then it goes to crm-person dataset and so 
               on. basically, we prioritize the order on most trusted values"], 
               ["add", "zipcode", 
-                  ["Coalesce", ["list", "_S.hr-person:lastname", 
+                  ["coalesce", ["list", "_S.hr-person:lastname", 
                   "_S.crm-person:name", "_S.erp-person:surname"] 
               ] 
           ] 
@@ -448,7 +448,7 @@ First we need to be able to assort the different people into two separate groups
       ["add", "age_group", "group_2"]
   ]
 
-The third line is activated if the statement if true, and the fourth line if the statement i false.
+The third line is activated if the statement is true, and the fourth line if the statement is false.
 
 Another handy function is ``["return"]``  which allows us to specify which values we want returned from source when doing hops. Please see code example below
 
@@ -660,8 +660,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
 
  When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding ``["_S"]``  in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
 
- ``["_S"]``  is a built-in variable in **DTL**. Read more about Variables :ref:`here <DTLReferenceGuide-variables>`.
-
+  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <DTLReferenceGuide-variables>`.
 
 
 ::
@@ -756,13 +755,13 @@ Dependency-tracking and resetting a pipe
 
 We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
 
-In order to make sure that only entities that has changed since last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit :ref:`here <concepts-dependency_tracking>`.
+In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit :ref:`here <concepts-dependency_tracking>`.
 
 We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
 
 Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
 
-If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
 
 Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
 
@@ -1035,8 +1034,8 @@ Let's look at an example:
       "default": "",
       "allow_null": true,
       "index": false,
-      "max_size": 50,
-      "min_size": 0,
+      "max_value": 10000000,
+      "min_value": 0,
       "primary_key": false,
       "source_property": "salary"
     }, {
@@ -1132,7 +1131,7 @@ We will use Apache HttpClient to create a GET request and will need the followin
     <version>4.5.4</version>
  </dependency> 
 
-**Jaca class**:
+**Java class**:
 
 ::
 
@@ -1333,7 +1332,7 @@ The Docker image is then pushed up to a repository on Docker Hub (or any Docker 
 Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an input pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems. 
 
 Microservices with Docker
-==========================
+=========================
 
 First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
 
@@ -1554,7 +1553,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
 .. _getting-started-microservices-restAPI:
 
 REST APIs
-============
+=========
 Sometimes we have to connect to a websites API to extract data for our pipe. A website's API is a code that allows our program to communicate with the website, to either extract information, or to post information. A REST (Representational State Transfer), or RESTful, API is an API which uses HTTP requests to POST, GET PUT and DELETE data. 
 
 We will be using the `flask <https://flask.palletsprojects.com/en/1.1.x/>`__ library as well as the `requests <https://2.python-requests.org/en/master/>`__ library in Python to display how we might communicate with a websites API. 

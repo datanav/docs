@@ -246,7 +246,33 @@ Pump failed
 This ruletype checks if the pipe failed the last time it ran, for any reason.
 
 If more control of when the notification rule triggers is needed, the
-:ref:`Pattern match <pump_completed_pattern_match_notification_rule>` can be used instead.
+:ref:`Pattern match <pump_completed_pattern_match_notification_rule>` rule can be used instead.
+
+.. _restore_completed_notification_rule:
+
+Restore completed
+=================
+
+This ruletype triggers when the pipe and its associated state and data has been restored from backup. This can happen
+if the machine the pipe is running on has failed for some reason; in this case the pipe's state and data might
+be restored from a remote backup. After a restore the pipe will be in the state it was when the backup was made,
+which means data might be reprocessed.
+
+See also the :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule.
+
+.. _pump_offset_set_notification_rule:
+
+Pump offset set
+===============
+
+This ruletype triggers when the pipe's offset has been set for any reason. The offset can be set manually by a
+user (for instance by resetting the pipe), or automatically if the pipe detects that something has happened to
+the upstream pipes that requires the pipe's offset to be modified.
+
+A typical usecase is that an upstream pipe has been restored from backup; in this case the pipe's offset may be
+rewound to match the max offset of the restored upstread pipe.
+
+See also the :ref:`Restore completed <restore_completed_notification_rule>` notification rule.
 
 
 .. _pump_completed_pattern_match_notification_rule:
@@ -281,8 +307,13 @@ or::
 
 , depending on which part(s) of the errormessage the user is interested in.
 
-Note that there is no need for wildcards at the start and/or end of the patterns; if the pattern matches
+Tip: there is no need for wildcards at the start and/or end of the pattern; if the pattern matches
 *anywhere* in the value the notification-rule will trigger.
+
+Note: If the value is missing or empty, the pattern will *never* match.
+
+If the intention is to get a notification whenever a pipe fails, it is better to use the
+:ref:`Pump failed <pump_failed_notification_rule>` rule instead.
 
 
 Node heartbeat overdue
@@ -324,7 +355,7 @@ subscription have triggered (for instance to create a status-board website).
 
 Example::
 
-    curl 'https://portal.sesam.io/api/notifications' -H 'Authorization: bearer <JWT-for-the-subscription-12345644-2a04-4ff1-9d77-7b3eb615974c>'
+    curl 'https://portal.sesam.io/api/notifications-summary' -H 'Authorization: bearer <JWT-for-the-subscription-12345644-2a04-4ff1-9d77-7b3eb615974c>'
 
 will result in a response that looks like this::
 

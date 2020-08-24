@@ -79,7 +79,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', '.python_env']
+exclude_patterns = ['_build', os.path.basename(os.environ['VIRTUAL_ENV'])]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
