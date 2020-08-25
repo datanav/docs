@@ -1485,7 +1485,8 @@ To stop the container running locally you can run:
 
 ::
 
-docker stop <container name> or docker stop <container_id> 
+ docker stop <container name> or docker stop <container_id>  
+
 
 Push to Docker Hub
 ^^^^^^^^^^^^^^^^^^
