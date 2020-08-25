@@ -193,11 +193,11 @@ Sesam utilizes :ref:`DTL <concepts-dtl>` (Data Transformation Language) which en
 
 DTL scripts are written inside the config tab when selecting a pipe in your Sesam node. The scripts consist of five sections: 
 
-	* **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
-	* **Provider**: We need to tell DTL which source/sources to get the data from. 
-	* **Transform**: Next we need to specify the rules with which we wish to transform the data.
-	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
-	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
+  * **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
+  * **Provider**: We need to tell DTL which source/sources to get the data from. 
+  * **Transform**: Next we need to specify the rules with which we wish to transform the data.
+  * **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
+  * **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
 
 Next, let us briefly explain key-value pair. It is quite simply a property with a value. E.g.:
 
@@ -518,7 +518,7 @@ If we don't need exact match, we can use ``["intersects"]`` instead; it will con
 Global datasets
 ^^^^^^^^^^^^^^^
 Global datasets are key to getting the most out of using Sesam. We combine data from sources with logically linked information to provide one common place to then retrieve this data from when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time.
-You can read more about global datasets; what they are, how to use them and how to develop them   :ref:`here <best-practice-global>`.
+You can read more about global datasets; what they are, how to use them and how to develop them :ref:`here <best-practice-global>`.
 
 Namespace identifiers
 ^^^^^^^^^^^^^^^^^^^^^
@@ -660,7 +660,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
 
  When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding ``["_S"]``  in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
 
-  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <DTLReferenceGuide-variables>`.
+  **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <variables>`.
 
 
 ::
@@ -1362,7 +1362,7 @@ In addition we need requirements.txt file which tells the microservice file whic
 
 `Flask==1.1.2``
 
-If you want to know more about requirements.txt files, please click `here <https://pip.pypa.io/en/stable/user_guide/#requirements-files>>`__ 
+If you want to know more about requirements.txt files, please click `here <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`__ 
 
 
 Now let us go through this step by step.
@@ -1571,9 +1571,9 @@ JSON Web Tokens
 ^^^^^^^^^^^^^^^
 When we authenticate ourselves to a server, we often utilize something called a **JSON Web Token** (**JWT**). A JWT is a string that consists of a **header**, a **payload** and a **signature** to form the string **header.payload.signature**.
 
-	* **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
-	* **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
-	* **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
+  * **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
+  * **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
+  * **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
 
 A JWT is used when we need to make sure that the sent data actually originates from an authentic source, to make sure no secondhand party has tempered with the data. When we sign into an app, i.e. google we first communicate with the app's authentication server. This server sends us a JWT back which we can use to communicate with the app's API. 
 
@@ -1587,8 +1587,8 @@ Requests methods
 ^^^^^^^^^^^^^^^^
 When communicating with the API we use requests methods such as **GET**, **POST**. For more request methods read `this <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods>`__.
 
-	* **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
-	* **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
+  * **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
+  * **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
 
 .. _getting-started-labs:
 
