@@ -456,19 +456,24 @@ Config:
 
 ::
 
-  ["hops", {
-              "datasets": ["some-dataset sd"],
-              "where": [
-                ["eq", "_S.some-source:Username", "sd.Username"]
-               
-              "return": "sd.somevalue"
-            }]
-  Output
+  ["add", "FirstName",
+    ["first",
+      ["hops", {
+        "datasets": ["users u"],
+        "where": [
+          ["eq", "_S.Username", "u.Username"]
+         
+        "return": "u.FirstName"
+      }]
+    ]
+  ]
+
+  This example will make a hops to the 'users' dataset based on the Username properties, and if a match is found, return the value of the 'FirstName' property. If the value of that property is 'John', the resulting output would be:
 
   {
     
-    "some-dataset:consents": [
-      "somevalue"
+    "FirstName": [
+      "John"
     ]
   }
 
@@ -1404,7 +1409,7 @@ Next step is to create the "requirements.txt" inside the "service" folder and pa
 
  If you have a newer version of Flask, you put that in instead of 1.0.2.
 
-Final part is the actual program. FOr this we create a python file, also in the "service" folder, named "DemoMicroservice.py" with the following code:
+Final part is the actual program. For this we create a python file, also in the "service" folder, named "DemoMicroservice.py" with the following code:
 
 ::
 

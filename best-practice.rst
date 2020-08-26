@@ -331,6 +331,8 @@ The data is fed into Sesam through **input pipes** where namespaced identity is 
 
 **Output pipes** basically sends data to an endpoint and should normally have no logic.
 
+The main reason for why **output pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. Any logic added to an **output pipe** cannot either be used by other pipes.
+
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
@@ -494,7 +496,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
 
   "metadata": {
     "global": true
- }dc
+ }
 
 In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
 
