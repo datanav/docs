@@ -471,9 +471,7 @@ Config:
   This example will make a hops to the 'users' dataset based on the Username properties, and if a match is found, return the value of the 'FirstName' property. If the value of that property is 'John', the resulting output would be:
 
   {
-    "FirstName": [
-      "John"
-    ]
+    "FirstName": "John"
   }
 
 ``["Tuples"]`` is mainly used when we need to make several equalities between two datasets in one hops. Let us say you have two properties in dataset A that will match two properties in dataset B, it will be done as follows:
