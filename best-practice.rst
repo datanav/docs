@@ -317,7 +317,7 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The data fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition **RDF type** for future filtering and classification is added in the input pipe. 
+The data is fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the input pipe for future filtering and classification. 
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
 
@@ -327,9 +327,11 @@ The data fed into Sesam through **input pipes** where namespaced identity is add
     "global": true
  }
 
-**Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for target system.
+**Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
-**Output pipes** has no logic and basically sends data to endpoint.
+**Output pipes** basically sends data to an endpoint and should normally have no logic.
+
+The main reason for why **output pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. Any logic added to an **output pipe** cannot either be used by other pipes.
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
@@ -695,6 +697,9 @@ Preparation pipes
 =================
 
 The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
+
+
+.. _best-practice-output-pipes:
 
 Output pipes 
 ============

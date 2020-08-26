@@ -49,6 +49,8 @@ Pressing **“...”** after the name of dataset, you get two options as seen in
 
 The option “Create a downstream pipe” means to create the next step in the dataflow. Pressing this takes you into “new pipe” with the current dataset as source. By pressing **“Go to pipe”** it takes you to the pipe that produced the current dataset. 
 
+.. _management-studio-pipes:
+
 Pipes
 =====
 
@@ -67,6 +69,8 @@ By pressing **"..."** to the right of the pipe name, a menu with various options
     :width: 600px
     :align: center
     :alt: DataSet
+
+.. _management-studio-pipe-menu:
 
 Pipe Menu
 ^^^^^^^^^
@@ -97,13 +101,15 @@ Pipe Menu
      - | It generates a copy of the pipe. Then edit the current config and press ``Save``. This means you do not have to create a pipe from scratch
 
    * - ``Create downstream pipe``
-     - | automatically takes you to new pipe with current dataset as source
+     - | Automatically takes you to new pipe with current dataset as source
 
    * - ``Go to sink``
-     - | takes you straight to sink dataset from current pipe
+     - | Takes you straight to sink dataset from current pipe
 
    * - ``Update last seen``
      - | enables you to update the last seen index of the pipe. This is useful if you need to reprocess a certain number of entities back in time, but not necessarily all the entities. Depending on the pipe this value could either be a sequence number, a date and time value given in epoch or a list of either separated by comma. The sequence number for an entity can be found in the "_updated" property on the entity.
+
+.. _management-studio-new-pipe:
 
 New Pipe
 ^^^^^^^^

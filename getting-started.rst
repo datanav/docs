@@ -48,7 +48,11 @@ Once you get the access from the Sesam team you'll get your own Dev Node card in
 Import data
 ===========
 
-Before we describe how to import data into your node, we need to emphasize an important issue. If you will work on a Sesam node that already contains configurations and data, you should NOT import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. You then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
+Before we describe how to import data into your node, we need to emphasize an important issue. If you are going to work on a Sesam node that already contains configurations and data, you should *not* import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. If this is the case, it is recommended you push the exisiting config to a git solution before adding the new config so it is not lost.
+
+In the case you have added the training-config.json file, you then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. 
+
+Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
 
 When you are setting up your node for the first time your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
 
@@ -179,7 +183,7 @@ As seen above a pipe in Sesam typically consists of five blocks and each block i
 
 The data is typically structured as a list of entities. An entity is a dictionary with key-value pairs and is identified through its '_id' tag. This data might be a list of employees, with the '_id' tag corresponding to their personal employee number.  
 
-For more details on how to use the templates when making a new pipe from scratch, please click here LINK.
+For more details on how to use the templates when making a new pipe from scratch, please click :ref:`here <management-studio-new-pipe>`.
 
 .. _getting-started-basic-dtl-functions:
 
@@ -189,11 +193,11 @@ Sesam utilizes :ref:`DTL <concepts-dtl>` (Data Transformation Language) which en
 
 DTL scripts are written inside the config tab when selecting a pipe in your Sesam node. The scripts consist of five sections: 
 
-	* **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
-	* **Provider**: We need to tell DTL which source/sources to get the data from. 
-	* **Transform**: Next we need to specify the rules with which we wish to transform the data.
-	* **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
-	* **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
+  * **System**: We initialize the DTL scripts in Sesam by specifying the **_id** and **type** of the script. The **_id** is the name of the script, and the type is simply just **pipe**.
+  * **Provider**: We need to tell DTL which source/sources to get the data from. 
+  * **Transform**: Next we need to specify the rules with which we wish to transform the data.
+  * **Pump**: We need to add a pump in order to schedule the pumping of data from a source to a **Sink**.
+  * **Sink**: Finally we need to specify a **Sink** which writes the data to the target.
 
 Next, let us briefly explain key-value pair. It is quite simply a property with a value. E.g.:
 
@@ -203,6 +207,7 @@ Next, let us briefly explain key-value pair. It is quite simply a property with 
     :width: 600px
     :align: center
     :alt: Generic pipe concept
+
 
 
 .. _getting-started-transformations:
@@ -224,7 +229,7 @@ There are many different ways of transforming the source data. In this section w
               ["add","Firstname-lower", 
                   ["lower","_S.FirstName"]], 
               ["add", "part-of-string", 
-                  ["substring",0,4,"_S.FirstName"]], 
+                  ["substring", 0, 4,"_S.FirstName"]], 
               ["add", "fullname-lower-case", 
                   ["concat","_T.Firstname-lower"," ","_S.LastName"]], 
               ["remove", "Username"] 
@@ -234,19 +239,92 @@ There are many different ways of transforming the source data. In this section w
 
 The above DTL snippet displays the :ref:`add <dtl_transform-add>` function as well as the  :ref:`concat <concat_dtl_function>`, :ref:`add <lower_dtl_function>`, :ref:`substring <substring_dtl_function>` and the :ref:`remove <dtl_transform-remove>` function inside the transform. 
 
-  * The first **["add"]** creates a new property named **"Type"** that has the value **"customer"**.
+  * The first ``["add"]``  creates a new property named **"Type"** that has the value **"customer"**.
 
-  * The second **["add"]** creates a new property named **"Firstname"** which is constructed by using the function concatenate (**["concat"]**).
+  * The second ``["add"]`` creates a new property named **"Fullname"** which is constructed by using the function concatenate (``["concat"]``).
 
-  * The third **["add"]** uses the function **["lower"]** to make all characters lower case.
+  * The third ``["add"]`` uses the function ``["lower"]`` to make all characters lower case.
 
-  * The fourth **["add"]** uses the function **["substring"]** to make a substring of the **"FirstName"**.
+  * The fourth ``["add"]`` uses the function ``["substring"]`` to make a substring of the **"FirstName"**.
 
-  * The fifth **["add"]** uses the function **["concat"]** to combine the lower cased first name with the last name.
+  * The fifth ``["add"]`` uses the function``["concat"]`` to combine the lower cased first name with the last name.
 
-  * The **["remove"]** function removes the selected property.
+  * The ``["remove"]`` function removes the selected property.
 
-Notice the **"_S.[property1]"** and **"_T.[property2]"**. The **_S** and **_T** are called variables, and refer to the source and the target respectively.
+Notice the ``["_S.[property1]"`` and ``["_T.[property2]"``. The **_S** and **_T** are called variables, and refer to the source and the target entity respectively.
+
+Rules
+^^^^^
+
+In each pipe there is one mandatory rule where most of functions to apply transforms to source data is added; **"default"**.The other rules can be applied via the ``["apply"]``,  and ``["apply-hops"]`` DTL functions. This means that most of the logic applied to the entities of the source data, will be added inside **"default"**. That can be ``["add"]``,  ``["remove™]``, ``["filter"]`` and ``["copy"]`` to name a few examples. 
+
+It is important to remember the *order of the functions is significant*. This means Sesam can use output from a previous function (by using the variable ``["_T"]`` ) in a transform step further down within the default rule. The rules applied to the ``["apply"]``  and ``["apply-hops"]`` , are stated outside the default rule, but within the curly brackets of **{"rules"}**. 
+
+Let us have a look at an example of a global pipe to try to highlight some of this:
+
+As we can see in "default" several ``["add"]`` have been listed. When adding "fullname” The order is important as this is based on "firstname" and "lastname" which was already added. Also ``["filter"]`` used for **"consents"** which is added straight after **"consents"** was added via ``["hops"]`` function. Filters are often added at the start of "default rule", e.g. if you only want to process entities that meet certain requirements. And in some cases at the end of the "default rule" as in this example the filter checks if "consents" contain data, in which case the entity is included in further processing.
+
+In our example we have one rule in addition to the "default rule". As we can see it is the rule is called **"location"** which is called on by ``["apply-hops"]`` in the default rule. This rule specifies what output is to be returned. In this case "kommunenavn" and "poststed" is copied from "global-location".
+
+::
+
+   {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["erp-person ep", "greg-crm-person gcp", "hr-person hp", "salesforce-userprofile sup"],
+      "equality": [
+        ["eq", "gcp.SSN", "ep.SSN"],
+        ["eq", "gcp.SSN", "hp.SSN"],
+        ["eq", "gcp.EmailAddress", "sup.EmailAddress"]],
+      "identity": "first",
+      "strategy": "default",
+      "version": 2
+    },
+    "transform": [{
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "zipcode",
+            ["coalesce",
+              ["list", "_S.hr-person:ZipCode", "_S.greg-crm-person:PostalCode", "_S.erp-person:ZipCode"]]],
+          ["add", "email",
+            ["coalesce", "_S.EmailAddress"]],
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.erp-person:Firstname", "_S.hr-person:GivenName", "_S.greg-crm-person:FirstName"]]],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.erp-person:Lastname", "_S.greg-crm-person:LastName", "_S.hr-person:Surname"]]],
+          ["add", "fullname",
+            ["concat", "_T.firstname", " ", "_S.erp-person:MiddleInitial", " ", "_T.lastname"]],
+          ["add", "active-subscriptions",
+            ["apply", "filter-subscriptions", "_S.erp-person:subscriptions"]],
+          ["add", "consents",
+            ["hops", {
+              "datasets": ["global-consent gc"],
+              "where": [
+                ["eq", "_S.salesforce-userprofile:Username", "gc.Username"]],
+              "return": "gc.title"
+            }]],
+          ["filter",
+            ["is-not-empty", "_T.consents"]],
+          ["merge",
+            ["apply-hops", "location", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.ZipCode", "gl.postnummer"]
+            }]],
+        "location": [
+          ["copy", "kommunenavn"],
+          ["copy", "poststed"]]
+      }
+    }],
+    "metadata": {
+      "global": true
+    }
+  }
 
 Lab 1-2
 ^^^^^^^^
@@ -292,9 +370,9 @@ The **”version”** property refers to the version of the merge source. The de
 Coalesce, list and other useful DTL functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**"Coalesce"** means to join or combine. In SQL it is commonly used together with "is-null" to return the first non-null value in a list. In DTL, when we need to prioritize which keys we want to use to pick a value, we use **"Coalesce"**. So, when is this useful and how is it used?
+**"Coalesce"** means to join or combine. In SQL it is commonly used together with ``["is-null"]`` to return the first non-null value in a list. In DTL, when we need to prioritize which keys we want to use to pick a value, we use **"Coalesce"**. So, when is this useful and how is it used?
 
-Say we want to add a property or a key called "lastname". This key-value is found in three different systems. We want to make sure we use the most trusted value, we use **"Coalesce"** to state order which Sesam checks for values. If the hr-person "lastname" is null, **"Coalesce"** gives us the opportunity to choose which is the next best option.
+Say we want to add a property or a key called "lastname". This key-value is found in three different systems. We want to make sure we use the most trusted value, we use ``["Coalesce"]`` to state the order which Sesam checks for values. If the hr-person "lastname" is null, ``["Coalesce"]`` gives us the opportunity to choose which is the next best option.
 
 ::
 
@@ -309,9 +387,9 @@ Say we want to add a property or a key called "lastname". This key-value is foun
   ] 
 
 
-**"Coalesce"** is used together with **"list"** function, which basically is a list of values. We need **"list"** to list the order of which keys to pick values from. 
+``["Coalesce"]`` is used together with ``["list"]`` function, which basically is a list of values. We need ``["list"]``  to list the order of which keys to pick values from. 
 
-If you need a list of key-value pairs, in other words a list of properties *and* values, you need to make a dictionary using the **"dict"** function.
+If you need a list of key-value pairs, in other words a list of properties *and* values, you need to make a dictionary using the ``["dict"]``  function.
 
 To illustrate the difference let us look at some DTL in a pipe
 
@@ -354,13 +432,13 @@ To illustrate the difference let us look at some DTL in a pipe
 
 As seen in pipe above, the dictionary contains key and where to access value i.e. **["dict","SSN", "_S.ssn"].** A list could be a list of items separated by commas i.e.  **["list","_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"].**
 
-The **"if"** condition is a function in DTL that works by evaluating a statement and by performing different actions depending on the outcome of the evaluation. 
+The ``["if"]``  condition is a function in DTL that works by evaluating a statement and by performing different actions depending on the outcome of the evaluation. 
 
 In everyday life we might say "if you're 50 years old or older, then you're entitled to a longer vacation". If not, then you have the standard number of weeks set aside for vacation. 
 
 In DTL this would be utilized in the following way:
 
-First we need to be able to assort the different people into two separate groups, e.g. group_1 is the group containing people with normal vacation (under 50 years of age) and group_2 is the group with people with extended vacation. Now let's assume that every person has an attribute named "age". Assuming that the person entity is the source entity we could define our evaluating statement as the following: ["gte", "_S.age", "50"], which will be true if the person is 50 years old or older, and false otherwise. We use the **"gte"** function which is used to get values greater than or equal to. In comparison **"gt"** simply means greater than. Now we can construct our complete if-statement:
+First we need to be able to assort the different people into two separate groups, e.g. group_1 is the group containing people with normal vacation (under 50 years of age) and group_2 is the group with people with extended vacation. Now let's assume that every person has an attribute named "age". Assuming that the person entity is the source entity we could define our evaluating statement as the following: ["gte", "_S.age", "50"], which will be true if the person is 50 years old or older, and false otherwise. We use the ``["gte"]``  function which is used to get values greater than or equal to. In comparison ``["gt"]``  simply means greater than. Now we can construct our complete if-statement:
 
 ::
 
@@ -372,9 +450,31 @@ First we need to be able to assort the different people into two separate groups
 
 The third line is activated if the statement is true, and the fourth line if the statement is false.
 
-Another handy function is "return" which allows us to specify which values we want returned from source when doing hops.
+Another handy function is ``["return"]``  which allows us to specify which values we want returned from source when doing hops. Please see code example below
 
-"Tuples" is mainly used when we need to make several equalities between two datasets in one hops. Let us say you have two properties in dataset A that will match two properties in dataset B, it will be done as follows:
+Config:
+
+::
+
+  ["add", "FirstName",
+    ["first",
+      ["hops", {
+        "datasets": ["users u"],
+        "where": [
+          ["eq", "_S.Username", "u.Username"]
+         
+        "return": "u.FirstName"
+      }]
+    ]
+  ]
+
+  This example will make a hops to the 'users' dataset based on the Username properties, and if a match is found, return the value of the 'FirstName' property. If the value of that property is 'John', the resulting output would be:
+
+  {
+    "FirstName": "John"
+  }
+
+``["Tuples"]`` is mainly used when we need to make several equalities between two datasets in one hops. Let us say you have two properties in dataset A that will match two properties in dataset B, it will be done as follows:
 
 ::
 
@@ -383,9 +483,44 @@ Another handy function is "return" which allows us to specify which values we wa
     ["tuples", "B.prop1", "B.prop2"]
   ]
 
+**Filters** they can be used in many contexts, but one typical case we use ``["filter"]``  for is on out from globals to filter in correct entities (typically on rdf: type) to be processed further.
+
+When we need to filter data, there is a ``["filter"]`` function. This can be used in several ways and in various combinations with other functions. Below are some examples:
+
+- To stop processing, simply use ``["filter"]``
+
+- Continue processing only if the source entity's age is greater than say 42, use  ``["filter", ["gt", "_S.age", 42]]``
+
+- Continue processing only if the source entity's doctype is report, use ``["filter", ["eq", "_S.doctype", "report"]]``
+
+- If you wish to process only if doctype *isn't* report, then use ``[["filter", ["neq", "_S.doctype", "report"]]``
+
+- If you have more than one type, continues processing if source entity has doctypes either report, letter or budget, you can combine with ``["or"]``
+
+
+::
+
+  ["filter",
+           ["or",
+             ["eq", "_S.doctype", "report"],
+             ["eq", "_S.doctype", "letter"],
+             ["eq", "_S.doctype", "budget"]
+ 
+If we don't need exact match, we can use ``["intersects"]`` instead; it will continue  to process if we get overlap.
+
+::
+
+  ["filter",
+            ["intersects", "_S.doctype",
+              ["list", "report", "letter", "budget"]
+            ]
+          ]
+
+
 Global datasets
 ^^^^^^^^^^^^^^^
 Global datasets are key to getting the most out of using Sesam. We combine data from sources with logically linked information to provide one common place to then retrieve this data from when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time.
+You can read more about global datasets; what they are, how to use them and how to develop them :ref:`here <best-practice-global>`.
 
 Namespace identifiers
 ^^^^^^^^^^^^^^^^^^^^^
@@ -453,7 +588,7 @@ We can merge entities in the DTL transform section with the :ref:`merge <dtl_tra
             }] 
         ] 
 
-We will later see the use of the **["merge"]** function in combination with functions that fetch entities from other datasets.
+We will later see the use of the ``["merge"]`` function in combination with functions that fetch entities from other datasets.
 
 Apply
 =====
@@ -483,7 +618,7 @@ The :ref:`hops <hops_function>` function joins two datasets and returns the enti
      } 
 
 
-In this transform we first copy everything from the source dataset into the target. To do a **["hops"]** you first add a new property to the target dataset. Then, inside that **["add"]** you call on the **["hops"]** function to fetch entities from the specified dataset, in this example (**"global-orders"**).
+In this transform we first copy everything from the source dataset into the target. To do a ``["hops"]``  you first add a new property to the target dataset. Then, inside that ``["add"]``  you call on the ``["hops"]``  function to fetch entities from the specified dataset, in this example (**"global-orders"**).
 
 Lab 4
 ^^^^^
@@ -492,7 +627,7 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 4 <getting
 
 Apply-hops
 ==========
-There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined **["apply"]** and **["hops"]** function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the **["apply"]** function :ref:`here <hops_function>` 
+There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined ``["apply"]``  and ``["hops"]``  function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the ``["apply"]``  function :ref:`here <hops_function>` 
 
 ::
 
@@ -523,12 +658,11 @@ Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 5 <getting
 
 Should I "add" or "merge" an apply-hops?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-As you can see in the examples below we want to add the "City" and "Municipality" from another dataset to the source. In the two examples we have the same source but the difference is in how we use the **["apply-hops"]**. In the first case we **["add"]** a new property called "difi-data" which you can see in the results creates a dictionary containing "City" and "Municipality" in **"difi-data"**.
+As you can see in the examples below we want to add the "City" and "Municipality" from another dataset to the source. In the two examples we have the same source but the difference is in how we use the ``["apply-hops"]`` . In the first case we ``["add"]``  a new property called "difi-data" which you can see in the results creates a dictionary containing "City" and "Municipality" in **"difi-data"**.
 
- When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding **"_S"** in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
+ When adding "City" and "Municipality" from another dataset we need to specify which *sources* and *entities* we want to match on. This is done by adding ``["_S"]``  in front of name of dataset and entity.  It looks like this: **_S.hr-person:ZipCode**
 
   **"_S"** is a built-in variable in **DTL**. Read more about Variables :ref:`here <variables>`.
-
 
 
 ::
@@ -571,7 +705,7 @@ As you can see in the examples below we want to add the "City" and "Municipality
     :align: center
     :alt: Generic pipe concept
 
-In the second example, instead of adding the **["apply-hops"]**, we use **["merge"]**. This will add the "City" and "Municipality" as properties in the target.
+In the second example, instead of adding the ``["apply-hops"]`` , we use ``["merge"]`` . This will add the "City" and "Municipality" as properties in the target.
 
 ::
 
@@ -623,7 +757,7 @@ Dependency-tracking and resetting a pipe
 
 We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
 
-In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit `here <https://docs.sesam.io/concepts.html#dependency-tracking>`__ 
+In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit :ref:`here <concepts-dependency_tracking>`.
 
 We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
 
@@ -660,7 +794,8 @@ Sinks
 
 Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
-Sinks can support `batching <https://docs.sesam.io/configuration.html#batching>`__ by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about the sinks in the documentation and "Best practice" for  best ways of working with them.
+Sinks can support :ref:`batching <pipe_batching>` by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about 
+:ref:`the sinks <best-practice-output-pipes>` in the documentation and "Best practice" for best ways of working with them :ref:`here <best-practice-output-pipes>`.
 
 .. _getting-started-csv-endpoint:
 
@@ -1109,6 +1244,67 @@ Pumps
 -----
 The pumps specify the schedule with which the pipe runs. This can be done through a scheduled interval specified either pr.seconds, hours, days, weeks or months. A pump can be added to a pipe through the **Schedule** template. 
 
+Dead letters
+============
+
+"Pump" is also the part of the pipe where more advanced settings for keeping control of dead letters are configured.
+
+A general definition of "dead letter" is a letter sent to unknown address, in other words "failed delivery". Transferring this to Sesam, a dead letter is an entity in a dataset that fails to write when a pipe runs. Hence a "failed delivery" to the target system it is supposed to be written to. 
+
+If a pipe fails, Sesam provides a function which allows failed entities to be written to a "dead letter" dataset. If the entities can be transferred later on, they are flagged as "ok" in the dead letter dataset. Sesam can be configured to keep trying to write the entities to appropriate dataset.
+
+Once pipe has run, go into **Dataset**. On top go to column **"Origin"** and click **"system"**. This filter shows on the systems datasets and it is here you will find you dead letter datasets. So for pipes configurated to use **dead letters**, a dataset prefix ``system:dead-letter:`` followed by the pipe name will be generated. If no entities failed, the dataset will be empty. Those entities that failed, will be listed in this dataset.
+
+.. image:: images/how-to-dl-dataset.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+
+.. image:: images/dl-dataset.png
+    :width: 600px
+    :align: center
+    :alt: DataSet
+
+Now we have a list of datasets that failed and you can do more configuration to pump to say when to retry to write the failed entities, how often, max number of times Sesam should try to re-write them and delay when try to re-write. For more detail on how to use the various options, please read more about configuring :ref:`pumps <pump_section>`
+
+::
+
+  {
+    "_id": "crm-person-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-cmm"
+    },
+    "sink": {
+      "type": "json",
+      "system": "cmm",
+      "url": "person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "timestamp",
+            ["datetime-format", "%Y-%m-%d",
+              ["now"]
+            ]
+          ]
+        ]
+      }
+    },
+    "pump": {
+      "max_consecutive_write_errors": 1000,
+      "max_retries_per_entity": 3,
+      "max_write_errors_in_retry_dataset": 10000,
+      "track_dead_letters": true,
+      "use_dead_letter_dataset": true,
+      "write_retry_delay": "~f0.1"
+    }
+  }
+
 .. _getting-started-microservices:
 
 Microservices
@@ -1131,11 +1327,11 @@ Microservices in Sesam run in docker containers. These containers run on our Ses
     :align: center
     :alt: Generic pipe concept
 
-We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice. We can create and run as many containers as we want from the same image.
+We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice. 
 
-The Docker image is then pushed up to a repository on Docker Hub. This repository can be private or made public. When hosted in the repository the image can be pulled by anyone with access.
+The Docker image is then pushed up to a repository on Docker Hub (or any Docker platform. When hosted in the repository the image can be pulled by anyone with access.
 
-Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam-node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. 
+Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an input pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems. 
 
 Microservices with Docker
 =========================
@@ -1149,18 +1345,35 @@ First you need to sign up on `Docker <https://www.docker.com>`__ and create a ne
 
 Then download `Docker Desktop <https://www.docker.com/get-started>`__.
 
-You now need to download Python. Here we're using Python 3.6 but you can use any version after 3.5. Then install pip and Flask. If you need help with this, follow the instructions `here <https://pip.pypa.io/en/stable/installing/>`__ for pip and `here <http://flask.pocoo.org/docs/1.0/installation/>`__ for Flask.
+You now need to download Python. Here we're using Python 3.6 but you can use any version after 3.5. Then install pip and Flask.
+
+Flask is a web framework used by Pything to develop web services nad pip is a de facto standard package-management system used to install and manage software packages written in Python. If you need help with this, follow the instructions `here <https://pip.pypa.io/en/stable/installing/>`__ for pip and `here <http://flask.pocoo.org/docs/1.0/installation/>`__ for Flask.
 
 .. image:: images/getting-started/flaskInstall.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Now you are ready to create the microservice.
+First things first, we need to decice which IDE (integrated development environment) you want to use. In this exercise we will use *Pycharm*, but there are various other options so if you are currently using another one, that is not a problem.
 
-Create a new project in Pycharm (or your preferred text editor). This tutorial will be using Pycharm. Name your project “Demo_MicroserviceProject”.
+You are now ready to create the microservice. We will generate a folder and a couple of files that a microservice always need to run. Firstly we need to create a **Dockerfile**. A `Dockerfile <https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>`__ is a text file that Docker reads in from top to bottom. It contains instructions which informs Docker *how* the Docker image should get built. To read more about Docker, Docker image, Docker build, it is helpful to browse the `Docker documentation <https://docs.docker.com>`__ . In addition we need to generate the actual program which is stored in a python file (.py). 
 
-Inside your Demo_MicroserviceProject folder create a new file called Dockerfile and paste:
+This is the program that actually runs inside Sesam and tells the system that it is connected to what needs to be done. In this example, it only sends 3 entities with embedded order data. In other cases, the MS must contain authentication to the system (eg basic auth or sql database), or in some cases we have to extract the data in the correct format (such as retrieving OData). All of these .py files (must not be .py, these are only python programs. It could have been .java for java programs, for example) are the "programs" that are running.
+
+In addition we need requirements.txt file which tells the microservice file which libraries this program needs to run. In our example, we only run Flaks so we simply write it in in the following format:
+
+`Flask==1.1.2``
+
+If you want to know more about requirements.txt files, please click `here <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`__ 
+
+
+Now let us go through this step by step.
+
+First thing we need is to create a new project in Pycharm. Name your project “Demo_MicroserviceProject”. The files we need to create the Microservices, will be stored inside the project. 
+
+Once we have this, we can start by adding the **"Dockerfile"**. 
+
+Inside your Demo_MicroserviceProject folder create a new file called "Dockerfile" and paste:
 
 ::
 
@@ -1178,20 +1391,22 @@ Inside your Demo_MicroserviceProject folder create a new file called Dockerfile 
   
   CMD ["python3", "./service/DemoMicroservice.py"]
 
-Then create a new folder called service inside your project root folder.
+Once Dockerfile is ready, we create a new folder called "service" inside your project root folder.
 
 .. image:: images/getting-started/MSproject.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Create a text file named "requirements.txt" inside the "service" folder and paste the following text inside it:
+Next step is to create the "requirements.txt" inside the "service" folder and paste the following text inside it:
 
 ::
 
  Flask==1.0.2
 
-Then create a python file, also in the "service" folder, named "DemoMicroservice.py" with the following code:
+ If you have a newer version of Flask, you put that in instead of 1.0.2.
+
+Final part is the actual program. For this we create a python file, also in the "service" folder, named "DemoMicroservice.py" with the following code:
 
 ::
 
@@ -1248,31 +1463,32 @@ To check that the you have created image run the command:
 Testing
 ^^^^^^^
 
-To test that you can run a container from your image locally you can run it in command line/terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
+To test that you can run a container from your image locally you can run it directly in the terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 
 Next we'll need to run the image to create the container.
 
-To check that the you have created image run the command:
+To check that you have created the image run the command:
 
 ::
 
   docker run -p <local_port>:<container_port> <docker_username>/<your_repository_name>:<tagname>
 
-Set **local_port** to 5000 and the container_port should be the same as the you expose in the Dockerfile.
+Set **local_port** to 5000 and the container_port to the same as the one you specified in the Dockerfile.
 
-Then to check you can either go to the url in the browser or do:
+Now you can either go to the url in the browser or do:
 
 ::
 
  curl -v http://localhost:5000/api/orders 
 
-in terminal
+in terminal to see if the the container runs.
 
 To stop the container running locally you can run: 
 
 ::
 
- docker stop container name or container id <
+ docker stop <container name> or docker stop <container_id>  
+
 
 Push to Docker Hub
 ^^^^^^^^^^^^^^^^^^
@@ -1293,7 +1509,8 @@ Go to hub.docker.com and check that you can see the tagname in you repository.
 
 Import to Sesam node
 ^^^^^^^^^^^^^^^^^^^^
-Now we need to spin up the container in our Sesam node.
+
+Now that the Docker image has been pushed to our Docker platform we need to spin up the container in our Sesam node. 
 
 Create a new system in your node. Choose **microservice prototype** as template. Give it a proper name. Inside the **"docker"** parameter write:
 
@@ -1316,7 +1533,7 @@ Save it and click on **Status**. Click **Pull** and **restart**, then **Refresh*
     :align: center
     :alt: Generic pipe concept
 
-Then create a new pipe. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities and that reason we use this function:
+The final step is to create an input pipe to get all the data from our microservice into Sesam datahub. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities and that reason we use this function:
 
 ::
 
@@ -1334,6 +1551,7 @@ This creates a new rule where we can add the **"_id"**. Since the **"id"** in th
     :width: 800px
     :align: center
     :alt: Generic pipe concept
+
 
 .. _getting-started-microservices-restAPI:
 
@@ -1355,9 +1573,9 @@ JSON Web Tokens
 ^^^^^^^^^^^^^^^
 When we authenticate ourselves to a server, we often utilize something called a **JSON Web Token** (**JWT**). A JWT is a string that consists of a **header**, a **payload** and a **signature** to form the string **header.payload.signature**.
 
-	* **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
-	* **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
-	* **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
+  * **Header**: The header describes what sort of object it is, in this case a JWT. It also describes the specific algorithm needed to create the JWT signature component.
+  * **Payload**: The payload contains the user information, such as the user ID and the rights of the user.
+  * **Signature**: The signature makes sure the JWT is securure during transport. The signature is the hashed version of the header and the payload, combined with a secret. The secret uses the algorithm specified in the header to hash the data.      
 
 A JWT is used when we need to make sure that the sent data actually originates from an authentic source, to make sure no secondhand party has tempered with the data. When we sign into an app, i.e. google we first communicate with the app's authentication server. This server sends us a JWT back which we can use to communicate with the app's API. 
 
@@ -1371,8 +1589,8 @@ Requests methods
 ^^^^^^^^^^^^^^^^
 When communicating with the API we use requests methods such as **GET**, **POST**. For more request methods read `this <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods>`__.
 
-	* **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
-	* **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
+  * **GET**: The GET method request a representation of the data from a web resource, i.e. it reads data.
+  * **POST**: The POST method request that the web resource accepts the data in the request, i.e. it writes data.
 
 .. _getting-started-labs:
 
@@ -1380,7 +1598,7 @@ Labs
 ----
 These tasks will make you familiar with the basics of data transformation with Sesam. We recommend keeping the `documentation <https://docs.sesam.io/DTLReferenceGuide.html>`__ at hand to look up syntax and concepts when needed.
 
-To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following the :ref:`Getting started <getting-started>` with Sesam guide you are ready to do these labs.
+To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following this guide you are ready to do these labs.
 
 We recommend having a go at this by yourself, but there are clues provided below each lab on where to look for guidance if needed.
 
@@ -1488,7 +1706,7 @@ Scope : Publishing data to CSV-endpoint
 
   * Create new pipe. Source from lab 6. Add transform and sink.​
 
-Hint: Look `here  <https://docs.sesam.io/getting-started.html#csv-endpoint-sink>`__ for help
+Hint: Look :ref:`here <getting-started-csv-endpoint>` for help
 
 Lab 9
 =====
