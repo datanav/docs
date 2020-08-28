@@ -48,13 +48,13 @@ Once you get the access from the Sesam team you'll get your own Dev Node card in
 Import data
 ===========
 
-Before we describe how to import data into your node, we need to emphasize an important issue. If you are going to work on a Sesam node that already contains configurations and data, you should *not* import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. If this is the case, it is recommended you push the exisiting config to a git solution before adding the new config so it is not lost.
+Before we describe how to import data into your node, we need to emphasize an important issue. If you are going to work on a Sesam node that already contains configurations and data, you should *not* import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. If this is the case, it is recommended that you take a backup of the existing configuration before adding the new config so it is not lost. This can be done by either downloading the existing config and pushing it to a git repository or a local storage on your computer.
 
-In the case you have added the training-config.json file, you then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes (or system) in the json file are identified by the "_id" attribute. 
+When you are setting up your node for the first time, it will not contain any :ref:`systems <concepts-systems>`, :ref:`pipes <concepts-pipes>` or :ref:`data <concepts-datasets>`. Until you are ready to configure your node with pipes and systems that corresponds to your needs and wishes, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
 
-Copy the pipe's content and its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
+In the case your node already contains an existing config and data, you then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes and system in the json file are identified by the "_id" attribute. 
 
-When you are setting up your node for the first time your Sesam node might contain many different :ref:`pipes <concepts-pipes>` and :ref:`systems <concepts-systems>` depending on your needs and wishes. However, as of yet we do not have any data to work with. For this purpose, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about the what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
+Copy the pipe's content including its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
 
 Go into you 'Dev Node'. Click on **Datahub** in the left menu and select the **Tools tab**.
 
@@ -71,9 +71,9 @@ We have created some test data for you. Go to the **Variables** tab and paste th
 
   "node-env": "test"
 
-You should now have several pipes available. Pipes are available in the **pipes** tab. Click on a pipe in the list to see details on how it's configured.
+You should now have several pipes available. Select **Pipes** in the menu on the left to see the available pipes, click on a pipe in the list to see details on how it's configured.
 
-As a sanity check you can select **Pipes** in the menu on the left. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run pipe to check output. The **config** contains the actual data transformations and pumps. In the top right corner press **Start** then **Refresh**. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
+As a sanity check you can go into one of the pipes. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run the pipe to check output. The **config** contains the actual data transformations and pumps. To run the pipe, press **Start** in the top right corner, then press **Refresh** to update the view. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
 
 .. image:: images/getting-started/running_pipe.gif
     :width: 800px
@@ -88,7 +88,7 @@ Sesam overview
 --------------
 We will now give a short overview of the Sesam machinery and the Sesam portal, before we start learning and applying the different concepts. 
 
-In the image above we see five main tabs under the "Training Node" section on the left-hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>`  tab shows the datasets you are currently using is this particular node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes you have created in your node and the tab :ref:`Systems <concepts-systems>` displays the different :ref:`microservices <getting-started-microservices>` and source systems you employ. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
+In the image above we see five main tabs under the "Training Node" section on the left-hand side. The **Overview** tab shows the current systems you have active, as well as their corresponding inbound and outbound pipes. The :ref:`Datasets <concepts-datasets>` tab shows the datasets existing in the node. The tab :ref:`Pipes <concepts-pipes>` displays the different pipes existing in the node. :ref:`Systems <concepts-systems>` displays the various systems you employ, note that any :ref:`microservices <getting-started-microservices>` will be listed as a system. The tab **Flows** gives you an overview of your pipes and their connections to other pipes and systems.
 
 The following picture shows the general setup of a Sesam node.
 
@@ -98,7 +98,7 @@ The following picture shows the general setup of a Sesam node.
     :align: center
     :alt: Generic pipe concept
 
-The data is supplied to our pipe via different :ref:`sources <concepts-sources>`. These sources might be databases such as SQL or CSV files. Sometimes, the data available might not be compatible with the Sesam requirements, or you might wish to extract data from an API. The Python scrips performing these tasks are called microservices, and they act as **Systems** in the Sesam node. Since not all sources have their data updated at the same time, every pipe has a :ref:`pump <concepts-pumps>` which tells the pipe how often to run send the data from the source to a :ref:`sink <concepts-sinks>`. A **Sink** writes the final result to a target.  
+The data is supplied to the pipes via different :ref:`sources <concepts-sources>`. These sources might be databases such as a SQL database or a CSV file. Sometimes, the data available might not be compatible with the requirements that Sesam have, or you might wish to extract data from an API. In these cases, Sesam offers an architecture that provides a way to plugin a self-developed script, code or service into the node. This is done through what we call a :ref:`microservice <getting-started-microservices>`, which act as **Systems** in the Sesam node. Since not all sources have their data updated at the same time, every pipe has a :ref:`pump <concepts-pumps>` which tells the pipe how often to run and send the data from the source dataset to its configured :ref:`sink <concepts-sinks>`. A **Sink** writes the final result to a target.  
 
 The picture below shows the different tabs when working on a pipe.   
 
@@ -115,22 +115,21 @@ The **Dashboard** tab gives you an overview of the different pipes connected to 
 
 Glossary
 ========
-:ref:`Datasets <concepts-datasets>`: Sesam stores its data as datasets consisting of entities. Datasets are used as sources for data transformation and stored as new datasets and sources for delivering data to target systems (endpoints).
+:ref:`Datasets <concepts-datasets>`: Sesam stores its data as datasets consisting of entities. The stored datasets can be used as sources for internal pipes, where entities can be transformed using DTL, or as sources for delivering data to target systems (endpoints).
 
-:doc:`Entities <entitymodel>`: Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
+:doc:`Entities <entitymodel>`: Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can either be a literal value, a list or another dictionary.
 
-:ref:`Pipes <concepts-pipes>`: Defines the flow of data in Sesam. They consist of a source and can also have a list of transformations and a sink. In addition, every pipe has a pump that is scheduled to run at selected intervals and pull data entities from the source, through the transformations and put the results into the sink.
+:ref:`Pipes <concepts-pipes>`: Defines the flow of data in Sesam. They consist of a source and can also have a set of transformations and a sink. In addition, every pipe has a pump. When the pump is running, the pipe will read the entities from its source dataset, process the configured transformations and send the resulting entities into the configured sink.
 
-:ref:`Pumps <concepts-pumps>`: A scheduler that handles the mechanics of sending data from a source to a sink. It runs periodically or on a 'cron' schedule and reads entities from a data source and writes them to a data sink.
+:ref:`Pumps <concepts-pumps>`: A scheduler that handles the mechanics of running a pipe, it can either run on a periodic schedule or on a schedule defined by a 'cron' expression. When the pump is scheduled to start, it will run its corresponding pipe.
 
 :ref:`Sinks <concepts-sinks>`: Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
-:ref:`Sources <concepts-sources>`: Sources consist of data entities and they come in many different formats. A source can provide data as datasets, SQL databases, CSV-files, RDF files such as XML, JSON data, REST APIs and others.
+:ref:`Sources <concepts-sources>`: A source is the system from where Sesam reads its data from. It can either be an external data source, which can be a SQL database, a CSV file, a XML file, JSON data, REST APIs or others. Or it can be an internal data source as a Sesam dataset.
 
-:ref:`Systems <concepts-systems>`: A system component represents a computer system that can provide data entities. Its task is to provide common properties and services that can be used by several data sources, such as connection pooling, authentication settings, communication protocol settings and so on.
+:ref:`Systems <concepts-systems>`: A system component represents an external system that can provide data entities. The system is responsible for communicating with the external system and provide functionality so that data from the system can be read into Sesam. 
 
-:ref:`Transformations <concepts-transforms>`: These are described using the Data Transformation Language (DTL). It is here you transform your data from many datasets to construct new entities into new datasets.
-
+:ref:`Transformations <concepts-transforms>`: These are described using the Data Transformation Language (DTL). Using data transformation, you can enrich or transform your data to construct new entities based on a source dataset.
 
 .. _getting-started-naming-conventions:
 
