@@ -468,8 +468,9 @@ Config:
     ]
   ]
 
-  This example will make a hops to the 'users' dataset based on the Username properties, and if a match is found, return the value of the 'FirstName' property. If the value of that property is 'John', the resulting output would be:
+This example will make a hops to the 'users' dataset based on the Username properties, and if a match is found, return the value of the 'FirstName' property. If the value of that property is 'John', the resulting output would be:
 
+::
   {
     "FirstName": "John"
   }
