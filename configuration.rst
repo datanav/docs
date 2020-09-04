@@ -113,7 +113,7 @@ Example:
       },
       "global_defaults": {
          "use_signalling_internally": false,
-         "default_compaction_type": "background",
+         "default_compaction_type": "sink",
       },
       "dependency_tracking": {
          "dependency_warning_threshold": 10000,
@@ -188,7 +188,7 @@ Properties
    * - ``global_defaults.default_compaction_type``
      - Enum<String>
      - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
-     - ``"background"``
+     - ``"sink"``
      -
 
    * - ``global_defaults.max_entity_bytes_size``
@@ -262,6 +262,8 @@ The following *json* snippet shows the general form of a pipe definition.
     {
         "_id": "pipe-id",
         "name": "Name of pipe",
+        "description": "This is a description of the pipe",
+        "comment": "This is a comment",
         "type": "pipe",
         "source": {
         },
@@ -314,7 +316,19 @@ Properties
      - String
      - A human readable name of the component.
      -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
      - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
+     -
+     -
 
    * - ``type``
      - String
@@ -497,10 +511,10 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
-unless sink compaction is enabled. If sink compaction is enabled then
-compaction will happen incrementally as the pipe writes new entities
-to the dataset. The default is to keep the last two versions of every
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are compacted incrementally as
+the pipe writes new entities to the dataset by default (compaction type "sink" enabled). If sink compaction is disabled,
+the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
+compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
 
 Properties
@@ -525,7 +539,7 @@ Properties
    * - ``compaction.sink``
      - Boolean
      - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
-     - ``false``
+     - ``true``
      - No
 
    * - ``compaction.keep_versions``
@@ -623,7 +637,7 @@ Properties
      - Req
 
    * - ``reprocessing_policy``
-     - Enum<String> 
+     - Enum<String>
      - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
@@ -703,6 +717,47 @@ can also be nested), and have a single required property:
 **_id**. This ``_id`` field must be *unique within a flow* for a
 specific logical entity. There may exist multiple *versions* of this
 entity within a flow, however.
+
+Prototype
+---------
+
+The following *json* snippet shows the general form of a source definition.
+
+::
+
+    {
+        "type": "a-source-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the source, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the source (optional).
+     -
+     -
+
 
 .. _continuation_support:
 
@@ -1045,7 +1100,7 @@ Properties
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``equality``
      - List<EqFunctions{>=0}>
@@ -1312,7 +1367,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``include_previous_versions``
      - Boolean
@@ -1435,7 +1490,7 @@ strategy.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``strategy``
      - String
@@ -1565,7 +1620,7 @@ be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``whitelist``
      - List<String>
@@ -2978,6 +3033,7 @@ either a transform configuration object or a list of them.
        ..
        "transform": {
           "name": "name of transform (NOTE: deprecated)",
+          "comment": "This is a comment",
           "description": "description of the transform (optional)"
            ...the rest of the transform configuration goes here...
        }
@@ -3795,6 +3851,45 @@ each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
 
+Prototype
+---------
+
+The following *json* snippet shows the general form of a sink definition.
+
+::
+
+    {
+        "type": "a-sink-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the sink, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the sink (optional).
+     -
+     -
 
 .. _conditional_sink:
 
@@ -3914,6 +4009,7 @@ Properties
        - ``always`` means that the pipe will always set the initial offset when the pipe completed
          successfully.
        - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+       - ``onload`` means that the initial offset will be set when the pipe is loaded / configured.
 
      - ``if-source-populated``
      -
@@ -5948,6 +6044,8 @@ Prototype
         "_id": "a_system_id",
         "type": "system:some-type-of-system",
         "name": "The Foo System",
+        "description": "This is a description of the system",
+        "comment": "This is a comment",
         "worker_threads": 10,
         "metadata": {
            "some_key": "some_value"
@@ -5977,6 +6075,18 @@ Properties
    * - ``name``
      - String
      - A human readable name for this system
+     -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
      -
      -
 
@@ -6055,7 +6165,7 @@ Properties
           source that uses the system will be shifted from the specified
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
-          
+
      - "UTC"
      -
 
@@ -6290,6 +6400,7 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
+        "instance": "named-instance",
         "port": 1433,
         "database": "database-name"
     }
@@ -6325,9 +6436,18 @@ Properties
      -
      - Yes
 
+   * - ``instance``
+     - String
+     - The name of the SQL Server "named instance", if applicable. Note that if ``instance`` is set, ``port`` will be
+       ignored as SQL Server will assign a "named instance" a random port by default. Be aware that using such
+       "port-less" named instances potentially has consequences for the configuration of firewall rules as well
+       (i.e. for both TCP and UDP port ranges, please consult the SQL Server DBA or SQL Server manual for details).
+     -
+     -
+
    * - ``port``
      - Integer
-     - Database IP port.
+     - Database IP port. Note: ignored if ``instance`` is set, see the previous section.
      - 1433
      -
 
@@ -7162,8 +7282,9 @@ Properties
    * - ``proxies``
      - Dict<String,String>
      - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
-       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
-       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
+       or .``http(s)://username:password@domain_or_ip:port``
        The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
        secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
      -
@@ -7666,6 +7787,7 @@ Prototype
 ::
 
     {
+        "comment": "This is a comment",
         "schedule_interval": 30,
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
@@ -7713,6 +7835,12 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Default
      -
       .. _pump_param_schedule_interval:
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the pump (optional).
+     -
+     -
 
    * - ``schedule_interval``
      - Number
