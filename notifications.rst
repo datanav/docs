@@ -433,4 +433,16 @@ If none of the notification rules on a pipe has been triggered, the summary-entr
 If at least one rule is currently triggered, the summary-entry for the pipe will have a "status"-property with the
 value "failed" and a "notifications"-property with a list of the ongoing notifications.
 
+The subscription summary entries can have notifications for the following notification rule types:
+
+* store_disk_usage_upper_limit
+   This is a built-in rule that is automatically added to all subscriptions.
+   It triggers if the subscription is using too much disk space.
+
+* license_expiration_date
+   This is a built-in rule that is automatically added to all subscriptions.
+   This ruletype checks if the subscription's license is getting close to its expiration date.
+
+
+
 This endpoint implements the :doc:`JSON Pull Protocol <json-pull>`.
