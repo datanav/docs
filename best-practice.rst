@@ -168,6 +168,8 @@ E.g.
 
   "hr-person:ssn"
 
+.. _best-practice-namespaced-identifiers:
+
 Namespaced identifiers
 ======================
 
@@ -277,6 +279,8 @@ Output from the example code above as seen below with a join to hr-system:
   }
 
 .. _best-practice-naming:
+
+.. _best-practice-naming-conventions:
 
 Naming conventions
 ------------------

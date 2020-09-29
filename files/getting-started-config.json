@@ -1,0 +1,973 @@
+[
+  {
+    "_id": "node",
+    "type": "metadata",
+    "namespaced_identifiers": true
+  },
+  {
+    "_id": "crm-person",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "Address": "Helmers vei 242",
+        "Customerid": "1",
+        "EmailAddress": "torjussand@einrot.com",
+        "FirstName": "Torjus",
+        "Gender": "male",
+        "LastName": "Sand",
+        "MiddleInitial": "M",
+        "PostalCode": "5031",
+        "SSN": "23072451376",
+        "Username": "Unjudosely"
+      }, {
+        "_id": "2",
+        "Address": "Frognerveien 60",
+        "Customerid": "2",
+        "EmailAddress": "larsevjen@rhyta.com",
+        "FirstName": "Lars",
+        "Gender": "male",
+        "LastName": "Evjen",
+        "PostalCode": "3121",
+        "SSN": "09046987892",
+        "Username": "Wim79"
+      }, {
+        "_id": "3",
+        "Address": "Gydas gate 227",
+        "Customerid": "3",
+        "EmailAddress": "siri@me.com",
+        "FirstName": "Siri",
+        "Gender": "female",
+        "LastName": "Olsen",
+        "PostalCode": "3733",
+        "SSN": "07033589877",
+        "Username": "Gotin1984"
+      }, {
+        "_id": "100",
+        "Address": "Nadderudåsen 186",
+        "Customerid": "100",
+        "EmailAddress": "isakeikeland@teleworm.us",
+        "FirstName": "Isak",
+        "Gender": "male",
+        "LastName": "Eikeland",
+        "MiddleInitial": "E",
+        "PostalCode": "9325",
+        "SSN": "02023688018",
+        "Username": "Mays1944"
+      }, {
+        "_id": "99",
+        "Address": "Sommerfjøsvegen 143",
+        "Customerid": "99",
+        "EmailAddress": "sebastianskjold@dayrep.com",
+        "FirstName": "Sebastian",
+        "Gender": "male",
+        "LastName": "Skjold",
+        "MiddleInitial": "T",
+        "PostalCode": "7080",
+        "SSN": "27035223852",
+        "Username": "Theimence"
+      }, {
+        "_id": "93",
+        "Address": "Kongens gate 69",
+        "Customerid": "93",
+        "EmailAddress": "caspiannygard@einrot.com",
+        "FirstName": "Caspian",
+        "Gender": "male",
+        "LastName": "Nygård",
+        "MiddleInitial": "I",
+        "PostalCode": "0153",
+        "SSN": "12032920177",
+        "Username": "Somper"
+      }, {
+        "_id": "91",
+        "Address": "Åsmostubben 19",
+        "Customerid": "91",
+        "EmailAddress": "davidberntsen@superrito.com",
+        "FirstName": "David",
+        "Gender": "male",
+        "LastName": "Berntsen",
+        "MiddleInitial": "M",
+        "PostalCode": "9011",
+        "SSN": "19125622937",
+        "Username": "Thret1941"
+      }, {
+        "_id": "90",
+        "Address": "Fagerliveien 108",
+        "Customerid": "90",
+        "EmailAddress": "lucaslie@cuvox.de",
+        "FirstName": "Lucas",
+        "Gender": "male",
+        "LastName": "Lie",
+        "MiddleInitial": "T",
+        "PostalCode": "1605",
+        "SSN": "26026727498",
+        "Username": "Briver"
+      }, {
+        "_id": "80",
+        "Address": "Zetlitzveien 241",
+        "Customerid": "80",
+        "EmailAddress": "julieandersen@superrito.com",
+        "FirstName": "Julie",
+        "Gender": "female",
+        "LastName": "Andersen",
+        "MiddleInitial": "I",
+        "PostalCode": "4017",
+        "SSN": "16115430967",
+        "Username": "jules"
+      }, {
+        "_id": "81",
+        "Address": "Kong Trygves vei 32",
+        "Customerid": "81",
+        "EmailAddress": "camillawilhelmsen@dayrep.com",
+        "FirstName": "Camilla",
+        "Gender": "female",
+        "LastName": "Wilhelmsen",
+        "MiddleInitial": "M",
+        "PostalCode": "3125",
+        "SSN": "22035964477",
+        "Username": "Shenlace"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["make-ni", "hr-person", "SSN"],
+          ["add", "rdf:type",
+            ["ni", "crm", "person"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "udir-postalcode",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "json",
+          "system": "udir",
+          "url": "v1/postnummerdata"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{
+            "FylkeNummer": "38",
+            "KommuneNummer": "3811",
+            "PostNummer": "3121",
+            "PostSted": "NØTTERØY"
+          }, {
+            "FylkeNummer": "38",
+            "KommuneNummer": "3807",
+            "PostNummer": "3733",
+            "PostSted": "SKIEN"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3007",
+            "PostNummer": "3501",
+            "PostSted": "HØNEFOSS"
+          }, {
+            "FylkeNummer": "50",
+            "KommuneNummer": "5001",
+            "PostNummer": "7080",
+            "PostSted": "HEIMDAL"
+          }, {
+            "FylkeNummer": "54",
+            "KommuneNummer": "5418",
+            "PostNummer": "9325",
+            "PostSted": "BARDUFOSS"
+          }, {
+            "FylkeNummer": "03",
+            "KommuneNummer": "0301",
+            "PostNummer": "0153",
+            "PostSted": "OSLO"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3004",
+            "PostNummer": "1605",
+            "PostSted": "FREDRIKSTAD"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3001",
+            "PostNummer": "1766",
+            "PostSted": "HALDEN"
+          }, {
+            "FylkeNummer": "11",
+            "KommuneNummer": "1103",
+            "PostNummer": "4017",
+            "PostSted": "STAVANGER"
+          }, {
+            "FylkeNummer": "38",
+            "KommuneNummer": "3803",
+            "PostNummer": "3125",
+            "PostSted": "TØNSBERG"
+          }, {
+            "FylkeNummer": "46",
+            "KommuneNummer": "4601",
+            "PostNummer": "5031",
+            "PostSted": "LAKSEVÅG"
+          }, {
+            "FylkeNummer": "18",
+            "KommuneNummer": "1824",
+            "PostNummer": "8657",
+            "PostSted": "MOSJØEN"
+          }, {
+            "FylkeNummer": "54",
+            "KommuneNummer": "5401",
+            "PostNummer": "9011",
+            "PostSted": "TROMSØ"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3025",
+            "PostNummer": "1390",
+            "PostSted": "VOLLEN"
+          }]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["comment", "The discard and renames in this pipe is done to simplify and translate the dataset for this guide"],
+          ["discard",
+            ["and",
+              ["in", "_S.FylkeNummer",
+                ["list", "03", "11", "15", "18", "30", "34", "38", "42", "46", "50", "54"]
+              ],
+              ["is-null", "_S.ArvtakerPostnummerDataIdListe"]
+            ]
+          ],
+          ["add", "_id", "_S.PostNummer"],
+          ["rename", "KommuneNummer", "municipality"],
+          ["rename", "PostNummer", "postalcode"],
+          ["rename", "PostSted", "city"],
+          ["add", "rdf:type",
+            ["ni", "udir", "postalcode"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "erp-person",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Aleksander",
+        "MiddleInitial": "M",
+        "MoneyUsed": "1014",
+        "Number": "10",
+        "SSN": "12052427741",
+        "StreetAddress": "Drengs 36",
+        "Surname": "Ommundsen",
+        "TimesOrdered": "17",
+        "Title": "Mr.",
+        "Username": "Grale1949",
+        "ZipCode": "1390"
+      }, {
+        "_id": "2",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Lars",
+        "MoneyUsed": "13798",
+        "Number": "2",
+        "SSN": "09046987892",
+        "StreetAddress": "Øvre 12",
+        "Surname": "Evjen",
+        "TimesOrdered": "3",
+        "Title": "Mr.",
+        "Username": "Wimen1979",
+        "ZipCode": "5239"
+      }, {
+        "_id": "3",
+        "Country": "NO",
+        "Gender": "female",
+        "GivenName": "Siri",
+        "MoneyUsed": "15878",
+        "Number": "3",
+        "SSN": "07033589877",
+        "StreetAddress": "Gydas vei",
+        "Surname": "Olsen",
+        "TimesOrdered": "13",
+        "Title": "Ms.",
+        "Username": "Gotin1984",
+        "ZipCode": "5003"
+      }, {
+        "_id": "4",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Isak",
+        "MiddleInitial": "E",
+        "MoneyUsed": "19392",
+        "Number": "100",
+        "SSN": "02023688018",
+        "StreetAddress": "Frodegaten gate",
+        "Surname": "Eikeland",
+        "TimesOrdered": "16",
+        "Title": "Mr.",
+        "Username": "Mays1944",
+        "ZipCode": "4017"
+      }, {
+        "_id": "5",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Sebastian",
+        "MiddleInitial": "T",
+        "MoneyUsed": "13935",
+        "Number": "99",
+        "SSN": "27035223852",
+        "StreetAddress": "Kværnerveien 148",
+        "Surname": "Skjold",
+        "TimesOrdered": "18",
+        "Title": "Mr.",
+        "Username": "Theimence",
+        "ZipCode": "3732"
+      }, {
+        "_id": "6",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Caspian",
+        "MiddleInitial": "I",
+        "MoneyUsed": "11923",
+        "Number": "93",
+        "SSN": "12032920177",
+        "StreetAddress": "Lindøy Løkkavei",
+        "Surname": "Nygård",
+        "TimesOrdered": "12",
+        "Title": "Mr.",
+        "Username": "Aney1996",
+        "ZipCode": "2213"
+      }, {
+        "_id": "7",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "David",
+        "MiddleInitial": "M",
+        "MoneyUsed": "4475",
+        "Number": "91",
+        "SSN": "19125622937",
+        "StreetAddress": "Hesjejordet 83",
+        "Surname": "Berntsen",
+        "TimesOrdered": "14",
+        "Title": "Mr.",
+        "Username": "Thret1941",
+        "ZipCode": "3739"
+      }, {
+        "_id": "8",
+        "Country": "NO",
+        "Gender": "male",
+        "GivenName": "Lucas",
+        "MiddleInitial": "T",
+        "MoneyUsed": "2527",
+        "Number": "90",
+        "SSN": "26026727498",
+        "StreetAddress": "Storheia 10",
+        "Surname": "Lie",
+        "TimesOrdered": "18",
+        "Title": "Mr.",
+        "Username": "Briver",
+        "ZipCode": "3121"
+      }, {
+        "_id": "9",
+        "Country": "NO",
+        "Gender": "female",
+        "GivenName": "Erika",
+        "MiddleInitial": "L",
+        "MoneyUsed": "4021",
+        "Number": "9",
+        "SSN": "14085111225",
+        "StreetAddress": "Tiurvegen vei",
+        "Surname": "Olsen",
+        "TimesOrdered": "1",
+        "Title": "Mrs.",
+        "Username": "Whavillat",
+        "ZipCode": "8657"
+      }, {
+        "_id": "10",
+        "Country": "NO",
+        "Gender": "female",
+        "GivenName": "Camilla",
+        "MiddleInitial": "M",
+        "MoneyUsed": "17926",
+        "Number": "81",
+        "SSN": "22035964477",
+        "StreetAddress": "Stortuveien Solheims",
+        "Surname": "Wilhelmsen",
+        "TimesOrdered": "19",
+        "Title": "Ms.",
+        "Username": "Shenclace",
+        "ZipCode": "1385"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "erp", "person"]
+          ],
+          ["add", "SSN-ni",
+            ["ni", "hr-person", "_S.SSN"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "global-location", 
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["udir-postalcode upc"],
+      "identity": "first",
+      "version": 2
+    },
+    "metadata": {
+      "global": true
+    }
+  },
+  {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "merged-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.hr-person:GivenName", "_S.crm-person:FirstName", "_S.erp-person:GivenName"]
+            ]
+          ],
+          ["add", "middle-initial",
+            ["coalesce",
+              ["list", "_S.hr-person:MiddleInitial", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial"]
+            ]
+          ],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.hr-person:Surname", "_S.crm-person:LastName", "_S.erp-person:Surname"]
+            ]
+          ],
+          ["add", "fullname",
+            ["join", " ",
+              ["list", "_T.global-person:firstname",
+                ["if",
+                  ["is-not-null", "_T.global-person:middle-initial"],
+                  ["concat", "_T.global-person:middle-initial", "."]
+                ], "_T.global-person:lastname"]
+            ]
+          ],
+          ["add", "address",
+          ["coalesce",
+            ["list", "_S.crm-person:Address", "_S.hr-person:StreetAddress", "_S.erp-person:StreetAddress"]
+          ]
+        ],
+          ["add", "zipcode",
+            ["coalesce",
+              ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
+            ]
+          ],
+          ["add", "country",
+            ["coalesce",
+              ["list", "_S.hr-person:Country", "_S.erp-person:Country"]
+            ]
+          ],
+          ["add", "gender",
+            ["coalesce",
+              ["list", "_S.hr-person:Gender", "_S.crm-person:Gender", "_S.erp-person:Gender"]
+            ]
+          ]
+        ]
+      }
+    },
+    "metadata": {
+      "global": true
+    }
+  },
+  {
+    "_id": "hr-person",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "23072451376",
+        "Country": "NO",
+        "EmailAddress": "TorjusSand@einrot.com",
+        "Gender": "male",
+        "GivenName": "Torjus",
+        "MiddleInitial": "M",
+        "Number": "1",
+        "SSN": "23072451376",
+        "StreetAddress": "Helmers vei 242",
+        "Surname": "Sand",
+        "Title": "Mr.",
+        "Username": "Unjudosely",
+        "ZipCode": "5031"
+      }, {
+        "_id": "09046987892",
+        "Country": "NO",
+        "EmailAddress": "LarsEvjen@rhyta.com",
+        "Gender": "male",
+        "GivenName": "Lars",
+        "Number": "2",
+        "SSN": "09046987892",
+        "StreetAddress": "Frognerveien 60",
+        "Surname": "Evjen",
+        "Title": "Mr.",
+        "Username": "Wimen1979",
+        "ZipCode": "3121"
+      }, {
+        "_id": "07033589877",
+        "Country": "NO",
+        "EmailAddress": "siriolsen@dayrep.com",
+        "Gender": "female",
+        "GivenName": "Siri",
+        "Number": "3",
+        "SSN": "07033589877",
+        "StreetAddress": "Gydas gate 227",
+        "Surname": "Olsen",
+        "Title": "Ms.",
+        "Username": "Gotin1984",
+        "ZipCode": "3733"
+      }, {
+        "_id": "02023688018",
+        "Country": "NO",
+        "EmailAddress": "IsakEikeland@teleworm.us",
+        "Gender": "male",
+        "GivenName": "Isak",
+        "MiddleInitial": "E",
+        "Number": "100",
+        "SSN": "02023688018",
+        "StreetAddress": "Nadderudåsen 186",
+        "Surname": "Eikeland",
+        "Title": "Mr.",
+        "Username": "Mays1944",
+        "ZipCode": "9325"
+      }, {
+        "_id": "27035223852",
+        "Country": "NO",
+        "EmailAddress": "SebastianSkjold@dayrep.com",
+        "Gender": "male",
+        "GivenName": "Sebastian",
+        "MiddleInitial": "T",
+        "Number": "99",
+        "SSN": "27035223852",
+        "StreetAddress": "Sommerfjøsvegen 143",
+        "Surname": "Skjold",
+        "Title": "Mr.",
+        "Username": "Theimence",
+        "ZipCode": "7080"
+      }, {
+        "_id": "12032920177",
+        "Country": "NO",
+        "EmailAddress": "CaspianNygard@einrot.com",
+        "Gender": "male",
+        "GivenName": "Caspian",
+        "MiddleInitial": "I",
+        "Number": "93",
+        "SSN": "12032920177",
+        "StreetAddress": "Kongens gate 69",
+        "Surname": "Nygård",
+        "Title": "Mr.",
+        "Username": "Aney1996",
+        "ZipCode": "0153"
+      }, {
+        "_id": "19125622937",
+        "Country": "NO",
+        "EmailAddress": "DavidBerntsen@superrito.com",
+        "Gender": "male",
+        "GivenName": "David",
+        "MiddleInitial": "M",
+        "Number": "91",
+        "SSN": "19125622937",
+        "StreetAddress": "Åsmostubben 19",
+        "Surname": "Berntsen",
+        "Title": "Mr.",
+        "Username": "Thret1941",
+        "ZipCode": "9011"
+      }, {
+        "_id": "26026727498",
+        "Country": "NO",
+        "EmailAddress": "LucasLie@cuvox.de",
+        "Gender": "male",
+        "GivenName": "Lucas",
+        "MiddleInitial": "T",
+        "Number": "90",
+        "SSN": "26026727498",
+        "StreetAddress": "Fagerliveien 108",
+        "Surname": "Lie",
+        "Title": "Mr.",
+        "Username": "Briver",
+        "ZipCode": "1605"
+      }, {
+        "_id": "05064951171",
+        "Country": "NO",
+        "EmailAddress": "RuneWold@armyspy.com",
+        "Gender": "male",
+        "GivenName": "Rune",
+        "MiddleInitial": "E",
+        "Number": "73",
+        "SSN": "05064951171",
+        "StreetAddress": "Norderhovsgata 63",
+        "Surname": "Wold",
+        "Title": "Mr.",
+        "Username": "Weralause",
+        "ZipCode": "3501"
+      }, {
+        "_id": "14032547069",
+        "Country": "NO",
+        "EmailAddress": "WilliamFauske@jourrapide.com",
+        "Gender": "male",
+        "GivenName": "William",
+        "MiddleInitial": "H",
+        "Number": "74",
+        "SSN": "14032547069",
+        "StreetAddress": "Bøkleva 141",
+        "Surname": "Fauske",
+        "Title": "Mr.",
+        "Username": "Shemas",
+        "ZipCode": "1766"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "hr", "person"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "merged-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["crm-person cp", "hr-person hp", "erp-person ep", "salesforce-userprofile sup", "salesforce-consent sc"],
+      "equality": [
+        ["eq", "cp.SSN-ni", "hp.$ids"],
+        ["eq", "ep.SSN-ni", "hp.$ids"],
+        ["eq", "cp.Username", "sup.Username"],
+        ["eq", "sup.Username", "sc.Username"]
+      ],
+      "identity": "first",
+      "version": 2
+    }
+  },
+  {
+    "_id": "person-address-csv",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["intersects",
+              ["list", "~:crm:person", "~:hr:person", "~:erp:person"], "_S.rdf:type"]
+          ],
+          ["copy", "_id"],
+          ["add", "Name", "_S.global-person:fullname"],
+          ["add", "Address", "_S.global-person:address"],
+          ["add", "Postal",
+            ["concat", "_S.global-person:zipcode", " ",
+              ["first",
+                ["hops", {
+                  "datasets": ["global-location gl"],
+                  "where": [
+                    ["eq", "_S.global-person:zipcode", "gl.udir-postalcode:postalcode"]
+                  ],
+                  "return": "gl.city"
+                }]
+              ]
+            ]
+          ],
+          ["add", "Country", "_S.global-person:country"]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "person-address-csv-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-address-csv"
+    },
+    "sink": {
+      "type": "csv_endpoint",
+      "columns": ["Name", "Address", "Postal", "Country"]
+    }
+  },
+  {
+    "_id": "salesforce-consent",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "0",
+        "HasConsented": true,
+        "LastUpdated": "2015-10-25",
+        "Username": "Unjudosely",
+        "title": "email-marketing"
+      }, {
+        "_id": "1",
+        "HasConsented": true,
+        "LastUpdated": "2015-12-20",
+        "Username": "Wim79",
+        "title": "email-marketing"
+      }, {
+        "_id": "2",
+        "HasConsented": true,
+        "LastUpdated": "2017-11-21",
+        "Username": "Gotin1984",
+        "title": "email-marketing"
+      }, {
+        "_id": "3",
+        "HasConsented": true,
+        "LastUpdated": "2017-11-16",
+        "Username": "Mays1944",
+        "title": "email-marketing"
+      }, {
+        "_id": "4",
+        "HasConsented": false,
+        "LastUpdated": "2016-12-12",
+        "Username": "Theimence",
+        "title": "email-marketing"
+      }, {
+        "_id": "31",
+        "HasConsented": false,
+        "LastUpdated": "2018-10-30",
+        "Username": "Somper",
+        "title": "phone-marketing"
+      }, {
+        "_id": "7",
+        "HasConsented": false,
+        "LastUpdated": "2017-11-17",
+        "Username": "Thret1941",
+        "title": "email-marketing"
+      }, {
+        "_id": "8",
+        "HasConsented": false,
+        "LastUpdated": "2017-10-29",
+        "Username": "Briver",
+        "title": "email-marketing"
+      }, {
+        "_id": "9",
+        "HasConsented": false,
+        "LastUpdated": "2015-12-28",
+        "Username": "jules",
+        "title": "email-marketing"
+      }, {
+        "_id": "44",
+        "HasConsented": true,
+        "LastUpdated": "2016-11-14",
+        "Username": "Shenlace",
+        "title": "phone-marketing"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "salesforce", "consent"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "webshop-order",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+      "customerId": 1,
+      "id": 56870,
+      "itemId": "8257cc68-3dc8-4a46-82e5-7beac6acc8cb",
+      "orderPlaced": "2020-06-18 10:52:49",
+      "quantity": 1
+    }, {
+      "customerId": 2,
+      "id": 56871,
+      "itemId": "6c64aee2-4a0a-4072-9e42-4c0f0952dd50",
+      "orderPlaced": "2020-06-18 12:39:29",
+      "quantity": 1
+    }, {
+      "customerId": 3,
+      "id": 56872,
+      "itemId": "84fba00b-3102-4470-af57-e24ebde40718",
+      "orderPlaced": "2020-06-18 12:56:02",
+      "quantity": 4
+    }, {
+      "customerId": 4,
+      "id": 56873,
+      "itemId": "a928244f-069a-4366-910e-deabd98304ec",
+      "orderPlaced": "2020-06-18 21:18:40",
+      "quantity": 100
+    }, {
+      "customerId": 5,
+      "id": 56874,
+      "itemId": "01d62e90-f1dd-4712-9cbd-75a38597d72e",
+      "orderPlaced": "2020-06-19 07:09:23",
+      "quantity": 1
+    }, {
+      "customerId": 6,
+      "id": 56875,
+      "itemId": "9a678432-3f72-4d9b-8d24-8e320050f268",
+      "orderPlaced": "2020-06-19 09:50:20",
+      "quantity": 2
+    }, {
+      "customerId": 7,
+      "id": 56876,
+      "itemId": "192c594f-29a2-42b2-8cdd-4462ae6e05a1",
+      "orderPlaced": "2020-06-19 13:33:37",
+      "quantity": 12
+    }, {
+      "customerId": 8,
+      "id": 56877,
+      "itemId": "7c0af6bf-7b29-4d25-b514-2c55147cefed",
+      "orderPlaced": "2020-06-20 15:29:30",
+      "quantity": 2
+    }, {
+      "customerId": 10,
+      "id": 56878,
+      "itemId": "c248d5cc-06ce-4609-9c9a-6002b3df0037",
+      "orderPlaced": "2020-06-20 16:06:19",
+      "quantity": 1
+    }, {
+      "customerId": 1,
+      "id": 56879,
+      "itemId": "b07e1ebe-d115-4715-9b7d-404f794d149a",
+      "orderPlaced": "2020-06-20 23:45:10",
+      "quantity": 1
+    }, {
+      "customerId": 3,
+      "id": 56880,
+      "itemId": "9a68018a-e1ed-47fa-8211-f4cb25f6a254",
+      "orderPlaced": "2020-06-20 16:06:19",
+      "quantity": 24
+    }, {
+      "customerId": 3,
+      "id": 56881,
+      "itemId": "c248d5cc-06ce-4609-9c9a-6002b3df0037",
+      "orderPlaced": "2020-06-20 16:06:19",
+      "quantity": 1
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id",
+            ["string", "_S.id"]
+          ],
+          ["make-ni", "erp-person", "customerId"],
+          ["add", "rdf:type",
+            ["ni", "webshop", "order"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "salesforce-userprofile",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "0",
+        "EmailAddress": "torjussand@einrot.com",
+        "Username": "Unjudosely",
+        "phone_number": 29398319
+      }, {
+        "_id": "1",
+        "EmailAddress": "larsevjen@rhyta.com",
+        "Username": "Wim79",
+        "phone_number": 24723752
+      }, {
+        "_id": "2",
+        "EmailAddress": "siri@me.com",
+        "Username": "Gotin1984",
+        "phone_number": 14483792
+      }, {
+        "_id": "3",
+        "EmailAddress": "isakeikeland@teleworm.us",
+        "Username": "Mays1944",
+        "phone_number": 91794756
+      }, {
+        "_id": "4",
+        "EmailAddress": "sebastianskjold@dayrep.com",
+        "Username": "Theimence",
+        "phone_number": 22786513
+      }, {
+        "_id": "5",
+        "EmailAddress": "caspiannygard@einrot.com",
+        "Username": "Somper",
+        "phone_number": 27661595
+      }, {
+        "_id": "6",
+        "EmailAddress": "davidberntsen@superrito.com",
+        "Username": "Thret1941",
+        "phone_number": 67558820
+      }, {
+        "_id": "7",
+        "EmailAddress": "lucaslie@cuvox.de",
+        "Username": "Briver",
+        "phone_number": 66261922
+      }, {
+        "_id": "8",
+        "EmailAddress": "julieandersen@superrito.com",
+        "Username": "jules",
+        "phone_number": 42764125
+      }, {
+        "_id": "9",
+        "EmailAddress": "camillawilhelmsen@dayrep.com",
+        "Username": "Shenlace",
+        "phone_number": 25406855
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "salesforce", "userprofile"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "udir",
+    "type": "system:url",
+    "url_pattern": "$ENV(udir-baseurl)",
+    "verify_ssl": true
+  }
+]
