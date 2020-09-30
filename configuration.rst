@@ -12,8 +12,7 @@ General
 =======
 
 The *Sesam* service is configured using one or more `JSON <https://en.wikipedia.org/wiki/JSON>`_ files.
-These configuration files can be imported through the service API, e.g. using the ``sesam``
-:doc:`command line client <commandlineclient>`. They can also be created and edited using the :doc:`Sesam Management Studio <management-studio>`.
+These configuration files can be imported through the service API. They can also be created and edited using the :doc:`Sesam Management Studio <management-studio>`.
 
 Conceptually, the configuration files contains definitions for *Systems* and *Pipes*.
 
@@ -46,8 +45,7 @@ Environment variables
 =====================
 
 You can insert the values of environment variables into configuration using the syntax "$ENV(variable)" in place of
-property values. You can manage these environment variables using the :doc:`Sesam client <commandlineclient>` or
-using a HTTP client with the :ref:`Environment Manager API <api-reference>`.
+property values. You can manage these environment variables using a HTTP client with the :ref:`Environment Manager API <api-reference>`.
 
 An example, given a uploaded environment variable JSON file containing:
 
@@ -112,6 +110,17 @@ Example:
            "example": "http://example.org/",
            "fifa": "http://www.fifa.com/"
          }
+      },
+      "global_defaults": {
+         "use_signalling_internally": false,
+         "default_compaction_type": "sink",
+      },
+      "dependency_tracking": {
+         "dependency_warning_threshold": 10000,
+         "dependency_error_threshold": 50000,
+         "dependency_warning_threshold_total_bytes": 33554432,
+         "dependency_error_threshold_total_bytes": 134217728,
+         "enable_hops_thresholds": true
       }
    }
 
@@ -160,6 +169,74 @@ Properties
      -
      -
 
+   * - ``global_defaults.use_signalling_internally``
+     - Boolean
+     - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
+       Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
+       installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
+       :ref:`dataset source <dataset_source>` (including variants like
+       :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
+       :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
+       delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
+       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
+       be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
+       on the pipe source it will be turned on regardless of the pump schedule.
+     - ``false``
+     -
+
+   * - ``global_defaults.default_compaction_type``
+     - Enum<String>
+     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
+     - ``"sink"``
+     -
+
+   * - ``global_defaults.max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold:
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``10000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold:
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``33554432`` (32MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+       .. _service_metadata_dependency_tracking_enable_hops_thresholds:
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. It is recommended that you set this property to ``true`` in development environments.
+     - ``false``
+     -
+
 .. _pipe_section:
 
 Pipes
@@ -185,6 +262,8 @@ The following *json* snippet shows the general form of a pipe definition.
     {
         "_id": "pipe-id",
         "name": "Name of pipe",
+        "description": "This is a description of the pipe",
+        "comment": "This is a comment",
         "type": "pipe",
         "source": {
         },
@@ -237,7 +316,19 @@ Properties
      - String
      - A human readable name of the component.
      -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
      - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
+     -
+     -
 
    * - ``type``
      - String
@@ -300,6 +391,36 @@ Properties
      - Object
      - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold>`.
+     - ``10000``
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes>`.
+     - ``33554432`` (32MB)
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`. It is recommended that you set this property to ``true`` in development environments.
+     - ``false``
      -
 
 .. _namespaces:
@@ -390,10 +511,10 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
-unless sink compaction is enabled. If sink compaction is enabled then
-compaction will happen incrementally as the pipe writes new entities
-to the dataset. The default is to keep the last two versions of every
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are compacted incrementally as
+the pipe writes new entities to the dataset by default (compaction type "sink" enabled). If sink compaction is disabled,
+the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
+compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
 
 Properties
@@ -417,8 +538,8 @@ Properties
 
    * - ``compaction.sink``
      - Boolean
-     - EXPERIMENTAL. If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
-     - ``false``
+     - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
+     - ``true``
      - No
 
    * - ``compaction.keep_versions``
@@ -516,7 +637,7 @@ Properties
      - Req
 
    * - ``reprocessing_policy``
-     - Enum<String> 
+     - Enum<String>
      - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
@@ -596,6 +717,47 @@ can also be nested), and have a single required property:
 **_id**. This ``_id`` field must be *unique within a flow* for a
 specific logical entity. There may exist multiple *versions* of this
 entity within a flow, however.
+
+Prototype
+---------
+
+The following *json* snippet shows the general form of a source definition.
+
+::
+
+    {
+        "type": "a-source-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the source, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the source (optional).
+     -
+     -
+
 
 .. _continuation_support:
 
@@ -767,7 +929,8 @@ Prototype
         "type": "dataset",
         "dataset": "id-of-dataset",
         "include_previous_versions": false,
-        "include_replaced": true
+        "include_replaced": true,
+        "supports_signalling": false
     }
 
 Properties
@@ -818,6 +981,21 @@ Properties
      - ``true``
      -
 
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - ``false``
+     -
+
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -856,8 +1034,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _merge_source:
 
-The merge source (Experimental)
--------------------------------
+The merge source
+----------------
 
 The merge source is a source that is able to infer the sameness of
 entities across multiple datasets. The source uses a set of equality
@@ -887,7 +1065,8 @@ Prototype
         "equality": [
              ["eq", "d1.field1", "d2.field1"],
              ["eq", "d2.field2", "d3.field2"]
-        ]
+        ],
+        "supports_signalling": false
     }
 
 Properties
@@ -921,7 +1100,7 @@ Properties
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``equality``
      - List<EqFunctions{>=0}>
@@ -994,6 +1173,20 @@ Properties
 
      - ``"default"``
      - No
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1142,7 +1335,8 @@ Prototype
     {
         "type": "union_datasets",
         "datasets": ["id-of-dataset1", "id-of-dataset2"],
-        "include_previous_versions": false
+        "include_previous_versions": false,
+        "supports_signalling": false
     }
 
 Properties
@@ -1173,7 +1367,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``include_previous_versions``
      - Boolean
@@ -1181,6 +1375,26 @@ source, except ``datasets`` can be a list of datasets ids.
        data source will only return the latest version of any entity for
        any unique ``_id`` value in the dataset. This is the default behaviour.
      - false
+     -
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
+     -
+
+   * - ``prefix_ids``
+     - Boolean
+     - If set to ``false``, then the entity ids will not be prefixed with the dataset id.
+     - true
      -
 
 Continuation support
@@ -1243,7 +1457,8 @@ Prototype
    {
        "type": "merge_datasets",
        "datasets": ["id-of-dataset1", "id-of-dataset2"],
-       "strategy": "latest"
+       "strategy": "latest",
+       "supports_signalling": false
     }
 
 Properties
@@ -1275,7 +1490,7 @@ strategy.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``strategy``
      - String
@@ -1299,6 +1514,20 @@ strategy.
        transform, so that only the entity can be shaped in a way that
        is more useful downstream.
      - "latest"
+     -
+
+   * - ``supports_signalling``
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+
+       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       expression has been used.
+     - false
      -
 
 Continuation support
@@ -1391,7 +1620,7 @@ be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``whitelist``
      - List<String>
@@ -2248,8 +2477,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _ldap_source:
 
-The LDAP source (Experimental)
-------------------------------
+The LDAP source
+---------------
 
 The LDAP source provides entities from a `LDAP catalog <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_
 configured by a :ref:`LDAP system <ldap_system>`.
@@ -2358,8 +2587,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "ldap",
-            "system": "bouvet_ldap",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
+            "system": "example_ldap",
+            "search_base": "ou=Example,dc=example,dc=org"
         }
     }
 
@@ -2383,7 +2612,8 @@ Prototype
     {
        "system": "system-id",
        "type": "json",
-       "url": "url-to-json-data"
+       "url": "url-to-json-data",
+       "supports_signalling": false
     }
 
 Properties
@@ -2410,6 +2640,13 @@ Properties
      - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
      -
      - Yes
+
+   * - ``supports_signalling`` (experimental)
+     - Boolean
+     - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
+       run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
+     - ``false``
+     -
 
    * - ``page_size``
      - Integer(>=1)
@@ -2767,100 +3004,6 @@ configuration, which is omitted here for brevity.
         },
     }
 
-.. _kafka_source:
-
-The Kafka source
------------------
-
-The Kafka source consumes data from a Kafka topic. The consumer stores the offset in the pipe, and does not commit the consumer offset back to Kafka.
-
-The entities emitted from this source has offset, partition, timestamp, value and key as properties. Message keys in Kafka can be any bytes, but the source will try to utf-8 decode the key and add that as the ``_id`` property.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "kafka",
-        "system": "kafka-system-id",
-        "topic": "some-topic"
-    }
-
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``system``
-     - String
-     - The id of the :ref:`Kafka System <kafka_system>` component to use.
-     -
-     - Yes
-
-   * - ``topic``
-     - String
-     - The topic to consume from.
-     -
-     - Yes
-
-   * - ``partitions``
-     - List<Integer>
-     - Manual assignment of partitions if only a subset of the topic is to be consumed by this pipe. In Azure Event Hubs this property
-       has to be set for assignment to work for now.
-     - <All>
-     - No (Yes for Event Hubs)
-
-   * - ``seek_to_beginning``
-     - Boolean
-     - If the consumer should start from the beginning of the topic or only consume new messages. This only applies to the first run,
-       subsequent runs will continue where it left off unless the pipe is reset.
-     - false
-     -
-
-   * - ``ignore_null_keys``
-     - Boolean
-     - If the consumer should drop messages that does not have keys.
-     - true
-     -
-
-   * - ``consumer_timeout_ms``
-     - Integer
-     - The pipe will consume all available messages from the topic. Once all messages has been consumed it will wait for this period of
-       time until it will complete. Note that for topics that receives new messages more often than this interval the pipe will never
-       complete.
-     - 60000
-     -
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>`
-configuration, which is omitted here for brevity.
-
-::
-
-    {
-        "source": {
-            "type": "kafka",
-            "system": "my-kafka",
-            "consumer_timeout_ms": 5000,
-            "ignore_null_keys": false,
-            "partitions": [0, 1],
-            "seek_to_beginning": true,
-            "topic": "foo"
-        },
-    }
-
 
 .. _transform_section:
 
@@ -2890,6 +3033,7 @@ either a transform configuration object or a list of them.
        ..
        "transform": {
           "name": "name of transform (NOTE: deprecated)",
+          "comment": "This is a comment",
           "description": "description of the transform (optional)"
            ...the rest of the transform configuration goes here...
        }
@@ -3707,6 +3851,45 @@ each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
 
+Prototype
+---------
+
+The following *json* snippet shows the general form of a sink definition.
+
+::
+
+    {
+        "type": "a-sink-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the sink, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the sink (optional).
+     -
+     -
 
 .. _conditional_sink:
 
@@ -3826,6 +4009,7 @@ Properties
        - ``always`` means that the pipe will always set the initial offset when the pipe completed
          successfully.
        - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+       - ``onload`` means that the initial offset will be set when the pipe is loaded / configured.
 
      - ``if-source-populated``
      -
@@ -3915,6 +4099,24 @@ Properties
      - Specifies how often dataset bitsets and dataset compaction changes are written to disk. The higher the number the fewer writes, but at the cost of having to redo the work if the pipe fails before completion. The changes are always written to disk once the pipe completes.
      - ``1000000``
      - No
+
+   * - ``prevent_multiple_versions``
+     - Boolean
+     - If ``true`` then the pipe will fail if a new version of an existing entity is attempted written to the sink dataset. This is useful if one wants to prevent multiple versions of the same entity to be written to the sink dataset.
+     - ``false``
+     - No
+
+   * - ``suppress_filtered``
+     - Boolean
+     - The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false`` [*]. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
+     - ``false`` [*]
+     - No
+
+   * - ``max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
 
 
 Example configuration
@@ -4206,8 +4408,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sms_message_sink:
 
-The SMS message sink (Experimental)
------------------------------------
+The SMS message sink
+--------------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
@@ -4947,8 +5149,8 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
 
 .. _mail_message_sink:
 
-The Email Message sink (Experimental)
--------------------------------------
+The Email Message sink
+----------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
@@ -5616,8 +5818,8 @@ The XML document will be available at ``http://localhost:9042/api/publishers/my-
 
 .. _rest_sink:
 
-The REST sink (Experimental)
-----------------------------
+The REST sink
+-------------
 
 This is a data sink that can communicate with a REST service using HTTP requests.
 
@@ -5817,73 +6019,6 @@ Example input entities:
         }
     ]
 
-.. _kafka_sink:
-
-The Kafka sink
------------------
-
-The Kafka sink produces data to a Kafka topic.
-
-Entities sent to this sink will use the key, value and partition properties if present, otherwise the key will be utf-8 encoded version of ``_id`` and the value will be the entire entity. If partition is not specified, the partitioning will be based on the key.
-
-The properties used matches the properties emitted by the :ref:`Kafka source <kafka_source>`. This means that it should be possible to consume a topic and produce to a new topic in a pipe with no DTL.
-
-The sink will flush to Kafka after every batch.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "kafka",
-        "system": "kafka-system-id",
-        "topic": "some-topic"
-    }
-
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``system``
-     - String
-     - The id of the :ref:`Kafka System <kafka_system>` component to use.
-     -
-     - Yes
-
-   * - ``topic``
-     - String
-     - The topic to send to.
-     -
-     - Yes
-
-Example configuration
-^^^^^^^^^^^^^^^^^^^^^
-
-The outermost object would be your :ref:`pipe <pipe_section>`
-configuration, which is omitted here for brevity.
-
-::
-
-    {
-        "sink": {
-            "type": "kafka",
-            "system": "my-kafka",
-            "topic": "foo"
-        },
-    }
-
-
 
 .. _system_section:
 
@@ -5909,6 +6044,8 @@ Prototype
         "_id": "a_system_id",
         "type": "system:some-type-of-system",
         "name": "The Foo System",
+        "description": "This is a description of the system",
+        "comment": "This is a comment",
         "worker_threads": 10,
         "metadata": {
            "some_key": "some_value"
@@ -5938,6 +6075,18 @@ Properties
    * - ``name``
      - String
      - A human readable name for this system
+     -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
      -
      -
 
@@ -6016,7 +6165,7 @@ Properties
           source that uses the system will be shifted from the specified
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
-          
+
      - "UTC"
      -
 
@@ -6251,6 +6400,7 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
+        "instance": "named-instance",
         "port": 1433,
         "database": "database-name"
     }
@@ -6286,9 +6436,18 @@ Properties
      -
      - Yes
 
+   * - ``instance``
+     - String
+     - The name of the SQL Server "named instance", if applicable. Note that if ``instance`` is set, ``port`` will be
+       ignored as SQL Server will assign a "named instance" a random port by default. Be aware that using such
+       "port-less" named instances potentially has consequences for the configuration of firewall rules as well
+       (i.e. for both TCP and UDP port ranges, please consult the SQL Server DBA or SQL Server manual for details).
+     -
+     -
+
    * - ``port``
      - Integer
-     - Database IP port.
+     - Database IP port. Note: ignored if ``instance`` is set, see the previous section.
      - 1433
      -
 
@@ -6701,20 +6860,20 @@ Example configuration
 ::
 
     {
-        "_id": "bouvet_ldap",
-        "name": "Bouvet LDAP server",
+        "_id": "example_ldap",
+        "name": "Example LDAP server",
         "type": "system:ldap",
-        "host": "dc1.bouvet.no",
+        "host": "ldap.example.org",
         "port": 389,
-        "username": "bouvet\\some-user",
+        "username": "example\\some-user",
         "password": "********"
     }
 
 
 .. _smtp_system:
 
-The SMTP system (Experimental)
-------------------------------
+The SMTP system
+---------------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
 server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_message_sink>` to construct
@@ -6916,8 +7075,8 @@ Example configuration
 
 .. _twilio_system:
 
-The Twilio system (Experimental)
---------------------------------
+The Twilio system
+-----------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
 :ref:`SMS message sinks <sms_message_sink>` to construct and send SMS messages from entities.
@@ -7037,7 +7196,7 @@ Prototype
         },
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Properties
@@ -7123,8 +7282,9 @@ Properties
    * - ``proxies``
      - Dict<String,String>
      - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
-       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
-       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
+       or .``http(s)://username:password@domain_or_ip:port``
        The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
        secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
      -
@@ -7141,7 +7301,7 @@ Properties
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
    * - ``ignore_invalid_content_length_response_header``
@@ -7184,8 +7344,8 @@ Example with ntlm configuration:
 
 .. _rest_system:
 
-The REST system (Experimental)
-------------------------------
+The REST system
+---------------
 
 The REST system represents a REST service (i.e. a web server) serving
 `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
@@ -7215,7 +7375,7 @@ Prototype
         "authentication": "basic",
         "jwt_token": null,
         "connect_timeout": 60,
-        "read_timeout": 7200,
+        "read_timeout": 1800,
         "operations": {
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -7368,8 +7528,8 @@ Example configuration
 
 .. _microservice_system:
 
-The microservice system (Experimental)
---------------------------------------
+The microservice system
+-----------------------
 
 The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
 
@@ -7419,7 +7579,7 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -7577,7 +7737,7 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
 Microservice APIs
@@ -7609,59 +7769,6 @@ Example configuration
         }
     }
 
-.. _kafka_system:
-
-The Kafka system (Experimental)
---------------------------------------
-
-This system can be used to read and write data from `Apache Kafka <https://kafka.apache.org>`_ as well as `Azure Event Hubs for Apache Kafka <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview>`_.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "_id": "id-of-system",
-        "name": "Name of system",
-        "type": "system:kafka",
-        "bootstrap_servers": "localhost:9092,otherhost:9092",
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``bootstrap_servers``
-     - String
-     - Comma separated list of bootstrap servers with hostname and port. For Azure Event Hubs this should be set to ``<fqdn>:9093``.
-     -
-     - Yes
-
-   * - ``sasl_username``
-     - String
-     - Username to use when authentication against a SASL enabled Kafka cluster. If username is set, authentication will be performed.
-       For Azure Event Hubs this property must be set to ``$ConnectionString`` and the connection string should be passed as the
-       password.
-     -
-     - No
-
-
-   * - ``sasl_password``
-     - String
-     - Password to use when authentication against a SASL enabled Kafka cluster. For Azure Event Hubs this should be set to ``Endpoint=sb://[...]``.
-     -
-     - No
-
 .. _pump_section:
 
 Pumps
@@ -7680,6 +7787,7 @@ Prototype
 ::
 
     {
+        "comment": "This is a comment",
         "schedule_interval": 30,
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
@@ -7727,6 +7835,12 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Default
      -
       .. _pump_param_schedule_interval:
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the pump (optional).
+     -
+     -
 
    * - ``schedule_interval``
      - Number

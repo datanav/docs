@@ -3,3 +3,4 @@ _build
 .python_env/
 /images/best-practice/.DS_Store
 /images/Globals.pptx
+**/.DS_Store
