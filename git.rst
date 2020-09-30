@@ -72,7 +72,7 @@ Incorporating a finished feature on develop :
     Deleted branch myfeature (was 05e9557).
     $ git push origin develop
 
-Tip :The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
+Tip: The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
 **Release branches**
 
@@ -164,7 +164,7 @@ Important : The one exception to the rule here is that, when a release branch cu
     $ git branch -d hotfix-1.1.1
     Deleted branch hotfix-1.1.1 (was abbe5d6).
 
-Now, Let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
+Now, let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
 Actual steps:
 The optimal directory structure of Sesam Node project should look like this:
 ::
