@@ -112,7 +112,15 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false
+         "use_signalling_internally": false,
+         "default_compaction_type": "sink",
+      },
+      "dependency_tracking": {
+         "dependency_warning_threshold": 10000,
+         "dependency_error_threshold": 50000,
+         "dependency_warning_threshold_total_bytes": 33554432,
+         "dependency_error_threshold_total_bytes": 134217728,
+         "enable_hops_thresholds": true
       }
    }
 
@@ -177,6 +185,58 @@ Properties
      - ``false``
      -
 
+   * - ``global_defaults.default_compaction_type``
+     - Enum<String>
+     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
+     - ``"sink"``
+     -
+
+   * - ``global_defaults.max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold:
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``10000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold:
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log.
+     - ``33554432`` (32MB)
+     -
+
+       .. _service_metadata_dependency_tracking_dependency_error_threshold_total_bytes:
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+       .. _service_metadata_dependency_tracking_enable_hops_thresholds:
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. It is recommended that you set this property to ``true`` in development environments.
+     - ``false``
+     -
+
 .. _pipe_section:
 
 Pipes
@@ -202,6 +262,8 @@ The following *json* snippet shows the general form of a pipe definition.
     {
         "_id": "pipe-id",
         "name": "Name of pipe",
+        "description": "This is a description of the pipe",
+        "comment": "This is a comment",
         "type": "pipe",
         "source": {
         },
@@ -254,7 +316,19 @@ Properties
      - String
      - A human readable name of the component.
      -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
      - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
+     -
+     -
 
    * - ``type``
      - String
@@ -317,6 +391,36 @@ Properties
      - Object
      - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold>`.
+     - ``10000``
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold``
+     - Integer
+     - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``50000``
+     -
+
+   * - ``dependency_tracking.dependency_warning_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold_total_bytes>`.
+     - ``33554432`` (32MB)
+     -
+
+   * - ``dependency_tracking.dependency_error_threshold_total_bytes``
+     - Integer
+     - The number of bytes that dependency tracking can keep in memory at a given time. If this number is exceeded then the pump will fail. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_error_threshold_total_bytes>`.  Do not set this value too high as it may cause excessive memory usage.
+     - ``134217728`` (128MB)
+     -
+
+   * - ``dependency_tracking.enable_hops_thresholds``
+     - Boolean
+     - If ``true``, then warning and error thresholds that apply for dependency tracking also apply for regular ``"hops"`` expressions. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_enable_hops_thresholds>`. It is recommended that you set this property to ``true`` in development environments.
+     - ``false``
      -
 
 .. _namespaces:
@@ -407,10 +511,10 @@ Compaction
 Compaction deletes the oldest entities in a dataset and reclaims space for those
 entities in the dataset's indexes.
 
-Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are automatically compacted once every 24 hours,
-unless sink compaction is enabled. If sink compaction is enabled then
-compaction will happen incrementally as the pipe writes new entities
-to the dataset. The default is to keep the last two versions of every
+Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are compacted incrementally as
+the pipe writes new entities to the dataset by default (compaction type "sink" enabled). If sink compaction is disabled,
+the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
+compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
 
 Properties
@@ -435,7 +539,7 @@ Properties
    * - ``compaction.sink``
      - Boolean
      - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
-     - ``false``
+     - ``true``
      - No
 
    * - ``compaction.keep_versions``
@@ -533,7 +637,7 @@ Properties
      - Req
 
    * - ``reprocessing_policy``
-     - Enum<String> 
+     - Enum<String>
      - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
@@ -613,6 +717,47 @@ can also be nested), and have a single required property:
 **_id**. This ``_id`` field must be *unique within a flow* for a
 specific logical entity. There may exist multiple *versions* of this
 entity within a flow, however.
+
+Prototype
+---------
+
+The following *json* snippet shows the general form of a source definition.
+
+::
+
+    {
+        "type": "a-source-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the source, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the source (optional).
+     -
+     -
+
 
 .. _continuation_support:
 
@@ -955,7 +1100,7 @@ Properties
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``equality``
      - List<EqFunctions{>=0}>
@@ -1222,7 +1367,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``include_previous_versions``
      - Boolean
@@ -1246,6 +1391,11 @@ source, except ``datasets`` can be a list of datasets ids.
      - false
      -
 
+   * - ``prefix_ids``
+     - Boolean
+     - If set to ``false``, then the entity ids will not be prefixed with the dataset id.
+     - true
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -1340,7 +1490,7 @@ strategy.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``strategy``
      - String
@@ -1470,7 +1620,7 @@ be a list of datasets ids.
 
        See also the :ref:`dataset sink <dataset_sink>` property ``set_initial_offset``.
      -
-     - 
+     -
 
    * - ``whitelist``
      - List<String>
@@ -2437,8 +2587,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
     {
         "source": {
             "type": "ldap",
-            "system": "bouvet_ldap",
-            "search_base": "ou=Bouvet,dc=bouvet,dc=no"
+            "system": "example_ldap",
+            "search_base": "ou=Example,dc=example,dc=org"
         }
     }
 
@@ -2883,6 +3033,7 @@ either a transform configuration object or a list of them.
        ..
        "transform": {
           "name": "name of transform (NOTE: deprecated)",
+          "comment": "This is a comment",
           "description": "description of the transform (optional)"
            ...the rest of the transform configuration goes here...
        }
@@ -3700,6 +3851,45 @@ each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
 
+Prototype
+---------
+
+The following *json* snippet shows the general form of a sink definition.
+
+::
+
+    {
+        "type": "a-sink-type",
+        "comment": "This is a comment",
+        ..
+    }
+
+The only universally required property is ``type``.
+
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the sink, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the sink (optional).
+     -
+     -
 
 .. _conditional_sink:
 
@@ -3819,6 +4009,7 @@ Properties
        - ``always`` means that the pipe will always set the initial offset when the pipe completed
          successfully.
        - ``initially`` means that the pipe will set the initial offset at the start of the pump run.
+       - ``onload`` means that the initial offset will be set when the pipe is loaded / configured.
 
      - ``if-source-populated``
      -
@@ -3920,6 +4111,12 @@ Properties
      - The default value is ``false`` unless it is a full sync and the source is of type ``dataset`` and ``include_previous_versions`` is ``false`` [*]. The purpose of this property is to make it possible to opt-in or opt-out of a specific optimization in the pipe. The optimization is to suppress entities that are filtered out in a transform early so that they are not passed to the sink. This optimization should only be used when the pipe produces exactly one version per ``_id`` in the output. The optimization is useful when the pipe filters out a lot of entities.
      - ``false`` [*]
      - No
+
+   * - ``max_entity_bytes_size``
+     - Enum<String>
+     - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
+     - ``104857600`` (100MB)
+     -
 
 
 Example configuration
@@ -5847,6 +6044,8 @@ Prototype
         "_id": "a_system_id",
         "type": "system:some-type-of-system",
         "name": "The Foo System",
+        "description": "This is a description of the system",
+        "comment": "This is a comment",
         "worker_threads": 10,
         "metadata": {
            "some_key": "some_value"
@@ -5876,6 +6075,18 @@ Properties
    * - ``name``
      - String
      - A human readable name for this system
+     -
+     -
+
+   * - ``description``
+     - String or list of strings
+     - A human readable description of the component (optional).
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the component (optional).
      -
      -
 
@@ -5954,7 +6165,7 @@ Properties
           source that uses the system will be shifted from the specified
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
-          
+
      - "UTC"
      -
 
@@ -6189,6 +6400,7 @@ Prototype
         "password":"secret",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
+        "instance": "named-instance",
         "port": 1433,
         "database": "database-name"
     }
@@ -6224,9 +6436,18 @@ Properties
      -
      - Yes
 
+   * - ``instance``
+     - String
+     - The name of the SQL Server "named instance", if applicable. Note that if ``instance`` is set, ``port`` will be
+       ignored as SQL Server will assign a "named instance" a random port by default. Be aware that using such
+       "port-less" named instances potentially has consequences for the configuration of firewall rules as well
+       (i.e. for both TCP and UDP port ranges, please consult the SQL Server DBA or SQL Server manual for details).
+     -
+     -
+
    * - ``port``
      - Integer
-     - Database IP port.
+     - Database IP port. Note: ignored if ``instance`` is set, see the previous section.
      - 1433
      -
 
@@ -6639,12 +6860,12 @@ Example configuration
 ::
 
     {
-        "_id": "bouvet_ldap",
-        "name": "Bouvet LDAP server",
+        "_id": "example_ldap",
+        "name": "Example LDAP server",
         "type": "system:ldap",
-        "host": "dc1.bouvet.no",
+        "host": "ldap.example.org",
         "port": 389,
-        "username": "bouvet\\some-user",
+        "username": "example\\some-user",
         "password": "********"
     }
 
@@ -6975,7 +7196,7 @@ Prototype
         },
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Properties
@@ -7061,8 +7282,9 @@ Properties
    * - ``proxies``
      - Dict<String,String>
      - A optional set of properties that specifies a set of SOCKS5 proxies for the URL system. The keys represents url-
-       prefixes (for example 'http' and 'https') and the values the SOCKS5 servers that the requests matching the
-       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``.
+       prefixes (for example 'http' and 'https') and the values of the HTTP(S) or SOCKS5 servers that the requests matching the
+       prefixes should be passed through. The values should be on the form ``socks5://username:password@domain_or_ip:port``
+       or .``http(s)://username:password@domain_or_ip:port``
        The ``username:password@..`` syntax is optional. If used, the embedded username and passord should be put into system
        secrets, i.e. ``$SECRET(username):$SECRET(password)@..``.
      -
@@ -7079,7 +7301,7 @@ Properties
      - Integer
      - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
    * - ``ignore_invalid_content_length_response_header``
@@ -7153,7 +7375,7 @@ Prototype
         "authentication": "basic",
         "jwt_token": null,
         "connect_timeout": 60,
-        "read_timeout": 7200,
+        "read_timeout": 1800,
         "operations": {
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -7357,7 +7579,7 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 7200
+        "read_timeout": 1800
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -7515,7 +7737,7 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
        means wait indefinitely.
-     - ``7200``
+     - ``1800``
      -
 
 Microservice APIs
@@ -7565,6 +7787,7 @@ Prototype
 ::
 
     {
+        "comment": "This is a comment",
         "schedule_interval": 30,
         "cron_expression": "* * * * *",
         "rescan_run_count": 10,
@@ -7612,6 +7835,12 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Default
      -
       .. _pump_param_schedule_interval:
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the pump (optional).
+     -
+     -
 
    * - ``schedule_interval``
      - Number

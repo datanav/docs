@@ -350,7 +350,7 @@ There are three ways that one can access properties on entities:
    ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path
    element must begin and end with a single quote. Single quotes can
    be escaped with ``''``.
-   
+
 2. **The "path" function**: ``["path", "placed_by", ["sorted",
    "_.amount", "_S.orders"]]``, which will first evaluate the
    rightmost expression. Then it will traverse the path given in the
@@ -1295,8 +1295,7 @@ modifiying the target entity, and has no return value.
        |   ``["union", "_T.$children", ...]]``
        |
        | Note that the ``$children`` property is special. This function should
-         really only be used when writing into a ``dataset`` sink with the
-         ``track_children`` property set to ``true``.
+         really only be used when writing into a ``dataset`` sink.
        |
        | If an entity with a ``$children`` property is written to the ``dataset``
          sink then it will compare it against the value of the ``$children``
@@ -1441,29 +1440,29 @@ Booleans
        | Returns one boolean: false.
        |
        | ``["boolean",``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |   ``["list", "true", "~rhttp://www.example.org/",``
        |     ``"True", false, 1234]]``
        |
        | Returns a list of booleans: [true, true, false]. The URI and integer
          values are ignored.
        |
        | ``["boolean", ["boolean", false],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/",``
+       |   ``["list", "true", "~rhttp://www.example.org/",``
        |     ``"124.4", "FALSE"]]``
        |
        | Returns a list of booleans: [true, false, false, false]. The URI value
          and the string value are replaced with the literal value: false
        |
        | ``["boolean", ["string", "n/a"],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/", "124.4"]]``
+       |   ``["list", "true", "~rhttp://www.example.org/", "124.4"]]``
        |
        | Returns a list of booleans: [true, "n/a", "n/a"]. The URI value and
          the string value are replaced with the literal value "n/a"
        |
        | ``["boolean", ["string", "_."],``
-       |   ``["list", "true", "~rhttp://www.bouvet.no/", "False"]]``
+       |   ``["list", "true", "~rhttp://www.example.org/", "False"]]``
        |
-       | Returns a list of booleans: [true, "http://www.bouvet.no/", false].
+       | Returns a list of booleans: [true, "http://www.example.org/", false].
          The URI value is replaced with its string cast.
 
    * - ``is-boolean``
@@ -1682,7 +1681,7 @@ If-then-else
        |   ``"NO", "Norway",``
        |   ``"SE", "Sweden",``
        |   ``"Other"]``
-       |     
+       |
        |
        | Given then value of ``_S.country``, returns ``"Norway"`` if the value is ``"NO"``
          and ``"Sweden"`` if the value is ``"SE"``, otherwise ``"Other"`` is returned.
@@ -1691,7 +1690,7 @@ If-then-else
        |   ``45, "DK",``
        |   ``46, "SE",``
        |   ``47, "NO"]``
-       |     
+       |
        |
        | Given the value of ``_S.dialing_code``, returns ``"DK"`` if the value is
          ``45`` and ``"SE"`` if the value  is ``46`` and ``"NO"`` if the value is ``47``,
@@ -1718,6 +1717,8 @@ If-then-else
        | or ``"toddler"`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``"unknown"``.
        
+.. _nulls:
+
 Nulls
 -----
 
@@ -1872,26 +1873,26 @@ Numbers
        | Returns one integer: 1.
        |
        | ``["integer",``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |   ``["list", "1", "~rhttp://www.example.org/", 124.4, 12345]]``
        |
        | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
        |
        | ``["integer", ["integer", 0],``
-       |    ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |    ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
        |
        | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
          string value are replaced with the literal value 0
        |
        | ``["integer", ["string", "n/a"],``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
        |
        | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
          and the string value are replaced with the literal value "n/a"
        |
        | ``["integer", ["string", "_."],``
-       |   ``["list", "1", "~rhttp://www.bouvet.no/", "10^2", 12345]]``
+       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
        |
-       | Returns a list of integers: [1, "http://www.bouvet.no/", "10^2", 12345].
+       | Returns a list of integers: [1, "http://www.example.org/", "10^2", 12345].
          The URI value and the non-integer string value are replaced with the
          their respective string casts.
        |
@@ -1950,28 +1951,28 @@ Numbers
        | Returns one decimal value: 1.0
        |
        | ``["decimal",``
-       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
        |
        | Returns a list of decimal values: [1.0, 2.2]. The URI and
          non-decimal string value are ignored.
        |
        | ``["decimal", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
        |     ``"124.4", "FALSE"]]``
        |
        | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
          non-decimal string value are replaced with the literal value: false
        |
        | ``["decimal", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
        |
        | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
        | literal value "n/a".
        |
        | ``["decimal", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
        |
-       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
          is replaced with its string cast.
 
        .. _is_decimal_dtl_function:
@@ -2024,28 +2025,28 @@ Numbers
        | Returns one float value: 1.0
        |
        | ``["float",``
-       |   ``["list", "1.0", "~rhttp://www.bouvet.no/", 2.2, "one"]]``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
        |
        | Returns a list of float values: [1.0, 2.2]. The URI and
          non-numeric string value are ignored.
        |
        | ``["float", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.bouvet.no/",``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
        |     ``"124.4", "FALSE"]]``
        |
        | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
          non-numeric string value are replaced with the literal value: false
        |
        | ``["float", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "124.4"]]``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
        |
        | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
        | literal value "n/a".
        |
        | ``["float", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.bouvet.no/", "2.5"]]``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
        |
-       | Returns [1.0, 2.0, "http://www.bouvet.no/", 2.5]. The URI value
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
          is replaced with its string cast.
 
        .. _is_float_dtl_function:
@@ -2101,7 +2102,7 @@ Numbers
        | Returns one string: ``"0xff"``.
        |
        | ``["hex",``
-       |   ``["list", 1, "~rhttp://www.bouvet.no/", 124.4, 12345]]``
+       |   ``["list", 1, "~rhttp://www.example.org/", 124.4, 12345]]``
        |
        | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
 
@@ -2468,13 +2469,13 @@ Strings
        |
        | ``["string",``
        |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
        |       ``124.4, 12345]]``
        |
        | Returns a list of strings:
        |
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+       |   ``"http://www.example.org/", "124.4", "12345"]``.
 
        .. _bytes_dtl_function:
    * - ``bytes``
@@ -2900,6 +2901,10 @@ Strings
        | ``["encrypt-pki", "RSA_PEM_public_key", "secret-passphrase"]``
        |
        | Returns a single bytes object: ``"~bDHAERS.."``
+       |
+       | ``["encrypt-pki", "$SECRET(key-secret-name)", "$SECRET(secret-passphrase-name)"]``
+       |
+       | Returns a single bytes object: ``"~bDHAERS.."``
 
    * - ``encrypt-pgp``
      - | *Arguments:*
@@ -2925,6 +2930,10 @@ Strings
        | ``["encrypt-pgp", "OpenPGP_public_key", "secret-message"]``
        |
        | Returns a single OpenPGP message in ASCII format: ``"----BEGIN PGP MESSAGE.."``
+       |
+       | ``["encrypt-pgp", "$SECRET(key-secret-name)", "secret-message"]``
+       |
+       | Returns a single OpenPGP message in ASCII format: ``"----BEGIN PGP MESSAGE.."``
 
        .. _decrypt_dtl_function:
    * - ``decrypt``
@@ -2936,6 +2945,10 @@ Strings
        | function, i.e. it is symmetric with ``encrypt`` if the same key is used:
        |
      - | ``["decrypt", "secret", ["encrypt", "secret", ["list", "a", "b", "c"]]]``
+       |
+       | Returns ``["a", "b", "c"]``
+       |
+       | ``["decrypt", "$SECRET(secret-name)", ["encrypt", "$SECRET(secret-name)", ["list", "a", "b", "c"]]]``
        |
        | Returns ``["a", "b", "c"]``
        |
@@ -2963,7 +2976,13 @@ Strings
 
        | Returns ``["a", "b", "c"]``
        |
+       | ``["json-transit-parse",``
+       |    ``["decrypt-pki", "$SECRET(private-key-name)",``
+       |       ``["encrypt-pki", "-----BEGIN PUBLIC KEY-----..-----END PUBLIC KEY-----",``
+       |           ``["json-transit", ["list", ["list", "a", "b", "c"]]]]]``
 
+       | Returns ``["a", "b", "c"]``
+       |
    * - ``decrypt-pgp``
      - | *Arguments:*
        |   PRIVATE_KEY(string{1})
@@ -2986,6 +3005,11 @@ Strings
        | Returns a list: ``["data", "data2"]``
        |
        | ``["decrypt-pgp", "-----BEGIN PGP PRIVATE KEY..", "valid-password",``
+       |    ``["encrypt-pgp", "-----BEGIN PGP PUBLIC KEY..", "secret message"]]``
+       |
+       | Returns a string: ``"secret message"``
+       |
+       | ``["decrypt-pgp", "$SECRET(private-key-name)", "$SECRET(password-name)",``
        |    ``["encrypt-pgp", "-----BEGIN PGP PUBLIC KEY..", "secret message"]]``
        |
        | Returns a string: ``"secret message"``
@@ -3018,13 +3042,13 @@ JSON
        |
        | ``["json",``
        |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
        |       ``124.4, 12345]]``
        |
        | Returns a list of strings:
        |
        | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.bouvet.no/", "124.4", "12345"]``.
+       |   ``"http://www.example.org/", "124.4", "12345"]``.
 
        .. _json_transit_dtl_function:
    * - ``json-transit``
@@ -3044,13 +3068,13 @@ JSON
        |
        | ``["json-transit",``
        |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.bouvet.no/"],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
        |       ``124.4, 12345]]``
        |
        | Returns a list of strings:
        |
        | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"~rhttp://www.bouvet.no/", "124.4", "12345"]``.
+       |   ``"~rhttp://www.example.org/", "124.4", "12345"]``.
 
        .. _json_parse_dtl_function:
    * - ``json-parse``
@@ -3073,7 +3097,7 @@ JSON
        | Returns one string: ``"hello"``.
        |
        | ``["is-uri", ["json-parse",``
-       |   ``"\"~rhttp://www.bouvet.no/\""]]``
+       |   ``"\"~rhttp://www.example.org/\""]]``
        |
        | Returns ``false``.
        |
@@ -3091,7 +3115,7 @@ JSON
        |
        | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
          is a valid JSON expression, so ``null`` is included in the result list. Note
-         also that ``"~rhttp://www.bouvet.no/"`` is not parsed as a URI since we don't do
+         also that ``"~rhttp://www.example.org/"`` is not parsed as a URI since we don't do
          transit decoding here.
        |
        | ``["json-parse", "no-value", "hello"]``
@@ -3125,7 +3149,7 @@ JSON
        | Returns one string: ``"hello"``.
        |
        | ``["is-uri", ["json-transit-parse",``
-       |   ``"\"~rhttp://www.bouvet.no/\""]]``
+       |   ``"\"~rhttp://www.example.org/\""]]``
        |
        | Returns ``true``.
        |
@@ -3139,7 +3163,7 @@ JSON
        |
        | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
          is a valid JSON expression, so ``null`` is included in the result list. Note
-         also that "~rhttp://www.bouvet.no/" is parsed as a URI since we are
+         also that "~rhttp://www.example.org/" is parsed as a URI since we are
          doing transit decoding.
        |
        | ``["json-transit-parse",``
@@ -3172,12 +3196,12 @@ URIs
        |
        | Translates input values to URIs. Only strings in VALUES will be
          cast to URIs. Note that *no* URI escaping is done on the strings.
-     - | ``["uri", "http://www.bouvet.no/"]``
+     - | ``["uri", "http://www.example.org/"]``
        |
        | Returns one URI.
        |
        | ``["uri",``
-       |    ``["list", "http://www.bouvet.no/",``
+       |    ``["list", "http://www.example.org/",``
        |       ``"http://www.sesam.io/", 12345]]``
        |
        | Returns a list of two URIs. The number is silently ignored because
@@ -3265,15 +3289,26 @@ UUIDs
      - Description
      - Examples
 
+       .. _uuid_dtl_function:
    * - ``uuid``
      - | *Arguments:*
-       |   NONE(value-expression{0})
+       |   VALUES(value-expression{0|1})
        |
-       | Create a new UUID object.
+       | Create a new UUID object (version 4 ). It can optionally cast a single string or list of string UUID representations to
+         UUID objects. Any input that can't be cast to a UUID object will be ignored.
        |
      - | ``["uuid"]``
        |
-       | Returns a new UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       | Returns a new random UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       |
+       | ``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
+       |
+       | Returns a new UUID object cast from the input argument: "~uabc98f65-ddf5-1234-a8f5-82f6d8e69726".
+       |
+       | ``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
+       |
+       | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
+       | Note that the mismatched input argument ``2`` is ignored.
 
 
 Nested transformations
