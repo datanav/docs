@@ -12,34 +12,38 @@ Best Practice
 
 Summary
 -------
-Sesam is an Integration Platform using a unique Datahub approach for collecting, connecting and sharing data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the legacy systems that own the original data. Making all the valuable data within your company available for the whole organization. 
+Sesam is an Integration Platform using a unique Datahub approach for collecting, connecting and sharing data. With Sesam data can quickly be re-purposed, re-structured and used without changing the legacy systems that own the original data making all the valuable data within your company available for the whole organization. 
 
-As many systems, Sesam can become complex and difficult to maintain when misused. To mitigate this, it is important to follow a small set of simple rules when starting on your journey. Adhering to these guidelines early will give your system solid foundations making it future proof and sparing you numerous headaches when time will come to connect more external systems and get even more out of your data. 
+As many systems, Sesam can become complex and difficult to maintain when misused. To mitigate this, it is important to follow a small set of simple rules when starting on your journey. Adhering to these guidelines early on will give your system a solid integrational foundation, sparing you of numerous headaches when later on connecting more external systems adding further integrations. 
 
-As the amount of data in a Sesam node grows, an optimized dataset structure will become necessary. For example, rather than approach each data flow sequentially and individually—where a single entry will lead to single merger or alteration followed by sinking the data to a recipient external system—it helps to favour aggregations of data with similar type or pertaining to the same concept. These aggregations are called “global datasets” and can be seen as authoritative datasets—e.g. the one stop shop for customer data, where the freshest and most accurate data can unequivocally be found. 
+As the amount of data in a Sesam node grows, an optimized dataset structure will become necessary. For example, rather than approaching each data flow sequentially and individually — where a single entry will lead to a single integration inside the datahub — it helps to favour aggregations of data with similar type, or data pertaining to the same concept. These aggregations are called “global datasets” and can be seen as authoritative datasets; the one-stop-shop for customer data, where the freshest and most accurate data can unequivocally be found. 
 
 
 Data handling philosophy
 ------------------------
 
-The data handling philosophy in Sesam can be described in short as connect, collect, share. Sesam uses connectors to fetch data from external systems. The internal data representation uses JSON, allowing to work with data from heterogeneous sources indistinctively of their system of origin.
-We recommend applying a few principles when importing data into Sesam:
+The data handling philosophy in Sesam can be described in short as connect, collect and share. Sesam uses connectors to fetch data from external systems. The internal data representation uses JSON which allows Sesam to work with data from heterogeneous sources indistinctively of their system of origin.
+We recommend applying the following principles when importing data into Sesam:
 
-1)  Collect data comprehensively, it is preferable to have unused data in Sesam than to re-engineer the connector should the data elements become necessary. 
-2)  Keep the data as faithful to the original as possible, transforms are generally not necessary at this stage and can be looked into later.
+1)  Collect data comprehensively; it is preferable to have unused data in Sesam than to re-engineer the connector should the data elements become necessary. 
+2)  Keep the data as faithful to the original as possible; transforms are generally not necessary prior to the aggregations.
 
-The next step is to create the global datasets, these consist of data from the imported datasets, categorized and connected when possible. 
+The next step is to create the global datasets. These consist of categorized and connected data from the imported datasets. 
 We also recommend considering the following principles when creating the global datasets: 
 
-1)  The entirety of the imported data should be in at least one global dataset. That means all the raw datasets need to be imported into a global dataset. 
+1)  The entirety of the imported data should be in at least one global dataset. This means all the raw datasets should to be imported into a global dataset. 
 2)  Try to merge the data into the global dataset referring to the same concept. This semantic approach to global datasets will facilitate the consumption and improve the reusability of the data within Sesam.
 
-Following the above mentioned principles when importing data and creating global datasets will establish good foundations for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource».
+Following the above mentioned principles when importing data and creating global datasets will establish a good foundation for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource».
+
+|
 
 .. image:: images/best-practice/Sesam-datamodel.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept    
+
+|
 
 To read about the main concepts and how to get started in Sesam, please click :ref:`here <getting-started-glossary>`.
 
@@ -52,19 +56,19 @@ Sesam organizes entities by storing them in global datasets.
 Definition
 ==========
 
-A global dataset is a collection of data pertaining to a same concept from different sources. In other words, a global dataset combines data from sources semantically linked to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
+A global dataset is a collection of data pertaining to the same concept from different sources. In other words, a global dataset combines semantically linked data from different sources to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
 
 Global datasets can be populated by: 
 
-- simply add datasets to a global dataset without merging, 
+- adding datasets to a global dataset without merging, 
 - merging data from various sources without modifications,  
-- selectively merge data, by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained :ref:`here <getting-started-transformations>`.
+- selectively merge data by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained :ref:`here <getting-started-transformations>`.
 
 It is important to remember that a global dataset requires either business knowledge or a sound understanding of the data from the different sources. Global datasets will work to their fullest potential if they include all of the semantically linked data elements relating to the subject matter. 
 
 Example:
 
-There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each root datasets every time. However, through the creation a **global-person** dataset, information can be easily fetched from one single location.
+There are three sources containing person data as shown below. If any target system wants to access data related to this person, without a global dataset available, it would have to go through each root dataset every time. However, through the creation a **global-person** dataset, information can be easily fetched from one single location.
 
 ::
 
@@ -123,10 +127,10 @@ Positive effects of global datasets
 
 • By decoupling data from original sources, point-to-point integrations within Sesam can be avoided, thus fewer connections results in lower maintenance costs. In addition, data is available without concern for the original source
 • All logic related to connecting and enriching data is only done once 
-• Data in Global datasets are re-used, which saves work and makes adding new integrations easier
+• Data in global datasets are re-used, which saves work and makes adding new integrations easier
 • Only one look-up, instead of having to “look for data” in various datasets
 • Input datasets can be kept raw and as similar to the real source as possible, independent of how the data will be used, thus avoiding “early binding”
-• Adding additional integrations further refines the global datasets, and therefore continuously improves the data quality
+• Adding additional integrations further refines the global datasets and therefore continuously improves the data quality
 
 A data model without global datasets might look like the figure below. This example consists of four sources and three target systems only. Generally, it will be a lot more complicated.
 
@@ -147,7 +151,7 @@ What do you have to take into account, and what are the challenges of global dat
 
 Global datasets will most likely grow and become large. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
 
-As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, the company is required to store as well, the total data objects sum up to 30 000 000. One way of managing this large data amount is to divide the data into different global datasets. In this case, the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
+As an example, an energy company has 700.000 customers, and each customer has a power meter connected to their home. When adding the historic data (the company is required to store as well) the total data objects sum up to 30.000.000. One way of managing this large data amount is to divide the data into different global datasets. In this case the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
 
 .. _best-practice-namespace:
 
@@ -157,7 +161,7 @@ Namespace and namespaced identifiers
 Namespace 
 =========
 
-A namespace consists of two parts: a namespace and a property. The namespace part can consist of any characters, ending with a colon. The property part can consist of any character except colons.
+A namespaced property consists of two parts: a namespace and a property. The namespace part can consist of any characters, ending with a colon. The property part can consist of any character except colons.
 In the example below, **"crm-person"** and **"hr-person"** are namespaces and **"SSN"** is the property.
 
 E.g.
@@ -171,7 +175,7 @@ E.g.
 Namespaced identifiers
 ======================
 
-Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the input pipe.
+Namespaces are used to create namespaced identifiers (NI's), which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the input pipe.
 
 A namespaced identifier takes the following form:
 
@@ -185,9 +189,9 @@ Namespace identifiers is a recommended way of referring to datasets for matching
 
 By default, namespaced identifiers are stripped from the endpoint entities.
 
-If you have two different person datasets, and you want to merge on a common property, like SSN, we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"hr-person"** and **"erp-person"**. In other words we need to create a namespace identifier between **"hr-person"** and **"erp-person"** datasets so that we can refer to them during merging.
+If you have two different person datasets which you want to merge on a common property, like SSN, we should use namespace identifiers. The code below will add a namespace identifier based on common SSN properties between datasets **"hr-person"** and **"erp-person"**. In other words we need to create a namespace identifier between **"hr-person"** and **"erp-person"** datasets so that we can refer to them during merging.
 
-The main reason for generating NI's is to match the **$ids** they point to so you can actually use them to merge, in hops etc.
+The main reason for generating NI's is to match the **$ids** they point to such that you can actually use them to merge in hops etc.
 
 ::
 
@@ -200,14 +204,14 @@ The main reason for generating NI's is to match the **$ids** they point to so yo
           ["ni", "hr-person", "_S._id"]
         ]
 
-This will produce the following output. We see the ["ni"] we added in code above; 
+This will produce the output below where we see the NI we added in the code above: 
 
 ::
 
   "erp-person:SSN": "~:hr-person:erp-person:02023688018",
  
 
-You now have unique namespace identifiers based on **SSN**, which you can use to merge the person data from two different sources.
+You now have unique namespaced identifiers based on **SSN** which you can use to merge the person data from two different sources.
 
 ::
 
@@ -229,7 +233,7 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
       }
     }
 
-In the above code we are connecting the foreign keys **SSN** of **"erp-person"** with the primary key **"$ids"** of 
+In the above code we are connecting the foreign key **SSN** of **"erp-person"** with the primary key **"$ids"** of 
 **"hr-person"**. 
 
 Output from the example code above as seen below with a join to hr-system:
@@ -292,23 +296,23 @@ General rules
 Systems
 =======
 
-• name after the name of the service you integrate with, not the technology used (e.g. salesforce instead of mysql)
-• if multiple systems are required to talk to a system, postfix them with a qualifier (e.g.salesforce-out)
+• name systems after the name of the service you integrate with, not the technology used (e.g. salesforce instead of mysql)
+• if multiple systems are required to talk to a service, postfix them with a qualifier (e.g.salesforce-out)
  
 Pipes
 =====
 
-• name input pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
+• relate input pipe names with the system they read from and postfix the name with the type of content (e.g. salesforce-sale)
 • do not use plural names (e.g. salesforce-sale not salesforce-sales)
 • prefix merge pipes with merged- (e.g. merged-sale)
 • prefix global pipes with global- (e.g. global-sale)
-• name intermediate output pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
-• name outgoing pipe by postfixing the intermediate output with -endpoint (e.g. sale-bigquery-endpoint)
+• name preparation pipes with the type of the content and the name of the system to connect to (e.g. sale-salesforce)
+• name outgoing pipe by postfixing the intermediate output with -endpoint (e.g. sale-salesforce-endpoint)
 
 Datasets
 ========
 
-• name them the same as the pipe that produced it (the default and does not need to be specified)
+• name them the same as the pipe that produced it (this is default and does not need to be specified)
 
 .. _best-practice-workflow:
 
@@ -317,9 +321,9 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The data is fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the input pipe for future filtering and classification. 
+The data is fed into Sesam through **input pipes** where namespaced identities are added in order to keep the existing data model with joins intact. In addition an **RDF type** is added in the input pipe for future filtering and classification. 
 
-**Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
+**Global pipes** merge semantically related data to generate **global datasets**. To be able to easily spot a global pipe in the graph view, the following code can be added:
 
 ::
 
@@ -327,21 +331,21 @@ The data is fed into Sesam through **input pipes** where namespaced identity is 
     "global": true
  }
 
-**Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
+**Preparation pipes** prepare data from **global datasets** to target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
-**Output pipes** basically sends data to an endpoint and should normally have no logic.
-
-The main reason for why **output pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. Any logic added to an **output pipe** cannot either be used by other pipes.
+**Output pipes** sends data to an endpoint and should normally have no logic. The main reason for why **output pipes** should not contain any logic or transformations is that we want to see the end result that is being sent to the target system for debugging purposes. If logic is added in the pipe the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. 
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
 
+.. _best-practice-input-pipe:
+
 Input pipes
 ===========
 
-Input pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the input pipes. Data filtering, transformation and consolidation will be done at a later stage. 
+Input pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest there should be very few rules about filtering or altering data embedded within the input pipes. Data filtering, transformation and consolidation will be done at a later stage. 
 
 Embedded data and Conditional input pipes 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -350,7 +354,7 @@ Embedded data is data that does not originate from an external source but are ma
 Embedded data as extra information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Embedded data can be used when we need extra information about data that is not available from the source providing the data. The source data could contain codes or abbreviations which need to be translated to a more readable format. Using embedded data we can create a dataset which interprets these codes and abbreviations in order to extract more information than provided by the source data, see example below.
+Embedded data can be used when we need extra information regarding data that is not available from the source data. The source data could contain codes or abbreviations which need to be translated to a more readable format. Using embedded data we can create a dataset which interprets these codes and abbreviations in order to extract more information than provided by the source data, see example below.
 
 :: 
 
@@ -373,23 +377,23 @@ Embedded data can be used when we need extra information about data that is not 
 Embedded data for testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
- 
-These issues are solved with the conditional source setting in the pipe config, and we will go through how to do this below.
+Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single input pipe. 
+
+For example, consider a customer that has two different HR-system environments, one for production and one for test. Often there are paired with test- and production-environments in Sesam such. Through conditional pipes we may use the same DTL code for both environments as long as we specify the source environments to be conditional on the Sesam environments. The test environment in Sesam should connect to the data from the HR test environment and the production environment in Sesam should connect to data from the HR production environment. We could also set a condition when working on your private Sesam node, such that when you work ourside the official environments only embedded data is used. This is specially helpful since the IP of your personal Sesam node might not have access to the HR systems. 
  
 In the pipe config below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
  
-The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.  
+The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source, but anonymized. As the data is embedded (or hard coded if you will) there is no access restriction.  
 
-Which condition is used, should be determined by an environment variable and not by the configuration, so that we can upload the same configuration to several nodes, but determine which condition to be used independently of the node. Adding environment variables is done in the "Variables"-tab under the "Settings"-section for the Datahub.
+The condition used should be determined by an environment variable and not by the configuration such that we can upload the same configuration to several nodes. Adding environment variables is done in the "Variables"-tab under the "Settings"-section for the Datahub.
 
-In this example, we should create an environment variable specifying which environment the node is running, let us call the variable "node-env" and set it to either "prod" or "dev" depending on which we use:
+In this example we create an environment variable specifying which environment the node is running on. We call this variable "node-env" and set it to either "prod" or "dev", depending on which we use:
 
 :: 
  
   "node-env": "prod" or "node-env": "dev".
 
-The corresponding env variable are used in the condition property in the pipe. It is added inside the "Source" curly brackets of the pipe as seen in example below.
+The corresponding environment variable are used in the "condition" property in the pipe. It is added inside the "Source" section of the pipe's config, as seen in the example below.
 
 ``"condition": "$ENV(node-env)"``
 
@@ -477,20 +481,20 @@ The RDF type is metadata used to relate data and give some semantic context. Whe
 Namespaces
 ^^^^^^^^^^
 
-The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
+The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifiers are by convention prefixed by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions :ref:`make-ni <dtl_transform-make-ni>` or :ref:`ni <ni_function>` to create it.
 
 Global pipes
 ============
 
 Before going into **global pipes** please read on what a global dataset is and why we generate them :ref:`here <best-practice-global>`.
 
-The global pipe creates a new dataset. This dataset will be updated with entities from all sources added to the global pipe.
+The global pipe creates a new dataset. This dataset will be updated with entities from all sources connected to the global pipe.
 
 We can choose not to join or transform some of the datasets which means they are simply “put into” the global dataset. The ones who will be joined and transformed you can read more about below.
 
 A resulting dataset can be a new dataset, but also an existing dataset where one wants to add more data from new sources when they become available for Sesam. This is done by adding source datasets to a global pipe. The new data will be added to the dataset (can be compared to the use of alter table/update of a relational database – but in one single operation).
 
-In the global pipe we want to add a metadata tag to show this is a pipe going into a global dataset, so we set the following code into the pipe:
+In order to vizualize global pipes in the data-flow graph we add a metadata tag to the pipe config by the following code:
 
 ::
 
@@ -498,7 +502,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
     "global": true
  }
 
-In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
+This tag need to be placed on root level inside the pipe config, and the resultant graph would take the following form:
 
 .. image:: images/global_true.png
     :width: 600px
@@ -506,13 +510,13 @@ In addition, it gives the dataset a “global symbol” in the graph tab as seen
     :alt: Generic pipe concept  
 
 
-As a general rule when it comes to transformations, we wish to use reusable properties; e.g. global properties generated in the global dataset. This gives us opportunity to track data from start to end of flow through Sesam. 
+As a general rule when it comes to transformations we wish to use reusable properties; e.g. global properties generated in the global dataset. This gives us the opportunity to track data from start to end of the flow through Sesam. 
 
-In order to prioritize which ids we want to use, we use :ref:`coalesce <nulls>`.  If the global id is null, **“Coalesce”** gives us the opportunity to choose which is the next best option. This, in turn gives us the opportunity to use the golden record, which you can read about :ref:`here <best-practice-golden-record>`.
+Often several dataset may contain the same properties, but not necessarily with the same value. In order to prioritize which property value from which dataset we want to use we utilize the :ref:`coalesce <coalesce_dtl_function>` function. If the global id is null, **“Coalesce”** gives us the opportunity to choose which is the next best option. This in turn gives us the opportunity to use the golden record, which you can read about :ref:`here <best-practice-golden-record>`.
 
-Below we see an example of a global pipe called "global-person". At top the type of pipe is set to **“merge“** enabling us to add 4 datasets that we wish to merge.
+Below we see an example of a global pipe called **global-person**. The type of pipe is set to **“merge“**, enabling us to add 4 datasets that we wish to merge.
 
-Below the actual merge, or **“equality“** rules are set. Further down, in the **“transform”** section the use of **coalesce** becomes obvious when choosing which properties got get values from.
+The **“equality“** determines the join chriteria between the datasets. Further down in the **“transform”** section we see an example of the use of the **coalesce** rule. In this case, three of the datasets contain the zip code belonging to a person. The order of the dataset keys determines the priority (in this example the zip code of hr-person will be chosen whenever it is available).
 
 ::
 
@@ -580,7 +584,7 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
 
-The first property that greets us in a global dataset is called **"$ids"**, which will be a list of **namespaced identifiers**. When an entity is merged into another entity in a merge pipe, the pipe will add the _id of the source entity to the **"$ids"** property. Thus, the **ids** property consists of the ids of all the source entities that were merged to created that specific merged entity, typically looking like below.
+The first property of an entity in a global dataset is called **"$ids"**. This which will be a list (whenever multiple entities are joined) of **namespaced identifiers**. When an entity is merged into another entity in a merge pipe, the pipe will add the _id of the source entity to the **"$ids"** property. Thus, the **ids** property consists of the _id's of all the source entities that were merged to created that specific merged entity. The **"$ids"** typically tkes the following form:
 
 ::
 
@@ -591,11 +595,9 @@ The first property that greets us in a global dataset is called **"$ids"**, whic
     "~:hr-person:02023688018"
   ]
 
-The **"$ids"** are generated automatically when the global pipe runs, and they always show up on top for the global dataset.
+The **"$ids"** are generated automatically when the global pipe runs and they always show up on top for the global dataset entity.
 
-So, what is **"$ids"**? Basically, **$ids** is a property containing a list of the **_id** of all the source entities that were merged to create that specific entity.
-
-Below is a whole entity of the above global pipe and as seen, it gives an aggregated dataset from 4 sources with **$ids**, **RDF types** and **global properties**.
+Below is a whole entity of the above global pipe. As we can see it gives an aggregated dataset from 4 sources with **$ids**, **RDF types** and **global properties**.
 
 ::
 
@@ -696,7 +698,7 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 Preparation pipes
 =================
 
-The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. The transformation and enrichment of data is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow down the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented by performing hops to other datasets. For example a city name can be fetched from a different dataset using the the property "difi-postnummer". The goal is to have the data ready to be picked up by the output pipe.
 
 
 .. _best-practice-output-pipes:
@@ -704,46 +706,48 @@ The aggregated data residing in a global dataset often needs to be transformed a
 Output pipes 
 ============
 
-The output pipe is the input pipe counterpart. While the input pipe is used solely to import data into Sesam, the output pipe sole function is to export data out of Sesam. As mentioned in the Input pipe section, the focus of the input pipe will be on its source component/property, the output pipe, on the other end, will be built around its sink. Similarly, the output pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
+best-practice-input-pipe
+
+The output pipe is the input pipe counterpart. While the input pipe is used to either import data into Sesam or to utiliza embedded data, the output pipe's function is to export data out of Sesam. As mentioned in the :ref:`input pipe <best-practice-input-pipe>` section, the focus of the input pipe will be on its source component/property. The output pipe on the other end will be built around its sink. The output pipe sink will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a :ref:`microservice <microservice_system>`. The function of the connector/microservice is to interface at the API level with the external system.
 
 Tips for global datasets
 ------------------------
 
 • All datasets should go into a global dataset
-• In most data models, between 10–20 global datasets are sufficient. This is based on experience on various size of projects at Sesam. The smaller  projects could have close to 10, and some of the bigger projects has over 20 global datasets, with hundreds of pipes connected to them. To identify how many global datasets a project might need it is important to perform a proper analysis. For instance, if a company’s needs are met by five global datasets, then they don’t have to have at least ten. This is only for best practice, but we do have examples of larger data models with less than ten global datasets
+• In most data models, between 10–20 global datasets are sufficient. This is based on experience from various sized projects at Sesam. The smaller projects could have close to 10, and some of the bigger projects has over 20 global datasets, with hundreds of pipes connected to them. To identify how many global datasets a project might need it is important to perform a proper analysis. For instance, if a company’s needs are met by five global datasets, then they do not have to have at least ten. This is only for best practice, but we do have examples of larger data models with less than ten global datasets
 • Start general with big “buckets” and re-arrange and split into smaller global datasets if necessary
 • Think less property and more “what it is”, e.g. person vs user. Something that stops being a user might not stop being a person
 • Keep it generic
-• Avoid system specific global datasets. I.e. a document management system contains metadata about various concepts (e.g. title, revision, status, equipment, owner, date generated files). These are static in nature, and to make them useful you can put “equipment data” in a global equipment dataset. The “owner data” might be put in global person dataset etc. This way you gather concepts across sources and enrich them, such that they are available for other systems to use
-• Global datasets give us the opportunity to define “golden records”
+• Avoid system specific global datasets, i.e. a document management system contains metadata about various concepts (e.g. title, revision, status, equipment, owner, date generated files). These are static in nature and to make them useful you can put “equipment data” in a "global equipment" dataset. The “owner data” might be put in a "global person" dataset etc. This way you gather concepts across sources and enrich them, such that they are available for other systems to use
+• Global datasets give us the opportunity to define :ref:`golden records <best-practice-golden-record>`
+
+
 
 How to do global datasets in Sesam
 ----------------------------------
 
-When initiating a new project in Sesam, it is important to begin with the data model. Start by analyzing the sources and data to determine the needs of the organization. This will have an impact on the data model and more specifically how the global datasets will be organized. It is here the organization needs to think: what is important to me? What data do I use often, and therefore needs to be easily available? The results vary for each organization and each data model. It is however normal to add global datasets, or to re-arrange them, as the amount of data is growing.
+When initiating a new project in Sesam it is important to begin with the data model. Start by analyzing the sources and data to determine the needs of the organization. This will have an impact on the data model, and more specifically how the global datasets will be organized. It is here the organization needs to think: "what is important to me?", "What data do I use often, and therefore needs to be easily available?". The results vary for each organization and each data model. It is however normal to add global datasets, or to re-arrange them, as the amount of data is growing.
 
-To get an idea of the granularity, please see final chapter called “Examples of real global datasets”.
+To get an idea of the granularity, please see the final chapter called :ref:`Examples of real global datasets <best-practice-examples-of-real-global-datasets>`.
 
-Generally, most organizations need five basic global datasets. This is not true for all organizations and data integrations, but it is a good basis to start from.
+Generally, most organizations need the following five basic global datasets:
 
-These five are:
+• global-person
 
-Global-person
+• global-project
 
-Global-project
+• global-classification
 
-Global-classification
+• global-organization
 
-Global-organization
-
-Global-task
+• global-task
 
 This is only the first part of the analysis. The second part is how to enrich data in the global datasets, and to determine which aggregated datasets there is a need for. These are questions that need to be asked in order to make the enriched datasets as useful as possible.
 
 Recipe for generating global datasets
 -------------------------------------
 
-It is impossible to make a universal recipe for all integration projects using Sesam as all projects are unique. The different data variety, data model complexity and costumer requirements are all integral parts structuring each individual Sesam node. In addition, the order you do the various tasks might vary, so please use this as a guideline only, not a comprehensive recipe.
+It is impossible to make a universal recipe for all integration projects using Sesam as all projects are unique. The different data variety, data model complexity and costumer requirements are all integral parts structuring each individual Sesam node. In addition, the order in which you do the various tasks might vary, so please use this as a guideline only and not a comprehensive recipe.
 
 1.  The first step is to consider what the goal of the integration is; what do you want to achieve?
 2.  Next step is to determine which data from which sources do you need to achieve your goal.
@@ -755,10 +759,10 @@ It is impossible to make a universal recipe for all integration projects using S
 In many cases however, it does make sense to merge the data, such as person data as shown earlier, which was merged on SSN, email etc.
 
 7.  Some data may need to be processed before being added to a global dataset. This involves e.g. selecting what we use as ID, converting data type, change property names etc.
-8.  When the global datasets are set up, the data can either be re-used as is, or undergo further transformations. This might encompass filtering specific data and joining with other datasets etc. to enhance quality and usefulness.
-9.  Based on the target systems and your requirements, adapting data to target systems is done as late as possible in the data flow and as close to target as possible (late binding.)
+8.  When the global datasets are set up, the data can either be re-used as is or undergo further transformations. This might encompass filtering specific data and joining with other datasets to enhance quality and usefulness.
+9.  Based on the target systems and your requirements, adapting data to target systems is done as late as possible in the data flow and as close to target as possible (late binding).
 
-Let’s start with simplified example to demonstrate. Below we have four datasets from two different sources; **"crm"** and **"erp"**:
+Let’s start with simplified example to demonstrate. Below you can see the names four datasets from two different sources; **"crm"** and **"erp"**:
 
 erp-person
 
@@ -770,64 +774,97 @@ crm-organisation
 
 Looking at the names of the datasets, it would be logical to create two global datasets. The first could contain data about person, such as user, customer, name, employee and so on.
 
+|
+
 **global-person**
 
-.. image:: images/best-practice/global-person1.png
-    :width: 700px
+|
+
+.. image:: images/best-practice/global-person-2.png
+    :width: 400px
     :align: center
     :alt: Generic pipe concep
+
+|
 
 The second could contain data concerning the organization. This might include names of departments, customers, regions and so on.
 
+|
+
 **global-organisation**
 
-.. image:: images/best-practice/global-organisation.png
-    :width: 700px
+.. image:: images/best-practice/global-organization-2.png
+    :width: 400px
     :align: center
     :alt: Generic pipe concep
 
-When the number of sources and datasets increases it will become natural to add more “buckets” or global datasets to put them in.
+|
 
-Below are new sources with data from Difi and Salesforce. In addition, more datasets from existing sources were added.
+When the number of sources and datasets increases it will become natural to add more “buckets”, or global datasets, to put them in.
+
+Below you find new sources with data from Difi and Salesforce. In addition, more datasets from existing sources were added.
 
 Datasets:
 
-erp-person
+• erp-person
 
-crm-person
+• crm-person
 
-difi-ssn
+• difi-ssn
 
-hrsystem-person
+• hrsystem-person
 
-difi-ssn
+• difi-ssn
 
-difi-orgnumber
+• difi-orgnumber
 
-salesforce-opportunity
+• salesforce-opportunity
 
-erp-projectnumber
+• erp-projectnumber
 
-crm-order
+• crm-order
 
-The datasets might be organized like this, please see below. As seen no changes in **“global-organization”**. New datasets added to **“global-person”** and new “bucket” called **“global-project”** is generated.
+The datasets might be organized as depicted below. The global pipe placement of these new sources resulted in one additional source to **“global-organization”**, and two additional sources to **“global-person”**. We also added a new global pipe **“global-project”**.
+
+|
 
 **global-person**
 
-.. image:: images/best-practice/global-person2.png
-    :width: 600px
+|
+
+.. image:: images/best-practice/global-person-4.png
+    :width: 400px
     :align: center
     :alt: Generic pipe concep
 
+|
 
 The second could contain data concerning projects. This might be orders, project numbers, sales opportunities etc.
 
-**global-project**
+|
 
-.. image:: images/best-practice/global-project.png
-    :width: 600px
+**global-organization**
+
+|
+
+.. image:: images/best-practice/global-organization-3.png
+    :width: 400px
     :align: center
     :alt: Generic pipe concep
+
+|
+
+**global-project**
+
+|
+
+.. image:: images/best-practice/global-project-4.png
+    :width: 400px
+    :align: center
+    :alt: Generic pipe concep
+
+|
+
 
 It is important to emphasize that this is only a suggestion on how it might be logical to organize the datasets. The end result is highly individual and will most likely vary. This does however give an idea on how architecture in Sesam is built and developed using global datasets.    
 
@@ -886,9 +923,9 @@ Below are principles of doing data modelling in Sesam.
 Raw input
 ^^^^^^^^^
 
-When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is identical or close to identical to the source data. It is, however, common practice to add namespaces to the properties in order to keep track of where the data comes from. If you know that a property is a reference to another entity (like a foreign key in a relational database), it is good practice to make a namespaced identifier based on that property. Such a property is usually added as a new property, with a -ni postfix, for example "my-order:customer-ni": "~:my-customer:1" (the source entity will here usually have a property like this: "my-order:customer": 1).
+When reading data into Sesam it is best practice to copy it and not start changing it. This way we have a dataset which is as identical, or as close to identical, to the source data as possible. It is however common practice to add namespaces to the properties in order to keep track of where the data comes from. If you know that a property is a reference to another entity (like a foreign key in a relational database), it is good practice to make a namespaced identifier based on that property. Such a property is usually added as a new property, with a -ni postfix, for example "my-order:customer-ni": "~:my-customer:1" (the source entity will here usually have a property like this: "my-order:customer": 1).
 
-It is also advisable to add, as mentioned earlier a RDF type and other metadata tags if required. Each entity should have a **id** and if the id isn't generated by the system, we should add it. This **id** (_id) can then be referenced to as a namespaced identifier in other entities, like a foreign key (this being the primary key).
+It is also advisable to add, as mentioned earlier, an RDF type and other metadata tags if required. Each entity should have an **id** and if the id isn't generated by the system, we should add it. This **id** (_id) can then be referenced to as a namespaced identifier in other entities, like a foreign key (this being the primary key).
 
 Benefits:
 
@@ -903,18 +940,18 @@ Drawbacks:
 Data flow
 ^^^^^^^^^
 
-In Sesam data is collected, connected, enriched and transformed from the datasets formed from retrieving data from the source systems. This is done by compiling data from multiple datasets, transforming data into new data formats or standards, and adapting the data to new target systems. In this way, new values are created for the re-use and use of data. This is done in the global dataset where the main purpose is that one should not need to look up multiple datasets and compile data for each time one needs it, but rather make the connecting and enriching once and look up in one place.
+In Sesam data is collected, connected, enriched and transformed from the datasets formed from retrieving data from the source systems. This is done by compiling data from multiple datasets, transforming data into new data formats or standards, and adapting the data to new target systems. In this way, new values are created for the re-use and use of data. This is done in the global datasets where the main purpose is that one should not need to look up multiple datasets and compile data for each time one needs it. One should rather make the connecting and enriching once to avoid point-to-point integrations.
 
 Enrich data
 ^^^^^^^^^^^
 
-There are multiple ways to enrich the original source data, the most common one is to do a DTL transformation, a simple example would be to concatenate “firstname” and “lastname” into a new property called “name”. 
+There are multiple ways to enrich the original source data. The most common one is to do a DTL transformation. A simple example would be to concatenate “firstname” and “lastname” into a new property called “name”. 
 
-Another way to enrich data, is to derive it based on the original properties. One example of this can be a “map-coordinate” property that is stored in the coordinate system that Google uses, but the target system needs it in another coordinate system. This is achieved by calling a coordinate microservice, that returns one or more extra properties based on other coordinate systems.
+Another way to enrich data is to derive it based on the original properties. One example of this can be the “map-coordinate” property that is stored in the coordinate system that Google uses, but the target system needs it in another coordinate system. This could be achieved by calling a coordinate microservice that returns one or more extra properties based on other coordinate systems.
 
-Yet another example on how to enrich data is by adding mapping to the properties to support a corporate standard information model or simply mapping to a target system.
+Yet another example on how to enrich data is by adding mapping to the properties to support a corporate standard information model, or simply mapping to a target system.
 
-Doing these enrichments in a global pipe and storing the enriched data in the global dataset means that the enriched data will be available for future integrations and dataflows that might need the same enrichment.
+Doing these enrichments in a global pipe and storing the enriched data in the global dataset allows the enriched data to be available for future integrations and dataflows that might need the same enrichment.
 
 
 Output data (late binding)
@@ -933,6 +970,9 @@ Manage source code
 Sesam usually uses a Git based source control service to collaborate and have version control on source code.
 
 Git: an open source version control system used to manage code (DTL when working in Sesam). When working in project the code is updated constantly and released in new versions, so Git helps manage this. As with all projects, it’s up to the project itself to decide how to manage the source code, and what kind of service to use. It is not required to use a source control service, but it is highly recommended.
+
+
+.. _best-practice-examples-of-real-global-datasets:
 
 Examples of real global datasets
 --------------------------------
