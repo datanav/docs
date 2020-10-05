@@ -28,10 +28,11 @@ When pressing **Overview**, it shows the Sesam integration for the particular no
     :align: center
     :alt: DataSet
 
+
 Datasets
 ========
 
-This contains a list of each dataset in this node. By clicking on a dataset, it takes you into the entities this dataset consists of. From here you can **“Go to pipe”** which takes you straight to pipe used to generate this dataset. You can also “delete” this dataset” by pressing **“Delete“** button. If the pipe has recently been running, you can press **“Refresh”** to get latest update. 
+This contains a list of each dataset in this node. By clicking on a dataset you will access the entities this dataset consists of. From here you can **“Go to pipe”** which takes you straight to pipe used to generate this dataset. You can also “delete” this dataset” by pressing **“Delete“** button. If the pipe has recently been running, you can press **“Refresh”** to get latest update. 
 
 .. image:: images/Datasets.png
     :width: 600px
@@ -61,7 +62,7 @@ The pipes page contains a list of pipes generated for a particular node.
     :align: center
     :alt: DataSet
 
-Double clicking on a pipe takes you into this pipe's working area.
+Clicking on a pipe takes you into this pipe's working area.
 
 By pressing **"..."** to the right of the pipe name, a menu with various options appear. We are going to go through the most commonly used.
 
@@ -116,7 +117,7 @@ New Pipe
 
 When pressing the button **"New Pipe"**, it takes you into template for generating a pipe from scratch.
 
-First we have to add value to "_id" or pipe cannot be saved. The naming conventions of pipe or the "id" can be found here: 
+First we have to add value to "_id" or the pipe cannot be saved. The naming conventions of pipes, or the id's, can be found here: 
 :ref:`Naming conventions <getting-started-naming-conventions>`
 
 As seen below, we have several tabs called "Panels" in Sesam. Press **"Templates"** and the available templates for each part of the pipe is available.
@@ -154,7 +155,7 @@ To see an example please visit LINK example
 Schema
 ^^^^^^
 
-Next to **Templates** tab, we find **Schema**. When pressing it, the **Schema** for this pipe shows up on right hand side of interface. A **"schema"** generally tells something about the *structure of the data*, i.e. metadata. Examples of metadata that the schema shows are e.g. whether a value is a string, Boolean, or an integer (text, true / false, or number).
+Next to the **Templates** tab, we find the **Schema**. When pressing it, the **Schema** for this pipe shows up on the right hand side of the interface. A **"schema"** generally tells something about the *structure of the data*, i.e. metadata. Examples of metadata that the schema shows are e.g. whether a value is a string, boolean, or an integer (text, true / false, or number).
 
 .. image:: images/new-pipe-schema.png
     :width: 800px
@@ -166,7 +167,7 @@ Editor Preferences
 
 The tab to the far right takes you to page where you can choose some preferences on **code style**.
 
-As you can see below you have some choices (and short explanation on what they mean) like *"Automatic auto completion"*, *"Close nested array on new line"* amongst others. Please have a look and click on the ones you would like to implement.
+As you can see below you have some choices (and short explanation of what they mean) like *"Automatic auto completion"*, *"Close nested array on new line"* amongst others. Please have a look and click on the ones you would like to implement.
 
 To the right side of the interface there is a list of available **keyboard shortcuts** which makes working in Sesam easier. 
 
@@ -178,9 +179,9 @@ To the right side of the interface there is a list of available **keyboard short
 Systems
 =======
 
-When pressing Systems, it gives a list of various systems defined on this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, a mssql, url or rest.
+When pressing Systems you will gives a list of various systems defined on this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, an mssql, url or rest.
 
-By pressing one of the systems, it takes you into the config for a particular system. You find six tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
+By pressing one of the systems you will be redirected to the config for a particular system. You will find seven tabs here where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system through the graph tab, and lastly to get an overview.
 
 As with pipes and datasets, you can press "..." next to the system name and from this menu you can *delete* or *duplicate* config for the system.
 
@@ -203,16 +204,16 @@ On the Flows page you can get information about a flow as a whole, whether any p
 Settings
 ========
 
-Lastly, Sesam has “Settings” for both Datahub and your Subscription.
+Finally, Sesam has “Settings” for both the **Datahub** and your **Subscription**.
 
-Settings for datahub manages queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
+Settings for the Datahub manages queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
 
 .. image:: images/settings_datahub.png
     :width: 600px
     :align: center
     :alt: DataSet
 
-For subscription Sesam has settings for e.g. license, JWT token and Network. 
+In Subscription you will find settings for e.g. license, JWT token and Network. 
 
 .. image:: images/settings_subscription.png
     :width: 600px
@@ -226,16 +227,16 @@ In order to use the Management Studio you first need to log in with your user cr
 authenticate via a third party authentication provider (as for example Google or Azure), or create
 a user-account directly in the Management Studio.
 
-Your user-account is uniquely identified by the email-address. That means that it is possible to use multiple
+Your user account is uniquely identified by the email-address. That means that it is possible to use multiple
 authentication providers to log in as the same user, as long as the user credentials from the various authentication
 providers contain the same email address.
 
-This comes with a small caveat: If you create a user-account directly in the Management Studio you are not required
+This comes with a small caveat: If you create a user account directly in the Management Studio you are not required
 to verify that the email address you specify actually exists and that you own it. That basically means that anyone can
-claim to own any email-address, including addresses that actually belongs to someone else.
+claim to own any email address, including addresses that actually belongs to someone else.
 
 On the other hand: most of the third party authentication providers supplies a verified email address.
 
-To avoid someone else to be able to log in with your email-address, the first login with a verified email-address
+To avoid someone else to be able to log in with your email address, the first login with a verified email address
 will disable any unverified user credentials that has been previously used. All other settings on the existing user
-account will be kept, though.
+account will be kept.
