@@ -6,6 +6,7 @@ Git - How to deal with different git scenarios
 Set up a new git project for Sesam
 ==================================
 
+.. _git-init-repo-setup:
 Initial repository setup
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The initial repository should contain two main branches with an infinite lifetime.
@@ -51,8 +52,63 @@ Each of these branches have a specific purpose and are bound to strict rules as 
 
 **One exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.**
 
+.. _git-master-branch:
+Set up master branch
+^^^^^^^^^^^^^^^^^^^^
 
-**feature branches**
+Now, let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
+Actual steps:
+The optimal directory structure of Sesam Node project should look like this:
+::
+
+    my-project-directory
+      ├ node
+      | ├ expected
+      | ├ pipes
+      | ├ systems
+      | └ variables
+      ├ README.md
+      ├ LICENSE
+      ├ .gitignore
+      └ ++
+
+Based on this structure you should navigate to the project root (my-project-directory) and run the following command::
+
+    git init
+
+Then your directory will become a git repository (repo). After you've done this, go to your source control website (i.e. github.com). Here you will need to create a new repo under your organisation. Make sure that you don't initialize the repo from the website. When the repo has been created you should be presented with a url to use. (i.e. git@github.com:my_org/my_repo.git)
+Connect the your github repo to your local repo::
+
+    git remote add origin git@github.com:my_org/my_repo.git
+
+Push your local repo to github::
+
+    git push -u origin master
+
+    (Tip: Sometimes you need to first add and commit README.md file, to make your first push to remote repo.)
+
+.. _git-development-branch:
+Set up development branch
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since we want to use the master branch as the production branch, we need to setup a new branch called *develop* to use for development.
+To do this we need to type the following in terminal::
+
+    git checkout -b develop
+
+This creates a new branch called develop that mirrors master. To push it to github::
+
+    git push --set-upstream origin develop
+
+Now you should have two branches in github. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
+
+More information about pull requests can be read below.
+:ref:`Pull Request<pull-request>`
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
+
+.. _git-feature-branch:
+Set up feature branches
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Creation:
 ::
@@ -74,7 +130,9 @@ Incorporating a finished feature on develop :
 
 Tip: The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.
 
-**Release branches**
+.. _git-release-branch:
+Set up release branches
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Creation :
 ::
@@ -92,13 +150,6 @@ Creation :
     [release-1.2 74d9424] Bumped version number to 1.1.0
     1 files changed, 1 insertions(+), 1 deletions(-)
 
-You must use `semantic versioning <https://semver.org>`_ for any of your releases to production.
-
-Given a version number MAJOR.MINOR.PATCH, increment the:
-
-1. MAJOR version when you make incompatible API changes,
-2. MINOR version when you add functionality in a backwards compatible manner, and
-3. PATCH version when you make backwards compatible bug fixes
 
 Finishing a release branch :
 ::
@@ -126,7 +177,21 @@ Now we are really done and the release branch may be removed, since we don’t n
     $ git branch -d release-1.1.0
     Deleted branch release-1.1.0 (was ff452fe).
 
-**Hotfix branches**
+.. _git-release-branch-versioning:
+Versioning of release branches:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You must use `semantic versioning <https://semver.org>`_ for any of your releases to production.
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards compatible manner, and
+3. PATCH version when you make backwards compatible bug fixes
+
+.. _git-hotfix-branch:
+Set up hotfix branches
+^^^^^^^^^^^^^^^^^^^^^^
 
 Creation:
 ::
@@ -164,286 +229,6 @@ Important : The one exception to the rule here is that, when a release branch cu
     $ git branch -d hotfix-1.1.1
     Deleted branch hotfix-1.1.1 (was abbe5d6).
 
-Now, let's start with below steps, based on that you already have a directory with sesam config you want to put into a repo
-Actual steps:
-The optimal directory structure of Sesam Node project should look like this:
-::
-
-    my-project-directory
-      ├ node
-      | ├ expected
-      | ├ pipes
-      | ├ systems
-      | └ variables
-      ├ README.md
-      ├ LICENSE
-      ├ .gitignore
-      └ ++
-
-Based on this structure you should navigate to the project root (my-project-directory) and run the following command::
-
-    git init
-
-Then your directory will become a git repository (repo). After you've done this, go to your source control website (i.e. github.com). Here you will need to create a new repo under your organisation. Make sure that you don't initialize the repo from the website. When the repo has been created you should be presented with a url to use. (i.e. git@github.com:my_org/my_repo.git)
-Connect the your github repo to your local repo::
-
-    git remote add origin git@github.com:my_org/my_repo.git
-
-Push your local repo to github::
-
-    git push -u origin master
-
-    (Tip: Sometimes you need to first add and commit README.md file, to make your first push to remote repo.)
-
-
-Set up branches for development
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Since we want to use the master branch as the production branch, we need to setup a new branch called *develop* to use for development.
-To do this we need to type the following in terminal::
-
-    git checkout -b develop
-
-This creates a new branch called develop that mirrors master. To push it to github::
-
-    git push --set-upstream origin develop
-
-Now you should have two branches in github. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
-
-More information about pull requests can be read below.
-:ref:`Pull Request<pull-request>`
-https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
-
-
-Automatic tests
-===============
-
-Automatic tests are needed to verify that your pull request does not break any existing pipes/flows inside sesam.
-To perform these types of tests we need to set up automatic tests. Since there are a few different CI/CD tools, we are going to explain a few of the most common ones.
-
-Jenkins
-^^^^^^^
-This section describes how to set up Jenkins build with GCloud.
-
-Jenkins is a CI/CD tool that does not support single build pipeline. The reason for the need of single build pipeline is that we upload node config to a single node, if there are mulitple builds running at the same time there will be pushed multiple configs to the one node, which will result into tests not completing.
-
-To set up builds in jenkins, you will need to add  a few file to your repository
-my-project-directory
-::
-
-  my-project-directory
-    ├ deployment
-    | ├ jenkins
-    | | └ jobs
-    | |   └ build
-    | |     ├ dm-pod.yaml
-    | |     └ Jenkinsfile
-    | └ sesam
-    |   ├ cloudbuild.yaml
-    |   ├ Dockerfile
-    |   └ Readme.md
-    ├ node
-    | └ ++
-    └ ++
-
-dm-pod.yaml:
-
-Describes what type of container that should be used in the build process.
-::
-
-    apiVersion: v1
-    kind: Pod
-    spec:
-
-      containers:
-      - name: sesam-ci-container
-        image: eu.gcr.io/<your_gcr_repo>/sesam:<version_of_sesam_client>
-        tty: true
-        command:
-        - cat
-        resources:
-          limits:
-            memory: 6Gi
-            cpu: 1.7
-
-Jenkinsfile:
-
-The Jenkinsfile contains the stages that are supposed to run when the tests are running. The three default stages are:
-
-- Set environment variables for container
-
-- Verify usage of correct Sesam client version.
-
-- Running the tests and printing scheduler logs to see error messages in output.
-
-::
-
-  #!groovy
-
-  pipeline {
-      options {
-          disableConcurrentBuilds()
-      }
-      agent {
-          kubernetes {
-              label "dm-${BRANCH_NAME}-${BUILD_ID}"
-              defaultContainer 'jnlp'
-              yamlFile 'deployment/jenkins/jobs/build/dm-pod.yaml'
-          }
-      }
-      environment {
-          Sesam_CI_node_jwt = credentials('Sesam_CI_node_jwt')
-      }
-      stages {
-          stage('Set Sesam env vars') {
-              steps {
-                  script {
-                      env.Sesam_CI_node = "datahub-****.sesam.cloud"
-                  }
-              }
-          }
-          stage("Verify Sesam version") {
-              steps {
-                  dir('') {
-                      container('sesam-ci-container') {
-                          sh "/./sesam -version"
-                      }
-                  }
-              }
-          }
-          stage("Run Sesam tests") {
-              steps {
-                  dir('') {
-                      container('sesam-ci-container') {
-                          sh "export NODE='${env.Sesam_CI_node}'; export JWT='$Sesam_CI_node_jwt'; cd node && /./sesam -vv test  -print-scheduler-log"
-                      }
-                  }
-              }
-          }
-      }
-  }
-
-
-The files under the sesam folder here describes the files that should exist in the repository where jenkins is configured. Usually you do not have access to this repository, but you will need to provide these files.
-
-cloudbuild.yaml:
-
-cloudbuild.yaml A build config file defines the fields that are needed for Cloud Build to perform your tasks. You'll need a build config file if you're starting builds using the gcloud command-line tool or build triggers. You can write the build config file using the YAML or the JSON syntax.
-
-::
-
-  steps:
-    - name: 'gcr.io/cloud-builders/docker'
-      args: [
-        'build',
-        '-t', 'eu.gcr.io/<your_gcr_repo>/sesam:latest',
-        '-t', 'eu.gcr.io/<your_gcr_repo>/sesam:1.15.41',
-        '.'
-      ]
-  images:
-    - 'eu.gcr.io/<your_gcr_repo>/sesam'
-  tags:
-    - '1.15.41'
-    - 'latest'
-
-Dockerfile:
-
-The dockerfile describes the contianer that should run when the build process is executed. This container should be deployed to the repository that is used
-
-::
-
-  FROM debian:9.9-slim
-  MAINTAINER Ashkan Vahidishams "ashkan.vahidishams@sesam.io"
-
-  ARG SESAM_CI_VERSION=1.15.41
-
-  SHELL ["/bin/bash", "-c"]
-
-  RUN apt-get update
-  RUN apt-get install -y wget
-
-  RUN set -x
-  RUN wget -O sesam.tar.gz https://github.com/tombech/sesam-py/releases/download/$SESAM_CI_VERSION/sesam-linux-$SESAM_CI_VERSION.tar.gz
-  RUN tar -xf sesam.tar.gz
-  RUN rm sesam.tar.gz
-
-This dockerfile builds a container with the sesam client that is needed to execute the build.
-
-Azure DevOps
-^^^^^^^^^^^^
-Azure DevOps is a bit easier to set up with single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
-
-::
-
-  # Sesam AzureDevops Pipeline
-
-  trigger: none
-
-  pool:
-    vmImage: 'ubuntu-latest'
-
-  steps:
-  - script: |
-      wget -O sesam.tar.gz https://github.com/tombech/sesam-py/releases/download/$(sesam_cli_version)/sesam-linux-$(sesam_cli_version).tar.gz
-      tar -xf sesam.tar.gz
-      rm sesam.tar.gz
-    displayName: 'Download Sesam CLI'
-
-  - script: ./sesam -version
-    displayName: 'Verify Sesam CLI version'
-
-  - script: |
-      export NODE='$(node)'
-      export JWT='$(node_jwt)'
-      cd node
-      .././sesam -vv test  -print-scheduler-log
-    displayName: 'Run Tests'
-
-You will also have to add variables
-
-::
-
-  sesam_cli_version = 1.15.41 (version of the CLI used in your project)
-  node              = datahub-***.sesam.cloud (the node url to the CI server used in your project)
-  node_jwt          = bearer ****** (jwt for the CI server used in your project)
-
-
-Branch permissions are also needed to not be able to merge a Pull Request unless the tests have completed successfully. These permissions needs to be set under
-
-``Repos->Branches->More->Branch Policies->Add Build Policy``
-
-Use the default settings.
-
-You will also need to turn on ``Require a minimum number of reviewers``, and set it to ``1`` and ``Check for linked work items``. This makes it Easier to trace and close the tasks/issues for the Pull Request.
-
-These settings are required for your main branches ``develop`` and ``master``.
-
-Since the ``trigger`` parameter is set to ``none``, the build process will only trigger on PR's. There is no need to build ``master`` and ``develop`` after merge.
-
-Note if there is support for parallel builds on the agent pool you will need to disable this so that only one build process runs and the second build is queued up. This can be done by adding capability on the build agent. You will also need to add a this in the yaml file to enable this.
-Add user capabilities in the agent pool (key value pair), key = Limit and value = DisAbleParallel
-
-Your yaml file:
-::
-
-  pool:
-    name: {agent pool name}
-    demands: Limit -equals DisAbleParallel
-
-Your configuration will end up beeing in your repository under the main directory:
-::
-
-  my-project-directory
-    ├ node
-    | ├ pipes
-    | ├ systems
-    | ├ expected
-    | └ ++
-    └ azure-pipelines.yml
-
-Required checks
- TODO: Explain required checks for a sesam project
-
-Local git hooks (pre commit checks)
 
 Working on a new feature/change
 ===============================
@@ -478,7 +263,6 @@ I.E
 Try to avoid having commit messages like: Fixed bug with Y. This is a non-imperative form and when we apply the imperative mood to the text "Fixed bug with Y" the sentence will result into:
 If, applied, this commit will Fixed bug with Y.
 
-
 ::
 
     AB-123: Update requirements to fix deprecation error
@@ -506,6 +290,7 @@ When this is done, you should push your latest changes to github or similar and 
 
 Deploy a new feature
 ====================
+
 Creating a release
 ^^^^^^^^^^^^^^^^^^
 Release branches contain production ready new features and bug fixes that come from stable develop branch. In most cases, master branch is always behind develop branch because development goes on develop branch. After finishing release branches, they get merged back into develop and master branches so as a result both of these branches will match each other eventually.

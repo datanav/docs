@@ -1006,4 +1006,5 @@ global-task
 
 global-location
 
+.. include:: project-setup.rst
 .. include:: git.rst
