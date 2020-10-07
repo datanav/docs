@@ -528,9 +528,11 @@ GitHub Autodeployer microservice
 
 One way to easy set up automatic deployment of your Sesam configuration is to use the GitHub Autodeployer microservice. This is a microservice that you can configure in your Sesam node that at given intervals will check the configured Git repository for changes. If any changes to the repo is found, it will read the configuration from the repo and deploy it to the node.
 
-In the configuration you specify which branch to check against and deploy, so if you are using versioning of your releases, you need to go into the configuration and change the configured branch version to the new version. 
+In the configuration you can either specify a branch or a tag. Use tags when deploying a release branch with a version number (which should be a tag in the repo). If no tag is specified, the autodeployer will use the branch variable, which defaults to "master" if not set. Depending on the specified branch or tag, the autodeployer will compare the current Sesam configuration against the configuration in the repository, if any changes are found, the deployer will read the updated configuration from the repository and deploy it to the node.
 
 WARNING! Any existing pipes and systems will be overwritten when the autodeployer deploys a new version to the node. Any pipe or system configuration in the node not existing in the branch will be removed.
+
+Also note that the autodeployer only deploys a configuration, it does not do any other actions on the node, such as starting or resetting pipes. If any pipes need to be reset as part of the deployment for instance, the autodeployer will not perform any such task and this must be done manually.
 
 Information on how to configure the GitHub Autodeployer microservice can be found at its corresponding GitHub page: `https://github.com/sesam-community/github-autodeployer <https://github.com/sesam-community/github-autodeployer>`_.
 
