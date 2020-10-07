@@ -1,25 +1,12 @@
-==============================
+------------------------------
 Setting up a new Sesam project
-==============================
-
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
-Introduction
-------------
+------------------------------
 
 When setting up a new Sesam project there are several tasks that needs to be done in order to ensure a good working environment for the project and its team. One thing is the Sesam installation itself, but in every software development project, concepts such as version control, continuous integration (CI) testing and automatic deployment are key factors for a successful project.
 
 As a product, Sesam in itself does not contain any features that supports versioning of its configuration, local or automated CI testing and automatic deployment, but it provides a set of features (mostly through its API) that can be used in regular development tools or scripts for this purpose. This is flexible in terms of requirements set by the various customer, whose development platforms might vary. It does, however, mean that some time must be spent at the beginning of the project. In this document we will go through how to setup a Sesam project with these features, with examples and links to more in-depth documents.
 
-.. image:: images/datahub.jpg
-    :width: 800px
-    :align: center
-    :alt: Sesam
-
-
-.. _setup-versioncontrol
+.. _setup-version-control:
 
 Set up version control
 ----------------------
@@ -32,7 +19,8 @@ We will describe how to set up a version control repository for Sesam with Git i
 
 
 Initial repository setup
-^^^^^^^^^^^^^^^^^^^^^^^^
+========================
+
 The initial repository should contain two main branches with an infinite lifetime.
 Parallel to the master branch, another branch should exist, called develop.
 
@@ -80,7 +68,7 @@ For information on how to set up the master branch in Git, read :ref:`here<git-m
 For information on how to set up the development branch in Git, read :ref:`here<git-development-branch>`.
 
 Versioning of releases
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 You should use `semantic versioning <https://semver.org>`_ for any of your releases to production.
 
@@ -100,12 +88,12 @@ In a normal workflow you should test your local changes before committing them t
 Testing a Sesam configuration should be done by running all the pipes in your local node until no pipes has any entities left in their queues, except the output pipes (which should either be disabled or unable to send data to their respective systems). Doing this manually could hence be a tedious job, especially if your configuration consists of numerous pipes, having to repeatedly start all or several pipes. The output of the endpoint pipes should then be verified against the expected output of the pipes. The Sesam client includes a nifty feature for this, both for running the pipes to their conclusion and verifying the end result.
 
 Configuring tests
-^^^^^^^^^^^^^^^^^
+=================
 
 However, for this to work, you have to configure your Sesam configuration with a test-file for each endpoint pipe. In the same directory as you have your 'pipes' and 'systems' folders, you need to add a new folder named 'expected', this will be the folder that contains the test files and the expected result for each pipe.
 
 For each endpoint pipe in your Sesam configuration, you need to add two files (replace <name_of_pipe> with the name of the pipe):
-::
+
 	* <name_of_pipe>.json
 	* <name_of_pipe>.test.json
 
@@ -197,7 +185,7 @@ Example:
     }
 
 DTL parameters
-^^^^^^^^^^^^^^
+==============
 
 If you need to pass various variations of bound parameters to the DTL, you just create multiple .test.json files for each combination of parameters.
 
@@ -230,12 +218,12 @@ Example:
 This will compare the output of ``/publishers/foo/xml?my-param=A`` with the contents of ``foo-A.xml`` and ``/publishers/foo/xml?my-param=B`` with the contents of ``foo-B.xml``.
 
 Internal properties
-^^^^^^^^^^^^^^^^^^^
+===================
 
 All internal properties except ``_id`` and ``_deleted`` are removed from the output. Entities that has ``_deleted`` set to ``false`` will also be removed.
 
 Endpoints
-^^^^^^^^^
+=========
 
 By default the entities are fetched from ``/pipes/<my-pipe>/entities``, but if endpoint is set it will be fetched from
 ``/publishers/<my-pipe>/<endpoint-type>`` based on the endpoint type specified. Note that the pipe needs to be configured to publish to this endpoint.
@@ -267,7 +255,7 @@ Example:
 This will compare the output of ``/pipes/foo/entities?stage=source`` with the contents of ``foo.json``, useful when the pipe's sink strips away the "_id" property for example.
 
 Running tests locally
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 To test your Sesam configuration locally, run the following commmand:
 ::
@@ -295,7 +283,7 @@ Another check that should be considered is:
 - Only pull requests (PR) that are approved by another person in the team should be valid (this is however, )
   
 CI node
-^^^^^^^
+=======
 
 In order to be able to test your Sesam configuration across the project team, you need to have a CI node. This node's sole purpose is to provide a Sesam environment to test changes to the configuration against. Tests will be run in the same way as you will test your configuration locally, except that it should be initiated from your automatic CI testing system instead.
 
@@ -306,7 +294,7 @@ The CI node should be unable to write any data to another system, bear this in m
 Usually, the CI node could be a smaller instance than the production node, as the data used in the tests should not be of a considerable size.
 
 Jenkins
-^^^^^^^
+=======
 
 This section describes how to set up Jenkins build with GCloud.
 
@@ -455,7 +443,8 @@ The dockerfile describes the contianer that should run when the build process is
 This dockerfile builds a container with the sesam client that is needed to execute the build. Replace [Your name] with the name of the person responsible for the build process, alongside his or hers email-address.
 
 Azure DevOps
-^^^^^^^^^^^^
+============
+
 Azure DevOps is a bit easier to set up with single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
 
 ::
@@ -535,7 +524,7 @@ Set up automatic deployment
 Whether setting up automatic deployment of a Sesam configuration is a disputed theme. In normal usecases, you would like to have more control of when a release is deployed to a production environment, especially in larger or business critical installations. But if you decide upon setting up automatic deployment of your Sesam configuration, it can be done in several ways.
 
 GitHub Autodeployer microservice
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 One way to easy set up automatic deployment of your Sesam configuration is to use the GitHub Autodeployer microservice. This is a microservice that you can configure in your Sesam node that at given intervals will check the configured Git repository for changes. If any changes to the repo is found, it will read the configuration from the repo and deploy it to the node.
 
@@ -546,7 +535,7 @@ WARNING! Any existing pipes and systems will be overwritten when the autodeploye
 Information on how to configure the GitHub Autodeployer microservice can be found at its corresponding GitHub page: `https://github.com/sesam-community/github-autodeployer <https://github.com/sesam-community/github-autodeployer>`_.
 
 Using Jenkins, Azure DevOps or any other CD tools
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=================================================
 
 Automatic deployment could also be done using the same tools you use for your automatic CI testing, like Jenkins or Azure DevOps. For this, you need to change the step for testing with a step for deploying the given branch. See the document about the :ref:`Sesam client <concepts-sesam-client>` for the correct parameters to use.
 
