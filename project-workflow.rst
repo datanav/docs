@@ -1,6 +1,6 @@
-=============================================
-Best practices for working on a Sesam project
-=============================================
+============================================
+Best practice for working on a Sesam project
+============================================
  
 .. contents:: Table of Contents
    :depth: 2
