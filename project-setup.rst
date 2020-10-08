@@ -24,9 +24,9 @@ Initial repository setup
 The initial repository should contain two main branches with an infinite lifetime.
 Parallel to the master branch, another branch should exist, called develop.
 
-**master**
+*master*
 
-**develop**
+*develop*
 
 We consider origin/master to be the main branch where the source code always reflects a production-ready state.
 We consider origin/develop to be the main branch where the source code always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”.
