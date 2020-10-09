@@ -171,7 +171,7 @@ E.g.
 Namespaced identifiers
 ======================
 
-Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the input pipe.
+Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the inbound pipe.
 
 A namespaced identifier takes the following form:
 
@@ -298,11 +298,11 @@ Systems
 Pipes
 =====
 
-• name input pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
+• name inbound pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
 • do not use plural names (e.g. salesforce-sale not salesforce-sales)
 • prefix merge pipes with merged- (e.g. merged-sale)
 • prefix global pipes with global- (e.g. global-sale)
-• name intermediate output pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
+• name intermediate outbound pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
 • name outgoing pipe by postfixing the intermediate output with -endpoint (e.g. sale-bigquery-endpoint)
 
 Datasets
@@ -317,7 +317,7 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The data is fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the input pipe for future filtering and classification. 
+The data is fed into Sesam through **inbound pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the inbound pipe for future filtering and classification. 
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
 
@@ -329,21 +329,21 @@ The data is fed into Sesam through **input pipes** where namespaced identity is 
 
 **Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
-**Output pipes** basically sends data to an endpoint and should normally have no logic.
+**Outbound pipes** basically sends data to an endpoint and should normally have no logic.
 
-The main reason for why **output pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. Any logic added to an **output pipe** cannot either be used by other pipes.
+The main reason for why **outbound pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **outbound pipe**. Any logic added to an **outbound pipe** cannot either be used by other pipes.
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
 
-Input pipes
+Inbound pipes
 ===========
 
-Input pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the input pipes. Data filtering, transformation and consolidation will be done at a later stage. 
+Inbound pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the inbound pipes. Data filtering, transformation and consolidation will be done at a later stage. 
 
-Embedded data and Conditional input pipes 
+Embedded data and Conditional inbound pipes 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Embedded data is data that does not originate from an external source but are manually put into a pipe. Embedded data can be used for different purposes, two of which we will explain below.
 
@@ -373,11 +373,11 @@ Embedded data can be used when we need extra information about data that is not 
 Embedded data for testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
+Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single inbound pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
  
 These issues are solved with the conditional source setting in the pipe config, and we will go through how to do this below.
  
-In the pipe config below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
+In the pipe config below we see an example of the general setup of a conditional inbound pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
  
 The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.  
 
@@ -696,15 +696,15 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 Preparation pipes
 =================
 
-The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
 
 
 .. _best-practice-output-pipes:
 
-Output pipes 
+Outbound pipes 
 ============
 
-The output pipe is the input pipe counterpart. While the input pipe is used solely to import data into Sesam, the output pipe sole function is to export data out of Sesam. As mentioned in the Input pipe section, the focus of the input pipe will be on its source component/property, the output pipe, on the other end, will be built around its sink. Similarly, the output pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
+The outbound pipe is the inbound pipe counterpart. While the inbound pipe is used solely to import data into Sesam, the outbound pipe sole function is to export data out of Sesam. As mentioned in the Inbound pipe section, the focus of the inbound pipe will be on its source component/property, the outbound pipe, on the other end, will be built around its sink. Similarly, the outbound pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
 
 Tips for global datasets
 ------------------------
