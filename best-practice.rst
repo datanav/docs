@@ -339,12 +339,12 @@ The main reason for why **outbound pipes** shouldn't contain any logic or transf
     :alt: Generic pipe concept  
 
 Inbound pipes
-===========
+=============
 
 Inbound pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the inbound pipes. Data filtering, transformation and consolidation will be done at a later stage. 
 
 Embedded data and Conditional inbound pipes 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Embedded data is data that does not originate from an external source but are manually put into a pipe. Embedded data can be used for different purposes, two of which we will explain below.
 
 Embedded data as extra information
@@ -702,7 +702,7 @@ The aggregated data residing in a global dataset often needs to be transformed a
 .. _best-practice-output-pipes:
 
 Outbound pipes 
-============
+==============
 
 The outbound pipe is the inbound pipe counterpart. While the inbound pipe is used solely to import data into Sesam, the outbound pipe sole function is to export data out of Sesam. As mentioned in the Inbound pipe section, the focus of the inbound pipe will be on its source component/property, the outbound pipe, on the other end, will be built around its sink. Similarly, the outbound pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
 
