@@ -252,67 +252,70 @@ The Sesam client allows us to, in a quick and easy manner, to run new DTL config
 
 As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
 
-How to use the Sesam client
-===========================
+How to install and configure the Sesam client
+=============================================
 
-Before you start using the Sesam client make sure you have the following ready:
+Download the latest release of the Sesam client from github: https://github.com/sesam-community/sesam-py/releases/ (choose the version that corresponds to your operating system).
 
-•   Sesam client is available on github (https://github.com/sesam-community/sesam-py). Read about Installation and configuration further down
-•   A personal Sesam node for testing
-•   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
-•   A git clone of the repository you wish to work on
-•   Initial test setup (task "setting up tests in new projects” in Teams. text to be written)
-•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The content of the file should be on the form;
+To configure the Sesam client to talk to a Sesam node, you need to do the following:
+
+•   Create a `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__ (Json Web Token) on the Sesam node you want to connect to. This can be generated from the Sesam Management Studio, go to *Settings => Subscription => JWT*.
+•   Add a ".syncconfig" file to the folder you will be working from, which should store the JWT and the url to the Sesam node.
+
+The content of the ".syncconfig" file should be on the form of:
 
     ``node=’https://<node-id>.sesam.cloud’
     JWT=’<your-JWT>’``
 
-The "node-id" of your private Sesam node can be found between the node name and the "Overview" link inside your node.
+Replace <node-id> with the id of the node you want to connect to, this id can be found under the "Network"-settings for the subscription in the Sesam Management Studio, go to *Settings => Subscription => Network*. You will find the id as part of the "Default URL" property, which will be similar to the url that should be defined in the ".syncconfig" file. For example, with a default url of "https://datahub-ab123c45.sesam.cloud/api", the <node-id> would be datahub-ab123c45". It can also be found underneath the name of the node:
 
 .. image:: images/Node_ID.png
     :width: 800px
     :align: center
-    :alt: DataSet
 
-The JWT token can be generated inside your private node under *"Settings" ----> "Subsctiption" ---> "JWT"* (see above).
+Then replace <your-JWT> with the JWT you generated in the Sesam node.
 
-Then add another folder named "expected" in the same folder as the ".syncconfig" file.
+Usually the ".syncconfig" file should be located in the same folder as the "pipes" and "systems" folders in the Git clone you would be working on (as downloading the config of a node will write the config to the same folder the ".syncconfig" file is located in for instance). Your ".syncconfig" should not be added to the Git repo, so it is important that you add it to the ".gitignore" file. See the following folder structure for how a typical Sesam Git repo should look like::
 
-After we have installed Sesam client via pip, we need to configure it. You can read about this here as seen below.
+    my-project-directory
+      ├ node
+      | ├ expected
+      | ├ pipes
+      | ├ systems
+      | ├ .syncconfig
+      | └ variables
+      ├ README.md
+      ├ LICENSE
+      ├ .gitignore
+      └ ++
 
-Installation
-============
-
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
-
-To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
- 
-::
-
-    $ cd sesam
-    $ virtualenv --python=python3 venv
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    $ python sesam.py -version
-    sesam version 1.0.0
-
-Configuration
-=============
-
-::
-
-    •   When running the sesam client for the first time, use this commando:
-
-        $ sesam init
-
-    •   Enter your Sesam username and press enter, enter your passord and press enter.
-    •   You will then get a list of the various Sesam subscriptions you are a member of.
-        The Sesam client will then ask which Subscription to use?
-        Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
-    •   The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
+When this is done, you are ready to use the Sesam client.
 
 Configuring tests
 =================
+
+To configure the tests for your Sesam node, add "expected" folder to your working directory. Normally this should be the same folder as the "pipes" and "systems" folders in the Git clone you would be working on. For each endpoint pipe in your configuration, you need to add a test configuration file. This file should contain the properties for the test of that specific endpoint pipe. The file should have the same name as the endpoint pipe, with a ".test.json" extension (like 'my-endpoint-pipe.test.json').
+
+The "expected" folder should also contain the expected test result for each test defined in the folder. For the initial definition of these files, you need to first run the tests and then use the "sesam update" command to update the test results. These files will be given the same name as the endpoint pipe with a ".json" extension.
+
+See the following folder structure for how a typical Sesam Git repo should look like, with tests configured::
+
+    my-project-directory
+      ├ node
+      | ├ expected
+      | | ├ my-endpoint-pipe.json
+      | | ├ my-endpoint-pipe.test.json
+      | | └ ++
+      | ├ pipes
+      | ├ systems
+      | ├ .syncconfig
+      | └ variables
+      ├ README.md
+      ├ LICENSE
+      ├ .gitignore
+      └ ++
+
+The properties available for the test configuration files are:
 
 .. list-table::
    :header-rows: 1
