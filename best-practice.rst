@@ -70,7 +70,7 @@ There are three sources containing person data as shown below. If any target sys
 
   HR system
   {
-     "_id": "hr-person:02023688018",
+    "_id": "hr-person:02023688018",
     "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
     "hr-person:Gender": "male",
     "hr-person:SSN": "02023688018"
@@ -79,19 +79,19 @@ There are three sources containing person data as shown below. If any target sys
   CRM
   {
     "_id": "crm-person:100",
-      "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-      "crm-person:ID:”100”,
-      "crm-person:SSN": "02023688018",
-      "crm-person:SSN-ni": "~:hr-person:02023688018"
-    }
+    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "crm-person:ID:”100”,
+    "crm-person:SSN": "02023688018",
+    "crm-person:SSN-ni": "~:hr-person:02023688018"
+  }
 
   ERP
   {
-     "_id": "erp-person:0202",
-     "erp-person:SSN": "02023688018",
-     "erp-person:SSN-ni": "~:hr-person:02023688018",
-     "erp-person:ID:”0202”,
-     "erp-person:country":"NO"
+    "_id": "erp-person:0202",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:hr-person:02023688018",
+    "erp-person:ID:”0202”,
+    "erp-person:country":"NO"
   }
 
 The dataset below is what a global dataset of the above three datasets looks like in Sesam when merging on equality of social security number (SSN).
@@ -177,9 +177,9 @@ A namespaced identifier takes the following form:
 
 ::
 
-  "hr-person:SSN:"~:hr-person:18057653453"
+  "hr-person:SSN": "~:hr-person:18057653453"
 
-  "namespace:propertyName":"namespaced-identifier:value"
+  "namespace:propertyName": "namespaced-identifier:value"
 
 Namespace identifiers is a recommended way of referring to datasets for matching properties during transformations. This will ease the connection of data. Namespaced identifiers are generated to keep existing joins so we are able to keep the data model from source. 
 
@@ -204,7 +204,7 @@ This will produce the following output. We see the ["ni"] we added in code above
 
 ::
 
-  "erp-person:SSN": "~:hr-person:erp-person:02023688018",
+  "erp-person:SSN": "~:hr-person:erp-person:02023688018"
  
 
 You now have unique namespace identifiers based on **SSN**, which you can use to merge the person data from two different sources.
@@ -222,12 +222,12 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
       ],
       "identity": "first",
       "version": 2
-      },
-      "metadata": {
-        "global": true,
-        "tags": ["people"]
-      }
+    },
+    "metadata": {
+      "global": true,
+      "tags": ["people"]
     }
+  }
 
 In the above code we are connecting the foreign keys **SSN** of **"erp-person"** with the primary key **"$ids"** of 
 **"hr-person"**. 
@@ -270,7 +270,7 @@ Output from the example code above as seen below with a join to hr-system:
     "hr-person:Title": "Mr.",
     "hr-person:Username": "Mays1944",
     "hr-person:ZipCode": "2213",
-    **"rdf:type"**: [
+    "rdf:type": [
       "~:erp:person",
       "~:hr:person"
     ]  
@@ -325,7 +325,7 @@ The data is fed into Sesam through **inbound pipes** where namespaced identity i
 
   "metadata": {
     "global": true
- }
+  }
 
 **Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
@@ -397,77 +397,75 @@ Our pipe:
 
 ::
 
-   { 
-    "_id": "hr-person", 
-    "type": "pipe", 
-    "source": { 
-      "type": "conditional", 
-      "alternatives": { 
-        "Prod": { 
-          "type": "csv", 
-          "system": "hr", 
-          "blacklist": ["Password"], 
-          "delimiter": ",", 
-          "encoding": "utf-8", 
-          "primary_key": "SSN", 
-          "url": "/file/sesam-training/data/test_people_sesam_training1.csv" 
-        }, 
-
-        "Dev": { 
-          "type": "embedded", 
-          "entities": [{ 
-            "_id": "23072451376", 
-            "Country": "NO", 
-            "EmailAddress": "TorjusSand@einrot.com", 
-            "Gender": "male", 
-            "GivenName": "Torjus", 
-            "MiddleInitial": "M", 
-            "Number": "1", 
-            "SSN": "23072451376", 
-            "StreetAddress": "Helmers vei 242", 
-            "Surname": "Sand", 
-            "Title": "Mr.", 
-            "Username": "Unjudosely", 
-            "ZipCode": "5163" 
-          }, { 
-            "_id": "09046987892", 
-            "Country": "NO", 
-            "EmailAddress": "LarsEvjen@rhyta.com", 
-            "Gender": "male", 
-            "GivenName": "Lars", 
-            "MiddleInitial": "A", 
-            "Number": "2", 
-            "SSN": "09046987892", 
-            "StreetAddress": "Frognerveien 60", 
-            "Surname": "Evjen", 
-            "Title": "Mr.", 
-            "Username": "Wimen1979", 
-            "ZipCode": "3121" 
-          } 
-          }] 
-        } 
-      }, 
-      "condition": "$ENV(node-env)" 
-    }, 
-    "transform": { 
-      "type": "dtl", 
-      "rules": { 
-        "default": [ 
-          ["copy", "*"], 
-          ["comment", "below we will add a namespaced identifier and 'rdf:type' for easy filtering later"], 
-          ["add", "rdf:type", 
-            ["ni", "hr", "person"] 
-          ] 
-        ] 
-      } 
-    }, 
-    "pump": { 
-      "mode": "manual" 
-    }, 
-    "metadata": { 
-      "tags": ["embedded", "person"] 
-    } 
-     
+  {
+    "_id": "hr-person",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "Dev": {
+          "type": "embedded",
+          "entities": [{
+            "_id": "23072451376",
+            "Country": "NO",
+            "EmailAddress": "TorjusSand@einrot.com",
+            "Gender": "male",
+            "GivenName": "Torjus",
+            "MiddleInitial": "M",
+            "Number": "1",
+            "SSN": "23072451376",
+            "StreetAddress": "Helmers vei 242",
+            "Surname": "Sand",
+            "Title": "Mr.",
+            "Username": "Unjudosely",
+            "ZipCode": "5163"
+          }, {
+            "_id": "09046987892",
+            "Country": "NO",
+            "EmailAddress": "LarsEvjen@rhyta.com",
+            "Gender": "male",
+            "GivenName": "Lars",
+            "MiddleInitial": "A",
+            "Number": "2",
+            "SSN": "09046987892",
+            "StreetAddress": "Frognerveien 60",
+            "Surname": "Evjen",
+            "Title": "Mr.",
+            "Username": "Wimen1979",
+            "ZipCode": "3121"
+          }]
+        },
+        "Prod": {
+          "type": "csv",
+          "system": "hr",
+          "blacklist": ["Password"],
+          "delimiter": ",",
+          "encoding": "utf-8",
+          "primary_key": "SSN",
+          "url": "/file/sesam-training/data/test_people_sesam_training1.csv"
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["comment", "below we will add a namespaced identifier and 'rdf:type' for easy filtering later"],
+          ["add", "rdf:type",
+            ["ni", "hr", "person"]
+          ]
+        ]
+      }
+    },
+    "pump": {
+      "mode": "manual"
+    },
+    "metadata": {
+      "tags": ["embedded", "person"]
+    }
+  }
 
 RDF type  
 ^^^^^^^^
@@ -496,7 +494,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
 
   "metadata": {
     "global": true
- }
+  }
 
 In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
 
@@ -517,65 +515,65 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 ::
 
   {
-  "_id": "global-person",
-  "type": "pipe",
-  "source": {
-    "type": "merge",    
-    "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
-      s"equality": [
-      ["eq", "ep.$ids", "cp.SSN "],
-      ["eq", "ep. .$ids ", "hr.$ids"],
-      ["eq", "ep.Username", "su.Username"]
-    ],
-    "identity": "first",
-    "version": 2
-  },
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+      "equality": [
+        ["eq", "ep.$ids", "cp.SSN "],
+        ["eq", "ep. .$ids ", "hr.$ids"],
+        ["eq", "ep.Username", "su.Username"]
+      ],
+      "identity": "first",
+      "version": 2
+    },
     "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "*"],
-        ["add", "zipcode",
-          ["coalesce",
-            ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"]
-          ]
-        ],
-        ["add", "email",
-          ["coalesce", "_S.EmailAddress"]
-        ],
-        ["add", "firstname",
-          ["coalesce",
-            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
-          ]
-        ],
-        ["add", "lastname",
-          ["coalesce",
-            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
-          ]
-        ],
-        ["add", "fullname2",
-          ["concat", "_T.global-person:firstname", " ",
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "zipcode",
             ["coalesce",
-              ["not",
-                ["matches", "*.", "_."]
-              ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"]
-        ],
-        ["add", "fullname",
-          ["concat", "_T.global-person:firstname", " ",
-            ["filter",
-              ["neq", "_.", ". "],
-              ["concat",
-                ["coalesce",
-                  ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"]
-                ], ". "]
-            ], "_T.global-person:lastname"]
+              ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"]
+            ]
+          ],
+          ["add", "email",
+            ["coalesce", "_S.EmailAddress"]
+          ],
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+            ]
+          ],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+            ]
+          ],
+          ["add", "fullname2",
+            ["concat", "_T.global-person:firstname", " ",
+              ["coalesce",
+                ["not",
+                  ["matches", "*.", "_."]
+                ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"]
+          ],
+          ["add", "fullname",
+            ["concat", "_T.global-person:firstname", " ",
+              ["filter",
+                ["neq", "_.", ". "],
+                ["concat",
+                  ["coalesce",
+                    ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"]
+                  ], ". "]
+              ], "_T.global-person:lastname"]
+          ]
         ]
-      ]
+      }
+    },
+    "metadata": {
+      "global": true
     }
-  },
-  "metadata": {
-    "global": true
-  }
   }
 
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
@@ -600,98 +598,98 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 ::
 
   {
-  "$ids": [
-    "~:erp-person:02023688018",
-    "~:crm-person:100",
-    "~:salesforce-userprofile:Mays1944",
-    "~:hr-person:02023688018"
-  ],
-  "crm-person:Address": "Ørneveien 40",
-  "crm-person:Customerid": "100",
-  "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "crm-person:FirstName": "Isak",
-  "crm-person:Gender": "male",
-  "crm-person:LastName": "Eikeland",
-  "crm-person:MiddleInitial": "E",
-  "crm-person:PostalCode": "1357",
-  "crm-person:SSN": "02023688018",
-  "crm-person:Username": "Mays1944",
-  "erp-person:Country": "NO",
-  "erp-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "erp-person:Firstname": "Isak",
-  "erp-person:Gender": "male",
-  "erp-person:Lastname": "Eikeland",
-  "erp-person:MiddleInitial": "E",
-  "erp-person:MoneyUsed": "19392",
-  "erp-person:Number": "100",
-  "erp-person:SSN": "02023688018",
-  "erp-person:SSN-ni": "~:crm-person:02023688018",
-  "erp-person:StreetAddress": "Frodegaten gate",
-  "erp-person:TimesOrdered": "16",
-  "erp-person:Title": "Mr.",
-  "erp-person:Username": "Mays1944",
-  "erp-person:ZipCode": "4017",
-  "erp-person:subscriptions": [
-    {
-      "erp-person:active": true,
-      "erp-person:category": "Types of Drink",
-      "erp-person:hash": "cd821925a05449c7d5b907157d00fe4b",
-      "erp-person:items-ordered": 8,
-      "erp-person:received": 20,
-      "erp-person:specials": 15,
-      "erp-person:start-date": "~t2005-05-02T05:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Alpha"
-    },
-    {
-      "erp-person:active": true,
-      "erp-person:category": "Foreign Cities",
-      "erp-person:hash": "02f30f1fd084eef209c64bcbb577c66d",
-      "erp-person:items-ordered": 19,
-      "erp-person:received": 21,
-      "erp-person:specials": 10,
-      "erp-person:start-date": "~t2007-07-01T07:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Delta"
-    },
-    {
-      "erp-person:active": false,
-      "erp-person:category": "Something You're Afraid Of",
-      "erp-person:end-date": "~t2006-12-26T12:17:30.6196185Z",
-      "erp-person:hash": "f0145edebae47eccd463a2dec9ac7485",
-      "erp-person:items-ordered": 21,
-      "erp-person:received": 49,
-      "erp-person:specials": 23,
-      "erp-person:start-date": "~t2005-12-26T12:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Beta"
-    }
-  ],
-  "global-person:email": "IsakEikeland@teleworm.us",
-  "global-person:firstname": "Isak",
-  "global-person:fullname": "Isak E. Eikeland",
-  "global-person:fullname2": "Isak E. Eikeland",
-  "global-person:lastname": "Eikeland",
-  "global-person:zipcode": "1357",
-  "hr-person:Country": "NO",
-  "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "hr-person:Gender": "male",
-  "hr-person:GivenName": "Isak",
-  "hr-person:MiddleInitial": "E",
-  "hr-person:Number": "100",
-  "hr-person:SSN": "02023688018",
-  "hr-person:StreetAddress": "Nadderudåsen 186",
-  "hr-person:Surname": "Eikeland",
-  "hr-person:Title": "Mr.",
-  "hr-person:Username": "Mays1944",
-  "hr-person:ZipCode": "1357",
-  **"rdf:type"**: [
-    "~:erp:person",
-    "~:crm:person",
-    "~:salesforce:userprofile",
-    "~:hr:person"
-  ],
-  "salesforce-userprofile:EmailAddress": "IsakEikeland@teleworm.us",
-  "salesforce-userprofile:Username": "Mays1944",
-  "salesforce-userprofile:phone_number": 24887159
-    }
+    "$ids": [
+      "~:erp-person:02023688018",
+      "~:crm-person:100",
+      "~:salesforce-userprofile:Mays1944",
+      "~:hr-person:02023688018"
+    ],
+    "crm-person:Address": "Ørneveien 40",
+    "crm-person:Customerid": "100",
+    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "crm-person:FirstName": "Isak",
+    "crm-person:Gender": "male",
+    "crm-person:LastName": "Eikeland",
+    "crm-person:MiddleInitial": "E",
+    "crm-person:PostalCode": "1357",
+    "crm-person:SSN": "02023688018",
+    "crm-person:Username": "Mays1944",
+    "erp-person:Country": "NO",
+    "erp-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "erp-person:Firstname": "Isak",
+    "erp-person:Gender": "male",
+    "erp-person:Lastname": "Eikeland",
+    "erp-person:MiddleInitial": "E",
+    "erp-person:MoneyUsed": "19392",
+    "erp-person:Number": "100",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:crm-person:02023688018",
+    "erp-person:StreetAddress": "Frodegaten gate",
+    "erp-person:TimesOrdered": "16",
+    "erp-person:Title": "Mr.",
+    "erp-person:Username": "Mays1944",
+    "erp-person:ZipCode": "4017",
+    "erp-person:subscriptions": [
+      {
+        "erp-person:active": true,
+        "erp-person:category": "Types of Drink",
+        "erp-person:hash": "cd821925a05449c7d5b907157d00fe4b",
+        "erp-person:items-ordered": 8,
+        "erp-person:received": 20,
+        "erp-person:specials": 15,
+        "erp-person:start-date": "~t2005-05-02T05:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Alpha"
+      },
+      {
+        "erp-person:active": true,
+        "erp-person:category": "Foreign Cities",
+        "erp-person:hash": "02f30f1fd084eef209c64bcbb577c66d",
+        "erp-person:items-ordered": 19,
+        "erp-person:received": 21,
+        "erp-person:specials": 10,
+        "erp-person:start-date": "~t2007-07-01T07:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Delta"
+      },
+      {
+        "erp-person:active": false,
+        "erp-person:category": "Something You're Afraid Of",
+        "erp-person:end-date": "~t2006-12-26T12:17:30.6196185Z",
+        "erp-person:hash": "f0145edebae47eccd463a2dec9ac7485",
+        "erp-person:items-ordered": 21,
+        "erp-person:received": 49,
+        "erp-person:specials": 23,
+        "erp-person:start-date": "~t2005-12-26T12:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Beta"
+      }
+    ],
+    "global-person:email": "IsakEikeland@teleworm.us",
+    "global-person:firstname": "Isak",
+    "global-person:fullname": "Isak E. Eikeland",
+    "global-person:fullname2": "Isak E. Eikeland",
+    "global-person:lastname": "Eikeland",
+    "global-person:zipcode": "1357",
+    "hr-person:Country": "NO",
+    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hr-person:Gender": "male",
+    "hr-person:GivenName": "Isak",
+    "hr-person:MiddleInitial": "E",
+    "hr-person:Number": "100",
+    "hr-person:SSN": "02023688018",
+    "hr-person:StreetAddress": "Nadderudåsen 186",
+    "hr-person:Surname": "Eikeland",
+    "hr-person:Title": "Mr.",
+    "hr-person:Username": "Mays1944",
+    "hr-person:ZipCode": "1357",
+    "rdf:type": [
+      "~:erp:person",
+      "~:crm:person",
+      "~:salesforce:userprofile",
+      "~:hr:person"
+    ],
+    "salesforce-userprofile:EmailAddress": "IsakEikeland@teleworm.us",
+    "salesforce-userprofile:Username": "Mays1944",
+    "salesforce-userprofile:phone_number": 24887159
+  }
 
 Preparation pipes
 =================
@@ -871,10 +869,10 @@ In addition to the zip-code from the 3 different data sources, the "global-perso
 
 ::
 
-"hr-person:ZipCode": null,
-"crm-person:PostalCode": "3732",
-"erp-person:ZipCode": "5003",
-"global-person:zipcode": "3732"
+  "hr-person:ZipCode": null,
+  "crm-person:PostalCode": "3732",
+  "erp-person:ZipCode": "5003",
+  "global-person:zipcode": "3732"
       
 Now, the most trusted zip-code value can be accessed without evaluating all three at every inquiry.
 
