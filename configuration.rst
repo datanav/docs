@@ -3885,8 +3885,8 @@ Properties
      - The name of the property to store the result returned from the REST service. Note that if the ``replace-entity``
        property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
        the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
-       the ``reponse-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
-       set to ``false``, the ``reponse-property`` will be added to the original entity and set to the contents of the
+       the ``response-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
+       set to ``false``, the ``response-property`` will be added to the original entity and set to the contents of the
        request reponse body as a string or a parsed JSON structure if that is the returned content type.
 
      - ``"response"``
@@ -4021,7 +4021,8 @@ Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in these exapmles:
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
 
 ::
 
@@ -6197,7 +6198,8 @@ Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in these exapmles:
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
 
 ::
 
