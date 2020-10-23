@@ -3845,7 +3845,7 @@ The REST transform
 This transform can communicate with a REST service using HTTP requests.
 
 Note that the shape of the entities piped to this transform must conform to certain criteria, see the
-:ref:`notes <rest_expected_rest_entity_shape>` later in the section.
+:ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
 
 Also note that, in contrast to the REST sink, the REST transform also supports the GET operation.
 
@@ -3910,7 +3910,7 @@ Properties
      - ``false``
      -
 
-.. _rest_expected_rest_entity_shape:
+.. _rest_transform_expected_rest_entity_shape:
 
 Expected entity shape
 ^^^^^^^^^^^^^^^^^^^^^
