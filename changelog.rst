@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _2020_10_23:
+
+2020-10-23
+----------
+* Documented the :ref:` REST transform <REST_transform>`.
+
 .. _2020_08_24:
 
 2020-08-24

@@ -3840,12 +3840,14 @@ it will produce the transformed entity:
 .. _REST_transform:
 
 The REST transform
------------------
+------------------
 
 This transform can communicate with a REST service using HTTP requests.
 
 Note that the shape of the entities piped to this transform must conform to certain criteria, see the
 :ref:`notes <rest_expected_rest_entity_shape>` later in the section.
+
+Also note that, in contrast to the REST sink, the REST transform also supports the GET operation.
 
 Prototype
 ^^^^^^^^^
@@ -3877,6 +3879,36 @@ Properties
      - The id of the :ref:`REST system <rest_system>` to use.
      -
      - Yes
+
+   * - ``response-property``
+     - String
+     - The name of the property to store the result returned from the REST service. Note that if the ``replace-entity``
+       property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
+       the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
+       the ``reponse-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
+       set to ``false``, the ``reponse-property`` will be added to the original entity and set to the contents of the
+       request reponse body as a string or a parsed JSON structure if that is the returned content type.
+
+     - ``"response"``
+     -
+
+   * - ``replace-entity``
+     - Boolean
+     - This property controls if the entity should be replaced with the JSON contents of the response or if the
+       original entity should be kept. See the ``response-property`` for more detail on how this works. The default
+       is to keep the original entity and add a ``reponse`` property holding the result of the REST operation.
+
+     - ``false``
+     -
+
+   * - ``response-include-content-type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property. Note that this property is ignored if ``replace-entity`` is set to ``true`` and
+       the response is JSON.
+
+     - ``false``
+     -
 
 .. _rest_expected_rest_entity_shape:
 
@@ -3919,7 +3951,7 @@ expected is:
 
    * - ``operation``
      - String
-     - The contents of this property must refer to one of the named ``operations`` registered with the sink's :ref:`REST system <rest_system>`.
+     - The contents of this property must refer to one of the named ``operations`` registered with the transform's :ref:`REST system <rest_system>`.
      -
      - Yes
 
@@ -3949,7 +3981,7 @@ String as payload:
     "payload": "<some>string-value</some>"
   }
 
-Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form"  in the :ref:`REST system <rest_system>` the sink uses):
+Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form"  in the :ref:`REST system <rest_system>` the transform uses):
 
 ::
 
@@ -4016,6 +4048,23 @@ Example input entities:
     ]
 
 
+Example output entities:
+
+::
+
+    [
+      {
+          "_id": "bob",
+          "operation": "get-man",
+          "properties": {
+              "collection_name": "study-group-1"
+          },
+          "response": {
+              "name": "Bob Maker"
+              "email": "bob.maker@example.com"
+          }
+      }
+    ]
 
 .. _sink_section:
 
