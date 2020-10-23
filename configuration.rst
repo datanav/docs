@@ -3837,6 +3837,236 @@ it will produce the transformed entity:
     "rdf": "<http://x.org/1> <http://x.org/name> \"Entity 1\".\n<http://x.org/1> <http://x.org/id> \"entity-1\".\n<http://x.org/1> <http://foo.org/child> _:x1.\n_:x1 <http://x.org/id> \"child\".\n"
   }
 
+.. _REST_transform:
+
+The REST transform
+------------------
+
+This transform can communicate with a REST service using HTTP requests.
+
+Note that the shape of the entities piped to this transform must conform to certain criteria, see the
+:ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
+
+Also note that, in contrast to the REST sink, the REST transform also supports the GET operation.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "rest",
+        "system" : "rest-system",
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``system``
+     - String
+     - The id of the :ref:`REST system <rest_system>` to use.
+     -
+     - Yes
+
+   * - ``response-property``
+     - String
+     - The name of the property to store the result returned from the REST service. Note that if the ``replace-entity``
+       property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
+       the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
+       the ``response-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
+       set to ``false``, the ``response-property`` will be added to the original entity and set to the contents of the
+       request reponse body as a string or a parsed JSON structure if that is the returned content type.
+
+     - ``"response"``
+     -
+
+   * - ``replace-entity``
+     - Boolean
+     - This property controls if the entity should be replaced with the JSON contents of the response or if the
+       original entity should be kept. See the ``response-property`` for more detail on how this works. The default
+       is to keep the original entity and add a ``reponse`` property holding the result of the REST operation.
+
+     - ``false``
+     -
+
+   * - ``response-include-content-type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property. Note that this property is ignored if ``replace-entity`` is set to ``true`` and
+       the response is JSON.
+
+     - ``false``
+     -
+
+.. _rest_transform_expected_rest_entity_shape:
+
+Expected entity shape
+^^^^^^^^^^^^^^^^^^^^^
+
+The entities must be transformed into a particular form before being piped to the REST transform. The general form
+expected is:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``properties``
+     - Object
+     - Any non-payload properties you need should go into the toplevel child entity ``properties``. You can then address
+       these properties in the Jinja templates for operation ``url`` properties using the "{{ properties.key_name }}" syntax.
+     -
+     -
+
+   * - ``operation``
+     - String
+     - The contents of this property must refer to one of the named ``operations`` registered with the transform's :ref:`REST system <rest_system>`.
+     -
+     - Yes
+
+   * - ``payload``
+     - String or Object
+     - The payload for the operation specified. It can be a string or an object. You can also omit it, in which case
+       the empty string will be used instead (for example for "DELETE" methods). All string payloads will be encoded
+       as UTF-8.
+     -
+     -
+
+
+Example entities:
+
+String as payload:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form"  in the :ref:`REST system <rest_system>` the transform uses):
+
+::
+
+  {
+    "_id": "2",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-other-operation",
+    "payload": {
+        "payload": "property",
+        "child": {
+          "foo": "bar"
+        }
+    }
+  }
+
+Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "json-transit" for this type of entity:
+
+::
+
+  {
+    "_id": "3",
+    "operation": "some-third-operation",
+    "payload": [
+      {
+        "foo": "bar"
+      },
+      {
+        "zoo": "foo"
+      }
+    ]
+  }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
+
+::
+
+    {
+        "type" : "pipe",
+        "transform" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+        }
+    }
+
+Example input entities:
+
+::
+
+    [
+      {
+          "_id": "bob",
+          "operation": "get-man",
+          "properties": {
+              "collection_name": "study-group-1"
+          }
+      }
+    ]
+
+
+Example output entities:
+
+::
+
+    [
+      {
+          "_id": "bob",
+          "operation": "get-man",
+          "properties": {
+              "collection_name": "study-group-1"
+          },
+          "response": {
+              "name": "Bob Maker"
+              "email": "bob.maker@example.com"
+          }
+      }
+    ]
+
 .. _sink_section:
 
 Sinks
@@ -5968,7 +6198,8 @@ Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in these exapmles:
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
 
 ::
 
@@ -7377,6 +7608,10 @@ Prototype
         "connect_timeout": 60,
         "read_timeout": 1800,
         "operations": {
+            "get-operation": {
+                "url" : "/a/service/that/supports/get/{{ _id }}",
+                "method": "GET"
+            },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
                 "method": "DELETE"
@@ -7457,7 +7692,7 @@ A operation configuration looks like:
 
    * - ``method``
      - String
-     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
+     - A enumeration of "GET", "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
        that the operation should execute on the ``url`` specified.
      -
      - Yes
@@ -7500,6 +7735,14 @@ Example configuration
         "url_pattern": "http://our.domain.com/api/%s",
         "type": "system:rest",
         "operations": {
+            "get-man": {
+                "url" : "men/{{ properties.collection_name }}/{{ _id }}",
+                "method": "GET"
+            },
+            "get-woman": {
+                "url" : "women/{{ properties.collection_name }}/{{ _id }}",
+                "method": "GET"
+            },
            "delete-man": {
                "url" : "men/{{ properties.collection_name }}/{{ _id }}",
                "method": "DELETE"
