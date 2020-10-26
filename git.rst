@@ -3,7 +3,7 @@ Using Git in a Sesam project
 ----------------------------
 
 Initial repository setup
-========================
+------------------------
 
 The initial repository should contain two main branches with an infinite lifetime.
 Parallel to the master branch, another branch should exist, called develop.
