@@ -444,5 +444,325 @@ The subscription summary entries can have notifications for the following notifi
    This ruletype checks if the subscription's license is getting close to its expiration date.
 
 
+This endpoint implements the :doc:`JSON Pull Protocol <json-pull>`, but the following quirk is useful to
+know about: The ordering of the returned entities are not directly determined by when the notification each entity
+describes triggered. Example: if the endpoint returns two entities with ``"_updated":1`` and  ``"_updated":2``,
+the entity with  ``"_updated":1`` might describe a notification that triggered *after* the notification in the entity
+with ``"_updated":2``. This is not a problem, but can be a source of confusion if one is not aware of this behaviour.
 
-This endpoint implements the :doc:`JSON Pull Protocol <json-pull>`.
+
+Example timeline
+----------------
+This timeline illustrates how the notification-summary api works.
+
+10:00
+~~~~~
+We have three pipes: pipeA, pipeB and pipeC. Initially, no pipes have triggered any notifications.
+At this time, the api returns something like this::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 100,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 101,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 102,
+        "confidence": 1,
+        "pipe_id": "pipeC",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+
+10:01
+~~~~~
+pipeA fails and triggers a notification
+
+10:02
+~~~~~
+pipeB fails and triggers a notification
+
+10:03
+~~~~~
+At this time, the api may return this::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 100,
+        "confidence": 1,
+        "pipe_id": "pipeC",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "notifications": [
+            {**the notification that was triggered at 10:01**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 104,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+
+But, it may just as well return this (i.e. switching the order of pipeA and pipeB)::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 100,
+        "confidence": 1,
+        "pipe_id": "pipeC",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 104,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "notifications": [
+            {**the notification that was triggered at 10:01**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+(Implementation details: This happens because the "_updated" values aren't assigned until the "api/notification-summary" endpoint is actually called. At that point all the current notifications are gathered, and the code decides if it needs to create new entries for any of the pipes.)
+
+10:04
+~~~~~
+pipeC fails and triggers a notification
+
+10:05
+~~~~~
+At this time, the api will return this (assuming that the ordering at 10:03 was "pipeC", "pipeB", "pipeA")::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 104,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "notifications": [
+            {**the notification that was triggered at 10:01**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 105,
+        "confidence": 1,
+        "notifications": [
+            {**the notification that was triggered at 10:04**}
+        ],
+        "pipe_id": "pipeC",
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+10:06
+~~~~~
+pipeC fails again, but in a way that triggers an additional notification.
+
+10:07
+~~~~~
+At this time, the api will returns this::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 104,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "notifications": [
+            {**the notification that was triggered at 10:01**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 106,
+        "confidence": 1,
+        "notifications": [
+            {**the notification that was triggered at 10:04**},
+            {**the notification that was triggered at 10:06**},
+        ],
+        "pipe_id": "pipeC",
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+10:08
+~~~~~
+pipeA succeeds, and all notifications on pipeA is removed.
+
+10:09
+~~~~~
+At this time, the api will returns this::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 106,
+        "confidence": 1,
+        "notifications": [
+            {**the notification that was triggered at 10:04**},
+            {**the notification that was triggered at 10:06**},
+        ],
+        "pipe_id": "pipeC",
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 107,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+
+
+10:10
+~~~~~
+pipeC fails yet again, but in a way that makes the notification that was triggered at 10:06 go away.
+
+
+10:11
+~~~~~
+At this time, the api will returns this::
+
+    [
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeB",
+        "_updated": 103,
+        "confidence": 1,
+        "pipe_id": "pipeB",
+        "notifications": [
+            {**the notification that was triggered at 10:02**}
+        ],
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeA",
+        "_updated": 107,
+        "confidence": 1,
+        "pipe_id": "pipeA",
+        "status": "ok",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      },
+      {
+        "_deleted": false,
+        "_id": "12345678-1234-1234-1234-1234567890ab_pipeC",
+        "_updated": 108,
+        "confidence": 1,
+        "notifications": [
+            {**the notification that was triggered at 10:04**}
+        ],
+        "pipe_id": "pipeC",
+        "status": "failed",
+        "subscription_id": "12345678-1234-1234-1234-1234567890ab"
+      }
+    ]
+

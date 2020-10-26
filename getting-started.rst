@@ -149,11 +149,11 @@ Systems
 
 Pipes
 ^^^^^
-  * Name input pipes with the system they read from, and postfix with the type of content (e.g. **salesforce-sale**).
+  * Name inbound pipes with the system they read from, and postfix with the type of content (e.g. **salesforce-sale**).
   * Do not use plural names (e.g. **crm-store**, not **crm-stores**).
   * Prefix merge pipes with **merged-** (e.g. **merged-person**).
   * Prefix global pipes with **global-** (e.g. **global-person**).
-  * Name intermediate output pipes with the type of the content and the name of the system to send to (e.g. **sale-bigquery**).
+  * Name intermediate outbound pipes with the type of the content and the name of the system to send to (e.g. **sale-bigquery**).
   * Name outgoing pipes by postfixing the intermediate output with **-endpoint** (e.g. **sale-bigquery-endpoint**).
 
 Datasets
@@ -1333,7 +1333,7 @@ We start by building a Docker image from our microservice. A Docker image is the
 
 The Docker image is then pushed up to a repository on Docker Hub (or any Docker platform. When hosted in the repository the image can be pulled by anyone with access.
 
-Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an input pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems. 
+Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an inbound pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems. 
 
 Microservices with Docker
 =========================
@@ -1535,7 +1535,7 @@ Save it and click on **Status**. Click **Pull** and **restart**, then **Refresh*
     :align: center
     :alt: Generic pipe concept
 
-The final step is to create an input pipe to get all the data from our microservice into Sesam datahub. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities and that reason we use this function:
+The final step is to create an inbound pipe to get all the data from our microservice into Sesam datahub. Because our dataset does not have an **"_id"** property we need to add that. We could just use a normal **["add"]** function, but as you can see from the microservice, we’ve actually just created one property as a dictionary. We really want these as three entities and that reason we use this function:
 
 ::
 
