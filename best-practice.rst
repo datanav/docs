@@ -937,73 +937,10 @@ Git: an open source version control system used to manage code (DTL when working
 Examples of real global datasets
 --------------------------------
 
-**Below is an example from a Sesam customer:**
+**Below is an example of global datasets from a Sesam customer:**
 
-global-workorder
-
-global-customer
-
-global-classification
-
-global-document
-
-global-exportobjects
-
-global-facility
-
-global-grid
-
-global-inventory
-
-global-invoice
-
-global-job
-
-global-location
-
-global-market
-
-global-meterpoint
-
-global-sale
-
-global-timeseries
-
-global-vendor
-
-global-workorder
-
-
-**Another public sector company’s list of global datasets:**
-
-global-access
-
-global-address
-
-global-asset
-
-global-case
-
-global-classification
-
-global-company
-
-global-contract
-
-global-course
-
-global-document
-
-global-file
-
-global-order
-
-global-person
-
-global-project
-
-global-task
-
-global-location
-
-.. include:: git.rst
+- global-workorder
+- global-customer
+- global-classification
+- global-document
+- global-location
