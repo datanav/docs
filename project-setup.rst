@@ -18,65 +18,24 @@ A Sesam configuration should hence always be stored in a separate version contro
 We will describe how to set up a version control repository for Sesam with Git in mind, but the overall way of how to work with branches and flows in another version control system should be the same.
 
 
-Initial repository setup
-========================
+Set up a new Git project / repository for Sesam
+-----------------------------------------------
 
-The initial repository should contain two main branches with an infinite lifetime.
-Parallel to the master branch, another branch should exist, called develop.
+Given that you already have a directory with a Sesam configuration that you want to put into a repository, there are some additional files and folders that needs to be added in order to add it to a Git repository.
 
-*master*
+The optimal directory structure of a Sesam Node project in Git should look like this:
+::
 
-*develop*
-
-We consider origin/master to be the main branch where the source code always reflects a production-ready state.
-We consider origin/develop to be the main branch where the source code always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”.
-
-When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master branch and then tagged with a release number.
-
-Therefore, each time when changes are merged back into master, this is a new production release by definition.
-We follow this practice very strictly.
-
-**Supporting branches**
-
-Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems.
-
-Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.
-
-The different types of branches we may use are:
-
-*Feature branches*
-
-*Release branches*
-
-*Hotfix branches*
-
-Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets.
-
-+-------------+----------------------+-----------------------+-----------------------------------------------------------+
-| Branch Type | May branch off from  | Must merge back into  | Branch naming convention                                  |
-+-------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Feature      | develop              | develop               | Aything except master, develop, release-*, or hotfix-*    |
-+-------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Release      | master               | develop and master    | release-*                                                 |
-+-------------+----------------------+-----------------------+-----------------------------------------------------------+
-|Hotfix       | master               | develop and master    | hotfix-*                                                  |
-+-------------+----------------------+-----------------------+-----------------------------------------------------------+
-
-**One exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop.**
-
-For information on how to set up the master branch in Git, read :ref:`here<git-master-branch>`.
-For information on how to set up the development branch in Git, read :ref:`here<git-development-branch>`.
-
-Versioning of releases
-======================
-
-You should use `semantic versioning <https://semver.org>`_ for any of your releases to production.
-
-Given a version number MAJOR.MINOR.PATCH, increment the:
-
-1. MAJOR version when you make incompatible changes to the configuration,
-2. MINOR version when you add functionality in a backwards compatible manner, and
-3. PATCH version when you make backwards compatible bug fixes
+    my-project-directory
+      ├ node
+      | ├ expected
+      | ├ pipes
+      | ├ systems
+      | └ variables
+      ├ README.md
+      ├ LICENSE
+      ├ .gitignore
+      └ ++
 
 .. _setup-local-tests:
 
@@ -106,8 +65,8 @@ The file with the .json extension is the file that shall contain the expected re
    * - Property
      - Description
      - Type
-     - Required 
-     - Default 
+     - Required
+     - Default
 
    * - ``_id``
      - | Name of the test.
@@ -125,7 +84,7 @@ The file with the .json extension is the file that shall contain the expected re
      - | A description of the test.
      - | ``string``
      - |  No
-     - |  
+     - |
 
    * - ``ignore``
      - | If the output should be ignored during tests.
@@ -169,7 +128,7 @@ The file with the .json extension is the file that shall contain the expected re
      - |   No
      - | ``{}``
 
-Example: 
+Example:
 
 ::
 
@@ -192,7 +151,7 @@ If you need to pass various variations of bound parameters to the DTL, you just 
 Example:
 
 ::
-    
+
     {
     	$ cat foo-A.test.json
 	    {
@@ -227,7 +186,7 @@ Endpoints
 
 By default the entities are fetched from ``/pipes/<my-pipe>/entities``, but if endpoint is set it will be fetched from
 ``/publishers/<my-pipe>/<endpoint-type>`` based on the endpoint type specified. Note that the pipe needs to be configured to publish to this endpoint.
- 
+
 Example:
 
 ::
@@ -272,7 +231,7 @@ Set up automatic CI testing
 Automatic tests are needed to verify that your pull request does not break any existing pipes/flows inside sesam.
 To perform these types of tests we need to set up automatic tests. Since there are a few different CI/CD tools, we are going to explain a few of the most common ones.
 
-In order to fully be able to have an automated CI test of your Sesam configuration, you need to have a designated CI node. The only purpose of the CI node is to provide an environment to test changes to the configuration so that it doesn't break. 
+In order to fully be able to have an automated CI test of your Sesam configuration, you need to have a designated CI node. The only purpose of the CI node is to provide an environment to test changes to the configuration so that it doesn't break.
 
 When setting up automatic CI testing for a Sesam project, the following check should be required for the test to pass:
 
@@ -281,7 +240,7 @@ When setting up automatic CI testing for a Sesam project, the following check sh
 Another check that should be considered is:
 
 - Only pull requests (PR) that are approved by another person in the team should be valid (this is however, )
-  
+
 CI node
 =======
 
