@@ -517,6 +517,12 @@ the dataset is automatically compacted once every 24 hours (compaction type "bac
 compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
 
+.. NOTE::
+
+   Compaction will only be performed up to the lowest offset for which there exists a pipe doing dependency tracking on the dataset. Each pipe doing dependency tracking keeps a tracking offset on the dataset so that it knows which entities to perform dependency tracking for. It is this tracking offset that compaction cannot go beyond. This is done so that those pipes should not fall out of sync. If the compaction did not hold off then we could not guarantee that the output of those pipes are correct.
+
+   Be aware that disabled pipes also hold off compaction. If the pipes are to be disabled for a long time then it is better to remove the pipe, or alternatively comment out the hops.
+
 Properties
 ^^^^^^^^^^
 
