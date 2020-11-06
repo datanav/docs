@@ -70,7 +70,7 @@ There are three sources containing person data as shown below. If any target sys
 
   HR system
   {
-     "_id": "hr-person:02023688018",
+    "_id": "hr-person:02023688018",
     "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
     "hr-person:Gender": "male",
     "hr-person:SSN": "02023688018"
@@ -79,19 +79,19 @@ There are three sources containing person data as shown below. If any target sys
   CRM
   {
     "_id": "crm-person:100",
-      "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-      "crm-person:ID:”100”,
-      "crm-person:SSN": "02023688018",
-      "crm-person:SSN-ni": "~:hr-person:02023688018"
-    }
+    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "crm-person:ID:”100”,
+    "crm-person:SSN": "02023688018",
+    "crm-person:SSN-ni": "~:hr-person:02023688018"
+  }
 
   ERP
   {
-     "_id": "erp-person:0202",
-     "erp-person:SSN": "02023688018",
-     "erp-person:SSN-ni": "~:hr-person:02023688018",
-     "erp-person:ID:”0202”,
-     "erp-person:country":"NO"
+    "_id": "erp-person:0202",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:hr-person:02023688018",
+    "erp-person:ID:”0202”,
+    "erp-person:country":"NO"
   }
 
 The dataset below is what a global dataset of the above three datasets looks like in Sesam when merging on equality of social security number (SSN).
@@ -173,15 +173,15 @@ E.g.
 Namespaced identifiers
 ======================
 
-Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the input pipe.
+Namespaces are used to create namespaced identifiers, which makes it possible to merge data without losing track of the source. In addition, namespaced identifiers can be mapped to complete URLs as we have unique identifiers for each object. When namespaces are enabled, the _id of an entity will be a namespaced identifier. In similar ways like foreign keys are used in a relational database, a reference to a namespaced identifier could be used to relate one entity with another. These references are usually added in the inbound pipe.
 
 A namespaced identifier takes the following form:
 
 ::
 
-  "hr-person:SSN:"~:hr-person:18057653453"
+  "hr-person:SSN": "~:hr-person:18057653453"
 
-  "namespace:propertyName":"namespaced-identifier:value"
+  "namespace:propertyName": "namespaced-identifier:value"
 
 Namespace identifiers is a recommended way of referring to datasets for matching properties during transformations. This will ease the connection of data. Namespaced identifiers are generated to keep existing joins so we are able to keep the data model from source. 
 
@@ -206,7 +206,7 @@ This will produce the following output. We see the ["ni"] we added in code above
 
 ::
 
-  "erp-person:SSN": "~:hr-person:erp-person:02023688018",
+  "erp-person:SSN": "~:hr-person:erp-person:02023688018"
  
 
 You now have unique namespace identifiers based on **SSN**, which you can use to merge the person data from two different sources.
@@ -224,12 +224,12 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
       ],
       "identity": "first",
       "version": 2
-      },
-      "metadata": {
-        "global": true,
-        "tags": ["people"]
-      }
+    },
+    "metadata": {
+      "global": true,
+      "tags": ["people"]
     }
+  }
 
 In the above code we are connecting the foreign keys **SSN** of **"erp-person"** with the primary key **"$ids"** of 
 **"hr-person"**. 
@@ -272,7 +272,7 @@ Output from the example code above as seen below with a join to hr-system:
     "hr-person:Title": "Mr.",
     "hr-person:Username": "Mays1944",
     "hr-person:ZipCode": "2213",
-    **"rdf:type"**: [
+    "rdf:type": [
       "~:erp:person",
       "~:hr:person"
     ]  
@@ -302,11 +302,11 @@ Systems
 Pipes
 =====
 
-• name input pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
+• name inbound pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
 • do not use plural names (e.g. salesforce-sale not salesforce-sales)
 • prefix merge pipes with merged- (e.g. merged-sale)
 • prefix global pipes with global- (e.g. global-sale)
-• name intermediate output pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
+• name intermediate outbound pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
 • name outgoing pipe by postfixing the intermediate output with -endpoint (e.g. sale-bigquery-endpoint)
 
 Datasets
@@ -321,7 +321,7 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The data is fed into Sesam through **input pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the input pipe for future filtering and classification. 
+The data is fed into Sesam through **inbound pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the inbound pipe for future filtering and classification. 
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
 
@@ -329,26 +329,26 @@ The data is fed into Sesam through **input pipes** where namespaced identity is 
 
   "metadata": {
     "global": true
- }
+  }
 
 **Preparation pipes** is where **global datasets** are prepared for target systems. It is here most of the logic is added. It could include enriching with more context from other datasets, structuring data into other formats, adding new fields and other transformations. The main purpose is to get data ready for the target system.
 
-**Output pipes** basically sends data to an endpoint and should normally have no logic.
+**Outbound pipes** basically sends data to an endpoint and should normally have no logic.
 
-The main reason for why **output pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **output pipe**. Any logic added to an **output pipe** cannot either be used by other pipes.
+The main reason for why **outbound pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **outbound pipe**. Any logic added to an **outbound pipe** cannot either be used by other pipes.
 
 .. image:: images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
 
-Input pipes
-===========
+Inbound pipes
+=============
 
-Input pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the input pipes. Data filtering, transformation and consolidation will be done at a later stage. 
+Inbound pipes are used to fetch data from external systems into Sesam. As we want to be as comprehensive as possible regarding the data we ingest, there should be very few rules about filtering or altering data embedded within the inbound pipes. Data filtering, transformation and consolidation will be done at a later stage. 
 
-Embedded data and Conditional input pipes 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Embedded data and Conditional inbound pipes 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Embedded data is data that does not originate from an external source but are manually put into a pipe. Embedded data can be used for different purposes, two of which we will explain below.
 
 Embedded data as extra information
@@ -377,11 +377,11 @@ Embedded data can be used when we need extra information about data that is not 
 Embedded data for testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single input pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
+Embedded data may also be used to test new configurations through conditional pipes. Conditional pipes are a way to define several distinct sources for a single inbound pipe. For example, consider a customer that has 2 different environments, one for production and one for test. The customer’s production environment includes all the personal data for the individuals working for the company. This data is sensitive, and the access restricted to only one IP-address. The customer's test environment might also contain sensitive personal data. Therefore, only one IP-address from the Sesam portal may have access too. There are several issues with such a setup. First, what do we do when several consultants work with the same project from multiple IPs? Second, what about minor changes to code that we would like to test out, without having to change data in the customer’s test environment?
  
 These issues are solved with the conditional source setting in the pipe config, and we will go through how to do this below.
  
-In the pipe config below we see an example of the general setup of a conditional input pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
+In the pipe config below we see an example of the general setup of a conditional inbound pipe. In this example we specify two environments; “Prod“ and “Dev“. In this case, the “Prod“ environment talks directly to the source data, here a csv-file. Inside the conditional “Prod“-definition we specify all the information we need in order to collect the source data.
  
 The “Dev“ environment does not connect directly to any external source. Instead we use *"embedded data“*, which is data formatted just like it would be from an external source but anonymized. As the data is embedded, or hard coded if you will, there is no access restriction.  
 
@@ -401,77 +401,75 @@ Our pipe:
 
 ::
 
-   { 
-    "_id": "hr-person", 
-    "type": "pipe", 
-    "source": { 
-      "type": "conditional", 
-      "alternatives": { 
-        "Prod": { 
-          "type": "csv", 
-          "system": "hr", 
-          "blacklist": ["Password"], 
-          "delimiter": ",", 
-          "encoding": "utf-8", 
-          "primary_key": "SSN", 
-          "url": "/file/sesam-training/data/test_people_sesam_training1.csv" 
-        }, 
-
-        "Dev": { 
-          "type": "embedded", 
-          "entities": [{ 
-            "_id": "23072451376", 
-            "Country": "NO", 
-            "EmailAddress": "TorjusSand@einrot.com", 
-            "Gender": "male", 
-            "GivenName": "Torjus", 
-            "MiddleInitial": "M", 
-            "Number": "1", 
-            "SSN": "23072451376", 
-            "StreetAddress": "Helmers vei 242", 
-            "Surname": "Sand", 
-            "Title": "Mr.", 
-            "Username": "Unjudosely", 
-            "ZipCode": "5163" 
-          }, { 
-            "_id": "09046987892", 
-            "Country": "NO", 
-            "EmailAddress": "LarsEvjen@rhyta.com", 
-            "Gender": "male", 
-            "GivenName": "Lars", 
-            "MiddleInitial": "A", 
-            "Number": "2", 
-            "SSN": "09046987892", 
-            "StreetAddress": "Frognerveien 60", 
-            "Surname": "Evjen", 
-            "Title": "Mr.", 
-            "Username": "Wimen1979", 
-            "ZipCode": "3121" 
-          } 
-          }] 
-        } 
-      }, 
-      "condition": "$ENV(node-env)" 
-    }, 
-    "transform": { 
-      "type": "dtl", 
-      "rules": { 
-        "default": [ 
-          ["copy", "*"], 
-          ["comment", "below we will add a namespaced identifier and 'rdf:type' for easy filtering later"], 
-          ["add", "rdf:type", 
-            ["ni", "hr", "person"] 
-          ] 
-        ] 
-      } 
-    }, 
-    "pump": { 
-      "mode": "manual" 
-    }, 
-    "metadata": { 
-      "tags": ["embedded", "person"] 
-    } 
-     
+  {
+    "_id": "hr-person",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "Dev": {
+          "type": "embedded",
+          "entities": [{
+            "_id": "23072451376",
+            "Country": "NO",
+            "EmailAddress": "TorjusSand@einrot.com",
+            "Gender": "male",
+            "GivenName": "Torjus",
+            "MiddleInitial": "M",
+            "Number": "1",
+            "SSN": "23072451376",
+            "StreetAddress": "Helmers vei 242",
+            "Surname": "Sand",
+            "Title": "Mr.",
+            "Username": "Unjudosely",
+            "ZipCode": "5163"
+          }, {
+            "_id": "09046987892",
+            "Country": "NO",
+            "EmailAddress": "LarsEvjen@rhyta.com",
+            "Gender": "male",
+            "GivenName": "Lars",
+            "MiddleInitial": "A",
+            "Number": "2",
+            "SSN": "09046987892",
+            "StreetAddress": "Frognerveien 60",
+            "Surname": "Evjen",
+            "Title": "Mr.",
+            "Username": "Wimen1979",
+            "ZipCode": "3121"
+          }]
+        },
+        "Prod": {
+          "type": "csv",
+          "system": "hr",
+          "blacklist": ["Password"],
+          "delimiter": ",",
+          "encoding": "utf-8",
+          "primary_key": "SSN",
+          "url": "/file/sesam-training/data/test_people_sesam_training1.csv"
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["comment", "below we will add a namespaced identifier and 'rdf:type' for easy filtering later"],
+          ["add", "rdf:type",
+            ["ni", "hr", "person"]
+          ]
+        ]
+      }
+    },
+    "pump": {
+      "mode": "manual"
+    },
+    "metadata": {
+      "tags": ["embedded", "person"]
+    }
+  }
 
 RDF type  
 ^^^^^^^^
@@ -500,7 +498,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
 
   "metadata": {
     "global": true
- }
+  }
 
 In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
 
@@ -521,65 +519,65 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 ::
 
   {
-  "_id": "global-person",
-  "type": "pipe",
-  "source": {
-    "type": "merge",    
-    "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
-      s"equality": [
-      ["eq", "ep.$ids", "cp.SSN "],
-      ["eq", "ep. .$ids ", "hr.$ids"],
-      ["eq", "ep.Username", "su.Username"]
-    ],
-    "identity": "first",
-    "version": 2
-  },
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
+      "equality": [
+        ["eq", "ep.$ids", "cp.SSN "],
+        ["eq", "ep. .$ids ", "hr.$ids"],
+        ["eq", "ep.Username", "su.Username"]
+      ],
+      "identity": "first",
+      "version": 2
+    },
     "transform": {
-    "type": "dtl",
-    "rules": {
-      "default": [
-        ["copy", "*"],
-        ["add", "zipcode",
-          ["coalesce",
-            ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"]
-          ]
-        ],
-        ["add", "email",
-          ["coalesce", "_S.EmailAddress"]
-        ],
-        ["add", "firstname",
-          ["coalesce",
-            ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
-          ]
-        ],
-        ["add", "lastname",
-          ["coalesce",
-            ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
-          ]
-        ],
-        ["add", "fullname2",
-          ["concat", "_T.global-person:firstname", " ",
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "zipcode",
             ["coalesce",
-              ["not",
-                ["matches", "*.", "_."]
-              ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"]
-        ],
-        ["add", "fullname",
-          ["concat", "_T.global-person:firstname", " ",
-            ["filter",
-              ["neq", "_.", ". "],
-              ["concat",
-                ["coalesce",
-                  ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"]
-                ], ". "]
-            ], "_T.global-person:lastname"]
+              ["list", "_S.hr-person:ZipCode", "_S.erp-person:ZipCode", "_S.crm-person:PostalCode"]
+            ]
+          ],
+          ["add", "email",
+            ["coalesce", "_S.EmailAddress"]
+          ],
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.crm-person:FirstName", "_S.erp-person:Firstname", "_S.hr-person:GivenName"]
+            ]
+          ],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.crm-person:LastName", "_S.erp-person:Lastname", "_S.hr-person:Surname"]
+            ]
+          ],
+          ["add", "fullname2",
+            ["concat", "_T.global-person:firstname", " ",
+              ["coalesce",
+                ["not",
+                  ["matches", "*.", "_."]
+                ], "_S.MiddleInitial"], ". ", "_T.global-person:lastname"]
+          ],
+          ["add", "fullname",
+            ["concat", "_T.global-person:firstname", " ",
+              ["filter",
+                ["neq", "_.", ". "],
+                ["concat",
+                  ["coalesce",
+                    ["list", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial", "_S.hr-person:MiddleInitial"]
+                  ], ". "]
+              ], "_T.global-person:lastname"]
+          ]
         ]
-      ]
+      }
+    },
+    "metadata": {
+      "global": true
     }
-  },
-  "metadata": {
-    "global": true
-  }
   }
 
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
@@ -604,111 +602,111 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 ::
 
   {
-  "$ids": [
-    "~:erp-person:02023688018",
-    "~:crm-person:100",
-    "~:salesforce-userprofile:Mays1944",
-    "~:hr-person:02023688018"
-  ],
-  "crm-person:Address": "Ørneveien 40",
-  "crm-person:Customerid": "100",
-  "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "crm-person:FirstName": "Isak",
-  "crm-person:Gender": "male",
-  "crm-person:LastName": "Eikeland",
-  "crm-person:MiddleInitial": "E",
-  "crm-person:PostalCode": "1357",
-  "crm-person:SSN": "02023688018",
-  "crm-person:Username": "Mays1944",
-  "erp-person:Country": "NO",
-  "erp-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "erp-person:Firstname": "Isak",
-  "erp-person:Gender": "male",
-  "erp-person:Lastname": "Eikeland",
-  "erp-person:MiddleInitial": "E",
-  "erp-person:MoneyUsed": "19392",
-  "erp-person:Number": "100",
-  "erp-person:SSN": "02023688018",
-  "erp-person:SSN-ni": "~:crm-person:02023688018",
-  "erp-person:StreetAddress": "Frodegaten gate",
-  "erp-person:TimesOrdered": "16",
-  "erp-person:Title": "Mr.",
-  "erp-person:Username": "Mays1944",
-  "erp-person:ZipCode": "4017",
-  "erp-person:subscriptions": [
-    {
-      "erp-person:active": true,
-      "erp-person:category": "Types of Drink",
-      "erp-person:hash": "cd821925a05449c7d5b907157d00fe4b",
-      "erp-person:items-ordered": 8,
-      "erp-person:received": 20,
-      "erp-person:specials": 15,
-      "erp-person:start-date": "~t2005-05-02T05:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Alpha"
-    },
-    {
-      "erp-person:active": true,
-      "erp-person:category": "Foreign Cities",
-      "erp-person:hash": "02f30f1fd084eef209c64bcbb577c66d",
-      "erp-person:items-ordered": 19,
-      "erp-person:received": 21,
-      "erp-person:specials": 10,
-      "erp-person:start-date": "~t2007-07-01T07:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Delta"
-    },
-    {
-      "erp-person:active": false,
-      "erp-person:category": "Something You're Afraid Of",
-      "erp-person:end-date": "~t2006-12-26T12:17:30.6196185Z",
-      "erp-person:hash": "f0145edebae47eccd463a2dec9ac7485",
-      "erp-person:items-ordered": 21,
-      "erp-person:received": 49,
-      "erp-person:specials": 23,
-      "erp-person:start-date": "~t2005-12-26T12:17:30.6196185Z",
-      "erp-person:subscription-psuedo-name": "Beta"
-    }
-  ],
-  "global-person:email": "IsakEikeland@teleworm.us",
-  "global-person:firstname": "Isak",
-  "global-person:fullname": "Isak E. Eikeland",
-  "global-person:fullname2": "Isak E. Eikeland",
-  "global-person:lastname": "Eikeland",
-  "global-person:zipcode": "1357",
-  "hr-person:Country": "NO",
-  "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-  "hr-person:Gender": "male",
-  "hr-person:GivenName": "Isak",
-  "hr-person:MiddleInitial": "E",
-  "hr-person:Number": "100",
-  "hr-person:SSN": "02023688018",
-  "hr-person:StreetAddress": "Nadderudåsen 186",
-  "hr-person:Surname": "Eikeland",
-  "hr-person:Title": "Mr.",
-  "hr-person:Username": "Mays1944",
-  "hr-person:ZipCode": "1357",
-  **"rdf:type"**: [
-    "~:erp:person",
-    "~:crm:person",
-    "~:salesforce:userprofile",
-    "~:hr:person"
-  ],
-  "salesforce-userprofile:EmailAddress": "IsakEikeland@teleworm.us",
-  "salesforce-userprofile:Username": "Mays1944",
-  "salesforce-userprofile:phone_number": 24887159
-    }
+    "$ids": [
+      "~:erp-person:02023688018",
+      "~:crm-person:100",
+      "~:salesforce-userprofile:Mays1944",
+      "~:hr-person:02023688018"
+    ],
+    "crm-person:Address": "Ørneveien 40",
+    "crm-person:Customerid": "100",
+    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "crm-person:FirstName": "Isak",
+    "crm-person:Gender": "male",
+    "crm-person:LastName": "Eikeland",
+    "crm-person:MiddleInitial": "E",
+    "crm-person:PostalCode": "1357",
+    "crm-person:SSN": "02023688018",
+    "crm-person:Username": "Mays1944",
+    "erp-person:Country": "NO",
+    "erp-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "erp-person:Firstname": "Isak",
+    "erp-person:Gender": "male",
+    "erp-person:Lastname": "Eikeland",
+    "erp-person:MiddleInitial": "E",
+    "erp-person:MoneyUsed": "19392",
+    "erp-person:Number": "100",
+    "erp-person:SSN": "02023688018",
+    "erp-person:SSN-ni": "~:crm-person:02023688018",
+    "erp-person:StreetAddress": "Frodegaten gate",
+    "erp-person:TimesOrdered": "16",
+    "erp-person:Title": "Mr.",
+    "erp-person:Username": "Mays1944",
+    "erp-person:ZipCode": "4017",
+    "erp-person:subscriptions": [
+      {
+        "erp-person:active": true,
+        "erp-person:category": "Types of Drink",
+        "erp-person:hash": "cd821925a05449c7d5b907157d00fe4b",
+        "erp-person:items-ordered": 8,
+        "erp-person:received": 20,
+        "erp-person:specials": 15,
+        "erp-person:start-date": "~t2005-05-02T05:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Alpha"
+      },
+      {
+        "erp-person:active": true,
+        "erp-person:category": "Foreign Cities",
+        "erp-person:hash": "02f30f1fd084eef209c64bcbb577c66d",
+        "erp-person:items-ordered": 19,
+        "erp-person:received": 21,
+        "erp-person:specials": 10,
+        "erp-person:start-date": "~t2007-07-01T07:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Delta"
+      },
+      {
+        "erp-person:active": false,
+        "erp-person:category": "Something You're Afraid Of",
+        "erp-person:end-date": "~t2006-12-26T12:17:30.6196185Z",
+        "erp-person:hash": "f0145edebae47eccd463a2dec9ac7485",
+        "erp-person:items-ordered": 21,
+        "erp-person:received": 49,
+        "erp-person:specials": 23,
+        "erp-person:start-date": "~t2005-12-26T12:17:30.6196185Z",
+        "erp-person:subscription-psuedo-name": "Beta"
+      }
+    ],
+    "global-person:email": "IsakEikeland@teleworm.us",
+    "global-person:firstname": "Isak",
+    "global-person:fullname": "Isak E. Eikeland",
+    "global-person:fullname2": "Isak E. Eikeland",
+    "global-person:lastname": "Eikeland",
+    "global-person:zipcode": "1357",
+    "hr-person:Country": "NO",
+    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hr-person:Gender": "male",
+    "hr-person:GivenName": "Isak",
+    "hr-person:MiddleInitial": "E",
+    "hr-person:Number": "100",
+    "hr-person:SSN": "02023688018",
+    "hr-person:StreetAddress": "Nadderudåsen 186",
+    "hr-person:Surname": "Eikeland",
+    "hr-person:Title": "Mr.",
+    "hr-person:Username": "Mays1944",
+    "hr-person:ZipCode": "1357",
+    "rdf:type": [
+      "~:erp:person",
+      "~:crm:person",
+      "~:salesforce:userprofile",
+      "~:hr:person"
+    ],
+    "salesforce-userprofile:EmailAddress": "IsakEikeland@teleworm.us",
+    "salesforce-userprofile:Username": "Mays1944",
+    "salesforce-userprofile:phone_number": 24887159
+  }
 
 Preparation pipes
 =================
 
-The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the output pipe.
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
 
 
 .. _best-practice-output-pipes:
 
-Output pipes 
-============
+Outbound pipes 
+==============
 
-The output pipe is the input pipe counterpart. While the input pipe is used solely to import data into Sesam, the output pipe sole function is to export data out of Sesam. As mentioned in the Input pipe section, the focus of the input pipe will be on its source component/property, the output pipe, on the other end, will be built around its sink. Similarly, the output pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
+The outbound pipe is the inbound pipe counterpart. While the inbound pipe is used solely to import data into Sesam, the outbound pipe sole function is to export data out of Sesam. As mentioned in the Inbound pipe section, the focus of the inbound pipe will be on its source component/property, the outbound pipe, on the other end, will be built around its sink. Similarly, the outbound pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
 
 Tips for global datasets
 ------------------------
@@ -875,10 +873,10 @@ In addition to the zip-code from the 3 different data sources, the "global-perso
 
 ::
 
-"hr-person:ZipCode": null,
-"crm-person:PostalCode": "3732",
-"erp-person:ZipCode": "5003",
-"global-person:zipcode": "3732"
+  "hr-person:ZipCode": null,
+  "crm-person:PostalCode": "3732",
+  "erp-person:ZipCode": "5003",
+  "global-person:zipcode": "3732"
       
 Now, the most trusted zip-code value can be accessed without evaluating all three at every inquiry.
 
@@ -941,14 +939,10 @@ Git: an open source version control system used to manage code (DTL when working
 Examples of real global datasets
 --------------------------------
 
-**Below is an example from a Sesam customer:**
+**Below is an example of global datasets from a Sesam customer:**
 
-global-workorder
-
-global-customer
-
-global-classification
-
-global-document
-
-global-location
+- global-workorder
+- global-customer
+- global-classification
+- global-document
+- global-location

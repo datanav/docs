@@ -178,7 +178,7 @@ To set up this automation we need to take care of a few things:
 Import data
 ^^^^^^^^^^^
 
-We have to copy all the data from our source systems that contain data that could be served to our data subjects. We can import this data from different types of sources like databases, APIs, CSV- or XML-files. We do this by creating "input pipes" that copy all the data from a source. The pipes connect to external sources through "systems" in Sesam, which serve connection strings, connection pooling, authentication etc. Take a look at the Getting started with Sesam section of this documentation if you need to learn how to configure pipes and systems to connect to external data sources.
+We have to copy all the data from our source systems that contain data that could be served to our data subjects. We can import this data from different types of sources like databases, APIs, CSV- or XML-files. We do this by creating "inbound pipes" that copy all the data from a source. The pipes connect to external sources through "systems" in Sesam, which serve connection strings, connection pooling, authentication etc. Take a look at the Getting started with Sesam section of this documentation if you need to learn how to configure pipes and systems to connect to external data sources.
 
 For testing purposes we have pre-made a few pipe configurations with embedded test data. We can use these pipes to setup and test the automation with dummy data before connecting to our real data sources.
 

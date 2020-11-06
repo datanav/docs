@@ -2261,25 +2261,25 @@ Date and time
        |   ``"%Y-%m-%d %H:%M:%S",``
        |   ``["datetime-parse",``
        |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]``
+       |     ``"2018-08-18T12:39:01"]]``
        |
-       | Returns one string: "2018-08-08 12:39:01".
+       | Returns one string: "2018-08-18 12:39:01".
        |
        | ``["datetime-format", "Europe/Oslo",``
        |   ``"%Y-%m-%d %H:%M:%S",``
        |   ``["datetime-parse",``
        |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]``
+       |     ``"2018-08-18T12:39:01"]]``
        |
-       | Returns one string: "2018-08-08 14:39:01".
+       | Returns one string: "2018-08-18 14:39:01".
        |
        | ``["datetime-format", "Europe/Oslo",``
        |   ``"%Y-%m-%d %H:%M:%S",``
        |   ``["datetime-parse", "Europe/Oslo",``
        |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]``
+       |     ``"2018-08-18T12:39:01"]]``
        |
-       | Returns one string: "2018-08-08 12:39:01".
+       | Returns one string: "2018-08-18 12:39:01".
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
 

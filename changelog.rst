@@ -1,20 +1,33 @@
 Changelog
 =========
 
-.. _2020_08_24:
+.. _changelog_2020_11_06:
+
+2020-11-06
+----------
+
+* Added :ref:`note <pipe_compaction>` about compaction not being performed beyond depencency tracking offsets.
+  
+.. _changelog_2020_10_23:
+
+2020-10-23
+----------
+* Documented the :ref:`REST transform <REST_transform>`.
+
+.. _changelog_2020_08_24:
 
 2020-08-24
 ----------
 * Changed default compaction type to ``sink``. To go back to the previous default, you can set sink compaction to ``false`` on individual pipes or set the global default property ``default_compaction_type`` to ``background`` in the :ref:`service metadata <service_metadata_section>`.
 
-.. _2020_08_21:
+.. _changelog_2020_08_21:
 
 2020-08-21
 ----------
 * Added an optional ``description`` property to pipes and systems - it can be either a string or a list of strings.
 * Added an optional ``comment`` property to pipes, systems, sources, sinks, pumps and transforms - - it can be either a string or a list of strings.
 
-.. _2020_08_17:
+.. _changelog_2020_08_17:
 
 2020-08-17
 ----------
@@ -125,7 +138,7 @@ Changelog
 
 2019-08-26
 ----------
-* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 2019-08-19
 ----------
@@ -523,7 +536,7 @@ Changelog
 
 2017-03-30
 ----------
-* Extended all :ref:`systems <system_section>` to accept a new property ``worker_threads`` that limits the number of concurrent pipes that can run against a particular system. The default value is 10. For input pipes the source system is used and for output pipes the sink system is used. For internal pipes, the the pool has 50 worker threads (i.e. for dataset to dataset pipes or receiver/publisher endpoints).
+* Extended all :ref:`systems <system_section>` to accept a new property ``worker_threads`` that limits the number of concurrent pipes that can run against a particular system. The default value is 10. For inbound pipes the source system is used and for outbound pipes the sink system is used. For internal pipes, the the pool has 50 worker threads (i.e. for dataset to dataset pipes or receiver/publisher endpoints).
 
 2017-03-24
 ----------

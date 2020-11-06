@@ -489,7 +489,7 @@ Properties
 
    * - ``add_namespaces``
      - Boolean
-     - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on input pipes.
+     - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on inbound pipes.
 
        If ``namespaced_identifiers`` is enabled in the service metadata then the source default value is used. The following sources has a default value of ``true``: :ref:`csv <csv_source>`, :ref:`ldap <ldap_source>`, :ref:`sql <sql_source>`, :ref:`embedded <embedded_source>`, :ref:`http_endpoint <http_endpoint_source>`, and :ref:`json <json_source>`.
      - Source default
@@ -497,7 +497,7 @@ Properties
 
    * - ``remove_namespaces``
      - Boolean
-     - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on output pipes.
+     - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on outbound pipes.
 
        If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
      - Sink default
@@ -516,6 +516,12 @@ the pipe writes new entities to the dataset by default (compaction type "sink" e
 the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
 compaction.sink set to ``false``). The default is to keep the last two versions of every
 entity up until the current time.
+
+.. NOTE::
+
+   Compaction will only be performed up to the lowest offset for which there exists a pipe doing dependency tracking on the dataset. Each pipe doing dependency tracking keeps a tracking offset on the dataset so that it knows which entities to perform dependency tracking for. It is this tracking offset that compaction cannot go beyond. This is done so that those pipes should not fall out of sync. If the compaction did not hold off then we could not guarantee that the output of those pipes are correct.
+
+   Be aware that disabled pipes also hold off compaction. If the pipes are to be disabled for a long time then it is better to remove the pipe, or alternatively comment out the hops.
 
 Properties
 ^^^^^^^^^^
@@ -652,7 +658,7 @@ Properties
 Completeness
 ------------
 
-When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Input pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 Properties
 ^^^^^^^^^^
@@ -3837,6 +3843,236 @@ it will produce the transformed entity:
     "rdf": "<http://x.org/1> <http://x.org/name> \"Entity 1\".\n<http://x.org/1> <http://x.org/id> \"entity-1\".\n<http://x.org/1> <http://foo.org/child> _:x1.\n_:x1 <http://x.org/id> \"child\".\n"
   }
 
+.. _REST_transform:
+
+The REST transform
+------------------
+
+This transform can communicate with a REST service using HTTP requests.
+
+Note that the shape of the entities piped to this transform must conform to certain criteria, see the
+:ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
+
+Also note that, in contrast to the REST sink, the REST transform also supports the GET operation.
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "rest",
+        "system" : "rest-system",
+    }
+
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``system``
+     - String
+     - The id of the :ref:`REST system <rest_system>` to use.
+     -
+     - Yes
+
+   * - ``response-property``
+     - String
+     - The name of the property to store the result returned from the REST service. Note that if the ``replace-entity``
+       property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
+       the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
+       the ``response-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
+       set to ``false``, the ``response-property`` will be added to the original entity and set to the contents of the
+       request reponse body as a string or a parsed JSON structure if that is the returned content type.
+
+     - ``"response"``
+     -
+
+   * - ``replace-entity``
+     - Boolean
+     - This property controls if the entity should be replaced with the JSON contents of the response or if the
+       original entity should be kept. See the ``response-property`` for more detail on how this works. The default
+       is to keep the original entity and add a ``reponse`` property holding the result of the REST operation.
+
+     - ``false``
+     -
+
+   * - ``response-include-content-type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property. Note that this property is ignored if ``replace-entity`` is set to ``true`` and
+       the response is JSON.
+
+     - ``false``
+     -
+
+.. _rest_transform_expected_rest_entity_shape:
+
+Expected entity shape
+^^^^^^^^^^^^^^^^^^^^^
+
+The entities must be transformed into a particular form before being piped to the REST transform. The general form
+expected is:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``properties``
+     - Object
+     - Any non-payload properties you need should go into the toplevel child entity ``properties``. You can then address
+       these properties in the Jinja templates for operation ``url`` properties using the "{{ properties.key_name }}" syntax.
+     -
+     -
+
+   * - ``operation``
+     - String
+     - The contents of this property must refer to one of the named ``operations`` registered with the transform's :ref:`REST system <rest_system>`.
+     -
+     - Yes
+
+   * - ``payload``
+     - String or Object
+     - The payload for the operation specified. It can be a string or an object. You can also omit it, in which case
+       the empty string will be used instead (for example for "DELETE" methods). All string payloads will be encoded
+       as UTF-8.
+     -
+     -
+
+
+Example entities:
+
+String as payload:
+
+::
+
+  {
+    "_id": "1",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-named-operation",
+    "payload": "<some>string-value</some>"
+  }
+
+Object as payload (set operation ``payload-type`` to "json", "json-transit" or "form"  in the :ref:`REST system <rest_system>` the transform uses):
+
+::
+
+  {
+    "_id": "2",
+    "properties": {
+        "foo": "bar",
+        "zoo": 1,
+        "baz": [1,2,3]
+    },
+    "operation": "some-other-operation",
+    "payload": {
+        "payload": "property",
+        "child": {
+          "foo": "bar"
+        }
+    }
+  }
+
+Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "json-transit" for this type of entity:
+
+::
+
+  {
+    "_id": "3",
+    "operation": "some-third-operation",
+    "payload": [
+      {
+        "foo": "bar"
+      },
+      {
+        "zoo": "foo"
+      }
+    ]
+  }
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
+
+::
+
+    {
+        "type" : "pipe",
+        "transform" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+        }
+    }
+
+Example input entities:
+
+::
+
+    [
+      {
+          "_id": "bob",
+          "operation": "get-man",
+          "properties": {
+              "collection_name": "study-group-1"
+          }
+      }
+    ]
+
+
+Example output entities:
+
+::
+
+    [
+      {
+          "_id": "bob",
+          "operation": "get-man",
+          "properties": {
+              "collection_name": "study-group-1"
+          },
+          "response": {
+              "name": "Bob Maker"
+              "email": "bob.maker@example.com"
+          }
+      }
+    ]
+
 .. _sink_section:
 
 Sinks
@@ -5968,7 +6204,8 @@ Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
-See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in these exapmles:
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
 
 ::
 
@@ -7377,6 +7614,10 @@ Prototype
         "connect_timeout": 60,
         "read_timeout": 1800,
         "operations": {
+            "get-operation": {
+                "url" : "/a/service/that/supports/get/{{ _id }}",
+                "method": "GET"
+            },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
                 "method": "DELETE"
@@ -7457,7 +7698,7 @@ A operation configuration looks like:
 
    * - ``method``
      - String
-     - A enumeration of "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
+     - A enumeration of "GET", "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
        that the operation should execute on the ``url`` specified.
      -
      - Yes
@@ -7500,6 +7741,14 @@ Example configuration
         "url_pattern": "http://our.domain.com/api/%s",
         "type": "system:rest",
         "operations": {
+            "get-man": {
+                "url" : "men/{{ properties.collection_name }}/{{ _id }}",
+                "method": "GET"
+            },
+            "get-woman": {
+                "url" : "women/{{ properties.collection_name }}/{{ _id }}",
+                "method": "GET"
+            },
            "delete-man": {
                "url" : "men/{{ properties.collection_name }}/{{ _id }}",
                "method": "DELETE"
