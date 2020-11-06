@@ -204,6 +204,13 @@ Next, let us briefly explain key-value pair. It is quite simply a property with 
 
 
 
+.. _getting-started-labtime.1:
+
+Lab time
+========
+Now that some basics of Sesam are established head over to the :ref:`labs <getting-started-labs>` and try your hand at the labs in the "Basics" and "Import data" sections.
+
+
 .. _getting-started-transformations:
 
 Transformations
@@ -726,17 +733,22 @@ In the second example, instead of adding the ``["apply-hops"]`` , we use ``["mer
     :align: center
     :alt: Generic pipe concept
 
+.. _getting-started-labtime.2:
+
+Lab time
+========
+Now that we are more familier with transforming data with DTL it's time to go to the labs section again and try doing the labs under :ref:`Data modelling <getting-started-labs-data-modelling>`. Save the last one of the data modelling labs until you have read the next section of this guide below regarding dependency-tracking and resets.
 
 .. _getting-started-Dependency-tracking-and-resetting-a-pipe:
 
 Dependency-tracking and resetting a pipe
 ========================================
 
-We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
+in the labs we have now started to create dependencies between datasets through hops. In the node config provided for this guide there is also a pipe named **person-address-csv** which uses **global-person** as its source dataset. In its DTL transform there is a hops to **global-location**. This means that entities from **person-address-csv** should change when the data in the source dataset **global-person** changes, in addition to when the relevant data in **global-location** changes. We could of course check through every entity in global-location for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to global-location.
 
-In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit :ref:`here <concepts-dependency_tracking>`.
+In order to make sure that only entities that have changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit the :ref:`Consepts-section <concepts-dependency_tracking>` of the Developer Guide.
 
-We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
+We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`lab 22 <getting-started-labs-22>`.
 
 Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
 
@@ -762,7 +774,7 @@ Similarly, imagine you work on a global pipe which merges data from 3 different 
 
 There are other reasons both to reprocess all the data and only some of it, but the main point is to assess every situation individually.
 
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 9 <getting-started-labs-9>` for examples and to play around with data and see how it works.
+Try doing :ref:`lab 22 <getting-started-labs-22>` to see examples and play around with data to see how this works.
 
 .. _getting-started-sinks:
 
@@ -877,7 +889,7 @@ Should **Provider** -> **employeetable** not pop up automatically just type in t
 
 You are now free to transform the data as you want, but it is not needed and will be omitted here.
 
-Creating out CSV sink
+Creating our CSV sink
 ^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/getting-started/csv-endpoint.png
     :width: 800px
@@ -1211,6 +1223,12 @@ To make these code implementations work with our HTTP endpoint we have to replac
 The complete URL could look like this ``https://datahub-425aagcte.sesam.cloud/api/publishers/person-crm-httpendpoint/entities?since=255``:
 
 All of these templates provide the data from the HTTP endpoint as a JSON-formatted string object named **entities**. We can now replace the printing of this string with our own implementation to make use of the data.
+
+.. _getting-started-labtime.3:
+
+Lab time
+========
+Now that we have had a look at different types of sinks it's time to have a go at the :ref:`Export data <getting-started-labs-export>` section of the labs.
 
 .. _getting-started-pumps:
 
@@ -1584,6 +1602,8 @@ To do these labs you will need to have a Sesam node set up with the :download:`g
 Basics
 ======
 
+.. _getting-started-labs-1:
+
 Lab 1
 ^^^^^
 
@@ -1612,6 +1632,8 @@ Tips
     * ``["copy", "*", ["list", "foo", "bar"]]`` will copy all attributes except "foo" and "bar".
     * ``["copy", "foo*"]`` will copy all attributes that have "foo" at the start of their name.
 
+.. _getting-started-labs-2:
+
 Lab 2
 ^^^^^
 
@@ -1637,6 +1659,8 @@ Tips
 Import data
 ===========
 
+.. _getting-started-labs-3:
+
 Lab 3
 ^^^^^
 
@@ -1659,6 +1683,8 @@ Tips
   - The rest of the URL will be appended at the end of the ``url_pattern`` from an ``url`` parameter in the source of the input pipe. 
   - You can see whether the system is able to connect to the target on the "Status"-tab.
 
+.. _getting-started-labs-4:
+
 Lab 4
 ^^^^^
 
@@ -1670,6 +1696,8 @@ Task
 ++++
 
 - Save the base URL of the geonorge-system as an environment variable in the datahub, and change the geonorge-system's ``url_pattern`` attribute to refer to that environment variable.
+
+.. _getting-started-labs-5:
 
 Lab 5
 ^^^^^
@@ -1693,6 +1721,8 @@ Tips
   - Check the "Execution Log"-tab to see whether the pipe ran successfully. It contains helpful information if you need to figure out why the pipe run did not yield the expected outcome.
 
 
+.. _getting-started-labs-6:
+
 Lab 6
 ^^^^^
 
@@ -1713,6 +1743,8 @@ Tips
   - Try setting the ``node-env`` environment variable to "prod" and run both **geonorge-county** and **udir-postalcode**. Observe that they now import the full datasets from the external source. Set ``node-env`` back to "test" and run the pipes again to keep working with just test data.
 
 
+.. _getting-started-labs-7:
+
 Lab 7
 ^^^^^
 
@@ -1730,10 +1762,12 @@ Tips
 
   - Study **global-location** to create **global-transaction**, or even copy its config and change what you need.
   
-
+.. _getting-started-labs-data-modelling:
 
 Data Modelling
 ==============
+
+.. _getting-started-labs-8:
 
 Lab 8
 ^^^^^
@@ -1751,7 +1785,7 @@ As explained in our :ref:`Best Practices <best-practice>` we want to use a globa
 
 This means an entity will be sent to the sink only if "~:hr:person" is found in the ``rdf:type`` attribute. Entities that do not have "~:hr:person" in the rdf:type will be excluded from our resulting data.
 
-Something to note when we change the transform config of a pipe is that data previously processed by the pipe will remain unchanged unless we pump it through the pipe again with the new transform config. We need to reset the pipe if we want all data output to be processed the same way. The "Restart"-option in the pipe menu conveniently triggers both a "Reset" and a "Start" command on the pipe.
+Note that when we change the DTL transform config of a pipe the data previously processed by the pipe will only be reprocessed if the source data changes. If we want all entities to be produced based on the the new config we have to pump all of them through the pipe again. To do that we reset the pipe. The "Restart"-option in the pipe menu conveniently triggers both a "Reset" and a "Start" command on the pipe.
 
 Task
 ++++
@@ -1766,8 +1800,10 @@ Task
 Tips
 
   - The entities you find in the "Output"-tab of the pipe are the same as the entities in the dataset with the same name. The entities in the "Latest" category is the current dataset. In "Latest w/ deleted" you will also find the hr-person entities som the first pipe run. In the "All" category you will find previous versions of all entities as well as the current and deleted entities.
-  - The number of previous entities to keep is two by default and can be changed with a :ref:`compaction <pipe_compaction>` config.
+  - The number of previous entities to keep in the dataset is two by default and can be changed with a :ref:`compaction <pipe_compaction>` config.
   - When in the config editor use ``Alt`` + ``.`` to reformat the config and display it with correct line breaks and whitespace for improved readability.
+
+.. _getting-started-labs-9:
 
 Lab 9
 ^^^^^
@@ -1783,6 +1819,8 @@ Task
 - Copy only the ``_id`` and ``hr-person:StreetAddress``.
 - Add one attribute containing ``StreetAddress`` from **erp-person** and another with ``Address`` from **crm-person**.
 - Note that the namespace of the added attributes refer to the new pipe. This is different from attributes that are copied from the source dataset, which keep their original namespace from the source.  
+
+.. _getting-started-labs-10:
 
 Lab 10
 ^^^^^^
@@ -1822,6 +1860,7 @@ Tips
 
   - All the functions needed for this lab, and many more, are found in the docs' :ref:`DTL Reference Guide <DTLReferenceGuide>` under "Values/collections".
 
+.. _getting-started-labs-11:
 
 Lab 11
 ^^^^^^
@@ -1839,6 +1878,8 @@ Tips
 
   - Look up the ``coalesce`` function in the docs or look at its use in **global-person**.
   - Restart pipes after making changes to their transform config if you want its dataset to reflect the new config.
+
+.. _getting-started-labs-12:
 
 Lab 12
 ^^^^^^
@@ -1869,6 +1910,8 @@ Task
 - Create a pipe with **erp-person** data. Make the pipe downstream from **erp-person** or preferrably downstream from **global-person** and filter the entities that do not contain **erp-person** data (filter on ``rdf:type``).
 - Imagine a new order has come in for everyone in this dataset, and increase the number of ``TimesOrdered`` by one. As this attribute is a string in the source data it needs to be cast to integer before we can increase the value. Cast the result back to string and add it to the entity as a new ``TimesOrdered`` attribute which will get its namespace from the new pipe.
 
+.. _getting-started-labs-13:
+
 Lab 13
 ^^^^^^
 
@@ -1891,6 +1934,7 @@ Tips
 
   - The first two digits of a SSN represent the day, the next two digits represent the month and then the next two represent the year.
 
+.. _getting-started-labs-14:
 
 Lab 14
 ^^^^^^
@@ -1914,6 +1958,7 @@ Tip
 
   - For the last task use the ``now`` function when calculating how much time has passed.
 
+.. _getting-started-labs-15:
 
 Lab 15
 ^^^^^^
@@ -1934,6 +1979,8 @@ Tips
   - You will have to cast the ``MoneyUsed`` value to a numeric type, i.e. integer, to get a correct result from the comparison.
   - You can perform more than one action as the result of an ``if`` by placing them within square brackets to make it a list of actions in the then or else argument of an if. Test it by adding another attribute along with ``big-spender``, like ``"foo": "bar"``.
 
+.. _getting-started-labs-16:
+
 Lab 16
 ^^^^^^
 
@@ -1952,7 +1999,9 @@ Task
 
 Tips
 
-- The ``discard`` transform function is similar to the ``filter`` transform function. But ``discard`` will drop the entity completely and not send it to the sink at all, while the ``filter`` function adds ``_filtered`` as true to the entity and lets the entity pass to the sink. If an entity already exists in the pipe's dataset from previous runs, but is updated with ``"_filtered": true`` it will be deleted from the dataset (receive ``"_deleted": true``). With ``discard`` that same entity would stay unchanged in the pipe's dataset. If a filtered entity does not alreay exist in the dataset it will not be written to the dataset by the sink.
+  - The ``discard`` transform function is similar to the ``filter`` transform function. But ``discard`` will drop the entity completely and not send it to the sink at all, while the ``filter`` function adds ``_filtered`` as true to the entity and lets the entity pass to the sink. If an entity already exists in the pipe's dataset from previous runs, but is updated with ``"_filtered": true`` it will be deleted from the dataset (receive ``"_deleted": true``). With ``discard`` that same entity would stay unchanged in the pipe's dataset. If a filtered entity does not alreay exist in the dataset it will not be written to the dataset by the sink.
+
+.. _getting-started-labs-17:
 
 Lab 17
 ^^^^^^
@@ -1995,6 +2044,8 @@ Tips
 
   - Try swapping ``merge-union``  with ``merge`` or ``add`` to see the difference in how the resulting data is structured as it is returned and added to the target entity.
 
+.. _getting-started-labs-18:
+
 Lab 18
 ^^^^^^
 
@@ -2022,6 +2073,12 @@ Task
 - Run the pipe and confirm that it outputs municipalities.
 - Finaly, add the new municipality dataset to **global-location**'s' source dataset list and run the global pipe.
 
+Tips
+
+  - We don't have to chain transforms in one pipe to emit the entities in the ``$children`` attribute. We do that in this lab to test the functionality of chaining transforms. The ``emit_children`` transform can be in a pipe downstream from the pipe where ``$children`` is created.
+
+.. _getting-started-labs-19:
+
 Lab 19
 ^^^^^^
 
@@ -2043,6 +2100,8 @@ Tips
 
   - Once we have made a NI attribute that refers to an entity in another dataset we can look up that entity when browsing its dataset by pasting the NI-attribute value as id to search in the dataset browser (or the "Output"-tab of the dataset's pipe).
 
+.. _getting-started-labs-20:
+
 Lab 20
 ^^^^^^
 
@@ -2063,6 +2122,8 @@ Tips
   - You can see an example of hops in use in the **person-address-csv** pipe in your datahub.
   - If you set **erp-person** as the source of your pipe you can join the datasets on erp-person's ``_id`` and webshop-order's ``customer-id``. But if you set **global-person** as your pipe source and used filter to get only the erp-person entities (as is recommended) those entities' ``_id`` may not be the ``_id`` of **erp-person**, and the comparison will fail. However, on the **global-person** entity there is a ``$ids`` attribute containing all ``_id``\s of the merged person entities in a list of namespaced identifiers. Base the join expression of the ``where`` parameter on ``$ids`` when possible when working with merged entities.
 
+.. _getting-started-labs-21:
+
 Lab 21
 ^^^^^^
 
@@ -2076,7 +2137,36 @@ Task
 - Create a pipe with **global-person** as its source. Make a ``merge`` transform function with an ``apply-hops`` to the **global-location** dataset. Set the join expression ``eq`` function to compare ``global-person:zipcode`` and ``udir-postalcode:postalcode``.
 - In the rule called by the ``apply-hops``, add an attribute named "location" which should be a concatinated string that states the number of the municipality in which the postal city is located, i.e. "Oslo is located in municipality number 0301".
 - Inside the newly made custom rule ``merge`` another ``apply-hops`` to the related **geonorge-municipality** entity in **global-location**. Since we have already made ``municipality-ni`` in **udir-postalcode** we can compare that to the ``$ids`` of the **global-location** municipalities in the join expression.
-- Check if the municipality is located north of the arctic cirle by checking if the last number, the latitude, in ``punktIOmrade.coordinates`` (pointInArea) is 66.33 or bigger. Add ``arctic-municipality`` as true or false.
+- Use the rule related to the last ``apply-hops`` to check if the municipality is located north of the arctic cirle by checking if the last number, the latitude, in ``punktIOmrade.coordinates`` (pointInArea) is 66.33 or bigger. Add ``arctic-municipality`` as true or false.
+
+.. _getting-started-labs-22:
+
+Lab 22
+^^^^^^
+
+| **Change-tracking**
+| **Dependency-tracking**
+| **Sequence number**
+| **Last seen / pipe offset**
+
+In lab 8 we learned to restart a pipe if we want all of its entities to be processed with an updated DTL-transform. This is because a Sesam pipe by default only reprocesses entities that have changed from the source, to avoid the inefficiency of reprocessing entire datasets. Similarly, dependency-tracking enables the pipe to reprocess only affected entities after a change in datasets connected through hops. Change-tracking and dependency-tracking are explained futher in :ref:`Dependency-tracking and resetting a pipe <getting-started-Dependency-tracking-and-resetting-a-pipe>`.
+
+Task
+++++
+
+- Add a new property in the first custom rule of the pipe you made in the previous lab. Assign a hardcoded value. 
+
+  - Start the pipe, click "Refresh" and look at the output. Note that no entities have changed.
+  - Reset, start and refresh the pipe. Note that all entities now have the new property.
+- Go back to the config and change the value of the property we just added.
+
+  - Now go to the "Input"-tab of the pipe. The entities found here are from the source dataset. Pick any entity that is neither at the top or the bottom the list. Find its sequence number in its "_updated" attribute.
+  - Select "Update last seen" from the pipe menu and supply the sequence number from the entity you chose. 
+  - Then start the pipe and check the results in the "Output"-tab. 
+  - Note that only the entities with a sequence number in the source dataset that is higher than the "last seen" value we set are updated.
+- Play around with the "Update last seen", "Reset", "Restart" and "Start" options. Feel free to change entities in the source or a dataset that is connected with hops to see the effects on the resulting data.
+
+.. _getting-started-labs-export:
 
 Export data
 ===========
@@ -2085,8 +2175,9 @@ How we export data from Sesam depends on the target system. For many databases, 
 
 You will find documentation for the systems and sinks on the Developer Guide's :ref:`Service Configuration <configuration>` page.
 
+.. _getting-started-labs-23:
 
-Lab 22
+Lab 23
 ^^^^^^
 
 **CSV endpoint**
@@ -2101,9 +2192,11 @@ Task
 Tips
 
   - You can find the sink config template under the "Target" header in templates. Choose system "system:sesam-node" and sink "csv_endpoint prototype".
-  - Note that you can retrieve the entities with the cURL provided in the Output-tab. This cURL contains a JWT (JSON Web Token) for authentication. You can also create a shareable link for use without access to the Sesam portal. 
+  - Note that you can retrieve the entities with the cURL provided in the "Output"-tab. This cURL contains a JWT (JSON Web Token) for authentication. You can also create a shareable link for use without access to the Sesam portal. 
 
-Lab 23
+.. _getting-started-labs-24:
+
+Lab 24
 ^^^^^^
 
 | **HTTP endpoint**
@@ -2120,8 +2213,9 @@ Tips
   - You can send the GET-request with cURL, Postman (or your favorite alternative), write a microservice that fetches the data or import the data from another service or system capable of sending HTTP-requests that you may be looking to integrate with Sesam.
   - The "Output"-tab of the output pipe provides what's needed to retrieve the data.
 
+.. _getting-started-labs-25:
 
-Lab 24
+Lab 25
 ^^^^^^
 
 **Export to SQL-database**
@@ -2150,7 +2244,7 @@ Write entities to a table in an SQL database. Follow the steps below:
 
 4. Create an output pipe downstream from the preperation pipe with an SQL sink that refers to the newly created system and the "person" table. Make sure to add a pump config in which ``"mode"`` is set to ``"ENV(pump-mode)"``, which in turn is set to "manual" in the datahub environment variables.
 
-5 Send your data to the database table by starting the output pipe. Check the execution log of the pipe to see how it ran. These logs are the first place to look for clues of what went wrong in a failed run. Verify that the entities have been written to the table in your database. If you need to run a query to view the data in the database, you can run ``select * from person;``.
+5. Send your data to the database table by starting the output pipe. Check the execution log of the pipe to see how it ran. These logs are the first place to look for clues of what went wrong in a failed run. Verify that the entities have been written to the table in your database. If you need to run a query to view the data in the database, you can run ``select * from person;``.
 
 Tips
 
@@ -2158,8 +2252,9 @@ Tips
   - The SQL sink also has a lot of parameters for customizing your SQL operations, like the possibility to define a table's columns in ``schema_definition`` and creating the table on a first run or a reset of the output pipe. Only the parameters "type", "system" and "table" are required.
   - The ``pump-mode`` environment variable is used to make sure an output pipe in a non-production environment does not export data unless the pipe is started manually. In a production environment ``pump-mode`` would be set as "scheduled" and the pipe's pump config would include a "cron-expression" or "schedule_interval" that specifies when to run. 
 
+.. _getting-started-labs-26:
 
-Lab 25
+Lab 26
 ^^^^^^
 
 **Export to API**
@@ -2207,15 +2302,15 @@ We encourage you to play around and test more imports, transformations, enrichme
   - ``rename``
   - ``make-ni``
   - ``ni-is and ni-id``
-  - ``all and any``
-  - ``and and or``
+  - ``all`` and ``any``
+  - ``and`` and ``or``
   - ``encrypt``
   - ``path``
 
 Solution examples
 =================
 
-As with most programming there are usually more ways than one to reach a certain outcome. Below are suggestions for how to solve the labs in this guide, but keep in mind other approaches might be just as viable.
+As with most programming there is usually more than one way to reach a certain outcome. Below are suggestions for how to solve the labs in this guide.
 
 Lab 1
 ^^^^^
@@ -2257,7 +2352,7 @@ Pipe config:
     }
   }
 
-Result:
+Output:
 
 .. image:: images/getting-started/labs/lab-copy-from-source.png
     :width: 800px
@@ -2289,7 +2384,7 @@ Pipe config:
     }
   }
 
-Result:
+Output:
 
 .. image:: images/getting-started/labs/lab-add-remove.png
     :width: 800px
@@ -2344,6 +2439,7 @@ Effective system config:
 
 Lab 5
 ^^^^^
+Pipe config:
 ::
 
   {
@@ -2365,6 +2461,8 @@ Lab 5
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-input-pipe.png
     :width: 800px
     :align: center
@@ -2372,6 +2470,7 @@ Lab 5
 
 Lab 6
 ^^^^^
+Pipe config:
 ::
 
   {
@@ -2406,6 +2505,8 @@ Lab 6
 
 The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
 
+Output:
+
 .. image:: images/getting-started/labs/lab-conditional-source.png
     :width: 800px
     :align: center
@@ -2413,6 +2514,7 @@ The embedded entities are removed in this code snippet for brevity. They are fou
 
 Lab 7
 ^^^^^
+Pipe configs:
 ::
 
   {
@@ -2447,6 +2549,7 @@ Lab 7
 
 Lab 8
 ^^^^^
+Pipe config:
 ::
 
   {
@@ -2469,6 +2572,8 @@ Lab 8
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-filter-entities.png
     :width: 800px
     :align: center
@@ -2476,6 +2581,7 @@ Lab 8
 
 Lab 9
 ^^^^^
+Pipe config:
 ::
 
   {
@@ -2499,6 +2605,8 @@ Lab 9
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-namespaces.png
     :width: 800px
     :align: center
@@ -2506,6 +2614,7 @@ Lab 9
 
 Lab 10
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2545,6 +2654,8 @@ Lab 10
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-list.png
     :width: 800px
     :align: center
@@ -2552,6 +2663,7 @@ Lab 10
 
 Lab 11
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2623,6 +2735,7 @@ Lab 11
     }
   }
 
+Output:
 
 .. image:: images/getting-started/labs/lab-golden-record.png
     :width: 800px
@@ -2631,6 +2744,7 @@ Lab 11
 
 Lab 12
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2662,6 +2776,8 @@ Lab 12
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-casting.png
     :width: 800px
     :align: center
@@ -2669,6 +2785,7 @@ Lab 12
 
 Lab 13
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2713,6 +2830,8 @@ Lab 13
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-strings.png
     :width: 800px
     :align: center
@@ -2720,6 +2839,7 @@ Lab 13
 
 Lab 14
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2757,6 +2877,8 @@ Lab 14
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-datetime.png
     :width: 800px
     :align: center
@@ -2764,6 +2886,7 @@ Lab 14
 
 Lab 15
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2807,6 +2930,8 @@ Lab 15
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-comparisons.png
     :width: 800px
     :align: center
@@ -2814,6 +2939,7 @@ Lab 15
 
 Lab 16
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2842,6 +2968,8 @@ Lab 16
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-filter.png
     :width: 800px
     :align: center
@@ -2850,6 +2978,7 @@ Lab 16
 
 Lab 17
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2881,6 +3010,8 @@ Lab 17
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-apply.png
     :width: 800px
     :align: center
@@ -2888,6 +3019,7 @@ Lab 17
 
 Lab 18
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2925,6 +3057,8 @@ Lab 18
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-create-child.png
     :width: 800px
     :align: center
@@ -2932,6 +3066,7 @@ Lab 18
 
 Lab 19
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -2982,11 +3117,14 @@ Lab 19
 
 Because the "municipality" attribute is a rename from a differently named attribute in the source we have used the "_T" variable to refer to it. Refering to "_S.KommuneNummer" would yield the same result.
 
+Output:
+
 .. image:: images/getting-started/labs/lab-municipality-ni.png
     :width: 800px
     :align: center
     :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
+Pipe config:
 ::
 
   {
@@ -3021,6 +3159,9 @@ Because the "municipality" attribute is a rename from a differently named attrib
     }
   }
 
+
+Output:
+
 .. image:: images/getting-started/labs/lab-rdf:type.png
     :width: 800px
     :align: center
@@ -3028,6 +3169,7 @@ Because the "municipality" attribute is a rename from a differently named attrib
 
 Lab 20
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -3058,6 +3200,8 @@ Lab 20
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-hops.png
     :width: 800px
     :align: center
@@ -3065,6 +3209,7 @@ Lab 20
 
 Lab 21
 ^^^^^^
+Pipe config:
 ::
 
   {
@@ -3109,6 +3254,8 @@ Lab 21
     }
   }
 
+Output:
+
 .. image:: images/getting-started/labs/lab-apply-hops.png
     :width: 800px
     :align: center
@@ -3116,6 +3263,99 @@ Lab 21
 
 Lab 22
 ^^^^^^
+Config from pipe in previous lab with added property "foo":
+::
+
+  {
+    "_id": "apply-hops-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["copy", "global-person:zipcode"],
+          ["merge",
+            ["apply-hops", "city-location", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.global-person:zipcode", "gl.udir-postalcode:postalcode"]
+            }]
+          ]
+        ],
+        "city-location": [
+          ["add", "location",
+            ["concat", "_S.city", " is located in municipality number ", "_S.municipality"]
+          ],
+          ["merge",
+            ["apply-hops", "latitude-check", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.municipality-ni", "gl.$ids"]
+            }]
+          ],
+          ["add", "foo", "bar"]
+        ],
+        "latitude-check": [
+          ["add", "arctic-municipality",
+            ["if",
+              ["gte",
+                ["last", "_S.punktIOmrade.coordinates"], "~f66.33"], true, false]
+          ]
+        ]
+      }
+    }
+  }
+
+Output after pipe run without reset:
+
+.. image:: images/getting-started/labs/lab-apply-hops.png
+    :width: 800px
+    :align: center
+    :alt: No changes to entities output by the pipe
+
+Output after pipe is reset and run:
+
+.. image:: images/getting-started/labs/lab-change-tracking-reset-result.png
+    :width: 800px
+    :align: center
+    :alt: All entities are updated with the new property
+
+Change to the new property's value in the config:
+
+::
+
+  ["add", "foo", "a different value"]
+
+
+Locate the sequence number of an entity in the source dataset:
+
+.. image:: images/getting-started/labs/lab-change-tracking-sequence-number.png
+    :width: 800px
+    :align: center
+    :alt: Locate the sequence number of entities in the source
+
+
+Input the sequence number of the source entity as the pipe's "last seen" value:
+
+.. image:: images/getting-started/labs/lab-change-tracking-last-seen.png
+    :width: 800px
+    :align: center
+    :alt: Input the sequence number as "last seen"
+
+
+Results after running the pipe from the new pipe offset:
+
+.. image:: images/getting-started/labs/lab-change-tracking-lastseen-result.png
+    :width: 800px
+    :align: center
+    :alt: Only the three latest entities are updated
+
+Lab 23
+^^^^^^
+Preperation pipe config:
 ::
 
   {
@@ -3138,6 +3378,7 @@ Lab 22
     }
   }
 
+Output pipe config:
 ::
 
   {
@@ -3173,8 +3414,9 @@ Output:
   Drengs 36,NO,,Aleksander M. Ommundsen,male,1390
   Tiurvegen vei,NO,,Erika L. Olsen,female,8657
 
-Lab 23
+Lab 24
 ^^^^^^
+Preperation pipe config:
 ::
 
   {
@@ -3197,6 +3439,7 @@ Lab 23
     }
   }
 
+Output pipe config:
 ::
 
   {
@@ -3211,6 +3454,8 @@ Lab 23
     }
   }
 
+Creating JWT:
+
 .. image:: images/getting-started/labs/lab-jwt.png
     :width: 800px
     :align: center
@@ -3222,19 +3467,19 @@ cURL command with newly created JWT:
 
   curl -H "Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTcyNjcyMzYuOTEwNTA2NywiZXhwIjoxNTk3NjEyMzgwLCJ1c2VyX2lkIjoiY2VlNDUxZDQtMDYwMC00NDk5LThkN2QtYjk3NGI4YTRlOTA1IiwidXNlcl9wcm9maWxlIjp7ImVtYWlsIjoicGFsLmFuZHJlYXNzZW5Ac2VzYW0uaW8iLCJuYW1lIjoiUFx1MDBlNWwgQW5kcmVhc3NlbiIsInBpY3R1cmUiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20vdjEuMC9tZS9waG90by8kdmFsdWUifSwidXNlcl9wcmluY2lwYWwiOiJncm91cDpFdmVyeW9uZSIsInByaW5jaXBhbHMiOnsiMTE3ZGNlYWEtZDY1OC00OTg2LTg5ZjktZDczOGIxMmMxNjlkIjpbImdyb3VwOkFkbWluIl19LCJhcGlfdG9rZW5faWQiOiIxOGEyNGQ0Mi0yOGVmLTQ0NGYtODM4NC1hOGVjMjEzM2FhOGQifQ.VT0PCDnEBraFk1pCSlO7d92zkD3MOhOvfdiLy7J6oAy6M77h1YbYKZRumzYUyg_XK8NXaginrK_pH563875S4nUZqINKiAnDJ0HYI9gQmABT2U8XQxeF-LlePpcxCI-UZarRiW_f2yQNYWqV_bJ3PmltodX2SUHjOmTcpqwVJvCqMSTqmCVqy6gPyQw6MTvzffP78MvmSb8fy8KcFP8H1rS4MilI9OnVWs9K3YaaXLs1SIxhAQrvjH2XlgwzMoCh05TpWPuiO1ph09fVI1U85uC59Q4e45bEpxMJmRuJ7RqEUdFR5RbSovqorB4Wxf8Cs0gFKMZxzj74eenMGjDJPg" https://datahub-117dceaa.sesam.cloud/api/publishers/person-http-endpoint/entities?limit=15
 
-Output:
+Exposed data in the HTTP-endpoint:
 
 ::
 
   [{"address": "Helmers vei 242", "country": "NO", "email": "torjussand@einrot.com", "fullname": "Torjus M. Sand", "gender": "male", "zipcode": "5031", "_id": "1", "_deleted": false, "_updated": 4, "_previous": null, "_ts": 1597266361399643, "_hash": "8a70306f3bcdb13714b62fa0dd5e8045"},{"address": "Frognerveien 60", "country": "NO", "email": "larsevjen@rhyta.com", "fullname": "Lars Evjen", "gender": "male", "zipcode": "3121", "_id": "2", "_deleted": false, "_updated": 5, "_previous": null, "_ts": 1597266361399655, "_hash": "821a5f4092874ae9d2b4e72819520ec5"},{"address": "Gydas gate 227", "country": "NO", "email": "siri@me.com", "fullname": "Siri Olsen", "gender": "female", "zipcode": "3733", "_id": "3", "_deleted": false, "_updated": 6, "_previous": null, "_ts": 1597266361399666, "_hash": "f8a5460cc0b8f25654e0581396fe9a8e"},{"address": "Nadderudåsen 186", "country": "NO", "email": "isakeikeland@teleworm.us", "fullname": "Isak E. Eikeland", "gender": "male", "zipcode": "9325", "_id": "100", "_deleted": false, "_updated": 7, "_previous": null, "_ts": 1597266361399677, "_hash": "f8a2aa8ef24b41ed18cbb9462790fa38"},{"address": "Sommerfjøsvegen 143", "country": "NO", "email": "sebastianskjold@dayrep.com", "fullname": "Sebastian T. Skjold", "gender": "male", "zipcode": "7080", "_id": "99", "_deleted": false, "_updated": 8, "_previous": null, "_ts": 1597266361399689, "_hash": "f576c6956daa30c4ab05192440117a4f"},{"address": "Kongens gate 69", "country": "NO", "email": "caspiannygard@einrot.com", "fullname": "Caspian I. Nygård", "gender": "male", "zipcode": "0153", "_id": "93", "_deleted": false, "_updated": 9, "_previous": null, "_ts": 1597266361399701, "_hash": "367cee1c0315ac189d0caccd76ab1a14"},{"address": "Åsmostubben 19", "country": "NO", "email": "davidberntsen@superrito.com", "fullname": "David M. Berntsen", "gender": "male", "zipcode": "9011", "_id": "91", "_deleted": false, "_updated": 10, "_previous": null, "_ts": 1597266361399712, "_hash": "b21ffc16fdfd6382d62a8b71d055d0d8"},{"address": "Fagerliveien 108", "country": "NO", "email": "lucaslie@cuvox.de", "fullname": "Lucas T. Lie", "gender": "male", "zipcode": "1605", "_id": "90", "_deleted": false, "_updated": 11, "_previous": null, "_ts": 1597266361399724, "_hash": "51266239e58e092fb537a0a0210242e6"},{"address": "Zetlitzveien 241", "country": null, "email": "julieandersen@superrito.com", "fullname": "Julie I. Andersen", "gender": "female", "zipcode": "4017", "_id": "80", "_deleted": false, "_updated": 12, "_previous": null, "_ts": 1597266361399735, "_hash": "109324caa77563a1f1a465ecc19f20fc"},{"address": "Kong Trygves vei 32", "country": "NO", "email": "camillawilhelmsen@dayrep.com", "fullname": "Camilla M. Wilhelmsen", "gender": "female", "zipcode": "3125", "_id": "81", "_deleted": false, "_updated": 13, "_previous": null, "_ts": 1597266361399747, "_hash": "8b5942cbc58a4f5dedc114234de95327"}]
 
-Lab 24
+Lab 25
 ^^^^^^
 
 Postgres database connection info:
 
 .. image:: images/getting-started/labs/lab-db-info.png
-    :width: 800px
+    :width: 500px
     :align: center
     :alt: The connection info to an example online database for used in this lab example solution
 
@@ -3245,7 +3490,7 @@ System config:
     :align: center
     :alt: A system config matching the connection info to the database in the previous image
 
-Preperation pipe:
+Preperation pipe config:
 
 ::
 
@@ -3268,12 +3513,14 @@ Preperation pipe:
     }
   }
 
+Preperation pipe output:
+
 .. image:: images/getting-started/labs/lab-db-prep-pipe.png
     :width: 800px
     :align: center
     :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
-Output pipe:
+Output pipe config:
 
 ::
 
@@ -3294,12 +3541,14 @@ Output pipe:
     }
   }
 
+Resulting data in database:
+
 .. image:: images/getting-started/labs/lab-db-entries.png
     :width: 800px
     :align: center
     :alt: The person entities shown in the database browser after export
 
-Lab 25
+Lab 26
 ^^^^^^
 System config:
 
@@ -3312,7 +3561,7 @@ System config:
     "verify_ssl": true
   }
 
-Preperation pipe:
+Preperation pipe config:
 
 ::
 
@@ -3335,12 +3584,14 @@ Preperation pipe:
     }
   }
 
+Preperation pipe output:
+
 .. image:: images/getting-started/labs/lab-api-prep-pipe.png
     :width: 800px
     :align: center
     :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
-Output pipe:
+Output pipe config:
 
 ::
 
@@ -3360,6 +3611,8 @@ Output pipe:
       "mode": "$ENV(pump-mode)"
     }
   }
+
+Execution log "pump-completed" log entry:
 
 .. image:: images/getting-started/labs/lab-api-exec-log.png
     :width: 800px
