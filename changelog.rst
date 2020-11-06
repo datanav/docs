@@ -1,26 +1,33 @@
 Changelog
 =========
 
-.. _2020_10_23:
+.. _changelog_2020_11_06:
+
+2020-11-06
+----------
+
+* Added :ref:`note <pipe_compaction>` about compaction not being performed beyond depencency tracking offsets.
+  
+.. _changelog_2020_10_23:
 
 2020-10-23
 ----------
 * Documented the :ref:`REST transform <REST_transform>`.
 
-.. _2020_08_24:
+.. _changelog_2020_08_24:
 
 2020-08-24
 ----------
 * Changed default compaction type to ``sink``. To go back to the previous default, you can set sink compaction to ``false`` on individual pipes or set the global default property ``default_compaction_type`` to ``background`` in the :ref:`service metadata <service_metadata_section>`.
 
-.. _2020_08_21:
+.. _changelog_2020_08_21:
 
 2020-08-21
 ----------
 * Added an optional ``description`` property to pipes and systems - it can be either a string or a list of strings.
 * Added an optional ``comment`` property to pipes, systems, sources, sinks, pumps and transforms - - it can be either a string or a list of strings.
 
-.. _2020_08_17:
+.. _changelog_2020_08_17:
 
 2020-08-17
 ----------
