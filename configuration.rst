@@ -8051,7 +8051,6 @@ Prototype
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
         "fallback_to_single_entities_on_batch_fail": true,
-        "use_dead_letter_dataset": false,
         "dead_letter_dataset": "some-dataset-id",
         "track_dead_letters": false,
         "mode": "scheduled",
@@ -8157,7 +8156,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
    * - ``use_dead_letter_dataset``
      - Boolean
      - Deprecated. Use the ``dead_letter_dataset`` property instead. This is a flag used to indicate whether to write
-       any entities that fail retries to a special "dead letter" dataset. This can only happen iff
+       any entities that fail retries to a special "dead letter" dataset. This can only happen if
        ``max_write_errors_in_retry_dataset`` is non-zero and ``max_retries_per_entity`` for
        the particular entity has been exceeded. Note that unspecified dead letter datasets for a pipe has the special
        id pattern ``system:dead-letter:pipe-id``. Only users with the authorization to see the pipe configuration can
@@ -8167,7 +8166,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
    * - ``dead_letter_dataset``
      - String
-     - This is string that indicates which dataset to write any entities that fail retries iff
+     - This is string that indicates which dataset to write any entities that fail retries if
        ``max_write_errors_in_retry_dataset`` is non-zero and ``max_retries_per_entity`` for the particular entity has
        been exceeded. Only users with the authorization to see the pipe configuration will have access to this dataset.
        The dataset indicated must be unique per pipe.
