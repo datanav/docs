@@ -8051,7 +8051,7 @@ Prototype
         "max_consecutive_write_errors": 1,
         "max_write_errors_in_retry_dataset": 0,
         "fallback_to_single_entities_on_batch_fail": true,
-        "use_dead_letter_dataset": false,
+        "dead_letter_dataset": "some-dataset-id",
         "track_dead_letters": false,
         "mode": "scheduled",
         "log_events_noop_runs": false,
@@ -8155,12 +8155,22 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
 
    * - ``use_dead_letter_dataset``
      - Boolean
-     - A flag used to indicate whether to write any entities that fail retries to a special "dead letter" dataset.
-       This can only happen iff ``max_write_errors_in_retry_dataset`` is non-zero and ``max_retries_per_entity`` for
-       the particular entity has been exceeded. Dead letter datasets for a pipe has the special id pattern
-       ``system:dead-letter:pipe-id``. Only users with the authorization to see the pipe configuration can access this
-       dataset.
-     - false
+     - Deprecated. Use the ``dead_letter_dataset`` property instead. This is a flag used to indicate whether to write
+       any entities that fail retries to a special "dead letter" dataset. This can only happen if
+       ``max_write_errors_in_retry_dataset`` is non-zero and ``max_retries_per_entity`` for
+       the particular entity has been exceeded. Note that unspecified dead letter datasets for a pipe has the special
+       id pattern ``system:dead-letter:pipe-id``. Only users with the authorization to see the pipe configuration can
+       access this dataset.
+     -
+     -
+
+   * - ``dead_letter_dataset``
+     - String
+     - This is string that indicates which dataset to write any entities that fail retries if
+       ``max_write_errors_in_retry_dataset`` is non-zero and ``max_retries_per_entity`` for the particular entity has
+       been exceeded. Only users with the authorization to see the pipe configuration will have access to this dataset.
+       The dataset indicated must be unique per pipe.
+     -
      -
 
    * - ``track_dead_letters``
@@ -8202,7 +8212,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
    * - ``max_retries_per_entity``
      - Integer
      - A counter that indicates to the pump how many times it should retry a failing entity when writing to a sink before
-       giving up on it, which in case it can optionally write it to the dataset referenced in ``use_dead_letter_dataset``
+       giving up on it, which in case it can optionally write it to the dataset referenced in ``dead_letter_dataset``
        (if specified).
      - 5
      -
@@ -8306,7 +8316,7 @@ dataset. Also max ten consecutive write failures allowed:
            "max_retries_per_entity": 5,
            "max_consecutive_write_errors": 10,
            "max_write_errors_in_retry_dataset": 100,
-           "use_dead_letter_dataset": true
+           "dead_letter_dataset": "mypipe-dead-letters"
        }
     }
 
