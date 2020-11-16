@@ -5042,6 +5042,9 @@ The expected form of an entity to be written to the sink is:
 
 This sink supports :ref:`batching <pipe_batching>`.
 
+Note that identiy columns (columns with automatically assigned values) are currently not supported by the SQL sink, however
+there is a potential :ref:`workaround <mssql-identity-columns>` for non-primary key identity columns for MS SQL based systems.
+
 Prototype
 ^^^^^^^^^
 
@@ -5053,8 +5056,6 @@ Prototype
         "primary_key": ["list","of","key","names"],
         "table": "name-of-table",
         "schema": "default-schema-name-if-included",
-        "whitelist": ["properties/columns","to","include"],
-        "blacklist": ["properties/columns","to","exclude"],
         "batch_size": 100,
         "use_bulk_operations": false,
         "keep_failed_bulk_operation_files": false,
@@ -5208,7 +5209,7 @@ Properties
 
    * - ``whitelist``
      - List<String>
-     - The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
+     - Deprecated. The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
        ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
      -
      -
@@ -5216,7 +5217,8 @@ Properties
 
    * - ``blacklist``
      - List<String>
-     - The names of the properties (columns) to exclude from inserts into the target table.
+     - Deprecated. The names of the properties (columns) to exclude from inserts into the target table. If you are looking
+       for a way to filter out identity columns, there exists a :ref:`workaround <mssql-identity-columns>` for MS SQL based systems.
      -
      -
 
@@ -6833,6 +6835,18 @@ parameter set to ``true``, this happens when the pipe runs:
 For this method to work, Sesam must have permissions to create and drop tables in the database. If
 for some reason that is not possible, the ``use_bulk_operations`` parameter in the sql sink can be
 set to ``false`` to make the sink use the (slower) ``INSERT`` and ``UPDATE`` sql statements to upload data.
+
+.. _mssql-identity-columns:
+
+Identity columns in MS SQL server
+---------------------------------
+
+Identity columns (columns with automatically assigned values) are not supported by the SQL sink machinery.
+However, for MS SQL based servers there is a workaround for this problem: instead of writing to the table directly,
+you can define a "writable view" of the table that omits the identity columns and write to that instead. See more information
+here: https://docs.microsoft.com/en-us/sql/relational-databases/views/modify-data-through-a-view
+
+Note that this does not work for primary key columns.
 
 .. _mysql_system:
 

@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2020_11_16:
+
+2020-11-18
+----------
+
+* The ``blacklist`` and ``whitelist`` properties of the :ref:`SQL sink <sql_sink>` has been deprecated. You can use DTL to filter properties to achieve the same functionality. '
+* Note that these deprecated properties cannot be used to avoid inserting values into or overwriting values of existing table columns (partial table updates) or to support identity columns.
+* For the special case of identity columns (columns with automatically assigned values) some RDBMS systems such as MS SQL Server allow you to define a "writable view" that can be used as a workaround for this. We have added some  :ref:`information <mssql-identity-columns>` to the documentation on this usecase for MS SQL Server.
+
 .. _changelog_2020_11_13:
 
 2020-11-13
