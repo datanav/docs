@@ -239,3 +239,141 @@ On the other hand: most of the third party authentication providers supplies a v
 To avoid someone else to be able to log in with your email-address, the first login with a verified email-address
 will disable any unverified user credentials that has been previously used. All other settings on the existing user
 account will be kept, though.
+
+Elasticsearch [in development]
+==============================
+
+.. warning:: This is an experimental feature and will be changed in the future.
+
+We are in the middle of making the Dataset Inspector's free text search work with Elasticsearch. Although this feature is very experimental, it can still be tested
+by having:
+
+1. A microservice system called "elasticsearch-freetext", running Elasticsearch 7.
+2. An index with the same name as the dataset you want to search.
+3. Every entity as a doc in the index, with the id of the doc being the entity's _updated value.
+
+If all of those conditions are met, the Dataset Inspector will use Elasticsearch to do the freetext search. If not, the old way of searching free text will be used.
+
+
+Setting up Elasticsearch as a microservice.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Read more about the microservice system :ref:`here. <microservice_system>`
+
+Here is a sample microservice config for Elasticsearch:
+::
+
+    {
+      "_id": "elasticsearch-freetext",
+      "connect_timeout": 3600,
+      "docker": {
+        "environment": {
+          "discovery.type": "single-node"
+        },
+        "image": "elasticsearch:7.7.0",
+        "memory": 4000,
+        "port": 9200
+      },
+      "read_timeout": 3600,
+      "type": "system:microservice"
+    }
+
+
+Create an index
+^^^^^^^^^^^^^^^
+
+Then next thing we want to do is to create an index with the same name as the dataset you want to search. This new index will also need some simple mappings
+to work as intended. By supplying the mappings, Elasticsearch will automatically create the index, so we can do both at the same time by 
+doing the following http request to the microservice system:
+
+::
+
+    PUT /systems/elasticsearch-freetext/proxy/{index name}
+    Content-Type: application/json
+    {
+      "mappings": {
+        "properties": {
+          "__id": {
+            "type":  "keyword"
+          }
+        }
+      }
+    }
+
+
+.. note:: Remember to change {index name} to the name of the dataset you want to search.
+
+
+Fill the index
+^^^^^^^^^^^^^^
+
+Next up we will create a pipe that will fill the newly created index with entities.
+
+The way we willd do this is to first create a REST system that will communicate with our microservice system:
+
+::
+
+    {
+      "_id": "elasticsearch-freetext-rest",
+      "type": "system:rest",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "operations": {
+        "doc": {
+          "headers": {
+            "Content-type": "application/json"
+          },
+          "method": "POST",
+          "payload-type": "json",
+          "url": "_doc/{{ properties._id }}"
+        }
+      },
+      "url_pattern": "{sub URL}/systems/jsonplaceholder-photos/proxy/%s",
+      "verify_ssl": true
+    }
+
+
+.. note:: Remember to change the {sub URL} to the URL of your subscription.
+
+
+Then we want to create a pipe with the dataset you wan to search as a source, and the rest system as a sink:
+
+::
+
+    {
+      "_id": "{dataset}-elasticsearch-freetext-rest",
+      "type": "pipe",
+      "source": {
+        "type": "dataset",
+        "dataset": "{dataset}"
+      },
+      "transform": [{
+        "type": "dtl",
+        "rules": {
+          "default": [
+            ["add", "properties",
+              ["dict", "_id", "_S._updated"]
+            ],
+            ["add", "operation", "doc"],
+            ["add", "payload",
+              ["map-dict",
+                ["if",
+                  ["not",
+                    ["matches", "_*", "_."]
+                  ], "_.", ["concat", "_", "_."]], "_.", "_S."]
+            ]
+          ]
+        }
+      }, {
+        "type": "rest",
+        "system": "elasticsearch-freetext-rest",
+        "replace-entity": false
+      }]
+    }
+
+
+.. note:: Remember to change {dataset} to the id of the dataset you want to search
+.. note:: The dtl transforms all the system attributes to start with "__" instead of "_". This is because single underscore is reserved for internal ES attributes (such as _id). The Dataset Inspector transforms them into single underscores again when getting them from the ES index.
+
+After running the pipe, the ES index should be filled up with the entities from the source dataset, and the Dataset Inspector should pick that up and use the index to do free text searches.
+
