@@ -5042,7 +5042,7 @@ The expected form of an entity to be written to the sink is:
 
 This sink supports :ref:`batching <pipe_batching>`.
 
-Note that identiy columns (columns with automatically assigned values) are currently not supported by the SQL sink, however
+Note that identity columns (columns with automatically assigned values) are currently not supported by the SQL sink, however
 there is a potential :ref:`workaround <mssql-identity-columns>` for non-primary key identity columns for MS SQL based systems.
 
 Prototype
