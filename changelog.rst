@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2020_11_20:
+
+2020-11-20
+----------
+
+* New circuit breaker feature for uploading configuration available in :ref:`service metadata <service_metadata_section>`. Prevents the node from updating it's configuration if the new configuration would result in the deletion of more than 10 and more than 10% of existing components (for example when using the ``/config`` API). The circuit breaker can be activated by setting the service metadata property ``global_defaults.use_config_circuit_breaker`` to ``true``.
+
 .. _changelog_2020_11_16:
 
 2020-11-18
