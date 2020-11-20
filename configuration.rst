@@ -197,6 +197,12 @@ Properties
      - ``104857600`` (100MB)
      -
 
+   * - ``global_defaults.use_config_circuit_breaker``
+     - Boolean
+     - When set to true, activates the circuit breaker for uploading configuration to the node. When activated, any changes to the node configuration that would result in the deletion of more than 10% of the existing components will not go through (this is the case only when the number of deleted components is also more than 10). 
+     - False
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
