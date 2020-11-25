@@ -724,7 +724,7 @@ Below is an example of a preparation pipe, based on the global pipe above, where
 .. raw:: html
 
    <details>
-   <summary><a>address-hr</a></summary>
+   <summary><a>address-hr example pipe</a></summary>
 
 .. code-block:: python
 
@@ -767,7 +767,7 @@ The result from the address-hr pipe with the input from the global-person exampl
 .. raw:: html
 
    <details>
-   <summary><a>address-hr output</a></summary>
+   <summary><a>address-hr example output</a></summary>
 
 .. code-block:: python
 
@@ -799,7 +799,7 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
 .. code-block:: python
 
   {
-    "_id": "address-hr-endpoint",
+    "_id": "address-hr-endpoint example pipe",
     "type": "pipe",
     "source": {
       "type": "dataset",
