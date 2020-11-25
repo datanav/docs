@@ -517,19 +517,19 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 .. raw:: html
 
    <details>
-   <summary><a>global-person</a></summary>
+   <summary><a>global-person example pipe</a></summary>
 
 .. code-block:: python
 
   {
-    "_id": "global-person1",
+    "_id": "global-person",
     "type": "pipe",
     "source": {
       "type": "merge",
       "datasets": ["erp-person ep", "crm-person cp", "salesforce-userprofile su", "hr-person hr"],
       "equality": [
         ["eq", "ep.$ids", "cp.SSN "],
-        ["eq", "ep. .$ids ", "hr.$ids"],
+        ["eq", "ep.$ids ", "hr.$ids"],
         ["eq", "ep.Username", "su.Username"]
       ],
       "identity": "first",
@@ -608,7 +608,12 @@ So, what is **"$ids"**? Basically, **$ids** is a property containing a list of t
 
 Below is a whole entity of the above global pipe and as seen, it gives an aggregated dataset from 4 sources with **$ids**, **RDF types** and **global properties**.
 
-::
+.. raw:: html
+
+   <details>
+   <summary><a>global-person example output</a></summary>
+
+.. code-block:: python
 
   {
     "$ids": [
@@ -704,6 +709,11 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
     "salesforce-userprofile:phone_number": 24887159
   }
 
+.. raw:: html
+
+   </details>
+
+
 Preparation pipes
 =================
 
@@ -732,7 +742,9 @@ Below is an example of a preparation pipe, based on the global pipe above, where
           ["filter",
             ["in", "~:crm:person", "_S.rdf:type"]
           ],
-          ["copy", "_id"],
+          ["copy",
+            ["list", "hr-person:SSN", "_id"]
+          ],
           ["filter",
             ["is-not-null", "_S.crm-person:Address"]
           ],
@@ -762,8 +774,10 @@ The result from the address-hr pipe with the input from the global-person exampl
   {
     "address-hr:GivenName": "Isak",
     "address-hr:StreetAddress": "Ørneveien 40",
-    "address-hr:Surname": "Eikeland"
+    "address-hr:Surname": "Eikeland",
+    "hr-person:SSN": "02023688018"
   }
+
 .. raw:: html
 
    </details>
@@ -773,7 +787,48 @@ The result from the address-hr pipe with the input from the global-person exampl
 Outbound pipes 
 ==============
 
-The outbound pipe is the inbound pipe counterpart. While the inbound pipe is used solely to import data into Sesam, the outbound pipe sole function is to export data out of Sesam. As mentioned in the Inbound pipe section, the focus of the inbound pipe will be on its source component/property, the outbound pipe, on the other end, will be built around its sink. Similarly, the outbound pipe will use a system to interface with external systems. In turn the system will either access an embedded connector or an outside interface called a microservice. The function of the microservice, or the connector, is to interface at the API level with the external system.
+The outbound pipe is the inbound pipe counterpart. While the inbound pipe is used solely to import data into Sesam, the outbound pipe sole function is to export data out of Sesam. As mentioned in the Inbound pipe section, the focus of the inbound pipe will be on its source component/property. The outbound pipe on the other hand will be built around its :ref:`sink <sink_section>` . Similarly, the outbound pipe will use a Sesam :ref:`system <concepts-systems>` to interface with target systems. This system will either access an embedded connector or an outside interface, called a :ref:`microservice <getting-started-microservices>`. The function of the microservice, or the connector, is to interface at the API level with the external system.
+
+Below is an example of an outbound pipe. This pipe uses the dataset created by the pipe **address-hr** in the previous example to send data to the Sesam system called HR.
+
+.. raw:: html
+
+   <details>
+   <summary><a>address-hr output</a></summary>
+
+.. code-block:: python
+
+  {
+    "_id": "address-hr-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "address-hr"
+    },
+    "sink": {
+      "type": "sql",
+      "system": "HR",
+      "primary_key": "SSN",
+      "table": "SomeTable"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"]
+        ]
+      }
+    },
+    "pump": {
+      "cron_expression": "*/10 * * * ?"
+    }
+  }
+
+.. raw:: html
+
+   </details>
+
+In this particular pipe we have set our own :doc:`cron expression <cron-expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
 
 Tips for global datasets
 ------------------------
