@@ -794,12 +794,12 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
 .. raw:: html
 
    <details>
-   <summary><a>address-hr output</a></summary>
+   <summary><a>address-hr-endpoint output example</a></summary>
 
 .. code-block:: python
 
   {
-    "_id": "address-hr-endpoint example pipe",
+    "_id": "address-hr-endpoint",
     "type": "pipe",
     "source": {
       "type": "dataset",
