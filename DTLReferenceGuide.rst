@@ -3994,6 +3994,7 @@ Values / collections
        |
        | Returns a list that contains the sisters and brothers.
 
+       .. _filter_dtl_function:
    * - ``filter``
      - | *Arguments:*
        |   FUNCTION(function-expression(1}

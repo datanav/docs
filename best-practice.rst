@@ -467,6 +467,8 @@ Our pipe:
     }
   }
 
+.. _best_practice_rdf_type:
+
 RDF type  
 ^^^^^^^^
 
@@ -512,10 +514,15 @@ Below we see an example of a global pipe called "global-person". At top the type
 
 Below the actual merge, or **“equality“** rules are set. Further down, in the **“transform”** section the use of **coalesce** becomes obvious when choosing which properties got get values from.
 
-::
+.. raw:: html
+
+   <details>
+   <summary><a>global-person</a></summary>
+
+.. code-block:: python
 
   {
-    "_id": "global-person",
+    "_id": "global-person1",
     "type": "pipe",
     "source": {
       "type": "merge",
@@ -576,9 +583,15 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
     }
   }
 
+.. raw:: html
+
+   </details>
+
+
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
 
 The first property that greets us in a global dataset is called **"$ids"**, which will be a list of **namespaced identifiers**. When an entity is merged into another entity in a merge pipe, the pipe will add the _id of the source entity to the **"$ids"** property. Thus, the **ids** property consists of the ids of all the source entities that were merged to created that specific merged entity, typically looking like below.
+
 
 ::
 
@@ -694,8 +707,66 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 Preparation pipes
 =================
 
-The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The filtering and relating of data are performed using the RDF types introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The :ref:`filtering <filter_dtl_function>`  and relating of data are performed using the :ref:`RDF types <best_practice_rdf_type>` introduced earlier. Data can also be augmented performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
 
+Below is an example of a preparation pipe, based on the global pipe above, where we wish to update the data in the system generating the hr-person data with crm-person data. More precicely, we wish to update data in the HR system to reflect the golden records from global-person. In addition we wish to update the HR data for "StreetAddress" with the address stated in the crm-person key "Address". 
+
+.. raw:: html
+
+   <details>
+   <summary><a>address-hr</a></summary>
+
+.. code-block:: python
+
+  {
+    "_id": "address-hr",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:crm:person", "_S.rdf:type"]
+          ],
+          ["copy", "_id"],
+          ["filter",
+            ["is-not-null", "_S.crm-person:Address"]
+          ],
+          ["add", "StreetAddress", "_S.crm-person:Address"],
+          ["add", "GivenName", "_S.global-person:firstname"],
+          ["add", "Surname", "_S.global-person:lastname"]
+        ]
+      }
+    }
+  }
+
+.. raw:: html
+
+   </details>
+
+In this case we need to make sure that we do not overwrite existing "StreetAddress" values with potential null-values (altough we should be able to trust the master data from the CRM system, misakes do occur). We do not have to perform the same check for the properties from our golden records since in this case the hr-person data is part of the coalesce in the global-person pipe. Note that even though several of these properties is already the same in both the HR system and the CRM system, they do not have to be. The first time this integration runs there might be some unnecessary updates, but Sesam's built-in :ref:`change tracking <concepts-change-tracking>` will make sure only future changes will be passed through to the target system. 
+
+The result from the address-hr pipe with the input from the global-person example with crm-person:100 look like:
+
+.. raw:: html
+
+   <details>
+   <summary><a>address-hr output</a></summary>
+
+.. code-block:: python
+
+  {
+    "address-hr:GivenName": "Isak",
+    "address-hr:StreetAddress": "Ørneveien 40",
+    "address-hr:Surname": "Eikeland"
+  }
+.. raw:: html
+
+   </details>
 
 .. _best-practice-output-pipes:
 
