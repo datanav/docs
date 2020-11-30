@@ -237,7 +237,12 @@ Output from the example code above as seen below with a join to hr-system:
 
 ``"erp-person:SSN": "~:hr-person:12032920177"``
 
-::
+.. raw:: html
+
+   <details>
+   <summary><a>global-person example output</a></summary>
+
+.. code-block:: python
 
   {
     "$ids": [
@@ -275,6 +280,11 @@ Output from the example code above as seen below with a join to hr-system:
       "~:hr:person"
     ]  
   }
+
+.. raw:: html
+
+   </details>
+
 
 .. _best-practice-naming:
 
@@ -393,9 +403,13 @@ The corresponding env variable are used in the condition property in the pipe. I
 
 ``"condition": "$ENV(node-env)"``
 
-Our pipe:
 
-::
+.. raw:: html
+
+   <details>
+   <summary><a>hr-person example pipe</a></summary>
+
+.. code-block:: python
 
   {
     "_id": "hr-person",
@@ -466,6 +480,12 @@ Our pipe:
       "tags": ["embedded", "person"]
     }
   }
+
+.. raw:: html
+
+   </details>
+
+
 
 .. _best_practice_rdf_type:
 
@@ -764,12 +784,7 @@ In this case we need to make sure that we do not overwrite existing "StreetAddre
 
 The result from the address-hr pipe with the input from the global-person example with crm-person:100 look like:
 
-.. raw:: html
-
-   <details>
-   <summary><a>address-hr example output</a></summary>
-
-.. code-block:: python
+::
 
   {
     "address-hr:GivenName": "Isak",
@@ -778,9 +793,6 @@ The result from the address-hr pipe with the input from the global-person exampl
     "hr-person:SSN": "02023688018"
   }
 
-.. raw:: html
-
-   </details>
 
 .. _best-practice-output-pipes:
 
