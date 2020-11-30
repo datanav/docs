@@ -191,20 +191,21 @@ The main reason for generating NI's is to match the **$ids** they point to so yo
 
 ::
 
- "transform": {
+  "transform": {
     "type": "dtl",
     "rules": {
       "default": [
         ["copy", "*"],
-        ["add", "SSN",
-          ["ni", "hr-person", "_S._id"]
-        ]
+        ["make-ni", "hr-person", "SSN"]
+      ]
+    }
+  }
 
 This will produce the following output. We see the ["ni"] we added in code above; 
 
 ::
 
-  "erp-person:SSN": "~:hr-person:erp-person:02023688018"
+  "erp-person:SSN-ni": "~:hr-person:02023688018"
  
 
 You now have unique namespace identifiers based on **SSN**, which you can use to merge the person data from two different sources.
@@ -218,7 +219,7 @@ You now have unique namespace identifiers based on **SSN**, which you can use to
       "type": "merge",
       "datasets": ["erp-person ep", "hr-person hr"],
       "equality": [
-        ["eq", "ep.SSN", "hr.SSN"]
+        ["eq", "ep.SSN-ni", "hr.$ids"]
       ],
       "identity": "first",
       "version": 2
@@ -235,7 +236,7 @@ In the above code we are connecting the foreign keys **SSN** of **"erp-person"**
 Output from the example code above as seen below with a join to hr-system:
 
 
-``"erp-person:SSN": "~:hr-person:12032920177"``
+``"erp-person:SSN-ni": "~:hr-person:12032920177"``
 
 .. raw:: html
 

@@ -915,13 +915,13 @@ The table below shows which strategy is chosen depending on the value of the pro
      - Chronological
 
 If continuation support is enabled for a pipe, the ``since``
-marker is stored in the ``last-seen`` property on the pump. Note that
+marker is stored in the ``pipe_offset`` property on the pump. Note that
 one can use the pump's `update-last-seen
 <api.html#post--pipes-pipe_id-pump>`_ operation in the :doc:`api` to
-update or reset the ``last-seen`` value manually. This is useful in
+update or reset the ``pipe_offset`` value manually. This is useful in
 cases where one wants to reprocess the data from scratch for some
 reason. The :doc:`api` can also tell you what the current
-``last-seen`` value is.
+``pipe_offset`` value is.
 
 If you wish to activate continuation support for a :ref:`microservice <getting-started-microservices>` you need to manually set the "_updated" value for each entity to correspond to the time-stamp up sequence value of the column representing the last data update (the same column as for the "_updated_column" for SQL type sources). This "_updated" value is NOT the same as the "_updated" value seen in the output-tab in the Sesam GUI, but the value seen in the "pipe_offset" value in the execution log. In the two example codes below there's a pipe config and a corresponding code snippet from a microservice showing how continuation support can be set up for those cases. In this example, "supports_since" is activate in the pipe, which results in Sesam passing the "pipe_offset" to the microservice as a query parameter. The first time the pipe runs (or at a reset of the pipe) this value will be "None", resulting in the microservice requesting all the entities in the source. This specific source system has a property/column named "modifiedon". This source property contains a time-stamp value corresponding to the last time the entity was modified. This value is attached to a new entity property named "_updated". After the pipe has run Sesam will store the max value of all the entities "_updated" value as the new "pipe_offset". The next time the pipe runs this value will get passed to the microservice as the query parameter "since" such that the new request only covers data changed from after this specific time. 
 
