@@ -328,6 +328,17 @@ Workflow for transforming data in Sesam
 
 Most Sesam projects will have a set flow that the data goes through.
 
+The best-practice workflow follows a simple flow structure created for an optimal Sesam experience.
+
+|
+
+.. image:: images/best-practice/sesam-flow.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept  
+
+|
+
 The data is fed into Sesam through **inbound pipes** where namespaced identity is added in order to keep existing data model with joins intact. In addition a **RDF type** is added in the inbound pipe for future filtering and classification. 
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
