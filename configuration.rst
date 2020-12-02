@@ -923,15 +923,15 @@ cases where one wants to reprocess the data from scratch for some
 reason. The :doc:`api` can also tell you what the current
 ``pipe_offset`` value is.
 
-If you wish to activate continuation support for a :ref:`microservice <getting-started-microservices>` you need to manually set the "_updated" value for each entity to correspond to the time-stamp up sequence value of the column representing the last data update (the same column as for the "_updated_column" for SQL type sources). This "_updated" value is NOT the same as the "_updated" value seen in the output-tab in the Sesam GUI, but the value seen in the "pipe_offset" value in the execution log. In the two example codes below there's a pipe config and a corresponding code snippet from a microservice showing how continuation support can be set up for those cases. In this example, "supports_since" is activate in the pipe, which results in Sesam passing the "pipe_offset" to the microservice as a query parameter. The first time the pipe runs (or at a reset of the pipe) this value will be "None", resulting in the microservice requesting all the entities in the source. This specific source system has a property/column named "modifiedon". This source property contains a time-stamp value corresponding to the last time the entity was modified. This value is attached to a new entity property named "_updated". After the pipe has run Sesam will store the max value of all the entities "_updated" value as the new "pipe_offset". The next time the pipe runs this value will get passed to the microservice as the query parameter "since" such that the new request only covers data changed from after this specific time. 
+Continuation support for Microservices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that should the pipe's pump for some reason fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.  
-
+If you wish to activate continuation support for a :ref:`microservice <getting-started-microservices>` the pipe source needs to have the "supports_since" parameter set as true, as well as either the "is_since_comparable" or "is_chronological" strategy. An example of this is shown in the Sesam config example below.
 
 .. raw:: html
 
    <details>
-   <summary><a>Input pipe example of continuation support from a microservice</a></summary>
+   <summary><a>Inbound pipe example of continuation support from a microservice</a></summary>
 
 .. code-block:: python
 
@@ -964,6 +964,11 @@ In this case the data from the source is not ordered chronologically, which mean
 
    </details>
 
+The microservice needs to pass on an entity property named "_updated" to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the "updated_column" for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these "_updated" values and pick the max value as the new "pipe_offset".
+
+The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset" will not have a value, resulting in a complete import of all the data from the endpoint. Once data has been imported, the new "pipe_offset" will get passed to the microservice as the query parameter "since". This parameter can in turn be used as a query parameter to the API ensuring that only data updated after the last "since" value will be included in the GET request. An example of this is shown in the Python code snippet below.
+
+
 
 .. raw:: html
 
@@ -975,23 +980,28 @@ In this case the data from the source is not ordered chronologically, which mean
   @app.route("/get-contacts", methods=["GET", "POST"])
   def get_contacts():
       token = auth()
+      
       if request.args.get('since') is None:
           url = api_url + "/contacts"
       else:
           url = api_url + "/contacts?filter=modifiedon ge {}".format(request.args.get('since'))
       headers = {"Authorization": "Bearer {}".format(token)}
-
+ 
       req = requests.get(url = url, headers = headers)
+      
       if req.status_code != 200:
         logger.error("Unexpected response status code: %d with response text %s" % (req.status_code, req.text))
         raise AssertionError ("Unexpected response status code: %d with response text %s"%(req.status_code, req.text))
       entities = req.json()["value"]
+ 
       for entity in entities:
         entity["_updated"] = entity["modifiedon"]
 
 .. raw:: html
 
    </details>
+
+In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.  
 
 
 .. _dataset_source:
