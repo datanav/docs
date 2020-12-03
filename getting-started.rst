@@ -74,7 +74,7 @@ You should now have several pipes available in the **pipes** tab. Select all pip
 Config contents
 ^^^^^^^^^^^^^^^
 
-The config, and now our node, contains seven input pipes. Five of them have embedded person data, one has postal codes and the last one has embedded orders from a webshop. In addition there is a a merge pipe for person data, two global pipes, and example pipes for modelling and exporting person address data. Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merge-person" pipe is a good place to start.
+The config, and now our node, contains seven input pipes. Five of them have embedded person data, one has postal codes and the last one has embedded orders from a webshop. In addition there is a a merge pipe for person data, two global pipes, and example pipes for modelling and exporting person address data. Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merged-person" pipe is a good place to start.
 
 .. _getting-started-sesam-overview:
 
@@ -1955,7 +1955,7 @@ In Sesam's DTL there are many functions available for working with :ref:`strings
 
 Task
 ++++
-  
+
 - Create a pipe with **hr-person** data. 
 - Create an attribute for each of the subtasks below containing:
 
@@ -2131,7 +2131,7 @@ This lab covers:
 
 - **Namespaced Identifiers**
 
-When we know that an attribute on entities in an input pipe is equal to the ``_id`` of entities in a different dataset, we can add a namespaced identifier based on that attribute. This makes it easier to join data from different datasets, and can be viewed as similar to setting a foreign key in one table that relates to the primary key of another table in an SQL-database. If we make a namespaced identifier (NI) on a ``customer-id`` attribute of an order entity, it might look like this on our order entity: ``"customer-id-ni": "~:crm-customer:123456"``. We can then use that NI attribute when we join customer and orrder data in a downstream pipe.
+When we know that an attribute on entities in an input pipe is equal to the ``_id`` of entities in a different dataset, we can add a namespaced identifier based on that attribute. This makes it easier to join data from different datasets, and can be viewed as similar to setting a foreign key in one table that relates to the primary key of another table in an SQL-database. If we make a namespaced identifier (NI) on a ``customer-id`` attribute of an order entity, it might look like this on our order entity: ``"customer-id-ni": "~:crm-customer:123456"``. We can then use that NI attribute when we join customer and order data in a downstream pipe.
 
 We have seen the NI attribute ``rdf:type`` on all the entities in our Sesam hub in these labs. This attribute is used to filter entities downstream, like we have been doing.
 
@@ -2186,9 +2186,9 @@ Task
 ++++
 
 - Create a pipe with **global-person** as its source. Make a ``merge`` transform function with an ``apply-hops`` to the **global-location** dataset. Set the join expression ``eq`` function to compare ``global-person:zipcode`` and ``udir-postalcode:postalcode``.
-- In the rule called by the ``apply-hops``, add an attribute named "location".  It should be a concatinated string explaining which municipality number the person's city is located in, i.e. "Oslo is located in municipality number 0301".
+- In the rule called by the ``apply-hops``, add an attribute named "location". It should be a concatinated string explaining which municipality number the person's city is located in, i.e. "Oslo is located in municipality number 0301".
 - Inside the newly made custom rule, ``merge`` another ``apply-hops`` to the related **geonorge-municipality** entity in **global-location**. Since we have already made ``municipality-ni`` in **udir-postalcode** we can compare that to the ``$ids`` of the **global-location** municipalities in the join expression.
-- Use the rule related to the last ``apply-hops`` to check if the municipality is located north of the arctic cirle. This can be done by checking if the latitute value is 66.33 or higher. The latitude of the municipality is represented by the last number in ``punktIOmrade.coordinates`` (pointInArea.coordinates). Add ``arctic-municipality`` as true or false depending on the result.
+- Use the rule related to the last ``apply-hops`` to check if the municipality is located north of the arctic cirle. This can be done by checking if the latitude value is 66.33 or higher. The latitude of the municipality is represented by the last number in ``punktIOmrade.coordinates`` (pointInArea.coordinates). Add ``arctic-municipality`` as true or false depending on the result.
 
 .. _getting-started-labs-22:
 
