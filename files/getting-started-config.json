@@ -143,118 +143,6 @@
     }
   },
   {
-    "_id": "udir-postalcode",
-    "type": "pipe",
-    "source": {
-      "type": "conditional",
-      "alternatives": {
-        "prod": {
-          "type": "json",
-          "system": "udir",
-          "url": "v1/postnummerdata"
-        },
-        "test": {
-          "type": "embedded",
-          "entities": [{
-            "FylkeNummer": "38",
-            "KommuneNummer": "3811",
-            "PostNummer": "3121",
-            "PostSted": "NØTTERØY"
-          }, {
-            "FylkeNummer": "38",
-            "KommuneNummer": "3807",
-            "PostNummer": "3733",
-            "PostSted": "SKIEN"
-          }, {
-            "FylkeNummer": "30",
-            "KommuneNummer": "3007",
-            "PostNummer": "3501",
-            "PostSted": "HØNEFOSS"
-          }, {
-            "FylkeNummer": "50",
-            "KommuneNummer": "5001",
-            "PostNummer": "7080",
-            "PostSted": "HEIMDAL"
-          }, {
-            "FylkeNummer": "54",
-            "KommuneNummer": "5418",
-            "PostNummer": "9325",
-            "PostSted": "BARDUFOSS"
-          }, {
-            "FylkeNummer": "03",
-            "KommuneNummer": "0301",
-            "PostNummer": "0153",
-            "PostSted": "OSLO"
-          }, {
-            "FylkeNummer": "30",
-            "KommuneNummer": "3004",
-            "PostNummer": "1605",
-            "PostSted": "FREDRIKSTAD"
-          }, {
-            "FylkeNummer": "30",
-            "KommuneNummer": "3001",
-            "PostNummer": "1766",
-            "PostSted": "HALDEN"
-          }, {
-            "FylkeNummer": "11",
-            "KommuneNummer": "1103",
-            "PostNummer": "4017",
-            "PostSted": "STAVANGER"
-          }, {
-            "FylkeNummer": "38",
-            "KommuneNummer": "3803",
-            "PostNummer": "3125",
-            "PostSted": "TØNSBERG"
-          }, {
-            "FylkeNummer": "46",
-            "KommuneNummer": "4601",
-            "PostNummer": "5031",
-            "PostSted": "LAKSEVÅG"
-          }, {
-            "FylkeNummer": "18",
-            "KommuneNummer": "1824",
-            "PostNummer": "8657",
-            "PostSted": "MOSJØEN"
-          }, {
-            "FylkeNummer": "54",
-            "KommuneNummer": "5401",
-            "PostNummer": "9011",
-            "PostSted": "TROMSØ"
-          }, {
-            "FylkeNummer": "30",
-            "KommuneNummer": "3025",
-            "PostNummer": "1390",
-            "PostSted": "VOLLEN"
-          }]
-        }
-      },
-      "condition": "$ENV(node-env)"
-    },
-    "transform": {
-      "type": "dtl",
-      "rules": {
-        "default": [
-          ["comment", "The discard and renames in this pipe is done to simplify and translate the dataset for this guide"],
-          ["discard",
-            ["and",
-              ["in", "_S.FylkeNummer",
-                ["list", "03", "11", "15", "18", "30", "34", "38", "42", "46", "50", "54"]
-              ],
-              ["is-null", "_S.ArvtakerPostnummerDataIdListe"]
-            ]
-          ],
-          ["add", "_id", "_S.PostNummer"],
-          ["rename", "KommuneNummer", "municipality"],
-          ["rename", "PostNummer", "postalcode"],
-          ["rename", "PostSted", "city"],
-          ["add", "rdf:type",
-            ["ni", "udir", "postalcode"]
-          ]
-        ]
-      }
-    }
-  },
-  {
     "_id": "erp-person",
     "type": "pipe",
     "source": {
@@ -425,82 +313,6 @@
     }
   },
   {
-    "_id": "global-location", 
-    "type": "pipe",
-    "source": {
-      "type": "merge",
-      "datasets": ["udir-postalcode upc"],
-      "identity": "first",
-      "version": 2
-    },
-    "metadata": {
-      "global": true
-    }
-  },
-  {
-    "_id": "global-person",
-    "type": "pipe",
-    "source": {
-      "type": "dataset",
-      "dataset": "merged-person"
-    },
-    "transform": {
-      "type": "dtl",
-      "rules": {
-        "default": [
-          ["copy", "*"],
-          ["add", "firstname",
-            ["coalesce",
-              ["list", "_S.hr-person:GivenName", "_S.crm-person:FirstName", "_S.erp-person:GivenName"]
-            ]
-          ],
-          ["add", "middle-initial",
-            ["coalesce",
-              ["list", "_S.hr-person:MiddleInitial", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial"]
-            ]
-          ],
-          ["add", "lastname",
-            ["coalesce",
-              ["list", "_S.hr-person:Surname", "_S.crm-person:LastName", "_S.erp-person:Surname"]
-            ]
-          ],
-          ["add", "fullname",
-            ["join", " ",
-              ["list", "_T.global-person:firstname",
-                ["if",
-                  ["is-not-null", "_T.global-person:middle-initial"],
-                  ["concat", "_T.global-person:middle-initial", "."]
-                ], "_T.global-person:lastname"]
-            ]
-          ],
-          ["add", "address",
-          ["coalesce",
-            ["list", "_S.crm-person:Address", "_S.hr-person:StreetAddress", "_S.erp-person:StreetAddress"]
-          ]
-        ],
-          ["add", "zipcode",
-            ["coalesce",
-              ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
-            ]
-          ],
-          ["add", "country",
-            ["coalesce",
-              ["list", "_S.hr-person:Country", "_S.erp-person:Country"]
-            ]
-          ],
-          ["add", "gender",
-            ["coalesce",
-              ["list", "_S.hr-person:Gender", "_S.crm-person:Gender", "_S.erp-person:Gender"]
-            ]
-          ]
-        ]
-      }
-    },
-    "metadata": {
-      "global": true
-    }
-  },
-  {
     "_id": "hr-person",
     "type": "pipe",
     "source": {
@@ -658,67 +470,72 @@
     }
   },
   {
-    "_id": "merged-person",
+    "_id": "salesforce-userprofile",
     "type": "pipe",
     "source": {
-      "type": "merge",
-      "datasets": ["crm-person cp", "hr-person hp", "erp-person ep", "salesforce-userprofile sup", "salesforce-consent sc"],
-      "equality": [
-        ["eq", "cp.SSN-ni", "hp.$ids"],
-        ["eq", "ep.SSN-ni", "hp.$ids"],
-        ["eq", "cp.Username", "sup.Username"],
-        ["eq", "sup.Username", "sc.Username"]
-      ],
-      "identity": "first",
-      "version": 2
-    }
-  },
-  {
-    "_id": "person-address-csv",
-    "type": "pipe",
-    "source": {
-      "type": "dataset",
-      "dataset": "global-person"
+      "type": "embedded",
+      "entities": [{
+        "_id": "0",
+        "EmailAddress": "torjussand@einrot.com",
+        "Username": "Unjudosely",
+        "phone_number": 29398319
+      }, {
+        "_id": "1",
+        "EmailAddress": "larsevjen@rhyta.com",
+        "Username": "Wim79",
+        "phone_number": 24723752
+      }, {
+        "_id": "2",
+        "EmailAddress": "siri@me.com",
+        "Username": "Gotin1984",
+        "phone_number": 14483792
+      }, {
+        "_id": "3",
+        "EmailAddress": "isakeikeland@teleworm.us",
+        "Username": "Mays1944",
+        "phone_number": 91794756
+      }, {
+        "_id": "4",
+        "EmailAddress": "sebastianskjold@dayrep.com",
+        "Username": "Theimence",
+        "phone_number": 22786513
+      }, {
+        "_id": "5",
+        "EmailAddress": "caspiannygard@einrot.com",
+        "Username": "Somper",
+        "phone_number": 27661595
+      }, {
+        "_id": "6",
+        "EmailAddress": "davidberntsen@superrito.com",
+        "Username": "Thret1941",
+        "phone_number": 67558820
+      }, {
+        "_id": "7",
+        "EmailAddress": "lucaslie@cuvox.de",
+        "Username": "Briver",
+        "phone_number": 66261922
+      }, {
+        "_id": "8",
+        "EmailAddress": "julieandersen@superrito.com",
+        "Username": "jules",
+        "phone_number": 42764125
+      }, {
+        "_id": "9",
+        "EmailAddress": "camillawilhelmsen@dayrep.com",
+        "Username": "Shenlace",
+        "phone_number": 25406855
+      }]
     },
     "transform": {
       "type": "dtl",
       "rules": {
         "default": [
-          ["filter",
-            ["intersects",
-              ["list", "~:crm:person", "~:hr:person", "~:erp:person"], "_S.rdf:type"]
-          ],
-          ["copy", "_id"],
-          ["add", "Name", "_S.global-person:fullname"],
-          ["add", "Address", "_S.global-person:address"],
-          ["add", "Postal",
-            ["concat", "_S.global-person:zipcode", " ",
-              ["first",
-                ["hops", {
-                  "datasets": ["global-location gl"],
-                  "where": [
-                    ["eq", "_S.global-person:zipcode", "gl.udir-postalcode:postalcode"]
-                  ],
-                  "return": "gl.city"
-                }]
-              ]
-            ]
-          ],
-          ["add", "Country", "_S.global-person:country"]
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "salesforce", "userprofile"]
+          ]
         ]
       }
-    }
-  },
-  {
-    "_id": "person-address-csv-endpoint",
-    "type": "pipe",
-    "source": {
-      "type": "dataset",
-      "dataset": "person-address-csv"
-    },
-    "sink": {
-      "type": "csv_endpoint",
-      "columns": ["Name", "Address", "Postal", "Country"]
     }
   },
   {
@@ -795,6 +612,165 @@
           ["copy", "*"],
           ["add", "rdf:type",
             ["ni", "salesforce", "consent"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "mailerlite-person",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "country": "NO",
+        "email": "torjus@gmail.com",
+        "socialsecuritynumber": "23072451376"
+      }, {
+        "country": "NO",
+        "email": "larsevjen@rhyta.com",
+        "socialsecuritynumber": "09046987892"
+      }, {
+        "country": "NO",
+        "email": "siri@me.com",
+        "socialsecuritynumber": "07033589877"
+      }, {
+        "country": "NO",
+        "email": "davidberntsen@superrito.com",
+        "socialsecuritynumber": "19125622937"
+      }, {
+        "country": "NO",
+        "email": "lucaslie@cuvox.de",
+        "socialsecuritynumber": "26026727498"
+      }, {
+        "country": "NO",
+        "email": "runewold@armyspy.com",
+        "socialsecuritynumber": "05064951171"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id", "_S.socialsecuritynumber"],
+          ["add", "SSN-ni",
+            ["ni", "hr-person", "_S.socialsecuritynumber"]
+          ],
+          ["add", "rdf:type",
+            ["ni", "mailerlite", "person"]
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "udir-postalcode",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "json",
+          "system": "udir",
+          "url": "v1/postnummerdata"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{
+            "FylkeNummer": "38",
+            "KommuneNummer": "3811",
+            "PostNummer": "3121",
+            "PostSted": "NØTTERØY"
+          }, {
+            "FylkeNummer": "38",
+            "KommuneNummer": "3807",
+            "PostNummer": "3733",
+            "PostSted": "SKIEN"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3007",
+            "PostNummer": "3501",
+            "PostSted": "HØNEFOSS"
+          }, {
+            "FylkeNummer": "50",
+            "KommuneNummer": "5001",
+            "PostNummer": "7080",
+            "PostSted": "HEIMDAL"
+          }, {
+            "FylkeNummer": "54",
+            "KommuneNummer": "5418",
+            "PostNummer": "9325",
+            "PostSted": "BARDUFOSS"
+          }, {
+            "FylkeNummer": "03",
+            "KommuneNummer": "0301",
+            "PostNummer": "0153",
+            "PostSted": "OSLO"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3004",
+            "PostNummer": "1605",
+            "PostSted": "FREDRIKSTAD"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3001",
+            "PostNummer": "1766",
+            "PostSted": "HALDEN"
+          }, {
+            "FylkeNummer": "11",
+            "KommuneNummer": "1103",
+            "PostNummer": "4017",
+            "PostSted": "STAVANGER"
+          }, {
+            "FylkeNummer": "38",
+            "KommuneNummer": "3803",
+            "PostNummer": "3125",
+            "PostSted": "TØNSBERG"
+          }, {
+            "FylkeNummer": "46",
+            "KommuneNummer": "4601",
+            "PostNummer": "5031",
+            "PostSted": "LAKSEVÅG"
+          }, {
+            "FylkeNummer": "18",
+            "KommuneNummer": "1824",
+            "PostNummer": "8657",
+            "PostSted": "MOSJØEN"
+          }, {
+            "FylkeNummer": "54",
+            "KommuneNummer": "5401",
+            "PostNummer": "9011",
+            "PostSted": "TROMSØ"
+          }, {
+            "FylkeNummer": "30",
+            "KommuneNummer": "3025",
+            "PostNummer": "1390",
+            "PostSted": "VOLLEN"
+          }]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["comment", "The discarding of sone counties and renames in this pipe is done to simplify and translate the dataset for this guide"],
+          ["discard",
+            ["and",
+              ["in", "_S.FylkeNummer",
+                ["list", "03", "11", "15", "18", "30", "34", "38", "42", "46", "50", "54"]
+              ],
+              ["is-null", "_S.ArvtakerPostnummerDataIdListe"]
+            ]
+          ],
+          ["add", "_id", "_S.PostNummer"],
+          ["rename", "KommuneNummer", "municipality"],
+          ["rename", "PostNummer", "postalcode"],
+          ["rename", "PostSted", "city"],
+          ["add", "rdf:type",
+            ["ni", "udir", "postalcode"]
           ]
         ]
       }
@@ -896,72 +872,147 @@
     }
   },
   {
-    "_id": "salesforce-userprofile",
+    "_id": "merged-person",
     "type": "pipe",
     "source": {
-      "type": "embedded",
-      "entities": [{
-        "_id": "0",
-        "EmailAddress": "torjussand@einrot.com",
-        "Username": "Unjudosely",
-        "phone_number": 29398319
-      }, {
-        "_id": "1",
-        "EmailAddress": "larsevjen@rhyta.com",
-        "Username": "Wim79",
-        "phone_number": 24723752
-      }, {
-        "_id": "2",
-        "EmailAddress": "siri@me.com",
-        "Username": "Gotin1984",
-        "phone_number": 14483792
-      }, {
-        "_id": "3",
-        "EmailAddress": "isakeikeland@teleworm.us",
-        "Username": "Mays1944",
-        "phone_number": 91794756
-      }, {
-        "_id": "4",
-        "EmailAddress": "sebastianskjold@dayrep.com",
-        "Username": "Theimence",
-        "phone_number": 22786513
-      }, {
-        "_id": "5",
-        "EmailAddress": "caspiannygard@einrot.com",
-        "Username": "Somper",
-        "phone_number": 27661595
-      }, {
-        "_id": "6",
-        "EmailAddress": "davidberntsen@superrito.com",
-        "Username": "Thret1941",
-        "phone_number": 67558820
-      }, {
-        "_id": "7",
-        "EmailAddress": "lucaslie@cuvox.de",
-        "Username": "Briver",
-        "phone_number": 66261922
-      }, {
-        "_id": "8",
-        "EmailAddress": "julieandersen@superrito.com",
-        "Username": "jules",
-        "phone_number": 42764125
-      }, {
-        "_id": "9",
-        "EmailAddress": "camillawilhelmsen@dayrep.com",
-        "Username": "Shenlace",
-        "phone_number": 25406855
-      }]
+      "type": "merge",
+      "datasets": ["crm-person cp", "hr-person hp", "erp-person ep", "salesforce-userprofile sup", "salesforce-consent sc"],
+      "equality": [
+        ["eq", "cp.SSN-ni", "hp.$ids"],
+        ["eq", "ep.SSN-ni", "hp.$ids"],
+        ["eq", "cp.Username", "sup.Username"],
+        ["eq", "sup.Username", "sc.Username"]
+      ],
+      "identity": "first",
+      "version": 2
+    }
+  },
+  {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "merged-person"
     },
     "transform": {
       "type": "dtl",
       "rules": {
         "default": [
           ["copy", "*"],
-          ["add", "rdf:type",
-            ["ni", "salesforce", "userprofile"]
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.hr-person:GivenName", "_S.crm-person:FirstName", "_S.erp-person:GivenName"]
+            ]
+          ],
+          ["add", "middle-initial",
+            ["coalesce",
+              ["list", "_S.hr-person:MiddleInitial", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial"]
+            ]
+          ],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.hr-person:Surname", "_S.crm-person:LastName", "_S.erp-person:Surname"]
+            ]
+          ],
+          ["add", "fullname",
+            ["join", " ",
+              ["list", "_T.global-person:firstname",
+                ["if",
+                  ["is-not-null", "_T.global-person:middle-initial"],
+                  ["concat", "_T.global-person:middle-initial", "."]
+                ], "_T.global-person:lastname"]
+            ]
+          ],
+          ["add", "address",
+            ["coalesce",
+              ["list", "_S.crm-person:Address", "_S.hr-person:StreetAddress", "_S.erp-person:StreetAddress"]
+            ]
+          ],
+          ["add", "zipcode",
+            ["coalesce",
+              ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
+            ]
+          ],
+          ["add", "city",
+            ["first",
+              ["hops", {
+                "datasets": ["global-location gl"],
+                "where": [
+                  ["eq",
+                    ["coalesce",
+                      ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
+                    ], "gl.udir-postalcode:postalcode"]
+                ],
+                "return": "gl.city"
+              }]
+            ]
+          ],
+          ["add", "country",
+            ["coalesce",
+              ["list", "_S.hr-person:Country", "_S.erp-person:Country"]
+            ]
+          ],
+          ["add", "gender",
+            ["coalesce",
+              ["list", "_S.hr-person:Gender", "_S.crm-person:Gender", "_S.erp-person:Gender"]
+            ]
           ]
         ]
       }
+    },
+    "metadata": {
+      "global": true
+    }
+  },
+  {
+    "_id": "global-location", 
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["udir-postalcode upc"],
+      "identity": "first",
+      "version": 2
+    },
+    "metadata": {
+      "global": true
+    }
+  },
+  {
+    "_id": "person-address-csv",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["intersects",
+              ["list", "~:crm:person", "~:hr:person", "~:erp:person"], "_S.rdf:type"]
+          ],
+          ["copy", "_id"],
+          ["add", "Name", "_S.global-person:fullname"],
+          ["add", "Address", "_S.global-person:address"],
+          ["add", "Postal",
+            ["concat", "_S.global-person:zipcode", " ", "_S.global-person:city"]
+          ],
+          ["add", "Country", "_S.global-person:country"]
+        ]
+      }
+    }
+  },
+  {
+    "_id": "person-address-csv-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-address-csv"
+    },
+    "sink": {
+      "type": "csv_endpoint",
+      "columns": ["Name", "Address", "Postal", "Country"]
     }
   },
   {
