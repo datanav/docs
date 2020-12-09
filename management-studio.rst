@@ -189,6 +189,8 @@ As with pipes and datasets, you can press "..." next to the system name and from
     :align: center
     :alt: DataSet
 
+.. _management-studio-flows:
+
 Flows
 =====
 In Sesam, a *flow* can be defined as a collection of pipes on one path, either from a global to an endpoint or vice versa.
