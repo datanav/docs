@@ -7,8 +7,9 @@ Sesam Data Integration Platform
 
    Overview <overview>
    Concepts <concepts>
-   Developer Guide <developer-guide>
+   Architecture <architecture>
    Getting started <getting-started>
+   Developer Guide <developer-guide>
    Best Practice <best-practice>
    Best practice for working with a Sesam project <project-workflow>
    Management Studio <management-studio>
