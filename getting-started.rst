@@ -74,7 +74,7 @@ You should now have several pipes available in the **pipes** tab. Select all pip
 Config contents
 ^^^^^^^^^^^^^^^
 
-The config, and now our node, contains seven input pipes. Five of them have embedded person data, one has postal codes and the last one has embedded orders from a webshop. In addition there is a a merge pipe for person data, two global pipes, and example pipes for modelling and exporting person address data. Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merged-person" pipe is a good place to start.
+The config, and now our node, contains eight input pipes. Six of them have embedded person data, one has postal codes and the last one has embedded orders from a webshop. In addition there is a a merge pipe for person data, two global pipes, and example pipes for modelling and exporting person address data. Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merged-person" pipe is a good place to start.
 
 .. _getting-started-sesam-overview:
 
@@ -1591,7 +1591,7 @@ When communicating with the API we use requests methods such as **GET**, **POST*
 Labs
 ----
 
-To do these labs you will need to have a Sesam node set up with the :download:`getting-started-config.json<files/getting-started-config.json>` configuration. If you have set up your datahub following the :ref:`guide <getting-started-upload-config>` you are ready to do these labs.
+To do these labs you will need to have a Sesam node set up with the :download:`getting-started-config.json<files/getting-started-config.json>` configuration. If you have set up your datahub following the :ref:`guide <getting-started-upload-config>` you are ready to do these labs. At the end of the labs section you will find :ref:`solution examples <getting-started-labs-solution-examples>` for each lab.
 
 | **Naming pipes**
 | As explained in this guide and our :ref:`Best Practice documentation <best-practice-naming-conventions>` we encourage creating pipe names from **the type of object the pipe contains** and **the external system** the data is imported from or to be exported to, i.e. "salesforce-user" or "event-bigquery". For some of the pipes we will create in these labs it can be difficult to give proper names as the pipes can be arbitrary and have no target system. In these cases it is OK to use the topic of the task as the pipe's object and simply "labs" as the target system when naming the pipe, i.e. "string-logic-labs".
@@ -2375,6 +2375,8 @@ We encourage you to play around and test more imports, transformations, enrichme
   - ``and`` and ``or``
   - ``encrypt``
   - ``path``
+
+.. _getting-started-labs-solution-examples:
 
 Solution examples
 =================
