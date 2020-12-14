@@ -1,0 +1,849 @@
+[{
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f10.489165172704", "~f59.8093113195"],
+                ["~f10.489165172704", "~f60.135106376679"],
+                ["~f10.951389441803", "~f60.135106376679"],
+                ["~f10.951389441803", "~f59.8093113195"],
+                ["~f10.489165172704", "~f59.8093113195"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Oslo",
+          "fylkesnummer": "03",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.489165172704", "~f59.8093113195"],
+                  ["~f10.489165172704", "~f60.135106376679"],
+                  ["~f10.951389441803", "~f60.135106376679"],
+                  ["~f10.951389441803", "~f59.8093113195"],
+                  ["~f10.489165172704", "~f59.8093113195"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Oslo",
+            "fylkesnummer": "03",
+            "gyldigeNavn": [{
+              "navn": "Oslo",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Oslo",
+            "kommunenavnNorsk": "Oslo",
+            "kommunenummer": "0301",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.775729206388", "~f59.972397398369"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f4.454272371676", "~f58.027850833081"],
+                ["~f4.454272371676", "~f59.844574383341"],
+                ["~f7.214666647844", "~f59.844574383341"],
+                ["~f7.214666647844", "~f58.027850833081"],
+                ["~f4.454272371676", "~f58.027850833081"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Rogaland",
+          "fylkesnummer": "11",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f5.49903313381", "~f58.884658939559"],
+                  ["~f5.49903313381", "~f59.312103554166"],
+                  ["~f6.131310442607", "~f59.312103554166"],
+                  ["~f6.131310442607", "~f58.884658939559"],
+                  ["~f5.49903313381", "~f58.884658939559"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Rogaland",
+            "fylkesnummer": "11",
+            "gyldigeNavn": [{
+              "navn": "Stavanger",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Stavanger",
+            "kommunenavnNorsk": "Stavanger",
+            "kommunenummer": "1103",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f5.712610778068", "~f59.10201328799"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f10.578060311074", "~f64.939497267972"],
+                ["~f10.578060311074", "~f69.596700594429"],
+                ["~f18.151354895285", "~f69.596700594429"],
+                ["~f18.151354895285", "~f64.939497267972"],
+                ["~f10.578060311074", "~f64.939497267972"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Nordland",
+          "fylkesnummer": "18",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f12.584747944911", "~f65.464111894169"],
+                  ["~f12.584747944911", "~f66.178541173109"],
+                  ["~f13.766028693325", "~f66.178541173109"],
+                  ["~f13.766028693325", "~f65.464111894169"],
+                  ["~f12.584747944911", "~f65.464111894169"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Nordland",
+            "fylkesnummer": "18",
+            "gyldigeNavn": [{
+              "navn": "Vefsn",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Vefsn",
+            "kommunenavnNorsk": "Vefsn",
+            "kommunenummer": "1824",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f13.178900256596", "~f65.821508100394"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f7.438842389721", "~f58.760960386839"],
+                ["~f7.438842389721", "~f61.09172049879"],
+                ["~f11.946004480769", "~f61.09172049879"],
+                ["~f11.946004480769", "~f58.760960386839"],
+                ["~f7.438842389721", "~f58.760960386839"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Viken",
+          "fylkesnummer": "30",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f9.704508522066", "~f60.017259873475"],
+                  ["~f9.704508522066", "~f60.637925964842"],
+                  ["~f10.601537696947", "~f60.637925964842"],
+                  ["~f10.601537696947", "~f60.017259873475"],
+                  ["~f9.704508522066", "~f60.017259873475"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Viken",
+            "fylkesnummer": "30",
+            "gyldigeNavn": [{
+              "navn": "Ringerike",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Ringerike",
+            "kommunenavnNorsk": "Ringerike",
+            "kommunenummer": "3007",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.02176352828", "~f60.327406206201"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.290061623227", "~f59.457326948062"],
+                  ["~f10.290061623227", "~f59.905938428793"],
+                  ["~f10.63499407509", "~f59.905938428793"],
+                  ["~f10.63499407509", "~f59.457326948062"],
+                  ["~f10.290061623227", "~f59.457326948062"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Viken",
+            "fylkesnummer": "30",
+            "gyldigeNavn": [{
+              "navn": "Asker",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Asker",
+            "kommunenavnNorsk": "Asker",
+            "kommunenummer": "3025",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.474836026786", "~f59.681260177431"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f11.153506179673", "~f58.876894630362"],
+                  ["~f11.153506179673", "~f59.259612439157"],
+                  ["~f11.710523915211", "~f59.259612439157"],
+                  ["~f11.710523915211", "~f58.876894630362"],
+                  ["~f11.153506179673", "~f58.876894630362"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Viken",
+            "fylkesnummer": "30",
+            "gyldigeNavn": [{
+              "navn": "Halden",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Halden",
+            "kommunenavnNorsk": "Halden",
+            "kommunenummer": "3001",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f11.537193173979", "~f59.068055511312"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.605012229747", "~f59.044876877373"],
+                  ["~f10.605012229747", "~f59.324031500773"],
+                  ["~f11.130718076503", "~f59.324031500773"],
+                  ["~f11.130718076503", "~f59.044876877373"],
+                  ["~f10.605012229747", "~f59.044876877373"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Viken",
+            "fylkesnummer": "30",
+            "gyldigeNavn": [{
+              "navn": "Fredrikstad",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Fredrikstad",
+            "kommunenavnNorsk": "Fredrikstad",
+            "kommunenummer": "3004",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.868024082656", "~f59.186201229507"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f7.096287396418", "~f58.603310840909"],
+                ["~f7.096287396418", "~f60.188271815673"],
+                ["~f10.675019827765", "~f60.188271815673"],
+                ["~f10.675019827765", "~f58.603310840909"],
+                ["~f7.096287396418", "~f58.603310840909"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Vestfold og Telemark",
+          "fylkesnummer": "38",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.042613976798", "~f59.227583546888"],
+                  ["~f10.042613976798", "~f59.482449788377"],
+                  ["~f10.590794972153", "~f59.482449788377"],
+                  ["~f10.590794972153", "~f59.227583546888"],
+                  ["~f10.042613976798", "~f59.227583546888"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Vestfold og Telemark",
+            "fylkesnummer": "38",
+            "gyldigeNavn": [{
+              "navn": "Tønsberg",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Tønsberg",
+            "kommunenavnNorsk": "Tønsberg",
+            "kommunenummer": "3803",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.282049108274", "~f59.354979471362"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f9.227646987285", "~f59.045256476496"],
+                  ["~f9.227646987285", "~f59.487254400388"],
+                  ["~f9.779704215986", "~f59.487254400388"],
+                  ["~f9.779704215986", "~f59.045256476496"],
+                  ["~f9.227646987285", "~f59.045256476496"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Vestfold og Telemark",
+            "fylkesnummer": "38",
+            "gyldigeNavn": [{
+              "navn": "Skien",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Skien",
+            "kommunenavnNorsk": "Skien",
+            "kommunenummer": "3807",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f9.53125020388", "~f59.266244217834"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.330225274849", "~f58.760960386839"],
+                  ["~f10.330225274849", "~f59.271141136719"],
+                  ["~f10.675019827765", "~f59.271141136719"],
+                  ["~f10.675019827765", "~f58.760960386839"],
+                  ["~f10.330225274849", "~f58.760960386839"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Vestfold og Telemark",
+            "fylkesnummer": "38",
+            "gyldigeNavn": [{
+              "navn": "Færder",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Færder",
+            "kommunenavnNorsk": "Færder",
+            "kommunenummer": "3811",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.501120197805", "~f59.014867016811"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f4.087524332196", "~f59.475420802226"],
+                ["~f4.087524332196", "~f62.38239573256"],
+                ["~f8.322052970654", "~f62.38239573256"],
+                ["~f8.322052970654", "~f59.475420802226"],
+                ["~f4.087524332196", "~f59.475420802226"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Vestland",
+          "fylkesnummer": "46",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f5.144578165328", "~f60.176091099054"],
+                  ["~f5.144578165328", "~f60.536093127722"],
+                  ["~f5.686791416551", "~f60.536093127722"],
+                  ["~f5.686791416551", "~f60.176091099054"],
+                  ["~f5.144578165328", "~f60.176091099054"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Vestland",
+            "fylkesnummer": "46",
+            "gyldigeNavn": [{
+              "navn": "Bergen",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Bergen",
+            "kommunenavnNorsk": "Bergen",
+            "kommunenummer": "4601",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f5.379238242075", "~f60.356091301992"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f7.648093889282", "~f62.255726730257"],
+                ["~f7.648093889282", "~f65.470175001623"],
+                ["~f14.325985837436", "~f65.470175001623"],
+                ["~f14.325985837436", "~f62.255726730257"],
+                ["~f7.648093889282", "~f62.255726730257"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Trøndelag",
+          "fylkesnummer": "50",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f10.003525936184", "~f63.159898538562"],
+                  ["~f10.003525936184", "~f63.516594919762"],
+                  ["~f10.725198686392", "~f63.516594919762"],
+                  ["~f10.725198686392", "~f63.159898538562"],
+                  ["~f10.003525936184", "~f63.159898538562"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Trøndelag",
+            "fylkesnummer": "50",
+            "gyldigeNavn": [{
+              "navn": "Trondheim",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Trondheim",
+            "kommunenavnNorsk": "Trondheim",
+            "kommunenummer": "5001",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f10.475134148777", "~f63.33812478818"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }, {
+          "avgrensningsboks": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                ["~f15.592541618359", "~f68.356013804011"],
+                ["~f15.592541618359", "~f71.384878756183"],
+                ["~f31.761592895114", "~f71.384878756183"],
+                ["~f31.761592895114", "~f68.356013804011"],
+                ["~f15.592541618359", "~f68.356013804011"]
+              ]
+            ],
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:4258"
+              }
+            }
+          },
+          "fylkesnavn": "Troms og Finnmark",
+          "fylkesnummer": "54",
+          "kommuner": [{
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f17.160046520175", "~f69.282088930274"],
+                  ["~f17.160046520175", "~f70.168416669364"],
+                  ["~f20.043638691933", "~f70.168416669364"],
+                  ["~f20.043638691933", "~f69.282088930274"],
+                  ["~f17.160046520175", "~f69.282088930274"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Troms og Finnmark",
+            "fylkesnummer": "54",
+            "gyldigeNavn": [{
+              "navn": "Tromsø",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Tromsø",
+            "kommunenavnNorsk": "Tromsø",
+            "kommunenummer": "5401",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f18.678884772757", "~f69.727908572083"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }, {
+            "avgrensningsboks": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  ["~f18.17827873074", "~f68.557941797575"],
+                  ["~f18.17827873074", "~f69.377186146149"],
+                  ["~f20.335873057104", "~f69.377186146149"],
+                  ["~f20.335873057104", "~f68.557941797575"],
+                  ["~f18.17827873074", "~f68.557941797575"]
+                ]
+              ],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "fylkesnavn": "Troms og Finnmark",
+            "fylkesnummer": "54",
+            "gyldigeNavn": [{
+              "navn": "Målselv",
+              "prioritet": 1,
+              "sprak": "Norwegian"
+            }, {
+              "navn": null,
+              "prioritet": 2,
+              "sprak": null
+            }, {
+              "navn": null,
+              "prioritet": 3,
+              "sprak": null
+            }],
+            "kommunenavn": "Målselv",
+            "kommunenavnNorsk": "Målselv",
+            "kommunenummer": "5418",
+            "punktIOmrade": {
+              "type": "Point",
+              "coordinates": ["~f19.397183939757", "~f68.969100818865"],
+              "crs": {
+                "type": "name",
+                "properties": {
+                  "name": "EPSG:4258"
+                }
+              }
+            },
+            "samiskForvaltningsomrade": false
+          }]
+        }]
