@@ -70,7 +70,7 @@ Configuration
 
 ::
 
-    •   When running the sesam client for the first time, use this commando:
+    •   When running the sesam client for the first time, use this command:
 
         $ sesam init
 
