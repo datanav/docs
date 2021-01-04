@@ -261,7 +261,7 @@ Note that the forward slash character ("``/``") is not allowed in the pipe ``_id
 
 Prototype
 ---------
-The following *json* snippet shows the general form of a pipe definition.
+The following *JSON* snippet shows the general form of a pipe definition.
 
 ::
 
@@ -733,7 +733,7 @@ entity within a flow, however.
 Prototype
 ---------
 
-The following *json* snippet shows the general form of a source definition.
+The following *JSON* snippet shows the general form of a source definition.
 
 ::
 
@@ -4096,7 +4096,7 @@ information.
 Prototype
 ---------
 
-The following *json* snippet shows the general form of a sink definition.
+The following *JSON* snippet shows the general form of a sink definition.
 
 ::
 

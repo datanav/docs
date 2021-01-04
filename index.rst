@@ -12,6 +12,7 @@ Sesam Data Integration Platform
    Best Practice <best-practice>
    Best practice for working with a Sesam project <project-workflow>
    Management Studio <management-studio>
+   Sesam Client <sesam-client>
    Open Sesam <open-sesam>
    GDPR platform <gdpr-platform>
    Known Issues <known-issues>

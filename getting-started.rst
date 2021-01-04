@@ -329,6 +329,7 @@ Lab 1-2
 ^^^^^^^^
 The :ref:`Labs section <getting-started-labs>` helps us get more hands on with Sesam. Head over there and do the first two labs to get more experience transforming data. 
 
+.. _getting-started-merging-sources:
 
 Merging sources
 ^^^^^^^^^^^^^^^
