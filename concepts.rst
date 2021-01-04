@@ -27,6 +27,10 @@ Why?
 
 The data hub is the go-to place for data within the enterprise. Integrations no longer have to be point-to-point. Systems can be loosely coupled instead of being tightly coupled, as is the case for direct integrations. With Sesam, individual systems no longer have to depend on other systems being up. It is also a lot easier to replace systems or to perform migrations. Sesam is the active part and will :ref:`schedule <concepts-scheduling-and-signalling>` how and when pipes are run. If a system is down, the pipe will try getting or sending the data once the system is back up.
 
+With the help of features like :ref:`streaming <concepts-streaming>`, :ref:`merging <concepts-merging>`, :ref:`namespaces <concepts-namespaces>` and :ref:`global datasets <concepts-global-datasets>` Sesam enables higher quality `master data management <https://en.wikipedia.org/wiki/Master_data_management>`_.
+
+.. _concepts-streaming:
+
 Streams of data
 ---------------
 
@@ -57,11 +61,11 @@ Streams of entities flow through pipes. A pipe has an associated pump that is sc
 Datasets
 --------
 
-A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A *dataset sink* can write entities to the dataset. The dataset appends the entity to the log if and only if it is new (as in, an entity with a never-before-seen *_id* property) or if it's different from the most recent version of the same entity.
+A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A :ref:`dataset sink <dataset_sink>` can write entities to the dataset. An entity is appended to the log if it is new (as in, an entity with a never-before-seen ``_id`` property) or if it is different from the previous version of the same entity.
 
 A content hash is generated from the content of each entity. This hash value is used to determine if an entity has changed over time. The content hashing is what enables :ref:`change tracking <concepts-change-tracking>`.
 
-A :ref:`dataset source <dataset_source>` exposes the entities from the dataset so that they can be streamed through :ref:`pipes <concepts-pipes>`. As the main data structure is a log the source can read from a specific location in the log. Datasets have full :ref:`continuation support <concepts-continuation-support>`.
+The :ref:`dataset source <dataset_source>` exposes the entities from the dataset so that they can be streamed through :ref:`pipes <concepts-pipes>`. As the main data structure is a log the source can read from a specific location in the log. Datasets have full :ref:`continuation support <concepts-continuation-support>`.
 
 .. image:: images/dataset-structure.png
     :width: 800px
@@ -76,7 +80,7 @@ Configuration
 Systems
 =======
 
-A *system* is any database or API that could be used as a source of data for Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected or integrated.
+A :ref:`system <system_section>` is any database or API that could be used as a source of data for Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected or integrated.
 
 The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how Sesam consumes or delivers data.
 
@@ -89,7 +93,7 @@ You can also run your own :ref:`extension systems <concepts-extensions>`.
 Pipes
 =====
 
-A *pipe* is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`transforms <concepts-transforms>`, a :ref:`sink <concepts-sinks>`, and a :ref:`pump <concepts-pumps>`. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the :ref:`flow <concepts-flows>` of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
+A :ref:`pipe <pipe_section>` is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`transforms <concepts-transforms>`, a :ref:`sink <concepts-sinks>`, and a :ref:`pump <concepts-pumps>`. It is an atomic unit that makes sure that data flows from the source to the sink. It is a simple way to talk about the :ref:`flow <concepts-flows>` of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
 
 .. image:: images/pipes-structure.png
     :width: 600px
@@ -101,14 +105,14 @@ A *pipe* is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`tra
 Sources
 #######
 
-A *source* is a component hosted in Sesam that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
+A :ref:`source <source_section>` exposes a stream of entities. Typically, this stream of entities will be the entities in a dataset, rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
 .. image:: images/pipes-source.png
     :width: 800px
     :align: center
     :alt: Source
 
-Some sources can accept an additional parameter called a 'since' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time Sesam asked for them. The since token is an opaque string token that may take any form; it is interpreted by the source only. For example, for a SQL source it might be a datestamp, for a log based source it might be a location offset.
+Sources have varying support for :ref:`continuations <concepts-continuation-support>`. They accept an additional parameter called a *since* token. This token is used to fetch only the entities that have changed since the location stored in the token. This is used to ask for only the entities that have changed since the last time Sesam asked for them. The since token is an opaque string token that may take any form; it is interpreted by the source only. For example, for a SQL source it might be a datestamp, for a log based source it might be an offset.
 
 Sesam provides a number of out of the box *source* types, such as :ref:`SQL <sql_source>` and :ref:`LDAP <ldap_source>`. It is also easy for developers to expose a :ref:`micro-service <concepts-extensions>` that can supply data from an external service. The built-in :ref:`json <json_source>` source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
@@ -119,7 +123,7 @@ To help with this there are a number of template projects hosted on our `GitHub 
 Transforms
 ##########
 
-Entities streaming through a pipe can be transformed on their way from the source to the sink. A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :doc:`Data Transformation Language <DTLReferenceGuide>` transform, which uses DTL to join and transform data into new shapes.
+Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink. A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <DTLReferenceGuide>` to join and transform data into new shapes.
 
 .. _concepts-dtl:
 
@@ -137,9 +141,9 @@ In general, DTL is applied to entities in a dataset and the resulting entities a
 Sinks
 #####
 
-A *sink* is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
+A :ref:`sink <sink_section>` is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
 
-Several types of sinks, such as the SQL Sink, are available. Using the JSON Push sink enables entities to be pushed to custom micro-services or other Sesam service instances.
+Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_push_sink>` enables entities to be pushed to custom micro-services or other Sesam service instances.
 
 .. image:: images/pipes-sink.png
     :width: 800px
@@ -151,18 +155,18 @@ Several types of sinks, such as the SQL Sink, are available. Using the JSON Push
 Pumps
 #####
 
-A scheduler handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or on a 'cron' schedule and reads entities from a source and writes them to a sink.
+A :ref:`scheduler <concepts-scheduling-and-signalling>` handles the mechanics of :ref:`pumping <pump_section>` data from a source to a sink. It runs periodically or on a :doc:`cron <cron-expressions>` schedule and reads entities from a source and writes them to a sink.
 
 It's also capable of rescanning the source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry writing an entity later.
 
-The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
+The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a *dead letter* dataset for further processing.
 
 .. _concepts-flows:
 
 Flows
 #####
 
-Pipes read from sources and writes to sinks. The output of one pipe can be read by many downstream pipes. In this way pipes can be chained together into a directed graph – also called a flow. In some special situations you may also have cycles in this graph. The Sesam Management Studio has features for :ref:`visualising and inspecting flows <management-studio-flows>`.
+:ref:`Pipes <concepts-pipes>` read from sources and writes to sinks. The output of one pipe can be read by many downstream pipes. In this way pipes can be chained together into a directed graph – also called a flow. In some special situations you may also have cycles in this graph. The Sesam Management Studio has features for :ref:`visualising and inspecting flows <management-studio-flows>`.
 
 .. _concepts-environment-variables:
 
@@ -224,7 +228,7 @@ The :ref:`dataset sink <dataset_sink>` is capable of detecting that entities hav
 Dependency Tracking
 ===================
 
-One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property 'customer_id' that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new 'customer-with-address' structure that includes the address as a property. To do this they can use the 'hops' function to connect the customer and address. This DTL transform forms part of a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed?
+One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property ``customer_id`` that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new ``customer-with-address`` structure that includes the address as a property. To do this they can use the :ref:`hops <hops_function>` function to connect the customer and address. This DTL transform forms part of a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed.
 
 This is in essence a problem of cache invalidation of complex queries. With Sesam, we have solved the problem. We are empowered to solve the problem thanks to our dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
 
@@ -244,7 +248,11 @@ There are many possible reasons why a pipe may fall out of sync. Configuration m
 Namespaces
 ==========
 
-:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_, The Resource Description Framework. You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a named identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier. A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
+:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier.
+
+Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
+
+A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
 
 .. _concepts-global-datasets:
 
@@ -258,7 +266,7 @@ The use of global datasets is described in depth in the :ref:`Best Practice <bes
 Merging
 =======
 
-An essential feature that enables :ref:`global datasets <concepts-global-datasets>` is the ability to :ref:`merge <getting-started-merging-sources>` different entities into one entity representing the same thing. Organizations often have multiple systems that share overlapping information about employees, customers, products etc. The :ref:`merge source <merge_source>` lets you define equivalence rules that enables you to merge entities. The merge source is able to merging incrementally producing a stream of entities that have been merged – or unmerged (when the equivalence rule no longer applies).
+An essential feature that enables :ref:`global datasets <concepts-global-datasets>` is the ability to :ref:`merge <getting-started-merging-sources>` different entities into one entity representing the same thing. Organizations often have multiple systems that share overlapping information about employees, customers, products etc. The :ref:`merge source <merge_source>` lets you define equivalence rules that enables you to merge entities. The merge source is able to merging incrementally producing a stream of entities that have been merged – or unmerged (when an equivalence rule no longer applies).
 
 .. _concepts-transit-encoding:
 
