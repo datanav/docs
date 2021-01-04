@@ -6866,7 +6866,7 @@ A note on writable views in MS SQL server
 -----------------------------------------
 
 If you need to filter out identity columns or skip certain columns in a table you can try to use the ``skip_identity_columns``
-and/or the ``use_default_values_from_table`` properties on the SQL sink. Howecer, for MS SQL based servers there is another
+and/or the ``use_default_values_from_table`` properties on the SQL sink. However, for MS SQL based servers there is another
 option/workaround for this usecase: instead of writing to the table directly, you can define a "writable view" of the table
 that omits the identity columns (or other columns you want to skip) and write to that instead.
 See more information here: https://docs.microsoft.com/en-us/sql/relational-databases/views/modify-data-through-a-view
