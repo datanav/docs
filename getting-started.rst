@@ -326,6 +326,8 @@ In our example we have one rule in addition to the "default rule". As we can see
     }
   }
 
+.. _getting-started-merging-sources:
+
 Merging sources
 ^^^^^^^^^^^^^^^
 Merging gives us an aggregated representation of two or more datasets​​. We can create an aggregated dataset source that contains all the data from multiple datasets by using the source type "merge". With this merge type we will join datasets through properties that have corresponding values across different datasets. The resulting aggregated dataset will contain entities with all the properties from the different datasets. 

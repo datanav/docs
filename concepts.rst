@@ -9,23 +9,34 @@ Concepts
 Introduction
 ------------
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data
-from source systems, transforming data, and providing data for target systems.
-
-Sesam collects raw data from source systems and stores it in datasets. Data transformations can be defined to process
-the data residing in datasets to construct new datasets. Transformations can join data across datasets to create new
-shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by
-the state change of entities. This document introduces the concepts that are key to understanding and working with Sesam.
-
 .. image:: images/datahub.jpg
     :width: 800px
     :align: center
     :alt: Sesam
 
+This document introduces concepts that are key to understanding and working with Sesam.
 
-Sesam produces and consumes streams of data. Each stream contains a number of data entities. Each entity consists of a
-number of name-value pairs and with some special reserved property names. See the :doc:`entity data model <entitymodel>`
-section for more details. The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
+Sesam is a streaming dataflow system and a general purpose data integration and processing platform. It stores data in a data hub. The platform is optimised for getting data from source systems, transforming data, and providing data to target systems.
+
+Sesam gets raw data from source systems and stores it in datasets. Pipes can be defined to process datasets to construct new datasets. Transforms can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of :doc:`entities <entitymodel>`.
+
+The primary building block for building :ref:`flows <concepts-flows>` is the :ref:`pipe <concepts-pipes>`. A pipe gets data from a :ref:`source <concepts-sources>`, :ref:`transforms <concepts-transforms>` it and writes it to a :ref:`sink <concepts-sinks>`. The data that flows through pipes are streams of :doc:`entities <entitymodel>` – which are like JSON objects. Pipes are the active component that gets data into the data hub, makes data flow through it and provides data to target systems.
+
+Why?
+----
+
+The data hub is the go-to place for data within the enterprise. Integrations no longer have to be point-to-point. Systems can be loosely coupled instead of being tightly coupled, as is the case for direct integrations. With Sesam, individual systems no longer have to depend on other systems being up. It is also a lot easier to replace systems or to perform migrations. Sesam is the active part and will :ref:`schedule <concepts-scheduling-and-signalling>` how and when pipes are run. If a system is down, the pipe will try getting or sending the data once the system is back up.
+
+With the help of features like :ref:`streaming <concepts-streaming>`, :ref:`merging <concepts-merging>`, :ref:`namespaces <concepts-namespaces>` and :ref:`global datasets <concepts-global-datasets>` Sesam enables higher quality `master data management <https://en.wikipedia.org/wiki/Master_data_management>`_.
+
+.. _concepts-streaming:
+
+Streams of data
+---------------
+
+Sesam consumes and produces streams of :doc:`entities <entitymodel>`. An entity is very much like a JSON object and consists of a number of key-value pairs along with some special reserved property names. See the :doc:`entity data model <entitymodel>` document for more details about entities.
+
+The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
 
 ::
 
@@ -42,39 +53,7 @@ section for more details. The following is a quick example of the shape of entit
         }
     ]
 
-
-A key concept in Sesam is the *pipe*. Data flows through a pipe. A pipe consists of a source, an optional list of
-transformations, and a sink. Each pipe has an associated pump that is scheduled to run at intervals and pull data
-entities from the source, push them through any transformations and deliver the results into the sink.
-
-*Sources* are configured to expose data as streams of entities from source systems such as REST APIs and SQL databases.
-Each source is connected to a *System*. A system represents some external system, such as a web server hosting an
-API endpoint or a SQL database. The job of the source is to convert the underlying data into a uniform representation; JSON.
-Some sources offer features additional features such as only exposing the entities that have changed.
-Different sources offer different levels of support for change detection.
-
-Data from a source for an external system, such as a SQL database, is piped into a dataset sink. A dataset sink writes
-data into a named dataset. The dataset is the core storage mechanism and consists of a log of entities with some
-additional indexes to support lookups and joins. An entity is only appended to the dataset's log if the data is new
-or has changed.
-
-Datasets also act as sources. One of the main uses of a dataset is as a source to a transformation. Transformations are
-described using the Data Transformation Language (DTL). DTL is optimised for ease of use in stream and graph processing
-for the construction of new entities. DTL transformations can use data from many datasets to construct new entities.
-
-The results of applying a DTL transformation is a new stream of entities that can be delivered into a sink. These sinks
-can either be another dataset sink or it can be a sink that connects to a target system.
-
-Sesam provides a comprehensive API and UI for working with all aspects of Sesam.
-
-Sesam Service Instance
-----------------------
-
-We use *Sesam* as the general name for a Sesam service instance. A given service instance exposes a single API endpoint and user interface. Internally, the service instance consists of configuration for all the pipe definitions, processes to execute the pumps and datasets for the storage of data.
-
-A service instance is configured via the API. Configuration in Sesam is quite cool. It is entity based. This means that we can track and understand if the configuration has changed in the same way we understand if any data has changed.
-
-The API offers two ways to upload configuration. The first is via the 'config' endpoint. This allows a complete set of configuration to be uploaded and is typically used when bootstrapping a service instance in QA or production environments. The other way is to use the individual resources exposed via the API. Such as a post to the collection of pipes.
+Streams of entities flow through pipes. A pipe has an associated pump that is scheduled to regularly pull data entities from the source, push them through any transforms and send the results to the sink. The most common source is the :ref:`dataset source <dataset_source>` which reads entities from a dataset. The most common sink is the :ref:`dataset sink <dataset_sink>` which writes entities to a dataset. There are also :ref:`sources <source_section>` and :ref:`sinks <sink_section>` that can read and write data to and from external systems outside of Sesam.
 
 
 .. _concepts-datasets:
@@ -82,267 +61,251 @@ The API offers two ways to upload configuration. The first is via the 'config' e
 Datasets
 --------
 
-A dataset is the basic means of storage inside the node. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A *dataset sink* can write entities to the dataset. The dataset appends the entity to the log if and only if it is new or if it is different from the most recent version of the same entity.
+A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. A :ref:`dataset sink <dataset_sink>` can write entities to the dataset. An entity is appended to the log if it is new (as in, an entity with a never-before-seen ``_id`` property) or if it is different from the previous version of the same entity.
 
-Each entity is given a hash value based on the complete set of values in that entity. This value is used to determine if an entity has changed over time.
+A content hash is generated from the content of each entity. This hash value is used to determine if an entity has changed over time. The content hashing is what enables :ref:`change tracking <concepts-change-tracking>`.
 
-A *dataset source* exposes the entities from the dataset so that they can be streamed through pipes. As the main data structure is a log the source can read from a specific location in the log.
+The :ref:`dataset source <dataset_source>` exposes the entities from the dataset so that they can be streamed through :ref:`pipes <concepts-pipes>`. As the main data structure is a log the source can read from a specific location in the log. Datasets have full :ref:`continuation support <concepts-continuation-support>`.
 
-.. image:: images/dataset.jpg
+.. image:: images/dataset-structure.png
     :width: 800px
     :align: center
-    :alt: DataSet
+    :alt: Dataset structure
 
-
-The datasets of service instance can be found using the API
-
-::
-
-    http://service_url:9042/api/datasets
-
-
-Retention Policies
-==================
-
-A dataset is an immutable log of data that would, left unchecked, grow forever. This problem is partly mitigated as entities are only written to the log if they are new or different (based on a hash comparison) from the most recent version of that entity. To supplement this and ensure that a dataset does not consume all available disk space a retention policy can be defined. A rentention policy describes the general way in which the log should be compacted. The currently available policy is actually the best one and it is 'None'.
+Configuration
+-------------
 
 .. _concepts-systems:
 
 Systems
--------
+=======
 
-A *system* is any database or API that could be used as a source of data Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected, or integrated.
+A :ref:`system <system_section>` is any database or API that could be used as a source of data for Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected or integrated.
 
-The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how the node consumes or delivers data.
+The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible 'source' or 'sink' targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how Sesam consumes or delivers data.
 
-The other use of the *system* is that it allow configuration that may apply to many *source* definitions, e.g. connection strings, to be located and managed in just one place.
+The other use of the *system* is that it allows configuration that may apply to many *source* definitions, e.g. connection strings, to be located and managed in just one place. Systems also provide services like connection pooling and rate limiting.
+
+You can also run your own :ref:`extension systems <concepts-extensions>`.
 
 .. _concepts-pipes:
 
 Pipes
------
+=====
 
-A *pipe* is composed of a source, a transformation chain, a sink, and a pump. It is an atomic unit that makes sure that data flows from the source to the sink at defined intervals. It is a simple way to talk about the flow of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
+A :ref:`pipe <pipe_section>` is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`transforms <concepts-transforms>`, a :ref:`sink <concepts-sinks>`, and a :ref:`pump <concepts-pumps>`. It is an atomic unit that makes sure that data flows from the source to the sink. It is a simple way to talk about the :ref:`flow <concepts-flows>` of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
 
-.. image:: images/pipes.jpg
-    :width: 800px
+.. image:: images/pipes-structure.png
+    :width: 600px
     :align: center
-    :alt: Generic pipe concept
-
+    :alt: Pipe structure
 
 .. _concepts-sources:
 
 Sources
-=======
+#######
 
-A *source* is a component hosted in Sesam that exposes a stream of entities. Typically, this stream of entities will be the rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
+A :ref:`source <source_section>` exposes a stream of entities. Typically, this stream of entities will be the entities in a dataset, rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
-.. image:: images/datasource.png
+.. image:: images/pipes-source.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Source
 
-Some sources can accept an additional parameter that is an 'offset' token. This token is used to fetch only the entities that have changed since that given offset. This can be used to ask for only the entities that have changed since the last time. An offset is an opaque token that may take any form; it is interpreted by the data source only. For example; for a SQL data source it might be a datestamp or for a log based source it might be a location offset.
+Sources have varying support for :ref:`continuations <concepts-continuation-support>`. They accept an additional parameter called a *since* token. This token is used to fetch only the entities that have changed since the location stored in the token. This is used to ask for only the entities that have changed since the last time Sesam asked for them. The since token is an opaque string token that may take any form; it is interpreted by the source only. For example, for a SQL source it might be a datestamp, for a log based source it might be an offset.
 
-Sesam provides a number of out of the box *source* types, such as SQL and LDAP. It is also easy for developers to expose a micro-service that can supply data from a remote service. The built-in remote data source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
+Sesam provides a number of out of the box *source* types, such as :ref:`SQL <sql_source>` and :ref:`LDAP <ldap_source>`. It is also easy for developers to expose a :ref:`micro-service <concepts-extensions>` that can supply data from an external service. The built-in :ref:`json <json_source>` source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
-To help with this there are a number of template projects hosted on our repository GitHub to make this process as easy as possible.
+To help with this there are a number of template projects hosted on our `GitHub <https://github.com/sesam-community>`_ to make this process as easy as possible.
 
 .. _concepts-transforms:
 
 Transforms
-==========
+##########
 
-Entities streaming through a pipe can be transformed on their way from the source to the sink. A transformation chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the Data Transformation Language Transform, which uses DTL to join and transform data into new shapes.
+Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink. A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <DTLReferenceGuide>` to join and transform data into new shapes.
+
+.. _concepts-dtl:
+
+DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'. These may operate on properties, lists of values or complete entities.
+
+.. image:: images/pipes-transform.png
+    :width: 800px
+    :align: center
+    :alt: Transform
+
+In general, DTL is applied to entities in a dataset and the resulting entities are pushed into a sink that writes to a new dataset. The new dataset is then used as a source for sinks that write the data to external systems.
 
 .. _concepts-sinks:
 
 Sinks
-=====
+#####
 
-A data *sink* is a component that can consume entities fed to them by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries, and potentially, the batching of multiple entities if supported by the target system.
+A :ref:`sink <sink_section>` is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
 
-Several types of data sinks, SQL Sink for example, are available. Using the JSON push sink enables entities to be pushed to custom micro-services or other Sesam service instances.
+Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_push_sink>` enables entities to be pushed to custom micro-services or other Sesam service instances.
+
+.. image:: images/pipes-sink.png
+    :width: 800px
+    :align: center
+    :alt: Sink
 
 .. _concepts-pumps:
 
 Pumps
-=====
+#####
 
-A scheduler handles the mechanics of 'pumping' data from a source to a sink. It runs periodically or on a 'cron' schedule and reads entities from a data source and writes them to a data sink.
+A :ref:`scheduler <concepts-scheduling-and-signalling>` handles the mechanics of :ref:`pumping <pump_section>` data from a source to a sink. It runs periodically or on a :doc:`cron <cron-expressions>` schedule and reads entities from a source and writes them to a sink.
 
-It's also capable of rescanning the data source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry
-writing an entity later.
+It's also capable of rescanning the source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities and in the case of writes it can retry writing an entity later.
 
-The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a 'dead letter' dataset for further processing.
+The retry strategy is configurable in several ways and if an end state is reached for a failed entity, it can be written to a *dead letter* dataset for further processing.
 
-Change tracking
+.. _concepts-flows:
+
+Flows
+#####
+
+:ref:`Pipes <concepts-pipes>` read from sources and writes to sinks. The output of one pipe can be read by many downstream pipes. In this way pipes can be chained together into a directed graph – also called a flow. In some special situations you may also have cycles in this graph. The Sesam Management Studio has features for :ref:`visualising and inspecting flows <management-studio-flows>`.
+
+.. _concepts-environment-variables:
+
+Environment Variables
+=====================
+
+An :ref:`environment variable <environment_variables>` is a named value that you can reference in your configuration. Environment variables are used to parameterize your configuration so that you can easily enable/disable or change certain aspects of your configuration. If you have an environment variable called ``myvariable`` then you can reference it in configuration like this: ``"$ENV(myvariable)"``. Do not use environment variables for sensitive values; use :ref:`secrets <concepts-secrets>` instead. Environment variables are global only.
+
+.. _concepts-secrets:
+
+Secrets
+=======
+
+:ref:`Secrets <secrets_manager>` are like environment variables except that they are write-only. Once written to the API you cannot read them back out, but you can reference them in your configuration. They should be used for sensitive values like passwords and other credentials. A secret can only be used in certain locations of the configuration. If you have a secret called ``mysecret`` then you can reference it in configuration like this: ``"$SECRET(mysecret)"``. Secrets can either be global or be local to a system (recommended).
+
+
+.. _concepts-service-metadata:
+
+Service Metadata
+================
+
+The :ref:`service metadata <service_metadata_section>` is a singleton configuration entity that is used for service-wide settings.
+
+Features
+--------
+
+.. _concepts-scheduling-and-signalling:
+
+Scheduling and signalling
+=========================
+
+The active part of a pipe is called a :ref:`pump <pump_section>`. A pump makes entities flow through the pipe. It can be scheduled to run at regular intervals. These intervals can be specified in seconds or using a :doc:`cron expression <cron-expressions>`. One can also optionally schedule the pipe to do full rescans.
+
+Signalling is an optional feature that automatically signals downstream pipes when data changes upstream. The signal then schedules the pump for immediate execution. This feature allows for new data to flow downstream at a much faster pace than if the pumps just ran at scheduled intervals.
+
+.. _concepts-continuation-support:
+
+Continuation Support
+====================
+
+:ref:`Sources <concepts-sources>` can optionally support a since marker which lets them pick up where the previous stream of entities left off - like a "bookmark" in the entity stream. This :ref:`continuation support <continuation_support>` allows a pipe to process changes incrementally. The next time the pipe runs it will continue where the previous run finished. Combined with change tracking this reduces the amount of work that needs to be done.
+
+.. _concepts-change-tracking:
+
+Change Tracking
 ===============
 
-Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a source and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the source was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a source it may, if the source supports it, be possible to just ask for the entities that have changed since the last time. This uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, it is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
+Sesam is special in that it really cares when data has changed. The typical pattern is to read data from a source and push it to a sink that is writing into a dataset. The dataset is essentially a log of the entities it receives. However if a new log entry was added every time the source was checked then log would grow very fast and be of little use. There are mechanisms at both ends to prevent this. When reading data from a source, it may be possible to just ask for the entities that have changed since the last time, if the source supports it. This uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. On the side of the dataset, regardless of where the data comes from, an incoming entity is compared with the existing version of that entity and only updated if they are different. The comparison is done by comparing the hashes of the old and new entity.
 
-.. _concepts-dtl:
+.. _concepts-deletion-tracking:
 
-The Data Transformation Language (DTL)
---------------------------------------
+Deletion Tracking
+=================
 
-The Data Transformation Language is used to construct new data from existing data. DTL transforms should only be applied to data in a dataset.
-
-DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'. That work on properties, list of values and complete entities.
-
-.. image:: images/dtl.png
-    :width: 800px
-    :align: center
-    :alt: DataSet
-
-Persisting the results of Transformation
-========================================
-
-In general DTL is applied to the entities in a dataset and the resulting entities are pushed into a sink that writes to a new dataset. The new dataset is then used as a source for sinks that write the data to external systems.
-
+The :ref:`dataset sink <dataset_sink>` is capable of detecting that entities have disappeared from the source. It can do this when the pipe does a full rescan. At the end of a pipe run the sink will write a deleted version of those entities (where the ``"_deleted"`` property is set to ``true``). This is a useful feature particularly when the source itself is not able to emit deletes. It is also useful in the cases where filters or other configuration changes causes previously emitted entities to no longer be produced by the pipe.
 
 .. _concepts-dependency_tracking:
 
 Dependency Tracking
 ===================
 
-One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property 'customer_id' that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new 'customer-with-address' structure that includes the address as a property. To do this they can use the 'hops' function to connect the customer and address. This DTL transform forms part of  a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed?
+One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property ``customer_id`` that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new ``customer-with-address`` structure that includes the address as a property. To do this they can use the :ref:`hops <hops_function>` function to connect the customer and address. This DTL transform forms part of a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed.
 
-This is in essence a cache invalidation of complex queries problem. With Sesam we have solved that problem. We are empowered to solve the problem as we have a dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
+This is in essence a problem of cache invalidation of complex queries. With Sesam, we have solved the problem. We are empowered to solve the problem thanks to our dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
 
 .. NOTE::
 
-   Only pipes that use the :ref:`dataset source <dataset_source>` supports dependency tracking. The primary reason for that is a technical one; the tracked entities need to be looked up by id before a specific point in time and feed through the pipe. This is currently only implemented for the ``dataset`` source type. It is unlikely that it can be implemented for other source types as those have latency and ambiguity issues.
+   Only pipes that use the :ref:`dataset source <dataset_source>` supports dependency tracking. The primary reason for that is a technical one; the tracked entities need to be looked up by id before a specific point in time and fed through the pipe. This is currently only implemented for the ``dataset`` source type. It is unlikely that it can be implemented for other source types as those have latency and ambiguity issues.
 
-Sesam API
----------
+.. _concepts-automatic-reprocessing:
 
-The Sesam API is a RESTful API that exposes the current state of a Sesam service instance and allows clients to add and modify configuration, test DTL, introspect datasets, view logs and the operational state of pumps and pipes.
+Automatic Reprocessing
+======================
 
-The API can be found at:
+There are many possible reasons why a pipe may fall out of sync. Configuration may change, datasets may be deleted and then recreated, sources may be truncated, data may be restored from backup, joins to new datasets can be introduced and so on. In these cases the pipe should be reset and it should perform a full rescan to get a new view of the world. Sesam has a feature called :ref:`automatic reprocessing <automatic_reprocessing>` that will detect that the pipe has fallen out of sync and needs to be reset. This is currently an opt-in feature, but if you enable it in on the pipe or in :ref:`service metadata <concepts-service-metadata>` the pipe will automatically reset itself and perform a full rescan – making sure that it is no longer out of sync. In some situations it may need to rewind just a little, instead of doing a full rescan - in any case you can then be sure that it is no longer out of sync.
 
-::
+.. _concepts-namespaces:
 
-    http://service_endpoint:9042/api
+Namespaces
+==========
 
-Sesam Management Studio
------------------------
+:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier.
 
-As well as the API there is a UI for working with Sesam. The UI exposes the pipes, datasets and operational information for a service instance.
+Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
 
-The management studio can be found at:
+A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
 
-::
+.. _concepts-global-datasets:
 
-    http://service_endpoint:9042/gui
+Global datasets
+===============
 
+The use of global datasets is described in depth in the :ref:`Best Practice <best-practice-global>` document. The idea is to have one go-to dataset to find data about a specific type of data. A global dataset typically co-locates and :ref:`merges <concepts-merging>` data from many different sources.
 
-To read more about Sesam Management Studio and the UI, please click here `here <https://docs.sesam.io/management-studio.html>`__ 
+.. _concepts-merging:
 
-.. _concepts-sesam-client:
+Merging
+=======
 
-Sesam Client
-------------
+An essential feature that enables :ref:`global datasets <concepts-global-datasets>` is the ability to :ref:`merge <getting-started-merging-sources>` different entities into one entity representing the same thing. Organizations often have multiple systems that share overlapping information about employees, customers, products etc. The :ref:`merge source <merge_source>` lets you define equivalence rules that enables you to merge entities. The merge source is able to merging incrementally producing a stream of entities that have been merged – or unmerged (when an equivalence rule no longer applies).
 
-The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
+.. _concepts-transit-encoding:
 
-So what is it used for? When working with a Sesam project, the Sesam client is an invaluable tool for testing purposes, as well as for making the configuration available for interactions with a source control system, such as a Git repository. Note that the Sesam client itself does not contain any functionality to talk with a Git repository for instance.
-
-When applying a new solution to a project, there is a need to perform tests on the results of your solution. If applying the solution without testing the impact of new or modified integrations, we risk affecting the data quality of other integrations connected to the pipe/pipes in question.
-
-The Sesam client allows us to, in a quick and easy manner, to run new DTL configurations and observing the changes in output throughout the whole node. This results in both a more qualitative monitoring of changes to be implemented, but also saves time, as the Sesam client compares new output data with the old output data automatically, giving us an efficient way of testing all the potential connections inside the node. The tests are performed inside your own private Sesam instance, instead of the project instance, which enables us to test new implementations without risking the integrity of the project data.
-
-As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
-
-How to use the Sesam client
-===========================
-
-Before you start using the Sesam client make sure you have the following ready:
-
-•   Sesam client is available on github (https://github.com/sesam-community/sesam-py). Read about Installation and configuration further down
-•   A personal Sesam node for testing
-•   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
-•   A git clone of the repository you wish to work on
-•   Initial test setup (task "setting up tests in new projects” in Teams. text to be written)
-•   A ".syncconfig" file should be placed in the same folder as the "pipes", "systems" and "variables" folders in your github clone. The content of the file should be on the form;
-
-    ``node=’https://<node-id>.sesam.cloud’
-    JWT=’<your-JWT>’``
-
-The "node-id" of your private Sesam node can be found between the node name and the "Overview" link inside your node.
-
-.. image:: images/Node_ID.png
-    :width: 800px
-    :align: center
-    :alt: DataSet
-
-The JWT token can be generated inside your private node under *"Settings" ----> "Subsctiption" ---> "JWT"* (see above).
-
-Then add another folder named "expected" in the same folder as the ".syncconfig" file.
-
-After we have installed Sesam client via pip, we need to configure it. You can read about this here as seen below.
-
-Installation
-============
-
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
-
-To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
- 
-::
-
-    $ cd sesam
-    $ virtualenv --python=python3 venv
-    $ . venv/bin/activate
-    $ pip install -r requirements.txt
-    $ python sesam.py -version
-    sesam version 1.0.0
-
-Configuration
-=============
-
-::
-
-    •   When running the sesam client for the first time, use this commando:
-
-        $ sesam init
-
-    •   Enter your Sesam username and press enter, enter your passord and press enter.
-    •   You will then get a list of the various Sesam subscriptions you are a member of.
-        The Sesam client will then ask which Subscription to use?
-        Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
-    •   The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
-
-
-Typical workflow 
+Transit encoding
 ================
 
-•   Start with making sure your GitHub repository is up-to-date.
-•   Run the **"sesam test -use-internal-scheduler"** command to ensure that the results from the local repository matches the output of the configuration files. The "-use-internal-scheduler" tag ensures a faster test than without since without it the Sesam client needs to run several operations "behind-the-scene" to execute all pipes. 
-• The **"sesam test"** command actually runs three different commands:
+Sesam's entity data model is a `JSON <https://www.json.org/json-en.html>`_ compatible data model. JSON itself supports a limited number of data types, so in order to make the model richer the entity data model supports a subset of the `Transit <https://github.com/cognitect/transit-format>`_ data types. Transit encoding is a technique for encoding a larger set of data types in JSON. See the :doc:`entity data model <entitymodel>` for more information about this encoding.
 
-    ◦ **"sesam upload"**: loads the local configs to the private Sesam node
+.. _concepts-compaction:
 
-    ◦ **"sesam run"**: runs the configs inside the local Sesam node and populates the datasets
+Compaction
+==========
 
-    ◦ **"sesam verify’"**: matches the output from the current configurations in the private Sesam node with the output in the "expected" folder on the local repository
+A dataset is an append-only immutable log of data that would, left unchecked, grow forever. This problem is partly mitigated as entities are only written to the log if they are new or different (based on a content hash comparison) from the most recent version of that entity. To supplement this and ensure that a dataset does not consume all available disk space a retention policy can be defined. A retention policy describes the general way in which the log should be compacted. The default policy is to keep two versions of every entity. This is the minimal number of versions to keep in order to make dependency tracking work. A time-based policy is also available allowing you to say how old and entity can be before it becomes a candidate for :ref:`compaction <pipe_compaction>`.
 
-•   When this is done, create a new local git branch where you can store your future changes
-•   Make changes to the configs inside your Sesam node
-•   When you are content with your changes, run the command **"sesam download"**. This will pull all the current configs on your node down to the local repository, which you   will need when updating the git repository (explained further down)
-•   To check changes in output, run the command **"sesam test -user-internal-scheduler"** again
-•   If the changes in output are expected/acceptable, run the command **"sesam update"** to update the output in the "expected" folder to the current output in the private Sesam node. If the output is not expected/acceptable, go back to the private Sesam node and make the necessary adjustments and repeat the last three point (starting with "sesam download")
-•   Commit changes and push them [link to git-section?] to the corresponding git repository
+.. _concepts-completeness:
 
-Other useful commands:
+Completeness
+============
 
-    •   Adding either -v, -vv or -vvv after your command will yield further information regarging the workings of the Sesam client. **-v** will yield some extra information, **-vv** will yield some more extra information while **-vvv** will yield maximum information.
-    •   **"status"** will test if the local configs are up-to-date with the node configs.
-    •   **"wipe"** will wipe your private node clean of configs
-    •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.  
+:ref:`Completeness <completeness>` is a feature that you typically enable on outgoing pipes. It makes sure that all pipes that this pipe is dependent on have run before it processes the source entities of this pipe. The timestamp of the source entity is compared with the completeness timestamp that was inherited from its upstream and dependent pipes. This feature effectively holds back the processing of source entities until it can be sure that dependent pipes have completed. This is useful when you want to have a final entity version before you send it to the target system. It also reduces the number of times you have to send the entity to the target system as there might be several state transitions until the entity can be considered complete.
 
-For further commands available through the Sesam client, run the command **"sesam -h"**
+.. _concepts-circuit-breakers:
 
+Circuit Breakers
+================
 
+A :ref:`circuit breaker <circuit_breakers_section>` is a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if a larger than expected number of entities written to a dataset in a pipe run. When tripped, the pipe will refuse to run and it has to be untripped manually. This safety mechanism is there to prevent unforeseen tsunamis of changes and to prevent them from propagating downstream.
 
+.. _concepts-notifications:
 
+Notifications
+=============
+
+Monitoring of pipes can be enabled. Once a pipe is being monitored, you can add :doc:`notification rules <notifications>` to pipes and be alerted when those rules are triggered. You can get notification alerts in the user-interface or by email.
+
+.. _concepts-extensions:
+
+Extensions
+==========
+
+Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own micro-service extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
