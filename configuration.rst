@@ -5066,7 +5066,6 @@ Prototype
         "bulk_operation_queue_size": 3,
         "schema_definition": [],
         "skip_identity_columns": false,
-        "use_defaults_from_table": false,
         "create_table_if_missing": false,
         "timestamp": "name-of-collumn-to-add-timestamp-into",
         "truncate_table_on_first_run": false
@@ -5218,16 +5217,6 @@ Properties
        that you still need to define one or more non-identity unique column(s) in the ``primary_key`` property (sesam
        does not support automatically generated primary keys if there are no other unique combination of column values
        for a row).
-     - ``false``
-     -
-
-   * - ``use_defaults_from_table`` (experimental)
-     - Boolean
-     - If this flag is set, if an entity has a missing property and the sink can detect via table metadata reflection that it has a
-       default value defined it will omit this property from inserts and updates. If ``use_defaults_from_table`` isn't set, and a default value
-       is not provided via the ``schema_definition``, then the default value used will be a "NULL" value.
-       Note that this option is not compatible with the ``use_bulk_operations`` property. In this case it's recommended
-       that you either provide an explicit schema in ``schema_definition`` or add a default value for any missing properties using DTL.
      - ``false``
      -
 
@@ -6866,7 +6855,7 @@ A note on writable views in MS SQL server
 -----------------------------------------
 
 If you need to filter out identity columns or skip certain columns in a table you can try to use the ``skip_identity_columns``
-and/or the ``use_defaults_from_table`` properties on the SQL sink. However, for MS SQL based servers there is another
+property on the SQL sink. However, for MS SQL based servers there is another
 option/workaround for this usecase: instead of writing to the table directly, you can define a "writable view" of the table
 that omits the identity columns (or other columns you want to skip) and write to that instead.
 See more information here: https://docs.microsoft.com/en-us/sql/relational-databases/views/modify-data-through-a-view

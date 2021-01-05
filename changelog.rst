@@ -6,7 +6,7 @@ Changelog
 2021-01-04
 ----------
 
-* Added experimental ``skip_identity_columns`` and ``use_defaults_from_table`` properties to the :ref:`SQL sink <sql_sink>`.
+* Added experimental ``skip_identity_columns`` property to the :ref:`SQL sink <sql_sink>`.
 
 .. _changelog_2020_11_20:
 
