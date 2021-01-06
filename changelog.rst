@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_01_04:
+
+2021-01-04
+----------
+
+* Added experimental ``skip_identity_columns`` property to the :ref:`SQL sink <sql_sink>`.
+
 .. _changelog_2020_11_20:
 
 2020-11-20
