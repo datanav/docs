@@ -41,7 +41,7 @@ Once you've signed up you'll see this page. Click on Request private trial.
     :align: center
     :alt: Generic pipe concept
 
-Once you get the access from the Sesam team you'll get your own Dev Node card in the Dashboard.
+Once you get access to your requested private trial from the Sesam team you'll get a card for your requested node in the Dashboard. If wanted, you can change the name of the node in the 'Basics' section under 'Subscription'-settings.
 
 .. _getting-started-upload-config:
 
@@ -52,7 +52,7 @@ Please note that uploading a config as described below **will overwrite** any co
 
 Download the :download:`getting-started-config.json<files/getting-started-config.json>` and save it locally on your computer.
 
-Go to your 'Dev Node' on the Sesam portal. Click on **Datahub** in the left menu and select the **Tools tab**.
+Go to your 'Requested private trial node' on the Sesam portal. Click on **Datahub** in the left menu and select the **Tools tab**.
 
 .. image:: images/getting-started/importdata.png
     :width: 800px
@@ -588,11 +588,11 @@ We can merge entities in the DTL transform section with the :ref:`merge <dtl_tra
 We will later see the use of the ``["merge"]`` function in combination with functions that fetch entities from other datasets.
 
 Apply
-=====
+^^^^^
 The :ref:`apply <apply_function>` operation applies an own-specified rule to an entity. I.e. the call ["apply", "SomeRule", "_S.orders"] applied the rule "SomeFunc" to the source "_S.orders".  
 
 Hops
-====
+^^^^
 The :ref:`hops <hops_function>` function joins two datasets and returns the entities where the specified parameters match:
 
 ::
@@ -619,7 +619,7 @@ In this transform we first copy everything from the source dataset into the targ
 
 
 Apply-hops
-==========
+^^^^^^^^^^
 There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined ``["apply"]``  and ``["hops"]``  function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the ``["apply"]``  function :ref:`here <hops_function>` 
 
 ::
@@ -644,7 +644,6 @@ There is also the function :ref:`apply-hops <apply_hops_function>`, which is a c
   }
 
 This will retrieve orders through the hops expression and then add them using the order transformation rule. The output is a dataset where the ID of all orders are added to the customers from the source dataset.
-
 
 
 Should I "add" or "merge" an apply-hops?
@@ -750,17 +749,17 @@ Dependency-tracking and resetting a pipe
 
 in the labs we have now started to create dependencies between datasets through hops. In the node config provided for this guide there is also a pipe named **person-address-csv** which uses **global-person** as its source dataset. In its DTL transform there is a hops to **global-location**. This means that entities from **person-address-csv** should change when the data in the source dataset **global-person** changes, in addition to when the relevant data in **global-location** changes. We could of course check through every entity in global-location for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to global-location.
 
-In order to make sure that only entities that have changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit the :ref:`Consepts-section <concepts-dependency_tracking>` of the Developer Guide.
+In order to make sure that only entities that have changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit the :ref:`Concepts-section <concepts-dependency_tracking>` of the Developer Guide.
 
-We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`lab 22 <getting-started-labs-22>`.
+We will try to explain the workings of dependency tracking with a different example, and then apply this information in :ref:`lab 22 <getting-started-labs-22>`.
 
 Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
 
-If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset is not the source in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
 
 Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
 
-So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. If we make changes in a Sesam pipe, changes that will affect the end result (such as adding extra data), the entities that has already been processed will not by them self be reprocessed, thus only changed data or new data will be populated with the extra information. 
+So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. This means that if we make changes to a Sesam pipe, only changed or new data will be populated with the extra information, the entities that has already been processed will not by themselves be reprocessed.
 
 To remedy this, every time we make changes in a pipe that will affect the output data, and if we want all old entities to have that extra information, we must manually **reset** and **start** the pipe. When we reset a pipe, all the entities from the source will be reprocessed. This can be done by clicking on the three dots next to the pipe name at the top of your pipe.
 
@@ -772,7 +771,7 @@ To remedy this, every time we make changes in a pipe that will affect the output
 
 Some of the alternatives presented are **“Restart”**, **“Start”** and **“Reset”**. **“Restart”** is simply a combination of **“Reset”** followed by **“Start”**. This will send all the entities from the source dataset through the pipe and populate them with the extra data you have specified through your DTL config. 
 
-In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . This functionality could be more efficient. In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
+In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
 
 Similarly, imagine you work on a global pipe which merges data from 3 different sources. Two of these sources contain millions of entities, and one only a few. Let’s say you wish to change the output containing data from the source with only a few entities. Resetting the whole pipe in this case is unnecessary since we only need to reprocess a few entities, The **Update last seen** option also supports resetting the data from several sources at different times, thus if you need to reprocess the entities from the "small" dataset, you may do so without sending through all the other million entities, which will in either case be unaffected by your DTL changes. 
 
@@ -882,7 +881,7 @@ Delete the old text and copy/paste the following:
 
 Then click on **Execute**. We have now created a sample table with some properties with values.
 
-Head back to your Dev node. Now you can create a new pipe that pulls this table from the database.
+Head back to your 'Requested private trial node'. Now you can create a new pipe that pulls this table from the database.
 
 .. image:: images/getting-started/new-pipe-db.png
     :width: 800px
@@ -1228,11 +1227,24 @@ The complete URL could look like this ``https://datahub-425aagcte.sesam.cloud/ap
 
 All of these templates provide the data from the HTTP endpoint as a JSON-formatted string object named **entities**. We can now replace the printing of this string with our own implementation to make use of the data.
 
+.. _getting-started-labs-export:
+
+Writing data to external systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+How we write data to a system from Sesam depends on the target system. For many databases, APIs and other targets there are ready-made connectors in Sesam. These are available as systems and can be created using templates, in which you fill in the required connection info. The system in Sesam then serves as your connection to the external system. Previously in these labs we set up a URL-system in our Sesam node to import data from geonorge.no.
+
+If a system in Sesam is connected to an external system that we can write to, we can reference that Sesam-system in an output pipe's sink. When the pipe is run, data will be written to the external system instead of a dataset in Sesam.
+
+If we need to connect to a system that is not supported out-of-the-box or do operations that are not supported we can create and run a custom microservice as a system, used with a JSON push sink. You can find open-source, community developed microservices at https://github.com/sesam-community. We can also expose data directly in an HTTP publisher endpoint as JSON, CSV or XML without any system, just using a sink.
+
+You will find documentation for the systems and sinks on the Developer Guide's :ref:`Service Configuration <configuration>` page.
+
 .. _getting-started-labtime.3:
 
 Lab time
 ========
-Now that we have had a look at different types of sinks it's time to have a go at the :ref:`Export data <getting-started-labs-export>` section of the labs.
+Now that we have had a look at different types of sinks it's time to have a go at the :ref:`Writing data to external systems <getting-started-labs-23>` section of the labs.
 
 .. _getting-started-pumps:
 
@@ -1599,7 +1611,7 @@ To do these labs you will need to have a Sesam node set up with the :download:`g
 | As explained in this guide and our :ref:`Best Practice documentation <best-practice-naming-conventions>` we encourage creating pipe names from **the type of object the pipe contains** and **the external system** the data is imported from or to be exported to, i.e. "salesforce-user" or "event-bigquery". For some of the pipes we will create in these labs it can be difficult to give proper names as the pipes can be arbitrary and have no target system. In these cases it is OK to use the topic of the task as the pipe's object and simply "labs" as the target system when naming the pipe, i.e. "string-logic-labs".
 
 | **Developer Guide**
-| `The Developer Guide <https://docs.sesam.io/developer-guide.html>`__ section of the documentation will be an important resource when doing these labs, the tree first sub-sections of **Service Configuration**, **Entity Data Model** and **Data Transformation Language** in particular.
+| `The Developer Guide <https://docs.sesam.io/developer-guide.html>`__ section of the documentation will be an important resource when doing these labs, the three first sub-sections of **Service Configuration**, **Entity Data Model** and **Data Transformation Language** in particular.
 
 .. _getting-started-labs-basics:
 
@@ -1702,7 +1714,7 @@ This lab covers:
 
 - **Environment variables and secrets**
 
-We can store environment variables and secrets in the hub through the 'Variables'-tab on the Datahub settings page. Variables and secrets stored there are globally accessible with syntax ``"$ENV(variable-name)"`` and ``"$SECRET(variable-name)"``. We can also store secrets that are exclusively accessible to a specific systen in that system's 'Secrets'-tab.
+We can store environment variables and secrets in the hub through the 'Variables'-tab on the Datahub settings page. Variables and secrets stored there are globally accessible with syntax ``"$ENV(variable-name)"`` and ``"$SECRET(secret-name)"``. We can also store secrets that are exclusively accessible to a specific systen in that system's 'Secrets'-tab.
 
 Task
 ++++
@@ -1768,7 +1780,7 @@ This lab covers:
 
 - **Global datasets**
 
-We want to put all data in the datahub into a fitting global dataset, so there's a logical place to find it when needed. When placing sematically similar data in the same dataset, we can also combine entites into larger, global entities that contain all the data from its source entities. Entities from some datasets may make sense to combine, while others do not and should be placed in the global-dataset as separate entities. This depends on whether the entities actually represent the same object. Merging entities into global-entities based on equal attribute values is done in the merge source's ``equality`` property.
+We want to put all data in the datahub into a fitting global dataset, so there's a logical place to find it when needed. When placing sematically similar data in the same dataset, we can also combine entities into larger, global entities that contain all the data from its source entities. Entities from some datasets may make sense to combine, while others do not and should be placed in the global dataset as separate entities. This depends on whether the entities actually represent the same object. Merging entities into global entities based on equal attribute values is done in the merge source's ``equality`` property.
 
 Our newly imported data represents counties, with their municipalities, and fits well in the **global-location** dataset.
 
@@ -2030,7 +2042,7 @@ This lab covers:
 
 There are two ``filter`` functions in Sesam's DTL. In this task and when we filter entities on ``rdf:type`` we use the transform function. Transform functions are the functions that can add or remove attributes to the entities, which in this case adds an internal system attribute (``"_filtered": true``) to the entity. The other filter function is found under Values/Collections in the docs, and it is used to filter values that do not match a certain criteria when we perform logic on data within a transform function.
 
-If we use the ``filter`` transform function without any input parameter we filter out the entity we're currently processing unconditionally. We can provide a function as an "unless"-condition, and the entity will only be filtered if that function returns true. We have already used this filter function to filter entities from a global dataset source based on ``rdf:type``. ``["filter", ["in", "~\:hr:person", "_S.rdf:type"]]`` reads "Filter, unless '~:hr:person' is in the 'rdf:type'-list".
+If we use the ``filter`` transform function without any input parameter we filter out the entity we're currently processing unconditionally. We can provide a function as an "unless"-condition, and the entity will only be filtered if that function returns true. We have already used this filter function to filter entities from a global dataset source based on ``rdf:type``. ``["filter", ["in", "~:hr:person", "_S.rdf:type"]]`` reads "Filter, unless '~:hr:person' is in the 'rdf:type'-list".
 
 Task
 ++++
@@ -2102,7 +2114,7 @@ This lab covers:
 
 We can emit new, standalone entities from a set of values on an entity. This can be done either with the ``create`` or ``create-child`` transform functions. ``create`` will emit and send the new standalone entities to the pipe's sink, while ``create-child`` will add them in a ``$children`` attribute on the original entity. We can then pass the original entity through an ``emit_children`` transform to write them as standalone entities to a dataset. The new entities must have their own valid ``_id``. 
 
-So far we have only been using a ``DTL`` transform in our pipes. There are other :ref:`transforms <transform_section>` that do different things. The emit children transform will produce standalone entities from the contents of a ``$children`` attribute of an entity. It discards the original entity. The HTTP transform can send the entities to an external HTTP endpoint for transformation and recieve data back. You can have a conditional transform just like we have conditional source, and you can chain multiple transforms in one pipe.
+So far we have only been using a ``DTL`` transform in our pipes. There are other :ref:`transforms <transform_section>` that do different things. The emit children transform will produce standalone entities from the contents of a ``$children`` attribute of an entity. It discards the original entity. The HTTP transform can send the entities to an external HTTP endpoint for transformation and receive data back. You can have a conditional transform just like we have conditional source, and you can chain multiple transforms in one pipe.
 
 The counties we imported from geonorge earlier in these labs each include a list of municipalities. Let's emit these municipalities as their own entities using ``create-child`` and an emit children transform that we chain after the DTL transform where we create the ``$children``.
 
@@ -2221,19 +2233,6 @@ Task
   - Note that only the entities with a sequence number in the source dataset that is higher than the "last seen" value we set are updated.
 - Play around with the "Update last seen", "Reset", "Restart" and "Start" options. Feel free to change entities in the source or a dataset that is connected through hops to see the effects on the resulting data.
 
-.. _getting-started-labs-export:
-
-Export data
-===========
-
-How we export data from Sesam depends on the target system. For many databases, APIs and other targets there are ready-made connectors in Sesam. These are available as systems and can be created using templates, in which you fill in the required connection info. The system in Sesam then serves as your connection to the external system. Previously in these labs we set up a URL-system in our Sesam node to import data from geonorge.no.
-
-If a system in Sesam is connected to an external system that we can write to, we can reference that Sesam-system in an output pipe's sink. When the pipe is run, data will be written to the external system instead of a dataset in Sesam.
-
-If we need to connect to a system that is not supported out-of-the-box or do operations that are not supported we can create and run a custom microservice as a system, used with a JSON push sink. You can find open-source, community developed microservices at https://github.com/sesam-community. We can also expose data directly in an HTTP publisher endpoint as JSON, CSV or XML without any system, just using a sink.
-
-You will find documentation for the systems and sinks on the Developer Guide's :ref:`Service Configuration <configuration>` page.
-
 .. _getting-started-labs-23:
 
 Lab 23
@@ -2248,8 +2247,8 @@ First, let's expose some data in a CSV-endpoint. The .csv file can be downloaded
 Task
 ++++
 
-- Create a preperation pipe, a pipe with entities that will be exported or exposed in an output pipe downstream. Populate the preperation pipe with entities of your choosing. Make sure to stick to naming conventions and name it after the type of object it contains and the target system (in this case the system is simply "csv") i.e. "orders-csv".
-- Create an output pipe downstream with a CSV sink. Name this pipe the same as its preperation pipe, but with an "-endpoint" postfix, i.e. "orders-csv-endpoint".
+- Create a preparation pipe, a pipe with entities that will be exported or exposed in an output pipe downstream. Populate the preparation pipe with entities of your choosing. Make sure to stick to naming conventions and name it after the type of object it contains and the target system (in this case the system is simply "csv") i.e. "orders-csv".
+- Create an output pipe downstream with a CSV sink. Name this pipe the same as its preparation pipe, but with an "-endpoint" postfix, i.e. "orders-csv-endpoint".
 - Download the .csv file from the pipe's "Output"-tab and verify its content.
 
 Tips
@@ -2287,9 +2286,9 @@ Lab 25
 
 This lab covers:
 
-- **Export to SQL-database**
+- **Write data to a SQL-database**
 
-SQL databases are common target systems for data export from Sesam. There are a few different SQL systems available in sesam, and all of them are used togother with the SQL sink when exporting data. For the following task you need an SQL database to write to. If you don't have one at hand, there are free online database services where you can set up a database using a trial account. https://www.elephantsql.com/ is one where you can set up a postgresql database.
+SQL databases are common target systems for data export from Sesam. There are a few different SQL systems available in sesam, and all of them are used together with the SQL sink when exporting data. For the following task you need an SQL database to write to. If you don't have one at hand, there are free online database services where you can set up a database using a trial account. https://www.elephantsql.com/ is one where you can set up a postgresql database.
 
 Task
 ++++
@@ -2309,16 +2308,16 @@ Write entities to a table in an SQL database. Follow the steps below:
   address varchar(100)
   );
 
-3. Create a preperation pipe downstream from **global-person** and have it copy this list of attributes: ``["list", "_id", "global-person:firstname", "global-person:lastname", "global-person:address"]``.
+3. Create a preparation pipe downstream from **global-person** and have it copy this list of attributes: ``["list", "_id", "global-person:firstname", "global-person:lastname", "global-person:address"]``.
 
-4. Create an output pipe downstream from the preperation pipe with an SQL sink that refers to the newly created system and the "person" table. Make sure to add a pump config in which ``"mode"`` is set to ``"ENV(pump-mode)"``, which in turn is set to "manual" in the datahub environment variables.
+4. Create an output pipe downstream from the preparation pipe with an SQL sink that refers to the newly created system and the "person" table. Make sure to add a pump config in which ``"mode"`` is set to ``"ENV(pump-mode)"``, which in turn is set to "manual" in the datahub environment variables.
 
 5. Send your data to the database table by starting the output pipe. Check the execution log of the pipe to see how it ran. These logs are the first place to look for clues of what went wrong in a failed run. Verify that the entities have been written to the table in your database. If you need to run a query to view the data in the database, you can run ``select * from person;``.
 
 Tips
 
   - The system config will be different depending on what type of database you are connecting to. Selecting a template will help with config creation. The Developer Guide also have full descriptions of the possible parameters of your system config. In many cases copying the "Example config" from the docs or selecting a config template and filling in the values to match your database server and authentication will be sufficient.
-  - The SQL sink also has a lot of parameters for customizing your SQL operations, like the possibility to define a table's columns in ``schema_definition`` and creating the table on a first run or a reset of the output pipe. Only the parameters "type", "system" and "table" are required.
+  - The SQL sink also has a lot of parameters for customizing your SQL operations, like the possibility to define a table's columns in ``schema_definition`` and creating the table on a first run (this requires the system user to have the necessary permissions in the database) or a reset of the output pipe. Only the parameters "type", "system" and "table" are required.
   - The ``pump-mode`` environment variable is used to make sure an output pipe in a non-production environment does not export data unless the pipe is started manually. In a production environment ``pump-mode`` would be set as "scheduled" and the pipe's pump config would include a "cron-expression" or "schedule_interval" that specifies when to run. 
 
 .. _getting-started-labs-26:
@@ -2328,7 +2327,7 @@ Lab 26
 
 This lab covers:
 
-- **Export to API**
+- **Write data to an API endpoint**
 
 API's are another common external system type that Sesam integrates with. Let's try posting some data to jsonplaceholder.typicode.com, which is a API containing test data that we can also post data to. The data will not actually be saved and stored, but the status codes that the API returns are the same as if it did. The operation we want to imitate is described on this page https://jsonplaceholder.typicode.com/guide.html under "Create a resource".
 
@@ -2337,7 +2336,7 @@ Task
 
 - POST entities to an API. Follow the steps below:
 
-1. Create a URL system in Sesam named "typicode" with the base url ``"https://sonplaceholder.typicode.com/%s"`` as its ``url_pattern``. Store the url as an environment variable and refer to that in the system config.
+1. Create a URL system in Sesam named "typicode" with the base url ``"https://jsonplaceholder.typicode.com/%s"`` as its ``url_pattern``. Store the url as an environment variable and refer to that in the system config.
 
 2. Create a preparation pipe with some entities. You can for example copy the config of the preparation pipe of the previous task. Just remember to have the newly created system in the pipe name.
 
@@ -2358,7 +2357,7 @@ We encourage you to play around and test more imports, transformations, enrichme
 - Get the data you exported back from your SQL database.
 - Import some of the test data available at http://jsonplaceholder.typicode.com.
 - Create an item dataset related to the webshop-orders in an input pipe with embedded source. Give some of the items IDs that correspond to the webshop-order dataset. Find or create a suitable global dataset to put the items in. Create payloads that combine data from people or orders with data from the item-entities.
-- Export data to an external system you have access to and that can be used for testing.
+- Write data to an external system you have access to and that can be used for testing.
 - Try more DTL-functions like
   
   - ``dict``
@@ -3250,7 +3249,7 @@ Pipe config:
     }
   }
 
-Because the "municipality" attribute is a rename from a differently named attribute in the source we have used the "_T" variable to refer to it. Refering to "_S.KommuneNummer" would yield the same result.
+Because the "municipality" attribute is a rename from a differently named attribute in the source we have used the "_T" variable to refer to it. Refering to "_S.KommuneNummer" would yield the same result. The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
 
 Output:
 
@@ -3294,6 +3293,7 @@ Pipe config:
     }
   }
 
+The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
 
 Output:
 
@@ -3492,7 +3492,7 @@ Results after running the pipe from the new pipe offset:
 
 Lab 23
 ^^^^^^
-Preperation pipe config:
+preparation pipe config:
 ::
 
   {
@@ -3553,7 +3553,7 @@ Output:
 
 Lab 24
 ^^^^^^
-Preperation pipe config:
+preparation pipe config:
 ::
 
   {
@@ -3627,7 +3627,7 @@ System config:
     :align: center
     :alt: A system config matching the connection info to the database in the previous image
 
-Preperation pipe config:
+preparation pipe config:
 
 ::
 
@@ -3650,7 +3650,7 @@ Preperation pipe config:
     }
   }
 
-Preperation pipe output:
+preparation pipe output:
 
 .. image:: images/getting-started/labs/lab-db-prep-pipe.png
     :width: 800px
@@ -3698,7 +3698,7 @@ System config:
     "verify_ssl": true
   }
 
-Preperation pipe config:
+preparation pipe config:
 
 ::
 
@@ -3721,7 +3721,7 @@ Preperation pipe config:
     }
   }
 
-Preperation pipe output:
+preparation pipe output:
 
 .. image:: images/getting-started/labs/lab-api-prep-pipe.png
     :width: 800px
