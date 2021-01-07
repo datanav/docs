@@ -1716,7 +1716,7 @@ If-then-else
        | or ``"teenager"`` if the value of ``_S.age`` is greater than or equal to ``13``,
        | or ``"toddler"`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``"unknown"``.
-       
+
 .. _nulls:
 
 Nulls
@@ -2109,6 +2109,10 @@ Numbers
 
 Date and time
 -------------
+
+A general note on timezone conversion functions: Sesam relies on tabulated historical data for daylight
+saving information for the various timezones. This data gets corrected or supplemented from time to time which means
+that the result of an explicit or implicit timezone conversion operation can change over time.
 
 .. list-table::
    :header-rows: 1

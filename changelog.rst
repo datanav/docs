@@ -44,6 +44,12 @@ Changelog
 ----------
 * Documented the :ref:`REST transform <REST_transform>`.
 
+.. _changelog_2020_10_09:
+
+2020-10-09
+----------
+* Fixed a bug in datetime-shift and other functions that does implicit or explicit timezone-conversion where we didn't have the correct historic daylight saving information. This affects the following ranges: 1895-1901, 1916, 1940-1945, 1959-1965 and any year after 2038.
+
 .. _changelog_2020_08_24:
 
 2020-08-24
