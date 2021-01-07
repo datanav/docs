@@ -6418,6 +6418,11 @@ Properties
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
 
+          Also note that Sesam relies on tabulated historical data for daylight
+          saving information for the various timezones. This data gets corrected or
+          supplemented from time to time which means that the result of a timezone
+          conversion operation can change over time.
+
      - "UTC"
      -
 
