@@ -8457,12 +8457,3 @@ started. A rescan run can also be started while an incremental run is in progres
 
 The incremental runs will not do retries, since the rescan will reprocess any previously failed entities.
 The incremental runs will do dependency tracking.
-
-
-
-Caveats of doing rescan+incremental runs:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The order of the entities the pipe produces may be different from the order that the pipe would produce in a
-normal run, since newer entities can be processed by the incremental run before the same entities are processed by the
-rescan.
-
