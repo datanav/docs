@@ -204,6 +204,14 @@ Properties
      - False
      -
 
+       .. _service_metadata_global_defaults_enable_background_rescan:
+
+   * - ``global_defaults.enable_background_rescan``
+     - Boolean
+     - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for all applicable pipes.
+     - False
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
@@ -369,6 +377,14 @@ Properties
      - If this flag is set to ``true``, it will no longer be possible to reset or set the 'last seen' parameter for this
        pipe. The primary use case for this property is when you need to protect the pipe from accidental resets.
      - ``false``
+     -
+
+       .. _pipe_settings_enable_background_rescan:
+
+   * - ``enable_background_rescan``
+     - Boolean
+     - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for this pipe.
+     - False
      -
 
    * - ``source``
@@ -8382,6 +8398,8 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
     }
 
 
+.. _pipe_rescans:
+
 Rescans
 -------
 
@@ -8395,7 +8413,16 @@ Incremental run:
 Rescan:
   This is what a pump does when it is started by the :ref:`rescan_cron_expression <pump_rescan_cron_expression>` or
   :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
-  "rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
+  "start-rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
+
+  Only pipes with a :ref:`dataset sink <dataset_sink>` supports rescans.
+
+  The rescan functionality is not enabled by default. To enable it, either set the pipe's
+  :ref:`enable_background_rescan <pipe_settings_enable_background_rescan>` setting to ``true``
+  to enable rescans on that specific pipe, or set the service metadata property
+  :ref:`global_defaults.enable_background_rescan <service_metadata_global_defaults_enable_background_rescan>`
+  to ``true`` to enable rescans on all pipes.
+
 
 Reset/Full run:
   This is what a pump does when the user has explicitly reset the pipe. It will process all the source-entities,
