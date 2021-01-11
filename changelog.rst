@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_01_11:
+
+2021-01-11
+----------
+
+* Added experimental support for running a :ref:`pipe rescan <pipe_rescans>` in the background while simultaneously doing normal incremental pipe-runs.
+
 .. _changelog_2021_01_04:
 
 2021-01-04
