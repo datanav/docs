@@ -11,6 +11,17 @@ Overview
 Introduction
 ------------
 
+Sesam is offered as service. The service is either hosted for you in the cloud or it is self-hosted. The service has an :doc:`API <api>` that is used to securely communicate with the service over HTTPS. The service subscription is billed monthly.
+
+The terms of service can be found here: https://sesam.io/terms.html. Our privacy policies can be found here: https://sesam.io/privacy.html.
+
+The Sesam service is backed by a centralized portal. The portal is a web service running at `https://portal.sesam.io/ <https://portal.sesam.io/>`_ . The portal is the place were you can sign up for, and manage, your Sesam subscriptions. It is also the place where you go to for the :doc:`Sesam Management Studio <management-studio>`, the user interface for accessing your own Sesam service.
+
+There is also an `experimental version <https://beta.portal.sesam.io/>`_ of the Management Studio where new features are introduced at an earlier stage before they are publicly released in the main portal.
+
+Concepts
+--------
+
 Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems,  :ref:`transforming data <getting-started-transformations>`, and :ref:`pushing or providing data <getting-started-sinks>` to target :ref:`systems <system_section>`.
 
 Data is stored in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched from the source systems on a regular basis and the :doc:`entities <entitymodel>` are stored in the log only if they have changed from the last time the entity was seen.
@@ -20,6 +31,8 @@ Data is stored in datasets. A dataset is a log of data entities with additional 
 The final piece of Sesam is to deliver data from a dataset to a :ref:`sink <sink_section>`. Sinks are used to write data into target :ref:`systems <system_section>` or send it to service endpoints.
 
 Sesam provides implementations for many types of :ref:`sources <source_section>`, including :ref:`relational databases <sql_source>` and custom JSON streams. It also provides a number of core Sink implementations such as the :ref:`relational database <sql_sink>` and :ref:`HTTP endpoint sinks <http_endpoint_sink>`.
+
+See the :doc:`Concepts <concepts>` document for more in-depth explanation of the Sesam concepts.
 
 .. _overview-installation:
 
@@ -59,6 +72,18 @@ The API can be found at:
 ::
 
     http://service_endpoint:9042/api
+
+Software channels
+-----------------
+
+Sesam software is released through a phased rollout scheme. There are four different release channels – commonly called canaries. This is done to give changes and new features some time in non-production environments before they are rolled out to production. The goal is to reduce risk.
+
+The available channels are:
+
+- ``weekly-prod`` is release bi-weekly and is the most stable release. *Use this in production!*
+- ``weekly`` is release once a week. Use this in staging environments.
+- ``nightly`` is released every night. Use this in development environments.
+- ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
 Tooling
 -------

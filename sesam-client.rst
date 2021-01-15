@@ -68,17 +68,17 @@ To install and run the sesam client with python on Linux/OSX (python 3.5+ requir
 Configuration
 =============
 
+When running the sesam client for the first time, use this command:
+
 ::
 
-    •   When running the sesam client for the first time, use this command:
+    $ sesam init
 
-        $ sesam init
+- Enter your Sesam username and press enter, enter your passord and press enter.
 
-    •   Enter your Sesam username and press enter, enter your passord and press enter.
-    •   You will then get a list of the various Sesam subscriptions you are a member of.
-        The Sesam client will then ask which Subscription to use?
-        Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
-    •   The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
+- You will then get a list of the various Sesam subscriptions you are a member of. The Sesam client will then ask which Subscription to use? Type in the number corresponding to the subscription you want to connect to, this will typically be your dev node.
+
+- The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
 
 
 Typical workflow 

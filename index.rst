@@ -7,16 +7,10 @@ Sesam Data Integration Platform
 
    Overview <overview>
    Concepts <concepts>
-   Developer Guide <developer-guide>
    Getting started <getting-started>
-   Best Practice <best-practice>
-   Best practice for working with a Sesam project <project-workflow>
-   Management Studio <management-studio>
-   Sesam Client <sesam-client>
-   Open Sesam <open-sesam>
-   GDPR platform <gdpr-platform>
-   Known Issues <known-issues>
+   Developer Guide <developer-guide>
+   Best Practices <best-practices>
+   Tools <tools>
+   Behind the scenes <behind-the-scenes>
    Roadmap <roadmap>
-   Deprecated features <deprecations>
-   Open source licences <open-source-licenses>
    Changelog <changelog>

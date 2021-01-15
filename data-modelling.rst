@@ -1,8 +1,8 @@
 .. _best-practice:
 
-=============
-Best Practice
-=============
+=======================
+Data modelling in Sesam
+=======================
 
 
 .. contents:: Table of Contents
