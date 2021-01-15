@@ -800,8 +800,7 @@ the Sesam components and it is assumed to be interpretable *only by
 the source*. Within an entity the marker is carried in the
 ``_updated`` property if supported by its source.
 
-Sesam supports a diverse set of core data sources. They are all
-described below.
+Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
 
 There are three characteristics that describe continuation
 support. All sources have these and there are three properties
@@ -932,14 +931,95 @@ The table below shows which strategy is chosen depending on the value of the pro
      - ``true``
      - Chronological
 
-If continuation support is enabled for a pipe then the ``since``
-marker is stored in the ``last-seen`` property on the pump. Note that
+If continuation support is enabled for a pipe, the ``since``
+marker is stored in the ``pipe_offset`` property on the pump. Note that
 one can use the pump's `update-last-seen
 <api.html#post--pipes-pipe_id-pump>`_ operation in the :doc:`api` to
-update or reset the ``last-seen`` value manually. This is useful in
+update or reset the ``pipe_offset`` value manually. This is useful in
 cases where one wants to reprocess the data from scratch for some
 reason. The :doc:`api` can also tell you what the current
-``last-seen`` value is.
+``pipe_offset`` value is.
+
+Continuation support for Microservices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you wish to activate continuation support for a :ref:`microservice <getting-started-microservices>` the pipe source needs to have the "supports_since" parameter set as true, as well as either the "is_since_comparable" or "is_chronological" strategy. An example of this is shown in the Sesam config example below.
+
+.. raw:: html
+
+   <details>
+   <summary><a>Inbound pipe example of continuation support from a microservice</a></summary>
+
+.. code-block:: python
+
+  {
+    "_id": "contacts-test",
+    "type": "pipe",
+    "source": {
+      "type": "json",
+      "system": "<system-name>",
+      "is_since_comparable": true,
+      "supports_since": true,
+      "url": "/get-contacts"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["add", "_id", "_S.contactid"],
+          ["copy", "*"]
+        ]
+      }
+    },
+    "pump": {
+      "cron_expression": "0/10 * * * *",
+      "rescan_cron_expression": "0 * * * *"
+    }
+  }
+
+.. raw:: html
+
+   </details>
+
+The microservice needs to pass on an entity property named "_updated" to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the "updated_column" for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these "_updated" values and pick the max value as the new "pipe_offset".
+
+The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset" will not have a value, resulting in a complete import of all the data from the endpoint. Once data has been imported, the new "pipe_offset" will get passed to the microservice as the query parameter "since". This parameter can in turn be used as a query parameter to the API ensuring that only data updated after the last "since" value will be included in the GET request. An example of this is shown in the Python code snippet below.
+
+
+
+.. raw:: html
+
+   <details>
+   <summary><a>Microservice example of continuation support</a></summary>
+
+.. code-block:: python
+
+  @app.route("/get-contacts", methods=["GET", "POST"])
+  def get_contacts():
+      token = auth()
+      
+      if request.args.get('since') is None:
+          url = api_url + "/contacts"
+      else:
+          url = api_url + "/contacts?filter=modifiedon ge {}".format(request.args.get('since'))
+      headers = {"Authorization": "Bearer {}".format(token)}
+ 
+      req = requests.get(url = url, headers = headers)
+      
+      if req.status_code != 200:
+        logger.error("Unexpected response status code: %d with response text %s" % (req.status_code, req.text))
+        raise AssertionError ("Unexpected response status code: %d with response text %s"%(req.status_code, req.text))
+      entities = req.json()["value"]
+ 
+      for entity in entities:
+        entity["_updated"] = entity["modifiedon"]
+
+.. raw:: html
+
+   </details>
+
+In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.  
+
 
 .. _dataset_source:
 
@@ -5805,7 +5885,7 @@ Properties
      - Boolean
      - Controls how instances of ``quotechar`` appearing inside a field should themselves be quoted. When set to
        ``true`` (the default), the character is doubled (repeated). When set to ``false``, the ``escapechar`` property
-       setting is used as a prefix to the ``quotechar``. If ``doublequoting`` is set to ``true` but ``escapechar`` is
+       setting is used as a prefix to the ``quotechar``. If ``doublequoting`` is set to ``true`` but ``escapechar`` is
        not set, the backward slash character (``\``) is used as prefix.
      - ``true``
      -
@@ -6298,7 +6378,7 @@ A system component represents a computer system that can provide data entities. 
 and services that can be used by several data sources, such as connection pooling, authentication settings,
 communication protocol settings and so on.
 
-You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
+You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`. 
 
 Note: as with pipe components, you are not allowed to use the forward slash character ("``/``") in system id's.
 
@@ -6490,8 +6570,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:oracle",
         "name": "The Oracle Database",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
         "port": 1521,
         "database": "database-name",
@@ -6561,8 +6641,8 @@ Example Oracle configuration:
         "_id": "oracle_db",
         "name": "Oracle test database",
         "type": "system:oracle",
-        "username": "system",
-        "password": "oracle",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-secret)",
         "host": "oracle",
         "database": "XE",
         "coerce_to_decimal": true
@@ -6587,8 +6667,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:oracle_tns",
         "name": "The Oracle Database",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "tns_name": "tns-name-here",
         "coerce_to_decimal": false
     }
@@ -6645,8 +6725,8 @@ Example Oracle TNS configuration:
         "_id": "oracle_db",
         "name": "Oracle test database",
         "type": "system:oracle_tns",
-        "username": "system",
-        "password": "oracle",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "tns_name": "(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = foo)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = BAR)))"",
         "coerce_to_decimal": true
     }
@@ -6670,8 +6750,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:mssql",
         "name": "The Microsoft SQL Server Database",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
         "tds_version":"7.4",
         "instance": "named-instance",
@@ -6752,8 +6832,8 @@ Example MS SQL Server configuration:
         "_id": "sqlserver_db",
         "name": "MS SQL Server test database",
         "type": "system:mssql",
-        "username": "user",
-        "password": "password",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "host": "localhost",
         "port": 1433,
         "database": "testdb"
@@ -6778,8 +6858,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:mssql-azure-dw",
         "name": "A Microsoft Azure SQL Data Warehouse server",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
         "port": 1433,
         "database": "database-name"
@@ -6839,8 +6919,8 @@ Example MS SQL Server configuration:
         "_id": "sqlserver_db",
         "name": "MS Azure DW SQL Server test database",
         "type": "system:mssql-azure-dw",
-        "username": "user",
-        "password": "password",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "host": "myserver.database.windows.net",
         "port": 1433,
         "database": "testdb"
@@ -6904,8 +6984,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:mysql",
         "name": "The MySQL Database",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
         "port": 3306,
         "database": "database-name"
@@ -6965,8 +7045,8 @@ Example MySQL configuration:
         "_id": "sqlserver_db",
         "name": "MySQL test database",
         "type": "system:mysql",
-        "username": "user",
-        "password": "password",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "host": "localhost",
         "port": 3306,
         "database": "testdb"
@@ -6990,8 +7070,8 @@ Prototype
         "_id": "sql_system_id",
         "type": "system:postgresql,
         "name": "The PostgreSQL Database",
-        "username":"username-here",
-        "password":"secret",
+        "username":"$ENV(username-variable)",
+        "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
         "port": 5432,
         "database": "database-name",
@@ -7060,8 +7140,8 @@ Example PostgreSQL configuration:
         "_id": "postgresql_db",
         "name": "PostgreSQL test database",
         "type": "system:postgresql",
-        "username": "user",
-        "password": "pw",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "host": "test.postgresql.mydomain.com",
         "database": "test"
     }
@@ -7088,8 +7168,8 @@ Prototype
         "host": "FQDN of LDAP host",
         "port": 389,
         "use_ssl": false,
-        "username": "authentication-username-here",
-        "password": "authentication-password-here",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "charset": "latin-1"
     }
 
@@ -7154,8 +7234,8 @@ Example configuration
         "type": "system:ldap",
         "host": "ldap.example.org",
         "port": 389,
-        "username": "example\\some-user",
-        "password": "********"
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)"
     }
 
 
@@ -7246,8 +7326,8 @@ Example configuration
         "type": "system:smtp",
         "smtp_server": "localhost",
         "smtp_port": 25,
-        "smtp_username": "some-user",
-        "smtp_password": "*********",
+        "smtp_username": "$ENV(username-variable)",
+        "smtp_password": $SECRET(password-variable)
         "max_per_hour": 100000
     }
 
@@ -7381,8 +7461,8 @@ Prototype
         "_id": "system-id",
         "name": "Service name",
         "type": "system:twilio",
-        "account": "twilio-account-number",
-        "token": "twilio-api-token",
+        "account": "$ENV(account-number-variable)",
+        "token": "$SECRET(twilio-api-token-variable)",
         "max_per_hour": 1000,
         "proxy":  "socks5://user:password@socksproxy:1234"
     }
@@ -7435,8 +7515,8 @@ Example configuration
          "_id": "twilio_service",
          "name": "Twilio Service",
          "type": "system:twilio",
-         "account": "12334567890",
-         "token": "ABCD-ADEF-FAA1-1234",
+         "account": "$ENV(account-number-variable)",
+         "token": "$SECRET(twilio-api-token-variable)",
          "max_per_hour": 100000
     }
 
@@ -7624,8 +7704,8 @@ Example with ntlm configuration:
         "name": "Our HTTP Server",
         "type": "system:url",
         "authentication": "ntlm",
-        "username": "domain\\user",
-        "password": "secret",
+        "username": "$ENV(username-variable)",
+        "password": "$SECRET(password-variable)",
         "base_url": "http://our.domain.com/files"
     }
 

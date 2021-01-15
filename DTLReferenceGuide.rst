@@ -1401,7 +1401,7 @@ Boolean logic
        | Returns true because all arguments evaluate to true.
        |
        | ``["any",``
-       |    ``["gt", "_.", 5]]``
+       |    ``["gt", "_.", 5],``
        |    ``["list", 4, 6, 8]]``
        |
        | Returns true because two of the arguments are greater than 5.
@@ -2848,7 +2848,7 @@ Strings
          wildcard characters can be used. Non-string values are not matched and will cause the
          function to return false. If PATTERN contains multiple string values then only the
          first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", alpaca"]]``
+     - | ``["matches", "a*p*a", ["list", "alpha", "alpaca"]]``
        |
        | Returns ``true``.
        |
@@ -3998,6 +3998,7 @@ Values / collections
        |
        | Returns a list that contains the sisters and brothers.
 
+       .. _filter_dtl_function:
    * - ``filter``
      - | *Arguments:*
        |   FUNCTION(function-expression(1}
