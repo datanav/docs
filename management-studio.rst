@@ -189,6 +189,8 @@ As with pipes and datasets, you can press "..." next to the system name and from
     :align: center
     :alt: DataSet
 
+.. _management-studio-flows:
+
 Flows
 =====
 In Sesam, a *flow* can be defined as a collection of pipes on one path, either from a global to an endpoint or vice versa.
@@ -242,7 +244,7 @@ account will be kept, though.
 
 Elasticsearch [in development]
 ==============================
-
+.. warning:: The data that is indexed will be available to all users!
 .. warning:: This is an experimental feature and will be changed in the future.
 
 We are in the middle of making the Dataset Inspector's free text search work with Elasticsearch. Although this feature is very experimental, it can still be tested
@@ -328,7 +330,7 @@ The way we willd do this is to first create a REST system that will communicate 
           "url": "_doc/{{ properties._id }}"
         }
       },
-      "url_pattern": "{sub URL}/systems/jsonplaceholder-photos/proxy/%s",
+      "url_pattern": "{sub URL}/systems/elasticsearch-freetext/proxy/%s",
       "verify_ssl": true
     }
 
@@ -336,41 +338,44 @@ The way we willd do this is to first create a REST system that will communicate 
 .. note:: Remember to change the {sub URL} to the URL of your subscription.
 
 
-Then we want to create a pipe with the dataset you wan to search as a source, and the rest system as a sink:
-
 ::
 
+  {
+    "_id": "{dataset}-elasticsearch-freetext-rest",
+    "type": "pipe",
+    "source":
     {
-      "_id": "{dataset}-elasticsearch-freetext-rest",
-      "type": "pipe",
-      "source": {
-        "type": "dataset",
-        "dataset": "{dataset}"
-      },
-      "transform": [{
-        "type": "dtl",
-        "rules": {
-          "default": [
-            ["add", "properties",
-              ["dict", "_id", "_S._updated"]
-            ],
-            ["add", "operation", "doc"],
-            ["add", "payload",
-              ["map-dict",
-                ["if",
-                  ["not",
-                    ["matches", "_*", "_."]
-                  ], "_.", ["concat", "_", "_."]], "_.", "_S."]
-            ]
+      "type": "dataset",
+      "dataset": "{dataset}"
+    },
+    "sink":
+    {
+      "type": "rest",
+      "system": "elasticsearch-freetext-rest"
+    },
+    "transform": [
+    {
+      "type": "dtl",
+      "rules":
+      {
+        "default": [
+          ["add", "properties",
+            ["dict", "_id", "_S._updated"]
+          ],
+          ["add", "operation", "doc"],
+          ["add", "payload",
+            ["map-dict",
+              ["if",
+                ["not",
+                  ["matches", "_*", "_."]
+                ], "_.",
+                ["concat", "_", "_."]
+              ], "_.", "_S."]
           ]
-        }
-      }, {
-        "type": "rest",
-        "system": "elasticsearch-freetext-rest",
-        "replace-entity": false
-      }]
-    }
-
+        ]
+      }
+    }]
+  }
 
 .. note:: Remember to change {dataset} to the id of the dataset you want to search
 .. note:: The dtl transforms all the system attributes to start with "__" instead of "_". This is because single underscore is reserved for internal ES attributes (such as _id). The Dataset Inspector transforms them into single underscores again when getting them from the ES index.

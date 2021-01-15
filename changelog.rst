@@ -1,6 +1,20 @@
 Changelog
 =========
 
+.. _changelog_2021_01_11:
+
+2021-01-11
+----------
+
+* Added experimental support for running a :ref:`pipe rescan <pipe_rescans>` in the background while simultaneously doing normal incremental pipe-runs.
+
+.. _changelog_2021_01_04:
+
+2021-01-04
+----------
+
+* Added experimental ``skip_identity_columns`` property to the :ref:`SQL sink <sql_sink>`.
+
 .. _changelog_2020_11_20:
 
 2020-11-20
@@ -36,6 +50,12 @@ Changelog
 2020-10-23
 ----------
 * Documented the :ref:`REST transform <REST_transform>`.
+
+.. _changelog_2020_10_09:
+
+2020-10-09
+----------
+* Fixed a bug in datetime-shift and other functions that does implicit or explicit timezone-conversion where we didn't have the correct historic daylight saving information. This affects the following ranges: 1895-1901, 1916, 1940-1945, 1959-1965 and any year after 2038.
 
 .. _changelog_2020_08_24:
 

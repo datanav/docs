@@ -166,6 +166,7 @@ Properties
           "skos": "http://www.w3.org/2004/02/skos/core#",
           "dcterms": "http://purl.org/dc/terms/",
           "gs": "http://www.opengis.net/ont/geosparql#",
+
      -
      -
 
@@ -199,7 +200,15 @@ Properties
 
    * - ``global_defaults.use_config_circuit_breaker``
      - Boolean
-     - When set to true, activates the circuit breaker for uploading configuration to the node. When activated, any changes to the node configuration that would result in the deletion of more than 10% of the existing components will not go through (this is the case only when the number of deleted components is also more than 10). 
+     - When set to true, activates the circuit breaker for uploading configuration to the node. When activated, any changes to the node configuration that would result in the deletion of more than 10% of the existing components will not go through (this is the case only when the number of deleted components is also more than 10).
+     - False
+     -
+
+       .. _service_metadata_global_defaults_enable_background_rescan:
+
+   * - ``global_defaults.enable_background_rescan``
+     - Boolean
+     - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for all applicable pipes.
      - False
      -
 
@@ -261,7 +270,7 @@ Note that the forward slash character ("``/``") is not allowed in the pipe ``_id
 
 Prototype
 ---------
-The following *json* snippet shows the general form of a pipe definition.
+The following *JSON* snippet shows the general form of a pipe definition.
 
 ::
 
@@ -368,6 +377,14 @@ Properties
      - If this flag is set to ``true``, it will no longer be possible to reset or set the 'last seen' parameter for this
        pipe. The primary use case for this property is when you need to protect the pipe from accidental resets.
      - ``false``
+     -
+
+       .. _pipe_settings_enable_background_rescan:
+
+   * - ``enable_background_rescan``
+     - Boolean
+     - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for this pipe.
+     - False
      -
 
    * - ``source``
@@ -733,7 +750,7 @@ entity within a flow, however.
 Prototype
 ---------
 
-The following *json* snippet shows the general form of a source definition.
+The following *JSON* snippet shows the general form of a source definition.
 
 ::
 
@@ -2733,7 +2750,7 @@ Properties
      -
      - Yes
 
-   * - ``supports_signalling`` (experimental)
+   * - ``supports_signalling``
      - Boolean
      - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
@@ -4176,7 +4193,7 @@ information.
 Prototype
 ---------
 
-The following *json* snippet shows the general form of a sink definition.
+The following *JSON* snippet shows the general form of a sink definition.
 
 ::
 
@@ -5128,9 +5145,6 @@ The expected form of an entity to be written to the sink is:
 
 This sink supports :ref:`batching <pipe_batching>`.
 
-Note that identity columns (columns with automatically assigned values) are currently not supported by the SQL sink, however
-there is a potential :ref:`workaround <mssql-identity-columns>` for non-primary key identity columns for MS SQL based systems.
-
 Prototype
 ^^^^^^^^^
 
@@ -5148,6 +5162,7 @@ Prototype
         "bulk_operation_timeout": 600,
         "bulk_operation_queue_size": 3,
         "schema_definition": [],
+        "skip_identity_columns": false,
         "create_table_if_missing": false,
         "timestamp": "name-of-collumn-to-add-timestamp-into",
         "truncate_table_on_first_run": false
@@ -5293,6 +5308,15 @@ Properties
      -
      -
 
+   * - ``skip_identity_columns`` (experimental)
+     - Boolean
+     - If this flag is set, the sink will skip any identity columns it can detect via table metadata reflection. Note
+       that you still need to define one or more non-identity unique column(s) in the ``primary_key`` property (sesam
+       does not support automatically generated primary keys if there are no other unique combination of column values
+       for a row).
+     - ``false``
+     -
+
    * - ``whitelist``
      - List<String>
      - Deprecated. The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
@@ -5304,7 +5328,7 @@ Properties
    * - ``blacklist``
      - List<String>
      - Deprecated. The names of the properties (columns) to exclude from inserts into the target table. If you are looking
-       for a way to filter out identity columns, there exists a :ref:`workaround <mssql-identity-columns>` for MS SQL based systems.
+       for a way to filter out identity columns, see the ``skip_identity_columns`` property.
      -
      -
 
@@ -6491,6 +6515,11 @@ Properties
           timezone to UTC. Note that the ``_updated`` property will
           not be shifted.
 
+          Also note that Sesam relies on tabulated historical data for daylight
+          saving information for the various timezones. This data gets corrected or
+          supplemented from time to time which means that the result of a timezone
+          conversion operation can change over time.
+
      - "UTC"
      -
 
@@ -6924,15 +6953,18 @@ set to ``false`` to make the sink use the (slower) ``INSERT`` and ``UPDATE`` sql
 
 .. _mssql-identity-columns:
 
-Identity columns in MS SQL server
----------------------------------
+A note on writable views in MS SQL server
+-----------------------------------------
 
-Identity columns (columns with automatically assigned values) are not supported by the SQL sink machinery.
-However, for MS SQL based servers there is a workaround for this problem: instead of writing to the table directly,
-you can define a "writable view" of the table that omits the identity columns and write to that instead. See more information
-here: https://docs.microsoft.com/en-us/sql/relational-databases/views/modify-data-through-a-view
+If you need to filter out identity columns or skip certain columns in a table you can try to use the ``skip_identity_columns``
+property on the SQL sink. However, for MS SQL based servers there is another
+option/workaround for this usecase: instead of writing to the table directly, you can define a "writable view" of the table
+that omits the identity columns (or other columns you want to skip) and write to that instead.
+See more information here: https://docs.microsoft.com/en-us/sql/relational-databases/views/modify-data-through-a-view
 
-Note that this does not work for primary key columns.
+Note that this does not work for primary key columns - i.e. you still need to have one or more unique columns for each row defined
+in the ``primary_key`` property. Autogenerated primary keys are not supported since Sesam then have no way to uniquely identify
+which rows to update or delete.
 
 .. _mysql_system:
 
@@ -8205,6 +8237,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
      -
 
+       .. _pump_rescan_run_count:
    * - ``rescan_run_count``
      - Integer(>=1)
      - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
@@ -8212,6 +8245,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      -
      -
 
+       .. _pump_rescan_cron_expression:
    * - ``rescan_cron_expression``
      - String
      - A cron expression that indicates when the pump should schedule a full rescan of the source of the pipe the pump
@@ -8442,3 +8476,91 @@ A scheduled pump running every 5 minutes from 14:00 and ending at 14:55, AND fir
            "cron_expression": "0/5 14,18 * * ?"
        }
     }
+
+
+.. _pipe_rescans:
+
+Rescans
+-------
+
+Definition of terms:
+
+Incremental run:
+  This is what a pump does when it is started when the stored "last_seen" value is set to a non-empty value,
+  i.e. the pipe will only process source-entities that has appeared after the previous run of the pipe. This is
+  the most common way to run a pipe.
+
+Rescan:
+  This is what a pump does when it is started by the :ref:`rescan_cron_expression <pump_rescan_cron_expression>` or
+  :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
+  "start-rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
+
+  Only pipes with a :ref:`dataset sink <dataset_sink>` supports background rescans.
+
+  The rescan functionality is not enabled by default. To enable it, either set the pipe's
+  :ref:`enable_background_rescan <pipe_settings_enable_background_rescan>` setting to ``true``
+  to enable rescans on that specific pipe, or set the service metadata property
+  :ref:`global_defaults.enable_background_rescan <service_metadata_global_defaults_enable_background_rescan>`
+  to ``true`` to enable rescans on all pipes.
+
+
+Reset/Full run:
+  This is what a pump does when the user has explicitly reset the pipe. It will process all the source-entities,
+  and do deletion tracking when finished.
+
+The use-case for rescans is that the user wants new entities to flow through the pipe as quickly as possible,
+but the user also wants to reprocess *all* the source entities. The latter can be very time-consuming, and sometimes
+it is not an option to simply reset the pipe to reprocess everything, since that would prevent any new entities from
+flowing through the pipe until all the old entities have been processed.
+
+Example: The pipe reads from a sql database-table that has an "last_modified_time"-column, but no "deleted" column;
+new and modified rows can be selected with a an appropriate sql-statement, but there is no way to query the sql
+database for deleted rows. In this case a rescan can be used to detect deleted rows, while incremental runs can
+be used to process new rows at the same time.
+
+There are two different "flavors" of rescans:
+
+1. The entities produced by the incremental runs are known to be correct. This is the case if the user has just
+   changed the DTL of a pipe.
+
+   If one or more incremental run has been started while a rescan was in progress, the rescan will stop processing
+   entities when it reaches the "last_seen" offset used by the first incremental run.
+
+   If no incremental run has been started, the rescan will proceed past the "last_seen" offset and start to update
+   the stored "last_seen" value.  It is not possible to start an incremental run if a rescan is running and it has
+   already passed the "last_seen" offset.
+
+   The rescan will not overwrite any entities that have been written by an incremental run.
+   At the end of the rescan, the recan will do deletion-tracking, but will not delete any entities that were output
+   by the incremental run(s).
+
+   Caveats of doing rescan+incremental runs:
+
+   * The order of the resulting entities can be different that it would be in a normal "reset"-run.
+   * Since the rescan can't overwrite entities that has been output by the incremental run, the pipe may not output
+     all the versions of an entity that it would in a normal run. This can happen for instance if the pipe has a
+     :ref:`dataset source <dataset_source>` with the ``include_previous_versions`` property set to true; once the
+     incremental run has output entity "A", any older versions of "A" that is produces by the rescan will be ignored.
+
+2. The entities produced by the incremental run may not be correct in all cases. This is the case if the pipe has
+   a "merge"-source, and the user has changed the configuration of the merge-source.
+
+   In this case the incremental run will use the old version of the merge-source, which may produce erronous results.
+   The entities from the incremental run will not be put into the sink's seen-tracker. The incremental run will not
+   overwrite any entities that have been produced by the rescan run.
+
+   Once the rescan finishes, any incremental run in progress will be stopped. The rescan will then process any entities
+   that have appeared since the start of the rescan. Once that is done, the rescan will do deletion-tracking. This will
+   delete any erronous entities that was emitted by the incremental run.
+
+   Caveats of doing rescan+incremental runs:
+
+   * The order of the resulting entities can be different that it would be in a normal "reset"-run.
+   * The output can temporarily contain erronous entities (produced by the incremental runs).
+     Such entities will deleted once the rescan has finished.
+
+Only one incremental run can be active at once, but once an incremental run has finished a new incremental run can be
+started. A rescan run can also be started while an incremental run is in progress.
+
+The incremental runs will not do retries, since the rescan will reprocess any previously failed entities.
+The incremental runs will do dependency tracking.
