@@ -6,110 +6,73 @@ Roadmap
    :depth: 2
    :local:
 
-Future plans. Disclaimer safe harbour. More transparency.
+This roadmap highlights some of features we are currently working on. This roadmap might be subject to
+change.
 
-Planned
-=======
+Background rescanning
+---------------------
 
-The following features are currently being worked on an will be rolled out as soon as they are implemented.
+If you want to do a full rescan of the source of a pipe and the source is huge this will cause the pipe to stop
+processing new data for a considerable amount of time.
 
-Background reprocessing
------------------------
+We are looking at how to be able to do a full rescan while
+at the same time process new data so that you can safely do full rescans without causing halt in the
+data flow.
 
-Why? Changing a global (e.g. adding a property) requires long downtime..
-
-Goal? Not have significant downtime in data flow when you reset a pipe.
-
-How? Reprocess in the background so that new data is not interrupted while the reprocessing is happening.
+Lack of this feature makes it hard to enable 'automatic processing'.
 
 Integrated data browsing
 ------------------------
 
-Why? Databrowser hard to configure. Not integrated into MS. Targeted at external users.
+The current 'Databrowser' tool is hard to configure, not integrated into Management Studio and targeted at
+external users.
 
-Goal? Easier to understand data. More efficient development.
+We are looking at making a simpler tool that is integrated into Management Studio so that you
+can do more efficient development.
 
-How? Integrated search engine. Enterprise feature. Global setting.
+This feature will most likely only be available on the 'Scalable architecture',
+so it depends on the 'Scalable architecture everywhere' item on the roadmap.
 
 Extensions
 ----------
 
-Why? Microservices second hand citizens. Unstructured documentation (README, etc).
+Microservices are second-class citizens in Management Studio. Setting up a microservice is done using
+unstructured documentation (README, etc).
 
-Goal? No difference between built in systems and extensions. Provide a marketplace. Trivial to enable an extensions
-on a subscription.
+We are looking at how to structure and describe microservices so that
+microservices can work and behave as builtin systems in Management Studio.
 
-How? Manifest (declaration). Config passed in a defined way. Endpoint patterns and behaviour defined. Built on JSON
-pull/push protocol and JSON configuration.
+This will also open up the possibility for us to turn the builtin systems into separate extensions.
 
-Kubernetes based architecture
------------------------------
+Scalable architecture everywhere
+--------------------------------
 
-Why? Currently have two architectures (docker compose and kubernetes). Some features are only available in one or
-the other of the architectures. Not an automated way to get from one to the other. Two code paths.
+Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
+some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
+slight differences in behaviour between the two variants.
 
-Goal? End user can upgrade without assistance.
+We are looking into how we can get the clustered architecture everywhere.
 
-How? Standalone will be transitioned to kubernetes with one compute node. Self-hosted installations will require
-Kubernetes. There are single machine kubernetes wrappers (Kind) that makes this doable.
+This architecture is based on Kubernetes
+and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
-On the radar
-============
+Age based deletion marker compaction
+------------------------------------
 
-The following features are on the radar and is not yet planned in the product. We list them here to give you insight
-into what we are currently investigating.
+If Sesam has seen an entity it will remember the 'id' for this entity forever. This also applies to entities that was
+seen but no longer exists in the source.
 
-System proxy (aka chaining systems)
------------------------------------
+These deletion markers are required for incremental synchronizing of data, but once all the consumers have read the
+deletion marker it only has historic value.
 
-Why? Not possible to add middleware (cross cutting concerns) across HTTP based systems. E.g. signing every request to
-AWS services with or do additional header verification on incoming requests. Workaround today requires microservices
-to talk to each other without any declartion which we do not want to allow in the future due to security problems.
+We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
+cleaned up.
 
-Goal? Be able to implement such logic in one component and apply it where you want to. Be able to know
-about these dependencies.
+Logging data access
+-------------------
 
-How? Add a proxy list property on all HTTP-based systems that the system will proxy all requests through. Will also
-work on most existing microservices/extensions as the HTTP libraries in Python and Java can be configured to use
-proxies through pre-defined environment variables.
+Most of the data in Sesam is structured as an immutable log, so any write or change to Sesam is
+automatically logged and audited. Reading of the data is only stored in rotated access logs that is not made
+available to the end user.
 
-Partitioned pipes
------------------
-
-Why? As data volumes grow the time to reprocess grows. Not considered a problem once the initial computation is done,
-but
-adding
-new
-data or reshaping data can take a long time the more data you have and this reduces agility.
-
-Goal? Be able to scale out so that the time to reprocess or import new data is not limited by Sesam.
-
-How? Partitioned pipes. Complex problem due to how merging and complex hops work.
-
-Finding relationships between datasets
---------------------------------------
-
-Why? Manually defining relationsships can be tedious.
-
-Goal? Be able to find relationships by examining the data.
-
-How? Use machine learning to detect them.
-
-Billable SaaS through Azure and AWS
------------------------------------
-
-Why? Running Sesam requires a sales process today which might hinder adoption.
-
-Goal? Make it easier to find and use Sesam.
-
-How? Offer Sesam as a billable SaaS through the major Cloud vendors marketplaces.
-
-Extend user accessible audit logs to data access
-------------------------------------------------
-
-Why? Today you need to contact support in order to get an audit log of data access in Sesam (when, who, which
-dataset). That audit log might also not contain what you expect.
-
-Goal? End user should have access to the data access audit logs.
-
-How? Have the possibility to log data access into a separate dataset.
+We are looking into how to audit reads of data and make this available to the end user in a the form of a dataset.
