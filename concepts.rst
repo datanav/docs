@@ -29,6 +29,8 @@ The data hub is the go-to place for data within the enterprise. Integrations no 
 
 With the help of features like :ref:`streaming <concepts-streaming>`, :ref:`merging <concepts-merging>`, :ref:`namespaces <concepts-namespaces>` and :ref:`global datasets <concepts-global-datasets>` Sesam enables higher quality `master data management <https://en.wikipedia.org/wiki/Master_data_management>`_.
 
+The Sesam service is built around the principle that Sesam does not own the data stored in the data hub. The idea is that all the data in the data hub can be re-read from the sources and thus be fully rebuilt from scratch.
+
 .. _concepts-streaming:
 
 Streams of data
@@ -309,3 +311,15 @@ Extensions
 ==========
 
 Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own micro-service extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
+
+Network Policy
+==============
+
+One has the option of blocking all public access through it or denying all except for a whitelist of ip addresses and ranges. In the new architecture it is possible to push the IP white listing down to the reverse proxy and also allow public access and restricted access to pipes through custom rules on the pipes. There are no restrictions on outgoing traffic currently.
+
+VPN
+===
+
+You can extend Sesam into your own network using a IPSec-based Virtual Private Network. The :doc:`Sesam Management Studio <management-studio>` interface does not currently let you configure this. Please contact sales@sesam.io to configure your VPN.
+
+

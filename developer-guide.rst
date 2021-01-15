@@ -18,5 +18,5 @@ Developer Guide
    Security <security>
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
-   Databrowser <databrowser>
    Source datatype mapping <source-datatype-mapping>
+   Deprecated features <deprecations>

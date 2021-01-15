@@ -245,3 +245,12 @@ The user can then enrich this data and produce a new dataset that is intended to
 Note that every dataset is automatically published, including intermediate steps like ``mydatasetcopy``
 above. If you want to hide your data, you can set up a private subscription in the Sesam Portal.
 
+Known Issues
+------------
+
+The following issues are known issues:
+
+  - Open Sesam is automatically upgraded every night, and the user might experience short disruptions of
+    service during the upgrade.
+
+  - Users on the same Open sesam segment (``A``, ``B``, etc.) share namespace for systems and pipes.

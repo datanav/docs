@@ -12,7 +12,7 @@ Introduction
 
 Sesam Management Studio (SMS) is used to configure, manage and administer Sesam nodes.
 
-Management studio can be found here`https://portal.sesam.io <https://portal.sesam.io>`__.
+Management studio can be found here `https://portal.sesam.io <https://portal.sesam.io>`_.
 
 If you are familiar with the Sesam concepts then the UI should be quite intuitive.
 
