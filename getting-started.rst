@@ -41,46 +41,40 @@ Once you've signed up you'll see this page. Click on Request private trial.
     :align: center
     :alt: Generic pipe concept
 
-Once you get the access from the Sesam team you'll get your own Dev Node card in the Dashboard.
+Once you get access to your requested private trial from the Sesam team you'll get a card for your requested node in the Dashboard. If wanted, you can change the name of the node in the 'Basics' section under 'Subscription'-settings.
 
-.. _getting-started-import-data:
+.. _getting-started-upload-config:
 
-Import data
-===========
+Upload config
+=============
 
-Before we describe how to import data into your node, we need to emphasize an important issue. If you are going to work on a Sesam node that already contains configurations and data, you should *not* import data through uploading the training-config.json as described below. This is because **uploading a config replaces the existing one**. If this is the case, it is recommended that you take a backup of the existing configuration before adding the new config so it is not lost. This can be done by either downloading the existing config and pushing it to a git repository or a local storage on your computer.
+Please note that uploading a config as described below **will overwrite** any config already on the node. You should have a node dedicated for the purpose if you are going set it up for this guide and its labs. 
 
-When you are setting up your node for the first time, it will not contain any :ref:`systems <concepts-systems>`, :ref:`pipes <concepts-pipes>` or :ref:`data <concepts-datasets>`. Until you are ready to configure your node with pipes and systems that corresponds to your needs and wishes, we have made available a practice datahub which contains several pipes and systems which we will use in this getting started guide. As this guide progresses, we will talk more about what a pipe and a system is. For now, the first thing you need to do is to download the `training-config.json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ and save it locally on your computer (left click url and "Save Link As...").
+Download the :download:`getting-started-config.json<files/getting-started-config.json>` and save it locally on your computer.
 
-In the case your node already contains an existing config and data, you then need to create each pipe and the system found in the training-config.json file manually. Go to the Pipes-view, create pipe, post one of the pipes found in the json file and repeat the process. The pipes and system in the json file are identified by the "_id" attribute. 
-
-Copy the pipe's content including its curly bracket { } wrapper. The pipes to copy and create are **"hr-person"**, **"crm-person"**, **"difi-postnummer"**, **"erp-person"**, **"global-location"**, **"global-person"**, **"person-crm"**, **"salesforce-consent"** and **"salesforce-userprofile"**. The **"datahotel"** config is a system that you copy and create in the Systems-view.
-
-Go into you 'Dev Node'. Click on **Datahub** in the left menu and select the **Tools tab**.
+Go to your 'Requested private trial node' on the Sesam portal. Click on **Datahub** in the left menu and select the **Tools tab**.
 
 .. image:: images/getting-started/importdata.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Upload the file. As seen on picture above, make sure you check the box "**Force upload (ignore validation errors)**".
-
-We have created some test data for you. Go to the **Variables** tab and paste the code below inside the curly brackets.
+Upload the getting-started-config.json file through the drag & drop interface. Then go to the **Variables** tab and paste the below code as environment variables.
 
 ::
 
-  "node-env": "test"
+  {
+    "node-env": "test",
+    "pump-mode": "manual",
+    "udir-baseurl": "https://data-nxr-fellestjeneste.udir.no/api/%s"
+  }
 
-You should now have several pipes available. Select **Pipes** in the menu on the left to see the available pipes, click on a pipe in the list to see details on how it's configured.
+You should now have several pipes available in the **pipes** tab. Select all pipes and click the **Enable** and **Start** buttons. This will first populate the input pipes' datasets with test data and then subsecuently the rest of the pipes will run to make the data flow downstream and populate the node. You can click on a pipe in the list to see details on how it's configured.
 
-As a sanity check you can go into one of the pipes. Select the crm-person pipe and go to the **Config** tab. Preview the pipe by hitting **ctrl + Enter**. Previewing a pipe is useful when you want to check result of logic without having to run the pipe to check output. The **config** contains the actual data transformations and pumps. To run the pipe, press **Start** in the top right corner, then press **Refresh** to update the view. It should look like the picture below. Notice that it says "Processed 10 last run" next to the **Start** button. You can also check the **Output** tab to see the entities. 
+Config contents
+^^^^^^^^^^^^^^^
 
-.. image:: images/getting-started/running_pipe.gif
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Repeat these steps for **hr-system**, **erp-person**, **salesforce-userprofile** and **difi-postnummer** pipes.
+The config, and now our node, contains eight input pipes. Six of them have embedded person data, one has postal codes and the last one has embedded orders from a webshop. In addition there is a a merge pipe for person data, two global pipes, and example pipes for modelling and exporting person address data. Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merged-person" pipe is a good place to start.
 
 .. _getting-started-sesam-overview:
 
@@ -209,6 +203,13 @@ Next, let us briefly explain key-value pair. It is quite simply a property with 
 
 
 
+.. _getting-started-labtime.1:
+
+Lab time
+========
+Now that some basics of Sesam are established head over to the :ref:`labs <getting-started-labs>` and try your hand at the labs in the "Basics" and "Import data" sections.
+
+
 .. _getting-started-transformations:
 
 Transformations
@@ -324,10 +325,6 @@ In our example we have one rule in addition to the "default rule". As we can see
       "global": true
     }
   }
-
-Lab 1-2
-^^^^^^^^
-The :ref:`Labs section <getting-started-labs>` helps us get more hands on with Sesam. Head over there and do the first two labs to get more experience transforming data. 
 
 .. _getting-started-merging-sources:
 
@@ -572,9 +569,6 @@ Now, you have unique namespace identifiers based on SSN, which you can refer now
 
 In the above code we are connecting the foreign keys, **"SSN-ni"** of **"hr-person"** and **"crm-person"** with the primary key, **"$ids"**, of **"erp-person"**. You do not need to add the third equality between **"hr-person"** and **"crm-person"** as it will happen automatically.
 
-Labs 3
-^^^^^^
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 3 <getting-started-labs-3>`.
 
 Merging with DTL
 ^^^^^^^^^^^^^^^^
@@ -594,11 +588,11 @@ We can merge entities in the DTL transform section with the :ref:`merge <dtl_tra
 We will later see the use of the ``["merge"]`` function in combination with functions that fetch entities from other datasets.
 
 Apply
-=====
+^^^^^
 The :ref:`apply <apply_function>` operation applies an own-specified rule to an entity. I.e. the call ["apply", "SomeRule", "_S.orders"] applied the rule "SomeFunc" to the source "_S.orders".  
 
 Hops
-====
+^^^^
 The :ref:`hops <hops_function>` function joins two datasets and returns the entities where the specified parameters match:
 
 ::
@@ -623,13 +617,9 @@ The :ref:`hops <hops_function>` function joins two datasets and returns the enti
 
 In this transform we first copy everything from the source dataset into the target. To do a ``["hops"]``  you first add a new property to the target dataset. Then, inside that ``["add"]``  you call on the ``["hops"]``  function to fetch entities from the specified dataset, in this example (**"global-orders"**).
 
-Lab 4
-^^^^^
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 4 <getting-started-labs-4>`.
-
 
 Apply-hops
-==========
+^^^^^^^^^^
 There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined ``["apply"]``  and ``["hops"]``  function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the ``["apply"]``  function :ref:`here <hops_function>` 
 
 ::
@@ -655,9 +645,6 @@ There is also the function :ref:`apply-hops <apply_hops_function>`, which is a c
 
 This will retrieve orders through the hops expression and then add them using the order transformation rule. The output is a dataset where the ID of all orders are added to the customers from the source dataset.
 
-Lab 5
-^^^^^
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 5 <getting-started-labs-5>`.
 
 Should I "add" or "merge" an apply-hops?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -749,28 +736,30 @@ In the second example, instead of adding the ``["apply-hops"]`` , we use ``["mer
     :align: center
     :alt: Generic pipe concept
 
-Lab 6
-^^^^^
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 6 <getting-started-labs-6>`.
+.. _getting-started-labtime.2:
+
+Lab time
+========
+Now that we are more familier with transforming data with DTL it's time to go to the labs section again and try doing the labs under :ref:`Data modelling <getting-started-labs-data-modelling>`. Save the last one of the data modelling labs until you have read the next section of this guide below regarding dependency-tracking and resets.
 
 .. _getting-started-Dependency-tracking-and-resetting-a-pipe:
 
 Dependency-tracking and resetting a pipe
 ========================================
 
-We have now started to create dependencies between datasets. In :ref:`Lab 5 <getting-started-labs-5>` you created a pipe called **<your_name>-global-person** and in :ref:`Lab 6 <getting-started-labs-6>` you created hops to **difi-postnummer**. This means that entities from **<your_name>-global-person** should change when the data in the source datasets (crm-person, erp-person, hr-person and salesforce-userprofile) changes, in addition to when the relevant data in difi-postnummer changes. We could of course check through every entity in difi-postnummer for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to **difi-postnummer**.
+in the labs we have now started to create dependencies between datasets through hops. In the node config provided for this guide there is also a pipe named **person-address-csv** which uses **global-person** as its source dataset. In its DTL transform there is a hops to **global-location**. This means that entities from **person-address-csv** should change when the data in the source dataset **global-person** changes, in addition to when the relevant data in **global-location** changes. We could of course check through every entity in global-location for changes, but this would also mean we need to reprocess every entity in the source datasets to check for changes when they connect to global-location.
 
-In order to make sure that only entities that has changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit :ref:`here <concepts-dependency_tracking>`.
+In order to make sure that only entities that have changed since the last time the integration ran are updated, Sesam utilizes **“dependency tracking”**. **Dependency tracking** ensures that Sesam recognizes changes in connected data, and not only changes in the pipe’s sources, and acts accordingly. For further information regarding dependency tracking visit the :ref:`Concepts-section <concepts-dependency_tracking>` of the Developer Guide.
 
-We will try to explain the workings of dependency tracking with a different example, and then apply this information to the current situation in :ref:`Lab 9 <getting-started-labs-9>`.
+We will try to explain the workings of dependency tracking with a different example, and then apply this information in :ref:`lab 22 <getting-started-labs-22>`.
 
 Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
 
-If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset in not the source entity in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
+If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset is not the source in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
 
 Dependency tracking tracks all the data this pipe, as well as the dataset it is connected to, such that changes to data outside the source dataset are registered and reprocessed in the pipe. 
 
-So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. If we make changes in a Sesam pipe, changes that will affect the end result (such as adding extra data), the entities that has already been processed will not by them self be reprocessed, thus only changed data or new data will be populated with the extra information. 
+So far in the labs we have only covered changes outside the pipe we are working on. But, what about changes in the pipe itself? If we add lines in our DTL config, how does Sesam know that the entities should be reprocessed? The source or the dependent data has no changes, and therefore no entities will be reprocessed as Sesam thinks nothing has changed. In short, Sesam does not recognize this automatically. Entities are only reprocessed in Sesam if there are changes in the data coming into the pipe. This means that if we make changes to a Sesam pipe, only changed or new data will be populated with the extra information, the entities that has already been processed will not by themselves be reprocessed.
 
 To remedy this, every time we make changes in a pipe that will affect the output data, and if we want all old entities to have that extra information, we must manually **reset** and **start** the pipe. When we reset a pipe, all the entities from the source will be reprocessed. This can be done by clicking on the three dots next to the pipe name at the top of your pipe.
 
@@ -782,13 +771,13 @@ To remedy this, every time we make changes in a pipe that will affect the output
 
 Some of the alternatives presented are **“Restart”**, **“Start”** and **“Reset”**. **“Restart”** is simply a combination of **“Reset”** followed by **“Start”**. This will send all the entities from the source dataset through the pipe and populate them with the extra data you have specified through your DTL config. 
 
-In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . This functionality could be more efficient. In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
+In many cases, we do not wish to reprocess all the entities, but only some of the them. E.g. imagine you have a dataset of 5 million entities, tracing back many years. In your DTL config, you have added logic that yields extra data if the entities are two months old or newer. Reprocessing entities older than two month makes no sense now, since they will not be populated with the new data either way. In these situations, press **"..."** at end of pipe name and on the menu choose **“Update last seen”** . In this case, we choose which entities should be reprocessed, which greatly decreases the computational time. 
 
 Similarly, imagine you work on a global pipe which merges data from 3 different sources. Two of these sources contain millions of entities, and one only a few. Let’s say you wish to change the output containing data from the source with only a few entities. Resetting the whole pipe in this case is unnecessary since we only need to reprocess a few entities, The **Update last seen** option also supports resetting the data from several sources at different times, thus if you need to reprocess the entities from the "small" dataset, you may do so without sending through all the other million entities, which will in either case be unaffected by your DTL changes. 
 
 There are other reasons both to reprocess all the data and only some of it, but the main point is to assess every situation individually.
 
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 9 <getting-started-labs-9>` for examples and to play around with data and see how it works.
+Try doing :ref:`lab 22 <getting-started-labs-22>` to see examples and play around with data to see how this works.
 
 .. _getting-started-sinks:
 
@@ -819,9 +808,6 @@ After creating a pipe with a CSV endpoint sink you can go to the **"Output"** ta
 
 You can also download the output by copying the cURL and creating your .csv file in a CLI like curl or Git Bash. Paste the cURL into you CLI and add " > my_file.csv" at the end. This will create the file at your current location. You can remove the entity limit and get all entities by removing "?limit=X" from the curl.
 
-Lab 7
-^^^^^
-Go to the :ref:`Labs section <getting-started-labs>` and do :ref:`Lab 7 <getting-started-labs-7>`.
 
 SQL database to CSV file output step by step
 ============================================
@@ -895,7 +881,7 @@ Delete the old text and copy/paste the following:
 
 Then click on **Execute**. We have now created a sample table with some properties with values.
 
-Head back to your Dev node. Now you can create a new pipe that pulls this table from the database.
+Head back to your 'Requested private trial node'. Now you can create a new pipe that pulls this table from the database.
 
 .. image:: images/getting-started/new-pipe-db.png
     :width: 800px
@@ -906,7 +892,7 @@ Should **Provider** -> **employeetable** not pop up automatically just type in t
 
 You are now free to transform the data as you want, but it is not needed and will be omitted here.
 
-Creating out CSV sink
+Creating our CSV sink
 ^^^^^^^^^^^^^^^^^^^^^
 .. image:: images/getting-started/csv-endpoint.png
     :width: 800px
@@ -1240,6 +1226,25 @@ To make these code implementations work with our HTTP endpoint we have to replac
 The complete URL could look like this ``https://datahub-425aagcte.sesam.cloud/api/publishers/person-crm-httpendpoint/entities?since=255``:
 
 All of these templates provide the data from the HTTP endpoint as a JSON-formatted string object named **entities**. We can now replace the printing of this string with our own implementation to make use of the data.
+
+.. _getting-started-labs-export:
+
+Writing data to external systems
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+How we write data to a system from Sesam depends on the target system. For many databases, APIs and other targets there are ready-made connectors in Sesam. These are available as systems and can be created using templates, in which you fill in the required connection info. The system in Sesam then serves as your connection to the external system. Previously in these labs we set up a URL-system in our Sesam node to import data from geonorge.no.
+
+If a system in Sesam is connected to an external system that we can write to, we can reference that Sesam-system in an output pipe's sink. When the pipe is run, data will be written to the external system instead of a dataset in Sesam.
+
+If we need to connect to a system that is not supported out-of-the-box or do operations that are not supported we can create and run a custom microservice as a system, used with a JSON push sink. You can find open-source, community developed microservices at https://github.com/sesam-community. We can also expose data directly in an HTTP publisher endpoint as JSON, CSV or XML without any system, just using a sink.
+
+You will find documentation for the systems and sinks on the Developer Guide's :ref:`Service Configuration <configuration>` page.
+
+.. _getting-started-labtime.3:
+
+Lab time
+========
+Now that we have had a look at different types of sinks it's time to have a go at the :ref:`Writing data to external systems <getting-started-labs-23>` section of the labs.
 
 .. _getting-started-pumps:
 
@@ -1599,151 +1604,2154 @@ When communicating with the API we use requests methods such as **GET**, **POST*
 
 Labs
 ----
-These tasks will make you familiar with the basics of data transformation with Sesam. We recommend keeping the `documentation <https://docs.sesam.io/DTLReferenceGuide.html>`__ at hand to look up syntax and concepts when needed.
 
-To do these labs you will need to have a Sesam node set up with the `training config json <https://raw.githubusercontent.com/sesam-community/wiki/master/training-config.json>`__ configuration. If you have set up your node following this guide you are ready to do these labs.
+To do these labs you will need to have a Sesam node set up with the :download:`getting-started-config.json<files/getting-started-config.json>` configuration. If you have set up your datahub following the :ref:`guide <getting-started-upload-config>` you are ready to do these labs. At the end of the labs section you will find :ref:`solution examples <getting-started-labs-solution-examples>` for each lab.
 
-We recommend having a go at this by yourself, but there are clues provided below each lab on where to look for guidance if needed.
+| **Naming pipes**
+| As explained in this guide and our :ref:`Best Practice documentation <best-practice-naming-conventions>` we encourage creating pipe names from **the type of object the pipe contains** and **the external system** the data is imported from or to be exported to, i.e. "salesforce-user" or "event-bigquery". For some of the pipes we will create in these labs it can be difficult to give proper names as the pipes can be arbitrary and have no target system. In these cases it is OK to use the topic of the task as the pipe's object and simply "labs" as the target system when naming the pipe, i.e. "string-logic-labs".
 
-Good luck and have fun!
+| **Developer Guide**
+| `The Developer Guide <https://docs.sesam.io/developer-guide.html>`__ section of the documentation will be an important resource when doing these labs, the three first sub-sections of **Service Configuration**, **Entity Data Model** and **Data Transformation Language** in particular.
 
-Lab 1
-=====
+.. _getting-started-labs-basics:
+
+Basics
+======
 
 .. _getting-started-labs-1:
 
-Scope: Transforming data.
+Lab 1
+^^^^^
 
-  * Create a new pipe​.
-  * Use the **"crm-person"** as source.
-  * Name it "[yourname]-crm-person".
-  * Create a new property called "FullName" by using the functions **["add"]** and **["concat"]**.
-  * Run pipe and look at ​dataset.
+This lab covers:
 
-*If you need a hint on how to do this, look for the ["concat"] function in the "global-person" pipe.*
+- **Copying from source**
 
-Lab 2
-=====
+If a pipe has no transform config it will copy all the attributes of an the entity from the source. But if the pipe has a transform config then that config must specify which attributes to copy from the source. In many cases we want to keep all attributes from the source entity. Other times we might want a subset of the attributes or we want to make some changes to the attributes before we add them to the target entity. In most cases we want to keep the entity ID from the source dataset, so we also copy the ``_id`` system attribute. We can choose not to copy the ``_id`` if we want to handle entity ID in a different way, but all entities must have an ``_id`` of type string.
+
+Task
+++++
+
+- Create a pipe with ``"_id": "order-anonymized-labs"``.
+- Set source to be of type "dataset" and the dataset to "webshop-order".
+- In the transform section, copy all properties from source except the ``customerId`` and ``customerId-ni`` attributes.
+- Start the pipe and check the results in the "Output"-tab of the pipe. 
+
+Tips
+
+  - You can create a downstream pipe (a pipe that uses the dataset of the pipe you're currently viewing as its source) from the pipe menu. Click the three dots to the right of the pipe name to open the menu.
+  - The templates available on the pipe's "Config"-tab can help ease and speed up config creation. Add a transform config with the "Add DTL transform" button.
+  - You can look up how the ``copy`` transform function in DTL works in the :ref:`documentation <dtl-transforms>`. You'll notice that like many other DTL functions it is more flexible than it looks:
+
+    * ``["copy", "foo"]`` will copy the "foo" attribute.
+    * ``["copy", "*"]`` will copy all attributes.
+    * ``["copy", "*", "foo"]`` will copy all attributes except "foo".
+    * ``["copy", ["list", "foo", "bar"]]`` will copy only the "foo" and "bar" attributes.
+    * ``["copy", "*", ["list", "foo", "bar"]]`` will copy all attributes except "foo" and "bar".
+    * ``["copy", "foo*"]`` will copy all attributes that have "foo" at the start of their name.
 
 .. _getting-started-labs-2:
 
-Scope: Remove and add.
+Lab 2
+^^^^^
 
-  * Create a new pipe.
-  * Use a "person" source that contains the property "SSN".
-  * Copy all the properties.
-  * Remove the property "SSN".
-  * By using the **["add"]** function, add a new property called "Birthday" by using the **["substring"]** function.
+This lab covers:
 
-*Hint: Look up "remove" and "substring" in the documentation.*
+- **Adding and removing attributes**
+- **Variables _S and _T**
+- **Sequential execution**
 
-Lab 3
-=====
+In the transform config part of the pipe config, we can create new attributes in our resulting (target) entities with the ``add`` transform function and remove attributes with  the ``remove`` transform function. To refer to attributes on the source or target entity, we can prefix the attribute with ``_S.`` or ``_T.`` respectively. Let's say we wanted to add the value from an attribute named ``foo`` on the source entity as ``bar`` on the resulting entity. We could do that by referring to the attribute on the source in an ``add`` like this: ``["add", "bar", "_S.foo"]``. 
+
+Task
+++++
+
+- Create a pipe downstream from **crm-person** and copy only the ``_id`` from the source entity. 
+- Add an attribute named ``address-from-source`` and populate it with the address found in **crm-person** using the ``_S.`` variable. 
+- Then add ``address-from-target`` using the ``_T.`` variable to refer to the address attribute you just made.
+- Finally remove the ``address-from-source`` attribute.
+
+Tips
+
+  - You can preview how a transform config will affect an entity using ``CTRL`` + ``Enter`` when in the editor of the "Config"-tab. Use the arrow buttons to navigate to a fitting entity, or enter its ``_id`` in the "Search ID" textbox.
+  - There are other variables than the commonly used ``_S`` and ``_T`` variables. These can be looked up in the :ref:`documentation <variables>`.
+
+Import data
+===========
 
 .. _getting-started-labs-3:
 
-Scope: Merge multiple datasets in source to create a global.​
+Lab 3
+^^^^^
 
-  * Create New pipe. Call this pipe <your_name>-global-person.
-  * Select source system: system:sesam-node.
-  * Select provider type: merge prototype.
-  * List these four datasets in the source, with aliases: **"crm-person cp"**, **"erp-person ep"**, **"hr-person hp"** and **"salesforce-userprofile sup"**.
-  * Use **["equality"]** to merge the datasets on matching values.
-  * Set **"identity"** to **"first"**.
-  * Set **"version"** to 2​.
-  * Add transform​.
-  * ["copy" , "*"]​.
+This lab covers:
 
-*Hint: Look at the source section of the "global-person" pipe.*
+- **Creating a system**
 
-Lab 4
-=====
+A system in Sesam represents a computer system that can provide or receive data entities. Its task is to provide common properties and services that can be used by several data sources, such as connection pooling, authentication settings, communication protocol settings and so on. There are many different types of systems available in Sesam. And if we need a more customized system we can use a microservice from https://github.com/sesam-community or create a new one to run as a custom microservice system.
+
+We are going to import data containing county and municipality information for Norway from an API (https://ws.geonorge.no/kommuneinfo/v1/fylkerkommuner) using a URL system in our Sesam node.
+
+Task
+++++
+
+- Create a URL-system that connects to geonorge with the base URL "https://ws.geonorge.no/" as its ``url_pattern``. 
+- Name the system "geonorge".
+
+Tips
+
+  - All systems are :ref:`documented <system_section>`.
+  - You can select the "url prototype" system type template when creating the system config to help populate it.
+  - The rest of the URL will be appended at the end of the ``url_pattern`` from an ``url`` parameter in the source of the input pipe. 
+  - You can see whether the system is able to connect to the target on the "Status"-tab.
+
 .. _getting-started-labs-4:
 
-Scope: Hops
+Lab 4
+^^^^^
 
-  * In the same pipe that we created in lab 3 we want to 'hop' to another dataset with the **["hops"]** function.
-  * Add a new property called difi-data. Inside the add, use **["hops"]** to join on the "zipcode" from **hr-person** OR **"PostalCode"** from crm-person with **"postnummer"** of "difi-postnummer".
+This lab covers:
 
-*Hint: Look up hops in the Getting started guide, the "person-crm" pipe or the documentation. You will also find the "or" function in the documentation.*
+- **Environment variables and secrets**
 
-Lab 5
-=====
+We can store environment variables and secrets in the hub through the 'Variables'-tab on the Datahub settings page. Variables and secrets stored there are globally accessible with syntax ``"$ENV(variable-name)"`` and ``"$SECRET(secret-name)"``. We can also store secrets that are exclusively accessible to a specific systen in that system's 'Secrets'-tab.
+
+Task
+++++
+
+- Save the base URL of the **geonorge**-system as an environment variable in the datahub. Then change the system's ``url_pattern`` attribute to refer to that environment variable.
+
 .. _getting-started-labs-5:
 
-Scope: Apply-hops
+Lab 5
+^^^^^
 
-  * In the same pipe that we created in lab 3 we want to 'hop' to another dataset with the **["apply-hops"]** function.
-  * Add a global property "City" and "Municipality" from "difi-postnummer" by using **["apply-hops"]**.
-  * Try to use **["apply-hops"]** inside an **["add"]** and a **["merge"]**. See any difference?
+This lab covers:
 
-*Hint: Look at the transform section of the "person-crm" pipe.*
+- **Input pipes**
 
-Lab 6
-=====
+In an input pipe we specify where to get data from, and through which system. We often have to specify which attribute's value to use as our internal ``_id`` system attribute, which has to be a unique string per entity. We also add an attribute named ``rdf:type`` to each entity describing where the data comes from and what it is, which we use for filtering later downstream. But we will omit the ``rdf:type`` for now and come back to that later.
+
+Task
+++++
+
+- Create an input pipe with ``_id`` "geonorge-county" that imports county data using the newly made "geonorge"-system. 
+- Give the pipe a JSON source config and set its ``url`` to "kommuneinfo/v1/fylkerkommuner". 
+- As there is no automatically identifiable ID in the data, you will have to add a transform config in your pipe and in it ``add`` the ``_id`` attribute from the source data's "fylkesnummer" attribute (county number).
+- ``copy`` all attributes from the source.
+
+Tips
+
+  - You can find the JSON source documented under Service Configuration in the Developer Guide section of the documentation.
+  - The imported entities can be viewed in the "Output"-tab of the pipe and in the dataset of the same name. There should be 11 counties.
+  - Check the "Execution Log"-tab to see whether the pipe ran successfully. It contains helpful information if you need to figure out why the pipe run did not yield the expected outcome.
+
+
 .. _getting-started-labs-6:
 
-Scope: Creating global properties
+Lab 6
+^^^^^
 
-  * In the global pipe we now want to create global properties for firstname, lastname, fullname, address, SSN, zipcode and customerid.
-  * Use **["coalesce"]** and **["list"]** functions to prioritize which source you want to pick from first.
+This lab covers:
 
-*Hint: Look at the transform section of the "global-person" pipe.*
+- **Conditional source**
 
-Lab 7
-=====
+We should be able to use the same exact pipe-configs on Sesam nodes in different environments. To support this in input pipes we use a conditional source with two alternative configs named "prod" and "test". We refer to the environment variable ``node-env`` as the condition to determine which source to use, which is set as either "prod" or "test" depending of the environment the node runs in. The source config for test should be an embedded type with a few test entities while the source config for prod refers to the external source system. See the **udir-postalcode** pipe for an example of this. We have set our ``node-env`` environment varible as "test" as we prepared for these labs.
+
+Task
+++++
+
+- Make the source config for **geonorge-county** conditional and supply a few counties as embedded entities. The entities to embed can be taken from the output of the pipe as it previously ran with the production source, but to save time creating entities that match our person test data from other pipes we have created a :download:`list of entities <files/geonorge-county-test-data.json>` to embed. 
+- Run the pipe and verify that it now outputs the embedded entities.
+
+Tips
+
+  - Always make sure to anonymize the test data and replace sensitive information.
+  - Create embedded entities that will match and connect with test data from other input pipes. 
+  - Try setting the ``node-env`` environment variable to "prod" and run both **geonorge-county** and **udir-postalcode**. Observe that they now import the full datasets from the external source. Set ``node-env`` back to "test" and run the pipes again to keep working with just test data.
+
+
 .. _getting-started-labs-7:
 
-Scope: Enhancing the quality of data
+Lab 7
+^^^^^
 
-  * Create new pipe, following naming conventions.
-  * Copy these properties to the output dataset: CustomerId, firstname, lastname, FullName, Address, SSN, zipcode, City and Municipality.
+This lab covers:
 
-*Hint: Look at the transform section of the "person-crm" pipe.*
+- **Global datasets**
 
-Lab 8
-=====
+We want to put all data in the datahub into a fitting global dataset, so there's a logical place to find it when needed. When placing sematically similar data in the same dataset, we can also combine entities into larger, global entities that contain all the data from its source entities. Entities from some datasets may make sense to combine, while others do not and should be placed in the global dataset as separate entities. This depends on whether the entities actually represent the same object. Merging entities into global entities based on equal attribute values is done in the merge source's ``equality`` property.
+
+Our newly imported data represents counties, with their municipalities, and fits well in the **global-location** dataset.
+
+Task
+++++
+
+- Add the new county data to the **global-location** dataset by adding the county dataset in the global's source datasets list. Note that the datasets listed need to have an alias as well, i.e. "udir-postalcode upc". Run the global pipe after adding the new dataset in its config.
+- Add the **mailerlite-person** dataset in the source of **merged-person**. Merge its entities with **hr-person** based on its SSN-ni attribute.
+- Create a new global pipe named **global-transaction**. Use a merge source and put **webshop-order** in its dataset property list. Remember to give the dataset an alias. Add a metadata config to the pipe's config at root level as ``"metadata": {"global": true}`` to give the pipe a global icon in the "Graph"-tab view.
+
+Tips
+
+  - Study **global-location** to create **global-transaction**, or even copy its config and change what you need.
+  - Global pipes that contain hops (joins) to other datasets need to have a dataset source for dependency tracking. Dependency tracking ensures that the output of a pipe is kept up to date when any relevant source data changes. In our setup **global-person** hops to global-location to get a person's city. Because of this we have a pipe upstream named **merged-person** with a merge source containing all relevant input pipes. All entities from merged-person then flow to **global-person** as it refers to merged-person in its dataset source.
+  
+.. _getting-started-labs-data-modelling:
+
+Data Modelling
+==============
+
 .. _getting-started-labs-8:
 
-Scope : Publishing data to CSV-endpoint
+Lab 8
+^^^^^
 
-  * Create new pipe. Source from lab 6. Add transform and sink.​
+This lab covers:
 
-Hint: Look :ref:`here <getting-started-csv-endpoint>` for help
+- **Filtering entities**  
+- **Global dataset as pipe source**
+- **Pipe reset**
 
-Lab 9
-=====
+As explained in our :ref:`Best Practices <best-practice>`, we want to use a global dataset as our data source when preparing data for export to another system. When we use a global dataset as a pipe's source, we have to specify what data from that global dataset we want to use. For this we use the DTL transform function ``filter``. With it we can select only the entities we want based on the condition we supply. If the condition resolves as ``false``, the entity is filtered and will not be written to the pipe's dataset.
+
+The most common filtering we do is filter on ``rdf:type``. That is an attribute we add to entities as they enter Sesam to tag which system it comes from and what it contains. A filter on rdf:type can look like this:
+::
+
+  ["filter",
+    ["in", "~:hr:person", "_S.rdf:type"]
+  ]
+
+This means an entity will be sent to the sink and written to the dataset only if "~:hr:person" is found in the ``rdf:type`` list attribute. Entities that do not have "~:hr:person" in the rdf:type will be excluded from our resulting data. This way we can create datasets from only the relevant entities even though the pipe's source contains a lot more data.
+
+Note that when we change the DTL transform config of a pipe the data previously processed by the pipe will only be reprocessed if the source data changes. If we want all entities to be produced based on the the new config we have to pump all of them through the pipe again. To do that we reset the pipe. The "Restart"-option in the pipe menu conveniently triggers both a "Reset" and a "Start" command on the pipe.
+
+Task
+++++
+
+1. Create a pipe with **global-person** as the source dataset. Do not include a transform section in the pipe. 
+2. Observe that the pipe outputs all the same entities as **global-person** in its "Output"-tab.
+3. Add a transform to the pipe config with ``["copy, "*"]`` and ``["filter", ["in", "~:hr:person", "_S.rdf:type"]]``. 
+4. Restart the pipe. Observe that there are now only 10 entities in the output, and that they all contain data from "hr-person".
+5. Change the filter to keep only entities that have data from the **crm-person** dataset.
+6. Restart the pipe and observe that you now have 10 entities which all have data from **crm-person**. This should not be the exact same 10 entities as before.
+
+Tips
+
+  - The entities you find in the "Output"-tab of the pipe are the same as the entities in the dataset with the same name. The entities in the "Latest" category is the current dataset. In "Latest w/ deleted" you will also find the hr-person entities from the first pipe run. In the "All" category you will find previous versions of all entities as well as the current and deleted entities.
+  - The number of previous entities to keep in the dataset is two by default and can be changed with a :ref:`compaction <pipe_compaction>` config.
+  - When in the config editor use ``Alt`` + ``.`` to reformat the config and display it with correct line breaks and whitespace for improved readability.
+
 .. _getting-started-labs-9:
 
-Start from your pipe from lab 5. 
+Lab 9
+^^^^^
 
-* Add another property in the apply-hops rule and start the pipe again and look at the output. 
+This lab covers:
 
-.. image:: images/getting-started/DT-03.png
+- **Namespaces**
+
+By default attributes in Sesam have a namespace as a prefix to the attribute name, separated with a colon. This namespace is a string that by default contains the name of the pipe where the attribute was created. For data that we import from external systems this means the name of the input pipe. We can use this namespace to distinguish between attributes with the same name that originate from different sources.
+
+Task
+++++
+
+- Create a pipe downstream from **global-person**. 
+- Copy only the ``_id`` and ``hr-person:StreetAddress``.
+- Add one attribute containing ``StreetAddress`` from **erp-person** and another with ``Address`` from **crm-person**.
+- Note that the namespace of the added attributes refer to the new pipe. This is different from attributes that are copied from the source dataset, which keep their original namespace from the source.  
+
+.. _getting-started-labs-10:
+
+Lab 10
+^^^^^^
+
+This lab covers:
+
+- **Lists**
+
+Lists are a common collection type to work with in Sesam. Source data can contain lists. Merges can result in joined attributes becoming lists. And we can structure data in lists through DTL to provide as output or to use as input in other DTL-functions.
+
+Task
+++++
+
+- Create a pipe with the config provided below.
+
+::
+
+  {
+    "_id": "list-labs",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1"
+      }]
+    }
+  }
+
+- Give it a transform config and ``add`` a list containing strings "a", "b", "c" and "d" using the ``list`` function.
+- Use this list for the following sub-tasks in which you create new attributes containing:
+
+  - the first string element in the list.
+  - the 3rd string element in the list.
+  - the number of elements in the list.
+  - the original list, but with the string "e" inserted as the second element.
+  - the same list as in the previous sub-task, but sorted alphabetically.
+
+Tips
+
+  - All the functions needed for this lab, and many more, are found in the docs' :ref:`DTL Reference Guide <DTLReferenceGuide>` under "Values/collections".
+
+.. _getting-started-labs-11:
+
+Lab 11
+^^^^^^
+
+This lab covers:
+
+- **Golden records**
+
+In globals we often have data from different sources describing the same characteristic of an object. To avoid having to research which data is most reliable every time we need to use that data, we can create a golden record which is populated with the most reliable version of that data that is available on the object in the global. We can later use that golden record attribute downstream and not have to make the same prioritization each time we need that data.
+
+Task
+++++
+
+- Create a new golden record attribute named ``email`` in **global-person**. Use the ``coalesce`` function to rank the data quality of the email address from **mailerlite-person** the highest, **crm-person** the 2nd most, **salesforce-userprofile** the 3rd most and **hr-person** the least.
+
+Tips
+
+  - Look up the ``coalesce`` function in the docs or look at its use in **global-person**.
+  - Restart pipes after making changes to their transform config if you want its dataset to reflect the new config.
+
+.. _getting-started-labs-12:
+
+Lab 12
+^^^^^^
+
+This lab covers:
+
+- **Casting**
+- **Number logic**    
+- **Nested functions**
+
+We can cast an attribute as different types, like integer, string, datetime and others described in the docs. 
+
+When working with numbers we have a set of functions and operators that we can apply to the numeric values. These are documented in the DTL Reference Guide under "Math". Different functions for casting can be found under "Numbers", "Strings" and other headers regarding data types. 
+
+To do successive actions on a value we nest functions within eachother. We use the result of one function as an input parameter of another, like so:
+
+::
+
+  ["add", "foo",
+    ["first",
+      ["split", "-", "bar-bell"]
+    ]
+  ]
+
+To follow a value through complex logic you often read the config from right to left. I.e. we have a string of "bar-bell". We then split the string at the hyphen to get two strings in a list (``["bar", "bell"]``). Then we select the first object in the list and add that as ``foo`` to end up with a key + value pair of ``"foo": "bar"``.
+
+Task
+++++
+
+- Create a pipe with **erp-person** data. Make the pipe downstream from **erp-person** or preferrably downstream from **global-person** and filter the entities that do not contain **erp-person** data (filter on ``rdf:type``).
+- Imagine a new order has come in for everyone in this dataset, and increase the number of ``TimesOrdered`` by one. As this attribute is a string in the source data it needs to be cast to integer before we can increase the value. Cast the result back to string and add it to the entity as a new ``TimesOrdered`` attribute which will get its namespace from the new pipe.
+
+.. _getting-started-labs-13:
+
+Lab 13
+^^^^^^
+
+This lab covers:
+
+- **String logic**
+
+In Sesam's DTL there are many functions available for working with :ref:`strings <string_dtl_function>`. Let's try working with some of them. 
+
+Task
+++++
+
+- Create a pipe with **hr-person** data. 
+- Create an attribute for each of the subtasks below containing:
+
+  - only the prefix of the email address. Look up the ``split`` and ``first`` functions. 
+  - the person's surname in only capital letters. Look up ``upper`` in the docs.
+  - the date of birth of the person in the format of "dd.mm.yy" extrapolated from ``SSN``. Look up ``substring`` and ``concat`` or ``join`` in the docs.
+  - the title of the person without any punctuation at the end. Look up the use of the ``strip`` functions.
+
+Tips
+
+  - The first two digits of a SSN represent the day, the next two digits represent the month and then the next two represent the year.
+
+.. _getting-started-labs-14:
+
+Lab 14
+^^^^^^
+
+This lab covers:
+
+- **Datetime logic**
+
+Sesam provides a toolkit for working with date and time values, just like it does for string and number logic. These DTL-functions can be found in the docs too! With ``datetime-parse`` we can translate strings to datetime values, while ``datetime-format`` translates datetime values to strings. ``datetime-diff``, ``datetime-plus`` and ``datetime-shift`` lets us do calculation and manipulation of datetime values.
+
+Task
+++++
+
+- Create a pipe containing the entities from **webshop-orders**. 
+- Use datetime logic on the ``orderPlaced`` attribute from source, to create additional attributes containing
+  
+  - ``orderPlaced`` as a datetime value.
+  - ``orderPlaced`` as a string containing its date in the "dd.mm.yyyy" format.
+  - a datetime value of 72 hours after the order was placed.
+  - the number of days since the order was placed.
+
+Tip
+
+  - For the last task use the ``now`` function when calculating how much time has passed.
+
+.. _getting-started-labs-15:
+
+Lab 15
+^^^^^^
+
+This lab covers:
+
+- **If**
+- **Comparisons**
+
+With DTL we can perform logic with checks and comparisons as well. Let's look at the ``if`` function and the comparison functions we have available.
+
+Task
+++++
+
+- Create a pipe that checks entities from **erp-person** using the ``if`` function to see if they have a 10 000 or higher spending according to their ``MoneyUsed`` attribute. Add the attribute ``big-spender`` as a boolean true or false depending on the result.
+
+Tips
+
+  - Look up the ``if`` function and the various comparisons in the :ref:`docs <eq_dtl_function>`.
+  - You will have to cast the ``MoneyUsed`` value to a numeric type, i.e. integer, to get a correct result from the comparison.
+  - You can perform more than one action as the result of an ``if`` by placing them within square brackets to make it a list of actions in the then or else argument of an if. Test it by adding another attribute along with ``big-spender``, like ``"foo": "bar"``.
+
+.. _getting-started-labs-16:
+
+Lab 16
+^^^^^^
+
+This lab covers:
+
+- **Filtering entities**
+
+There are two ``filter`` functions in Sesam's DTL. In this task and when we filter entities on ``rdf:type`` we use the transform function. Transform functions are the functions that can add or remove attributes to the entities, which in this case adds an internal system attribute (``"_filtered": true``) to the entity. The other filter function is found under Values/Collections in the docs, and it is used to filter values that do not match a certain criteria when we perform logic on data within a transform function.
+
+If we use the ``filter`` transform function without any input parameter we filter out the entity we're currently processing unconditionally. We can provide a function as an "unless"-condition, and the entity will only be filtered if that function returns true. We have already used this filter function to filter entities from a global dataset source based on ``rdf:type``. ``["filter", ["in", "~:hr:person", "_S.rdf:type"]]`` reads "Filter, unless '~:hr:person' is in the 'rdf:type'-list".
+
+Task
+++++
+
+- Create a pipe with **global-person** as its source.
+- Use the filter transform function to keep only the females.
+- Add another filter, or add another condition in the first filter, that filters out anyone who does not have "dayrep.com" as their email postfix.
+
+Tips
+  
+  - To add a second condition to the first ``filter`` you will need to place an ``ànd`` function around the two conditions. There is also an ``or`` function which can be useful in other scenarios.
+  - The ``discard`` transform function is similar to the ``filter`` transform function. But ``discard`` will drop the entity completely and not send it to the sink at all, while the ``filter`` function adds ``_filtered`` as true to the entity and lets the entity pass to the sink. If an entity already exists in the pipe's dataset from previous runs, but is updated with ``"_filtered": true`` it will be deleted from the dataset (receive ``"_deleted": true``). With ``discard`` that same entity would stay unchanged in the pipe's dataset. If a filtered entity does not alreay exist in the dataset it will not be written to the dataset by the sink.
+
+.. _getting-started-labs-17:
+
+Lab 17
+^^^^^^
+
+This lab covers:
+
+- **Apply**
+
+The transform section of a pipe config contains a ``default`` rule. The logic in this rule will execute on the pipe's source entity. We can make additional rules and in the default rule select data to pass through those custom rules with an ``apply`` function. By passing entities or lists through a rule we can achieve a loop-like behavior where the transforms of the rule is applied to each item of the entity or list individually. Additional rules can also help section and organize a large pipe config.
+
+Task
+++++
+
+- Create a pipe with the config provided below. 
+
+::
+
+  {
+    "_id": "apply-labs",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": {
+        "_id": "1",
+        "list": ["some string", false, "another string", 45678908765, "abcd", "STRING", true, null, "132456"]
+      }
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"]
+        ]
+      }
+    }
+  }
+
+- Expand the transform config. Use ``apply`` with a ``merge-union`` transform function to run the ``list`` items through another rule. 
+- Have that rule keep the string-objects and not save anything else. Within that rule the data sent to it is accessible through ``_S``. Use ``if`` to check the object with ``is-string``. Keep a string by adding it with ``["add", "result", "_S."]`` if ``is-string`` returns true. The rule you call with the apply must exist inside the ``rules`` dictionary of the pipe config, just like the ``default`` rule does.
+
+Tips
+
+  - Try swapping ``merge-union``  with ``merge`` or ``add`` to see the difference in how the resulting data is structured as it is returned and added to the target entity.
+
+.. _getting-started-labs-18:
+
+Lab 18
+^^^^^^
+
+This lab covers:
+
+- **Create-child**
+- **Emit_children**
+- **Chained transforms**
+
+We can emit new, standalone entities from a set of values on an entity. This can be done either with the ``create`` or ``create-child`` transform functions. ``create`` will emit and send the new standalone entities to the pipe's sink, while ``create-child`` will add them in a ``$children`` attribute on the original entity. We can then pass the original entity through an ``emit_children`` transform to write them as standalone entities to a dataset. The new entities must have their own valid ``_id``. 
+
+So far we have only been using a ``DTL`` transform in our pipes. There are other :ref:`transforms <transform_section>` that do different things. The emit children transform will produce standalone entities from the contents of a ``$children`` attribute of an entity. It discards the original entity. The HTTP transform can send the entities to an external HTTP endpoint for transformation and receive data back. You can have a conditional transform just like we have conditional source, and you can chain multiple transforms in one pipe.
+
+The counties we imported from geonorge earlier in these labs each include a list of municipalities. Let's emit these municipalities as their own entities using ``create-child`` and an emit children transform that we chain after the DTL transform where we create the ``$children``.
+
+Task
+++++
+
+- Make a pipe downstream from geonorge-county and name it geonorge-municipality.
+- Give it a chained transform with a DTL transform first and an emit children transform second. 
+- In the DTL transform first add ``["filter", ["neq", "_S._deleted", true]]`` to remove ``_deleted`` entities, as the emit children transform would also emit children from those. 
+- As the municipalities listed in the counties do not have an "_id" already, we need to add that before we put them in ``$children``. In the DTL transform have a ``create-child`` transform function take the results of an ``apply`` as its argument. The ``apply`` function should pass the list-attribute "_S.kommuner" (municipalities) through a rule in which we build our new entities. In that rule 
+
+  - copy all attributes that are passed to the rule in the "kommuner" list object with ["copy", "*"]
+  - add "_id" from "_S.kommunenummer" (municipality number)
+  - add "rdf:type" as ["ni", "geonorge", "municipality"] to use for filtering downstream when we are to use this data later.
+- Run the pipe and confirm that it outputs municipalities.
+- Finaly, add the new municipality dataset to **global-location**'s' source dataset list and run the global pipe.
+
+Tips
+
+  - We don't have to chain transforms in one pipe to emit the entities in the ``$children`` attribute. We do that in this lab to test the functionality of chaining transforms. The ``emit_children`` transform can be in a pipe downstream from the pipe where ``$children`` is created.
+
+.. _getting-started-labs-19:
+
+Lab 19
+^^^^^^
+
+This lab covers:
+
+- **Namespaced Identifiers**
+
+When we know that an attribute on entities in an input pipe is equal to the ``_id`` of entities in a different dataset, we can add a namespaced identifier based on that attribute. This makes it easier to join data from different datasets, and can be viewed as similar to setting a foreign key in one table that relates to the primary key of another table in an SQL-database. If we make a namespaced identifier (NI) on a ``customer-id`` attribute of an order entity, it might look like this on our order entity: ``"customer-id-ni": "~:crm-customer:123456"``. We can then use that NI attribute when we join customer and order data in a downstream pipe.
+
+We have seen the NI attribute ``rdf:type`` on all the entities in our Sesam hub in these labs. This attribute is used to filter entities downstream, like we have been doing.
+
+Look up the ``ni`` function in the Developer Guide. You can also read more about namespaced identifiers in the :ref:`Best Practice <best-practice-namespaced-identifiers>` section of the docs.
+
+Task
+++++
+
+- Add a NI as ``municipality-ni`` in **udir-postalcode** based on the ``municipality`` attribute in the postalcode entity. In the ``ni`` function supply the namespace string "geonorge-municipality" and refer to the ``municipality`` attribute for the value.
+- Add ``rdf:type`` using the ``ni`` function in geonorge-county.
+
+Tips
+
+  - Once we have made a NI attribute that refers to an entity in another dataset we can look up that entity when browsing its dataset by pasting the NI-attribute value as id to search in the dataset browser (or the "Output"-tab of the dataset's pipe).
+
+.. _getting-started-labs-20:
+
+Lab 20
+^^^^^^
+
+This lab covers:
+
+- **Hops**
+
+With the ``hops`` function we can reach data outside of the entity we're currently processing. The function takes a dictionary as its only argument; the hops spec. In that dictionary we specify which datasets to join on which attributes. We can also specify what attribute or expression we want returned from the hops. If not, the whole entity is returned. If a pipe joins data from multiple datasets, Sesam builds an index on the specified properties. You can read more about hops and how joins work in the :ref:`Developer Guide <path_expressions_and_hops>`. It is considered good practice to hop to a global dataset when possible, instead of other datasets that contain the data we need. 
+
+Task
+++++
+
+- Create a pipe containing the people from **erp-person**.
+- Use the ``hops`` function to access the **webshop-order** data through the **global-transaction** dataset, and from that add a list of IDs of items the person has ordered. The ``where`` parameter of the hops spec shoould be an ``eq`` comparison between ``$ids`` of the pipe's source and the ``customerId-ni`` of the order dataset.
+- Specify the item ID attribute of the order in the hops spec's ``return`` parameter.
+
+Tips
+
+  - Look up ``hops`` in the Developer Guide. The hops spec has many optional parameters, only ``datasets`` and ``where`` are required.
+  - You can see an example of hops in use in the **person-address-csv** pipe in your datahub.
+  - If you set **erp-person** as the source of your pipe, you can join the datasets on erp-person's ``_id`` and webshop-order's ``customer-id``. But if you set **global-person** as your pipe source and used filter to get only the erp-person entities (as is recommended), those entities' ``_id`` may not be the ``_id`` of **erp-person**, and the comparison will fail. However, on the **global-person** entity there is a ``$ids`` attribute containing all ``_id``\s of the merged person entities in a list of namespaced identifiers. Base the join expression of the ``where`` parameter on ``$ids`` when possible when working with merged entities.
+
+.. _getting-started-labs-21:
+
+Lab 21
+^^^^^^
+
+This lab covers:
+
+- **Apply-hops**
+
+In some cases we want to apply some transforms to the results of a hops before we return it to our entity. We can use the ``apply-hops`` function to run the results from the hops through a specified rule before returning. This can be used to traverse a list or entity, for example to filter the elements of the list that are not relevant. Within the rule called by the apply we can also do new hops to join data from other datasets based on the data returned from the initial hops.
+
+Task
+++++
+
+- Create a pipe with **global-person** as its source. Make a ``merge`` transform function with an ``apply-hops`` to the **global-location** dataset. Set the join expression ``eq`` function to compare ``global-person:zipcode`` and ``udir-postalcode:postalcode``.
+- In the rule called by the ``apply-hops``, add an attribute named "location". It should be a concatinated string explaining which municipality number the person's city is located in, i.e. "Oslo is located in municipality number 0301".
+- Inside the newly made custom rule, ``merge`` another ``apply-hops`` to the related **geonorge-municipality** entity in **global-location**. Since we have already made ``municipality-ni`` in **udir-postalcode** we can compare that to the ``$ids`` of the **global-location** municipalities in the join expression.
+- Use the rule related to the last ``apply-hops`` to check if the municipality is located north of the arctic cirle. This can be done by checking if the latitude value is 66.33 or higher. The latitude of the municipality is represented by the last number in ``punktIOmrade.coordinates`` (pointInArea.coordinates). Add ``arctic-municipality`` as true or false depending on the result.
+
+.. _getting-started-labs-22:
+
+Lab 22
+^^^^^^
+
+This lab covers:
+
+- **Change-tracking**
+- **Dependency-tracking**
+- **Sequence number**
+- **Last seen / pipe offset**
+
+In lab 8 we learned to restart a pipe if we want all of its entities to be processed with an updated DTL-transform. This is because a Sesam pipe by default only reprocesses entities that have changed in the source, to avoid the inefficiency of reprocessing entire datasets. Similarly, dependency tracking enables the pipe to reprocess only affected entities after changes in datasets connected through hops. Dependency tracking is explained futher in :ref:`Dependency-tracking and resetting a pipe <getting-started-Dependency-tracking-and-resetting-a-pipe>`.
+
+Task
+++++
+
+- Add a new property in the first custom rule of the pipe you made in the previous lab. Assign a hardcoded value. 
+
+  - Start the pipe, click "Refresh" and look at the output. Note that no entities have changed.
+  - Reset, start and refresh the pipe. Note that all entities now have the new property.
+- Go back to the config and change the value of the property we just added.
+
+  - Now go to the "Input"-tab of the pipe. The entities found here are from the source dataset. Pick any entity that is neither at the top or the bottom the list. Find its sequence number in its "_updated" attribute.
+  - Select "Update last seen" from the pipe menu and supply the sequence number from the entity you chose. 
+  - Then start the pipe and check the results in the "Output"-tab. 
+  - Note that only the entities with a sequence number in the source dataset that is higher than the "last seen" value we set are updated.
+- Play around with the "Update last seen", "Reset", "Restart" and "Start" options. Feel free to change entities in the source or a dataset that is connected through hops to see the effects on the resulting data.
+
+.. _getting-started-labs-23:
+
+Lab 23
+^^^^^^
+
+This lab covers:
+
+- **CSV endpoint**
+
+First, let's expose some data in a CSV-endpoint. The .csv file can be downloaded from the output pipe's "Output"-tab.
+
+Task
+++++
+
+- Create a preparation pipe, a pipe with entities that will be exported or exposed in an output pipe downstream. Populate the preparation pipe with entities of your choosing. Make sure to stick to naming conventions and name it after the type of object it contains and the target system (in this case the system is simply "csv") i.e. "orders-csv".
+- Create an output pipe downstream with a CSV sink. Name this pipe the same as its preparation pipe, but with an "-endpoint" postfix, i.e. "orders-csv-endpoint".
+- Download the .csv file from the pipe's "Output"-tab and verify its content.
+
+Tips
+
+  - You can find the sink config template under the "Target" header in templates. Choose system "system:sesam-node" and sink "csv_endpoint prototype".
+  - Note that you can retrieve the entities with the cURL provided in the "Output"-tab. This cURL contains a JWT (JSON Web Token) for authentication. You can also create a shareable link for use without access to the Sesam portal. 
+
+.. _getting-started-labs-24:
+
+Lab 24
+^^^^^^
+
+This lab covers:
+
+- **HTTP endpoint**
+- **JWT**
+
+Now let's expose data in a HTTP-endpoint. We will also use a JWT for authentication. The JWT, or JSON Web Token, is a token that can be created on the Subscription page. When creating the JWT, an expiry data and a role must be set. The value of a token is not retrievable after creation. These JWTs can be supplied as bearer tokens for authentication in requests sent to the node.
+
+Task
+++++
+
+- Create a similar data flow as in the previous lab, but this time use an HTTP sink in the output pipe. Stick to naming conventions.
+- Create a JWT of your own in the datahub's subscription page. Using this bearer token as authentication, retrieve the data through a GET-request to the ".../entities"-URL exposed by the http-sink.
+
+Tips
+
+  - You can send the GET-request with cURL, Postman (or your favorite alternative), write a microservice that fetches the data or import the data from another service or system capable of sending HTTP-requests that you may be looking to integrate with Sesam.
+  - The "Output"-tab of the output pipe provides what's needed to retrieve the data.
+
+.. _getting-started-labs-25:
+
+Lab 25
+^^^^^^
+
+This lab covers:
+
+- **Write data to a SQL-database**
+
+SQL databases are common target systems for data export from Sesam. There are a few different SQL systems available in sesam, and all of them are used together with the SQL sink when exporting data. For the following task you need an SQL database to write to. If you don't have one at hand, there are free online database services where you can set up a database using a trial account. https://www.elephantsql.com/ is one where you can set up a postgresql database.
+
+Task
+++++
+
+Write entities to a table in an SQL database. Follow the steps below:
+
+1. Create an SQL system in Sesam that is of the same type as your database and supply the connection info needed in the template system config. Put passwords or auth tokens for your system in the datahub's secrets and refer to those in your system config. In many cases it is advisable to store other connection info values as environment variables in the datahub. You can verify that the system is able to connect on its "Status"-tab.
+
+2. Create a person table in your database with columns as specified in the SQL query below:
+
+::
+
+  CREATE TABLE person (
+  _id varchar(50) PRIMARY KEY,
+  firstname varchar(50),
+  lastname varchar(50),
+  address varchar(100)
+  );
+
+3. Create a preparation pipe downstream from **global-person** and have it copy this list of attributes: ``["list", "_id", "global-person:firstname", "global-person:lastname", "global-person:address"]``.
+
+4. Create an output pipe downstream from the preparation pipe with an SQL sink that refers to the newly created system and the "person" table. Make sure to add a pump config in which ``"mode"`` is set to ``"ENV(pump-mode)"``, which in turn is set to "manual" in the datahub environment variables.
+
+5. Send your data to the database table by starting the output pipe. Check the execution log of the pipe to see how it ran. These logs are the first place to look for clues of what went wrong in a failed run. Verify that the entities have been written to the table in your database. If you need to run a query to view the data in the database, you can run ``select * from person;``.
+
+Tips
+
+  - The system config will be different depending on what type of database you are connecting to. Selecting a template will help with config creation. The Developer Guide also have full descriptions of the possible parameters of your system config. In many cases copying the "Example config" from the docs or selecting a config template and filling in the values to match your database server and authentication will be sufficient.
+  - The SQL sink also has a lot of parameters for customizing your SQL operations, like the possibility to define a table's columns in ``schema_definition`` and creating the table on a first run (this requires the system user to have the necessary permissions in the database) or a reset of the output pipe. Only the parameters "type", "system" and "table" are required.
+  - The ``pump-mode`` environment variable is used to make sure an output pipe in a non-production environment does not export data unless the pipe is started manually. In a production environment ``pump-mode`` would be set as "scheduled" and the pipe's pump config would include a "cron-expression" or "schedule_interval" that specifies when to run. 
+
+.. _getting-started-labs-26:
+
+Lab 26
+^^^^^^
+
+This lab covers:
+
+- **Write data to an API endpoint**
+
+API's are another common external system type that Sesam integrates with. Let's try posting some data to jsonplaceholder.typicode.com, which is a API containing test data that we can also post data to. The data will not actually be saved and stored, but the status codes that the API returns are the same as if it did. The operation we want to imitate is described on this page https://jsonplaceholder.typicode.com/guide.html under "Create a resource".
+
+Task
+++++
+
+- POST entities to an API. Follow the steps below:
+
+1. Create a URL system in Sesam named "typicode" with the base url ``"https://jsonplaceholder.typicode.com/%s"`` as its ``url_pattern``. Store the url as an environment variable and refer to that in the system config.
+
+2. Create a preparation pipe with some entities. You can for example copy the config of the preparation pipe of the previous task. Just remember to have the newly created system in the pipe name.
+
+3. Create an output pipe with a JSON push sink. The sink needs to refer to the ``"typicode"`` system and have``"posts"`` as the ``url`` to append to the ``url_pattern`` of the system. Remember to set the pump's mode to the ``pump-mode`` environment variable.
+
+4. Run the output pipe and make sure you get a "pump-completed" entry in the execution log of the pipe.
+
+Tips
+
+  - The URL system has more available parameters than we need for this test, i.e. for authentication. The REST system further expands the ability to customize our integrations with APIs.
+
+Learn more
+==========
+
+We encourage you to play around and test more imports, transformations, enrichment and exports of data. Here are a few suggestions for what to do next.
+
+
+- Get the data you exported back from your SQL database.
+- Import some of the test data available at http://jsonplaceholder.typicode.com.
+- Create an item dataset related to the webshop-orders in an input pipe with embedded source. Give some of the items IDs that correspond to the webshop-order dataset. Find or create a suitable global dataset to put the items in. Create payloads that combine data from people or orders with data from the item-entities.
+- Write data to an external system you have access to and that can be used for testing.
+- Try more DTL-functions like
+  
+  - ``dict``
+  - ``case``
+  - ``case-eq``
+  - ``matches``
+  - ``intersects/intersection``
+  - ``map``
+  - ``key-values``
+  - ``discard``
+  - ``default``
+  - ``rename``
+  - ``make-ni``
+  - ``ni-is and ni-id``
+  - ``all`` and ``any``
+  - ``and`` and ``or``
+  - ``encrypt``
+  - ``path``
+
+.. _getting-started-labs-solution-examples:
+
+Solution examples
+=================
+
+As with most programming there is usually more than one way to reach a certain outcome. Below are suggestions for how to solve the labs in this guide.
+
+Lab 1
+^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "order-anonymized-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "webshop-order"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*", "customerId*"],
+          ["comment", "Alternative solutions that produce the same results are shown in the comments below"],
+          ["comment",
+            ["copy", "*",
+              ["list", "customerId", "customerId-ni"]
+            ]
+          ],
+          ["comment",
+            ["copy",
+              ["list", "_id", "id", "itemId", "orderPlaced", "quantity"]
+            ]
+          ],
+          ["comment",
+            ["copy", "_id"],
+            ["copy", "id"],
+            ["copy", "itemId"],
+            ["copy", "orderPlaced"],
+            ["copy", "quantity"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-copy-from-source.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
-* What can you see? Probably, you do not notice anything different, even though you just told the pipe to add another line with data to your entities. Why didn’t the outcome changes when you added a new property?
+Lab 2
+^^^^^
+Pipe config:
+::
 
-* In the outcome, locate an entity which has the properties "City" and "Municipality".
+  {
+    "_id": "add-remove-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "crm-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "address-from-source", "_S.Address"],
+          ["add", "address-from-target", "_T.address-from-source"],
+          ["remove", "address-from-source"]
+        ]
+      }
+    }
+  }
 
-.. image:: images/getting-started/DT-05.png
+Output:
+
+.. image:: images/getting-started/labs/lab-add-remove.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
-*  Note down it’s sequence number (_updated value). 
+Lab 3
+^^^^^
+System config:
+::
 
-* click on the three dots next to your pipe name and choose the option "Update last seen". Write down the sequency number you noted down and start the pipe again. 
+  {
+    "_id": "geonorge",
+    "type": "system:url",
+    "url_pattern": "https://ws.geonorge.no/%s",
+    "verify_ssl": true
+  }
 
-.. image:: images/getting-started/DT-06.png
+Lab 4
+^^^^^
+System config:
+::
+
+  {
+    "_id": "geonorge",
+    "type": "system:url",
+    "url_pattern": "$ENV(geonorge-baseurl)",
+    "verify_ssl": true
+  }
+
+Environment variables:
+::
+
+  {
+    "geonorge-baseurl": "https://ws.geonorge.no/%s",
+    "node-env": "test",
+    "pump-mode": "manual",
+    "udir-baseurl": "https://data-nxr-fellestjeneste.udir.no/api/%s"
+  }
+
+Effective system config:
+::
+
+  {
+    "_id": "geonorge",
+    "connect_timeout": 60,
+    "read_timeout": 1800,
+    "type": "system:url",
+    "url_pattern": "https://ws.geonorge.no/%s",
+    "verify_ssl": true
+  }
+
+Lab 5
+^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "geonorge-county",
+    "type": "pipe",
+    "source": {
+      "type": "json",
+      "system": "geonorge",
+      "url": "kommuneinfo/v1/fylkerkommuner"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id", "_S.fylkesnummer"]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-input-pipe.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
 
-* Has the output changed? Why/why not? Did all the entities in the outcome change? Why/why not?
-* What is the difference between the "Update last seen" option and the "Reset", "Restart" and "Start" options?
+Lab 6
+^^^^^
+Pipe config:
+::
 
-*Hint: check "Dependency-tracking and resetting a pipe"*
+  {
+    "_id": "geonorge-county",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "json",
+          "system": "geonorge",
+          "url": "kommuneinfo/v1/fylkerkommuner"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{...},{...}]
+          }]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id", "_S.fylkesnummer"]
+        ]
+      }
+    }
+  }
 
+The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
+
+Output:
+
+.. image:: images/getting-started/labs/lab-conditional-source.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 7
+^^^^^
+Pipe configs:
+::
+
+  {
+    "_id": "global-location",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["udir-postalcode upc", "geonorge-county gnc"],
+      "identity": "first",
+      "version": 2
+    },
+    "metadata": {
+      "global": true
+    }
+  }
+
+::
+
+  {
+    "_id": "merged-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["crm-person cp", "hr-person hp", "erp-person ep", "salesforce-userprofile sup", "salesforce-consent sc", "mailerlite-person mp"],
+      "equality": [
+        ["eq", "mp.SSN-ni", "hp.$ids"],
+        ["eq", "cp.SSN-ni", "hp.$ids"],
+        ["eq", "ep.SSN-ni", "hp.$ids"],
+        ["eq", "cp.Username", "sup.Username"],
+        ["eq", "sup.Username", "sc.Username"]
+      ],
+      "identity": "first",
+      "version": 2
+    }
+  }
+
+::
+
+  {
+    "_id": "global-transaction",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["webshop-order wo"],
+      "identity": "first",
+      "version": 2
+    },
+    "metadata": {
+      "global": true
+    }
+  }
+
+Output global-location:
+
+.. image:: images/getting-started/labs/lab-global-location.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Output merged-person:
+
+.. image:: images/getting-started/labs/lab-merged-person.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Output global-person:
+
+.. image:: images/getting-started/labs/lab-global-person.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Output global-transaction:
+
+.. image:: images/getting-started/labs/lab-global-transaction.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 8
+^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "filter-entities-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["filter",
+            ["in", "~:crm:person", "_S.rdf:type"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-filter-entities.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 9
+^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "namespace-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy",
+            ["list", "_id", "hr-person:StreetAddress"]
+          ],
+          ["add", "erp-address", "_S.erp-person:StreetAddress"],
+          ["add", "crm-address", "_S.crm-person:Address"]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-namespaces.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 10
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "list-labs",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "list",
+            ["list", "a", "b", "c", "d"]
+          ],
+          ["add", "first-item",
+            ["first", "_T.list"]
+          ],
+          ["add", "3rd-item",
+            ["nth", 2, "_T.list"]
+          ],
+          ["add", "count",
+            ["count", "_T.list"]
+          ],
+          ["add", "inserted-item",
+            ["insert", 1, "_T.list", "e"]
+          ],
+          ["add", "sorted",
+            ["sorted", "_T.inserted-item"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-list.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 11
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "merged-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "firstname",
+            ["coalesce",
+              ["list", "_S.hr-person:GivenName", "_S.crm-person:FirstName", "_S.erp-person:GivenName"]
+            ]
+          ],
+          ["add", "middle-initial",
+            ["coalesce",
+              ["list", "_S.hr-person:MiddleInitial", "_S.crm-person:MiddleInitial", "_S.erp-person:MiddleInitial"]
+            ]
+          ],
+          ["add", "lastname",
+            ["coalesce",
+              ["list", "_S.hr-person:Surname", "_S.crm-person:LastName", "_S.erp-person:Surname"]
+            ]
+          ],
+          ["add", "fullname",
+            ["join", " ",
+              ["list", "_T.global-person:firstname",
+                ["if",
+                  ["is-not-null", "_T.global-person:middle-initial"],
+                  ["concat", "_T.global-person:middle-initial", "."]
+                ], "_T.global-person:lastname"]
+            ]
+          ],
+          ["add", "address",
+            ["coalesce",
+              ["list", "_S.crm-person:Address", "_S.hr-person:StreetAddress", "_S.erp-person:StreetAddress"]
+            ]
+          ],
+          ["add", "zipcode",
+            ["coalesce",
+              ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
+            ]
+          ],
+          ["add", "city",
+            ["first",
+              ["hops", {
+                "datasets": ["global-location gl"],
+                "where": [
+                  ["eq",
+                    ["coalesce",
+                      ["list", "_S.hr-person:ZipCode", "_S.crm-person:PostalCode", "_S.erp-person:ZipCode"]
+                    ], "gl.udir-postalcode:postalcode"]
+                ],
+                "return": "gl.city"
+              }]
+            ]
+          ],
+          ["add", "country",
+            ["coalesce",
+              ["list", "_S.hr-person:Country", "_S.erp-person:Country"]
+            ]
+          ],
+          ["add", "gender",
+            ["coalesce",
+              ["list", "_S.hr-person:Gender", "_S.crm-person:Gender", "_S.erp-person:Gender"]
+            ]
+          ],
+          ["add", "email",
+            ["coalesce",
+              ["list", "_S.mailerlite-person:email", "_S.crm-person.EmailAddress", "_S.salesforce-userprofile:EmailAddress", "_S.hr-person:EmailAddress"]
+            ]
+          ]
+        ]
+      }
+    },
+    "metadata": {
+      "global": true
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-golden-record.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 12
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "casting-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:erp:person", "_S.rdf:type"]
+          ],
+          ["copy",
+            ["list", "_id", "erp-person:*"]
+          ],
+          ["add", "TimesOrdered",
+            ["string",
+              ["plus", 1,
+                ["integer", "_S.TimesOrdered"]
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-casting.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 13
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "string-logic-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:hr:person", "_S.rdf:type"]
+          ],
+          ["copy",
+            ["list", "_id", "hr-person:*"]
+          ],
+          ["add", "email-prefix",
+            ["first",
+              ["split", "@", "_S.hr-person:EmailAddress"]
+            ]
+          ],
+          ["add", "capital-surname",
+            ["upper", "_S.hr-person:Surname"]
+          ],
+          ["add", "date-of-birth",
+            ["join", ".",
+              ["list",
+                ["substring", 0, 2, "_S.hr-person:SSN"],
+                ["substring", 2, 4, "_S.hr-person:SSN"],
+                ["substring", 4, 6, "_S.hr-person:SSN"]
+              ]
+            ]
+          ],
+          ["add", "title",
+            ["rstrip", ".", "_S.hr-person:Title"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-strings.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 14
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "datetime-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-transaction"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:webshop:order", "_S.rdf:type"]
+          ],
+          ["copy",
+            ["list", "_id", "orderPlaced"]
+          ],
+          ["add", "orderPlaced-datetime",
+            ["datetime-parse", "%Y-%m-%d %H:%M:%S", "_S.orderPlaced"]
+          ],
+          ["add", "orderPlaced-date",
+            ["datetime-format", "%d.%m.%Y", "_T.orderPlaced-datetime"]
+          ],
+          ["add", "orderPlaced-plus72h",
+            ["datetime-plus", "hour", 72, "_T.orderPlaced-datetime"]
+          ],
+          ["add", "orderPlaced-days-since",
+            ["datetime-diff", "day",
+              ["now"], "_T.orderPlaced-datetime"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-datetime.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 15
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "comparison-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:erp:person", "_S.rdf:type"]
+          ],
+          ["copy",
+            ["list", "_id", "erp-person:*"]
+          ],
+          ["if",
+            ["gte",
+              ["integer", "_S.MoneyUsed"], 10000],
+            [
+              ["add", "big-spender", true],
+              ["add", "foo", "bar"]
+            ],
+            [
+              ["add", "big-spender", false],
+              ["add", "foo", "bar"]
+            ]
+          ],
+          ["comment", "Alternative code below",
+            ["add", "big-spender",
+              ["if",
+                ["gte",
+                  ["integer", "_S.MoneyUsed"], 10000], true, false]
+            ]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-comparisons.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 16
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "filter-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["filter",
+            ["and",
+              ["eq", "_S.global-person:gender", "female"],
+              ["eq",
+                ["last",
+                  ["split", "@", "_S.global-person:email"]
+                ], "dayrep.com"]
+            ]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-filter.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+
+Lab 17
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "apply-labs",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": {
+        "_id": "1",
+        "list": ["some string", false, "another string", 45678908765, "abcd", "STRING", true, null, "132456"]
+      }
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["merge-union",
+            ["apply", "type-check", "_S.list"]
+          ]
+        ],
+        "type-check": [
+          ["if",
+            ["is-string", "_S."],
+            ["add", "result", "_S."]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-apply.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 18
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "geonorge-municipalities",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "geonorge-county"
+    },
+    "transform": {
+      "type": "chained",
+      "transforms": [{
+        "type": "dtl",
+        "rules": {
+          "default": [
+            ["filter",
+              ["neq", "_S._deleted", true]
+            ],
+            ["copy", "_id"],
+            ["create-child",
+              ["apply", "build-municipality", "_S.kommuner"]
+            ]
+          ],
+          "build-municipality": [
+            ["copy", "*"],
+            ["add", "_id", "_S.kommunenummer"],
+            ["add", "rdf:type",
+              ["ni", "geonorge", "municipality"]
+            ]
+          ]
+        }
+      }, {
+        "type": "emit_children"
+      }]
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-create-child.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 19
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "udir-postalcode",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "json",
+          "system": "udir",
+          "url": "v1/postnummerdata"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{...},{...}]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["comment", "The discard and renames in this pipe is done to simplify and translate the dataset for this guide"],
+          ["discard",
+            ["and",
+              ["in", "_S.FylkeNummer",
+                ["list", "03", "11", "15", "18", "30", "34", "38", "42", "46", "50", "54"]
+              ],
+              ["is-null", "_S.ArvtakerPostnummerDataIdListe"]
+            ]
+          ],
+          ["add", "_id", "_S.PostNummer"],
+          ["rename", "KommuneNummer", "municipality"],
+          ["rename", "PostNummer", "postalcode"],
+          ["rename", "PostSted", "city"],
+          ["add", "rdf:type",
+            ["ni", "udir", "postalcode"]
+          ],
+          ["add", "municipality-ni",
+            ["ni", "geonorge-municipality", "_T.municipality"]
+          ]
+        ]
+      }
+    }
+  }
+
+Because the "municipality" attribute is a rename from a differently named attribute in the source we have used the "_T" variable to refer to it. Refering to "_S.KommuneNummer" would yield the same result. The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
+
+Output:
+
+.. image:: images/getting-started/labs/lab-municipality-ni.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Pipe config:
+::
+
+  {
+    "_id": "geonorge-county",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "json",
+          "system": "geonorge",
+          "url": "kommuneinfo/v1/fylkerkommuner"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{...},{...}]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id", "_S.fylkesnummer"],
+          ["add", "rdf:type",
+            ["ni", "geonorge", "county"]
+          ]
+        ]
+      }
+    }
+  }
+
+The embedded entities are removed in this code snippet for brevity. They are found in the lab task text.
+
+Output:
+
+.. image:: images/getting-started/labs/lab-rdf:type.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 20
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "hops-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:erp:person", "_S.rdf:type"]
+          ],
+          ["copy", "_id"],
+          ["copy", "global-person:fullname"],
+          ["add", "items",
+            ["hops", {
+              "datasets": ["global-transaction gt"],
+              "where": ["eq", "_S.$ids", "gt.webshop-order:customerId-ni"],
+              "return": "gt.webshop-order:itemId"
+            }]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-hops.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 21
+^^^^^^
+Pipe config:
+::
+
+  {
+    "_id": "apply-hops-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["comment", "Copying the zipcode is not needed. We have done it in this example to display which postalcode the data is from."],
+          ["copy", "global-person:zipcode"],
+          ["merge",
+            ["apply-hops", "city-location", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.global-person:zipcode", "gl.udir-postalcode:postalcode"]
+            }]
+          ]
+        ],
+        "city-location": [
+          ["add", "location",
+            ["concat", "_S.city", " is located in municipality number ", "_S.municipality"]
+          ],
+          ["merge",
+            ["apply-hops", "latitude-check", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.municipality-ni", "gl.$ids"]
+            }]
+          ]
+        ],
+        "latitude-check": [
+          ["add", "arctic-municipality",
+            ["if",
+              ["gte",
+                ["last", "_S.punktIOmrade.coordinates"], "~f66.33"], true, false]
+          ]
+        ]
+      }
+    }
+  }
+
+Output:
+
+.. image:: images/getting-started/labs/lab-apply-hops.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Lab 22
+^^^^^^
+Config from pipe in previous lab with added property "foo":
+::
+
+  {
+    "_id": "apply-hops-labs",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["comment", "Copying the zipcode is not needed. We have done it in this example to display which postalcode the data is from."],
+          ["copy", "global-person:zipcode"],
+          ["merge",
+            ["apply-hops", "city-location", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.global-person:zipcode", "gl.udir-postalcode:postalcode"]
+            }]
+          ]
+        ],
+        "city-location": [
+          ["add", "location",
+            ["concat", "_S.city", " is located in municipality number ", "_S.municipality"]
+          ],
+          ["merge",
+            ["apply-hops", "latitude-check", {
+              "datasets": ["global-location gl"],
+              "where": ["eq", "_S.municipality-ni", "gl.$ids"]
+            }]
+          ],
+          ["add", "foo", "bar"]
+        ],
+        "latitude-check": [
+          ["add", "arctic-municipality",
+            ["if",
+              ["gte",
+                ["last", "_S.punktIOmrade.coordinates"], "~f66.33"], true, false]
+          ]
+        ]
+      }
+    }
+  }
+
+Output after pipe run without reset:
+
+.. image:: images/getting-started/labs/lab-apply-hops.png
+    :width: 800px
+    :align: center
+    :alt: No changes to entities output by the pipe
+
+Output after pipe is reset and run:
+
+.. image:: images/getting-started/labs/lab-change-tracking-reset-result.png
+    :width: 800px
+    :align: center
+    :alt: All entities are updated with the new property
+
+Change to the new property's value in the config:
+
+::
+
+  ["add", "foo", "a different value"]
+
+
+Locate the sequence number of an entity in the source dataset:
+
+.. image:: images/getting-started/labs/lab-change-tracking-sequence-number.png
+    :width: 800px
+    :align: center
+    :alt: Locate the sequence number of entities in the source
+
+
+Input the sequence number of the source entity as the pipe's "last seen" value:
+
+.. image:: images/getting-started/labs/lab-change-tracking-last-seen.png
+    :width: 800px
+    :align: center
+    :alt: Input the sequence number as "last seen"
+
+
+Results after running the pipe from the new pipe offset:
+
+.. image:: images/getting-started/labs/lab-change-tracking-lastseen-result.png
+    :width: 800px
+    :align: center
+    :alt: Only the three latest entities are updated
+
+Lab 23
+^^^^^^
+preparation pipe config:
+::
+
+  {
+    "_id": "person-csv",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["copy", "global-person:*",
+            ["list", "firstname", "middle-initial", "lastname"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output pipe config:
+::
+
+  {
+    "_id": "person-csv-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-csv"
+    },
+    "sink": {
+      "type": "csv_endpoint",
+      "columns": ["address", "country", "email", "fullname", "gender", "zipcode"]
+    }
+  }
+
+Output:
+
+::
+
+  address,country,email,fullname,gender,zipcode
+  Helmers vei 242,NO,torjus@gmail.com,Torjus M. Sand,male,5031
+  Frognerveien 60,NO,larsevjen@rhyta.com,Lars Evjen,male,3121
+  Gydas gate 227,NO,siri@me.com,Siri Olsen,female,3733
+  Nadderudåsen 186,NO,isakeikeland@teleworm.us,Isak E. Eikeland,male,9325
+  Sommerfjøsvegen 143,NO,sebastianskjold@dayrep.com,Sebastian T. Skjold,male,7080
+  Kongens gate 69,NO,caspiannygard@einrot.com,Caspian I. Nygård,male,0153
+  Åsmostubben 19,NO,davidberntsen@superrito.com,David M. Berntsen,male,9011
+  Fagerliveien 108,NO,lucaslie@cuvox.de,Lucas T. Lie,male,1605
+  Zetlitzveien 241,,julieandersen@superrito.com,Julie I. Andersen,female,4017
+  Kong Trygves vei 32,NO,camillawilhelmsen@dayrep.com,Camilla M. Wilhelmsen,female,3125
+  Norderhovsgata 63,NO,RuneWold@armyspy.com,Rune E. Wold,male,3501
+  Bøkleva 141,NO,WilliamFauske@jourrapide.com,William H. Fauske,male,1766
+  Drengs 36,NO,,Aleksander M. Ommundsen,male,1390
+  Tiurvegen vei,NO,,Erika L. Olsen,female,8657
+
+Lab 24
+^^^^^^
+preparation pipe config:
+::
+
+  {
+    "_id": "person-http",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["copy", "global-person:*",
+            ["list", "firstname", "middle-initial", "lastname"]
+          ]
+        ]
+      }
+    }
+  }
+
+Output pipe config:
+::
+
+  {
+    "_id": "person-http-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-http"
+    },
+    "sink": {
+      "type": "http_endpoint"
+    }
+  }
+
+Creating JWT:
+
+.. image:: images/getting-started/labs/lab-jwt.png
+    :width: 800px
+    :align: center
+    :alt: JWT creation on Subscription settings page
+
+cURL command with newly created JWT:
+
+::
+
+  curl -H "Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTcyNjcyMzYuOTEwNTA2NywiZXhwIjoxNTk3NjEyMzgwLCJ1c2VyX2lkIjoiY2VlNDUxZDQtMDYwMC00NDk5LThkN2QtYjk3NGI4YTRlOTA1IiwidXNlcl9wcm9maWxlIjp7ImVtYWlsIjoicGFsLmFuZHJlYXNzZW5Ac2VzYW0uaW8iLCJuYW1lIjoiUFx1MDBlNWwgQW5kcmVhc3NlbiIsInBpY3R1cmUiOiJodHRwczovL2dyYXBoLm1pY3Jvc29mdC5jb20vdjEuMC9tZS9waG90by8kdmFsdWUifSwidXNlcl9wcmluY2lwYWwiOiJncm91cDpFdmVyeW9uZSIsInByaW5jaXBhbHMiOnsiMTE3ZGNlYWEtZDY1OC00OTg2LTg5ZjktZDczOGIxMmMxNjlkIjpbImdyb3VwOkFkbWluIl19LCJhcGlfdG9rZW5faWQiOiIxOGEyNGQ0Mi0yOGVmLTQ0NGYtODM4NC1hOGVjMjEzM2FhOGQifQ.VT0PCDnEBraFk1pCSlO7d92zkD3MOhOvfdiLy7J6oAy6M77h1YbYKZRumzYUyg_XK8NXaginrK_pH563875S4nUZqINKiAnDJ0HYI9gQmABT2U8XQxeF-LlePpcxCI-UZarRiW_f2yQNYWqV_bJ3PmltodX2SUHjOmTcpqwVJvCqMSTqmCVqy6gPyQw6MTvzffP78MvmSb8fy8KcFP8H1rS4MilI9OnVWs9K3YaaXLs1SIxhAQrvjH2XlgwzMoCh05TpWPuiO1ph09fVI1U85uC59Q4e45bEpxMJmRuJ7RqEUdFR5RbSovqorB4Wxf8Cs0gFKMZxzj74eenMGjDJPg" https://datahub-117dceaa.sesam.cloud/api/publishers/person-http-endpoint/entities?limit=15
+
+Exposed data in the HTTP-endpoint:
+
+::
+
+  [{"address": "Helmers vei 242", "country": "NO", "email": "torjus@gmail.com", "fullname": "Torjus M. Sand", "gender": "male", "zipcode": "5031", "_id": "1", "_deleted": false, "_updated": 4, "_previous": null, "_ts": 1597266361399643, "_hash": "8a70306f3bcdb13714b62fa0dd5e8045"},{"address": "Frognerveien 60", "country": "NO", "email": "larsevjen@rhyta.com", "fullname": "Lars Evjen", "gender": "male", "zipcode": "3121", "_id": "2", "_deleted": false, "_updated": 5, "_previous": null, "_ts": 1597266361399655, "_hash": "821a5f4092874ae9d2b4e72819520ec5"},{"address": "Gydas gate 227", "country": "NO", "email": "siri@me.com", "fullname": "Siri Olsen", "gender": "female", "zipcode": "3733", "_id": "3", "_deleted": false, "_updated": 6, "_previous": null, "_ts": 1597266361399666, "_hash": "f8a5460cc0b8f25654e0581396fe9a8e"},{"address": "Nadderudåsen 186", "country": "NO", "email": "isakeikeland@teleworm.us", "fullname": "Isak E. Eikeland", "gender": "male", "zipcode": "9325", "_id": "100", "_deleted": false, "_updated": 7, "_previous": null, "_ts": 1597266361399677, "_hash": "f8a2aa8ef24b41ed18cbb9462790fa38"},{"address": "Sommerfjøsvegen 143", "country": "NO", "email": "sebastianskjold@dayrep.com", "fullname": "Sebastian T. Skjold", "gender": "male", "zipcode": "7080", "_id": "99", "_deleted": false, "_updated": 8, "_previous": null, "_ts": 1597266361399689, "_hash": "f576c6956daa30c4ab05192440117a4f"},{"address": "Kongens gate 69", "country": "NO", "email": "caspiannygard@einrot.com", "fullname": "Caspian I. Nygård", "gender": "male", "zipcode": "0153", "_id": "93", "_deleted": false, "_updated": 9, "_previous": null, "_ts": 1597266361399701, "_hash": "367cee1c0315ac189d0caccd76ab1a14"},{"address": "Åsmostubben 19", "country": "NO", "email": "davidberntsen@superrito.com", "fullname": "David M. Berntsen", "gender": "male", "zipcode": "9011", "_id": "91", "_deleted": false, "_updated": 10, "_previous": null, "_ts": 1597266361399712, "_hash": "b21ffc16fdfd6382d62a8b71d055d0d8"},{"address": "Fagerliveien 108", "country": "NO", "email": "lucaslie@cuvox.de", "fullname": "Lucas T. Lie", "gender": "male", "zipcode": "1605", "_id": "90", "_deleted": false, "_updated": 11, "_previous": null, "_ts": 1597266361399724, "_hash": "51266239e58e092fb537a0a0210242e6"},{"address": "Zetlitzveien 241", "country": null, "email": "julieandersen@superrito.com", "fullname": "Julie I. Andersen", "gender": "female", "zipcode": "4017", "_id": "80", "_deleted": false, "_updated": 12, "_previous": null, "_ts": 1597266361399735, "_hash": "109324caa77563a1f1a465ecc19f20fc"},{"address": "Kong Trygves vei 32", "country": "NO", "email": "camillawilhelmsen@dayrep.com", "fullname": "Camilla M. Wilhelmsen", "gender": "female", "zipcode": "3125", "_id": "81", "_deleted": false, "_updated": 13, "_previous": null, "_ts": 1597266361399747, "_hash": "8b5942cbc58a4f5dedc114234de95327"}]
+
+Lab 25
+^^^^^^
+
+Postgres database connection info:
+
+.. image:: images/getting-started/labs/lab-db-info.png
+    :width: 500px
+    :align: center
+    :alt: The connection info to an example online database for used in this lab example solution
+
+System config:
+
+.. image:: images/getting-started/labs/lab-db-system.png
+    :width: 800px
+    :align: center
+    :alt: A system config matching the connection info to the database in the previous image
+
+preparation pipe config:
+
+::
+
+  {
+    "_id": "person-elephantdb",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy",
+            ["list", "_id", "global-person:firstname", "global-person:lastname", "global-person:address"]
+          ]
+        ]
+      }
+    }
+  }
+
+preparation pipe output:
+
+.. image:: images/getting-started/labs/lab-db-prep-pipe.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Output pipe config:
+
+::
+
+  {
+    "_id": "person-elephantdb-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-elephantdb"
+    },
+    "sink": {
+      "type": "sql",
+      "system": "elephantdb",
+      "table": "person"
+    },
+    "pump": {
+      "mode": "$ENV(pump-mode)"
+    }
+  }
+
+Resulting data in database:
+
+.. image:: images/getting-started/labs/lab-db-entries.png
+    :width: 800px
+    :align: center
+    :alt: The person entities shown in the database browser after export
+
+Lab 26
+^^^^^^
+System config:
+
+::
+
+  {
+    "_id": "typicode",
+    "type": "system:url",
+    "url_pattern": "$ENV(typicode-baseurl)",
+    "verify_ssl": true
+  }
+
+preparation pipe config:
+
+::
+
+  {
+    "_id": "person-typicode",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy",
+            ["list", "_id", "global-person:firstname", "global-person:lastname", "global-person:address"]
+          ]
+        ]
+      }
+    }
+  }
+
+preparation pipe output:
+
+.. image:: images/getting-started/labs/lab-api-prep-pipe.png
+    :width: 800px
+    :align: center
+    :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab
+
+Output pipe config:
+
+::
+
+  {
+    "_id": "person-typicode-endpoint",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person-typicode"
+    },
+    "sink": {
+      "type": "json",
+      "system": "typicode",
+      "url": "posts"
+    },
+    "pump": {
+      "mode": "$ENV(pump-mode)"
+    }
+  }
+
+Execution log "pump-completed" log entry:
+
+.. image:: images/getting-started/labs/lab-api-exec-log.png
+    :width: 800px
+    :align: center
+    :alt: A "pump-completed" entry in the output pipe's execution log
