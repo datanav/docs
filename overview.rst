@@ -45,13 +45,6 @@ You can also access an existing Sesam service by registering in the Sesam Portal
 
 Once you have have access to a running Sesam service in the portal, you can access the Sesam Management Studio by clicking on its name on the home page in the Portal.
 
-.. _overview-license:
-
-License
--------
-
-Sesam requires a valid license to function. Without a valid license the pipes will stop running. Instructions for obtaining a valid license can be found in the `Sesam Portal <https://portal.sesam.io/>`__.
-
 Service Instance
 ----------------
 
@@ -71,7 +64,7 @@ The API can be found at:
 
 ::
 
-    http://service_endpoint:9042/api
+    https://service_endpoint/api
 
 Software channels
 -----------------

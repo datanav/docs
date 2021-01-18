@@ -52,7 +52,7 @@ Note that ``Geo-redundant`` backups are kept for 30 days after deletion as this 
 Clustered service
 =================
 
-This service is hosted on `Kubernetes <https://kubernetes.io/>`_ and can scale out to a large number of machines. It is dynamic and can scale out as your processing requirements increase. These subscriptions will be provisioned in one Azure subscription per customer. Each subscription has its own Azure Network Security Group. Data is stored on local nvme disks and/or managed network disks. 
+This service is hosted on `Kubernetes <https://kubernetes.io/>`_ and can scale out to a large number of machines. It is dynamic and can scale out as your processing requirements increase. These subscriptions will be provisioned in one Azure subscription per customer. Each subscription has its own Azure Network Security Group. Data is stored on local NVMe disks and/or managed network disks. 
 
 The services consists of the following software components:
 
