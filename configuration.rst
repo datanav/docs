@@ -188,12 +188,23 @@ Properties
 
    * - ``global_defaults.default_compaction_type``
      - Enum<String>
-     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction will run once every 24 hours. Sink compaction will run every time the pipe runs.
+     - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction
+       will run once every 24 hours. Sink compaction will normally run every time the pipe runs, but this can be
+       tweaked with the ``global_defaults.compaction_interval`` setting.
      - ``"sink"``
      -
 
+   * - ``global_defaults.compaction_interval``
+     - Float
+     - Specifies the default sink compaction interval. If this value is zero, sink compaction will run every time
+       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
+       to prevent pipes that run often from constantly trying to compact the sink-dataset.
+     - ``0``
+     -
+
    * - ``global_defaults.max_entity_bytes_size``
-     - Enum<String>
+     - Integer
      - Defines the maximum size in bytes of an individual entity as it is stored in a dataset.
      - ``104857600`` (100MB)
      -
@@ -609,6 +620,17 @@ Properties
        the dataset since the last compaction. ``1.0`` is the minimum value allowed.
      - ``1.10``
      - No
+
+   * - ``compaction.compaction_interval``
+     - Float
+     - Specifies the sink compaction interval. If this value is zero, sink compaction will run every time
+       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
+       to prevent a pipe that run often from constantly trying to compact the sink-dataset.
+     - ``0``
+     - No
+
+
 
 .. _circuit_breakers_section:
 
