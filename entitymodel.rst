@@ -91,7 +91,7 @@ level, so child entities can have them.
        the dataset. The value is an integer representing the number
        of microseconds since epoch (January 1st 1970 UTC). This field is
        used only for informal purposes.
-       
+
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
@@ -125,7 +125,7 @@ stored as part of the entity.
        may have multiple identities, i.e. in addition to the one in ``_id``. The value type
        is always :ref:`NI <ni_data_type>`. The :ref:`merge <merge_source>` source
        will collect all the merged identities in this field.
-     - 
+     -
 
        .. _dollar_children:
    * - ``$children``
@@ -133,7 +133,7 @@ stored as part of the entity.
        will add the created child entity as a value in the ``$children`` property of the
        target entity. The :ref:`emit_children <emit_children_transform>` transform can
        then later be used to expand the ``$children`` entities into standalone entities.
-     - 
+     -
 
        .. _dollar_replaced:
    * - ``$replaced``
@@ -142,7 +142,7 @@ stored as part of the entity.
        different entity id. This typically happens when the entity is being merged
        with another entity where the id of the other entity takes precedence over
        the current one.
-     - 
+     -
 
 .. _entity_data_types:
 
@@ -216,6 +216,9 @@ values are represented as strings in JSON. The value is prefixed by
 extension types below are currently the only ones supported. Transit
 types that are not recognized will be treated as string values.
 
+Note that there's currently no support for escaping string literals
+that start with a "~" character.
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 30, 50
@@ -250,7 +253,7 @@ types that are not recognized will be treated as string values.
      - A base64 encoded binary value.
      - ``"~bAAECAwQF"``
 
-   * - UUID 
+   * - UUID
      - A Universally unique identifier formatted as hexadecimal text.
      - ``"~u531a379e-31bb-4ce1-8690-158dceb64be6"``
 
