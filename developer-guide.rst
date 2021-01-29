@@ -19,4 +19,5 @@ Developer Guide
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
    Source datatype mapping <source-datatype-mapping>
+   Self-hosted service <self-hosted>
    Deprecated features <deprecations>
