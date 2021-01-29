@@ -1,6 +1,6 @@
 
-Sesam Data Integration Platform
-===============================
+Sesam Master Data Hub
+=====================
 
 .. toctree::
    :maxdepth: 2

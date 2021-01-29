@@ -22,7 +22,7 @@ There is also an `experimental version <https://beta.portal.sesam.io/>`_ of the 
 Concepts
 --------
 
-Sesam is a general purpose data integration and processing platform. It is optimised for collecting or receiving data from source systems,  :ref:`transforming data <getting-started-transformations>`, and :ref:`pushing or providing data <getting-started-sinks>` to target :ref:`systems <system_section>`.
+Sesam is a Master Data Hub built on a streaming dataflow data integration and processing system. It is optimised for collecting or receiving data from source systems,  :ref:`transforming data <getting-started-transformations>`, and :ref:`pushing or providing data <getting-started-sinks>` to target :ref:`systems <system_section>`.
 
 Data is stored in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched from the source systems on a regular basis and the :doc:`entities <entitymodel>` are stored in the log only if they have changed from the last time the entity was seen.
 
