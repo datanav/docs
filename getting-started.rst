@@ -14,7 +14,7 @@ Introduction
 ------------
 Welcome to this introduction to Sesam! This is a basic course that will guide you through what Sesam is, what it does and how it works.
 
-Sesam is an Integration Platform that uses a unique Datahub approach for collection, connecting and sharing of data. The platform is optimized for collecting or receiving data from source systems, transforming data and pushing or providing data to target systems.
+Sesam is an Master Data Hub using a unique approach for collection, connecting and sharing of data. The datahub is optimized for collecting or receiving data from source systems, transforming data and pushing or providing data to target systems.
 
 If you want to jump straight into Sesam and get hands-on, you can go right  to the :ref:`Labs section <getting-started-labs>`.
 

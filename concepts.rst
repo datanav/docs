@@ -16,7 +16,7 @@ Introduction
 
 This document introduces concepts that are key to understanding and working with Sesam.
 
-Sesam is a streaming dataflow system and a general purpose data integration and processing platform. It stores data in a data hub. The platform is optimised for getting data from source systems, transforming data, and providing data to target systems.
+Sesam is a Master Data Hub built on a streaming dataflow data integration and processing system. It stores data in a data hub. The hub is optimised for getting data from source systems, transforming data, and providing data to target systems.
 
 Sesam gets raw data from source systems and stores it in datasets. Pipes can be defined to process datasets to construct new datasets. Transforms can join data across datasets to create new shapes of data. Data from these datasets can be exposed and delivered to other systems. The entire system is driven by the state change of :doc:`entities <entitymodel>`.
 
