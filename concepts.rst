@@ -116,7 +116,7 @@ A :ref:`source <source_section>` exposes a stream of entities. Typically, this s
 
 Sources have varying support for :ref:`continuations <concepts-continuation-support>`. They accept an additional parameter called a *since* token. This token is used to fetch only the entities that have changed since the location stored in the token. This is used to ask for only the entities that have changed since the last time Sesam asked for them. The since token is an opaque string token that may take any form; it is interpreted by the source only. For example, for a SQL source it might be a datestamp, for a log based source it might be an offset.
 
-Sesam provides a number of out of the box *source* types, such as :ref:`SQL <sql_source>` and :ref:`LDAP <ldap_source>`. It is also easy for developers to expose a :ref:`micro-service <concepts-extensions>` that can supply data from an external service. The built-in :ref:`json <json_source>` source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
+Sesam provides a number of out of the box *source* types, such as :ref:`SQL <sql_source>` and :ref:`LDAP <ldap_source>`. It is also easy for developers to expose a :ref:`microservice <concepts-extensions>` that can supply data from an external service. The built-in :ref:`json <json_source>` source is able to consume data from these endpoints. These custom data providers can be written and hosted in any language.
 
 To help with this there are a number of template projects hosted on our `GitHub <https://github.com/sesam-community>`_ to make this process as easy as possible.
 
@@ -145,7 +145,7 @@ Sinks
 
 A :ref:`sink <sink_section>` is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
 
-Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_push_sink>` enables entities to be pushed to custom micro-services or other Sesam service instances.
+Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_push_sink>` enables entities to be pushed to custom microservices or other Sesam service instances.
 
 .. image:: images/pipes-sink.png
     :width: 800px
@@ -310,7 +310,7 @@ Monitoring of pipes can be enabled. Once a pipe is being monitored, you can add 
 Extensions
 ==========
 
-Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own micro-service extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
+Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own microservice extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
 
 Network Policy
 ==============
