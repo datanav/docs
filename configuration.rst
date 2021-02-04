@@ -8517,7 +8517,7 @@ Rescan:
   :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
   "start-rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
 
-  Only pipes with a :ref:`dataset sink <dataset_sink>` supports background rescans. This is because a rescan run
+  Only pipes with a :ref:`dataset sink <dataset_sink>` support background rescans. This is because a rescan run
   needs a way to check that it isn't overwriting newer entities from an incremental run, and only the dataset sink
   has the required functionality.
 
