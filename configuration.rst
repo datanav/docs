@@ -186,6 +186,8 @@ Properties
      - ``false``
      -
 
+       .. _service_metadata_global_defaults_compaction_settings:
+
    * - ``global_defaults.default_compaction_type``
      - Enum<String>
      - Specifies the default compaction type. It can be set to ``"background"`` or ``"sink"``. Background compaction
@@ -201,6 +203,44 @@ Properties
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent pipes that run often from constantly trying to compact the sink-dataset.
      - ``0``
+     -
+
+   * - ``global_defaults.compaction_keep_versions``
+     - Integer
+     - The number of unique versions of an entity to keep around.
+       The value must be greater than or equal to ``0``. If set to ``0`` then a time
+       threshold must be set explicitly.
+
+       .. WARNING::
+
+          A value less than ``2`` means that dependency tracking is best effort only,
+          and it will not be able to find all reprocessable entities. Do full or partial
+          rescans as a counter measure.
+
+     -
+     -
+
+   * - ``global_defaults.compaction_time_threshold_hours``
+     - Integer
+     - Specifies the threshold for how old entities must be before they are considered
+       for compaction. This property is usually used when you want to keep entities
+       around for a certain time.
+     -
+     -
+
+   * - ``global_defaults.compaction_time_threshold_hours_pump``
+     - Integer
+     - Same as ``compaction_time_threshold_hours``, but applies to the pipe's pump
+       execution dataset. Pump execution datasets are always trimmed by time.
+     -
+     -
+
+   * - ``global_defaults.compaction_growth_threshold``
+     - Float
+     - The growth factor required for the automatically scheduled compaction to kick
+       in. A value of ``1.1`` mean that there must have been 10% new offsets written to
+       the dataset since the last compaction. ``1.0`` is the minimum value allowed.
+     -
      -
 
    * - ``global_defaults.max_entity_bytes_size``
@@ -1019,20 +1059,20 @@ The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset
   @app.route("/get-contacts", methods=["GET", "POST"])
   def get_contacts():
       token = auth()
-      
+
       if request.args.get('since') is None:
           url = api_url + "/contacts"
       else:
           url = api_url + "/contacts?filter=modifiedon ge {}".format(request.args.get('since'))
       headers = {"Authorization": "Bearer {}".format(token)}
- 
+
       req = requests.get(url = url, headers = headers)
-      
+
       if req.status_code != 200:
         logger.error("Unexpected response status code: %d with response text %s" % (req.status_code, req.text))
         raise AssertionError ("Unexpected response status code: %d with response text %s"%(req.status_code, req.text))
       entities = req.json()["value"]
- 
+
       for entity in entities:
         entity["_updated"] = entity["modifiedon"]
 
@@ -1040,7 +1080,7 @@ The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset
 
    </details>
 
-In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.  
+In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.
 
 
 .. _dataset_source:
@@ -6400,7 +6440,7 @@ A system component represents a computer system that can provide data entities. 
 and services that can be used by several data sources, such as connection pooling, authentication settings,
 communication protocol settings and so on.
 
-You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`. 
+You can manage any secret property values you do not want to be exposed in the API (or in log files) by using the :ref:`Secrets manager API <secrets_manager>`.
 
 Note: as with pipe components, you are not allowed to use the forward slash character ("``/``") in system id's.
 
