@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_02_05:
+
+2021-02-05
+----------
+
+* We are optimizing the maximum number of concurrent running pipes in small subscriptions. The rationale is to get better overall performance. Note that this also affects self-hosted subscriptions.
+
 .. _changelog_2021_01_11:
 
 2021-01-11
