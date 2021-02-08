@@ -47,7 +47,7 @@ To read about the main concepts and how to get started in Sesam, please click :r
 
 Global datasets
 ---------------
-Sesam organizes entities by storing them in global datasets.
+The recommended way of organizing the data in Sesam is to model and store the data in global datasets.
 
 Definition
 ==========
