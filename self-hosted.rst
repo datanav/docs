@@ -58,7 +58,7 @@ Outbound firewall rules
 
 .. WARNING::
 
-   These outbound firewall rules must be activate for the service to operate fully. Not opening the ports for the specified domains may violate the terms of service. 
+   These outbound firewall rules must be active for the service to operate fully. Not opening the ports for the specified domains may violate the terms of service. 
 
 .. list-table::
    :header-rows: 1
