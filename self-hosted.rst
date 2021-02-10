@@ -56,6 +56,10 @@ Inbound firewall rules
 Outbound firewall rules
 =======================
 
+.. WARNING::
+
+   These outbound firewall rules must be activate for the service to operate fully. Not opening the ports for the specified domains may violate the terms of service. 
+
 .. list-table::
    :header-rows: 1
    :widths: 10, 15, 10, 65
@@ -68,22 +72,38 @@ Outbound firewall rules
    * - 443/HTTPS
      - Sesam IP
      - ``*.docker.com``, ``*.docker.io``
-     - The sesam-node needs access to docker HUB to pull and update images used by the sesam-node and microservices
+     - The sesam-node needs access to docker HUB to pull and update images used by the sesam-node and microservices.
+
+       .. WARNING::
+
+          If the outbound firewall is not open the service will not be able to self-update.
 
    * - 443/HTTPS
      - Sesam IP
      - ``*.letsencrypt.org``
      - Only needed if certificates are managed by certbot/letsencrypt (see DESC on port 80 inbound)
 
+       .. WARNING::
+
+          If the outbound firewall is not open the service will not be able to update its Let's Encrypt TLS certificates.
+
    * - 443/HTTPS
      - Sesam IP
      - ``*.sesam.io``, ``*.sesam.cloud``
-     - The sesam-node needs to communicate with several services hosted on these domains. These services include the sesam portal, log shipping,  shipping metrics and sesam-agent updates.
+     - The sesam-node needs to communicate with several services hosted on these domains. These services include the sesam portal, log shipping, shipping metrics and sesam-agent updates.
+
+       .. WARNING::
+
+          If the outbound firewall is not open the service will not be able to retrieve data from the Sesam portal, and it won't be able to ship logs and metrics to Sesam. This will make notifications not work and it will break billing.
 
    * - 443/HTTPS
      - Sesam IP
      - ``files.pythonhosted.org``, ``pypi.org``
      - The sesam-agent is a python program that has some dependencies on software that is hosted on [pypi](https://pypi.org/).
+
+       .. WARNING::
+
+          If the outbound firewall is not open the service will not be able to self-update.
 
 Installation
 ------------
