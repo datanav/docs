@@ -118,6 +118,8 @@ Before starting the setup you will  need:
   
 - A sesam-agent config (example below)
 
+.. _self_hosted_file_structure:
+
 File structure
 ==============
 
@@ -154,6 +156,8 @@ Example config file (must be located at /etc/sesam-agent/config.json)
         "tag": "weekly-prod"
       }
     }
+
+.. _self_hosted_install_the_agent:
 
 Install the Agent
 =================
@@ -192,8 +196,8 @@ Restart nginx for things to take effect:
 Migrate an old installation to use the sesam-agent
 ==================================================
 
-Be sure to back up your data before proceeding. Before Install the Agent section you must make sure you have done the following:
+Be sure to back up your data before proceeding. Before :ref:`Install the Agent <self_hosted_install_the_agent>` section you must make sure you have done the following:
 
-- Stop and remove all running containers
+- Stop and remove all running containers.
   
-- Copy or move the current store folder and license to the location configured under "File structure"
+- Copy or move the current store folder and license to the location configured under :ref:`File structure <self_hosted_file_structure>`.
