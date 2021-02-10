@@ -168,3 +168,12 @@ Restart nginx for things to take effect:
 ::
 
     docker restart nginx
+
+Migrate an old installation to use the sesam-agent
+==================================================
+
+Be sure to back up your data before proceeding. Before Install the Agent section you must make sure you have done the following:
+
+- Stop and remove all running containers
+  
+- Copy or move the current store folder and license to the location configured under "File structure"
