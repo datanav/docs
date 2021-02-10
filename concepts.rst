@@ -57,6 +57,9 @@ The following is a quick example of the shape of entities that are consumed and 
 
 Streams of entities flow through pipes. A pipe has an associated pump that is scheduled to regularly pull data entities from the source, push them through any transforms and send the results to the sink. The most common source is the :ref:`dataset source <dataset_source>` which reads entities from a dataset. The most common sink is the :ref:`dataset sink <dataset_sink>` which writes entities to a dataset. There are also :ref:`sources <source_section>` and :ref:`sinks <sink_section>` that can read and write data to and from external systems outside of Sesam.
 
+.. NOTE::
+
+   Sesam's service API is not built to serve a large number of concurrent clients. Sesam is primarily an asynchronous batching and stream processing system. The Service API is not meant to be used by user-facing applications that have low latency and high throughput requirements. For that reason we do not currently give any guarantees in this regard. In practice means that if you have such a requirement you should stream the data out of Sesam and host it in a dedicated publishing systems that can scale its endpoints.
 
 .. _concepts-datasets:
 
