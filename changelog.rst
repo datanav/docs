@@ -23,6 +23,13 @@ Changelog
 
 * Added experimental ``skip_identity_columns`` property to the :ref:`SQL sink <sql_sink>`.
 
+.. _changelog_2020_12_01:
+
+2020-12-01
+----------
+
+* Changed the receive endpoint for log shipping. See :doc:`Self-hosted service <self-hosted>`.
+
 .. _changelog_2020_11_20:
 
 2020-11-20
