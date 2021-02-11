@@ -352,7 +352,9 @@ Pipes support batching if the sink supports batching. It does this by
 accumulating source entities in a buffer before writing the batch to
 transforms and the sink. The size of each batch can be specified using
 the ``batch_size`` property on the pipe. The default batch size
-is 100.
+is usually 100, but this may vary depending on the source- and
+sink-type used in the pipe. The :ref:`JSON sink <json_push_sink>` and the :ref:`REST sink <rest_sink>` will
+for instance make the default batch_size 1.
 
 Note that the sink may have its own ``batch_size`` property. This is
 useful if the pipe has transforms that produce more entities than the
@@ -409,7 +411,7 @@ Properties
        one go. The sink must support batch for the bulking to happen. This may increase the
        throughput of the pipe, at the cost of extra memory usage. If the batch fails,
        then entities will be retried individually.
-     - 100
+     - usually 100, but varies with other pipe settings.
      -
 
    * - ``checkpoint_interval``
@@ -419,8 +421,9 @@ Properties
        offset is always saved at the end of the sync if it changed.
 
        The default value is 10000/``batch_size`` = 100, i.e. the
-       checkpoint happens every 100 batches.
-     - 100
+       checkpoint happens every 100 batches. The exception is if ``batch_size`` is 1, in which case the
+       default value of ``checkpoint_interval`` is also set to 1.
+     - 100 (1 if batch_size=1)
      -
 
    * - ``disable_set_last_seen``
@@ -435,7 +438,7 @@ Properties
    * - ``enable_background_rescan``
      - Boolean
      - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for this pipe.
-     - False
+     - ``false``
      -
 
    * - ``source``
@@ -4655,7 +4658,8 @@ is described in more detail :doc:`here <entitymodel>`.
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
 
-This sink supports :ref:`batching <pipe_batching>`.
+This sink supports :ref:`batching <pipe_batching>`, but the pipe's batch_size
+defaults to 1 when this sink-type is being used.
 
 Prototype
 ^^^^^^^^^
@@ -6235,6 +6239,8 @@ This is a data sink that can communicate with a REST service using HTTP requests
 
 Note that the shape of the entities piped to this sink must conform to certain criteria, see the
 :ref:`notes <rest_expected_rest_entity_shape>` later in the section.
+
+The pipe's :ref:`batch_size <pipe_batching>` defaults to 1 when this sink-type is being used.
 
 Prototype
 ^^^^^^^^^
