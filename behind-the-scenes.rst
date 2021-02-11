@@ -15,7 +15,10 @@ The Sesam software is distributed as standard `OCI images <https://opencontainer
 
 The infrastructure is provisioned by `Terraform <https://www.terraform.io/>`_ on `Microsoft Azure <https://azure.microsoft.com/>`_ . The default Microsoft Azure region is North Europe (Dublin, Ireland). The data never leaves this region. The data is encrypted at rest using a key managed by Microsoft Azure. Bringing your own key is currently not yet supported.
 
-Sesam uses `RocksDB <https://rocksdb.org/>`_, an embedded high-performance key-value database, to persist data.
+Sesam uses `RocksDB <https://rocksdb.org/>`_, an embedded high-performance key-value database, to persist data. The data
+is stored in the compact `MessagePack <https://msgpack.org/>`_ data format, and is further compressed using
+RocksDB's default `compression <https://github.com/facebook/rocksdb/wiki/Compression/>`_ settings.
+
 
 .. single_arch:
 
