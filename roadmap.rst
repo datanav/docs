@@ -9,18 +9,6 @@ Roadmap
 This roadmap highlights some of features we are currently working on. This roadmap might be subject to
 change.
 
-Background rescanning
----------------------
-
-If you want to do a full rescan of the source of a pipe and the source is huge this will cause the pipe to stop
-processing new data for a considerable amount of time.
-
-We are looking at how to be able to do a full rescan while
-at the same time process new data so that you can safely do full rescans without causing halt in the
-data flow.
-
-Lack of this feature makes it hard to enable 'automatic processing'.
-
 Integrated data browsing
 ------------------------
 
