@@ -353,7 +353,7 @@ accumulating source entities in a buffer before writing the batch to
 transforms and the sink. The size of each batch can be specified using
 the ``batch_size`` property on the pipe. The default batch size
 is usually 100, but this may vary depending on the source- and
-sink-type used in the pipe. The :ref:`JSON sink <json_push_sink>` and the :ref:`REST sink <rest_sink>` will
+sink-type used in the pipe. The :ref:`REST sink <rest_sink>` will
 for instance make the default batch_size 1.
 
 Note that the sink may have its own ``batch_size`` property. This is
@@ -4658,8 +4658,7 @@ is described in more detail :doc:`here <entitymodel>`.
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
 
-This sink supports :ref:`batching <pipe_batching>`, but the pipe's batch_size
-defaults to 1 when this sink-type is being used.
+This sink supports :ref:`batching <pipe_batching>`.
 
 Prototype
 ^^^^^^^^^
