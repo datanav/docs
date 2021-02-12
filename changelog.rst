@@ -6,8 +6,7 @@ Changelog
 2021-02-11
 ----------
 
-* The default :ref:`batch_size <pipe_batching>` value of pipes that use the :ref:`JSON sink <json_push_sink>`
-  or the :ref:`REST sink <rest_sink>` has been changed to 1 (used to be 100).
+* The default :ref:`batch_size <pipe_batching>` value of pipes that use the :ref:`REST sink <rest_sink>` has been changed to 1 (used to be 100).
 
 .. _changelog_2021_02_05:
 
