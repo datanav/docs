@@ -22,7 +22,7 @@ Changelog
 2021-02-01
 ----------
 
-* We automatically upgrade a *small* subscription type to a *medium* subscription type if the data storage usage exceeds 40 Gb. We also upgrade a *medium* subscription type to *large* subscription type if the data storage usage exceeds 350 Gb. Note that this also affects self-hosted subscriptions.
+* We automatically upgrade a *Small* subscription type to a *Medium* subscription type if the data storage usage exceeds 40 Gb. We also upgrade a *Medium* subscription type to *Large* subscription type if the data storage usage exceeds 350 Gb. Note that this also affects self-hosted subscriptions.
 
 .. _changelog_2021_01_11:
 
