@@ -17,6 +17,13 @@ Changelog
 * We are optimizing the maximum number of concurrent running pipes in small subscriptions. The rationale is to get better overall performance. Note that this also affects self-hosted subscriptions.
 * Documented the  :ref:`compaction settings  <service_metadata_global_defaults_compaction_settings>` in the global defaults section of the service metadata. Note that should be careful in changing these values as this can lead to loss of data and/or influence dependency tracking functionality.
 
+.. _changelog_2021_02_01:
+
+2021-02-01
+----------
+
+* We automatically upgrade a *small* subscription type to a *medium* subscription type if the data storage usage exceeds 40 Gb. Note that this also affects self-hosted subscriptions.
+
 .. _changelog_2021_01_11:
 
 2021-01-11
