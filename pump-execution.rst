@@ -9,6 +9,12 @@ information about a particular pump's execution history. The dataset
 id is computed from the pump's ``_id`` property as
 ``system:pump_execution:<pump_id>``.
 
+.. WARNING::
+
+   The pump execution entities are subject to change. Their ids and
+   structure may be changed in the future. The dataset is not meant
+   to be a public API that applications can use.
+
 It will always contain at least two entities for each time the pump
 runs. The first will have the id "pump-started" and the last either
 "pump-ended" *or* "pump-completed". In between these entities,
