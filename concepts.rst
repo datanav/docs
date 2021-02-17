@@ -325,4 +325,8 @@ VPN
 
 You can extend Sesam into your own network using a IPSec-based Virtual Private Network. The :doc:`Sesam Management Studio <management-studio>` interface does not currently let you configure this. Please contact sales@sesam.io to configure your VPN.
 
+Status Page
+===========
+
+Sesam hosts a status page at `https://status.sesam.io/ <https://status.sesam.io/>`_. There you will find the real-time operational status of the Sesam services. Any incidents will be reported there, but you can also register and get emails when there are changes in the operational status. A notification badge will also be shown in the :doc:`Sesam Management Studio <management-studio>` when incidents occur. If you have other custom requirements there is also a provisional `Status API <https://status.sesam.io/api>`_ that you can use.
 
