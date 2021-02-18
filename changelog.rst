@@ -9,6 +9,13 @@ Changelog
 * A new property ``equality_sets`` has been added to the :ref:`merge source <merge_source>`. This property can be
   used instead of (or in combination with) the ``equality`` property, and should make it a bit easier to configure
   the equality-rules correctly.
+  
+.. _changelog_2021_02_15:
+
+2021-02-15
+----------
+
+* Open Sesam will shut down March 31st, 2021. It unfortunately did not gain as much traction among our users as we had hoped and we are focusing more on the core product. We will notify the users by email soon.
 
 .. _changelog_2021_02_11:
 
