@@ -80,6 +80,8 @@ Backup
 
 Backup is performed once every 24 hours. A ``Geo-redundant`` backup is written to the Azure subscription's Azure storage account at the same time. The ``Geo-redundant`` retension policy is to keep the last backup, 7 daily backups, 4 weekly backups and 2 monthly backups.
 
+.. _monitoring:
+
 Monitoring
 ==========
 
