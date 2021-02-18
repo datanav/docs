@@ -31,6 +31,8 @@ Firewall requirements
 
 In general it is hard to be specific on IP addresses since most of these services are hosted on CDNs which basically means that you have no guarantee that the IPs don't change. If you don't have a firewall that support wildcards and/or use of domain names, an option is to allow this access through a proxy.
 
+.. _inbound_firewall_rules:
+
 Inbound firewall rules
 ======================
 
@@ -81,7 +83,7 @@ Outbound firewall rules
    * - 443/HTTPS
      - Sesam IP
      - ``*.letsencrypt.org``
-     - Only needed if certificates are managed by certbot/letsencrypt (see DESC on port 80 inbound)
+     - Only needed if certificates are managed by `Certbot <https://certbot.eff.org/>`_ / `Let's Encrypt <https://letsencrypt.org/>`_ (see description on :ref:`inbound port 80 <inbound_firewall_rules>`)
 
        .. WARNING::
 
@@ -91,6 +93,8 @@ Outbound firewall rules
      - Sesam IP
      - ``*.sesam.io``, ``*.sesam.cloud``
      - The sesam-node needs to communicate with several services hosted on these domains. These services include the sesam portal, log shipping, shipping metrics and sesam-agent updates.
+
+       More information on how monitoring works can be found :ref:`here <monitoring>`.
 
        .. WARNING::
 
