@@ -1230,18 +1230,37 @@ set to ``true``.
 Prototype
 ^^^^^^^^^
 
+Variant 1: Explicit equality-rules with the ``equality`` property
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ::
 
     {
         "type": "merge",
         "version": 2,
-        "datasets": ["one d1", "two d2", "three d3"],
+        "datasets": ["A a", "B b", "C c", "D d"],
         "equality": [
-             ["eq", "d1.field1", "d2.field1"],
-             ["eq", "d2.field2", "d3.field2"]
+            ["eq", "a.x", "b.x"],
+            ["eq", "b.x", "c.y"],
+            ["eq", "c.z", "d.z"],
         ],
         "supports_signalling": false
     }
+
+Variant 2: Implicit equality-rules with the ``equality_sets`` property
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+::
+
+    {
+        "type": "merge",
+        "version": 2,
+        "datasets": ["A a", "B b", "C c", "D d"],
+        "equality_sets": [
+            ["a.x", "b.x", "c.y"],
+            ["c.z", "d.z"],
+        ],
+        "supports_signalling": false
+    }
+
 
 Properties
 ^^^^^^^^^^
@@ -1279,6 +1298,14 @@ Properties
    * - ``equality``
      - List<EqFunctions{>=0}>
      - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
+       Note: Consider using the newer ``equality_sets`` property instead.
+     -
+     - No
+
+   * - ``equality_sets``
+     - List<List<ValueExpressions>{>0}>
+     - A list of lists with one or more value expressions. This is the preferred alternative to using the old
+       ``equality`` property to specify the equality-rules. See below for a detailed explanation of the difference between ``equality`` and ``equality_sets``.
      -
      - No
 
@@ -1361,6 +1388,53 @@ Properties
        expression has been used.
      - false
      -
+
+
+
+"equality" vs "equality_sets"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Equality is resolved transitively, so if A is the same as B and B is the same as C then A,
+B and C are all considered the same. With the ``equality`` property, these rules must be specified
+one at a time, like this::
+
+        "equality": [
+            ["eq", "a.x", "b.x"],
+            ["eq", "b.x", "c.y"],
+            ["eq", "c.z", "d.z"],
+        ],
+
+The ``equality_sets`` property was added as a way to makes it clearer which equality-rules belong together.
+The equality-rules above could be expressed like this::
+
+        "equality_sets": [
+            ["a.x", "b.x", "c.y"],
+            ["c.z", "d.z"],
+        ],
+
+Note that the ``equality_sets`` property is just a bit of syntactic sugar; behind the scenes the implicit
+equality-rules are added to the rules in the ``equality`` property. This means that you can use both the
+``equality_sets`` and the ``equality`` property at the same time if you want (although this is not recommended, since
+it makes it harder to figure out the equality-rules). It also means that you will not get a configuration warning if
+if you accidentally specify two equality-sets that are actually overlapping. If you for example specify this::
+
+        "equality_sets": [
+            ["a.x", "b.x", "c.y"],
+            ["c.y", "d.y"],
+        ],
+
+you won't actually get two equality-sets, since behind the scenes you end up with these equality-rules::
+
+        "equality": [
+            ["eq", "a.x", "b.x"],
+            ["eq", "b.x", "c.y"],
+            ["eq", "c.y", "d.y"]
+        ],
+
+, which is equivalent to specifying a single equality-set, like this::
+
+        "equality_sets": [
+            ["a.x", "b.x", "c.y", "d.y"],
+        ],
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
