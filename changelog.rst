@@ -15,7 +15,7 @@ Changelog
 2021-02-15
 ----------
 
-* Open Sesam will shut down March 31st, 2021. The user experience has not been great, and it did unfortunately not gain as much traction among our users as we had hoped. We will notify the users by email soon.
+* Open Sesam will shut down March 31st, 2021. It unfortunately did not gain as much traction among our users as we had hoped and we are focusing more on the core product. We will notify the users by email soon.
 
 .. _changelog_2021_02_11:
 
