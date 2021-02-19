@@ -330,3 +330,14 @@ Status Page
 
 Sesam hosts a status page at `https://status.sesam.io/ <https://status.sesam.io/>`_. There you will find the real-time operational status of the Sesam services. Any incidents will be reported there, but you can also register and get emails when there are changes in the operational status. A notification badge will also be shown in the :doc:`Sesam Management Studio <management-studio>` when incidents occur. If you have other custom requirements there is also a provisional `Status API <https://status.sesam.io/api>`_ that you can use.
 
+Software channels
+=================
+
+Sesam software is released through a phased rollout scheme. There are four different release channels – commonly called canaries. This is done to give changes and new features some time in non-production environments before they are rolled out to production. The goal is to reduce risk.
+
+The available channels are:
+
+- ``weekly-prod`` is release bi-weekly and is the most stable release. *Use this in production!*
+- ``weekly`` is release once a week. Use this in staging environments.
+- ``nightly`` is released every night. Use this in development environments.
+- ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
