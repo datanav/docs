@@ -7,7 +7,7 @@ Changelog
 ----------
 
 * The driver for the :ref:`MySQL <mysql_system>` database type has been changed to the latest stable version of
-  `PyMySQL <https://pypi.org/project/PyMySQL>`_.
+  `PyMySQL <https://pypi.org/project/PyMySQL>`_ (the old driver was from 2015, and we wanted to use a more recent driver).
   The new driver gives the same results as the old driver in our tests, but it is still possible that there may be
   some subtle changes in how the new driver interacts with the MySQL database (for instance in how data is converted
   between Sesam's internal format and the fields in a database table).
