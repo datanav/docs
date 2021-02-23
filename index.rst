@@ -9,6 +9,7 @@ Sesam Master Data Hub
    Concepts <concepts>
    Getting started <getting-started>
    Developer Guide <developer-guide>
+   Pricing <pricing>
    Best Practices <best-practices>
    Tools <tools>
    Behind the scenes <behind-the-scenes>
