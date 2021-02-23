@@ -341,3 +341,6 @@ The available channels are:
 - ``weekly`` is release once a week. Use this in staging environments.
 - ``nightly`` is released every night. Use this in development environments.
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
+
+Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to monday. 
+Security hotfixes will not wait for the scheduled window. Downgrades are not supported. 
