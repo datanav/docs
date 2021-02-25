@@ -242,6 +242,11 @@ To avoid someone else to be able to log in with your email-address, the first lo
 will disable any unverified user credentials that has been previously used. All other settings on the existing user
 account will be kept, though.
 
+Preview of new features
+=======================
+
+There is a version of the Management Studio with a preview of all the latest features available on `https://beta.portal.sesam.io <https://beta.portal.sesam.io>`_. It uses the same login credentials as the regular portal.
+
 Elasticsearch [in development]
 ==============================
 .. warning:: The data that is indexed will be available to all users!
