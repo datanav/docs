@@ -96,7 +96,7 @@ The following kinds of logs are shipped to Sesam:
   
 - Sesam configuration. No sensitive data is shipped, so no embedded data nor secrets are shipped. 
   
-- The pipe execution dataset. This is only shipped when pipe monitoring is enabled. It is used to trigger notifications for registered notification rules.
+- The pipe execution dataset. This is only shipped when pipe monitoring is enabled. It is used to trigger notifications for registered notification rules. Execution logs regarding failing pipes contain the entity objects which caused the failure, however these objects are not shipped to Sesam.
   
 - System logs, currently only the kernel logs are shipped. 
 
