@@ -8,77 +8,196 @@ Overview
 
 .. _overview-introduction:
 
-Introduction
-------------
+Core principles of Sesam Master Data Management for data platforms
+------------------------------------------------------------------
 
-Sesam is offered as service. The service is either hosted for you in the cloud or it is self-hosted. The service has an :doc:`API <api>` that is used to securely communicate with the service over HTTPS. The service subscription is billed monthly.
+Sesam is a master data hub that simplifies the proses of making to
+up-to-date master data available in a data platforms architecture. Sesam
+enables rapid development of solutions, which can be effectively
+managed, on top of a data platform. Sesam is a data platform component
+that collects data from source systems, connects all representations of
+an object, across a variety of source systems, in a continuously updated
+and dynamic `data model <https://en.wikipedia.org/wiki/Data_model>`__,
+and make the data easily accessible inside the data platform. Sesam has
+a set of fundamental principles to ensure that the capture,
+exploitation, and management of master data will be as fast and
+efficient as possible. Together, these principles ensures continuously
+updated master data, with high data quality, that can be effectively
+managed over time.
 
-The terms of service can be found here: https://sesam.io/terms.html. Our privacy policies can be found here: https://sesam.io/privacy.html.
+Master data is any structured that changes, not just the most central data
+--------------------------------------------------------------------------
 
-The Sesam service is backed by a centralized portal. The portal is a web service running at `https://portal.sesam.io/ <https://portal.sesam.io/>`_ . The portal is the place were you can sign up for, and manage, your Sesam subscriptions. It is also the place where you go to for the :doc:`Sesam Management Studio <management-studio>`, the user interface for accessing your own Sesam service.
+The definition of `master
+data <https://en.wikipedia.org/wiki/Master_data>`__ is "Data that
+provides context to transactional data", but in a dataplatform
+architecture, the definition of transactional data is somewhat unclear.
+We therefore redefine this to "Data that provides context to time series
+data". With `time-series, <https://en.wikipedia.org/wiki/Time_series>`__
+we mean data that is captured at a given time and that never changes,
+such as sensor data and log data. It gives us the following definition
+of master data in a data platform:
 
-There is also an `experimental version <https://beta.portal.sesam.io/>`_ of the Management Studio where new features are introduced at an earlier stage before they are publicly released in the main portal.
+   *Structured data that changes over time and that it needs for use
+   outside the system where they were created.*
 
-Concepts
---------
+This means that master data is not limited to customer, product, asset,
+and employee data, but contains both `reference
+data <https://en.wikipedia.org/wiki/Reference_data>`__ and all possible
+forms of structured data stored in a system, where the data also is
+required to be made available outside of that system. Master data is all
+data in a data platform that is not either unstructured or in time
+series. Examples of master data slightly outside the usual definition
+is; order and invoice information, work orders, hourly, document
+metadata, as well as any type categories.
 
-Sesam is a Master Data Hub built on a streaming dataflow data integration and processing system. It is optimised for collecting or receiving data from source systems,  :ref:`transforming data <getting-started-transformations>`, and :ref:`pushing or providing data <getting-started-sinks>` to target :ref:`systems <system_section>`.
+Parallel and continually function-adapted data models, not static canonical
+---------------------------------------------------------------------------
 
-Data is stored in datasets. A dataset is a log of data entities with additional indexes for efficient random access and lookups. Data is fetched from the source systems on a regular basis and the :doc:`entities <entitymodel>` are stored in the log only if they have changed from the last time the entity was seen.
+The biggest challenge for data quality is that each system in a
+composite architecture has different representations of the same object.
+The challenge is amplified in a data-driven architecture, where the data
+itself should be meaningful and not wrapped in functional shells as in a
+traditional `SOA
+architecture. <https://en.wikipedia.org/wiki/Service-oriented_architecture>`__
 
-:doc:`Entities <entitymodel>` in the datasets can be processed using the :doc:`Data Transformation Language <DTLReferenceGuide>`. DTL takes a stream of entities as input and returns a new stream of transformed entities. It can join data from other datasets to create new entities. Data produced via DTL can be stored in new datasets to be exposed or sent to applications that need it.
+The "simple" solution is to agree on one a single data model for each
+object type, a so-called `canonical
+model <https://en.wikipedia.org/wiki/Canonical_model>`__, that
+represents everything you will ever need, in all systems, forever. This
+is a utopia on which many businesses have wasted enormous resources,
+only to realize that it is not possible. An ideal model does not exist,
+and one must realize that the given data model will always be a
+perspective of the object one wants to describe, not an objective truth.
+In Sesam, we solve this fundamental problem in the diametrically
+opposite way: We collect all the different representations of an object,
+without changing the data model for any of the different
+representations. Instead of a false idea of "`Single source of
+Truth," <https://en.wikipedia.org/wiki/Single_source_of_truth>`__ Sesam
+will gather and connect all perspectives, i.e. data models, which exists
+about an object in a composite dynamic representation. Any single master
+data object becomes available, in all its different perspectives, as a
+single resource. This makes it easy to continuously develop the platform
+wide, domain wide, or functionality wide, data models needed in the data
+platform. The composite object representation linking all the different
+representations across systems, is stored as a single object in global
+datasets. The representation is stored in a standard
+`JSON <https://en.wikipedia.org/wiki/JSON>`__ based format, and
+continuously updated with data from all source systems. The complete
+object is stored in one global dataset only, and in a single data
+format. However, the data models describing the object can be
+continuously enhanced, based on the development of the source systems,
+and driven by the functional needs at any time.
 
-The final piece of Sesam is to deliver data from a dataset to a :ref:`sink <sink_section>`. Sinks are used to write data into target :ref:`systems <system_section>` or send it to service endpoints.
+Adapt your data platform to the business systems, not the other way around
+--------------------------------------------------------------------------
 
-Sesam provides implementations for many types of :ref:`sources <source_section>`, including :ref:`relational databases <sql_source>` and custom JSON streams. It also provides a number of core Sink implementations such as the :ref:`relational database <sql_sink>` and :ref:`HTTP endpoint sinks <http_endpoint_sink>`.
+A data platform exists to collect data from different systems and share
+this data in a consistent manner, to make it easier to retrieve the
+value that lies in the data. This is an ongoing process that must
+facilitate to continually expand the value outtake, and to quickly
+deliver the right data with the right quality for new purposes. The
+master data will need to be compiled from a set of business systems that
+are constantly changing, both in the case of new versions of a system,
+and in the case or replacing them with new systems. It is essential to
+be able to effectively manage a data platform, that the business systems
+and data platform, are as loosely coupled as possible. Sesam does not
+require any modifications in the business systems, but instead can
+collect and share data in the form that each system supports, through
+the mechanisms for which the systems are built. Whether the business
+system communicates via REST API, SOAP, XML, CSV, SQL or any other
+communication form or format is indifferent. If there is structured
+data, Sesam will be able to receive and return data in the subject
+system's own format and data model. The data is transformed into JSON
+data format, but retains its original data model. This is essential not
+to degrade the quality of the data. Any conversion from one data model
+to another will mean a reduction in data quality. In Sesam, the original
+data model will be retained in addition to the origin of the data, and
+thus the context in which they were created is retained as part of the
+data format. It ensures that data is not lost in the transmission from
+business system to data platform.
 
-See the :doc:`Concepts <concepts>` document for more in-depth explanation of the Sesam concepts.
+Synchronize the data, don't let it flow only in one direction
+-------------------------------------------------------------
 
-.. _overview-installation:
+Any system that is the source of master data needs to continuously keep
+their data up to date. These data updates do not have to come through
+the system's own UI, but should be able to originate from anywhere in
+the data platform architecture. The aim of a data platform is to make
+data available to ensure that a wide set of value-added services, such
+as automation, machine learning, mobile applications, web etc. All
+services built on data will be able to create new valuable data that is
+sent back and will further enrich the data platform. This data should
+not only remain inside the data platform, but continuously update the
+subject systems in question. Sesam synchronizes data from its global
+dataset back into the business system, so that in practice one achieves
+a functional `multi-master
+replication <https://en.wikipedia.org/wiki/Multi-master_replication>`__
+across both business systems and the entire data platform solution. In
+all systems where semantically equal properties about the same object
+exists, the data will be coordinated to achieve consistent data at all
+levels.
 
-Installation
-------------
+Build autonomous services, avoid dependencies, and tight couplings
+------------------------------------------------------------------
 
-You must sign up using the `Sesam Portal <https://portal.sesam.io/>`__ to get access to a Sesam service. The default service type is a cloud based service, but it's also possible to install a self-hosted Sesam. This document assumes a cloud based service.
+Just as a common data model can't meet all needs, one data access point
+isn't effective to cover a wide range of data-driven services. The most
+stable architecture is to allow each service to have an optimized data
+source with a subset of data that is tailored to the service's needs.
+This forms the core of a `loosely
+connected <https://en.wikipedia.org/wiki/Loose_coupling>`__
+architecture, and means that each service can choose to use the data
+store and the data model that is most efficient, while ensuring that the
+services do not stop working at the same time due to a common
+dependency. Sesam is optimized for synchronizing master data between the
+master data hub and each service's data store in the same way as against
+business systems. Regardless if the optimal store for a service is SQL
+based, search-index based, no-sql graph based, or special a tools such
+as Firebase, Qlik, Tableau, etc.
 
-You can also access an existing Sesam service by registering in the Sesam Portal and obtaining an invitation from someone with management permissions for the existing service.
+Stream changes to master data, don't use slow and resource intensive ETL
+------------------------------------------------------------------------
 
-Once you have have access to a running Sesam service in the portal, you can access the Sesam Management Studio by clicking on its name on the home page in the Portal.
+Traditional data platform architecture is often based on ETL to retrieve
+master data as opposed to time series data, witch in most cases is
+streamed into the platform. A reason for this is that the amount of
+master data is usually limited, and that the source systems often cannot
+deliver a stream of changes. The biggest problem in this approach is
+that master data is always composed from multiple systems, so all data
+from all systems must be reloaded each time data is updated. This causes
+a low refresh rate, and undesired dependencies between source systems to
+make ETL jobs able to complete. Downstream this causes all systems who
+needs master data to also be forced to batch proses ther data usning
+ETL. Sesam is at design time dataflow tool optimized to always just
+collect changes and stream them into the global datasets, and from there
+on out to all systems that need the change. Regardless of whether a
+source supports change tracking, Sesam will immediately convert any
+batch load to a stream of the real changes contained in that batch using
+delta comparison. Sesam will automatically interpret the dataflow
+configuration so that it knows every single object affected by any
+change. This is a prerequisite for being able to stream compound objects
+without having to ETL load the entire dataset each time updated data is
+needed.
 
-Service Instance
-----------------
+Implementation details
+----------------------
 
-We use *Sesam* as the general name for a Sesam service instance. A given service instance exposes a single API endpoint and user interface. Internally, the service instance consists of configuration and datasets for the storage of data.
+1. Sesam should pull data inn, and push data out, if possible
 
-A service instance is configured via the API. Configuration in Sesam is quite cool. It is entity based. This means that we can track and understand if the configuration has changed in the same way we understand if any data has changed.
+2. All data in Sesam must have name spaced properties and Id's
 
-The API offers two ways to upload configuration. The first is via the 'config' endpoint. This allows a complete set of configuration to be uploaded and is typically used when bootstrapping a service instance in QA or production environments. The other way is to use the individual resources exposed via the API. Such as a post to the collection of pipes.
+3. All references between data objects should be stored as NI's
 
+4. All incoming raw data must flow directly into a global dataset,
+   except if it needs to be split into several objects
 
-Service API
------------
+5. No modifications should be done to the raw data, only additions
 
-The Sesam API is a RESTful API that exposes the current state of a Sesam service instance and allows clients to add and modify configuration, test DTL, introspect datasets, view logs and the operational state of pumps and pipes.
+6. No object should be stored in more than one global dataset
 
-The API can be found at:
+7. No object Id’s must exist in more than one global dataset
 
-::
+8. Never hop to anything but a global dataset
 
-    https://service_endpoint/api
-
-
-Tooling
--------
-
-Management Studio
-=================
-
-The Sesam Management Studio is a user-interface for working with Sesam. The UI exposes the pipes, datasets and operational information for a service instance.
-
-To read more about the Sesam Management Studio, please click :doc:`here <management-studio>`.
-
-
-Sesam Client
-============
-
-The Sesam Client is primarily a tool for running CI tests. To read more about the Sesam Client command line tool, please click :doc:`here <sesam-client>`.
+9. All outgoing dataflows must start from a global dataset
