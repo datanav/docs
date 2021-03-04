@@ -5,7 +5,8 @@ Sesam Master Data Hub
 .. toctree::
    :maxdepth: 2
 
-   Core principles <overview>
+   Overview <overview>
+   Core principles <core-principles>
    Concepts <concepts>
    Getting started <getting-started>
    Developer Guide <developer-guide>
