@@ -202,9 +202,11 @@ eminent over time. It’s imperative to standardize the way master data is
 managed and gain a transparent unified methodology throughout the
 platform, which is flexible and can be maintained over time.
 
-Coding is effective in the short term and gives every developer free
+Coding is extremly effective in an isolated environment, 
+and it gives every developer free
 rein to solve their individual tasks to their own liking. The problem is
-effective management. Every code snippet becomes a `black
+effective management over time in a complex environment. 
+Every code snippet becomes a `black
 box <https://en.wikipedia.org/wiki/Black_box>`__, and while this may be
 the best way to solve some functional needs, it is destructive when it
 comes to managing master data.
