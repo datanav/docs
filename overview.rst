@@ -218,7 +218,7 @@ transparent, you can never trust its quality.
 In Sesam every part of the dataflow, storage and management is highly
 standardized and defined declaratively. There is no code, only
 structured configuration, stored as data, which instructs the platform
-how to collect data, how to transform them, and where to move
+how to collect data, how to connect and enrich them, and how to share
 them. This makes the master data management completely transparent, and
 even the most complicated dataflow self-documented. All data can be
 traced back to its origin, inspected at any point in a flow, and the
