@@ -1,6 +1,6 @@
-========
+===============
 Core principles
-========
+===============
 
 Sesam is a master data hub that simplifies the process of making
 up-to-date master data available in a data platform architecture. Sesam
