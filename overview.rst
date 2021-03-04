@@ -193,6 +193,37 @@ change. This is a prerequisite for being able to stream compound objects
 without having to ETL load the entire dataset each time updated data is
 needed.
 
+Standardize master data management, don’t hide it in code
+=========================================================
+
+The complexity of a data platform is increasing for every system and
+data type you add to it, and the chance of losing control becomes
+eminent over time. It’s imperative to standardize the way master data is
+managed and gain a transparent unified methodology throughout the
+platform, which is flexible and can be maintained over time.
+
+Coding is effective in the short term and gives every developer free
+rein to solve their individual tasks to their own liking. The problem is
+effective management. Every code snippet becomes a `black
+box <https://en.wikipedia.org/wiki/Black_box>`__, and while this may be
+the best way to solve some functional needs, it is destructive when it
+comes to managing master data.
+
+A core challenge in a heterogeneous environment, as data platforms are,
+is the lack of transparency. Utilization of composite data from a wide
+range of source systems is the core principle to gain value from a data
+platform, and if the process for generation of that data is not
+transparent, you can never trust its quality.
+
+In Sesam every part of the dataflow, storage and management is highly
+standardized and defined declaratively. There is no code, only
+structured configuration, stored as data, which instructs the platform
+how to where to collect data, how to transform them, and where to move
+them. This makes the master data management completely transparent, and
+even the most complicated dataflow self-documented. All data can be
+traced back to its origin, inspected at any point in a flow, and the
+data quality completely trustworthy.
+
 Implementation details
 ======================
 
