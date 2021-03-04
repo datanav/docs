@@ -187,10 +187,15 @@ collect changes and stream them into the global datasets, and from there
 out to all systems that need the change. Regardless of whether a
 source supports change tracking, Sesam will immediately convert any
 batch load to a stream of the real changes contained in that batch using
-delta comparison. Sesam will automatically interpret the dataflow
+delta comparison. 
+
+Sesam will automatically interpret the dataflow
 configuration so that it knows every single object affected by any
-change. This is a prerequisite for being able to stream compound objects
-without having to ETL load the entire dataset each time updated data is
+change.  Even the construction of complex composite data objects across a 
+multitude of source systems with advanced dependencies, is automaticaly
+change tracked by the Sesam engine.
+This is a prerequisite for being able to stream compound objects
+without having to ETL the entire dataset each time updated data is
 needed.
 
 Standardize master data management, don’t hide it in code
