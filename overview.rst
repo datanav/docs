@@ -191,7 +191,7 @@ delta comparison.
 
 Sesam will automatically interpret the dataflow
 configuration so that it knows every single object affected by any
-change.  Even the construction of complex composite data objects across a 
+change. Even the construction of complex composite data objects across a 
 multitude of source systems with advanced dependencies, is automaticaly
 change tracked by the Sesam engine.
 This is a prerequisite for being able to stream compound objects
