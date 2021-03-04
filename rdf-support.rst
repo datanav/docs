@@ -18,7 +18,7 @@ In this document we will cover what you need to know when working with RDF data 
 Core Concepts
 -------------
 
-First, a short recap of the core concepts when working with RDF, see the `RDF standard <https://www.w3.org/standards/techs/rdf#w3c_all>`_ for more details:
+First, a short recap of the core concepts when working with RDF, see the `RDF standard <https://www.w3.org/RDF/>`_ for more details:
 
 The RDF data model consists in essence of statements about a particular subject. This is given as a *triple*:
 

@@ -1243,7 +1243,7 @@ parameters:
       'rest of path'-type parameters, so this parameter-definition isn't 100% accurate. This parameter
       should not actually be url-escaped in any way. For instnace, to retrieve the configfile in the
       folder "/sesam/data/conf/42/css/temp/test.css", the url used should just be
-      "https://<dap-backend>/configuration/conf/42/css/temp/test.css".
+      ``https://<dap-backend>/configuration/conf/42/css/temp/test.css``.
 
   validate_only:
     name: validate_only

@@ -566,8 +566,8 @@ datebrowser also has some pages that is only visible for administrative
 users.
 
 These are reached by adding "/admin_index" to the databrower address in your browser.
-Example: if your databrowser is reached at "https://databrowser.example.com", the admin-pages
-will be at ""https://databrowser.example.com/admin_index".
+Example: if your databrowser is reached at ``https://databrowser.example.com``, the admin-pages
+will be at ``https://databrowser.example.com/admin_index``.
 
 .. figure:: ./databrowser-guide-images/admin_index_page.png
    :width: 800 px

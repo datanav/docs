@@ -42,24 +42,24 @@ Each provider-info entry in the authentication_providers list must contain the f
 The provider-info must contain either a "openid_configuration_url" or a "openid_configuration" parameter:
 
     openid_configuration_url:
-      An url that returns the provider metadata as specified here: http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
+      An url that returns the provider metadata as specified here: https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
 
-      Example: "https://myserver.example.com/auth/realms/demo/.well-known/openid-configuration"
+      Example: ``https://myserver.example.com/auth/realms/demo/.well-known/openid-configuration``
 
     openid_configuration:
       If the provider doesn't have a openid_configuration_url endpoint,
-      the provider metadata can be supplied directly on the format specified in http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata.
+      the provider metadata can be supplied directly on the format specified in https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata.
       (This is fiddly and not recommended. Use the 'openid_configuration_url' parameter whenever possible)
 
 The provider-info can contain the following optional parameters:
 
-    user_id_attribute: The claim in the UserInfoResponse (http://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse)
+    user_id_attribute: The claim in the UserInfoResponse (https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse)
       to use as the "user_id" value. Defaults to "sub". Often, the "sub" claim contains a non-human-readable
       id, so it is usually better to use some other (unique) claim instead.
       For authentication against google, "email" should be used. For authentication against
       login.microsoftonline.com, "upn" should be used.
 
-    contactinfo_attribute: The claim in the UserInfoResponse (http://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse)
+    contactinfo_attribute: The claim in the UserInfoResponse (https://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse)
       to use as the "contactinfo" value in the returned user_info dict. Defaults to "email".
 
     allow_unverified_email:
@@ -69,7 +69,7 @@ The provider-info can contain the following optional parameters:
 
     use_userinfo_endpoint: This can be set to False for providers where the userinfo endpoint isn't
         neccessary or doesn't work for some reason (which is the case for the preprod environment from
-        bankidnorge.no, for example). In such cases the user_id, etc is extracted from the IDToken (http://openid.net/specs/openid-connect-core-1_0.html#IDToken) instead.
+        bankidnorge.no, for example). In such cases the user_id, etc is extracted from the IDToken (https://openid.net/specs/openid-connect-core-1_0.html#IDToken) instead.
 
     scope:
       The openid scopes to request from the provider.

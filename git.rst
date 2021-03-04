@@ -99,7 +99,7 @@ This creates a new branch called develop that mirrors master. To push it to Git:
 Now you should have two branches in Git. Before we go forward you should go to your repository settings (in Github or equal) and configure the default branch to be develop. After that you should set both *master* and *develop* branches as protected. This means that you won't be able to directly push commits to these branches. We want to force users to do that by creating pull requests.
 
 More information about pull requests can be read in this :ref:`document<pull-request>`
-https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request.
+https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request.
 
 .. _git-feature-branch:
 

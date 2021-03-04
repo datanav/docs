@@ -23,7 +23,7 @@ If you want to jump straight into Sesam and get hands-on, you can go right  to t
 
 Setting up our Sesam instance
 -----------------------------
-You must sign up using the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. If you consider this option, please be free to contact us on info@sesam.io for further information). This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
+You must sign up using the `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__ to purchase new or access existing Sesam instances. The default instance type is cloud based, but it's also possible to install Sesam on-premise or in a local cloud environment. If you consider this option, please be free to contact us on info@sesam.io for further information). This document assumes a cloud based installation. You can also access an existing Sesam instance by registering in the `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__ and obtaining an invitation from someone with management permissions for the existing installation. 
 
 The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
 
@@ -32,7 +32,7 @@ The following guide requires the use of Python 3.5.x/3.4.x and a Git client.
 Sign up
 =======
 
-Go to the `Sesam Portal <https://portal.sesam.io/unified/auth/login?redirect=dashboard>`__ and sign up.
+Go to the `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__ and sign up.
 
 Once you've signed up you'll see this page. Click on Request private trial.
 
@@ -1355,7 +1355,7 @@ Then download `Docker Desktop <https://www.docker.com/get-started>`__.
 
 You now need to download Python. Here we're using Python 3.6 but you can use any version after 3.5. Then install pip and Flask.
 
-Flask is a web framework used by Pything to develop web services nad pip is a de facto standard package-management system used to install and manage software packages written in Python. If you need help with this, follow the instructions `here <https://pip.pypa.io/en/stable/installing/>`__ for pip and `here <http://flask.pocoo.org/docs/1.0/installation/>`__ for Flask.
+Flask is a web framework used by Pything to develop web services nad pip is a de facto standard package-management system used to install and manage software packages written in Python. If you need help with this, follow the instructions `here <https://pip.pypa.io/en/stable/installing/>`__ for pip and `here <https://flask.palletsprojects.com/en/1.0.x/installation/>`__ for Flask.
 
 .. image:: images/getting-started/flaskInstall.png
     :width: 800px
@@ -1690,12 +1690,12 @@ This lab covers:
 
 A system in Sesam represents a computer system that can provide or receive data entities. Its task is to provide common properties and services that can be used by several data sources, such as connection pooling, authentication settings, communication protocol settings and so on. There are many different types of systems available in Sesam. And if we need a more customized system we can use a microservice from https://github.com/sesam-community or create a new one to run as a custom microservice system.
 
-We are going to import data containing county and municipality information for Norway from an API (https://ws.geonorge.no/kommuneinfo/v1/fylkerkommuner) using a URL system in our Sesam node.
+We are going to import data containing county and municipality information for Norway from an API (``https://ws.geonorge.no/kommuneinfo/v1/fylkerkommuner``) using a URL system in our Sesam node.
 
 Task
 ++++
 
-- Create a URL-system that connects to geonorge with the base URL "https://ws.geonorge.no/" as its ``url_pattern``. 
+- Create a URL-system that connects to geonorge with the base URL ``https://ws.geonorge.no/`` as its ``url_pattern``. 
 - Name the system "geonorge".
 
 Tips
@@ -2329,7 +2329,7 @@ This lab covers:
 
 - **Write data to an API endpoint**
 
-API's are another common external system type that Sesam integrates with. Let's try posting some data to jsonplaceholder.typicode.com, which is a API containing test data that we can also post data to. The data will not actually be saved and stored, but the status codes that the API returns are the same as if it did. The operation we want to imitate is described on this page https://jsonplaceholder.typicode.com/guide.html under "Create a resource".
+API's are another common external system type that Sesam integrates with. Let's try posting some data to jsonplaceholder.typicode.com, which is a API containing test data that we can also post data to. The data will not actually be saved and stored, but the status codes that the API returns are the same as if it did. The operation we want to imitate is described on this page https://jsonplaceholder.typicode.com/guide/ under "Create a resource".
 
 Task
 ++++

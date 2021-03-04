@@ -26,7 +26,7 @@ of the "databrowser.ini" file.
 This is a boolean value, with the following meaning:
 
 | False:
-| User authentication is done via an `OpenID connect <http://openid.net/connect/>`_
+| User authentication is done via an `OpenID connect <https://openid.net/connect/>`_
   authentication provider. This works by redirecting the user's web browser to
   some external webpage that does the authentication and redirects back to the data access portal.
 
@@ -64,7 +64,7 @@ OpenID connect authentication provider config
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the The USE\_X\_REMOTE\_USER\_HEADER\_AUTHENTICATION config-variable is set to `False`,
-the data access portal can be configured to authenticate with an `OpenID connect <http://openid.net/connect/>`_
+the data access portal can be configured to authenticate with an `OpenID connect <https://openid.net/connect/>`_
 authentication provider.
 
 .. include:: databrowser-authentication_providers_examples_and_docs-for_include.rst

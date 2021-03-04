@@ -12,8 +12,8 @@ Logging into the GDPR data access portal
 ========================================
 
 By default, the end user (subject) can log into the GDPR data access portal by accessing its public URL.
-For example, if your public URL is https://datahub-subscription_id.domain.com the data access portal URL should be
-https://gdpr-dap-subscription_id.domain.com
+For example, if your public URL is ``https://datahub-subscription_id.domain.com`` the data access portal URL should be
+``https://gdpr-dap-subscription_id.domain.com``
 
 You can find the public URL of your GDPR platform by navigating to the "GDPR data access portal" section on the left hand
 side of the management studion and clicking on the "Network" tab. Under the heading "Data Access Portal backend"

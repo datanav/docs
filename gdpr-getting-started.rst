@@ -40,7 +40,7 @@ Setup
     :align: center
     :alt: GDPR setup page
 
-The domain name is the internet address (DNS) where your GDPR data access portal should be available to the data subjects. You can choose any name you want, as long as it's not already in use by someone else. Your GDPR data access portal will then be available on the web (e.g. https://your-selected-name.sesamdata.com).
+The domain name is the internet address (DNS) where your GDPR data access portal should be available to the data subjects. You can choose any name you want, as long as it's not already in use by someone else. Your GDPR data access portal will then be available on the web (e.g. ``https://your-selected-name.sesamdata.com``).
 
 7. You can customize you portal by uploading your own logo and selecting colors further down the page.
 

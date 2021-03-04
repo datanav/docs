@@ -156,7 +156,7 @@ Example config file (must be located at /etc/sesam-agent/config.json)
         "disable": false
       },
       "sesam-node": {
-        "args": "--sesam-portal-url https://portal.sesam.io/unified/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints ",
+        "args": "--sesam-portal-url https://portal.sesam.io/ --redirect-portal-gui 1 -b /sesam/data/backup --backup-use-checkpoints ",
         "tag": "weekly-prod"
       }
     }
