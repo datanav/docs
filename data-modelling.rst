@@ -367,6 +367,8 @@ The main reason for why **outbound pipes** shouldn't contain any logic or transf
     :align: center
     :alt: Generic pipe concept  
 
+.. _best-practice-Inbound pipes:
+
 Inbound pipes
 =============
 
@@ -506,7 +508,7 @@ The corresponding env variable are used in the condition property in the pipe. I
 
 
 
-.. _best_practice_rdf_type:
+.. _best-practice_-rdf type:
 
 RDF type  
 ^^^^^^^^
@@ -517,6 +519,8 @@ Namespaces
 ^^^^^^^^^^
 
 The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
+
+.. _best-practice-Global pipes:
 
 Global pipes
 ============
