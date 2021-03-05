@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_03_05:
+
+2021-03-05
+----------
+
+* Added default ``operation``, ``properties`` and ``payload`` values to the :ref:`REST sink <rest_sink>` and :ref:`REST transform <REST_transform>`
+
 .. _changelog_2021_02_19:
 
 2021-02-19
@@ -21,7 +28,7 @@ Changelog
 * A new property ``equality_sets`` has been added to the :ref:`merge source <merge_source>`. This property can be
   used instead of (or in combination with) the ``equality`` property, and should make it a bit easier to configure
   the equality-rules correctly.
-  
+
 .. _changelog_2021_02_15:
 
 2021-02-15

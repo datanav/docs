@@ -4105,6 +4105,13 @@ Prototype
     {
         "type": "rest",
         "system" : "rest-system",
+        "operation": "the-default-operation",
+        "properties": {
+           "the-default": "properties"
+        },
+        "payload": {
+           "the-default": "payload"
+        }
     }
 
 
@@ -4158,6 +4165,25 @@ Properties
      - ``false``
      -
 
+   * - ``operation``
+     - String
+     - The default id of the operation to use if not present in the entity.
+     -
+     -
+
+   * - ``properties``
+     - Object
+     - The properties mapping to use if not present in the entity. Note that if both are present the properties in
+       the entity takes precendence.
+     -
+     -
+
+   * - ``payload``
+     - Object, string or array
+     - The default value to use as payload if not present in the entity.
+     -
+     -
+
 .. _rest_transform_expected_rest_entity_shape:
 
 Expected entity shape
@@ -4200,8 +4226,9 @@ expected is:
    * - ``operation``
      - String
      - The contents of this property must refer to one of the named ``operations`` registered with the transform's :ref:`REST system <rest_system>`.
+       Note that if no default value is defined in the transform configuration, this property is required.
      -
-     - Yes
+     -
 
    * - ``payload``
      - String or Object
@@ -4279,6 +4306,10 @@ these examples:
         "transform" : {
             "type" : "rest",
             "system" : "our-rest-service",
+            "operation": "post-man",
+            "properties": {
+                 "collection_name": "study-group-2"
+            }
         }
     }
 
@@ -6323,6 +6354,13 @@ Prototype
     {
         "type": "rest",
         "system" : "rest-system",
+        "operation": "the-default-operation",
+        "properties": {
+           "the-default": "properties"
+        },
+        "payload": {
+           "the-default": "payload"
+        }
     }
 
 
@@ -6345,6 +6383,25 @@ Properties
      - The id of the :ref:`REST system <rest_system>` to use.
      -
      - Yes
+
+   * - ``operation``
+     - String
+     - The default id of the operation to use if not present in the entity.
+     -
+     -
+
+   * - ``properties``
+     - Object
+     - The properties mapping to use if not present in the entity. Note that if both are present the properties in
+       the entity takes precendence.
+     -
+     -
+
+   * - ``payload``
+     - Object, string or array
+     - The default value to use as payload if not present in the entity.
+     -
+     -
 
 .. _rest_expected_rest_entity_shape:
 
@@ -6388,8 +6445,9 @@ expected is:
    * - ``operation``
      - String
      - The contents of this property must refer to one of the named ``operations`` registered with the sink's :ref:`REST system <rest_system>`.
+       Note that if no default value is defined in the sink configuration, this property is required.
      -
-     - Yes
+     -
 
    * - ``payload``
      - String or Object
@@ -6467,6 +6525,14 @@ these examples:
         "sink" : {
             "type" : "rest",
             "system" : "our-rest-service",
+            "operation": "update-woman",
+            "properties": {
+                "sex": "F"
+            },
+            "payload": {
+              "id": "unknown",
+              "collection_name": "study-group-1"
+            }
         }
     }
 
@@ -6481,18 +6547,15 @@ Example input entities:
             "properties": {
                 "id": "john",
                 "age": 21,
-                "sex": "M",
-                "collection_name": "study-group-1"
+                "sex": "M"
             },
             "payload": "<man id=\"john\">john</man>"
         },
         {
             "_id": "mary",
-            "operation": "update-woman",
             "properties": {
                 "id": "mary",
                 "age": 23,
-                "sex": "F",
                 "collection_name": "study-group-2"
             },
             "payload": {
