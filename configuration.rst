@@ -2637,7 +2637,7 @@ The SDShare source
 ------------------
 
 The SDShare data source can read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
-`SDShare specification <http://sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
+`SDShare specification <http://www.sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
 in Sesam.
 
 
@@ -4891,7 +4891,7 @@ The SMS message sink
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
-templates (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
+templates (https://palletsprojects.com/p/jinja/) with the entities properties available to the templating context. The template file
 name can either be inlined in the configuration or embedded in the input entity. The SMS service to use must be
 configured separately as a :ref:`system <system_section>` and its ``_id`` property given in the ``system`` property.
 Currently, only the :ref:`Twilio provider <twilio_system>` is supported.
@@ -5641,7 +5641,7 @@ The Email Message sink
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
-templates`` (http://jinja.pocoo.org/) with the entities properties available to the templating context. The template file
+templates`` (https://palletsprojects.com/p/jinja/) with the entities properties available to the templating context. The template file
 name can either be embedded in the configuration or in the input entity. The mail server settings have to
 be registered in a :ref:`SMTP system <smtp_system>` component in advance and its ``_id`` put in the ``system``
 property of the sink.
@@ -6647,7 +6647,7 @@ Properties
      - The local timezone for the database server. It is used for any date(time) objects returned that doesn't have any
        timezone information. The default is the UTC timezone. All the official timezone names are supported,
        i.e. "UTC", "GMT", "EST" etc. You can also use the indirect "Continent/City" format, for example "Europe/Oslo"
-       (see `the complete list <http://twiki.org/cgi-bin/xtra/tzdatepick.html>`_ for which cities are supported).
+       (see `the complete list <https://twiki.org/cgi-bin/xtra/tzdatepick.html>`_ for which cities are supported).
 
        .. WARNING::
 
@@ -6985,7 +6985,7 @@ Example MS SQL Server configuration:
 The Microsoft Azure SQL Data Warehouse system
 ---------------------------------------------
 
-This system type represents a `Microsoft Azure SQL Data Warehouse server <https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is>`_ running in Azure.
+This system type represents a `Microsoft Azure SQL Data Warehouse server <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is>`_ running in Azure.
 
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
@@ -7265,7 +7265,7 @@ Properties
    * - ``sslmode``
      - String
      - The ssl mode to use. The value has to be one of "disable", "allow", "prefer", "require", "verify-ca" or "verify-full".
-       Please consult the `PostgreSQL documentation <https://www.postgresql.org/docs/10/static/libpq-ssl.html>`_  for
+       Please consult the `PostgreSQL documentation <https://www.postgresql.org/docs/10/libpq-ssl.html>`_  for
        the full details of what these modes entail.
      - ``"prefer"``
      -
@@ -7510,7 +7510,7 @@ Properties
    * - ``url``
      - String
      - Contains a full URL to the Solr dataset to read/write documents from
-     - "http://localhost:8983/solr/"
+     - ``http://localhost:8983/solr/``
      -
 
    * - ``timeout``
@@ -7963,7 +7963,7 @@ A operation configuration looks like:
 
    * - ``url``
      - String
-     - A URL or URL part. The property supports the ``Jinja`` template (http://jinja.pocoo.org/) syntax with the entities properties
+     - A URL or URL part. The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities properties
        available to the templating context. The expanded string is then substituted into the system's ``url_pattern`` property in
        place of its ``%s`` placeholder marker to get the final URL to use for the operation.
      -

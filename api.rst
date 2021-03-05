@@ -16,7 +16,7 @@ Sesam provides a RESTful API for controlling the service and for working with th
 
 If you follow the :ref:`getting-started` guide, the api will be served on the url you find on the
 management studio "settings" page under the "Connection url" heading. For a cloud instance it will typically be on
-the form "https://instance-guid.sesam.cloud/api".
+the form ``https://instance-guid.sesam.cloud/api``.
 
 All references to this URL in this document should be substituted with the real URL for your Sesam instance.
 The rest of this document will assume that the api can be found on this URL.
@@ -28,8 +28,8 @@ Most API calls will require you to authenticate using a `JWT token <https://jwt.
 
 .. _using_jwt_token:
 
-You can also use a commandline tool like `curl <http://manpages.ubuntu.com/manpages/lucid/man1/curl.1.html>`_
-or `wget <http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html>`_ to explore the API. This will be the most
+You can also use a commandline tool like `curl <https://curl.se/>`_
+or `wget <https://www.gnu.org/software/wget/>`_ to explore the API. This will be the most
 useful approach if you are planning to communicate with Sesam using a script or a program.
 
 When using ``curl`` to access the API url's directly, you will need to supply the JWT token for each HTTP request.
@@ -64,11 +64,11 @@ retrieved the JWT token.
 
 The most important api urls are:
 
-``/api/pipes`` (i.e. https://instance-guid.sesam.cloud/api/pipes)
+``/api/pipes`` (i.e. ``https://instance-guid.sesam.cloud/api/pipes``)
 
 This returns a list of pipes. For an explanation of what a pipe is, read the :ref:`concepts-pipes` concept definition.
 
-``/api/datasets`` (i.e. https://instance-guid.sesam.cloud/api/datasets)
+``/api/datasets`` (i.e. ``https://instance-guid.sesam.cloud/api/datasets``)
 
 This returns a list of datasets. (For an explanation of what a dataset is, read the :ref:`concepts-datasets` concept definition).
 
