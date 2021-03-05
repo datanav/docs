@@ -982,7 +982,7 @@ It is important to emphasize that this is only a suggestion on how it might be l
 Additional Sesam tips
 ---------------------
 
-.. _best-practice-golden-record:
+.. _data-modelling-golden-record:
 
 Golden record
 =============
