@@ -9,11 +9,6 @@ Data modelling
 Introduction
 ------------
 
-.. image:: images/datahub.jpg
-    :width: 800px
-    :align: center
-    :alt: Sesam
-
 This document introduces what we need to understand and consider, both in terms of customers current data and how they want to use it, in other words what steps do we need to take before we start a new project.  So prior to start setting up infratstructure and doing work in Sesam we need to have a plan, or a data modell showing how data flows from which systems, how it needs to be connected and transformed and which systems will receive data.
 
 Before we dive straight into data and dataflows we have to take a step back consider the following; there are a few risks that can affect the timeline of the pilot pr project phase, where both start date and end date can be delayed:
@@ -34,6 +29,7 @@ Summary
 
 Data modelling in Sesam isn't so much about connecting data together by their relations as it is about connecting them by what they represent. A good data model in Sesam hence relies much about having a good knowledge of the data that are read into Sesam and what they represent, in other words what they are. 
 
+ :doc:`entity data model <entitymodel>`
 Short glossary of terms used in this document:
 •   :ref:`pipe <concepts-pipes>`: in Sesam terms this is the component that makes sure that data flows from a source to a target at defined intervals.
 •   Inbound pipe: this is used to refer to pipes that reads from an external system and writes the data to a dataset in Sesam.
@@ -136,7 +132,7 @@ Adding global properties does not mean that you have to create a golden record, 
 Enhancing global datasets with data from other datasets
 =======================================================
 
-This point is quite similar to the above point, with the only difference being that you create global properties by making a :ref:`hops <hops_function>` to another dataset (preferably global). 
+This point is quite similar to the above point, with the only difference being that you create global properties by making a `hops <https://docs.sesam.io/DTLReferenceGuide.html#hops>`_ to another dataset (preferably global).   
 
 When modelling your global dataset and seeing the need to create a global property using hops, it is one thing you need to be aware of. Dependency tracking does not work for hops made in a “merge”-pipe. This means that you have to split the global pipe into two separate pipes. One pipe that contains the merge rules and does the merging, this pipe should be given the “merged-“ prefix. The second pipe should have the merged dataset as source and contain the DTL transformations, this should be the global pipe.
 
@@ -154,5 +150,14 @@ For example, let us say we have two datasets or tables, ‘employee and ‘child
 What you are trying to accomplish, is to have a set of global datasets that the preparation pipes can choose from, like food items grouped together in a supermarket to easily locate the food items you need. On the other hand, you don’t want the number of global datasets to grow out of hand, making it hard to find.
 
 Start by analyzing the sources and data to determine the needs of the organization. This will have an impact on the data model and more specifically how the global datasets will be organized. It is here the organization needs to think: what is important to me? What data do I use often, and therefore needs to be easily available? The results vary for each organization and each data model.
+
+Sesam as masterdata hub in a larger archtecture
+-----------------------------------------------
+
+Azure
+=====
+
+Google
+======
 
 
