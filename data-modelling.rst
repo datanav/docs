@@ -43,7 +43,7 @@ Following the above mentioned principles when importing data and creating global
 
 To read about the main concepts and how to get started in Sesam, please click :ref:`here <getting-started-glossary>`.
 
-.. _best-practice-global:
+.. data-modelling-global:
 
 Global datasets
 ---------------
@@ -149,7 +149,7 @@ Global datasets will most likely grow and become large. If the configuration or 
 
 As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, the company is required to store as well, the total data objects sum up to 30 000 000. One way of managing this large data amount is to divide the data into different global datasets. In this case, the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
 
-.. _best-practice-namespace:
+.. _data-modelling-namespace:
 
 Namespace and namespaced identifiers
 ------------------------------------
@@ -168,7 +168,7 @@ E.g.
 
   "hr-person:ssn"
 
-.. _best-practice-namespaced-identifiers:
+.. _data-modelling-namespaced-identifiers:
 
 Namespaced identifiers
 ======================
@@ -288,10 +288,7 @@ Output from the example code above as seen below with a join to hr-system:
 
    </details>
 
-
-.. _best-practice-naming:
-
-.. _best-practice-naming-conventions:
+.. _data-modelling-naming-conventions:
 
 Naming conventions
 ------------------
@@ -325,7 +322,7 @@ Datasets
 
 • name them the same as the pipe that produced it (the default and does not need to be specified)
 
-.. _best-practice-workflow:
+.. _data-modelling-workflow:
 
 Workflow for transforming data in Sesam
 ---------------------------------------
@@ -367,7 +364,7 @@ The main reason for why **outbound pipes** shouldn't contain any logic or transf
     :align: center
     :alt: Generic pipe concept  
 
-.. _best-practice-Inbound pipes:
+.. _data-modelling-Inbound pipes:
 
 Inbound pipes
 =============
@@ -508,7 +505,7 @@ The corresponding env variable are used in the condition property in the pipe. I
 
 
 
-.. _best-practice_-rdf type:
+.. _data-modelling-rdf type:
 
 RDF type  
 ^^^^^^^^
@@ -520,7 +517,7 @@ Namespaces
 
 The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
 
-.. _best-practice-Global pipes:
+.. _data-modelling-Global pipes:
 
 Global pipes
 ============
@@ -817,7 +814,7 @@ The result from the address-hr pipe with the input from the global-person exampl
   }
 
 
-.. _best-practice-output-pipes:
+.. _data-modelling-output-pipes:
 
 Outbound pipes 
 ==============
