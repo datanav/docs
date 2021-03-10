@@ -11,12 +11,11 @@ an object across a variety of source systems in a continuously updated
 and dynamic `data model <https://en.wikipedia.org/wiki/Data_model>`_,
 and makes the data easily accessible inside the data platform.
 
-Sesam has
-a set of fundamental principles to ensure that the capture,
-exploitation, and management of master data will be as fast and
-efficient as possible. Together, these principles ensure continuously
-updated master data, with high data quality, that can be effectively
-managed over time.
+Sesam has a set of fundamental principles to ensure that the capture,
+exploitation, and management of master data in data platform solutions
+will be as fast and efficient as possible. Together, these principles 
+ensure continuously updated master data, with high data quality, that 
+can be effectively managed over time.
 
 Master data is any structured data that changes, not just the most central data
 ===============================================================================
@@ -56,12 +55,21 @@ architecture. <https://en.wikipedia.org/wiki/Service-oriented_architecture>`_
 
 The "simple" solution is to agree on one a single data model for each
 object type, a so-called `canonical
-model <https://en.wikipedia.org/wiki/Canonical_model>`_, that
-represents everything you will ever need, in all systems, forever. This
-is a utopia on which many businesses have wasted enormous resources,
+model <https://en.wikipedia.org/wiki/Canonical_model>`_, that ideally
+represents a standardized superset everything you will ever need, from 
+all systems. 
+While this may be a requirement in a message-based integration
+architecture, and is a truly valubale in a industry-wide data 
+`interoperability <https://en.wikipedia.org/wiki/Interoperability>`_ 
+scenario, in a data platform the canonical model becomes a constant burden 
+demanding continual enhansement and expansion over time. The result becomes a 
+datamodel that fits none of the source systems, and allways lags behind 
+the continously evolving needs of the platform.
+
+Many businesses have wasted enormous resources on a utopia of a stable canonical model,
 only to realize that it is not possible. An ideal model does not exist,
-and one must realize that the given data model will always be a
-perspective of the object one wants to describe, not an objective truth.
+and one must realize that any given data model will always be a
+perspective of the object one wants to describe, not an objective and lasting truth.
 
 In Sesam, we solve this fundamental problem in the diametrically
 opposite way: We collect all the different representations of an object,
@@ -74,8 +82,10 @@ data object becomes available, in all its different perspectives, as a
 single resource. This makes it easy to continuously develop the platform-wide,
 domain-wide, or functionality-wide data models needed in the data
 platform. The composite object representation linking all the different
-representations across systems is stored as a single object in global
-datasets. The representation is stored in a standard
+representations across systems is stored as a single object in :ref:`global 
+datasets <concepts-global-datasets>`. 
+
+The representation is stored in a standard
 `JSON <https://en.wikipedia.org/wiki/JSON>`_ based format, and
 continuously updated with data from all source systems. The complete
 object is stored in one global dataset only, and in a single data
@@ -96,25 +106,29 @@ The master data
 will need to be compiled from a set of business systems that are
 constantly changing, both in the case of new versions of a system,
 and in the case or replacing them with new systems. To effectively
-manage a data platform, it is essential that the business systems
+manage a data platform, and make it fast and easy 
+to use best-of-breed business systems  `out-of-the-box 
+<https://en.wikipedia.org/wiki/Out_of_the_box_(feature)>`_, 
+it is essential that the business systems
 and data platform are as loosely coupled as possible. 
 
-Sesam does not
-require any modifications in the business systems, but instead can
-collect and share data in the form that each system supports, through
-mechanisms for which the systems were built. Whether the business
-system communicates via REST API, SOAP, XML, CSV, SQL or any other
-communication form or format is irelevant. If there is structured
-data, Sesam will be able to receive and return data in the subject
-system's own format and data model. 
+Sesam does not require any modifications in the business systems, but 
+instead each system talk in their own language, meaning they can collect and 
+share data in the form that the system supports, through mechanisms for 
+which the systems were built. Whether the business system communicates via 
+REST API, SOAP, XML, CSV, SQL or any other communication form or format 
+is irelevant. If there is structured data, Sesam will be able to talk to
+every system in their own language. 
 
-In Sesam all data is transformed into a JSON based
+Internaly in Sesam all data is transformed into a 
+:ref:`extended <concepts-transit-encoding>` JSON based
 data format, but retains its original data model. This is essential to
 not degrade the quality of the data. Any conversion from one data model
 to another will mean a reduction in data quality.
 
 In Sesam, the original
-data model will be retained in addition to the origin of the data, and
+data model will be retained in addition to the origin of the data by 
+using :ref:`namespaces <best-practice-namespace>`, and
 thus the context in which they were created is retained as part of the
 data format. It ensures that data is not lost in the transmission from
 business system to data platform.
@@ -194,9 +208,9 @@ configuration so that it knows every single object affected by any
 change. Even the construction of complex composite data objects across a 
 multitude of source systems with advanced dependencies, is automaticaly
 change tracked by the Sesam engine.
-This is a prerequisite for being able to stream compound objects
-without having to ETL the entire dataset each time updated data is
-needed.
+This non trivial requirement is a prerequisite for being able to stream 
+compound objects without having to ETL the entire dataset each time updated 
+data is needed.
 
 Standardize master data management, don’t hide it in code
 =========================================================
@@ -224,15 +238,16 @@ transparent, you can never trust its quality.
 
 In Sesam every part of the dataflow, storage and management is highly
 standardized and defined declaratively. There is no code, only
-structured configuration, stored as data, which instructs the platform
+structured :ref:`configuration <concepts-config>`, stored as data, 
+which instructs the platform
 how to collect data, how to connect and enrich them, and how to share
 them. This makes the master data management completely transparent, and
 even the most complicated dataflow self-documented. All data can be
 traced back to its origin, inspected at any point in a flow, and the
 data quality completely trustworthy.
 
-Implementation details
-======================
+Detailed implementation principles
+==================================
 
 1. Sesam should pull data in, and push data out, if possible
 
