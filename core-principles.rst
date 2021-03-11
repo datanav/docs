@@ -62,8 +62,8 @@ While this may be a requirement in a message-based integration
 architecture, and is a truly valubale in a industry-wide data 
 `interoperability <https://en.wikipedia.org/wiki/Interoperability>`_ 
 scenario, in a data platform the canonical model becomes a constant burden 
-demanding continual enhansement and expansion over time. The result becomes a 
-datamodel that fits none of the source systems, and allways lags behind 
+demanding continual enhancement and expansion over time. The result becomes a 
+datamodel that fits none of the source systems, and always lags behind 
 the continously evolving needs of the platform.
 
 Many businesses have wasted enormous resources on a utopia of a stable canonical model,
@@ -117,10 +117,10 @@ instead each system talk in their own language, meaning they can collect and
 share data in the form that the system supports, through mechanisms for 
 which the systems were built. Whether the business system communicates via 
 REST API, SOAP, XML, CSV, SQL or any other communication form or format 
-is irelevant. If there is structured data, Sesam will be able to talk to
+is irrelevant. If there is structured data, Sesam will be able to talk to
 every system in their own language. 
 
-Internaly in Sesam all data is transformed into a 
+Internally in Sesam all data is transformed into a 
 :ref:`extended <concepts-transit-encoding>` JSON based
 data format, but retains its original data model. This is essential to
 not degrade the quality of the data. Any conversion from one data model
