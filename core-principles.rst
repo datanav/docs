@@ -246,24 +246,3 @@ even the most complicated dataflow self-documented. All data can be
 traced back to its origin, inspected at any point in a flow, and the
 data quality completely trustworthy.
 
-Detailed implementation principles
-==================================
-
-1. Sesam should pull data in, and push data out, if possible
-
-2. All data in Sesam must have namespaced properties and IDs
-
-3. All references between data objects should be stored as namespaced identifiers (NIs)
-
-4. All incoming raw data must flow directly into a global dataset,
-   except if it needs to be split into several objects
-
-5. No modifications should be done to the raw data, only additions
-
-6. No object should be stored in more than one global dataset
-
-7. No object IDs must exist in more than one global dataset
-
-8. Never hop to anything but a global dataset
-
-9. All outgoing dataflows must start from a global dataset
