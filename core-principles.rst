@@ -17,8 +17,7 @@ will be as fast and efficient as possible. Together, these principles
 ensure continuously updated master data, with high data quality, that 
 can be effectively managed over time.
 
-Master data is any structured data that changes, not just the most central data
-===============================================================================
+.. rubric:: Master data is any structured data that changes, not just the most central data
 
 The definition of `master
 data <https://en.wikipedia.org/wiki/Master_data>`_ is "Data that
@@ -43,8 +42,7 @@ series. Examples of master data slightly outside the usual definition
 are: order and invoice information, work orders, timesheet, document
 metadata, as well as any type of category.
 
-Parallel and continuously function-adapted data models, not static and canonical
-================================================================================
+.. rubric:: Parallel and continuously function-adapted data models, not static and canonical
 
 The biggest challenge for data quality is that each system in a
 composite architecture has different representations of the same object.
@@ -93,8 +91,7 @@ format. However, the data models describing the object can be
 continuously enhanced, based on the development of the source systems,
 and driven by the functional needs at any time.
 
-Adapt your data platform to the business systems, not the other way around
-==========================================================================
+.. rubric:: Adapt your data platform to the business systems, not the other way around
 
 A data platform exists to collect data from different systems and share
 this data in a consistent manner, to make it easier to retrieve the
@@ -133,8 +130,7 @@ thus the context in which they were created is retained as part of the
 data format. It ensures that data is not lost in the transmission from
 business system to data platform.
 
-Synchronize the data, don't let it flow only in one direction
-=============================================================
+.. rubric:: Synchronize the data, don't let it flow only in one direction
 
 Any system that is the source of master data needs to continuously keep
 their data up to date. These data updates do not have to come through
@@ -157,8 +153,7 @@ all systems where semantically equal properties about the same object
 exist, the data will be coordinated to achieve consistency on all
 levels.
 
-Build autonomous services, avoid dependencies, and tight coupling
-=================================================================
+.. rubric:: Build autonomous services, avoid dependencies, and tight coupling
 
 Just as a common data model can't meet all needs, one data access point
 isn't effective to cover a wide range of data-driven services. The most
@@ -177,8 +172,7 @@ business systems. Regardless of the optimal store for a service, whether
 it's SQL-based, search-index-based, NoSQL-based, graph-based, or using
 special tools such as Firebase, Qlik, Tableau, etc.
 
-Stream changes to master data, don't use slow and resource intensive ETL
-========================================================================
+.. rubric:: Stream changes to master data, don't use slow and resource intensive ETL
 
 Traditional data platform architecture is often based on `ETL
 <https://en.wikipedia.org/wiki/Extract,_transform,_load>`_ to retrieve
@@ -212,8 +206,7 @@ This non trivial requirement is a prerequisite for being able to stream
 compound objects without having to ETL the entire dataset each time updated 
 data is needed.
 
-Standardize master data management, don’t hide it in code
-=========================================================
+.. rubric:: Standardize master data management, don’t hide it in code
 
 The complexity of a data platform is increasing for every system and
 data type you add to it, and the chance of losing control becomes
