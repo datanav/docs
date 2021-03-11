@@ -77,6 +77,8 @@ The :ref:`dataset source <dataset_source>` exposes the entities from the dataset
     :align: center
     :alt: Dataset structure
 
+.. _concepts-config:
+
 Configuration
 -------------
 
@@ -264,7 +266,7 @@ A namespaced identifier is a unique reference to an abstract thing. It is an ide
 Global datasets
 ===============
 
-The use of global datasets is described in depth in the :ref:`Best Practice <best-practice-global>` document. The idea is to have one go-to dataset to find data about a specific type of data. A global dataset typically co-locates and :ref:`merges <concepts-merging>` data from many different sources.
+The use of global datasets is described in depth in the :ref:`Best Practice <best-practice-global>` document. The principle is to have one go-to dataset to find data about a specific type of data. A global dataset typically co-locates and :ref:`merges <concepts-merging>` data from many different sources.
 
 .. _concepts-merging:
 
