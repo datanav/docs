@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_03_12:
+
+2021-03-12
+----------
+
+* Notification status changes on `Status page <https://status.sesam.no>`_ is now fully automated.
+
 .. _changelog_2021_03_05:
 
 2021-03-05
