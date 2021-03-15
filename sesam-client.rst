@@ -21,6 +21,8 @@ The Sesam client allows us to, in a quick and easy manner, to run new DTL config
 
 As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
 
+Sesam only supports the latest version of the client at any given time. 
+
 How to use the Sesam client
 ===========================
 
