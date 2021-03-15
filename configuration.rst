@@ -3252,6 +3252,8 @@ configuration, which is omitted here for brevity.
         },
     }
 
+.. _rest_source:
+
 The REST source (experimental)
 ------------------------------
 
@@ -3317,7 +3319,7 @@ Properties
      - The properties mapping used as default values for the emitted entitites. Note that if both are present the
        properties in the emitted entity takes precendence. Also note that this property can be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-precendence if defined.
+       precendence if defined.
      -
      -
 
@@ -3325,7 +3327,7 @@ precendence if defined.
      - Object, string or array
      - The value to use as payload for the operation. Note that this property can be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-precendence if defined.
+       precendence if defined.
      -
      -
 
@@ -3362,19 +3364,31 @@ See the section on :ref:`continuation support <continuation_support>` for more i
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 80
+   :widths: 10, 10, 60, 10, 3
 
    * - Property
-     - Value
+     - Type
+     - Description
+     - Default
+     - Req
 
    * - ``supports_since``
+     - Boolean
+     -
      - ``false``
+     -
 
    * - ``is_since_comparable``
+     - Boolean
+     -
      - ``true``
+     -
 
    * - ``is_chronological``
+     - Boolean
+     -
      - ``false``
+     -
 
    * - ``updated_property``
      - String
@@ -3393,9 +3407,9 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
        set to ``true``. See ``since_property_location`` and ``updated_property`` as well. Note that this
        property can alternatively be defined in the specified ``operation`` section of the
-        :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
+       :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
      -
-     - ``"since"``
+     -
 
    * - ``since_property_location``
      - String
@@ -3404,7 +3418,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
        ``updated_property`` as well. Note that this property can alternatively be defined in the specified ``operation``
        section of the :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
      -
-     - ``"since"``
+     -
 
 
 
@@ -3451,6 +3465,7 @@ Configuration for REST source:
 Example response entities:
 
 ::
+
     {
         "result": [
             {
@@ -3527,6 +3542,7 @@ Configuration for REST source:
 Example response entities:
 
 ::
+
     {
         "result": [
             {
@@ -3554,6 +3570,7 @@ Configuration for REST system:
 In this case we add a JINJA template to extract the pagination link so we can parse all pages of the response:
 
 ::
+
     {
         "_id": "our-rest-service",
         "name": "Our REST service",
@@ -3586,10 +3603,10 @@ Example response from a service that supports pagination in the header as per th
 
 ::
 
-Headers:
+    Headers:
 
-Content-Type: application/json
-Link: <?page=1>; rel="prev", <?page=3>; rel="next"
+    Content-Type: application/json
+    Link: <?page=1>; rel="prev", <?page=3>; rel="next"
 
     [
         {
@@ -3611,6 +3628,7 @@ In this case we add a JINJA template to extract the pagination link from the rep
 all pages of the response:
 
 ::
+
     {
         "_id": "our-rest-service",
         "name": "Our REST service",
@@ -8522,8 +8540,8 @@ A operation configuration looks like:
        property can be defined in the :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
        precendence if both are defined.
-     -
      - ``"since"``
+     -
 
    * - ``since_property_location``
      - String
@@ -8532,8 +8550,8 @@ A operation configuration looks like:
        ``updated_property`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
        configuration as well. It will be ignored by the :ref:`REST transform <rest_transform>` and
        :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
+     - ``"query"``
      -
-     - ``"since"``
 
 
 .. _rest_system_example:
