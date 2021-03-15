@@ -3562,7 +3562,7 @@ In this case we add a JINJA template to extract the pagination link so we can pa
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link: "{{ paging.next }}"
+                "next_page_link: "{{ pagination.next }}"
                 "method": "GET"
             }
     }
