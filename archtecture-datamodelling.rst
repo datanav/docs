@@ -9,9 +9,9 @@ Data modelling
 Introduction
 ------------
 
-This document introduces what we need to understand and consider, both in terms of customers current data and how they want to use it, in other words what steps do we need to take before we start a new project.  So prior to start setting up infratstructure and doing work in Sesam we need to have a plan, or a data modell showing how data flows from which systems, how it needs to be connected and transformed and which systems will receive data.
+This document introduces what we need to understand and consider before starting on a new project for a customer. So prior to start setting up infrastructure and doing work in Sesam we need to have a plan, or a data model showing how data flows from which systems, how it needs to be connected and transformed and which systems will receive data.
 
-Before we dive straight into data and dataflows we have to take a step back consider the following; there are a few risks that can affect the timeline of the pilot pr project phase, where both start date and end date can be delayed:
+Before we dive straight into data and dataflows we have to take a step back consider the following: there are a few risks that can affect the timeline of the pilot pr project phase, where both start date and end date can be delayed:
 
 • Clear scope of understanding of a pilot
 • Appointment of a Project Manager by a customer
@@ -19,7 +19,7 @@ Before we dive straight into data and dataflows we have to take a step back cons
 • Scope and specifications of integrations 
 • Understanding of Sesam MasterData HUB
 
-This is not a project management document so we will not spend a lot of tie on this, but it is important to bear these points in mind. 
+This is not a project management document so we will not spend a lot of time on this, but it is important to bear these points in mind. 
 
 Data modelling in Sesam
 -----------------------
@@ -30,11 +30,11 @@ Summary
 Data modelling in Sesam isn't so much about connecting data together by their relations as it is about connecting them by what they represent. A good data model in Sesam hence relies much about having a good knowledge of the data that are read into Sesam and what they represent, in other words what they are. 
 
 Short glossary of terms used in this document:
-• :ref:`pipe <concepts-pipes>`: in Sesam terms this is the component that makes sure that data flows from a source to a target at defined intervals.
-• Inbound pipe this is used to refer to pipes that reads from an external system and writes the data to a dataset in Sesam.
-• Global pipe: this refer to datasets containing global data for reuse throughout the Sesam instance, see description of global datasets below.
-• Preparation pipe: this is a pipe that creates the data that will be sent to an external system.
-• Outbound pipe: this is used to refer to pipes that reads data from Sesam and sends them to an external system.
+- :ref:`pipe <concepts-pipes>`: in Sesam terms this is the component that makes sure that data flows from a source to a target at defined intervals.
+- Inbound pipe this is used to refer to pipes that reads from an external system and writes the data to a dataset in Sesam.
+- Global pipe: this refers to datasets containing global data for reuse throughout the Sesam instance, see description of global datasets below.
+- Preparation pipe: this is a pipe that creates the data that will be sent to an external system.
+- Outbound pipe: this is used to refer to pipes that reads data from Sesam and sends them to an external system.
 
 .. _datamodelling-Global datasets:
 
@@ -59,7 +59,7 @@ Inbound pipes / datasets
 Typically when modelling :ref:`an inbound pipe <data-modelling-Inbound pipes>`, you will do an analysis of the data. From the result of the analysis you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
 
  • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <data-modelling-namespace>`. These references are usually key properties when semantically link data together in a global dataset but are also useful when connecting data in preparation pipes.
- •  :ref:`An RDF type <best-practice_-rdf type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets or in :ref:`hops <hops_function>` to other datasets.
+ •  :ref:`An RDF type <best-practice_-rdf type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
  •  **A combination of fields**: a dataset may at times contain data that when combined can form a fuller understanding of the field, like a combination of first name and surname will give the full name of a person. This is especially important if a combination of fields may be a reference to another dataset.
 
  However, in general, try to keep the inbound data from a data source as untouched and close to its original representation as possible.
