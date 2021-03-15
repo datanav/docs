@@ -8345,8 +8345,7 @@ Prototype
                 "payload_property": "result",
                 "response_property": "response",
                 "since_property_name": "updated",
-                "since_property_location": "query",
-                "since_property_location": "query",
+                "since_property_location": "query|header"
             },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
