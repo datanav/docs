@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_03_15:
+
+2021-03-15
+----------
+
+* Added experimental :ref:`REST source <rest_source>`. This source is intended to be able to replace some of the connectors that currently require Microservices.
+
 .. _changelog_2021_03_12:
 
 2021-03-12

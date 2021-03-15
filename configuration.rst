@@ -3252,6 +3252,392 @@ configuration, which is omitted here for brevity.
         },
     }
 
+The REST source (experimental)
+------------------------------
+
+This is a data source that can communicate with a REST service that produce JSON output using HTTP requests.
+The REST source supports both pagination as part of the reponse body or pagination in the form of header properties
+after the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ . It optionally supports continuation both as
+a query parameter or as header property.
+
+Note that the REST source is still under development and might change configuration format while it's marked
+as "experimental".
+
+Prototype
+^^^^^^^^^
+
+::
+
+    {
+        "type": "rest",
+        "system" : "rest-system",
+        "operation": "the-default-operation",
+        "properties": {
+           "the-default": "properties"
+        },
+        "payload": {
+           "the-default": "payload"
+        },
+        "response_property": "the-property-name-to-put-the-reponse-in",
+        "payload_property": "the-property-the-response-resides-in",
+        "id_property": "{{ jinja_expression_for_the_id.property }}",
+        "updated_property": "{{ jinja_expression_for_the_updated_property }}",
+        "since_property_name": "name-of-since-property",
+        "since_property_location": "where-to-put-since-param"
+    }
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+
+   * - ``system``
+     - String
+     - The id of the :ref:`REST system <rest_system>` to use.
+     -
+     - Yes
+
+   * - ``operation``
+     - String
+     - The id of the operation to use.
+     -
+     - Yes
+
+   * - ``properties``
+     - Object
+     - The properties mapping used as default values for the emitted entitites. Note that if both are present the
+       properties in the emitted entity takes precendence. Also note that this property can be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
+precendence if defined.
+     -
+     -
+
+   * - ``payload``
+     - Object, string or array
+     - The value to use as payload for the operation. Note that this property can be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
+precendence if defined.
+     -
+     -
+
+   * - ``response_property``
+     - String
+     - The name of the property to put the response in when emitting entities. Note that this property can be defined
+       in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
+       will take precendence if defined.
+     -
+     -
+
+   * - ``payload_property``
+     - String
+     - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
+       defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source
+       configuration will take precendence if defined.
+     -
+     -
+
+   * - ``id_property``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_id`` properties to the emitted
+       entities if missing from the source system. Note that this property can be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
+       precendence if defined.
+     -
+     -
+
+Continuation support
+^^^^^^^^^^^^^^^^^^^^
+
+See the section on :ref:`continuation support <continuation_support>` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 80
+
+   * - Property
+     - Value
+
+   * - ``supports_since``
+     - ``false``
+
+   * - ``is_since_comparable``
+     - ``true``
+
+   * - ``is_chronological``
+     - ``false``
+
+   * - ``updated_property``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
+       entities if missing from the source system (for continuation support). This is only relevant if
+       ``since_support`` as been set to ``true``. See the ``since_property_name`` and ``since_property_location``
+       configuration properties as well. Note that this property can alternatively be defined in the specified
+       ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precendence
+       if defined.
+     -
+     -
+
+   * - ``since_property_name``
+     - String
+     - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
+       set to ``true``. See ``since_property_location`` and ``updated_property`` as well. Note that this
+       property can alternatively be defined in the specified ``operation`` section of the
+        :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
+     -
+     - ``"since"``
+
+   * - ``since_property_location``
+     - String
+     - A enumeration of "query" and "header". The location property to relay continuation information.
+       This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
+       ``updated_property`` as well. Note that this property can alternatively be defined in the specified ``operation``
+       section of the :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
+     -
+     - ``"since"``
+
+
+
+Example configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+See the :ref:`REST system example <rest_system_example>` section for how to configure the operations we refer to in
+these examples:
+
+Example response entities:
+
+::
+
+    [
+        {
+            "_id": "john",
+            "name": "John",
+            "age": 21,
+            "sex": "M"
+        },
+        {
+            "_id": "bob",
+            "name": "Bob",
+            "age": 44,
+            "sex": "M"
+        }
+    ]
+
+
+Configuration for REST source:
+
+::
+
+    {
+        "type" : "pipe",
+        "source" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+            "operation": "get-men"
+        }
+    }
+
+
+Example response entities:
+
+::
+    {
+        "result": [
+            {
+                "_id": "john",
+                "name": "John",
+                "age": 21,
+                "sex": "M"
+            },
+            {
+                "_id": "bob",
+                "name": "Bob",
+                "age": 44,
+                "sex": "M"
+            }
+        ]
+    }
+
+
+Configuration for REST source:
+
+::
+
+    {
+        "type" : "pipe",
+        "source" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+            "operation": "get-men",
+            "payload_property": "result"
+        }
+    }
+
+
+Example response entities:
+
+::
+
+    [
+        {
+            "id": "john",
+            "seq": 0,
+            "name": "John",
+            "age": 21,
+            "sex": "M"
+        },
+        {
+            "id": "bob",
+            "seq": 1,
+            "name": "Bob",
+            "age": 44,
+            "sex": "M"
+        }
+    ]
+
+
+Configuration for REST source:
+
+::
+
+    {
+        "type" : "pipe",
+        "source" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+            "operation": "get-men"
+            "id_property" : "{{ id }}"
+            "updated_property" : "{{ seq }}",
+            "since_support": true,
+            "is_chronological": true,
+            "is_since_comparable": true
+        }
+    }
+
+Example response entities:
+
+::
+    {
+        "result": [
+            {
+                "_id": "john",
+                "name": "John",
+                "age": 21,
+                "sex": "M"
+            },
+            {
+                "_id": "bob",
+                "name": "Bob",
+                "age": 44,
+                "sex": "M"
+            }
+        ],
+        "pagination": {
+            "next": "?page=3,
+            "prev": "?page=1
+        }
+    }
+
+
+Configuration for REST system:
+
+In this case we add a JINJA template to extract the pagination link so we can parse all pages of the response:
+
+::
+    {
+        "_id": "our-rest-service",
+        "name": "Our REST service",
+        "url_pattern": "http://our.domain.com/api/%s",
+        "type": "system:rest",
+        "operations": {
+            "get-men": {
+                "url" : "men/{{ properties.collection_name }}/",
+                "next_page_link: "{{ paging.next }}"
+                "method": "GET"
+            }
+    }
+
+
+Configuration for REST source is the same as previously:
+
+::
+
+    {
+        "type" : "pipe",
+        "source" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+            "operation": "get-men",
+            "payload_property": "result"
+        }
+    }
+
+Example response from a service that supports pagination in the header as per the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ .
+
+::
+
+Headers:
+
+Content-Type: application/json
+Link: <?page=1>; rel="prev", <?page=3>; rel="next"
+
+    [
+        {
+            "_id": "john",
+            "name": "John",
+            "age": 21,
+            "sex": "M"
+        },
+        {
+            "_id": "bob",
+            "name": "Bob",
+            "age": 44,
+            "sex": "M"
+        }
+    ]
+
+
+In this case we add a JINJA template to extract the pagination link from the reponse header so we can parse
+all pages of the response:
+
+::
+    {
+        "_id": "our-rest-service",
+        "name": "Our REST service",
+        "url_pattern": "http://our.domain.com/api/%s",
+        "type": "system:rest",
+        "operations": {
+            "get-men": {
+                "url" : "men/{{ properties.collection_name }}/",
+                "next_page_link: "{{ headers.Link.next }}"
+                "method": "GET"
+            }
+    }
+
+Configuration for REST source is unchanged:
+
+::
+
+    {
+        "type" : "pipe",
+        "source" : {
+            "type" : "rest",
+            "system" : "our-rest-service",
+            "operation": "get-men"
+        }
+    }
+
+
 
 .. _transform_section:
 
@@ -7952,7 +8338,15 @@ Prototype
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
-                "method": "GET"
+                "method": "GET",
+                "next_page_link": {{ pagination.next }},
+                "id_property": {{ id }},
+                "updated_property": {{ updated }},
+                "payload_property": "result",
+                "response_property": "response",
+                "since_property_name": "updated",
+                "since_property_location": "query",
+                "since_property_location": "query",
             },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -8063,6 +8457,85 @@ A operation configuration looks like:
      -
      -
 
+   * - ``properties``
+     - Object
+     - The properties mapping used as default values for the emitted entitites. Note that if both are present the
+       properties in the emitted entity takes precendence. Also note that this property can be defined in the
+       :ref:`REST source <rest_source>`, :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`
+       configuration as well. The configuration in pipes will take precendence if both are defined.
+     -
+     -
+
+   * - ``payload``
+     - Object, string or array
+     - The value to use as payload for the operation. Note that if both are present the
+       properties in the processed entity takes precendence. Also note that this property can be defined
+       in the :ref:`REST source <rest_source>`, :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`
+       configuration as well. The configuration in pipes will take precendence if both are defined.
+     -
+     -
+
+   * - ``response_property``
+     - String
+     - The name of the property to put the response in when emitting entities. Note that this property can be defined
+       in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well.
+       The configuration in pipes will take precendence if both are defined.
+     -
+     -
+
+   * - ``payload_property``
+     - String
+     - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
+       defined in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as
+       well. It will be ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence
+       if both are defined.
+     -
+     -
+
+   * - ``id_property``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_id`` properties to the emitted
+       entities if missing from the source system. Note that this property can be defined in the
+       :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
+       precendence if both are defined.
+     -
+     -
+
+   * - ``updated_property``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
+       entities if missing from the source system (for continuation support). This is only relevant if
+       ``since_support`` as been set to ``true`` in the source. See the ``since_property_name`` and ``since_property_location``
+       configuration properties as well. Note that this property can be defined in the
+       :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
+       precendence if both are defined.
+     -
+     -
+
+   * - ``since_property_name``
+     - String
+     - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
+       set to ``true`` in the source. See ``since_property_location`` and ``updated_property`` as well. Note that this
+       property can be defined in the :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
+       precendence if both are defined.
+     -
+     - ``"since"``
+
+   * - ``since_property_location``
+     - String
+     - A enumeration of "query" and "header". The location property to relay continuation information.
+       This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
+       ``updated_property`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
+       configuration as well. It will be ignored by the :ref:`REST transform <rest_transform>` and
+       :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
+     -
+     - ``"since"``
+
 
 .. _rest_system_example:
 
@@ -8077,6 +8550,10 @@ Example configuration
         "url_pattern": "http://our.domain.com/api/%s",
         "type": "system:rest",
         "operations": {
+            "get-men": {
+                "url" : "men/{{ properties.collection_name }}/men",
+                "method": "GET"
+            },
             "get-man": {
                 "url" : "men/{{ properties.collection_name }}/{{ _id }}",
                 "method": "GET"
