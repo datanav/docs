@@ -52,8 +52,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Sesam'
-copyright = '2018, Sesam'
-author = 'Graham Moore'
+copyright = '2021 Sesam.io AS'
+author = 'The Sesam Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
