@@ -3579,7 +3579,7 @@ In this case we add a Jinja template to extract the pagination link so we can pa
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link: "{{ pagination.next }}"
+                "next_page_link": "{{ pagination.next }}"
                 "method": "GET"
             }
     }
@@ -3637,7 +3637,7 @@ all pages of the response:
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link: "{{ headers.Link.next }}"
+                "next_page_link": "{{ headers.Link.next }}"
                 "method": "GET"
             }
     }
