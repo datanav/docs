@@ -3258,7 +3258,7 @@ The REST source (experimental)
 ------------------------------
 
 This is a data source that can communicate with a REST service that produce JSON output using HTTP requests.
-The REST source supports both pagination as part of the reponse body or pagination in the form of header properties
+The REST source supports both pagination as part of the response body or pagination in the form of header properties
 after the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ . It optionally supports continuation both as
 a query parameter or as header property.
 
@@ -3280,7 +3280,7 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
-        "response_property": "the-property-name-to-put-the-reponse-in",
+        "response_property": "the-property-name-to-put-the-response-in",
         "payload_property": "the-property-the-response-resides-in",
         "id_property": "{{ jinja_expression_for_the_id.property }}",
         "updated_property": "{{ jinja_expression_for_the_updated_property }}",
@@ -3579,7 +3579,7 @@ In this case we add a Jinja template to extract the pagination link so we can pa
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link: "{{ pagination.next }}"
+                "next_page_link": "{{ pagination.next }}"
                 "method": "GET"
             }
     }
@@ -3637,7 +3637,7 @@ all pages of the response:
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link: "{{ headers.Link.next }}"
+                "next_page_link": "{{ headers.Link.next }}"
                 "method": "GET"
             }
     }
