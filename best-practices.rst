@@ -7,4 +7,5 @@ Best Practices
 
    Data modelling in Sesam <data-modelling>
    Working on a Sesam project <project-workflow>
+   Sesam in Microsoft Azure <azure>
 
