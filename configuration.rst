@@ -3559,15 +3559,15 @@ Example response entities:
             }
         ],
         "pagination": {
-            "next": "?page=3,
-            "prev": "?page=1
+            "next": "?page=3",
+            "prev": "?page=1"
         }
     }
 
 
 Configuration for REST system:
 
-In this case we add a JINJA template to extract the pagination link so we can parse all pages of the response:
+In this case we add a Jinja template to extract the pagination link so we can parse all pages of the response:
 
 ::
 
@@ -3624,7 +3624,7 @@ Example response from a service that supports pagination in the header as per th
     ]
 
 
-In this case we add a JINJA template to extract the pagination link from the reponse header so we can parse
+In this case we add a Jinja template to extract the pagination link from the reponse header so we can parse
 all pages of the response:
 
 ::
