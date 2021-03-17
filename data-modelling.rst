@@ -322,14 +322,14 @@ Datasets
 
 • name them the same as the pipe that produced it (the default and does not need to be specified)
 
-.. _data-modelling-workflow:
+.. _data-modelling-dataflow:
 
-Workflow for transforming data in Sesam
+Dataflow for transforming data in Sesam
 ---------------------------------------
 
 Most Sesam projects will have a set flow that the data goes through.
 
-The best-practice workflow follows a simple flow structure created for an optimal Sesam experience.
+The best-practice dataflow follows a simple flow structure created for an optimal Sesam experience.
 
 |
 
