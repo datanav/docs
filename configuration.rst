@@ -8161,7 +8161,7 @@ Prototype
             "client_id": "my-client-id",
             "client_secret": "$SECRET(client-secret)",
             "token_url": "https://oath2-enabled-server:port/path/to/service/for/access/token",
-            "scope": ["scope1", "scope2"]
+            "scope": ["scope1", "scope2"],
             "extra": {
                "some": "extra-params",
                "to": "include-in-token-request"
