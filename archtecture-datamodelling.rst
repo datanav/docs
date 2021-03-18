@@ -24,12 +24,56 @@ In addition there are other things to consider like can we use other components 
 
 Considerations before setting up a new Sesam project
 ----------------------------------------------------
+Testing
+=======
 
-Test environment
-================
+The best practice for testing IT systems is involve testers as earliest as possible. This will ensure that test personnel will contribute to a specification phase and figure out how they should plan and test the requirements, both functional and non-functional. And also figuring what metrics they should use.
+This is regarded as the best practice by the most common used framework within Europe and US/Canada – ISTQB. And also aligned with a commonly used framework for specifying requirement used in Europe (required by EU entities) – IREB.
+By involving test at the earliest stage, one will ensure that all tests are planned for, and will be executed efficiently. And one could avoid the time-consuming exploratory test scenario.
 
-Trond
+Another positive side-effect of early test planning, one also has to possibility to create a foundation for regression tests in later LCM stages of an IT-system. It can be executed quickly, and the process of deploying changes to the software can be more efficiently and very often can be automized. 
 
+During test planning in the specification phase one develop test cases, not test shots. Test shots are developed from test cases, but with variable input and expected output. One test case might have several test shots derived from it. Test shots can often be developed into test scripts that can be executed time after time, in system test, acceptance test and in a regression test. Sesam as APIs that support continuous testing through its CI API, and various software for automated testing can use this API. 
+
+Test Environments
+^^^^^^^^^^^^^^^^^
+
+Sesam IO AS recommend having two test environments beside the production environment and the personal unit test environment for developer (same as the developer node).
+
+Unit test
+^^^^^^^^^
+
+This is basically the developer´s node where he or she should test his newly developed feature or during development. This node is small, and one cannot expect to cover all possible test scenarios due to limitation on size of the node. This environment should contain modules and configurations, and data useful for development and personal unit test, and should not consist of other modules and configurations.
+
+System test
+^^^^^^^^^^^
+
+The first objective of a system test is not to see if a system has no errors, but to find errors. A good tester will cheer when a bug is discovered. As developers we should embrace this, it makes our software better. The second objective of a system test is to see if the system fulfills the stated requirements (the specified test cases and shots). If the test team participate in the specification phase, this will ensure that the requirements are testable and measurable. And the system test becomes efficiently for the functional test (just the test the requirements). 
+
+There will be bugs! And bugs must be fixed. But not every bug is equally important to fix. So, agree upon a classification on severity and priority beforehand (during specification). Many conflicts will be avoided. A team of fixers should also be appointed.
+Another important part of system test is security, documentation and even training – this are the non-functional aspects of a system test.
+But other non-functional test might not be possible to perform in a system test environment, either due to lack of source and target systems, size of the node and size of data in sources. And also, end-to-end value chain tests can be impossible to execute in a system test environment.
+Sesam IO AS recommend a medium sized node for a system test environment. And routines for rollback to a starting point is recommended if a system test environment should be a good testing ground for retesting features that has been flagged with a bug. If a rollback scenario is possible with test cycle, a system test environment could be fully automated. 
+
+After a developer has completed his or her unit tests, modules and configurations should be deployed to the System Test environment. 
+In a System Test environment only surrounding test system should be used if possible (in some case full production system must be used to provide useful data – especially external services).
+In a system test environment, all modules and configurations. 
+In a system test environment several test cycles are executed.
+
+At the end of a system test, a test team will often perform an exploratory test. This is ok, but it should on be perform if one has time. But in exploratory tests, unusual issues and bugs might turn up.
+
+And all test (and fixes) should be logged with an updated status in a test management system like Jira, Zephyr etc.
+
+Acceptance Test 
+^^^^^^^^^^^^^^^
+
+The environment for performing acceptance test should be equally configured as a production environment, same node size and all integrations included. And if possible populated with the same amount data.
+But the objective of an acceptance test is not to test every test case and shots that was perform during system test, but it is a good practice to perform those before telling the environment is ready for testing, just to check if all deployable are deployed correctly.
+The main purpose is to test if Sesam is fulfilling the needs of business stakeholder in an everyday work simulation. 
+The second purpose is to test if Sesam is suitable performance wise, security wise along with other application in the enterprise architecture. 
+The third objective is to test usability and documentation.
+
+After the acceptance test is completed, and Sesam is deployed to a production environment, an acceptance test environment should be maintained for regression testing when CR and later bug fixes are in need of deployment. A regression test is often necessary to be executed to avoid introducing new bugs due to CRs and fixes. This can be any part of Sesam could be affected.
 
 Data flows in Sesam
 ===================
@@ -99,10 +143,45 @@ What you are trying to accomplish, is to have a set of global datasets that the 
 Start by analyzing the sources and data to determine the needs of the organization. This will have an impact on the data model and more specifically how the global datasets will be organized. It is here the organization needs to think: what is important to me? What data do I use often, and therefore needs to be easily available? The results vary for each organization and each data model.
 
 The use of other components in Sesam projects
------------------------------------------------
+---------------------------------------------
 
 Azure
 =====
+
+Sesam with Azure components to form a data platform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: images/azure_sesam.png
+    :width: 400px
+    :align: center
+    :alt: Generic pipe concept  
+
+Sesam can be used as a master data HUB and or Data Mesh to improve data quality and data analysis in corporation with several other Azure product to create an Intelligent and ML platform for creating an architecture for state based and predictive maintenance. 
+
+Sesam is not a real-time system and cannot connect to thousands of IoT objects/sensors – so you need a system for collect data from those in real-time. However, Sesam can in retrospect (few seconds later) start to ingest, transform, enrich these data into more useful dimensions to feed DWH, ML/AI like Synapse or Thor (and other similar). 
+All systems can be sources and targets for Sesam. And like Synapse and Sesam, they can feedback on each other to improve data and analysis in both systems. Data Factory can be used as a source for Sesam to transform and enrich data and merge data from other sources to improve quality in for example Synapse Analytics or Databricks or similar software. 
+
+Sesam can also be used as a bond in an enterprise architecture consisting of multi cloud software.
+
+Scope for Sesam as a component in data platform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sesam works best being a part of the master data platform but can be used as an iPaaS in all parts of complete data platform as a component – Sesam is not the data platform for business or generic but can be a component for building such platforms to enable flows and streams of data between other components that a data platform consists of.
+
+.. image:: images/sesam_component.png
+    :width: 400px
+    :align: center
+    :alt: Generic pipe concept
+
+Sesam as a component in an ITSM platform
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sesam can also be utilized as a propagation tool in ITSM platform. If a project manager needs to add a team member to a DevOps team, Sesam can be used to retrieve data from a master and propagate authorizations needed for that particular team member across the architecture so he can perform his duties without hindrance
+
+.. image:: images/ITSM_component.png
+    :width: 400px
+    :align: center
+    :alt: Generic pipe concept
 
 Google
 ======
