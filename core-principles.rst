@@ -25,7 +25,7 @@ provides context to transactional data", but in a data platform
 architecture, the definition of transactional data is somewhat unclear.
 We therefore redefine this to be "Data that provides context to time series
 data". With `time series, <https://en.wikipedia.org/wiki/Time_series>`_
-we mean data that is captured at a given time and that never changes,
+we mean captured data that evolves over time,
 such as sensor data and log data. It gives us the following definition
 of master data in a data platform:
 
