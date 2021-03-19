@@ -4793,7 +4793,7 @@ Example output entities:
 Pagination support
 ^^^^^^^^^^^^^^^^^^
 
-See the the :ref:`REST source examples <rest_system_examples>` for how to use pagination with the REST transform -
+See the the :ref:`REST source examples <rest_source_examples>` for how to use pagination with the REST transform -
 the configuration set up is the same as with the REST source.
 
 
