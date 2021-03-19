@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2021_03_19:
+
+2021-03-19
+----------
+
+* Added support for paginated responses to the :ref:`REST transform <rest_transform>` as well.
+* The REST transform ``response-property``, ``replace-entity`` and  ``response-include-content-type`` properties has
+  been deprecated. Use ``response_property``, ``replace_entity`` and ``response_include_content_type`` instead.
+
 .. _changelog_2021_03_15:
 
 2021-03-15
