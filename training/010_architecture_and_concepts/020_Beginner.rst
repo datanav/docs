@@ -1,29 +1,12 @@
-=========================
+.. _architecture-and-concepts_beginner-1-1:
 
-Introduction
-------------
+Architecture and Concepts: Beginner
+-----------------------------------
 
-Sesam opens the door to running a data-driven business, but what is a
-data driven business and how does the journey towards it look?
+.. _different-types-of-architectures-1-1:
 
-In this chapter we will introduce you to Sesam as a way of not only
-developing but thinking. You will learn about overarching themes for
-designing integrations, the components you build with and the pitfalls
-to look out for along the way.
-
-After reading you can expect to recognize and design a data driven
-Integration of your own.
-
-Architecture
-------------
-
-What do we mean about architecture
-
-1. .. rubric:: Architecture and Concepts: Beginner
-      :name: architecture-and-concepts-beginner
-
-   1. .. rubric:: Different types of Architectures @Jonas
-         :name: different-types-of-architectures-jonas
+Different types of Architectures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When modelling data, integration architectures (IA) lay the foundation
 upon which data is shaped and structured as it moves through one system
@@ -35,7 +18,10 @@ mobility at its center.
 Albeit, before elaborating on how integration principles has undergone
 recent radical changes, you should first dive into P2P and ESB.
 
-1.1.1.1 Point-to-Point
+.. _point-to-point-1-1:
+
+Point-to-Point
+^^^^^^^^^^^^^^
 
 This kind of IA is a simple integration principle. As an example of P2P
 imagine sending a message generated in one system to a single receiver
@@ -46,9 +32,11 @@ sent? Well, in this case P2P is not your best option, and the issue of
 scalability presents itself. To illustrate how complexity can make P2P a
 non-viable option look at the below Figure 1 – Point-to-Point:
 
-|image0|
+.. figure:: ./media/Point_to_Point.png
+   :align: center
 
-Figure 1 – Point-to-Point
+   Figure 1 – Point-to-Point
+
 
 As illustrated on the right-hand side of the above figure “Complex
 integration”, you have to maintain multiple connections separately
@@ -56,7 +44,8 @@ which, in this case, will make P2P time consuming and expensive to
 manage. Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being ESB.
 
-1.1.1.2 Enterprise Service Bus
+Enterprise Service Bus
+^^^^^^^^^^^^^^^^^^^^^^
 
 The ESB is a more robust IA and plays a critical role in connecting
 diverse systems and services in a Service Oriented Architecture (SOA).
@@ -68,8 +57,11 @@ simplifying integration efforts when connecting differing applications
 that need to communicate with each other. See Figure 2 – Enterprise
 Service Bus.
 
-| |image1|
-| Figure 2 – Enterprise Service Bus
+.. figure:: ./media/Enterprise_Service_Bus.png
+   :align: center
+   :alt: Figure 2 – Enterprise Service Bus
+
+   Figure 2 – Enterprise Service Bus
 
 Taking into account the positives from using an ESB for your IA - some
 challenges still remain unresolved. Recent years transition towards more
@@ -86,9 +78,11 @@ and how modelling a data-centric ecosystem takes precedence in order to
 realize an agile meanwhile robust IA, see Figure 3 – Data Driven
 Architecture.
 
-|image2|
+.. figure:: ./media/Data_Driven_Architecture.png
+   :align: center
+   :alt: Figure 3 – Data_Driven_Architecture
 
-Figure 3 – Data Driven Architecture
+   Figure 3 – Data Driven Architecture
 
 As opposed to P2P and ESB, DDA is, respectively, scalable and agile - in
 that it does not need the “Bus” to orchestrate data flows, rather DDA
@@ -101,6 +95,8 @@ cost-effectiveness and possibilities a DDA provides. A word of caution
 however, if such guidelines are not agreed upon and followed up on, you
 risk creating a waterfall of technical depth as time goes by and these
 natural flows of data grows unhinged.
+
+.. _datahub-1-1:
 
 Datahub @Jonas
 ~~~~~~~~~~~~~~
@@ -147,15 +143,23 @@ Cons:
 
 - Does not operate in silos.
 
-4. .. rubric:: [STRIKEOUT:Sesam “sesam-world-map”?]
-      :name: sesam-sesam-world-map
+.. _sesam_world_map-1-1:
 
-5. .. rubric:: The parts of sesam @Erik
-      :name: the-parts-of-sesam-erik
+Sesam world map
+~~~~~~~~~~~~~~~
+
+
+.. _the_parts_of_sesam-1-1:
+
+The parts of sesam @Erik
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _terminology-1-1:
 
 Terminology
-
+^^^^^^^^^^^
 Systems, pipes, datasets
+
 
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
@@ -165,9 +169,13 @@ the fundamental parts which make up a Sesam integration pipeline. Figure
 1.1.5A gives you an insight into how a standard Sesam integration
 pipeline would look.
 
-|A general pipeline flow in Sesam depicting the three central parts of a
-Sesam integration, systems, pipes and datasets. The arrows symbolizes
-the direction of data flow.|
+.. figure:: ./media/Architecture_Beginner_Systems_pipes_datasets_A.png
+   :align: center
+   :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolizes the direction of data flow.
+
+   A general pipeline flow in Sesam depicting the three central parts of a
+   Sesam integration, systems, pipes and datasets. The arrows symbolizes
+   the direction of data flow.
 
 -  **Systems**: A system’s main feature is to import and export data
    into and out of the Sesam portal. They are therefore found in the
@@ -202,8 +210,10 @@ the direction of data flow.|
    entity is defined by its primary key, which is represented in Sesam
    as the value belonging to the key ‘_id’.
 
-   6. .. rubric:: The Sesam portal
-         :name: the-sesam-portal
+.. _the_sesam_portal-1-1:
+
+The Sesam portal
+~~~~~~~~~~~~~~~~
 
 Show basics of portal
 
@@ -218,8 +228,14 @@ orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
 please look [here (with a link)].
 
-When logging in to the portal you will be met with a page like figure
-1.1.6A.\ |image4|
+When logging in to the portal you will be met with a page like figure "The Sesam Portal"
+
+.. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
+   :align: center
+   :alt: The Sesam Portal
+
+   The Sesam Portal
+
 
 The cards on the Dashboard are often referred to as “subscriptions” or
 “nodes” and they represent separate instances of Sesam installations.
@@ -232,7 +248,11 @@ datasets.
 When entering the “Training Node” you will be met with the page seen in
 figure 1.1.6B.
 
-|image5|
+.. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_B.png
+   :align: center
+   :alt: Training Node Landing Page
+
+   Training Node Landing Page
 
 In this section we will only focus on the specific parts of the portal
 needed to start working with Sesam, namely the “Pipes” page and the
@@ -247,7 +267,13 @@ some of their corresponding meta-data. There are also several search and
 filter options available, which are specially handy when trying to
 located one, or a set of pipes, in a subscription with many pipes.
 
-|image6|
+
+.. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
+   :align: center
+   :alt: Sesam Node Pipe overview
+
+   Sesam Node Pipe overview
+
 
 If you now enter the pipe called “person-cmm” we can look into more of
 details regarding how you may use the portal to navigate, troubleshoot
@@ -256,7 +282,11 @@ and configure you pipes.
 Upon entering a pipe, you will by default be sent to the pipe’s “Graph”
 view, as seen in figure 1.1.6D.
 
-|image7|
+.. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_D.png
+   :align: center
+   :alt: Pipe Graph view
+
+   Pipe Graph view
 
 The graph view shows you which pipes are upstream and downstream to the
 specific pipe you have selected, and it also shows connections to
@@ -318,8 +348,11 @@ and Status.
    you are connected correctly. When connected to Microservices this tab
    displays connection status and logging provided by the Microservice.
 
-   7. .. rubric:: Working language JSON
-         :name: working-language-json
+
+.. _working-language-json-1-1:
+
+Working language JSON
+~~~~~~~~~~~~~~~~~~~~~
 
 Something general about JSON
 
@@ -327,8 +360,11 @@ JSON configuration of pipes and systems
 
 DTL also validated as JSON?
 
-Naming convention
-~~~~~~~~~~~~~~~~~
+
+.. _namegiving-conventions-1-1:
+
+Namegiving conventions
+~~~~~~~~~~~~~~~~~~~~~~
 
 How (maybe a table) to give good names to the different parts in Sesam.
 
@@ -413,11 +449,19 @@ generating the output pipe’s source dataset, only postfixed with
 The following flow shows a typical Sesam flow with each pipe’s preferred
 name with an example:
 
-|image8|
+.. figure:: ./media/Architecture_Beginner_Pipes_A.png
+   :align: center
+   :alt: Full pipe flow with globals.
 
-|image9|
+   Full pipe flow with globals.
 
-.. _systems-1:
+   .. figure:: ./media/Architecture_Beginner_Pipes_B.png
+      :align: center
+      :alt: Example of Full pipe flow with globals.
+
+      Example of Full pipe flow with globals.
+
+.. _systems-1-1:
 
 Systems
 ~~~~~~~
@@ -442,7 +486,7 @@ start and finish points of every integration flow. System may cover
 other functionalities as well, but we will cover those special cases in
 later parts [ref to later parts].
 
-.. _pipes-1:
+.. _pipes-1-1:
 
 Pipes
 ~~~~~
@@ -464,6 +508,9 @@ Namegivingconventions ref. 1.1.8
 
 Where to make new ref 1.1.6
 
+
+.. _datasets-1-1:
+
 Datasets
 ~~~~~~~~
 
@@ -477,16 +524,25 @@ Namegivingconventions ref. 1.1.8
 
 Where to make new ref 1.1.6
 
+
+.. _datasets-vs-tables-1-1:
+
 Datasets vs. tables
 ~~~~~~~~~~~~~~~~~~~
 
 Examples end ref to 1.1.13
 
-13. .. rubric:: Entities / JSON (Key-value pairs)
-       :name: entities-json-key-value-pairs
+.. _entities-json-keyvalpairs-1-1:
 
-14. .. rubric:: Globals as a concept
-       :name: globals-as-a-concept
+Entities / JSON (Key-value pairs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. _globals-as-a-concept-1-1:
+
+Globals as a concept
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Why globals
 
@@ -496,6 +552,8 @@ Gjør data tilgjengelig
 
 Ref. 1.2.19, 3.2.14
 
+.. _special-sesam-attributes-1-1:
+
 Special sesam attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -504,6 +562,9 @@ Namespace
 Rdf:type
 
 \_id
+
+
+.. _tasks-for-architecture-and-concepts-beginner-1-1:
 
 1.1 Tasks for Architecture and Concepts: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -527,167 +588,3 @@ and stored inside an entity of the output dataset?*
 vs in a Sesam Dataset?*
 
 7. *What is the minimum required to define an entity?*
-
-2. .. rubric:: Architecture and Concepts: Novice
-      :name: architecture-and-concepts-novice
-
-   16. .. rubric:: Joining Data
-          :name: joining-data
-
-The value of joining data
-
-Short overview of what data joining is
-
-1-1, 1-n, n-m
-
-17. .. rubric:: Make namespaced for foreign keys [make-ni]
-       :name: make-namespaced-for-foreign-keys-make-ni
-
-18. .. rubric:: Full Outer Join (Merge)
-       :name: full-outer-join-merge
-
-All data from input ends up in output
-
-Left Join (Hops)
-~~~~~~~~~~~~~~~~
-
-Data is appended to the output
-
-Global
-~~~~~~
-
-Golden – the best truth about common attributes of a concept collected
-from multiple sources
-
-Coalesce, prioritization of source data (master data)
-
-Generic input pipes, custom output pipes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Write about where globals fit into the bigger picture of data flows, how
-do pipes going in look and how do pipes going out look?
-
-Filter entities on the way out
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| Filter gives the ability to stop entities from being sent by providing
-  a logical gate.
-| On the other hand, it can make sure you only send the entities you
-  wish to receive in an endpoint.
-
-| Makes sure the endpoint only receives the entities they want.
-| Can stop entities from triggering events they shouldn’t trigger.
-
-| + + many examples
-| filtering on source data
-| on target data (from hops f.ex) – typical example, hop to
-  global-classification and map status, if cancelled then filter
-
-Tag your entities - Categorization of sub-concepts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Extra:type
-
-Customize data structure for endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| Sesam has transformative functions to add, remove,Copy the attributes
-  you want the end system to receive.
-| All changes to attributes you add to the target will cause an entity
-  update.
-
-Referring to namespace 1.1.15 to know property origin, rename, add, copy
-
-Change tracking & data delta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-`All entities stored inside sesam have a
-\_hash <https://docs.sesam.io/entitymodel.html?highlight=_hash>`__
-value. This is a quantification of an entity and is calculated every
-time an entity is processed by a pipe. If the \_hash value changes or is
-new, the entity will be stored as a new version in dataset. We call this
-change in \_hash value a data-delta.
-
-Any data-delta for an entity in a dataset causes downstream pipes to see
-this as a new sequence number they haven’t yet read. This in turn makes
-the pipe process the entity. If the processed entity does not exist or
-gets a new \_hash in the output of the pipe, it will cause an update to
-the output dataset.
-
-2. .. rubric:: Tasks for Architecture and Concepts: Novice
-      :name: tasks-for-architecture-and-concepts-novice
-
-3. .. rubric:: Architecture and Concepts: Intermediate
-      :name: architecture-and-concepts-intermediate
-
-   26. .. rubric:: Hops
-          :name: hops
-
-Dependency tracking
-
-Stacking av hops (dvs flere datasett)
-
-Indeksering
-
-Incremental System queries
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Dataset vs database-tabell (oppdatere data)
-
-Subset
-~~~~~~
-
-Grabbing the rdf:type or type of data you need from a global
-
-Dynamic, Static & Timeseries Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| Dynamic data = frequent updates to the same object
-| Static data = rare/never update to the same object
-| Timeseries = Frequent new entities about the same object. (f.ex \_id =
-  meterpoint & timestamp and attribute attached is reading the last
-  hour)
-
-When to use a microservice
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For everything Sesam is bad at or can’t do.
-
-1.3 Tasks for Architecture and Concepts: Intermediate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1.4 Architecture and Concepts: Advanced
----------------------------------------
-
-Choosing a source dataset for your pipe
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Do not create children based on a hop, rather read from the dataset you
-hop to.
-
-Eventual Consistency
-~~~~~~~~~~~~~~~~~~~~
-
-Dependency tracking causes reprocessing of source entity in the pipe
-with the hops.
-
-Idempotency
-
-Create Child & Emit children
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Change-tracking
-
-1.4 Tasks for Architecture and Concepts: Advanced
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Epilogue
---------
-
-Congratulations on making your way through this treacherous territory
-and finding your way out. Let’s have a quick chat about the path you’ve
-walked before moving on to greener pastures.
-
-.. _systems-2:
-
-Systems

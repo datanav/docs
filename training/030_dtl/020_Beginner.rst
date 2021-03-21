@@ -1,32 +1,12 @@
-===========================
+.. _dtl-beginner-3-1:
 
-.. _introduction-2:
+DTL: Beginner
+-------------
 
-Introduction
-------------
+.. _pipes-where-dtl-executes-3-1:
 
-What is DTL?
-~~~~~~~~~~~~
-
-Data transformation language - Programming language, mix of JSON &
-func_programming etc
-
-Why DTL?
-~~~~~~~~
-
-What problems does it solve? Why did we need to make a new programming
-language?
-
-Where is DTL used? – Can fit into 3.1.1 probably.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Where do you write it? Why only in pipes?
-
-1. .. rubric:: **DTL: Beginner**
-      :name: dtl-beginner
-
-   1. .. rubric:: **Pipes, where DTL executes** **@Morten**
-         :name: pipes-where-dtl-executes-morten
+Pipes, where DTL executes
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (Repeting 1.1.5?)
 
@@ -118,6 +98,8 @@ overview in the DTL Reference Guide. You will use this much.
 **What happens when a pipe runs?**
 
 **What is the relationship of pipes and DTL?**
+
+.. _entities-pipes-and-id-3-1:
 
 Entities, pipes and \_id @Geir Atle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -311,6 +293,8 @@ Should probably write something sensible about the connection between
 \_id and $ids somewhere. Maybe related to merge pipes? – ‘Yea, or maybe
 add it to the \_ Properties chapter’ -G
 
+.. _entity-data-model-data-types-3-1:
+
 Entity Data model – Data Types @Gabriell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -373,23 +357,25 @@ Boolean: \`true/false\`
 
 Null: \`null\`
 
+.. _syntax-3-1:
+
 Syntax
 ~~~~~~
 
--  
+-
 
-   -  
+   -
 
-      -  
-      -  
+      -
+      -
 
-   -  
+   -
 
-      -  
+      -
 
--  
+-
 
-   -  
+   -
 
 Within IT, syntax can be defined as: “the structure of statements in a
 computer language”.
@@ -671,6 +657,8 @@ Result after run:
 
 }
 
+.. _dtl-in-practice-3-1:
+
 DTL in Practice
 ~~~~~~~~~~~~~~~
 
@@ -701,8 +689,10 @@ til "Restart"
 
 -  Referer "Proessser ny data" over, vis det også.
 
-   6. .. rubric:: Pipe shortcuts
-         :name: pipe-shortcuts
+.. _pipe-shortcuts-3-1:
+
+Pipe shortcuts
+~~~~~~~~~~~~~~
 
 Preview, Ctrl + Enter
 
@@ -714,269 +704,8 @@ Find/replace
 
 Ctrl+space = Search/autocomplete
 
-1. .. rubric:: Tasks for DTL: Beginner
-      :name: tasks-for-dtl-beginner
 
-2. .. rubric:: DTL: Novice
-      :name: dtl-novice
+.. _tasks-for-dtl-beginner-3-1:
 
-   7. .. rubric:: “Copy”
-         :name: copy
-
-Explain copy, based on ref 3.1.4 above
-
-Wildcard \* [namespace:*]
-
-"Copy" whitelist, blacklist
-
-“Add”
-~~~~~
-
-Explain the add, based on ref 3.1.4 above
-
-“Concat” – Concatination
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Concatenation of strings, examples etc
-
-rdf:type
-~~~~~~~~
-
-Resource Description Framework (?) explain what it means in Sesam
-context
-
-Namespace
-~~~~~~~~~
-
-Explain namespace in \_id (value) and keys.
-
-EXAMPLESSS
-
-“Make-ni”
-~~~~~~~~~
-
-Declaraiton of foreign key in Sesam, explain /reference Namespace
-
-“Eq” – Equality
-~~~~~~~~~~~~~~~
-
-Equality for joins [n-n]
-
-Merge as a Source
-~~~~~~~~~~~~~~~~~
-
-Examples, steal from PP training, show in tables vs json, everything
-coming in goes out.
-
--  Strategy
-
--  Identidy - \_id etter merge
-
--  datasets
-
-   15. .. rubric:: Filter as a transform
-          :name: filter-as-a-transform
-
-Explain in the context of reading from global pipes
-
-Coalesce
-~~~~~~~~
-
-ref 1.2.19
-
-Nested dictionaries
-~~~~~~~~~~~~~~~~~~~
-
-As you can see in *Example 3.2.17A: Dotted Notation*, we can get
-attributes inside dictionaries by using “.”
-
-Dotted notation
-
-list of dicts can give you list of values from a single key.
-
-A: [{“foo”:1},{“foo”:2}] -> \_S.A.foo = [1,2]
-
-1. [“add”, “some-nested-attribute”,
-   “_S.somedict.some-nested-attribute”] 
-
-*Example 3.2.17A: Dotted Notation*,
-
-Apply – Custom Functions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Basic, bare bruk på data fra \_S, forklar det uten å bruke hops
-
-Merge as a function
-~~~~~~~~~~~~~~~~~~~
-
-Source type Merge VS Transformation Merge
-
-Merging dictionaries up to the root level of entities.
-
-.. _hops-1:
-
-Hops
-~~~~
-
-Basics, uten apply
-
-\_ Properties
-~~~~~~~~~~~~~
-
-(_deleted, filtered, \_id, \_previous, \_updated, *\_hash? REF 1.2.24*)
-
-Type examples
-~~~~~~~~~~~~~
-
-Type eksempler:
-
-• Datettime
-
-• Dict {}
-
-• List
-
-○ First
-
-○ Unique/Distinct
-
-○ Last
-
-○ Count
-
-○ nth
-
-• String
-
-• Integer
-
-• Decimal
-
-• Float
-
-• Boolean
-
-○ And
-
-○ Or
-
-○ Not
-
-○ In
-
-○ Eq
-
-○ If-null
-
-○ Is-empty
-
-2. .. rubric:: Tasks for DTL: Novice
-      :name: tasks-for-dtl-novice
-
-3. .. rubric:: DTL: Intermediate
-      :name: dtl-intermediate
-
-   23. .. rubric:: More on Pipes
-          :name: more-on-pipes
-
-• Pump
-
-○ Dead-letter…
-
-• Metadata
-
-• Reset-to-end
-
-• Stop
-
-• Enable/disable
-
-Pipe Sink
-~~~~~~~~~
-
-Eksplisitt (vs implicit dataset) Sink - til system/fil
-
-25. .. rubric:: if
-       :name: if
-
-26. .. rubric:: Case &? case-eq
-       :name: case-case-eq
-
-27. .. rubric:: Multiple transforms
-       :name: multiple-transforms
-
-3.3.27 Dependency tracking in Hops
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When does dependency tracking work? How does it work? When doesn’t it
-work (multiple transforms) Ref 1.3.25
-
-"Apply-hops"
-~~~~~~~~~~~~
-
-Apply a function to the entities retrieved by your hop
-
-Source Subset
-~~~~~~~~~~~~~
-
-You don’t really need to filter :P
-
-Tasks for DTL: Intermediate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-4. .. rubric:: DTL: Advanced
-      :name: dtl-advanced
-
-   30. .. rubric:: Filter as an expression
-          :name: filter-as-an-expression
-
-VS as a transform (filter objects in list)
-
-\_. Syntax and Functions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-\_. : path, map, filter, what does it reference? How does it work?
-
-Map
-~~~
-
-Map, map-values, map-dict
-
-\_P & \_R – Parent & Root
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-How do I use \_P. notation? Where does it point?
-
-“Create-child”
-~~~~~~~~~~~~~~
-
-1-N
-
-dep. Tracking, $children, emit_child transform type (2 pipes necessary
-for all updates to propagate)
-
-35. .. rubric:: Recursion in Hops & Apply
-       :name: recursion-in-hops-apply
-
-36. .. rubric:: Key-values
-       :name: key-values
-
-37. .. rubric:: Escape Namespaced Identifiers [ni]
-       :name: escape-namespaced-identifiers-ni
-
-Add ::hello
-
-3.4 Tasks for DTL: Advanced
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. _epilogue-2:
-
-Epilogue
---------
-
-Summarize the topics the reader has gone through on a very high level.
-
-In relation to the introduction, tell them what they’ve learned and what
-they should be capable of using this knowledge to do.
-
-4. Projects & Infrastructure
+Tasks for DTL: Beginner
+~~~~~~~~~~~~~~~~~~~~~~~
