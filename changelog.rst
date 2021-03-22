@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_03_22:
+
+2021-03-22
+----------
+
+* The :ref:`mail message sink <mail_message_sink>` will now automatically add a ``Date`` header to the email message.
+
 .. _changelog_2021_03_19:
 
 2021-03-19
