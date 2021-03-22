@@ -16,3 +16,4 @@ Sesam is a Master Data Hub built on a streaming dataflow data integration and pr
    Behind the scenes <behind-the-scenes>
    Roadmap <roadmap>
    Changelog <changelog>
+   Learn sesam <training/training>
