@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_03_22:
+
+2021-03-22
+----------
+
+* Added support for specifying a list of HTTP response status codes to ignore in the :ref:`REST transform <rest_transform>`.
+
 .. _changelog_2021_03_19:
 
 2021-03-19
