@@ -4520,6 +4520,7 @@ Prototype
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
+        "ignored_status_codes": "404,444-450,501-599"
     }
 
 
@@ -4625,6 +4626,17 @@ Properties
        entities if missing from the transform response. Note that this property can alternatively be defined in the
        specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
        precendence if defined.
+     -
+     -
+
+   * - ``ignored_status_codes``
+     - String
+     - An expression in the form of single values or value ranges of HTTP status codes that will be ignored by the
+       transform. HTTP responses with status codes matching this list will result in the response being omitted from
+       the result. The values are either comma separated integer values or a range of values with a hyphen separator
+       (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 400-403 includes both 400 and
+       403. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 are always
+       allowed and the default is to fail for any status code outside of this range.
      -
      -
 
