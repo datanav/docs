@@ -566,8 +566,8 @@ Rdf:type
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
 
-1.1 Tasks for Architecture and Concepts: Beginner
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks for Architecture and Concepts: Beginner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. *In what component is data stored in Sesam?*
 

@@ -1,7 +1,7 @@
 .. _systems-beginner-2-1:
 
 Systems: Beginner
-~~~~~~~~~~~~~~~~~
+-----------------
 
 .. _what-is-a-system-in-sesam-2-1:
 

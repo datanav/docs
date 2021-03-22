@@ -1,7 +1,7 @@
 .. _projects-infrastructure-novice-4-2:
 
 Projects & Infrastructure: Novice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 .. _node-config-4-2:
 

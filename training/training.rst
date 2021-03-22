@@ -2,10 +2,28 @@
 Learn Sesam
 ===========
 
-.. toctree::
-   :maxdepth: 2
+.. rubric:: Prologue
 
-   Prologue <Prologue>
+* Introduction to this page
+
+* Who is it for?
+
+* Who are we?
+
+* What is Sesam?
+
+* What problems do we seek to solve?
+
+* What should you expect to learn?
+
+* Innholdsfortegnelse og forklaring/justification for det.
+
+.. rubric:: Table of Contents
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+
    Architecture & Concepts <010_architecture_and_concepts/architecture_and_concepts>
    Systems <020_systems/systems>
    DTL: Data Transformation Language <030_dtl/dtl>

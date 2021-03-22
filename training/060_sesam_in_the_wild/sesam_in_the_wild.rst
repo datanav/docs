@@ -2,10 +2,14 @@
 Sesam in the Wild
 =================
 
+.. rubric:: Some introduction title
+
+.. rubric:: Table of Contents
+
+
 .. toctree::
    :maxdepth: 2
 
-   Sesam in the Wild: Introduction <010_Introduction>
    Sesam in the Wild: Beginner <020_Beginner>
    Sesam in the Wild: Novice <030_Novice>
    Sesam in the Wild: Intermediate <040_Intermediate>

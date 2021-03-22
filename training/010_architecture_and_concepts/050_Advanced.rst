@@ -30,5 +30,5 @@ Change-tracking
 
 .. _tasks-for-architecture-and-concepts-advanced:
 
-1.4 Tasks for Architecture and Concepts: Advanced
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks for Architecture and Concepts: Advanced
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
