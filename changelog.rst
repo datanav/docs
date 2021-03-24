@@ -6,6 +6,7 @@ Changelog
 2021-03-22
 ----------
 
+* The :ref:`mail message sink <mail_message_sink>` will now automatically add a ``Date`` header to the email message.
 * Added support for specifying a list of HTTP response status codes to ignore in the :ref:`REST transform <rest_transform>`.
 
 .. _changelog_2021_03_19:
