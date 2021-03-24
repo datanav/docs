@@ -16,7 +16,7 @@ The current 'Databrowser' tool is hard to configure, not integrated into Managem
 external users.
 
 We are looking at making a simpler tool that is integrated into Management Studio so that you
-can do more efficient development.
+can do more efficient development. This new tool will replace the existing 'Databrowser' tool.
 
 This feature will most likely only be available on the 'Scalable architecture',
 so it depends on the 'Scalable architecture everywhere' item on the roadmap.
