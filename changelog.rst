@@ -1,6 +1,16 @@
 Changelog
 =========
 
+.. _changelog_2021_03_25:
+
+2021-03-25
+----------
+
+* The driver for the :ref:`LDAP system <ldap_system>` has been changed to version 2.4 of
+  `LDAP3 <https://pypi.org/project/ldap3/>`_ . The new driver gives the same results as the old driver
+  in our tests, but it is still possible that there may be some subtle changes in how the new driver
+  interacts with the LDAP server. The newer version implements some security fixes.
+
 .. _changelog_2021_03_22:
 
 2021-03-22
