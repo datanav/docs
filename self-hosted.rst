@@ -111,7 +111,7 @@ Outbound firewall rules
 
 .. INFO::
 
-    *.sesam.io and *.sesam.cloud can be replaced with IPs 137.116.234.60 and 13.74.166.9. We do not reccomend doing this as these IPs are subject to change at any time.
+    *.sesam.io and *.sesam.cloud can be replaced with IPs 137.116.234.60 and 13.74.166.9. We do not recommend doing this as these IPs are subject to change at any time.
 
 Installation
 ------------
