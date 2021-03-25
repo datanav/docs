@@ -694,15 +694,40 @@ til "Restart"
 Pipe shortcuts
 ~~~~~~~~~~~~~~
 
-Preview, Ctrl + Enter
+When you shape your data in the pipe config, shortcuts are quite a nice tool for you in order to work more efficiently.
 
-Formatering alt + .
+**Preview** 
 
-Save ctrl + s
+`Ctrl+Enter` 
 
-Find/replace
+- Lets you preview the result of a given change in your pipe config.
+- Lets you modify the incoming dataset. 
 
-Ctrl+space = Search/autocomplete
+**Auto formatting**
+
+`Alt+.`
+
+- Automatically formats your dtl.
+
+**Quick save**
+
+`Ctrl+s`
+
+- Saves the current pipe config.
+
+**Find/Replace**
+
+`Command+f` or `Ctrl+f`
+
+- Lets you search for string matches in the pipe config.
+- Automatically inserts a highlighted string in the pipe config as your search string.
+- Lets you do *search and replace* on strings in the pipe config.
+
+**Autocomplete/Suggestions**
+
+`Ctrl+Space`
+
+- Lets you pick functions/properties in each statement of the pipe config, i.e. transform statement.
 
 
 .. _tasks-for-dtl-beginner-3-1:
