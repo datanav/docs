@@ -54,20 +54,18 @@ architecture. <https://en.wikipedia.org/wiki/Service-oriented_architecture>`_
 The "simple" solution is to agree on one a single data model for each
 object type, a so-called `canonical
 model <https://en.wikipedia.org/wiki/Canonical_model>`_, that ideally
-represents a standardized superset everything you will ever need, from 
+represents a standardized superset everything you will need at the time, from 
 all systems. 
 While this may be a requirement in a message-based integration
 architecture, and is truly valuable in an industry-wide data 
 `interoperability <https://en.wikipedia.org/wiki/Interoperability>`_ 
 scenario, in a data platform however, the canonical model becomes a constant burden 
 demanding continual enhancement and expansion over time. The result becomes a 
-datamodel that fits none of the source systems, and always lags behind 
+datamodel that lags behind 
 the continously evolving needs of the platform.
 
-Many businesses have wasted enormous resources on a utopia of a stable canonical model,
-only to realize that it is not possible. An ideal model does not exist,
-and one must realize that any given data model will always be a
-perspective of the object one wants to describe, not an objective and lasting truth.
+Many businesses have allocated enormous resources on efforts to stabilize their canonical model. Any given data model will always be a
+perspective of the object one wants to describe at a given time, not an objective and lasting truth.
 
 In Sesam, we solve this fundamental problem in the diametrically
 opposite way: We collect all the different representations of an object,
