@@ -689,6 +689,139 @@ til "Restart"
 
 -  Referer "Proessser ny data" over, vis det også.
 
+----
+
+In this section we will show you how to
+
+- create a pipe from scratch
+- view the output of a pipe
+- write a greeting to the world with DTL
+
+Create a new pipe
+^^^^^^^^^^^^^^^^^
+
+Let us start by creating a new pipe from scratch called ``practice``.
+In the Sesam Management Studio, navigate to the **Pipes** view and follow these steps:
+
+- Click the **New pipe** button
+- Type in ``practice`` as the pipe's ``_id``
+- In the **Templates** panel:
+
+  - Choose Source Sytem ``system:sesam-node``
+  - Choose Source Provider ``embedded prototype``
+  - Click the **Replace** button
+
+    This will put the chosen Source configuration into the pipe configuration area.
+
+  - Click the **Add DTL transform** button
+
+    This will give you a nice starting point to write DTL.
+
+- Lastly, add some test data:
+
+  .. code-block:: json
+
+    "entities": [{
+      "_id": "1",
+      "data": "One"
+    }, {
+      "_id": "2",
+      "data": "Two"
+    }]
+
+You should now have the following pipe config:
+
+.. code-block:: json
+  :linenos:
+
+  {
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"]
+        ]
+      }
+    }
+  }
+
+Now save and run the pipe. In the next section you learn how to view the result of a pipe run.
+
+Click the **Save** button and then the **Start** button.
+
+Pipe output
+^^^^^^^^^^^
+
+To view the result of a pipe run, switch to the pipe's **Output** tab.
+Here you will see two entities:
+
+::
+
+  practice:2
+  practice:1
+
+But they are both empty:
+
+.. code-block:: json
+  :linenos:
+
+  {
+  }
+
+This is because we only copy the ``_id`` so far.
+
+In the next section you will learn to write your first piece of DTL to make the output a bit more interesting.
+
+Greet the world!
+^^^^^^^^^^^^^^^^
+
+Switch back to the **Config** tab.
+
+First, change the ``copy`` so that all source properties are included.
+Then add a property called ``greeting`` with the value `Hello, World!`:
+
+.. code-block:: json
+
+  ["copy", "*"],
+  ["add", "greeting", "Hello, World!"]
+
+Save and start the pipe again.
+Switch to the **Output** tab to view the new results.
+
+Now you will see that the output has changed:
+
+``practice:2``
+
+.. code-block:: json
+  :linenos:
+
+  {
+    "practice:data": "Two",
+    "practice:greeting": "Hello, World!"
+  }
+
+``practice:1``
+
+.. code-block:: json
+  :linenos:
+
+  {
+    "practice:data": "One",
+    "practice:greeting": "Hello, World!"
+  }
+
 .. _pipe-shortcuts-3-1:
 
 Pipe shortcuts
