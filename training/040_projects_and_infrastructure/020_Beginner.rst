@@ -34,6 +34,10 @@ Lage grupp/tilganger
 
 sesam-CLI
 ~~~~~~~~~
+There is an Sesam Commad Line Toole on Sesam Community on github. It is often refered to as Sesam-CLI or sesam-py.
+This is *NOT* a full command line replacement for the sesam portal web user interface. It is a tool related to development and testing.
+
+
 
 NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
 
