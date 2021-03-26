@@ -103,45 +103,50 @@ Datahub @Jonas
 
 Continuing the path of building data-centric solutions, the term
 “Datahub” comes into play. A datahub is recognized by its frictionless
-data flow and as such builds upon the architectural principles presented
+data flow and builds upon the architectural principles presented
 in DDA. A datahub can be described as a solution that consists of
 multiple different technologies, i.e., a data warehouse, microservices,
 databases etc.
 
 A Datahub shares data by connecting generators of data with consumers of
-data. In practice this allows data to be delivered in endpoints that can
-interact with the datahub in terms of injecting data into the datahub or
-exposing data to an external system. As such, a datahub mediates and
+data. In practice this allows data to be delivered in endpoints which
+interact with the datahub by either injecting into the datahub or
+exposing data to be retreived by the datahub. As such, a datahub mediates and
 manages how data flows between systems and makes states of data visible
 to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
-an enterprise and also what SESAM often becomes when it is used
-properly. As with any other technologies there are pros and cons to any
-technology.
+the objects an enterprise consists. This is what SESAM often becomes when
+it is used properly.
+
+As with any other technology, there are pros and cons.
 
 Some of these are listed below, so you might be able to recognize them –
 “down the road”.
 
 Pros:
 
-- Has enterprise scope, i.e., cloud, hybrid.
+- Enterprise scope, i.e., runs on cloud, hybrid.
 
 - Creates visibility into all data.
 
-- Centralizes data control.
+- Centralised data control & management.
 
-- Moves data in, close to, real time.
+- Moves data asynchronously.
 
-- Connects data.
+- Connects data from different systems.
+
+- Possibility of defining the best truth of an object across systems.
+
+- Forces the break-down of walled silos.
 
 Cons:
 
-- Data does not persist.
+- Only cares about the latest version of data.
 
 - Demands advanced capabilities.
 
-- Does not operate in silos.
+- Does not operate well with silos.
 
 .. _sesam_world_map-1-1:
 
