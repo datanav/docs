@@ -37,11 +37,14 @@ Chapter         | Architecture & Concepts
 Chapter Section | Architecture & Concepts: Beginner
 ---------------------------------------------------
 
-Topic           | Different types of Architectures
+Topic           | The parts of sesam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Title in topic  | Point to Point
+Title in topic  | Terminology
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SubTitle topic  | Systems
+#########################
 ```
 
 ## How is the table of contents generated?
