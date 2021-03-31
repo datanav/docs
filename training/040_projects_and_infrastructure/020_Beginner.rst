@@ -35,9 +35,22 @@ Lage grupp/tilganger
 sesam-CLI
 ~~~~~~~~~
 There is an Sesam Commad Line Toole on Sesam Community on github. It is often refered to as Sesam-CLI or sesam-py.
-This is *NOT* a full command line replacement for the sesam portal web user interface. It is a tool related to development and testing.
+This is **NOT** a full command line replacement for the sesam portal web user interface. It is a tool related to development and testing. 
+It should only be used with a development sesam node and **not with a PRODUCTION sesam node**. But it is very usful for development.
 
+sesam-py supports a workflow where you work with your sesam config files localy on your computer in you prefered text editor and usually with a 
+version controll system. sesam-py works in conjunction with your sesam development node to do tests and to send configs and data back and fort with your 
+local computer. The sesam development node do not run on your computer but on a remote machine (in the sky or dedicated server).
 
+You can work both in the web portal and the user interface there and with sesam-py, but you should allways think of what you have in the node as something that 
+can get lost. Only think of configuratios that are saved in the version controll system as saved. With this mindset you will not lose a lot of work if you 
+inadvertently wipe the node or overwrite it with new configs.
+
+https://github.com/sesam-community/sesam-py
+
+https://github.com/sesam-community/sesam-py/blob/master/README.md
+
+https://github.com/sesam-community/sesam-py/releases/
 
 NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
 
