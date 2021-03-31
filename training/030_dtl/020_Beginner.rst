@@ -659,39 +659,10 @@ Result after run:
 
 .. _dtl-in-practice-3-1:
 
-DTL in Practice
+DTL in practice
 ~~~~~~~~~~~~~~~
 
-Gå gjennom prosessen fra man trykker "New pipe" til "Save" til "Start"
-til "Restart"
-
--  Sette \_id
-
--  Bruke templater
-
-   -  Source system "sesam:node" (refers to itself)
-
-      -  Provider: premade dataset
-
-   -  "add DTL transform"
-
--  ["add", "hello", "world"]
-
--  Save
-
--  Starte
-
--  ["add", "key", "value"]
-
--  Save
-
--  Start - ikke noe nytt i output
-
--  Referer "Proessser ny data" over, vis det også.
-
-----
-
-In this section we will show you how to
+In this section you will learn how to:
 
 - create a pipe from scratch
 - view the output of a pipe
@@ -704,18 +675,13 @@ Let us start by creating a new pipe from scratch called ``practice``.
 In the Sesam Management Studio, navigate to the **Pipes** view and follow these steps:
 
 - Click the **New pipe** button
-- Type in ``practice`` as the pipe's ``_id``
+- Type in `practice` as the pipe's ``_id``
 - In the **Templates** panel:
 
-  - Choose Source Sytem ``system:sesam-node``
-  - Choose Source Provider ``embedded prototype``
-  - Click the **Replace** button
-
-    This will put the chosen Source configuration into the pipe configuration area.
-
-  - Click the **Add DTL transform** button
-
-    This will give you a nice starting point to write DTL.
+  - Choose Source Sytem: ``system:sesam-node``
+  - Choose Source Provider: ``embedded prototype``
+  - Click the **Replace** button to put the chosen Source configuration into the pipe configuration area.
+  - Click the **Add DTL transform** button to get a nice starting point to write DTL.
 
 - Lastly, add some test data:
 
@@ -731,7 +697,9 @@ In the Sesam Management Studio, navigate to the **Pipes** view and follow these 
 
 You should now have the following pipe config:
 
+.. _practice-pipe-config-initial:
 .. code-block:: json
+  :caption: Practice pipe config - initial
   :linenos:
 
   {
@@ -757,9 +725,9 @@ You should now have the following pipe config:
     }
   }
 
-Now save and run the pipe. In the next section you learn how to view the result of a pipe run.
+Save and run the pipe by clicking the **Save** button and then the **Start** button.
 
-Click the **Save** button and then the **Start** button.
+In the next section you learn how to view the result of a pipe run.
 
 Pipe output
 ^^^^^^^^^^^
@@ -769,8 +737,8 @@ Here you will see two entities:
 
 ::
 
-  practice:2
   practice:1
+  practice:2
 
 But they are both empty:
 
@@ -798,13 +766,22 @@ Then add a property called ``greeting`` with the value `Hello, World!`:
   ["add", "greeting", "Hello, World!"]
 
 Save and start the pipe again.
+
 Switch to the **Output** tab to view the new results.
 
 Now you will see that the output has changed:
 
-``practice:2``
+.. code-block:: json
+  :caption: ``practice:1``
+  :linenos:
+
+  {
+    "practice:data": "One",
+    "practice:greeting": "Hello, World!"
+  }
 
 .. code-block:: json
+  :caption: ``practice:2``
   :linenos:
 
   {
@@ -812,15 +789,38 @@ Now you will see that the output has changed:
     "practice:greeting": "Hello, World!"
   }
 
-``practice:1``
+You have now learned how to create a new pipe from scratch using templates, write and edit DTL functions,
+run a pipe and view it's output.
 
+.. _practice-pipe-config-final:
 .. code-block:: json
+  :caption: Practice pipe config - final
   :linenos:
 
   {
-    "practice:data": "One",
-    "practice:greeting": "Hello, World!"
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "greeting", "Hello, World!"]
+        ]
+      }
+    }
   }
+
 
 .. _pipe-shortcuts-3-1:
 
