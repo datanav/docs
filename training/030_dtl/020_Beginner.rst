@@ -678,7 +678,7 @@ In the Sesam Management Studio, navigate to the **Pipes** view and follow these 
 - Type in `practice` as the pipe's ``_id``
 - In the **Templates** panel:
 
-  - Choose Source Sytem: ``system:sesam-node``
+  - Choose Source System: ``system:sesam-node``
   - Choose Source Provider: ``embedded prototype``
   - Click the **Replace** button to put the chosen Source configuration into the pipe configuration area.
   - Click the **Add DTL transform** button to get a nice starting point to write DTL.
