@@ -158,10 +158,7 @@ The parts of sesam @Erik
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
 concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets. These are
-the fundamental parts which make up a Sesam integration pipeline. Figure
-1.1.5A gives you an insight into how a standard Sesam integration
-pipeline would look.
+with the integration platform: systems, pipes and datasets. 
 
 |
 
@@ -171,13 +168,16 @@ pipeline would look.
    :height: 80px
    :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolizes the direction of data flow.
 
-   *Figure 1.1.5A - A general pipeline flow in Sesam depicting the three central parts of a
+   *A general pipeline flow in Sesam depicting the three central parts of a
    Sesam integration, systems, pipes and datasets. The arrows symbolizes
    the direction of data flow.*
 
 |
 
-|  **Systems**: A system’s main feature is to import and export data
+These are the fundamental parts which make up a Sesam integration pipeline:
+
+Systems: 
+   A system’s main feature is to import and export data
    into and out of the Sesam portal. They are therefore found in the
    beginning and end of the pipeline flows and are often referred to as
    “source systems” or “target systems” respectively. A system could
@@ -189,7 +189,8 @@ pipeline would look.
    which in turn can manipulate and delegate data according to your own
    specifications, making Sesam a very robust and comprehensive tool.
 
-|  **Pipes**: Pipes handles the transformation of the data and specifies
+Pipes: 
+   Pipes handles the transformation of the data and specifies
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
    allows you to add, remove, transform and combine data according to
@@ -197,14 +198,16 @@ pipeline would look.
    dataset depending on where the pipe is located inside the integration
    pipeline.
 
-|  **Datasets**: Datasets are Sesam’s storage units and can be compared
+Datasets: 
+   Datasets are Sesam’s storage units and can be compared
    to i.e., a table in an SQL database. This is where pipes store the
    data after configuring them and in a pipeline flow, they are
    generally found between pipes. Sesam stores data in order to be able
    to perform tracking and indexing, but you will learn more about these
    functionalities later in this book (maybe a link?).
 
-|  **Entities**: A dataset consists of a list of entities. Entities in
+Entities: 
+   A dataset consists of a list of entities. Entities in
    Sesam can be compared to individual rows in an SQL table and can
    represent anything from a person, a mechanical part to a contract. An
    entity is defined by its primary key, which is represented in Sesam
