@@ -116,12 +116,9 @@ manages how data flows between systems and makes states of data visible
 to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
-the objects an enterprise consists. This is what SESAM often becomes when
-it is used properly.
-
-As with any other technology, there are pros and cons.
-
-Some of these are listed below, so you might be able to recognize them –
+an enterprise and also what SESAM often becomes when it is used
+properly. As with any other technologies there are pros and cons.
+Some of these are listed below, so you might be able to recognize them
 “down the road”.
 
 Pros:
