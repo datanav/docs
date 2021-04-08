@@ -1,4 +1,3 @@
-
 .. _architecture-and-concepts_beginner-1-1:
 
 Architecture and Concepts: Beginner
