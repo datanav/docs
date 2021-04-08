@@ -11,11 +11,12 @@ Different types of Architectures
 When modelling data, integration architectures (IA) lay the foundation
 for shaping and structuring data as it moves from one system
 to another. Within IA, Point-to-point (P2P) and Enterprise Service Bus
-(ESB) have been used extensively. Recent trends move away from
-these established IAs and places data and its meaning at the center.
+(ESB) have been used extensively. Recently Data Driven Architecture has
+mobilized data in new ways by placing data and its meaning at its center.
 
-Before we elaborate on the most recent data driven IA, we want to lay
-out the history by quickly diving into P2P and ESB.
+To show the evolution of Integration Architectures and why Data Driven
+Architecture is the natural step forward, we will first introduce you to
+ P2P and ESB.
 
 .. _point-to-point-1-1:
 
@@ -23,12 +24,12 @@ Point-to-Point
 ^^^^^^^^^^^^^^
 
 This kind of IA is the simplest integration principle. As an example of P2P
-imagine sending a message generated in one system A to a single receiver
-in another system B. System A talks to system B.
-It is simple and therefore easy to manage, albeit what if another system C is
-introduced and needs to talk with both system A and B?
-Introducing system C will increase the complexity of the architecture threefold,
-as we go from 1 integration between A and B to 3 integrations.
+imagine sending a message generated in one System A to a single receiver
+in another System B. System A talks to System B.
+It is simple and therefore easy to manage, albeit what if another System C is
+introduced and needs to talk with both System A and System B?
+Introducing System C will increase the complexity of the architecture threefold,
+as we go from 1 integration between System A and System B to 3 integrations.
 A->B, A->C, B->C
 In this case P2P is not your best option, and the issue of
 scalability presents itself.
@@ -93,15 +94,12 @@ relies on retrieving all the data in a system and connecting it internally
 to enhance and propegate it for usage in outbound flows.
 
 As in all great things, there is risk involved.
-In order to utilize DDA effectively you need logical, robust and
-flexible data flows and models.
+In order to utilize DDA effectively you need logical and robust principles
+to create flexible data flows and models.
 This can be achieved by always thinking ahead and leaving headroom to grow,
 which you will learn how to do throughout this course.
 If done correctly nothing beats the scalability, cost-effectiveness and
 possibilities a DDA provides.
-A word of caution however, if such guidelines are not followed you
-risk creating a waterfall of technical debt over time as these
-natural flows of data grow in complexity uninhibited.
 
 .. _datahub-1-1:
 
