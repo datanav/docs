@@ -659,35 +659,168 @@ Result after run:
 
 .. _dtl-in-practice-3-1:
 
-DTL in Practice
+DTL in practice
 ~~~~~~~~~~~~~~~
 
-Gå gjennom prosessen fra man trykker "New pipe" til "Save" til "Start"
-til "Restart"
+In this section you will learn how to:
 
--  Sette \_id
+- create a pipe from scratch
+- view the output of a pipe
+- write a greeting to the world with DTL
 
--  Bruke templater
+Create a new pipe
+^^^^^^^^^^^^^^^^^
 
-   -  Source system "sesam:node" (refers to itself)
+Let us start by creating a new pipe from scratch called ``practice``.
+In the Sesam Management Studio, navigate to the **Pipes** view and follow these steps:
 
-      -  Provider: premade dataset
+- Click the **New pipe** button
+- Type in `practice` as the pipe's ``_id``
+- In the **Templates** panel:
 
-   -  "add DTL transform"
+  - Choose Source System: ``system:sesam-node``
+  - Choose Source Provider: ``embedded prototype``
+  - Click the **Replace** button to put the chosen Source configuration into the pipe configuration area.
+  - Click the **Add DTL transform** button to get a nice starting point to write DTL.
 
--  ["add", "hello", "world"]
+- Lastly, add some test data:
 
--  Save
+  .. code-block:: json
 
--  Starte
+    "entities": [{
+      "_id": "1",
+      "data": "One"
+    }, {
+      "_id": "2",
+      "data": "Two"
+    }]
 
--  ["add", "key", "value"]
+You should now have the following pipe config:
 
--  Save
+.. _practice-pipe-config-initial:
+.. code-block:: json
+  :caption: Practice pipe config - initial
+  :linenos:
 
--  Start - ikke noe nytt i output
+  {
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"]
+        ]
+      }
+    }
+  }
 
--  Referer "Proessser ny data" over, vis det også.
+Save and run the pipe by clicking the **Save** button and then the **Start** button.
+
+In the next section you learn how to view the result of a pipe run.
+
+Pipe output
+^^^^^^^^^^^
+
+To view the result of a pipe run, switch to the pipe's **Output** tab.
+Here you will see two entities:
+
+::
+
+  practice:1
+  practice:2
+
+But they are both empty:
+
+.. code-block:: json
+  :linenos:
+
+  {
+  }
+
+This is because we only copy the ``_id`` so far.
+
+In the next section you will learn to write your first piece of DTL to make the output a bit more interesting.
+
+Greet the world!
+^^^^^^^^^^^^^^^^
+
+Switch back to the **Config** tab.
+
+First, change the ``copy`` so that all source properties are included.
+Then add a property called ``greeting`` with the value `Hello, World!`:
+
+.. code-block:: json
+
+  ["copy", "*"],
+  ["add", "greeting", "Hello, World!"]
+
+Save and start the pipe again.
+
+Switch to the **Output** tab to view the new results.
+
+Now you will see that the output has changed:
+
+.. code-block:: json
+  :caption: ``practice:1``
+  :linenos:
+
+  {
+    "practice:data": "One",
+    "practice:greeting": "Hello, World!"
+  }
+
+.. code-block:: json
+  :caption: ``practice:2``
+  :linenos:
+
+  {
+    "practice:data": "Two",
+    "practice:greeting": "Hello, World!"
+  }
+
+You have now learned how to create a new pipe from scratch using templates, write and edit DTL functions,
+run a pipe and view it's output.
+
+.. _practice-pipe-config-final:
+.. code-block:: json
+  :caption: Practice pipe config - final
+  :linenos:
+
+  {
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "greeting", "Hello, World!"]
+        ]
+      }
+    }
+  }
+
 
 .. _pipe-shortcuts-3-1:
 
