@@ -16,7 +16,7 @@ mobilized data in new ways by placing data and its meaning at its center.
 
 To show the evolution of Integration Architectures and why Data Driven
 Architecture is the natural step forward, we will first introduce you to
- P2P and ESB.
+P2P and ESB.
 
 .. _point-to-point-1-1:
 
