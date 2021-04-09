@@ -189,7 +189,7 @@ Systems:
    specifications, making Sesam a very robust and comprehensive tool.
 
 Pipes: 
-   Pipes handles the transformation of the data and specifies
+   Pipes handle the transformation of the data and specifies
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
    allows you to add, remove, transform and combine data according to
