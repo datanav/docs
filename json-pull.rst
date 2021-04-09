@@ -86,6 +86,9 @@ Response headers
    * - ``X-Dataset-Generation``
      - When a dataset is created it is assigned a UUID. If the dataset is deleted and then recreated it will get a new generation UUID.
 
+   * - ``X-Dataset-Completeness``
+     - If the dataset has a :ref:`completeness <completeness>` set then this header will contain the completeness value. The value is an integer representing the number of microseconds since epoch (January 1st 1970 UTC).
+
    * - ``X-Dataset-Restore-Uuid``
      - When a dataset is restored [from a backup] then it is assigned a UUID.
 
