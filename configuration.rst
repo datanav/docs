@@ -766,9 +766,9 @@ Properties
      - A list of dataset ids that should not contribute to the completeness timestamp value. Any
        dataset listed in this property will be ignored when calculating the dataset sink
        completeness timestamp value.
-       
+
        .. NOTE::
-       
+
          If all datasets are excluded a new completeness timestamp value will be generated in this pipe.
      - ``[]``
      -
@@ -7534,6 +7534,7 @@ Prototype
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
+        "dialect": "sql-server",
         "port": 1433,
         "database": "database-name"
     }
@@ -7580,6 +7581,12 @@ Properties
      - Name/id of database to connect to.
      -
      - Yes
+
+   * - ``dialect``
+     - String
+     - Indicates if the server is a normal SQL server or a Synapse server. The allowed values are ``sql-server`` or ``synapse``.
+     - ``sql-server``
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_04_09:
+
+2021-04-09
+----------
+
+* Added 'dialect' keyword to :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>` system to indicate whether it's a normal SQL server or a Synapse server.
+
 .. _changelog_2021_03_25:
 
 2021-03-25
