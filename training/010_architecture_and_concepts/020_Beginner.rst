@@ -215,18 +215,13 @@ pipeline would look.
 The Sesam portal
 ~~~~~~~~~~~~~~~~
 
-Show basics of portal
-
-(Here also refer to a full chapter for portal or from the projects
-chapter?)
-
 Integrations, connections and configurations can all be accessed inside
-the Sesam portal; the user interface of the Sesam product, The Sesam
-portal can be accessed at portal.sesam.io, and in this section you will
+the Sesam portal; the user interface of the Sesam product. The Sesam
+portal can be accessed at portal.sesam.io and in this section you will
 learn the most commonly used parts of the portal such that you can
 orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
-please look [here (with a link)].
+please look `here <management-studio.html#section>`__.
 
 When logging in to the portal you will be met with a page like figure "The Sesam Portal"
 
