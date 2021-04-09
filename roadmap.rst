@@ -64,3 +64,26 @@ automatically logged and audited. Reading of the data is only stored in rotated 
 available to the end user.
 
 We are looking into how to audit reads of data and make this available to the end user in a the form of a dataset.
+
+Expose invoices and contracts in the portal
+-------------------------------------------
+
+Invoices and contracts can be requested through support.
+
+We are looking into how to expose invoices and contracts in the portal to make them more accessible.
+
+Self service VPN setup
+----------------------
+
+VPN setup can be requested through support.
+
+We are looking into how to automate this process so that the end user can do this process faster.
+
+Durable data
+------------
+
+Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
+
+For http_endpoint sources and non-idempotent sinks, this can be a problem.
+
+We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
