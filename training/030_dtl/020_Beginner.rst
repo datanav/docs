@@ -99,32 +99,29 @@ overview in the DTL Reference Guide. You will use this much.
 
 .. _entities-pipes-and-id-3-1:
 
-Entities, pipes and \_id @Geir Atle
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Entities, pipes and _id @Geir Atle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-What is an \_id? Why do we need it? Is it used for the same thing
-always? What is it good for? [STRIKEOUT:Absolutely nothing] quite a bit!
-
-The reserved property \_id
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+The reserved property _id
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Everything in Sesam must have a unique identity, whether it is a system
 configuration, a pipe configuration, a dataset, an entity within a
 dataset, etc.
 
-The reserved property named \_id is used as unique identity for
+The reserved property named ``_id`` is used as unique identity for
 components in Sesam.
 
 This unique identity allows for precise references between
 configurations and precise connections between data entities.
 
-See <ref to \_id restrictions> for more information on how to create
+See <ref to ``_id`` restrictions> for more information on how to create
 valid identifiers.
 
-System \_id
-^^^^^^^^^^^
+System _id
+^^^^^^^^^^
 
-The identity (_id) of a system must be unique within a Sesam node
+The identity (``_id``) of a system must be unique within a Sesam node
 instance.
 
 Once a system configuration is saved, its identity cannot be changed. If
@@ -151,10 +148,10 @@ conventions.
 See <ref to system config> for more information on how to define systems
 in Sesam.
 
-Pipe \_id
-^^^^^^^^^
+Pipe _id
+^^^^^^^^
 
-The identity (_id) of a pipe must be unique within a Sesam node
+The identity (``_id``) of a pipe must be unique within a Sesam node
 instance.
 
 Once a pipe configuration is saved, its identity cannot be changed. If
@@ -178,10 +175,10 @@ conventions.
 See <ref to system config> for more information on how to define pipes
 in Sesam.
 
-Dataset \_id
-^^^^^^^^^^^^
+Dataset _id
+^^^^^^^^^^^
 
-The identity (_id) of a dataset must be unique within a Sesam node
+The identity (``_id``) of a dataset must be unique within a Sesam node
 instance.
 
 By default, a dataset will have the same identity as the pipe it is
@@ -205,10 +202,10 @@ all the datasets in that Sesam node.
 If you need to reference a dataset from another configuration in Sesam,
 you reference the dataset’s identity.
 
-Entity \_id
-^^^^^^^^^^^
+Entity _id
+^^^^^^^^^^
 
-The identity (_id) of an entity must be unique within the dataset in
+The identity (``_id``) of an entity must be unique within the dataset in
 which it resides. The identity of an entity is similar to a primary key
 in a database table.
 
@@ -220,31 +217,31 @@ This means that you usually define the identity for entities in inbound
 pipes.
 
 If the source system has multiple properties that combined makes the
-entity unique, you must combine all these properties into the \_id
+entity unique, you must combine all these properties into the ``_id``
 property to ensure that uniqueness is preserved in Sesam.
 
 In some cases, you can handle this in the source configuration part of
 the inbound pipe. SQL sources, for example, allows you to specify
 multiple columns from the source database as primary keys. Sesam will
-then combine these columns automatically into the \_id during import.
+then combine these columns automatically into the ``_id`` during import.
 
-In other cases, you may have to explicitly add the \_id property with
+In other cases, you may have to explicitly add the ``_id`` property with
 DTL in a transform step in the inbound pipe. This may be relevant when
 the source configuration does not support specifying multiple properties
 as primary keys.
 
-Entity \_id and namespaces
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Entity _id and namespaces
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the pipe identity of the pipe where the entity originates is
 used as namespace for both the entity’s identifier and the entity’s
 properties.
 
 Note that there is a slight, but significant, difference in the
-placement of the namespace for the entity’s \_id property compared to
+placement of the namespace for the entity’s ``_id`` property compared to
 its other properties.
 
-For the \_id property, the namespace prefixes the property **value**:
+For the ``_id`` property, the namespace prefixes the property **value**:
 
 “_id”: ”\ **<namespace>**:<value>”
 
@@ -252,7 +249,7 @@ For other properties, the namespace prefixes the property **name**:
 
 “\ **<namespace>**:property1”: ”<value>”
 
-The reason the namespace is put into the value of the \_id is to ensure
+The reason the namespace is put into the value of the ``_id`` is to ensure
 that all entities are unique across all source systems.
 
 Example:
@@ -274,8 +271,8 @@ consisting of a primary key “userId” with value “123”, and a column
 Now imagine you have another source where one of the entities are also
 identified by “123”.
 
-Unless the namespace is part of the property value of \_id, both
-entities would have the same \_id, namely “123”. So by prefixing this
+Unless the namespace is part of the property value of ``_id``, both
+entities would have the same ``_id``, namely “123”. So by prefixing this
 value with a namespace we ensure that these entities do not come into
 conflict with each other.
 
@@ -288,7 +285,7 @@ The autogenerated property $ids
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Should probably write something sensible about the connection between
-\_id and $ids somewhere. Maybe related to merge pipes? – ‘Yea, or maybe
+``_id`` and $ids somewhere. Maybe related to merge pipes? – ‘Yea, or maybe
 add it to the \_ Properties chapter’ -G
 
 .. _entity-data-model-data-types-3-1:
@@ -296,8 +293,8 @@ add it to the \_ Properties chapter’ -G
 Entity Data model – Data Types @Gabriell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Entities, Dictionaries and \_id
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Entities, Dictionaries and _id
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Sesams Entity Data model is based on JSON – JavaScript Object notation –
 and supports both the most common datatypes literally and the uncommon
@@ -307,13 +304,13 @@ another dictionary.
 
 There is however one crucial difference between JSON dictionaries and
 the Sesam Entity Data model; our entity model requires a primary key
-‘_id’ as you have learned about in the previous topic. The value of the
+``_id`` as you have learned about in the previous topic. The value of the
 key “_id” must always be a string. In the dataset view it can be found
 in the list on the left hand side, on the top bar when viewing any
 entity or shown inside the entity dictionary by checking the box “Show
 System Attributes”.
 
-An entity is therefore defined as a dictionary with the key “_id” as
+An entity is therefore defined as a dictionary with the key ``_id`` as
 shown in *Example 3.1.3A: Entity*
 
 | \``\`
@@ -323,7 +320,7 @@ shown in *Example 3.1.3A: Entity*
 \``\`
 
 | *Example 3.1.3B: Dictionary* is not an entity, because it is missing
-  \_id.
+  ``_id``.
 | \``\`
 | *Example 3.1.3B: Dictionary*
 | {}
