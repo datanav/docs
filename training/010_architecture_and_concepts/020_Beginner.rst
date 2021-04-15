@@ -361,20 +361,14 @@ JSON configuration of pipes and systems
 DTL also validated as JSON?
 
 
-.. _namegiving-conventions-1-1:
+.. _naming-conventions-1-1:
 
-Namegiving conventions
-~~~~~~~~~~~~~~~~~~~~~~
-
-How (maybe a table) to give good names to the different parts in Sesam.
-
-Why this is *really* important
+Naming Conventions
+~~~~~~~~~~~~~~~~~~
 
 When constructing an integration flow in Sesam the use of a standardized
-naming convention becomes essential. This becomes especially important
-when the integration project grows to more than a few pipes. A
-standardized naming convention helps you to easily structure your Sesam
-architecture such that:
+naming convention becomes essential as the project grows to more than a few pipes.
+A standardized naming convention helps you to easily structure your Sesam architecture such that:
 
 -  Localizing specific flows becomes easier.
 
@@ -408,9 +402,9 @@ easier in the long run.
 
 Input pipes should be named according to endpoint/table they connect to
 in the source system and prefixed with the source system name such that
-there is a clear and intuitive way of tracking their content. Let us use
-the same example as for naming system. I this case the HR system in the
-previous example populate its data in two tables: employee and
+there is a clear and intuitive way of tracking their content.
+We use the hr system mentioned above in this example.
+There are two tables we would like to read from the hr systems: employee and
 department. Our two input pipes connecting to the two tables containing
 HR data will therefore be named “hr-employee” and “hr-department”. The
 system name prefixed highlights that the HR system is upstream from the
@@ -444,7 +438,7 @@ pipe name i.e., “person-child-hr".
 
 An output pipe should have the same name as the name of the pipe
 generating the output pipe’s source dataset, only postfixed with
-“output” i.e., “person-child-hr-endpoint”.
+“endpoint” i.e., “person-child-hr-endpoint”.
 
 The following flow shows a typical Sesam flow with each pipe’s preferred
 name with an example:
@@ -455,11 +449,11 @@ name with an example:
 
    Full pipe flow with globals.
 
-   .. figure:: ./media/Architecture_Beginner_Pipes_B.png
-      :align: center
-      :alt: Example of Full pipe flow with globals.
+.. figure:: ./media/Architecture_Beginner_Pipes_B.png
+   :align: center
+   :alt: Example of Full pipe flow with globals.
 
-      Example of Full pipe flow with globals.
+   Example of Full pipe flow with globals.
 
 .. _systems-1-1:
 
