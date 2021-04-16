@@ -3652,6 +3652,7 @@ Entity lookups
           the entity that is looked up changes then you may want to
           reset the pipe. This will not happen automatically.
 
+.. _namespaced-identifiers:
 
 Namespaced identifiers
 ----------------------
