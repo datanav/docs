@@ -142,7 +142,7 @@ the System column will show that value instead of the identity.
 Regardless, if you need to reference a system configuration from another
 configuration in Sesam, you reference the system’s identity.
 
-See <ref to naming conventions> for more information on system naming
+See :ref:`namegiving-conventions-1-1` for more information on system naming
 conventions.
 
 See <ref to system config> for more information on how to define systems
@@ -169,7 +169,7 @@ Pipe column will show that value instead of the identity.
 Regardless, if you need to reference a pipe configuration from another
 configuration in Sesam, you reference the pipe’s identity.
 
-See <ref to naming conventions> for more information on pipe naming
+See :ref:`namegiving-conventions-1-1` for more information on pipe naming
 conventions.
 
 See <ref to system config> for more information on how to define pipes
@@ -243,38 +243,38 @@ its other properties.
 
 For the ``_id`` property, the namespace prefixes the property **value**:
 
-.. code-block:: text
+.. code-block:: json
 
-  “_id”: ”<namespace>:<value>”
+  "_id": "<namespace>:<value>"
 
 For other properties, the namespace prefixes the property **name**:
 
-.. code-block:: text
+.. code-block:: json
 
-  “<namespace>:property1”: ”<value>”
+  "<namespace>:<property-name>": "<value>"
 
 The reason the namespace is put into the value of the ``_id`` is to ensure
 that all entities are unique across all source systems.
 
 Example:
 
-An entity imported from a system called “crm” with a “user” table
-consisting of a primary key “userId” with value “123”, and a column
-“email” with value “john.doe@foo.no” would look something like this:
+An entity imported from a system called "crm" with a "user" table
+consisting of a primary key "userId" with value "123", and a column
+"email" with value "john.doe@foo.no" would look something like this:
 
 .. code-block:: json
 
    {
-     “_id”: “crm-user:123”,
-     “crm-user:userId”: “123”,
-     “crm-user:email”: “john.doe@foo.com”
+     "_id": "crm-user:123",
+     "crm-user:userId": "123",
+     "crm-user:email": "john.doe@foo.com"
    }
 
 Now imagine you have another source where one of the entities are also
-identified by “123”.
+identified by "123".
 
 Unless the namespace is part of the property value of ``_id``, both
-entities would have the same ``_id``, namely “123”. So by prefixing this
+entities would have the same ``_id``, namely "123". So by prefixing this
 value with a namespace we ensure that these entities do not come into
 conflict with each other.
 
@@ -307,17 +307,17 @@ another dictionary.
 There is however one crucial difference between JSON dictionaries and
 the Sesam Entity Data model; our entity model requires a primary key
 ``_id`` as you have learned about in the previous topic. The value of the
-key “_id” must always be a string. In the dataset view it can be found
+key "_id" must always be a string. In the dataset view it can be found
 in the list on the left hand side, on the top bar when viewing any
-entity or shown inside the entity dictionary by checking the box “Show
-System Attributes”.
+entity or shown inside the entity dictionary by checking the box "Show
+System Attributes".
 
 An entity is therefore defined as a dictionary with the key ``_id`` as
 shown in *Example 3.1.3A: Entity*
 
 | \``\`
 | *Example 3.1.3A: Entity*
-| {“_id”: “primary-key-as-String”}.
+| {"_id": "primary-key-as-String"}.
 
 \``\`
 
@@ -335,20 +335,20 @@ Sesam has many built in data types. I will list and explain them simply
 here and refer you to the documentation
 https://docs.sesam.io/entitymodel.html for further information.
 
-Dictionary: \`{“key”: value}\`
+Dictionary: \`{"key": value}\`
 
-Entity \`{“_id”: “primary-key-as-String”}`.
+Entity \`{"_id": "primary-key-as-String"}`.
 
-List: \`[“supports”, “different”, “types”,0, 0.01, true, null, {}, [],
+List: \`["supports", "different", "types",0, 0.01, true, null, {}, [],
 ]\`
 
-String: \`“”\`
+String: \`""\`
 
 Integer: \`0\`
 
 Decimal, \`0.01\`
 
-Float: \`“~f123.456”\`
+Float: \`"~f123.456"\`
 
 Boolean: \`true/false\`
 
@@ -359,8 +359,8 @@ Null: \`null\`
 Syntax
 ~~~~~~
 
-Within IT, syntax can be defined as: “the structure of statements in a
-computer language”.
+Within IT, syntax can be defined as: "the structure of statements in a
+computer language".
 
 Expanding upon your current knowledge of JSON, and how it is used in
 Sesam, a typical JSON syntax consists of the following:
@@ -381,12 +381,12 @@ Sesam. Typically, when shaping JSON, you will be working with the Source
 or Target that exists in a given pipe’s flow of data, as mentioned in
 3.1.1.
 
-In this sub-chapter, we will go through the functions [“copy”] and
-[“rename”], as also introduced earlier in this section, in addition to
-the [“add”] function.
+In this sub-chapter, we will go through the functions ["copy"] and
+["rename"], as also introduced earlier in this section, in addition to
+the ["add"] function.
 
-[“copy”] lets you copy properties existing in your Source data, and the
-most typical way of using [“copy”] is to copy everything in the Source.
+["copy"] lets you copy properties existing in your Source data, and the
+most typical way of using ["copy"] is to copy everything in the Source.
 To denote that you want to copy everything, you can use asterisk (*).
 Asterisk works like a wildcard, and therefore copies everything in the
 Source. This can look like the following:
@@ -424,7 +424,7 @@ Source. This can look like the following:
 
    }
 
-[“rename”] lets you define a new key for a given key in your Source. As
+["rename"] lets you define a new key for a given key in your Source. As
 such, let’s say we have:
 
 .. code-block:: json
@@ -439,8 +439,8 @@ such, let’s say we have:
 
    }
 
-In our Source, albeit you don’t want the key to be “EmailAddress” rather
-just “Email”, you could do the following in your pipe config:
+In our Source, albeit you don’t want the key to be "EmailAddress" rather
+just "Email", you could do the following in your pipe config:
 
 .. code-block:: json
 
@@ -493,10 +493,10 @@ run:
 
    }
 
-Continuing on to the [“add”] function. [“add”] lets you define a new key
+Continuing on to the ["add"] function. ["add"] lets you define a new key
 and/or value. As such, it does not necessarily rely upon the Source or
 Target. The following pipe config lists such definitions by using
-[“add”].
+["add"].
 
 .. code-block:: json
 
@@ -561,10 +561,10 @@ Having covered the above functions, you should now be able to do some
 basic shaping of your data as it flows into and out of a pipe. Albeit
 you will quickly experience the need to do more advanced shaping of your
 data. In order for you to do just that, you will now learn about the
-functions: [“string”], [“concat”], [“plus”] and [“minus”].
+functions: ["string"], ["concat"], ["plus"] and ["minus"].
 
 These functions work like expressions, i.e., you can add or subtract
-from an integer value by using [“plus”] and/or [“minus”]. The following
+from an integer value by using ["plus"] and/or ["minus"]. The following
 Source data, pipe config and result after a run shows simple use cases
 of all of these functions.
 
