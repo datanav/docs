@@ -243,11 +243,15 @@ its other properties.
 
 For the ``_id`` property, the namespace prefixes the property **value**:
 
-“_id”: ”\ **<namespace>**:<value>”
+.. code-block:: text
+
+  “_id”: ”<namespace>:<value>”
 
 For other properties, the namespace prefixes the property **name**:
 
-“\ **<namespace>**:property1”: ”<value>”
+.. code-block:: text
+
+  “<namespace>:property1”: ”<value>”
 
 The reason the namespace is put into the value of the ``_id`` is to ensure
 that all entities are unique across all source systems.
@@ -258,15 +262,13 @@ An entity imported from a system called “crm” with a “user” table
 consisting of a primary key “userId” with value “123”, and a column
 “email” with value “john.doe@foo.no” would look something like this:
 
-{
+.. code-block:: json
 
-“_id”: “\ **crm-user**:123”,
-
-“\ **crm-user**:userId”: “123”,
-
-“\ **crm-user**:email”: “john.doe@foo.com”
-
-}
+   {
+     “_id”: “crm-user:123”,
+     “crm-user:userId”: “123”,
+     “crm-user:email”: “john.doe@foo.com”
+   }
 
 Now imagine you have another source where one of the entities are also
 identified by “123”.
