@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_04_15:
+
+2021-04-15
+----------
+
+* Added 'dialect' keyword to :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>` system to indicate whether it's a normal SQL server or a Synapse server. Note that it uses the 'HEAP' table type when used to create new tables.
+
 .. _changelog_2021_03_25:
 
 2021-03-25
