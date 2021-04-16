@@ -302,7 +302,7 @@ another dictionary.
 There is however one crucial difference between JSON dictionaries and
 the Sesam Entity Data model; our entity model requires a primary key
 ``_id`` as you have learned about in the previous topic. The value of the
-key "_id" must always be a string. In the dataset view it can be found
+key ``_id`` must always be a string. In the dataset view it can be found
 in the list on the left hand side, on the top bar when viewing any
 entity or shown inside the entity dictionary by checking the box "Show
 System Attributes".
