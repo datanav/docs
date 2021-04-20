@@ -443,17 +443,25 @@ generating the output pipe’s source dataset, only postfixed with
 The following flow shows a typical Sesam flow with each pipe’s preferred
 name with an example:
 
+|
+
 .. figure:: ./media/Architecture_Beginner_Pipes_A.png
    :align: center
-   :alt: Full pipe flow with globals.
+   :width: 835px
+   :height: 105px
+   :alt: Full pipe flow with generic names.
 
-   Full pipe flow with globals.
+   Full pipe flow with generic names.
+
+|
 
 .. figure:: ./media/Architecture_Beginner_Pipes_B.png
+   :width: 800px
+   :height: 100px
    :align: center
    :alt: Example of Full pipe flow with globals.
 
-   Example of Full pipe flow with globals.
+   Full pipe flow with example names.
 
 .. _systems-1-1:
 
