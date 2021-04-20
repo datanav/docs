@@ -58,18 +58,10 @@ do pipes going in look and how do pipes going out look?
 Filter entities on the way out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Filter gives the ability to stop entities from being sent by providing
-  a logical gate.
-| On the other hand, it can make sure you only send the entities you
-  wish to receive in an endpoint.
+Filtering entities after the global stage of modelling is a common use case. Filtering gives the ability to work with subsections of a dataset. It is therefore often times used when working on large datasets where you are only interested in a small section of the data. In addition, filtering is often times used in outbound pipes as well. This is due to the fact that *_deleted* entities never leave Sesam and is not usually something you would like to send to a target system. This is obviously not always the case, but in general that is how things tend to work.
 
-| Makes sure the endpoint only receives the entities they want.
-| Can stop entities from triggering events they shouldn’t trigger.
+Imagine you are working on a large dataset produced by a global pipe. You quickly recognize that the amount of data and all its properties is not that relevant to you. Therefore, one of the first things you do in your DTL is to filter on a specific key and value. This will leave you with a subsection of the complete data. Albeit, since the state of the data does not immediately satisfy your needs, you decide to add specific properties given a specific condition; i.e., if the entity is of type: "Employee" - add properties "Salary", "Position" and "Goals", albeit if it is not of type "Employee" add the property "NotRelevant". This written logic will provide us with a second means of filtering, namelig the property "NotRelevant". As illustrated, it is not unusual to use multiple filters in a DTL config, especially when the amount of DTL increases, and a need for stepwise filtering presents itself. 
 
-| + + many examples
-| filtering on source data
-| on target data (from hops f.ex) – typical example, hop to
-  global-classification and map status, if cancelled then filter
 
 .. _tag-your-entities-categorization-of-sub-concepts-1-2:
 
@@ -112,3 +104,5 @@ the output dataset.
 
 Tasks for Architecture and Concepts: Novice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. *Why is it important to remember to filter on _deleted entities in an outbound pipe?*
