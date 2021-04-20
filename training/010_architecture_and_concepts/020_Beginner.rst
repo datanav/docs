@@ -374,6 +374,10 @@ A standardized naming convention helps you to easily structure your Sesam archit
 
 -  Troubleshooting becomes more efficient.
 
+- Determining pipe type (inbound, outbound, preparation or global) becomes easier.
+
+- Filtering relevant pipes become easier.  
+
 -  Switching between integration projects, or joining a new project,
    becomes more intuitive.
 
