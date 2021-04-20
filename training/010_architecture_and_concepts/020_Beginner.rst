@@ -165,10 +165,10 @@ with the integration platform: systems, pipes and datasets.
    :align: center
    :width: 800px
    :height: 80px
-   :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolizes the direction of data flow.
+   :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolize the direction of data flow.
 
    *A general pipeline flow in Sesam depicting the three central parts of a
-   Sesam integration, systems, pipes and datasets. The arrows symbolizes
+   Sesam integration, systems, pipes and datasets. The arrows symbolize
    the direction of data flow.*
 
 |
@@ -177,7 +177,7 @@ These are the fundamental parts which make up a Sesam integration pipeline:
 
 Systems: 
    A system’s main feature is to act as the interface to import and export data
-   into and out of the Sesam portal. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
+   into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
    beginning and end of the pipeline flows and are often referred to as
    “source systems” or “target systems” respectively. A system could
    connect to a REST API, directly to a database or simply send data to
@@ -189,7 +189,7 @@ Systems:
    specifications, making Sesam a very robust and comprehensive tool.
 
 Pipes:  
-   Pipes main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
+   A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
    allows you to add, remove, transform or combine data according to
