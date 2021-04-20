@@ -227,6 +227,8 @@ When logging in to the portal you will be met with a page like figure "The Sesam
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
    :align: center
+   :height: 200px
+   :width: 800px
    :alt: The Sesam Portal
 
    The Sesam Portal
@@ -246,6 +248,8 @@ figure 1.1.6B.
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_B.png
    :align: center
    :alt: Training Node Landing Page
+   :height: 400px
+   :width: 800px
 
    Training Node Landing Page
 
@@ -266,6 +270,8 @@ located one, or a set of pipes, in a subscription with many pipes.
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
    :alt: Sesam Node Pipe overview
+   :height: 400px
+   :width: 800px
 
    Sesam Node Pipe overview
 
@@ -279,6 +285,8 @@ view, as seen in figure 1.1.6D.
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_D.png
    :align: center
+   :height: 400px
+   :width: 800px
    :alt: Pipe Graph view
 
    Pipe Graph view
