@@ -407,14 +407,14 @@ easier in the long run.
 
 **Pipes**
 
-*Input pipes:*
+*Inbound pipes:*
 
-Input pipes should be named according to endpoint/table they connect to
+Inbound pipes should be named according to endpoint/table they connect to
 in the source system and prefixed with the source system name such that
 there is a clear and intuitive way of tracking their content. Let us use
 the same example as for naming system. I this case the HR system in the
 previous example populate its data in two tables: employee and
-department. Our two input pipes connecting to the two tables containing
+department. Our two inbound pipes connecting to the two tables containing
 HR data will therefore be named “hr-employee” and “hr-department”. The
 system name prefixed highlights that the HR system is upstream from the
 pipes.
@@ -430,7 +430,7 @@ global-person, global-company, global-customer or global-project.
 *Preparation pipes:*
 
 Preparation pipe naming can be more diverse but should explain the type
-of data it transforms as well as the target system. If the input pipe
+of data it transforms as well as the target system. If the inbound pipe
 importing a table “person” from a system “HR” is named “hr-person", the
 corresponding preparation pipe preparing data to be pushed to the table
 “person” should be named “person-hr". We use the system name as a
@@ -443,10 +443,10 @@ preparation pipe. As an example, if a preparation pipe splits entities
 into child entities, the children functionality should be part of the
 pipe name i.e., “person-child-hr".
 
-*Output pipes:*
+*Outbound pipes:*
 
-An output pipe should have the same name as the name of the pipe
-generating the output pipe’s source dataset, only postfixed with
+An outbound pipe should have the same name as the name of the pipe
+generating the outbound pipe’s source dataset, only postfixed with
 “output” i.e., “person-child-hr-endpoint”.
 
 The following flow shows a typical Sesam flow with each pipe’s preferred
