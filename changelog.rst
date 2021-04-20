@@ -1,6 +1,33 @@
 Changelog
 =========
 
+.. _changelog_2021_03_25:
+
+2021-03-25
+----------
+
+* The driver for the :ref:`LDAP system <ldap_system>` has been changed to version 2.4 of
+  `LDAP3 <https://pypi.org/project/ldap3/>`_ . The new driver gives the same results as the old driver
+  in our tests, but it is still possible that there may be some subtle changes in how the new driver
+  interacts with the LDAP server. The newer version implements some security fixes.
+
+.. _changelog_2021_03_22:
+
+2021-03-22
+----------
+
+* The :ref:`mail message sink <mail_message_sink>` will now automatically add a ``Date`` header to the email message.
+* Added support for specifying a list of HTTP response status codes to ignore in the :ref:`REST transform <rest_transform>`.
+
+.. _changelog_2021_03_19:
+
+2021-03-19
+----------
+
+* Added support for paginated responses to the :ref:`REST transform <rest_transform>` as well.
+* The REST transform ``response-property``, ``replace-entity`` and  ``response-include-content-type`` properties has
+  been deprecated. Use ``response_property``, ``replace_entity`` and ``response_include_content_type`` instead.
+
 .. _changelog_2021_03_15:
 
 2021-03-15

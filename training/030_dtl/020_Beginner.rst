@@ -50,43 +50,41 @@ Example: (need to line up with other examples and have a nice layout)
 This is the config for a pipe that gets data entities from the dataset
 salesforce-lead and make new enteties from each entity and put them in
 
-{
+.. code-block:: json
 
-"_id": "dtl-test",
+   {
 
-"type": "pipe",
+      "_id": "dtl-test",
 
-"source": {
+      "type": "pipe",
 
-"type": "dataset",
+      "source": {
 
-"dataset": "salesforce-lead"
+         "type": "dataset",
 
-},
+         "dataset": "salesforce-lead"
 
-"transform": {
+      },
 
-"type": "dtl",
+      "transform": {
 
-"rules": {
+         "type": "dtl",
 
-"default": [
+         "rules": {
 
-["copy",
+            "default": [
 
-["list", "_id", "Username"]
+               ["copy", ["list", "_id", "Username"]],
 
-],
+               ["rename","EmailAddress",":Contact-point"]
 
-["rename","EmailAddress",":Contact-point"]
+            ]
 
-]
+         }
 
-}
+      }
 
-}
-
-}
+   }
 
 DTL is often more complex. E.g. it can pull and use data from other data
 sets in your Sesam node or deal with nested structures in the source
@@ -362,32 +360,22 @@ Null: \`null\`
 Syntax
 ~~~~~~
 
--
-
-   -
-
-      -
-      -
-
-   -
-
-      -
-
--
-
-   -
-
 Within IT, syntax can be defined as: “the structure of statements in a
 computer language”.
 
 Expanding upon your current knowledge of JSON, and how it is used in
 Sesam, a typical JSON syntax consists of the following:
 
-[“<function>”, “<key>”, “<value>”]
+.. code-block:: json
+
+   ["<function>", "<key>", "<value>"]
 
 i.e:
 
-[“rename”, “EmailAddress”, “:Contact-point”], as shown in 3.1.1
+.. code-block:: json
+
+   ["rename", "EmailAddress", ":Contact-point"]
+
 
 Additionally, you will frequently be shaping JSON as data flows through
 Sesam. Typically, when shaping JSON, you will be working with the Source
@@ -404,160 +392,171 @@ To denote that you want to copy everything, you can use asterisk (*).
 Asterisk works like a wildcard, and therefore copies everything in the
 Source. This can look like the following:
 
-{
+.. code-block:: json
 
-"_id": "dtl-test",
+   {
 
-"type": "pipe",
+   "_id": "dtl-test",
 
-"source": {
+   "type": "pipe",
 
-"type": "dataset",
+      "source": {
 
-"dataset": "salesforce-lead"
+         "type": "dataset",
 
-},
+         "dataset": "salesforce-lead"
 
-"transform": {
+      },
 
-"type": "dtl",
+      "transform": {
 
-"rules": {
+         "type": "dtl",
 
-"default": [
+         "rules": {
 
-["copy", "*"]
+            "default": [
 
-]
+               ["copy", "*"]
 
-}
+            ]
+         }
 
-}
+      }
 
-}
+   }
 
 [“rename”] lets you define a new key for a given key in your Source. As
 such, let’s say we have:
 
-{
+.. code-block:: json
 
-“EmailAddress”: “thisIs@google.com”,
+   {
 
-“PostCode”: 0461,
+      "EmailAddress": "thisIs@google.com",
 
-“Country”: “Norway”
+      "PostCode": 0461,
 
-}
+      "Country": "Norway"
+
+   }
 
 In our Source, albeit you don’t want the key to be “EmailAddress” rather
 just “Email”, you could do the following in your pipe config:
 
-{
+.. code-block:: json
 
-"_id": "dtl-test",
+   {
 
-"type": "pipe",
+   "_id": "dtl-test",
 
-"source": {
+   "type": "pipe",
 
-"type": "dataset",
+      "source": {
 
-"dataset": "salesforce-lead"
+         "type": "dataset",
 
-},
+         "dataset": "salesforce-lead"
 
-"transform": {
+      },
 
-"type": "dtl",
+      "transform": {
 
-"rules": {
+         "type": "dtl",
 
-"default": [
+         "rules": {
 
-["copy", "*"],
+            "default": [
 
-["rename", "EmailAddress", "Email"]
+               ["copy", "*"],
 
-]
+               ["rename", "EmailAddress", "Email"]
 
-}
+            ]
 
-}
+         }
 
-}
+      }
+
+   }
 
 Which will produce the following dataset, when the pipe has completed a
 run:
 
-{
+.. code-block:: json
 
-“Email”: “thisIs@google.com”,
+   {
 
-“PostCode”: 0461,
+      "Email": "thisIs@google.com",
 
-“Country”: “Norway”
+      "PostCode": 0461,
 
-}
+      "Country": "Norway"
+
+   }
 
 Continuing on to the [“add”] function. [“add”] lets you define a new key
 and/or value. As such, it does not necessarily rely upon the Source or
 Target. The following pipe config lists such definitions by using
 [“add”].
 
-{
+.. code-block:: json
 
-"_id": "dtl-test",
+   {
 
-"type": "pipe",
+   "_id": "dtl-test",
 
-"source": {
+   "type": "pipe",
 
-"type": "dataset",
+      "source": {
 
-"dataset": "salesforce-lead"
+         "type": "dataset",
 
-},
+         "dataset": "salesforce-lead"
 
-"transform": {
+      },
 
-"type": "dtl",
+      "transform": {
 
-"rules": {
+         "type": "dtl",
 
-"default": [
+         "rules": {
 
-["copy", "*"],
+            "default": [
 
-["add", "fakeKey", "fakeValue"],
+               ["copy", "*"],
 
-["add", "fakeKey2", "_T. fakeKey "],
+               ["add", "fakeKey", "fakeValue"],
 
-["add", "newEmail", "_S.Email"]
+               ["add", "fakeKey2", "_T. fakeKey "],
 
-]
+               ["add", "newEmail", "_S.Email"]
 
-}
+            ]
 
-}
+         }
 
-}
+      }
+
+   }
 
 Which will produce the following dataset, when the pipe has completed a
 run:
 
-{
+.. code-block:: json
 
-“fakeKey”: “fakeValue”,
+   {
 
-“fakeKey2”: “fakeValue”,
+      "fakeKey": "fakeValue",
 
-“newEmail”: “thisIs@google.com”,
+      "fakeKey2": "fakeValue",
 
-“PostCode”: 0461,
+      "newEmail": "thisIs@google.com",
 
-“Country”: “Norway”
+      "PostCode": 0461,
 
-}
+      "Country": "Norway"
+
+   }
 
 Having covered the above functions, you should now be able to do some
 basic shaping of your data as it flows into and out of a pipe. Albeit
@@ -572,137 +571,305 @@ of all of these functions.
 
 Source data:
 
-{
+.. code-block:: json
 
-“favouriteSeries”: “Breaking Bad”,
+   {
 
-“secondFavouriteSeries”: “Game of Thrones”,
+      "favouriteSeries": "Breaking Bad",
 
-“favouriteNumber”: 7,
+      "secondFavouriteSeries": "Game of Thrones",
 
-“newEmail”: “thisIs@google.com”,
+      "favouriteNumber": 7,
 
-“PostCode”: 0461,
+      "newEmail": "thisIs@google.com",
 
-“Country”: “Norway”
+      "PostCode": 0461,
 
-}
+      "Country": "Norway"
+
+   }
 
 Pipe config:
 
-{
+.. code-block:: json
 
-"_id": "dtl-test",
+   {
 
-"type": "pipe",
+   "_id": "dtl-test",
 
-"source": {
+   "type": "pipe",
 
-"type": "dataset",
+      "source": {
 
-"dataset": "salesforce-lead"
+         "type": "dataset",
 
-},
+         "dataset": "salesforce-lead"
 
-"transform": {
+      },
 
-"type": "dtl",
+      "transform": {
 
-"rules": {
+         "type": "dtl",
 
-"default": [
+         "rules": {
 
-["copy", "*"],
+            "default": [
 
-["add", "postalCode", ["string", "_S.PostCode"]],
+               ["copy", "*"],
 
-["add", "numberPlussed", ["plus", 1, "_S. favouriteNumber"]],
+               ["add", "postalCode", ["string", "_S.PostCode"]],
 
-["add", "numberMinussed", ["minus", 1, "_S. favouriteNumber"]],
+               ["add", "numberPlussed", ["plus", 1, "_S. favouriteNumber"]],
 
-["add", "series", ["concat", "_S. favouriteSeries ", " and ", "_S.
-secondFavouriteSeries",]]
+               ["add", "numberMinussed", ["minus", 1, "_S. favouriteNumber"]],
 
-]
+               ["add", "series", ["concat", "_S. favouriteSeries ", " and ", "_S.
+               secondFavouriteSeries"]]
 
-}
+            ]
 
-}
+         }
 
-}
+      }
+
+   }
 
 Result after run:
 
-{
+.. code-block:: json
 
-“favouriteSeries”: “Breaking Bad”,
+   {
 
-“secondFavouriteSeries”: “Game of Thrones”,
+      "favouriteSeries": "Breaking Bad",
 
-“series”: “Breaking Bad and Game of Thrones”,
+      "secondFavouriteSeries": "Game of Thrones",
 
-“favouriteNumber”: 7,
+      "series": "Breaking Bad and Game of Thrones",
 
-“newEmail”: “thisIs@google.com”,
+      "favouriteNumber": 7,
 
-“numberPlussed”: 8,
+      "newEmail": "thisIs@google.com",
 
-“numberMinussed”: 6,
+      "numberPlussed": 8,
 
-“postalCode”: “0461”,
+      "numberMinussed": 6,
 
-“PostCode”: 0461,
+      "postalCode": "0461",
 
-“Country”: “Norway”
+      "PostCode": 0461,
 
-}
+      "Country": "Norway"
+
+   }
 
 .. _dtl-in-practice-3-1:
 
-DTL in Practice
+DTL in practice
 ~~~~~~~~~~~~~~~
 
-Gå gjennom prosessen fra man trykker "New pipe" til "Save" til "Start"
-til "Restart"
+In this section you will learn how to:
 
--  Sette \_id
+- create a pipe from scratch
+- view the output of a pipe
+- write a greeting to the world with DTL
 
--  Bruke templater
+Create a new pipe
+^^^^^^^^^^^^^^^^^
 
-   -  Source system "sesam:node" (refers to itself)
+Let us start by creating a new pipe from scratch called ``practice``.
+In the Sesam Management Studio, navigate to the **Pipes** view and follow these steps:
 
-      -  Provider: premade dataset
+- Click the **New pipe** button
+- Type in `practice` as the pipe's ``_id``
+- In the **Templates** panel:
 
-   -  "add DTL transform"
+  - Choose Source System: ``system:sesam-node``
+  - Choose Source Provider: ``embedded prototype``
+  - Click the **Replace** button to put the chosen Source configuration into the pipe configuration area.
+  - Click the **Add DTL transform** button to get a nice starting point to write DTL.
 
--  ["add", "hello", "world"]
+- Lastly, add some test data:
 
--  Save
+  .. code-block:: json
 
--  Starte
+    "entities": [{
+      "_id": "1",
+      "data": "One"
+    }, {
+      "_id": "2",
+      "data": "Two"
+    }]
 
--  ["add", "key", "value"]
+You should now have the following pipe config:
 
--  Save
+.. _practice-pipe-config-initial:
+.. code-block:: json
+  :caption: Practice pipe config - initial
+  :linenos:
 
--  Start - ikke noe nytt i output
+  {
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"]
+        ]
+      }
+    }
+  }
 
--  Referer "Proessser ny data" over, vis det også.
+Save and run the pipe by clicking the **Save** button and then the **Start** button.
+
+In the next section you learn how to view the result of a pipe run.
+
+Pipe output
+^^^^^^^^^^^
+
+To view the result of a pipe run, switch to the pipe's **Output** tab.
+Here you will see two entities:
+
+::
+
+  practice:1
+  practice:2
+
+But they are both empty:
+
+.. code-block:: json
+  :linenos:
+
+  {
+  }
+
+This is because we only copy the ``_id`` so far.
+
+In the next section you will learn to write your first piece of DTL to make the output a bit more interesting.
+
+Greet the world!
+^^^^^^^^^^^^^^^^
+
+Switch back to the **Config** tab.
+
+First, change the ``copy`` so that all source properties are included.
+Then add a property called ``greeting`` with the value `Hello, World!`:
+
+.. code-block:: json
+
+  ["copy", "*"],
+  ["add", "greeting", "Hello, World!"]
+
+Save and start the pipe again.
+
+Switch to the **Output** tab to view the new results.
+
+Now you will see that the output has changed:
+
+.. code-block:: json
+  :caption: ``practice:1``
+  :linenos:
+
+  {
+    "practice:data": "One",
+    "practice:greeting": "Hello, World!"
+  }
+
+.. code-block:: json
+  :caption: ``practice:2``
+  :linenos:
+
+  {
+    "practice:data": "Two",
+    "practice:greeting": "Hello, World!"
+  }
+
+You have now learned how to create a new pipe from scratch using templates, write and edit DTL functions,
+run a pipe and view it's output.
+
+.. _practice-pipe-config-final:
+.. code-block:: json
+  :caption: Practice pipe config - final
+  :linenos:
+
+  {
+    "_id": "practice",
+    "type": "pipe",
+    "source": {
+      "type": "embedded",
+      "entities": [{
+        "_id": "1",
+        "data": "One"
+      }, {
+        "_id": "2",
+        "data": "Two"
+      }]
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "greeting", "Hello, World!"]
+        ]
+      }
+    }
+  }
+
 
 .. _pipe-shortcuts-3-1:
 
 Pipe shortcuts
 ~~~~~~~~~~~~~~
 
-Preview, Ctrl + Enter
+When you shape your data in the pipe config, shortcuts are quite a nice tool for you in order to work more efficiently. Pipe shortcuts can be viewed by pressing the "Editor Options" tab in the Management Studio. 
 
-Formatering alt + .
+**Run/Preview**
 
-Save ctrl + s
+`Ctrl+Enter` (Windows/Linux/MacOS) 
 
-Find/replace
+* Lets you preview the result of a given change in your pipe config.
+* Lets you modify the incoming dataset. 
 
-Ctrl+space = Search/autocomplete
+**Auto formatting**
+
+`Alt+.` (Windows/Linux)
+
+`Opt+.` (MacOS)
+
+* Automatically formats your dtl.
+
+**Quick save**
+
+`Ctrl+s` (Windows/Linux/MacOS)
+
+* Saves the current pipe config.
+
+**Find/Replace**
+
+`Ctrl+f` (Windows/Linux)
+
+`Command+f` (MacOS)
+
+* Lets you search for string matches in the pipe config.
+* Automatically inserts a highlighted string in the pipe config as your search string.
+* Lets you do *search and replace* on strings in the pipe config.
+
+**Autocomplete/Suggestions**
+
+`Ctrl+Space` (Windows/Linux/MacOS) 
+
+* Lets you pick functions/properties in each statement of the pipe config, i.e. transform statement.
 
 
 .. _tasks-for-dtl-beginner-3-1:
