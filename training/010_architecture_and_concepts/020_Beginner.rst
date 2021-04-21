@@ -537,6 +537,17 @@ Examples end ref to 1.1.13
 Entities / JSON (Key-value pairs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+As stated earlier in this section, a dataset consists of a list of entities and an entity is of the type JSON. In addition, the entity consists of key-value pairs. A key-value pair is two related data elements. A key is a constant and defines what that data element is concerned with, i.e., postCode, email, phoneNumber, etc. Meanwhile, the value provides contextual information for a specific key. This could look like the following:
+
+.. code-block:: json
+
+   {
+     "<key>": "<value>"
+   }
+
+   {
+     "postCode": "6400"
+   }
 
 
 .. _globals-as-a-concept-1-1:
