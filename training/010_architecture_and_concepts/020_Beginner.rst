@@ -157,7 +157,7 @@ The parts of sesam @Erik
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
 concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets. 
+with the integration platform: systems, pipes and datasets.
 
 |
 
@@ -175,7 +175,7 @@ with the integration platform: systems, pipes and datasets.
 
 These are the fundamental parts which make up a Sesam integration pipeline:
 
-Systems: 
+Systems:
    A system’s main feature is to act as the interface to import and export data
    into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
    beginning and end of the pipeline flows and are often referred to as
@@ -188,7 +188,7 @@ Systems:
    which in turn can manipulate and delegate data according to your own
    specifications, making Sesam a very robust and comprehensive tool.
 
-Pipes:  
+Pipes:
    A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
@@ -197,14 +197,14 @@ Pipes:
    dataset depending on where the pipe is located inside the integration
    pipeline.
 
-Datasets: 
+Datasets:
    Datasets are Sesam’s storage units and can be compared
    to i.e., a table in an SQL database. Datasets are where the pipes store the
    data they produce, unless a sink specifies otherwise. Sesam stores data in order to be able
    to perform tracking and indexing, but you will learn more about these
    functionalities later in this book (maybe a link?).
 
-Entities: 
+Entities:
    A dataset consists of a list of entities. Entities in
    Sesam can be compared to individual rows in an SQL table and can
    represent anything from a person, a mechanical part to a contract. An
@@ -543,13 +543,68 @@ Entities / JSON (Key-value pairs)
 .. _globals-as-a-concept-1-1:
 
 Globals as a concept
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
-Why globals
+Note to self: Add image of Global here.
 
-Golden records
 
-Gjør data tilgjengelig
+Globals are special pipes used to merge datasets which store similar entities which
+fall under the same concept. As an example, "global-person" can merge data from the
+datasets "hr-employee" and "hr-customer". This is because "person" is the common denominator
+of both employees and customers.
+
+But what is there to gain by doing this?
+Globals give us the opportunity to simplify and enhance our integrations by joining
+data which represents the same concept in the real world but is stored separately in
+in the binary world.
+We can also simplify the process of grabbing the data we need by using globals, as
+the only information we truly need to start customizing data for an endpoint is what
+concept the endpoint wishes to receive - because this information makes it easy to pick
+the correct global. You may only want to process a specific part of the global
+but this is easily done by using the "rdf:type" you specified in the inbound pipes.
+
+Globals are the aggregation of objects about the same concepts.
+In other words, globals are buckets for concepts.
+To draw on this metaphor further, you can choose to either mix your bucket by joining
+the objects within it, or keep them separate inside the bucket.
+Of course more value is gained by mixing the objects within, but without doing so you
+still have a nicely labeled bucket which will simplify decisions of what data to use.
+
+Example of an un-mixed bucket also known as Globals without Joins:
+We have the inbound pipes/datasets cab-address and hr-address. Both theses datasets
+store information about addresses, but the first is for our customers and the second
+for our employees. Unless a person might fall into both categories, there is no value
+to be gained by joining these together. We will therefore only aggregate these datasets
+into the "global-address" pipe and for example hop to this pipe when we need to look up
+either an employees or a customers address.
+
+Example of a mixed bucket also known as Globals with Joins:
+We have the inbound pipes/datasets shipping-customerinfo and sales-customer which read
+from a shipping and a sales system respectively. The datasets produced by these pipes both
+store information about the same customers, but from systems which have a different perspective
+on these customers. The shipping system cares about how the customer wishes to receive their
+goods, while the sales systems cares about what goods the customer usually shops and analytics
+about their habits.
+The entities (customers) in these datasets could be linked together by
+for example emailaddress or phone number.
+By aggregating these datasets together in the "global-customer" pipe, we can also join
+the customers on let us say Email for the sake of the argument.
+We now have a aggregated view of the customers which join together, givin us both
+perspectives in the same entity!
+This makes us able to pick data both from the shipping and the sales system when we
+wish to process data about any given customer.
+
+As a sidenote to this last example, we would now be able to define "golden records".
+A golden records consists of the properties which together represent the most
+truthful version of an object.
+For example: Both the shipping-customerinfo and sales-customer entities have the
+property "address", but the shipping systems version of this address is always most up to date.
+This means that we can define a golden attribute "golden-address" with the address provided
+by our shipiing system, which we can thereafter use in any downstream pipes
+without needing to worry about where this attribute originally came from.
+
+Read more about Globals and Golden Records here: -Link later to 030_Novice:Global
+
 
 Ref. 1.2.19, 3.2.14
 
@@ -589,4 +644,3 @@ and stored inside an entity of the output dataset?*
 vs in a Sesam Dataset?*
 
 7. *What is the minimum required to define an entity?*
-
