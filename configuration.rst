@@ -8341,15 +8341,13 @@ Properties
 
    * - ``connect_timeout``
      - Integer
-     - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
-       wait indefinitely.
+     - Number of seconds to wait for connecting to the HTTP server before timing out.
      - ``60``
      -
 
    * - ``read_timeout``
      - Integer
-     - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
-       means wait indefinitely.
+     - Number of seconds to wait for the HTTP server to respond to a request before timing out.
      - ``1800``
      -
 
@@ -8886,15 +8884,13 @@ Properties
 
    * - ``connect_timeout``
      - Integer
-     - Number of seconds to wait for connecting to the microservice before timing out. A value of ``null`` means
-       wait indefinitely.
+     - Number of seconds to wait for connecting to the microservice before timing out.
      - ``60``
      -
 
    * - ``read_timeout``
      - Integer
-     - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
-       means wait indefinitely.
+     - Number of seconds to wait for the microservice to respond to a request before timing out.
      - ``1800``
      -
 
