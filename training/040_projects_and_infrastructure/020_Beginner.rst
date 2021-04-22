@@ -24,6 +24,8 @@ Legge til env-vars/secrets (system secrets vs secrets)
 
 Lage JWT
 
+Finne API-URL
+
 se på Execution logs/system dataset
 
 system:config-dataset
@@ -38,19 +40,43 @@ There is an Sesam Commad Line Toole on Sesam Community on github. It is often re
 This is **NOT** a full command line replacement for the sesam portal web user interface. It is a tool related to development and testing. 
 It should only be used with a development sesam node and **not with a PRODUCTION sesam node**. But it is very usful for development.
 
-sesam-py supports a workflow where you work with your sesam config files localy on your computer in you prefered text editor and usually with a 
-version controll system. sesam-py works in conjunction with your sesam development node to do tests and to send configs and data back and fort with your 
+sesam-py supports a workflow where you work with your sesam config files localy on your computer. You can use your prefered text editor and version controll system. sesam-py works in conjunction with your sesam development node to do tests and to send configs and data back and fort with your 
 local computer. The sesam development node do not run on your computer but on a remote machine (in the sky or dedicated server).
 
-You can work both in the web portal and the user interface there and with sesam-py, but you should allways think of what you have in the node as something that 
+Visual studio code will be a good choice of editor for moste people, but others prefer Atom, Sublime Text, Vim etc. the importaint thing is that it support utf-8 character encoding and is nice for editing json.
+
+git on github works well with sesam-py as version controll system, but most version controll sytems will work as long as long as it does not "mess up" filenames and folder structures.
+
+You can work both in the web portal with the user interface in web portal and with sesam-py, but you should allways think of what you have in the node as something that 
 can get lost. Only think of configuratios that are saved in the version controll system as saved. With this mindset you will not lose a lot of work if you 
 inadvertently wipe the node or overwrite it with new configs.
 
+You find sesam-py on github:
+
 https://github.com/sesam-community/sesam-py
+
+Make sure to read README for install instructions and recommendations:
 
 https://github.com/sesam-community/sesam-py/blob/master/README.md
 
+You find different releases on this page
+
 https://github.com/sesam-community/sesam-py/releases/
+
+Remember to check for importaint updates of sesam-py on these pages from time to time.
+
+In :ref:`portal-gui-4-1` you learned how to find API-URL (node service url) and make a JWT for a sesam Node. To use sesam-py with your **developer-node** you need the API-URL for your **developer-node** and a JWT with admin rights for this Node.
+Make **sure** you are in **developer-node** and not in a **production** node when you get API-URL and JWT.
+
+Make a folder for you project if you don't have one and initiate it with version control system. Make a file called .syncconfig and put your **developer-node API-URL and JWT** in it as this:
+
+.. code-block:: bash
+    NODE="your-dev-node-at.sesam.cloud"
+    JWT="your-JWT-for-your-dev-node"
+
+
+
+
 
 NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
 
