@@ -695,8 +695,9 @@ run again.
 Compaction will not be performed datasets with a tripped circuit
 breaker. It is also not possible to repost entities to these datasets.
 
-The `service API <api.html#post--datasets-dataset_id>`_ can be used to
-reset the circuit breaker.
+You can rollback or commit the circuit breaker on the dataset page in
+the :doc:`Management Studio <management-studio>`, or use the
+`service API <api.html#post--datasets-dataset_id>`_.
 
 Resetting
 ---------
