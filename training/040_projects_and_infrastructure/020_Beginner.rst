@@ -38,7 +38,7 @@ sesam-CLI
 ~~~~~~~~~
 There is an Sesam Commad Line Toole on Sesam Community on github. It is often refered to as Sesam-CLI or sesam-py.
 This is **NOT** a full command line replacement for the sesam portal web user interface. It is a tool related to development and testing. 
-It should only be used with a development sesam node and **not with a PRODUCTION sesam node**. But it is very usful for development.
+It should only be used with a development sesam node and **not with a PRODUCTION sesam node**. But it is very usful for development and testing.
 
 sesam-py supports a workflow where you work with your sesam config files localy on your computer. You can use your prefered text editor and version controll system. sesam-py works in conjunction with your sesam development node to do tests and to send configs and data back and fort with your 
 local computer. The sesam development node do not run on your computer but on a remote machine (in the sky or dedicated server).
@@ -46,9 +46,12 @@ local computer. The sesam development node do not run on your computer but on a 
 Visual studio code will be a good choice of editor for moste people, but others prefer Atom, Sublime Text, Vim etc. the importaint thing is that it support utf-8 character encoding and is nice for editing json.
 
 git on github works well with sesam-py as version controll system, but most version controll sytems will work as long as long as it does not "mess up" filenames and folder structures.
+sesam-py is a command line tool and basically what you *see* when you navigate in the terminal is what sesam-py *see* and use. 
 
-You can work both in the web portal with the user interface in web portal and with sesam-py, but you should allways think of what you have in the node as something that 
-can get lost. Only think of configuratios that are saved in the version controll system as saved. With this mindset you will not lose a lot of work if you 
+You can use your favorit terminal. However a version of bash for your operating system is probably a good choice, and make it easier to relate to documentaion and examples. 
+
+You can work both in the web portal with the user interface in web portal and with sesam-py, but you should allways think of what you have in the node as **something that 
+can get lost**. Only think of configurations that are saved in the version controll system as saved. With this mindset you will not lose a lot of work if you 
 inadvertently wipe the node or overwrite it with new configs.
 
 You find sesam-py on github:
@@ -69,16 +72,78 @@ In :ref:`portal-gui-4-1` you learned how to find API-URL (node service url) and 
 Make **sure** you are in **developer-node** and not in a **production** node when you get API-URL and JWT.
 
 Make a folder for you project if you don't have one and initiate it with version control system. Make a file called .syncconfig and put your **developer-node API-URL and JWT** in it as this:
+::
 
-.. code-block:: bash
     NODE="your-dev-node-at.sesam.cloud"
     JWT="your-JWT-for-your-dev-node"
 
+The optimal directory structure of a Sesam Node project in Git should look like this:
+    ::
+    
+        my-project-directory
+          ├ node
+          | ├ expected/
+          | ├ pipes/
+          | ├ systems/
+          | ├ variables/
+          | ├ testdata/
+          | ├ node-metadata.conf.json
+          | ├ test-env.json
+          | └ .syncconfig
+          ├ README.md
+          ├ LICENSE
+          ├ .gitignore
+          └ ++
+
+You can fork and clone ... as a start project. Except for the .gitignore file this structure will be the same for other version controll systems.
+To avoid to leak secret eg. JWT for your developer node, make sure files with secrets are listed in the .gitignore file or a eqvivelent file.
+
+sesam-py will expect several of the files and folders shown in the node folder to exist to work propperly.
+    
+If you have unsaved work in your developer node (not recommend workflow) or are not sure if you have unsaved work, you can easily download this to an empty folder with the *download* command. 
+For this to work you need to put a valid .syncconfig in the empty folder configured with NODE and JWT values to connect to your dev-container. Depending on how *compleat*
+yor dev-node is configured, this will produce a filestructure eqvivelant to node folder above. You will need to run the command *update* also to get an *expected* folder.
+
+If you use the *download* command in a non empty folder it is a risk that it will overwrite existing files, so be carefull if you chose to do this.
+
+If you work on many different projects with different configurations for sesam nodes, you will have many different project folders. However you will probably use your own dveloper node to develop and test on.
+This means that everything in the developer node will be replaced when you switch from working on one project to an other. To make sure that you start work on a *clean slate* you will use the *wipe* command. 
+This command can also be followe by the *restart* command to make sure the dev-node is as *fresh* as it can be.
+
+Usual work flow
+go to project folder, check out version of config you want to develop on and test
+wipe dev-node
+restart dev-node
+run sesam *test* command. This will do an upload (of checked out config in project folder), a *run* and a *verify*.
+look at output from *verify*. If you expect the new config to produce all the same output/endpoint data as previous configs, *verify* should return that all tests passed.
+If output is not the same you need to look for bugs in your config. If you expected output to change, you need to check if new output is as you expected. If you use command *update*, you will download
+the current output values from your dev-node to your expected folder. You can than use diff functionallity in you version controll system to check differenses from previous expect values. If this is as you intended
+you can make this the new expected values by staging/commiting changes to expected to your project. If not you can revert to old expected files.
+
+?? example with bash, git and sesam-py:
+::
+    cd your-sesam-project
+    git status
+    git checkout my-feature
+    cd node/
+    sesam wipe -vv
+    sesam restart -vv
+    sesam test -vv -scheduler-max-run-time 3000 -print-scheduler-log
+    sesam -vv update
+    git add -A .
+    git commit -m "Expected updated for new feature"
 
 
 
+?? Full github based init and example. Use internal ref for docs URL?
+https://docs.sesam.io/project-workflow.html
+https://docs.sesam.io/project-workflow.html#using-git-in-a-sesam-project
+
+?? docs not up to date with current sesam client. No intit command anymore, and not in PIP (??)
+https://docs.sesam.io/sesam-client.html#concepts-sesam-client
 
 NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
+?? (feature request: tags to set node type [PROD,DEVELOP,CI,TEST,etc] sesam-py should not accept PROD and TEST, or at least only non-destructive (read) operations)
 
 pre-requisite lære seg hvordan man installerer det.
 
