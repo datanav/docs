@@ -263,6 +263,22 @@ Properties
      - False
      -
 
+       .. _service_metadata_global_defaults_disable_microservices
+       
+   * - ``global_defaults.disable_microservices``
+     - Boolean
+     - When set to true, prevents all microservices from running.`.
+     - False
+     -
+
+       .. _service_metadata_global_defaults_eager_load_microservices
+
+   * - ``global_defaults.eager_load_microservices``
+     - Boolean
+     - When set to false, prevents all microservices from running unless they have at least one pipe connected to them.
+     - True
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
@@ -8736,7 +8752,9 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 1800
+        "read_timeout": 1800,
+        "disable": false,
+        "eager_load": true
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -8893,6 +8911,18 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out.
      - ``1800``
+     -
+
+   * - ``disable``
+     - Boolean
+     - A true value will prevent the microservice from running entirely. Overrides setting in :ref:`service metadata <_service_metadata_global_defaults_disable_microservices>`. Only works in :ref:`clustered architecture <_multi_arch>`.
+     - ``false``
+     -
+
+   * - ``eager_load``
+     - Boolean
+     - A false value will prevent the microservice from running unless there's at least one pipe connected to it. Overrides setting in :ref:`service metadata <_service_metadata_global_defaults_eager_load_microservices>`. Only works in :ref:`clustered architecture <_multi_arch>`.
+     - ``true``
      -
 
 Microservice APIs
