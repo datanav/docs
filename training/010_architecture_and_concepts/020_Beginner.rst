@@ -224,7 +224,7 @@ orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
 please look `here <management-studio.html#section>`__.
 
-When logging in to the portal you will be met with a page like figure "The Sesam Portal"
+When logging in to the portal you will be met with a page like the figure below
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
    :align: center
@@ -261,12 +261,13 @@ needed to start working with Sesam, namely the “Pipes” page and the
 Pipes
 ^^^^^
 
-When entering the “Pipes” page you will be met by figure 1.1.6C. This
-figure shows you all the available pipes in your subscription as well as
-some of their corresponding meta-data. There are also several search and
-filter options available, which are specially handy when trying to
+Upon entering the “Pipes” page you will be met by a list representation of a set of pipes, as seen below. Unless fiters are applied, this
+list, as seen in the figure below, diplays all the available pipes in your subscription as well as
+some of their corresponding meta-data. The search and
+filter options available are specially handy when trying to
 located one, or a set of pipes, in a subscription with many pipes.
 
+.. _pipe_overview_figure:
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
@@ -274,15 +275,15 @@ located one, or a set of pipes, in a subscription with many pipes.
    :height: 400px
    :width: 800px
 
-   Sesam Node Pipe overview
+   Pipe overview
 
 
-If you now enter the pipe called “person-cmm” we can look into more of
+We will now enter the pipe called “person-cmm” where we can look more into the
 details regarding how you may use the portal to navigate, troubleshoot
-and configure you pipes.
+and configure your pipes.
 
-Upon entering a pipe, you will by default be sent to the pipe’s “Graph”
-view, as seen in figure 1.1.6D.
+Upon entering a pipe you will by default be sent to the pipe’s “Graph”
+view, as seen below.
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_D.png
    :align: center
@@ -290,31 +291,35 @@ view, as seen in figure 1.1.6D.
    :width: 800px
    :alt: Pipe Graph view
 
-   Pipe Graph view
+   Pipe graph view
 
 The graph view shows you which pipes are upstream and downstream to the
-specific pipe you have selected, and it also shows connections to
+specific pipe you have selected, and it also displays connections to
 related pipes (you will learn more about connected pipes later [link
 maybe?]). For now, we will focus on four of the pipe’s subpages: Config,
 Input, Output and the Execution log.
 
--  **Config**: The config subpage is where the actual coding takes
+Config: 
+   The config subpage is where the actual coding takes
    place. This is where you define what this specific pipe is supposed
    to do. A pipe config is written in DTL which you will learn more
    about in section [link]. One
 
--  **Input**: Whenever a pipe uses one or several datasets as a source,
+Input: 
+   Whenever a pipe uses one or several datasets as a source,
    the source entities will be displayed here. These are the entities
    the pipe will perform some sort of transformation on.
 
--  **Output**: The output tab shows the entities after the DTL
+Output: 
+   The output tab shows the entities after the DTL
    transformation. The way you see the output depends on whether the
    data is stored in a dataset or sent to a target system. There are
    some occasions where there is no output so be seen but for now you
    can assume that there will always be an output to be see for each
    pipe.
 
--  **Execution log**: The execution log supplies us with information on
+Execution log: 
+   The execution log supplies us with information on
    the state of the pipe. If a pipe runs as it should the execution log
    will display information on how many entities it has processed, how
    much time the processing took and much more. If a pipe is not be able
@@ -327,11 +332,32 @@ Input, Output and the Execution log.
 Systems
 ^^^^^^^
 
-The systems tab looks very much like the pipe tab in figure 1.1.6C. For
-systems we will focus the three most commonly used tabs: Config, Secrets
+The systems tab looks very much like the pipe tab in the Pipe overview above. 
+
+.. figure:: ./media/systems-overview.png
+   :align: center
+   :alt: Sesam Node System overview
+   :height: 200px
+   :width: 800px
+
+   Systems overview
+
+
+When entering a system you will se a set of subpages, just as we saw in a specific pipe.  
+
+.. figure:: ./media/system-graph.png
+   :align: center
+   :alt: System graph
+   :height: 400px
+   :width: 800px
+
+   System graph view
+
+For systems we will focus the three most commonly used tabs: Config, Secrets
 and Status.
 
--  **Config**: Like with pipes, the config tab is where you specify what
+Config: 
+   Like with pipes, the config tab is where you specify what
    the system is supposed to do. There are many different types of
    systems and many of have very different configuration. There are
    however some common traits that apply to most system. These traits
@@ -340,14 +366,16 @@ and Status.
    where your system relies on a Microservice you might also have a set
    of environmental variables used by the Microservice.
 
--  **Secrets**: In the Secrets tab you may store sensitive information
+Secrets: 
+   In the Secrets tab you may store sensitive information
    you do not wish everyone on the node to have access to. These secrets
    are often passwords or token used to authorization and
    authentication. Secrets stored in the system tabs are local secrets
    and may only be used by the specific system in which they are
    defined.
 
--  **Status**: In the Status tab you can monitor the health of your
+Status: 
+   In the Status tab you can monitor the health of your
    system. When connected to built-in systems this tab shows you whether
    you are connected correctly. When connected to Microservices this tab
    displays connection status and logging provided by the Microservice.
