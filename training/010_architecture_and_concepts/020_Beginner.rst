@@ -363,7 +363,7 @@ DTL also validated as JSON?
 
 .. _naming-conventions-1-1:
 
-Naming Conventions
+Naming conventions
 ~~~~~~~~~~~~~~~~~~
 
 When constructing an integration flow in Sesam the use of a standardized
