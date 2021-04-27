@@ -263,15 +263,15 @@ Properties
      - False
      -
 
-       .. _service_metadata_global_defaults_disable_microservices
+       .. _service_metadata_global_defaults_disable_microservices:
        
    * - ``global_defaults.disable_microservices``
      - Boolean
-     - When set to true, prevents all microservices from running.`.
+     - When set to true, prevents all microservices from running.
      - False
      -
 
-       .. _service_metadata_global_defaults_eager_load_microservices
+       .. _service_metadata_global_defaults_eager_load_microservices:
 
    * - ``global_defaults.eager_load_microservices``
      - Boolean
@@ -8915,13 +8915,13 @@ Properties
 
    * - ``disable``
      - Boolean
-     - A true value will prevent the microservice from running entirely. Overrides setting in :ref:`service metadata <_service_metadata_global_defaults_disable_microservices>`. Only works in :ref:`clustered architecture <_multi_arch>`.
+     - A true value will prevent the microservice from running entirely. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_disable_microservices>`. Only works in :ref:`clustered architecture <multi_arch>`.
      - ``false``
      -
 
    * - ``eager_load``
      - Boolean
-     - A false value will prevent the microservice from running unless there's at least one pipe connected to it. Overrides setting in :ref:`service metadata <_service_metadata_global_defaults_eager_load_microservices>`. Only works in :ref:`clustered architecture <_multi_arch>`.
+     - A false value will prevent the microservice from running unless there's at least one pipe connected to it. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`. Only works in :ref:`clustered architecture <multi_arch>`.
      - ``true``
      -
 
