@@ -548,6 +548,7 @@ Globals as a concept
 
 .. figure:: ./media/Architecture_Beginner_Globals_as_a_concept_A.png
    :align: right
+   :scale: 45 %
 
    Figure A – Global Symbol.
 
