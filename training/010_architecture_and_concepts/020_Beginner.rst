@@ -545,32 +545,46 @@ Entities / JSON (Key-value pairs)
 Globals as a concept
 ~~~~~~~~~~~~~~~~~~~~
 
-Note to self: Add image of Global here.
+
+.. figure:: ./media/Architecture_Beginner_Globals_as_a_concept_A.png
+   :align: right
+
+   Figure A – Global Symbol.
 
 
-Globals are special pipes used to merge datasets which store similar entities which
+What are Globals?
+^^^^^^^^^^^^^^^^^
+
+Globals are pipes which merge datasets that store similar entities which
 fall under the same concept. As an example, "global-person" can merge data from the
 datasets "hr-employee" and "hr-customer". This is because "person" is the common denominator
 of both employees and customers.
 
-But what is there to gain by doing this?
+Why use globals?
+^^^^^^^^^^^^^^^^
+
 Globals give us the opportunity to simplify and enhance our integrations by joining
-data which represents the same concept in the real world but is stored separately in
+data which represents the same concept in the real world but normally is stored separately in
 in the binary world.
-We can also simplify the process of grabbing the data we need by using globals, as
-the only information we truly need to start customizing data for an endpoint is what
-concept the endpoint wishes to receive - because this information makes it easy to pick
-the correct global. You may only want to process a specific part of the global
-but this is easily done by using the "rdf:type" you specified in the inbound pipes.
+By using globals we also simplify the process of grabbing the data we need because if you
+know which concept or type of entity an endpoint wishes to receive, you can quickly pick
+the global which stores this concept. If you only want to process a specific subset of the global
+then you can easily use the "rdf:type" to narrow down what entities you want.
+
+How do globals work?
+^^^^^^^^^^^^^^^^^^^^
 
 Globals are the aggregation of objects about the same concepts.
-In other words, globals are buckets for concepts.
+In other words, globals are buckets for entities which fall under the same concept.
 To draw on this metaphor further, you can choose to either mix your bucket by joining
 the objects within it, or keep them separate inside the bucket.
 Of course more value is gained by mixing the objects within, but without doing so you
 still have a nicely labeled bucket which will simplify decisions of what data to use.
 
-Example of an un-mixed bucket also known as Globals without Joins:
+Globals without joins
+^^^^^^^^^^^^^^^^^^^^^
+
+This is an example of an un-mixed bucket also known as Global without joins.
 We have the inbound pipes/datasets cab-address and hr-address. Both theses datasets
 store information about addresses, but the first is for our customers and the second
 for our employees. Unless a person might fall into both categories, there is no value
@@ -578,18 +592,22 @@ to be gained by joining these together. We will therefore only aggregate these d
 into the "global-address" pipe and for example hop to this pipe when we need to look up
 either an employees or a customers address.
 
-Example of a mixed bucket also known as Globals with Joins:
+Globals with joins
+^^^^^^^^^^^^^^^^^^
+
+This is an example of a mixed bucket also known as Globals with joins.
 We have the inbound pipes/datasets shipping-customerinfo and sales-customer which read
 from a shipping and a sales system respectively. The datasets produced by these pipes both
-store information about the same customers, but from systems which have a different perspective
-on these customers. The shipping system cares about how the customer wishes to receive their
-goods, while the sales systems cares about what goods the customer usually shops and analytics
+store information about the same customers, but this data is currently stored separately.
+In other words, these systems and pipes talk about the same customers but with different perspectives.
+The shipping system cares about how the customer wishes to receive their
+goods, while the sales systems cares about what goods the customer usually shops for and analytics
 about their habits.
-The entities (customers) in these datasets could be linked together by
-for example emailaddress or phone number.
+The entities (customers) in these datasets could for example be linked together by
+emailaddress or phone number.
 By aggregating these datasets together in the "global-customer" pipe, we can also join
-the customers on let us say Email for the sake of the argument.
-We now have a aggregated view of the customers which join together, givin us both
+the customers on for example Email.
+We now have a aggregated view of the customers which join together, giving us both
 perspectives in the same entity!
 This makes us able to pick data both from the shipping and the sales system when we
 wish to process data about any given customer.
@@ -597,7 +615,7 @@ wish to process data about any given customer.
 As a sidenote to this last example, we would now be able to define "golden records".
 A golden records consists of the properties which together represent the most
 truthful version of an object.
-For example: Both the shipping-customerinfo and sales-customer entities have the
+For example, both the shipping-customerinfo and sales-customer entities could have the
 property "address", but the shipping systems version of this address is always most up to date.
 This means that we can define a golden attribute "golden-address" with the address provided
 by our shipiing system, which we can thereafter use in any downstream pipes
