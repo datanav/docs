@@ -3,10 +3,10 @@ Changelog
 
 .. _changelog_2021_04_27:
 
-2021-04-27
+2021-04-29
 ----------
 
-* Added configuration options for controlling deployment of microservices. The :ref:`disable_microservices <service_metadata_global_defaults_disable_microservices>` option will prevent any microservice from running, while the :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will prevent any microservice from running, unless it has at least one pipe connected to it. As of now, this options is false by default. Both of these options can be overriden per system using the ``disable`` and ``eager_load`` options in the :ref:`Microservice system configuration <microservice_system>`.
+* Added a configuration option for controlling the deployment of microservices. The :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will prevent any microservice from running, unless it has at least one pipe connected to it. This option is only available in the :ref:`clustered architecture <multi_arch>` and it's ``true`` by default, in line with previous behaviour. The default will change to ``false`` in three weeks. The option can be overriden per system using the ``eager_load`` flag in the :ref:`Microservice system configuration <microservice_system>`.
 
 .. _changelog_2021_04_15:
 
