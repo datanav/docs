@@ -267,7 +267,7 @@ Properties
 
    * - ``global_defaults.eager_load_microservices``
      - Boolean
-     - When set to false, prevents all microservices from running unless they have at least one pipe connected to them. Only works in :ref:`clustered architecture <multi_arch>`.
+     - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless. Only works in :ref:`clustered architecture <multi_arch>`.
      - True
      -
 
@@ -8906,7 +8906,7 @@ Properties
 
    * - ``eager_load``
      - Boolean
-     - A false value will prevent the microservice from running unless there's at least one pipe connected to it. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`. Only works in :ref:`clustered architecture <multi_arch>`.
+     - When set to false, Sesam can hold off starting up the microservice if it isn't connected to any pipes. Set to true to force the microservice to start up regardless. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`.
      - ``true``
      -
 
