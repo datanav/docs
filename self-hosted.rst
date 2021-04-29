@@ -34,7 +34,7 @@ Software requirements
 Firewall requirements
 ---------------------
 
-In general it is hard to be specific on IP addresses since most of these services are hosted on CDNs which basically means that you have no guarantee that the IPs don't change. If you don't have a firewall that support wildcards and/or use of domain names, an option is to allow this access through a proxy.
+In general it is hard to be specific on IP addresses since most of these services are hosted on Content Delivery Networks (CDNs), which basically means that you have no guarantee that the IPs don't change. If you don't have a firewall that support wildcards and/or use of domain names, an option is to allow this access through a proxy.
 
 .. _inbound_firewall_rules:
 
