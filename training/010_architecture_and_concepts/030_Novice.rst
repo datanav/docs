@@ -19,6 +19,50 @@ Short overview of what data joining is
 Make namespaced identifiers for foreign keys - make-ni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Continuing along the lines of joining data, namespaced identifiers (NI's) come into play. NI's are used in Sesam to create unique identifiers inside one Sesam datahub. In order to create them, you can use either of the two functions: ["make-ni"] or ["ni"].
+
+In the below example, ["make-ni"] will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
+
+.. code-block:: json
+
+	{
+	  "_id": "mssql-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type",
+	          ["ni", "mssql-accounts", "accounts"]
+	        ],
+	        ["make-ni", "mssql-contacts", "phone"]
+	      ]
+	    }
+	  }
+	}
+
+and will result in the following dataset when run. For the purpose of spacing, only one entity is shown:
+
+.. code-block:: json
+
+	{
+	  "mssql-accounts:country": "DK",
+	  "mssql-accounts:id": 40,
+	  "mssql-accounts:phone": "1-894-115-3398",
+	  "mssql-accounts:phone-ni": "~:mssql-contacts:1-894-115-3398",
+	  "mssql-accounts:position": "CEO",
+	  "rdf:type": "~:mssql-accounts:accounts"
+	}
+
+
+As can be seen in the above dataset, the property with the key: "mssql-accounts:phone-ni" is the result of the function ["make-ni"] as defined in the above pipe config. The value can be used to join data between the pipes: "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
+
 .. _full-outer-join-merge-1-2:
 
 Full outer Join - Merge
