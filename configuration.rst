@@ -267,7 +267,7 @@ Properties
 
    * - ``global_defaults.eager_load_microservices``
      - Boolean
-     - When set to false, prevents all microservices from running unless they have at least one pipe connected to them.
+     - When set to false, prevents all microservices from running unless they have at least one pipe connected to them. Only works in :ref:`clustered architecture <multi_arch>`.
      - True
      -
 
