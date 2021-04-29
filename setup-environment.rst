@@ -49,13 +49,13 @@ before propagating them to the test environment. A CI environment is
 also set up to automatically verify that the integrity of existing data
 is not violated before updated configuration is deployed.
 
-1. Set up a source control system.
+1. Set up a source control system. For information about how to do this for a Sesam configuration, read the :ref:`guide to set up version control <setup-version-control>`.
 
-2. Set up the CI subscription and connect it to your source control flow.
+2. Set up the CI subscription and connect it to your source control flow. For information about to set up CI for a Sesam project, read the :ref:`guide to set up CI <setup-ci>`.
 
-3. **OPTIONAL**: Set up automatic deployment from source control.
+3. **OPTIONAL**: Set up automatic deployment from source control. For information about to set up this for a Sesam project, read the :ref:`guide to set up automic deployment <setup-deployment>`.
 
-4. Ensure every developer has set up their local test environment.
+4. Ensure every developer has set up their local test environment. For how to set up local testing for test-driven development, follow the instructions in the :ref:`guide to set up local tests <setup-local-tests>`.
 
 Security
 --------

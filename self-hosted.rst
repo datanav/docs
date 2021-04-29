@@ -1,3 +1,5 @@
+.. _self-hosted:
+
 ===================
 Self-hosted service
 ===================
