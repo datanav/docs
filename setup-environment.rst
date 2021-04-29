@@ -30,7 +30,7 @@ Network connectivity
 --------------------
 
 To prepare connectivity the following ports between connected
-systems, and the test and production environments needs to be opened
+systems, and the test and production environments need to be opened
 in the affected firewalls. Alternatively, a VPN connection can be
 established between the Sesam service and the connected systems.
 
@@ -42,12 +42,12 @@ Development environment
 -----------------------
 
 The recommended way to work with Sesam is to use test-driven
-development. This requires that the configuration include test data for
+development. This requires that the configuration includes test data for
 all incoming data types. The test data allows developers to work
 separately on their own Sesam subscription, testing changes locally
 before propagating them to the test environment. A CI environment is
 also set up to automatically verify that the integrity of existing data
-is not violated before updated configuration is deployed.
+is not violated before an updated configuration is deployed.
 
 1. Set up a source control system. For information about how to do this for a Sesam configuration, read the :ref:`guide to set up version control <setup-version-control>`.
 
@@ -64,8 +64,8 @@ Sesam has an advanced security model that can be aligned to different
 needs, but as a standard the admin needs to add users in one of two main
 roles:
 
-1. Developer – Access all data, and deploy changes to the main
+1. Developer – Access all data and deploy changes to the main
    config-group.
 
-2. User – Access only data explicitly opened for them, and add their own
+2. User – Access only data explicitly opened for them and add their own
    config-group to set up data flows.
