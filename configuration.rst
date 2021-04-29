@@ -267,7 +267,7 @@ Properties
 
    * - ``global_defaults.eager_load_microservices``
      - Boolean
-     - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless. Only works in :ref:`clustered architecture <multi_arch>`.
+     - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless.
      - True
      -
 
