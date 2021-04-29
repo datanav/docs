@@ -34,10 +34,9 @@ systems, and the test and production environments needs to be opened
 in the affected firewalls. Alternatively, a VPN connection can be
 established between the Sesam service and the connected systems.
 
-Open the ports for each of your connected systems, in addition to this
-list of standard ports:
+Open the ports for each of your connected systems.
 
-[*\* LIST OF STANRDARD PORTS \**]
+If you are running a self hosted Sesam, follow the instructions in the :ref:`Self Hosted Guide <self-hosted>`.
 
 Development environment
 -----------------------
