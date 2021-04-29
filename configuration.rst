@@ -263,6 +263,14 @@ Properties
      - False
      -
 
+       .. _service_metadata_global_defaults_eager_load_microservices:
+
+   * - ``global_defaults.eager_load_microservices``
+     - Boolean
+     - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless.
+     - True
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
@@ -8736,7 +8744,8 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 1800
+        "read_timeout": 1800,
+        "eager_load": true
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -8893,6 +8902,12 @@ Properties
      - Integer
      - Number of seconds to wait for the microservice to respond to a request before timing out.
      - ``1800``
+     -
+
+   * - ``eager_load``
+     - Boolean
+     - When set to false, Sesam can hold off starting up the microservice if it isn't connected to any pipes. Set to true to force the microservice to start up regardless. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`.
+     - ``true``
      -
 
 Microservice APIs
