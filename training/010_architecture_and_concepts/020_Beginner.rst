@@ -557,11 +557,28 @@ Ref. 1.2.19, 3.2.14
 Special sesam attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Namespace
+Namespaces
+^^^^^^^^^^
+Namespaces are inspired by RDF (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the entity data model. In essence they are a string consisting of two parts, the namespace and the identifier. "~:foo:bar" is an example. The ~: is the type part that tells you that it is a namespaced identifier. foo in this case is the namespace and bar is the identifier.
+
+Properties can also have namespaces, but here the ~: part is not used. global-person:fullname is an example of such a namespaced property. Namespaced properties are essential when merging to avoid naming collisions and to maintain provenance of the properties.
+
+A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export. You use the functions ["make-ni"] or ["ni"] to create them.
+
 
 Rdf:type
+^^^^^^^^
+The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 \_id
+^^^^
+The identity (_id) of systems, pipes and datasets must be unique and consistent as data moves via systems, through pipes and into datasets.
+
+The _id of a system is usually defined by the name of your source system i.e., salesforce. In case you need two systems in Sesam that both originate from salesforce, you'll need to make two unique names for each of these i.e., salesforce and salesforce-rest.
+
+For pipes, the _id is typically defined by establishing which properties in the pipe´s dataset are unique across its entities. This could typically be primary key(s) when data is imported from a database or potentially a unique property or even concatenated properties when data is imported from an API.
+
+When data reaches a pipe's dataset, the _id will be identical to what you defined the _id to be, in that pipe's config.
 
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
