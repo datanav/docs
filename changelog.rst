@@ -6,7 +6,7 @@ Changelog
 2021-04-29
 ----------
 
-* Added a configuration hint for controlling the deployment of microservices. The new :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will allow Sesam to hold off starting up microservices which are not connected to any pipes. This option is ``true`` by default, in line with previous behaviour. The default will change to ``false`` in three weeks. The option can be overriden per system using the ``eager_load`` flag in the :ref:`Microservice system configuration <microservice_system>`.
+* Added a configuration hint for controlling the deployment of microservices. The new :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will allow Sesam to hold off starting up microservices which are not connected to any pipes. This option is ``true`` by default, in line with previous behaviour. The default will change to ``false`` in three weeks. The option can be overriden per system using the ``eager_load`` flag in the :ref:`Microservice system configuration <microservice_system>`. Individual microservices which need to be run eagerly should have the option ``eager_load`` set to ``true`` explicitly in anticipation of the default changing.
 
 .. _changelog_2021_04_15:
 
