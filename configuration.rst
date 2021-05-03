@@ -3358,7 +3358,9 @@ Properties
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source
-       configuration will take precendence if defined.
+       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
+       response body it will take precedence over any property found by traversing the path using the dot notation.
      -
      -
 
@@ -4620,7 +4622,9 @@ Properties
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform
-       configuration will take precendence if defined.
+       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
+       response body it will take precedence over any property found by traversing the path using the dot notation.
      -
      -
 
