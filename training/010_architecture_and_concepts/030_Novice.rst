@@ -8,11 +8,31 @@ Architecture and Concepts: Novice
 Joining Data
 ~~~~~~~~~~~~
 
-The value of joining data
+When working with data, you will often find yourself in situations where you need to join data. By joining data you get a comprehensive representation of a data object that has relations to other isolated data objects. In general, you join data because it gives you a more complete picture of a data object and its relation to other data objects. This allows you to work more efficiently and logically when you model your data towards a target state.
 
-Short overview of what data joining is
+In Sesam you will also experience the need for joining data, and this is a functionality Sesam excels at. To outline the different possibilities when joining data, given the two data objects "foo" and "bar", the below example will be used. It draws upon the Sesam syntax and as such is something you will be using down the road. Here goes:
 
-1-1, 1-n, n-m
+{
+  "_id": "foo",
+  "value": 1,
+  "values": [1, 2, 4, 5]
+}
+{
+  "_id": "bar",
+  "value": 1,
+  "values": [1, 3, 4, 6]
+}
+
+There are four different kinds of joins. In the below outline, "eq" is an abreviation for equals and "foo.value" is to denote that you search in the "foo" data object in the key "value":
+
+One-to-one join: ["eq", "foo.value", "bar.value"]
+One-to-many: ["eq", "foo.value", "bar.values"]
+Many-to-one: ["eq", "foo.values", "bar.value"]
+Many-to-many: ["eq", "foo.values", "bar.values"]
+
+The rule for joins is very simple: if any of the values overlap, then the join succeeds.
+
+All of the four joins given above succeed for the two data objects given, because they all have overlapping values, i.e. the values 1 and 4.
 
 .. _make-namespaced-identifiers-for-foreign-keys-make-ni-1-2:
 
