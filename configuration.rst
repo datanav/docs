@@ -3297,6 +3297,8 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
@@ -3374,6 +3376,21 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precendence if defined.
      -
+     -
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the source or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and source,
+       the source value takes precedence.
+     - 1
      -
 
 Continuation support
@@ -4535,6 +4552,8 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
@@ -4659,6 +4678,21 @@ Properties
        403. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 are always
        allowed and the default is to fail for any status code outside of this range.
      -
+     -
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and transform,
+       the transform value takes precedence.
+     - 1
      -
 
 .. _rest_transform_expected_rest_entity_shape:
@@ -6839,6 +6873,8 @@ Prototype
         "type": "rest",
         "system" : "rest-system",
         "operation": "the-default-operation",
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "properties": {
            "the-default": "properties"
         },
@@ -6941,6 +6977,20 @@ expected is:
      -
      -
 
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the sink or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and sink,
+       the sink value takes precedence.
+     - 1
+     -
 
 Example entities:
 
@@ -8438,6 +8488,8 @@ Prototype
         "jwt_token": null,
         "connect_timeout": 60,
         "read_timeout": 1800,
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
@@ -8452,7 +8504,9 @@ Prototype
             },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
-                "method": "DELETE"
+                "method": "DELETE",
+                "rate_limiting_retries": 3,
+                "rate_limiting_delay": 60
             },
             "put-operation": {
                 "url" : "/some/service/that/supports/put",
@@ -8502,6 +8556,21 @@ Properties
        At least one operation need to be registered for the system.
      -
      - Yes
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
+       the operation definition, the operation value takes precedence.
+     - 1
+     -
 
 Operation properties
 ^^^^^^^^^^^^^^^^^^^^
@@ -8645,6 +8714,20 @@ A operation configuration looks like:
      - ``"query"``
      -
 
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
+       the operation definition, the operation value takes precedence.
+     - 1
+     -
 
 .. _rest_system_example:
 

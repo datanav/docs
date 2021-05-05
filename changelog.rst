@@ -11,6 +11,13 @@ Changelog
 
 .. _changelog_2021_05_03:
 
+2021-05-05
+----------
+
+* Added ``rate_limiting_retries`` and ``rate_limiting_delay`` properties to the :ref:`REST source <rest_source>`, :ref:`REST transform <REST_transform>`, :ref:`REST sink <REST_sink>` and :ref:`REST system <rest_system>`. These can be used to retry failed requests that return a HTTP 429 error code.
+
+.. _changelog_2021_04_27:
+
 2021-05-03
 ----------
 
