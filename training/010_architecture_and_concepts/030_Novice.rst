@@ -27,10 +27,10 @@ In Sesam you will also experience the need for joining data, and this is a funct
 
 There are four different kinds of joins. In the below outline, "eq" is an abreviation for equals and "foo.value" is to denote that you search in the "foo" data object in the key "value":
 
-One-to-one join: ["eq", "foo.value", "bar.value"]
-One-to-many: ["eq", "foo.value", "bar.values"]
-Many-to-one: ["eq", "foo.values", "bar.value"]
-Many-to-many: ["eq", "foo.values", "bar.values"]
+- One-to-one join: ["eq", "foo.value", "bar.value"]
+- One-to-many: ["eq", "foo.value", "bar.values"]
+- Many-to-one: ["eq", "foo.values", "bar.value"]
+- Many-to-many: ["eq", "foo.values", "bar.values"]
 
 The rule for joins is very simple: if any of the values overlap, then the join succeeds.
 
