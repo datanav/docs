@@ -12,16 +12,18 @@ When working with data, you will often find yourself in situations where you nee
 
 In Sesam you will also experience the need for joining data, and this is a functionality Sesam excels at. To outline the different possibilities when joining data, given the two data objects "foo" and "bar", the below example will be used. It draws upon the Sesam syntax and as such is something you will be using down the road. Here goes:
 
-{
-  "_id": "foo",
-  "value": 1,
-  "values": [1, 2, 4, 5]
-}
-{
-  "_id": "bar",
-  "value": 1,
-  "values": [1, 3, 4, 6]
-}
+.. code-block:: json
+
+	{
+	  "_id": "foo",
+	  "value": 1,
+	  "values": [1, 2, 4, 5]
+	}
+	{
+	  "_id": "bar",
+	  "value": 1,
+	  "values": [1, 3, 4, 6]
+	}
 
 There are four different kinds of joins. In the below outline, "eq" is an abreviation for equals and "foo.value" is to denote that you search in the "foo" data object in the key "value":
 
