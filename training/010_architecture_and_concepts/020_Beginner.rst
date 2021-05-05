@@ -561,7 +561,7 @@ Namespaces
 ^^^^^^^^^^
 Namespaces are inspired by RDF (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the entity data model. In essence they are a string consisting of two parts, the namespace and the identifier. "~:foo:bar" is an example. The ~: is the type part that tells you that it is a namespaced identifier. foo in this case is the namespace and bar is the identifier.
 
-Properties can also have namespaces, but here the ~: part is not used. global-person:fullname is an example of such a namespaced property. Namespaced properties are essential when merging to avoid naming collisions and to maintain provenance of the properties.
+Properties can also have namespaces, but here the ~: part is not used. global-person:fullname is an example of such a namespaced property. Namespaced properties are essential when merging to avoid naming collisions and to maintain the origin of the properties.
 
 A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export. You use the functions ["make-ni"] or ["ni"] to create them.
 
@@ -569,6 +569,8 @@ A namespaced identifier is a unique reference to an abstract thing. It is an ide
 Rdf:type
 ^^^^^^^^
 The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
+
+Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
 
 \_id
 ^^^^
