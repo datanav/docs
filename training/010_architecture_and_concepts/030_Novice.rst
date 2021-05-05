@@ -24,7 +24,50 @@ Make namespaced identifiers for foreign keys - make-ni
 Full outer Join - Merge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All data from input ends up in output
+Full outer join is something you will experience in the Sesam terminology as a "merge". A merge, like the full outer join, retains all entries from i.e. two merged data objects. Graphically, a full outer join will look like the following:
+
+.. figure:: ./media/Full_Outer_Join.png
+   :align: center
+   :alt: Figure – Full Outer Join
+
+   Figure – Full Outer Join
+
+A note on the handling of null values. In Sesam null values is not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example: 
+
+.. code-block:: json
+	
+	{
+	  "_id": "first_entity:foo",
+	  "first_entity:foo_value": 1,
+	  "first_entity:foo_string":"Hello merge",
+	  "first_entity:foo_values": [1, 2, 4, 5]
+	}
+	{			
+	  "_id": "second_entity:bar",
+	  "second_entity:bar_value": 1,
+	  "second_entity:bar_string":"This is retained",
+	  "second_entity:bar_values": [1, 3, 4, 6]
+	}
+
+and the merged result, if we choose to retain the first "_id" of the above two data objects:
+
+.. code-block:: json
+
+	{
+	  "_id": "first_entity:foo",
+	  "first_entity:foo_value": 1,
+	  "first_entity:foo_string":"Hello merge",
+	  "first_entity:foo_values": [1, 2, 4, 5],
+	  "second_entity:bar_value": 1,
+	  "second_entity:bar_string":"This is retained",
+	  "second_entity:bar_values": [1, 3, 4, 6],
+	  "$ids": [
+	    "~:first_entity:foo",
+	    "~:second_entity:bar"
+	  ]
+	}
+
+What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.  
 
 
 .. _left-join-hops-1-2:
