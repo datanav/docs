@@ -43,7 +43,7 @@ Warning: Note that by default no backups are made. Data and service configuratio
 SLA
 ===
 
-Billed by storage use, but capped at 300GB. Basic is default and no additional cost. Standard 4h response 15 EUR pr GB. Enterprise 1h response 30 EUR pr GB. Premium 30m 24/7 100 EUR pr GB. Premium require fixed price minimum 300GB storage use (TODO check this).
+Billed by storage use, but capped at 300GB. Basic is default and no additional cost. Standard 4h response 15 EUR pr GB, minimum 50GB. Enterprise 1h response 30 EUR pr GB, minimum 50GB. Premium 30m 24/7 100 EUR pr GB. Premium require fixed price minimum 50GB storage use.
 
 Pipe monitoring
 ===============
