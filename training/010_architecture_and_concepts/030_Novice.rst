@@ -61,7 +61,7 @@ and will result in the following dataset when run. For the purpose of spacing, o
 	}
 
 
-As can be seen in the above dataset, the property with the key: "mssql-accounts:phone-ni" is the result of the function ["make-ni"] as defined in the above pipe config. The value can be used to join data between the pipes: "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
+As can be seen in the above dataset, the property with the key "mssql-accounts:phone-ni" is the result of the function ["make-ni"] as defined in the above pipe config. The value can be used to join data between the pipes "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
 
 .. _full-outer-join-merge-1-2:
 
