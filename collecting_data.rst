@@ -33,6 +33,7 @@ Raw data
 Data is fed into Sesam through :ref:`an inbound pipe <data-modelling-Inbound pipes>`. Firstly you will do an analysis of the data. From the result of the analysis you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
 
  • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <data-modelling-namespace>`. These references are usually key properties when semantically link data together in a global dataset but are also useful when connecting data in preparation pipes.
+ • When raw data is linked to data used to categorize it or toher meta data, it is advisable to split it; keep data and metadata seperate. The metadata used to categorize can be merged into global-classification.
  •  :ref:`An RDF type <best-practice_-rdf type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
  •  **A combination of fields**: a dataset may at times contain data that when combined can form a fuller understanding of the field, like a combination of first name and surname will give the full name of a person. This is especially important if a combination of fields may be a reference to another dataset.
 
@@ -68,8 +69,32 @@ When a global dataset has been defined, there are some considerations to be done
 •   Should data in a global dataset be merged to a single entity or not?
 •   Is the data of such a format and quality that a golden record can be defined?
 •   Would enhancing the data in a global dataset with data from another dataset improve the data for later use?
+•	Structure of data; try to keep it flat if possible
 
 To read more about global datasets; the benefits and best practice of generating and using them, please see :ref:`here <best-practice-global>`.
+
+Classification of data
+^^^^^^^^^^^^^^^^^^^^^^
+
+How do we decide which data pertains to the same concept? For example a person can potentially end up in global-customer, global-employee or global-person. which one is correct? 
+
+In Sesam we recommend a *one dimensional structure*, i.e. data can only belong to one global. Let us use an example; a company has lots of data about persons; both customers, clients, prospects, employees and applicants. It is tempting to be able to separate these to generate a global for each. The problem with this is a person with a unique ID can end up in two or more globals (e.g. global-customer and global-person). Then it is *role* of person deciding and not *concept*; which is data about persons. 
+
+So how can we differentiate between all the various types of person? In Sesam we add a category. This is mulitidimensial which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
+
+These principles actually coincide with Carl Linnaeus principles of taxonomy; it is one dimensions that is each species can only belong to one category. He had 7 classifications:
+
+Kingdom
+Phylum
+Classes
+Orders 
+Family
+Genera
+Species
+
+When classifying in Sesam, it is advisable to start high up in the hierarchy but not at top as that proves to be too general, but for most data modelling, starting at Phylum or Classes is a good starting point. To further classify deeper down in the hierarchy, we add categories and subcategories.
+
+To meet this requirement for classifying data, we recommend always generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categories. When mentioning splitting of raw data, to "clean it" so that the objects come in clean and the data used to categorize it in the source system can be merged into global classification to generate aggregated sets of metadata used to classify.
 
 .. collecting_data-Merge data in a global dataset or not:
 
@@ -113,9 +138,15 @@ In general, try to keep hops from a global pipe to other datasets as minimal as 
 Test data
 =========
 
+Test data is generated to be able to test that the data behaves as expected.
+
+It is best practice to build a foundation of test data in the inbound pipe and then build on this as the needs for testing arises. This is a smoother option than to try to generate prefect test data at the very beginning. This set of data can consist of 10 objects, anonymize if required and make sure it contains the fields required for testing. E.g. if you are testing merging, you need the fields you are margining on (E.g. mering person from HR and ERP system, you need social security number in both datasets).
+
+To read more about test data and how it is set up in Sesam, please click :ref:`here <data-modelling-Inbound pipes>`
+
 Monitoring
 ==========
 
-.
+Sesam ha a built in monitoring function to help to ensure data flows as expected and there are no bottlenecks or any stops. Best practice in Sesam is to switch on monitoring in the inbound pipes as this will cover the whole data flow.
 
 
