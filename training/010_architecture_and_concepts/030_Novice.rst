@@ -34,6 +34,12 @@ Left Join - Hops
 
 Data is appended to the output
 
+.. figure:: ./media/Left_Join.png
+   :align: center
+   :alt: Figure – Left Join
+
+   Figure – Left Join
+
 .. _global-1-2:
 
 Global
