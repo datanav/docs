@@ -38,29 +38,29 @@ A note on the handling of null values. In Sesam null values is not existing. Mea
 	
 	{
 	  "_id": "first_entity:foo",
-	  "first_entity:foo_value": 1,
-	  "first_entity:foo_string":"Hello merge",
-	  "first_entity:foo_values": [1, 2, 4, 5]
+	  "first_entity:value": 1,
+	  "first_entity:string":"Hello merge",
+	  "first_entity:values": [1, 2, 4, 5]
 	}
 	{			
 	  "_id": "second_entity:bar",
-	  "second_entity:bar_value": 1,
-	  "second_entity:bar_string":"This is retained",
-	  "second_entity:bar_values": [1, 3, 4, 6]
+	  "second_entity:value": 1,
+	  "second_entity:string":"This is retained",
+	  "second_entity:values": [1, 3, 4, 6]
 	}
 
-and the merged result, if we choose to retain the first "_id" of the above two data objects:
+and the merged result, if we choose to retain the first "_id" of the above two data objects and join the data on the value property:
 
 .. code-block:: json
 
 	{
 	  "_id": "first_entity:foo",
-	  "first_entity:foo_value": 1,
-	  "first_entity:foo_string":"Hello merge",
-	  "first_entity:foo_values": [1, 2, 4, 5],
-	  "second_entity:bar_value": 1,
-	  "second_entity:bar_string":"This is retained",
-	  "second_entity:bar_values": [1, 3, 4, 6],
+	  "first_entity:value": 1,
+	  "first_entity:string":"Hello merge",
+	  "first_entity:values": [1, 2, 4, 5],
+	  "second_entity:value": 1,
+	  "second_entity:string":"This is retained",
+	  "second_entity:values": [1, 3, 4, 6],
 	  "$ids": [
 	    "~:first_entity:foo",
 	    "~:second_entity:bar"
