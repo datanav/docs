@@ -949,6 +949,8 @@ the source. The table below explains them in detail.
           should also make sure that ``supports_since`` is set to
           ``true``.
 
+.. _strategy:
+
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
 
