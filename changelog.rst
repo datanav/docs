@@ -16,7 +16,7 @@ Changelog
 
 * The ``payload_property`` of the :ref:`REST source <rest_source>` and :ref:`REST transform <REST_transform>` now supports traversing a path in the response body using a "dotted" notation.
 
-.. _changelog_2021_04_27:
+.. _changelog_2021_04_29:
 
 2021-04-29
 ----------
