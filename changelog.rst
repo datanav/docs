@@ -6,7 +6,7 @@ Changelog
 2021-05-06
 ----------
 
-* If pipes with sources with the :ref:`chronological strategy <strategy>` fail, they now save their pipe offset based on last successful batch in the pipe run.
+* If pipes with sources with the :ref:`chronological strategy <strategy>` fail, they now save their pipe offset based on last successful batch in the pipe run. This improvement makes it more likely that a failing pipe is able to make progress.
 
 
 .. _changelog_2021_05_03:
