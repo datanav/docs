@@ -11,7 +11,7 @@ Sesam Client
 Introduction
 ============
 
-The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip. 
+The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API. The client requires python3 to work and can be installed using Pip.
 
 So what is it used for? When working with a Sesam project, the Sesam client is an invaluable tool for testing purposes, as well as for making the configuration available for interactions with a source control system, such as a Git repository. Note that the Sesam client itself does not contain any functionality to talk with a Git repository for instance.
 
@@ -21,7 +21,9 @@ The Sesam client allows us to, in a quick and easy manner, to run new DTL config
 
 As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
 
-Sesam only supports the latest version of the client at any given time. 
+Sesam only supports the latest version of the client at any given time.
+
+Note that only one instance of the sesam client can run commands on a sesam node at a time. You also need to take care when doing changes via the GUI while the client is running, as this can lead to undefined behavior.
 
 How to use the Sesam client
 ===========================
@@ -54,10 +56,10 @@ After we have installed Sesam client via pip, we need to configure it. You can r
 Installation
 ============
 
-You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__ 
+You can either run the sesam.py script directly using python, or you can download and run a stand alone binary from `Github Releases <https://github.com/sesam-community/sesam-py/releases/>`__
 
 To install and run the sesam client with python on Linux/OSX (python 3.5+ required):
- 
+
 ::
 
     $ cd sesam
@@ -83,11 +85,11 @@ When running the sesam client for the first time, use this command:
 - The Sesam client will respond by writing "Config stored in .sesam/config." and then you are ready to go.
 
 
-Typical workflow 
+Typical workflow
 ================
 
 •   Start with making sure your GitHub repository is up-to-date.
-•   Run the **"sesam test -use-internal-scheduler"** command to ensure that the results from the local repository matches the output of the configuration files. The "-use-internal-scheduler" tag ensures a faster test than without since without it the Sesam client needs to run several operations "behind-the-scene" to execute all pipes. 
+•   Run the **"sesam test -use-internal-scheduler"** command to ensure that the results from the local repository matches the output of the configuration files. The "-use-internal-scheduler" tag ensures a faster test than without since without it the Sesam client needs to run several operations "behind-the-scene" to execute all pipes.
 • The **"sesam test"** command actually runs three different commands:
 
     ◦ **"sesam upload"**: loads the local configs to the private Sesam node
@@ -108,6 +110,6 @@ Other useful commands:
     •   Adding either -v, -vv or -vvv after your command will yield further information regarging the workings of the Sesam client. **-v** will yield some extra information, **-vv** will yield some more extra information while **-vvv** will yield maximum information.
     •   **"status"** will test if the local configs are up-to-date with the node configs.
     •   **"wipe"** will wipe your private node clean of configs
-    •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.  
+    •   **-print-scheduler-log** is used with the commands **"sesam run"** or **"sesam test"**. Prints the logs of the scheduler.
 
 For further commands available through the Sesam client, run the command **"sesam -h"**
