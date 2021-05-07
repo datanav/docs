@@ -32,7 +32,7 @@ Full outer join is something you will experience in the Sesam terminology as a "
 
    Figure – Full Outer Join
 
-A note on the handling of null values. In Sesam null values is not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example: 
+A note on the handling of null values. In Sesam null values are not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example: 
 
 .. code-block:: json
 	
