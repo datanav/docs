@@ -62,7 +62,7 @@ To illustrate the graphical representation of a left join, the following practic
 	  "third_entity:string":"Third's the charm"
 	}
 
-When applying the hops, our point of reference will be the first data object from the above and we will name the new property "left_join_result". We will choose to join the data on the value property present in all of the above three data objects in order to return the values property. Albeit, the values property is only present on the first two data objects. The expected result can be seen below:
+When applying the hops, our point of reference will be the first data object from the above and we will name the new property "left_join_result". We will choose to join the data on the "value" property present in all of the above three data objects in order to return the "values" property. Albeit, the "values" property is only present on the first two data objects. The expected result can be seen below:
 
 .. code-block:: json
 
