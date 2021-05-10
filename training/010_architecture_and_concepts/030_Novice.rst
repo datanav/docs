@@ -32,7 +32,49 @@ All data from input ends up in output
 Left Join - Hops
 ~~~~~~~~~~~~~~~~
 
-Data is appended to the output
+In addition to a full outer join it is also relevant to talk about the left join. This is because you in the Sesam terminology will use something we call "hops". The hops is similar to a left join, in that it appends data and returns data even if there are no matches for a particular entry in the join. As such, in cases where you append data, null values in Sesam are retained. A graphical representation of the left join can be viewed in the below figure:
+
+.. figure:: ./media/Left_Join.png
+   :align: center
+   :alt: Figure – Left Join
+
+   Figure – Left Join
+
+To illustrate the graphical representation of a left join, the following practical example has been drafted:
+
+.. code-block:: json
+	
+	{
+	  "_id": "first_entity:foo",
+	  "first_entity:value": 1,
+	  "first_entity:string":"Hello merge",
+	  "first_entity:values": [1, 2, 4, 5]
+	}
+	{			
+	  "_id": "second_entity:bar",
+	  "second_entity:value": 1,
+	  "second_entity:string":"This is retained",
+	  "second_entity:values": [1, 3, 4, 6]
+	}
+	{			
+	  "_id": "third_entity:the_runt",
+	  "third_entity:value": 1,
+	  "third_entity:string":"Third's the charm"
+	}
+
+When applying the hops, our point of reference will be the first data object from the above and we will name the new property "left_join_result". We will choose to join the data on the "value" property present in all of the above three data objects in order to return the "values" property. Albeit, the "values" property is only present on the first two data objects. The expected result can be seen below:
+
+.. code-block:: json
+
+	{
+	  "_id": "first_entity:foo",
+	  "first_entity:value": 1,
+	  "first_entity:string":"Hello merge",
+	  "first_entity:values": [1, 2, 4, 5],
+	  "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
+	}
+
+As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.  
 
 .. _global-1-2:
 
