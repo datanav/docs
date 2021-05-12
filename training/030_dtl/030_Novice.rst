@@ -8,11 +8,59 @@ DTL: Novice
 "Copy"
 ~~~~~~
 
-Explain copy, based on ref 3.1.4 above
+Copy is one of the most fundamental DTL functions you will be using in Sesam when transforming your data. Copy might also be the most frequently used DTL function. The main reason for this is that it allows you to copy data by the use of wildcards, i.e. asterisk (*).
 
-Wildcard namespace:\*
+In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist data by providing arguments in the ``["copy"]`` function as follows:   
 
-"Copy" whitelist, blacklist
+``["copy", "*", "_*"]``
+
+The first argument in the above declaration accepts all values by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values that has an "_" as part of their key property. For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
+
+Data entering a pipe from the system "sesam-training":
+
+.. code-block:: json
+
+	{
+	  "country": "DK",
+	  "id": 40,
+	  "phone": "1-894-115-3398",
+	  "_position": "Engineer"
+	}
+
+Pipe config:
+
+.. code-block:: json
+
+	{
+	  "_id": "mssql-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*", "_*"]
+	      ]
+	    }
+	  }
+	}
+
+Data produced by the pipe DTL transformation:
+
+.. code-block:: json
+
+	{
+	  "mssql-accounts:country": "DK",
+	  "mssql-accounts:id": 40,
+	  "mssql-accounts:phone": "1-894-115-3398"
+	}
+
+As can be seen from the above produced data, the property with the key "_position" has been filtered by the ``["copy"]`` function and its arguments.
+
 
 .. _add-3-2:
 
