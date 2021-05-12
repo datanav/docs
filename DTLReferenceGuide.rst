@@ -2134,6 +2134,19 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z".
+         
+       .. WARNING::
+
+          This function is non-deterministic and will return a
+          different value every time it is evaluated. Be aware that if
+          the pipe is rewound or reset then it will produce a
+          different output. Dependency tracking will also have a
+          similar effect as to produce a different value when entities
+          are reprocessed.
+
+          *Use this function with care and make sure
+          that you are aware of the consequences of reprocessing
+          entities.*
 
        .. _`datetime`:
 
@@ -3314,6 +3327,19 @@ UUIDs
        |
        | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
        | Note that the mismatched input argument ``2`` is ignored.
+         
+       .. WARNING::
+
+          This function is non-deterministic and will return a
+          different value every time it is evaluated. Be aware that if
+          the pipe is rewound or reset then it will produce a
+          different output. Dependency tracking will also have a
+          similar effect as to produce a different value when entities
+          are reprocessed.
+
+          *Use this function with care and make sure
+          that you are aware of the consequences of reprocessing
+          entities.*
 
 
 Nested transformations
@@ -3652,6 +3678,7 @@ Entity lookups
           the entity that is looked up changes then you may want to
           reset the pipe. This will not happen automatically.
 
+.. _namespaced-identifiers:
 
 Namespaced identifiers
 ----------------------

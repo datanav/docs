@@ -103,50 +103,48 @@ possibilities a DDA provides.
 
 .. _datahub-1-1:
 
-Datahub @Jonas
-~~~~~~~~~~~~~~
+Datahub
+~~~~~~~
 
-Continuing the path of building data-centric solutions, the term
+Continuing along the path of building data-centric solutions, the term
 “Datahub” comes into play. A datahub is recognized by its frictionless
-data flow and as such builds upon the architectural principles presented
+data flow and builds upon the architectural principles presented
 in DDA. A datahub can be described as a solution that consists of
 multiple different technologies, i.e., a data warehouse, microservices,
 databases etc.
 
-A Datahub shares data by connecting generators of data with consumers of
-data. In practice this allows data to be delivered in endpoints that can
-interact with the datahub in terms of injecting data into the datahub or
-exposing data to an external system. As such, a datahub mediates and
-manages how data flows between systems and makes states of data visible
-to consumers outside the datahub.
+A Datahub shares data by connecting providers of data with consumers of
+data. As such, a datahub mediates and manages how data flows between systems and makes states of data visible to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
 an enterprise and also what SESAM often becomes when it is used
-properly. As with any other technologies there are pros and cons to any
-technology.
-
-Some of these are listed below, so you might be able to recognize them –
+properly. As with any other technologies there are pros and cons.
+Some of these are listed below, so you might be able to recognize them
 “down the road”.
 
 Pros:
 
-- Has enterprise scope, i.e., cloud, hybrid.
+- Enterprise scope, i.e., runs on cloud, hybrid.
 
 - Creates visibility into all data.
 
-- Centralizes data control.
+- Centralised data control & management.
 
-- Moves data in, close to, real time.
+- Moves data asynchronously.
 
-- Connects data.
+- Connects data from different systems.
+
+- Possibility of defining the best truth of an object across systems.
+
+- Forces the break-down of walled silos.
 
 Cons:
 
-- Data does not persist.
+- Only cares about the latest version of data.
 
 - Demands advanced capabilities.
 
-- Does not operate in silos.
+- Does not operate well with silos.
 
 .. _sesam_world_map-1-1:
 
@@ -159,34 +157,33 @@ Sesam world map
 The parts of sesam @Erik
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _terminology-1-1:
-
-Terminology
-^^^^^^^^^^^
-Systems, pipes, datasets
-
-
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
 concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets. These are
-the fundamental parts which make up a Sesam integration pipeline. Figure
-1.1.5A gives you an insight into how a standard Sesam integration
-pipeline would look.
+with the integration platform: systems, pipes and datasets.
+
+|
 
 .. figure:: ./media/Architecture_Beginner_Systems_pipes_datasets_A.png
    :align: center
-   :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolizes the direction of data flow.
+   :width: 800px
+   :height: 80px
+   :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolize the direction of data flow.
 
-   A general pipeline flow in Sesam depicting the three central parts of a
-   Sesam integration, systems, pipes and datasets. The arrows symbolizes
-   the direction of data flow.
+   *A general pipeline flow in Sesam depicting the three central parts of a
+   Sesam integration, systems, pipes and datasets. The arrows symbolize
+   the direction of data flow.*
 
--  **Systems**: A system’s main feature is to import and export data
-   into and out of the Sesam portal. They are therefore found in the
+|
+
+These are the fundamental parts which make up a Sesam integration pipeline:
+
+Systems:
+   A system’s main feature is to act as the interface to import and export data
+   into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
    beginning and end of the pipeline flows and are often referred to as
    “source systems” or “target systems” respectively. A system could
-   connect to a REST API, directly to a database of simply send data to
+   connect to a REST API, directly to a database or simply send data to
    a waiting http server. Sesam has several of these system types built
    into the product to simplify the workings inside the portal. In
    situations where the built-in system types are not enough for your
@@ -194,26 +191,28 @@ pipeline would look.
    which in turn can manipulate and delegate data according to your own
    specifications, making Sesam a very robust and comprehensive tool.
 
--  **Pipes**: Pipes handles the transformation of the data and specifies
+Pipes:
+   A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
-   allows you to add, remove, transform and combine data according to
+   allows you to add, remove, transform or combine data according to
    you own needs. A pipe generally acquires data from a system or from a
    dataset depending on where the pipe is located inside the integration
    pipeline.
 
--  **Datasets**: Datasets are Sesam’s storage units and can be compared
-   to i.e., a table in an SQL database. This is where pipes store the
-   data after configuring them and in a pipeline flow, they are
-   generally found between pipes. Sesam stores data in order to be able
+Datasets:
+   Datasets are Sesam’s storage units and can be compared
+   to i.e., a table in an SQL database. Datasets are where the pipes store the
+   data they produce, unless a sink specifies otherwise. Sesam stores data in order to be able
    to perform tracking and indexing, but you will learn more about these
    functionalities later in this book (maybe a link?).
 
--  **Entities**: A dataset consists of a list of entities. Entities in
+Entities:
+   A dataset consists of a list of entities. Entities in
    Sesam can be compared to individual rows in an SQL table and can
    represent anything from a person, a mechanical part to a contract. An
    entity is defined by its primary key, which is represented in Sesam
-   as the value belonging to the key ‘_id’.
+   as the value belonging to the key ``_id``.
 
 .. _the_sesam_portal-1-1:
 
@@ -542,6 +541,17 @@ Examples end ref to 1.1.13
 Entities / JSON (Key-value pairs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+As stated earlier in this section, a dataset consists of a list of entities. An entity is a JSON type dictionary containing a set of key-value pairs identified by its unique identifier. A key-value pair is two related data elements. A key is a constant and defines what that data element is concerned with, i.e., postCode, email, phoneNumber, etc. Meanwhile, the value provides contextual information for a specific key. This could look like the following:
+
+.. code-block:: json
+
+   {
+     "<key>": "<value>"
+   }
+
+   {
+     "postCode": "6400"
+   }
 
 
 .. _globals-as-a-concept-1-1:
