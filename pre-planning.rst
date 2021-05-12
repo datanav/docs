@@ -1,11 +1,11 @@
 Pre-planning a Sesam project
-========================
+============================
 
 The main planning task before starting a Sesam projects is to document
 an overview of what master data types is needed, their source, and how
 they should be organized inside Sesam.
 
-The :ref:`dataflow <data-modelling-dataflow>` can be documented by filling this 
+The :ref:`dataflow <data-modelling-dataflow>` can be documented by filling this
 :download:`template <files/Sesam data flow planning.xlsx>` by following these 4 steps:
 
 1. Identify what master data you need and where this data must be
@@ -18,7 +18,7 @@ The :ref:`dataflow <data-modelling-dataflow>` can be documented by filling this
 
 4. Connect the systems and master data types to the globals
 
-Identify master data 
+Identify master data
 --------------------
 
 Based on the functional needs of the project, identify the data types at
@@ -50,7 +50,7 @@ different sources must be set. Central object will always be stored in
 multiple systems, and prioritizing what system will override others is
 important to support multi master data synchronization.
 
-Identify globals 
+Identify globals
 ----------------
 
 Once det necessary master data sources and targets have been found, the
