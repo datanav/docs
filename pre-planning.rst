@@ -5,7 +5,7 @@ The main planning task before starting a Sesam projects is to document
 an overview of what master data types is needed, their source, and how
 they should be organized inside Sesam.
 
-The :ref:`dataflow <data-modelling-dataflow>` can be documented by filling this
+The :ref:`dataflow <best-practice-workflow>` can be documented by filling this
 :download:`template <files/Sesam data flow planning.xlsx>` by following these 4 steps:
 
 1. Identify what master data you need and where this data must be
