@@ -143,7 +143,7 @@ Regardless, if you need to reference a system configuration from another
 configuration in Sesam, you reference the system’s identity.
 
 **Related topics:**
-:ref:`namegiving-conventions-1-1`,
+:ref:`naming-conventions-1-1`,
 :ref:`systems`
 
 Pipe _id
@@ -169,7 +169,7 @@ configuration in Sesam, you reference the pipe’s identity.
 
 **Related topics:**
 :ref:`dtl-in-practice-3-1`,
-:ref:`namegiving-conventions-1-1`
+:ref:`naming-conventions-1-1`
 
 Dataset _id
 ^^^^^^^^^^^
