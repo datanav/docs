@@ -55,6 +55,7 @@ clean:
 	rm -rf $(DOCKER_PATH)/dist
 
 saasdoc:
+	mkdir -p $(BUILDDIR)
 	echo "\n\\\newpage\n# Appendix 1\n\n" > $(BUILDDIR)/service-appendix.md
 	echo "\n\\\newpage\n# Appendix 2\n\n" > $(BUILDDIR)/pricing-appendix.md
 	echo "\n\\\newpage\n# Appendix 3\n\n" > $(BUILDDIR)/dap-appendix.md
