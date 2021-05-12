@@ -222,7 +222,7 @@ portal can be accessed at portal.sesam.io and in this section you will
 learn the most commonly used parts of the portal such that you can
 orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
-please look `here <management-studio.html#section>`__.
+please see :ref:`sesam-management-studio`.
 
 When logging in to the portal you will be met with a page like the figure below
 
