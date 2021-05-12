@@ -1133,6 +1133,8 @@ Properties
        | Example: ``["eq", "_S.category", "tank"]``
 
        .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
+       .. NOTE:: Subsets currently also return non-latest versions of entities within the subset.
+       .. NOTE:: `eq` in subsets behaves the way it does in :ref:`joins <joins>`.
      -
      - No
 
@@ -3282,8 +3284,8 @@ Prototype
         },
         "response_property": "the-property-name-to-put-the-response-in",
         "payload_property": "the-property-the-response-resides-in",
-        "id_property": "{{ jinja_expression_for_the_id.property }}",
-        "updated_property": "{{ jinja_expression_for_the_updated_property }}",
+        "id_expression": "{{ jinja_expression_for_the_id.property }}",
+        "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
         "since_property_name": "name-of-since-property",
         "since_property_location": "where-to-put-since-param"
     }
@@ -3347,13 +3349,13 @@ Properties
      -
      -
 
-   * - ``id_property``
+   * - ``id_expression``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
-       properties available to the templating context. It can be used to add ``_id`` properties to the emitted
-       entities if missing from the source system. Note that this property can be defined in the specified
-       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-       precendence if defined.
+       properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
+       if missing from the source system. Note that this property can be defined
+       in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
+       will take precendence if defined.
      -
      -
 
@@ -3390,7 +3392,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - ``false``
      -
 
-   * - ``updated_property``
+   * - ``updated_expression``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
@@ -3420,7 +3422,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      -
      -
 
-
+.. _rest_source_examples:
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3531,8 +3533,8 @@ Configuration for REST source:
             "type" : "rest",
             "system" : "our-rest-service",
             "operation": "get-men"
-            "id_property" : "{{ id }}"
-            "updated_property" : "{{ seq }}",
+            "id_expression" : "{{ id }}"
+            "updated_expression" : "{{ seq }}",
             "since_support": true,
             "is_chronological": true,
             "is_since_comparable": true
@@ -3579,7 +3581,7 @@ In this case we add a Jinja template to extract the pagination link so we can pa
         "operations": {
             "get-men": {
                 "url" : "men/{{ properties.collection_name }}/",
-                "next_page_link": "{{ pagination.next }}"
+                "next_page_link": "{{ body.pagination.next }}"
                 "method": "GET"
             }
     }
@@ -4515,7 +4517,12 @@ Prototype
         },
         "payload": {
            "the-default": "payload"
-        }
+        },
+        "response_property": "the-property-name-to-put-the-response-in",
+        "payload_property": "the-property-the-response-resides-in",
+        "id_expression": "{{ jinja_expression_for_the_id.property }}",
+        "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
+        "ignored_status_codes": "404,444-450,501-599"
     }
 
 
@@ -4539,31 +4546,31 @@ Properties
      -
      - Yes
 
-   * - ``response-property``
+   * - ``response_property``
      - String
-     - The name of the property to store the result returned from the REST service. Note that if the ``replace-entity``
+     - The name of the property to store the result returned from the REST service. Note that if the ``replace_entity``
        property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
        the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
-       the ``response-property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
+       the ``response_property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
        set to ``false``, the ``response-property`` will be added to the original entity and set to the contents of the
        request reponse body as a string or a parsed JSON structure if that is the returned content type.
 
      - ``"response"``
      -
 
-   * - ``replace-entity``
+   * - ``replace_entity``
      - Boolean
      - This property controls if the entity should be replaced with the JSON contents of the response or if the
-       original entity should be kept. See the ``response-property`` for more detail on how this works. The default
+       original entity should be kept. See the ``response_property`` for more detail on how this works. The default
        is to keep the original entity and add a ``reponse`` property holding the result of the REST operation.
 
      - ``false``
      -
 
-   * - ``response-include-content-type``
+   * - ``response_include_content_type``
      - Boolean
      - This property controls if the output entity should include the Content-Type of the response in a
-       ``content-type`` property. Note that this property is ignored if ``replace-entity`` is set to ``true`` and
+       ``content-type`` property. Note that this property is ignored if ``replace_entity`` is set to ``true`` and
        the response is JSON.
 
      - ``false``
@@ -4585,6 +4592,53 @@ Properties
    * - ``payload``
      - Object, string or array
      - The default value to use as payload if not present in the entity.
+     -
+     -
+
+   * - ``response_property``
+     - String
+     - The name of the property to put the response in when emitting entities. Note that this property can be defined
+       in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
+       will take precendence if defined.
+     -
+     -
+
+   * - ``payload_property``
+     - String
+     - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
+       defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform
+       configuration will take precendence if defined.
+     -
+     -
+
+   * - ``id_expression``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
+       if missing from the transform response. Note that this property can be defined
+       in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform configuration
+       will take precendence if defined.
+     -
+     -
+
+   * - ``updated_expression``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
+       entities if missing from the transform response. Note that this property can alternatively be defined in the
+       specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
+       precendence if defined.
+     -
+     -
+
+   * - ``ignored_status_codes``
+     - String
+     - An expression in the form of single values or value ranges of HTTP status codes that will be ignored by the
+       transform. HTTP responses with status codes matching this list will result in the response being omitted from
+       the result. The values are either comma separated integer values or a range of values with a hyphen separator
+       (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 400-403 includes both 400 and
+       403. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 are always
+       allowed and the default is to fail for any status code outside of this range.
      -
      -
 
@@ -4749,6 +4803,13 @@ Example output entities:
           }
       }
     ]
+
+Pagination support
+^^^^^^^^^^^^^^^^^^
+
+See the the :ref:`REST source examples <rest_source_examples>` for how to use pagination with the REST transform -
+the configuration set up is the same as with the REST source.
+
 
 .. _sink_section:
 
@@ -8357,9 +8418,9 @@ Prototype
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
                 "method": "GET",
-                "next_page_link": {{ pagination.next }},
-                "id_property": {{ id }},
-                "updated_property": {{ updated }},
+                "next_page_link": {{ body.pagination.next }},
+                "id_expression": {{ id }},
+                "updated_expression": {{ updated }},
                 "payload_property": "result",
                 "response_property": "response",
                 "since_property_name": "updated",
@@ -8509,27 +8570,34 @@ A operation configuration looks like:
      -
      -
 
-   * - ``id_property``
+   * - ``next_page_link``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the source
+       or transform response properties and header values available to the templating context bound to the ``body``
+       and ``headers`` variables respectively. It is used to extract the next URL to perform the operation on for
+       pagination support. This property will be ignored by the :ref:`REST sink <rest_sink>`.
+     -
+     -
+
+   * - ``id_expression``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted
        entities if missing from the source system. Note that this property can be defined in the
-       :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
-       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
-       precendence if both are defined.
+       :ref:`REST source <rest_source>` configuration and :ref:`REST transform <rest_transform>` as well. It will be
+       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
      -
      -
 
-   * - ``updated_property``
+   * - ``updated_expression``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
-       entities if missing from the source system (for continuation support). This is only relevant if
+       entities if missing from the source system (for continuation support). For REST sources, this is only relevant if
        ``since_support`` as been set to ``true`` in the source. See the ``since_property_name`` and ``since_property_location``
        configuration properties as well. Note that this property can be defined in the
-       :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
-       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
-       precendence if both are defined.
+       :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well. It will be
+       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
      -
      -
 
