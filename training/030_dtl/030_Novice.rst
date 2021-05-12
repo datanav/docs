@@ -8,15 +8,17 @@ DTL: Novice
 "Copy"
 ~~~~~~
 
-Copy is one of the most fundamental DTL functions you will be using in Sesam when transforming your data. Copy might also be the most frequently used DTL function. The main reason for this is that it allows you to copy data by the use of wildcards, i.e. asterisk (*).
+Copy is one of the most fundamental DTL functions you will be using in Sesam when transforming your source data to your target. The main reason for this is that it allows you to copy source data by the use of wildcards, i.e. asterisk (*). In the below example this has been implemented in order to copy all keys with the namespace "golden-object:" in them:
 
-In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist data by providing arguments in the ``["copy"]`` function as follows:   
+``["copy", "golden-object:*"]``
+
+In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist source data by providing arguments in the ``["copy"]`` function as follows:   
 
 ``["copy", "*", "_*"]``
 
-The first argument in the above declaration accepts all values by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values that has an "_" as part of their key property. For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
+The first argument in the above declaration copies everything from your source to your target by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values whose keys start with "_". For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
 
-Data entering a pipe from the system "sesam-training":
+Data entering the pipe mssql-accounts from the system "sesam-training":
 
 .. code-block:: json
 
@@ -59,7 +61,7 @@ Data produced by the pipe DTL transformation:
 	  "mssql-accounts:phone": "1-894-115-3398"
 	}
 
-As can be seen from the above produced data, the property with the key "_position" has been filtered by the ``["copy"]`` function and its arguments.
+As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]` function.
 
 
 .. _add-3-2:
