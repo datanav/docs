@@ -20,8 +20,8 @@ P2P and ESB.
 
 .. _point-to-point-1-1:
 
-Point-to-Point
-^^^^^^^^^^^^^^
+Point-to-Point (P2P)
+^^^^^^^^^^^^^^^^^^^^
 
 This kind of IA is the simplest integration principle. As an example of P2P
 imagine sending a message generated in one System A to a single receiver
@@ -29,8 +29,8 @@ in another System B. System A talks to System B.
 It is simple and therefore easy to manage, albeit what if another System C is
 introduced and needs to talk with both System A and System B?
 Introducing System C will increase the complexity of the architecture threefold,
-as we go from 1 integration between System A and System B to 3 integrations.
-A->B, A->C, B->C
+as we go from one integration between System A and System B A->B,
+to three integrations A->B, A->C, B->C.
 In this case P2P is not your best option, and the issue of
 scalability presents itself.
 
@@ -49,8 +49,8 @@ which, in this case, will make P2P time consuming and expensive to
 manage. Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being the ESB.
 
-Enterprise Service Bus
-^^^^^^^^^^^^^^^^^^^^^^
+Enterprise Service Bus (ESB)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ESB is a more robust IA and plays a critical role in connecting
 diverse systems and services in a Service Oriented Architecture (SOA).
@@ -74,8 +74,8 @@ cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
 
-Data Driven Architecture @Jonas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data Driven Architecture (DDA)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As opposed to both the P2P and the ESB integration principles the Data
 Driven Architecture (DDA) does not focus on systems but rather the data
@@ -91,12 +91,12 @@ This gives us an agile, robust IA. See Figure 3 – Data Driven Architecture.
 As opposed to P2P and ESB, DDA is, respectively, scalable and agile - in
 that it does not need the “Bus” to orchestrate data flows, rather DDA
 relies on retrieving all the data in a system and connecting it internally
-to enhance and propegate it for usage in outbound flows.
+to enhance and propagate it for usage in outbound flows.
 
 As in all great things, there is risk involved.
 In order to utilize DDA effectively you need logical and robust principles
 to create flexible data flows and models.
-This can be achieved by always thinking ahead and leaving headroom to grow,
+This can be achieved by always thinking ahead and leaving room for growth,
 which you will learn how to do throughout this course.
 If done correctly nothing beats the scalability, cost-effectiveness and
 possibilities a DDA provides.
