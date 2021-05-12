@@ -61,7 +61,7 @@ Data produced by the pipe DTL transformation:
 	  "mssql-accounts:phone": "1-894-115-3398"
 	}
 
-As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]` function.
+As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]`` function.
 
 
 .. _add-3-2:
