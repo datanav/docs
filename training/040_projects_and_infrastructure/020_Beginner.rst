@@ -48,11 +48,11 @@ Visual studio code will be a good choice of editor for moste people, but others 
 git on github works well with sesam-py as version controll system, but most version controll sytems will work as long as long as it does not "mess up" filenames and folder structures.
 sesam-py is a command line tool and basically what you *see* when you navigate in the terminal is what sesam-py *see* and use. 
 
-You can use your favorit terminal. However a version of bash for your operating system is probably a good choice, and make it easier to relate to documentaion and examples. 
+You can use your favorit terminal. However a version of bash for your operating system is a good choice, and make it easier to relate to documentaion and examples. 
 
 You can work both in the web portal with the user interface in web portal and with sesam-py, but you should allways think of what you have in the node as **something that 
 can get lost**. Only think of configurations that are saved in the version controll system as saved. With this mindset you will not lose a lot of work if you 
-inadvertently wipe the node or overwrite it with new configs.
+inadvertently wipe the developer node or overwrite it with new configs.
 
 You find sesam-py on github:
 
@@ -76,6 +76,8 @@ Make a folder for you project if you don't have one and initiate it with version
 
     NODE="your-dev-node-at.sesam.cloud"
     JWT="your-JWT-for-your-dev-node"
+
+Use UTF-8 character encoding and line feed as line endings for best compatability.
 
 The optimal directory structure of a Sesam Node project in Git should look like this:
     ::
@@ -120,7 +122,7 @@ If output is not the same you need to look for bugs in your config. If you expec
 the current output values from your dev-node to your expected folder. You can than use diff functionallity in you version controll system to check differenses from previous expect values. If this is as you intended
 you can make this the new expected values by staging/commiting changes to expected to your project. If not you can revert to old expected files.
 
-?? example with bash, git and sesam-py:
+Example with bash, git and sesam-py:
 ::
     cd your-sesam-project
     git status
