@@ -69,8 +69,8 @@ cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
 
-Data Driven Architecture @Jonas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data Driven Architecture
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 As opposed to both the P2P and the ESB integration principles the Data
 Driven Architecture (DDA) does not focus on systems – rather the data
@@ -98,22 +98,18 @@ natural flows of data grows unhinged.
 
 .. _datahub-1-1:
 
-Datahub @Jonas
-~~~~~~~~~~~~~~
+Datahub
+~~~~~~~
 
-Continuing the path of building data-centric solutions, the term
+Continuing along the path of building data-centric solutions, the term
 “Datahub” comes into play. A datahub is recognized by its frictionless
 data flow and builds upon the architectural principles presented
 in DDA. A datahub can be described as a solution that consists of
 multiple different technologies, i.e., a data warehouse, microservices,
 databases etc.
 
-A Datahub shares data by connecting generators of data with consumers of
-data. In practice this allows data to be delivered in endpoints which
-interact with the datahub by either injecting into the datahub or
-exposing data to be retreived by the datahub. As such, a datahub mediates and
-manages how data flows between systems and makes states of data visible
-to consumers outside the datahub.
+A Datahub shares data by connecting providers of data with consumers of
+data. As such, a datahub mediates and manages how data flows between systems and makes states of data visible to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
 an enterprise and also what SESAM often becomes when it is used
