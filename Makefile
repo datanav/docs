@@ -54,7 +54,26 @@ clean:
 	rm -rf $(BUILDDIR)/*
 	rm -rf $(DOCKER_PATH)/dist
 
-html:
+saasdoc:
+	echo "\n\\\newpage\n# Appendix 1\n\n" > $(BUILDDIR)/service-appendix.md
+	echo "\n\\\newpage\n# Appendix 2\n\n" > $(BUILDDIR)/pricing-appendix.md
+	echo "\n\\\newpage\n# Appendix 3\n\n" > $(BUILDDIR)/dap-appendix.md
+	pandoc terms.rst -t markdown -o $(BUILDDIR)/terms.md
+	pandoc legal-service.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/service.md
+	pandoc pricing.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/pricing.md
+	pandoc legal-dap.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/dap.md
+	cd $(BUILDDIR) && cat terms.md service-appendix.md service.md \
+		pricing-appendix.md pricing.md dap-appendix.md dap.md > saas.md && cd ..
+
+saaspdf: saasdoc
+	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
+
+saasdocx: saasdoc
+	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t ms -o files/sesam-cloud-service-contract.pdf
+
+saas: saaspdf saasdocx
+
+html: saas
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

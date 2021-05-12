@@ -4,6 +4,11 @@ python:
   - "3.5"
 services:
   - docker
+before_install:
+  # required for generating downloadable contracts
+  - sudo apt-get -y install groff
+  - wget https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
+  - sudo dpkg -i pandoc-2.13-1-amd64.deb
 install:
   - pip install -r requirements.txt
 script:
