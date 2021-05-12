@@ -565,17 +565,17 @@ Why use globals?
 ^^^^^^^^^^^^^^^^
 
 Globals give us the opportunity to simplify and enhance our integrations by joining
-data which represents the same concept in the real world but normally is stored separately in
+data which represent the same concept in the real world but normally is stored separately
 in the binary world.
 By using globals we also simplify the process of grabbing the data we need because if you
-know which concept or type of entity an endpoint wishes to receive, you can quickly pick
+know which concept or type of entity an external system wishes to receive, you can quickly pick
 the global which stores this concept. If you only want to process a specific subset of the global
-then you can easily use the "rdf:type" to narrow down what entities you want.
+then you can easily use the "rdf:type" to narrow down which entities you want.
 
 How do globals work?
 ^^^^^^^^^^^^^^^^^^^^
 
-Globals are the aggregation of objects about the same concepts.
+A global is the aggregation of objects categorized as the same concept.
 In other words, globals are buckets for entities which fall under the same concept.
 To draw on this metaphor further, you can choose to either mix your bucket by joining
 the objects within it, or keep them separate inside the bucket.
@@ -598,29 +598,30 @@ Globals with joins
 
 This is an example of a mixed bucket also known as Globals with joins.
 We have the inbound pipes/datasets shipping-customerinfo and sales-customer which read
-from a shipping and a sales system respectively. The datasets produced by these pipes both
+from a shipping system and a sales system respectively. The datasets produced by these pipes both
 store information about the same customers, but this data is currently stored separately.
 In other words, these systems and pipes talk about the same customers but with different perspectives.
 The shipping system cares about how the customer wishes to receive their
-goods, while the sales systems cares about what goods the customer usually shops for and analytics
+goods while the sales system cares about what goods the customer usually shops for and analytics
 about their habits.
 The entities (customers) in these datasets could for example be linked together by
 emailaddress or phone number.
 By aggregating these datasets together in the "global-customer" pipe, we can also join
 the customers on for example Email.
-We now have a aggregated view of the customers which join together, giving us both
+We now have an aggregated view of the customers which join together, giving us both
 perspectives in the same entity!
 This makes us able to pick data both from the shipping and the sales system when we
 wish to process data about any given customer.
 
 As a sidenote to this last example, we would now be able to define "golden records".
-A golden records consists of the properties which together represent the most
+A golden record consists of the properties which together represent the most
 truthful version of an object.
 For example, both the shipping-customerinfo and sales-customer entities could have the
-property "address", but the shipping systems version of this address is always most up to date.
+property "address", but the version of the address received from the shipping system is always most up to date.
 This means that we can define a golden attribute "golden-address" with the address provided
-by our shipiing system, which we can thereafter use in any downstream pipes
-without needing to worry about where this attribute originally came from.
+by our shipping system.
+This "golden-address" attribute can thereafter be used in any outbound flows from
+"global-customer" without needing to worry about the original origin of the attribute.
 
 Read more about Globals and Golden Records here: -Link later to 030_Novice:Global
 
