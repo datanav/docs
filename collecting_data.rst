@@ -11,7 +11,7 @@ Introduction
 
 Principles for collecting data is pulling data is best practice. Once data is in sesam through the inbound pipe, a small number of properties can be added to aid connecting and re-using data. This is done mainly by modeling global datasets where we :ref:`merge <getting-started-merging-sources>` data about same object. 
 
-Once this is done we can further enrich data by adding data from other datasets or do other :ref:`transformations <getting-started-transformations> depending on requirements. 
+Once this is done we can further enrich data by adding data from other datasets or do other :ref:`transformations <getting-started-transformations>`depending on requirements. 
 
 Principles of collecting data
 -----------------------------
@@ -80,7 +80,7 @@ How do we decide which data pertains to the same concept? For example a person c
 
 In Sesam we recommend a *one dimensional structure*, i.e. data can only belong to one global. Let us use an example; a company has lots of data about persons; both customers, clients, prospects, employees and applicants. It is tempting to be able to separate these to generate a global for each. The problem with this is a person with a unique ID can end up in two or more globals (e.g. global-customer and global-person). Then it is *role* of person deciding and not *concept*; which is data about persons. 
 
-So how can we differentiate between all the various types of person? In Sesam we add a category. This is mulitidimensial which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
+So how can we differentiate between all the various types of person? In Sesam we add a category. This is multidimensionaland  which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
 
 These principles actually coincide with Carl Linnaeus principles of taxonomy; it is one dimensions that is each species can only belong to one category. He had 7 classifications:
 
@@ -94,7 +94,7 @@ Species
 
 When classifying in Sesam, it is advisable to start high up in the hierarchy but not at top as that proves to be too general, but for most data modelling, starting at Phylum or Classes is a good starting point. To further classify deeper down in the hierarchy, we add categories and subcategories.
 
-To meet this requirement for classifying data, we recommend always generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categories. When mentioning splitting of raw data, to "clean it" so that the objects come in clean and the data used to categorize it in the source system can be merged into global classification to generate aggregated sets of metadata used to classify.
+To meet this requirement for classifying data, we recommend always generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categories. When mentioning splitting of raw data, to "clean it" so that the objects come in clean and the data used to categorize it in the source system can be merged into global classification to generate aggregated sets of metadata used to classify. En example on this can be a product and product type coming in as one data object. The best practicse is to split the raw data into two data objects. The product can go into *global-equipment* for example. This depends on context. But it is highly recommended to always havae a *global-classification* dataset mentioned above where we would merge in data object *product type*. Product type is now ready to be used as category for products needing this.
 
 .. collecting_data-Merge data in a global dataset or not:
 
@@ -147,6 +147,6 @@ To read more about test data and how it is set up in Sesam, please click :ref:`h
 Monitoring
 ==========
 
-Sesam ha a built in monitoring function to help to ensure data flows as expected and there are no bottlenecks or any stops. Best practice in Sesam is to switch on monitoring in the inbound pipes as this will cover the whole data flow.
+Sesam ha a built in monitoring function to help to ensure data flows as expected and there are no bottlenecks or any stops. Best practice in Sesam is to switch on monitoring in the inbound and the outbound pipes as it will be clear to see if data is not flowing as expected.
 
 
