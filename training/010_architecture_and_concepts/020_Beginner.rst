@@ -9,27 +9,32 @@ Different types of Architectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When modelling data, integration architectures (IA) lay the foundation
-upon which data is shaped and structured as it moves through one system
+for shaping and structuring data as it moves from one system
 to another. Within IA, Point-to-point (P2P) and Enterprise Service Bus
-(ESB) have been used extensively. Recent trends, however, move away from
-these established integration principles and places data and its
-mobility at its center.
+(ESB) have been used extensively. Recently Data Driven Architecture has
+mobilized data in new ways by placing data and its meaning at its center.
 
-Albeit, before elaborating on how integration principles has undergone
-recent radical changes, you should first dive into P2P and ESB.
+To show the evolution of Integration Architectures and why Data Driven
+Architecture is the natural step forward, we will first introduce you to
+P2P and ESB.
 
 .. _point-to-point-1-1:
 
-Point-to-Point
-^^^^^^^^^^^^^^
+Point-to-Point (P2P)
+^^^^^^^^^^^^^^^^^^^^
 
-This kind of IA is a simple integration principle. As an example of P2P
-imagine sending a message generated in one system to a single receiver
-in another system. This simplified example shows both the pros and cons
-to using P2P. It is simple and therefore easy to manage, albeit what if
-another system is introduced and so multiple new messages need to be
-sent? Well, in this case P2P is not your best option, and the issue of
-scalability presents itself. To illustrate how complexity can make P2P a
+This kind of IA is the simplest integration principle. As an example of P2P
+imagine sending a message generated in one System A to a single receiver
+in another System B. System A talks to System B.
+It is simple and therefore easy to manage, albeit what if another System C is
+introduced and needs to talk with both System A and System B?
+Introducing System C will increase the complexity of the architecture threefold,
+as we go from one integration between System A and System B A->B,
+to three integrations A->B, A->C, B->C.
+In this case P2P is not your best option, and the issue of
+scalability presents itself.
+
+To illustrate how complexity can make P2P a
 non-viable option look at the below Figure 1 – Point-to-Point:
 
 .. figure:: ./media/Point_to_Point.png
@@ -42,10 +47,10 @@ As illustrated on the right-hand side of the above figure “Complex
 integration”, you have to maintain multiple connections separately
 which, in this case, will make P2P time consuming and expensive to
 manage. Therefore, amongst other things, new architectural principles
-have been developed. One of the more prominent ones being ESB.
+have been developed. One of the more prominent ones being the ESB.
 
-Enterprise Service Bus
-^^^^^^^^^^^^^^^^^^^^^^
+Enterprise Service Bus (ESB)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ESB is a more robust IA and plays a critical role in connecting
 diverse systems and services in a Service Oriented Architecture (SOA).
@@ -69,14 +74,13 @@ cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
 
-Data Driven Architecture
-~~~~~~~~~~~~~~~~~~~~~~~~
+Data Driven Architecture (DDA)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As opposed to both the P2P and the ESB integration principles the Data
-Driven Architecture (DDA) does not focus on systems – rather the data
-and how modelling a data-centric ecosystem takes precedence in order to
-realize an agile meanwhile robust IA, see Figure 3 – Data Driven
-Architecture.
+Driven Architecture (DDA) does not focus on systems but rather the data
+these systems store and how it can be used in a data-centric ecosystem.
+This gives us an agile, robust IA. See Figure 3 – Data Driven Architecture.
 
 .. figure:: ./media/Data_Driven_Architecture.png
    :align: center
@@ -86,15 +90,16 @@ Architecture.
 
 As opposed to P2P and ESB, DDA is, respectively, scalable and agile - in
 that it does not need the “Bus” to orchestrate data flows, rather DDA
-relies on natural flows of connected data to trigger data flows. You may
-think that this also presents a risk - that is correct.
+relies on retrieving all the data in a system and connecting it internally
+to enhance and propagate it for usage in outbound flows.
 
-In order to utilize DDA you need to create logical, robust albeit
-flexible data flows. If done correctly nothing beats the scalability,
-cost-effectiveness and possibilities a DDA provides. A word of caution
-however, if such guidelines are not agreed upon and followed up on, you
-risk creating a waterfall of technical depth as time goes by and these
-natural flows of data grows unhinged.
+As in all great things, there is risk involved.
+In order to utilize DDA effectively you need logical and robust principles
+to create flexible data flows and models.
+This can be achieved by always thinking ahead and leaving room for growth,
+which you will learn how to do throughout this course.
+If done correctly nothing beats the scalability, cost-effectiveness and
+possibilities a DDA provides.
 
 .. _datahub-1-1:
 
@@ -155,7 +160,7 @@ The parts of sesam @Erik
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
 concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets. 
+with the integration platform: systems, pipes and datasets.
 
 |
 
@@ -173,7 +178,7 @@ with the integration platform: systems, pipes and datasets.
 
 These are the fundamental parts which make up a Sesam integration pipeline:
 
-Systems: 
+Systems:
    A system’s main feature is to act as the interface to import and export data
    into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
    beginning and end of the pipeline flows and are often referred to as
@@ -186,7 +191,7 @@ Systems:
    which in turn can manipulate and delegate data according to your own
    specifications, making Sesam a very robust and comprehensive tool.
 
-Pipes:  
+Pipes:
    A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
    where the data is supposed to be sent. Manipulation of the data is
    done through Sesam’s own Data Transformation Language (DTL) which
@@ -195,14 +200,14 @@ Pipes:
    dataset depending on where the pipe is located inside the integration
    pipeline.
 
-Datasets: 
+Datasets:
    Datasets are Sesam’s storage units and can be compared
    to i.e., a table in an SQL database. Datasets are where the pipes store the
    data they produce, unless a sink specifies otherwise. Sesam stores data in order to be able
    to perform tracking and indexing, but you will learn more about these
    functionalities later in this book (maybe a link?).
 
-Entities: 
+Entities:
    A dataset consists of a list of entities. Entities in
    Sesam can be compared to individual rows in an SQL table and can
    represent anything from a person, a mechanical part to a contract. An
@@ -604,4 +609,3 @@ and stored inside an entity of the output dataset?*
 vs in a Sesam Dataset?*
 
 7. *What is the minimum required to define an entity?*
-
