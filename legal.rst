@@ -9,6 +9,7 @@ Legal
    Description of the Services <legal-service>
    Subscription Fee, payment terms <pricing>
    Data Process Agreement <legal-dap>
+   Privacy Policy <privacy-policy>
 
 Downloads
 ---------
