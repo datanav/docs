@@ -534,6 +534,18 @@ Namegivingconventions ref. 1.1.8
 
 Where to make new ref 1.1.6
 
+Datasets are the default sink of internal pipes in Sesam.
+Datasets are where data imported into a Sesam node is stored.
+Datasets consist of a list of JSON entities.
+Datasets are also often the source of internal pipes.
+
+**Related topics:**
+
+:ref:`dataset-id-3-1`,
+:ref:`entities-json-keyvalpairs-1-1`,
+:ref:`naming-conventions-1-1`,
+:ref:`pipes-1-1`
+
 
 .. _datasets-vs-tables-1-1:
 
