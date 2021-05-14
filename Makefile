@@ -66,11 +66,11 @@ saasdoc:
 	cd $(BUILDDIR) && cat terms.md service-appendix.md service.md \
 		pricing-appendix.md pricing.md dap-appendix.md dap.md > saas.md && cd ..
 
-saaspdf: saasdoc
+saasdocx: saasdoc
 	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
 
-saasdocx: saasdoc
-	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t ms -o files/sesam-cloud-service-contract.pdf
+saaspdf: saasdoc
+	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -V geometry:margin=1in -o files/sesam-cloud-service-contract.pdf
 
 saas: saaspdf saasdocx
 
