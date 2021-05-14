@@ -61,7 +61,7 @@ Process Personal Data on behalf of the Controller in connection with the
 Principal Agreement.
 
 2. Processing of Personal Data on the Controller's behalf
----------------------------------------------------------
+=========================================================
 
 2.1.1 This Agreement comes into force if and when the Customer chooses to enter
 and store Personal Data in the Services. The Agreement is an appendix to

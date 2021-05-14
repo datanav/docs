@@ -616,7 +616,7 @@ Agreement or breach of this Agreement is one year after the termination
 of the agreement. Claims forwarded after the limitation period is out of
 date and hence have no validity.
 
-12. Confidentiality
+12. Confidntiality
 ===================
 
 Information that comes into the possession of the parties in connection
