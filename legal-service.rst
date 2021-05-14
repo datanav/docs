@@ -17,68 +17,68 @@ catalogue in the table below.
    * - SaaS-Service
      - Specification of tasks and contents of Sesam SaaS-Service
    * - 1. Description of the SaaS-Service
-     -  SESAM is a data-oriented integration platform delivered as a Service.
-        Sesam consists of service instances that exposes an API (see
-        http://docs.sesam.io for documentation). The Service instance can be
-        configured through this API. The Service may be configured to fetch data
-        from various systems and databases, and the data that is so collected and
-        stored in SESAM. Such configuration may be performed by the Customer or
-        by a separate consulting agreement between SESAM and Customer. API's
-        are also used to transform and expose the stored data.
+     - SESAM is a data-oriented integration platform delivered as a Service.
+       Sesam consists of service instances that exposes an API (see
+       http://docs.sesam.io for documentation). The Service instance can be
+       configured through this API. The Service may be configured to fetch data
+       from various systems and databases, and the data that is so collected and
+       stored in SESAM. Such configuration may be performed by the Customer or
+       by a separate consulting agreement between SESAM and Customer. API's
+       are also used to transform and expose the stored data.
 
-        The SaaS-Service consists of two applications:
+       The SaaS-Service consists of two applications:
 
-        1. SESAM Integration Service that collects, connects and transforms data
-        before it is routed to a receiving system or search engine.
-        2. SESAM Data Browser, which is a search interface against structured
-        data that links with data in a search index populated from the SESAM
-        Integration Service.
+       1. SESAM Integration Service that collects, connects and transforms data
+       before it is routed to a receiving system or search engine.
+       2. SESAM Data Browser, which is a search interface against structured
+       data that links with data in a search index populated from the SESAM
+       Integration Service.
 
-        The SaaS-Service is secured with SSL-certificates that are unique for each
-        Customer and through access controls that may be set for the stored data.
-        Access to the SaaS-Service is through the currently supported interface
-        published at sesam.io.
+       The SaaS-Service is secured with SSL-certificates that are unique for each
+       Customer and through access controls that may be set for the stored data.
+       Access to the SaaS-Service is through the currently supported interface
+       published at sesam.io.
 
-        The Service Instance reports operations-oriented metadata back to
-        SESAM. These metadata are used to monitor the system's conditions and
-        provides the Customer with the opportunity to receive notifications on the
-        data flow in the service.
+       The Service Instance reports operations-oriented metadata back to
+       SESAM. These metadata are used to monitor the system's conditions and
+       provides the Customer with the opportunity to receive notifications on the
+       data flow in the service.
    * - 2. Requirements for scaleability
-     -  The SaaS-Service can be scaled both in terms of the number of Users,
-        amounts of data and requirements for computing capacity.
+     - The SaaS-Service can be scaled both in terms of the number of Users,
+       amounts of data and requirements for computing capacity.
 
-        Storage scales automatically, while increased computing power, monitoring
-        or SLA-changes can be selected via the My Page in the SESAM-portal.
+       Storage scales automatically, while increased computing power, monitoring
+       or SLA-changes can be selected via the My Page in the SESAM-portal.
    * - 3. Backup and securing data
-     -  SESAM shall keep the Customer's data logically separated from any third
-        parties' data to limit the risk of data loss or unauthorized disclosure. By
-        «logically separated» is meant that necessary technical measures securing
-        the data against unwanted alteration and access are implemented.
+     - SESAM shall keep the Customer's data logically separated from any third
+       parties' data to limit the risk of data loss or unauthorized disclosure. By
+       «logically separated» is meant that necessary technical measures securing
+       the data against unwanted alteration and access are implemented.
 
-        Backup of data may be selected as an optional service on My Page in the
-        SESAM-portal. The cloud service, as a basis, only contains copies of data
-        from other sources that the Customer has chosen to integrate with, and
-        transformations of such data. Therefore, all data may be re-imported and
-        recreated when needed for such sources. Re-creating from back-up may,
-        however, be faster for large quantities of data.
+       Backup of data may be selected as an optional service on My Page in the
+       SESAM-portal. The cloud service, as a basis, only contains copies of data
+       from other sources that the Customer has chosen to integrate with, and
+       transformations of such data. Therefore, all data may be re-imported and
+       recreated when needed for such sources. Re-creating from back-up may,
+       however, be faster for large quantities of data.
    * - 4. Reconstruction of data
-     -  If data is lost or corrupted due to causes which SESAM is responsible for,
-        SESAM shall re-establish the data from the latest backup within reasonable
-        time and at SESAM's own cost, if not otherwise agreed below.
+     - If data is lost or corrupted due to causes which SESAM is responsible for,
+       SESAM shall re-establish the data from the latest backup within reasonable
+       time and at SESAM's own cost, if not otherwise agreed below.
 
-        SESAM's responsibility for costs is limited to the costs for re-establishment
-        of the data from the latest backup, and additional costs that may arise due
-        to SESAM not having performed backups as set forth in the Agreement.
-        Costs attributable to reconstruction of data after the latest backup may only
-        be attributed to SESAM if the data loss is due to gross negligence by
-        SESAM. If the cause of the data loss is such that the Customer shall carry
-        the costs, the Customer shall approve the scope of the work before it
-        commences.
+       SESAM's responsibility for costs is limited to the costs for re-establishment
+       of the data from the latest backup, and additional costs that may arise due
+       to SESAM not having performed backups as set forth in the Agreement.
+       Costs attributable to reconstruction of data after the latest backup may only
+       be attributed to SESAM if the data loss is due to gross negligence by
+       SESAM. If the cause of the data loss is such that the Customer shall carry
+       the costs, the Customer shall approve the scope of the work before it
+       commences.
    * - 5. Notification of updates of the Services
-     -  Major updates and planned maintenance / downtime is notified through the
-        SESAM Service Desk.
+     - Major updates and planned maintenance / downtime is notified through the
+       SESAM Service Desk.
    * - 6. System documentation for the Services
-     -  SESAM is documented here: https://docs.sesam.io/overview.html
+     - SESAM is documented here: https://docs.sesam.io/overview.html
    * - 7. Third party cloud services included in the Services
 
        or
@@ -87,24 +87,24 @@ catalogue in the table below.
        cloud services are included in the Services, but it is set forth in
        this agreement that the Customer will provide the operating
        environment
-     -  SESAM is delivered as a SaaS from virtual servers in Microsoft Azure
-        Cloud. For Azure, separate terms of service apply from Microsoft:
-        https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?
-        country=no&language=en and "Online Services Terms". These terms are
-        binding on the Customer as they are amended and updated by Microsoft at
-        any given time.
+     - SESAM is delivered as a SaaS from virtual servers in Microsoft Azure
+       Cloud. For Azure, separate terms of service apply from Microsoft: `Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_
+       and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_.
+       These terms are
+       binding on the Customer as they are amended and updated by Microsoft at
+       any given time.
 
-        or
+       or
 
-        It is agreed between the parties that the Customer will acquire and use
-        another operating environment with their own terms of service, when using
-        SESAM's Services. The Customer is responsible for entering into contract
-        with the supplier of the operating environment.
+       It is agreed between the parties that the Customer will acquire and use
+       another operating environment with their own terms of service, when using
+       SESAM's Services. The Customer is responsible for entering into contract
+       with the supplier of the operating environment.
    * - 8. The Customer's responsibility in connection with the Services
-     -  Configuring routers and firewalls for expanding the Customer's network to
-        include the Services, included securing the network communication.
-        Configuring access to applications to be integrated with the Service.
-        SESAM will assist with specifications for network configuration.
+     - Configuring routers and firewalls for expanding the Customer's network to
+       include the Services, included securing the network communication.
+       Configuring access to applications to be integrated with the Service.
+       SESAM will assist with specifications for network configuration.
 
 2. Service level agreement and standardized refunds
 ===================================================
@@ -121,7 +121,7 @@ procedure: Through SESAM Service Desk.
 ----------------------------------
 
 **Availability target** SESAM, as a SaaS, is provided with the target of
-99.5% uptime per installation (cf. production environment, test or
+99.5% uptime per installation (cf. production environment, test or
 development, which corresponds to approximately 1 hour maximum unplanned
 downtime per month for the individual installation.
 
@@ -144,17 +144,28 @@ installation):
 
 On unplanned downtime, points are accumulated as set out below:
 
-============= ==============  ================
-Hours of downtime per month.  Number of points
-----------------------------  ----------------
-From          To
-------------- --------------  ----------------
-1             2               4
-2             4               8
-4             6               12
-6             10              15
-10                            25
-============= ==============  ================
+.. list-table:: Hours of downtime per month to points
+   :widths: 30 30 40
+   :header-rows: 1
+
+   * - Hours from
+     - Hours to
+     - Number of points
+   * - 1
+     - 2
+     - 4
+   * - 2
+     - 4
+     - 8
+   * - 4
+     - 6
+     - 12
+   * - 6
+     - 10
+     - 15
+   * - 10
+     -
+     - 25
 
 Upon non-conformity with these requirements, any standardized penalties
 set out under section 2.4 is to be calculated.
@@ -186,62 +197,62 @@ apply.
 Upon errors in the Services, SESAM shall fulfil the following
 requirements for processing and reaction:
 
-.. list-table:: Reaction and correction time
-   :widths: 5 35 10 10 10  30
+.. list-table:: Reaction time target and correction time
+   :widths: 5 35 10 10 10 30
    :header-rows: 1
 
    * - Level
      - Category
-     - Reaction time target Enterprise
-     - Reaction time target Standard
-     - Reaction time target Basic
+     - Enterprise
+     - Standard
+     - Basic
      - Correction target
    * - A
-     -  Critical error that is so serious
-        that the entirety or significant
-        parts of the Services are not
-        available or not functioning
+     - Critical error that is so serious
+       that the entirety or significant
+       parts of the Services are not
+       available or not functioning
      - 1 hour
      - 8 hour
      - n/a
-     -  A workaround of the error
-        shall be delivered without
-        undue delay, and at the
-        latest within
+     - A workaround of the error
+       shall be delivered without
+       undue delay, and at the
+       latest within
 
-        * Next business day for Enterprise
-        * 3 days for Standard
-        * n/a for Basic
+       * Next business day for Enterprise
+       * 3 days for Standard
+       * n/a for Basic
 
-        If this is not possible, a fix
-        will be delivered within 10
-        days.
+       If this is not possible, a fix
+       will be delivered within 10
+       days.
    * - B
-     -  Serious error that may be
-        fixed with a work around, but
-        which delay the usage of the
-        Services
+     - Serious error that may be
+       fixed with a work around, but
+       which delay the usage of the
+       Services
      - 4 hours
      - 2 days
      - n/a
-     -  A workaround of the error
-        shall be delivered within 10
-        business days.
+     - A workaround of the error
+       shall be delivered within 10
+       business days.
 
-        If this is not possible, a fix
-        will be delivered in the next
-        release.
+       If this is not possible, a fix
+       will be delivered in the next
+       release.
    * - C
-     -  Less serious error, which
-        does not entail delays in the
-        usage of the Services
+     - Less serious error, which
+       does not entail delays in the
+       usage of the Services
      - None
      - None
      - None
-     -  The error is evaluated with
-        the goal of a fix in the next
-        release in line with the
-        normal release schedule.
+     - The error is evaluated with
+       the goal of a fix in the next
+       release in line with the
+       normal release schedule.
 
 All requirements in the table shall be calculated within SESAM's
 standard business hours, 0800 -  1600 hours Central European time, excluding public holidays and other
@@ -333,17 +344,31 @@ number of points incurred by SESAM during a one-month period. Points are
 calculated for reaction time, correction time and non-planned downtime
 within the installation in question.
 
-========= ========= =================================
-Points              Reduction of monthly subscription
-                    fee for the relevant installation
-------------------- ---------------------------------
-From      To        %
---------- --------- ---------------------------------
-1         10        0%
-11        20        -5%
-21        30        -10%
-31        40        -15%
-41        50        -20%
-51        60        -25%
-61                  -40%
-========= ========= =================================
+.. list-table:: Accumulated points to reduction of fee
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Points from
+     - Points to
+     - Reduction of monthly subscription fee for the relevant installation
+   * - 1
+     - 10
+     - 0%
+   * - 11
+     - 20
+     - -5%
+   * - 21
+     - 30
+     - -10%
+   * - 31
+     - 40
+     - -15%
+   * - 41
+     - 50
+     - -20%
+   * - 51
+     - 60
+     - -25%
+   * - 61
+     -
+     - -40%

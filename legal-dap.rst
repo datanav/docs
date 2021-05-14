@@ -84,7 +84,7 @@ Applicable Laws and according to the Controller's documented instructions.
 
 2.1.5 The subject matter of the Processing of the Personal Data is set out in the
 Principal Agreement and this Agreement, and the duration of the processing
-shall be for the duration of the Customer ́s right to use the Services pursuant
+shall be for the duration of the Customer's right to use the Services pursuant
 to the Principal Agreement.
 
 2.1.6 The Processor will typically not have access to the Personal Data. The

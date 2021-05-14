@@ -172,8 +172,7 @@ change and of technical and legal effects of such change.
 At the present time the operating environment selected by SESAM is
 Microsoft Azure. For Azure, separate terms of service apply from
 Microsoft:
-https://azure.microsoft.com/enus/support/legal/subscription-agreement/?
-country=no&language=en and “Online Services Terms”. These terms apply as
+`Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_ and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_. These terms apply as
 amended and updated by Microsoft at any time. SESAM has no
 responsibility for error and defects in such services.
 
