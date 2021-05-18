@@ -149,7 +149,7 @@ collect any consents from the Data Subjects for the processing of Personal
 Data taking place according to the Principal Agreement.
 
 2.4 The Processor's obligations
---------------------------------
+-------------------------------
 
 2.4.1 The Processor shall only process the Personal Data on behalf of the
 Controller and on written instructions from the Controller, unless Processing
