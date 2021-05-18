@@ -580,11 +580,9 @@ Special sesam attributes
 
 Namespaces
 ^^^^^^^^^^
-Namespaces are inspired by RDF (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the entity data model. In essence they are a string consisting of two parts, the namespace and the identifier. "~:foo:bar" is an example. The ~: is the type part that tells you that it is a namespaced identifier; foo in this case is the namespace and bar is the identifier.
+Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name.
 
-Properties can also have namespaces, but here the ~: part is not used. Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name
-
-NIs are identifiers (i.e. property values) given a namespace.
+Namespaced identifiers (NIs) are identifiers (i.e. property values) given a namespace.
 "source:reference": "~:foo:bar" is an example of a NI, where "source" is the property namespace, "reference" is the property name, "foo" is the namespace of the referenced data and "bar" is the identifier usually matching an identifier in the referenced data. The "~" is the Sesam syntax for defining a datatype as a NI.
 
 As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
