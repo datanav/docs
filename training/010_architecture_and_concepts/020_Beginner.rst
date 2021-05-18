@@ -75,7 +75,7 @@ focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
 
 Data Driven Architecture (DDA)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As opposed to both the P2P and the ESB integration principles the Data
 Driven Architecture (DDA) does not focus on systems but rather the data
@@ -601,11 +601,30 @@ Ref. 1.2.19, 3.2.14
 Special sesam attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Namespace
+Namespaces
+^^^^^^^^^^
+Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name.
+
+Namespaced identifiers (NIs) are identifiers (i.e. property values) given a namespace.
+"source:reference": "~:foo:bar" is an example of a NI, where "source" is the property namespace, "reference" is the property name, "foo" is the namespace of the referenced data and "bar" is the identifier usually matching an identifier in the referenced data. The "~" is the Sesam syntax for defining a datatype as a NI.
+
+As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
 
 Rdf:type
+^^^^^^^^
+The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
+
+Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
 
 \_id
+^^^^
+The identity (_id) of systems, pipes and datasets must be unique and consistent as data moves via systems, through pipes and into datasets.
+
+The _id of a system is usually defined by the name of your source system i.e., salesforce. In case you need two systems in Sesam that both originate from salesforce, you'll need to make two unique names for each of these i.e., salesforce and salesforce-rest.
+
+For pipes, the _id is typically defined by establishing which properties in the pipe´s dataset are unique across its entities. This could typically be primary key(s) when data is imported from a database or potentially a unique property or even concatenated properties when data is imported from an API.
+
+When data reaches a pipe's dataset, the _id will be identical to what you defined the _id to be, in that pipe's config.
 
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
