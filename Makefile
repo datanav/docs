@@ -56,21 +56,21 @@ clean:
 
 saasdoc:
 	mkdir -p $(BUILDDIR)
-	echo "\n\\\newpage\n# Appendix 1\n\n" > $(BUILDDIR)/service-appendix.md
-	echo "\n\\\newpage\n# Appendix 2\n\n" > $(BUILDDIR)/pricing-appendix.md
-	echo "\n\\\newpage\n# Appendix 3\n\n" > $(BUILDDIR)/dap-appendix.md
-	pandoc terms.rst -t markdown -o $(BUILDDIR)/terms.md
-	pandoc legal-service.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/service.md
-	pandoc pricing.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/pricing.md
-	pandoc legal-dap.rst --shift-heading-level-by=1 -t markdown -o $(BUILDDIR)/dap.md
-	cd $(BUILDDIR) && cat terms.md service-appendix.md service.md \
-		pricing-appendix.md pricing.md dap-appendix.md dap.md > saas.md && cd ..
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 1\n==========\n" > $(BUILDDIR)/service-appendix.rst
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 2\n==========\n" > $(BUILDDIR)/pricing-appendix.rst
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 3\n==========\n" > $(BUILDDIR)/dap-appendix.rst
+	pandoc terms.rst -o $(BUILDDIR)/terms.rst
+	pandoc legal-service.rst --shift-heading-level-by=1 -o $(BUILDDIR)/service.rst
+	pandoc pricing.rst --shift-heading-level-by=1 -o $(BUILDDIR)/pricing.rst
+	pandoc legal-dap.rst --shift-heading-level-by=1 -o $(BUILDDIR)/dap.rst
+	cd $(BUILDDIR) && cat terms.rst service-appendix.rst service.rst \
+		pricing-appendix.rst pricing.rst dap-appendix.rst dap.rst > saas.rst
 
 saasdocx: saasdoc
-	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
+	pandoc $(BUILDDIR)/saas.rst --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
 
 saaspdf: saasdoc
-	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -V geometry:margin=1in -V urlcolor=cyan -o files/sesam-cloud-service-contract.pdf
+	pandoc $(BUILDDIR)/saas.rst --lua-filter=pagebreak.lua -V geometry:margin=1in -V urlcolor=cyan -o files/sesam-cloud-service-contract.pdf
 
 saas: saaspdf saasdocx
 
