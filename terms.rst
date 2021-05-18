@@ -33,14 +33,14 @@ address with the necessary access and login details.
 The Services consist of various sub-services, and the right to use the
 Services only comprise the individual sub-services which the Customer
 has ordered and received access to. Some of the Services are payable.
-Appendix 1 sets out the sub-services that the Customer has ordered at
+*Description of the Services* sets out the sub-services that the Customer has ordered at
 the time of signature of this Agreement. The Customer’s account overview
 sets out active sub- services which the Customer has ordered, including
 which Services are payable.
 
 Some sub-services may be subject to additional terms and/or
 restrictions. Such additional terms and/or restrictions are set out in
-Appendix 1 and/or the terms of use for the sub-service together with the
+*Description of the Services* and/or the terms of use for the sub-service together with the
 description of the sub-service in question.
 
 1.2. Description of the Services
@@ -71,7 +71,7 @@ terminable, non-exclusive and nontransferable right to use the Services
 in accordance with the terms of this Agreement, exclusively for the
 Customer's internal business purposes. This right is conditional on the
 payment of the applicable subscription fee and other fees as set out in
-Appendix 2 (“Subscription Fee”). Any applicable Subscription Fee is
+Subscription Fee, payment terms. Any applicable Subscription Fee is
 provided on the Customer's account overview.
 
 The Payment of the Subscription Fee and the compliance with the terms of
@@ -96,7 +96,7 @@ Services, the Customer does not purchase a copy of, or license to, the
 software used to deliver the Services, but consecutively pay for a
 subscription to access the Services. To the extent that separate
 license- or other terms apply for use of third party software and/ or
-services included in the Services, these are set out in Appendix 1
+services included in the Services, these are set out in *Description of the Services*
 and/or together with the description of the Services in question. Any
 terms for third party software and/or services take precedence over the
 terms of this Agreement.
@@ -199,7 +199,7 @@ Documentation of Services, SESAM will correct verified errors in the
 Services at SESAMS's own expense. SESAM may choose to replace the
 Services or functionality therein instead of performing a correction. If
 SESAM does not solve the verified errors according to the time-limits
-agreed in Appendix 1 section 2.3, or does not replace the Service within
+agreed in *Description of the Services* section 2.3, or does not replace the Service within
 a reasonable time, the Customer may cancel their subscription to that
 particular service in accordance with the terms in section 11. The
 Customer may not set forth any other claims due to defects or errors in
@@ -221,7 +221,7 @@ The provisions in this section apply only to the Customers who pay a
 Subscription Fee.
 
 SESAM's Service availability targets, SLA penalties, and fixed
-maintenance periods are set out in Appendix 1.
+maintenance periods are set out in *Description of the Services*.
 
 SESAM may, from time to time, require additional maintenance periods
 beyond what is set out above, for example for major upgrades. Such
@@ -363,27 +363,27 @@ The Customer as the Controller agrees and warrants that:
    Customer uses standard-level SLA or higher.
 
 SESAM and the Customer have entered into a Data Processing Agreement
-which is attached hereto in Appendix 3. The Data Processing Agreement
+which is attached hereto in *Data processing agreement*. The Data Processing Agreement
 further states the Parties' obligations and rights as Controller and
 Processor, regarding the Processor's processing of Personal Data on
 behalf of the Controller.
 
 SESAM as the Processor, shall only process data in accordance with the
-Data Processing Agreement included as Appendix 3 to this Agreement.
+*Data processing agreement* included as to this Agreement.
 
 6. Fees and Payment Terms
 =========================
 
 For Services included in this Agreement, the Customer may have payed a
-Subscription Fee to SESAM as set out in Appendix 2.
+Subscription Fee to SESAM as set out in *Subscription Fee, payment terms*.
 
-Dynamic price model: The price model set out in Appendix 2 is a dynamic
+Dynamic price model: The price model set out in *Subscription Fee, payment terms* is a dynamic
 (running) price model that is renewed automatically until terminated by
 one of the parties as set out in section 11.
 
 Fixed price model: A fixed price model entails that Sesam gives a 50%
 discount of a set amount of data (GB), based on the dynamic price set
-out in Appendix 2, and provided that the Customer in the Agreement
+out in *Subscription Fee, payment terms*, and provided that the Customer in the Agreement
 agrees to the fixed price model for a renewable term of 12 months.
 
 If the Parties agrees upon fixed price, the Agreement will be for a term
@@ -392,7 +392,7 @@ that the model is fixed price (most often the Date the Agreement is
 signed by both parties). If the Customer uses more data than the agreed
 upon fixed price model allows for that term, the fee for the data amount
 (GB) surpassing the agreed upon fixed price, will be double of what
-follows from the dynamic price model in Appendix 2.
+follows from the dynamic price model in *Subscription Fee, payment terms*.
 
 The Agreement will automatically be renewed with the same data amount
 (GB) for the following 12 months as that of the running term, unless the
@@ -534,7 +534,7 @@ In the event that law, rules or regulations applicable to the use or
 delivery of the Services is changed or new rules or regulations are
 adopted after the Services have been made available on the market and
 this prevents SESAM from fulfilling the Customer's instructions pursuant
-to the Data Processing Agreement in Appendix 3 or other obligation in
+to the *Data processing agreement* or other obligation in
 this Agreement, and/or this requires full or partial termination of
 access to the Services for a limited or indefinite period of time, this
 shall be considered as a force majeure circumstance. SESAM is not in any
