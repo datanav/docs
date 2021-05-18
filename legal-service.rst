@@ -10,7 +10,7 @@ Services as set out in section 1 and that is set out in the service
 catalogue in the table below.
 
 .. list-table:: Service specification
-   :widths: 20 80
+   :widths: 30 70
    :header-rows: 1
 
    * - SaaS-Service
