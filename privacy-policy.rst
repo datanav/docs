@@ -638,7 +638,7 @@ or erasure of Personal Data, restriction of the processing, as well as
 the right to data portability.
 
 You are entitled to have your rights enforced. At any time, you can
-choose to send a request, by following the directions **here**
+choose to send a request, by following the directions `here <https://me.sesam.io>`_.
 
 The right to lodge a complaint with a supervisory authority
 -----------------------------------------------------------
