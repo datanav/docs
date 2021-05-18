@@ -7,7 +7,7 @@ services:
   - docker
 before_install:
   # required for generating downloadable contracts
-  - sudo apt-get -y install texlive-latex-base texlive-latex-extra lmodern texlive-fonts-recommended ghostscript
+  - sudo apt-get -y install texlive-latex-base texlive-latex-extra texlive-generic-extra lmodern texlive-fonts-recommended ghostscript
   - wget https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
   - sudo dpkg -i pandoc-2.13-1-amd64.deb
 install:
