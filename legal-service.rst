@@ -9,7 +9,6 @@ SESAM shall deliver the Services and complete the tasks related to the
 Services as set out in section 1 and that is set out in the service
 catalogue in the table below.
 
-
 .. list-table:: Service specification
    :widths: 20 80
    :header-rows: 1
@@ -81,12 +80,12 @@ catalogue in the table below.
      - SESAM is documented here: https://docs.sesam.io/overview.html
    * - 7. Third party cloud services included in the Services
 
-       or
+          or
 
-       Third party
-       cloud services are included in the Services, but it is set forth in
-       this agreement that the Customer will provide the operating
-       environment
+          Third party
+          cloud services are included in the Services, but it is set forth in
+          this agreement that the Customer will provide the operating
+          environment
      - SESAM is delivered as a SaaS from virtual servers in Microsoft Azure
        Cloud. For Azure, separate terms of service apply from Microsoft: `Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_
        and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_.
