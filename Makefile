@@ -70,7 +70,7 @@ saasdocx: saasdoc
 	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
 
 saaspdf: saasdoc
-	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -V geometry:margin=1in -o files/sesam-cloud-service-contract.pdf
+	pandoc $(BUILDDIR)/saas.md --lua-filter=pagebreak.lua -V geometry:margin=1in -V urlcolor=cyan -o files/sesam-cloud-service-contract.pdf
 
 saas: saaspdf saasdocx
 
