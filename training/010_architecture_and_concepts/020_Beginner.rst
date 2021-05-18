@@ -524,20 +524,31 @@ Where to make new ref 1.1.6
 Datasets
 ~~~~~~~~
 
-Something more general about pipes maybe in context of systems and pipes
+Datasets are where data is stored inside Sesam, regardless of whether the
+data comes from external systems or from internal pipes.
 
-Very low level but enough to see entities?
+Data in a dataset is represented as a JSON list where each list item is a
+data record, called *entity*, consisting og key-value pairs.
 
-and refer to entities subchapter ref. 1.1.12
+A dataset with two people entities could look something like this:
 
-Namegivingconventions ref. 1.1.8
+.. code-block:: json
 
-Where to make new ref 1.1.6
+   [
+     {
+       "id": "1",
+       "name": "Jane Doe"
+     },
+     {
+       "id": "2",
+       "name": "John Doe"
+     }
+   ]
 
-Datasets are the default sink of internal pipes in Sesam.
-Datasets are where data imported into a Sesam node is stored.
-Datasets consist of a list of JSON entities.
-Datasets are also often the source of internal pipes.
+Dataset is the default sink type for internal pipes in Sesam, so if no sink
+config is specified for a pipe it's output will be a dataset.
+
+Datasets are also often the source for internal pipes.
 
 **Related topics:**
 
@@ -602,22 +613,25 @@ Rdf:type
 Tasks for Architecture and Concepts: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. *In what component is data stored in Sesam?*
+#. *In what component is data stored in Sesam?*
 
-2. *Which component moves data in Sesam?*
+#. *Which component moves data in Sesam?*
 
-3. *What moves through Sesam?*
+#. *What moves through Sesam?*
 
-| *4. Name the input pipe for this system & table:*
-| *System name : IFS
-  Table name: workorder
-  Pipe name: \_____\_*
+#. *Name the input pipe for this system & table:*
 
-5. *in an entity representing a row, how would the column “personalid”
-with row value “123” look after it is read by a pipe named crm-person
-and stored inside an entity of the output dataset?*
+     System name: ``IFS``
 
-6. *What is the difference between and entity stored as a row in a table
-vs in a Sesam Dataset?*
+     Table name: ``WorkOrder``
+     
+     Pipe name: ______
 
-7. *What is the minimum required to define an entity?*
+#. *In an entity representing a row, how would the column “personalid”
+   with row value “123” look after it is read by a pipe named crm-person
+   and stored inside an entity of the output dataset?*
+
+#. *What is the difference between and entity stored as a row in a table
+   vs in a Sesam Dataset?*
+
+#. *What is the minimum required to define an entity?*
