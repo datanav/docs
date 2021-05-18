@@ -75,6 +75,7 @@ focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
 
 Data Driven Architecture (DDA)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As opposed to both the P2P and the ESB integration principles the Data
 Driven Architecture (DDA) does not focus on systems but rather the data
