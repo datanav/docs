@@ -80,7 +80,7 @@ catalogue in the table below.
      - SESAM is documented here: https://docs.sesam.io/overview.html
    * - 7. Third party cloud services included in the Services
 
-          or
+          *or*
 
           Third party
           cloud services are included in the Services, but it is set forth in
@@ -93,7 +93,7 @@ catalogue in the table below.
        binding on the Customer as they are amended and updated by Microsoft at
        any given time.
 
-       or
+       *or*
 
        It is agreed between the parties that the Customer will acquire and use
        another operating environment with their own terms of service, when using
