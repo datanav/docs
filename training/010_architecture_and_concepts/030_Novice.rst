@@ -19,7 +19,7 @@ Short overview of what data joining is
 Make namespaced identifiers for foreign keys - make-ni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Continuing along the lines of joining data, namespaced identifiers (NI's) come into play. NI's are used in Sesam to create unique identifiers inside one Sesam datahub. In order to create them, you can use either of the two functions: ["make-ni"] or ["ni"].
+Continuing along the lines of joining data, namespaced identifiers (NIs) come into play. NIs in Sesam are used to reference an identifier or a NI in a related dataset. In order to create them, you can use either of the two functions: ["make-ni"] or ["ni"].
 
 In the below example, ["make-ni"] will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
 
