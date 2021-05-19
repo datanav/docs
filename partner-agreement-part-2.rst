@@ -115,7 +115,9 @@ consent of any third party. Each Party warrants that it is not aware of
 any pending or threatened legal proceeding against it with respect to
 ownership or title in or to their Services.
 
-9.3. Sesam's Intellectual Property Rights 9.3.1. Ownership and
+9.3. Sesam's Intellectual Property Rights
+
+9.3.1. Ownership and
 Intellectual Property Rights, cf section 1. 6, hereunder all rights,
 titles and interests (including without limitation all patent rights,
 copyrights, trademark rights, trade secret rights and any other
@@ -129,7 +131,9 @@ Modifications means translations, improvements, updates, enhancements, or any
 other form of changes/amendments or modifications in the Services and/or the
 Documentation.
 
-9.4. Rights of Use 9.4.1. Sesam grants the Partner a free-of-charge
+9.4. Rights of Use
+
+9.4.1. Sesam grants the Partner a free-of-charge
 right of use to Sesam's Intellectual Property to the extent that such
 right of use is necessary for the Partner to be able to carry out their
 own work in the Collaboration.
@@ -140,7 +144,9 @@ reasonable diligence to detect and shall immediately advise Sesam if it
 becomes aware of any infringement of any Intellectual Property Rights
 owned or used by Sesam.
 
-9.6. Third Party IPR and indemnification 9.6.1. Each Party shall obtain
+9.6. Third Party IPR and indemnification
+
+9.6.1. Each Party shall obtain
 approval before using any material, in relation to the performance of
 its obligations under the Agreement, which is or may be subject to any
 third party Intellectual Property Rights. Each Party shall notify the
