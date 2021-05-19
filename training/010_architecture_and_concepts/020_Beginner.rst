@@ -528,9 +528,9 @@ Datasets are where data is stored inside Sesam, regardless of whether the
 data comes from external systems or from internal pipes.
 
 Data in a dataset is represented as a JSON list where each list item is a
-data record, called *entity*, consisting og key-value pairs.
+data record, called *entity*, consisting of key-value pairs.
 
-A dataset with two people entities could look something like this:
+A dataset with two entities concerning people could look like this:
 
 .. code-block:: json
 
