@@ -112,10 +112,3 @@ If, after the signature of the Agreement, changes in public taxes,
 charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
-
-5. Partner discount
-===================
-
-To be eligible for the 15% discount the Partner must be a Sesam Certified
-Solution Partner. To qualify for the 15% discount, the Partner must run and
-drive the process, as well as invoice the Customer/End User.
