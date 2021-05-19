@@ -12,7 +12,7 @@ Terms of Service for Access and Use of SESAM Software as a Service
 ------------
 
 This documents contains terms of service for Customers' access to and
-use of SESAM Software as a Service (“Services”) provided by SESAM.io AS,
+use of SESAM Software as a Service (“Services”) provided by SESAM.IO AS
 922 409 676 (“SESAM”). The services consist of both free- and paid
 subscriptions and the term “Customer” is used regardless of whether a
 Subscription Fee applies to a particular Customer's account. Some
@@ -27,21 +27,19 @@ this Agreement.
 Upon entering into this Agreement and the registration of the Customer
 in SESAM's systems, the Customer is given a right to use the Services on
 the terms in this Agreement. Once access to the Services has been
-granted, the Customer will receive an e-mail to its registered email
+granted, the Customer will receive an e-mail to its registered e-mail
 address with the necessary access and login details.
 
 The Services consist of various sub-services, and the right to use the
 Services only comprise the individual sub-services which the Customer
-has ordered and received access to. Some of the Services are payable.
-*Description of the Services* sets out the sub-services that the Customer has ordered at
-the time of signature of this Agreement. The Customer’s account overview
-sets out active sub- services which the Customer has ordered, including
-which Services are payable.
+has ordered, and received access to. Some of the Services are payable.
+The Customer's account overview sets out active sub-services which the
+Customer has ordered, including which Services are payable.
 
 Some sub-services may be subject to additional terms and/or
 restrictions. Such additional terms and/or restrictions are set out in
-*Description of the Services* and/or the terms of use for the sub-service together with the
-description of the sub-service in question.
+the terms of use for the sub-service together with the description of
+the sub-service in question.
 
 1.2. Description of the Services
 --------------------------------
@@ -67,12 +65,12 @@ Services with different roles (each individual referred to herein as a
 persons in the employment or service of the Customer.
 
 The Customer and the Customer's Users receive a worldwide, limited,
-terminable, non-exclusive and nontransferable right to use the Services
+terminable, non-exclusive and non-transferable right to use the Services
 in accordance with the terms of this Agreement, exclusively for the
 Customer's internal business purposes. This right is conditional on the
-payment of the applicable subscription fee and other fees as set out in
-Subscription Fee, payment terms. Any applicable Subscription Fee is
-provided on the Customer's account overview.
+payment of the applicable subscription fee and other fees (“Subscription
+Fee”). Any applicable Subscription Fee is provided on the Customer's
+account overview.
 
 The Payment of the Subscription Fee and the compliance with the terms of
 this Agreement is a precondition for the right to use the Services.
@@ -96,10 +94,10 @@ Services, the Customer does not purchase a copy of, or license to, the
 software used to deliver the Services, but consecutively pay for a
 subscription to access the Services. To the extent that separate
 license- or other terms apply for use of third party software and/ or
-services included in the Services, these are set out in *Description of the Services*
-and/or together with the description of the Services in question. Any
-terms for third party software and/or services take precedence over the
-terms of this Agreement.
+services included in the Services, these are set out together with the
+description of the Services in question. Any terms for third party
+software and/or services take precedence over the terms of this
+Agreement.
 
 2.2. The relationship between the Customer's Users and SESAM
 ------------------------------------------------------------
@@ -123,26 +121,25 @@ Customer's other Users.
 ------------------------
 
 If the Customer is a physical person, the Customer will be assigned a
-single user.
+single User.
 
 If the Customer is a legal person, Users are created and administrated
 by the Customer. Customer's administrators for this Agreement should be
 communicated to SESAM.
 
-The log-on information of an individual User shall not be shared or used
-by more than one physical person, but may freely be re-assigned by the
+The logon information of an individual User shall not be shared or used
+by more than one physical person, but may freely be reassigned by the
 Customer's administrator. The Customer's administrator may also name
 further administrators and delete Users. The Customer shall ensure that
 all information about Users and administrators are up to date at all
 times.
 
-Each User is responsible for keeping his/her Username and password
+Each User is responsible for keeping his/her username and password
 confidential. The Customer shall inform SESAM immediately in case of
-unauthorized use of a User's log-on
-
-information. Users are authorized to provide SESAM's support personnel
-with access to their accounts where such access is necessary to provide
-support or else performed tasks asked for by the User.
+unauthorized use of a User's logon information. Users are authorized to
+provide SESAM's support personnel with access to their accounts where
+such access is necessary to provide support or else asked for by the
+User.
 
 2.4. Requirements for use of the Services
 -----------------------------------------
@@ -164,17 +161,17 @@ restrictions and -regulations.
 The Services will be delivered through the operating environment
 selected by SESAM at any time, unless it is agreed with the Customer
 that the Customer will use another operating environment. The Customer
-will be given minimum three moths' notice in case of significant changes
-to the operating environment. SESAM reserves the right to change the
-operating environment, but will in such event notify the Customer of the
-change and of technical and legal effects of such change.
+will be given minimum three months' notice in case of significant
+changes to the operating environment. SESAM reserves the right to change
+the operating environment, but will in such event notify the Customer of
+the change and of technical and legal effects of such change.
 
 At the present time the operating environment selected by SESAM is
 Microsoft Azure. For Azure, separate terms of service apply from
 Microsoft:
-`Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_ and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_. These terms apply as
-amended and updated by Microsoft at any time. SESAM has no
-responsibility for error and defects in such services.
+`Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_ and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_.
+These terms apply as amended and updated by Microsoft at any time. SESAM
+has no responsibility for error and defects in such services.
 
 SESAM and the Customer may agree on special requirements for the
 operating environment in a separate agreement.
@@ -194,25 +191,23 @@ SESAM warrants that the Services will perform substantially as described
 in applicable Documentation of Services. The Services will be subject to
 continual improvement.
 
-If the Services does not function as described in applicable
-Documentation of Services, SESAM will correct verified errors in the
-Services at SESAMS's own expense. SESAM may choose to replace the
-Services or functionality therein instead of performing a correction. If
-SESAM does not solve the verified errors according to the time-limits
-agreed in *Description of the Services* section 2.3, or does not replace the Service within
-a reasonable time, the Customer may cancel their subscription to that
-particular service in accordance with the terms in section 11. The
-Customer may not set forth any other claims due to defects or errors in
-the Services.
+If the Services do not function as described in applicable Documentation
+of Services, SESAM will correct verified errors in the Services at
+SESAMS's own expense. SESAM may choose to replace the Services or
+functionality therein instead of performing a correction. If SESAM does
+not solve the verified errors according to the time-limits set out
+together with the description of the Services in question or does not
+replace the Service within a reasonable time, the Customer may cancel
+their subscription to that particular service in accordance with the
+terms in section 11. The Customer may not set forth any other claims due
+to defects or errors in the Services.
 
 Links to websites not owned or controlled by SESAM that are available in
 the Services, related web pages or the documentation are provided
 without any responsibility or liability for SESAM. SESAM is not
 responsible for the content and/or information on such websites. In the
-same
-
-manner, SESAM is not responsible for defects and errors arising from the
-Customer's own applications, databases or other systems.
+same manner, SESAM is not responsible for defects and errors arising
+from the Customer's own applications, databases or other systems.
 
 4.2. Service Level Agreements (SLA) targets, penalties
 ------------------------------------------------------
@@ -221,7 +216,8 @@ The provisions in this section apply only to the Customers who pay a
 Subscription Fee.
 
 SESAM's Service availability targets, SLA penalties, and fixed
-maintenance periods are set out in *Description of the Services*.
+maintenance periods are set out together with the description of the
+Services in question.
 
 SESAM may, from time to time, require additional maintenance periods
 beyond what is set out above, for example for major upgrades. Such
@@ -262,19 +258,18 @@ shall take place via https://support.sesam.io.
 
 Support is provided in accordance with the following guidelines:
 
-•A Customer with more than three Users shall designate a contact person
-for support, which will act as the Customer's point of contact with
-SESAM. Accordingly, the contact person shall provide first line support,
-and forward detailed information to SESAM's personnel.
-
--  Support requests shall regard the Services, when used in a manner
-   recommended by SESAM. Support shall not cover repair of information,
-   data-correction in a database or problems caused by the Customer.
-   Neither shall the support cover any matter outside of the Services as
-   covered by the Customer's subscription.
--  SESAM will recommend trainings or consulting services if the support
-   request takes the form of being general training or education.
--  Support does not include any form of consulting services.
+- A Customer with more than three Users shall designate a contact person
+  for support, which will act as the Customer's point of contact with
+  SESAM. Accordingly, the contact person shall provide first line support,
+  and forward detailed information to SESAM's personnel.
+- Support requests shall regard the Services, when used in a manner
+  recommended by SESAM. Support shall not cover repair of information,
+  data-correction in a database or problems caused by the Customer.
+  Neither shall the support cover any matter outside of the Services as
+  covered by the Customer's subscription.
+- SESAM will recommend training or consulting services if the support
+  request takes the form of being general training or education.
+- Support does not include any form of consulting services.
 
 5. Security
 ===========
@@ -283,12 +278,12 @@ and forward detailed information to SESAM's personnel.
 -------------------
 
 The Customer retains all rights to all data that is entrusted to SESAM
-for processing and which is stored or processed with help of the Services
-under this Agreement.
+for processing and which is stored or processed with help of the
+Services under this Agreement.
 
-Upon termination of all Services or individual Services, SESAM may agree
-to assist in transferring the data to a designated and usable format.
-Such a service should be ordered at least 30 days before the end of the
+Upon termination of all Services or individual Services, SESAM may
+assist in transferring the data to a designated and usable format. Such
+a service should be ordered at least 30 days before the end of the
 subscription in question in order to ensure that the Customer can
 receive the data before deletion. Such assistance is invoiced by SESAM
 according to the at any time applicable fee schedule and terms for
@@ -305,86 +300,85 @@ from time to time.
 
 SESAM provides secure and reliable services, and will at any time have
 in place administrative, physical and technical security measures
-including backup solutions according to corresponding standards
+including backup solutions according to corresponding standards:
 
--  SESAM has established an information security governance system where
-   systems, routines and processes which was set up in accordance with
-   ISO 27001 and 27018
--  A yearly third party audit shall be carried out in accordance with
-   ISO 27001
--  A confidential summary report of the audit shall be produced, and
-   made available to the Customer upon request
--  The summary report shall enable the Customer to assess whether the
-   security level in SESAM's services are according to the Agreement and
-   the Customer's requirements
+- SESAM has established an information security governance system where
+  systems, routines and processes which was set up in accordance with
+  ISO 27001 and 27018.
+- A yearly third party audit shall be carried out in accordance with
+  ISO 27001.
+- A confidential summary report of the audit shall be produced, and
+  made available to the Customer upon request.
+- The summary report shall enable the Customer to assess whether the
+  security level in SESAM's services are according to the Agreement and
+  the Customer's requirements.
 
 5.3 Processing of personal data
 -------------------------------
 
 The Services may entail processing of the Customer's personal data,
 e.g. storage in SESAM's operating environments, cf. section 3 above,
-Users
+unless otherwise is agreed with the Customer.
+
+If the Services entail processing of the Customer's personal data, the
+Data Processing Addendum comes into force. The Data Processing Addendum
+forms part of the Terms Of Service. The Data Processing Addendum are
+hereby incorporated by reference and shall apply to the extent Customer
+Data includes Personal Data, as defined in the DPA. The DPA further
+states the Parties' obligations and rights as Controller and Processor,
+regarding the Processor's processing of Personal Data on behalf of the
+Controller. SESAM as the Processor, shall only process data in
+accordance with the Data Processing Addendum.
+
+In the circumstance that the Services entail processing of the
+Customer's personal data the following will enter into force in addition
+to the Data Processing Addendum:
 
 The Customer is the Controller in accordance with EU's General Data
 Protection Regulation (“GDPR”) article 4 paragraph 7. SESAM is the
 Processor in accordance with GDPR article 4 paragraph 8.
 
-The Customer as the Controller agrees and warrants that:
-
--  The Customer owns or otherwise has the right to transfer the personal
-   data to the Service for processing, and that the Customer is
-   responsible for the accuracy, integrity, contents, and legality of
-   the personal data, including transfer and instructions;
-
--  Where applicable, that the processing of personal data is covered by
-   an applicable permit, and/or has been notified to the applicable
-   regulatory authorities and/or Data Subjects, and that the processing
-   of personal data is not in violation of applicable law, hereunder
-   GDPR;
-
--  It is the Customer's obligation as the Controller to notify the
-   applicable regulatory authorities and/or Data Subjects in case of
-   breach or the unauthorized processing of personal data, incl. special
-   categories.
-
--  The Customer, by way of its risk assessment, has verified that
-   SESAM's security measures are effective and appropriate for the
-   processing in question;
-
--  SESAM has provided sufficient guarantees in terms of logical,
-   technical, physical and organizational security measures.
-
--  SESAM generally recommends that the Customer uses standard-level SLA
-   or higher when processing personal data.
-
--  If it is set forth in the agreement that the processing of personal
-   data includes processing of special categories of personal data or
-   data processing that entails high risk, SESAM requires that the
-   Customer uses standard-level SLA or higher.
-
-SESAM and the Customer have entered into a Data Processing Agreement
-which is attached hereto in *Data processing agreement*. The Data Processing Agreement
-further states the Parties' obligations and rights as Controller and
-Processor, regarding the Processor's processing of Personal Data on
-behalf of the Controller.
-
-SESAM as the Processor, shall only process data in accordance with the
-*Data processing agreement* included as to this Agreement.
+The Customer as the Controller agrees and warrants that: - The Customer
+owns or otherwise has the right to transfer the personal data to the
+Service for processing, and that the Customer is responsible for the
+accuracy, integrity, contents, and legality of the personal data,
+including transfer and instructions; - Where applicable, that the
+processing of personal data is covered by an applicable permit, and/or
+has been notified to the applicable regulatory authorities and/or Data
+Subjects, and that the processing of personal data is not in violation
+of applicable law, hereunder GDPR. - It is the Customer's obligation as
+the Controller to notify the applicable regulatory authorities and/or
+Data Subjects in case of breach or unauthorized processing of personal
+data, incl. special categories. - The Customer, by way of its risk
+assessment, has verified that SESAM's security measures are effective
+and appropriate for the processing in question; - SESAM has provided
+sufficient guarantees in terms of logical, technical, physical and
+organizational security measures. - SESAM generally recommends that the
+Customer uses standard-level SLA or higher when processing personal
+data. - If it is set forth in the agreement that the processing of
+personal data includes processing of special categories of personal data
+or data processing that entails high risk, SESAM requires that the
+Customer uses standard-level SLA or higher.
 
 6. Fees and Payment Terms
 =========================
 
 For Services included in this Agreement, the Customer may have payed a
-Subscription Fee to SESAM as set out in *Subscription Fee, payment terms*.
+Subscription Fee to SESAM as set out together with the description of
+the Services in question.
 
-Dynamic price model: The price model set out in *Subscription Fee, payment terms* is a dynamic
-(running) price model that is renewed automatically until terminated by
-one of the parties as set out in section 11.
+Dynamic price model:
 
-Fixed price model: A fixed price model entails that Sesam gives a 50%
-discount of a set amount of data (GB), based on the dynamic price set
-out in *Subscription Fee, payment terms*, and provided that the Customer in the Agreement
-agrees to the fixed price model for a renewable term of 12 months.
+The price model is a dynamic (running) price model that is renewed
+automatically until terminated by one of the parties as set out in
+section 11.
+
+Fixed price model:
+
+A fixed price model entails that Sesam gives a 50% discount of a set
+amount of data (GB), based on the dynamic price and provided that the
+Customer in the Agreement agrees to the fixed price model for a
+renewable term of 12 months.
 
 If the Parties agrees upon fixed price, the Agreement will be for a term
 of 12 months calculated from the date it is agreed between the parties
@@ -392,7 +386,7 @@ that the model is fixed price (most often the Date the Agreement is
 signed by both parties). If the Customer uses more data than the agreed
 upon fixed price model allows for that term, the fee for the data amount
 (GB) surpassing the agreed upon fixed price, will be double of what
-follows from the dynamic price model in *Subscription Fee, payment terms*.
+follows from the dynamic price model.
 
 The Agreement will automatically be renewed with the same data amount
 (GB) for the following 12 months as that of the running term, unless the
@@ -418,9 +412,9 @@ internal or external auditors to observe SESAM's delivery of the
 Services with related Customer data and any documentation for the
 Services for the Customer. The Customer shall give reasonable notice
 before such audits, at least 20 calendar days, and the audit shall be
-carried out during normal business hours as set out in this Agreement.
-The Customer acknowledges that scope of audit shall be limited to
-SESAM's own delivery of Service, as well as applicable documentation.
+carried out during normal business hours. The Customer acknowledges that
+scope of audit shall be limited to SESAM's own delivery of Service, as
+well as applicable documentation.
 
 The Customers may not utilize auditors who are in direct competition
 with SESAM. The auditor(s) shall sign a confidentiality statement. The
@@ -445,13 +439,15 @@ change section 5.1. to the detriment of the Customer.
 =====================================
 
 The provisions in this section apply only to the Customers who pay a
-Subscription Fee. SESAM shall defend the Customer against claims or law
-suits set forth by third parties claiming that the Customer's use of the
-Services infringes that third party's registered Norwegian or EU
-intellectual property rights, including, without limitations, patents,
-copyright, trade secrets, trademark or any other intellectual property
-rights. In the event of such claims the Customer shall immediately
-inform SESAM in writing.
+Subscription Fee.
+
+SESAM shall defend the Customer against claims or law suits set forth by
+third parties claiming that the Customer's use of the Services infringes
+that third party's registered Norwegian or EU intellectual property
+rights, including, without limitations, patents, copyright, trade
+secrets, trademark or any other intellectual property rights. In the
+event of such claims the Customer shall immediately inform SESAM in
+writing.
 
 SESAM shall, to the extent SESAM is responsible for the infringement,
 hold the Customer harmless against all costs, damages, expenses or
@@ -463,11 +459,10 @@ may at its own discretion (i) modify the Services so that there is no
 longer any infringement of third party rights, (ii) replace the Services
 with functionally equivalent services, (iii) provide a right for the
 Customer's continued use of the Services. If these options are not
-available, SESAM may or (iv) terminate the Customer's access to the
-Products and Services with a refund of any fees paid for the
-subscription after the date of termination. The Customer may not set
-forth any other claims as a result of infringement of third party
-rights.
+available, SESAM may terminate the Customer's access to the Products and
+Services with a refund of any fees paid for the subscription after the
+date of termination. The Customer may not set forth any other claims as
+a result of infringement of third party rights.
 
 The previous right to be held harmless does not apply if the Services
 have been used in violation of these terms and conditions or if the
@@ -484,13 +479,11 @@ SESAM shall immediately notify the Customer in writing in the event of
 such claims.
 
 The Customer shall hold SESAM harmless against all costs, damages,
-expenses or losses
-
-that SESAM is sentenced to pay by a court or agrees to in a settlement,
-including attorney fees, provided that SESAM cooperates with the
-Customer at the Customer's own expense and that SESAM provides the
-Customer with full control over the legal process and settlement, and
-that the settlement releases SESAM from all liability.
+expenses or losses that SESAM is sentenced to pay by a court or
+agrees to in a settlement, including attorney fees, provided that SESAM
+cooperates with the Customer at the Customers own expense and that SESAM
+provides the Customer with full control over the legal process and
+settlement, and that the settlement releases SESAM from all liability.
 
 10. Liability, Limitation of Liability etc.
 ===========================================
@@ -514,8 +507,8 @@ amount equivalent to 6 month's Subscription Fee's ex. VAT for the
 Services during the same period.
 
 If standardized sanctions are agreed, these standardized sanctions shall
-be the sole and exclusive remedy for the matter and no other claims may
-be made based on the same situation.
+be the sole remedy and no other claims may be made based on the same
+situation.
 
 10.2. Force majeure
 -------------------
@@ -534,11 +527,11 @@ In the event that law, rules or regulations applicable to the use or
 delivery of the Services is changed or new rules or regulations are
 adopted after the Services have been made available on the market and
 this prevents SESAM from fulfilling the Customer's instructions pursuant
-to the *Data processing agreement* or other obligation in
-this Agreement, and/or this requires full or partial termination of
-access to the Services for a limited or indefinite period of time, this
-shall be considered as a force majeure circumstance. SESAM is not in any
-way responsible for any such or other force majeure circumstance.
+to the Data Processing Addendum or other obligations in this Agreement
+and/or this requires full or partial termination of access to the
+Services for a limited or indefinite period of time, this shall be
+considered as a force majeure circumstance. SESAM is not in any way
+responsible for any such or other force majeure circumstance.
 
 10.3. Circumstances for which SESAM not in any event is responsible
 -------------------------------------------------------------------
@@ -548,8 +541,7 @@ transmission of information between the Customer and the Services, the
 Customer recognizes that the Internet is an open system, and that SESAM
 cannot warrant that a third party cannot or will not intercept or alter
 data during the transmission. SESAM takes no responsibility for such
-unauthorized access to, use or alternation or publication or loss of
-data.
+unauthorized access to, use or publication or loss of data.
 
 Neither is SESAM responsible for lack of availability of the Services
 when this is directly or indirectly caused by the Customer or by
@@ -561,12 +553,9 @@ reconstruction of data regardless of cause.
 
 The Customer may cancel the Services or individual sub-services and
 thereby cancel the entire subscription for SESAM's Service using the
-Customer's account tool with applicable notice
-
-period. The cancellation takes effect from the start of the first month
-after end of the notice period. If a minimum term has been agreed for
-some of the Services, the termination takes effect after the expiration
-of such minimum term.
+Customer's account tool with applicable notice period. The cancellation
+takes effect from the start of the first month after the end of the
+notice period.
 
 For non-paying Customers SESAM has the right to suspend or terminate
 access to all or any part of the Service at any time, with or without
@@ -615,7 +604,7 @@ Agreement or breach of this Agreement is one year after the termination
 of the agreement. Claims forwarded after the limitation period is out of
 date and hence have no validity.
 
-12. Confidntiality
+12. Confidentiality
 ===================
 
 Information that comes into the possession of the parties in connection
@@ -632,7 +621,6 @@ sector-specific regulations.
 The confidentiality obligation pursuant to this provision shall not
 prevent the disclosure of information if such disclosure is demanded
 pursuant to laws or regulations, including any disclosure or right of
-
 access pursuant to the Act of 19 May 2006 relating to the Right of
 Access to Documents in the Public Administration (Freedom of Information
 Act). The other party shall, if possible, be notified prior to the
@@ -643,7 +631,7 @@ being used when there is no legitimate interest in keeping it
 confidential, for example when it is in the public domain or is
 accessible to the public elsewhere.
 
-The parties shall take all necessary precautions to prevent unauthorised
+The parties shall take all necessary precautions to prevent unauthorized
 persons from gaining access to, or knowledge of, confidential
 information.
 
@@ -656,7 +644,7 @@ and provided that they are subjected to a confidentiality obligation
 corresponding to that stipulated in this clause.
 
 The confidentiality obligation shall not prevent the parties from
-utilising experience and expertise developed in connection with the
+utilizing experience and expertise developed in connection with the
 implementation of the Agreement.
 
 The confidentiality obligation shall continue to apply after the expiry
@@ -693,13 +681,15 @@ regarding this Agreement or its subject matter herein.
 ============
 
 Any dispute or disagreement arising between the parties will be resolved
-by negotiations. If such negotiations fail, either party may request
-that the case is brought before a Norwegian court. If the parties so
-agree, the case shall be decided by arbitration after Norwegian Act of
-14. May 2004 no. 25 on arbitration. If the parties require confidential
-treatment of the arbitration proceedings, hereunder the arbitration
-court's verdict, this shall be agreed between the parties in writing
-together with the arbitration agreement.
+by negotiations.
+
+If such negotiations fail, either party may request that the case is
+brought before a Norwegian court. If the parties so agree, the case
+shall be decided by arbitration after Norwegian Act of 14. May 2004 no.
+25 on arbitration. If the parties require confidential treatment of the
+arbitration proceedings, hereunder the arbitration court's verdict, this
+shall be agreed between the parties in writing together with the
+arbitration agreement.
 
 The agreed legal venue shall be the location where SESAM has its
 registered address when the case is made before the court or arbitration
@@ -724,6 +714,5 @@ treatment of the arbitration proceedings, hereunder the arbitration
 court's verdict, this shall be agreed between the parties in writing
 together with the arbitration agreement.
 
-The agreed legal venue shall be the location where SESAM has its
-registered address when the case is made before the court or arbitration
-court.
+The agreed legal venue shall be the location SESAM has its registered
+address when the case is made before the court or arbitration court.
