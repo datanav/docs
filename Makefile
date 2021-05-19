@@ -82,9 +82,12 @@ saaspdf: saasdoc
 	## switch to groff after https://github.com/jgm/pandoc/issues/7288
 	#$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -t ms -o files/sesam-cloud-service-contract.pdf
 
+partnerdocx:
+	$(PANDOCPATH) $(PANDOCOPTS) partner-agreement-form.rstx -f rst --lua-filter=pagebreak.lua -t docx -o files/partner-agreement.docx
+
 saas: saaspdf saasdocx
 
-html: saas
+html: saas partnerdocx
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
