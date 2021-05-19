@@ -13,6 +13,13 @@ Fees for standard services are set out in EURO, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
+Compute is automatically upgraded if data use exceeds specified limits. You
+can upgrade without additional data storage in case you want higher performance.
+
+If data storage is more than 1TB you will be billed with an additional X-large
+compute for every TB above 1TB. As an example, if you have 4,5TB of data you
+will be billed with 5 quantities of X-large computes.
+
 The fees for the Services are set out below in Euro exclusive of VAT:
 
 .. list-table:: Compute prices
@@ -21,7 +28,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
    * - Compute
      - Pr environment
-   * - Small - 1 Engine < 40 GB Data
+   * - Small - 1 Engine < 40 GB Data [#]_
      - €100.00
    * - Medium - 4 Engines < 350 GB Data
      - €800.00
@@ -38,9 +45,9 @@ The fees for the Services are set out below in Euro exclusive of VAT:
      - Pr GB
    * - GB
      - €10.00
-   * - Geo-redundant backup
+   * - Geo-redundant backup [#]_
      - €2.00
-   * - VPN
+   * - VPN [#]_
      - €2.00
 
 .. list-table:: Monitoring
@@ -64,10 +71,19 @@ The fees for the Services are set out below in Euro exclusive of VAT:
      - Pr Gb
    * - N/A
      - €0.00
-   * - Standard - 8h
+   * - Standard - 8h [#]_
      - €15.00
-   * - Enterprise - 1h
+   * - Enterprise - 1h [#]_
      - €30.00
+   * - Premium 0,5h x 24/7 [#]_
+     - €100.00
+
+.. [#] Small compute is intended for development only
+.. [#] Geo-redundant backup is required for Cloud subscriptions
+.. [#] VPN only available on Medium, Large and X-Large compute
+.. [#] Standard SLA is billed minimum 50Gb data
+.. [#] Enterprise SLA is billed minimum 50Gb data
+.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data
 
 2. Invoicing
 ============
@@ -97,3 +113,9 @@ charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
 
+5. Partner discount
+===================
+
+To be eligible for the 15% discount the Partner must be a Sesam Certified
+Solution Partner. To qualify for the 15% discount, the Partner must run and
+drive the process, as well as invoice the Customer/End User.
