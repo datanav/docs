@@ -6,6 +6,7 @@ DOCKER_PATH = docker
 PANDOCPATH = pandoc
 PANDOCOPTS = 
 PANDOC_INT = json
+PANDOC_LATEXPDF_OPTS = -V block-headings -V geometry:margin=1in -V urlcolor=cyan
 
 # You can set these variables from the command line.
 SPHINXOPTS    = -W
@@ -78,13 +79,14 @@ saasdocx: saasdoc
 	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
 
 saaspdf: saasdoc
-	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -V block-headings -V geometry:margin=1in -V urlcolor=cyan -o files/sesam-cloud-service-contract.pdf
-	## switch to groff after https://github.com/jgm/pandoc/issues/7288
-	#$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -t ms -o files/sesam-cloud-service-contract.pdf
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua $(PANDOC_LATEXPDF_OPTS) -o files/sesam-cloud-service-contract.pdf
+
+termspdf: 
+	$(PANDOCPATH) $(PANDOCOPTS) terms.rst $(PANDOC_LATEXPDF_OPTS) -o files/terms.pdf
 
 saas: saaspdf saasdocx
 
-html: saas
+html: saas termspdf
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

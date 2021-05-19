@@ -14,4 +14,6 @@ Legal
 Downloads
 ---------
 
-You can also download a complete Sesam Cloud Service Contract as :download:`PDF<files/sesam-cloud-service-contract.pdf>` or :download:`DOCX<files/sesam-cloud-service-contract.docx>` documents.
+Terms of Service is also available in :download:`PDF<files/terms.pdf>`.
+
+You can download a complete Sesam Cloud Service Contract as :download:`PDF<files/sesam-cloud-service-contract.pdf>` or :download:`DOCX<files/sesam-cloud-service-contract.docx>` documents.
