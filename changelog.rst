@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_05_19:
+
+2021-05-19
+----------
+
+* Legal documents has been reformatted and are now available under :doc:`legal`.
+
 .. _changelog_2021_05_06:
 
 2021-05-06
