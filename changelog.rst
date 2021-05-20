@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_05_20:
+
+2021-05-20
+----------
+
+* Added a :doc:`Sesam Community <community>` section.
+
 .. _changelog_2021_05_19:
 
 2021-05-19
