@@ -16,7 +16,7 @@ Building connectors
 -------------------
 
 We recommend that you read the `Guidelines <https://github.com/sesam-community/guidelines>`_ that explains the rules
-for sharing code on the Sesam Community
+for sharing code on the Sesam Community.
 
 
 Using connectors
