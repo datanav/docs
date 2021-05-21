@@ -171,6 +171,8 @@ configuration in Sesam, you reference the pipe’s identity.
 :ref:`dtl-in-practice-3-1`,
 :ref:`naming-conventions-1-1`
 
+.. _dataset-id-3-1:
+
 Dataset _id
 ^^^^^^^^^^^
 
