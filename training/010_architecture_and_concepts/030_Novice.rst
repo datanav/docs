@@ -262,7 +262,13 @@ As an example, the data presented below is produced by the pipe "global-person":
 	  "crm-account:hobbies": "Builds LEGO"
 	}   
 
-The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as ``["copy", "global-person:*"]`` and would produce the following data:
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+
+.. code-block:: json
+
+	["copy", "global-person:*"]
+
+and would produce the following data:
 
 .. code-block:: json
 
@@ -273,7 +279,21 @@ The shape of the data does not immediately satisfy your needs, as you are only i
 	  "global-person:position": "Engineer"
 	} 
 
-After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following: ``["remove", "country"]`` and ``["rename", "phone", "Phone"]``, ``["rename", "id", "Id"]``, ``["rename", "position", "Position"].`` Based on the declared DTL functions, this would produce the following:
+After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following: 
+
+.. code-block:: json
+	
+	["remove", "country"] 
+
+and 
+
+.. code-block:: json
+	
+	["rename", "phone", "Phone"]
+	["rename", "id", "Id"]
+	["rename", "position", "Position"] 
+
+based on the declared DTL functions, this would produce the following:
 
 .. code-block:: json
 
