@@ -175,13 +175,13 @@ When applying the hops, our point of reference will be the first data object fro
 
 .. code-block:: json
 
-	{
-	  "_id": "first_entity:foo",
-	  "first_entity:value": 1,
-	  "first_entity:string":"Hello merge",
-	  "first_entity:values": [1, 2, 4, 5],
-	  "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
-	}
+  {
+    "_id": "first_entity:foo",
+    "first_entity:value": 1,
+    "first_entity:string":"Hello merge",
+    "first_entity:values": [1, 2, 4, 5],
+    "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
+  }
 
 As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.  
 
