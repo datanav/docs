@@ -39,10 +39,52 @@ Data is appended to the output
 Global
 ~~~~~~
 
-Golden – the best truth about common attributes of a concept collected
-from multiple sources
+Global datasets lies at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
-Coalesce, prioritization of source data (master data)
+Creating global datasets allows a Sesam installation to:
+
+- 	Semantically group and structure data
+		A semantic grouping of the data makes the data it self easier to understand and more intuitive to work with, both in turns of excisting architecture and new projects. For excisting architecture, separating your data into relatable and recongnizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to allocate to localize and to correct a potential issue. 
+		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
+
+-	Setup master data management - Golden records
+		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize whih system know a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. An other benefit of goldenr ecords are their reusability. Once their logic has been created a golden record may be used by any project downstream from it's global-dataset, thus saving both time and energy.
+
+		Golden records are created with the "coalesce" function, as shown in the example below.
+
+
+
+	A global pipe, "global-person", has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe "global-person" we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
+
+	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
+
+.. code-block:: json
+  :linenos:
+
+  ["add", "email",
+    ["coalesce",
+      ["list", "_S.hr-person:email", "_S.crm-person:Email", "_S.economy-person:e-mail"]
+    ]
+  ]
+
+In this case, all three source datasets has an email property. If the email in hr-person is not null, that email will be the value in our global property. Should it have a null value the email from crm-person will be evaluated, and so on. 
+
+.. code-block:: json
+  :linenos:	
+
+  ["add", "hours-pr-project",
+    ["coalesce",
+      ["list", "_S.crm-person:hours-pr-project", "_S.economy-person:hours-pr-project"]
+  ]
+
+
+  ["add", "weekly-hours-billed",
+    ["coalesce",
+      ["list", "_S.economy-person:weekly-hours-billed", "_S.crm-person:weekly-hours-billed"]
+    ]
+  ] 
+
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
 
 
 .. _generic-input-pipes-custom-output-pipes-1-2:

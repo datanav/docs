@@ -690,16 +690,6 @@ In the Sesam Management Studio, navigate to the **Pipes** view and follow these 
 
 - Lastly, add some test data:
 
-  .. code-block:: json
-
-    "entities": [{
-      "_id": "1",
-      "data": "One"
-    }, {
-      "_id": "2",
-      "data": "Two"
-    }]
-
 You should now have the following pipe config:
 
 .. _practice-pipe-config-initial:
@@ -764,11 +754,6 @@ Switch back to the **Config** tab.
 
 First, change the ``copy`` so that all source properties are included.
 Then add a property called ``greeting`` with the value `Hello, World!`:
-
-.. code-block:: json
-
-  ["copy", "*"],
-  ["add", "greeting", "Hello, World!"]
 
 Save and start the pipe again.
 
