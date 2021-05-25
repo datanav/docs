@@ -289,8 +289,8 @@ and
 
 .. code-block:: json
 	
-	["rename", "phone", "Phone"]
 	["rename", "id", "Id"]
+	["rename", "phone", "Phone"]
 	["rename", "position", "Position"] 
 
 based on the declared DTL functions, this would produce the following:
