@@ -8,31 +8,31 @@ Architecture and Concepts: Beginner
 Different types of Architectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When modelling data, integration architectures (IA) lay the foundation
+When modelling data, integration architectures lay the foundation
 for shaping and structuring data as it moves from one system
-to another. Within IA, Point-to-point (P2P) and Enterprise Service Bus
-(ESB) have been used extensively. Recently Data Driven Architecture has
-mobilized data in new ways by placing data and its meaning at its center.
+to another. Within integration architectures the Point-to-Point (P2P) and Enterprise Service Bus
+(ESB) architectures have been used extensively. Recently Data-Driven Architecture (DDA) has
+enabled data to be used in new ways by focusing on data and its meaning.
 
-To show the evolution of Integration Architectures and why Data Driven
-Architecture is the natural step forward, we will first introduce you to
-P2P and ESB.
+To show the evolution of integration architectures and why DDA is the natural step
+forward we will first introduce you to P2P and ESB.
 
 .. _point-to-point-1-1:
 
 Point-to-Point (P2P)
 ^^^^^^^^^^^^^^^^^^^^
 
-This kind of IA is the simplest integration principle. As an example of P2P
-imagine sending a message generated in one System A to a single receiver
-in another System B. System A talks to System B.
-It is simple and therefore easy to manage, albeit what if another System C is
-introduced and needs to talk with both System A and System B?
-Introducing System C will increase the complexity of the architecture threefold,
-as we go from one integration between System A and System B A->B,
-to three integrations A->B, A->C, B->C.
-In this case P2P is not your best option, and the issue of
-scalability presents itself.
+This kind of integration architecture is the simplest integration principle and works well
+when the number of related systems are limited and low latency is key.
+As an example of P2P imagine sending a message generated in one system A to a single receiver
+in another system B. System A talks to system B.
+It is simple and therefore easy to manage, however what if another system C is
+introduced and needs to talk with both system A and system B?
+Introducing system C will increase the complexity of the architecture threefold
+as we go from one integration between system A and system B, A to B,
+to three integrations A to B, A to C and B to C.
+In this case P2P may not be your best option as the issue of
+scalability starts to present itself.
 
 To illustrate how complexity can make P2P a
 non-viable option look at the below Figure 1 – Point-to-Point:
@@ -45,21 +45,21 @@ non-viable option look at the below Figure 1 – Point-to-Point:
 
 As illustrated on the right-hand side of the above figure “Complex
 integration”, you have to maintain multiple connections separately
-which, in this case, will make P2P time consuming and expensive to
-manage. Therefore, amongst other things, new architectural principles
+which can make P2P time consuming and expensive to manage.
+Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being the ESB.
 
 Enterprise Service Bus (ESB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ESB is a more robust IA and plays a critical role in connecting
-diverse systems and services in a Service Oriented Architecture (SOA).
+The ESB is a more robust integration architecture and plays the critical role of
+being the hub where you can connect diverse systems and services in a Service Oriented Architecture (SOA).
 The ESB takes on the responsibility of ensuring that data sent from one
-system conforms to the requirements in another system. This core
-functionality is an important feature as to why the ESB is such an
-established architectural principle. In addition, the ESB aids in
+system conforms to the requirements in another system by way of a message queue.
+This core functionality is an important feature as to why the ESB is such an
+established integration architecture. In addition, the ESB aids in
 simplifying integration efforts when connecting differing applications
-that need to communicate with each other. See Figure 2 – Enterprise
+that need to communicate with each other as shown below in Figure 2 – Enterprise
 Service Bus.
 
 .. figure:: ./media/Enterprise_Service_Bus.png
@@ -68,38 +68,37 @@ Service Bus.
 
    Figure 2 – Enterprise Service Bus
 
-Taking into account the positives from using an ESB for your IA - some
-challenges still remain unresolved. Recent years transition towards more
+Taking into account the positives from using an ESB for your integration architecture - some
+challenges still remain unresolved. In recent years the transition towards more
 cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
-propelled what is called “Data Driven Architecture”.
+propelled what is called DDA.
 
-Data Driven Architecture (DDA)
+Data-Driven Architecture (DDA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As opposed to both the P2P and the ESB integration principles the Data
-Driven Architecture (DDA) does not focus on systems but rather the data
-these systems store and how it can be used in a data-centric ecosystem.
-This gives us an agile, robust IA. See Figure 3 – Data Driven Architecture.
+As opposed to both the P2P and the ESB integration architectures the DDA
+does not focus on systems but rather the data these systems store and how
+it can be used in a data-centric ecosystem.
+This gives us an agile and robust integration architecture.
+See Figure 3 – Data-Driven Architecture.
 
 .. figure:: ./media/Data_Driven_Architecture.png
    :align: center
    :alt: Figure 3 – Data_Driven_Architecture
 
-   Figure 3 – Data Driven Architecture
+   Figure 3 – Data-Driven Architecture
 
 As opposed to P2P and ESB, DDA is, respectively, scalable and agile - in
 that it does not need the “Bus” to orchestrate data flows, rather DDA
-relies on retrieving all the data in a system and connecting it internally
-to enhance and propagate it for usage in outbound flows.
+relies on retrieving and storing all the data from a system for the purpose of
+connecting it internally to enhance and propagate it for usage in outbound flows.
 
-As in all great things, there is risk involved.
-In order to utilize DDA effectively you need logical and robust principles
+As in all great things there are risks involved.
+In order to utilise DDA effectively you need logical and robust principles
 to create flexible data flows and models.
 This can be achieved by always thinking ahead and leaving room for growth,
 which you will learn how to do throughout this course.
-If done correctly nothing beats the scalability, cost-effectiveness and
-possibilities a DDA provides.
 
 .. _datahub-1-1:
 
@@ -107,20 +106,21 @@ Datahub
 ~~~~~~~
 
 Continuing along the path of building data-centric solutions, the term
-“Datahub” comes into play. A datahub is recognized by its frictionless
+"datahub" comes into play. A datahub is recognized by its frictionless
 data flow and builds upon the architectural principles presented
-in DDA. A datahub can be described as a solution that consists of
-multiple different technologies, i.e., a data warehouse, microservices,
+in DDA such as storing data. A datahub can be described as a solution that consists of
+and relates to multiple different technologies, i.e., a data warehouse, microservices,
 databases etc.
 
-A Datahub shares data by connecting providers of data with consumers of
-data. As such, a datahub mediates and manages how data flows between systems and makes states of data visible to consumers outside the datahub.
+A datahub shares data by connecting providers of data with consumers of
+data. As such, a datahub mediates and manages how data flows between systems
+and makes states of data visible to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
-an enterprise and also what SESAM often becomes when it is used
+an enterprise and also what Sesam often becomes when it is used
 properly. As with any other technologies there are pros and cons.
 Some of these are listed below, so you might be able to recognize them
-“down the road”.
+down the road.
 
 Pros:
 
@@ -145,6 +145,41 @@ Cons:
 - Demands advanced capabilities.
 
 - Does not operate well with silos.
+
+- Moves data asynchronously.
+
+Synchronousity and pizza - NOT HOME HERE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Synchronousity
+
+Synchronousity is when an action or request is dependent on a response or reply.
+
+Example:
+
+Imagine having to pay for a pizza delivery in cash.
+The delivery person is dependent on receiving cash from you before providing the pizza.
+
+The upside for you is that you can pay in cash and the delivery person knows that you
+have confirmed the receivment of the pizza. The downside here is that the delivery person
+is dependent on you to come and take the pizza before moving on to other customers.
+And the pizza may become cold if you are slow.
+
+
+
+Asynchronousity
+
+Asynchronousity is when an action or request is not dependent on a response or reply.
+
+Example:
+
+Imagine now that you have already paid for the pizza which is on it's way to your door.
+The delivery person is not dependent on meeting you to provide the pizza, but can
+leave it outside your door and notifying you by SMS.
+
+The upside here is that the delivery person is not dependent on a response from you,
+but the downside is that if you do not see the notification you may very well go
+get the pizza when it has become cold.
 
 .. _sesam_world_map-1-1:
 
