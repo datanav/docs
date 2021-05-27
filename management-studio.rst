@@ -2,6 +2,8 @@
 Sesam Management Studio
 =======================
 
+.. _management_studio:
+
 .. contents:: Table of Contents
    :depth: 2
    :local:

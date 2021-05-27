@@ -225,7 +225,7 @@ portal can be accessed at portal.sesam.io and in this section you will
 learn the most commonly used parts of the portal such that you can
 orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
-please look `here <management-studio.html#section>`__.
+please visit the :ref:`Management Studio <management_studio>` section.
 
 When logging in to the portal you will be met with a page like the figure below:
 
@@ -264,7 +264,7 @@ needed to start working with Sesam, namely the “Pipes” page and the
 Pipes
 ^^^^^
 
-Upon entering the “Pipes” page you will be met by a list representation of a set of pipes, as seen below. Unless filters are applied the list diplays all the available pipes in your subscription as well as
+Upon entering the “Pipes” page via the menu of the left hand side you will be met by a list representation of a set of pipes, as seen below. Unless filters are applied the list diplays all the available pipes in your subscription as well as
 some of their corresponding meta-data. The search and
 filter options available are specially handy when trying to
 locate one, or a subset of pipes, in a subscription with many pipes.
@@ -334,7 +334,7 @@ Execution log:
 Systems
 ^^^^^^^
 
-The systems tab looks very much like the pipe tab in the Pipe overview above. 
+The systems manu looks very much like the pipe tab in the Pipe overview above. 
 
 .. figure:: ./media/systems-overview.png
    :align: center
