@@ -22,20 +22,29 @@ will be billed with 5 quantities of X-large computes.
 
 The fees for the Services are set out below in Euro exclusive of VAT:
 
+.. NOTE::
+
+   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :ref:`Sesam Client <sesam-client>`.
+
+.. list-table:: Developer environment
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Compute
+     - Pr environment
+   * - Developer - 1 Engine < 20 GB Data [#]_
+     - €50.00
+
 .. list-table:: Compute prices
    :widths: 70 30
    :header-rows: 1
 
    * - Compute
      - Pr environment
-   * - Small - 1 Engine < 40 GB Data [#]_
-     - €100.00
-   * - Medium - 4 Engines < 350 GB Data
-     - €800.00
-   * - Large - 8 Engines < 750 GB Data
-     - €1,500.00
-   * - X-large - 16 Engines < 1 TB Data
-     - €3,000.00
+   * - Standard - 4 Engines < 350 GB Data  [#]_
+     - €900.00
+   * - Enterprise - 16 Engines < 1 TB Data [#]_
+     - €3,300.00
 
 .. list-table:: Data prices
    :widths: 70 30
@@ -44,10 +53,8 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Data
      - Pr GB
    * - GB
-     - €10.00
-   * - Geo-redundant backup [#]_
-     - €2.00
-   * - VPN [#]_
+     - €14.00
+   * - VPN
      - €2.00
 
 .. list-table:: Monitoring
@@ -78,9 +85,9 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Premium 0,5h x 24/7 [#]_
      - €100.00
 
-.. [#] Small compute is intended for development only
-.. [#] Geo-redundant backup is required for Cloud subscriptions
-.. [#] VPN only available on Medium, Large and X-Large compute
+.. [#] The developer environment does not have support for backup, VPN and no SLA is offered.
+.. [#] Geo-replicated backup is included.
+.. [#] Geo-replicated backup is included.
 .. [#] Standard SLA is billed minimum 50Gb data
 .. [#] Enterprise SLA is billed minimum 50Gb data
 .. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data
