@@ -33,7 +33,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
 .. NOTE::
 
-   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :ref:`Sesam Client <sesam-client>`.
+   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :doc:`Sesam Client <sesam-client>`.
 
 .. list-table:: Runtime environments
    :widths: 70 30
