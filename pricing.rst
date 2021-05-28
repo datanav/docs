@@ -76,8 +76,6 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
    * - Support - Response time
      - Pr Gb
-   * - N/A
-     - €0.00
    * - Standard - 8h [#]_
      - €15.00
    * - Enterprise - 1h [#]_
