@@ -22,10 +22,6 @@ will be billed with 5 quantities of X-large computes.
 
 The fees for the Services are set out below in Euro exclusive of VAT:
 
-.. NOTE::
-
-   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :ref:`Sesam Client <sesam-client>`.
-
 .. list-table:: Developer environments
    :widths: 70 30
    :header-rows: 1
@@ -34,6 +30,10 @@ The fees for the Services are set out below in Euro exclusive of VAT:
      - Pr environment
    * - Developer - 1 Engine < 20 GB Data [#]_
      - €50.00
+
+.. NOTE::
+
+   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :ref:`Sesam Client <sesam-client>`.
 
 .. list-table:: Runtime environments
    :widths: 70 30
@@ -86,9 +86,9 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 .. [#] The developer environment does not have support for backup and VPN, and no SLA is offered.
 .. [#] Geo-replicated backup is included.
 .. [#] Geo-replicated backup is included.
-.. [#] Standard SLA is billed minimum 50Gb data
-.. [#] Enterprise SLA is billed minimum 50Gb data
-.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data
+.. [#] Standard SLA is billed minimum 50Gb data.
+.. [#] Enterprise SLA is billed minimum 50Gb data.
+.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data.
 
 2. Invoicing
 ============
