@@ -148,6 +148,8 @@ Cons:
 
 - Moves data asynchronously.
 
+#Todo Snakke om hvorfor Synchrounousity er pro & con.
+
 Synchronousity and pizza - NOT HOME HERE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -189,13 +191,54 @@ Sesam world map
 
 .. _the_parts_of_sesam-1-1:
 
-The parts of sesam @Erik
-~~~~~~~~~~~~~~~~~~~~~~~~
+The parts of sesam
+~~~~~~~~~~~~~~~~~~
 
-In order to understand how Sesam works, it is important to understand
-the parts Sesam is made up of. There are three central re-occurring
-concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets.
+In order to understand Sesam, it is important to understand
+the following three central concepts:
+
+- Systems
+- Pipes
+- Datasets
+
+Systems:
+   A system's main feature is to act as the interface to import and export data
+   into and out of a Sesam node. The actual import and export is carried out by
+   the pipes connected to the systems. Systems are therefore usually found in the
+   beginning and end of dataflows, and are often referred to as
+   “source systems” or “target systems” respectively. A system could
+   connect directly to a database, to a REST API, or simply send data to
+   a waiting http endpoint.
+   Sesam has several of these system types built
+   into the product to simplify the workings inside the portal. In
+   situations where the built-in system types are not enough for your
+   requirements Sesam also supports hosting custom code in microservice systems.
+   These microservices can in turn manipulate and delegate data according to your own
+   specifications, making Sesam a very robust and comprehensive product.
+
+Pipes:
+   A pipe's main functions are to move and transform data.
+   Transformation of data is done through Sesam’s own
+   Data Transformation Language (DTL) which allows you to
+   add, remove, transform or connect data according to your needs.
+   A pipe generally reads from or writes to a system or dataset depending
+   on where the pipe is located in the dataflow.
+
+Datasets:
+   A dataset's main function is to store data and track changes.
+   Datasets are Sesam’s storage units and can be compared
+   to i.e., a table in an SQL database. Datasets are where the pipes store the
+   data they produce, unless a sink specifies otherwise.
+   Sesam stores data in order to perform tracking and indexing in addition
+   to acting as a smart cache for the source systems' data.
+   A dataset is only updated when data changes.
+   You will learn more about these functionalities later in this book.
+
+Entities:
+   A dataset consists of a list of entities.
+   An entity is a JSON dictionary with the identifying key ``_id``.
+   Entities in Sesam can be compared to individual rows in a table and can
+   represent anything from a person or a mechanical part to a contract.
 
 |
 
@@ -205,49 +248,14 @@ with the integration platform: systems, pipes and datasets.
    :height: 80px
    :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolize the direction of data flow.
 
-   *A general pipeline flow in Sesam depicting the three central parts of a
+   *A general dataflow in Sesam depicting the three central parts of a
    Sesam integration, systems, pipes and datasets. The arrows symbolize
    the direction of data flow.*
 
 |
 
-These are the fundamental parts which make up a Sesam integration pipeline:
 
-Systems:
-   A system’s main feature is to act as the interface to import and export data
-   into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
-   beginning and end of the pipeline flows and are often referred to as
-   “source systems” or “target systems” respectively. A system could
-   connect to a REST API, directly to a database or simply send data to
-   a waiting http server. Sesam has several of these system types built
-   into the product to simplify the workings inside the portal. In
-   situations where the built-in system types are not enough for your
-   requirements Sesam also supports connecting systems to a microservice
-   which in turn can manipulate and delegate data according to your own
-   specifications, making Sesam a very robust and comprehensive tool.
-
-Pipes:
-   A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
-   where the data is supposed to be sent. Manipulation of the data is
-   done through Sesam’s own Data Transformation Language (DTL) which
-   allows you to add, remove, transform or combine data according to
-   you own needs. A pipe generally acquires data from a system or from a
-   dataset depending on where the pipe is located inside the integration
-   pipeline.
-
-Datasets:
-   Datasets are Sesam’s storage units and can be compared
-   to i.e., a table in an SQL database. Datasets are where the pipes store the
-   data they produce, unless a sink specifies otherwise. Sesam stores data in order to be able
-   to perform tracking and indexing, but you will learn more about these
-   functionalities later in this book (maybe a link?).
-
-Entities:
-   A dataset consists of a list of entities. Entities in
-   Sesam can be compared to individual rows in an SQL table and can
-   represent anything from a person, a mechanical part to a contract. An
-   entity is defined by its primary key, which is represented in Sesam
-   as the value belonging to the key ``_id``.
+#TODO SKIPPER REVIEW FOR NÅ PGA ÅPEN PR
 
 .. _the_sesam_portal-1-1:
 
@@ -259,15 +267,15 @@ Show basics of portal
 (Here also refer to a full chapter for portal or from the projects
 chapter?)
 
-Integrations, connections and configurations can all be accessed inside
-the Sesam portal; the user interface of the Sesam product, The Sesam
-portal can be accessed at portal.sesam.io, and in this section you will
-learn the most commonly used parts of the portal such that you can
-orient yourself, as well as manage existing integrations. For a full
-explanation if the workings and functionality of the Sesam portal,
-please look [here (with a link)].
+Integrations, connections and configurations can be accessed inside
+the Sesam portal; the user interface of the Sesam product. The Sesam
+portal can be accessed at https://portal.sesam.io, and in this section you will
+learn the most commonly used parts of the portal so that you can
+orient yourself as well as manage existing integrations. For a full
+explanation of the workings and functionality of the Sesam portal,
+please see :ref:`sesam-management-studio`.
 
-When logging in to the portal you will be met with a page like figure "The Sesam Portal"
+When logging into the portal you will be met with a page like figure "The Sesam Portal"
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
    :align: center
@@ -278,14 +286,15 @@ When logging in to the portal you will be met with a page like figure "The Sesam
 
 The cards on the Dashboard are often referred to as “subscriptions” or
 “nodes” and they represent separate instances of Sesam installations.
-Each node comes in different sizes (memory available) depending on the
-requirements of the customer/project/user. In this example you will be
-shown the portal inside the node called “Training Node”, but all nodes
-will have the same setup, only different set of systems, pipes and
-datasets.
+Each node comes in different sizes depending on the
+requirements of the customer, project or user. In this example you will be
+shown the portal inside the node called “Training Node”.
+All nodes have the same interface.
 
 When entering the “Training Node” you will be met with the page seen in
-figure 1.1.6B.
+figure :ref:`figure_Training_Node_Landing_Page`
+
+.. _figure_Training_Node_Landing_Page:
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_B.png
    :align: center
@@ -300,12 +309,15 @@ needed to start working with Sesam, namely the “Pipes” page and the
 Pipes
 ^^^^^
 
-When entering the “Pipes” page you will be met by figure 1.1.6C. This
-figure shows you all the available pipes in your subscription as well as
-some of their corresponding meta-data. There are also several search and
-filter options available, which are specially handy when trying to
-located one, or a set of pipes, in a subscription with many pipes.
+When entering the “Pipes” page you will be met by figure
+:ref:`figure_Training_Node_Landing_Page`. This
+figure shows you all the available pipes in your node as well as
+some of their corresponding metadata. There are also several search and
+filter options available, which are especially handy when trying to
+locate one or a set of pipes in a node with many pipes.
 
+
+.. _figure_Training_Node_Landing_Page:
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
@@ -415,7 +427,7 @@ A standardized naming convention helps you to easily structure your Sesam archit
 
 - Determining pipe type (inbound, outbound, preparation or global) becomes easier.
 
-- Filtering relevant pipes become easier.  
+- Filtering relevant pipes become easier.
 
 -  Switching between integration projects, or joining a new project,
    becomes more intuitive.
@@ -653,7 +665,8 @@ Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look
 
 \_id
 ^^^^
-The identity (_id) of systems, pipes and datasets must be unique and consistent as data moves via systems, through pipes and into datasets.
+The identity (_id) of systems, pipes and datasets must be unique and consistent as data moves
+via systems, through pipes and into datasets.
 
 The _id of a system is usually defined by the name of your source system i.e., salesforce. In case you need two systems in Sesam that both originate from salesforce, you'll need to make two unique names for each of these i.e., salesforce and salesforce-rest.
 
@@ -667,19 +680,37 @@ When data reaches a pipe's dataset, the _id will be identical to what you define
 Tasks for Architecture and Concepts: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#. *What are the main types of integration architectures?*
+
+#. *What type of integration architecture does Sesam support?*
+
+#. *What are the main components in Sesam?*
+
+#. *Which component gives Sesam access to the outside world?*
+
 #. *In what component is data stored in Sesam?*
 
 #. *Which component moves data in Sesam?*
 
+#. *What is the relationship between JSON and Sesam entities?*
+
+#. *What is the difference between a JSON dictionary and an entity in Sesam?*
+
 #. *What moves through Sesam?*
 
-#. *Name the input pipe for this system & table:*
+#. *Based on naming conventions: Name the input pipe for this system & table:*
 
      System name: ``IFS``
 
      Table name: ``WorkOrder``
-     
+
      Pipe name: ______
+
+#: *Name the global pipe which merges these three input pipes:*
+
+     cab-person, salesforce-user, ifs-employee.
+
+     Global name: global-
 
 #. *In an entity representing a row, how would the column “personalid”
    with row value “123” look after it is read by a pipe named crm-person
@@ -687,5 +718,3 @@ Tasks for Architecture and Concepts: Beginner
 
 #. *What is the difference between and entity stored as a row in a table
    vs in a Sesam Dataset?*
-
-#. *What is the minimum required to define an entity?*

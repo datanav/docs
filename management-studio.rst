@@ -1,3 +1,4 @@
+.. _sesam-management-studio:
 =======================
 Sesam Management Studio
 =======================
