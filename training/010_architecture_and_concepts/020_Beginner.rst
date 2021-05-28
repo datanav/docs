@@ -708,9 +708,9 @@ Tasks for Architecture and Concepts: Beginner
 
 #: *Name the global pipe which merges these three input pipes:*
 
-     cab-person, salesforce-user, ifs-employee.
+     ``cab-person``, ``salesforce-user``, ``ifs-employee``.
 
-     Global name: global-
+     Global name: ``global-_____``
 
 #. *In an entity representing a row, how would the column “personalid”
    with row value “123” look after it is read by a pipe named crm-person
