@@ -1,7 +1,12 @@
 Changelog
 =========
 
-.. _changelog_2021_05_20:
+.. _changelog_2021_05_31:
+
+2021-05-31
+----------
+
+* We've updated out :doc:`pricing`. The changes will take effect from September 1st 2021.
 
 2021-05-20
 ----------
