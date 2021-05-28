@@ -6,7 +6,7 @@ Changelog
 2021-05-31
 ----------
 
-* We've updated out :doc:`pricing`. The changes will take effect from September 1st 2021.
+* We've updated our :doc:`pricing`. The changes will take effect from September 1st 2021.
 
 2021-05-20
 ----------
