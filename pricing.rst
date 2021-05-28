@@ -26,7 +26,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
    A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :ref:`Sesam Client <sesam-client>`.
 
-.. list-table:: Developer environment
+.. list-table:: Developer environments
    :widths: 70 30
    :header-rows: 1
 
@@ -35,7 +35,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Developer - 1 Engine < 20 GB Data [#]_
      - €50.00
 
-.. list-table:: Compute prices
+.. list-table:: Runtime environments
    :widths: 70 30
    :header-rows: 1
 
@@ -85,7 +85,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Premium 0,5h x 24/7 [#]_
      - €100.00
 
-.. [#] The developer environment does not have support for backup, VPN and no SLA is offered.
+.. [#] The developer environment does not have support for backup and VPN, and no SLA is offered.
 .. [#] Geo-replicated backup is included.
 .. [#] Geo-replicated backup is included.
 .. [#] Standard SLA is billed minimum 50Gb data

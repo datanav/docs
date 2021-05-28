@@ -87,7 +87,7 @@ partnerdocx:
 
 saas: saaspdf saasdocx
 
-html: saas partnerdocx
+html: # saas partnerdocx
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
