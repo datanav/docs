@@ -310,14 +310,14 @@ Pipes
 ^^^^^
 
 When entering the “Pipes” page you will be met by figure
-:ref:`figure_Training_Node_Landing_Page`. This
+:ref:`_figure_Sesam_Node_Pipe_Overview`. This
 figure shows you all the available pipes in your node as well as
 some of their corresponding metadata. There are also several search and
 filter options available, which are especially handy when trying to
 locate one or a set of pipes in a node with many pipes.
 
 
-.. _figure_Training_Node_Landing_Page:
+.. _figure_Sesam_Node_Pipe_Overview:
 
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
