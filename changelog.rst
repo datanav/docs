@@ -1,7 +1,12 @@
 Changelog
 =========
 
-.. _changelog_2021_05_20:
+.. _changelog_2021_05_31:
+
+2021-05-31
+----------
+
+* We've updated our :doc:`pricing`. For existing customers, the changes will take effect from September 1st 2021.
 
 2021-05-20
 ----------
@@ -13,7 +18,6 @@ Changelog
 2021-05-19
 ----------
 
-* Some conditions for backup, VPN and SLA has changed in :doc:`pricing`.
 * Legal documents has been reformatted and are now available under :doc:`legal`.
 
 .. _changelog_2021_05_06:

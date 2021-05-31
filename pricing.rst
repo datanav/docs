@@ -9,33 +9,48 @@ The Subscription Fee for the Services are set
 depending on the computing power, data volume, selected monitoring
 functionality and SLA-level.
 
-Fees for standard services are set out in EURO, and are calculated into
+Fees for standard services are set out in Euro, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
 Compute is automatically upgraded if data use exceeds specified limits. You
 can upgrade without additional data storage in case you want higher performance.
 
-If data storage is more than 1TB you will be billed with an additional X-large
+If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
-will be billed with 5 quantities of X-large computes.
+will be billed with 5 quantities of Multi computes.
 
 The fees for the Services are set out below in Euro exclusive of VAT:
 
-.. list-table:: Compute prices
+Developer environment
+---------------------
+A developer environment has a fixed price and serves a single developer, or a CI test environment. 
+These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted. 
+We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ 
+by using the :doc:`Sesam Client <sesam-client>`.
+
+.. list-table:: Developer environments
    :widths: 70 30
    :header-rows: 1
 
    * - Compute
      - Pr environment
-   * - Small - 1 Engine < 40 GB Data [#]_
-     - €100.00
-   * - Medium - 4 Engines < 350 GB Data
-     - €800.00
-   * - Large - 8 Engines < 750 GB Data
-     - €1,500.00
-   * - X-large - 16 Engines < 1 TB Data
-     - €3,000.00
+   * - Fixed price developer - 1 Engine < 20 GB Data
+     - €50.00
+
+Production and test environment 
+-------------------------------
+
+.. list-table:: Runtime environments [#]_
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Compute
+     - Pr environment
+   * - Single compute - 4 Engines < 350 GB Data
+     - €900.00
+   * - Multi compute - 16 Engines < 1 TB Data
+     - €3,300.00
 
 .. list-table:: Data prices
    :widths: 70 30
@@ -44,10 +59,8 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Data
      - Pr GB
    * - GB
-     - €10.00
-   * - Geo-redundant backup [#]_
-     - €2.00
-   * - VPN [#]_
+     - €14.00
+   * - VPN
      - €2.00
 
 .. list-table:: Monitoring
@@ -63,29 +76,24 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Enterprise - Notifications
      - €20.00
 
-.. list-table:: SLA
+.. list-table:: SLA [#]_
    :widths: 70 30
    :header-rows: 1
 
    * - Support - Response time
-     - Pr Gb
-   * - N/A
-     - €0.00
-   * - Standard - 8h [#]_
+     - Pr GB
+   * - Standard - 8h
      - €15.00
-   * - Enterprise - 1h [#]_
+   * - Enterprise - 1h
      - €30.00
    * - Premium 0,5h x 24/7 [#]_
      - €100.00
 
-.. [#] Small compute is intended for development only
-.. [#] Geo-redundant backup is required for Cloud subscriptions
-.. [#] VPN only available on Medium, Large and X-Large compute
-.. [#] Standard SLA is billed minimum 50Gb data
-.. [#] Enterprise SLA is billed minimum 50Gb data
-.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data
+.. [#] Geo-replicated backup is included in cloud environments.
+.. [#] SLA is billed for minimum 50GB data and a maximum og 800GB.
+.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
 
-2. Invoicing
+1. Invoicing
 ============
 
 From the start of the Services, SESAM shall invoice the Customer monthly
