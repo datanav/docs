@@ -18,7 +18,6 @@ Changelog
 2021-05-19
 ----------
 
-* Some conditions for backup, VPN and SLA has changed in :doc:`pricing`.
 * Legal documents has been reformatted and are now available under :doc:`legal`.
 
 .. _changelog_2021_05_06:
