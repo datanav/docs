@@ -9,7 +9,7 @@ The Subscription Fee for the Services are set
 depending on the computing power, data volume, selected monitoring
 functionality and SLA-level.
 
-Fees for standard services are set out in EURO, and are calculated into
+Fees for standard services are set out in Euro, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
@@ -24,8 +24,8 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
 Developer environment
 ---------------------
-A developer environment has a fixed price and serves a single developer, or a CI test environments. 
-These does not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted. 
+A developer environment has a fixed price and serves a single developer, or a CI test environment. 
+These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted. 
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ 
 by using the :doc:`Sesam Client <sesam-client>`.
 
@@ -47,9 +47,9 @@ Production and test environment
 
    * - Compute
      - Pr environment
-   * - Single - 4 Engines < 350 GB Data
+   * - Single compute - 4 Engines < 350 GB Data
      - €900.00
-   * - Multi - 16 Engines < 1 TB Data
+   * - Multi compute - 16 Engines < 1 TB Data
      - €3,300.00
 
 .. list-table:: Data prices
