@@ -292,7 +292,7 @@ shown the portal inside the node called “Training Node”.
 All nodes have the same interface.
 
 When entering the “Training Node” you will be met with the page seen in
-figure :ref:`figure_Training_Node_Landing_Page`
+figure :ref:`figure_Training_Node_Landing_Page`.
 
 .. _figure_Training_Node_Landing_Page:
 
@@ -310,7 +310,7 @@ Pipes
 ^^^^^
 
 When entering the “Pipes” page you will be met by figure
-:ref:`_figure_Sesam_Node_Pipe_Overview`. This
+:ref:`figure_Sesam_Node_Pipe_Overview`. This
 figure shows you all the available pipes in your node as well as
 some of their corresponding metadata. There are also several search and
 filter options available, which are especially handy when trying to
