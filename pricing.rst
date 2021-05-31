@@ -25,7 +25,7 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 Developer environment
 ---------------------
 A developer environment has a fixed price and serves a single developer, or a CI test environments. 
-These can not host test, staging or production environments. The development environment is cloud-only and restricted. 
+These does not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted. 
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ 
 by using the :doc:`Sesam Client <sesam-client>`.
 
@@ -35,11 +35,8 @@ by using the :doc:`Sesam Client <sesam-client>`.
 
    * - Compute
      - Pr environment
-   * - Fixed price developer - 1 Engine < 20 GB Data [#]_
+   * - Fixed price developer - 1 Engine < 20 GB Data
      - €50.00
-
-.. [#] The developer environment does not have support for backup, VPN, or SLA.
-
 
 Production and test environment 
 -------------------------------
