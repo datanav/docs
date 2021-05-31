@@ -16,11 +16,18 @@ the invoicing day.
 Compute is automatically upgraded if data use exceeds specified limits. You
 can upgrade without additional data storage in case you want higher performance.
 
-If data storage is more than 1TB you will be billed with an additional X-large
+If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
-will be billed with 5 quantities of X-large computes.
+will be billed with 5 quantities of Multi computes.
 
 The fees for the Services are set out below in Euro exclusive of VAT:
+
+Developer environment
+---------------------
+A developer environment has a fixed price and serves a single developer, or a CI test environments. 
+These can not host test, staging or production environments. The development environment is cloud-only and restricted. 
+We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ 
+by using the :doc:`Sesam Client <sesam-client>`.
 
 .. list-table:: Developer environments
    :widths: 70 30
@@ -28,22 +35,24 @@ The fees for the Services are set out below in Euro exclusive of VAT:
 
    * - Compute
      - Pr environment
-   * - Developer - 1 Engine < 20 GB Data [#]_
+   * - Fixed price developer - 1 Engine < 20 GB Data [#]_
      - €50.00
 
-.. NOTE::
+.. [#] The developer environment does not have support for backup, VPN, or SLA.
 
-   A developer environment is meant for development purposes for a single developer. These should not be used to host test, staging or production environments. The development environment is cloud-only and restricted. We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_ by using the :doc:`Sesam Client <sesam-client>`.
 
-.. list-table:: Runtime environments
+Production and test environment 
+-------------------------------
+
+.. list-table:: Runtime environments [#]_
    :widths: 70 30
    :header-rows: 1
 
    * - Compute
      - Pr environment
-   * - Standard - 4 Engines < 350 GB Data  [#]_
+   * - Single - 4 Engines < 350 GB Data
      - €900.00
-   * - Enterprise - 16 Engines < 1 TB Data [#]_
+   * - Multi - 16 Engines < 1 TB Data
      - €3,300.00
 
 .. list-table:: Data prices
@@ -70,27 +79,24 @@ The fees for the Services are set out below in Euro exclusive of VAT:
    * - Enterprise - Notifications
      - €20.00
 
-.. list-table:: SLA
+.. list-table:: SLA [#]_
    :widths: 70 30
    :header-rows: 1
 
    * - Support - Response time
-     - Pr Gb
-   * - Standard - 8h [#]_
+     - Pr GB
+   * - Standard - 8h
      - €15.00
-   * - Enterprise - 1h [#]_
+   * - Enterprise - 1h
      - €30.00
    * - Premium 0,5h x 24/7 [#]_
      - €100.00
 
-.. [#] The developer environment does not have support for backup and VPN, and no SLA is offered.
-.. [#] Geo-replicated backup is included.
-.. [#] Geo-replicated backup is included.
-.. [#] Standard SLA is billed minimum 50Gb data.
-.. [#] Enterprise SLA is billed minimum 50Gb data.
-.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50Gb data.
+.. [#] Geo-replicated backup is included in cloud environments.
+.. [#] SLA is billed for minimum 50GB data and a maximum og 800GB.
+.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
 
-2. Invoicing
+1. Invoicing
 ============
 
 From the start of the Services, SESAM shall invoice the Customer monthly
