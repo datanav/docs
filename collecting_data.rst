@@ -35,7 +35,7 @@ Raw data
 Data is fed into Sesam through :ref:`an inbound pipe <data-modelling-Inbound pipes>`. Firstly you will do an analysis of the data. From the result of the analysis you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
 
  • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <data-modelling-namespace>`. These references are usually key properties when semantically link data together in a global dataset but are also useful when connecting data in preparation pipes.
- • When raw data is linked to data used to categorize it or toher meta data, it is advisable to split it; keep data and metadata seperate. The metadata used to categorize can be merged into global-classification.
+ • When raw data is linked to data used to categorize it or other metadata, it is advisable to split it; keep data and metadata seperate. The metadata used to categorize can be merged into global-classification.
  •  :ref:`An RDF type <best-practice_-rdf type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
  •  **A combination of fields**: a dataset may at times contain data that when combined can form a fuller understanding of the field, like a combination of first name and surname will give the full name of a person. This is especially important if a combination of fields may be a reference to another dataset.
 
@@ -55,7 +55,7 @@ When connecting data in Sesam, it is important to understand :ref:`global datase
 Global pipes / datasets
 =======================
 
-These are collections of data that pertains to the same concept from different sources. The main purpose of a global dataset is to be the single authorative location to get fresh data about a specific concept from. Generally when we want to start building globals, we start at high level and work our way into the details. For example if we work for a business who sells stationary, it will be natural to create globals based on various things we sell;  global-paper, global-pens, global-postit, global-equipment etc. This is exactly how we would stock the shelves in a stationary shop. If, however we are a pen specialist our perspective would be completely different and we would have a global-pencil, global-marker, global-Ballpoint global-ink etc. Here we have so many different kinds of pens it does not make sesne to have a shelf for printing paper or notes books but we would sort the pens after type of pen in the very same way we sort them into various global data sets. 
+These are collections of data that pertains to the same concept from different sources. The main purpose of a global dataset is to be the single authorative location to get fresh data about a specific concept from. Generally when we want to start building globals, we start at high level and work our way into the details. For example if we work for a business who sells stationary, it will be natural to create globals based on various things we sell;  global-paper, global-pens, global-postit, global-equipment etc. This is exactly how we would stock the shelves in a stationary shop. If, however we are a pen specialist our perspective would be completely different and we would have a global-pencil, global-marker, global-ballpoint global-ink etc. Here we have so many different kinds of pens it does not make sesne to have a shelf for printing paper or notes books but we would sort the pens after type of pen in the very same way we sort them into various global data sets. 
 
 None of these two examples are wrong but make sense for each example as their data requirements and use of data are very different even though a lot of their data is the same. So when wanting to sort data into globals in order to retrieve it and it is logical to search for it, it is important to understand what data we have and how we can group it to build globals in Sesam.
 
@@ -66,7 +66,7 @@ When defining global datasets, there are a few guidelines for modelling:
 •   A global dataset should be defined by what the data it contains are.
 •   Try to keep the number of global datasets low. 
 •   Every dataset written to Sesam through an inbound pipe should be put into a global dataset, do not put a dataset into multiple global datasets.
-•   If unsure which global a dataset should belong to, choosing one of the candidates is usually good enough, try avoiding creating new global datasets just for one    dataset.
+•   If unsure which global a dataset should belong to, choosing one of the candidates is usually good enough, try avoiding creating new global datasets just for one dataset.
 •   There is no definite right or wrong way in how you organize your global datasets.
 •   Avoid system specific global datasets.
 
@@ -75,7 +75,7 @@ When a global dataset has been defined, there are some considerations to be done
 •   Should data in a global dataset be merged to a single entity or not?
 •   Is the data of such a format and quality that a golden record can be defined?
 •   Would enhancing the data in a global dataset with data from another dataset improve the data for later use?
-•	Structure of data; try to keep it flat if possible
+•	Structure of data; try to keep it flat if possible.
 
 To read more about global datasets; the benefits and best practice of generating and using them, please see :ref:`here <best-practice-global>`.
 
