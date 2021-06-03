@@ -9,6 +9,8 @@ Connect & collect patterns
 Introduction
 ------------
 
+When starting a new Sesam project it is very important to start thinking of how to organise the data in Sesam; what sort of data do we have, how is it linked in source system and how will it be used? What are the goals and requirements for wanting to use Sesam? Very early on, we start looking at the raw data and needing to consider and plan which globals do we need and how will we generate them. If not, it is guaranteed it will be chaos; we can have data object in more than one global, they can be enriched in one global, and not in another and it is impossible to know which one we should use.
+
 Principles for collecting data is pulling data is best practice. Once data is in sesam through the inbound pipe, a small number of properties can be added to aid connecting and re-using data. This is done mainly by modeling global datasets where we :ref:`merge <getting-started-merging-sources>` data about same object. 
 
 Once this is done we can further enrich data by adding data from other datasets or do other :ref:`transformations <getting-started-transformations>`depending on requirements. 
@@ -109,7 +111,7 @@ One of the purposes of a global dataset is to present a single authoritative tru
 
 However, merging data comes with a cost. In certain cases, changing the rules of how the data are merged requires the pipe to be reset and run again. For large datasets this might mean that it will take time before the downstream pipes will get updates.
 
-In some cases, merging the data isn’t logical. For instance, data like countries, counties, cities and streets might be put into a global location dataset, but it is not logical to merge these data. 
+In some cases, merging the data isn't logical. For instance, data like countries, counties, cities and streets might be put into a global location dataset, but it is not logical to merge these data. For example, if we think of Norway (a country) and Oslo (a city), they both could fit into a global location dataset, both being locations, but we can agree that Norway and Oslo is not the same thing.  
 
 Also note that if a global dataset contains merged data, it does not necessarily mean that every other dataset in the global must be merged. Some data might be telling something about an entity but is not necessary the same thing. 
 
@@ -137,7 +139,9 @@ This point is quite similar to the above point, with the only difference being t
 
 When modelling your global dataset and seeing the need to create a global property using hops, it is one thing you need to be aware of. Dependency tracking does not work for hops made in a “merge”-pipe. This means that you have to split the global pipe into two separate pipes. One pipe that contains the merge rules and does the merging, this pipe should be given the “merged-“ prefix. The second pipe should have the merged dataset as source and contain the DTL transformations, this should be the global pipe.
 
-In general, try to keep hops from a global pipe to other datasets as minimal as possible. 
+However, in general, try to keep hops from a global pipe to other datasets as minimal as possible. Separating the global datasets into two datasets in order to enrich the data with data from other datasets also means duplicating the data. Adding data that may change due to dependency tracking may also lead to more processing for the downstream pipes, this is especially true for global datasets as they usually have multiple downstream pipes reading from them. The ideal pattern for doing this is only when the enriched data is necessary for multiple downstream datasets. 
+
+ 
 
 Test data
 =========
