@@ -3052,7 +3052,7 @@ JSON
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all non-null input values to JSON strings (no transit encoding).
+       | Translates all input values to JSON strings (no transit encoding).
          The keys of dicts are sorted lexically.
      - | ``["json", 1]``
        |
@@ -3077,7 +3077,7 @@ JSON
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all non-null input values to transit encoded JSON strings.
+       | Translates all input values to transit encoded JSON strings.
          The keys of dicts are sorted lexically. This function behaves like
          the ``json`` function, except that it transit encodes values.
      - | ``["json-transit", 1]``
