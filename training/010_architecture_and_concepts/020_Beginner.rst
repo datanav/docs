@@ -598,7 +598,7 @@ Sesam datasets and database tables that is important to point out:
 * Database tables are for the most part storage of mutable records.
   When a record is updated, the table cells where updated data is
   supplied are changed in-place. Historical changes of a particular
-  record is therefor not persisted, unless you design for it.
+  record is therefore not available, unless you design for it.
 
   Sesam datasets are lists of immutable entities, and can be thought of
   as logs of entities.
@@ -606,20 +606,20 @@ Sesam datasets and database tables that is important to point out:
   applies the new data to the copy and saves it as a new entity version.
   The copy will keep its original identifier,
   but will have a reference to its previous version.
-  Sesam datasets will therefore grow as data changes, and all changes
-  will be tracked.
+  Sesam datasets will therefore grow when data changes, as all changes
+  are tracked.
 
 * Tables are usually defined in a database schema.
   A database schema imposes integrity constraints on a database.
 
   Sesam datasets are schemaless, which means that Sesam is neither bound by
   or enforces any integrity constraints on or between datasets.
-  This also means that you as the integration specialist must take care of
-  defining any relevant constraints such as foreign keys, etc. based on
+  This also means that you as the integration specialist must 
+  define any relevant constraints such as foreign keys, etc. based on
   domain knowledge.
   However the great advantage of being schemaless is that Sesam is very flexible
-  with handling vastly different datastructures from different sources so you usually
-  do not have to spend any time on restructuring inboud data.
+  with handling vastly different data structures from different sources so you usually
+  do not have to spend any time on restructuring inbound data.
 
 * Tables often have a defined primary key (PK) but not always.
 
