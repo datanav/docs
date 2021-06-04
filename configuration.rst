@@ -6519,7 +6519,7 @@ Prototype
     {
         "type": "csv_endpoint",
         "columns": ["properties","to","use","as","columns"],
-        "quoting": "all|minimal|non-numeric|"none",
+        "quoting": "all|minimal|non-numeric|none",
         "delimiter": ","
         "doublequote": true
         "include_header": true,
