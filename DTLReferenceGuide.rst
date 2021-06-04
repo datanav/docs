@@ -1433,12 +1433,15 @@ Booleans
          is given, values that don't parse as boolean values will be silently
          ignored. If not, the evaluated value from the default expression will
          be used as a replacement value. String literals are case insensitive,
-         and the supported values are "true" and "false". null values are
-         evaluated as false.
+         and the supported values are "true" and "false".
        |
      - | ``["boolean", "false"]``
        |
        | Returns one boolean: false.
+       |
+       | ``["boolean", null]``
+       |
+       | Returns ``null``.
        |
        | ``["boolean",``
        |   ``["list", "true", "~rhttp://www.example.org/",``
