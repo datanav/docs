@@ -1429,16 +1429,19 @@ Booleans
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to booleans. If no default value expression
+       | Translates all non-null input values to booleans. If no default value expression
          is given, values that don't parse as boolean values will be silently
          ignored. If not, the evaluated value from the default expression will
          be used as a replacement value. String literals are case insensitive,
-         and the supported values are "true" and "false". null values are
-         evaluated as false.
+         and the supported values are "true" and "false".
        |
      - | ``["boolean", "false"]``
        |
        | Returns one boolean: false.
+       |
+       | ``["boolean", null]``
+       |
+       | Returns ``null``.
        |
        | ``["boolean",``
        |   ``["list", "true", "~rhttp://www.example.org/",``
@@ -1862,7 +1865,7 @@ Numbers
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to integers. If no default value expression
+       | Translates all non-null input values to integers. If no default value expression
          is given, values that don't parse as integers will be silently ignored.
          If not, the evaluated value from the default expression will be used
          as a replacement value.
@@ -1941,7 +1944,7 @@ Numbers
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to decimals (a fractional number with
+       | Translates all non-null input values to decimals (a fractional number with
          unlimited precision). If no default value expression is given,
          values that don't parse as decimal values will be silently ignored.
          If not, the evaluated value from the default expression will be
@@ -2014,7 +2017,7 @@ Numbers
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to floats (a  IEEE 754 binary 64 format).
+       | Translates all non-null input values to floats (a  IEEE 754 binary 64 format).
          if no default value expression is given,
          values that don't parse as float values will be silently ignored.
          If not, the evaluated value from the default expression will be
@@ -2087,7 +2090,7 @@ Numbers
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to a string containing an hexadecimal representation of the value
+       | Translates all non-null input values to a string containing an hexadecimal representation of the value
          in two's complement format.
        | Values that don't parse as integers will be silently ignored.
      - | ``["hex", 1]``
@@ -2155,7 +2158,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |   FUNCTION(default-value-expression(0|1}
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to datetime values. If no default value
+       | Translates all non-null input values to datetime values. If no default value
          expression is given, values that don't parse as datetime values will
          be silently ignored. If not, the evaluated value from the default
          expression will be used as a replacement value.
@@ -2189,7 +2192,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |   FORMATSTRING(string{1})
        |   VALUES(value-expression{})
        |
-       | Translates all input values to datetime values. The values must be strings
+       | Translates all non-null input values to datetime values. The values must be strings
          matching the format string given. Any values that don't parse as datetime values will
          be silently ignored.
        |
@@ -2255,7 +2258,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |   FORMATSTRING(string{1})
        |   VALUES(value-expression{})
        |
-       | Translates all input datetime values to strings. The strings will be formattet according to the format string.
+       | Translates all non-null input datetime values to strings. The strings will be formattet according to the format string.
          Any values that aren't datetime values will be silently ignored. Note that precision loss is possible since
          ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
          microseconds (using the seconds fraction token ``%f``).
@@ -2471,7 +2474,7 @@ Strings
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all input values to strings.
+       | Translates all non-null input values to strings.
 
        .. NOTE::
 
@@ -2479,11 +2482,15 @@ Strings
           Bytes are decoded to strings using ``utf-8`` encoding.
      - | ``["string", 1]``
        |
-       | Returns one string: ``1``.
+       | Returns one string: ``"1"``.
        |
        | ``["string", "hello"]``
        |
-       | Returns one string: ``hello``.
+       | Returns one string: ``"hello"``.
+       |
+       | ``["string", null]``
+       |
+       | Returns ``null``.
        |
        | ``["string",``
        |   ``["list", "abc", ["list", 1, 2, 3],``
@@ -2500,7 +2507,7 @@ Strings
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all input string values to bytes using ``utf-8`` encoding.
+       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
        |
      - | ``["bytes", "abc"]``
        |
