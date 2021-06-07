@@ -15,7 +15,7 @@ Novice topic
 Tag your entities - Categorization of sub-concepts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Usually an entity with its given properties will convey a concept. Imagine pulling data from a Customer relationship management (CRM) system. The inbound pipe that pulls data from this CRM system is called ``salesforce-person.`` If you were to look at the entities in the dataset of this pipe, you will usually be able to convey to yourself or a person of interest, what this data is all about. For brevity, only one entity is shown below:
+Usually an entity with its given properties will convey a concept. Imagine pulling data from a Customer relationship management (CRM) system. The inbound pipe that pulls data from this CRM system is called ``salesforce-person``. If you were to look at the entities in the dataset of this pipe, you will usually be able to understand what the data is all about. For brevity, only one entity is shown below:
 
 .. code-block:: json
 	
@@ -32,9 +32,11 @@ Usually an entity with its given properties will convey a concept. Imagine pulli
 
 	}  
 
-Which could be semantically defined as an object which is concerned with personal data. This definition is a very general one, as personal data can be many things. Meanwhile, for this specific entity, you could say that this entity is about the person Tordenskjold Skipskaptajnson whose age is 32 and who has been a Sesam Expert for 5 years. Previously, it seems he persued a career as a footballer, albeit he did not succeed in doing that given his current employment. This is a more detailed semantic definition of the above object.
+Which could be semantically defined as an object which is concerned with personal data. This definition is a very general one, as personal data can be many things. Meanwhile, for this specific entity, you could say that it is about the person Tordenskjold Skipskaptajnson whose age is 32 and who has been a Sesam Expert for 5 years. Previously, it seems he persued a career as a footballer, albeit he did not succeed in doing that given his current employment. This is a more detailed semantic definition of the above object.
 
-The above description of the entity is a semantic categorization, as we define its meaning based on our understanding of the words that make up the entity. Albeit, from a semantic point of view, in terms of what can immediately be told from looking at the current state of the data, it seems that one of the properties can only be somewhat vaguely understood. Namely the property ``salesforce-person:EmployeeStatus.`` ``EmployeeStatus`` with the value ``0`` can mean many things. In such scenarios you might need to define sub-concepts that will allow you to increase the immediate semantic meaning. Imagine you are in charge of sending out salaries for the next month, albeit you are not sure whether or not Tordenskjold Skipskaptajnson is actually an active employee, and so should receive his registered salary. To solve this, you recognize that you need to enrich your data to increase the semantic meaning of the property ``salesforce-person:EmployeeStatus.`` This could for example be done by having a mapping dataset, which will contain a semantic description for a range of integers, i.e:
+The above description of the entity is a semantic categorization, as we define its meaning based on our understanding of the words that make up the entity. Albeit, from a semantic point of view, in terms of what can immediately be told from looking at the current state of the data, it seems that one of the properties can only be somewhat vaguely understood. Namely the property ``salesforce-person:EmployeeStatus``. ``EmployeeStatus`` with the value ``0`` can mean many things. In such scenarios you might need to define sub-concepts that will allow you to increase the immediate semantic meaning. 
+
+Imagine you are in charge of sending out salaries for the next month, albeit you are not sure whether or not Tordenskjold Skipskaptajnson is actually an active employee, and so should receive his registered salary. To solve this, you recognize that you need to enrich your data to increase the semantic meaning of the property ``salesforce-person:EmployeeStatus``. This could for example be done by having a mapping dataset containing a semantic description for a range of integers, i.e:
 
 .. code-block:: json
 	
@@ -55,11 +57,11 @@ The above description of the entity is a semantic categorization, as we define i
 	  "Description": "Future Employee"
 	}]  
 
-Then, if we use a ``hops`` function, we can merge the two datasets on ``EmployeeStatus.`` In DTL, this could look like the following:
+Then, if we use a ``hops`` function, we can merge the two datasets on ``EmployeeStatus``. In DTL, this could look like the following:
 
 .. code-block:: json
 	
-	["merge",
+		["merge",
       ["hops", {
         "datasets": ["mapping-dataset md"],
         "where": [
@@ -69,7 +71,7 @@ Then, if we use a ``hops`` function, we can merge the two datasets on ``Employee
       }]
     ]
 
-And would produce the following changes to the dataset produced by the pipe ``salesforce-person:``
+And would produce the following changes to the dataset produced by the pipe ``salesforce-person``:
 
 .. code-block:: json
 
@@ -78,7 +80,7 @@ And would produce the following changes to the dataset produced by the pipe ``sa
 	  "salesforce-person:Age": 32,
 	  "salesforce-person:CurrentProfession": "Sesam Expert",
 	  "salesforce-person:EmployeeStatus": 0,
-	  "salesforce-person:EmployeeStatusDescription": "On Leave",
+	  "mapping-dataset:EmployeeStatusDescription": "On Leave",
 	  "salesforce-person:EmployeeTime": "5 years",
 	  "salesforce-person:FormerProfession": "Semiprofessional footballer",
 	  "salesforce-person:Fullname": "Tordenskjold Skipskaptajnson",
