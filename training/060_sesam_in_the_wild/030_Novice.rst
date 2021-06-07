@@ -62,14 +62,14 @@ Then, if we use a ``hops`` function, we can merge the two datasets on ``Employee
 .. code-block:: json
 	
 	["merge",
-    ["hops", {
-      "datasets": ["mapping-dataset md"],
-      "where": [
-        ["eq", "_S.salesforce-person:EmployeeStatus", "md.EmployeeStatus"] 
-      ],
-      "return": ["dict", "EmployeeStatusDescription", "md.Description"]
-    }]
-  ]
+	    ["hops", {
+	      "datasets": ["mapping-dataset md"],
+	      "where": [
+		["eq", "_S.salesforce-person:EmployeeStatus", "md.EmployeeStatus"] 
+	      ],
+	      "return": ["dict", "EmployeeStatusDescription", "md.Description"]
+	    }]
+  	]
 
 And would produce the following changes to the dataset produced by the pipe ``salesforce-person``:
 
