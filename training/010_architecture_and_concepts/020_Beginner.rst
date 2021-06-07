@@ -550,12 +550,12 @@ config is specified for a pipe it's output will be a dataset.
 
 Datasets are also often the source for internal pipes.
 
-**Related topics:**
+.. seealso::
 
-:ref:`dataset-id-3-1`,
-:ref:`entities-json-keyvalpairs-1-1`,
-:ref:`naming-conventions-1-1`,
-:ref:`pipes-1-1`
+  :ref:`dataset-id-3-1`,
+  :ref:`entities-json-keyvalpairs-1-1`,
+  :ref:`naming-conventions-1-1`,
+  :ref:`pipes-1-1`
 
 
 .. _datasets-vs-tables-1-1:
