@@ -610,7 +610,9 @@ Sesam datasets and database tables that is important to point out:
   are tracked.
 
 * Tables are usually defined in a database schema.
-  A database schema imposes integrity constraints on a database.
+  A database schema imposes integrity constraints on a database such
+  as primary keys, referential integrity on foreign keys and
+  column declarations.
 
   Sesam datasets are schemaless, which means that Sesam is neither bound by
   or enforces any integrity constraints on or between datasets.
@@ -621,7 +623,7 @@ Sesam datasets and database tables that is important to point out:
   with handling vastly different data structures from different sources so you usually
   do not have to spend any time on restructuring inbound data.
 
-* Tables often have a defined primary key (PK) but not always.
+* Tables often have a defined primary key but not always.
 
   Entities in a Sesam dataset *must* have a PK property and it *must* be named ``_id``.
 
