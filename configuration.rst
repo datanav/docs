@@ -443,6 +443,16 @@ Properties
 
        .. _pipe_settings_enable_background_rescan:
 
+   * - ``initial_pipe_offset``
+     - String or integer
+     - If set, the source of the pipe will use this value as the pipe offset if the pipe offset has not been set (or
+       the pipe has been reset). It should be used when you don't want the source to fetch all available data when
+       the pipe is initiallt run or reset. Note that this value is only used by sources that has
+       explicit or implicit :ref:`continuation support <continuation_support>`.
+     -
+     -
+
+
    * - ``enable_background_rescan``
      - Boolean
      - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for this pipe.

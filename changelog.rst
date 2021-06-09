@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_06_09:
+
+2021-06-09
+----------
+
+* Added a ``initial_pipe_offset`` property to the :ref:`Pipe <pipe_section>` configuration. This property holds the pipe offset to use by the source when the pipe offset is unset (or has been reset).
+
 .. _changelog_2021_05_31:
 
 2021-05-31
