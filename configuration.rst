@@ -880,7 +880,7 @@ the source*. Within an entity the marker is carried in the
 
 Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
 
-There are three characteristics that describe continuation
+There are four characteristics that describe continuation
 support. All sources have these and there are three properties
 available to describe them. The properties can be fixed, have a
 default value or be calculated from other properties (aka dynamic) on
@@ -888,19 +888,21 @@ the source. The table below explains them in detail.
 
 .. NOTE::
 
-   It is important that you do not to set any of these properties to
+   It is important that you do not to set any of the boolean properties to
    ``true`` unless the source actually have these
    characteristics. Doing so can mean that the pump is not able track
    changes properly.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 80
+   :widths: 10, 10, 80
 
    * - Property
+     - Type
      - Description
 
    * - ``supports_since``
+     - Boolean
      - Does the source make use of the 'since' parameter if it gets
        passed one?
 
@@ -916,6 +918,7 @@ the source. The table below explains them in detail.
           depending on the strategy you want.
 
    * - ``is_since_comparable``
+     - Boolean
      - Can you compare two ``_updated`` values using lexical/bytewise
        comparison and decide their relative order?
 
@@ -932,6 +935,7 @@ the source. The table below explains them in detail.
           ``true``.
 
    * - ``is_chronological``
+     - Boolean
      - Does the source hand out entities in chronological order, i.e.
        in increasing order?
 
@@ -948,6 +952,14 @@ the source. The table below explains them in detail.
           If you set ``is_chronological`` to ``true`` then you
           should also make sure that ``supports_since`` is set to
           ``true``.
+
+
+   * - ``initial_since_value``
+     - String or integer
+     - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
+       the pipe has been reset). It should be used when you don't want the source to fetch all available data when
+       the pipe is initiallt run or reset. Note that this value is only used by sources that can support "since".
+
 
 .. _strategy:
 
@@ -3173,7 +3185,7 @@ Prototype
         "url": "sparql-endpoint",
         "fragments_query": "SPARQL select query",
         "fragment_query": "SPARQL construct query"
-        "since_default": "0001-01-01T00:00:00Z"
+        "initial_since_value": "0001-01-01T00:00:00Z"
     }
 
 
@@ -3216,7 +3228,7 @@ Properties
      -
      - Yes
 
-   * - ``since_default``
+   * - ``initial_since_value``
      - String
      - A string literal to use when querying the triplestore the first time.
      - "0001-01-01T00:00:00Z"
