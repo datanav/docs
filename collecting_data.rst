@@ -82,7 +82,7 @@ To read more about global datasets; the benefits and best practice of generating
 Classification of data
 ^^^^^^^^^^^^^^^^^^^^^^
 
-How do we decide which data pertains to the same concept? For example a person can potentially end up in global-customer, global-employee or global-person. which one is correct? 
+How do we decide which data pertains to the same concept? For example a person can potentially end up in global-customer, global-employee or global-person, which one is correct? 
 
 In Sesam we recommend a *one dimensional structure*, i.e. data can only belong to one global. Let us use an example; a company has lots of data about persons; both customers, clients, prospects, employees and applicants. It is tempting to be able to separate these to generate a global for each. The problem with this is a person with a unique ID can end up in two or more globals (e.g. global-customer and global-person). Then it is *role* of person deciding and not *concept*; which is data about persons. 
 
