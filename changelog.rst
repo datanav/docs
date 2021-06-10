@@ -6,7 +6,8 @@ Changelog
 2021-06-09
 ----------
 
-* Added a ``initial_pipe_offset`` property to the :ref:`Pipe <pipe_section>` configuration. This property holds the pipe offset to use by the source when the pipe offset is unset (or has been reset).
+* Added a ``initial_since_value`` property to the :ref:`source <continuation_support>` configuration. This property holds the "since" value to use by the source when the pipe offset is unset (or has been reset).
+* The ``since_default`` property of the :ref:`SPARQL source <sparql_source>` has been deprecated, please use ``initial_since_value`` instead.
 
 .. _changelog_2021_05_31:
 
