@@ -958,7 +958,7 @@ the source. The table below explains them in detail.
      - String or integer
      - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
        the pipe has been reset). It should be used when you don't want the source to fetch all available data when
-       the pipe is initiallt run or reset. Note that this value is only used by sources that can support "since".
+       the pipe is initially run or has been reset. Note that this value is only used by sources that can support "since".
 
 
 .. _strategy:
