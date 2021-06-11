@@ -614,11 +614,86 @@ Datasets are also often the source for internal pipes.
 Datasets vs. tables
 ~~~~~~~~~~~~~~~~~~~
 
-Examples end ref to 1.1.13
+Sesam datasets are similar to database tables in that both store data records.
+
+Continuing with the example from the previous section:
+
+.. code-block:: json
+
+   [
+     {
+       "id": "1",
+       "name": "Jane Doe"
+     },
+     {
+       "id": "2",
+       "name": "John Doe"
+     }
+   ]
+
+This would typically be represented as the following database table:
+
+== ====
+id name
+== ====
+1  Jane Doe
+2  John Doe
+== ====
+
+Notice that property names in Sesam usually correspond to columns
+in a database table and property values correspond to cell values.
+
+Despite the similarities, there are some key differences between
+Sesam datasets and database tables that is important to point out:
+
+* Database tables are for the most part storage of mutable records.
+  When a record is updated, the table cells where updated data is
+  supplied are changed in-place. Historical changes of a particular
+  record is therefore not available, unless you design for it.
+
+  Sesam datasets are lists of immutable entities, and can be thought of
+  as logs of entities.
+  When an entity is updated, Sesam creates a copy of the current entity version,
+  applies the new data to the copy and saves it as a new entity version.
+  The copy will keep its original identifier,
+  but will have a reference to its previous version.
+  Sesam datasets will therefore grow when data changes, as all changes
+  are tracked.
+
+* Tables are usually defined in a database schema.
+  A database schema imposes integrity constraints on a database such
+  as primary keys, referential integrity on foreign keys and
+  column declarations.
+
+  Sesam datasets are schemaless, which means that Sesam is neither bound by
+  or enforces any integrity constraints on or between datasets.
+  This also means that you as the integration specialist must 
+  define any relevant constraints such as foreign keys, etc. based on
+  domain knowledge.
+  However the great advantage of being schemaless is that Sesam is very flexible
+  with handling vastly different data structures from different sources so you usually
+  do not have to spend any time on restructuring inbound data.
+
+* Tables often have a defined primary key but not always.
+
+  Entities in a Sesam dataset *must* have a PK property and it *must* be named ``_id``.
+
+.. Trying out some new markup for summarizing the section and referencing other sections:
+
+.. attention::
+
+   * Sesam datasets are immutable logs of entities
+   * Sesam datasets are schemaless
+   * Entities in Sesam datasets *must* have ``_id``
 
 .. seealso::
 
-  TODO
+  :ref:`id-1-1`,
+  :ref:`concepts-datasets`,
+  :ref:`dataset-id-3-1`,
+  :ref:`entities-json-keyvalpairs-1-1`,
+  :ref:`naming-conventions-1-1`,
+  :ref:`pipes-1-1`
 
 .. _entities-json-keyvalpairs-1-1:
 
@@ -686,6 +761,8 @@ Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look
 .. seealso::
 
   TODO
+
+.. _id-1-1:
 
 \_id
 ^^^^
