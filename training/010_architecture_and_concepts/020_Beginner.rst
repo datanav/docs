@@ -616,7 +616,7 @@ Sesam datasets and database tables that is important to point out:
 
   Sesam datasets are schemaless, which means that Sesam is neither bound by
   or enforces any integrity constraints on or between datasets.
-  This also means that you as the integration specialist must 
+  This also means that you as the integration specialist must
   define any relevant constraints such as foreign keys, etc. based on
   domain knowledge.
   However the great advantage of being schemaless is that Sesam is very flexible
@@ -752,17 +752,17 @@ unless other behaviour is specified - this is called :ref:`special-sesam-attribu
 The ``global-customer:address`` attribute can thereafter be used in any outbound flows which use data from
 global-customer without needing to worry about the original origin of the attribute.
 
-**Related topics:**
+.. seealso::
 
-- Architecture Beginner - Next topic: :ref:`special-sesam-attributes-1-1`
+  Architecture Beginner - Next topic: :ref:`special-sesam-attributes-1-1`
 
-- Architecture Novice: :ref:`full-outer-join-merge-1-2`, :ref:`left-join-hops-1-2`, :ref:`global-1-2`
+  Architecture Novice: :ref:`full-outer-join-merge-1-2`, :ref:`left-join-hops-1-2`, :ref:`global-1-2`
 
-- Architecture Intermediate: :ref:`hops-1-3`, :ref:`subset-1-3`
+  Architecture Intermediate: :ref:`hops-1-3`, :ref:`subset-1-3`
 
-- DTL Novice: :ref:`merge-as-a-source-3-2`, :ref:`hops-3-2`
+  DTL Novice: :ref:`merge-as-a-source-3-2`, :ref:`hops-3-2`
 
-- DTL Intermediate: :ref:`source-subset-3-3`
+  DTL Intermediate: :ref:`source-subset-3-3`
 
 
 .. _special-sesam-attributes-1-1:
