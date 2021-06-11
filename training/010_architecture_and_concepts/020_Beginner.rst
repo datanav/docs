@@ -600,9 +600,9 @@ What are Globals?
 ^^^^^^^^^^^^^^^^^
 
 Globals are pipes which merge datasets that store similar entities which
-fall under the same concept. As an example, "global-person" can merge data from the
-datasets "hr-employee" and "hr-customer". This is because "person" is the common denominator
-of both employees and customers.
+fall under the same concept. As an example, ``global-person`` can merge data from the
+datasets ``hr-employee`` and ``hr-customer``. This is because the concept of a "person"
+is the common denominator of both employees and customers.
 
 Why use globals?
 ^^^^^^^^^^^^^^^^
@@ -613,7 +613,10 @@ in the binary world.
 By using globals we also simplify the process of grabbing the data we need because if you
 know which concept or type of entity an external system wishes to receive, you can quickly pick
 the global which stores this concept. If you only want to process a specific subset of the global
-then you can easily use the "rdf:type" to narrow down which entities you want.
+then you can easily use the ``rdf:type`` attribute to narrow down which entities you want.
+More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special-sesam-attributes-1-1`.
+
+
 
 How do globals work?
 ^^^^^^^^^^^^^^^^^^^^
@@ -629,18 +632,18 @@ Globals without joins
 ^^^^^^^^^^^^^^^^^^^^^
 
 This is an example of an un-mixed bucket also known as Global without joins.
-We have the inbound pipes/datasets cab-address and hr-address. Both theses datasets
+We have the inbound pipes/datasets ``cab-address`` and ``hr-address``. Both these datasets
 store information about addresses, but the first is for our customers and the second
 for our employees. Unless a person might fall into both categories, there is no value
 to be gained by joining these together. We will therefore only aggregate these datasets
-into the "global-address" pipe and for example hop to this pipe when we need to look up
-either an employees or a customers address.
+into the ``global-address`` pipe and for example hop to this pipe when we need to look up
+either an employees or a customers address. Read more about hops here: :ref:`left-join-hops-1-2`.
 
 Globals with joins
 ^^^^^^^^^^^^^^^^^^
 
 This is an example of a mixed bucket also known as Globals with joins.
-We have the inbound pipes/datasets shipping-customerinfo and sales-customer which read
+We have the inbound pipes/datasets ``shipping-customerinfo`` and ``sales-customer`` which read
 from a shipping system and a sales system respectively. The datasets produced by these pipes both
 store information about the same customers, but this data is currently stored separately.
 In other words, these systems and pipes talk about the same customers but with different perspectives.
@@ -648,8 +651,8 @@ The shipping system cares about how the customer wishes to receive their
 goods while the sales system cares about what goods the customer usually shops for and analytics
 about their habits.
 The entities (customers) in these datasets could for example be linked together by
-emailaddress or phone number.
-By aggregating these datasets together in the "global-customer" pipe, we can also join
+their email address or phone number.
+By aggregating these datasets together in the ``global-customer`` pipe, we can also join
 the customers on for example Email.
 We now have an aggregated view of the customers which join together, giving us both
 perspectives in the same entity!
@@ -659,31 +662,47 @@ wish to process data about any given customer.
 As a sidenote to this last example, we would now be able to define "golden records".
 A golden record consists of the properties which together represent the most
 truthful version of an object.
-For example, both the shipping-customerinfo and sales-customer entities could have the
-property "address", but the version of the address received from the shipping system is always most up to date.
-This means that we can define a golden attribute "golden-address" with the address provided
+For example, both the ``shipping-customerinfo`` and sales-customer entities could have the
+attribute ``address``, but the version of the address received from the shipping system is always most up to date.
+In other words; the address received from the shipping system is more *truthful*.
+This means that in our global pipe we can add the attribute ``address`` with the address provided
 by our shipping system.
-This "golden-address" attribute can thereafter be used in any outbound flows from
-"global-customer" without needing to worry about the original origin of the attribute.
+This ``address`` attribute is automatically prefixed with the name of the pipe it was generated in, like ``global-customer:address``,
+unless other behaviour is specified - this is called :ref:`special-sesam-attributes_namespaces` and is explained in the next topic :ref:`special-sesam-attributes-1-1`.
+The ``global-customer:address`` attribute can thereafter be used in any outbound flows which use data from
+global-customer without needing to worry about the original origin of the attribute.
 
-Read more about Globals and Golden Records here: -Link later to 030_Novice:Global
+**Related topics:**
 
+- Architecture Beginner - Next topic: :ref:`special-sesam-attributes-1-1`
 
-Ref. 1.2.19, 3.2.14
+- Architecture Novice: :ref:`full-outer-join-merge-1-2`, :ref:`left-join-hops-1-2`, :ref:`global-1-2`
+
+- Architecture Intermediate: :ref:`hops-1-3`, :ref:`subset-1-3`
+
+- DTL Novice: :ref:`merge-as-a-source-3-2`, :ref:`hops-3-2`
+
+- DTL Intermediate: :ref:`source-subset-3-3`
+
 
 .. _special-sesam-attributes-1-1:
 
 Special sesam attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _special-sesam-attributes_namespaces:
+
 Namespaces
 ^^^^^^^^^^
+
 Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name.
 
 Namespaced identifiers (NIs) are identifiers (i.e. property values) given a namespace.
 "source:reference": "~:foo:bar" is an example of a NI, where "source" is the property namespace, "reference" is the property name, "foo" is the namespace of the referenced data and "bar" is the identifier usually matching an identifier in the referenced data. The "~" is the Sesam syntax for defining a datatype as a NI.
 
 As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
+
+.. _special-sesam-attributes_rdf-type:
 
 Rdf:type
 ^^^^^^^^
