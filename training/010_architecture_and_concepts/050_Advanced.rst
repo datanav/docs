@@ -3,6 +3,10 @@
 1.4 Architecture and Concepts: Advanced
 ---------------------------------------
 
+.. seealso::
+
+  TODO
+
 .. _choosing-a-source-dataset-for-your-pipe:
 
 Choosing a source dataset for your pipe
@@ -10,6 +14,10 @@ Choosing a source dataset for your pipe
 
 Do not create children based on a hop, rather read from the dataset you
 hop to.
+
+.. seealso::
+
+  TODO
 
 .. _eventual-consistency:
 
@@ -21,12 +29,20 @@ with the hops.
 
 Idempotency
 
+.. seealso::
+
+  TODO
+
 .. _create-child-emit-children:
 
 Create Child & Emit children
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Change-tracking
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-architecture-and-concepts-advanced:
 

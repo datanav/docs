@@ -97,6 +97,10 @@ overview in the DTL Reference Guide. You will use this much.
 
 **What is the relationship of pipes and DTL?**
 
+.. seealso::
+
+  TODO
+
 .. _entities-pipes-and-id-3-1:
 
 Entities, pipes and _id @Geir Atle
@@ -117,6 +121,10 @@ configurations and precise connections between data entities.
 
 See <ref to ``_id`` restrictions> for more information on how to create
 valid identifiers.
+
+.. seealso::
+
+  TODO
 
 System _id
 ^^^^^^^^^^
@@ -202,6 +210,10 @@ all the datasets in that Sesam node.
 If you need to reference a dataset from another configuration in Sesam,
 you reference the dataset’s identity.
 
+.. seealso::
+
+  TODO
+
 Entity _id
 ^^^^^^^^^^
 
@@ -229,6 +241,10 @@ In other cases, you may have to explicitly add the ``_id`` property with
 DTL in a transform step in the inbound pipe. This may be relevant when
 the source configuration does not support specifying multiple properties
 as primary keys.
+
+.. seealso::
+
+  TODO
 
 Entity _id and namespaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,6 +306,10 @@ Should probably write something sensible about the connection between
 ``_id`` and $ids somewhere. Maybe related to merge pipes? – ‘Yea, or maybe
 add it to the \_ Properties chapter’ -G
 
+.. seealso::
+
+  TODO
+
 .. _entity-data-model-data-types-3-1:
 
 Entity Data model – Data Types @Gabriell
@@ -328,6 +348,10 @@ shown in *Example 3.1.3A: Entity*
 | {}
 | \``\`
 
+.. seealso::
+
+  TODO
+
 Data types
 ^^^^^^^^^^
 
@@ -353,6 +377,10 @@ Float: \`"~f123.456"\`
 Boolean: \`true/false\`
 
 Null: \`null\`
+
+.. seealso::
+
+  TODO
 
 .. _syntax-3-1:
 
@@ -661,6 +689,10 @@ Result after run:
 
    }
 
+.. seealso::
+
+  TODO
+
 .. _dtl-in-practice-3-1:
 
 DTL in practice
@@ -733,6 +765,10 @@ Save and run the pipe by clicking the **Save** button and then the **Start** but
 
 In the next section you learn how to view the result of a pipe run.
 
+.. seealso::
+
+  TODO
+
 Pipe output
 ^^^^^^^^^^^
 
@@ -755,6 +791,10 @@ But they are both empty:
 This is because we only copy the ``_id`` so far.
 
 In the next section you will learn to write your first piece of DTL to make the output a bit more interesting.
+
+.. seealso::
+
+  TODO
 
 Greet the world!
 ^^^^^^^^^^^^^^^^
@@ -826,6 +866,10 @@ run a pipe and view it's output.
   }
 
 
+.. seealso::
+
+  TODO
+
 .. _pipe-shortcuts-3-1:
 
 Pipe shortcuts
@@ -870,6 +914,9 @@ When you shape your data in the pipe config, shortcuts are quite a nice tool for
 
 * Lets you pick functions/properties in each statement of the pipe config, i.e. transform statement.
 
+.. seealso::
+
+  TODO
 
 .. _tasks-for-dtl-beginner-3-1:
 
