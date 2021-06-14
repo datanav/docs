@@ -3291,6 +3291,14 @@ The REST source supports both pagination as part of the response body or paginat
 after the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ . It optionally supports continuation both as
 a query parameter or as header property.
 
+Note that by default the REST source will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST source emit "empty" entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the REST source is still under development and might change configuration format while it's marked
 as "experimental".
 
@@ -3312,6 +3320,7 @@ Prototype
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -3368,6 +3377,14 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precendence if defined.
      -
+     -
+
+   * - ``response_include_content_type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property.
+
+     - ``false``
      -
 
    * - ``payload_property``
@@ -4544,6 +4561,14 @@ The REST transform
 
 This transform can communicate with a REST service using HTTP requests.
 
+Note that by default the REST transform will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST transform emit entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the shape of the entities piped to this transform must conform to certain criteria, see the
 :ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
 
@@ -4567,6 +4592,7 @@ Prototype
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -8502,6 +8528,7 @@ Prototype
         "read_timeout": 1800,
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
+        "json_content_types": ["application/jsonish"]
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
@@ -8582,6 +8609,14 @@ Properties
        the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
        the operation definition, the operation value takes precedence.
      - 1
+     -
+
+   * - ``json_content_types``
+     - Array of strings
+     - This property can be used to supply the REST source and transform a list of response "content-type" strings
+       that represent valid JSON content that should be parsed as such. The content-type "application/json" is always
+       included.
+     - ["application/json"]
      -
 
 Operation properties
