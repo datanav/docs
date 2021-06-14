@@ -27,9 +27,9 @@ alternative text is prefixed with the numbering "Figure 2".
 ```reStructuredText
 .. figure:: ./media/Enterprise_Service_Bus.png
    :align: center
-   :alt: Figure 2 – Enterprise Service Bus
+   :alt: Figure – Enterprise Service Bus
 
-   Figure 2 – Enterprise Service Bus
+   Figure – Enterprise Service Bus
 ```
 
 ## Insertion of Code
