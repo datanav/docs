@@ -21,9 +21,6 @@ The pictures or diagrams you add need to be named to match the information
 they contain.
 As an example this picture is about the ESB and is named accordingly.
 
-It is also the second figure in the topic where it is referenced, so the
-alternative text is prefixed with the numbering "Figure 2".
-
 ```reStructuredText
 .. figure:: ./media/Enterprise_Service_Bus.png
    :align: center
