@@ -9,7 +9,7 @@ Changelog
 * Added a ``json_content_types`` property to the :ref:`REST system <rest_system>`. This property can be used to specify
   additional JSON content types to accept besides the default "application/json". The content must still be valid JSON.
   Note that the REST source will no longer attempt to parse all responses as JSON but check the content-type against the
-  list of recongised content-types first. If the response content-type is not in this list, it will be treated as
+  list of recognised content-types first. If the response content-type is not in this list, it will be treated as
   "unknown" and an empty entity containing a property with the response body (and optionally the content type) will be
   emitted for further processing with DTL. Support for ``response_include_content_type`` and ``response_property`` has
   been added to the REST source for this scenario.
