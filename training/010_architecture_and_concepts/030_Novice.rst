@@ -236,15 +236,64 @@ Imagine you are working on a large dataset produced by a global pipe. You quickl
 
 .. _customize-data-structure-for-endpoints-1-2:
 
-Customize data structure for endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Customize data structure for outbound flows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Sesam has transformative functions to add, remove,Copy the attributes
-  you want the end system to receive.
-| All changes to attributes you add to the target will cause an entity
-  update.
+An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
-Referring to namespace 1.1.15 to know property origin, rename, add, copy
+As an example, the data presented below is produced by the pipe "global-person":
+
+.. code-block:: json
+
+	{
+	  "global-person:country": "DK",
+	  "global-person:id": 40,
+	  "global-person:phone": "1-894-115-3398",
+	  "global-person:position": "Engineer",
+	  "crm-account:positions": ["Engineer", "Salesmanager", "Accountant", "CTO"],
+	  "crm-account:hobbies": "Builds LEGO"
+	}   
+
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+
+.. code-block:: json
+
+	["copy", "global-person:*"]
+
+and would produce the following data:
+
+.. code-block:: json
+
+	{
+	  "global-person:country": "DK",
+	  "global-person:id": 40,
+	  "global-person:phone": "1-894-115-3398",
+	  "global-person:position": "Engineer"
+	} 
+
+After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following: 
+
+.. code-block:: json
+	
+	["remove", "country"] 
+
+and 
+
+.. code-block:: json
+	
+	["rename", "id", "Id"]
+	["rename", "phone", "Phone"]
+	["rename", "position", "Position"] 
+
+based on the declared DTL functions, this would produce the following:
+
+.. code-block:: json
+
+	{
+	  "global-person:Id": 40,
+	  "global-person:Phone": "1-894-115-3398",
+	  "global-person:Position": "Engineer"
+	} 
 
 .. _change-tracking-data-delta-1-2:
 
