@@ -12,7 +12,7 @@ Copy is one of the most fundamental DTL functions you will be using in Sesam whe
 
 ``["copy", "golden-object:*"]``
 
-In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist source data by providing arguments in the ``["copy"]`` function as follows:   
+In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist source data by providing arguments in the ``["copy"]`` function as follows:
 
 ``["copy", "*", "_*"]``
 
@@ -123,8 +123,11 @@ coming in goes out.
 
 -  datasets
 
-   15. .. rubric:: Filter as a transform
-          :name: filter-as-a-transform
+
+.. _filter-as-a-transform:
+
+Filter as a transform
+~~~~~~~~~~~~~~~~~~~~~
 
 Explain in the context of reading from global pipes
 
