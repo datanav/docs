@@ -41,22 +41,22 @@ Imagine you are in charge of sending out salaries for the next month, albeit you
 .. code-block:: json
 	
 	[{
-		"_id": "0",
+	  "_id": "0",
 	  "EmployeeStatus": 0,
 	  "Description": "On Leave"
 	},
 	{
-		"_id": "1",
+	  "_id": "1",
 	  "EmployeeStatus": 1,
 	  "Description": "Active"
 	},
 	{
-		"_id": "2",
+	  "_id": "2",
 	  "EmployeeStatus": 2,
 	  "Description": "InActive"
 	},
 	{
-		"_id": "3",
+	  "_id": "3",
 	  "EmployeeStatus": 3,
 	  "Description": "Future Employee"
 	}]  
@@ -66,14 +66,14 @@ Then, if we use a ``hops`` function, we can merge the two datasets on ``Employee
 .. code-block:: json
 	
 	["merge",
-    ["hops", {
-      "datasets": ["map-salesforce-person-status md"],
-      "where": [
-        ["eq", "_S.salesforce-person:EmployeeStatus", "md.EmployeeStatus"] 
-      ],
-      "return": ["dict", "EmployeeStatusDescription", "md.map-salesforce-person-status:Description"]
-    }]
-  ]
+	   ["hops", {
+	     "datasets": ["map-salesforce-person-status md"],
+	     "where": [
+		["eq", "_S.salesforce-person:EmployeeStatus", "md.EmployeeStatus"] 
+	     ],
+	     "return": ["dict", "EmployeeStatusDescription", "md.map-salesforce-person-status:Description"]
+	   }]
+	]
 
 And would produce the following changes to the dataset produced by the pipe ``salesforce-person``:
 
