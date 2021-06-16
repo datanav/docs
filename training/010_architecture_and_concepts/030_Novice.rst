@@ -232,27 +232,68 @@ Filter entities on the way out
 
 Filtering entities after the global stage of modelling is a common use case. Filtering gives the ability to work with subsets of a dataset. It is therefore often used when working on large datasets where you are only interested in a small section of the data. In addition, filtering is often used in outbound pipes as well. This is due to the fact that *_deleted* entities are processed continously as data flows through Sesam and do rarely leave Sesam when first introduced. The *_deleted* property is used in Sesam to flag whether an entity is deleted or not. As such an entity which is deleted will have the property: ``{"_deleted": true},`` whilst an entity that is not deleted will have the property: ``{"_deleted": false}.`` Additionally, *_deleted* entities are not usually something you would like to send to a target system. This is obviously not always the case, but in general that is how things tend to work.
 
-Imagine you are working on a large dataset produced by a global pipe. You quickly recognize that the amount of data and all its properties is not that relevant to you. Therefore, one of the first things you do is to apply a filter on a specific key and value. This leaves you with a subset of the complete data. As you look closely at the state of the data, after having applied your first filter, you are not immediately satisfied. This makes you apply another filter to alter the state of the data further. Therefore, you decide to add a specific property given a specific condition; i.e., if the entity is of type: "Employee" - add properties "Salary", "Position" and "Goals". Finally, if it is not of type "Employee" apply a filter to exclude that entity. As illustrated, it is not unusual to use multiple filters in a DTL config, especially when the amount of DTL increases, and a need for stepwise filtering presents itself. 
-
-
-.. _tag-your-entities-categorization-of-sub-concepts-1-2:
-
-Tag your entities - Categorization of sub-concepts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Extra:type - usually added into the globals to separate what entities about the same thing do & mean.
+Imagine you are working on a large dataset produced by a global pipe. You quickly recognize that the amount of data and all its properties is not that relevant to you. Therefore, one of the first things you do is to apply a filter on a specific key and value. This leaves you with a subset of the complete data. As you look closely at the state of the data, after having applied your first filter, you are not immediately satisfied. This makes you apply another filter to alter the state of the data further. Therefore, you decide to add a specific property given a specific condition; i.e., if the entity is of type: "Employee" - add properties "Salary", "Position" and "Goals". Finally, if it is not of type "Employee" apply a filter to exclude that entity. As illustrated, it is not unusual to use multiple filters in a DTL config, especially when the amount of DTL increases, and a need for stepwise filtering presents itself.
 
 .. _customize-data-structure-for-endpoints-1-2:
 
-Customize data structure for endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Customize data structure for outbound flows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Sesam has transformative functions to add, remove,Copy the attributes
-  you want the end system to receive.
-| All changes to attributes you add to the target will cause an entity
-  update.
+An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
-Referring to namespace 1.1.15 to know property origin, rename, add, copy
+As an example, the data presented below is produced by the pipe "global-person":
+
+.. code-block:: json
+
+	{
+	  "global-person:country": "DK",
+	  "global-person:id": 40,
+	  "global-person:phone": "1-894-115-3398",
+	  "global-person:position": "Engineer",
+	  "crm-account:positions": ["Engineer", "Salesmanager", "Accountant", "CTO"],
+	  "crm-account:hobbies": "Builds LEGO"
+	}   
+
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+
+.. code-block:: json
+
+	["copy", "global-person:*"]
+
+and would produce the following data:
+
+.. code-block:: json
+
+	{
+	  "global-person:country": "DK",
+	  "global-person:id": 40,
+	  "global-person:phone": "1-894-115-3398",
+	  "global-person:position": "Engineer"
+	} 
+
+After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following: 
+
+.. code-block:: json
+	
+	["remove", "country"] 
+
+and 
+
+.. code-block:: json
+	
+	["rename", "id", "Id"]
+	["rename", "phone", "Phone"]
+	["rename", "position", "Position"] 
+
+based on the declared DTL functions, this would produce the following:
+
+.. code-block:: json
+
+	{
+	  "global-person:Id": 40,
+	  "global-person:Phone": "1-894-115-3398",
+	  "global-person:Position": "Engineer"
+	} 
 
 .. _change-tracking-data-delta-1-2:
 
