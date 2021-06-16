@@ -440,15 +440,14 @@ easier in the long run.
 
 Inbound pipes should be named according to endpoint/table they connect to
 in the source system and prefixed with the source system name such that
-<<<<<<< HEAD
 there is a clear and intuitive way of tracking their content. Let us use
 the same example as for naming system. I this case the HR system in the
 previous example populate its data in two tables: employee and
-=======
+
 there is a clear and intuitive way of tracking their content.
 We use the hr system mentioned above in this example.
 There are two tables we would like to read from the hr systems: employee and
->>>>>>> 42d8152eab1b5f70ab372557ee2a3e88f8df9f47
+>>>>>>> 90529b39dfb96e13941f5cbee9f3dbf108993705
 department. Our two inbound pipes connecting to the two tables containing
 HR data will therefore be named “hr-employee” and “hr-department”. The
 system name prefixed highlights that the HR system is upstream from the
@@ -482,11 +481,7 @@ pipe name i.e., “person-child-hr".
 
 An outbound pipe should have the same name as the name of the pipe
 generating the outbound pipe’s source dataset, only postfixed with
-<<<<<<< HEAD
-“output” i.e., “person-child-hr-endpoint”.
-=======
 “endpoint” i.e., “person-child-hr-endpoint”.
->>>>>>> 42d8152eab1b5f70ab372557ee2a3e88f8df9f47
 
 The following flow shows a typical Sesam flow with each pipe’s preferred
 name with an example:
