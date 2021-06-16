@@ -31,4 +31,5 @@ Learn Sesam
    Microservices <050_microservices/microservices>
    Sesam in the Wild <060_sesam_in_the_wild/sesam_in_the_wild>
    Appendix <Appendix>
-   Courses <courses/sesam_intro>
+   Sesam Intro Course <courses/tmp/sesam_intro>
+   Sesam Pro Course <courses/tmp/sesam_pro>
