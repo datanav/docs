@@ -45,6 +45,20 @@ The reason why a reference should be in the form of a namespaced identifier is t
 
 The benefit of adding a property that is a combination of fields in the inbound pipe and not in a global or preparation pipe is that once it is added, you don't have to repeat the same ETL transformation in every pipe that needs this data. Also, if a combination of fields forms a reference to another dataset and will be used in a hops, it should be added in a dataset prior to that pipe.
 
+Advantages
+==========
+Importing raw data can be interesting for multiple reasons. When an external system can only push data for example, having a record of the data received will allow to consult previously ingested data or re-run a data flow without having to request a new data delivery, which can sometimes be impossible. Or if an external system is to be decommissioned, historical data can be preserved within Sesam and made available should the replacing system needs it. There are also external systems that prune data that is might necessary for other external system with a broader lifecycle scope. An ERP for example will keep data from procuration to decommission, while the lifespan of data will be shorter an a system focussing on operations.
+
+A two steps approach
+====================
+To fulfil both goals of raw data retention and ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the verbatim raw dataset. From the input pipe’s point of view, the raw dataset is the data source as if it were from the external system itself. The Semantic correlations, Sesamification if you will, is then performed in the input pipe. Namespace identifiers and rdf types are added, and the data is sent to the pertinent global, either as a whole or broken down, depending on the elected conceptual segmentation.
+
+A word about data ownership and data availability
+=================================================
+In the case of data only available within Sesam, Sesam will become the de facto data owner and should be considered and labelled as such in broader architecture documentation and resources. Also, it is necessary to ensure those datasets are preserved, by setting them up as high availability pipes (links to doc). High availability pipes have built in mechanisms for data redundancy, securing data retention.
+
+
+
 Principles of connecting data
 -----------------------------
 
