@@ -43,7 +43,7 @@ Make namespaced identifiers for foreign keys - make-ni
 
 Continuing along the lines of joining data, namespaced identifiers (NIs) come into play. NIs in Sesam are used to reference an identifier or a NI in a related dataset. In order to create them, you can use either of the two functions: ["make-ni"] or ["ni"].
 
-In the below example, ["make-ni"] will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
+In the below example, ["make-ni"] will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:
 
 .. code-block:: json
 
@@ -98,17 +98,17 @@ Full outer join is something you will experience in the Sesam terminology as a "
 
    Figure – Full Outer Join
 
-A note on the handling of null values. In Sesam null values are not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example: 
+A note on the handling of null values. In Sesam null values are not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example:
 
 .. code-block:: json
-	
+
 	{
 	  "_id": "first_entity:foo",
 	  "first_entity:value": 1,
 	  "first_entity:string":"Hello merge",
 	  "first_entity:values": [1, 2, 4, 5]
 	}
-	{			
+	{
 	  "_id": "second_entity:bar",
 	  "second_entity:value": 1,
 	  "second_entity:string":"This is retained",
@@ -133,7 +133,7 @@ and the merged result, if we choose to retain the first "_id" of the above two d
 	  ]
 	}
 
-What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.  
+What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.
 
 
 .. _left-join-hops-1-2:
@@ -152,20 +152,20 @@ In addition to a full outer join it is also relevant to talk about the left join
 To illustrate the graphical representation of a left join, the following practical example has been drafted:
 
 .. code-block:: json
-	
+
 	{
 	  "_id": "first_entity:foo",
 	  "first_entity:value": 1,
 	  "first_entity:string":"Hello merge",
 	  "first_entity:values": [1, 2, 4, 5]
 	}
-	{			
+	{
 	  "_id": "second_entity:bar",
 	  "second_entity:value": 1,
 	  "second_entity:string":"This is retained",
 	  "second_entity:values": [1, 3, 4, 6]
 	}
-	{			
+	{
 	  "_id": "third_entity:the_runt",
 	  "third_entity:value": 1,
 	  "third_entity:string":"Third's the charm"
@@ -183,7 +183,7 @@ When applying the hops, our point of reference will be the first data object fro
 	  "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
 	}
 
-As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.  
+As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.
 
 .. _global-1-2:
 
@@ -204,20 +204,20 @@ Guidelines - inbound and outbound pipes
 As established above, an important aspect when modelling data in Sesam is the use of globals. Albeit before reaching the global stage and after completion of the global stage, when modelling your data the following guidelines apply:
 
 Inbound pipes
-#####################
+^^^^^^^^^^^^^
 
 As data enters Sesam it is handled in inbound pipes. An inbound pipe should be as generic as possible with regards to the amount of shaping done on the data that flows through to its dataset. The reason being, in order for you to make the best possible modelling decisions downstream, you should look at the "raw" data first to get a complete understanding of the condition of the data. In addition, we want to assume as little as possible about how the data will be used by current and future recipients. Therefore,
 if we start shaping and customizing data too soon in the flow, it's much harder, if not impossible, to reuse the data for different purposes later. A rule of thumb is therefore to minimize the amount of DTL used in an inbound pipe and try to just copy everything, or close to everything. Special cases can occur when you need to do some shaping of the data before reaching the global stage. In such cases, you should aim at making the minimal required DTL changes in order for the data to retain as much of its original integrity as possible.
 
 Outbound pipes
-######################
+^^^^^^^^^^^^^^
 
-Following the flow of data as it leaves the global stage of modelling, the amount of DTL will increase in the preparation pipes. As you might recall, preparation pipes deliver data to the outbound pipes. It is therefore important to consider the state of the data as it enters an outbound pipe. The reason for this being, as with any inbound pipe, that you should aim at minimizing the amount of DTL needed to shape your data further. This will create robust consumable data that can be delivered seamlessly to your target systems as data flows through your outbound pipes. As with inbound pipes, special cases can occur, where you need to do some additional shaping before the data can be presented in a consumable shape for a given target system. Again, aim at making a minimal set of DTL changes. 
+Following the flow of data as it leaves the global stage of modelling, the amount of DTL will increase in the preparation pipes. As you might recall, preparation pipes deliver data to the outbound pipes. It is therefore important to consider the state of the data as it enters an outbound pipe. The reason for this being, as with any inbound pipe, that you should aim at minimizing the amount of DTL needed to shape your data further. This will create robust consumable data that can be delivered seamlessly to your target systems as data flows through your outbound pipes. As with inbound pipes, special cases can occur, where you need to do some additional shaping before the data can be presented in a consumable shape for a given target system. Again, aim at making a minimal set of DTL changes.
 
 Summary
-#######
+^^^^^^^
 
-The amount of DTL in a given pipe with respect to modelling stage in Sesam should increase until the point of modelling stage, where the intent of shaping data is primarily due to target system requirements, as visualized in the below *Figure - DTL Amount*. 
+The amount of DTL in a given pipe with respect to modelling stage in Sesam should increase until the point of modelling stage, where the intent of shaping data is primarily due to target system requirements, as visualized in the below *Figure - DTL Amount*.
 
 .. figure:: ./media/dtl-amount.png
    :align: center

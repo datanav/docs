@@ -5,6 +5,9 @@
 Introduction to Sesam
 =====================
 
+Beginner Topics
+---------------
+
 .. toctree::
    :maxdepth: 2
 
@@ -21,3 +24,19 @@ Introduction to Sesam
    ###.. _entities-pipes-and-id-3-1:###
    ###.. _dtl-in-practice-3-1:###
    ###.. _globals-as-a-concept-1-1:###
+
+Novice Topics
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   ###.. _joining-data-1-2:###
+   ###.. _full-outer-join-merge-1-2:###
+   ###.. _merge-as-a-source-3-2:###
+   ###.. _global-1-2:###
+   ###.. _coalesce-3-2:###
+   ###.. _guidelines-inbound-and-outbound-pipes-1-2:###
+   ###.. _change-tracking-data-delta-1-2:###
+   ###.. _left-join-hops-1-2:###
+   ###.. _hops-3-2:###
