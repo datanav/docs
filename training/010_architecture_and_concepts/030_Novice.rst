@@ -39,18 +39,18 @@ Data is appended to the output
 Global
 ~~~~~~
 
-Global datasets lies at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
+Global datasets lie at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
-Creating global datasets allows a Sesam installation to:
+Creating global datasets allows you to:
 
 - 	Semantically group and structure data
-		A semantic grouping of the data makes the data it self easier to understand and more intuitive to work with, both in turns of excisting architecture and new projects. For excisting architecture, separating your data into relatable and recongnizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to allocate to localize and to correct a potential issue. 
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architecture and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
 		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
 
 -	Setup master data management - Golden records
-		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize whih system know a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. An other benefit of goldenr ecords are their reusability. Once their logic has been created a golden record may be used by any project downstream from it's global-dataset, thus saving both time and energy.
+		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize which system knows a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. Another benefit of golden records are their reusability. Once their logic has been created a golden record may be used by any project downstream from its global dataset, thus saving both time and energy.
 
-		Golden records are created with the "coalesce" function, as shown in the example below.
+		Golden records are created with the ``["coalesce"]`` function, as shown in the example below.
 
 
 
@@ -67,7 +67,7 @@ Creating global datasets allows a Sesam installation to:
     ]
   ]
 
-In this case, all three source datasets has an email property. If the email in hr-person is not null, that email will be the value in our global property. Should it have a null value the email from crm-person will be evaluated, and so on. 
+In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
 
 .. code-block:: json
   :linenos:	
