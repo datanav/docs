@@ -10,10 +10,10 @@ Novice topic
 ~~~~~~~~~~~~
 
 
-.. _tag-your-entities-categorization-of-sub-concepts-6-2:
+.. _creating-mapping-data-for-enrichment-6-2:
 
-Tag your entities - Categorization of sub-concepts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creating mapping data for enrichment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Usually an entity with its given properties will convey a concept. Imagine pulling data from a Customer relationship management (CRM) system. The inbound pipe that pulls data from this CRM system is called ``salesforce-person``. If you were to look at the entities in the dataset of this pipe, you will usually be able to understand what the data is all about. For brevity, only one entity is shown below:
 
@@ -41,18 +41,22 @@ Imagine you are in charge of sending out salaries for the next month, albeit you
 .. code-block:: json
 	
 	[{
+		"_id": "0",
 	  "EmployeeStatus": 0,
 	  "Description": "On Leave"
 	},
 	{
+		"_id": "1",
 	  "EmployeeStatus": 1,
 	  "Description": "Active"
 	},
 	{
+		"_id": "2",
 	  "EmployeeStatus": 2,
 	  "Description": "InActive"
 	},
 	{
+		"_id": "3",
 	  "EmployeeStatus": 3,
 	  "Description": "Future Employee"
 	}]  
@@ -63,11 +67,11 @@ Then, if we use a ``hops`` function, we can merge the two datasets on ``Employee
 	
 	["merge",
     ["hops", {
-      "datasets": ["mapping-dataset md"],
+      "datasets": ["map-salesforce-person-status md"],
       "where": [
         ["eq", "_S.salesforce-person:EmployeeStatus", "md.EmployeeStatus"] 
       ],
-      "return": ["dict", "EmployeeStatusDescription", "md.Description"]
+      "return": ["dict", "EmployeeStatusDescription", "md.map-salesforce-person-status:Description"]
     }]
   ]
 
@@ -80,7 +84,7 @@ And would produce the following changes to the dataset produced by the pipe ``sa
 	  "salesforce-person:Age": 32,
 	  "salesforce-person:CurrentProfession": "Sesam Expert",
 	  "salesforce-person:EmployeeStatus": 0,
-	  "mapping-dataset:EmployeeStatusDescription": "On Leave",
+	  "map-salesforce-person-status:EmployeeStatusDescription": "On Leave",
 	  "salesforce-person:EmployeeTime": "5 years",
 	  "salesforce-person:FormerProfession": "Semiprofessional footballer",
 	  "salesforce-person:Fullname": "Tordenskjold Skipskaptajnson",
