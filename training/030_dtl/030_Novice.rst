@@ -114,8 +114,7 @@ Equality for joins [n-n]
 Merge as a Source
 ~~~~~~~~~~~~~~~~~
 
-Examples, steal from PP training, show in tables vs json, everything
-coming in goes out.
+Show config, explain all properties, refer to architecture chapter also.
 
 -  Strategy
 
