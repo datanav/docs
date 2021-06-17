@@ -300,18 +300,11 @@ based on the declared DTL functions, this would produce the following:
 Change tracking & data delta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`All entities stored inside sesam have a
-\_hash <https://docs.sesam.io/entitymodel.html?highlight=_hash>`__
-value. This is a quantification of an entity and is calculated every
-time an entity is processed by a pipe. If the \_hash value changes or is
-new, the entity will be stored as a new version in dataset. We call this
-change in \_hash value a data-delta.
+Change tracking and data delta allows for Sesam to process and update data only when it changes. This ensures minimal latency and increases agility when 1)reading data from a source system and 2) when creating dataflows as data has entered Sesam and is modelled towards consumption in a target system.
 
-Any data-delta for an entity in a dataset causes downstream pipes to see
-this as a new sequence number they haven’t yet read. This in turn makes
-the pipe process the entity. If the processed entity does not exist or
-gets a new \_hash in the output of the pipe, it will cause an update to
-the output dataset.
+	1) When reading data from a source system, it may be possible to just ask for the data that have changed since the last time, if the source supports it. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
+
+	2) Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``hash`` property will be created. This ``hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``hash`` value changes, any downstream pipes register this change and recoqnizes it as a new sequence number that needs to be processed again.
 
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 
