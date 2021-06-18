@@ -300,11 +300,11 @@ based on the declared DTL functions, this would produce the following:
 Change tracking & data delta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Change tracking and data delta allows for Sesam to process and update data only when it changes. This ensures minimal latency and increases agility when 1)reading data from a source system and 2) when creating dataflows as data has entered Sesam and is modelled towards consumption in a target system.
+Change tracking and data delta allows Sesam to process and update data only when it changes. This ensures minimal latency and increased agility both when importing data from source systems and when processing data through internal pipes towards target systems.
 
-	1) When reading data from a source system, it may be possible to just ask for the data that have changed since the last time, if the source supports it. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
+Firstly, when reading data from a source system, if the source supports it, it may be possible to just ask for the data that have changed since the last time. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
 
-	2) Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``hash`` property will be created. This ``hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``hash`` value changes, any downstream pipes register this change and recoqnizes it as a new sequence number that needs to be processed again.
+Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``_hash`` property will be created. This ``_hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``_hash`` value changes, any downstream pipes register this change and recoqnizes it as a new sequence number that needs to be processed again.
 
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 
