@@ -90,7 +90,7 @@ Numbering is added in post as the docs page is generated. We use the toctree fla
 
 ## Section summary
 
-A "floating" sidebar summary can be handled by the `..sidebar` directive in combination with some custom CSS.
+A "floating" sidebar summary can be handled by the `.. sidebar` directive in combination with some custom CSS.
 
 ### Initial setup:
 
@@ -118,12 +118,12 @@ The following line was added to `layout.html` to handle this:
 All future custom CSS additions can now be put into `_templates/css/sesam.css`
 and be automatically included in builds.
 
-### ..sidebar Usage
+### .. sidebar Usage
 
 With the custom CSS all set up, we can use the folling RST:
 
 ```
-..sidebar:: Summary
+.. sidebar:: Summary
 
   - First point in summary
   - Second point in summary
