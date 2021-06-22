@@ -8,6 +8,10 @@ Systems: Beginner
 What is a system in Sesam?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  A Sesam system is a reusable interface to an external system outside of Sesam.
+
 .. A system defines the connectors through which Sesam communicates with the outside world.
 
 A system is an interface that enables Sesam to communicate with the outside world.
@@ -32,19 +36,11 @@ So if you need to let Sesam both pull data from and push data to a specific exte
 you would use the same system config for both, and handle the specifics in separate
 pipe configs.
 
-.. sidebar:: Summary
-
-  - A Sesam system is a reusable interface to an external system outside of Sesam
-
 .. seealso::
 
   Concepts - Configuration: :ref:`concepts-systems`
 
   Developer Guide - Service configuration: :ref:`system_section`
-
-.. seealso::
-
-  TODO
 
 .. _introduction-to-sql-json-systems-2-1:
 
