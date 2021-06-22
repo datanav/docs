@@ -49,6 +49,10 @@ which, in this case, will make P2P time consuming and expensive to
 manage. Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being the ESB.
 
+.. seealso::
+
+  TODO
+
 Enterprise Service Bus (ESB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -73,6 +77,10 @@ challenges still remain unresolved. Recent years transition towards more
 cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
+
+.. seealso::
+
+  TODO
 
 Data Driven Architecture (DDA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -100,6 +108,10 @@ This can be achieved by always thinking ahead and leaving room for growth,
 which you will learn how to do throughout this course.
 If done correctly nothing beats the scalability, cost-effectiveness and
 possibilities a DDA provides.
+
+.. seealso::
+
+  TODO
 
 .. _datahub-1-1:
 
@@ -146,10 +158,18 @@ Cons:
 
 - Does not operate well with silos.
 
+.. seealso::
+
+  TODO
+
 .. _sesam_world_map-1-1:
 
 Sesam world map
 ~~~~~~~~~~~~~~~
+
+.. seealso::
+
+  TODO
 
 
 .. _the_parts_of_sesam-1-1:
@@ -214,6 +234,10 @@ Entities:
    entity is defined by its primary key, which is represented in Sesam
    as the value belonging to the key ``_id``.
 
+.. seealso::
+
+  TODO
+
 .. _the_sesam_portal-1-1:
 
 The Sesam portal
@@ -261,6 +285,10 @@ figure 1.1.6B.
 In this section we will only focus on the specific parts of the portal
 needed to start working with Sesam, namely the “Pipes” page and the
 “Systems” page.
+
+.. seealso::
+
+  TODO
 
 Pipes
 ^^^^^
@@ -324,6 +352,10 @@ Input, Output and the Execution log.
    not only tells you if a pipe works as it should, but also contains
    detailed information on why a pipe run fails and when they failed.
 
+.. seealso::
+
+  TODO
+
 Systems
 ^^^^^^^
 
@@ -352,6 +384,10 @@ and Status.
    you are connected correctly. When connected to Microservices this tab
    displays connection status and logging provided by the Microservice.
 
+.. seealso::
+
+  TODO
+
 
 .. _working-language-json-1-1:
 
@@ -363,6 +399,10 @@ Something general about JSON
 JSON configuration of pipes and systems
 
 DTL also validated as JSON?
+
+.. seealso::
+
+  TODO
 
 
 .. _naming-conventions-1-1:
@@ -471,6 +511,10 @@ name with an example:
 
    Full pipe flow with example names.
 
+.. seealso::
+
+  TODO
+
 .. _systems-1-1:
 
 Systems
@@ -496,6 +540,10 @@ start and finish points of every integration flow. System may cover
 other functionalities as well, but we will cover those special cases in
 later parts [ref to later parts].
 
+.. seealso::
+
+  TODO
+
 .. _pipes-1-1:
 
 Pipes
@@ -518,6 +566,9 @@ Namegivingconventions ref. 1.1.8
 
 Where to make new ref 1.1.6
 
+.. seealso::
+
+  TODO
 
 .. _datasets-1-1:
 
@@ -552,12 +603,12 @@ config is specified for a pipe it's output will be a dataset.
 
 Datasets are also often the source for internal pipes.
 
-**Related topics:**
+.. seealso::
 
-:ref:`dataset-id-3-1`,
-:ref:`entities-json-keyvalpairs-1-1`,
-:ref:`naming-conventions-1-1`,
-:ref:`pipes-1-1`
+  :ref:`dataset-id-3-1`,
+  :ref:`entities-json-keyvalpairs-1-1`,
+  :ref:`naming-conventions-1-1`,
+  :ref:`pipes-1-1`
 
 
 .. _datasets-vs-tables-1-1:
@@ -565,7 +616,86 @@ Datasets are also often the source for internal pipes.
 Datasets vs. tables
 ~~~~~~~~~~~~~~~~~~~
 
-Examples end ref to 1.1.13
+Sesam datasets are similar to database tables in that both store data records.
+
+Continuing with the example from the previous section:
+
+.. code-block:: json
+
+   [
+     {
+       "id": "1",
+       "name": "Jane Doe"
+     },
+     {
+       "id": "2",
+       "name": "John Doe"
+     }
+   ]
+
+This would typically be represented as the following database table:
+
+== ====
+id name
+== ====
+1  Jane Doe
+2  John Doe
+== ====
+
+Notice that property names in Sesam usually correspond to columns
+in a database table and property values correspond to cell values.
+
+Despite the similarities, there are some key differences between
+Sesam datasets and database tables that is important to point out:
+
+* Database tables are for the most part storage of mutable records.
+  When a record is updated, the table cells where updated data is
+  supplied are changed in-place. Historical changes of a particular
+  record is therefore not available, unless you design for it.
+
+  Sesam datasets are lists of immutable entities, and can be thought of
+  as logs of entities.
+  When an entity is updated, Sesam creates a copy of the current entity version,
+  applies the new data to the copy and saves it as a new entity version.
+  The copy will keep its original identifier,
+  but will have a reference to its previous version.
+  Sesam datasets will therefore grow when data changes, as all changes
+  are tracked.
+
+* Tables are usually defined in a database schema.
+  A database schema imposes integrity constraints on a database such
+  as primary keys, referential integrity on foreign keys and
+  column declarations.
+
+  Sesam datasets are schemaless, which means that Sesam is neither bound by
+  or enforces any integrity constraints on or between datasets.
+  This also means that you as the integration specialist must 
+  define any relevant constraints such as foreign keys, etc. based on
+  domain knowledge.
+  However the great advantage of being schemaless is that Sesam is very flexible
+  with handling vastly different data structures from different sources so you usually
+  do not have to spend any time on restructuring inbound data.
+
+* Tables often have a defined primary key but not always.
+
+  Entities in a Sesam dataset *must* have a PK property and it *must* be named ``_id``.
+
+.. Trying out some new markup for summarizing the section and referencing other sections:
+
+.. attention::
+
+   * Sesam datasets are immutable logs of entities
+   * Sesam datasets are schemaless
+   * Entities in Sesam datasets *must* have ``_id``
+
+.. seealso::
+
+  :ref:`id-1-1`,
+  :ref:`concepts-datasets`,
+  :ref:`dataset-id-3-1`,
+  :ref:`entities-json-keyvalpairs-1-1`,
+  :ref:`naming-conventions-1-1`,
+  :ref:`pipes-1-1`
 
 .. _entities-json-keyvalpairs-1-1:
 
@@ -587,6 +717,10 @@ As stated earlier in this section, a dataset consists of a list of entities. An 
    }
 
 
+.. seealso::
+
+  TODO
+
 .. _globals-as-a-concept-1-1:
 
 Globals as a concept
@@ -599,6 +733,10 @@ Golden records
 Gjør data tilgjengelig
 
 Ref. 1.2.19, 3.2.14
+
+.. seealso::
+
+  TODO
 
 .. _special-sesam-attributes-1-1:
 
@@ -614,11 +752,21 @@ Namespaced identifiers (NIs) are identifiers (i.e. property values) given a name
 
 As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
 
+.. seealso::
+
+  TODO
+
 Rdf:type
 ^^^^^^^^
 The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
+
+.. seealso::
+
+  TODO
+
+.. _id-1-1:
 
 \_id
 ^^^^
@@ -630,6 +778,9 @@ For pipes, the _id is typically defined by establishing which properties in the 
 
 When data reaches a pipe's dataset, the _id will be identical to what you defined the _id to be, in that pipe's config.
 
+.. seealso::
+
+  TODO
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
 

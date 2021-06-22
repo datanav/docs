@@ -18,6 +18,10 @@ språk
 
 Docker
 
+.. seealso::
+
+  TODO
+
 .. _why-use-microservices-in-sesam-5-1:
 
 Why use Microservices in Sesam?
@@ -25,12 +29,20 @@ Why use Microservices in Sesam?
 
 System som gjør ting andre systemer ikke kan
 
+.. seealso::
+
+  TODO
+
 .. _how-are-microservices-used-in-sesam-5-1:
 
 How are Microservices used in Sesam?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ekte Use caser
+
+.. seealso::
+
+  TODO
 
 .. _microservice-hosting-5-1:
 
@@ -40,6 +52,10 @@ Microservice hosting
 Sesamcommunity Git & Docker
 
 Intro til Hosting
+
+.. seealso::
+
+  TODO
 
 .. _running-a-microservice-in-sesam-5-1:
 
@@ -60,6 +76,10 @@ Forklare Config
 
 Pipe source/sink/http
 
+.. seealso::
+
+  TODO
+
 .. _types-of-microservices-5-1:
 
 Types of Microservices
@@ -75,6 +95,10 @@ Types of Microservices
 
    Monitorering av Sesam
 
+.. seealso::
+
+  TODO
+
 .. _naming-convention-5-1:
 
 Naming Convention this should probs be under architecture namegiving conventions
@@ -84,6 +108,10 @@ Naming Convention this should probs be under architecture namegiving conventions
 
 Repo/microservice naming convention recommendation:
 sesam-<system>[-<special-functionality>]
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-microservices-beginner-tasks-5-1:
 
