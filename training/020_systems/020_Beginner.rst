@@ -42,6 +42,10 @@ pipe configs.
 
   Developer Guide - Service configuration: :ref:`system_section`
 
+.. seealso::
+
+  TODO
+
 .. _introduction-to-sql-json-systems-2-1:
 
 Introduction to SQL & JSON systems
@@ -49,12 +53,20 @@ Introduction to SQL & JSON systems
 
 No such thing as a JSON system.
 
+.. seealso::
+
+  TODO
+
 .. _pipe-interaction-with-systems.-2-1:
 
 Pipe interaction with systems.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Input, output (mention transform?)
+
+.. seealso::
+
+  TODO
 
 .. _how-to-create-a-system-with-templates-2-1:
 
@@ -101,7 +113,6 @@ You can check the connectivity status by clicking the **Status** tab.
 
   DTL - Beginner: :ref:`dtl-in-practice-3-1`
 
-
 .. _environment-variables-secrets-2-1:
 
 Environment variables & Secrets
@@ -116,12 +127,20 @@ $SECRET
 
 $ENV
 
+.. seealso::
+
+  TODO
+
 .. _json-push-pull-protocol-2-1:
 
 JSON Push & Pull protocol
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lots of info in docs.
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-systems-beginner-2-1:
 

@@ -29,6 +29,10 @@ Unit testing
 Implementer MVP testing på sesam-community [great expectations
 python-lib Daniel har info]!!
 
+.. seealso::
+
+  TODO
+
 .. _proxy-endpoint-5-4:
 
 Proxy Endpoint [Jonas]
@@ -36,12 +40,20 @@ Proxy Endpoint [Jonas]
 
 Kan lage en ms med frontend f.eks og eksponere den fra sesam
 
+.. seealso::
+
+  TODO
+
 .. _chaining-5-4:
 
 Chaining
 ~~~~~~~~
 
 Ref advanced system 2.4.13.
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-microservices-intermediate-5-4:
 
