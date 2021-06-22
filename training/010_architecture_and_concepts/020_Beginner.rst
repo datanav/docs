@@ -533,6 +533,8 @@ data record, called *entity*, consisting of key-value pairs.
 A dataset with two entities concerning people could look like this:
 
 .. code-block:: json
+   :class: example
+   :caption: Dataset with two entities concerning people
 
    [
      {
@@ -573,6 +575,8 @@ Entities / JSON (Key-value pairs)
 As stated earlier in this section, a dataset consists of a list of entities. An entity is a JSON type dictionary containing a set of key-value pairs identified by its unique identifier. A key-value pair is two related data elements. A key is a constant and defines what that data element is concerned with, i.e., postCode, email, phoneNumber, etc. Meanwhile, the value provides contextual information for a specific key. This could look like the following:
 
 .. code-block:: json
+   :class: example
+   :caption: JSON entity
 
    {
      "<key>": "<value>"
