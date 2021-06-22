@@ -1,0 +1,61 @@
+body {
+  counter-reset: example-counter 0;
+  /*
+   * looks like only one counter is supported
+  counter-reset: figure-counter 0;
+  */
+}
+
+/*
+.container:before,
+.caption-text::before
+.example::before,
+.code-block-caption::before
+div.code-block-caption::before
+*/
+div.code-block-caption::before
+{
+    counter-increment: example-counter;
+    content: "Example " counter(example-counter) ". ";
+}
+
+.example
+{
+    /*
+    border-color: #428bca ;
+    border-left-style: solid ;
+    border-width: 2px ;
+    */
+    /*
+    box-shadow: 5px 5px;
+    */
+    font-size: small ;
+    font-style: normal ;
+    margin-left: 2em ;
+}
+
+/*
+.figure::before
+{
+    counter-increment: figure-counter;
+    content: "Figure " counter(figure-counter) ". ";
+}
+*/
+
+div.sidebar
+{
+    background: #edf7fa ;
+    border-color: #428bca ;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid ;
+    border-width: 2px ;
+    float: right ;
+    margin-left: 10px ;
+    padding: 10px ;
+    width: 30% ;
+}
+
+.sidebar-title
+{
+    font-weight: bold ;
+}

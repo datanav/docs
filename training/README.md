@@ -87,3 +87,44 @@ All topics in a chapter will be shown in the main Table of Contents, meaning tit
 
 ## How does numbering work?
 Numbering is added in post as the docs page is generated. We use the toctree flag :numbered: in training.rst to enable this.
+
+## Section summary
+
+A "floating" sidebar summary can be handled by the `..sidebar` directive in combination with some custom CSS.
+
+### Initial setup:
+
+Sphinx expects the custom CSS to reside under `_build/html/_static/css/`.
+This folder is not GIT'ed so the CSS is stored as `_templates/css/sesam.css`.
+
+Create a link to it from `_build/html/_static/css/`:
+
+```
+$ cd _build/html/_static/css
+$ ln -s ../../../../_templates/css/sesam.css sesam.css
+```
+
+This will ensure correct relative link ref.
+
+With the custom CSS in the expected folder, `_templates/layout.html` is now able include it when building
+the project.
+
+The following line was added to `layout.html` to handle this:
+
+```
+{% set css_files = css_files + [ "_static/css/sesam.css" ] %}
+```
+
+All future custom CSS additions can now be put into `_templates/css/sesam.css`
+and be automatically included in builds.
+
+### ..sidebar Usage
+
+With the custom CSS all set up, we can use the folling RST:
+
+```
+..sidebar:: Summary
+
+  - First point in summary
+  - Second point in summary
+```
