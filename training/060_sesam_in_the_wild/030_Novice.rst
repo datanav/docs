@@ -9,6 +9,10 @@ Sesam in the Wild: Novice
 Novice topic
 ~~~~~~~~~~~~
 
+.. seealso::
+
+  TODO
+
 .. _tasks-for-sesam-in-the-wild-novice-6-2:
 
 Tasks for Sesam in the Wild: Novice

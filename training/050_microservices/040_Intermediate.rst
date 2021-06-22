@@ -30,6 +30,10 @@ Batching/streaming
 
 NB! siste batch sendt fra sesam er alltid en tom liste
 
+.. seealso::
+
+  TODO
+
 .. _looking-inside-an-output-microservice-5-3:
 
 Looking inside an Output Microservice
@@ -50,6 +54,10 @@ Gi gode feilmeldinger på http, catch spesifikke exceptions
 Batching/streaming
 
 NB! siste batch sendt fra sesam er alltid en tom liste
+
+.. seealso::
+
+  TODO
 
 .. _guidelines-for-microservice-development-5-3:
 
@@ -77,6 +85,10 @@ Release/tagging
 Ref. Optimalisering 5.3.17
 
 Requirements.txt
+
+.. seealso::
+
+  TODO
 
 .. _microservices-and-vcs-5-3:
 
@@ -108,6 +120,10 @@ Reference the “5.2.8 Changing a Microservice” for workflow
 Ref appendix with complete microservice workflow (create a sequence
 diagram Gabriell/Daniel?)
 
+.. seealso::
+
+  TODO
+
 .. _optimizing-a-microservice-5-3:
 
 Optimizing a Microservice
@@ -120,6 +136,10 @@ Streaming / Yield
 Delta/last seen
 
 Transparens (minst mulig transformasjon i microservice)
+
+.. seealso::
+
+  TODO
 
 .. _microservice-system-types-5-3:
 
@@ -144,6 +164,10 @@ Filer
 sFtp
 
 SOAP
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-microservices-intermediate-5-3:
 
