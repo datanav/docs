@@ -92,7 +92,7 @@ Numbering is added in post as the docs page is generated. We use the toctree fla
 
 A "floating" sidebar summary can be handled by the `.. sidebar` directive in combination with some custom CSS.
 
-### Initial setup:
+### Initial setup
 
 Sphinx expects the custom CSS to reside under `_build/html/_static/css/`.
 This folder is not GIT'ed so the CSS is stored as `_templates/css/sesam.css`.
@@ -106,8 +106,8 @@ $ ln -s ../../../../_templates/css/sesam.css sesam.css
 
 This will ensure correct relative link ref.
 
-With the custom CSS in the expected folder, `_templates/layout.html` is now able include it when building
-the project.
+With the custom CSS in the expected folder, `_templates/layout.html`
+is now able to include it when building the project.
 
 The following line was added to `layout.html` to handle this:
 
