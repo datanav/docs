@@ -12,9 +12,7 @@ What is a system in Sesam?
 
   A Sesam system is a reusable interface to an external system outside of Sesam.
 
-.. A system defines the connectors through which Sesam communicates with the outside world.
-
-A system is an interface that enables Sesam to communicate with the outside world.
+A system in Sesam is an interface that enables Sesam to communicate with the outside world.
 
 If you need Sesam to pull data from an external system,
 you define that external system as a system config inside Sesam.
@@ -69,7 +67,16 @@ Input, output (mention transform?)
 How to create a system with Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let us create a new system from scratch called ``difi``.
+.. sidebar:: Summary
+
+  - From **Systems** view: Click **New system**
+  - Fill in ``_id``
+  - Click **Templates**
+  - Choose **System type**
+  - Click **Replace**
+  - Fill in any remaining details
+
+Let us create a new system from scratch called "`difi`".
 In the Sesam Management Studio, navigate to the **Systems** view and follow these steps:
 
 - Click the **New system** button
@@ -114,6 +121,13 @@ You can check the connectivity status by clicking the **Status** tab.
 Environment variables & Secrets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  - Environment variables and secrets are named values used to parameterize configs
+  - Environment variables: ``"$ENV(my-env-var)"``
+  - Secrets: ``"$SECRET(my-secret)"``
+  - Eases and improves config maintenance
+
 How are secrets stored in the backend? – Discuss with product
 
 How do systems read secrets? Encrypted and decrypted in transmission or
@@ -123,9 +137,66 @@ $SECRET
 
 $ENV
 
+Environment variables are named values that can be used to parameterize
+Sesam configs.
+
+In this section we will cover how environment variables and secrets typically
+are used in system configs.
+
+Environment variables are referenced with ``"$ENV(my-env-var)"``.
+
+Secrets are referenced with ``"$SECRET(my-secret)"``.
+
+It is generally a good idea to put the parts of a configuration that differ between
+environments (develop, test, production, etc.) into environment variables.
+
+This includes configs such as server URLs, database names, API URLs, usernames, etc.
+
+By putting these configs parts into environment variables you can define each of them
+separately in the respective environments, but keep the system config identical
+in each of them.
+
+This is also practical for version control of the config.
+You can change the values of the environment variables separate from the actual
+system config.
+
+Continuing from the example :ref:`practice-system-config-initial` let us see how the
+introduction of environment variables can improve the system config.
+
+The ``url_pattern`` is a good canditate to be put into an environment variable.
+Let us call it `"difi-api"` and reference it from the system config.
+
+First we define the new environment variable under
+**Datahub > Variables > Environment variables**:
+
+.. code-block:: json
+  
+  "difi-api": "https://ws.geonorge.no/kommuneinfo/v1/%s"
+
+Then we change the system config to reference it:
+
+.. _practice-system-config-env-var-ref:
+.. code-block:: json
+  :caption: Practice system config with environment variable reference
+  :linenos:
+
+  {
+    "_id": "difi",
+    "type": "system:url",
+    "url_pattern": "$ENV(difi-api)"
+    "verify_ssl": true
+  }
+
+Say we want to access different Difi APIs depending on which environment
+we are accessing Difi from, or that Difi decided to change the API URL at some point.
+The only thing that we have to update is the value of ``difi-api``.
+No changes to the actual system config is required.
+
 .. seealso::
 
-  TODO
+  Concepts - Configuration: :ref:`concepts-environment-variables`
+
+  Concepts - Configuration: :ref:`concepts-secrets`
 
 .. _json-push-pull-protocol-2-1:
 

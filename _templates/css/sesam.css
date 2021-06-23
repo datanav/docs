@@ -42,20 +42,30 @@ div.code-block-caption::before
 }
 */
 
+/* Formatting of .. sidebar:: as a "floating" sidebar to the right of the section */
 div.sidebar
 {
-    background: #edf7fa ;
-    border-color: #428bca ;
-    border-radius: 10px 10px 10px 10px;
+    background: aliceblue ; /* same as h1 background-color */
+    border-color: #337ab7 ; /* same as text-logo background-color */
+    border-radius: 10px 10px 10px 10px; /* rounded cornes */
     border-style: solid ;
     border-width: 2px ;
-    float: right ;
+    float: right ; /* position relative to the main text */
     margin-left: 10px ;
     padding: 10px ;
-    width: 30% ;
+    width: 50% ; /* occupy a given percentage of screen width */
 }
 
 .sidebar-title
 {
     font-weight: bold ;
+}
+
+/* Formatting of single quote citations `...` */
+cite
+{
+    /*
+    font-style: italic ;
+    */
+    font-family: courier, monospace ;
 }
