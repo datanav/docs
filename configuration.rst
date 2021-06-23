@@ -6099,7 +6099,7 @@ Each object is on the form:
     {
         "source_property": "name_of_property",
         "name": "name_of_column",
-        "type": "string|integer|decimal|float|bytes|datetime|date|time|uuid|boolean",
+        "type": "string|integer|decimal|float|binary|datetime|date|time|uuid|boolean",
         "max_size|max_value": 1234,
         "min_size|min_value": 1234,
         "precision": 10,
@@ -6155,12 +6155,12 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - nvarchar(MAX)
      - Unicode
 
-   * - ``bytes``
+   * - ``binary``
      - <= 8000
      - varbinary(size)
      -
 
-   * - ``bytes``
+   * - ``binary``
      - > 8000
      - varbinary(MAX)
      -
