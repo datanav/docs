@@ -10,7 +10,7 @@ What is a system in Sesam?
 
 .. sidebar:: Summary
 
-  A Sesam system is a reusable interface to an external system outside of Sesam.
+  A system in Sesam is a reusable interface to an external system outside of Sesam.
 
 A system in Sesam is an interface that enables Sesam to communicate with the outside world.
 
@@ -67,6 +67,9 @@ Input, output (mention transform?)
 How to create a system with Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. TODO:
+.. We should consider having a consistent example case to build on throughtout these chapters.
+
 .. sidebar:: Summary
 
   - From **Systems** view: Click **New system**
@@ -112,9 +115,12 @@ You can check the connectivity status by clicking the **Status** tab.
 
 .. seealso::
 
+  Best Practices - Data modelling in Sesam: :ref:`best-practice-naming-conventions`
+
   Developer Guide - Service Configuration: :ref:`url_system`
 
   DTL - Beginner: :ref:`dtl-in-practice-3-1`
+
 
 .. _environment-variables-secrets-2-1:
 
@@ -124,45 +130,55 @@ Environment variables & Secrets
 .. sidebar:: Summary
 
   - Environment variables and secrets are named values used to parameterize configs
-  - Environment variables: ``"$ENV(my-env-var)"``
-  - Secrets: ``"$SECRET(my-secret)"``
+  - Environment variables are:
+
+    - unencrypted
+    - referenced with: ``"$ENV(my-env-var)"``
+
+  - Secrets are:
+    
+    - encrypted
+    - referenced with: ``"$SECRET(my-secret)"``
+    
+  - Both are defined under Datahub > Variables
+  - Secrets can also be stored under a system's **Secrets** tab
   - Eases and improves config maintenance
-
-How are secrets stored in the backend? – Discuss with product
-
-How do systems read secrets? Encrypted and decrypted in transmission or
-passed as plain text?
-
-$SECRET
-
-$ENV
-
-Environment variables are named values that can be used to parameterize
-Sesam configs.
 
 In this section we will cover how environment variables and secrets typically
 are used in system configs.
 
-Environment variables are referenced with ``"$ENV(my-env-var)"``.
+Environment variables and secrets are named values
+that can be used to parameterize Sesam configs.
 
-Secrets are referenced with ``"$SECRET(my-secret)"``.
+Environment variables are stored and processed as *unencrypted* values,
+and are referenced with ``"$ENV(my-env-var)"``.
+
+Secrets are stored and processed as *encrypted* values,
+and are referenced with ``"$SECRET(my-secret)"``.
+
+Both are defined in the Sesam Management Studio under **Datahub > Variables**.
+
+Secrets can also be defined locally in a system config under the system's
+**Secrets** tab.
+
+.. warning::
+
+  If a system config is deleted, all secrets stored locally in that system config is lost!
 
 It is generally a good idea to put the parts of a configuration that differ between
 environments (develop, test, production, etc.) into environment variables.
+This includes configs such as server names, database connection strings, API URLs, usernames, etc.
 
-This includes configs such as server URLs, database names, API URLs, usernames, etc.
-
-By putting these configs parts into environment variables you can define each of them
-separately in the respective environments, but keep the system config identical
-in each of them.
+By putting these config parts into environment variables you can define each of them
+separately in each Sesam node used for the respective environments,
+but keep the actual system config identical in each node.
 
 This is also practical for version control of the config.
 You can change the values of the environment variables separate from the actual
 system config.
 
-Continuing from the example :ref:`practice-system-config-initial` let us see how the
+Continuing from the example :ref:`practice-system-config-initial`, let us see how the
 introduction of environment variables can improve the system config.
-
 The ``url_pattern`` is a good canditate to be put into an environment variable.
 Let us call it `"difi-api"` and reference it from the system config.
 
@@ -189,7 +205,8 @@ Then we change the system config to reference it:
 
 Say we want to access different Difi APIs depending on which environment
 we are accessing Difi from, or that Difi decided to change the API URL at some point.
-The only thing that we have to update is the value of ``difi-api``.
+The only thing that we have to update is the value of the ``difi-api``
+environment variable.
 No changes to the actual system config is required.
 
 .. seealso::
