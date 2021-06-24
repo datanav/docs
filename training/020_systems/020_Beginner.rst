@@ -140,8 +140,8 @@ Environment variables & Secrets
     - encrypted
     - referenced with: ``"$SECRET(my-secret)"``
     
-  - Both are defined under Datahub > Variables
-  - Secrets can also be stored under a system's **Secrets** tab
+  - Both are defined under **Datahub > Variables**
+  - Secrets can also be defined under a system's **Secrets** tab
   - Eases and improves config maintenance
 
 In this section we will cover how environment variables and secrets typically
