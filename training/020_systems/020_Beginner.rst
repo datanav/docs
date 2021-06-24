@@ -246,6 +246,9 @@ JSON Push & Pull protocol
 
 Lots of info in docs.
 
+Yes, so should we even write about it here?
+Or should we just reference the docs?
+
 .. seealso::
 
   TODO
@@ -254,3 +257,25 @@ Lots of info in docs.
 
 Tasks for Systems: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- What is a system in Sesam?
+
+- From where in the Sesam Management Studio can a new system be created?
+
+- What is a Sesam environment variable?
+
+- What is a Sesam secret?
+
+- Name some of the benefits of using environment variables in a system config?
+
+- Where are environment variables defined?
+
+- Where are secrets defined?
+
+- What is the difference between environment variables and secrets?
+
+- When should secrets be used instead of environment variables?
+
+- How are environment variables referenced in Sesam configs?
+
+- How are secrets referenced in Sesam configs?
