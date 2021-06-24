@@ -45,7 +45,10 @@ pipe configs.
 Introduction to SQL & JSON systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No such thing as a JSON system.
+No such thing as a JSON system. We do have a JSON *source*.
+
+Should we even explain specific systems here?
+Or would it be sufficient to reference the docs?
 
 .. seealso::
 
