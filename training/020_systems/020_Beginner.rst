@@ -53,14 +53,38 @@ No such thing as a JSON system.
 
 .. _pipe-interaction-with-systems.-2-1:
 
-Pipe interaction with systems.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pipe interaction with systems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Input, output (mention transform?)
+.. Do this section belong under Systems or should it maybe be moved
+.. under a section where we talk about pipes?
+
+.. sidebar:: Summary
+
+  Pipes use systems as:
+
+  - ``source``
+  - ``sink``
+  - external transform
+
+The systems defined inside Sesam do not do so much by themselves.
+It is when they are used by pipes that data can start to flow.
+
+There are three ways a pipe can interact with a system:
+
+#. As a ``source`` for importing data into Sesam
+#. As a ``sink`` to push data out from Sesam
+#. As an external transform in a ``transform`` step to do intermediate processing
+
 
 .. seealso::
 
-  TODO
+  Concepts - Configuration: :ref:`concepts-pipes`
+
+  Architecture and Concepts: Beginner: :ref:`pipes-1-1`
+
+  DTL: Beginner: :ref:`pipes-where-dtl-executes-3-1`
+
 
 .. _how-to-create-a-system-with-templates-2-1:
 
