@@ -127,7 +127,7 @@ You should now have the following system config:
   {
     "_id": "difi",
     "type": "system:url",
-    "url_pattern": "https://ws.geonorge.no/kommuneinfo/v1/%s"
+    "url_pattern": "https://ws.geonorge.no/kommuneinfo/v1/%s",
     "verify_ssl": true
   }
 
@@ -226,7 +226,7 @@ Then we change the system config to reference it:
   {
     "_id": "difi",
     "type": "system:url",
-    "url_pattern": "$ENV(difi-api)"
+    "url_pattern": "$ENV(difi-api)",
     "verify_ssl": true
   }
 
