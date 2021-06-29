@@ -540,9 +540,8 @@ start and finish points of every integration flow. System may cover
 other functionalities as well, but we will cover those special cases in
 later parts [ref to later parts].
 
-<<<<<<< HEAD
-In this section we will show you an example of two of the most commom systems in a Sesam installation, 
-the mssql and the microservice system. We will also show how these systems can connect to pipes to 
+In this section we will show you an example of the most commom system in a Sesam installation, 
+the mssql system. We will also show how this system can connect to pipes to 
 either import or export data, depending on your need.  
 
 The MSSQL system
@@ -563,11 +562,7 @@ Since they are a relatively common way to store data, Sesam has a ready built-in
    MSSQL system status.
 
 Once the connection is open the node can extract data from the tables in the database through inbound pipes connected to the system. You can see if the connection to the MSSQL database is open by going to the "Status" tab on the system page. Should the system health state "failure" in your connectivity, this could be because you have some parameter values in your config wrong, or there might be a firewall blocking your access.
-=======
-.. seealso::
 
-  TODO
->>>>>>> f1f079e0a218f1f7dae004a4bd68f1486861f67a
 
 .. _pipes-1-1:
 
