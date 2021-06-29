@@ -195,7 +195,7 @@ Global datasets lie at the heart of a well managed Sesam architecture. They are 
 Creating global datasets allows you to:
 
 - 	Semantically group and structure data
-		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architecture and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
 		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
 
 -	Setup master data management - Golden records
@@ -205,7 +205,7 @@ Creating global datasets allows you to:
 
 
 
-	A global pipe, "global-person", has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe "global-person" we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
+	A global pipe, ``global-person``, has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe ``global-person`` we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
 
 	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
 
@@ -283,7 +283,7 @@ Customize data structure for outbound flows
 
 An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
-As an example, the data presented below is produced by the pipe "global-person":
+As an example, the data presented below is produced by the pipe ``global-person``:
 
 .. code-block:: json
 
@@ -296,7 +296,7 @@ As an example, the data presented below is produced by the pipe "global-person":
 	  "crm-account:hobbies": "Builds LEGO"
 	}   
 
-The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace ``global-person:``. To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
 
 .. code-block:: json
 
