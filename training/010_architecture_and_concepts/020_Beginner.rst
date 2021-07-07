@@ -580,6 +580,10 @@ name with an example:
 Systems
 ~~~~~~~
 
+.. sidebar:: Summary
+
+  Systems are interfaces to external systems.
+
 Short about systems (where in the sesam-world-map)
 
 Something more general about pipes maybe in context of pipes and
