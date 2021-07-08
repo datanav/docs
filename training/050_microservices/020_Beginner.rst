@@ -27,11 +27,25 @@ Docker
 Why use Microservices in Sesam?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-System som gjør ting andre systemer ikke kan
+.. sidebar:: Summary
+
+  When built-in connectors are insufficient, use microservices.
+
+Most of the time you can use Sesam's build-in connectors to access
+external systems, but sometimes you will find that you need to connect
+to systems that are not natively supported by Sesam.
+
+In these cases you either find an existing microservice and reuse it as is,
+tweak it a bit  to fit your needs, or simply write your own from scratch.
+
+The Sesam communities at GitHub and DockerHub are great places to look
+for microservices to reuse and tweak to your specific needs.
 
 .. seealso::
 
-  TODO
+  Sesam's GitHub community: https://github.com/sesam-community
+
+  Sesam's DockerHub community: https://hub.docker.com/u/sesamcommunity
 
 .. _how-are-microservices-used-in-sesam-5-1:
 
