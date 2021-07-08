@@ -21,13 +21,13 @@ What is a microservice?
 Microservices are modular self-contained software programs that provide a particular service.
 
 In a Sesam perspective they can function as connectors to either pull data from a source system,
-push data to a target system or transform data as part of a ``transform`` step inside a pipe in Sesam.
+push data to a target system or transform data as part of a step inside a pipe.
 
 Microservice code can essentially be written in any programming language, but in Sesam we usually
 prefer Python 3.
 
-Microservices are hosted in Sesam as docker containers. They are configured using Sesam's
-system config and their logs can be inspected through the system's **Status** tab.
+Microservices are hosted in Sesam as docker containers. They are configured using
+system configs and their logs can be inspected through the system's **Status** tab.
 
 .. seealso::
 
