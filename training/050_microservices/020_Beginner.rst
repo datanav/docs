@@ -36,7 +36,7 @@ external systems, but sometimes you will find that you need to connect
 to systems that are not natively supported by Sesam.
 
 In these cases you either find an existing microservice and reuse it as is,
-tweak it a bit  to fit your needs, or simply write your own from scratch.
+tweak it a bit to fit your needs, or simply write your own from scratch.
 
 The Sesam communities at GitHub and DockerHub are great places to look
 for microservices to reuse and tweak to your specific needs.
