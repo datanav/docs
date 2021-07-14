@@ -51,37 +51,41 @@ Microservice hosting
 
 .. sidebar:: Summary
 
-  - Microservice source code is hosted in Sesam's community at GitHub
-  - Microserice docker images are hosted in Sesam's community at DockerHub
-  - Auto-build scripts publishes docker images to Sesam's community at DockerHub
+  - Microservice source code is hosted in `Sesam's community at GitHub <https://github.com/sesam-community>`_
+  - Microserice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  - Auto-build scripts publish docker images to Sesam's community at DockerHub
+  - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
-Sesamcommunity Git & Docker
+We have already touched on the Sesam Community at GitHub and DockerHub
+to find available microservices. Let us take a more detailed look at how
+microservice hosting is done with Sesam.
 
-Intro til Hosting
-
-We have already touched on the Sesam community at GitHub and DockerHub
-to search for microservices. Let us take a more detailed look at how
-microservice hosting is done in Sesam.
-
-There is the Sesam comminity at GitHub for hosting microservice source code,
-and there is the Sesam comminity at DockerHub for hosting the microservice
-docker images which enabled Sesam to spin up docker containers as we
-covered in the previous sections.
+There is the `Sesam Community at GitHub <https://github.com/sesam-community>`_
+for hosting microservice source code,
+and there is the `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+for hosting the microservice
+docker images.
 
 When writing microservices we recommend putting the source code into
-Sesam's community at GitHub as Open Source
+Sesam's community at GitHub so that it can be shared and reused in other projects
 (unless there are specific restrictions in place).
 
-By configuring the microservices using Sesam's Travis script, when the
-source code is pushed to GitHub, Travis will automatically build a docker image
-and publish it to Sesam's docker hub community.
+By configuring the microservices using Sesam's auto-build script, when the
+source code is pushed to GitHub, the script will automatically build a docker image
+and publish it to Sesam's DockerHub community.
 
-From there the microservices will be available for use in virtually any
-Sesam project.
+From there the microservices will be available for use in any Sesam project.
+
+See the `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
+for more information on how to use the auto-build script and also how to contribute in general.
 
 .. seealso::
 
-  TODO
+  `Sesam Community at GitHub <https://github.com/sesam-community>`_
+
+  `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+
+  `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
 .. _running-a-microservice-in-sesam-5-1:
 
