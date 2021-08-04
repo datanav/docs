@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2021_08_04:
+
+2021-08-04
+----------
+
+* Added a ``header`` property to the :ref:`JSON source <json_source>`. This property can be used to specify
+  additional header values to be set when doing HTTP GET requests. This was added to make the JSON source
+  symmetrical with the :ref:`JSON (push) sink <json_push_sink>'. Note that both the JSON source and sink
+  adhere to the Sesam specific :doc:`JSON Pull Protocol <json-pull>`. Consider using the more general REST source or
+  sink if you're interacting with a non-Sesam JSON capable REST api.
+
 .. _changelog_2021_06_14:
 
 2021-06-14
