@@ -2876,7 +2876,12 @@ The JSON source
 ---------------
 
 
-The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server). The data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
+`HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
+The service must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+
+Consider using the more general :ref:`REST source <rest_source>` if you're interacting with a non-Sesam JSON capable
+REST api.
 
 If the ``supports_since`` property is set to *true*, then the ``since`` request parameter is added to the URL to
 signal that we want only changes that happened after the since marker.
@@ -2890,7 +2895,10 @@ Prototype
        "system": "system-id",
        "type": "json",
        "url": "url-to-json-data",
-       "supports_signalling": false
+       "supports_signalling": false,
+       "headers": {
+           "some-header": "some-value"
+       }
     }
 
 Properties
@@ -2944,6 +2952,13 @@ Properties
        .. NOTE:: For this to work the source must support subsets.
      -
      - No
+
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set in HTTP request made using this source. Both keys and values must
+       evaluate to strings.
+     -
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -5315,6 +5330,9 @@ to an :ref:`HTTP endpoint <url_system>`.
 The protocol is described in additional detail in the :doc:`JSON Push
 Protocol <json-push>` document. The serialisation of entities as JSON
 is described in more detail :doc:`here <entitymodel>`.
+
+Consider using the more general :ref:`REST sink <rest_sink>` if you're interacting with a non-Sesam JSON
+capable REST api.
 
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
