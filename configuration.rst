@@ -199,7 +199,7 @@ Properties
    * - ``global_defaults.compaction_interval``
      - Float
      - Specifies the default sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent pipes that run often from constantly trying to compact the sink-dataset.
      - ``0``
@@ -675,7 +675,7 @@ Properties
    * - ``compaction.compaction_interval``
      - Float
      - Specifies the sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent a pipe that run often from constantly trying to compact the sink-dataset.
      - ``0``
