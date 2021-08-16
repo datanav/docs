@@ -63,8 +63,7 @@ microservice hosting is done with Sesam.
 There is the `Sesam Community at GitHub <https://github.com/sesam-community>`_
 for hosting microservice source code,
 and there is the `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
-for hosting the microservice
-docker images.
+for hosting microservice docker images.
 
 When writing microservices we recommend putting the source code into
 Sesam's community at GitHub so that it can be shared and reused in other projects
