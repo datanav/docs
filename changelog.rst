@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2021_08_16:
+
+2021-08-16
+----------
+
+* Clarified when the ``is_first`` and ``is_last`` flags can be expected to be set in the Sesam: doc:`JSON Push Protocol <json-push>` - these flags are only set when running a full sync (i.e. not when in incremental mode). They are intended to signal to the client the start and end of a full sync run across multiple requests.
+* Fixed a bug in the :ref:`JSON (push) sink <json_push_sink>` that set the ``is_first`` flag also on incremental syncs.
+
 .. _changelog_2021_08_04:
 
 2021-08-04

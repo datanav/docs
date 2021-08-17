@@ -48,10 +48,12 @@ The following HTTP request parameters are supported:
        previous request. Included in all but the first request.
      
    * - is_first
-     - A boolean. Included in the first request with the value ``true``.
+     - A boolean. Included in the first request with the value ``true``. Note that this flag
+       is only set during a full data sync (i.e. ``is_full`` is ``true``).
      
    * - is_last
-     - A boolean. Included in the last request with the value ``true``.
+     - A boolean. Included in the last request with the value ``true``. Note that this flag
+       is only set during a full data sync (i.e. ``is_full`` is ``true``).
 
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
