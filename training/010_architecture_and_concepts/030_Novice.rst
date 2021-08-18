@@ -251,6 +251,7 @@ In this case, all three source datasets have an email property. If the email pro
   ] 
 
 The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritizations.
 
 
 .. seealso::
