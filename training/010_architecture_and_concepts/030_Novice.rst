@@ -306,6 +306,10 @@ Firstly, when reading data from a source system, if supported by the source, it 
 
 Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``_hash`` property will be created. This ``_hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``_hash`` value changes, any downstream pipes register this change and recognizes it as a new sequence number that needs to be processed again.
 
+.. seealso::
+
+  :ref:`entity_data_model`,	:ref:`concepts-datasets`, :ref:`concepts-change-tracking`
+
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 
 Tasks for Architecture and Concepts: Novice

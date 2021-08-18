@@ -1,3 +1,5 @@
+.. _entity_data_model:
+
 =================
 Entity Data Model
 =================
