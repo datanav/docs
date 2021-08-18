@@ -42,6 +42,12 @@ div.code-block-caption::before
 }
 */
 
+
+div.figure
+{
+  margin: 50px 0 50px 0; /* make sure there is "air" around figures */
+}
+
 /* Formatting of .. sidebar:: as a "floating" sidebar to the right of the section */
 div.sidebar
 {
@@ -50,6 +56,7 @@ div.sidebar
     border-radius: 10px 10px 10px 10px; /* rounded cornes */
     border-style: solid ;
     border-width: 2px ;
+    font-size: small ; /* scale down font to make info more legible */
     float: right ; /* position relative to the main text */
     margin-left: 10px ;
     padding: 10px ;
