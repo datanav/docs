@@ -181,6 +181,8 @@ To the right side of the interface there is a list of available **keyboard short
     :align: center
     :alt: Generic pipe concept
 
+.. _management-studio-systems:
+
 Systems
 =======
 

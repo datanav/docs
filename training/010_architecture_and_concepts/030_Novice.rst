@@ -36,6 +36,10 @@ The rule for joins is very simple: if any of the values overlap, then the join s
 
 All of the four joins given above succeed for the two data objects given, because they all have overlapping values, i.e. the values 1 and 4.
 
+.. seealso::
+
+  TODO
+
 .. _make-namespaced-identifiers-for-foreign-keys-make-ni-1-2:
 
 Make namespaced identifiers for foreign keys - make-ni
@@ -84,6 +88,10 @@ and will result in the following dataset when run. For the purpose of spacing, o
 
 
 As can be seen in the above dataset, the property with the key "mssql-accounts:phone-ni" is the result of the function ["make-ni"] as defined in the above pipe config. The value can be used to join data between the pipes "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
+
+.. seealso::
+
+  TODO
 
 .. _full-outer-join-merge-1-2:
 
@@ -135,6 +143,9 @@ and the merged result, if we choose to retain the first "_id" of the above two d
 
 What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.  
 
+.. seealso::
+
+  TODO
 
 .. _left-join-hops-1-2:
 
@@ -185,16 +196,67 @@ When applying the hops, our point of reference will be the first data object fro
 
 As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.  
 
+.. seealso::
+
+  TODO
+
 .. _global-1-2:
 
 Global
 ~~~~~~
 
-Golden – the best truth about common attributes of a concept collected
-from multiple sources
+Global datasets lie at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
-Coalesce, prioritization of source data (master data)
+Creating global datasets allows you to:
 
+- 	Semantically group and structure data
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
+		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
+
+-	Setup master data management - Golden records
+		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize which system knows a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. Another benefit of golden records are their reusability. Once their logic has been created a golden record may be used by any project downstream from its global dataset, thus saving both time and energy.
+
+		Golden records are created with the ``["coalesce"]`` function, as shown in the example below.
+
+
+
+	A global pipe, ``global-person``, has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe ``global-person`` we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
+
+	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
+
+.. code-block:: json
+  :linenos:
+
+  ["add", "email",
+    ["coalesce",
+      ["list", "_S.hr-person:email", "_S.crm-person:Email", "_S.economy-person:e-mail"]
+    ]
+  ]
+
+In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
+
+.. code-block:: json
+  :linenos:	
+
+  ["add", "hours-pr-project",
+    ["coalesce",
+      ["list", "_S.crm-person:hours-pr-project", "_S.economy-person:hours-pr-project"]
+  ]
+
+
+  ["add", "weekly-hours-billed",
+    ["coalesce",
+      ["list", "_S.economy-person:weekly-hours-billed", "_S.crm-person:weekly-hours-billed"]
+    ]
+  ] 
+
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritizations.
+
+
+.. seealso::
+
+  TODO
 
 .. _guidelines-inbound-and-outbound-pipes-1-2:
 
@@ -225,6 +287,10 @@ The amount of DTL in a given pipe with respect to modelling stage in Sesam shoul
    Figure – DTL Amount
 
 
+.. seealso::
+
+  TODO
+
 .. _filter-entities-on-the-way-out-1-2:
 
 Filter entities on the way out
@@ -234,6 +300,10 @@ Filtering entities after the global stage of modelling is a common use case. Fil
 
 Imagine you are working on a large dataset produced by a global pipe. You quickly recognize that the amount of data and all its properties is not that relevant to you. Therefore, one of the first things you do is to apply a filter on a specific key and value. This leaves you with a subset of the complete data. As you look closely at the state of the data, after having applied your first filter, you are not immediately satisfied. This makes you apply another filter to alter the state of the data further. Therefore, you decide to add a specific property given a specific condition; i.e., if the entity is of type: "Employee" - add properties "Salary", "Position" and "Goals". Finally, if it is not of type "Employee" apply a filter to exclude that entity. As illustrated, it is not unusual to use multiple filters in a DTL config, especially when the amount of DTL increases, and a need for stepwise filtering presents itself.
 
+.. seealso::
+
+  TODO
+
 .. _customize-data-structure-for-endpoints-1-2:
 
 Customize data structure for outbound flows
@@ -241,7 +311,7 @@ Customize data structure for outbound flows
 
 An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
-As an example, the data presented below is produced by the pipe "global-person":
+As an example, the data presented below is produced by the pipe ``global-person``:
 
 .. code-block:: json
 
@@ -254,7 +324,7 @@ As an example, the data presented below is produced by the pipe "global-person":
 	  "crm-account:hobbies": "Builds LEGO"
 	}   
 
-The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace ``global-person:``. To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
 
 .. code-block:: json
 
@@ -295,6 +365,10 @@ based on the declared DTL functions, this would produce the following:
 	  "global-person:Position": "Engineer"
 	} 
 
+.. seealso::
+
+  TODO
+
 .. _change-tracking-data-delta-1-2:
 
 Change tracking & data delta
@@ -312,6 +386,10 @@ this as a new sequence number they haven’t yet read. This in turn makes
 the pipe process the entity. If the processed entity does not exist or
 gets a new \_hash in the output of the pipe, it will cause an update to
 the output dataset.
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 

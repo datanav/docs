@@ -30,6 +30,10 @@ system:config-dataset
 
 Lage grupp/tilganger
 
+.. seealso::
+
+  TODO
+
 .. _sesam-cli-4-1:
 
 sesam-CLI
@@ -89,6 +93,10 @@ run
 
 Hvordan funker expected output
 
+.. seealso::
+
+  TODO
+
 .. _testing-and-testdata-4-1:
 
 Testing & Testdata
@@ -125,6 +133,10 @@ Dokumenter testdata
 
 Hvordan funker expected output
 
+.. seealso::
+
+  TODO
+
 .. _documentation-4-1:
 
 Documentation
@@ -148,6 +160,10 @@ DTL dokumentasjon(comments)
 
 clean code
 
+.. seealso::
+
+  TODO
+
 .. _jwt-authentication-4-1:
 
 JWT/Authentisering
@@ -157,6 +173,10 @@ Hvordan fungerer JWT’er?
 
 NB: Skal snake mer om API I sesam-in-the-wild
 
+.. seealso::
+
+  TODO
+
 .. _groups-and-permissions-4-1:
 
 Groups & Permissions
@@ -165,6 +185,10 @@ Groups & Permissions
 Hvordan virker det
 
 Får man satt opp tilgangsstyring i Sesam?
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-projects-infrastructure-beginner-4-1:
 

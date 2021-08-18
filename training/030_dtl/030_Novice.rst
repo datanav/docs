@@ -63,6 +63,9 @@ Data produced by the pipe DTL transformation:
 
 As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]`` function.
 
+.. seealso::
+
+  TODO
 
 .. _add-3-2:
 
@@ -71,12 +74,20 @@ As can be seen from the above produced data, the property with the key "_positio
 
 Explain the add, based on ref 3.1.4 above
 
+.. seealso::
+
+  TODO
+
 .. _concat-concatination-3-2:
 
 "Concat" - Concatination
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Concatenation of strings, examples etc
+
+.. seealso::
+
+  TODO
 
 .. _rdf:type-3-2:
 
@@ -85,6 +96,10 @@ rdf:type
 
 Resource Description Framework (?) explain what it means in Sesam
 context
+
+.. seealso::
+
+  TODO
 
 .. _namespace-3-2:
 
@@ -95,6 +110,10 @@ Explain namespace in \_id (value) and keys.
 
 EXAMPLESSS
 
+.. seealso::
+
+  TODO
+
 .. _make-ni-3-2:
 
 "Make-ni"
@@ -102,12 +121,20 @@ EXAMPLESSS
 
 Declaraiton of foreign key in Sesam, explain /reference Namespace
 
+.. seealso::
+
+  TODO
+
 .. _eq-equality-3-2:
 
 "Eq" - Equality
 ~~~~~~~~~~~~~~~
 
 Equality for joins [n-n]
+
+.. seealso::
+
+  TODO
 
 .. _merge-as-a-source-3-2:
 
@@ -128,12 +155,20 @@ coming in goes out.
 
 Explain in the context of reading from global pipes
 
+.. seealso::
+
+  TODO
+
 .. _coalesce-3-2:
 
 Coalesce
 ~~~~~~~~
 
 ref 1.2.19
+
+.. seealso::
+
+  TODO
 
 .. _nested-dictionaries-3-2:
 
@@ -154,12 +189,20 @@ A: [{"foo":1},{"foo":2}] -> \_S.A.foo = [1,2]
 
 *Example 3.2.17A: Dotted Notation*,
 
+.. seealso::
+
+  TODO
+
 .. _apply-custom-functions-3-2:
 
 Apply - Custom Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Basic, bare bruk på data fra \_S, forklar det uten å bruke hops
+
+.. seealso::
+
+  TODO
 
 .. _merge-as-a-function-3-2:
 
@@ -170,6 +213,10 @@ Source type Merge VS Transformation Merge
 
 Merging dictionaries up to the root level of entities.
 
+.. seealso::
+
+  TODO
+
 .. _hops-3-2:
 
 Hops
@@ -177,12 +224,20 @@ Hops
 
 Basics, uten apply
 
+.. seealso::
+
+  TODO
+
 .. _underline-properties-3-2:
 
 \_ Properties
 ~~~~~~~~~~~~~
 
 (_deleted, filtered, \_id, \_previous, \_updated, *\_hash? REF 1.2.24*)
+
+.. seealso::
+
+  TODO
 
 .. _type-examples-3-2:
 
@@ -230,6 +285,10 @@ Type eksempler:
 ○ If-null
 
 ○ Is-empty
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-dtl-novice-3-2:
 
