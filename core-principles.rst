@@ -241,8 +241,14 @@ data quality completely trustworthy.
 
 .. rubric:: Continuous enrichment of data and data model pattern
 
-Data enrichment is the merging of related data from multiple sources to the data platform. Data enrichment in Sesam is continuous, all systems can at any time make data available to the data platform, and onto the systems that need it. Although care should be taken in the design of the data model pattern. Indeed, positive feedback loops can occur and updated data could trigger more updates in a back and forth infinite loop. There are a few tools to prevent this phenomenon, for exemple identify merged entities as such and prevent source pipe to re process them.
+Data enrichment is the merging of related data from multiple sources to the data platform. Data enrichment in Sesam is continuous, all systems can at any time make data available to the data platform, and onto the systems that need it. Data can also be enrich from within the data model, and data can be fetch from one dataset to complement another.  Data enrichment is typically triggered when data is refreshed. Although continuous data enrichment has pitfalls and care should be taken in the design of the data model pattern. Indeed, positive feedback loops can occur and updated data could trigger more updates in a back and forth infinite loop. There are a few tools to prevent this phenomenon, for exemple identify merged entities as such and prevent source pipe to re process them.
 
-Certain updates might also require to be applied to the whole dataset. Sesam offers a completeness mechanism that allows any processing of the data being updated to be put on hold until the whole dataset has been processed. Note that this mechanism can impede performances of the node when applies to a large global.
+.. rubric:: Data refresh and completeness
 
 Data enrichment and semantic correlation can bind together conflicting data. It is important to define who/which system has the authority and identify the trustworthy elements within the data platform. The "golden record" is the result of this labelling, it encompasses the set of elements that are deemed trustworthy and up to date.
+
+Certain data updates might require to be applied to a whole dataset at once. Sesam offers a completeness mechanism that allows any processing of the data being updated to be put on hold until the whole dataset has been processed. Note that this mechanism can impede performances of the node when applies to a large global.
+
+.. rubric:: Golden record
+
+Data enrichment and semantic correlation can bind together conflicting data. It is important to define who/which system has the authority and identify the trustworthy elements within the data platform. The “golden record” is the result of this labelling, it encompasses the set of elements that are deemed trustworthy and up to date.
