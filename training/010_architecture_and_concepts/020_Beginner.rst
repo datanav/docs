@@ -520,10 +520,10 @@ name with an example:
 Systems
 ~~~~~~~
 
-Systems are one of Sesam’s core components.
+Systems are one of Sesam's core components.
 Systems can connect to external providers such as SQL databases, REST APIs,
 Microservices and more, to either import data into Sesam or export data out from Sesam.
-Systems are therefore the start and end points of every integration flow.
+Systems are therefore the start and end points of every dataflow.
 
 Systems may cover other functionalities as well, but we will cover those special cases
 later.
