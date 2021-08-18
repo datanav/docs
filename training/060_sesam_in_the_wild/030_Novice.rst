@@ -9,7 +9,6 @@ Sesam in the Wild: Novice
 Novice topic
 ~~~~~~~~~~~~
 
-
 .. _creating-mapping-data-for-enrichment-6-2:
 
 Creating mapping data for enrichment
@@ -96,6 +95,9 @@ As can be seen from the above result, we are now able to tell that Tordenskjold 
 
 The above example shows how a scenario might arise where you need to create sub-concepts of your data to get the required knowledge needed to handle your data appropriately.  
 
+.. seealso::
+
+  TODO
 
 .. _tasks-for-sesam-in-the-wild-novice-6-2:
 

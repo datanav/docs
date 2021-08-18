@@ -20,6 +20,10 @@ prod = live node som kjører live integrasjoner
 
 Tagging av brancher for deployment
 
+.. seealso::
+
+  TODO
+
 .. _ci-cd-4-3:
 
 Continoues Integration and Deployment
@@ -58,6 +62,10 @@ byggserver
 
 Autodeploy/vs ikke
 
+.. seealso::
+
+  TODO
+
 .. _workflow-in-projects-4-3:
 
 Workflow in Projects
@@ -88,6 +96,10 @@ Deploy to test
 Test changes in test – go back to create branch if necessary.
 
 Deploy to prod
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-projects-and-infrastructure-intermediate-4-3:
 

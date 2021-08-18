@@ -32,6 +32,10 @@ url-i pipe
 
 url-parameter
 
+.. seealso::
+
+  TODO
+
 .. _microservice-development-prerequisites-5-2:
 
 Microservice Development Prerequisites
@@ -48,6 +52,10 @@ Microservice Development Prerequisites
    User
 
    CLI/Desktop
+
+.. seealso::
+
+  TODO
 
 .. _changing-a-microservice-5-2:
 
@@ -72,6 +80,10 @@ Changing a Microservice
 
    How DockerFiles run [Sequentally, cache]
 
+.. seealso::
+
+  TODO
+
 .. _authentication-with-microservices-5-2:
 
 Authentication with microservices
@@ -82,6 +94,10 @@ Docker hosting site login
 Passing Env-vars/Secrets i Sesam
 
 Oauth2 standard – Salesforce microservice
+
+.. seealso::
+
+  TODO
 
 .. _microservices-sesam-input-output-5-2:
 
@@ -104,6 +120,10 @@ is-first
 
 is-last
 
+.. seealso::
+
+  TODO
+
 .. _using-a-microservice-as-input-in-sesam-5-2:
 
 Using a Microservice as Input in Sesam
@@ -121,6 +141,10 @@ is-first
 
 is-last
 
+.. seealso::
+
+  TODO
+
 .. _looking-inside-an-input-microservice-5-2:
 
 Looking inside an Input Microservice
@@ -137,6 +161,10 @@ Streaming
 Logging
 
 Gi gode feilmeldinger på http, catch spesifikke exceptions
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-microservices-novice-5-2:
 
