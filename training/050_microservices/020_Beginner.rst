@@ -51,10 +51,10 @@ let us look at a concrete example.
 Assume we want to pull data from SAP and that we have been provided
 the following information about the SAP system:
 
-- hosted at `https://sap.service.com/api`
+- hosted at ``https://sap.service.com/api``
 - data is exposed as OData
-- username `sap-user`
-- password `sap-very-secret-password`
+- username ``sap-user``
+- password ``sap-very-secret-password``
 
 Looking throught the list of Systems under :ref:`configuration`
 we see that Sesam does not have a built-in connector for OData.
