@@ -1,3 +1,5 @@
+.. _json_pull_protocl:
+
 ==================
 JSON Pull Protocol
 ==================
@@ -385,7 +387,7 @@ In this example we'll use one pipe. It is almost the same as the one in the prev
        }
    }
 
-   
+
 Now we can use the `dataset endpoint <./api.html#get--datasets-dataset_id-entities>`_,
 ``/api/datasets/letters/entities``, which supports the
 JSON Pull protocol, to retrieve the subset. The subset is expressed as an equality expression, ``["eq", "_S.vowel", true]``, with the index expression in the left side and the subset value on the right side. Note that all request parameters must be URL encoded, and in the case of the subset expression this makes it look garbled.
@@ -449,5 +451,5 @@ JSON Pull protocol, to retrieve the subset. The subset is expressed as an equali
         "_hash": "82bb94970ffea2b08cc15de9d26dd4f6"
       }
     ]
-    
+
 Note that subsets can also be exposed via a published endpoint, but then the ``subset`` property must be specified on the :ref:`dataset source <dataset_source>`. In that case the ``subset`` request parameter is not neccessary as only this one specific subset is published.

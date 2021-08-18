@@ -1,3 +1,5 @@
+.. _json_push_protocol:
+
 ==================
 JSON Push Protocol
 ==================
@@ -33,7 +35,7 @@ The following HTTP request parameters are supported:
    * - sequence_id
      - A string token that is generated every time the data sync is
        started. Included in all requests.
-     
+
    * - is_full
      - A boolean. Has the value ``true`` if this is a full data sync,
        and ``false`` if not. Included in all requests. The default
@@ -46,10 +48,10 @@ The following HTTP request parameters are supported:
    * - previous_request_id
      - A string token referencing the request_id of the
        previous request. Included in all but the first request.
-     
+
    * - is_first
      - A boolean. Included in the first request with the value ``true``.
-     
+
    * - is_last
      - A boolean. Included in the last request with the value ``true``.
 
@@ -100,7 +102,7 @@ Our examples all use the following pipe which sets up a receiver
 endpoint that we can use to push our JSON entities to:
 
 ::
-   
+
    $ cat pipe.json
    {
        "_id": "myendpoint",
@@ -119,7 +121,7 @@ token for authorization. We'll add the JWT authorization header to an
 environment variable to make this easier:
 
 ::
-   
+
    export AUTH_HEADER="Authorization: bearer YOUR-JWT-TOKEN"
 
 
@@ -148,14 +150,14 @@ treated as an incremental sync, which in practice will just add the
 entities to the ``mydataset`` dataset.
 
 ::
-   
+
    $ curl -X POST -H "$AUTH_HEADER" -H "Content-Type: application/json" --data @sequence0.json http://localhost:9042/api/receivers/myendpoint/entities
    {}
 
 If we now look at the ``mydataset`` dataset using the API, it now looks like this:
 
 ::
-   
+
    $ curl -s -H "$AUTH_HEADER" http://localhost:9042/api/datasets/mydataset/entities | jq .
    [
      {
@@ -184,7 +186,7 @@ Example 1: full sync
 This example has three JSON request bodies, which look like this:
 
 ::
-   
+
   $ cat sequence1.0.json
   [
       {
@@ -192,7 +194,7 @@ This example has three JSON request bodies, which look like this:
           "name": "B"
       }
   ]
-  
+
   $ cat sequence1.1.json
   [
       {
@@ -204,7 +206,7 @@ This example has three JSON request bodies, which look like this:
           "name": "C"
       }
   ]
-  
+
   $ cat sequence1.2.json
   [
       {
@@ -250,7 +252,7 @@ file did not contain any changes to the ``b`` entity. This is normal
 as a dataset will only update when entities actually are different.
 
 ::
-   
+
   $ curl -s -H "$AUTH_HEADER" http://localhost:9042/api/datasets/mydataset/entities | jq .
   [
     {
@@ -331,14 +333,14 @@ third file. Here the ``is_last`` request parameter is set to ``true``
 to tell the server that this is the last request in the sequence.
 
 ::
-   
+
    $ curl -X POST -H "$AUTH_HEADER" -H "Content-Type: application/json" --data @sequence1.2.json 'http://localhost:9042/api/receivers/myendpoint/entities?is_full=true&sequence_id=1&request_id=3&previous_request_id=2&is_last=true'
    {}
 
 Our dataset now contains a new ``d`` entity.
 
 ::
- 
+
    $ curls -H "$AUTH_HEADER" http://localhost:9042/api/datasets/mydataset/entities | jq .
    [
      {
@@ -394,7 +396,7 @@ Example 2: full sync (deletion detection)
 This example has two JSON request bodies, which look like this:
 
 ::
-   
+
    $ cat sequence2.0.json
    [
        {
@@ -406,7 +408,7 @@ This example has two JSON request bodies, which look like this:
            "name": "B"
        }
    ]
-   
+
    $ cat sequence2.1.json
    [
        {
@@ -425,14 +427,14 @@ first file. Note that the ``is_first`` request parameter is set to
 ``true``.
 
 ::
-   
+
    $ curl -X POST -H "$AUTH_HEADER" -H "Content-Type: application/json" --data @sequence2.0.json 'http://localhost:9042/api/receivers/myendpoint/entities?is_full=true&sequence_id=2&request_id=1&is_first=true'
 
 Our dataset now contains an updated ``a`` entity. ``b`` did not
 change, so it was not added to the dataset.
 
 ::
-   
+
    $ curl -s -H "$AUTH_HEADER" http://localhost:9042/api/datasets/mydataset/entities | jq .
    [
      {
@@ -498,7 +500,7 @@ that in this example there was no middle request that was neither
 ``is_first`` nor ``is_last``.
 
 ::
-   
+
     $ curl -X POST -H "$AUTH_HEADER" -H "Content-Type: application/json" --data @sequence2.1.json 'http://localhost:9042/api/receivers/myendpoint/entities?is_full=true&sequence_id=2&request_id=2&previous_request_id=1&is_last=true'
 
 Our dataset now contains a deleted ``c`` entity. The entity was
@@ -507,7 +509,7 @@ entities that we sent. It is thus marked as deleted. ``d`` did not
 change.
 
 ::
-   
+
     $ curl -s -H "$AUTH_HEADER" http://localhost:9042/api/datasets/mydataset/entities | jq .
     [
       {

@@ -40,27 +40,10 @@ pipe configs.
 
   Developer Guide - Service configuration: :ref:`system_section`
 
-.. _introduction-to-sql-json-systems-2-1:
-
-Introduction to SQL & JSON systems
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-No such thing as a JSON system. We do have a JSON *source*.
-
-Should we even explain specific systems here?
-Or would it be sufficient to reference the docs?
-
-.. seealso::
-
-  TODO
-
 .. _pipe-interaction-with-systems.-2-1:
 
 Pipe interaction with systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. Do this section belong under Systems or should it maybe be moved
-.. under a section where we talk about pipes?
 
 .. sidebar:: Summary
 
@@ -163,10 +146,10 @@ Environment variables & Secrets
     - referenced with: ``"$ENV(my-env-var)"``
 
   - Secrets are:
-    
+
     - encrypted
     - referenced with: ``"$SECRET(my-secret)"``
-    
+
   - Both are defined under **Datahub > Variables**
   - Secrets can also be defined under a system's **Secrets** tab
   - Eases and improves config maintenance
@@ -213,7 +196,7 @@ First we define the new environment variable under
 **Datahub > Variables > Environment variables**:
 
 .. code-block:: json
-  
+
   "difi-api": "https://ws.geonorge.no/kommuneinfo/v1/%s"
 
 Then we change the system config to reference it:
@@ -247,14 +230,7 @@ No changes to the actual system config is required.
 JSON Push & Pull protocol
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lots of info in docs.
-
-Yes, so should we even write about it here?
-Or should we just reference the docs?
-
-.. seealso::
-
-  TODO
+See :ref:`json_pull_protocl` & :ref:`json_push_protocol`.
 
 .. _tasks-for-systems-beginner-2-1:
 
