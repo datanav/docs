@@ -283,22 +283,15 @@ The Sesam portal
   The **Dashboard** is where you see all your Sesam subscriptions (nodes)
   and where you can order new ones.
 
-
-Show basics of portal
-
-(Here also refer to a full chapter for portal or from the projects
-chapter?)
-
 Integrations, connections and configurations can all be accessed inside
-the Sesam portal; the user interface of the Sesam product, The Sesam
-portal can be accessed at portal.sesam.io, and in this section you will
+the Sesam portal; the user interface of the Sesam product. The Sesam
+portal can be accessed at portal.sesam.io and in this section you will
 learn the most commonly used parts of the portal such that you can
 orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
-please see :ref:`sesam-management-studio`.
+please visit the :ref:`sesam-management-studio` section.
 
-When logging in to the portal you will be met with a page like figure
-:ref:`figure-sesam-portal-1-1`.
+When logging in to the portal you will be met with a page like the figure below:
 
 .. _figure-sesam-portal-1-1:
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
@@ -318,7 +311,7 @@ will have the same setup, only different set of systems, pipes and
 datasets.
 
 When entering the “Training Node” you will be met with the page seen in
-figure :ref:`figure-training-node-landing-page-1-1`.
+the figure below.
 
 .. _figure-training-node-landing-page-1-1:
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_B.png
@@ -339,27 +332,28 @@ needed to start working with Sesam, namely the “Pipes” page and the
 Pipes
 ^^^^^
 
-When entering the “Pipes” page you will be met by figure :ref:`figure-pipe-overview-1-1`.
-This figure shows you all the available pipes in your subscription as well as
-some of their corresponding meta-data. There are also several search and
-filter options available, which are specially handy when trying to
-located one, or a set of pipes, in a subscription with many pipes.
+Upon entering the “Pipes” page via the menu on the left hand side you will
+be met by a list of pipes as seen below.
+Unless filters are applied the list diplays all the available pipes in your
+subscription as well as some of their corresponding meta-data.
+The search and filter options available are specially handy when trying to
+locate one, or a subset of pipes, in a subscription with many pipes.
 
-.. _figure-pipe-overview-1-1:
+.. _pipe_overview_figure:
+
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
    :alt: Sesam Node Pipe overview
    :width: 100%
 
-   Sesam Node Pipe overview
+   Pipe overview
 
-
-If you now enter the pipe called “person-cmm” we can look into more of
+We will now enter the pipe called “person-cmm” where we can look more into the
 details regarding how you may use the portal to navigate, troubleshoot
-and configure you pipes.
+and configure your pipes.
 
-Upon entering a pipe, you will by default be sent to the pipe’s “Graph”
-view, as seen in figure :ref:`figure-pipe-graph-view-1-1`.
+Upon entering a pipe you will by default be sent to the pipe’s “Graph”
+view, as seen below.
 
 .. _figure-pipe-graph-view-1-1:
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_D.png
@@ -367,39 +361,39 @@ view, as seen in figure :ref:`figure-pipe-graph-view-1-1`.
    :alt: Pipe Graph view
    :width: 100%
 
-   Pipe Graph view
+   Pipe graph view
 
 The graph view shows you which pipes are upstream and downstream to the
-specific pipe you have selected, and it also shows connections to
+specific pipe you have selected, and it also displays connections to
 related pipes (you will learn more about connected pipes later [link
-maybe?]). For now, we will focus on four of the pipe’s subpages: Config,
+maybe?]). For now, we will focus on four of the pipe’s tabs: Config,
 Input, Output and the Execution log.
 
--  **Config**: The config subpage is where the actual coding takes
+Config:
+   The config tab is where the actual coding takes
    place. This is where you define what this specific pipe is supposed
    to do. A pipe config is written in DTL which you will learn more
-   about in section [link]. One
+   about in :ref:`dtl-beginner-3-1`.
 
--  **Input**: Whenever a pipe uses one or several datasets as a source,
+Input:
+   Whenever a pipe uses one or several datasets as a source,
    the source entities will be displayed here. These are the entities
    the pipe will perform some sort of transformation on.
 
--  **Output**: The output tab shows the entities after the DTL
+Output:
+   The output tab shows the entities after the DTL
    transformation. The way you see the output depends on whether the
-   data is stored in a dataset or sent to a target system. There are
-   some occasions where there is no output so be seen but for now you
-   can assume that there will always be an output to be see for each
-   pipe.
+   data is stored in a dataset or sent to a target system.
+   The pipe you are looking at needs to have run at least once for there to be any output.
 
--  **Execution log**: The execution log supplies us with information on
+Execution log:
+   The execution log supplies us with information on
    the state of the pipe. If a pipe runs as it should the execution log
    will display information on how many entities it has processed, how
-   much time the processing took and much more. If a pipe is not be able
+   much time the processing took and much more. If a pipe is not able
    to process all the data, the execution log will display a failed pipe
    run as well as error messages which may assist you to locate the
-   error. The execution log is a vital tool for troubleshooting as it
-   not only tells you if a pipe works as it should, but also contains
-   detailed information on why a pipe run fails and when they failed.
+   error. The execution log is a vital tool for troubleshooting.
 
 .. seealso::
 
@@ -408,27 +402,49 @@ Input, Output and the Execution log.
 Systems
 ^^^^^^^
 
-The systems tab looks very much like the pipe tab in figure :ref:`figure-pipe-overview-1-1`.
+The systems page looks very much like the pipe tab in the Pipe overview above.
+
+.. figure:: ./media/systems-overview.png
+   :align: center
+   :alt: Sesam Node System overview
+   :height: 200px
+   :width: 800px
+
+   Systems overview
+
+When entering a system you will se a set of tabs, just as we saw in a specific pipe.
+
+.. figure:: ./media/system-graph.png
+   :align: center
+   :alt: System graph
+   :height: 400px
+   :width: 800px
+
+   System graph view
+
 For systems we will focus the three most commonly used tabs: Config, Secrets
 and Status.
 
--  **Config**: Like with pipes, the config tab is where you specify what
+Config:
+   Like with pipes, the config tab is where you specify what
    the system is supposed to do. There are many different types of
-   systems and many of have very different configuration. There are
+   systems which have a variety of configuration options. There are
    however some common traits that apply to most system. These traits
    include authorization parameters, location parameters such as
-   IP-addresses, URLs and database names and system types. In the case
-   where your system relies on a Microservice you might also have a set
-   of environmental variables used by the Microservice.
+   IP-addresses, URLs and database names and system types.
+   If your system is a microservice you may set environment variables
+   whose values can be accessed inside the microservice.
 
--  **Secrets**: In the Secrets tab you may store sensitive information
+Secrets:
+   In the Secrets tab you may store sensitive information
    you do not wish everyone on the node to have access to. These secrets
    are often passwords or token used to authorization and
    authentication. Secrets stored in the system tabs are local secrets
    and may only be used by the specific system in which they are
    defined.
 
--  **Status**: In the Status tab you can monitor the health of your
+Status:
+   In the Status tab you can monitor the health of your
    system. When connected to built-in systems this tab shows you whether
    you are connected correctly. When connected to Microservices this tab
    displays connection status and logging provided by the Microservice.
@@ -480,7 +496,7 @@ A standardized naming convention helps you to easily structure your Sesam archit
 
 - Determining pipe type (inbound, outbound, preparation or global) becomes easier.
 
-- Filtering relevant pipes become easier.  
+- Filtering relevant pipes become easier.
 
 -  Switching between integration projects, or joining a new project,
    becomes more intuitive.
@@ -510,9 +526,9 @@ easier in the long run.
 
 Inbound pipes should be named according to endpoint/table they connect to
 in the source system and prefixed with the source system name such that
-there is a clear and intuitive way of tracking their content.
-We use the hr system mentioned above in this example.
-There are two tables we would like to read from the hr systems: employee and
+there is a clear and intuitive way of tracking their content. Let us use
+the same example as for naming system. I this case the HR system in the
+previous example populate its data in two tables: employee and
 department. Our two inbound pipes connecting to the two tables containing
 HR data will therefore be named “hr-employee” and “hr-department”. The
 system name prefixed highlights that the HR system is upstream from the
@@ -766,7 +782,7 @@ Sesam datasets and database tables that is important to point out:
 
   Sesam datasets are schemaless, which means that Sesam is neither bound by
   or enforces any integrity constraints on or between datasets.
-  This also means that you as the integration specialist must 
+  This also means that you as the integration specialist must
   define any relevant constraints such as foreign keys, etc. based on
   domain knowledge.
   However the great advantage of being schemaless is that Sesam is very flexible
@@ -890,7 +906,7 @@ Tasks for Architecture and Concepts: Beginner
      System name: ``IFS``
 
      Table name: ``WorkOrder``
-     
+
      Pipe name: ______
 
 #. *In an entity representing a row, how would the column “personalid”
