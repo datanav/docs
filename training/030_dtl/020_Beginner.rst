@@ -721,6 +721,16 @@ In the Sesam Management Studio, navigate to the **Pipes** view and follow these 
 
 - Lastly, add some test data:
 
+.. code-block:: json
+
+   "entities": [{
+     "_id": "1",
+     "data": "One"
+   }, {
+     "_id": "2",
+     "data": "Two"
+   }]
+
 You should now have the following pipe config:
 
 .. _practice-pipe-config-initial:
