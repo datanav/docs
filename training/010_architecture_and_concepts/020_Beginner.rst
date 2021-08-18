@@ -363,7 +363,7 @@ Config:
    however some common traits that apply to most system. These traits
    include authorization parameters, location parameters such as
    IP-addresses, URLs and database names and system types.
-   If your system is a microservice you may set environmental variables
+   If your system is a microservice you may set environment variables
    whose values can be accessed inside the microservice.
 
 Secrets:
