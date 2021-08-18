@@ -21,6 +21,10 @@ Don’t go too deep, we have a whole module for these.
 Probably want to wait with this subchapter until we’ve written the
 microservices module.
 
+.. seealso::
+
+  TODO
+
 .. _http-transforms-2-3:
 
 HTTP Transforms
@@ -45,6 +49,10 @@ the conversion and call this with an http_transform.
 General Example: appending time-dependent datapoints to your output
 without reading absolutely all of the time-dependented data.
 
+.. seealso::
+
+  TODO
+
 .. _chaining-of-systems-2-3:
 
 Chaining of Systems
@@ -60,6 +68,10 @@ Pros: Usually re-use of microservices makes development time shorter
 Cons: Debugging can be complex and unforeseen issues hard to find &
 pinpoint. Can’t see it in the graph, need to search the whole node
 configuration to find the systems.
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-systems-intermediate-2-3:
 

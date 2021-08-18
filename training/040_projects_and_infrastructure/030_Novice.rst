@@ -30,6 +30,10 @@ signalling
 
 Referer mye til dokumentasjon
 
+.. seealso::
+
+  TODO
+
 .. _deployment-4-2:
 
 Deployment
@@ -47,6 +51,10 @@ Disable/enable pipes (spesifik endpoint)
 
 Indexering
 
+.. seealso::
+
+  TODO
+
 .. _monitorering-4-2:
 
 Monitorering
@@ -59,6 +67,10 @@ pipes
 ekstern monitorering
 
 Execution logs/system dataset
+
+.. seealso::
+
+  TODO
 
 .. _working-methods-4-2:
 
@@ -84,6 +96,10 @@ frekvens
 6. Lag løsning
 
 Mer?
+
+.. seealso::
+
+  TODO
 
 .. _tasks-for-projects-infrastructure-novice-4-2:
 
