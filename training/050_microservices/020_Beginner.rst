@@ -13,10 +13,10 @@ What is a microservice?
 .. sidebar:: Summary
 
   Microservices are...
-  
+
   - modular self-contained services
   - hosted as docker containers
-  - confgured and monitored as Sesam Systems
+  - configured and monitored as Sesam Systems
 
 Microservices are modular self-contained software programs that provide a particular service.
 
