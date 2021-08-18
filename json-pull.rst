@@ -1,4 +1,4 @@
-.. _json_pull_protocl:
+.. _json_pull_protocol:
 
 ==================
 JSON Pull Protocol

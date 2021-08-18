@@ -230,7 +230,7 @@ No changes to the actual system config is required.
 JSON Push & Pull protocol
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See :ref:`json_pull_protocl` & :ref:`json_push_protocol`.
+See :ref:`json_pull_protocol` & :ref:`json_push_protocol`.
 
 .. _tasks-for-systems-beginner-2-1:
 
