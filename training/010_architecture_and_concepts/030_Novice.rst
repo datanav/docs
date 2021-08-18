@@ -205,10 +205,53 @@ As stated earlier, it is important to note that in this case, null values will b
 Global
 ~~~~~~
 
-Golden – the best truth about common attributes of a concept collected
-from multiple sources
+Global datasets lie at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
-Coalesce, prioritization of source data (master data)
+Creating global datasets allows you to:
+
+- 	Semantically group and structure data
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
+		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
+
+-	Setup master data management - Golden records
+		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize which system knows a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. Another benefit of golden records are their reusability. Once their logic has been created a golden record may be used by any project downstream from its global dataset, thus saving both time and energy.
+
+		Golden records are created with the ``["coalesce"]`` function, as shown in the example below.
+
+
+
+	A global pipe, ``global-person``, has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe ``global-person`` we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
+
+	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
+
+.. code-block:: json
+  :linenos:
+
+  ["add", "email",
+    ["coalesce",
+      ["list", "_S.hr-person:email", "_S.crm-person:Email", "_S.economy-person:e-mail"]
+    ]
+  ]
+
+In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
+
+.. code-block:: json
+  :linenos:	
+
+  ["add", "hours-pr-project",
+    ["coalesce",
+      ["list", "_S.crm-person:hours-pr-project", "_S.economy-person:hours-pr-project"]
+  ]
+
+
+  ["add", "weekly-hours-billed",
+    ["coalesce",
+      ["list", "_S.economy-person:weekly-hours-billed", "_S.crm-person:weekly-hours-billed"]
+    ]
+  ] 
+
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritizations.
 
 
 .. seealso::
@@ -268,7 +311,7 @@ Customize data structure for outbound flows
 
 An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
-As an example, the data presented below is produced by the pipe "global-person":
+As an example, the data presented below is produced by the pipe ``global-person``:
 
 .. code-block:: json
 
@@ -281,7 +324,7 @@ As an example, the data presented below is produced by the pipe "global-person":
 	  "crm-account:hobbies": "Builds LEGO"
 	}   
 
-The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace "global-person:". To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
+The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace ``global-person:``. To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
 
 .. code-block:: json
 

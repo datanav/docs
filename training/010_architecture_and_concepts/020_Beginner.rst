@@ -604,6 +604,29 @@ start and finish points of every integration flow. System may cover
 other functionalities as well, but we will cover those special cases in
 later parts [ref to later parts].
 
+In this section we will show you an example of the most commom system in a Sesam installation, 
+the mssql system. We will also show how this system can connect to pipes to 
+either import or export data, depending on your need.  
+
+The MSSQL system
+^^^^^^^^^^^^^^^^
+
+.. figure:: ./media/mssql-system-config.png
+   :align: right
+   :alt: MSSQL system config.
+
+   MSSQL system config
+
+Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.  
+
+.. figure:: ./media/mssql-system-status.png
+   :align: right
+   :alt: MSSQL system status.
+
+   MSSQL system status.
+
+Once the connection is open the node can extract data from the tables in the database through inbound pipes connected to the system. You can see if the connection to the MSSQL database is open by going to the "Status" tab on the system page. Should the system health state "failure" in your connectivity, this could be because you have some parameter values in your config wrong, or there might be a firewall blocking your access.
+
 .. seealso::
 
   Learn Sesam: :ref:`systems-beginner-2-1`
