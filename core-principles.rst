@@ -241,7 +241,7 @@ data quality completely trustworthy.
 
 .. rubric:: Continuous enrichment of data and data model pattern
 
-Data enrichment is the merging of related data from multiple sources to the data platform. Data enrichment in Sesam is continuous, all systems can at any time make data available to the data platform, and onto the systems that need it. Data can also be enrich from within the data model, and data can be fetch from one dataset to complement another.  Data enrichment is typically triggered when data is refreshed. Although continuous data enrichment has pitfalls and care should be taken in the design of the data model pattern. Indeed, positive feedback loops can occur and updated data could trigger more updates in a back and forth infinite loop. There are a few tools to prevent this phenomenon, for exemple identify merged entities as such and prevent source pipe to re process them.
+Data enrichment is the merging of related data from multiple sources to the data platform. Data enrichment in Sesam is continuous, all systems can at any time make data available to the data platform, and onto the systems that need it. Data can also be enrich from within the data model, and data can be fetch from one dataset to complement another.  Data enrichment is typically triggered when data is refreshed, or the pipe rescaned. Although continuous data enrichment has pitfalls and care should be taken in the design of the data model pattern. Indeed, positive feedback loops can occur and updated data could trigger more updates in a back and forth infinite loop. There are a few tools to prevent this phenomenon, for exemple identify merged entities as such and prevent source pipe to re process them.
 
 .. rubric:: Data refresh and completeness
 
