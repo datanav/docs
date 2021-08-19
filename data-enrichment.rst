@@ -34,15 +34,23 @@ When modelling we might like to create a set of global properties in the global 
 
 Adding global properties does not mean that you must create a golden record, there are many scenarios where adding a property to a global dataset is useful. However, adding a global property should be done with considerations. Remember that < to reset and rerun a global dataset has bigger implications than resetting and rerunning a preparation pipe, as there usually will be more downstream pipes that will be affected by it.
 
+There are 3 main reasons to introduce global properties
+- There are established standards you want to use
+- Properties that can originate in more than one source, where logic must be defined for which source is authoritative
+- One will establish standard characteristics that make it easier for consumers of data to know which properties to use
+
+Instead of having to define global properties in advance, Sesam is built so that these can be continuously defined and changed over time and as needed. Some recommendations for when to establish global characteristics:
+- In advance, if standardised schema already exists to be used
+- On demand, when a consumer needs properties that may originate in more than one source
+
 .. collecting_data-Enhancing global datasets with data from other datasets:
 
 Enhancing global datasets with data from other datasets
 =======================================================
 
-This point is quite similar to the above point, with the only difference being that you create global properties by making a :ref:`hops <hops_function>` to another dataset (preferably global).   
+This point is quite similar to the above point, with the only difference being that you create global properties by making a :ref:`hops <hops_function>` to another global datasets.   
 
 When modelling your global dataset and seeing the need to create a global property using hops, it is one thing you need to be aware of. Dependency tracking does not work for hops made in a “merge”-pipe. This means that you must split the global pipe into two separate pipes. One pipe that contains the merge rules and does the merging, this pipe should be given the “merged-“ prefix. The second pipe should have the merged dataset as source and contain the DTL transformations, this should be the global pipe.
 
 However, in general, try to keep hops from a global pipe to other datasets as minimal as possible. Separating the global datasets into two datasets in order to enrich the data with data from other datasets also means duplicating the data. Adding data that may change due to dependency tracking may also lead to more processing for the downstream pipes, this is especially true for global datasets as they usually have multiple downstream pipes reading from them. The ideal pattern for doing this is only when the enriched data is necessary for multiple downstream datasets. 
 
- 
