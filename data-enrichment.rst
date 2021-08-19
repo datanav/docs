@@ -54,3 +54,6 @@ When modelling your global dataset and seeing the need to create a global proper
 
 However, in general, try to keep hops from a global pipe to other datasets as minimal as possible. Separating the global datasets into two datasets in order to enrich the data with data from other datasets also means duplicating the data. Adding data that may change due to dependency tracking may also lead to more processing for the downstream pipes, this is especially true for global datasets as they usually have multiple downstream pipes reading from them. The ideal pattern for doing this is only when the enriched data is necessary for multiple downstream datasets. 
 
+Feedback loops
+==============
+A feedback loop i a downstream pipe from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properies that needs to be created recursively. It is also a way to add data that is dependent on hops to other dataset, without spliting a global in to several staps. A feedback pipe will effectivly block the completeness feature if it is not exclude from the completeness chain.
