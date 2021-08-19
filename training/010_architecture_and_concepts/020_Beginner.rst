@@ -600,25 +600,13 @@ Systems
 
   Systems are interfaces to external systems.
 
-Short about systems (where in the sesam-world-map)
+Systems are one of Sesam's core components.
+Systems can connect to external providers such as SQL databases, REST APIs,
+Microservices and more, to either import data into Sesam or export data out from Sesam.
+Systems are therefore the start and end points of every dataflow.
 
-Something more general about pipes maybe in context of pipes and
-datasets
-
-Very low level but enough to set up an inputpipe after maybe?
-
-and refer to systems chapter
-
-Namegivingconventions ref. 1.1.8
-
-Where to make new ref 1.1.6
-
-Systems are one of Sesam’s core sub-structures. Systems can connect to
-external providers such as an SQL database, a REST API or a Microservice
-to either import or export data to and from Sesam and are therefore the
-start and finish points of every integration flow. System may cover
-other functionalities as well, but we will cover those special cases in
-later parts [ref to later parts].
+Systems may cover other functionalities as well, but we will cover those special cases
+later.
 
 In this section we will show you an example of the most commom system in a Sesam installation, 
 the mssql system. We will also show how this system can connect to pipes to 
