@@ -7,5 +7,6 @@ Best Practices
 
    Data modelling in Sesam <data-modelling>
    Collect and Connect <collecting_data>
+   Data Enrichment <data-enrichment>
    Working on a Sesam project <project-workflow>
    Sesam in Microsoft Azure <azure>
