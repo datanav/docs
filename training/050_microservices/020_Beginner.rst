@@ -90,7 +90,7 @@ Extending on the topic of running microservices in Sesam, the following categori
   - Internal microservices
   - External microservices
 
-Both internal microservices and external microservices will be defined in a Sesam node as systems. However, microservices that connect to a Sesam node via the `Service API <https://docs.sesam.io/api.html>`_ can also be seen on the `Sesam Community on GitHub <https://github.com/sesam-community>`_. These kinds of microservices will not be elaborated on in this section, albeit you should be aware that these microservices exist and that they are also a viable option when extending upon default functionality.
+Both internal and external microservices will be defined in a Sesam node as systems. However, microservices that connect to a Sesam node via the `Service API <https://docs.sesam.io/api.html>`_ can also be seen on the `Sesam Community on GitHub <https://github.com/sesam-community>`_. These kinds of microservices will not be elaborated on in this section, albeit you should be aware that these microservices exist and that they are also a viable option when extending upon default functionality.
 
 
 Internal microservices
