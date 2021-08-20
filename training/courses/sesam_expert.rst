@@ -8,7 +8,10 @@ Introduction to Sesam
 Beginner Topics
 ---------------
 
-   ###.. _different-types-of-architectures-1-1:###
+Different types of Architectures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   ###.. _data-driven-architecture-1-1:###
    ###.. _datahub-1-1:###
    ###.. _the_parts_of_sesam-1-1:###
    ###.. _the_sesam_portal-1-1:###
@@ -58,6 +61,10 @@ Creating an input pipe
 
 Some task to make an input pipe reading from system created previously.
 
+   ###.. _globals-as-a-concept-1-1:###
+   ###.. _joining-data-1-2:###
+   ###.. _full-outer-join-merge-1-2:###
+
 THIS IS WHERE THE PATHS DIVERGE
 -------------------------------
 
@@ -69,13 +76,6 @@ shown and tasks given will be different.
 
 For the context of this document I will annotate where AC(architect) and devs
 differ for each topic.
-
-DEV & AC
---------
-
-   ###.. _globals-as-a-concept-1-1:###
-   ###.. _joining-data-1-2:###
-   ###.. _full-outer-join-merge-1-2:###
 
 DEV
 ---

@@ -122,6 +122,11 @@ Show config, explain all properties, refer to architecture chapter also.
 
 -  datasets
 
+.. _merge-as-a-source-3-2-summary:
+
+Summary
+^^^^^^^
+
 
 .. _filter-as-a-transform:
 

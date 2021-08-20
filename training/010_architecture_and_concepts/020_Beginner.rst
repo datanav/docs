@@ -49,6 +49,8 @@ which, in this case, will make P2P time consuming and expensive to
 manage. Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being the ESB.
 
+.. _enterprise-service-bus-1-1:
+
 Enterprise Service Bus (ESB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -73,6 +75,8 @@ challenges still remain unresolved. Recent years transition towards more
 cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called “Data Driven Architecture”.
+
+.. _data-driven-architecture-1-1:
 
 Data Driven Architecture (DDA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -380,7 +384,7 @@ A standardized naming convention helps you to easily structure your Sesam archit
 
 - Determining pipe type (inbound, outbound, preparation or global) becomes easier.
 
-- Filtering relevant pipes become easier.  
+- Filtering relevant pipes become easier.
 
 -  Switching between integration projects, or joining a new project,
    becomes more intuitive.
@@ -616,7 +620,7 @@ Sesam datasets and database tables that is important to point out:
 
   Sesam datasets are schemaless, which means that Sesam is neither bound by
   or enforces any integrity constraints on or between datasets.
-  This also means that you as the integration specialist must 
+  This also means that you as the integration specialist must
   define any relevant constraints such as foreign keys, etc. based on
   domain knowledge.
   However the great advantage of being schemaless is that Sesam is very flexible
@@ -725,7 +729,7 @@ Tasks for Architecture and Concepts: Beginner
      System name: ``IFS``
 
      Table name: ``WorkOrder``
-     
+
      Pipe name: ______
 
 #. *In an entity representing a row, how would the column “personalid”

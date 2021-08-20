@@ -307,66 +307,78 @@ import pathlib
 import shutil
 import os
 
+
+def find_root_headers(root_level_header, file=None, inputString=None, sourceFile=None):
+    """
+    I'm a function which finds all the root level headers in a document.
+    """
+    if file:
+        lines = open(file).readlines()
+        sourceFile = file
+    elif inputString:
+        lines = inputString.split('\n')
+    else:
+        print('find_root_headers function in conf.py got None as input!')
+    cur_ref = None
+    tmp_cur_ref = None
+    prev_line = None
+    returnlist = []
+    for l in lines:
+        l = l.replace('\n', '')
+        if l.startswith('.. _') and l.endswith(':'):
+            tmp_cur_ref = l
+        linelength = len(l)
+        reflength = 0
+        for c in l:
+            if c == root_level_header:
+                reflength += 1
+        if linelength == reflength and linelength != 0:
+            cur_ref = tmp_cur_ref
+            returnlist.append({
+                "reference": cur_ref,
+                "title": prev_line,
+                "source_file": sourceFile
+            })
+        prev_line = l
+
+
+    return returnlist
+
+def createFiles(splitonthis: list, inputFile=None, inputString=None):
+    """
+    I'm a function which a splits a string on a list of strings.
+    I make sure that there is no overlap in the output strings.
+    """
+    if inputFile:
+        input = open(inputFile).read()
+    elif inputString:
+        input = inputString
+    else:
+        print('createFiles function in conf.py only got None as input!')
+    splitonthis.reverse()
+    #print('SPLITTING ON' + str(splitonthis))
+    for x, e in enumerate(splitonthis):
+        splitted_main_file = input.split(e['reference'])
+        if splitted_main_file:
+            input = splitted_main_file[0]
+        ref_name = f".. _{e['reference'][4:]}"
+        e['text'] = ref_name + splitted_main_file[-1]
+    splitonthis.reverse()
+    return splitonthis
+
+
 def split_training_into_topics(root_level_header, files, output_folder, rename_ref_prefix):
     """
     I use the functions within me to split RST files into a file for each
     root level header in the file.
     """
-
-    def find_root_headers(file):
-        """
-        I'm a function which finds all the root level headers in a document.
-        Root level header character can be set at the top variable.
-        """
-        lines = open(file).readlines()
-        cur_ref = None
-        tmp_cur_ref = None
-        prev_line = None
-        returnlist = []
-        for l in lines:
-            l = l.replace('\n', '')
-            if l.startswith('.. _') and l.endswith(':'):
-                tmp_cur_ref = l
-            linelength = len(l)
-            reflength = 0
-            for c in l:
-                if c == root_level_header:
-                    reflength += 1
-            if linelength == reflength and linelength != 0:
-                cur_ref = tmp_cur_ref
-                returnlist.append({
-                    "reference": cur_ref,
-                    "title": prev_line,
-                    "source_file": file
-                })
-            prev_line = l
-
-
-        return returnlist
-
-    def createFiles(file, splitonthis: list):
-        """
-        I'm a function which a splits a string on a list of strings.
-        I make sure that there is no overlap in the output strings.
-        """
-        mainfile = open(file).read()
-        splitonthis.reverse()
-        for x, e in enumerate(splitonthis):
-            splitted_main_file = mainfile.split(e['reference'])
-            if splitted_main_file:
-                mainfile = splitted_main_file[0]
-            ref_name = f".. _{e['reference'][4:]}"
-            e['text'] = ref_name + splitted_main_file[-1]
-        splitonthis.reverse()
-        return splitonthis
-
     total_topics = []
     for f in files:
         filenameSplitted = f.split('/')[-2:]
-        topics = find_root_headers(f)
+        topics = find_root_headers(root_level_header=root_level_header, file=f)
         from json import dumps
         file = open(f).read()
-        total_topics += createFiles(file=f, splitonthis=topics)
+        total_topics += createFiles(inputFile=f, splitonthis=topics)
 
     return total_topics
 
@@ -419,6 +431,13 @@ def create_courses(files, output_folder, courses_path, root_level_header, rename
     output_folder_full_path = os.path.join(pathlib.Path().absolute(), output_folder)
     courses_path_full = os.path.join(pathlib.Path().absolute(), courses_path)
     topics = split_training_into_topics(root_level_header, files, output_folder, rename_ref_prefix)
+
+    subTopics = []
+    for t in topics:
+        curHeaders = find_root_headers(root_level_header='^', inputString=t['text'], sourceFile=t['source_file'])
+        curTopics = createFiles(splitonthis=curHeaders, inputString=t['text'])
+        subTopics = subTopics + curTopics
+    topics = topics + subTopics
     courses = get_courses(courses_path_full)
     new_course_files = []
     for course in courses:
