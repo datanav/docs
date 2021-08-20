@@ -56,9 +56,9 @@ for microservices to reuse and tweak to your specific needs.
 
 .. seealso::
 
-  Sesam's GitHub community: https://github.com/sesam-community
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
 
-  Sesam's DockerHub community: https://hub.docker.com/u/sesamcommunity
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
 .. _how-are-microservices-used-in-sesam-5-1:
 
@@ -85,8 +85,8 @@ the following information about the SAP system:
 
 Looking throught the list of Systems under :ref:`configuration`
 we see that Sesam does not have a built-in connector for OData.
-However we are in luck, browsing the
-`Sesam community at GitHub <https://github.com/sesam-community>`_
+However we are in luck, browsing
+`Sesam's community at GitHub <https://github.com/sesam-community>`_
 we find there are several OData microservices to choose from.
 
 .. TODO: get sap-odata-source into sesam-community!
@@ -197,13 +197,13 @@ Microservice hosting
   - Auto-build scripts publish docker images to Sesam's community at DockerHub
   - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
-We have already touched on the Sesam Community at GitHub and DockerHub
+We have already touched on Sesam's communities at GitHub and DockerHub
 to find available microservices. Let us take a more detailed look at how
 microservice hosting is done with Sesam.
 
-There is the `Sesam Community at GitHub <https://github.com/sesam-community>`_
+We have `Sesam's community at GitHub <https://github.com/sesam-community>`_
 for hosting microservice source code,
-and there is the `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+and we have `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 for hosting microservice docker images.
 
 When writing microservices we recommend putting the source code into
@@ -212,7 +212,7 @@ Sesam's community at GitHub so that it can be shared and reused in other project
 
 By configuring the microservices using Sesam's auto-build script, when the
 source code is pushed to GitHub, the script will automatically build a docker image
-and publish it to Sesam's DockerHub community.
+and publish it to Sesam's community at DockerHub.
 
 From there the microservices will be available for use in any Sesam project.
 
@@ -221,9 +221,9 @@ for more information on how to use the auto-build script and also how to contrib
 
 .. seealso::
 
-  `Sesam Community at GitHub <https://github.com/sesam-community>`_
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
 
-  `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
   `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
