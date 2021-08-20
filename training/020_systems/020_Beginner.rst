@@ -26,7 +26,7 @@ Introduction to SQL & Json systems
 
   TODO
 
-.. _pipe-interaction-with-systems.-2-1:
+.. _pipe-interaction-with-systems-2-1:
 
 Pipe interaction with systems.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
