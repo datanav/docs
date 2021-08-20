@@ -269,22 +269,6 @@ Types of Microservices
 
   TODO
 
-.. _naming-convention-5-1:
-
-Naming Convention this should probs be under architecture namegiving conventions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\_id standard system naming convention (source/sink system name)
-
-Repo/microservice naming convention recommendation:
-sesam-<system>[-<special-functionality>]
-
-.. seealso::
-
-  TODO
-
-.. _tasks-for-microservices-beginner-tasks-5-1:
-
 Tasks for Microservices: Beginner – Tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
