@@ -310,6 +310,8 @@ Secondly, the first time data flows through a pipe in Sesam that pipe's dataset 
 
   :ref:`entity_data_model`,	:ref:`concepts-datasets`, :ref:`concepts-change-tracking`
 
+  Developer Guide > Entity Data Model > Reserved fields: :ref:`entity_data_model`
+
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 
 Tasks for Architecture and Concepts: Novice
