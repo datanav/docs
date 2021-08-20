@@ -102,7 +102,7 @@ These kinds of microservices are the ones used with regards to Sesam dataflows. 
 External microservices
 ######################
 
-Even though external microservices are defined in Sesam as systems, they do not read or write data into or out of Sesam with regards to a defined dataflow. Rather, they implement their functionality in such a way that does not affect dataflows.
+External microservices can be hosted inside your Sesam node as a system or outside of your Sesam node in your preferred docker-compatible solution like for example Kubernetes. They do not read or write data into or out of Sesam with regards to a defined dataflow. Rather, they implement their functionality in such a way that does not affect dataflows.
 
 An example of such a microservice is the `Github Autodeployer <https://github.com/sesam-community/github-autodeployer>`_. This microservice connects to the GitHub API and uploads the latest version of files present on the GitHub repository in question to a Sesam node. This allows for continous integration/continous deployment (CICD) workflows and allows for easy peer reviews as changes are made to specific pipe configs.
 
