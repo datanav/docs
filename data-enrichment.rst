@@ -11,7 +11,8 @@ Introduction
 
 Data enrichment in Sesam is adding of new properties to an object either by the merging of data from multiple sources or transforming existing properties into new ones. This enrichment is then stored with separate namespeces as global-properties inside global datasets.
 
-.. data-enrichment-Defining global properties:
+.. data-enrichment-defining-global-properties:
+
 Defining global properties
 ==========================
 
@@ -34,7 +35,8 @@ Instead of having to define global properties in advance, Sesam is built so that
 
 If the creation of the global properies needs to use a :ref:`hops <hops_function>` to another global datasets, it is recomended to do this trough feedback loops.
 
-.. data-enrichment-Defining global properties:
+.. data-enrichment-feedback-loops:
+
 Feedback loops
 ==============
 
