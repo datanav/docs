@@ -40,7 +40,7 @@ pipe configs.
 
   Developer Guide - Service configuration: :ref:`system_section`
 
-.. _pipe-interaction-with-systems.-2-1:
+.. _pipe-interaction-with-systems-2-1:
 
 Pipe interaction with systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
