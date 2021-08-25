@@ -295,4 +295,16 @@ Additional examples of external examples are listed below:
 Tasks for Microservices: Beginner – Tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run a microservice in Sesam [could be sink, http, source]
+#. *Why do we use microservices in Sesam?*
+
+#. *What is a microservice in Sesam?*
+
+#. *Make a microservice successfully run in Sesam.*
+  
+    Hint: `Sesam Community at GitHub <https://github.com/sesam-community>`_ is a good place to get inspiration.
+
+    Condition: Successfull, in this case, means that the docker image spins up as intended.
+
+#. *Read data from your newly created microservice into a pipe.*
+
+    Condition: Make sure data flows through the pipe and creates a dataset.
