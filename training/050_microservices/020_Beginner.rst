@@ -295,9 +295,9 @@ Additional examples of external examples are listed below:
 Tasks for Microservices: Beginner – Tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. *Why do we use microservices in Sesam?*
-
 #. *What is a microservice in Sesam?*
+
+#. *Why do we use microservices in Sesam?*
 
 #. *Make a microservice successfully run in Sesam.*
   
