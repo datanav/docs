@@ -59,9 +59,9 @@ Finally, the "Subscription" tab. This tab is your, you could say, "manage my Ses
 
 .. seealso::
 
-  Learn Sesam > Architecture & Concepts: :ref:`systems`
+  Learn Sesam > Architecture & Concepts: :ref:`systems-1-1`
   
-  Learn Sesam > Architecture & Concepts: :ref:`pipes`
+  Learn Sesam > Architecture & Concepts: :ref:`pipes-1-1`
 
   Getting started: :ref:`getting-started-microservices`
 
