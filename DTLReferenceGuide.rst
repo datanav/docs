@@ -3598,6 +3598,12 @@ Hops
          will yield the same order of the result. You should apply a ``sorted*`` function to the result to get a
          particular order (for example on a particular property, or if you use the ``return`` keyword).
 
+       .. _hops_function_targeting_sink:
+       
+       .. WARNING::
+
+          Hop-ing to the sink dataset is discouraged as there are some gotchas. In practice the pipe's ``batch_size`` must be set to ``1`` in order to guarantee that the hops is able to find the entities being written by the sink. Entities inside the current unflushed batch is not visible to the hops.
+       
      - ::
 
           ["hops", {
