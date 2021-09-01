@@ -42,4 +42,4 @@ Feedback loops
 
 A feedback loop is a downstream pipe from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properies that needs to be created recursively. It is also the recommended way to add properties that is dependent on hops to other dataset.
 
-Be aware that a feedback pipe will effectivly block the completeness feature if it is not exclude from the completeness chain.
+Be aware that a feedback pipe will effectively block the completeness feature if it is not exclude from the completeness chain.
