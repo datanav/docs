@@ -337,22 +337,6 @@ VPN
 
 You can extend Sesam into your own network using a IPSec-based Virtual Private Network. The :doc:`Sesam Management Studio <management-studio>` interface does not currently let you configure this. Please contact sales@sesam.io to configure your VPN.
 
-How to handle non-idempotent systems 
-====================================
-The problem with non-idempotent systems you will get different results every time you apply an operation towards them. 
-For instance, if one expected to update an entity/record in a system via REST using the POST method this will be an unsuccessful update, since the POST method will add new record. And the record one wanted to update is still active alongside the new record. Same will happen every time a POST is used. 
-The POST method is a non-idempotent. Using the counter-part method PUT will ensure that the record you wanted to update is overwritten by the data provide in the PUT. Every time PUT is used this will happen. PUT is an idempotent method. So, the best way is to use PUT, but in many cases, this is not possible and only POST is available. And one must handle this by checking if the data already exists or not by using GET method. If data doesn´t exist a POST can be utilized without further operations. If data do exist and we want to update the data, one must use the DELETE method before doing a POST. That said, we delete data before we repost updated data records. This is one method of coping with the non-idempotent nature of POST method. 
-
-Working with relational databases, it is also a good idea to check if a record is present or not. In some systems records can be active within a timeframe. And due to business rules within an application it is not straightforward to either use UPDATE or INSERT. Using UPDATE on existing data might in some cases be judicially illegal due to requirements of audit trail or validity of features of a product. E.g., interest rates. You cannot change interest rates to a mortgage immediately (especially when they are increased) – you must insert a new record for the new interest rate from a certain date into to the future. But the old record will stop you from inserting new interest rates valid from a date in the future.
-So, what do we then? We cannot insert data, and we cannot update existing data?
- 
-The answer: To insert a new record might require setting the existing record to obsolete(passive) to get a successful insert of a new record. 
-The recommended practice is to SELECT the record that fits the data you want to insert. We set the existing record to become passive from a certain date in the future (set the to-date as the same date as the from-date of the new data record). We have updated the active record with an end-date (still active) and inserted a new record that will automatically be active at a future date.
-
-If the data doesn´t exist, INSERT can be used without any problem. If data exist, you will get an error from the server saying data already present. To handle this, one use UPDATE to set the currently data to obsolete(passive) and then do the insert.
-
-Same approach might be useful for old hierarchical database systems as well.
-
 Status Page
 ===========
 
