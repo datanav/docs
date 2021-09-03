@@ -12,6 +12,28 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+# Topic Template
+
+```reStructuredText
+Topic Title
+~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Something summarizing
+  - More summary
+
+<text about topic>
+
+subtopic title
+^^^^^^^^^^^^^^
+
+<subtopic text>
+
+.. seealso::
+
+   Chapter Difficulty - :ref:`special-sesam-attributes-1-1`
+```
 
 # Styleguide
 
@@ -202,10 +224,6 @@ All topics in a chapter will be shown in the main Table of Contents, meaning tit
 ## How does numbering work?
 Numbering is added in post as the docs page is generated. We use the toctree flag :numbered: in training.rst to enable this.
 
-## Section summary
-
-A "floating" sidebar summary can be handled by the `.. sidebar` directive in combination with some custom CSS.
-
 ### Initial setup
 
 Sphinx expects the custom CSS to reside under `_build/html/_static/css/`.
@@ -231,6 +249,10 @@ The following line was added to `layout.html` to handle this:
 
 All future custom CSS additions can now be put into `_templates/css/sesam.css`
 and be automatically included in builds.
+
+## Section summary
+
+A "floating" sidebar summary can be handled by the `.. sidebar` directive in combination with some custom CSS.
 
 ### .. sidebar Usage
 
