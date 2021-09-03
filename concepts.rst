@@ -311,6 +311,8 @@ Notifications
 
 Monitoring of pipes can be enabled. Once a pipe is being monitored, you can add :doc:`notification rules <notifications>` to pipes and be alerted when those rules are triggered. You can get notification alerts in the user-interface or by email.
 
+More on monitoring `<https://docs.sesam.io/behind-the-scenes.html#monitoring>`
+
 .. _concepts-extensions:
 
 Extensions
