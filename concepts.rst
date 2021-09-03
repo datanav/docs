@@ -255,17 +255,11 @@ There are many possible reasons why a pipe may fall out of sync. Configuration m
 Namespaces
 ==========
 
-:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a namespace identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier.
+:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier.
 
-Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespace property. Namespace properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
+Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
 
-A namespace identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub - within on node only. 
-
-Namespaces and NIs defined within in Sesam is for internal use only and will not be understandable outside of one single Sesam Datahub.
-
-There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
-
-Sesam can utilize RDF for input, transformation or producing data for external consumption `Use of RDF <https://docs.sesam.io/rdf-support.html?highlight=rdf#>`
+A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
 
 .. _concepts-global-datasets:
 
