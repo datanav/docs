@@ -105,6 +105,8 @@ Metrics
 
 This is a Prometheus-compatible system that pushes telemetry data from the local virtual machines to Sesam. The metrics include information like memory usage, disk usage and other resource usage. This information is used for monitoring and operations.
 
+Monitoring and notification comes with a price per each pipe. For more on pricing of monitoring: `<https://docs.sesam.io/pricing.html?highlight=monitoring>`
+Be wise to choose what pipes are subject for monitoring. Choose only pipes that are time-critical and has functional criticality for daily business operations 
 
 Isolation
 =========
