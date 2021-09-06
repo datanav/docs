@@ -72,63 +72,20 @@ Finally, the "Subscription" tab. This tab is your, you could say, "manage my Ses
 sesam-CLI
 ~~~~~~~~~
 
-NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
+The Sesam command line interface (CLI) is used in order to support continous integration/continous deployment (CICD) workflows. This is especially handy when multiple people are involved with working on the same project and each individual does continous changes to specific workflows asyncronously. Typically, GitHub is used to make a Sesam node config assessible from multiple different local instances of a Sesam node.  
 
-pre-requisite lære seg hvordan man installerer det.
+In order to use the Sesam CLI you will need to install it. The repository for installing it can be found `here <https://github.com/sesam-community/sesam-py>`_. Upon successfully installing the Sesam CLI you should verify your installation by running the following command from your command prompt or terminal ``sesam -version``. If your terminal outputs a semantic version of Sesam you are good to go.
 
-lag en sesam-init <- feature request
+Starting using the Sesam CLI on a project you should verify your local copy of the node config located on GitHub is up to date with recent changes. This is a rule of thumb when collaborating on a given CICD workflow across multiple local contributors. As such, *Always* pull recent changes, before starting to work on anything locally. After having made sure your local node config is up to date with the remote node config, you will typically do the following 1) Make a branch from the master branch in GitHub, 2) wipe your local node by running: ``sesam wipe`` followed by 3) ``sesam upload``. The upload command will upload your desired local node config. **Note**: Remember to run ``sesam download`` to save your current local sesam node config, if you want to retain those changes before running ``sesam wipe`` as ``sesam wipe`` will not save your current node config for you.
 
-setup
+In addition to all of the above, you should create an ``/expected`` folder. This folder should be placed in the root of your already existing ``/node`` folder. The ``/expected`` folder will hold all of your ``*.test.json`` config files. The ``*`` symbol denotes that every string value goes here. When finished with making local node config changes, then run ``sesam download`` followed by ``sesam test`` to check how your recently completed changes might affect the expected ouput placed in the ``/expected`` folder. The ``sesam test`` command compares the outcome produced by running all dataflows in Sesam against what is currently expected in the ``/expected`` folder. As an example, imagine you have made changes to the pipe config ``salesforce-person``, then what you want to make sure is that these changes are not disrupting any expected output present in the ``/expected`` folder. Your command prompt or terminal will let you know whether or not your tests passed. In case your tests failed, you can run ``sesam update`` followed by ``sesam verify`` to respectively update the ``/expected`` folder and verify the current state of what is expected equals what is produced via the dataflow run-throughs. Upon verification, you can add and/or commit your local changes and make a pull request to the master branch connected to your global repository state present on GitHub.
 
-expected folder
+Finally, alteration to environment variables, i.e. adding new ones or removing new ones is a manual process and you'll need to navigate to the ``/variables`` folder placed in the root of your node repository. In the ``/variables`` folder you'll find a file that holds all your environment variables. Again *remember* to alter the contents of this file you need to manually add or remove specific environment variables.            
 
-test.conf.json
-
-whitelist/blacklist
-
-test.json
-
-entiteter
-
-env-var-folder
-
-set up vars for different environments
-
-test-env
-
-.syncconfig
-
-jwt, node
-
-kommandoer
-
-sesam upload/download
-
-test
-
-update
-
--print-scheduler-log
-
--vv
-
--use-internal-scheduler
-
-wipe
-
-restart
-
-verify
-
-run
-
--version
-
-Hvordan funker expected output
 
 .. seealso::
 
-  TODO
+  Not sure what shoud go here... Any input?
 
 .. _testing-and-testdata-4-1:
 
