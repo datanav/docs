@@ -111,7 +111,7 @@ Finally, alteration to environment variables, i.e. adding new ones or removing n
 
   Tools > Sesam Client :ref:`sesam_client`
 
-  Best Practices > Working on a Sesam Project :ref:`project_workflow`
+  Best Practices > Working on a Sesam Project :ref:`working_on_a_sesam_project`
 
 .. _testing-and-testdata-4-1:
 
