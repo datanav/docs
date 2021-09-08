@@ -111,9 +111,9 @@ Finally, alteration to environment variables, i.e. adding new ones or removing n
 
   `Sesam Command Line Interface repository <https://github.com/sesam-community/sesam-py>`_
 
-  Tools > Sesam Client :ref:`_concepts-sesam-client`
+  Tools > Sesam Client :ref:`concepts-sesam-client`
 
-  Best Practices > Working on a Sesam Project :ref:`_setting-up-a-new-sesam-project`
+  Best Practices > Working on a Sesam Project :ref:`setting-up-a-new-sesam-project`
 
 .. _testing-and-testdata-4-1:
 
