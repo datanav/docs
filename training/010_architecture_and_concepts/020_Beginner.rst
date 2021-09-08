@@ -266,11 +266,11 @@ Entities:
 .. seealso::
 
   Learn Sesam - Architecture & Concepts: Beginner: :ref:`systems-1-1`
-  
+
   Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
 
   Learn Sesam - Architecture & Concepts: Beginner: :ref:`datasets-1-1`
- 
+
   Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
 
 .. _the_sesam_portal-1-1:
@@ -620,9 +620,9 @@ start and finish points of every integration flow. System may cover
 other functionalities as well, but we will cover those special cases in
 later parts [ref to later parts].
 
-In this section we will show you an example of the most commom system in a Sesam installation, 
-the mssql system. We will also show how this system can connect to pipes to 
-either import or export data, depending on your need.  
+In this section we will show you an example of the most commom system in a Sesam installation,
+the mssql system. We will also show how this system can connect to pipes to
+either import or export data, depending on your need.
 
 The MSSQL system
 ^^^^^^^^^^^^^^^^
@@ -633,7 +633,7 @@ The MSSQL system
 
    MSSQL system config
 
-Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.  
+Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.
 
 .. figure:: ./media/mssql-system-status.png
    :align: right
@@ -839,7 +839,7 @@ Globals as a concept
    :align: right
    :scale: 45 %
 
-   Figure A – Global Symbol.
+   Figure of a Global Symbol.
 
 
 What are Globals?
@@ -853,12 +853,13 @@ is the common denominator of both employees and customers.
 Why use globals?
 ^^^^^^^^^^^^^^^^
 
-Globals give us the opportunity to simplify and enhance our integrations by joining
+Globals give us the opportunity to simplify and enhance our integrations by merging
 data which represent the same concept in the real world but normally is stored separately
 in the binary world.
 By using globals we also simplify the process of grabbing the data we need because if you
-know which concept or type of entity an external system wishes to receive, you can quickly pick
-the global which stores this concept. If you only want to process a specific subset of the global
+know which concept or entity type an external system requires, you can quickly identify
+the global where this entity type is stored.
+If you only want to process a specific subset of the global
 then you can easily use the ``rdf:type`` attribute to narrow down which entities you want.
 More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special-sesam-attributes-1-1`.
 
@@ -867,28 +868,29 @@ More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special
 How do globals work?
 ^^^^^^^^^^^^^^^^^^^^
 
-A global is the aggregation of objects categorized as the same concept.
+A global is the collection of objects categorized as the same concept.
 In other words, globals are buckets for entities which fall under the same concept.
-To draw on this metaphor further, you can choose to either mix your bucket by joining
-the objects within it, or keep them separate inside the bucket.
+To draw on this metaphor further, you can choose to either mix your bucket by setting equalities
+between the objects within it, or keep them separate inside the bucket.
 Of course more value is gained by mixing the objects within, but without doing so you
 still have a nicely labeled bucket which will simplify decisions of what data to use.
 
-Globals without joins
-^^^^^^^^^^^^^^^^^^^^^
+Globals without equalities
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is an example of an un-mixed bucket also known as Global without joins.
+This is an example of an un-mixed bucket also known as a Global without equalities.
 We have the inbound pipes/datasets ``cab-address`` and ``hr-address``. Both these datasets
 store information about addresses, but the first is for our customers and the second
 for our employees. Unless a person might fall into both categories, there is no value
-to be gained by joining these together. We will therefore only aggregate these datasets
-into the ``global-address`` pipe and for example hop to this pipe when we need to look up
-either an employees or a customers address. Read more about hops here: :ref:`left-join-hops-1-2`.
+to be gained by joining these entities together using equalities. We will therefore place these datasets
+into the ``global-address`` pipe without creating equalities between the datasets.
+The ``global-address`` pipe can now be used as a destination when you want to look up
+an employees or a customers address. Read more about hops here: :ref:`left-join-hops-1-2`.
 
-Globals with joins
-^^^^^^^^^^^^^^^^^^
+Globals with equalities
+^^^^^^^^^^^^^^^^^^^^^^^
 
-This is an example of a mixed bucket also known as Globals with joins.
+This is an example of a mixed bucket also known as Globals with equalities.
 We have the inbound pipes/datasets ``shipping-customerinfo`` and ``sales-customer`` which read
 from a shipping system and a sales system respectively. The datasets produced by these pipes both
 store information about the same customers, but this data is currently stored separately.
@@ -898,8 +900,8 @@ goods while the sales system cares about what goods the customer usually shops f
 about their habits.
 The entities (customers) in these datasets could for example be linked together by
 their email address or phone number.
-By aggregating these datasets together in the ``global-customer`` pipe, we can also join
-the customers on for example Email.
+By merging these datasets together in the ``global-customer`` pipe, we can also join
+the customers from these different sources by setting an equality on for example Email.
 We now have an aggregated view of the customers which join together, giving us both
 perspectives in the same entity!
 This makes us able to pick data both from the shipping and the sales system when we
@@ -908,7 +910,7 @@ wish to process data about any given customer.
 As a sidenote to this last example, we would now be able to define "golden records".
 A golden record consists of the properties which together represent the most
 truthful version of an object.
-For example, both the ``shipping-customerinfo`` and sales-customer entities could have the
+For example, both the ``shipping-customerinfo`` and ``sales-customer`` entities could have the
 attribute ``address``, but the version of the address received from the shipping system is always most up to date.
 In other words; the address received from the shipping system is more *truthful*.
 This means that in our global pipe we can add the attribute ``address`` with the address provided
