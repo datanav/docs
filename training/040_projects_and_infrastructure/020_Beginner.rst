@@ -92,7 +92,9 @@ The Sesam command line interface (CLI) is used in order to support continous int
 
 In order to use the Sesam CLI you will need to install it. The repository for installing it can be found `here <https://github.com/sesam-community/sesam-py>`_. Upon successfully installing the Sesam CLI you should verify your installation by running the following command from your command prompt or terminal ``sesam -version``. If your terminal outputs a semantic version of Sesam you are good to go.
 
-Starting using the Sesam CLI on a project you should verify your local copy of the node config located on GitHub is up to date with recent changes. This is a rule of thumb when collaborating on a given CICD workflow across multiple local contributors. As such, *Always* pull recent changes, before starting to work on anything locally. After having made sure your local node config is up to date with the remote node config, you will typically do the following: 
+Starting using the Sesam CLI on a project you should verify your local copy of the node config located on GitHub is up to date with recent changes. This is a rule of thumb when collaborating on a given CICD workflow across multiple local contributors. As such, *Always* pull recent changes, before starting to work on anything locally. If this is your very first time working on a project you presumably do not have any Sesam configs on your local machine or in your personal Sesam development node. By cloning the node config located on GitHub, configuring the ``.syncconfig`` file and running ``sesam test``, your node will sync itself with the state of your cloned GitHub repository. 
+
+After having made sure your local node config is up to date with the remote node config, you will typically do the following: 
 
   1) Make a branch from the master branch in GitHub.
   2) Wipe your local node by running: ``sesam wipe``. 
@@ -109,9 +111,9 @@ Finally, alteration to environment variables, i.e. adding new ones or removing n
 
   `Sesam Command Line Interface repository <https://github.com/sesam-community/sesam-py>`_
 
-  Tools > Sesam Client :ref:`sesam_client`
+  Tools > Sesam Client :ref:`_concepts-sesam-client`
 
-  Best Practices > Working on a Sesam Project :ref:`working_on_a_sesam_project`
+  Best Practices > Working on a Sesam Project :ref:`_setting-up-a-new-sesam-project`
 
 .. _testing-and-testdata-4-1:
 
