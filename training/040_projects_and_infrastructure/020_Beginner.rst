@@ -135,6 +135,16 @@ Hvordan funker expected output
 Testing & Testdata
 ~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Testing & Testdata is used for...
+
+  - modular self-contained services
+  - hosted as docker containers
+  - configured and monitored as Sesam Systems
+
+Extending on the testing aspect of running your CICD workflows in projects. Testing is used in a Sesam project to allow for local testing of your changes to how you transform data in a given dataflow, i.e. applying filters. This is useful because it allows for verification locally without relying on real life data or an active system that receives data. As such, testing is useful in creating a vacuum in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
+
 testing
 
 Manuell testing med sesam-cli før opplasting til versjonskontroll
