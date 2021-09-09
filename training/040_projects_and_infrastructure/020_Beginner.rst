@@ -137,48 +137,96 @@ Testing & Testdata
 
 .. sidebar:: Summary
 
-  Testing & Testdata is used for...
+  Testing and testdata is used for...
 
-  - modular self-contained services
-  - hosted as docker containers
-  - configured and monitored as Sesam Systems
+  - validating transformation of data meets desired shape
+  - validate dataflows run as expected
+  - ensure changes made are robust enough to be pushed to production 
 
-Extending on the testing aspect of running your CICD workflows in projects. Testing is used in a Sesam project to allow for local testing of your changes to how you transform data in a given dataflow, i.e. applying filters. This is useful because it allows for verification locally without relying on real life data or an active system that receives data. As such, testing is useful in creating a vacuum in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
+Extending on the testing aspect of running your CI/CD workflows via the Sesam CLI - testdata comes into play. In practice, testing via the Sesam CLI uses testdata defined in your Sesam development node. As such, testdata is used in a Sesam project to allow for testing of a given change with respect to an intented or desired outcome, i.e. applying filters to only get a subset of data flowing through a dataflow. This is useful because it allows for verification in a self-contained space without relying on real life data or an active system that receives and/or retrieves data. As such, testing is useful in creating a self contained space in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
 
-testing
+To use testdata in Sesam, you will first need to create it. In order for you to do so, Sesam has developed a nifty transformation rule called the ``conditional`` transform statement. An example of a pipe config using this transform statement can be seen below:
 
-Manuell testing med sesam-cli før opplasting til versjonskontroll
+.. code-block:: json
 
-Manuell testing med config-group på live node
+  {
+    "_id": "crm-persondata",
+    "type": "pipe",
+    "source": {
+      "type": "conditional",
+      "alternatives": {
+        "prod": {
+          "type": "sql",
+          "system": "crm",
+          "primary_key": "PersonID",
+          "schema": "person",
+          "table": "PersonDepartment"
+        },
+        "test": {
+          "type": "embedded",
+          "entities": [{
+            "_id": "164",
+            "PersonID": 164,
+            "Department": "MIT Product",
+            "Departmentref": 804,
+            "RegionID": 7
+          }, {
+            "_id": "165",
+            "PersonID": 165,
+            "Department": "MIT Sales",
+            "Departmentref": 805,
+            "RegionID": 7
+          }, {
+            "_id": "1",
+            "PersonID": 1,
+            "Department": "MIT Tech",
+            "Departmentref": 803,
+            "RegionID": 12
+          }, {
+            "_id": "3",
+            "PersonID": 3,
+            "Department": "MIT Product",
+            "Departmentref": 804,
+            "RegionID": 12
+          }, {
+            "_id": "231",
+            "PersonID": 231,
+            "Department": "MIT Tech",
+            "Departmentref": 803,
+            "RegionID": 6
+          }, {
+            "_id": "229",
+            "PersonID": 229,
+            "Department": "MIT Sales",
+            "Departmentref": 805,
+            "RegionID": 6
+          }]
+        }
+      },
+      "condition": "$ENV(node-env)"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "crm:personData"]
+          ]
+        ]
+      }
+    }
+  }
 
-Automatisk testing med ci-node
-
-Testdata
-
-Bør lage data som reflekterer virkelige koblinger mellom data i systemer
-
-Bør være nok for å beskrive de caser man kan møte i virkeligheten
-
-Bør ikke være all data i prod
-
-Bør være anonymisert
-
-Bør reflektere \*innkommende\* data
-
-Bør utvidet behov legges til data, ikke endre eksisterende
-
-Bør gis navn utfra det case du vil teste, f.eks gi entiteten navn utfra
-casen
-
-Dokumenter testdata
-
-\\\oppdater prosjekt i docs utfra hva vi skriver\\\
-
-Hvordan funker expected output
+When the above pipe completes a run, given that the property ``"condition": "$ENV(node-env)"`` equals ``"condition": "test"`` and **not** ``"condition": "prod"``, it will only see the data that is defined within the dictionary key named ``test``. As such, by changing the value of ``$ENV(node-env)`` one can alter whether a pipe executes the DTL defined within the ``test`` or ``prod`` dictionary, as defined in the above config. Moving on to the actual testdata itself, you should take into account how well your testdata represents expected "real life" data. This is important to consider as a close resemblance between testing and reality minimizes room for error. Room for error is in this aspect related to how data is intended to be modelled through a given Sesam dataflow. **Note**: In case you work with personally identifiable indicators, you should anonymize these to make sure you are not breeching any rules or regulations with regards to the General Data Protection Regulation (GDPR).     
 
 .. seealso::
 
-  TODO
+  :ref:`dtl-beginner-3-1
+
+  Tools > Sesam Client :ref:`concepts-sesam-client`
+
+  Best Practices > Working on a Sesam Project :ref:`setting-up-a-new-sesam-project`
 
 .. _documentation-4-1:
 
