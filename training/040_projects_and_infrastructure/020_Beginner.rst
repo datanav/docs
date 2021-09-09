@@ -222,7 +222,7 @@ When the above pipe completes a run, given that the property ``"condition": "$EN
 
 .. seealso::
 
-  :ref:`dtl-beginner-3-1
+  :ref:`dtl-beginner-3-1`
 
   Tools > Sesam Client :ref:`concepts-sesam-client`
 
