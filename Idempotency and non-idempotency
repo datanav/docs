@@ -2,7 +2,18 @@ How to handle non-idempotent systems
 ====================================
 Idempotent means that a function will give the same result every time it is performed. A light switch is idempotent - you can turn on the light and turn it of. This wil happens
 And it will happen every time you flick the switch. Non-idempotent functions will give you differents results every time the function is performed.
+A dimmer switch is an example of a non-idempotent object (it might produce different result every time you turn it).
 
+Within a Sesam node, you will typically have a set of source and target systems. These systems respectively read and write data either into or out of a given dataflow defined in Sesam pipes.
+With regards to these systems, it is important to recognize how reading and writing of data from and to a given system can vary in behavior. As such, we will now discuss a term called idempotency.
+Idempotency can be divided into idempotent and non-idempotent operations, as these are quite different in terms of behavior:
+
+Idempotent operations have no side-effects if performed multiple times, i.e.: reading data from a source system and displaying the result.
+
+Non-idempotent operations, however, would evaluate differently if performed multiple times, i.e.: writing a change to a bank account. 
+In essence, you should be aware of how your source and/or target system will respond when provided with data multiple times, so - know your systems.
+
+APIs:
 The problem with non-idempotent systems you will get different results every time you apply an operation towards them. 
 For instance, if one expected to update an entity/record in a system via REST using the POST method this will be an unsuccessful update, since the POST method will add new record. And the record one wanted to update is still active alongside the new record. Same will happen every time a POST is used. 
 The POST method is a non-idempotent. Using the counter-part method PUT will ensure that the record you wanted to update is overwritten by the data provide in the PUT. Every time PUT is used this will happen. PUT is an idempotent method. So, the best way is to use PUT, but in many cases, this is not possible and only POST is available. And one must handle this by checking if the data already exists or not by using GET method. If data doesn´t exist a POST can be utilized without further operations. If data do exist and we want to update the data, one must use the DELETE method before doing a POST. That said, we delete data before we repost updated data records. This is one method of coping with the non-idempotent nature of POST method. 
