@@ -6,16 +6,16 @@ The core priniple of Sesam data manegemet is that any target systems needing dat
 
 Transport
 ---------
-Sesam supports both push and publish mechanisms. Push is has the advantige of making it possible for Data Managers to controll the flow and know the state of the target system. Publish has an advantage that gives the target system controll over their data flow, but a limitied support for data formats, JSON, CSV, XML, RDF, SD-SHARE.
+Sesam supports both push and publish mechanisms. Push is has the advantige of making it possible for Data Managers to controll the flow and know the state of the target system. Publish has an advantage that gives the target system controll over their data flow, but a limitied support for data formats, JSON, CSV, XML, RDF, SD-SHARE, and only supports HTTPS.
 Sesam does not support ad hock querying on published data, but has a limited support pre defined query properties or data subsets.
 
 Schema
 ------
-Sesam supports any data schema, and transforms the data from the global datasets into the target schema before offering it to the target schema. 
+Sesam supports any data schema, and transforms the data from the global datasets into the target schema before offering it to the target system. 
 
 Data format
 -----------
-Sesam has native connectors to transform its internal Json format into the most common data formats. Like XML, Jsn, SQL, CSV, Excel etc. Any format not supported can be buildt with a microservice.
+Sesam has native connectors to transform its internal Json format into the most common data formats. Like XML, Json, SQL, CSV, Excel etc. Any format not supported can be delivered using push trough a microservice.
 
 Identifiers
 -----------
