@@ -1,10 +1,13 @@
 Sharing data 
 ============	
-The main purpose of a Sesam is its ability to share data by delivering data in the form that each target system needs.
+The main purpose of a Sesam is its ability to share data by delivering data in the form that each target system needs. Insted of changing the system to adjust to a. In their own language.
+
+The core priniple of Sesam data manegemet is that any target systems needing data, will sync their designated optimized data store.
 
 Transport
 ---------
-Sesam supports both push and pull mechanisms. Push is prefered as it makes it possible for Data Managers to controll the flow and know the status of the target system.
+Sesam supports both push and publish mechanisms. Push is has the advantige of making it possible for Data Managers to controll the flow and know the state of the target system. Publish has an advantage that gives the target system controll over their data flow, but a limitied support for data formats, JSON, CSV, XML, RDF, SD-SHARE.
+Sesam does not support ad hock querying on published data, but has a limited support pre defined query properties or data subsets.
 
 Schema
 ------
