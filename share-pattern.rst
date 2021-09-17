@@ -6,7 +6,7 @@ The core principle of Sesam data management is that any target systems needing d
 
 Transport
 ---------
-Sesam supports both push and publish mechanisms. Push is having the advantage of making it possible for Data Managers to control the flow and know the state of the target system. Publish has an advantage that gives the target system control over their data flow, but a limited support for data formats, JSON, CSV, XML, RDF, SD-SHARE, and only supports HTTPS.
+Sesam supports both push and publish mechanisms. Push has the advantage of making it possible for Data Managers to control the flow and know the state of the target system. Publish has an advantage that gives the target system control over their data flow, but a limited support for data formats, JSON, CSV, XML, RDF, SD-SHARE, and only supports HTTPS.
 Sesam does not support ad hoc querying on published data but has a limited support pre-defined query properties or data subsets.
 
 Schema
