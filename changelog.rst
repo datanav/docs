@@ -1,6 +1,73 @@
 Changelog
 =========
 
+.. _changelog_2021_09_01:
+
+2021-09-01
+----------
+
+* Added an :ref:`explanation <hops_function_targeting_sink>` about why you should not hop to the sink dataset.
+  
+
+.. _changelog_2021_08_16:
+
+2021-08-16
+----------
+
+* Clarified when the ``is_first`` and ``is_last`` flags can be expected to be set in the Sesam :doc:`JSON Push Protocol <json-push>` - these flags are only set when running a full sync (i.e. not when in incremental mode). They are intended to signal to the client the start and end of a full sync run across multiple requests.
+* Fixed a bug in the :ref:`JSON (push) sink <json_push_sink>` that set the ``is_first`` flag also on incremental syncs.
+
+.. _changelog_2021_08_04:
+
+2021-08-04
+----------
+
+* Added a ``header`` property to the :ref:`JSON source <json_source>`. This property can be used to specify
+  additional header values to be set when doing HTTP GET requests. This was added to make the JSON source
+  symmetrical with the :ref:`JSON (push) sink <json_push_sink>`. Note that both the JSON source and sink
+  adhere to the Sesam specific :doc:`JSON Pull Protocol <json-pull>`. Consider using the more general REST source or
+  sink if you're interacting with a non-Sesam JSON capable REST api.
+
+.. _changelog_2021_06_14:
+
+2021-06-14
+----------
+
+* Added a ``json_content_types`` property to the :ref:`REST system <rest_system>`. This property can be used to specify
+  additional JSON content types to accept besides the default "application/json". The content must still be valid JSON.
+  Note that the REST source will no longer attempt to parse all responses as JSON but check the content-type against the
+  list of recognised content-types first. If the response content-type is not in this list, it will be treated as
+  "unknown" and an empty entity containing a property with the response body (and optionally the content type) will be
+  emitted for further processing with DTL. Support for ``response_include_content_type`` and ``response_property`` has
+  been added to the REST source for this scenario.
+
+.. _changelog_2021_06_09:
+
+2021-06-09
+----------
+
+* Added a ``initial_since_value`` property to the :ref:`source <continuation_support>` configuration. This property holds the "since" value to use by the source when the pipe offset is unset (or has been reset).
+* The ``since_default`` property of the :ref:`SPARQL source <sparql_source>` has been deprecated, please use ``initial_since_value`` instead.
+
+.. _changelog_2021_05_31:
+
+2021-05-31
+----------
+
+* We've updated our :doc:`pricing`. For existing customers, the changes will take effect from September 1st 2021.
+
+2021-05-20
+----------
+
+* Added a :doc:`Sesam Community <community>` section.
+
+.. _changelog_2021_05_19:
+
+2021-05-19
+----------
+
+* Legal documents has been reformatted and are now available under :doc:`legal`.
+
 .. _changelog_2021_05_06:
 
 2021-05-06
@@ -27,7 +94,7 @@ Changelog
 2021-04-29
 ----------
 
-* Added a configuration hint for controlling the deployment of microservices. The new :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will allow Sesam to hold off starting up microservices which are not connected to any pipes. This option is ``true`` by default, in line with previous behaviour. The default will change to ``false`` in three weeks. The option can be overriden per system using the ``eager_load`` flag in the :ref:`Microservice system configuration <microservice_system>`. Individual microservices which need to be run eagerly should have the option ``eager_load`` set to ``true`` explicitly in anticipation of the default changing.
+* Added a configuration hint for controlling the deployment of microservices. The new :ref:`eager_load_microservices <service_metadata_global_defaults_eager_load_microservices>` option will allow Sesam to hold off starting up microservices which are not connected to any pipes. This option is ``true`` by default, in line with previous behaviour. The option can be overriden per system using the ``eager_load`` flag in the :ref:`Microservice system configuration <microservice_system>`. Individual microservices which need to be run eagerly should have the option ``eager_load`` set to ``true`` explicitly in anticipation of the default changing.
 
 .. _changelog_2021_04_15:
 

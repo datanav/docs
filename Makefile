@@ -3,6 +3,10 @@
 
 DOCKER_PATH = docker
 
+PANDOCPATH = pandoc
+PANDOCOPTS = 
+PANDOC_INT = json
+
 # You can set these variables from the command line.
 SPHINXOPTS    = -W
 SPHINXBUILD   = sphinx-build
@@ -54,7 +58,36 @@ clean:
 	rm -rf $(BUILDDIR)/*
 	rm -rf $(DOCKER_PATH)/dist
 
-html:
+
+saasdoc:
+	mkdir -p $(BUILDDIR)
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 1\n==========\n" > $(BUILDDIR)/service-appendix.rst
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 2\n==========\n" > $(BUILDDIR)/pricing-appendix.rst
+	echo "\n.. raw:: latex\n\n   \\\\newpage\n\nAppendix 3\n==========\n" > $(BUILDDIR)/dap-appendix.rst
+	$(PANDOCPATH) $(PANDOCOPTS) terms.rst -t $(PANDOC_INT) -o $(BUILDDIR)/terms.native
+	$(PANDOCPATH) $(PANDOCOPTS) legal-service.rst --shift-heading-level-by=1 -t $(PANDOC_INT) -o $(BUILDDIR)/service.native
+	$(PANDOCPATH) $(PANDOCOPTS) pricing.rst --shift-heading-level-by=1 -t $(PANDOC_INT) -o $(BUILDDIR)/pricing.native
+	$(PANDOCPATH) $(PANDOCOPTS) legal-dap.rst --shift-heading-level-by=1 -t $(PANDOC_INT) -o $(BUILDDIR)/dap.native
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/service-appendix.rst -t $(PANDOC_INT) -o $(BUILDDIR)/service-appendix.native
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/pricing-appendix.rst -t $(PANDOC_INT) -o $(BUILDDIR)/pricing-appendix.native
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/dap-appendix.rst -t $(PANDOC_INT) -o $(BUILDDIR)/dap-appendix.native
+	cd $(BUILDDIR) && pandoc terms.native service-appendix.native service.native \
+		pricing-appendix.native pricing.native dap-appendix.native dap.native -f $(PANDOC_INT) -t $(PANDOC_INT) -o saas.native
+
+saasdocx: saasdoc
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -t docx -o files/sesam-cloud-service-contract.docx
+
+saaspdf: saasdoc
+	$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -V block-headings -V geometry:margin=1in -V urlcolor=cyan -o files/sesam-cloud-service-contract.pdf
+	## switch to groff after https://github.com/jgm/pandoc/issues/7288
+	#$(PANDOCPATH) $(PANDOCOPTS) $(BUILDDIR)/saas.native -f $(PANDOC_INT) --lua-filter=pagebreak.lua -t ms -o files/sesam-cloud-service-contract.pdf
+
+partnerdocx:
+	$(PANDOCPATH) $(PANDOCOPTS) partner-agreement-form.rstx -f rst --lua-filter=pagebreak.lua -t docx -o files/partner-agreement.docx
+
+saas: saaspdf saasdocx
+
+html: saas partnerdocx
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

@@ -238,4 +238,3 @@ them. This makes the master data management completely transparent, and
 even the most complicated dataflow self-documented. All data can be
 traced back to its origin, inspected at any point in a flow, and the
 data quality completely trustworthy.
-

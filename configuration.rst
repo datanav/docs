@@ -199,7 +199,7 @@ Properties
    * - ``global_defaults.compaction_interval``
      - Float
      - Specifies the default sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent pipes that run often from constantly trying to compact the sink-dataset.
      - ``0``
@@ -675,7 +675,7 @@ Properties
    * - ``compaction.compaction_interval``
      - Float
      - Specifies the sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent a pipe that run often from constantly trying to compact the sink-dataset.
      - ``0``
@@ -880,7 +880,7 @@ the source*. Within an entity the marker is carried in the
 
 Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
 
-There are three characteristics that describe continuation
+There are four characteristics that describe continuation
 support. All sources have these and there are three properties
 available to describe them. The properties can be fixed, have a
 default value or be calculated from other properties (aka dynamic) on
@@ -888,19 +888,21 @@ the source. The table below explains them in detail.
 
 .. NOTE::
 
-   It is important that you do not to set any of these properties to
+   It is important that you do not to set any of the boolean properties to
    ``true`` unless the source actually have these
    characteristics. Doing so can mean that the pump is not able track
    changes properly.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 80
+   :widths: 10, 10, 80
 
    * - Property
+     - Type
      - Description
 
    * - ``supports_since``
+     - Boolean
      - Does the source make use of the 'since' parameter if it gets
        passed one?
 
@@ -916,6 +918,7 @@ the source. The table below explains them in detail.
           depending on the strategy you want.
 
    * - ``is_since_comparable``
+     - Boolean
      - Can you compare two ``_updated`` values using lexical/bytewise
        comparison and decide their relative order?
 
@@ -932,6 +935,7 @@ the source. The table below explains them in detail.
           ``true``.
 
    * - ``is_chronological``
+     - Boolean
      - Does the source hand out entities in chronological order, i.e.
        in increasing order?
 
@@ -948,6 +952,14 @@ the source. The table below explains them in detail.
           If you set ``is_chronological`` to ``true`` then you
           should also make sure that ``supports_since`` is set to
           ``true``.
+
+
+   * - ``initial_since_value``
+     - String or integer
+     - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
+       the pipe has been reset). It should be used when you don't want the source to fetch all available data when
+       the pipe is initially run or has been reset. Note that this value is only used by sources that can support "since".
+
 
 .. _strategy:
 
@@ -2864,7 +2876,12 @@ The JSON source
 ---------------
 
 
-The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server). The data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
+`HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
+The service must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+
+Consider using the more general :ref:`REST source <rest_source>` if you're interacting with a non-Sesam JSON capable
+REST api.
 
 If the ``supports_since`` property is set to *true*, then the ``since`` request parameter is added to the URL to
 signal that we want only changes that happened after the since marker.
@@ -2878,7 +2895,10 @@ Prototype
        "system": "system-id",
        "type": "json",
        "url": "url-to-json-data",
-       "supports_signalling": false
+       "supports_signalling": false,
+       "headers": {
+           "some-header": "some-value"
+       }
     }
 
 Properties
@@ -2932,6 +2952,13 @@ Properties
        .. NOTE:: For this to work the source must support subsets.
      -
      - No
+
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set in HTTP request made using this source. Both keys and values must
+       evaluate to strings.
+     -
+     -
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
@@ -3173,7 +3200,7 @@ Prototype
         "url": "sparql-endpoint",
         "fragments_query": "SPARQL select query",
         "fragment_query": "SPARQL construct query"
-        "since_default": "0001-01-01T00:00:00Z"
+        "initial_since_value": "0001-01-01T00:00:00Z"
     }
 
 
@@ -3216,7 +3243,7 @@ Properties
      -
      - Yes
 
-   * - ``since_default``
+   * - ``initial_since_value``
      - String
      - A string literal to use when querying the triplestore the first time.
      - "0001-01-01T00:00:00Z"
@@ -3279,6 +3306,14 @@ The REST source supports both pagination as part of the response body or paginat
 after the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ . It optionally supports continuation both as
 a query parameter or as header property.
 
+Note that by default the REST source will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST source emit "empty" entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the REST source is still under development and might change configuration format while it's marked
 as "experimental".
 
@@ -3300,6 +3335,7 @@ Prototype
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -3356,6 +3392,14 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precendence if defined.
      -
+     -
+
+   * - ``response_include_content_type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property.
+
+     - ``false``
      -
 
    * - ``payload_property``
@@ -4532,6 +4576,14 @@ The REST transform
 
 This transform can communicate with a REST service using HTTP requests.
 
+Note that by default the REST transform will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST transform emit entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the shape of the entities piped to this transform must conform to certain criteria, see the
 :ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
 
@@ -4555,6 +4607,7 @@ Prototype
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -5277,6 +5330,9 @@ to an :ref:`HTTP endpoint <url_system>`.
 The protocol is described in additional detail in the :doc:`JSON Push
 Protocol <json-push>` document. The serialisation of entities as JSON
 is described in more detail :doc:`here <entitymodel>`.
+
+Consider using the more general :ref:`REST sink <rest_sink>` if you're interacting with a non-Sesam JSON
+capable REST api.
 
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
@@ -6061,7 +6117,7 @@ Each object is on the form:
     {
         "source_property": "name_of_property",
         "name": "name_of_column",
-        "type": "string|integer|decimal|float|bytes|datetime|date|time|uuid|boolean",
+        "type": "string|integer|decimal|float|binary|datetime|date|time|uuid|boolean",
         "max_size|max_value": 1234,
         "min_size|min_value": 1234,
         "precision": 10,
@@ -6117,12 +6173,12 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - nvarchar(MAX)
      - Unicode
 
-   * - ``bytes``
+   * - ``binary``
      - <= 8000
      - varbinary(size)
      -
 
-   * - ``bytes``
+   * - ``binary``
      - > 8000
      - varbinary(MAX)
      -
@@ -6519,7 +6575,7 @@ Prototype
     {
         "type": "csv_endpoint",
         "columns": ["properties","to","use","as","columns"],
-        "quoting": "all|minimal|non-numeric|"none",
+        "quoting": "all|minimal|non-numeric|none",
         "delimiter": ","
         "doublequote": true
         "include_header": true,
@@ -8490,6 +8546,7 @@ Prototype
         "read_timeout": 1800,
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
+        "json_content_types": ["application/jsonish"]
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
@@ -8570,6 +8627,14 @@ Properties
        the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
        the operation definition, the operation value takes precedence.
      - 1
+     -
+
+   * - ``json_content_types``
+     - Array of strings
+     - This property can be used to supply the REST source and transform a list of response "content-type" strings
+       that represent valid JSON content that should be parsed as such. The content-type "application/json" is always
+       included.
+     - ["application/json"]
      -
 
 Operation properties
