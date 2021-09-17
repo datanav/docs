@@ -1,6 +1,6 @@
 Sharing data 
 ============	
-The main purpose of a Sesam is its ability to share data by delivering data in the form that each target system needs. Instead of changing the system to adjust to data. Sesam utilize their own language.
+The main purpose of a Sesam is its ability to share data by delivering data in the form that each target system needs. Instead of changing the system to adjust to data. Sesam utilizes the targets own languages.
 
 The core principle of Sesam data management is that any target systems needing data, will sync their designated optimized data store.
 
