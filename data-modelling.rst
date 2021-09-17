@@ -367,6 +367,8 @@ The main reason for why **outbound pipes** shouldn't contain any logic or transf
     :align: center
     :alt: Generic pipe concept  
 
+.. _best-practice-inbound-pipes:
+
 Inbound pipes
 =============
 
@@ -506,7 +508,7 @@ The corresponding env variable are used in the condition property in the pipe. I
 
 
 
-.. _best_practice_rdf_type:
+.. _best-practice-rdf-type:
 
 RDF type  
 ^^^^^^^^
@@ -517,6 +519,8 @@ Namespaces
 ^^^^^^^^^^
 
 The namespace identifier is added to keep track of origin and to keep exsisting joins from source. Namespaced identifier, on NI'S are prefixed by convention by a ``‘~:’``, e.g. ``~:crm:person``. You use the functions ``make-ni`` or ``ni`` to create it.
+
+.. _best-practice-global-pipes: 
 
 Global pipes
 ============
@@ -756,7 +760,7 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 Preparation pipes
 =================
 
-The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The :ref:`filtering <filter_dtl_function>` and relating of data are performed using the :ref:`RDF types <best_practice_rdf_type>` introduced earlier. Data can also be augmented by performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
+The aggregated data residing in a global dataset often needs to be transformed and/or enriched before it can be delivered to targets. Transforming and enriching data to ready it for delivery is implemented through preparation pipes. Preparation pipes use the aggregated entities from global datasets to combine and narrow the data down to what is necessary/required by the recipient system. The :ref:`filtering <filter_dtl_function>` and relating of data are performed using the :ref:`RDF types <best-practice-rdf-type>` introduced earlier. Data can also be augmented by performing hops to other datasets, for example a city-name can be fetched from a different dataset using the difi-postnummer. The goal is to have the data ready to be picked up by the outbound pipe.
 
 Below is an example of a preparation pipe, based on the global pipe above, where we wish to update the data in the system generating the hr-person data with crm-person data. More precicely, we wish to update data in the HR system to reflect the golden records from global-person. In addition we wish to update the HR data for "StreetAddress" with the address stated in the crm-person key "Address". 
 

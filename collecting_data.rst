@@ -13,7 +13,7 @@ When starting a new Sesam project it is very important to start thinking of how 
 
 Principles for collecting data is pulling data is best practice. Once data is in Sesam through the inbound pipe, a small number of properties can be added to aid connecting and re-using data. This is done mainly by modeling global datasets where we :ref:`merge <getting-started-merging-sources>` data about same object. 
 
-Once this is done, we can further enrich data by adding data from other datasets or do other :ref:`transformations <getting-started-transformations>`depending on requirements. 
+Once this is done, we can further enrich data by adding data from other datasets or do other :ref:`transformations <getting-started-transformations>` depending on requirements. 
 
 Principles of collecting data
 -----------------------------
@@ -32,11 +32,11 @@ The problem with push is that Sesam receives the data but at the same time has n
 Raw data
 ========
 
-Data is fed into Sesam through :ref:`an inbound pipe <data-modelling-Inbound pipes>`. Firstly, you will do an analysis of the data. From the result of the analysis, you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
+Data is fed into Sesam through :ref:`an inbound pipe <best-practice-inbound-pipes>`. Firstly, you will do an analysis of the data. From the result of the analysis, you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
 
- • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <data-modelling-namespace>`. These references are usually key properties when semantically link data together in a global dataset but are also useful when connecting data in preparation pipes.
+ • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <best-practice-namespace>`. These references are usually key properties when semantically link data together in a global dataset but are also useful when connecting data in preparation pipes.
  • When raw data is linked to data used to categorize it or other metadata, it is advisable to split it; keep data and metadata separate. The metadata used to categorize can be merged into global-classification.
- •  :ref:`An RDF type <best-practice_-rdf type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
+ •  :ref:`An RDF type <best-practice-rdf-type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
  •  **A combination of fields**: a dataset may at times contain data that when combined can form a fuller understanding of the field, like a combination of first name and surname will give the full name of a person. This is especially important if a combination of fields may be a reference to another dataset.
 
 However, aim to keep the inbound data from a data source as untouched and close to its original representation as possible.
@@ -62,7 +62,7 @@ In the case of data only available within Sesam, Sesam will become the de facto 
 Principles of connecting data
 -----------------------------
 
-When connecting data in Sesam, it is important to understand :ref:`global datasets <data-modelling-Global pipes>`. The raw data where additional properties were added is now ready to be connected to other data from other sources. This can be done in various ways so next few chapters will describe this in more detail.
+When connecting data in Sesam, it is important to understand :ref:`global datasets <best-practice-global-pipes>`. The raw data where additional properties were added is now ready to be connected to other data from other sources. This can be done in various ways so next few chapters will describe this in more detail.
 
 .. collecting_data-Global pipes / datasets:
 
@@ -117,7 +117,7 @@ When classifying in Sesam, it is advisable to start high up in the hierarchy but
 To meet this requirement for classifying data, we recommend always generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categories. When mentioning splitting of raw data, to "clean it" so that the objects come in clean, and the data used to categorize it in the source system can be merged into global classification to generate aggregated sets of metadata used to classify. An example on this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* for example. This depends on context. But it is highly recommended to always have a *global-classification* dataset mentioned above where we would merge in data object *product type*. Product type is now ready to be used as category for products needing this.
 
 Semantics as a method of classification of data
--------------------------------------
+-----------------------------------------------
 Another way of classification of data is to use standardized semantics to describe properties of a certain field. Sesam make use of RDF (https://www.w3.org/RDF/) to describe what a certain field means, but other types of semantics can be utilized. 
 If one use RDF or other type of methods to define semantics of input from sources, it will be easier to understand what a field is later down the line when you have to merge, enrich and enhance data into globals. And further on of creating preparation pipes to be able to send data to targets.
 
@@ -185,7 +185,7 @@ Test data is generated to be able to test that the data behaves as expected.
 
 It is best practice to build a foundation of test data in the inbound pipe and then build on this as the needs for testing arises. This is a smoother option than to try to generate prefect test data at the very beginning. This set of data can consist of 10 objects, anonymize if required and make sure it contains the fields required for testing. E.g., if you are testing merging, you need the fields you are margining on (E.g., merging person from HR and ERP system, you need social security number in both datasets).
 
-To read more about test data and how it is set up in Sesam, please click :ref:`here <data-modelling-Inbound pipes>`
+To read more about test data and how it is set up in Sesam, please click :ref:`here <best-practice-inbound-pipes>`
 
 Monitoring
 ==========
