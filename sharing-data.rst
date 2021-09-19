@@ -23,7 +23,7 @@ When sending data to a target system, a main challenge is using the right identi
 The correct ID for the necessary objects is available in the global datasets, and by hoping to them in the outgoing flow, the correct identifiers can be populated.
 
 Completeness
------------
+------------
 To ensure that any composed object is complete before sending it to a target system. The completeness features delay the transfer of incomplete objects.
 
 Feedback loop
