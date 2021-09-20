@@ -18,7 +18,8 @@ Sesam is offered as service that is either hosted for you in the cloud or you ho
 Hardware requirements
 ---------------------
 
-We recommend setting up at least a machine with 4 CPUs, 16GB RAM and 350GB fast storage depending on what needs you have.
+We recommend setting up at least a machine with 4 CPUs, 16GB RAM and a 350GB data partition with fast storage depending on what needs you have.
+
 
 Software requirements
 ---------------------
