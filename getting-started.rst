@@ -1238,7 +1238,7 @@ If a system in Sesam is connected to an external system that we can write to, we
 
 If we need to connect to a system that is not supported out-of-the-box or do operations that are not supported we can create and run a custom microservice as a system, used with a JSON push sink. You can find open-source, community developed microservices at https://github.com/sesam-community. We can also expose data directly in an HTTP publisher endpoint as JSON, CSV or XML without any system, just using a sink.
 
-You will find documentation for the systems and sinks on the Developer Guide's :ref:`Service Configuration <configuration>` page.
+You will find documentation for the systems and sinks in the :ref:`Configuration Guide <configuration>`.
 
 .. _getting-started-labtime.3:
 

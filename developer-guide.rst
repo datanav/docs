@@ -5,10 +5,8 @@ Developer Guide
 .. toctree::
    :maxdepth: 2
 
-   Service Configuration <configuration>
-   Entity Data Model <entitymodel>
-   Data Transformation Language (DTL) <DTLReferenceGuide>
    Service API <api>
+   Entity Data Model <entitymodel>
    Developer Extension Points <extension-points>
    JSON Pull Protocol <json-pull>
    JSON Push Protocol <json-push>

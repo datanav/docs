@@ -53,7 +53,7 @@ Importing raw data can be interesting for multiple reasons. When an external sys
 
 A two steps approach
 ====================
-To fullfil both goals of raw data retention and ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the verbatim raw dataset. From the input pipe’s point of view, the raw dataset is the data source as if it were from the external system itself. The semantic correlation, Sesamification if you will, is then performed in the input pipe. Namespace identifiers and rdf types are added, and the data is sent to the pertinent global, either as a whole or broken down, depending on the elected conceptual segmentation.
+To fulfill both goals of raw data retention and ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the verbatim raw dataset. From the input pipe’s point of view, the raw dataset is the data source as if it were from the external system itself. The semantic correlation, Sesamification if you will, is then performed in the input pipe. Namespace identifiers and rdf types are added, and the data is sent to the pertinent global, either as a whole or broken down, depending on the elected conceptual segmentation.
 
 A word about data ownership and data availability
 =================================================

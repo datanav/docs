@@ -12,7 +12,9 @@ Sesam is a Master Data Hub built on a streaming dataflow data integration and pr
    Concepts <concepts>
    Getting started <getting-started>
    Quick Reference <quick-reference>
-   Developer Guide <developer-guide>
+   Configuration guide <configuration>
+   Data Transformation Language <DTLReferenceGuide>
+   Technical guides <developer-guide>
    Best Practices <best-practices>
    Tools <tools>
    Community <community>

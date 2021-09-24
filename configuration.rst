@@ -1,8 +1,8 @@
 .. _configuration:
 
-===========================
-Service Configuration Guide
-===========================
+===================
+Configuration Guide
+===================
 
 .. contents:: Table of Contents
    :depth: 2
@@ -834,6 +834,11 @@ can also be nested), and have a single required property:
 **_id**. This ``_id`` field must be *unique within a flow* for a
 specific logical entity. There may exist multiple *versions* of this
 entity within a flow, however.
+
+
+.. contents::
+   :depth: 1
+   :local:
 
 Prototype
 ---------
@@ -3784,6 +3789,10 @@ either a transform configuration object or a list of them.
     }}
 
 
+.. contents::
+   :depth: 1
+   :local:
+
 
 .. _dtl_transform:
 
@@ -4948,6 +4957,10 @@ accumulating entities in a buffer before writing the batch. The size of
 each batch can be specified using the ``batch_size`` property on the
 pipe. See the section on :ref:`batching <pipe_batching>` for more
 information.
+
+.. contents::
+   :depth: 1
+   :local:
 
 Prototype
 ---------
@@ -7196,7 +7209,9 @@ You can manage any secret property values you do not want to be exposed in the A
 
 Note: as with pipe components, you are not allowed to use the forward slash character ("``/``") in system id's.
 
-All systems share a number of common properties:
+.. contents::
+   :depth: 1
+   :local:
 
 Prototype
 ---------
@@ -9124,6 +9139,10 @@ for retrying failed writes of entities and logging its activity. It can also wri
 dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
 the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.
+
+.. contents::
+   :depth: 1
+   :local:
 
 Prototype
 ---------

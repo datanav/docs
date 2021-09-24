@@ -1,5 +1,9 @@
+=========
 Changelog
 =========
+
+News
+====
 
 .. _changelog_2021_09_28:
 
@@ -15,7 +19,6 @@ Changelog
 
 * The "Datasets" page has been removed.
 * A dataset is managed by a pipe and considered a part the pipe. All the details about a dataset have therefore been moved to the pipe page of the pipe that writes to the dataset (under Output). Internal datasets can be found under "Datahub" > "Internal datasets".
-
 
 .. _changelog_2021_09_01:
 
