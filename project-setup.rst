@@ -1,3 +1,5 @@
+.. _setting-up-a-new-sesam-project:
+
 ------------------------------
 Setting up a new Sesam project
 ------------------------------

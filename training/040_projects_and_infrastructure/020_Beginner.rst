@@ -72,63 +72,48 @@ Finally, the "Subscription" tab. This tab is your, you could say, "manage my Ses
 sesam-CLI
 ~~~~~~~~~
 
-NB!! IKKE BRUK SYNCCONFIG TIL Å LASTE OPP/NED TIL AKTIVE NODER (PROD)
+.. sidebar:: Summary
 
-pre-requisite lære seg hvordan man installerer det.
+  The Sesam CLI is...
 
-lag en sesam-init <- feature request
+  - a command line interface
+  - a tool that supports CI/CD workflows
 
-setup
+  and the most common command workflow is... 
 
-expected folder
+  - ``sesam wipe`` - wipes your Sesam node
+  - ``sesam upload`` - uploads a local node config to your Sesam node 
+  - ``sesam download`` - downloads a node config to your local machine repo 
+  - ``sesam test`` - runs all dataflows and compares expected with actual outcome
+  - ``sesam update`` - updates your tests to account for recent changes
+  - ``sesam verify`` - verify that your tests now run successfully
 
-test.conf.json
+The Sesam command line interface (CLI) is used in order to support continous integration/continous deployment (CI/CD) workflows. This is especially handy when multiple people are working on the same project and changes the node configuration when they want to. The Sesam node configuration is typically stored in GitHub to make it accessible and allow for version control.
+ 
+In order to use the Sesam CLI you will need to install it. The repository for installing it can be found `here <https://github.com/sesam-community/sesam-py>`_. Upon successfully installing the Sesam CLI you should verify your installation by running the following command from your command prompt or terminal ``sesam -version``. If your terminal outputs a semantic version of Sesam you are good to go.
 
-whitelist/blacklist
+Starting using the Sesam CLI on a project you should verify your local copy of the node config located on GitHub is up to date with recent changes. This is a rule of thumb when collaborating on a given CI/CD workflow across multiple local contributors. As such, *Always* pull recent changes, before starting to work on anything locally. If this is your very first time working on a project you presumably do not have any Sesam configs on your local machine or in your personal Sesam development node. By cloning the node config located on GitHub, configuring the ``.syncconfig`` file and running ``sesam test``, your node will sync itself with the state of your cloned GitHub repository. 
 
-test.json
+After having made sure your local node config is up to date with the remote node config, you will typically do the following: 
 
-entiteter
+  1) Make a branch from the master branch in GitHub.
+  2) Wipe your Sesam development node by running: ``sesam wipe``. 
+  3) Run ``sesam upload`` to upload your local node config to your Sesam development node, accessible in your preferred browser. 
 
-env-var-folder
+  **Note**: Remember to run ``sesam download`` to save your current Sesam development node config, if you want to retain those changes before running ``sesam wipe`` as ``sesam wipe`` will not save your current Sesam development node config for you.
 
-set up vars for different environments
+In addition to all of the above, you should create an ``expected/`` folder. The preferred way of doing this is to run ``sesam update`` which will create the ``expected/`` folder with template test configs for you automatically. Alternatively, you can create an empty ``expected/`` folder yourself. The ``expected/`` folder should be placed in the root of your already existing ``node/`` folder. The ``expected/`` folder will hold all of your ``*.test.json`` config files. The ``*`` symbol denotes that every string value goes here. When finished with making config changes in your Sesam development node, then run ``sesam download`` followed by ``sesam test`` to check how your recently completed changes might affect the expected ouput placed in the ``expected/`` folder. The ``sesam test`` command compares the outcome produced by running all dataflows created in your Sesam development node against what is currently expected in the ``expected/`` folder. As an example, imagine you have made changes to the pipe config ``salesforce-person``, then what you want to make sure is that these changes are not disrupting any expected output present in the ``expected/`` folder. Your command prompt or terminal will let you know whether or not your tests passed. In case your tests failed, you can run ``sesam update`` followed by ``sesam verify`` to respectively update the ``expected/`` folder and verify the current state of what is expected equals what is produced via the dataflow run-throughs. Upon verification, you can add and/or commit your local changes and make a pull request to the master branch connected to your global repository state present on GitHub.
 
-test-env
+Finally, alteration to environment variables, i.e. adding new ones or removing new ones is a manual process and you'll need to navigate to the ``variables/`` folder placed in the root of your node repository. In the ``variables/`` folder you'll find a file that holds all your environment variables. Again *remember* to alter the contents of this file you need to manually add or remove specific environment variables.            
 
-.syncconfig
-
-jwt, node
-
-kommandoer
-
-sesam upload/download
-
-test
-
-update
-
--print-scheduler-log
-
--vv
-
--use-internal-scheduler
-
-wipe
-
-restart
-
-verify
-
-run
-
--version
-
-Hvordan funker expected output
 
 .. seealso::
 
-  TODO
+  `Sesam Command Line Interface repository <https://github.com/sesam-community/sesam-py>`_
+
+  Tools > Sesam Client :ref:`concepts-sesam-client`
+
+  Best Practices > Working on a Sesam Project :ref:`setting-up-a-new-sesam-project`
 
 .. _testing-and-testdata-4-1:
 
