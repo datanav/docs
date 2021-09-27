@@ -187,13 +187,23 @@ clean code
 JWT/Authentisering
 ~~~~~~~~~~~~~~~~~~
 
-Hvordan fungerer JWT’er?
+A JSON Web Token (JWT) is an open standard that is a compact and self-contained means of securely transmitting information between parties as a JSON object, i.e: A user and a Sesam node. JWTs, from a Sesam point of view, are used to allow a user to authenticate towards the Sesam Service API. This will in essence allow a user to communicate with a Sesam node without having to authenticate towards a Sesam node in your preferred browser. Everything from scripts and/or CLIs can now be used to communicate with your Sesam node.
 
-NB: Skal snake mer om API I sesam-in-the-wild
+To create a JWT you need to navigate to the following page:
+
+.. _figure-sesamGUI-4-1:
+.. figure:: ./media/Sesam_JWT.png
+   :align: center
+
+   Sesam JWT
 
 .. seealso::
 
-  TODO
+  Sesam in the Wild: :ref:`sesam-in-the-wild-beginner-6-1`
+
+  Developer Guide > Service API :ref:`api-top`
+
+  Tools > Databrowser :ref:`databrowser_ini_authorization_via_jwt_token`
 
 .. _groups-and-permissions-4-1:
 
