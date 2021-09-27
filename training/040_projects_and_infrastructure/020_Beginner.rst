@@ -191,7 +191,7 @@ A JSON Web Token (JWT) is an open standard that is a compact and self-contained 
 
 To create a JWT you need to navigate to the following page:
 
-.. _figure-sesamGUI-4-1:
+.. _figure-SesamJWT-4-1:
 .. figure:: ./media/Sesam_JWT.png
    :align: center
 
