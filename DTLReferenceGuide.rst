@@ -2137,7 +2137,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z".
-         
+
        .. WARNING::
 
           This function is non-deterministic and will return a
@@ -3334,7 +3334,7 @@ UUIDs
        |
        | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
        | Note that the mismatched input argument ``2`` is ignored.
-         
+
        .. WARNING::
 
           This function is non-deterministic and will return a
@@ -3599,11 +3599,11 @@ Hops
          particular order (for example on a particular property, or if you use the ``return`` keyword).
 
        .. _hops_function_targeting_sink:
-       
+
        .. WARNING::
 
           Hop-ing to the sink dataset is discouraged as there are some gotchas. In practice the pipe's ``batch_size`` must be set to ``1`` in order to guarantee that the hops is able to find the entities being written by the sink. Entities inside the current unflushed batch is not visible to the hops.
-       
+
      - ::
 
           ["hops", {
@@ -3808,6 +3808,107 @@ Namespaced identifiers
        |
        | Returns ``["bar", "baz"]``
 
+       .. _ni_collapse_function:
+   * - ``ni-collapse``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Uses the ``namespaces.default`` service metadata contents to produce a namespaced identifier from URLs.
+         VALUES that are not URLs are ignored (i.e. it accepts strings and URI parameters). If there is no longest
+         matching prefix in the ``namespaces.default`` settings, the functions will return a NI that contains the
+         original input (i.e. the The ``http`` and ``https`` prefixes are implicitly defined). Non-http URIs are not
+         supported.
+
+         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
+         service metadata option set to ``true``.
+       |
+       | Given this ``namespaces.default`` mapping in the service metadata:
+       |
+       |  ``{``
+            ``"foo": "http://psi.test.no/",``
+            ``"sesam_male": "http://sesam.io/people/male/",``
+            ``"sesam_female": "http://sesam.io/people/female/",``
+            ``"sesam": "http://sesam.io/people/"``
+          ``}``
+       |
+       | The following examples will produce this output:
+       |
+       | ``["ni-collapse", "http://psi.test.no/bar"]``
+       |
+       | Returns ``"~:foo:bar"``.
+       |
+       | ``["ni-collapse", ["list", "http://psi.test.no/bar", "http://psi.test.no/baz"]]``
+       |
+       | Returns ``["~:foo:bar", "~:foo:baz"]``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/employees"]``
+       |
+       | Returns ``"~:sesam:employees"``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/male/john"]``
+       |
+       | Returns ``"~:sesam_male:john"``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/female/jane"]``
+       |
+       | Returns ``"~:sesam_female:jane"``
+       |
+       | The ``http`` and ``https`` namespaces are implicitly defined, so a URI that doesn't match any prefix will work:
+       |
+       | ``["ni-collapse", "http://example.com/path"]``
+       |
+       | Returns ``"~:http://example.com/path"``
+
+       .. _ni_expand_function:
+   * - ``ni-expand``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Uses the ``namespaces.default`` service metadata contents to produce a URL string from a namespaced identifier.
+         VALUES that are not NIs are ignored. If there is no longest matching prefix in the ``namespaces.default``
+         settings, the functions will return a string cast of the NI.
+
+         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
+         service metadata option set to ``true``.
+       |
+       | Given this ``namespaces.default`` mapping in the service metadata:
+       |
+       |  ``{``
+            ``"foo": "http://psi.test.no/",``
+            ``"sesam_male": "http://sesam.io/people/male/",``
+            ``"sesam_female": "http://sesam.io/people/female/",``
+            ``"sesam": "http://sesam.io/people/"``
+          ``}``
+       |
+       | The following examples will produce this output:
+       |
+       | ``["ni-expand", "~:foo:bar"]``
+       |
+       | Returns ``http://psi.test.no/bar``.
+       |
+       | ``["ni-expand", ["list", "~:foo:bar", "~:foo:baz"]]``
+       |
+       | Returns ``["http://psi.test.no/bar", "http://psi.test.no/baz"]``
+       |
+       | ``["ni-expand", "~:sesam:employees"]``
+       |
+       | Returns ``"http://sesam.io/people/employees"``
+       |
+       | ``["ni-expand", "~:sesam_male:john"]``
+       |
+       | Returns ``"http://sesam.io/people/male/john"``
+       |
+       | ``["ni-expand", "~:sesam_female:jane"]``
+       |
+       | Returns ``"http://sesam.io/people/female/jane"``
+       |
+       | ``["ni-expand", "~:http://example.com/path"]``
+       |
+       | Returns ``"http://example.com/path"``
+       |
+       | ``["ni-expand", "~:unknown:path"]``
+       |
+       | Returns ``"unknown:path"``
 
 Values / collections
 --------------------
