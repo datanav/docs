@@ -114,6 +114,7 @@ Example:
       "global_defaults": {
          "use_signalling_internally": false,
          "default_compaction_type": "sink",
+         "symmetric_namespace_collapse": false
       },
       "dependency_tracking": {
          "dependency_warning_threshold": 10000,
@@ -271,6 +272,15 @@ Properties
      - True
      -
 
+       .. _service_metadata_global_defaults_symmetric_namespace_collapse:
+
+   * - ``global_defaults.symmetric_namespace_collapse``
+     - Boolean
+     - When set to true, the expand and collapse features will be symmetrical, i.e. data containing namespaced identifiers read into Sesam will map to the same thing
+       on the way out of Sesam. Note that setting this option to ``true`` as assumed by the DTL ``ni-collapse`` and ``ni-expand`` DTL functions
+       will also alter the URI/NI collapse and expand behaviour of the RDF and SPARQL source and sink.
+     - False
+     -
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``

@@ -1,13 +1,20 @@
 Changelog
 =========
 
+.. _changelog_2021_09_28:
+
+2021-09-28
+----------
+
+* Added the (experimental) :ref:`ni-collapse <ni_collapse_function>` and :ref:`ni-expand <ni_expand_function>` DTL functions. Note that these are only meant to work with the ``global_defaults.symmetric_namespace_collapse`` service metadata option set to ``true`` (``false`` by default while this functionality is in experimental state)
+
 .. _changelog_2021_09_27:
 
 2021-09-27
 ----------
 
 * The "Datasets" page has been removed.
-* A dataset is managed by a pipe and considered a part the pipe. All the details about a dataset have therefore been moved to the pipe page of the pipe that writes to the dataset (under Output). Internal datasets can be found under "Datahub" > "Internal datasets".  
+* A dataset is managed by a pipe and considered a part the pipe. All the details about a dataset have therefore been moved to the pipe page of the pipe that writes to the dataset (under Output). Internal datasets can be found under "Datahub" > "Internal datasets".
 
 
 .. _changelog_2021_09_01:
@@ -16,7 +23,7 @@ Changelog
 ----------
 
 * Added an :ref:`explanation <hops_function_targeting_sink>` about why you should not hop to the sink dataset.
-  
+
 
 .. _changelog_2021_08_16:
 
