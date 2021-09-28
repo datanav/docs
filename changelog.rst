@@ -6,7 +6,7 @@ Changelog
 2021-09-28
 ----------
 
-* Added the (experimental) :ref:`ni-collapse <ni_collapse_function>` and :ref:`ni-expand <ni_expand_function>` DTL functions. Note that these are only meant to work with the ``global_defaults.symmetric_namespace_collapse`` service metadata option set to ``true`` (``false`` by default while this functionality is in experimental state)
+* Added the (experimental) :ref:`ni-collapse <ni_collapse_dtl_function>` and :ref:`ni-expand <ni_expand_dtl_function>` DTL functions. Note that these are only meant to work with the ``global_defaults.symmetric_namespace_collapse`` service metadata option set to ``true`` (``false`` by default while this functionality is in experimental state)
 
 .. _changelog_2021_09_27:
 
@@ -31,7 +31,7 @@ Changelog
 ----------
 
 * Clarified when the ``is_first`` and ``is_last`` flags can be expected to be set in the Sesam :doc:`JSON Push Protocol <json-push>` - these flags are only set when running a full sync (i.e. not when in incremental mode). They are intended to signal to the client the start and end of a full sync run across multiple requests.
-* Fixed a bug in the :ref:`JSON (push) sink <json_push_sink>` that set the ``is_first`` flag also on incremental syncs.
+* Fixed a bug in the :ref:`JSON (push) sink <json_sink>` that set the ``is_first`` flag also on incremental syncs.
 
 .. _changelog_2021_08_04:
 
@@ -40,7 +40,7 @@ Changelog
 
 * Added a ``header`` property to the :ref:`JSON source <json_source>`. This property can be used to specify
   additional header values to be set when doing HTTP GET requests. This was added to make the JSON source
-  symmetrical with the :ref:`JSON (push) sink <json_push_sink>`. Note that both the JSON source and sink
+  symmetrical with the :ref:`JSON (push) sink <json_sink>`. Note that both the JSON source and sink
   adhere to the Sesam specific :doc:`JSON Pull Protocol <json-pull>`. Consider using the more general REST source or
   sink if you're interacting with a non-Sesam JSON capable REST api.
 
@@ -134,7 +134,7 @@ Changelog
 2021-03-22
 ----------
 
-* The :ref:`mail message sink <mail_message_sink>` will now automatically add a ``Date`` header to the email message.
+* The :ref:`mail message sink <mail_sink>` will now automatically add a ``Date`` header to the email message.
 * Added support for specifying a list of HTTP response status codes to ignore in the :ref:`REST transform <rest_transform>`.
 
 .. _changelog_2021_03_19:
@@ -360,7 +360,7 @@ Changelog
 2019-12-18
 ----------
 * Updated the documentation for the ``supports_signalling`` property on dataset sources and the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section.
-* The :ref:`The JSON push sink <json_push_sink>` and :ref:`REST sink <rest_sink>` no longer includes header values or entity data in the traceback details of the execution log on failures.
+* The :ref:`The JSON push sink <json_sink>` and :ref:`REST sink <rest_sink>` no longer includes header values or entity data in the traceback details of the execution log on failures.
 * The execution log and dead letter entities no longer includes copies of the ``source`` or ``sink`` configuration properties of the pipe.
 * The properties of the event entities in the execution log are now truncated at 10 mb to avoid excessive event entity sizes. Note that this cut-off value might be decreased further in the future.
 * If the pump fails due to exceeding retry limits, the entity in question is no longer included in the traceback properties. Instead it's put in a separate ``exception_entity`` property. Note that this property is not included in the monitoring data, so you cannot devise notification rules that refer to it.
@@ -383,8 +383,8 @@ Changelog
 
 2019-10-07
 ----------
-* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_message_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_message_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
-* The :ref:`reference <reference_function>` DTL function has been deprecated.
+* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+* The :ref:`reference <reference_dtl_function>` DTL function has been deprecated.
 * The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
 
 2019-09-04
@@ -424,7 +424,7 @@ Changelog
 
 2019-04-01
 ----------
-* The :ref:`"dtl" transform <dtl_transform>` will now fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform_create>` and  :ref:`"create-child" <dtl_transform_create_child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. This is a change in default behaviour, but it is possible to opt-out of this new behaviour by setting the ``id_required`` property to ``false``. It would make it easier to discover logic errors.
+* The :ref:`"dtl" transform <dtl_transform>` will now fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform-create>` and  :ref:`"create-child" <dtl_transform-create-child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. This is a change in default behaviour, but it is possible to opt-out of this new behaviour by setting the ``id_required`` property to ``false``. It would make it easier to discover logic errors.
 
 2019-03-26
 ----------
@@ -432,7 +432,7 @@ Changelog
 
 2019-03-22
 ----------
-* The :ref:`lookup <lookup_function>` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
+* The :ref:`lookup <lookup_dtl_function>` DTL function has been deprecated and replaced with the :ref:`lookup-entity <lookup_entity_dtl_function>` function. Note that the dataset referenced in its first argument must be populated before the parent pipe will run.
 
 2019-03-14
 ----------
@@ -469,7 +469,7 @@ Changelog
 ----------
 * There is now a new index implementation (version 2) that supports bidirectional traversal and that can be used to expose incremental feeds for one or more subsets of a dataset. Index version 1 is currently the default. Nodes must be started with a special command line option in order to change the default value. Version 2 will be made the default at some point once we have enough experience with it.
 * The :ref:`dataset <dataset_source>` and :ref:`json <json_source>` sources now support the ``subset`` property. This property is used to specify a subset of the source dataset.
-* The :ref:`hops <hops_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions now support the ``prefilters`` property. This property is used to specify a subset of the dataset that it is hopped to.
+* The :ref:`hops <hops_dtl_function>` and :ref:`apply-hops <apply_hops_dtl_function>` DTL functions now support the ``prefilters`` property. This property is used to specify a subset of the dataset that it is hopped to.
 * The ``GET /api/datasets/{dataset_id}/indexes`` API endpoint now includes the indexes' version number.
 * The ``DELETE /datasets/{dataset_id}/indexes/{index_int_id}`` API endpoint has been added. It can be used to delete a dataset index.
 
@@ -540,14 +540,14 @@ Changelog
 
 2018-06-25
 ----------
-* Changed the :ref:`base64-encode <base64encode_dtl_function>` and :ref:`base64-decode <base64decode_dtl_function>` DTL functions to only accept bytes and string input respectively.
+* Changed the :ref:`base64-encode <base64_encode_dtl_function>` and :ref:`base64-decode <base64_decode_dtl_function>` DTL functions to only accept bytes and string input respectively.
 * Added support for bytes input to the :ref:`string <string_dtl_function>` casting function. The encoding used is ``utf-8``.
 * Added a :ref:`bytes <bytes_dtl_function>` casting function that casts strings to (``utf-8`` encoded) bytes representation.
 
 2018-06-19
 ----------
 * Added a :ref:`RDF transform <rdf_transform>`, similar to the XML transform. It will render entities to a NTriples string and embed it in the transformed entity.
-* Added the :ref:`base64-encode <base64encode_dtl_function>` and :ref:`base64-decode <base64decode_dtl_function>` DTL functions.
+* Added the :ref:`base64-encode <base64_encode_dtl_function>` and :ref:`base64-decode <base64_decode_dtl_function>` DTL functions.
 
 2018-06-07
 ----------
@@ -691,7 +691,7 @@ Changelog
 
 2017-11-08
 ----------
-* The :ref:`JSON push sink  <json_push_sink>` now supports customizable HTTP headers via a ``headers`` property.
+* The :ref:`JSON push sink  <json_sink>` now supports customizable HTTP headers via a ``headers`` property.
 
 2017-10-12
 ----------
@@ -714,7 +714,7 @@ Changelog
 
 2017-08-23
 ----------
-* It is now possible to specify ``track-dependencies`` on all the HOPS_SPEC in a specific :ref:`hops <hops_function>` DTL function. This change was made so that one can disable tracking for any of the HOP_SPECs, not just the last one.
+* It is now possible to specify ``track-dependencies`` on all the HOPS_SPEC in a specific :ref:`hops <hops_dtl_function>` DTL function. This change was made so that one can disable tracking for any of the HOP_SPECs, not just the last one.
 
 2017-08-16
 ----------
@@ -722,7 +722,7 @@ Changelog
 
 2017-08-08
 ----------
-* The :ref:`datetime-parse <datetime-parse>` and :ref:`datetime-format <datetime-format>` DTL functions now accept an optional timezone argument. This makes it possible to parse datetime strings and format datetime values in specific timezones.
+* The :ref:`datetime-parse <datetime_parse_dtl_function>` and :ref:`datetime-format <datetime_format_dtl_function>` DTL functions now accept an optional timezone argument. This makes it possible to parse datetime strings and format datetime values in specific timezones.
 
 2017-06-29
 ----------
@@ -771,7 +771,7 @@ Changelog
 2017-05-29
 ----------
 * Added the ``indexes`` property to the :ref:`dataset <dataset_sink>` sink. If set to ``"$ids"`` then an index will be maintained for the ``$ids`` property. This index will then be used by the dataset browser to look up entities both by _id and $ids.
-* The default value of the ``max_depth`` property in :ref:`hops <hops_function>` has been changed from ``null`` to ``10``. This means that the default is to stop the recursion at level 10.
+* The default value of the ``max_depth`` property in :ref:`hops <hops_dtl_function>` has been changed from ``null`` to ``10``. This means that the default is to stop the recursion at level 10.
 
 2017-05-26
 ----------
@@ -858,7 +858,7 @@ Changelog
 
 2017-02-06
 ----------
-* Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_message_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
+* Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
 
 2017-02-03
 ----------
@@ -888,7 +888,7 @@ Changelog
 
 2017-01-04
 ----------
-*  Added an ``unhandled_template_variable_replacement`` property to the :ref:`Email Message sink <mail_message_sink>`.
+*  Added an ``unhandled_template_variable_replacement`` property to the :ref:`Email Message sink <mail_sink>`.
 
 2016-12-20
 ----------
@@ -996,8 +996,8 @@ Changelog
 
 2016-09-21
 ----------
-* Added the :ref:`datetime-shift <datetime-shift>` DTL function.
-* Added support for timezones to the :ref:`datetime-parse <datetime-parse>` DTL function.
+* Added the :ref:`datetime-shift <datetime_shift_dtl_function>` DTL function.
+* Added support for timezones to the :ref:`datetime-parse <datetime_parse_dtl_function>` DTL function.
 * Added missing sink- and source- prototypes in the "Edit pipe" gui in Management Studio.
 * Fixed a bug that prevented users from adding a system in Management Studio.
 

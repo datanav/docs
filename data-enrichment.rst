@@ -33,7 +33,7 @@ Instead of having to define global properties in advance, Sesam is built so that
 - In advance, if standardised schema already exists are to be used
 - On demand, when a consumer needs properties that may originate in more than one source
 
-If the creation of the global properties needs to use a :ref:`hops <hops_function>` to another global datasets, it is recommended to do this through feedback loops.
+If the creation of the global properties needs to use a :ref:`hops <hops_dtl_function>` to another global datasets, it is recommended to do this through feedback loops.
 
 .. data-enrichment-feedback-loops:
 

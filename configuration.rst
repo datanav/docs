@@ -594,7 +594,7 @@ Properties
      - Boolean
      - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on outbound pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_sink>`.
      - Sink default
      -
 
@@ -1322,7 +1322,7 @@ Properties
 
    * - ``datasets``
      - List<String{>=1}>
-     - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
+     - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_dtl_function>`.
      -
      - Yes
 
@@ -3006,6 +3006,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
+.. _empty_source:
+
 The empty source
 ----------------
 
@@ -3091,7 +3093,7 @@ The JSON Push protocol is described in additional detail in the
 entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :doc:`here
 <entitymodel>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
-<json_push_sink>`.
+<json_sink>`.
 
 The JSON Push endpoint supports `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ of
 both a single JSON object and a list of JSON objects. The HTTP request's ``content-type``
@@ -3806,13 +3808,13 @@ Properties
 
    * - ``rules``
      - Object
-     - The named rules of the DTL transform. The ``default`` named rule is required and is the rule that will be applied on the source entity. The other rules can be applied via the :ref:`apply <apply_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions.
+     - The named rules of the DTL transform. The ``default`` named rule is required and is the rule that will be applied on the source entity. The other rules can be applied via the :ref:`apply <apply_dtl_function>` and :ref:`apply-hops <apply_hops_dtl_function>` DTL functions.
      -
      - Yes
 
    * - ``id_required``
      - Boolean
-     - If ``true`` then the DTL transform will fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform_create>` and  :ref:`"create-child" <dtl_transform_create_child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. If the value is ``false`` then it will not fail in these situation. Instead the values will be ignored.
+     - If ``true`` then the DTL transform will fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform-create>` and  :ref:`"create-child" <dtl_transform-create-child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. If the value is ``false`` then it will not fail in these situation. Instead the values will be ignored.
      - ``true``
      -
 
@@ -3855,6 +3857,7 @@ Transformation Language before writing them to the
        }
    }
 
+.. _json_schema_transform:
 
 The JSON Schema validation transform
 ------------------------------------
@@ -4204,12 +4207,17 @@ however, the result would instead become:
         }
     }
 
+.. _upper_keys_transform:
+
 The upper keys transform
 ------------------------
 
 This transform transforms all the keys of an entity to upper case (optionally recursively).
 The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
 transformed to upper case. See previous section for details.
+
+
+.. _undirected_graph_transform:
 
 The undirected graph transform
 ------------------------------
@@ -5328,7 +5336,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _json_push_sink:
+.. _json_sink:
 
 The JSON push sink
 ------------------
@@ -5433,12 +5441,12 @@ An example using a custom "application/json" content-type header needed by some 
     }
 
 
-.. _sdshare_push_sink:
+.. _sdshare_sink:
 
 The SDShare push sink
 ---------------------
 
-The SDShare push sink is similar to the :ref:`JSON push sink <json_push_sink>`, but instead of posting JSON it
+The SDShare push sink is similar to the :ref:`JSON push sink <json_sink>`, but instead of posting JSON it
 translates the inbound entities to ``RDF`` and ``POSTs`` them in N-Triples form to a :ref:`HTTP endpoint <url_system>`
 implementing the ``SDShare push protocol``.
 
@@ -5499,7 +5507,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _sms_message_sink:
+.. _sms_sink:
 
 The SMS message sink
 --------------------
@@ -6249,7 +6257,7 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - Preformatted strings on the format ``xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`` can also be used
 
 
-.. _mail_message_sink:
+.. _mail_sink:
 
 The Email Message sink
 ----------------------
@@ -6410,6 +6418,8 @@ To send multi-part email messages containing both a HTML and a plain-text versio
 The former should then contain your HTML message and the latter your plain-text version. If you omit the ``text_*``
 properties and the body template contains HTML, the sink will attempt to extract a text-only version of the HTML
 on a best-effort basis; i.e. this might not preserve the information contained in the HTML in the desired way.
+
+.. _null_sink:
 
 The null sink
 -------------
@@ -8056,7 +8066,7 @@ The SMTP system
 ---------------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
-server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_message_sink>` to construct
+server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_sink>` to construct
 and send emails based on the entities it receives.
 
 Prototype
@@ -8259,7 +8269,7 @@ The Twilio system
 -----------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
-:ref:`SMS message sinks <sms_message_sink>` to construct and send SMS messages from entities.
+:ref:`SMS message sinks <sms_sink>` to construct and send SMS messages from entities.
 
 It has the following properties:
 
@@ -8860,7 +8870,7 @@ Example configuration
 The microservice system
 -----------------------
 
-The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
+The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_sink>`.
 
 The ``docker`` property lets one specify a Docker container that should be spun up. Note that the microservice system does not have the ``base_url`` property. The reason is that it is able to figure out this itself.
 

@@ -455,7 +455,7 @@ The following functions are namespace aware: :ref:`add
 :ref:`make-ni <dtl_transform-make-ni>`, :ref:`remove
 <dtl_transform-remove>`, :ref:`copy <dtl_transform-copy>`,
 :ref:`rename <dtl_transform-rename>` and :ref:`path
-<path_function>`. This means they behave slightly differently when
+<path_dtl_function>`. This means they behave slightly differently when
 :ref:`namespaced identifiers <namespaces>` is enabled.
 
 - Function arguments that are of type ``wildcard-string`` will make
@@ -1259,8 +1259,7 @@ modifiying the target entity, and has no return value.
        |
        | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
 
-       .. _dtl_transform_create:
-
+       .. _dtl_transform-create:
    * - ``create``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1280,7 +1279,7 @@ modifiying the target entity, and has no return value.
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
-       .. _dtl_transform_create_child:
+       .. _dtl_transform-create-child:
 
    * - ``create-child``
      - | *Arguments:*
@@ -1330,6 +1329,7 @@ Boolean logic
      - Description
      - Examples
 
+       .. _and_dtl_function:
    * - ``and``
      - | *Arguments:* boolean-expression{>0}
        |
@@ -1341,6 +1341,7 @@ Boolean logic
        |
        | Age must be greater than 26 and the gender must be male.
 
+       .. _or_dtl_function:
    * - ``or``
      - | *Arguments:* boolean-expression{>0}
        |
@@ -1352,6 +1353,7 @@ Boolean logic
        |
        | The category field must contain "A" or "B".
 
+       .. _not_dtl_function:
    * - ``not``
      - | *Arguments:* boolean-expression{>0}
        |
@@ -1365,6 +1367,7 @@ Boolean logic
        |
        | The category must contain neither "A" nor "B".
 
+       .. _all_dtl_function:
    * - ``all``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1389,6 +1392,7 @@ Boolean logic
        |
        | Returns false because not all arguments are less than 2.
 
+       .. _any_dtl_function:
    * - ``any``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -1424,6 +1428,7 @@ Booleans
      - Description
      - Examples
 
+       .. _boolean_dtl_function:
    * - ``boolean``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -1469,6 +1474,7 @@ Booleans
        | Returns a list of booleans: [true, "http://www.example.org/", false].
          The URI value is replaced with its string cast.
 
+       .. _is_boolean_dtl_function:
    * - ``is-boolean``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -1645,7 +1651,7 @@ Comparisons
        | Returns true if the source entity's distance between ``start`` and ``end`` changed.
 
 
-If-then-else
+Conditionals
 ------------
 
 .. list-table::
@@ -2151,8 +2157,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
           that you are aware of the consequences of reprocessing
           entities.*
 
-       .. _`datetime`:
-
+       .. _datetime_dtl_function:
    * - ``datetime``
      - | *Arguments:*
        |   FUNCTION(default-value-expression(0|1}
@@ -2184,8 +2189,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
 
-       .. _`datetime-parse`:
-
+       .. _datetime_parse_dtl_function:
    * - ``datetime-parse``
      - | *Arguments:*
        |   TIMEZONE_NAME(string{0|1})
@@ -2250,8 +2254,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns one datetime value: "~t2018-08-08T10:39:01Z".
 
-       .. _`datetime-format`:
-
+       .. _datetime_format_dtl_function:
    * - ``datetime-format``
      - | *Arguments:*
        |   TIMEZONE_NAME(string{0|1})
@@ -2303,8 +2306,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | See ``datetime-parse`` for the supported tokens in the format string.
 
-       .. _`datetime-plus`:
-
+       .. _datetime_plus_dtl_function:
    * - ``datetime-plus``
      - | *Arguments:*
        |   DATEPART(string{1})
@@ -2346,8 +2348,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
        |                               ``"~t1951-06-01T00:00:00Z"]``.
 
-       .. _`datetime-diff`:
-
+       .. _datetime_diff_dtl_function:
    * - ``datetime-diff``
      - | *Arguments:*
        |   DATEPART(string{1})
@@ -2396,8 +2397,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns: -16
 
-       .. _`datetime-shift`:
-
+       .. _datetime_shift_dtl_function:
    * - ``datetime-shift``
      - | *Arguments:*
        |   FROM_TIMEZONE(string{1})
@@ -2432,8 +2432,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
        | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
        |                               ``"~t2015-07-28T02:46:00Z"]``.
 
-       .. _`is-datetime`:
-
+       .. _is_datetime_dtl_function:
    * - ``is-datetime``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -2502,17 +2501,6 @@ Strings
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.example.org/", "124.4", "12345"]``.
 
-       .. _bytes_dtl_function:
-   * - ``bytes``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
-       |
-     - | ``["bytes", "abc"]``
-       |
-       | Returns one bytes object: ``~bYWJj``.
-
        .. _is_string_dtl_function:
    * - ``is-string``
      - | *Arguments:*
@@ -2537,42 +2525,6 @@ Strings
        | ``["is-string", ["list", 1, "foo:bar"]]``
        |
        | Returns false
-
-
-       .. _base64encode_dtl_function:
-   * - ``base64-encode``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the base64 encoded version of its input bytes.
-         Non-bytes values are ignored.
-     - | ``["base64-encode", ["bytes", "abc"]]``
-       |
-       | Returns ``"YWJj"``.
-       |
-       | ``["base64-encode", ["list", 1, ["bytes", "abc"], 2, ["bytes", "def"], 3]]``
-       |
-       | Returns ``["YWJj", "ZGVm"]``.
-       |
-
-
-       .. _base64decode_dtl_function:
-   * - ``base64-decode``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the base64 decoded version of its input strings.
-         Non-string values and non-base64 encoded values are ignored.
-     - | ``["base64-decode", "YWJj"]``
-       |
-       | Returns ``"~babc"``.
-       |
-       | ``["base64-decode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
-       |
-       | Returns ``["~bYWJj", "~bZGVm"]``.
-       |
-       | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
-       | the similar looking output and input)
 
        .. _upper_dtl_function:
    * - ``upper``
@@ -2885,6 +2837,75 @@ Strings
        |
        | Returns ``false``.
 
+Bytes
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _bytes_dtl_function:
+   * - ``bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
+       |
+     - | ``["bytes", "abc"]``
+       |
+       | Returns one bytes object: ``~bYWJj``.
+
+
+       .. _base64_encode_dtl_function:
+   * - ``base64-encode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 encoded version of its input bytes.
+         Non-bytes values are ignored.
+     - | ``["base64-encode", ["bytes", "abc"]]``
+       |
+       | Returns ``"YWJj"``.
+       |
+       | ``["base64-encode", ["list", 1, ["bytes", "abc"], 2, ["bytes", "def"], 3]]``
+       |
+       | Returns ``["YWJj", "ZGVm"]``.
+       |
+
+
+       .. _base64_decode_dtl_function:
+   * - ``base64-decode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 decoded version of its input strings.
+         Non-string values and non-base64 encoded values are ignored.
+     - | ``["base64-decode", "YWJj"]``
+       |
+       | Returns ``"~babc"``.
+       |
+       | ``["base64-decode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
+       |
+       | Returns ``["~bYWJj", "~bZGVm"]``.
+       |
+       | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
+       | the similar looking output and input)
+
+Encryption
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
        .. _encrypt_dtl_function:
    * - ``encrypt``
      - | *Arguments:*
@@ -2901,6 +2922,7 @@ Strings
        |
        | Returns an encrypted bytes object.
 
+       .. _encrypt_pki_dtl_function:
    * - ``encrypt-pki``
      - | *Arguments:*
        |   PUBLIC_KEY(string{1})
@@ -2931,6 +2953,7 @@ Strings
        |
        | Returns a single bytes object: ``"~bDHAERS.."``
 
+       .. _encrypt_pgp_dtl_function:
    * - ``encrypt-pgp``
      - | *Arguments:*
        |   PUBLIC_KEY(string{1})
@@ -2978,6 +3001,7 @@ Strings
        | Returns ``["a", "b", "c"]``
        |
 
+       .. _decrypt_pki_dtl_function:
    * - ``decrypt-pki``
      - | *Arguments:*
        |   PRIVATE_KEY(string{1})
@@ -3008,6 +3032,8 @@ Strings
 
        | Returns ``["a", "b", "c"]``
        |
+
+       .. _decrypt_pgp_dtl_function:
    * - ``decrypt-pgp``
      - | *Arguments:*
        |   PRIVATE_KEY(string{1})
@@ -3215,6 +3241,7 @@ URIs
      - Description
      - Examples
 
+       .. _uri_dtl_function:
    * - ``uri``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3232,6 +3259,7 @@ URIs
        | Returns a list of two URIs. The number is silently ignored because
          it is not a string.
 
+       .. _is_uri_dtl_function:
    * - ``is-uri``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3360,7 +3388,7 @@ Nested transformations
      - Description
      - Examples
 
-       .. _apply_function:
+       .. _apply_dtl_function:
    * - ``apply``
      - | *Arguments:*
        |   RULE_ID(string{1}),
@@ -3375,7 +3403,7 @@ Nested transformations
          ``orders`` field using the ``order`` transform rules. The output is
          the transformed order entities.
 
-       .. _apply_hops_function:
+       .. _apply_hops_dtl_function:
    * - ``apply-hops``
      - | *Arguments:*
        |   RULE_ID(string{1}),
@@ -3385,8 +3413,8 @@ Nested transformations
          evaluates the hops, and then passes the result through
          the RULE_ID transform rule.
 
-       | See the :ref:`apply <apply_function>`
-         and the :ref:`hops <hops_function>` functions for more information
+       | See the :ref:`apply <apply_dtl_function>`
+         and the :ref:`hops <hops_dtl_function>` functions for more information
          about the parts.
 
        .. NOTE::
@@ -3418,7 +3446,7 @@ Paths
      - Description
      - Examples
 
-       .. _path_function:
+       .. _path_dtl_function:
    * - ``path``
      - | *Arguments:*
        |   PROPERTY_PATH(value-expression{1}),
@@ -3508,7 +3536,7 @@ Hops
      - Description
      - Examples
 
-       .. _hops_function:
+       .. _hops_dtl_function:
    * - ``hops``
      - | *Arguments:*
        |   HOPS_SPEC(dict{>1})
@@ -3672,7 +3700,7 @@ Entity lookups
      - Description
      - Examples
 
-       .. _lookup_entity_function:
+       .. _lookup_entity_dtl_function:
    * - ``lookup-entity``
      - | *Arguments:*
        |   DATASET_ID(string{1})
@@ -3703,7 +3731,7 @@ Namespaced identifiers
      - Description
      - Examples
 
-       .. _ni_function:
+       .. _ni_dtl_function:
    * - ``ni``
      - | *Arguments:*
        |   NAMESPACE(string{0|1}),
@@ -3752,7 +3780,7 @@ Namespaced identifiers
          had already been mapped to the ``unknown`` namespace then the expression would have
          returned ``"~:unknown:baz"``
 
-       .. _is_ni_function:
+       .. _is_ni_dtl_function:
    * - ``is-ni``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3776,7 +3804,7 @@ Namespaced identifiers
        |
        | Returns ``false``.
 
-       .. _ni_ns_function:
+       .. _ni_ns_dtl_function:
    * - ``ni-ns``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3792,7 +3820,7 @@ Namespaced identifiers
        |
        | Returns ``["foo", "bar"]``
 
-       .. _ni_id_function:
+       .. _ni_id_dtl_function:
    * - ``ni-id``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3808,7 +3836,7 @@ Namespaced identifiers
        |
        | Returns ``["bar", "baz"]``
 
-       .. _ni_collapse_function:
+       .. _ni_collapse_dtl_function:
    * - ``ni-collapse``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3859,7 +3887,7 @@ Namespaced identifiers
        |
        | Returns ``"~:http://example.com/path"``
 
-       .. _ni_expand_function:
+       .. _ni_expand_dtl_function:
    * - ``ni-expand``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3910,8 +3938,8 @@ Namespaced identifiers
        |
        | Returns ``"unknown:path"``
 
-Values / collections
---------------------
+Lists
+-----
 
 .. list-table::
    :header-rows: 1
@@ -3921,6 +3949,7 @@ Values / collections
      - Description
      - Examples
 
+       .. _list_dtl_function:
    * - ``list``
      - | *Arguments:*
        |   VALUES(value-expression{>0})
@@ -3938,6 +3967,7 @@ Values / collections
        |
        | Returns ``["a", ["b"], "c"]``.
 
+       .. _is_list_dtl_function:
    * - ``is-list``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3964,6 +3994,7 @@ Values / collections
        |
        | Returns true.
 
+       .. _first_dtl_function:
    * - ``first``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -3979,6 +4010,7 @@ Values / collections
        |
        | Returns the first tag in the source entity's ``tags`` field.
 
+       .. _last_dtl_function:
    * - ``last``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4037,6 +4069,7 @@ Values / collections
        | Returns ``false``.
 
 
+       .. _nth_dtl_function:
    * - ``nth``
      - | *Arguments:*
        |   INDEX(integer-expression{1})
@@ -4119,6 +4152,7 @@ Values / collections
        | ``["combine", ["list", 1, 2], ["list", 3, 4], 5]``
        | Returns ``[1, 2, 3, 4, 5]``
 
+       .. _flatten_dtl_function:
    * - ``flatten``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4220,6 +4254,7 @@ Values / collections
        |
        | Returns the order with the highest amount.
 
+       .. _sum_dtl_function:
    * - ``sum``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4234,6 +4269,7 @@ Values / collections
        |
        | Returns the sum of the amounts.
 
+       .. _count_dtl_function:
    * - ``count``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4303,6 +4339,7 @@ Values / collections
        |   ``{"key": 3, "value": 32},``
        |   ``{"key": 4, "value": 21}]``.
 
+       .. _distinct_dtl_function:
    * - ``distinct``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -4408,6 +4445,7 @@ Values / collections
        |
        | Returns the tags in descending order.
 
+       .. _reversed_dtl_function:
    * - ``reversed``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4551,6 +4589,7 @@ Sets
      - Description
      - Examples
 
+       .. _union_dtl_function:
    * - ``union``
      - | *Arguments:*
        |   VALUES1(value-expression{1})
@@ -4569,6 +4608,7 @@ Sets
        |
        | Returns ``["A", "B", "C"]``.
 
+       .. _intersection_dtl_function:
    * - ``intersection``
      - | *Arguments:*
        |   VALUES1(value-expression{1})
@@ -4612,6 +4652,7 @@ Sets
        |
        | Returns ``false``.
 
+       .. _difference_dtl_function:
    * - ``difference``
      - | *Arguments:*
        |   VALUES1(value-expression{1})
@@ -4637,8 +4678,8 @@ Sets
        | Returns ``["C", "D"]``.
 
 
-Dictionaries / Entities
------------------------
+Dictionaries
+------------
 
 .. list-table::
    :header-rows: 1
@@ -4648,6 +4689,7 @@ Dictionaries / Entities
      - Description
      - Examples
 
+       .. _items_dtl_function:
    * - ``items``
      - | *Arguments:*
        |   DICTS(value-expression{1})
@@ -4665,6 +4707,7 @@ Dictionaries / Entities
        |
        | Returns ``[["A", 1]]``.
 
+       .. _dict_dtl_function:
    * - ``dict``
      - | *Arguments:*
        |   EMPTY{0} or ITEMS(value-expression{1}) or (KEY, VALUE){>=0)
@@ -4699,6 +4742,7 @@ Dictionaries / Entities
        |
        | Returns ``{"a": "A", "b": "B"}``.
 
+       .. _is_dict_dtl_function:
    * - ``is-dict``
      - | *Arguments:*
        |   VALUES(value-expression{1})
@@ -4722,6 +4766,7 @@ Dictionaries / Entities
        |
        | Returns false
 
+       .. _keys_dtl_function:
    * - ``keys``
      - | *Arguments:*
        |   DICTS(value-expression{1})
@@ -4738,6 +4783,7 @@ Dictionaries / Entities
        |
        | Returns ``["A"]``.
 
+       .. _values_dtl_function:
    * - ``values``
      - | *Arguments:*
        |   DICTS(value-expression{1})
@@ -4754,6 +4800,7 @@ Dictionaries / Entities
        |
        | Returns ``[1]``.
 
+       .. _key_values_dtl_function:
    * - ``key-values``
      - | *Arguments:*
        |   DICTS(value-expression{1})
@@ -4862,6 +4909,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
      - Description
      - Examples
 
+       .. _plus_dtl_function:
    * - ``plus``
      - | *Arguments:*
        |   INCREMENT(numeric-expression{1})
@@ -4877,6 +4925,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``20``.
 
+       .. _plus_symbol_dtl_function:
    * - ``+``
      - | *Arguments:*
        |   VALUE1(value-expression{1})
@@ -4891,6 +4940,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``20``.
 
+       .. _minus_dtl_function:
    * - ``minus``
      - | *Arguments:*
        |   DECREMENT(numeric-expression{1})
@@ -4906,6 +4956,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``2``.
 
+       .. _minus_symbol_dtl_function:
    * - ``-``
      - | *Arguments:*
        |   VALUE1(value-expression{1})
@@ -4921,6 +4972,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``-2``.
 
+       .. _divide_dtl_function:
    * - ``divide``
      - | *Arguments:*
        |   DIVISOR(numeric-expression{1})
@@ -4940,6 +4992,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``1.5``.
 
+       .. _divide_symbol_dtl_function:
    * - ``/``
      - | *Arguments:*
        |   DIVIDEND(numeric-expression{1})
@@ -4966,6 +5019,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``null``.
 
+       .. _multiply_dtl_function:
    * - ``multiply``
      - | *Arguments:*
        |   MULTIPLIER(numeric-expression{1})
@@ -4985,6 +5039,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``4.6``.
 
+       .. _multiply_symbol_dtl_function:
    * - ``*``
      - | *Arguments:*
        |   VALUE(value-expression{1})
@@ -5003,6 +5058,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``4.6``.
 
+       .. _mod_dtl_function:
    * - ``mod``
      - | *Arguments:*
        |   DIVISOR(numeric-expression{1})
@@ -5018,6 +5074,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``2``.
 
+       .. _mod_symbol_dtl_function:
    * - ``%``
      - | *Arguments:*
        |   DIVIDEND(numeric-expression{1})
@@ -5041,6 +5098,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``2``.
 
+       .. _pow_dtl_function:
    * - ``pow``
      - | *Arguments:*
        |   EXPONENT(numeric-expression{1})
@@ -5056,6 +5114,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``1000``.
 
+       .. _pow_symbol_dtl_function:
    * - ``^``
      - | *Arguments:*
        |   VALUE(value-expression{1})
@@ -5118,6 +5177,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | If ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
        | it will be a decimal or a float.
 
+       .. _ceil_dtl_function:
    * - ``ceil``
      - | *Arguments:*
        |   DIGITS(numeric-expression{0|1})
@@ -5146,6 +5206,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | it will be a decimal or a float.
 
 
+       .. _floor_dtl_function:
    * - ``floor``
      - | *Arguments:*
        |   DIGITS(numeric-expression{0|1})
@@ -5173,6 +5234,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Note that if ``DIGITS`` is 0 or not provided, the return value will be of type integer. In all other cases
        | it will be a decimal or a float.
 
+       .. _abs_dtl_function:
    * - ``abs``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
@@ -5191,6 +5253,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``2.23``.
 
+       .. _sqrt_dtl_function:
    * - ``sqrt``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
@@ -5209,6 +5272,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``3.0``.
 
+       .. _sin_dtl_function:
    * - ``sin``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
@@ -5223,6 +5287,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``0.0``.
 
+       .. _cos_dtl_function:
    * - ``cos``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
@@ -5237,6 +5302,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``1.0``.
 
+       .. _tan_dtl_function:
    * - ``tan``
      - | *Arguments:*
        |   VALUE(numeric-expression{1})
@@ -5277,7 +5343,7 @@ Misc
 
 Supported timezones
 ===================
-The :ref:`datetime-shift<datetime-shift>` dtl-function supports the following timezones:
+The :ref:`datetime-shift<datetime_shift_dtl_function>` dtl-function supports the following timezones:
 
 ..
   TODO get this list from same pytz library version that the node uses

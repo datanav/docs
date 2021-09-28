@@ -129,7 +129,7 @@ stored as part of the entity.
 
        .. _dollar_children:
    * - ``$children``
-     - The :ref:`create-child <dtl_transform_create_child>` DTL transform function
+     - The :ref:`create-child <dtl_transform-create-child>` DTL transform function
        will add the created child entity as a value in the ``$children`` property of the
        target entity. The :ref:`emit_children <emit_children_transform>` transform can
        then later be used to expand the ``$children`` entities into standalone entities.

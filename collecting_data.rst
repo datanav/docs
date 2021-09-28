@@ -38,7 +38,7 @@ Data is fed into Sesam through :ref:`an inbound pipe <best-practice-inbound-pipe
 
  • **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <best-practice-namespace>`. These references are usually key properties when semantically linking data together in a global dataset but are also useful when connecting data in preparation pipes.
  • When raw data is linked to data used to categorize it or other metadata, it is advisable to split it; keep data and metadata separate. The metadata used to categorize can be merged into a global like ``global-classification``.
- •  :ref:`An RDF type <best-practice-rdf-type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_function>` to other datasets.
+ •  :ref:`An RDF type <best-practice-rdf-type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_dtl_function>` to other datasets.
  •  **A combination of fields**: a dataset may at times contain data that can form a fuller understanding of the field when combined, like a combination of first name and surname will give the full name of a person. This is especially important if a combination of fields may be a reference to another dataset.
 
 However, aim to keep the inbound data from a data source as untouched and close to its original representation as possible.
@@ -174,7 +174,7 @@ Adding global properties does not mean that you must create a golden record, the
 Enhancing global datasets with data from other datasets
 =======================================================
 
-This point is quite similar to the above point, with the only difference being that you create global properties by making a :ref:`hops <hops_function>` to another dataset (preferably global).   
+This point is quite similar to the above point, with the only difference being that you create global properties by making a :ref:`hops <hops_dtl_function>` to another dataset (preferably global).   
 
 When modelling your global dataset and seeing the need to create a global property using hops, there is one thing you need to be aware of. Dependency tracking does not work for hops made in a “merge”-pipe. This means that you must split the global pipe into two separate pipes. One pipe that contains the merge rules and does the merging, this pipe should be given the “merged-“ prefix. The second pipe should have the merged dataset as source and contain the DTL transformations, this should be the global pipe.
 
