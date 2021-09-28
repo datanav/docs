@@ -3818,9 +3818,9 @@ Namespaced identifiers
          matching prefix in the ``namespaces.default`` settings, the functions will return a NI that contains the
          original input (i.e. the The ``http`` and ``https`` prefixes are implicitly defined). Non-http URIs are not
          supported.
-
          NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
          service metadata option set to ``true``.
+
        |
        | Given this ``namespaces.default`` mapping in the service metadata:
        |
@@ -3867,9 +3867,9 @@ Namespaced identifiers
      - | Uses the ``namespaces.default`` service metadata contents to produce a URL string from a namespaced identifier.
          VALUES that are not NIs are ignored. If there is no longest matching prefix in the ``namespaces.default``
          settings, the functions will return a string cast of the NI.
-
          NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
          service metadata option set to ``true``.
+
        |
        | Given this ``namespaces.default`` mapping in the service metadata:
        |
