@@ -18,7 +18,7 @@ In essence, you should be aware of how your source and/or target system will res
 
 Non-idempotent APIs (REST or SOAP):
 --------------------------------------------------
-The problem with non-idempotent systems you might get different results every time you apply an operation towards them. Results that you did not attend to.
+The problem with non-idempotent systems is that you can get different results every time you use an operation against them. The results may not be what you expected.
 
 For instance, if one expected to update an entity/record in a system via REST using the POST method this will be an unsuccessful update, 
 since the POST method will add new record. And the record one wanted to update is still active alongside the new record. 
