@@ -589,11 +589,11 @@ We will later see the use of the ``["merge"]`` function in combination with func
 
 Apply
 ^^^^^
-The :ref:`apply <apply_function>` operation applies an own-specified rule to an entity. I.e. the call ["apply", "SomeRule", "_S.orders"] applied the rule "SomeFunc" to the source "_S.orders".  
+The :ref:`apply <apply_dtl_function>` operation applies an own-specified rule to an entity. I.e. the call ["apply", "SomeRule", "_S.orders"] applied the rule "SomeFunc" to the source "_S.orders".  
 
 Hops
 ^^^^
-The :ref:`hops <hops_function>` function joins two datasets and returns the entities where the specified parameters match:
+The :ref:`hops <hops_dtl_function>` function joins two datasets and returns the entities where the specified parameters match:
 
 ::
  
@@ -620,7 +620,7 @@ In this transform we first copy everything from the source dataset into the targ
 
 Apply-hops
 ^^^^^^^^^^
-There is also the function :ref:`apply-hops <apply_hops_function>`, which is a combined ``["apply"]``  and ``["hops"]``  function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the ``["apply"]``  function :ref:`here <hops_function>` 
+There is also the function :ref:`apply-hops <apply_hops_dtl_function>`, which is a combined ``["apply"]``  and ``["hops"]``  function. This adds another **"rule"** in the DTL configuration in which we can specify how to implement the entities fetched with the hops. You can read more about the ``["apply"]``  function :ref:`here <hops_dtl_function>` 
 
 ::
 
@@ -753,7 +753,7 @@ In order to make sure that only entities that have changed since the last time t
 
 We will try to explain the workings of dependency tracking with a different example, and then apply this information in :ref:`lab 22 <getting-started-labs-22>`.
 
-Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_function>` function. 
+Let us assume you have a dataset in your Sesam node concerning all the employees in a company. This dataset may contain information regarding the employee’s names, employee numbers, age, length of employment and so on. In another dataset you have information regarding which projects the employees have worked on as well as the employee number. You now wish to combine these datasets to generate a new dataset that includes both the employees name, employee number and the different projects this employee has worked on. This could be done using the :ref:`hops <hops_dtl_function>` function. 
 
 If we start with the dataset containing employee information, we may combine the data from the employee dataset with the project dataset based on matching employee numbers. Should an employee change their name, Sesam will pick up a change in the source entity and reprocess that entity to update the results. However, the project dataset is not the source in this case, but registering the changes in this dataset is just as vital as registering changes in the source dataset, as they both combine to make the resulting dataset in this use-case. This is where dependency tracking comes into play. 
 

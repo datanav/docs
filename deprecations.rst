@@ -23,7 +23,7 @@ DTL Functions
      - Description
      - Examples
 
-       .. _curie_function:
+       .. _curie_dtl_function:
    * - ``curie``
      - | *Arguments:*
        |   PREFIX(string{1}),
@@ -41,7 +41,7 @@ DTL Functions
        | This will produce a list of two URI objects with the
          values ``["~rfoo:bar", "~rfoo:zoo"]``.
 
-       .. _uri_expand_function:
+       .. _uri_expand_dtl_function:
    * - ``uri-expand``
      - | *Arguments:*
        |   FUNCTION(function-expression(0|1}
@@ -140,7 +140,7 @@ DTL Functions
          value of "employees" is overriden by the computed value (based on
          the contents of the entity's ``type`` property in this example).
 
-       .. _lookup_function:
+       .. _lookup_dtl_function:
    * - ``lookup``
      - | *Arguments:*
        |   DATASET_IDS(value-expression{0|1})
@@ -174,7 +174,7 @@ DTL Functions
          ``foo`` is looked up in the ``C`` dataset and ``quux`` in the ``D``
          dataset because they are explicit entity references.
 
-       .. _reference_function:
+       .. _reference_dtl_function:
    * - ``reference``
      - | *Arguments:*
        |   DATASET_ID(string{1})
@@ -605,7 +605,7 @@ Sinks
 Deprecated Properties
 ---------------------
 
-The ``prefix_includes`` property has been deprecated for the :ref:`sparql <sparql_sink>`, :ref:`sdshare <sdshare_push_sink>`, :ref:`databrowser <databrowser_sink>`, and :ref:`http_endpoint <http_endpoint_sink>` sinks.
+The ``prefix_includes`` property has been deprecated for the :ref:`sparql <sparql_sink>`, :ref:`sdshare <sdshare_sink>`, :ref:`databrowser <databrowser_sink>`, and :ref:`http_endpoint <http_endpoint_sink>` sinks.
 
 .. list-table::
    :header-rows: 1
@@ -1054,7 +1054,7 @@ When addressing properties in CURIEs form in DTL transform, you can simply use t
     ..
 
 You can also use the CURIEs in path expressions in the same way as any other property name. If you want to add a URI
-literal as part of your transformed entity you can use the DTL :ref:`curie function <curie_function>`, which takes
+literal as part of your transformed entity you can use the DTL :ref:`curie function <curie_dtl_function>`, which takes
 a prefix and a value expression (i.e. a literal or a function) and produces a URI property value:
 
 ::
@@ -1078,7 +1078,7 @@ CURIE expansion in DTL
 
 When processing RDF data in a flow, we sometimes would like to expand an entity or a child entity from CURIEs to full
 URI form (for example if there are conflicting usages of prefixes). This can be done using the DTL
-:ref:`uri-expand <uri_expand_function>`:
+:ref:`uri-expand <uri_expand_dtl_function>`:
 
 ::
 
@@ -1086,7 +1086,7 @@ URI form (for example if there are conflicting usages of prefixes). This can be 
     ["add", "<baz:expanded>", ["uri-expand", ["string", "my_entry"], {"_id": "<foo:bob>", "<foo:name>": "Bob Jones"}]]
     ..
 
-This will expand the properties of the entity (here shown inline, but typically will be from a :ref:`hops <hops_function>` join or some
+This will expand the properties of the entity (here shown inline, but typically will be from a :ref:`hops <hops_dtl_function>` join or some
 other function) to its "full" form:
 
 ::

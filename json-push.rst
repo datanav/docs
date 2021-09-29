@@ -13,7 +13,7 @@ endpoint. It supports splitting up the data into smaller batches, so
 that not all the data have to be sent in a single request.
 
 The protocol is supported by the :ref:`http_endpoint
-<http_endpoint_source>` source and the :ref:`json <json_push_sink>`
+<http_endpoint_source>` source and the :ref:`json <json_sink>`
 sink. This protocol can be used by microservices and other clients to
 send entities.
 
