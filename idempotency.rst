@@ -9,20 +9,20 @@ As such, we will now discuss a term called idempotency.
 Idempotency can be divided into idempotent and non-idempotent operations, as these are quite different in terms of behavior:
 	
 
-Idempotent operations have no side-effects if performed multiple times, i.e.: reading data from a source system and displaying the result.
+Idempotent operations have no side-effects if performed multiple times, i.e.: Reading data from a source system and displaying the result.
 	
 
-Non-idempotent operations, however, would evaluate differently if performed multiple times, i.e.: writing a change to a bank account. 
+Non-idempotent operations, however, would evaluate differently if performed multiple times, i.e.: Writing a change to a bank account. 
 In essence, you should be aware of how your source and/or target system will respond when provided with data multiple times, so - know your systems.
 	
 
 Non-idempotent APIs (REST or SOAP):
 --------------------------------------------------
-The problem with non-idempotent systems is that you can get different results every time you use an operation against them. The results may not be what you expected.
+The problem with non-idempotent systems is that you can get different results every time you use an operation against them. 
 
-For instance, if one expected to update an entity/record in a system via REST using the POST method this will be an unsuccessful update, 
-since the POST method will add new record. And the record one wanted to update is still active alongside the new record. 
+Trying to update an entity/record in a system via REST using the POST method will fail, since the POST method will add a new record. The record that was intended to be update is still unchanged.
 Same will happen every time a POST is used. The POST method is non-idempotent. 
+
 Using the counter-part method PUT will ensure that the record you wanted to update is overwritten by the data provide in the PUT. 
 Every time PUT is used this will happen. PUT is an idempotent method.
 
