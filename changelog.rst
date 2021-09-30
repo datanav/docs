@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2021_09_29:
+
+2021-09-29
+----------
+
+* Added a new :doc:`Quick Reference <quick-reference>` document for faster and easier navigation to configuration types and DTL transforms and functions.
+
 .. _changelog_2021_09_28:
 
 2021-09-28
