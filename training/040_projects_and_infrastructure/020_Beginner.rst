@@ -200,13 +200,15 @@ NB: Skal snake mer om API I sesam-in-the-wild
 Groups & Permissions
 ~~~~~~~~~~~~~~~~~~~~
 
-In a Sesam node you will have a set of hardcoded node permissions immediately available to you. These permissions are grouped into "Admin", "Everyone", "Developer" and "LicenceUploader". In addition to these permission groupings you can also define local grouping permissions. These can be defined based on your particular scenario. On the below picture the Datahub view is shown. In this view you can navigate to the Permissions tab. Here you can play around with the aforementioned node permissions, customized permissions and subsequent groupings.
+In a Sesam node you will have a set of hardcoded node permissions immediately available to you. Permissions are used to group users of a Sesam node into logical groups that have a controlled set of priviledges. Permissions are grouped into "Admin", "Everyone", "Developer" and "LicenceUploader". In addition to these permission groupings you can also define local grouping permissions. These can be defined based on your particular scenario. On the below picture the Datahub view is shown. In this view you can navigate to the Permissions tab. Here you can play around with the aforementioned node permissions, customized permissions and subsequent groupings.
 
 .. _figure-permissions4-1:
 .. figure:: ./media/permissions.png
    :align: center
 
    Datahub View
+
+In addition you can also add, remove or modify permissions for specific pipes and/or systems. These permissions and subsequent groupings can be found when looking at a specific pipe or system. 
 
 .. _tasks-for-projects-infrastructure-beginner-4-1:
 
