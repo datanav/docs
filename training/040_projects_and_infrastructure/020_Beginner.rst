@@ -128,9 +128,9 @@ Testing & Testdata
   - validate dataflows run as expected
   - ensure changes made are robust enough to be pushed to production 
 
-Extending on the testing aspect of running your CI/CD workflows via the Sesam CLI - testdata comes into play. In practice, testing via the Sesam CLI uses testdata defined in your Sesam development node. As such, testdata is used in a Sesam project to allow for testing of a given change with respect to an intented or desired outcome, i.e. applying filters to only get a subset of data flowing through a dataflow. This is useful because it allows for verification in a self-contained space without relying on real life data or an active system that receives and/or retrieves data. As such, testing is useful in creating a self contained space in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
+Extending on the testing aspect of running your CI/CD workflows via the Sesam CLI - testdata comes into play. In practice, testing via the Sesam CLI uses testdata defined in your embedded data. As such, testdata is used in a Sesam project to allow for testing of a given change with respect to an intended outcome. This is useful because it allows for verification in a self-contained space without relying on real life data or an active system that receives and/or retrieves data. As such, testing is useful in creating a controlled environment in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
 
-To use testdata in Sesam, you will first need to create it. In order for you to do so, Sesam has developed a nifty transformation rule called the ``conditional`` transform statement. An example of a pipe config using this transform statement can be seen below:
+To use testdata in Sesam you will need to define it in your pipe config. In order for you to do so, Sesam has developed a nifty transformation rule called the ``conditional`` transform statement. An example of a pipe config using this transform statement can be seen below:
 
 .. code-block:: json
 
@@ -203,7 +203,11 @@ To use testdata in Sesam, you will first need to create it. In order for you to 
     }
   }
 
-When the above pipe completes a run, given that the property ``"condition": "$ENV(node-env)"`` equals ``"condition": "test"`` and **not** ``"condition": "prod"``, it will only see the data that is defined within the dictionary key named ``test``. As such, by changing the value of ``$ENV(node-env)`` one can alter whether a pipe executes the DTL defined within the ``test`` or ``prod`` dictionary, as defined in the above config. Moving on to the actual testdata itself, you should take into account how well your testdata represents expected "real life" data. This is important to consider as a close resemblance between testing and reality minimizes room for error. Room for error is in this aspect related to how data is intended to be modelled through a given Sesam dataflow. **Note**: In case you work with personally identifiable indicators, you should anonymize these to make sure you are not breeching any rules or regulations with regards to the General Data Protection Regulation (GDPR).     
+When the above pipe completes a run, given that the property ``"condition": "$ENV(node-env)"`` equals ``"condition": "test"`` and **not** ``"condition": "prod"``, it will only see the data that is defined within the dictionary key named ``test``. As such, by changing the value of ``$ENV(node-env)`` one can alter whether a pipe executes the DTL defined within the ``test`` or ``prod`` dictionary, as defined in the above config. Moving on to the actual testdata itself, you should take into account how well your testdata represents expected "real life" data. This is important to consider as a close resemblance between testing and reality minimizes room for error. Room for error is in this aspect related to how data is intended to be modelled through a given Sesam dataflow. 
+
+.. note:: 
+
+  In case you work with personally identifiable indicators, you should anonymize these to make sure you are not breeching any rules or regulations with regards to the General Data Protection Regulation (GDPR).     
 
 .. seealso::
 
