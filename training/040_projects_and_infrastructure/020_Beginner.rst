@@ -200,13 +200,13 @@ NB: Skal snake mer om API I sesam-in-the-wild
 Groups & Permissions
 ~~~~~~~~~~~~~~~~~~~~
 
-Hvordan virker det
+In a Sesam node you will have a set of hardcoded node permissions immediately available to you. These permissions are grouped into "Admin", "Everyone", "Developer" and "LicenceUploader". In addition to these permission groupings you can also define local grouping permissions. These can be defined based on your particular scenario. On the below picture the Datahub view is shown. In this view you can navigate to the Permissions tab. Here you can play around with the aforementioned node permissions, customized permissions and subsequent groupings.
 
-Får man satt opp tilgangsstyring i Sesam?
+.. _figure-permissions4-1:
+.. figure:: ./media/permissions.png
+   :align: center
 
-.. seealso::
-
-  TODO
+   Datahub View
 
 .. _tasks-for-projects-infrastructure-beginner-4-1:
 
