@@ -182,12 +182,12 @@ clean code
 
   TODO
 
-.. _jwt-authentication-4-1:
+.. _authentication&authorization-4-1:
 
-JWT/Authentisering
-~~~~~~~~~~~~~~~~~~
+Authentication & Authorization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A JSON Web Token (JWT) is an open standard that is a compact and self-contained means of securely transmitting information between parties as a JSON object, i.e: A user and a Sesam node. JWTs, from a Sesam point of view, are used to allow a user to authenticate towards the Sesam Service API. This will in essence allow a user to communicate with a Sesam node without having to authenticate towards a Sesam node in your preferred browser. Everything from scripts and/or CLIs can now be used to communicate with your Sesam node.
+Authentication is the process of verifying that a party is who they claim to be, whilst authorization is the process of verifying the access rights of a party. In practice, this means that a user must first be authenticated by logging in to a Sesam node before generating a JSON Web Token (JWT) used for authorization. A JWT is an open standard that is a compact and self-contained means of securely transmitting information between parties as a JSON object. In a Sesam node, a JWT will support acccess to additional parts of the Sesam node, i.e: The Sesam Service API.
 
 To create a JWT you need to navigate to the following page:
 
