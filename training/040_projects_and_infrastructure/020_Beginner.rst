@@ -125,8 +125,8 @@ Testing & Testdata
   Testing and testdata is used for...
 
   - validating transformation of data meets desired shape
-  - validate dataflows run as expected
-  - ensure changes made are robust enough to be pushed to production 
+  - validating dataflows run as expected
+  - ensuring changes made are robust enough to be pushed to production 
 
 Extending on the testing aspect of running your CI/CD workflows via the Sesam CLI - testdata comes into play. In practice, testing via the Sesam CLI uses testdata defined in your embedded data. As such, testdata is used in a Sesam project to allow for testing of a given change with respect to an intended outcome. This is useful because it allows for verification in a self-contained space without relying on real life data or an active system that receives and/or retrieves data. As such, testing is useful in creating a controlled environment in which you can fine-tune and verify that your shape of data aligns with how you want it to look like when it hits production and leaves your personal Sesam development node.
 
@@ -213,9 +213,9 @@ When the above pipe completes a run, given that the property ``"condition": "$EN
 
   :ref:`dtl-beginner-3-1`
 
-  Tools > Sesam Client :ref:`concepts-sesam-client`
+  Tools > Sesam Client: :ref:`concepts-sesam-client`
 
-  Best Practices > Working on a Sesam Project :ref:`setting-up-a-new-sesam-project`
+  Best Practices > Working on a Sesam Project: :ref:`setting-up-a-new-sesam-project`
 
 .. _documentation-4-1:
 
