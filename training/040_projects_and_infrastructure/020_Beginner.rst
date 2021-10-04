@@ -201,9 +201,9 @@ To create a JWT you need to navigate to the following page:
 
   Sesam in the Wild: :ref:`sesam-in-the-wild-beginner-6-1`
 
-  Developer Guide > Service API :ref:`api-top`
+  Developer Guide: :ref:`api-top`
 
-  Tools > Databrowser :ref:`databrowser_ini_authorization_via_jwt_token`
+  Tools > Databrowser: :ref:`databrowser_ini_authorization_via_jwt_token`
 
 .. _groups-and-permissions-4-1:
 
