@@ -58,7 +58,7 @@ Production and test environment
 
    * - Data
      - Pr GB
-   * - GB
+   * - Storage
      - €14.00
    * - VPN
      - €2.00
@@ -90,7 +90,7 @@ Production and test environment
      - €100.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
-.. [#] SLA is billed for minimum 50GB data and a maximum og 800GB.
+.. [#] SLA is billed for minimum 50GB data and a maximum of 800GB.
 .. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
 
 1. Invoicing
