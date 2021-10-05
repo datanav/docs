@@ -200,6 +200,14 @@ NB: Skal snake mer om API I sesam-in-the-wild
 Members, Roles & Permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Members are ...
+
+  - users with access to a Sesam node
+  - grouped into roles with specific priviledges 
+  - assigned permissions in order to grant or restrict access to specific parts of a Sesam node
+
 Being a member of a given Sesam node can vary in terms of assigned roles and permissions. In order to control what specific members can access, members can be grouped into roles. A Sesam node has predefined groups of roles, these are "Admin", "Everyone", "Developer" and "LicenceUploader". In case you need to, you can create new roles to cover your specific use case. Additionally, these roles can be given permission on a global level or a local level within a Sesam node. Being given permission on a global level in a Sesam node will modify what you are allowed to do when navigating and using your Sesam node. Permissions given on a local level are more narrow and will typically modify how you can use or alter specific pipes and/or systems. On the below picture the Datahub view is shown. In this view you can navigate to the Permissions tab. Here you can play around with the aforementioned Sesam node permissions, customized permissions and subsequent groupings on a global level.
 
 .. _figure-permissions4-1:
