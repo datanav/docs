@@ -175,6 +175,14 @@ Hvordan funker expected output
 Documentation
 ~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  The documentation ...
+
+  - can be divided into Sesam documentation and DTL documentation
+  - concerning Sesam consists of general as well as technically specific themes
+  - concerning DTL consists of explanations and pratictical examples when using DTL functions
+
 In terms of documentation, we will diffentiate between the Sesam documentation and DTL documentation. The Sesam documentation will be concerned with the understanding of Sesam as a concept and as a datahub whilst DTL documentation will be concerned with how you should document what you do in your pipes, as you model your data. 
 
 
@@ -195,11 +203,20 @@ The DTL Documentation
 
 DTL is in many ways similar to any programming language you might know of. It is not heavily object oriented, albeit it does support the usage of multiple functions in order to transform your data as it moves through Sesam. As such you should conform to concepts such as "Clean Code" i.e: Naming convention should be logical and semantically concise. In addition, DTL supports implementation of a ``comment`` function. This function can be used to document what a given DTL section or function does, i.e: ``["comment", "The following function named 'checkingForNull' runs through your array and filters all entries that equals null."]``. As outlined, a ``comment`` function that makes it easy and convenient to document DTL logic when needed. Finally, DTL also supports adding a ``description`` function, which will display what a pipe does, when hovering over a given pipe in the Pipes view, i.e: ``["description", "This pipe transforms data to add customer loyalty and segments customers based on loyalty score"]``.    
 
+.. hint::
+
+  - when searching for specific DTL functions in the DTL documentation, search by hitting ``Ctrl/Cmd + f`` and type in the specific DTL function you want to look at in the search dropdown.
+
+  - the `Service Configuration <https://docs.sesam.io/configuration.html>`_ is a good resource to look at when wanting to set up a new pipe and/or system.
+
+
 .. seealso::
 
   Sesam Node GUI: :ref:`sesam-node-gui-4-1`
 
   The Sesam Documentation: :ref:`sesam-master-data-hub`
+
+  Developer Guide > Service Configuration: :ref:`configuration`
 
 .. _jwt-authentication-4-1:
 
