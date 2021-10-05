@@ -111,9 +111,9 @@ Finally, alteration to environment variables, i.e. adding new ones or removing n
 
   `Sesam Command Line Interface repository <https://github.com/sesam-community/sesam-py>`_
 
-  Tools > Sesam Client :ref:`concepts-sesam-client`
+  Tools > Sesam Client: :ref:`concepts-sesam-client`
 
-  Best Practices > Working on a Sesam Project :ref:`setting-up-a-new-sesam-project`
+  Best Practices > Working on a Sesam Project: :ref:`setting-up-a-new-sesam-project`
 
 .. _testing-and-testdata-4-1:
 
@@ -267,18 +267,38 @@ To create a JWT you need to navigate to the following page:
 
   Tools > Databrowser: :ref:`databrowser_ini_authorization_via_jwt_token`
 
-.. _groups-and-permissions-4-1:
+.. _members-roles-and-permissions-4-1:
 
-Groups & Permissions
-~~~~~~~~~~~~~~~~~~~~
+Members, Roles & Permissions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hvordan virker det
+.. sidebar:: Summary
 
-Får man satt opp tilgangsstyring i Sesam?
+  Members are ...
+
+  - users with access to a Sesam node
+  - grouped into roles with specific priviledges 
+  - assigned permissions in order to grant or restrict access to specific parts of a Sesam node
+
+Being a member of a given Sesam node can vary in terms of assigned roles and permissions. In order to control what specific members can access, members can be grouped into roles. A Sesam node has predefined groups of roles, these are "Admin", "Everyone", "Developer" and "LicenceUploader". In case you need to, you can create new roles to cover your specific use case. Additionally, these roles can be given permission on a global level or a local level within a Sesam node. Being given permission on a global level in a Sesam node will modify what you are allowed to do when navigating and using your Sesam node. Permissions given on a local level are more narrow and will typically modify how you can use or alter specific pipes and/or systems. On the below picture the Datahub view is shown. In this view you can navigate to the Permissions tab. Here you can play around with the aforementioned Sesam node permissions, customized permissions and subsequent groupings on a global level.
+
+.. _figure-permissions4-1:
+.. figure:: ./media/permissions.png
+   :align: center
+
+   Datahub View
+
+Permissions can be set and altered for:
+
+- all pipes
+- individual pipes
+- all systems
+- individual systems
+- your Sesam node    
 
 .. seealso::
 
-  TODO
+  Developer Guide > Security: :ref:`security_subscriptions_users_roles_and_permissions`
 
 .. _tasks-for-projects-infrastructure-beginner-4-1:
 
