@@ -182,18 +182,28 @@ clean code
 
   TODO
 
-.. _jwt-authentication-4-1:
+.. _authentication&authorization-4-1:
 
-JWT/Authentisering
-~~~~~~~~~~~~~~~~~~
+Authentication & Authorization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hvordan fungerer JWT’er?
+Authentication is the process of verifying that a party is who they claim to be, whilst authorization is the process of verifying the access rights of a party. In practice, this means that a user must first be authenticated by logging in to a Sesam node before generating a JSON Web Token (JWT) used for authorization. A JWT is an open standard that is a compact and self-contained means of securely transmitting information between parties as a JSON object. In a Sesam node, a JWT will support acccess to additional parts of the Sesam node, i.e: The Sesam Service API.
 
-NB: Skal snake mer om API I sesam-in-the-wild
+To create a JWT you need to navigate to the following page:
+
+.. _figure-SesamJWT-4-1:
+.. figure:: ./media/Sesam_JWT.png
+   :align: center
+
+   Sesam JWT
 
 .. seealso::
 
-  TODO
+  Sesam in the Wild: :ref:`sesam-in-the-wild-beginner-6-1`
+
+  Developer Guide: :ref:`api-top`
+
+  Tools > Databrowser: :ref:`databrowser_ini_authorization_via_jwt_token`
 
 .. _groups-and-permissions-4-1:
 
