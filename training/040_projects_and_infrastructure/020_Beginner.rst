@@ -189,7 +189,7 @@ In terms of documentation, we will diffentiate between the Sesam documentation a
 The Sesam Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The Sesam documentation can be found `here <https://docs.sesam.io/>`_. The documentation consists of anything from general themes to more technically specific themes. With regards to working on a project, the following links might be of particular interest to you:
+The Sesam documentation can be found here: `Sesam documentation <https://docs.sesam.io/>`_. The documentation consists of anything from general themes to more technically specific themes. With regards to working on a project, the following links might be of particular interest to you:
 
 - `Getting Started <https://docs.sesam.io/getting-started.html>`_
 - `Best Practices <https://docs.sesam.io/best-practices.html>`_
