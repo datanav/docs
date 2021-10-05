@@ -212,3 +212,17 @@ Får man satt opp tilgangsstyring i Sesam?
 
 Tasks for Projects & Infrastructure: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. *What are your bread and butter tabs when working on a Sesam project?*
+
+#. *When working on Sesam projects why is the Sesam CLI especially handy?*
+
+#. *What is the difference between authentication and authorization?*
+
+#. *Make a pipe that transforms embedded test data defined in its pipe config.*
+
+#. *Use the Sesam Documentation to find a transform function you have not used before and implement it in your embedded test data pipe.*
+
+#. *Add the ["description"] DTL function to your pipe config to describe what your pipe does to your embedded test data.*
+  
+#. *Add a local permission to your embedded test data pipe for the group "Developer".*
