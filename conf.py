@@ -306,7 +306,7 @@ texinfo_documents = [
 import pathlib
 import shutil
 import os
-
+from json import dumps as dump_json
 
 def find_root_headers(root_level_header, file=None, inputString=None, sourceFile=None):
     """
@@ -414,6 +414,38 @@ def replace_course_file_content(course, rename_ref_prefix, topics):
         f.close()
         return course, newfile
 
+
+def find_summaries(topics):
+    for t in topics:
+        summaries = []
+        curSummary = ''
+        curSummaryTextFound = False
+        atSummary = False
+        test = False
+        for line in t['text'].split('\n'):
+            if line == '.. sidebar:: Summary':
+                atSummary = True
+            if atSummary and (line.startswith('  ') or line == ''):
+                if line != '':
+                    curSummary += line + '\n'
+                curSummaryTextFound = True
+            elif atSummary and curSummaryTextFound:
+                summaries.append(curSummary)
+                curSummary = ''
+                atSummary = False
+                curSummaryTextFound = False
+
+
+        if len(summaries) > 0:
+            t['summary']  = summaries[-1]
+
+        if 'summary' in t:# and t['reference'] == '.. _environment-variables-secrets-2-1:':
+            print(f'#########\n"reference": {t["reference"]}')
+            print(f'"title": {t["title"]}')
+            print(f'"source_file": {t["source_file"]}')
+            print(f'"summary": "{t["summary"]}"\n####')
+            #return
+
 def create_course_files(new_course_files, directory):
     if os.path.exists(directory):
         shutil.rmtree(directory)
@@ -438,6 +470,7 @@ def create_courses(files, output_folder, courses_path, root_level_header, rename
         curTopics = createFiles(splitonthis=curHeaders, inputString=t['text'])
         subTopics = subTopics + curTopics
     topics = topics + subTopics
+    find_summaries(topics)
     courses = get_courses(courses_path_full)
     new_course_files = []
     for course in courses:
