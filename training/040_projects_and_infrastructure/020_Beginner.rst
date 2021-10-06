@@ -189,21 +189,21 @@ In terms of documentation, we will diffentiate between the Sesam documentation a
 The Sesam Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The Sesam documentation can be found here: `Sesam documentation <https://docs.sesam.io/>`_. The documentation consists of anything from general themes to more technically specific themes. With regards to working on a project, the following links might be of particular interest to you:
+The Sesam documentation can be found here: `Sesam documentation <https://docs.sesam.io/>`_. The documentation consists of anything from general topics to more technically specific topics. With regards to working on a project, the following links might be of particular interest to you:
 
 - `Getting Started <https://docs.sesam.io/getting-started.html>`_
 - `Best Practices <https://docs.sesam.io/best-practices.html>`_
 - `Developer Guide <https://docs.sesam.io/developer-guide.html>`_
 
-In addition, there is also the search function available on the Sesam documentation. This function is quite handy in case you want to search for something specific as you can search through the whole documentation, i.e: Filtering, Oracle DB etc.
+In addition, there is also the search function available on the Sesam documentation. This function is quite handy in case you want to search for something specific as you can search through the whole documentation.
 
 
 The DTL Documentation
 ^^^^^^^^^^^^^^^^^^^^^
 
-DTL is in many ways similar to any programming language you might know of. It is not heavily object oriented, albeit it does support the usage of multiple functions in order to transform your data as it moves through Sesam. As such you should conform to concepts such as "Clean Code" i.e: Naming convention should be logical and semantically concise. In addition, DTL supports implementation of a ``comment`` function. This function can be used to document what a given DTL section or function does, i.e: ``["comment", "The following function named 'checkingForNull' runs through your array and filters all entries that equals null."]``. As outlined, a ``comment`` function that makes it easy and convenient to document DTL logic when needed. Finally, DTL also supports adding a ``description`` function, which will display what a pipe does, when hovering over a given pipe in the Pipes view, i.e: ``["description", "This pipe transforms data to add customer loyalty and segments customers based on loyalty score"]``.    
+DTL is in some aspects similar to any programming language you might know of. It is not object oriented, albeit it does support the usage of multiple functions in order to transform your data as it moves through Sesam. As such you should conform to concepts such as "Clean Code" i.e: Naming convention should be logical and semantically concise. In addition, DTL supports implementation of a ``comment`` function. This function can be used to document what a given DTL section or function does, i.e: ``["comment", "The following function named 'checkingForNull' runs through your array and filters all entries that equals null."]``. As outlined, a ``comment`` function that makes it easy and convenient to document DTL logic when needed. Finally, DTL also supports adding a ``description`` function, which will display what a pipe does, when hovering over a given pipe in the Pipes view, i.e: ``["description", "This pipe transforms data to add customer loyalty and segments customers based on loyalty score"]``.    
 
-.. hint::
+.. tip::
 
   - when searching for specific DTL functions in the DTL documentation, search by hitting ``Ctrl/Cmd + f`` and type in the specific DTL function you want to look at in the search dropdown.
 
