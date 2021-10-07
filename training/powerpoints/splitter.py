@@ -3,7 +3,7 @@ from pptx.shapes.autoshape import Shape
 import copy
 
 prs = Presentation('splitme.pptx')
-print(prs)
+#print(prs)
 text_runs = []
 
 text_box = None
@@ -23,7 +23,10 @@ for slide in prs.slides:
                 print('###')
                 print(run)
                 print(run.text)
+                pass
 
+from sys import exit
+#exit(0)
 
 def replace_paragraph_text_retaining_initial_formatting(paragraph, new_text):
     p = paragraph._p  # the lxml element containing the `<a:p>` paragraph element
@@ -34,21 +37,6 @@ def replace_paragraph_text_retaining_initial_formatting(paragraph, new_text):
             continue
         p.remove(run._r)
     paragraph.runs[0].text = new_text
-
-s = prs.slides[0]
-
-
-replace_paragraph_text_retaining_initial_formatting(s.shapes.title.text_frame.paragraphs[0], 'Hello world')
-
-print('##########')
-print(text_box)
-writethis = """One
-Two
-Three
-Four
-Five
-"""
-
 
 def copy_run(run_from, run_to):
     r_to = run_to._r
@@ -62,34 +50,81 @@ def copy_paragraph(paragraph_from, paragraph_to):
 
 def replaceBulletPoints(textframe, text):
     first_paragraph = textframe.paragraphs[0]
-    #first_run = textframe.paragraphs[0].runs[0]
-    for i, line in enumerate(text.split('\n')):
+    #for i, line in enumerate(text.split('\n')):
+    for i, line in enumerate(text):
         if len(textframe.paragraphs) < i + 1:
             p = textframe.add_paragraph()
             copy_paragraph(paragraph_from=first_paragraph, paragraph_to=p)
-            #r = p.add_run()
-            #copy_run(run_from=first_run, run_to=r)
+#            p.level = 3
+            #print(p.indent)
         print(len(textframe.paragraphs))
         print(i + 1)
         replace_paragraph_text_retaining_initial_formatting(textframe.paragraphs[i], line)
 
+def replaceBulletPoints2(textframe, inputdict: dict):
+    first_paragraph = textframe.paragraphs[0]
+    first_paragraph_run = textframe.paragraphs[0].runs[0]
+    i = 0
+    for key in inputdict:
+        if len(textframe.paragraphs) < i + 1:
+            p = textframe.add_paragraph()
+            copy_paragraph(paragraph_from=first_paragraph, paragraph_to=p)
+        replace_paragraph_text_retaining_initial_formatting(textframe.paragraphs[i], key)
+        i += 1
+        for subpoints in inputdict[key]:
+            p = textframe.add_paragraph()
+            r = p.add_run()
+            copy_run(run_from=first_paragraph_run, run_to=r)
+            replace_paragraph_text_retaining_initial_formatting(textframe.paragraphs[i], subpoints)
+            i += 1
 
-#replace_paragraph_text_retaining_initial_formatting(text_box.text_frame.paragraphs[0], 'YO WAZZUP')
 
 
-replaceBulletPoints(text_box.text_frame, writethis)
-#print(text_box.text_frame.paragraphs)
-#for x in text_box.text_frame.paragraphs:
-#    print(x)
 
-#for shape in s.placeholders:
-#    print('%d %s' % (shape.placeholder_format.idx, shape.name))
+writethis = """  - Environment variables and secrets are named values used to parameterize configs
+  - Environment variables are:
+    - unencrypted
+    - referenced with: ``"$ENV(my-env-var)"``
+  - Secrets are:
+    - encrypted
+    - referenced with: ``"$SECRET(my-secret)"``
+  - Both are defined under **Datahub > Variables**
+  - Secrets can also be defined under a system's **Secrets** tab
+  - Eases and improves config maintenance
+"""
 
-textbox = None
-for shape in slide.shapes:
-    if shape.is_placeholder:
-        phf = shape.placeholder_format
-        print('%d, %s' % (phf.idx, phf.type))
-#    print('%s' % shape.shape_type)
+def summarizer(text: str):
+    output = {}
+    curMain = None
+    for line in text.split('\n'):
+        if line.startswith('  - '):
+            curMain = line.replace('  - ', '')
+            output[curMain] = []
+        elif line.startswith('    - '):
+            output[curMain].append(line)
+    return output
+
+def summarizer2(text: str):
+    output = []
+    curMain = None
+    indexer = 0
+    for line in text.split('\n'):
+        if line.startswith('  - '):
+            if len(output) > 0:
+                indexer += 1
+            output.append(line + '\n')
+        elif line.startswith('    - '):
+            output[indexer] += line + '\n'
+    return output
+
+from json import dumps
+
+s = prs.slides[0]
+
+replace_paragraph_text_retaining_initial_formatting(s.shapes.title.text_frame.paragraphs[0], 'Environment variables & Secrets')
+#replaceBulletPoints(text_box.text_frame, writethis)
+#replaceBulletPoints(text_box.text_frame, writethis.split('\n  - '))
+#replaceBulletPoints(text_box.text_frame, summarizer2(writethis))
+replaceBulletPoints2(text_box.text_frame, summarizer(writethis))
 
 prs.save('tmp_output.pptx')
