@@ -4,6 +4,8 @@
 Sesam Management Studio
 =======================
 
+.. _management_studio:
+
 .. contents:: Table of Contents
    :depth: 2
    :local:
@@ -178,6 +180,8 @@ To the right side of the interface there is a list of available **keyboard short
     :width: 800px
     :align: center
     :alt: Generic pipe concept
+
+.. _management-studio-systems:
 
 Systems
 =======

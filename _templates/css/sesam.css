@@ -1,0 +1,78 @@
+body {
+  counter-reset: example-counter 0;
+  /*
+   * looks like only one counter is supported
+  counter-reset: figure-counter 0;
+  */
+}
+
+/*
+.container:before,
+.caption-text::before
+.example::before,
+.code-block-caption::before
+div.code-block-caption::before
+*/
+div.code-block-caption::before
+{
+    counter-increment: example-counter;
+    content: "Example " counter(example-counter) ". ";
+}
+
+.example
+{
+    /*
+    border-color: #428bca ;
+    border-left-style: solid ;
+    border-width: 2px ;
+    */
+    /*
+    box-shadow: 5px 5px;
+    */
+    font-size: small ;
+    font-style: normal ;
+    margin-left: 2em ;
+}
+
+/*
+.figure::before
+{
+    counter-increment: figure-counter;
+    content: "Figure " counter(figure-counter) ". ";
+}
+*/
+
+
+div.figure
+{
+  margin: 50px 0 50px 0; /* make sure there is "air" around figures */
+}
+
+/* Formatting of .. sidebar:: as a "floating" sidebar to the right of the section */
+div.sidebar
+{
+    background: aliceblue ; /* same as h1 background-color */
+    border-color: #337ab7 ; /* same as text-logo background-color */
+    border-radius: 10px 10px 10px 10px; /* rounded cornes */
+    border-style: solid ;
+    border-width: 2px ;
+    font-size: small ; /* scale down font to make info more legible */
+    float: right ; /* position relative to the main text */
+    margin-left: 10px ;
+    padding: 10px ;
+    width: 50% ; /* occupy a given percentage of screen width */
+}
+
+.sidebar-title
+{
+    font-weight: bold ;
+}
+
+/* Formatting of single quote citations `...` */
+cite
+{
+    /*
+    font-style: italic ;
+    */
+    font-family: courier, monospace ;
+}

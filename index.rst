@@ -1,3 +1,5 @@
+.. _sesam-master-data-hub:
+
 
 Sesam Master Data Hub
 =====================

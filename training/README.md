@@ -1,29 +1,118 @@
-# This file contains the general practice we use in the training part of the documentation.
+- [Styleguide](#styleguide)
+  * [Referencing figures and pictures](#referencing-figures-and-pictures)
+  * [Insertion of Code](#insertion-of-code)
+  * [Inline DTL/Config references](#inline-dtl-config-references)
+  * [`.. _seealso:` At the end of topics](#---seealso---at-the-end-of-topics)
+  * [Inline links to other topics](#inline-links-to-other-topics)
+  * [Title and headers syntax in RST.](#title-and-headers-syntax-in-rst)
+- [General Setup](#general-setup)
+  * [File structure](#file-structure)
+  * [How is the table of contents generated?](#how-is-the-table-of-contents-generated-)
+  * [How does numbering work?](#how-does-numbering-work-)
 
-## File structure
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+# Topic Template
+
+```reStructuredText
+Topic Title
+~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Something summarizing
+  - More summary
+
+<text about topic>
+
+subtopic title
+^^^^^^^^^^^^^^
+
+<subtopic text>
+
+.. seealso::
+
+   Chapter Difficulty - :ref:`special-sesam-attributes-1-1`
 ```
-File structure overview. Structure is the same for each chapter.
 
-docs/
--training/
---010_architecture_and_concepts/
----architecture_and_concepts.rst #index file
----020_Beginner.rst
----030_Novice.rst
----040_Intermediate.rst
----050_Advanced.rst              #Not present in all chapters
----060_Expert.rst                #Not present in all chapters
----070_Epilogue.rst
----media/
-----beginner-different_types_of_architecture_ESB.png
-----novice-joining_data-Left_join.png
-----<difficulty>-<sub_chapter>-<image_name>.png
---020_systems/
----media/
----… same structure as 010_architecture_and_concepts.
+# Styleguide
 
+## Referencing figures and pictures
 
+The pictures or diagrams you add need to be named to match the information
+they contain.
+As an example this picture is about the ESB and is named accordingly.
+
+```reStructuredText
+.. figure:: ./media/Enterprise_Service_Bus.png
+   :align: center
+   :alt: Figure – Enterprise Service Bus
+
+   Figure – Enterprise Service Bus
+```
+
+## Insertion of Code
+
+```reStructuredText
+.. code-block:: json
+   {
+     "<key>": "<value>"
+   }
+
+   {
+     "postCode": "6400"
+   }
+```
+
+## Inline DTL/Config references
+
+All references to these must be enclosed with \`\`
+* \`\`some-dataset\`\`
+* \`\`some-pipe\`\`
+* \`\`some-system\`\`
+* \`\`some-DTL-function\`\`
+* \`\`some-entity-attribute\`\`
+
+RST example:
+```reStructuredText
+The pipe ``person`` reads from the system ``system`` and produces
+the dataset ``person`` where entities contain the attribute ``_id`` which
+is created by using the function ``add``.
+```
+
+## `.. _seealso:` At the end of topics
+
+At the end of each topic you should link to all topics referenced in the
+text and all relevant topics.
+
+This example comes from the topic "Globals as a concept".
+```reStructuredText
+.. seealso::
+
+  Architecture Beginner - Next topic: :ref:`special-sesam-attributes-1-1`
+
+  Architecture Novice: :ref:`full-outer-join-merge-1-2`, :ref:`left-join-hops-1-2`, :ref:`global-1-2`
+
+  Architecture Intermediate: :ref:`hops-1-3`, :ref:`subset-1-3`
+
+  DTL Novice: :ref:`merge-as-a-source-3-2`, :ref:`hops-3-2`
+
+  DTL Intermediate: :ref:`source-subset-3-3`
+```
+
+By using the `:ref:` syntax the name of the topic will replace the reference,
+for example
+```reStructuredText
+DTL Intermediate: :ref:`source-subset-3-3`
+```
+is converted into: `DTL Intermediate: Source Subset`
+
+## Inline links to other topics
+
+Inline links to other topics can be done by using the `:ref:` syntax which
+is as follows:
+```reStructuredText
+More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special-sesam-attributes-1-1`.
 ```
 
 ## Title and headers syntax in RST.
@@ -50,20 +139,67 @@ SubSubTitleTopic| (No example of usage)
 """""""""""""""""""""""""""""""""""""""
 ```
 
-## How to reference stuff in RST.
-Please read: https://docutils.sourceforge.io/docs/user/rst/quickref.html
+Example in RST:
+```reStructuredText
 
-If you want your subtopic titles to be reference-able use the syntax
+.. _architecture_and_concepts:
+
+=======================
+Architecture & Concepts
+=======================
+
+.. _architecture_and_concepts_beginner:
+
+Architecture & Concepts: Beginner
+---------------------------------
+
+.. _the_parts_of_sesam:
+
+The parts of sesam
+~~~~~~~~~~~~~~~~~~
+
+.. _the_parts_of_sesam_terminology:
+
+Terminology
+^^^^^^^^^^^
+
+.. _the_parts_of_sesam_terminology_systems:
+
+Systems
+#######
+
+.. _the_parts_of_sesam_terminology_systems_config:
+
+Configuration
+"""""""""""""
 
 ```
-.. _topic_subtitle:
 
-Topic Subtitle
-^^^^^^^^^^^^^^
+# General Setup
+
+## File structure
+
 ```
+File structure overview. Structure is the same for each chapter.
 
-To reference them later, use `topic_subtitle_`
-
+docs/
+-training/
+--010_architecture_and_concepts/
+---architecture_and_concepts.rst #index file
+---020_Beginner.rst
+---030_Novice.rst
+---040_Intermediate.rst
+---050_Advanced.rst              #Not present in all chapters
+---060_Expert.rst                #Not present in all chapters
+---070_Epilogue.rst
+---media/
+----beginner-different_types_of_architecture_ESB.png
+----novice-joining_data-Left_join.png
+----<difficulty>-<sub_chapter>-<image_name>.png
+--020_systems/
+---media/
+---… same structure as 010_architecture_and_concepts.
+```
 
 ## How is the table of contents generated?
 The structure is generated by the following hierarchy of "toctree" index files:
@@ -87,3 +223,44 @@ All topics in a chapter will be shown in the main Table of Contents, meaning tit
 
 ## How does numbering work?
 Numbering is added in post as the docs page is generated. We use the toctree flag :numbered: in training.rst to enable this.
+
+### Initial setup
+
+Sphinx expects the custom CSS to reside under `_build/html/_static/css/`.
+This folder is not GIT'ed so the CSS is stored as `_templates/css/sesam.css`.
+
+Create a link to it from `_build/html/_static/css/`:
+
+```
+$ cd _build/html/_static/css
+$ ln -s ../../../../_templates/css/sesam.css sesam.css
+```
+
+This will ensure correct relative link ref.
+
+With the custom CSS in the expected folder, `_templates/layout.html`
+is now able to include it when building the project.
+
+The following line was added to `layout.html` to handle this:
+
+```
+{% set css_files = css_files + [ "_static/css/sesam.css" ] %}
+```
+
+All future custom CSS additions can now be put into `_templates/css/sesam.css`
+and be automatically included in builds.
+
+## Section summary
+
+A "floating" sidebar summary can be handled by the `.. sidebar` directive in combination with some custom CSS.
+
+### .. sidebar Usage
+
+With the custom CSS all set up, we can use the folling RST:
+
+```
+.. sidebar:: Summary
+
+  - First point in summary
+  - Second point in summary
+```
