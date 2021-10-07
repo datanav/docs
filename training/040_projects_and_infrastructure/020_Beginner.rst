@@ -212,7 +212,7 @@ DTL is in some aspects similar to any programming language you might know of. It
 
 .. seealso::
 
-  Sesam Node GUI: :ref:`sesam-node-gui-4-1`
+  Projects & Infrastructure Beginner > Sesam Node GUI: :ref:`sesam-node-gui-4-1`
 
   The Sesam Documentation: :ref:`sesam-master-data-hub`
 
