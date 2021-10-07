@@ -222,27 +222,48 @@ When the above pipe completes a run, given that the property ``"condition": "$EN
 Documentation
 ~~~~~~~~~~~~~
 
-Hvordan bruke docs.sesam.io
+.. sidebar:: Summary
 
-developer guide!!
+  The documentation ...
 
-ctrl + f "hva du tror funksjon heter"
+  - can be divided into Sesam documentation and DTL documentation
+  - concerning Sesam consists of general as well as technically specific themes
+  - concerning DTL consists of explanations and pratictical examples when using DTL functions
 
-Hvordan dokumentere
+In terms of documentation, we will diffentiate between the Sesam documentation and DTL documentation. The Sesam documentation will be concerned with the understanding of Sesam as a concept and as a datahub whilst DTL documentation will be concerned with how you should document what you do in your pipes, as you model your data. 
 
-Schema definition
 
-hva mener vi er dokumentasjon
+The Sesam Documentation
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Generell dokumentasjon
+The Sesam documentation can be found here: `Sesam documentation <https://docs.sesam.io/>`_. The documentation consists of anything from general topics to more technically specific topics. With regards to working on a project, the following links might be of particular interest to you:
 
-DTL dokumentasjon(comments)
+- `Getting Started <https://docs.sesam.io/getting-started.html>`_
+- `Best Practices <https://docs.sesam.io/best-practices.html>`_
+- `Developer Guide <https://docs.sesam.io/developer-guide.html>`_
 
-clean code
+In addition, there is also the search function available on the Sesam documentation. This function is quite handy in case you want to search for something specific as you can search through the whole documentation.
+
+
+The DTL Documentation
+^^^^^^^^^^^^^^^^^^^^^
+
+DTL is in some aspects similar to any programming language you might know of. It is not object oriented, albeit it does support the usage of multiple functions in order to transform your data as it moves through Sesam. As such you should conform to concepts such as "Clean Code" i.e: Naming convention should be logical and semantically concise. In addition, DTL supports implementation of a ``comment`` function. This function can be used to document what a given DTL section or function does, i.e: ``["comment", "The following function named 'checkingForNull' runs through your array and filters all entries that equals null."]``. As outlined, a ``comment`` function that makes it easy and convenient to document DTL logic when needed. Finally, DTL also supports adding a ``description`` function, which will display what a pipe does, when hovering over a given pipe in the Pipes view, i.e: ``["description", "This pipe transforms data to add customer loyalty and segments customers based on loyalty score"]``.    
+
+.. tip::
+
+  - when searching for specific DTL functions in the DTL documentation, search by hitting ``Ctrl/Cmd + f`` and type in the specific DTL function you want to look at in the search dropdown.
+
+  - the `Service Configuration <https://docs.sesam.io/configuration.html>`_ is a good resource to look at when wanting to set up a new pipe and/or system.
+
 
 .. seealso::
 
-  TODO
+  Learn Sesam > Projects & Infrastructure > Projects & Infrastructure Beginner: :ref:`sesam-node-gui-4-1`
+
+  The Sesam Documentation: :ref:`sesam-master-data-hub`
+
+  Developer Guide > Service Configuration: :ref:`configuration`
 
 .. _authentication&authorization-4-1:
 
