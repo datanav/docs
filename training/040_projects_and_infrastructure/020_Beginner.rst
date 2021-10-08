@@ -254,8 +254,7 @@ DTL is in some aspects similar to any programming language you might know of. It
 
   - when searching for specific DTL functions in the DTL documentation, search by hitting ``Ctrl/Cmd + f`` and type in the specific DTL function you want to look at in the search dropdown.
 
-  - the `Service Configuration <https://docs.sesam.io/configuration.html>`_ is a good resource to look at when wanting to set up a new pipe and/or system.
-
+  - the :ref:`configuration` is a good resource to look at when wanting to set up a new pipe and/or system.
 
 .. seealso::
 
