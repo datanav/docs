@@ -1,7 +1,7 @@
 .. _architecture-and-concepts-intermediate-1-3:
 
-Architecture and Concepts: Intermediate
----------------------------------------
+Intermediate
+------------
 
 .. _hops-1-3:
 

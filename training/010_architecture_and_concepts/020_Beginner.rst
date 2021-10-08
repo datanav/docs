@@ -1,7 +1,7 @@
 .. _architecture-and-concepts_beginner-1-1:
 
-Architecture and Concepts: Beginner
------------------------------------
+Beginner
+--------
 
 .. _different-types-of-architectures-1-1:
 

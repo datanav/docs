@@ -17,8 +17,8 @@ language?
 .. toctree::
    :maxdepth: 2
 
-   DTL: Beginner <020_Beginner>
-   DTL: Novice <030_Novice>
-   DTL: Intermediate <040_Intermediate>
-   DTL: Advanced <050_Advanced>
-   DTL: Epilogue <060_Epilogue>
+   Beginner <020_Beginner>
+   Novice <030_Novice>
+   Intermediate <040_Intermediate>
+   Advanced <050_Advanced>
+   Epilogue <060_Epilogue>

@@ -1,8 +1,8 @@
 
 .. _dtl-intermediate-3-3:
 
-DTL: Intermediate
------------------
+Intermediate
+------------
 
 .. _more-on-pipes-3-3:
 

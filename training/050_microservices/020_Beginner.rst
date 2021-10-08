@@ -1,8 +1,8 @@
 
 .. _microservices-beginner-5-1:
 
-Microservices: Beginner
------------------------
+Beginner
+--------
 
 
 .. _what-is-a-microservice-5-1:

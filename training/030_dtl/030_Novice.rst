@@ -1,7 +1,7 @@
 .. _dtl-novice-3-2:
 
-DTL: Novice
------------
+Novice
+------
 
 .. _copy-3-2:
 

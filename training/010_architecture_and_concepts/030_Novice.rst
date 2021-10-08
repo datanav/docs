@@ -1,7 +1,7 @@
 .. _architecture-and-concepts-novice-1-2:
 
-Architecture and Concepts: Novice
----------------------------------
+Novice
+------
 
 .. _joining-data-1-2:
 

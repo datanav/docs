@@ -1,8 +1,8 @@
 
 .. _sesam-in-the-wild-advanced-6-4:
 
-Sesam in the Wild: Advanced
----------------------------
+Advanced
+--------
 
 .. _advanced-topic-6-4:
 

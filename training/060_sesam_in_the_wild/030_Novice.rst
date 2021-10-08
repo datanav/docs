@@ -1,8 +1,8 @@
 
 .. _sesam-in-the-wild-novice-6-2:
 
-Sesam in the Wild: Novice
--------------------------
+Novice
+------
 
 .. _novice-topic-6-2:
 
