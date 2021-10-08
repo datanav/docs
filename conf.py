@@ -303,10 +303,95 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+####### TRAINING COURSE AUTMATION STARTS HERE #######
+
+
 import pathlib
 import shutil
 import os
 from json import dumps as dump_json
+from pptx import Presentation
+from pptx.shapes.autoshape import Shape
+import copy
+
+def summarizer(text: str):
+    output = {}
+    curMain = None
+    for line in text.split('\n'):
+        if line.startswith('  - '):
+            curMain = line.replace('  - ', '')
+            output[curMain] = []
+        elif line.startswith('    - '):
+            output[curMain].append('     ' + line)
+    return output
+
+
+def findTextBox(presentation: Presentation):
+    for slide in presentation.slides:
+        for shape in slide.shapes:
+            if not shape.has_text_frame:
+                continue
+            if type(shape) == Shape:
+                return shape.text_frame
+
+
+def replace_paragraph_text_retaining_initial_formatting(paragraph, new_text):
+    p = paragraph._p  # the lxml element containing the `<a:p>` paragraph element
+    # remove all but the first run
+    print(f'For paragraph {paragraph} with runs "{paragraph.runs}" adding text {new_text}')
+    for idx, run in enumerate(paragraph.runs):
+        if idx == 0:
+            continue
+        p.remove(run._r)
+    paragraph.runs[0].text = new_text
+
+def replaceTitle(presentation: Presentation, new_title):
+    title_box = presentation.slides[0].shapes.title.text_frame.paragraphs[0]
+    replace_paragraph_text_retaining_initial_formatting(title_box, new_title)
+
+
+
+
+def replaceBulletPoints(textframe, inputdict: dict):
+
+    def copy_run(run_from, run_to):
+        r_to = run_to._r
+        r_to.addnext(copy.deepcopy(run_from._r))
+        r_to.getparent().remove(r_to)
+
+    def copy_paragraph(paragraph_from, paragraph_to):
+        p_to = paragraph_to._p
+        p_to.addnext(copy.deepcopy(paragraph_from._p))
+        p_to.getparent().remove(p_to)
+
+    first_paragraph = textframe.paragraphs[0]
+    first_paragraph_run = textframe.paragraphs[0].runs[0]
+    i = 0
+    for key in inputdict:
+        if len(textframe.paragraphs) < i + 1:
+            p = textframe.add_paragraph()
+            copy_paragraph(paragraph_from=first_paragraph, paragraph_to=p)
+        replace_paragraph_text_retaining_initial_formatting(textframe.paragraphs[i], key)
+        i += 1
+        for subpoints in inputdict[key]:
+            p = textframe.add_paragraph()
+            r = p.add_run()
+            copy_run(run_from=first_paragraph_run, run_to=r)
+            replace_paragraph_text_retaining_initial_formatting(textframe.paragraphs[i], subpoints)
+            i += 1
+
+
+def createPres(topic: list, template_slide_path, outputFolder=''):
+  if 'summary' in topic:
+      prs = Presentation(template_slide_path)
+      replaceTitle(prs, topic['title'])
+      text_box = findTextBox(prs)
+      replaceBulletPoints(text_box, summarizer(topic['summary']))
+      print(f"Created '{outputFolder}{topic['reference'][4:-1]}.pptx'")
+      prs.save(f"{outputFolder}{topic['reference'][4:-1]}.pptx")
+  else:
+      print(f"Topic {topic['title']} has no sumamry. Skipping PPT creation.")
+
 
 def find_root_headers(root_level_header, file=None, inputString=None, sourceFile=None):
     """
@@ -404,8 +489,10 @@ def replace_course_file_content(course, rename_ref_prefix, topics):
                         found = True
                         curLine = t['text']
                         topic_media_folder = f'../../../{"/".join(t["source_file"].split("/")[0:-1])}/media/'
-                        print(t["source_file"])
                         curLine = curLine.replace('.. figure:: ./media/', f'.. figure:: {topic_media_folder}')
+                        #createPres(t,
+                        # '/Users/gabriell.vig/Work/Sesam/docs/training/powerpoints/splitme.pptx',
+                        # f'/Users/gabriell.vig/Work/Sesam/docs/training/courses/{rename_ref_prefix}')
                         break
                 if found == False:
                     raise Exception(f'Could not find reference {curRef} in training docs!')
@@ -439,13 +526,6 @@ def find_summaries(topics):
         if len(summaries) > 0:
             t['summary']  = summaries[-1]
 
-        if 'summary' in t:# and t['reference'] == '.. _environment-variables-secrets-2-1:':
-            print(f'#########\n"reference": {t["reference"]}')
-            print(f'"title": {t["title"]}')
-            print(f'"source_file": {t["source_file"]}')
-            print(f'"summary": "{t["summary"]}"\n####')
-            #return
-
 def create_course_files(new_course_files, directory):
     if os.path.exists(directory):
         shutil.rmtree(directory)
@@ -455,8 +535,6 @@ def create_course_files(new_course_files, directory):
         with open(newfile_path, 'w') as newfile:
             newfile.write(file_content)
             newfile.close()
-
-#files = ["training/010_architecture_and_concepts/020_Beginner.rst"]
 
 def create_courses(files, output_folder, courses_path, root_level_header, rename_ref_prefix):
 
@@ -471,15 +549,24 @@ def create_courses(files, output_folder, courses_path, root_level_header, rename
         subTopics = subTopics + curTopics
     topics = topics + subTopics
     find_summaries(topics)
+    for t in topics:
+        createPres(t,
+         '/Users/gabriell.vig/Work/Sesam/docs/training/powerpoints/splitme.pptx',
+         f'/Users/gabriell.vig/Work/Sesam/docs/training/courses/{rename_ref_prefix}')
     courses = get_courses(courses_path_full)
     new_course_files = []
     for course in courses:
         new_course_files.append(replace_course_file_content(course, rename_ref_prefix, topics))
     create_course_files(new_course_files, output_folder_full_path)
 
+
+
 training_files = ["training/010_architecture_and_concepts/020_Beginner.rst","training/010_architecture_and_concepts/030_Novice.rst","training/010_architecture_and_concepts/040_Intermediate.rst","training/010_architecture_and_concepts/050_Advanced.rst","training/010_architecture_and_concepts/060_Epilogue.rst","training/010_architecture_and_concepts/architecture_and_concepts.rst","training/020_systems/020_Beginner.rst","training/020_systems/030_Novice.rst","training/020_systems/040_Intermediate.rst","training/020_systems/060_Epilogue.rst","training/020_systems/systems.rst","training/030_dtl/020_Beginner.rst","training/030_dtl/030_Novice.rst","training/030_dtl/040_Intermediate.rst","training/030_dtl/050_Advanced.rst","training/030_dtl/060_Epilogue.rst","training/030_dtl/dtl.rst","training/040_projects_and_infrastructure/020_Beginner.rst","training/040_projects_and_infrastructure/030_Novice.rst","training/040_projects_and_infrastructure/040_Intermediate.rst","training/040_projects_and_infrastructure/060_Epilogue.rst","training/040_projects_and_infrastructure/projects_and_infrastructure.rst","training/050_microservices/020_Beginner.rst","training/050_microservices/030_Novice.rst","training/050_microservices/040_Intermediate.rst","training/050_microservices/050_Advanced.rst","training/050_microservices/060_Epilogue.rst","training/050_microservices/microservices.rst","training/060_sesam_in_the_wild/020_Beginner.rst","training/060_sesam_in_the_wild/030_Novice.rst","training/060_sesam_in_the_wild/040_Intermediate.rst","training/060_sesam_in_the_wild/050_Advanced.rst","training/060_sesam_in_the_wild/060_Epilogue.rst","training/060_sesam_in_the_wild/sesam_in_the_wild.rst"]
+#training_files = ["training/010_architecture_and_concepts/020_Beginner.rst"]
 training_output_folder = 'training/courses/tmp'
 training_COURSES_PATH = 'training/courses'
 training_root_level_header = '~'
 training_rename_ref_prefix = 'tc_'
 create_courses(training_files, training_output_folder, training_COURSES_PATH, training_root_level_header, training_rename_ref_prefix)
+
+####### TRAINING COURSE AUTMATION ENDS HERE #######

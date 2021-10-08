@@ -24,7 +24,7 @@ Different types of Architectures
    ###.. _pipes-where-dtl-executes-3-1:###
    ###.. _entities-pipes-and-id-3-1:###
    ###.. _dtl-in-practice-3-1:###
-   ###.. _pipe-interaction-with-systems.-2-1:###
+###.. _pipe-interaction-with-systems.-2-1:###
    ###.. _systems-as-a-pipe-source-2-2:###
    ###.. _how-to-create-a-system-with-templates-2-1:###
 
