@@ -101,7 +101,7 @@ def summarizer(text: str):
             curMain = line.replace('  - ', '')
             output[curMain] = []
         elif line.startswith('    - '):
-            output[curMain].append(line)
+            output[curMain].append('     ' + line)
     return output
 
 def summarizer2(text: str):
@@ -114,10 +114,22 @@ def summarizer2(text: str):
                 indexer += 1
             output.append(line + '\n')
         elif line.startswith('    - '):
-            output[indexer] += line + '\n'
+            output[indexer] += '     ' + line + '\n'
     return output
 
 from json import dumps
+
+writethis2 = """  - Environment variables and secrets are named values used to parameterize configs
+  - Environment variables are:
+    - unencrypted
+    - referenced with: ``"$ENV(my-env-var)"``
+  - Secrets are:
+    - encrypted
+    - referenced with: ``"$SECRET(my-secret)"``
+  - Both are defined under **Datahub > Variables**
+  - Secrets can also be defined under a system's **Secrets** tab
+  - Eases and improves config maintenance
+"""
 
 s = prs.slides[0]
 

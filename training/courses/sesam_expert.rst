@@ -11,7 +11,10 @@ Beginner Topics
 Different types of Architectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   ###.. _data-driven-architecture-1-1:###
+###.. _data-driven-architecture-1-1:###
+
+
+   ###.. _enterprise-service-bus-1-1:###
    ###.. _datahub-1-1:###
    ###.. _the_parts_of_sesam-1-1:###
    ###.. _the_sesam_portal-1-1:###
@@ -27,6 +30,8 @@ Different types of Architectures
 ###.. _pipe-interaction-with-systems.-2-1:###
    ###.. _systems-as-a-pipe-source-2-2:###
    ###.. _how-to-create-a-system-with-templates-2-1:###
+   ###.. _environment-variables-secrets-2-1:###
+   ###.. _categories-of-microservices-5-1:###
 
 
 Introduction to some case.

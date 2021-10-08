@@ -303,7 +303,8 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-####### TRAINING COURSE AUTMATION STARTS HERE #######
+
+####### TRAINING COURSE AUTOMATION STARTS HERE #######
 
 
 import pathlib
@@ -338,7 +339,9 @@ def findTextBox(presentation: Presentation):
 def replace_paragraph_text_retaining_initial_formatting(paragraph, new_text):
     p = paragraph._p  # the lxml element containing the `<a:p>` paragraph element
     # remove all but the first run
-    print(f'For paragraph {paragraph} with runs "{paragraph.runs}" adding text {new_text}')
+    ###DEBUG###
+    # print(f'For paragraph {paragraph} with runs "{paragraph.runs}" adding text {new_text}')
+    ###DEBUG###
     for idx, run in enumerate(paragraph.runs):
         if idx == 0:
             continue
@@ -353,7 +356,7 @@ def replaceTitle(presentation: Presentation, new_title):
 
 
 def replaceBulletPoints(textframe, inputdict: dict):
-
+    #Prøv å bruk tab indent i str for å indentere bullet points
     def copy_run(run_from, run_to):
         r_to = run_to._r
         r_to.addnext(copy.deepcopy(run_from._r))
@@ -490,9 +493,9 @@ def replace_course_file_content(course, rename_ref_prefix, topics):
                         curLine = t['text']
                         topic_media_folder = f'../../../{"/".join(t["source_file"].split("/")[0:-1])}/media/'
                         curLine = curLine.replace('.. figure:: ./media/', f'.. figure:: {topic_media_folder}')
-                        #createPres(t,
-                        # '/Users/gabriell.vig/Work/Sesam/docs/training/powerpoints/splitme.pptx',
-                        # f'/Users/gabriell.vig/Work/Sesam/docs/training/courses/{rename_ref_prefix}')
+                        createPres(t,
+                         '/Users/gabriell.vig/Work/Sesam/docs/training/powerpoints/splitme.pptx',
+                         f'/Users/gabriell.vig/Work/Sesam/docs/training/courses/{rename_ref_prefix}')
                         break
                 if found == False:
                     raise Exception(f'Could not find reference {curRef} in training docs!')
@@ -549,10 +552,11 @@ def create_courses(files, output_folder, courses_path, root_level_header, rename
         subTopics = subTopics + curTopics
     topics = topics + subTopics
     find_summaries(topics)
+    ###DEBUG###
     for t in topics:
-        createPres(t,
-         '/Users/gabriell.vig/Work/Sesam/docs/training/powerpoints/splitme.pptx',
-         f'/Users/gabriell.vig/Work/Sesam/docs/training/courses/{rename_ref_prefix}')
+        if 'summary' in t:
+            print(dump_json(t, indent=2))
+    ###DEBUG###
     courses = get_courses(courses_path_full)
     new_course_files = []
     for course in courses:
