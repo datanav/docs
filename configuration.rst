@@ -1589,14 +1589,14 @@ already merged entities downstream.
 
 .. WARNING::
 
-   This applies only to merge sources using version ``1``.
-
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
    may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets. If you need
-   to do this then you should reset the pipe and maybe also delete the
-   target dataset.
+   though as this won't affect the order of the datasets. 
+   
+   If config changes are required be aware of the following:
+   Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
+   For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
 
 .. _union_datasets_source:
 
