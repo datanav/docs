@@ -633,9 +633,9 @@ Once the connection is open the node can extract data from the tables in the dat
 
 .. seealso::
 
-  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1`
-
   :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1`
 
 .. _pipes-1-1:
 
@@ -661,9 +661,9 @@ Where to make new ref 1.1.6
 
 .. seealso::
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`
-
   :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`
 
 .. _datasets-1-1:
 
