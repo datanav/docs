@@ -1,7 +1,7 @@
 .. _architecture-and-concepts-advanced:
 
-1.4 Architecture and Concepts: Advanced
----------------------------------------
+Advanced
+--------
 
 .. seealso::
 

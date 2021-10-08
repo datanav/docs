@@ -10,8 +10,8 @@ Sesam in the Wild
 .. toctree::
    :maxdepth: 2
 
-   Sesam in the Wild: Beginner <020_Beginner>
-   Sesam in the Wild: Novice <030_Novice>
-   Sesam in the Wild: Intermediate <040_Intermediate>
-   Sesam in the Wild: Advanced <050_Advanced>
-   Sesam in the Wild: Epilogue <060_Epilogue>
+   Beginner <020_Beginner>
+   Novice <030_Novice>
+   Intermediate <040_Intermediate>
+   Advanced <050_Advanced>
+   Epilogue <060_Epilogue>

@@ -1,7 +1,7 @@
 .. _projects-and-infrastructure-beginner-4-1:
 
-Projects & Infrastructure Beginner
-----------------------------------
+Beginner
+--------
 
 .. _sesam-node-gui-4-1:
 

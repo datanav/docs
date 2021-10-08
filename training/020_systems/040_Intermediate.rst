@@ -1,8 +1,8 @@
 
 .. _systems-intermediate-2-3:
 
-Systems: Intermediate
----------------------
+Intermediate
+------------
 
 .. _microservice-system-2-3:
 

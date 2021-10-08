@@ -1,8 +1,8 @@
 
 .. _sesam-in-the-wild-beginner-6-1:
 
-Sesam in the Wild: Beginner
----------------------------
+Beginner
+--------
 
 .. _beginner-topic-6-1:
 

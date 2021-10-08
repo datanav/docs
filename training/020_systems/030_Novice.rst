@@ -1,8 +1,8 @@
 
 .. _systems-novice-2-2:
 
-Systems: Novice
----------------
+Novice
+------
 
 .. _systems-as-a-pipe-source-2-2:
 

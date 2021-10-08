@@ -1,8 +1,8 @@
 
 .. _microservices-novice-5-2:
 
-Microservices: Novice
----------------------
+Novice
+------
 
 
 .. _interacting-with-a-microservice-in-sesam-5-2:

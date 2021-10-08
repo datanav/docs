@@ -32,8 +32,8 @@ Text here about we mean by Concepts.
 .. toctree::
    :maxdepth: 2
 
-   Architecture & Concepts: Beginner <020_Beginner>
-   Architecture & Concepts: Novice <030_Novice>
-   Architecture & Concepts: Intermediate <040_Intermediate>
-   Architecture & Concepts: Advanced <050_Advanced>
-   Architecture & Concepts: Epilogue <060_Epilogue>
+   Beginner <020_Beginner>
+   Novice <030_Novice>
+   Intermediate <040_Intermediate>
+   Advanced <050_Advanced>
+   Epilogue <060_Epilogue>

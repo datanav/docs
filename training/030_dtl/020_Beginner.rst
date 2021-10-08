@@ -1,7 +1,7 @@
 .. _dtl-beginner-3-1:
 
-DTL: Beginner
--------------
+Beginner
+--------
 
 .. _pipes-where-dtl-executes-3-1:
 

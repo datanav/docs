@@ -1,8 +1,8 @@
 
 .. _sesam-in-the-wild-intermediate-6-3:
 
-Sesam in the Wild: Intermediate
--------------------------------
+Intermediate
+------------
 
 .. _intermediate-topic-6-3:
 
