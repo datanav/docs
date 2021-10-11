@@ -1,3 +1,5 @@
+.. _sesam-in-the-wild:
+
 =================
 Sesam in the Wild
 =================

@@ -1,3 +1,5 @@
+.. _sesam-client:
+
 ============
 Sesam Client
 ============

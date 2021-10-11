@@ -1,3 +1,5 @@
+.. _learn-sesam:
+
 ===========
 Learn Sesam
 ===========

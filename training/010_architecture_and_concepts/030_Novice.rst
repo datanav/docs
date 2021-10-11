@@ -382,13 +382,13 @@ Secondly, the first time data flows through a pipe in Sesam that pipe's dataset 
 
 .. seealso::
 
-  :ref:`entity_data_model`,	:ref:`concepts-datasets`, :ref:`concepts-change-tracking`
+  :ref:`concepts` > :ref:`concepts-datasets`
 
-  Developer Guide > Entity Data Model > Reserved fields: :ref:`entity_data_model`
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-change-tracking`
 
-.. seealso::
+  :ref:`developer-guide` > :ref:`entity_data_model`
 
-  TODO
+  :ref:`developer-guide` > :ref:`entity_data_model` > :ref:`reserved-fields`
 
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 
