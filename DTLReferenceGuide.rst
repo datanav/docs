@@ -4716,7 +4716,7 @@ Dictionaries
        |
        | If ITEMS specified, then it takes a list of key+value pair tuples and
          returns a dictionary with those tuples as keys and values. Note that
-         last key  wins. Values are not two-element tuples are ignored.
+         last key  wins. Values that are not two-element tuples are ignored.
        |
        | If KEY+VALUE pairs are given, then a new dict with those pairs as keys and
          values. Note that last key  wins.
