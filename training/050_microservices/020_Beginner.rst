@@ -31,9 +31,9 @@ system configs and their logs can be inspected through the system's **Status** t
 
 .. seealso::
 
-  Getting started: :ref:`getting-started-microservices`
+  :ref:`getting-started` > :ref:`getting-started-microservices`
 
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
 
 .. _why-use-microservices-in-sesam-5-1:
 
@@ -172,18 +172,15 @@ We will look more into this in the sections below.
 
 .. seealso::
 
-  .. Testing to add refs as bread crumbs with links in each step except first step.
-  .. Is this reader-friendly or too much?
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
-  Learn Sesam > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
 
-  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
 
   `OData (Open Data Protocol) <https://www.odata.org/>`_
+
+  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
 
 .. _microservice-hosting-5-1:
 
@@ -283,10 +280,10 @@ Additional examples of external examples are listed below:
 
 
 .. seealso::
-  
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
 
-  Systems: Beginner: :ref:`pipe-interaction-with-systems-2-1`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`pipe-interaction-with-systems-2-1`
 
   `Sesam Community at GitHub <https://github.com/sesam-community>`_
 
