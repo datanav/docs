@@ -9,7 +9,7 @@ Behind the scenes
 Introduction
 ============
 
-Sesam utilize two architectures currently, a single machine service or a clustered machine service.
+Sesam utilizes two architectures currently, a single machine service or a clustered machine service.
 The single machine can be setup as a *Developer* or *Single compute* subscription. Note that the developer subscription does not support VPN or have backups.
 The clustered machine architecture is set up as the *Multi compute* subscription type, this can scale in width using multiple machines. 
 In the future we aim to host all subscription types on the same architecture. Both setups use container run times to host the service.
@@ -50,7 +50,7 @@ Backup
 ------
 
 Backup is performed once every 24 hours. Seven daily checkpoints are retained on the local disk if the backup policy is ``Local``. 
-All sesam hosted *Single compute* subscriptions have ``Geo-redundant`` backup enabled, which is a daily Azure VM backup. The ``Geo-redundant`` retension policy is to keep the last backup, 7 daily backups, 4 weekly backups and 4 monthly backups.
+All Sesam hosted *Single compute* subscriptions have ``Geo-redundant`` backup enabled, which is a daily Azure VM backup. The ``Geo-redundant`` retention policy is to keep the last backup, 7 daily backups, 4 weekly backups and 4 monthly backups.
 
 Note that ``Geo-redundant`` backups are kept for 30 days after deletion as this is mandated by Azure. If the service is self-hosted then the owner is responsible for creating off-site backups of the checkpoint directories or the virtual machine.
 
