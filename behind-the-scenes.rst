@@ -9,7 +9,10 @@ Behind the scenes
 Introduction
 ============
 
-There are two types of Sesam service architectures: single machine and clustered. The single machine setup runs the Sesam service on a single virtual machine. The subscription types *Small*, *Medium* and *Large* are all of this type. Note that the *Small* type is for development use only. The *Extra Large* subscription type uses the clustered setup and can scale to a large number of machines. In the future we aim to host all subscription types on the same architecture. Both setups use container runtimes to host the service.
+Sesam utilize two architectures currently, a single machine service or a clustered machine service.
+The single machine can be setup as a *Developer* or *Single compute* subscription. Note that the developer subscription does not support VPN or have backups.
+The clustered machine architecture is set up as the *Multi compute* subscription type, this can scale in width using multiple machines. 
+In the future we aim to host all subscription types on the same architecture. Both setups use container run times to host the service.
 
 The Sesam software is distributed as standard `OCI images <https://opencontainers.org/>`_ (aka Docker images). The container images are hosted on `Docker Hub <https://hub.docker.com/>`_ in a private repository.
 
@@ -27,7 +30,7 @@ Single machine service
 
 This service is hosted on a single virtual machine. The size of the virtual machine varies between the subscription types. All software runs as Docker containers, except the agent which runs directly on the host. These subscriptions are provisioned as individual resource groups in one shared Azure subscription. Each subscription has its own Azure Network Security Group. Data is stored on managed network disks. 
 
-The services consists of the following software components:
+The services consist of the following software components:
 
 - An agent that self-updates and makes sure that the other software that should run actually are running. It will also automatically upgrade the other software components.
 
@@ -46,7 +49,8 @@ The services consists of the following software components:
 Backup
 ------
 
-Backup is performed once every 24 hours. Seven daily checkpoints are retained on the local disk if the backup policy is ``Local``. If ``Geo-redundant`` backup is enabled then the Azure VM Backup service creates a backup of the VM daily.  The ``Geo-redundant`` retension policy is to keep the last backup, 7 daily backups, 4 weekly backups and 4 monthly backups.
+Backup is performed once every 24 hours. Seven daily checkpoints are retained on the local disk if the backup policy is ``Local``. 
+All sesam hosted *Single compute* subscriptions have ``Geo-redundant`` backup enabled, which is a daily Azure VM backup. The ``Geo-redundant`` retension policy is to keep the last backup, 7 daily backups, 4 weekly backups and 4 monthly backups.
 
 Note that ``Geo-redundant`` backups are kept for 30 days after deletion as this is mandated by Azure. If the service is self-hosted then the owner is responsible for creating off-site backups of the checkpoint directories or the virtual machine.
 
@@ -129,7 +133,7 @@ Sesam is ISO/IEC 27001 certified and follows a secure development policy. This p
 
 - All software changes must have unit tests, integration tests and other functional tests before being reviewed and then merged into the trunk.
 
-- All software changes must be reviewed by at least one other developer before being elegible for being merged into the trunk. Major changes are reviewed by a larger audience before being accepted.
+- All software changes must be reviewed by at least one other developer before being eligible for being merged into the trunk. Major changes are reviewed by a larger audience before being accepted.
 
 - Changes relating to security, robustness or stability are planned and approved before development begins.
 
@@ -141,4 +145,4 @@ Sesam is ISO/IEC 27001 certified and follows a secure development policy. This p
 
 - Third-party dependencies are reviewed on a regular basis.
 
-- Software artifacts are verified and checked against published hashses to avoid tampering risks.
+- Software artifacts are verified and checked against published hashes to avoid tampering risks.
