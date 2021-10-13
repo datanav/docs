@@ -10,31 +10,115 @@ Novice
 Interacting with a Microservice in Sesam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Interacting with microservices...
+
+  - to ingest or expose data is done with, respectively, a pull and push protocol
+  - you should use the ``since`` request parameter, in the pull protocol, to enable delta requests
+  - the request parameter ``is_first`` in the push protocol, on full data syncs, should be used to parse JSON from an array
+  - you should make sure to implement thorough error handling in order to allow for adequate logging
+  - logging should allow a non-technical user to understand why and potentially what made a microservice fail
+  - is done by "coupling" a given system with a given pipe
+  - in terms of triggering a microservice, the trigger is when streams of data flows through the implementation point 
+
+Interacting with a microservice in a Sesam node is by no means a simple thing when it comes to the technicality of utilizing a microservice, in the best possible way. In order for you to get the tools necessary to do exactly this, the following sub-sections will explain certain theoretical topics related to integrating a microservice optimally in Sesam. 
+
+Protocols
+#########
+
+In terms of functionality, a microservice will need to either ingest and/or expose data. Therefore, we will now talk about the pull and push protocols, which respectively allows for ingestion and exposure of data.
+
+The pull and push protocols are HTTP-based protocols. The pull protocol uses GET requests to read streams of JSON data. Requests can be split across multiple requests, albeit you should be cautious about splitting up your request, as you risk to only get a sample of the entire stream of data you are reading. The following request parameters are supported:
+
+- ``since`` - specifies an offset from which reading of data will start.
+- ``limit`` - specifies a maximum number of entities from which the server will cap the response.
+- ``subset`` - specifies whether a subset of entities is requested. 
+
+Moving onto the push protocol. This protocol uses POST requests to write incremental or full data syncs scross to an HTTP endpoint. It allows for splitting up data into smaller batches in order to decrease load on every request. As with the pull protocol, the push protocol also supports the use of request parameters:
+
+- ``sequence_id`` - a string token which is generated every time the data sync is started.
+- ``is_full`` - a boolean which evaluates to ``true`` on full data syncs and ``false`` if incremental. Default value is ``false``.
+- ``request_id`` - a string token which is generated on every request.
+- ``previous_request_id`` - a string token which refers to the previous ``request_id``. Present on all, but the first request.
+- ``is_first`` - a boolean, only set on full data syncs, which is included on the first request and has a default value of ``true``. 
+- ``is_last`` - a boolean, only set on full data syncs, which is included on the last request and has a default value of ``true``.
+
+Additional information about the protocols can be found here: `Pull <https://docs.sesam.io/json-pull.html#json-pull-protocol>`_ or `Push <https://docs.sesam.io/json-push.html#json-push-protocol>`_.
 
 
-Sesam push/pull protocol
+Error handling & logging
+########################
 
-Error handling/logging
+Error handling and logging are closely related topics and you should not do the one, without considering the other.
 
-Pipes
+Error handling should be done in such a way that you make sure typical causes of error will be registered in your microservice. Typical causes of error often relates to status codes. A successful request returns a response code of 200, whilst an altogether unsuccessful one returns a response code of 404. If you consider the above two response codes as extremes, in terms of success, there are multiple additional response codes on this scale. These allow for incremental error handling.
 
-Statuslogg [Hvordan bruke & Lese]
+Using the information returned from such a response is important and also here logging comes into play. Logging is used in a microservice so that a given user, especially a user not engaged technically in either response codes or code in itself, can explain and understand what made the microservice fail and/or why the microservice failed. Typically, severity in logging goes from logging of information to logging of warnings and finally to logging of errors. Naturally, you should make sure your microservice handles warnings and expecially errors in a robust and transparent way so that a given user will know what to do when such a logging entry occurs.       
 
-Log-level
 
-Trigger/Call
+Interaction & triggers
+######################
 
-Endepunkt i ms (/<paramater>)
+Interacting with a microservice in a Sesam node means in practice creating a system of the type ``system:microservice``. This tells Sesam that the system is in reality a microservice hosted in Docker. An example of such a system can be seen below:
 
-Hvordan sender man info til ms fra sesam
+.. code-block:: json
 
-url-i pipe
+  {
+    "_id": "my-system-microservice",
+    "type": "system:microservice",
+    "docker": {
+      "environment": {
+        "user": "$ENV(my-username)",
+        "password": "$SECRET(my-password)",
+        "base_url": "$ENV(my-base_url)"
+      }
+    },
+    "image": "myDockerID/myImageID:<semanticVersion>",
+    "port": 5000
+  }
 
-url-parameter
+After having set up such a system you can move on to making a pipe that interacts with this system:
+
+.. code-block:: json
+
+  {
+    "_id": "my-pipe",
+    "type": "pipe",
+    "source": {
+      "type": "json",
+      "system": "my-system-microservice",
+      "url": "/department"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "_id", "_S.departmentID"],
+          ["add", "rdf:type", ["ni", "department:Denmark"]]
+        ]
+      }
+    }
+  }
+
+As can be seen from the above pipe config you will recognize the name of your recently created system, namely "my-system-microservice". Basically, by specifying this name you tell Sesam that you wish to communicate with that exact microservice. Additionally, the property ``{"url": "/department"}`` is of particular interest to us. This property tells us which endpoint we are interested in ingesting data from. In programming terms you would say that the dictionary with the key "url" has a value of "/department". As outlined, you can provide whatever value you want for the key "url". This means that Sesam supports the implementation and use of dynamic endpoints, i.e: for Python <path>. This makes interacting with microservices quite complete and as such you do not need to think about compromising on your code in order for it to work in Sesam. 
+
+Finally, the topic of triggering comes into play. Triggering your system in Sesam is governed by how data flows in a given dataflow. An input pipe, that is connected directly to a system microservice, as shown in the above example, will run on a default schedule of 15 minutes, unless otherwise stated or if you choose to start the pipe manually. On the topic of run times, you can state specific run times by the use of cron expressions. A microservice that is used in the middle or at the end of a dataflow will be triggered when data flows through a specific pipe at this particular stage in the dataflow. As such, Sesam triggers microservices in accordance to the streams of data that makes a dataflow. A given change in the stream of data will trigger an interaction with a microservice, but only a load sufficient to handle the trigger will be carried out.
+
 
 .. seealso::
 
-  TODO
+  Developer Guuide > JSON Pull Protocol: :ref:`json_pull_protocol`
+
+  Developer Guuide > JSON Push Protocol: :ref:`json_push_protocol`
+
+  Developer Guuide > Service Configuration: :ref:`continuation_support`
+
+  Learn Sesam: :ref:`systems-novice-2-2`
+
+  Developer Guuide > Service Configuration: :ref:`microservice_system`
+
 
 .. _microservice-development-prerequisites-5-2:
 
