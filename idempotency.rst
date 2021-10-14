@@ -23,7 +23,7 @@ The problem with non-idempotent systems is that you can get different results ev
 Trying to update an entity/record in a system via REST using the POST method will fail, since the POST method will add a new record. The record that was intended to be update is still unchanged.
 Same will happen every time a POST is used. The POST method is non-idempotent. 
 
-Using the counter-part method PUT will ensure that the record you wanted to update is overwritten by the data provide in the PUT. 
+Using the counter-part method PUT will ensure that the record you wanted to update is overwritten by the data provided in the PUT. 
 Every time PUT is used this will happen. PUT is an idempotent method.
 
 To cope with the non-idempotency within a POST method, one must build functionality that brings idempotency into the equation to avoid unexpected results. 
