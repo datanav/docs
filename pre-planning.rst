@@ -74,7 +74,7 @@ Connect data types to the globals
 Finally connect all identified data types to their respective globals to
 complete the data flow architecture.
 
-Booth business system data types and data platform data types may
+Both business system data types and data platform data types may
 connect to one or more globals. Incoming data may be split into
 different globals, and outgoing data may need to combine several
 globals.
