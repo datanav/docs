@@ -1,4 +1,4 @@
-Pre-planning a Sesam project
+Planning a Sesam project
 ============================
 
 The main planning task before starting a Sesam project is to document
