@@ -28,7 +28,7 @@ Completeness
 ------------
 To ensure that any composed object is complete before sending it to a target system, the completeness feature(if set) will delay the transfer of incomplete objects to targets. If the completeness feature is not set, incomplete object will be sent to targets. 
 
-Feedback loop
--------------
+Generated identifiers
+---------------------
 In API based systems the result of the insert or update call should feed back into the target input flow, to handle IDs and errors.
 
