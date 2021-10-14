@@ -1,8 +1,8 @@
 Pre-planning a Sesam project
 ============================
 
-The main planning task before starting a Sesam projects is to document
-an overview of what master data types is needed, their source, and how
+The main planning task before starting a Sesam project is to document
+an overview of what master data types are needed, their source, and how
 they should be organized inside Sesam.
 
 The :ref:`dataflow <best-practice-workflow>` can be documented by filling this
@@ -35,18 +35,18 @@ endpoint URI, and what connector can be used to communicate with them.
 Identify master data sources
 ----------------------------
 
-Identify the source systems that contains the necessary data to fill the
+Identify the source systems that contain the necessary data to fill the
 master data requirements of the project.
 
 Identify their API, or other data protocol, and what connector can be
 used to communicate with them, including if the system has test and prod
 environments and their endpoint URIs.
 
-To be able to effectively impellent the project, a system owner and
+To be able to effectively implement the project, a system owner and
 preferably a data owner for each system should be identified.
 
-Once all sources have been identified, a initial priority of the
-different sources must be set. Central object will always be stored in
+Once all sources have been identified, an initial priority of the
+different sources can be set. Central objects will always be stored in
 multiple systems, and prioritizing what system will override others is
 important to support multi master data synchronization.
 
@@ -60,13 +60,13 @@ Group data by type, not role. One object should never fit in more than
 one group. Start generically in this phase. Re grouping to more detailed
 groups can be done with time.
 
-Samples of good way of grouping into globals:
+Samples of a good way of grouping into globals:
 
--  Person - Not employee, contact person, or user
+-  Person - Not use employee, contact person, or user
 
--  Business – Not supplier, customer, or partner
+-  Business – Not use supplier, customer, or partner
 
--  Product – Not screw, nut or bolt
+-  Product – Not use screw, nut or bolt
 
 Connect data types to the globals
 ---------------------------------
