@@ -9,11 +9,11 @@ Sesam is a Master Data Hub built on a streaming dataflow data integration and pr
 
    Core principles <core-principles>
    Key features <features>
+   Best Practices <best-practices>
    Concepts <concepts>
    Getting started <getting-started>
    Quick Reference <quick-reference>
    Developer Guide <developer-guide>
-   Best Practices <best-practices>
    Tools <tools>
    Community <community>
    Behind the scenes <behind-the-scenes>
