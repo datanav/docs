@@ -1,3 +1,5 @@
+.. _project-workflow:
+
 ==========================
 Working on a Sesam project
 ==========================
