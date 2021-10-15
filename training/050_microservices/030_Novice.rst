@@ -103,16 +103,15 @@ Finally, the topic of triggering comes into play. Triggering your system in Sesa
 
 .. seealso::
 
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`continuation_support`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
   :ref:`developer-guide` > :ref:`json_pull_protocol`
 
   :ref:`developer-guide` > :ref:`json_push_protocol`
 
-  :ref:`developer-guide` > :ref:`configuration` > :ref:`continuation_support`
-
-  :ref:`learn-sesam` > :ref:`systems-novice-2-2`
-
-  :ref:`developer-guide` > :ref:`configuration` > :ref:`microservice_system`
-
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2`
 
 .. _microservice-development-prerequisites-5-2:
 
