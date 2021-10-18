@@ -136,7 +136,7 @@ The Sesam Community can be found `here <https://github.com/sesam-community>`_.
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
 
-  :ref:`community`
+  :ref:`sesam-community`
 
 .. _changing-a-microservice-5-2:
 
