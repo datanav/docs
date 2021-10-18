@@ -18,9 +18,13 @@ Developer Guide
    Pump Execution Dataset <pump-execution>
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>
+   Idempotency and non-idempotency <idempotency>
    Security <security>
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
    Source datatype mapping <source-datatype-mapping>
    Self-hosted service <self-hosted>
+   Data modelling in Sesam <data-modelling>
+   Working on a Sesam project <project-workflow>
+   Sesam in Microsoft Azure <azure>
    Deprecated features <deprecations>

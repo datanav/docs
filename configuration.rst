@@ -114,6 +114,7 @@ Example:
       "global_defaults": {
          "use_signalling_internally": false,
          "default_compaction_type": "sink",
+         "symmetric_namespace_collapse": false
       },
       "dependency_tracking": {
          "dependency_warning_threshold": 10000,
@@ -199,7 +200,7 @@ Properties
    * - ``global_defaults.compaction_interval``
      - Float
      - Specifies the default sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent pipes that run often from constantly trying to compact the sink-dataset.
      - ``0``
@@ -263,6 +264,23 @@ Properties
      - False
      -
 
+       .. _service_metadata_global_defaults_eager_load_microservices:
+
+   * - ``global_defaults.eager_load_microservices``
+     - Boolean
+     - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless.
+     - True
+     -
+
+       .. _service_metadata_global_defaults_symmetric_namespace_collapse:
+
+   * - ``global_defaults.symmetric_namespace_collapse``
+     - Boolean
+     - When set to true, the expand and collapse features will be symmetrical, i.e. data containing namespaced identifiers read into Sesam will map to the same thing
+       on the way out of Sesam. Note that setting this option to ``true`` as assumed by the DTL ``ni-collapse`` and ``ni-expand`` DTL functions
+       will also alter the URI/NI collapse and expand behaviour of the RDF and SPARQL source and sink.
+     - False
+     -
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
@@ -576,7 +594,7 @@ Properties
      - Boolean
      - If ``true`` then namespaces will be removed from ``_id``, properties and namespaced identifier values. The namespaces are removed after the last transform. This property is normally only specified on outbound pipes.
 
-       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_message_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_message_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_push_sink>`.
+       If ``namespaced_identifiers`` is enabled in the service metadata then the sink default value is used. The following sinks has a default value of ``true``:  :ref:`csv_endpoint <csv_endpoint_sink>`, :ref:`elasticsearch <elasticsearch_sink>`, :ref:`mail <mail_sink>`, :ref:`rest <rest_sink>`, :ref:`sms <sms_sink>`, :ref:`solr <solr_sink>`, :ref:`sql <sql_sink>`, :ref:`http_endpoint <http_endpoint_sink>`, and :ref:`json <json_sink>`.
      - Sink default
      -
 
@@ -667,7 +685,7 @@ Properties
    * - ``compaction.compaction_interval``
      - Float
      - Specifies the sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, otherwise sink compaction will only run if at least
+       the pipe runs. If it is larger than zero, sink compaction will only run if at least
        ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
        to prevent a pipe that run often from constantly trying to compact the sink-dataset.
      - ``0``
@@ -695,8 +713,9 @@ run again.
 Compaction will not be performed datasets with a tripped circuit
 breaker. It is also not possible to repost entities to these datasets.
 
-The `service API <api.html#post--datasets-dataset_id>`_ can be used to
-reset the circuit breaker.
+You can rollback or commit the circuit breaker on the dataset page in
+the :doc:`Management Studio <management-studio>`, or use the
+`service API <api.html#post--datasets-dataset_id>`_.
 
 Resetting
 ---------
@@ -746,7 +765,7 @@ Properties
 Completeness
 ------------
 
-When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe.  One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 Properties
 ^^^^^^^^^^
@@ -766,6 +785,10 @@ Properties
      - A list of dataset ids that should not contribute to the completeness timestamp value. Any
        dataset listed in this property will be ignored when calculating the dataset sink
        completeness timestamp value.
+
+       .. NOTE::
+
+         If all datasets are excluded a new completeness timestamp value will be generated in this pipe.
      - ``[]``
      -
 
@@ -867,7 +890,7 @@ the source*. Within an entity the marker is carried in the
 
 Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
 
-There are three characteristics that describe continuation
+There are four characteristics that describe continuation
 support. All sources have these and there are three properties
 available to describe them. The properties can be fixed, have a
 default value or be calculated from other properties (aka dynamic) on
@@ -875,19 +898,21 @@ the source. The table below explains them in detail.
 
 .. NOTE::
 
-   It is important that you do not to set any of these properties to
+   It is important that you do not to set any of the boolean properties to
    ``true`` unless the source actually have these
    characteristics. Doing so can mean that the pump is not able track
    changes properly.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 80
+   :widths: 10, 10, 80
 
    * - Property
+     - Type
      - Description
 
    * - ``supports_since``
+     - Boolean
      - Does the source make use of the 'since' parameter if it gets
        passed one?
 
@@ -903,6 +928,7 @@ the source. The table below explains them in detail.
           depending on the strategy you want.
 
    * - ``is_since_comparable``
+     - Boolean
      - Can you compare two ``_updated`` values using lexical/bytewise
        comparison and decide their relative order?
 
@@ -919,6 +945,7 @@ the source. The table below explains them in detail.
           ``true``.
 
    * - ``is_chronological``
+     - Boolean
      - Does the source hand out entities in chronological order, i.e.
        in increasing order?
 
@@ -935,6 +962,16 @@ the source. The table below explains them in detail.
           If you set ``is_chronological`` to ``true`` then you
           should also make sure that ``supports_since`` is set to
           ``true``.
+
+
+   * - ``initial_since_value``
+     - String or integer
+     - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
+       the pipe has been reset). It should be used when you don't want the source to fetch all available data when
+       the pipe is initially run or has been reset. Note that this value is only used by sources that can support "since".
+
+
+.. _strategy:
 
 The strategy for tracking the ``since`` marker is chosen like this — and in this specific order:
 
@@ -1285,7 +1322,7 @@ Properties
 
    * - ``datasets``
      - List<String{>=1}>
-     - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_function>`.
+     - A list of one or more datasets that are to be merged. Each item in this list is a pair of dataset id and dataset alias. A given dataset can only appear once in this list. The syntax is the same as in the ``datasets`` property in :ref:`hops <hops_dtl_function>`.
      -
      - Yes
 
@@ -1552,14 +1589,14 @@ already merged entities downstream.
 
 .. WARNING::
 
-   This applies only to merge sources using version ``1``.
-
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
    may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets. If you need
-   to do this then you should reset the pipe and maybe also delete the
-   target dataset.
+   though as this won't affect the order of the datasets. 
+   
+   If config changes are required be aware of the following:
+   Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
+   For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
 
 .. _union_datasets_source:
 
@@ -2849,7 +2886,12 @@ The JSON source
 ---------------
 
 
-The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server). The data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
+`HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
+The service must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+
+Consider using the more general :ref:`REST source <rest_source>` if you're interacting with a non-Sesam JSON capable
+REST api.
 
 If the ``supports_since`` property is set to *true*, then the ``since`` request parameter is added to the URL to
 signal that we want only changes that happened after the since marker.
@@ -2863,7 +2905,10 @@ Prototype
        "system": "system-id",
        "type": "json",
        "url": "url-to-json-data",
-       "supports_signalling": false
+       "supports_signalling": false,
+       "headers": {
+           "some-header": "some-value"
+       }
     }
 
 Properties
@@ -2918,6 +2963,13 @@ Properties
      -
      - No
 
+   * - ``headers``
+     - Dict<String,String>
+     - A optional set of header values to set in HTTP request made using this source. Both keys and values must
+       evaluate to strings.
+     -
+     -
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -2953,6 +3005,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
             "url": "test.json",
         }
     }
+
+.. _empty_source:
 
 The empty source
 ----------------
@@ -3039,7 +3093,7 @@ The JSON Push protocol is described in additional detail in the
 entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :doc:`here
 <entitymodel>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
-<json_push_sink>`.
+<json_sink>`.
 
 The JSON Push endpoint supports `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ of
 both a single JSON object and a list of JSON objects. The HTTP request's ``content-type``
@@ -3091,6 +3145,14 @@ Properties
        specified if the sink is of type ``dataset``.
      - ``true``
      - No
+
+
+Completeness
+^^^^^^^^^^^^
+
+When entities are posted to the HTTP endpoint source, the :ref:`completeness <completeness>` value of the sink dataset will by default be set to the current time. But it is also possible to explicitly specify the completeness value by adding a 'X-Dataset-Completeness' header in the POST-request. This value must be a positive integer. It is recommended to use microseconds since the epoch, since this is what Sesam does by default.  Example::
+
+    curl -H "X-Dataset-Completeness: 1633934725921188" ...
 
 
 Continuation support
@@ -3158,7 +3220,7 @@ Prototype
         "url": "sparql-endpoint",
         "fragments_query": "SPARQL select query",
         "fragment_query": "SPARQL construct query"
-        "since_default": "0001-01-01T00:00:00Z"
+        "initial_since_value": "0001-01-01T00:00:00Z"
     }
 
 
@@ -3201,7 +3263,7 @@ Properties
      -
      - Yes
 
-   * - ``since_default``
+   * - ``initial_since_value``
      - String
      - A string literal to use when querying the triplestore the first time.
      - "0001-01-01T00:00:00Z"
@@ -3264,6 +3326,14 @@ The REST source supports both pagination as part of the response body or paginat
 after the `RFC 5988 specifcation <https://tools.ietf.org/html/rfc5988>`_ . It optionally supports continuation both as
 a query parameter or as header property.
 
+Note that by default the REST source will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST source emit "empty" entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the REST source is still under development and might change configuration format while it's marked
 as "experimental".
 
@@ -3282,7 +3352,10 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -3341,11 +3414,21 @@ Properties
      -
      -
 
+   * - ``response_include_content_type``
+     - Boolean
+     - This property controls if the output entity should include the Content-Type of the response in a
+       ``content-type`` property.
+
+     - ``false``
+     -
+
    * - ``payload_property``
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source
-       configuration will take precendence if defined.
+       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
+       response body it will take precedence over any property found by traversing the path using the dot notation.
      -
      -
 
@@ -3357,6 +3440,21 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precendence if defined.
      -
+     -
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the source or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and source,
+       the source value takes precedence.
+     - 1
      -
 
 Continuation support
@@ -3718,13 +3816,13 @@ Properties
 
    * - ``rules``
      - Object
-     - The named rules of the DTL transform. The ``default`` named rule is required and is the rule that will be applied on the source entity. The other rules can be applied via the :ref:`apply <apply_function>` and :ref:`apply-hops <apply_hops_function>` DTL functions.
+     - The named rules of the DTL transform. The ``default`` named rule is required and is the rule that will be applied on the source entity. The other rules can be applied via the :ref:`apply <apply_dtl_function>` and :ref:`apply-hops <apply_hops_dtl_function>` DTL functions.
      -
      - Yes
 
    * - ``id_required``
      - Boolean
-     - If ``true`` then the DTL transform will fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform_create>` and  :ref:`"create-child" <dtl_transform_create_child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. If the value is ``false`` then it will not fail in these situation. Instead the values will be ignored.
+     - If ``true`` then the DTL transform will fail if the target entity's ``_id`` property is either missing or is not a string. It will also do so if the arguments to :ref:`"create" <dtl_transform-create>` and  :ref:`"create-child" <dtl_transform-create-child>` is not a dict or is missing the ``_id`` property or the ``_id`` property is of a non-string type. If the value is ``false`` then it will not fail in these situation. Instead the values will be ignored.
      - ``true``
      -
 
@@ -3767,6 +3865,7 @@ Transformation Language before writing them to the
        }
    }
 
+.. _json_schema_transform:
 
 The JSON Schema validation transform
 ------------------------------------
@@ -4116,12 +4215,17 @@ however, the result would instead become:
         }
     }
 
+.. _upper_keys_transform:
+
 The upper keys transform
 ------------------------
 
 This transform transforms all the keys of an entity to upper case (optionally recursively).
 The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
 transformed to upper case. See previous section for details.
+
+
+.. _undirected_graph_transform:
 
 The undirected graph transform
 ------------------------------
@@ -4498,6 +4602,14 @@ The REST transform
 
 This transform can communicate with a REST service using HTTP requests.
 
+Note that by default the REST transform will only attempt to parse responses with content-type "application/json", if
+the REST API provides other types of valid JSON, you can specify which in the ``json_content_types`` property of
+the associated :ref:`REST system <rest_system>`.
+
+Responses which aren't recognised as JSON will make the REST transform emit entities with a property containing
+the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
+HTTP or REST transform(s).
+
 Note that the shape of the entities piped to this transform must conform to certain criteria, see the
 :ref:`notes <rest_transform_expected_rest_entity_shape>` later in the section.
 
@@ -4518,7 +4630,10 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
+        "response_include_content_type": false,
         "payload_property": "the-property-the-response-resides-in",
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
@@ -4607,7 +4722,9 @@ Properties
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform
-       configuration will take precendence if defined.
+       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
+       response body it will take precedence over any property found by traversing the path using the dot notation.
      -
      -
 
@@ -4640,6 +4757,21 @@ Properties
        403. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 are always
        allowed and the default is to fail for any status code outside of this range.
      -
+     -
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and transform,
+       the transform value takes precedence.
+     - 1
      -
 
 .. _rest_transform_expected_rest_entity_shape:
@@ -5212,7 +5344,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _json_push_sink:
+.. _json_sink:
 
 The JSON push sink
 ------------------
@@ -5224,6 +5356,9 @@ to an :ref:`HTTP endpoint <url_system>`.
 The protocol is described in additional detail in the :doc:`JSON Push
 Protocol <json-push>` document. The serialisation of entities as JSON
 is described in more detail :doc:`here <entitymodel>`.
+
+Consider using the more general :ref:`REST sink <rest_sink>` if you're interacting with a non-Sesam JSON
+capable REST api.
 
 This sink is compatible with :ref:`The HTTP endpoint source
 <http_endpoint_source>`.
@@ -5314,12 +5449,12 @@ An example using a custom "application/json" content-type header needed by some 
     }
 
 
-.. _sdshare_push_sink:
+.. _sdshare_sink:
 
 The SDShare push sink
 ---------------------
 
-The SDShare push sink is similar to the :ref:`JSON push sink <json_push_sink>`, but instead of posting JSON it
+The SDShare push sink is similar to the :ref:`JSON push sink <json_sink>`, but instead of posting JSON it
 translates the inbound entities to ``RDF`` and ``POSTs`` them in N-Triples form to a :ref:`HTTP endpoint <url_system>`
 implementing the ``SDShare push protocol``.
 
@@ -5380,7 +5515,7 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
         }
     }
 
-.. _sms_message_sink:
+.. _sms_sink:
 
 The SMS message sink
 --------------------
@@ -6008,7 +6143,7 @@ Each object is on the form:
     {
         "source_property": "name_of_property",
         "name": "name_of_column",
-        "type": "string|integer|decimal|float|bytes|datetime|date|time|uuid|boolean",
+        "type": "string|integer|decimal|float|binary|datetime|date|time|uuid|boolean",
         "max_size|max_value": 1234,
         "min_size|min_value": 1234,
         "precision": 10,
@@ -6064,12 +6199,12 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - nvarchar(MAX)
      - Unicode
 
-   * - ``bytes``
+   * - ``binary``
      - <= 8000
      - varbinary(size)
      -
 
-   * - ``bytes``
+   * - ``binary``
      - > 8000
      - varbinary(MAX)
      -
@@ -6130,7 +6265,7 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
      - Preformatted strings on the format ``xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`` can also be used
 
 
-.. _mail_message_sink:
+.. _mail_sink:
 
 The Email Message sink
 ----------------------
@@ -6291,6 +6426,8 @@ To send multi-part email messages containing both a HTML and a plain-text versio
 The former should then contain your HTML message and the latter your plain-text version. If you omit the ``text_*``
 properties and the body template contains HTML, the sink will attempt to extract a text-only version of the HTML
 on a best-effort basis; i.e. this might not preserve the information contained in the HTML in the desired way.
+
+.. _null_sink:
 
 The null sink
 -------------
@@ -6466,7 +6603,7 @@ Prototype
     {
         "type": "csv_endpoint",
         "columns": ["properties","to","use","as","columns"],
-        "quoting": "all|minimal|non-numeric|"none",
+        "quoting": "all|minimal|non-numeric|none",
         "delimiter": ","
         "doublequote": true
         "include_header": true,
@@ -6820,6 +6957,8 @@ Prototype
         "type": "rest",
         "system" : "rest-system",
         "operation": "the-default-operation",
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
         "properties": {
            "the-default": "properties"
         },
@@ -6922,6 +7061,20 @@ expected is:
      -
      -
 
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the sink or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the system and sink,
+       the sink value takes precedence.
+     - 1
+     -
 
 Example entities:
 
@@ -7530,6 +7683,7 @@ Prototype
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
+        "dialect": "sql-server",
         "port": 1433,
         "database": "database-name"
     }
@@ -7576,6 +7730,12 @@ Properties
      - Name/id of database to connect to.
      -
      - Yes
+
+   * - ``dialect``
+     - String
+     - Indicates if the server is a normal SQL server or a Synapse server. The allowed values are ``sql-server`` or ``synapse``.
+     - ``sql-server``
+     -
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -7914,7 +8074,7 @@ The SMTP system
 ---------------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
-server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_message_sink>` to construct
+server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_sink>` to construct
 and send emails based on the entities it receives.
 
 Prototype
@@ -8117,7 +8277,7 @@ The Twilio system
 -----------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
-:ref:`SMS message sinks <sms_message_sink>` to construct and send SMS messages from entities.
+:ref:`SMS message sinks <sms_sink>` to construct and send SMS messages from entities.
 
 It has the following properties:
 
@@ -8330,15 +8490,13 @@ Properties
 
    * - ``connect_timeout``
      - Integer
-     - Number of seconds to wait for connecting to the HTTP server before timing out. A value of ``null`` means
-       wait indefinitely.
+     - Number of seconds to wait for connecting to the HTTP server before timing out.
      - ``60``
      -
 
    * - ``read_timeout``
      - Integer
-     - Number of seconds to wait for the HTTP server to respond to a request before timing out. A value of ``null``
-       means wait indefinitely.
+     - Number of seconds to wait for the HTTP server to respond to a request before timing out.
      - ``1800``
      -
 
@@ -8414,6 +8572,9 @@ Prototype
         "jwt_token": null,
         "connect_timeout": 60,
         "read_timeout": 1800,
+        "rate_limiting_retries": 3,
+        "rate_limiting_delay": 60,
+        "json_content_types": ["application/jsonish"]
         "operations": {
             "get-operation": {
                 "url" : "/a/service/that/supports/get/{{ _id }}",
@@ -8428,7 +8589,9 @@ Prototype
             },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
-                "method": "DELETE"
+                "method": "DELETE",
+                "rate_limiting_retries": 3,
+                "rate_limiting_delay": 60
             },
             "put-operation": {
                 "url" : "/some/service/that/supports/put",
@@ -8478,6 +8641,29 @@ Properties
        At least one operation need to be registered for the system.
      -
      - Yes
+
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
+       the operation definition, the operation value takes precedence.
+     - 1
+     -
+
+   * - ``json_content_types``
+     - Array of strings
+     - This property can be used to supply the REST source and transform a list of response "content-type" strings
+       that represent valid JSON content that should be parsed as such. The content-type "application/json" is always
+       included.
+     - ["application/json"]
+     -
 
 Operation properties
 ^^^^^^^^^^^^^^^^^^^^
@@ -8621,6 +8807,20 @@ A operation configuration looks like:
      - ``"query"``
      -
 
+   * - ``rate_limiting_retries``
+     - Integer
+     - If set and the REST service returns a HTTP 429 error code, the request will be retried the number of times
+       indicated. The time between retries can be adjusted by setting ``rate_limiting_delay``.
+     -
+     -
+
+   * - ``rate_limiting_delay``
+     - Integer
+     - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
+       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
+       the operation definition, the operation value takes precedence.
+     - 1
+     -
 
 .. _rest_system_example:
 
@@ -8678,7 +8878,7 @@ Example configuration
 The microservice system
 -----------------------
 
-The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_push_sink>`.
+The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_sink>`.
 
 The ``docker`` property lets one specify a Docker container that should be spun up. Note that the microservice system does not have the ``base_url`` property. The reason is that it is able to figure out this itself.
 
@@ -8726,7 +8926,8 @@ Prototype
         "password": null,
         "authentication": "basic",
         "connect_timeout": 60,
-        "read_timeout": 1800
+        "read_timeout": 1800,
+        "eager_load": true
     }
 
 Note that due to Docker naming conventions, the ``_id`` of the microservice must start with a ASCII letter or number
@@ -8875,16 +9076,20 @@ Properties
 
    * - ``connect_timeout``
      - Integer
-     - Number of seconds to wait for connecting to the microservice before timing out. A value of ``null`` means
-       wait indefinitely.
+     - Number of seconds to wait for connecting to the microservice before timing out.
      - ``60``
      -
 
    * - ``read_timeout``
      - Integer
-     - Number of seconds to wait for the microservice to respond to a request before timing out. A value of ``null``
-       means wait indefinitely.
+     - Number of seconds to wait for the microservice to respond to a request before timing out.
      - ``1800``
+     -
+
+   * - ``eager_load``
+     - Boolean
+     - When set to false, Sesam can hold off starting up the microservice if it isn't connected to any pipes. Set to true to force the microservice to start up regardless. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`.
+     - ``true``
      -
 
 Microservice APIs

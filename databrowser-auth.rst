@@ -157,7 +157,7 @@ based on the :ref:`data in solr <databrowser_authorization_via_solr>`, the data 
 and authorization with a `JWT <https://en.wikipedia.org/wiki/JSON_Web_Token>`_  authorization
 token created by the `Sesam portal <https://portal.sesam.io>`_.
 
-This is used we want to be able to allow users to use their Sesam portal login credentials
+This is used as we want to be able to allow users to use their Sesam portal login credentials
 to log into the data access portal. This functionality is normally only used when the data access portal has
 been provisioned via the Sesam portal, and in this case the required configuration will have
 been done automatically.
