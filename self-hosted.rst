@@ -1,3 +1,5 @@
+.. _self-hosted:
+
 ===================
 Self-hosted service
 ===================
@@ -10,6 +12,9 @@ Introduction
 ------------
 
 Sesam is offered as service that is either hosted for you in the cloud or you host it yourself. We generally recommend the former, but there are scenarios where you would want to host it yourself. This document explains the requirements and the installation steps necessary to get the single-machine Sesam service running in a self-hosted environment.
+
+.. Note::
+   Self hosted subscriptions are required to run the latest image of their chosen `software channel <https://docs.sesam.io/concepts.html#software-channels>`_.
 
 
 Hardware requirements
@@ -29,7 +34,7 @@ Software requirements
 Firewall requirements
 ---------------------
 
-In general it is hard to be specific on IP addresses since most of these services are hosted on CDNs which basically means that you have no guarantee that the IPs don't change. If you don't have a firewall that support wildcards and/or use of domain names, an option is to allow this access through a proxy.
+In general it is hard to be specific on IP addresses since most of these services are hosted on Content Delivery Networks (CDNs), which basically means that you have no guarantee that the IPs don't change. If you don't have a firewall that support wildcards and/or use of domain names, an option is to allow this access through a proxy.
 
 .. _inbound_firewall_rules:
 
