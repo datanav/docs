@@ -22,8 +22,8 @@ Sesam gets raw data from source systems and stores it in datasets. Pipes can be 
 
 The primary building block for building :ref:`flows <concepts-flows>` is the :ref:`pipe <concepts-pipes>`. A pipe gets data from a :ref:`source <concepts-sources>`, :ref:`transforms <concepts-transforms>` it and writes it to a :ref:`sink <concepts-sinks>`. The data that flows through pipes are streams of :doc:`entities <entitymodel>` – which are like JSON objects. Pipes are the active component that gets data into the data hub, makes data flow through it and provides data to target systems.
 
-Why?
-----
+Why Sesam
+---------
 
 The data hub is the go-to place for data within the enterprise. Integrations no longer have to be point-to-point. Systems can be loosely coupled instead of being tightly coupled, as is the case for direct integrations. With Sesam, individual systems no longer have to depend on other systems being up. It is also a lot easier to replace systems or to perform migrations. Sesam is the active part and will :ref:`schedule <concepts-scheduling-and-signalling>` how and when pipes are run. If a system is down, the pipe will try getting or sending the data once the system is back up.
 
