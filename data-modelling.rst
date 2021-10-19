@@ -1084,14 +1084,3 @@ Manage source code
 Sesam usually uses a Git based source control service to collaborate and have version control on source code.
 
 Git: an open source version control system used to manage code (DTL when working in Sesam). When working in project the code is updated constantly and released in new versions, so Git helps manage this. As with all projects, it’s up to the project itself to decide how to manage the source code, and what kind of service to use. It is not required to use a source control service, but it is highly recommended.
-
-Examples of real global datasets
---------------------------------
-
-**Below is an example of global datasets from a Sesam customer:**
-
-- global-workorder
-- global-customer
-- global-classification
-- global-document
-- global-location
