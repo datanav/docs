@@ -1077,10 +1077,3 @@ Unmodified dataset as output
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When writing data out of Sesam the dataset might be transferred as it is (unmodified dataset as output), transformed on the way out or transferred directly to other sources. 
-
-Manage source code
-^^^^^^^^^^^^^^^^^^
-
-Sesam usually uses a Git based source control service to collaborate and have version control on source code.
-
-Git: an open source version control system used to manage code (DTL when working in Sesam). When working in project the code is updated constantly and released in new versions, so Git helps manage this. As with all projects, it’s up to the project itself to decide how to manage the source code, and what kind of service to use. It is not required to use a source control service, but it is highly recommended.
