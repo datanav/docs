@@ -985,6 +985,19 @@ It is important to emphasize that this is only a suggestion on how it might be l
 Additional Sesam tips
 ---------------------
 
+.. _best-practice-new-id:
+
+Creating a new _id for an entity
+================================
+
+Every entity in Sesam is given a unique identifier, which is stored in the ``_id`` field. The best practice when handling the identity field in downstream pipes is to keep the identity of the current entity being processed by the pipe. However, it is sometimes logical to change the identity of an entity. This is mainly done when a pipe is creating new entities (through the emit children functionality for instance), but also if an entity is changing context or type when applied through a DTL transform.
+
+There is one important thing to be aware of when changing the value of the ``_id`` field. Any transforms or operations prior to the change of the ``_id``, will adhere to the original identity of the entity. This means for instance that if you add a filter to a DTL transform before changing the identity, the filter will apply to the old identity, which may result in the entity not being filtered out if a change occur in the original entity. Since the entity is stored in the sink dataset with the new identity, but the entity processed is filtered out with the original identity.
+
+Using values from entities added through the hops function as part of the ``_id`` field should also be used with extreme care and mostly avoided. If a value from a joined entity is used to generate a new identifier is changed, the new identity will no longer match the previous identity and the entity will then be treated as a new entity. The same applies to using fields from the original entity as part of the ``_id``, if one of these changes value it will generate a new identifier.
+
+If it is necessary to create a new ``_id`` for an entity it should then be created before any filters are applied to the transform and no values from joined entities should be used as part of the new identity.
+
 .. _best-practice-golden-record:
 
 Golden record
