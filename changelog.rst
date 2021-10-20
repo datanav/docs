@@ -3,7 +3,7 @@ Changelog
 
 .. _changelog_2021_10_11:
 
-2019-10-11
+2021-10-11
 ----------
 * The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness>` value
   from the "X-Dataset-Completeness" http request header, if it is present.
