@@ -21,16 +21,12 @@ can do more efficient development. This new tool will replace the existing 'Data
 This feature will most likely only be available on the 'Scalable architecture',
 so it depends on the 'Scalable architecture everywhere' item on the roadmap.
 
-Extensions
-----------
+Self service VPN setup
+----------------------
 
-Microservices are second-class citizens in Management Studio. Setting up a microservice is done using
-unstructured documentation (README, etc).
+VPN setup can be requested through support.
 
-We are looking at how to structure and describe microservices so that
-microservices can work and behave as builtin systems in Management Studio.
-
-This will also open up the possibility for us to turn the builtin systems into separate extensions.
+We are looking into how to automate this process so that the end user can do this process faster.
 
 Scalable architecture everywhere
 --------------------------------
@@ -44,6 +40,17 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
+Extensions
+----------
+
+Microservices are second-class citizens in Management Studio. Setting up a microservice is done using
+unstructured documentation (README, etc).
+
+We are looking at how to structure and describe microservices so that
+microservices can work and behave as builtin systems in Management Studio.
+
+This will also open up the possibility for us to turn the builtin systems into separate extensions.
+
 Age based deletion marker compaction
 ------------------------------------
 
@@ -56,28 +63,12 @@ deletion marker it only has historic value.
 We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
 cleaned up.
 
-Logging data access
--------------------
-
-Most of the data in Sesam is structured as an immutable log, so any write or change to Sesam is
-automatically logged and audited. Reading of the data is only stored in rotated access logs that is not made
-available to the end user.
-
-We are looking into how to audit reads of data and make this available to the end user in a the form of a dataset.
-
 Expose invoices and contracts in the portal
 -------------------------------------------
 
 Invoices and contracts can be requested through support.
 
 We are looking into how to expose invoices and contracts in the portal to make them more accessible.
-
-Self service VPN setup
-----------------------
-
-VPN setup can be requested through support.
-
-We are looking into how to automate this process so that the end user can do this process faster.
 
 Durable data
 ------------
