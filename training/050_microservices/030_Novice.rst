@@ -139,20 +139,44 @@ Microservice Development Prerequisites
 Changing a Microservice
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-   Workflow
+.. sidebar:: Summary
 
-   Fork [Vi må lage et repo]
+  Changing a microservice...
 
-   Change
+  - follows a specific workflow from local development and testing to deployment in a Docker image  
+  - is easily done locally by setting up test driven development (TDD)
+  - that is open sourced should be forked, typically from GitHub, and then extended/changed upon
+  - in terms of hosting it via Docker, this is done in a DockerFile 
 
-   Test
+When it comes to changing a microservice, a specific workflow is recommended. Initially, you should fork a given publically available repository. The term repository is a synonym for microservice, and is used when the microservice is not yet hosted in Sesam via Docker. Publically available repositories are typically placed on GitHub. Sesam's `repositories <https://github.com/sesam-community>`_ can also be found there. Forking a repository means that you pull a given repository from i.e. Sesam Communnity on GitHub to your own account on GitHub. This allows for making radical and customer specific changes.
 
-   Teste lokalt
+After having forked the repository to your personal account you should clone the repository to your local machine. Having successfully cloned the repository, you should open up the repository in your preferred IDE. At this point, you can start to make desired changes to the repository. When making changes, it is recommended to work from a test driven development (TDD) approach. TDD, among other things, improves design and code quality, minimizses technical depth and eases maintenance. Upon verifying that your changes perform as intended, you can move on to building your Docker container. When building a Docker container, you will be using a file named DockerFile. This file should be placed in the root of your repository. An example of a Dockerfile can be seen below:
+
+.. code-block:: DOCKER
+  :caption: DockerFile
+
+  FROM python:3-alpine
+  RUN apk update
+  RUN pip3 install --upgrade pip
+  COPY ./service/requirements.txt /service/requirements.txt
+  RUN pip3 install -r /service/requirements.txt
+  COPY ./service /service
+  EXPOSE 5000 
+  CMD ["python3","-u","./service/service.py"]
+
+The DockerFile consists of a set of commands that each executes when building your Docker container. For details on what these specific commands do, you should look `here <https://docs.docker.com/>`_. When the build is running, you will see a set of entries in your CLI. These entries are defined by the above set of commands. To build your Docker container run the following command ``docker build .``. After a build finishes, you should run ``docker images`` to list all images that are currently running from your local Docker account. If your last entry in this list is your recently build Docker container, everything has been build successfully.
+
+The next step in changing a microservice is then pushing your recently build Docker container to a Docker image. This is done by running ``docker push``. 
+
+   
 
    Bygge docker konteiner
 
+   Tagge docker container
+
    Pushe docker konteiner
 
+   
    Explanation of Bare Bones DockerFile
 
    How DockerFiles run [Sequentally, cache]
