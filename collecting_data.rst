@@ -1,5 +1,5 @@
 ==========================
-Connect & collect patterns
+Collect & connect patterns
 ==========================
 
 .. contents:: Table of Contents
