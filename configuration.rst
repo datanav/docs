@@ -2140,7 +2140,7 @@ Properties
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used. The value *must* be lowercase.
+       the ``query`` property us used. Note that this property might be case sensitive.
      -
      -
 
@@ -2160,7 +2160,7 @@ Properties
        able to support ``since`` markers. You can provide the name of the column to use
        for such queries here. This must be a valid column name in the ``table`` or ``query``
        result sets and it must be of a data type that supports larger or equal (">=") tests
-       for the ``table`` case. The value *must* be lowercase.
+       for the ``table`` case. Note that this property might be case sensitive.
      -
      -
 
