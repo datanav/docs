@@ -145,12 +145,12 @@ Changing a Microservice
 
   - follows a specific workflow from local development and testing to deployment in a Docker image  
   - is easily done locally by setting up test driven development (TDD)
-  - that is open sourced should be forked, typically from GitHub, and then extended/changed upon
-  - in terms of hosting it via Docker, this is done in a DockerFile 
+  - that is open sourced should be forked, typically from GitHub, and then manipulated in accordance to needs
+  - in terms of integrating it with Docker, this is done in a DockerFile 
 
-When it comes to changing a microservice, a specific workflow is recommended. Initially, you should fork a given publically available repository. The term repository is a synonym for microservice, and is used when the microservice is not yet hosted in Sesam via Docker. Publically available repositories are typically placed on GitHub. Sesam's `repositories <https://github.com/sesam-community>`_ can also be found there. Forking a repository means that you pull a given repository from i.e. Sesam Communnity on GitHub to your own account on GitHub. This allows for making radical and customer specific changes.
+When it comes to changing a microservice, a specific workflow is recommended. Initially, you should fork a publically available repository. The term repository is a synonym for microservice, and is used when the microservice is not yet hosted in Sesam via Docker. Publically available repositories are typically placed on GitHub. Sesam's `repositories <https://github.com/sesam-community>`_ can also be found there. Forking a repository means that you pull a given repository from i.e. Sesam Community on GitHub to your own account on GitHub. This allows for making radical and customer specific changes.
 
-After having forked the repository to your personal account you should clone the repository to your local machine. Having successfully cloned the repository, you should open up the repository in your preferred IDE. At this point, you can start to make desired changes to the repository. When making changes, it is recommended to work from a test driven development (TDD) approach. TDD, among other things, improves design and code quality, minimizses technical depth and eases maintenance. Upon verifying that your changes perform as intended, you can move on to building your Docker container. When building a Docker container, you will be using a file named DockerFile. This file should be placed in the root of your repository. An example of a Dockerfile can be seen below:
+After having forked the repository to your personal account you should clone the repository to your local machine. Having successfully cloned the repository, you should open up the repository in your preferred IDE. At this point, you can start to make desired changes to the repository. When making changes, it is recommended to work from a test driven development (TDD) approach. TDD, among other things, improves design and code quality, minimizes technical depth and eases maintenance. Upon verifying that your changes perform as intended, you can move on to building your Docker image. When building a Docker image, you will be using a file named DockerFile. This file should be placed in the root of your repository. An example of a Dockerfile can be seen below:
 
 .. code-block:: DOCKER
   :caption: DockerFile
@@ -164,26 +164,41 @@ After having forked the repository to your personal account you should clone the
   EXPOSE 5000 
   CMD ["python3","-u","./service/service.py"]
 
-The DockerFile consists of a set of commands that each executes when building your Docker container. For details on what these specific commands do, you should look `here <https://docs.docker.com/>`_. When the build is running, you will see a set of entries in your CLI. These entries are defined by the above set of commands. To build your Docker container run the following command ``docker build .``. After a build finishes, you should run ``docker images`` to list all images that are currently running from your local Docker account. If your last entry in this list is your recently build Docker container, everything has been build successfully.
+The DockerFile consists of a set of commands that each executes when building your Docker image. For details on what these specific commands do, you should look `here <https://docs.docker.com/>`_. When the build is running, you will see a set of entries in your CLI. These entries are defined by the above set of commands. To build your Docker image run the following command ``docker build .``. After a build finishes, you should run ``docker images`` to list all images that are currently running from your local Docker instance. If your last entry in this list is your recently build Docker image, everything has been build successfully.
 
-The next step in changing a microservice is then pushing your recently build Docker container to a Docker image. This is done by running ``docker push``. 
+Upon listing your Docker images, you will see a row with the header "IMAGE ID". This row holds unique identifiers for each of your Docker images. This unique identifier is used to tag a semantic version to your recently build Docker image, for example running ``docker tag <your-IMAGE-ID> <dockerUserName>/<nameOfYourDockerImage>:<semanticTag>``. This could in practice look like the following: ``docker tag 876cbf9e3dfa jc89als/autoconnect:deltaStream``. After successfully tagging your Docker image it is time to push your local image to a remote repository. `DockerHub <https://hub.docker.com/>`_ is used as a remote repository for Docker images. 
 
-   
+In order to push your image, extending on the example above, you will need to run the following command: ``docker push jc89als/autoconnect:deltaStream``. After successfully pushing your Docker image the last step is to configure your microservice system in Sesam to use the latest version of your recently pushed image. This could look like the following:
 
-   Bygge docker konteiner
+.. code-block:: json
 
-   Tagge docker container
+  {
+    "_id": "my-system-microservice",
+    "type": "system:microservice",
+    "docker": {
+      "environment": {
+        "user": "$ENV(my-username)",
+        "password": "$SECRET(my-password)",
+        "base_url": "$ENV(autoconnect-base_url)"
+      }
+    },
+    "image": "jc89als/autoconnect:deltaStream",
+    "port": 5000
+  }
 
-   Pushe docker konteiner
+.. tip::
 
-   
-   Explanation of Bare Bones DockerFile
-
-   How DockerFiles run [Sequentally, cache]
+  - A Docker image differs from that of a Docker container in that an image is a template upon which an application can be run. A Docker container, is the isolated environment the application needs in order to run.  
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`sesam-community`
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
 .. _authentication-with-microservices-5-2:
 
