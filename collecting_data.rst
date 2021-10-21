@@ -120,7 +120,7 @@ To meet this requirement for classifying data, we recommend always generating a 
 An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* for example. This depends on context. But it is highly recommended to always have a *global-classification* dataset mentioned above where we would merge in data object *product type*. Product type is now ready to be used as a category for products needing this.
 
 Semantics as a method for classification of data
------------------------------------------------
+------------------------------------------------
 Another way of classifying data is to use standardized semantics to describe properties of a certain field. Sesam make use of RDF (https://www.w3.org/RDF/) to describe what a certain field means, but other types of semantics can be utilized. 
 If one uses RDF or other type of methods to define semantics of input from sources, it will be easier to understand what a field is later down the line when you have to merge, enrich and enhance data into globals. And further on when creating preparation pipes to be able to send data to targets.
 
