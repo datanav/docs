@@ -6,16 +6,14 @@ When setting up a new Sesam project there are several tasks that needs to be don
 
 As a product, Sesam in itself does not contain any features that supports versioning of its configuration, local or automated CI testing and automatic deployment, but it provides a set of features (mostly through its API) that can be used in regular development tools or scripts for this purpose. This is flexible in terms of requirements set by the various customer, whose development platforms might vary. It does, however, mean that some time must be spent at the beginning of the project. In this document we will go through how to setup a Sesam project with these features, with examples and links to more in-depth documents.
 
-.. _setup-version-control:
-
 Set up version control
 ----------------------
 
-Sesam will always store the previous version of a pipe or system that has been uploaded to the node, in the same way it stores the previous data for an updated entity in a dataset. These entities can be found in the ''system:config'' dataset, remember to check 'system' under 'Origin' to display the system datasets. However, this only lets you view the versions of the uploaded configurations, there is nothing you can do with these entities. As so, this cannot be regarded as a proper version control of the configuration (although you can always use this dataset to retrieve the current or a previous configuration of a pipe or system).
+Sesam will always store the previous version of a pipe or system that has been uploaded to the node, in the same way it stores the previous data for an updated entity in a dataset. You can view these entities by going to the ''internal datasets'' pane under ''Subscription''-settings, they will be located in the ''system:config'' dataset. Note that there is nothing you can do with these entities, as this is just a view of the versions of the uploaded configurations. Hence this cannot be regarded as a proper version control of the configuration (although you can always use this dataset to retrieve the current or a previous configuration of a pipe or system). You can also view the previous configurations for each pipe or system in the editor.
 
-A Sesam configuration should hence always be stored in a separate version control system such as Git, Concurrent Versions System (CVS), Subversion, TeamCity, Mercurial or other. Git is the most commonly used and will be used in the examples in this document, but in terms of a project, the overall handling should be the same.
+A Sesam configuration should hence always be stored in a separate version control system such as Git, Concurrent Versions System (CVS), Subversion, TeamCity, Mercurial or other.
 
-We will describe how to set up a version control repository for Sesam with Git in mind, but the overall way of how to work with branches and flows in another version control system should be the same.
+We will describe how you extract the necessary files and content from your Sesam subscription to store in your version control system of choice.
 
 
 Set up a new Git project / repository for Sesam
@@ -36,8 +34,6 @@ The optimal directory structure of a Sesam Node project in Git should look like 
       ├ LICENSE
       ├ .gitignore
       └ ++
-
-.. _setup-local-tests:
 
 Set up local tests
 ------------------
@@ -222,8 +218,6 @@ To test your Sesam configuration locally, run the following commmand:
     sesam -vv test
 
 If you haven't configured up the tests correctly or there are endpoint pipes that doesn't have any corresponding test file, you will be notified. If so, fix the missing tests and then run the commmand again. If the tests runs ok, you will get a message that all the tests has passed. If any test failed, you will be notified which test / pipe that failed and get a comparision of the expected result and the received result.
-
-.. _setup-ci:
 
 Set up automatic CI testing
 ---------------------------
