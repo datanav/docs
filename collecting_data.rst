@@ -74,7 +74,7 @@ When defining global datasets, there are a few guidelines for modelling:
 When a global dataset has been defined, there are some considerations to be done in terms of how the global dataset should work:
 
 •   Should data in a global dataset be merged to a single entity or not?
-•   Is the data of such a format and quality that a golden record LINK  can be defined?
+•   Is the data of such a format and quality that a :ref:`golden record <best-practice-golden-record>` can be defined?
 •   Would enhancing the data in a global dataset with data from another dataset improve the data for later use?
 •	Structure of data; try to keep it flat if possible.
 
@@ -101,7 +101,7 @@ When classifying in Sesam, it is advisable to start high up in the hierarchy but
 
 To meet this requirement for classifying data, we recommend generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categorized. When mentioning splitting of raw data, to "clean it" means that the objects come in clean, and the data used to categorize it in the source system can be merged into ``global-classification`` to generate aggregated sets of metadata used to classify.
 
-An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* or other appropriate global used for products.. The product type would be merged in to *global-classification* dataset. Product type is now ready to be used as a category for products needing this.
+An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* or another appropriate global used for products.. The product type would be merged in to *global-classification* dataset. Product type is now ready to be used as a category for products needing this.
 
 Semantics as a method for classification of data
 ------------------------------------------------
