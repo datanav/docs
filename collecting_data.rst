@@ -87,7 +87,7 @@ In Sesam we recommend a *one dimensional structure*, i.e. data can only belong t
 
 So how can we differentiate between all the various types of persons? In Sesam we add a category. This is multidimensional, which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
 
-These principles coincide with  `Carl Linnaeus <https://en.wikipedia.org/wiki/Linnaean_taxonomy>`__  principles of taxonomy; it is one dimensions that is each species can only belong to one category. He had 7 classifications:
+These principles coincide with `Carl Linnaeus <https://en.wikipedia.org/wiki/Linnaean_taxonomy>`__ principles of taxonomy; it is one dimensions that is each species can only belong to one category. He had 7 classifications:
 
 Kingdom
 Phylum
@@ -101,7 +101,7 @@ When classifying in Sesam, it is advisable to start high up in the hierarchy but
 
 To meet this requirement for classifying data, we recommend generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data needing categorized. When mentioning splitting of raw data, to "clean it" means that the objects come in clean, and the data used to categorize it in the source system can be merged into ``global-classification`` to generate aggregated sets of metadata used to classify.
 
-An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* or another appropriate global used for products.. The product type would be merged in to *global-classification* dataset. Product type is now ready to be used as a category for products needing this.
+An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* or another appropriate global used for products. The product type would be merged in to *global-classification* dataset. Product type is now ready to be used as a category for products needing this.
 
 Semantics as a method for classification of data
 ------------------------------------------------
