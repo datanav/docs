@@ -44,4 +44,4 @@ For instance we recommend using this directory structure if your version control
 Recommended workflow for a Sesam project
 ----------------------------------------
 
-We strongly promote using `Git-Flow <https://nvie.com/posts/a-successful-git-branching-model/>`_ as workflow for working with Sesam projects. To add a version number or tag to release we recommend using `semantic versioning <https://semver.org>`_.
+We strongly promote using either `Git-Flow <https://nvie.com/posts/a-successful-git-branching-model/>`_ or its simplified version `Github-Flow <https://guides.github.com/introduction/flow/>`_ as workflow for working with Sesam projects. To add a version number or tag to release we recommend using `semantic versioning <https://semver.org>`_.
