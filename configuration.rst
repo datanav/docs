@@ -1592,8 +1592,8 @@ already merged entities downstream.
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
    may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets. 
-   
+   though as this won't affect the order of the datasets.
+
    If config changes are required be aware of the following:
    Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
    For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
@@ -6690,6 +6690,13 @@ Properties
      - ``"\""``
      -
 
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
+     -
+
    * - ``encoding``
      - String
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
@@ -6839,6 +6846,13 @@ Properties
      - This can be set to ``false`` to make deleted entities appear in the XML output. The default is that
        deleted entities does not appear.
      - true
+     -
+
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
      -
 
    * - ``filename``

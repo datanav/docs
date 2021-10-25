@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2021_10_25:
+
+2021-10-25
+----------
+* Added a ``byte_order_mark`` property to the :ref:`csv_endpoint <csv_endpoint_sink>` and :ref:`xml_endpoint <xml_endpoint_sink>` sinks. If ``true`` these sinks will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. It's ``false`` by default and should only be used in conjunction with a UTF-8 encoding.
+
 .. _changelog_2021_10_11:
 
 2021-10-11
