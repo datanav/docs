@@ -33,13 +33,13 @@ Instead of having to define global properties in advance, Sesam is built so that
 - In advance, if standardised schema already exists are to be used
 - On demand, when a consumer needs properties that may originate in more than one source
 
-If the creation of the global properties needs to use a :ref:`hops <hops_dtl_function>` to another global datasets, it is recommended to do this through feedback loops.
+If you need to use a :ref:`hops <hops_dtl_function>` function to another global dataset when creating global properties, it is recommended to do this through feedback loops.
 
 .. data-enrichment-feedback-loops:
 
 Feedback loops
 ==============
 
-A feedback loop is a downstream pipe from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properies that needs to be created recursively. It is also the recommended way to add properties that is dependent on hops to other dataset.
+A feedback loop is a downstream pipe from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properies that need to be created recursively. It is also the recommended way to add properties that is dependent on hops to other datasets.
 
-Be aware that a feedback pipe will effectively block the completeness feature if it is not exclude from the completeness chain.
+Be aware that a feedback pipe will effectively block the completeness feature if it is not excluded from the completeness chain.
