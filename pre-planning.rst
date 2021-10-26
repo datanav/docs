@@ -25,8 +25,8 @@ Based on the functional needs of the project, identify the data types at
 a high level, and where this data must be available.
 
 For the master data giving context to the data platform, driving
-analytics, AI, web and applications, select the appropriate data platform
-components from your preferred vendors. Eg. Azure, Google etc.
+analytics, AI, web and Apps, select the appropriate data platform
+components from your preferred vendors. E.g., Azure, Google etc.
 
 For master data needed to synchronize with new or existing
 business systems, identify their API, data protocol, the
@@ -53,7 +53,7 @@ important to support multi-master data synchronization.
 Identify globals
 ----------------
 
-Once the necessary master data sources and targets have been identified, the
+Once the necessary master data sources and targets have been found, the
 source master data must be grouped into globals in Sesam.
 
 Group data by type, not role. One object should never fit in more than
