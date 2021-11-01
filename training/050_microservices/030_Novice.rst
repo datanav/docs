@@ -100,7 +100,6 @@ As can be seen from the above pipe config you will recognize the name of your re
 
 Finally, the topic of triggering comes into play. Triggering your system in Sesam is governed by how data flows in a given dataflow. An inbound pipe, as shown in the above example, will by default run every 15 minutes, unless otherwise stated or if you choose to start the pipe manually. On the topic of run times, you can state specific run times by the use of cron expressions. A microservice that is used in the middle or at the end of a dataflow will be triggered when data flows through a specific pipe at this particular stage in the dataflow. As such, Sesam triggers microservices in accordance to the streams of data that makes a dataflow. A given change in the stream of data will trigger an interaction with a microservice, but only a load sufficient to handle the trigger will be carried out.
 
-
 .. seealso::
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`continuation_support`
@@ -206,21 +205,55 @@ is-last
 Using a Microservice as Input in Sesam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside sesam
+.. sidebar:: Summary
 
-Best practise:
+  Using a Microservice as Input...
 
-Delta/last seen
+  - should implement adequate logging
+  - should utilize Sesam's in-built request parameters
 
-request-params
+    - by implementing the use of "since" logic, when possible
 
-is-first
+The following aspects should be considered, when using a microservice as a source system to inject data into a Sesam node:
 
-is-last
+Logging
+#######
+
+Looking into a microservice system in Sesam is done through logging. System logging is set up in your microservice code. In terms of logging, it is important to implement logging in a scale going from information logging to warning logging to error logging. Information logging is considered general logging.
+
+Information logging
+===================
+Information logging should be done so that all useful information, which is not related to warnings or errors are returned in the log. Typical examples of information logging is to log when a connection has been made, a file has been downloaded or uploaded an API call is made successfull. In terms of logging useful information, the more precise a given log entry is, the more value that log will have.
+
+Warning logging
+===============
+Logging of warnings should be done when a given logic will be affected negatively based on an outcome, albeit not fail entirely. Imagine reading xml files from a fileshare and one of the xml files is not read successfully, due to a parsing error. This should be logged as a warning in the entry log. The warning should in this case log useful information related to the specific file so that the parsing error can be fixed and the file read successfully when Sesam again tries to parse files from the fileshare.
+
+Error logging
+=============
+Error logging is logging at its most critical. An error log entry should always be included in your logging. If error logging is done correctly the person looking at the error log will immediately know what and why something went wrong. As a consequence thereof, the error can be corrected in its microservice code.   
+
+
+Request parameters
+##################
+
+Sesam utilizes in-built request parameters when connecting to a microservice system. Among these `request parameters <https://docs.sesam.io/json-pull.html#requests>`_ "since" will be explained in detail in this section.
+
+The since parameter is used in order to support Sesam's data handling philosophy. This is concerned with making sure streams of data is running through Sesam. In order to make streams of data entering and leaving a Sesam node it is preferable that both your source and target system can cope with incremental data queries. Incremental reading of source data empowers Sesam to work in accordance to how data is intended to flow in your established dataflows. As `change tracking <https://docs.sesam.io/concepts.html?change-tracking>`_ enables Sesam to track when data changes, even through complex integrations and mapping via `dependency tracking <https://docs.sesam.io/concepts.html?dependency-tracking>`_, this mechanism is complementing to the use of "since". 
+
+A "since" value is like a token that tells the endpoint after what offset in the stream to start streaming entities. In Sesam, this token typically references the `_updated <https://docs.sesam.io/entitymodel.html?entity-data-model>`_ property in entities. A "since" value is typically used to continue from the point where the previous request ended. In order to do this the value of the _updated property in the last entity in the previous request can used.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-change-tracking`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-dependency_tracking`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`continuation_support`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`developer-guide` > :ref:`json_pull_protocol`
 
 .. _looking-inside-an-input-microservice-5-2:
 
