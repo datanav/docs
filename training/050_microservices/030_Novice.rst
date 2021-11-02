@@ -233,15 +233,65 @@ Error logging
 =============
 Error logging is logging at its most critical. An error log entry should always be included in your logging. If error logging is done correctly the person looking at the error log will immediately know what and why something went wrong. As a consequence thereof, the error can be corrected in its microservice code.   
 
-
 Request parameters
 ##################
 
 Sesam utilizes in-built request parameters when connecting to a microservice system. Among these `request parameters <https://docs.sesam.io/json-pull.html#requests>`_ "since" will be explained in detail in this section.
 
-The since parameter is used in order to support Sesam's data handling philosophy. This is concerned with making sure streams of data is running through Sesam. In order to make streams of data entering and leaving a Sesam node it is preferable that both your source and target system can cope with incremental data queries. Incremental reading of source data empowers Sesam to work in accordance to how data is intended to flow in your established dataflows. As `change tracking <https://docs.sesam.io/concepts.html?change-tracking>`_ enables Sesam to track when data changes, even through complex integrations and mapping via `dependency tracking <https://docs.sesam.io/concepts.html?dependency-tracking>`_, this mechanism is complementing to the use of "since". 
+The since parameter is used in order to support Sesam's data handling philosophy. This is concerned with making sure streams of data is running through Sesam. In order to make streams of data entering and leaving a Sesam node it is preferable that both your source and target system can cope with incremental data queries. Incremental reading of source data empowers Sesam to work in accordance to how data is intended to flow in your established dataflows. As `change tracking <https://docs.sesam.io/concepts.html?change-tracking>`_ enables Sesam to track when data changes, even through complex integrations and mapping via `dependency tracking <https://docs.sesam.io/concepts.html?dependency-tracking>`_, these mechanisms are complementing to the use of "since". 
 
 A "since" value is like a token that tells the endpoint after what offset in the stream to start streaming entities. In Sesam, this token typically references the `_updated <https://docs.sesam.io/entitymodel.html?entity-data-model>`_ property in entities. A "since" value is typically used to continue from the point where the previous request ended. In order to do this the value of the _updated property in the last entity in the previous request can used.
+
+In order to activate the use of "since" when pulling data from a microservice system you need to activate `continuation support <https://docs.sesam.io/configuration.html#continuation-support>`_ for the inbound pipe that pulls the data. If you wish to activate continuation support for a microservice the pipe needs to have the "supports_since" parameter set as true in its pipe configuration, as well as either the "is_since_comparable" or "is_chronological" strategy enabled. An example of this is shown in the example below:
+
+.. code-block:: json
+
+  {
+    "_id": "contacts-test",
+    "type": "pipe",
+    "source": {
+      "type": "json",
+      "system": "<system-name>",
+      "is_since_comparable": true,
+      "supports_since": true,
+      "url": "/get-contacts"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["add", "_id", "_S.contactid"],
+          ["copy", "*"]
+        ]
+      }
+    }
+  }
+
+In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole request. Additionally, the microservice needs to pass on a property named "_updated" to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the "updated_column" for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these "_updated" values and pick the max value as the new "pipe_offset".
+
+The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset" will not have a value, resulting in a complete import of all the data from the ressource. Once data has been imported, the new "pipe_offset" will get passed to the microservice as the request parameter "since". This parameter can in turn be used as a request parameter to the API ensuring that only data updated after the last "since" value will be included when pulling of data is done again. An example of this is shown in the Python code snippet below.
+
+.. code-block:: python
+
+  @app.route("/get-contacts", methods=["GET", "POST"])
+  def get_contacts():
+      token = auth()
+
+      if request.args.get('since') is None:
+          url = api_url + "/contacts"
+      else:
+          url = api_url + "/contacts?filter=modifiedon ge {}".format(request.args.get('since'))
+      headers = {"Authorization": "Bearer {}".format(token)}
+
+      req = requests.get(url = url, headers = headers)
+
+      if req.status_code != 200:
+        logger.error("Unexpected response status code: %d with response text %s" % (req.status_code, req.text))
+        raise AssertionError ("Unexpected response status code: %d with response text %s"%(req.status_code, req.text))
+      entities = req.json()["value"]
+
+      for entity in entities:
+        entity["_updated"] = entity["modifiedon"]
 
 .. seealso::
 
