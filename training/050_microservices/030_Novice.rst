@@ -122,13 +122,13 @@ Microservice Development Prerequisites
 
   Microservice development prerequisites are...
 
-  - an integrated development environment (IDE)
+  - an integrated development environment (IDE) or text editor
   - a Docker account
   - a GitHub account
 
-In order to develop a microservice that will be implemented in a Sesam node as outlined in :ref:`interacting-with-a-microservice-in-sesam-5-2` you need to know what development environment you will need locally in order to make this happen.
+In order to develop a microservice that will be used in a Sesam node as outlined in :ref:`interacting-with-a-microservice-in-sesam-5-2` you need to know what development environment you will need locally in order to make this happen.
 
-Initially, an integrated development environment (IDE) and Docker are required prerequisites. An IDE will allow you to write and develop your code and Docker allows for hosting this code as an image. A Docker image can be implemented as a system in a Sesam node. In addition, a GitHub account is also advised as this will support for open sourcing your developed code and ease the way in which you can collaborate on developing your code.
+Initially, Docker is a prerequisite. Adding, that an integrated development environment (IDE) or text editor will most likely also be needed. An IDE or text editor will allow you to write and develop your code. Docker allows for hosting your code as an image. A Docker image is referenced from a Sesam system. From that Docker image, Sesam creates a Docker container that is hosted and run in the Sesam node. In addition, a GitHub account is also advised as this will support for open sourcing your developed code and ease the way in which you can collaborate on developing your code.
 
 The Sesam Community can be found `here <https://github.com/sesam-community>`_.
 
