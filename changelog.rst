@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2021-11-03
+----------
+* Added missing :ref:`is-uuid <is_uuid_dtl_function>` and :ref:`is-bytes <is_bytes_dtl_function>` DTL functions
+
 .. _changelog_2021_10_25:
 
 2021-10-25

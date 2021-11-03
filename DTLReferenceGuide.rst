@@ -2859,6 +2859,34 @@ Bytes
        |
        | Returns one bytes object: ``~bYWJj``.
 
+       .. _is_bytes_dtl_function:
+   * - ``is-bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a bytes literal or value or if
+         it is a list, that the first element in the list is a bytes type value or literal
+       |
+     - | ``["is-bytes", ["bytes", "abc"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "~bYWJj"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uuid", ["list", "~bYWJj", "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", ["list", "12345", "~bYWJj"]]]``
+       |
+       | Returns false.
+       |
 
        .. _base64_encode_dtl_function:
    * - ``base64-encode``
@@ -2894,6 +2922,7 @@ Bytes
        |
        | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
        | the similar looking output and input)
+
 
 Encryption
 ----------
@@ -3376,6 +3405,34 @@ UUIDs
           that you are aware of the consequences of reprocessing
           entities.*
 
+       .. _is_uuid_dtl_function:
+   * - ``is-uuid``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a UUID literal or value or if
+         it is a list, that the first element in the list is a UUID type value or literal
+       |
+     - | ``["is-uuid", ["uuid"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
+       |
+       | Returns false.
+       |
 
 Nested transformations
 ----------------------
