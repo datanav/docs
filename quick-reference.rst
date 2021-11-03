@@ -212,9 +212,9 @@ DTL Functions
        :ref:`url-unquote <url_unquote_dtl_function>`
 
    * - UUIDs
-     - :ref:`uuid <uuid_dtl_function>`
-     - :ref:`is-uuid <is_uuid_dtl_function>`
-
+     - :ref:`uuid <uuid_dtl_function>` ·
+       :ref:`is-uuid <is_uuid_dtl_function>`
+            
    * - Nested transformations
      - :ref:`apply <apply_dtl_function>` ·
        :ref:`apply-hops <apply_hops_dtl_function>`
