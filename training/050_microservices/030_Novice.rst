@@ -231,6 +231,45 @@ is-last
 Looking inside an Input Microservice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  To look inside an input microservice...
+
+  - you should only implement the minimum required code logic for Sesam to be able to consume data
+  - you should remember that Sesam consumes and produces streams of entities
+  - you should implement robust error handling and logging
+
+In order to easily understand how an input microservice works in terms of code functionality, it is important that the microservice does not transform or reshape its source data too much. Keep in mind, Sesam ideally pulls in raw data and then starts to transform the data so that it aligns with the way in which Sesam enriches its data. In addition, by keeping data in its raw state as it enters Sesam, it makes it easier to understand how its source looks and it also retains schema information. Extending on this aspect of looking inside an input microservice, you will now learn about returning entities, streaming, and error handling and logging.
+
+Returning entities
+##################
+
+Returning entities, with reference to the topic of looking inside an input microservice, comes down to the fact that you should only implement the minimum required code logic for Sesam to be able to consume data produced by a source system. As stated initially in this section, by retaining to the raw shape of your source data, our Sesam's data modelling approach can more easily be used to both enrich and maintain data integrity as entities are produced and transformed as these move through a Sesam node.   
+
+Streaming
+#########
+
+Sesam consumes and produces streams of entities. An entity is very much like a JSON object and consists of a number of key-value pairs along with some special reserved property names. See the `entity data model <https://docs.sesam.io/entitymodel.html>`_ document for more details about entities.
+
+The following is a quick example of the shape of entities that are consumed and exposed by Sesam.
+
+.. code-block:: json
+
+  [
+      {
+          "_id": "1",
+          "name": "Bill",
+          "dob": "01-01-1980"
+      },
+      {
+          "_id": "2",
+          "name": "Jane",
+          "dob": "04-10-1992"
+      }
+  ]
+
+Streams of entities flow through pipes. A pipe has an associated pump that is scheduled to regularly pull data entities from the source, push them through any transforms and send the results to the sink. The most common source is the `dataset source <https://docs.sesam.io/configuration.html#dataset-source>`_ which reads entities from a dataset. The most common sink is the `dataset sink <https://docs.sesam.io/configuration.html#dataset-sink>`_ which writes entities to a dataset. There are also `sources <https://docs.sesam.io/configuration.html#source-section>`_ and `sinks <https://docs.sesam.io/configuration.html#sink-section>`_ that can read and write data to and from external systems outside of Sesam.
+
 Error handling & logging
 ########################
 
@@ -240,21 +279,13 @@ Error handling should be done in such a way that you make sure typical causes of
 
 Using the information returned from such a response is important and also here logging comes into play. Logging is used in a microservice so that a given user, especially a user not engaged technically in either response codes or code in itself, can explain and understand what made the microservice fail and/or why the microservice failed. Typically, severity in logging goes from logging of information to logging of warnings and finally to logging of errors. Naturally, you should make sure your microservice handles warnings and expecially errors in a robust and transparent way so that a given user will know what to do when such a logging entry occurs.    
 
-Inside the microservice
-
-Transparens (minst mulig transformasjon i microservice)
-
-Måter å returnere entiteter på (Transform i MS vs transform i pipe)
-
-Streaming
-
-Logging
-
-Gi gode feilmeldinger på http, catch spesifikke exceptions
-
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-streaming`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`dataset_source`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`sink_section` > :ref:`dataset_sink`
 
 .. _tasks-for-microservices-novice-5-2:
 
