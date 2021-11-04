@@ -142,27 +142,66 @@ The Sesam Community can be found `here <https://github.com/sesam-community>`_.
 Changing a Microservice
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-   Workflow
+.. sidebar:: Summary
 
-   Fork [Vi må lage et repo]
+  Changing a microservice...
 
-   Change
+  - follows a specific workflow from local development and testing to deployment in a Docker image  
+  - is easily done locally by setting up test driven development (TDD)
+  - that is open sourced should be forked, typically from GitHub, and then manipulated in accordance to needs
+  - in terms of integrating it with Docker, this is done in a DockerFile 
 
-   Test
+When it comes to changing a microservice, a specific workflow is recommended. Initially, you should fork a publically available repository. The term repository is a synonym for microservice, and is used when the microservice is not yet hosted in Sesam via Docker. Publically available repositories are typically placed on GitHub. Sesam's `repositories <https://github.com/sesam-community>`_ can also be found there. Forking a repository means that you pull a given repository from i.e. Sesam Community on GitHub to your own account on GitHub. This allows for making radical and customer specific changes.
 
-   Teste lokalt
+After having forked the repository to your personal account you should clone the repository to your local machine. Having successfully cloned the repository, you should open up the repository in your preferred IDE. At this point, you can start to make desired changes to the repository. When making changes, it is recommended to work from a test driven development (TDD) approach. TDD, among other things, improves design and code quality, minimizes technical depth and eases maintenance. Upon verifying that your changes perform as intended, you can move on to building your Docker image. When building a Docker image, you will be using a file named DockerFile. This file should be placed in the root of your repository. An example of a Dockerfile can be seen below:
 
-   Bygge docker konteiner
+.. code-block:: DOCKER
+  :caption: DockerFile
 
-   Pushe docker konteiner
+  FROM python:3-alpine
+  RUN apk update
+  RUN pip3 install --upgrade pip
+  COPY ./service/requirements.txt /service/requirements.txt
+  RUN pip3 install -r /service/requirements.txt
+  COPY ./service /service
+  EXPOSE 5000 
+  CMD ["python3","-u","./service/service.py"]
 
-   Explanation of Bare Bones DockerFile
+The DockerFile consists of a set of commands that each executes when building your Docker image. For details on what these specific commands do, you should look on `Docker <https://docs.docker.com/>`_. When the build is running, you will see a set of entries in your CLI. These entries are defined by the above set of commands. To build your Docker image run the following command ``docker build .``. After a build finishes, you should run ``docker images`` to list all images that are currently running from your local Docker instance. If your last entry in this list is your recently build Docker image, everything has been build successfully.
 
-   How DockerFiles run [Sequentally, cache]
+Upon listing your Docker images, you will see a row with the header "IMAGE ID". This row holds unique identifiers for each of your Docker images. This unique identifier is used to tag a semantic version to your recently build Docker image, for example running ``docker tag <your-IMAGE-ID> <dockerUserName>/<nameOfYourDockerImage>:<semanticTag>``. This could in practice look like the following: ``docker tag 876cbf9e3dfa jc89als/autoconnect:deltaStream``. After successfully tagging your Docker image it is time to push your local image to a remote repository. `DockerHub <https://hub.docker.com/>`_ is used as a remote repository for Docker images. 
+
+In order to push your image, extending on the example above, you will need to run the following command: ``docker push jc89als/autoconnect:deltaStream``. After successfully pushing your Docker image the last step is to configure your microservice system in Sesam to use the latest version of your recently pushed image. This could look like the following:
+
+.. code-block:: json
+
+  {
+    "_id": "my-system-microservice",
+    "type": "system:microservice",
+    "docker": {
+      "environment": {
+        "user": "$ENV(my-username)",
+        "password": "$SECRET(my-password)",
+        "base_url": "$ENV(autoconnect-base_url)"
+      }
+    },
+    "image": "jc89als/autoconnect:deltaStream",
+    "port": 5000
+  }
+
+.. tip::
+
+  - A Docker image differs from that of a Docker container in that an image is a template upon which an application can be run. A Docker container, is the isolated environment the application needs in order to run.  
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`sesam-community`
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
 .. _authentication-with-microservices-5-2:
 
