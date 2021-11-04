@@ -118,21 +118,25 @@ Finally, the topic of triggering comes into play. Triggering your system in Sesa
 Microservice Development Prerequisites
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Docker
+.. sidebar:: Summary
 
-   User
+  Microservice development prerequisites are...
 
-   Program
+  - an integrated development environment (IDE) or text editor
+  - a Docker account
+  - a GitHub account
 
-   GitHub
+In order to develop a microservice that will be used in a Sesam node as outlined in :ref:`interacting-with-a-microservice-in-sesam-5-2` you need to know what development environment you will need locally in order to make this happen.
 
-   User
+Initially, Docker is a prerequisite. Adding, that an integrated development environment (IDE) or text editor will most likely also be needed. An IDE or text editor will allow you to write and develop your code. Docker allows for hosting your code as an image. A Docker image is referenced from a Sesam system. From that Docker image, Sesam creates a Docker container that is hosted and run in the Sesam node. In addition, a GitHub account is also advised as this will support for open sourcing your developed code and ease the way in which you can collaborate on developing your code.
 
-   CLI/Desktop
+The Sesam Community can be found `here <https://github.com/sesam-community>`_.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`sesam-community`
 
 .. _changing-a-microservice-5-2:
 
