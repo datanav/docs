@@ -170,6 +170,10 @@ Changing a Microservice
 Authentication with microservices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Authentication is the process of verifying that a party is who they claim to be. With regards to microservices the process of authentication can vary quite a bit. Among the most common forms of authentication, a verification via a username and password is a typical one.   
+
+DockerHub is a service provided by Docker for finding and sharing container images. 
+
 Docker hosting site login
 
 Passing Env-vars/Secrets i Sesam
