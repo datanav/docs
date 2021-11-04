@@ -1,3 +1,5 @@
+.. _sesam-community:
+
 ===============
 Sesam Community
 ===============
