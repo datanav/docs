@@ -122,7 +122,7 @@ DTL Functions
        :ref:`or <or_dtl_function>` ·
        :ref:`not <not_dtl_function>` ·
        :ref:`all <all_dtl_function>` ·
-       :ref:`any <any_dtl_function>` ·
+       :ref:`any <any_dtl_function>`
 
    * - Booleans
      - :ref:`boolean <boolean_dtl_function>` ·
