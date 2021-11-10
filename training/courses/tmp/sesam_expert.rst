@@ -11,39 +11,53 @@ Beginner Topics
 Different types of Architectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _tc_data-driven-architecture-1-1:
+###.. _tc_data-driven-architecture-1-1:###
 
-Data Driven Architecture (DDA)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As opposed to both the P2P and the ESB integration principles the Data
-Driven Architecture (DDA) does not focus on systems but rather the data
-these systems store and how it can be used in a data-centric ecosystem.
-This gives us an agile, robust IA. See Figure 3 – Data Driven Architecture.
+.. _tc_enterprise-service-bus-1-1:
 
-.. figure:: ../../../training/010_architecture_and_concepts/media/Data_Driven_Architecture.png
+Enterprise Service Bus (ESB)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. sidebar:: Summary
+
+  - Asyncronuous message queue
+  - Centralized management
+  - System decoupling
+  - Scaleable
+  - No centralized data storage
+
+The ESB is a more robust IA and plays a critical role in connecting
+diverse systems and services in a Service Oriented Architecture (SOA).
+The ESB takes on the responsibility of ensuring that data sent from one
+system conforms to the requirements in another system. This core
+functionality is an important feature as to why the ESB is such an
+established architectural principle. In addition, the ESB aids in
+simplifying integration efforts when connecting differing applications
+that need to communicate with each other. See figure :ref:`figure-esb-1-1`.
+
+.. _tc_figure-esb-1-1:
+.. figure:: ../../../training/010_architecture_and_concepts/media/Enterprise_Service_Bus.png
    :align: center
-   :alt: Figure 3 – Data_Driven_Architecture
 
-   Figure 3 – Data Driven Architecture
+   Enterprise Service Bus
 
-As opposed to P2P and ESB, DDA is, respectively, scalable and agile - in
-that it does not need the “Bus” to orchestrate data flows, rather DDA
-relies on retrieving all the data in a system and connecting it internally
-to enhance and propagate it for usage in outbound flows.
-
-As in all great things, there is risk involved.
-In order to utilize DDA effectively you need logical and robust principles
-to create flexible data flows and models.
-This can be achieved by always thinking ahead and leaving room for growth,
-which you will learn how to do throughout this course.
-If done correctly nothing beats the scalability, cost-effectiveness and
-possibilities a DDA provides.
+Taking into account the positives from using an ESB for your IA - some
+challenges still remain unresolved. Recent years transition towards more
+cloud-based solutions, hybrid solutions and the remaining tendency to
+focus on the systems in the ESB rather than the data itself has
+propelled what is called “Data Driven Architecture”.
 
 .. _tc_datahub-1-1:
 
 Datahub
 ~~~~~~~
+
+.. sidebar:: Summary
+
+  - Data centric
+  - Very scaleable
+  - Centralized data storage
 
 Continuing along the path of building data-centric solutions, the term
 “Datahub” comes into play. A datahub is recognized by its frictionless
@@ -85,29 +99,36 @@ Cons:
 
 - Does not operate well with silos.
 
+.. seealso::
+
+  TODO
+
 .. _tc_the_parts_of_sesam-1-1:
 
 The parts of sesam @Erik
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Sesam's core components:
+
+  - **Systems** to interaface with external systems
+  - **Pipes** to move and transform data
+  - **Datasets** to store data
+  - **Entities** that are the actual data stored in datasets
 
 In order to understand how Sesam works, it is important to understand
 the parts Sesam is made up of. There are three central re-occurring
 concepts in Sesam which you will encounter in your everyday life working
 with the integration platform: systems, pipes and datasets.
 
-|
-
 .. figure:: ../../../training/010_architecture_and_concepts/media/Architecture_Beginner_Systems_pipes_datasets_A.png
    :align: center
-   :width: 800px
-   :height: 80px
    :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolize the direction of data flow.
+   :width: 100%
 
-   *A general pipeline flow in Sesam depicting the three central parts of a
-   Sesam integration, systems, pipes and datasets. The arrows symbolize
-   the direction of data flow.*
-
-|
+   A general pipeline flow in Sesam depicting the three central parts of a Sesam integration,
+   systems, pipes and datasets. The arrows symbolize the direction of data flow.
 
 These are the fundamental parts which make up a Sesam integration pipeline:
 
@@ -147,29 +168,41 @@ Entities:
    entity is defined by its primary key, which is represented in Sesam
    as the value belonging to the key ``_id``.
 
+.. seealso::
+
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`systems-1-1`
+
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
+
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`datasets-1-1`
+
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
+
 .. _tc_the_sesam_portal-1-1:
 
 The Sesam portal
 ~~~~~~~~~~~~~~~~
 
-Show basics of portal
+.. sidebar:: Summary
 
-(Here also refer to a full chapter for portal or from the projects
-chapter?)
+  The **Dashboard** is where you see all your Sesam subscriptions (nodes)
+  and where you can order new ones.
 
 Integrations, connections and configurations can all be accessed inside
-the Sesam portal; the user interface of the Sesam product, The Sesam
-portal can be accessed at portal.sesam.io, and in this section you will
+the Sesam portal; the user interface of the Sesam product. The Sesam
+portal can be accessed at portal.sesam.io and in this section you will
 learn the most commonly used parts of the portal such that you can
 orient yourself, as well as manage existing integrations. For a full
 explanation if the workings and functionality of the Sesam portal,
-please look [here (with a link)].
+please visit the :ref:`sesam-management-studio` section.
 
-When logging in to the portal you will be met with a page like figure "The Sesam Portal"
+When logging in to the portal you will be met with a page like the figure below:
 
+.. _tc_figure-sesam-portal-1-1:
 .. figure:: ../../../training/010_architecture_and_concepts/media/Architecture_Beginner_The_Sesam_Portal_A.png
    :align: center
    :alt: The Sesam Portal
+   :width: 100%
 
    The Sesam Portal
 
@@ -183,11 +216,13 @@ will have the same setup, only different set of systems, pipes and
 datasets.
 
 When entering the “Training Node” you will be met with the page seen in
-figure 1.1.6B.
+the figure below.
 
+.. _tc_figure-training-node-landing-page-1-1:
 .. figure:: ../../../training/010_architecture_and_concepts/media/Architecture_Beginner_The_Sesam_Portal_B.png
    :align: center
    :alt: Training Node Landing Page
+   :width: 100%
 
    Training Node Landing Page
 
@@ -195,101 +230,150 @@ In this section we will only focus on the specific parts of the portal
 needed to start working with Sesam, namely the “Pipes” page and the
 “Systems” page.
 
+.. seealso::
+
+  Tools: :ref:`sesam-management-studio`
+
 Pipes
 ^^^^^
 
-When entering the “Pipes” page you will be met by figure 1.1.6C. This
-figure shows you all the available pipes in your subscription as well as
-some of their corresponding meta-data. There are also several search and
-filter options available, which are specially handy when trying to
-located one, or a set of pipes, in a subscription with many pipes.
+Upon entering the “Pipes” page via the menu on the left hand side you will
+be met by a list of pipes as seen below.
+Unless filters are applied the list diplays all the available pipes in your
+subscription as well as some of their corresponding meta-data.
+The search and filter options available are specially handy when trying to
+locate one, or a subset of pipes, in a subscription with many pipes.
 
+.. _tc_pipe_overview_figure:
 
 .. figure:: ../../../training/010_architecture_and_concepts/media/Architecture_Beginner_The_Sesam_Portal_C.png
    :align: center
    :alt: Sesam Node Pipe overview
+   :width: 100%
 
-   Sesam Node Pipe overview
+   Pipe overview
 
-
-If you now enter the pipe called “person-cmm” we can look into more of
+We will now enter the pipe called “person-cmm” where we can look more into the
 details regarding how you may use the portal to navigate, troubleshoot
-and configure you pipes.
+and configure your pipes.
 
-Upon entering a pipe, you will by default be sent to the pipe’s “Graph”
-view, as seen in figure 1.1.6D.
+Upon entering a pipe you will by default be sent to the pipe’s “Graph”
+view, as seen below.
 
+.. _tc_figure-pipe-graph-view-1-1:
 .. figure:: ../../../training/010_architecture_and_concepts/media/Architecture_Beginner_The_Sesam_Portal_D.png
    :align: center
    :alt: Pipe Graph view
+   :width: 100%
 
-   Pipe Graph view
+   Pipe graph view
 
 The graph view shows you which pipes are upstream and downstream to the
-specific pipe you have selected, and it also shows connections to
+specific pipe you have selected, and it also displays connections to
 related pipes (you will learn more about connected pipes later [link
-maybe?]). For now, we will focus on four of the pipe’s subpages: Config,
+maybe?]). For now, we will focus on four of the pipe’s tabs: Config,
 Input, Output and the Execution log.
 
--  **Config**: The config subpage is where the actual coding takes
+Config:
+   The config tab is where the actual coding takes
    place. This is where you define what this specific pipe is supposed
    to do. A pipe config is written in DTL which you will learn more
-   about in section [link]. One
+   about in :ref:`dtl-beginner-3-1`.
 
--  **Input**: Whenever a pipe uses one or several datasets as a source,
+Input:
+   Whenever a pipe uses one or several datasets as a source,
    the source entities will be displayed here. These are the entities
    the pipe will perform some sort of transformation on.
 
--  **Output**: The output tab shows the entities after the DTL
+Output:
+   The output tab shows the entities after the DTL
    transformation. The way you see the output depends on whether the
-   data is stored in a dataset or sent to a target system. There are
-   some occasions where there is no output so be seen but for now you
-   can assume that there will always be an output to be see for each
-   pipe.
+   data is stored in a dataset or sent to a target system.
+   The pipe you are looking at needs to have run at least once for there to be any output.
 
--  **Execution log**: The execution log supplies us with information on
+Execution log:
+   The execution log supplies us with information on
    the state of the pipe. If a pipe runs as it should the execution log
    will display information on how many entities it has processed, how
-   much time the processing took and much more. If a pipe is not be able
+   much time the processing took and much more. If a pipe is not able
    to process all the data, the execution log will display a failed pipe
    run as well as error messages which may assist you to locate the
-   error. The execution log is a vital tool for troubleshooting as it
-   not only tells you if a pipe works as it should, but also contains
-   detailed information on why a pipe run fails and when they failed.
+   error. The execution log is a vital tool for troubleshooting.
+
+.. seealso::
+
+  Tools - Sesam Management Studio: :ref:`management-studio-pipes`
 
 Systems
 ^^^^^^^
 
-The systems tab looks very much like the pipe tab in figure 1.1.6C. For
-systems we will focus the three most commonly used tabs: Config, Secrets
+The systems page looks very much like the pipe tab in the Pipe overview above.
+
+.. figure:: ../../../training/010_architecture_and_concepts/media/systems-overview.png
+   :align: center
+   :alt: Sesam Node System overview
+   :height: 200px
+   :width: 800px
+
+   Systems overview
+
+When entering a system you will se a set of tabs, just as we saw in a specific pipe.
+
+.. figure:: ../../../training/010_architecture_and_concepts/media/system-graph.png
+   :align: center
+   :alt: System graph
+   :height: 400px
+   :width: 800px
+
+   System graph view
+
+For systems we will focus the three most commonly used tabs: Config, Secrets
 and Status.
 
--  **Config**: Like with pipes, the config tab is where you specify what
+Config:
+   Like with pipes, the config tab is where you specify what
    the system is supposed to do. There are many different types of
-   systems and many of have very different configuration. There are
+   systems which have a variety of configuration options. There are
    however some common traits that apply to most system. These traits
    include authorization parameters, location parameters such as
-   IP-addresses, URLs and database names and system types. In the case
-   where your system relies on a Microservice you might also have a set
-   of environmental variables used by the Microservice.
+   IP-addresses, URLs and database names and system types.
+   If your system is a microservice you may set environment variables
+   whose values can be accessed inside the microservice.
 
--  **Secrets**: In the Secrets tab you may store sensitive information
+Secrets:
+   In the Secrets tab you may store sensitive information
    you do not wish everyone on the node to have access to. These secrets
    are often passwords or token used to authorization and
    authentication. Secrets stored in the system tabs are local secrets
    and may only be used by the specific system in which they are
    defined.
 
--  **Status**: In the Status tab you can monitor the health of your
+Status:
+   In the Status tab you can monitor the health of your
    system. When connected to built-in systems this tab shows you whether
    you are connected correctly. When connected to Microservices this tab
    displays connection status and logging provided by the Microservice.
+
+.. seealso::
+
+  Tools - Sesam Management Studio: :ref:`management-studio-systems`
 
 
 .. _tc_naming-conventions-1-1:
 
 Naming conventions
 ~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Lower case
+  - Hyphen (-) as separator
+  - Singular form (`user`, not `users`)
+  - Systems: Name of system (not type) (`hr`, not `mssql`)
+  - Inbound pipes: *<source system>*\ `-`\ *<data type>* (`hr-user`)
+  - Global pipes: `global-`\ *<category>* (`global-person`)
+  - Preparation pipes: *<data-type>*\ `-`\ *<target-system>* (`user-hr`)
+  - Endpoint pipes: *<data-type>*\ `-`\ *<target-system>*\ `-endpoint` (`user-hr-endpoint`)
 
 When constructing an integration flow in Sesam the use of a standardized
 naming convention becomes essential as the project grows to more than a few pipes.
@@ -331,9 +415,9 @@ easier in the long run.
 
 Inbound pipes should be named according to endpoint/table they connect to
 in the source system and prefixed with the source system name such that
-there is a clear and intuitive way of tracking their content.
-We use the hr system mentioned above in this example.
-There are two tables we would like to read from the hr systems: employee and
+there is a clear and intuitive way of tracking their content. Let us use
+the same example as for naming system. I this case the HR system in the
+previous example populate its data in two tables: employee and
 department. Our two inbound pipes connecting to the two tables containing
 HR data will therefore be named “hr-employee” and “hr-department”. The
 system name prefixed highlights that the HR system is upstream from the
@@ -392,30 +476,55 @@ name with an example:
 
    Full pipe flow with example names.
 
+.. seealso::
+
+  Best Practices - Data modelling in Sesam: :ref:`best-practice-naming-conventions`
+
 .. _tc_systems-1-1:
 
 Systems
 ~~~~~~~
 
-Short about systems (where in the sesam-world-map)
+.. sidebar:: Summary
 
-Something more general about pipes maybe in context of pipes and
-datasets
+  Systems are interfaces to external systems.
 
-Very low level but enough to set up an inputpipe after maybe?
+Systems are one of Sesam's core components.
+Systems can connect to external providers such as SQL databases, REST APIs,
+Microservices and more, to either import data into Sesam or export data out from Sesam.
+Systems are therefore the start and end points of every dataflow.
 
-and refer to systems chapter
+Systems may cover other functionalities as well, but we will cover those special cases
+later.
 
-Namegivingconventions ref. 1.1.8
+In this section we will show you an example of the most commom system in a Sesam installation,
+the mssql system. We will also show how this system can connect to pipes to
+either import or export data, depending on your need.
 
-Where to make new ref 1.1.6
+The MSSQL system
+^^^^^^^^^^^^^^^^
 
-Systems are one of Sesam’s core sub-structures. Systems can connect to
-external providers such as an SQL database, a REST API or a Microservice
-to either import or export data to and from Sesam and are therefore the
-start and finish points of every integration flow. System may cover
-other functionalities as well, but we will cover those special cases in
-later parts [ref to later parts].
+.. figure:: ../../../training/010_architecture_and_concepts/media/mssql-system-config.png
+   :align: right
+   :alt: MSSQL system config.
+
+   MSSQL system config
+
+Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.
+
+.. figure:: ../../../training/010_architecture_and_concepts/media/mssql-system-status.png
+   :align: right
+   :alt: MSSQL system status.
+
+   MSSQL system status.
+
+Once the connection is open the node can extract data from the tables in the database through inbound pipes connected to the system. You can see if the connection to the MSSQL database is open by going to the "Status" tab on the system page. Should the system health state "failure" in your connectivity, this could be because you have some parameter values in your config wrong, or there might be a firewall blocking your access.
+
+.. seealso::
+
+  Learn Sesam: :ref:`systems-beginner-2-1`
+
+  Developer Guide - Service Configuration: :ref:`system_section`
 
 .. _tc_pipes-1-1:
 
@@ -439,11 +548,22 @@ Namegivingconventions ref. 1.1.8
 
 Where to make new ref 1.1.6
 
+.. seealso::
+
+  Learn Sesam: :ref:`dtl-beginner-3-1`
+
+  Developer Guide - Service Configuration: :ref:`pipe_section`
 
 .. _tc_datasets-1-1:
 
 Datasets
 ~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Sesam datasets are immutable logs of entities
+  - Sesam datasets are schemaless
+  - Entities in Sesam datasets *must* have ``_id``
 
 Datasets are where data is stored inside Sesam, regardless of whether the
 data comes from external systems or from internal pipes.
@@ -471,13 +591,15 @@ config is specified for a pipe it's output will be a dataset.
 
 Datasets are also often the source for internal pipes.
 
-**Related topics:**
+.. seealso::
 
-:ref:`dataset-id-3-1`,
-:ref:`entities-json-keyvalpairs-1-1`,
-:ref:`naming-conventions-1-1`,
-:ref:`pipes-1-1`
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
 
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`naming-conventions-1-1`
+
+  Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
+
+  Learn Sesam - DTL: Beginner: :ref:`dataset-id-3-1`
 
 .. _tc_entities-json-keyvalpairs-1-1:
 
@@ -497,6 +619,10 @@ As stated earlier in this section, a dataset consists of a list of entities. An 
    }
 
 
+.. seealso::
+
+  TODO
+
 .. _tc_special-sesam-attributes-1-1:
 
 Special sesam attributes
@@ -511,11 +637,19 @@ Namespaced identifiers (NIs) are identifiers (i.e. property values) given a name
 
 As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
 
+.. seealso::
+
+  TODO
+
 Rdf:type
 ^^^^^^^^
 The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
+
+.. seealso::
+
+  TODO
 
 .. _tc_id-1-1:
 
@@ -529,6 +663,9 @@ For pipes, the _id is typically defined by establishing which properties in the 
 
 When data reaches a pipe's dataset, the _id will be identical to what you defined the _id to be, in that pipe's config.
 
+.. seealso::
+
+  TODO
 
 .. _tc_pipes-where-dtl-executes-3-1:
 
@@ -624,6 +761,10 @@ overview in the DTL Reference Guide. You will use this much.
 
 **What is the relationship of pipes and DTL?**
 
+.. seealso::
+
+  TODO
+
 .. _tc_entities-pipes-and-id-3-1:
 
 Entities, pipes and _id @Geir Atle
@@ -644,6 +785,10 @@ configurations and precise connections between data entities.
 
 See <ref to ``_id`` restrictions> for more information on how to create
 valid identifiers.
+
+.. seealso::
+
+  TODO
 
 System _id
 ^^^^^^^^^^
@@ -669,9 +814,10 @@ the System column will show that value instead of the identity.
 Regardless, if you need to reference a system configuration from another
 configuration in Sesam, you reference the system’s identity.
 
-**Related topics:**
-:ref:`naming-conventions-1-1`,
-:ref:`systems`
+.. seealso::
+
+  :ref:`naming-conventions-1-1`,
+  :ref:`systems`
 
 Pipe _id
 ^^^^^^^^
@@ -694,9 +840,10 @@ Pipe column will show that value instead of the identity.
 Regardless, if you need to reference a pipe configuration from another
 configuration in Sesam, you reference the pipe’s identity.
 
-**Related topics:**
-:ref:`dtl-in-practice-3-1`,
-:ref:`naming-conventions-1-1`
+.. seealso::
+
+  :ref:`dtl-in-practice-3-1`,
+  :ref:`naming-conventions-1-1`
 
 .. _tc_dataset-id-3-1:
 
@@ -727,6 +874,10 @@ all the datasets in that Sesam node.
 If you need to reference a dataset from another configuration in Sesam,
 you reference the dataset’s identity.
 
+.. seealso::
+
+  TODO
+
 Entity _id
 ^^^^^^^^^^
 
@@ -754,6 +905,10 @@ In other cases, you may have to explicitly add the ``_id`` property with
 DTL in a transform step in the inbound pipe. This may be relevant when
 the source configuration does not support specifying multiple properties
 as primary keys.
+
+.. seealso::
+
+  TODO
 
 Entity _id and namespaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -803,9 +958,10 @@ entities would have the same ``_id``, namely `123`. So by prefixing this
 value with a namespace we ensure that these entities do not come into
 conflict with each other.
 
-**Related topics:**
-:ref:`namespaced-identifiers`,
-:ref:`namespaces`
+.. seealso::
+
+  :ref:`namespaced-identifiers`,
+  :ref:`namespaces`
 
 The autogenerated property $ids
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -813,6 +969,10 @@ The autogenerated property $ids
 Should probably write something sensible about the connection between
 ``_id`` and $ids somewhere. Maybe related to merge pipes? – ‘Yea, or maybe
 add it to the \_ Properties chapter’ -G
+
+.. seealso::
+
+  TODO
 
 .. _tc_dtl-in-practice-3-1:
 
@@ -842,15 +1002,15 @@ In the Sesam Management Studio, navigate to the **Pipes** view and follow these 
 
 - Lastly, add some test data:
 
-  .. code-block:: json
+.. code-block:: json
 
-    "entities": [{
-      "_id": "1",
-      "data": "One"
-    }, {
-      "_id": "2",
-      "data": "Two"
-    }]
+   "entities": [{
+     "_id": "1",
+     "data": "One"
+   }, {
+     "_id": "2",
+     "data": "Two"
+   }]
 
 You should now have the following pipe config:
 
@@ -886,6 +1046,10 @@ Save and run the pipe by clicking the **Save** button and then the **Start** but
 
 In the next section you learn how to view the result of a pipe run.
 
+.. seealso::
+
+  TODO
+
 Pipe output
 ^^^^^^^^^^^
 
@@ -909,6 +1073,10 @@ This is because we only copy the ``_id`` so far.
 
 In the next section you will learn to write your first piece of DTL to make the output a bit more interesting.
 
+.. seealso::
+
+  TODO
+
 Greet the world!
 ^^^^^^^^^^^^^^^^
 
@@ -916,11 +1084,6 @@ Switch back to the **Config** tab.
 
 First, change the ``copy`` so that all source properties are included.
 Then add a property called ``greeting`` with the value `Hello, World!`:
-
-.. code-block:: json
-
-  ["copy", "*"],
-  ["add", "greeting", "Hello, World!"]
 
 Save and start the pipe again.
 
@@ -979,13 +1142,11 @@ run a pipe and view it's output.
   }
 
 
-.. _tc_pipe-interaction-with-systems.-2-1:
+.. seealso::
 
-Pipe interaction with systems.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TODO
 
-Input, output (mention transform?)
-
+###.. _tc_pipe-interaction-with-systems.-2-1:###
 .. _tc_systems-as-a-pipe-source-2-2:
 
 Systems as a pipe source
@@ -999,10 +1160,414 @@ with not only configs but explanations. Keep it simple don’t go into too
 many system types (json & SQL?). Write more text than configurations,
 draw stuff. (1-N)
 
+.. seealso::
+
+  TODO
+
 .. _tc_how-to-create-a-system-with-templates-2-1:
 
 How to create a system with Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. TODO:
+.. We should consider having a consistent example case to build on throughtout these chapters.
+
+.. sidebar:: Summary
+
+  - From **Systems** view: Click **New system**
+  - Fill in ``_id``
+  - Click **Templates**
+  - Choose **System type**
+  - Click **Replace**
+  - Fill in any remaining details
+
+Let us create a new system from scratch called "`difi`".
+In the Sesam Management Studio, navigate to the **Systems** view and follow these steps:
+
+- Click the **New system** button
+- Type in "`difi`" as the system's ``_id``
+- In the **Templates** panel:
+
+  - Choose System type: ``url prototype``
+  - Click the **Replace** button to put the chosen system configuration into the system configuration area
+  - Set ``url_pattern`` to "`https://ws.geonorge.no/kommuneinfo/v1/%s`"
+
+You should now have the following system config:
+
+.. _tc_practice-system-config-initial:
+.. code-block:: json
+  :caption: Practice system config - initial
+  :linenos:
+
+  {
+    "_id": "difi",
+    "type": "system:url",
+    "url_pattern": "https://ws.geonorge.no/kommuneinfo/v1/%s",
+    "verify_ssl": true
+  }
+
+.. note::
+
+  The ``%s`` at the end of the ``url_pattern`` will be substituted by
+  the relative url specified in the pipes using this system as a source or sink.
+
+Save the system config by clicking the **Save** button.
+
+You can check the connectivity status by clicking the **Status** tab.
+
+.. seealso::
+
+  Best Practices - Data modelling in Sesam: :ref:`best-practice-naming-conventions`
+
+  Developer Guide - Service Configuration: :ref:`url_system`
+
+  DTL - Beginner: :ref:`dtl-in-practice-3-1`
+
+
+.. _tc_environment-variables-secrets-2-1:
+
+Environment variables & Secrets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Environment variables and secrets are named values used to parameterize configs
+  - Environment variables are:
+
+    - unencrypted
+    - referenced with: ``"$ENV(my-env-var)"``
+
+  - Secrets are:
+
+    - encrypted
+    - referenced with: ``"$SECRET(my-secret)"``
+
+  - Both are defined under **Datahub > Variables**
+  - Secrets can also be defined under a system's **Secrets** tab
+  - Eases and improves config maintenance
+
+In this section we will cover how environment variables and secrets typically
+are used in system configs.
+
+Environment variables and secrets are named values
+that can be used to parameterize Sesam configs.
+
+Environment variables are stored and processed as *unencrypted* values,
+and are referenced with ``"$ENV(my-env-var)"``.
+
+Secrets are stored and processed as *encrypted* values,
+and are referenced with ``"$SECRET(my-secret)"``.
+
+Both are defined in the Sesam Management Studio under **Datahub > Variables**.
+
+Secrets can also be defined locally in a system config under the system's
+**Secrets** tab.
+
+.. warning::
+
+  If a system config is deleted, all secrets stored locally in that system config is lost!
+
+It is generally a good idea to put the parts of a configuration that differ between
+environments (develop, test, production, etc.) into environment variables.
+This includes configs such as server names, database connection strings, API URLs, usernames, etc.
+
+By putting these config parts into environment variables you can define each of them
+separately in each Sesam node used for the respective environments,
+but keep the actual system config identical in each node.
+
+This is also practical for version control of the config.
+You can change the values of the environment variables separate from the actual
+system config.
+
+Continuing from the example :ref:`practice-system-config-initial`, let us see how the
+introduction of environment variables can improve the system config.
+The ``url_pattern`` is a good canditate to be put into an environment variable.
+Let us call it `"difi-api"` and reference it from the system config.
+
+First we define the new environment variable under
+**Datahub > Variables > Environment variables**:
+
+.. code-block:: json
+
+  "difi-api": "https://ws.geonorge.no/kommuneinfo/v1/%s"
+
+Then we change the system config to reference it:
+
+.. _tc_practice-system-config-env-var-ref:
+.. code-block:: json
+  :caption: Practice system config with environment variable reference
+  :linenos:
+
+  {
+    "_id": "difi",
+    "type": "system:url",
+    "url_pattern": "$ENV(difi-api)",
+    "verify_ssl": true
+  }
+
+Say we want to access different Difi APIs depending on which environment
+we are accessing Difi from, or that Difi decided to change the API URL at some point.
+The only thing that we have to update is the value of the ``difi-api``
+environment variable.
+No changes to the actual system config is required.
+
+.. seealso::
+
+  Concepts - Configuration: :ref:`concepts-environment-variables`
+
+  Concepts - Configuration: :ref:`concepts-secrets`
+
+.. _tc_categories-of-microservices-5-1:
+.. _tc_microservices-beginner-5-1:
+
+Microservices: Beginner
+-----------------------
+
+
+.. _tc_what-is-a-microservice-5-1:
+
+What is a microservice?
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Microservices are...
+
+  - modular self-contained services
+  - hosted as docker containers
+  - configured and monitored as Sesam Systems
+
+Microservices are modular self-contained software programs that provide a particular service.
+
+In a Sesam perspective they can function as connectors to either pull data from a source system,
+push data to a target system or transform data as part of a step inside a pipe.
+
+Microservice code can essentially be written in any programming language, but in Sesam we usually
+prefer Python 3.
+
+Microservices are hosted in Sesam as docker containers. They are configured using
+system configs and their logs can be inspected through the system's **Status** tab.
+
+.. seealso::
+
+  Getting started: :ref:`getting-started-microservices`
+
+  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
+
+.. _tc_why-use-microservices-in-sesam-5-1:
+
+Why use Microservices in Sesam?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  When built-in connectors are insufficient, use microservices.
+
+Most of the time you can use Sesam's build-in connectors to access
+external systems, but sometimes you will find that you need to connect
+to systems that are not natively supported by Sesam.
+
+In these cases you either find an existing microservice and reuse it as is,
+tweak it a bit to fit your needs, or simply write your own from scratch.
+
+The Sesam communities at GitHub and DockerHub are great places to look
+for microservices to reuse and tweak to your specific needs.
+
+.. seealso::
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+
+.. _tc_how-are-microservices-used-in-sesam-5-1:
+
+How are Microservices used in Sesam?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Microservices in Sesam are:
+
+  - defined in system configs
+  - hosted in docker containers
+
+To get a better understanding of how microservices are used in Sesam,
+let us look at a concrete example.
+
+Assume we want to pull data from SAP and that we have been provided
+the following information about the SAP system:
+
+- hosted at ``https://sap.service.com/api``
+- data is exposed as OData
+- username ``sap-user``
+- password ``sap-very-secret-password``
+
+Looking throught the list of Systems under :ref:`configuration`
+we see that Sesam does not have a built-in connector for OData.
+However we are in luck, browsing
+`Sesam's community at GitHub <https://github.com/sesam-community>`_
+we find there are several OData microservices to choose from.
+
+.. TODO: get sap-odata-source into sesam-community!
+.. Just using this MS now because of familiarity.
+
+Let us go with the `sap-odata-source` microservice
+(https://github.com/ga-hegsvold/sap-odata-source).
+
+Reading up on the docs for this microservice we are provided with
+information about where to find the docker image, which docker environment
+variables to supply, and also examples of system and pipe configurations.
+
+For this particular microservice there are two authentication alternatives:
+"basic" with username and password or "token" with a JWT.
+Since we have been supplied a username and password we go with the "basic" option.
+
+Based on the information we now have, we can see that the microservice
+requires the following docker environment variables:
+
+`SERVICE_URL` - Base url to the Odata Service API
+
+`AUTH_TYPE` - Authentication method ("basic" or "token")
+
+`USERNAME` - Username to authenticate with the Odata Service
+
+`PASSWORD` - Password to authenticate with the Odata Service
+
+We also need to supply a link to the docker image for the microservice.
+
+When setting up a new system config in Sesam it is a good idea to start with defining
+the various Sesam environment variables and secrets needed.
+This is to avoid awkward warnings and error messages as Sesam will warn you if there are references
+to undefined environment variables and secrets in a system or pipe config.
+
+`AUTH_TYPE` can be hardcoded in the system config as it will most likely be the
+same in all Sesam environments (dev, test, prod, etc.).
+The remaining docker environment variables will probably differ in the various
+Sesam environments so these are good candidates to put into Sesam environment variables
+or secrets.
+We define these under **Datahub > Variables**:
+
+.. code-block:: JSON
+
+  "sap-service-url": "https://sap.service.com/api",
+  "sap-username": "sap-username"
+
+.. warning::
+  Passwords and other sensitive values should never be put into Sesam environment variables
+  as they are stored in plain text. Put them into secrets instead.
+
+So let us put the SAP password in a secret called ``sap-password``.
+
+With the Sesam environment variables and secrets defined, we can now create a new system config
+for the SAP system. Let us call it `sap`:
+
+.. code-block:: JSON
+  :linenos:
+  :emphasize-lines: 3, 11
+
+  {
+    "_id": "sap",
+    "type": "system:microservice",
+    "docker": {
+      "environment": {
+        "AUTH_TYPE": "basic",
+        "PASSWORD": "$SECRET(sap-password)",
+        "SERVICE_URL": "$ENV(sap-service-url)",
+        "USERNAME": "$ENV(sap-username)"
+      },
+      "image": "gamh/sap-odata-source",
+      "port": 5000
+    },
+    "verify_ssl": true
+  }
+
+Line 3 is where the system is defined as a microservice.
+
+Line 11 is the reference to the docker image for the microservice.
+
+When the system config is saved, Sesam will automatically try to
+spin up a docker container, based on the referenced docker image, to host the microservice.
+We will look more into this in the sections below.
+
+.. seealso::
+
+  .. Testing to add refs as bread crumbs with links in each step except first step.
+  .. Is this reader-friendly or too much?
+
+  Learn Sesam > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
+
+  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
+
+  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
+
+  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
+
+  `OData (Open Data Protocol) <https://www.odata.org/>`_
+
+.. _tc_microservice-hosting-5-1:
+
+Microservice hosting
+~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  - Microservice source code is hosted in `Sesam's community at GitHub <https://github.com/sesam-community>`_
+  - Microserice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  - Auto-build scripts publish docker images to Sesam's community at DockerHub
+  - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
+
+We have already touched on Sesam's communities at GitHub and DockerHub
+to find available microservices. Let us take a more detailed look at how
+microservice hosting is done with Sesam.
+
+We have `Sesam's community at GitHub <https://github.com/sesam-community>`_
+for hosting microservice source code,
+and we have `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+for hosting microservice docker images.
+
+When writing microservices we recommend putting the source code into
+Sesam's community at GitHub so that it can be shared and reused in other projects
+(unless there are specific restrictions in place).
+
+By configuring the microservices using Sesam's auto-build script, when the
+source code is pushed to GitHub, the script will automatically build a docker image
+and publish it to Sesam's community at DockerHub.
+
+From there the microservices will be available for use in any Sesam project.
+
+See the `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
+for more information on how to use the auto-build script and also how to contribute in general.
+
+.. seealso::
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+
+  `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
+
+.. _tc_running-a-microservice-in-sesam-5-1:
+
+Running a microservice in Sesam
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Intro til Running I sesam
+
+Forklare GUI
+
+Pull & Restart
+
+   Status
+
+   Refresh
+
+Forklare Config
+
+Pipe source/sink/http
+
+.. seealso::
+
+  TODO
 
 
 
@@ -1051,6 +1616,10 @@ Gjør data tilgjengelig
 
 Ref. 1.2.19, 3.2.14
 
+.. seealso::
+
+  TODO
+
 .. _tc_joining-data-1-2:
 
 Joining Data
@@ -1083,6 +1652,10 @@ There are four different kinds of joins. In the below outline, "eq" is an abrevi
 The rule for joins is very simple: if any of the values overlap, then the join succeeds.
 
 All of the four joins given above succeed for the two data objects given, because they all have overlapping values, i.e. the values 1 and 4.
+
+.. seealso::
+
+  TODO
 
 .. _tc_full-outer-join-merge-1-2:
 
@@ -1134,6 +1707,9 @@ and the merged result, if we choose to retain the first "_id" of the above two d
 
 What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.
 
+.. seealso::
+
+  TODO
 
 
 THIS IS WHERE THE PATHS DIVERGE
@@ -1179,11 +1755,58 @@ DEV & AC
 Global
 ~~~~~~
 
-Golden – the best truth about common attributes of a concept collected
-from multiple sources
+Global datasets lie at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
-Coalesce, prioritization of source data (master data)
+Creating global datasets allows you to:
 
+- 	Semantically group and structure data
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
+		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
+
+-	Setup master data management - Golden records
+		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize which system knows a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. Another benefit of golden records are their reusability. Once their logic has been created a golden record may be used by any project downstream from its global dataset, thus saving both time and energy.
+
+		Golden records are created with the ``["coalesce"]`` function, as shown in the example below.
+
+
+
+	A global pipe, ``global-person``, has three source datasets, crm-person, hr-person and economy-person. The crm-person dataset has high quality work experience data and medium quality hours logged data. The hr-person dataset has high quality personal information and the economy-person dataset has high quality hours logged data. In our global pipe ``global-person`` we wish to set 3 golden records: email, weekly-hours-billed and hours-pr-project. By using the "coalesce" function we may specify which source dataset has the master data for which specific variable.
+
+	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
+
+.. code-block:: json
+  :linenos:
+
+  ["add", "email",
+    ["coalesce",
+      ["list", "_S.hr-person:email", "_S.crm-person:Email", "_S.economy-person:e-mail"]
+    ]
+  ]
+
+In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
+
+.. code-block:: json
+  :linenos:	
+
+  ["add", "hours-pr-project",
+    ["coalesce",
+      ["list", "_S.crm-person:hours-pr-project", "_S.economy-person:hours-pr-project"]
+  ]
+
+
+  ["add", "weekly-hours-billed",
+    ["coalesce",
+      ["list", "_S.economy-person:weekly-hours-billed", "_S.crm-person:weekly-hours-billed"]
+    ]
+  ] 
+
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritizations.
+
+
+.. seealso::
+
+  TODO
 
 
 Creating a global pipe
@@ -1227,23 +1850,30 @@ The amount of DTL in a given pipe with respect to modelling stage in Sesam shoul
    Figure – DTL Amount
 
 
+.. seealso::
+
+  TODO
+
 .. _tc_change-tracking-data-delta-1-2:
 
 Change tracking & data delta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`All entities stored inside sesam have a
-\_hash <https://docs.sesam.io/entitymodel.html?highlight=_hash>`__
-value. This is a quantification of an entity and is calculated every
-time an entity is processed by a pipe. If the \_hash value changes or is
-new, the entity will be stored as a new version in dataset. We call this
-change in \_hash value a data-delta.
+Change tracking and data delta allows Sesam to process and update data only when it changes. This ensures minimal latency and increased agility both when importing data from source systems and when processing data through internal pipes towards target systems.
 
-Any data-delta for an entity in a dataset causes downstream pipes to see
-this as a new sequence number they haven’t yet read. This in turn makes
-the pipe process the entity. If the processed entity does not exist or
-gets a new \_hash in the output of the pipe, it will cause an update to
-the output dataset.
+Firstly, when reading data from a source system, if supported by the source, it may be possible to just ask for the data that have changed since the last time. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
+
+Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``_hash`` property will be created. This ``_hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``_hash`` value changes, any downstream pipes register this change and recognizes it as a new sequence number that needs to be processed again.
+
+.. seealso::
+
+  :ref:`entity_data_model`,	:ref:`concepts-datasets`, :ref:`concepts-change-tracking`
+
+  Developer Guide > Entity Data Model > Reserved fields: :ref:`entity_data_model`
+
+.. seealso::
+
+  TODO
 
 
 Creating a preparation pipe
@@ -1294,15 +1924,19 @@ When applying the hops, our point of reference will be the first data object fro
 
 .. code-block:: json
 
-	{
-	  "_id": "first_entity:foo",
-	  "first_entity:value": 1,
-	  "first_entity:string":"Hello merge",
-	  "first_entity:values": [1, 2, 4, 5],
-	  "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
-	}
+  {
+    "_id": "first_entity:foo",
+    "first_entity:value": 1,
+    "first_entity:string":"Hello merge",
+    "first_entity:values": [1, 2, 4, 5],
+    "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
+  }
 
 As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.
+
+.. seealso::
+
+  TODO
 
 .. _tc_hops-3-2:
 
@@ -1310,6 +1944,10 @@ Hops
 ~~~~
 
 Basics, uten apply
+
+.. seealso::
+
+  TODO
 
 
 Hopping with a preparation pipe
@@ -1350,6 +1988,10 @@ Coalesce
 ~~~~~~~~
 
 ref 1.2.19
+
+.. seealso::
+
+  TODO
 
 
 Defining golden properties

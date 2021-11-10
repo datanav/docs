@@ -24,6 +24,10 @@ prod = live node som kjører live integrasjoner
 
 Tagging av brancher for deployment
 
+.. seealso::
+
+  TODO
+
 .. _tc_using-a-microservice-as-output-in-sesam-5-3:
 
 Using a Microservice as Output in Sesam
@@ -49,12 +53,20 @@ Batching/streaming
 
 NB! siste batch sendt fra sesam er alltid en tom liste
 
+.. seealso::
+
+  TODO
+
 .. _tc_chaining-5-4:
 
 Chaining
 ~~~~~~~~
 
 Ref advanced system 2.4.13.
+
+.. seealso::
+
+  TODO
 
 .. _tc_create-child:
 
@@ -65,4 +77,8 @@ Ref advanced system 2.4.13.
 
 dep. Tracking, $children, emit_child transform type (2 pipes necessary
 for all updates to propagate)
+
+.. seealso::
+
+  TODO
 
