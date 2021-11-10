@@ -125,7 +125,7 @@ Microservice Development Prerequisites
   - a Docker account
   - a GitHub account
 
-In order to develop a microservice that will be used in a Sesam node as outlined in :ref:`interacting-with-a-microservice-in-sesam-5-2` you need to know what development environment you will need locally in order to make this happen.
+In order to develop a microservice that will be used in a Sesam node as outlined in :ref:`interacting with a microservice in Sesam <interacting-with-a-microservice-in-sesam-5-2>` you need to know what development environment you will need locally in order to make this happen.
 
 Initially, Docker is a prerequisite. Adding, that an integrated development environment (IDE) or text editor will most likely also be needed. An IDE or text editor will allow you to write and develop your code. Docker allows for hosting your code as an image. A Docker image is referenced from a Sesam system. From that Docker image, Sesam creates a Docker container that is hosted and run in the Sesam node. In addition, a GitHub account is also advised as this will support for open sourcing your developed code and ease the way in which you can collaborate on developing your code.
 
@@ -205,18 +205,76 @@ In order to push your image, extending on the example above, you will need to ru
 
 .. _authentication-with-microservices-5-2:
 
-Authentication with microservices
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Authentication and authorization with microservices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Docker hosting site login
+.. sidebar:: Summary
 
-Passing Env-vars/Secrets i Sesam
+  Microservice...
 
-Oauth2 standard – Salesforce microservice
+  - authentication is the process of verifying that a party is who they claim to be
+  - authorization is the process of verifying the access rights of a party
+  - authentication and authorization verfies that a party can now access available resources
+  - resources are defined in its API. APIs use frameworks to ease and standardize authorization
+
+    - `The OAuth Authorization Framework <https://auth0.com/docs/authorization/protocols/protocol-oauth2>`_ 
+
+  - OAuth authorization typically use an access token to grant access to protected resources owned by a client
+  - setup in a Sesam node uses environment variables defined globally
+  - secrets are defined locally for a specific system
+
+Authentication is the process of verifying that a party is who they claim to be, whilst authorization is the process of verifying the access rights of a party. With regards to microservices the process of authentication can vary quite a bit. Among the most common forms of authentication, a verification via username and password is a typical one. 
+
+After having completed both authentication and authorization, the user will have a set of resources available. Such resources can vary depending on what was authenticated against, albeit an API typically has endpoints whereas for example a database will have tables.
+
+API authorization
+##################
+
+APIs use authorization to ensure that a party requests data in a secure way. This will typically involve authenticating that the party which made the request is permitted to access and/or manipulate the relevant resource. Authorizing towards an API has historically been done in different ways, albeit recent authorization frameworks ease and standardize this. One of the most popular are the `OAuth Authorization Framework <https://auth0.com/docs/authorization/protocols/protocol-oauth2>`_. This framework is a protocol that allows a party to grant a third-party web site or application access to its protected resources, without necessarily revealing their long-term credentials or even their identity. 
+
+Imagine that you want to gain access to a client API using the OAuth Authorization Framework. Initially, you request access to a resource controlled by your client, albeit instead of using the client's credentials to access protected resources, you obtain an access token via the OAuth Authorization Framework. Having been granted an access token, you can now use this access token to access protected resources, within the scope granted by this access token, owned by your client.   
+
+.. hint::
+
+  - An access token is a string that specifies a scope, lifetime and other access related attributes. 
+  - Access tokens are issued by third-party clients, via an authorization server, approved by a resource owner and distributed to authorized users.
+
+Environment variables and secrets 
+#################################
+
+Upon successfully authorizing towards an API, you can now start to request resources implemented in your microservice code, assuming you have set up your environment variables and secrets. Doing so in a Sesam node is straight forward. Environment variables and secrets can both be defined locally for a given microservice system, albeit it is recommended to define environment variables globally in your Sesam node whereas secrets should be defined locally for your specific microservice system. 
+
+Global environment variables are defined in your "Datahub" view under the "Variables" tab, as shown below:
+
+.. _figure-EnvironmentVariables-5-2:
+.. figure:: ./media/EnvVariables.png
+   :align: center
+
+   Environment Variables
+
+Secrets, capable of being defined both globally and locally, also need to be set and as is recommended, you can see a picture below that illustrates this locally for a microservice system called "sesam-training".
+
+.. _figure-Secrets-5-2:
+.. figure:: ./media/Secrets.png
+   :align: center
+
+   Secrets
+
+As seen, the secret "sesam-training-password" has been defined locally and as such your microservice system can now be used to either pull and/or push data via Sesam.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2` > :ref:`systems-as-a-pipe-source-2-2`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2` > :ref:`authentication-methods-2-2`
+
+  :ref:`sesam-community`
+
+  `OAuth Authorization Framework <https://auth0.com/docs/authorization/protocols/protocol-oauth2>`_
+
+  `Sesam Community at GitHub <https://github.com/sesam-community>`_
 
 .. _using-a-microservice-as-input-in-sesam-5-2:
 
