@@ -176,18 +176,18 @@ Authentication and authorization with microservices
 
   - authentication is the process of verifying that a party is who they claim to be
   - authorization is the process of verifying the access rights of a party
-  - authentication and authorization verfies that a party can now access available ressources
-  - ressources are defined in its API. APIs use frameworks to ease and standardize authorization
+  - authentication and authorization verfies that a party can now access available resources
+  - resources are defined in its API. APIs use frameworks to ease and standardize authorization
 
     - `The OAuth Authorization Framework <https://auth0.com/docs/authorization/protocols/protocol-oauth2>`_ 
 
-  - OAuth authorization typically use an access token to grant access to protected ressources owned by a client
+  - OAuth authorization typically use an access token to grant access to protected resources owned by a client
   - setup in a Sesam node uses environment variables defined globally
   - secrets are defined locally for a specific system
 
 Authentication is the process of verifying that a party is who they claim to be, whilst authorization is the process of verifying the access rights of a party. With regards to microservices the process of authentication can vary quite a bit. Among the most common forms of authentication, a verification via username and password is a typical one. 
 
-After having completed both authentication and authorization, the user will have a set of ressources available. Such ressources can vary depending on what was authenticated against, albeit an API typically has endpoints whereas for example a database will have tables.
+After having completed both authentication and authorization, the user will have a set of resources available. Such resources can vary depending on what was authenticated against, albeit an API typically has endpoints whereas for example a database will have tables.
 
 API authorization
 ##################
@@ -204,7 +204,7 @@ Imagine that you want to gain access to a client API using the OAuth Authorizati
 Environment variables and secrets 
 #################################
 
-Upon successfully authorizing towards an API, you can now start to request ressources implemented in your microservice code, assuming you have set up your environment variables and secrets. Doing so in a Sesam node is straight forward. Environment variables and secrets can both be defined locally for a given microservice system, albeit it is recommended to define environment variables globally in your Sesam node whereas secrets should be defined locally for your specific microservice system. 
+Upon successfully authorizing towards an API, you can now start to request resources implemented in your microservice code, assuming you have set up your environment variables and secrets. Doing so in a Sesam node is straight forward. Environment variables and secrets can both be defined locally for a given microservice system, albeit it is recommended to define environment variables globally in your Sesam node whereas secrets should be defined locally for your specific microservice system. 
 
 Global environment variables are defined in your "Datahub" view under the "Variables" tab, as shown below:
 
