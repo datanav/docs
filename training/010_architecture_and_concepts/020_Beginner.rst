@@ -608,9 +608,9 @@ Systems are therefore the start and end points of every dataflow.
 Systems may cover other functionalities as well, but we will cover those special cases
 later.
 
-In this section we will show you an example of the most commom system in a Sesam installation, 
-the mssql system. We will also show how this system can connect to pipes to 
-either import or export data, depending on your need.  
+In this section we will show you an example of the most commom system in a Sesam installation,
+the mssql system. We will also show how this system can connect to pipes to
+either import or export data, depending on your need.
 
 The MSSQL system
 ^^^^^^^^^^^^^^^^
@@ -621,7 +621,7 @@ The MSSQL system
 
    MSSQL system config
 
-Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.  
+Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.
 
 .. figure:: ./media/mssql-system-status.png
    :align: right
@@ -820,27 +820,126 @@ As stated earlier in this section, a dataset consists of a list of entities. An 
 .. _globals-as-a-concept-1-1:
 
 Globals as a concept
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
-Why globals
 
-Golden records
+.. figure:: ./media/Architecture_Beginner_Globals_as_a_concept_A.png
+   :align: right
+   :scale: 45 %
 
-Gjør data tilgjengelig
+   Figure of a Global Symbol.
 
-Ref. 1.2.19, 3.2.14
+
+What are Globals?
+^^^^^^^^^^^^^^^^^
+
+Globals are pipes which merge datasets that store similar entities which
+fall under the same concept. As an example, ``global-person`` can merge data from the
+datasets ``hr-employee`` and ``hr-customer``. This is because the concept of a "person"
+is the common denominator of both employees and customers.
+
+Why use globals?
+^^^^^^^^^^^^^^^^
+
+Globals give us the opportunity to simplify and enhance our integrations by merging
+data which represent the same concept in the real world but normally is stored separately
+in the binary world.
+By using globals we also simplify the process of grabbing the data we need because if you
+know which concept or entity type an external system requires, you can quickly identify
+the global where this entity type is stored.
+If you only want to process a specific subset of the global
+then you can easily use the ``rdf:type`` attribute to narrow down which entities you want.
+More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special-sesam-attributes-1-1`.
+
+
+
+How do globals work?
+^^^^^^^^^^^^^^^^^^^^
+
+A global is the collection of objects categorized as the same concept.
+In other words, globals are buckets for entities which fall under the same concept.
+To draw on this metaphor further, you can choose to either mix your bucket by setting equalities
+between the objects within it, or keep them separate inside the bucket.
+Of course more value is gained by mixing the objects within, but without doing so you
+still have a nicely labeled bucket which will simplify decisions of what data to use.
+
+Globals without equalities
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This is an example of an un-mixed bucket also known as a Global without equalities.
+We have the inbound pipes/datasets ``cab-address`` and ``hr-address``. Both these datasets
+store information about addresses, but the first is for our customers and the second
+for our employees. Unless a person might fall into both categories, there is no value
+to be gained by joining these entities together using equalities. We will therefore place these datasets
+into the ``global-address`` pipe without creating equalities between the datasets.
+The ``global-address`` pipe can now be used as a destination when you want to look up
+an employees or a customers address. Read more about hops here: :ref:`left-join-hops-1-2`.
+
+Globals with equalities
+^^^^^^^^^^^^^^^^^^^^^^^
+
+This is an example of a mixed bucket also known as Globals with equalities.
+We have the inbound pipes/datasets ``shipping-customerinfo`` and ``sales-customer`` which read
+from a shipping system and a sales system respectively. The datasets produced by these pipes both
+store information about the same customers, but this data is currently stored separately.
+In other words, these systems and pipes talk about the same customers but with different perspectives.
+The shipping system cares about how the customer wishes to receive their
+goods while the sales system cares about what goods the customer usually shops for and analytics
+about their habits.
+The entities (customers) in these datasets could for example be linked together by
+their email address or phone number.
+By merging these datasets together in the ``global-customer`` pipe, we can also join
+the customers from these different sources by setting an equality on for example Email.
+We now have an aggregated view of the customers which join together, giving us both
+perspectives in the same entity!
+This makes us able to pick data both from the shipping and the sales system when we
+wish to process data about any given customer.
+
+As a sidenote to this last example, we would now be able to define "golden records".
+A golden record consists of the properties which together represent the most
+truthful version of an object.
+For example, both the ``shipping-customerinfo`` and ``sales-customer`` entities could have the
+attribute ``address``, but the version of the address received from the shipping system is always most up to date.
+In other words; the address received from the shipping system is more *truthful*.
+This means that in our global pipe we can add the attribute ``address`` with the address provided
+by our shipping system.
+This ``address`` attribute is automatically prefixed with the name of the pipe it was generated in, like ``global-customer:address``,
+unless other behaviour is specified - this is called :ref:`special-sesam-attributes_namespaces` and is explained in the next topic :ref:`special-sesam-attributes-1-1`.
+The ``global-customer:address`` attribute can thereafter be used in any outbound flows which use data from
+global-customer without needing to worry about the original origin of the attribute.
 
 .. seealso::
 
-  TODO
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`special-sesam-attributes-1-1`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`full-outer-join-merge-1-2`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`left-join-hops-1-2`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`global-1-2`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`hops-1-3`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`subset-1-3`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`merge-as-a-source-3-2`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`hops-3-2`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`source-subset-3-3`
+
+  :ref:`best-practice` > :ref:`best-practice-golden-record`
 
 .. _special-sesam-attributes-1-1:
 
 Special sesam attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. _special-sesam-attributes_namespaces:
+
 Namespaces
 ^^^^^^^^^^
+
 Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name.
 
 Namespaced identifiers (NIs) are identifiers (i.e. property values) given a namespace.
@@ -851,6 +950,8 @@ As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a
 .. seealso::
 
   TODO
+
+.. _special-sesam-attributes_rdf-type:
 
 Rdf:type
 ^^^^^^^^
