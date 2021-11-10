@@ -16,7 +16,7 @@ Interacting with a Microservice in Sesam
 
   - to ingest or expose data is done with, respectively, a pull and push protocol
   - you should use the ``since`` request parameter, in the pull protocol, to enable delta requests
-  - the request parameter ``is_first`` in the push protocol, on full data syncs, should be used to parse JSON from an array
+  - the request parameters ``is_first`` and ``is_last`` in the push protocol, on full data syncs, should be used to parse JSON from an array
   - you should make sure to implement thorough error handling in order to allow for adequate logging
   - logging should allow a non-technical user to understand why and potentially what made a microservice fail
   - is done by "coupling" a given system with a given pipe
@@ -54,7 +54,7 @@ Additional information about the protocols can be found here: `Pull <https://doc
 Interaction & triggers
 ######################
 
-Interacting with a microservice in a Sesam node means in practice creating a system of the type ``system:microservice``. This tells Sesam that the system is in reality a microservice hosted in Docker. An example of such a system can be seen below:
+Interacting with a microservice in a Sesam node means in practice creating a system of the type ``"system:microservice"``. This tells Sesam that the system is in reality a microservice hosted in Docker. An example of such a system can be seen below:
 
 .. code-block:: json
 
@@ -96,7 +96,7 @@ After having set up such a system you can move on to making a pipe that interact
     }
   }
 
-As can be seen from the above pipe config you will recognize the name of your recently created system, namely "my-system-microservice". Basically, by specifying this name you tell Sesam that you wish to communicate with that exact microservice. Additionally, the property ``{"url": "/department"}`` is of particular interest to us. This property tells us which endpoint we are interested in ingesting data from. As outlined, you can provide whatever value you want for the key "url". This means that Sesam supports the implementation and use of dynamic endpoints such as Python's <path>. This makes interacting with microservices well supported and as such you do not need to think about compromising on your code in order for it to work in Sesam. 
+As can be seen from the above pipe config you will recognize the name of your recently created system, namely ``"my-system-microservice"``. Basically, by specifying this name you tell Sesam that you wish to communicate with that exact microservice. Additionally, the property ``{"url": "/department"}`` is of particular interest to us. This property tells us which endpoint we are interested in ingesting data from. As outlined, you can provide whatever value you want for the key ``"url"``. This means that Sesam supports the implementation and use of dynamic endpoints such as Python's <path>. This makes interacting with microservices well supported and as such you do not need to think about compromising on your code in order for it to work in Sesam. 
 
 Finally, the topic of triggering comes into play. Triggering your system in Sesam is governed by how data flows in a given dataflow. An inbound pipe, as shown in the above example, will by default run every 15 minutes, unless otherwise stated or if you choose to start the pipe manually. On the topic of run times, you can state specific run times by the use of cron expressions. A microservice that is used in the middle or at the end of a dataflow will be triggered when data flows through a specific pipe at this particular stage in the dataflow. As such, Sesam triggers microservices in accordance to the streams of data that makes a dataflow. A given change in the stream of data will trigger an interaction with a microservice, but only a load sufficient to handle the trigger will be carried out.
 
@@ -218,31 +218,6 @@ Oauth2 standard – Salesforce microservice
 
   TODO
 
-.. _microservices-sesam-input-output-5-2:
-
-Micorservices in sesam and input/output
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Common for sesams input & output
-
-Sesam push/pull protocol
-
-Sesam-json (formattering)
-
-Lister av entiteter
-
-query-parameter
-
-url-parameter
-
-is-first
-
-is-last
-
-.. seealso::
-
-  TODO
-
 .. _using-a-microservice-as-input-in-sesam-5-2:
 
 Using a Microservice as Input in Sesam
@@ -255,7 +230,7 @@ Using a Microservice as Input in Sesam
   - should implement adequate logging
   - should utilize Sesam's in-built request parameters
 
-    - by implementing the use of "since" logic, when possible
+    - by implementing the use of ``since`` logic, when possible
 
 The following aspects should be considered, when using a microservice as a source system to inject data into a Sesam node:
 
@@ -279,13 +254,13 @@ Error logging is logging at its most critical. An error log entry should always 
 Request parameters
 ##################
 
-Sesam utilizes in-built request parameters when connecting to a microservice system. Among these `request parameters <https://docs.sesam.io/json-pull.html#requests>`_ "since" will be explained in detail in this section.
+Sesam utilizes in-built request parameters when connecting to a microservice system. Among these `request parameters <https://docs.sesam.io/json-pull.html#requests>`_ ``since`` will be explained in detail in this section.
 
-The since parameter is used in order to support Sesam's data handling philosophy. This is concerned with making sure streams of data is running through Sesam. In order to make streams of data entering and leaving a Sesam node it is preferable that both your source and target system can cope with incremental data queries. Incremental reading of source data empowers Sesam to work in accordance to how data is intended to flow in your established dataflows. As `change tracking <https://docs.sesam.io/concepts.html?change-tracking>`_ enables Sesam to track when data changes, even through complex integrations and mapping via `dependency tracking <https://docs.sesam.io/concepts.html?dependency-tracking>`_, these mechanisms are complementing to the use of "since". 
+The since parameter is used in order to support Sesam's data handling philosophy. This is concerned with making sure streams of data is running through Sesam. In order to make streams of data entering and leaving a Sesam node it is preferable that both your source and target system can cope with incremental data queries. Incremental reading of source data empowers Sesam to work in accordance to how data is intended to flow in your established dataflows. As `change tracking <https://docs.sesam.io/concepts.html?change-tracking>`_ enables Sesam to track when data changes, even through complex integrations and mapping via `dependency tracking <https://docs.sesam.io/concepts.html?dependency-tracking>`_, these mechanisms are complementing to the use of ``since``. 
 
-A "since" value is like a token that tells the endpoint after what offset in the stream to start streaming entities. In Sesam, this token typically references the `_updated <https://docs.sesam.io/entitymodel.html?entity-data-model>`_ property in entities. A "since" value is typically used to continue from the point where the previous request ended. In order to do this the value of the _updated property in the last entity in the previous request can used.
+A ``since`` value is like a token that tells the endpoint after what offset in the stream to start streaming entities. In Sesam, this token typically references the `_updated <https://docs.sesam.io/entitymodel.html?entity-data-model>`_ property in entities. A ``since`` value is typically used to continue from the point where the previous request ended. In order to do this the value of the _updated property in the last entity in the previous request can used.
 
-In order to activate the use of "since" when pulling data from a microservice system you need to activate `continuation support <https://docs.sesam.io/configuration.html#continuation-support>`_ for the inbound pipe that pulls the data. If you wish to activate continuation support for a microservice the pipe needs to have the "supports_since" parameter set as true in its pipe configuration, as well as either the "is_since_comparable" or "is_chronological" strategy enabled. An example of this is shown in the example below:
+In order to activate the use of ``since`` when pulling data from a microservice system you need to activate `continuation support <https://docs.sesam.io/configuration.html#continuation-support>`_ for the inbound pipe that pulls the data. If you wish to activate continuation support for a microservice the pipe needs to have the ``supports_since`` parameter set as true in its pipe configuration, as well as either the ``is_since_comparable`` or ``is_chronological`` strategy enabled. An example of this is shown in the example below:
 
 .. code-block:: json
 
@@ -310,9 +285,9 @@ In order to activate the use of "since" when pulling data from a microservice sy
     }
   }
 
-In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole request. Additionally, the microservice needs to pass on a property named "_updated" to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the "updated_column" for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these "_updated" values and pick the max value as the new "pipe_offset".
+In this case the data from the source is not ordered chronologically, which means we can not use the ``is_chronological`` tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole request. Additionally, the microservice needs to pass on a property named ``_updated`` to Sesam for each entity from the source. This property should take the value corresponding to the time-stamp or sequence value of the source data representing the last data update for that entity (the same column as for the ``updated_column`` for SQL type sources). When the entities have been passed on into Sesam, the inbound pipe will go through all these ``_updated`` values and pick the max value as the new ``pipe_offset``.
 
-The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset" will not have a value, resulting in a complete import of all the data from the ressource. Once data has been imported, the new "pipe_offset" will get passed to the microservice as the request parameter "since". This parameter can in turn be used as a request parameter to the API ensuring that only data updated after the last "since" value will be included when pulling of data is done again. An example of this is shown in the Python code snippet below.
+The first time the inbound pipe runs (or if the pipe is reset), the ``pipe_offset`` will not have a value, resulting in a complete import of all the data from the ressource. Once data has been imported, the new ``pipe_offset`` will get passed to the microservice as the request parameter ``since``. This parameter can in turn be used as a request parameter to the API ensuring that only data updated after the last ``since`` value will be included when pulling of data is done again. An example of this is shown in the Python code snippet below.
 
 .. code-block:: python
 
@@ -408,6 +383,70 @@ Using the information returned from such a response is important and also here l
   :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`dataset_source`
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`sink_section` > :ref:`dataset_sink`
+
+.. _synchronization-dataflow-microservices-5-2:
+
+Synchronization of dataflow in microservices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Synchronization of dataflow in microservices...
+
+  - should .....
+
+Optimally, data should be both ingested and exposed to the same system when creating dataflows in a Sesam node. This is called synchronization and is the optimal way for a system's data to be continously enriched in a Sesam node.
+
+In this section, we have already talked about the aspects of using a microservice as input in a Sesam node, albeit when it comes to using them as output, other aspects should be considered.
+
+Using a Microservice as Output in Sesam
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As data is moving out of a Sesam node in what we call sinks, Sesam presents its transformed entities as a list. This is the way in which Sesam exposes its data, albeit you can alter the number of entities in the exposed list. This can be done by adding the following property in your pipe configuration ``"batch_size": 1``. This property can alter the number of entities that is exposed in your list.
+
+As outlined previously in this section :ref:`interacting-with-a-microservice-in-sesam-5-2` both ``is_first`` and ``is_last`` in the push protocol used in Sesam comes into play when you expose your data.
+
+To exemplify how to utilize the request parameters present in the push protocol, regardless of ``"batch_size"``, the following ``Python code`` has been created:
+
+.. code-block:: python
+
+  # get entities from Sesam request
+  entities = request.get_json()
+
+  # looping through list of entities and enriching data
+  for entity in entities:
+    request_url = f"{base_url}/{entity["ressource"]}"
+    response = requests.get(request_url, headers=headers, auth=(f"{authorization}"))
+    if not response.ok:
+        logger.error(f"The following error occured whilst requesting data. Error: {response.content}")
+    
+    else:
+      enriched_entity = {**dict(entity), **dict(response.json())}
+      logger.info("Starting to stream data to Sesam...")
+      if entity["is_first"] == True:
+        yield "["
+        yield json.dumps(enriched_entity)
+        yield ','
+
+      if entity["is_last"] == True:
+        yield json.dumps(enriched_entity)
+        yield "]"
+        logger.info("---- Streaming done! ----")
+      
+      else:
+        yield json.dumps(enriched_entity)
+
+As can be seen from the above example, Sesam standardizes the way in which entities are exposed, how they can be enriched and finally how they are returned to Sesam in a streaming fashion. 
+
+.. seealso::
+
+  :ref:`concepts` > :ref:`concepts-streaming`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`sink_section` > :ref:`dataset_sink`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`developer-guide` > :ref:`json_push_protocol`
 
 .. _tasks-for-microservices-novice-5-2:
 
