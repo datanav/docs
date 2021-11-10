@@ -1,9 +1,19 @@
 Changelog
 =========
 
+2021-11-03
+----------
+* Added missing :ref:`is-uuid <is_uuid_dtl_function>` and :ref:`is-bytes <is_bytes_dtl_function>` DTL functions
+
+.. _changelog_2021_10_25:
+
+2021-10-25
+----------
+* Added a ``byte_order_mark`` property to the :ref:`csv_endpoint <csv_endpoint_sink>` and :ref:`xml_endpoint <xml_endpoint_sink>` sinks. If ``true`` these sinks will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. It's ``false`` by default and should only be used in conjunction with a UTF-8 encoding.
+
 .. _changelog_2021_10_11:
 
-2019-10-11
+2021-10-11
 ----------
 * The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness>` value
   from the "X-Dataset-Completeness" http request header, if it is present.

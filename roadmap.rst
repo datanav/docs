@@ -9,8 +9,20 @@ Roadmap
 This roadmap highlights some of features we are currently working on. This roadmap might be subject to
 change.
 
-Integrated data browsing
-------------------------
+Scalable architecture everywhere (Q4 2021)
+------------------------------------------
+
+Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
+some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
+slight differences in behaviour between the two variants.
+
+We are looking into how we can get the clustered architecture everywhere.
+
+This architecture is based on Kubernetes
+and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
+
+Integrated data browsing (Q4 2021)
+----------------------------------
 
 The current 'Databrowser' tool is hard to configure, not integrated into Management Studio and targeted at
 external users.
@@ -20,6 +32,13 @@ can do more efficient development. This new tool will replace the existing 'Data
 
 This feature will most likely only be available on the 'Scalable architecture',
 so it depends on the 'Scalable architecture everywhere' item on the roadmap.
+
+Self service VPN setup (Q4 2021)
+--------------------------------
+
+VPN setup can be requested through support.
+
+We are looking into how to automate this process so that the end user can do this process faster.
 
 Extensions
 ----------
@@ -31,18 +50,6 @@ We are looking at how to structure and describe microservices so that
 microservices can work and behave as builtin systems in Management Studio.
 
 This will also open up the possibility for us to turn the builtin systems into separate extensions.
-
-Scalable architecture everywhere
---------------------------------
-
-Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
-some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
-slight differences in behaviour between the two variants.
-
-We are looking into how we can get the clustered architecture everywhere.
-
-This architecture is based on Kubernetes
-and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
 Age based deletion marker compaction
 ------------------------------------
@@ -56,28 +63,12 @@ deletion marker it only has historic value.
 We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
 cleaned up.
 
-Logging data access
--------------------
-
-Most of the data in Sesam is structured as an immutable log, so any write or change to Sesam is
-automatically logged and audited. Reading of the data is only stored in rotated access logs that is not made
-available to the end user.
-
-We are looking into how to audit reads of data and make this available to the end user in a the form of a dataset.
-
 Expose invoices and contracts in the portal
 -------------------------------------------
 
 Invoices and contracts can be requested through support.
 
 We are looking into how to expose invoices and contracts in the portal to make them more accessible.
-
-Self service VPN setup
-----------------------
-
-VPN setup can be requested through support.
-
-We are looking into how to automate this process so that the end user can do this process faster.
 
 Durable data
 ------------

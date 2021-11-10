@@ -767,6 +767,10 @@ Completeness
 
 When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe.  One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
+.. WARNING::
+
+   Completeness is implictly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
+
 Properties
 ^^^^^^^^^^
 
@@ -1592,8 +1596,8 @@ already merged entities downstream.
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
    may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets. 
-   
+   though as this won't affect the order of the datasets.
+
    If config changes are required be aware of the following:
    Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
    For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
@@ -2140,7 +2144,7 @@ Properties
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used.
+       the ``query`` property us used. Note that this property might be case sensitive.
      -
      -
 
@@ -2160,7 +2164,7 @@ Properties
        able to support ``since`` markers. You can provide the name of the column to use
        for such queries here. This must be a valid column name in the ``table`` or ``query``
        result sets and it must be of a data type that supports larger or equal (">=") tests
-       for the ``table`` case.
+       for the ``table`` case. Note that this property might be case sensitive.
      -
      -
 
@@ -4356,6 +4360,8 @@ This transform will emit all child entities of its source
 entities. All entities in the ``$children`` property that have an
 ``_id`` property will be emitted. The parent entity will not be
 emitted.
+
+This transform should always be used in a separate pipe. If the ``emit_children`` transform is a part of a chained transform, Sesam won't be able to perform deletion tracking on the emitted child entities, as the parent entity will be removed from the sink dataset and not marked as deleted.
 
 Properties
 ^^^^^^^^^^
@@ -6690,6 +6696,13 @@ Properties
      - ``"\""``
      -
 
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
+     -
+
    * - ``encoding``
      - String
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
@@ -6839,6 +6852,13 @@ Properties
      - This can be set to ``false`` to make deleted entities appear in the XML output. The default is that
        deleted entities does not appear.
      - true
+     -
+
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
      -
 
    * - ``filename``
