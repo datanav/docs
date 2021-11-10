@@ -54,9 +54,7 @@ which can make P2P time consuming and expensive to manage.
 Therefore, amongst other things, new architectural principles
 have been developed. One of the more prominent ones being the ESB.
 
-.. seealso::
-
-  TODO
+.. _enterprise_service_bus:
 
 Enterprise Service Bus (ESB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,9 +88,8 @@ cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
 propelled what is called DDA.
 
-.. seealso::
 
-  TODO
+.. _data_driven_architecture:
 
 Data Driven Architecture (DDA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -126,10 +123,6 @@ to create flexible data flows and models.
 This can be achieved by always thinking ahead and leaving room for growth,
 which you will learn how to do throughout this course.
 
-.. seealso::
-
-  TODO
-
 .. _datahub-1-1:
 
 Datahub
@@ -152,15 +145,16 @@ A datahub shares data by connecting providers of data with consumers of
 data. As such, a datahub mediates and manages how data flows between systems
 and makes states of data visible to consumers outside the datahub.
 
-In a sense, you could say that a datahub is a digital representation of
-an enterprise and also what Sesam often becomes when it is used
-properly. As with any other technologies there are pros and cons.
+In a sense, you could say that a datahub is both a digital representation of
+an enterprise and what Sesam becomes when used properly.
+
+As with any other technologies there are pros and cons.
 Some of these are listed below, so you might be able to recognize them
 down the road.
 
 Pros:
 
-- Enterprise scope, i.e., runs on cloud, hybrid.
+- Enterprise scope, i.e., runs on cloud, on-prem, hybrid.
 
 - Creates visibility into all data.
 
@@ -183,56 +177,6 @@ Cons:
 - Does not operate well with silos.
 
 - Moves data asynchronously.
-
-#Todo Snakke om hvorfor Synchrounousity er pro & con.
-
-Synchronousity and pizza - NOT HOME HERE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Synchronousity
-
-Synchronousity is when an action or request is dependent on a response or reply.
-
-Example:
-
-Imagine having to pay for a pizza delivery in cash.
-The delivery person is dependent on receiving cash from you before providing the pizza.
-
-The upside for you is that you can pay in cash and the delivery person knows that you
-have confirmed the receivment of the pizza. The downside here is that the delivery person
-is dependent on you to come and take the pizza before moving on to other customers.
-And the pizza may become cold if you are slow.
-
-
-
-Asynchronousity
-
-Asynchronousity is when an action or request is not dependent on a response or reply.
-
-Example:
-
-Imagine now that you have already paid for the pizza which is on it's way to your door.
-The delivery person is not dependent on meeting you to provide the pizza, but can
-leave it outside your door and notifying you by SMS.
-
-The upside here is that the delivery person is not dependent on a response from you,
-but the downside is that if you do not see the notification you may very well go
-get the pizza when it has become cold.
-
-.. seealso::
-
-  TODO
-
-
-.. _sesam_world_map-1-1:
-
-Sesam world map
-~~~~~~~~~~~~~~~
-
-.. seealso::
-
-  TODO
-
 
 .. _the_parts_of_sesam-1-1:
 
@@ -300,8 +244,6 @@ Entities:
    A general pipeline flow in Sesam depicting the three central parts of a Sesam integration,
    systems, pipes and datasets. The arrows symbolize the direction of data flow.
 
-
-#TODO SKIPPER REVIEW FOR NÅ PGA ÅPEN PR
 
 .. seealso::
 
@@ -652,9 +594,9 @@ Systems are therefore the start and end points of every dataflow.
 Systems may cover other functionalities as well, but we will cover those special cases
 later.
 
-In this section we will show you an example of the most commom system in a Sesam installation, 
-the mssql system. We will also show how this system can connect to pipes to 
-either import or export data, depending on your need.  
+In this section we will show you an example of the most commom system in a Sesam installation,
+the mssql system. We will also show how this system can connect to pipes to
+either import or export data, depending on your need.
 
 The MSSQL system
 ^^^^^^^^^^^^^^^^
@@ -665,7 +607,7 @@ The MSSQL system
 
    MSSQL system config
 
-Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.  
+Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.
 
 .. figure:: ./media/mssql-system-status.png
    :align: right
@@ -921,7 +863,54 @@ When data reaches a pipe's dataset, the _id will be identical to what you define
 
 .. seealso::
 
-  TODO
+  Hello
+
+hello
+
+Synchronicity
+~~~~~~~~~~~~~~
+
+Synchronous Integrations
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The word Synchronous & Asynchronous has been mentioned for the above Integration Architectures,
+but what does it really mean?
+
+Synchronicity is when an action or request is dependent on a response or reply.
+
+Example:
+
+Imagine having to pay for a pizza delivery in cash.
+The delivery person is dependent on receiving cash from you before providing the pizza.
+
+The upside for you is that you can pay in cash and the delivery person knows that you
+have confirmed the receivment of the pizza. The downside here is that the delivery person
+is dependent on you to come and take the pizza before moving on to other customers.
+And the pizza may become cold if you are slow.
+
+Asynchronous Integrations
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Synchronicity is when an action or request is not dependent on a response or reply.
+
+Example:
+
+Imagine now that you have already paid for the pizza which is on it's way to your door.
+The delivery person is not dependent on meeting you to provide the pizza, but can
+leave it outside your door and notifying you by SMS.
+
+The upside here is that the delivery person is not dependent on a response from you,
+but the downside is that if you do not see the notification you may very well go
+get the pizza when it has become cold.
+
+.. seealso::
+   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1`:
+
+   * :ref:`different-types-of-architectures-1-1`
+   * :ref:`point-to-point-1-1`
+   * :ref:`enterprise_service_bus`
+   * :ref:`data_driven_architecture`
+   * :ref:`datahub-1-1
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
 
