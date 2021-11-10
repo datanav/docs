@@ -1,7 +1,7 @@
 .. _dtl-advanced:
 
-DTL: Advanced
--------------
+Advanced
+--------
 
 
 .. _filter-as-an-expression:

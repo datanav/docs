@@ -1,3 +1,5 @@
+.. _projects-and-infrastructure:
+
 =========================
 Projects & infrastructure
 =========================
@@ -9,7 +11,7 @@ Projects & infrastructure
 .. toctree::
    :maxdepth: 2
 
-   Projects & Infrastructure: Beginner <020_Beginner>
-   Projects & Infrastructure: Novice <030_Novice>
-   Projects & Infrastructure: Intermediate <040_Intermediate>
-   Projects & Infrastructure: Epilogue <060_Epilogue>
+   Beginner <020_Beginner>
+   Novice <030_Novice>
+   Intermediate <040_Intermediate>
+   Epilogue <060_Epilogue>

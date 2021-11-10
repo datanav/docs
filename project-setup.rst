@@ -1,3 +1,5 @@
+.. _setting-up-a-new-sesam-project:
+
 ------------------------------
 Setting up a new Sesam project
 ------------------------------
@@ -239,7 +241,7 @@ When setting up automatic CI testing for a Sesam project, the following check sh
 
 Another check that should be considered is:
 
-- Only pull requests (PR) that are approved by another person in the team should be valid (this is however, )
+- Only pull requests (PR) that are approved by another person in your team should be merged.
 
 CI node
 =======
@@ -255,11 +257,11 @@ Usually, the CI node could be a smaller instance than the production node, as th
 Jenkins
 =======
 
-This section describes how to set up Jenkins build with GCloud.
+This section describes how to set up Jenkins build with Google Cloud.
 
-Jenkins is a CI/CD tool that does not support single build pipeline. The reason for the need of single build pipeline is that we upload the node config to a single node, if there are mulitple builds running at the same time there will be pushed multiple configs to the one node, which will result into tests not completing.
+Jenkins is a CI/CD tool that does not immediately support a single build pipeline. The reason for the need of a single build pipeline is that we upload the node config to a single node, if there are mulitple builds running at the same time, multiple configs will be pushed to one node, which will result in tests not completing. You should therefore consider the following, if choosing to use Jenkins as your CI/CD tool.
 
-To set up builds in jenkins, you will need to add a few file to your repository
+To set up builds in jenkins, you will need to add a few files to your repository
 my-project-directory
 ::
 
@@ -360,7 +362,7 @@ The files under the sesam folder here describes the files that should exist in t
 
 cloudbuild.yaml:
 
-cloudbuild.yaml A build config file defines the fields that are needed for Cloud Build to perform your tasks. You'll need a build config file if you're starting builds using the gcloud command-line tool or build triggers. You can write the build config file using the YAML or the JSON syntax.
+cloudbuild.yaml A build config file defines the fields that are needed for Cloud Build to perform your tasks. You'll need a build config file if you are starting builds using the gcloud command-line tool or build triggers. You can write the build config file using the YAML or the JSON syntax.
 
 ::
 
@@ -380,7 +382,7 @@ cloudbuild.yaml A build config file defines the fields that are needed for Cloud
 
 Dockerfile:
 
-The dockerfile describes the contianer that should run when the build process is executed. This container should be deployed to the repository that is used
+The dockerfile describes the container that should run when the build process is executed. This container should be deployed to the repository that is used, i.e:
 
 ::
 
@@ -399,12 +401,12 @@ The dockerfile describes the contianer that should run when the build process is
   RUN tar -xf sesam.tar.gz
   RUN rm sesam.tar.gz
 
-This dockerfile builds a container with the sesam client that is needed to execute the build. Replace [Your name] with the name of the person responsible for the build process, alongside his or hers email-address.
+This dockerfile builds a container with the sesam client that is needed to execute the build. Replace [Your name] with the name of the person responsible for the build process, alongside with his or hers email-address.
 
 Azure DevOps
 ============
 
-Azure DevOps is a bit easier to set up with single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
+Azure DevOps is a bit easier to set up with a single build pipeline. You will need to add the following config to your Azure DevOps setup under Pipelines
 
 ::
 
@@ -447,13 +449,13 @@ Branch permissions are also needed to not be able to merge a Pull Request unless
 
 Use the default settings.
 
-You will also need to turn on ``Require a minimum number of reviewers``, and set it to ``1`` and ``Check for linked work items``. This makes it Easier to trace and close the tasks/issues for the Pull Request.
+You will also need to turn on ``Require a minimum number of reviewers``, and set it to ``1`` and ``Check for linked work items``. This makes it easier to trace and close the tasks/issues for the Pull Request.
 
 These settings are required for your main branches ``develop`` and ``master``.
 
-Since the ``trigger`` parameter is set to ``none``, the build process will only trigger on PR's. There is no need to build ``master`` and ``develop`` after merge.
+Since the ``trigger`` parameter is set to ``none``, the build process will only trigger on Pull Requests. There is no need to build ``master`` and ``develop`` after merge.
 
-Note if there is support for parallel builds on the agent pool you will need to disable this so that only one build process runs and the second build is queued up. This can be done by adding capability on the build agent. You will also need to add a this in the yaml file to enable this.
+Note if there is support for parallel builds on the agent pool you will need to disable this so that only one build process runs and the second build is queued up. This can be done by adding capability on the build agent. You will also need to add this in the .yaml file to enable it.
 Add user capabilities in the agent pool (key value pair), key = Limit and value = DisAbleParallel
 
 Your yaml file:
@@ -485,7 +487,7 @@ Whether setting up automatic deployment of a Sesam configuration is a disputed t
 GitHub Autodeployer microservice
 ================================
 
-One way to easy set up automatic deployment of your Sesam configuration is to use the GitHub Autodeployer microservice. This is a microservice that you can configure in your Sesam node that at given intervals will check the configured Git repository for changes. If any changes to the repo is found, it will read the configuration from the repo and deploy it to the node.
+One way to easily set up automatic deployment of your Sesam configuration is to use the GitHub Autodeployer microservice. This is a microservice that you can configure in your Sesam node that at given intervals will check the configured Git repository for changes. If any changes to the repo is found, it will read the configuration from the repo and deploy it to the node.
 
 In the configuration you can either specify a branch or a tag. Use tags when deploying a release branch with a version number (which should be a tag in the repo). If no tag is specified, the autodeployer will use the branch variable, which defaults to "master" if not set. Depending on the specified branch or tag, the autodeployer will compare the current Sesam configuration against the configuration in the repository, if any changes are found, the deployer will read the updated configuration from the repository and deploy it to the node.
 

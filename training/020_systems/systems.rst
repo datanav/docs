@@ -19,7 +19,7 @@ customized solutions when Sesams built-in systems cannot.
 .. toctree::
    :maxdepth: 2
 
-   Systems: Beginner <020_Beginner>
-   Systems: Novice <030_Novice>
-   Systems: Intermediate <040_Intermediate>
-   Systems: Epilogue <060_Epilogue>
+   Beginner <020_Beginner>
+   Novice <030_Novice>
+   Intermediate <040_Intermediate>
+   Epilogue <060_Epilogue>

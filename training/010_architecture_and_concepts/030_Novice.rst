@@ -1,7 +1,7 @@
 .. _architecture-and-concepts-novice-1-2:
 
-Architecture and Concepts: Novice
----------------------------------
+Novice
+------
 
 .. _joining-data-1-2:
 
@@ -374,22 +374,21 @@ based on the declared DTL functions, this would produce the following:
 Change tracking & data delta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`All entities stored inside sesam have a
-\_hash <https://docs.sesam.io/entitymodel.html?highlight=_hash>`__
-value. This is a quantification of an entity and is calculated every
-time an entity is processed by a pipe. If the \_hash value changes or is
-new, the entity will be stored as a new version in dataset. We call this
-change in \_hash value a data-delta.
+Change tracking and data delta allows Sesam to process and update data only when it changes. This ensures minimal latency and increased agility both when importing data from source systems and when processing data through internal pipes towards target systems.
 
-Any data-delta for an entity in a dataset causes downstream pipes to see
-this as a new sequence number they haven’t yet read. This in turn makes
-the pipe process the entity. If the processed entity does not exist or
-gets a new \_hash in the output of the pipe, it will cause an update to
-the output dataset.
+Firstly, when reading data from a source system, if supported by the source, it may be possible to just ask for the data that have changed since the last time. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
+
+Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``_hash`` property will be created. This ``_hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``_hash`` value changes, any downstream pipes register this change and recognizes it as a new sequence number that needs to be processed again.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-datasets`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-change-tracking`
+
+  :ref:`developer-guide` > :ref:`entity_data_model`
+
+  :ref:`developer-guide` > :ref:`entity_data_model` > :ref:`reserved-fields`
 
 .. _tasks-for-architecture-and-concepts-novice-1-2:
 

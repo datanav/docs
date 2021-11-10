@@ -1,8 +1,8 @@
 
 .. _microservices-beginner-5-1:
 
-Microservices: Beginner
------------------------
+Beginner
+--------
 
 
 .. _what-is-a-microservice-5-1:
@@ -31,9 +31,9 @@ system configs and their logs can be inspected through the system's **Status** t
 
 .. seealso::
 
-  Getting started: :ref:`getting-started-microservices`
+  :ref:`getting-started` > :ref:`getting-started-microservices`
 
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
 
 .. _why-use-microservices-in-sesam-5-1:
 
@@ -56,9 +56,9 @@ for microservices to reuse and tweak to your specific needs.
 
 .. seealso::
 
-  Sesam's GitHub community: https://github.com/sesam-community
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
 
-  Sesam's DockerHub community: https://hub.docker.com/u/sesamcommunity
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
 .. _how-are-microservices-used-in-sesam-5-1:
 
@@ -85,8 +85,8 @@ the following information about the SAP system:
 
 Looking throught the list of Systems under :ref:`configuration`
 we see that Sesam does not have a built-in connector for OData.
-However we are in luck, browsing the
-`Sesam community at GitHub <https://github.com/sesam-community>`_
+However we are in luck, browsing
+`Sesam's community at GitHub <https://github.com/sesam-community>`_
 we find there are several OData microservices to choose from.
 
 .. TODO: get sap-odata-source into sesam-community!
@@ -172,18 +172,15 @@ We will look more into this in the sections below.
 
 .. seealso::
 
-  .. Testing to add refs as bread crumbs with links in each step except first step.
-  .. Is this reader-friendly or too much?
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
-  Learn Sesam > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
 
-  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
 
   `OData (Open Data Protocol) <https://www.odata.org/>`_
+
+  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
 
 .. _microservice-hosting-5-1:
 
@@ -193,17 +190,17 @@ Microservice hosting
 .. sidebar:: Summary
 
   - Microservice source code is hosted in `Sesam's community at GitHub <https://github.com/sesam-community>`_
-  - Microserice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  - Microservice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
   - Auto-build scripts publish docker images to Sesam's community at DockerHub
   - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
-We have already touched on the Sesam Community at GitHub and DockerHub
+We have already touched on Sesam's communities at GitHub and DockerHub
 to find available microservices. Let us take a more detailed look at how
 microservice hosting is done with Sesam.
 
-There is the `Sesam Community at GitHub <https://github.com/sesam-community>`_
+We have `Sesam's community at GitHub <https://github.com/sesam-community>`_
 for hosting microservice source code,
-and there is the `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+and we have `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 for hosting microservice docker images.
 
 When writing microservices we recommend putting the source code into
@@ -212,7 +209,7 @@ Sesam's community at GitHub so that it can be shared and reused in other project
 
 By configuring the microservices using Sesam's auto-build script, when the
 source code is pushed to GitHub, the script will automatically build a docker image
-and publish it to Sesam's DockerHub community.
+and publish it to Sesam's community at DockerHub.
 
 From there the microservices will be available for use in any Sesam project.
 
@@ -221,9 +218,9 @@ for more information on how to use the auto-build script and also how to contrib
 
 .. seealso::
 
-  `Sesam Community at GitHub <https://github.com/sesam-community>`_
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
 
-  `Sesam Community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 
   `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
@@ -250,42 +247,61 @@ Pipe source/sink/http
 
   TODO
 
-.. _types-of-microservices-5-1:
+.. _categories-of-microservices-5-1:
 
-Types of Microservices
-~~~~~~~~~~~~~~~~~~~~~~
+Categories of Microservices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Interne
+Extending on the topic of running microservices in Sesam, the following categories of microservices will be elaborated on in this section:
 
-   http-transform
+  - Internal microservices
+  - External microservices
 
-   Source, sink (begge i 1?)
+Both internal and external microservices will be defined in a Sesam node as systems. However, microservices that connect to a Sesam node via the `Service API <https://docs.sesam.io/api.html>`_ can also be seen on the `Sesam Community on GitHub <https://github.com/sesam-community>`_. These kinds of microservices will not be elaborated on in this section, albeit you should be aware that these microservices exist and that they are also a viable option when extending upon default functionality.
 
-   Eksterne
 
-   Monitorering av Sesam
+Internal microservices
+######################
+
+These kinds of microservices are the ones used with regards to Sesam dataflows. Therefore, these are also the most commonly used. Internal microservices can be used at specific points in time with regards to a dataflow. As such, internal microservices can be used in the beginning, in the middle or at the end of a dataflow, which will respectively, in a Sesam node, turn out as a source system, http-transform system or sink system. Many of these internal microservices can be found on the `Sesam Community on GitHub <https://github.com/sesam-community>`_.
+
+
+External microservices
+######################
+
+External microservices can be hosted inside your Sesam node as a system or outside of your Sesam node in your preferred docker-compatible solution like for example Kubernetes. They do not read or write data into or out of Sesam with regards to a defined dataflow. Rather, they implement their functionality in such a way that does not affect dataflows.
+
+An example of such a microservice is the `Github Autodeployer <https://github.com/sesam-community/github-autodeployer>`_. This microservice connects to the GitHub API and uploads the latest version of files present on the GitHub repository in question to a Sesam node. This allows for continous integration/continous deployment (CICD) workflows and allows for easy peer reviews as changes are made to specific pipe configs.
+
+Additional examples of external examples are listed below:
+
+    - `Statuspage <https://github.com/sesam-community/statuspage>`_
+    - `Statuspage Monitoring Pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
+
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
 
-.. _naming-convention-5-1:
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`pipe-interaction-with-systems-2-1`
 
-Naming Convention this should probs be under architecture namegiving conventions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  `Sesam Community at GitHub <https://github.com/sesam-community>`_
 
-\_id standard system naming convention (source/sink system name)
-
-Repo/microservice naming convention recommendation:
-sesam-<system>[-<special-functionality>]
-
-.. seealso::
-
-  TODO
-
-.. _tasks-for-microservices-beginner-tasks-5-1:
+  `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
 Tasks for Microservices: Beginner – Tasks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run a microservice in Sesam [could be sink, http, source]
+#. *What is a microservice in Sesam?*
+
+#. *Why do we use microservices in Sesam?*
+
+#. *Make a microservice successfully run in Sesam.*
+
+    Hint: `Sesam Community at GitHub <https://github.com/sesam-community>`_ is a good place to get inspiration.
+
+    Condition: Successfull, in this case, means that the docker image spins up as intended.
+
+#. *Read data from your newly created microservice into a pipe.*
+
+    Condition: Make sure data flows through the pipe and creates a dataset.

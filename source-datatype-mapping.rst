@@ -73,7 +73,7 @@ column types should be both forwards and backwards compatible with older and fut
 
    * - ``BIT``
      - Boolean
-     - ``0`` is ``true`` and ``1`` is ``false``
+     - ``0`` is ``false`` and ``1`` is ``true``
 
    * - ``VARCHAR``
      - String
