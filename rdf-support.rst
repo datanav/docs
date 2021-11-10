@@ -94,7 +94,7 @@ RDF output
 Sesam has several ways of outputting RDF data:
 
 * :ref:`The SPARQL sink <sparql_sink>`
-* :ref:`The SDShare Push sink <sdshare_push_sink>`
+* :ref:`The SDShare Push sink <sdshare_sink>`
 * :ref:`The Databrowser sink <databrowser_sink>`
 * :ref:`The HTTP endpoint sink <http_endpoint_sink>`
 

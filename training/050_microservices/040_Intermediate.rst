@@ -1,8 +1,8 @@
 
 .. _microservices-intermediate-5-3:
 
-Microservices: Intermediate
----------------------------
+Intermediate
+------------
 
 
 .. _using-a-microservice-as-output-in-sesam-5-3:

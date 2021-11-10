@@ -1,8 +1,8 @@
 
 .. _microservices-beginner-5-1:
 
-Microservices: Beginner
------------------------
+Beginner
+--------
 
 
 .. _what-is-a-microservice-5-1:
@@ -31,9 +31,9 @@ system configs and their logs can be inspected through the system's **Status** t
 
 .. seealso::
 
-  Getting started: :ref:`getting-started-microservices`
+  :ref:`getting-started` > :ref:`getting-started-microservices`
 
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
 
 .. _why-use-microservices-in-sesam-5-1:
 
@@ -172,18 +172,15 @@ We will look more into this in the sections below.
 
 .. seealso::
 
-  .. Testing to add refs as bread crumbs with links in each step except first step.
-  .. Is this reader-friendly or too much?
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
-  Learn Sesam > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
 
-  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`how-to-create-a-system-with-templates-2-1`
-
-  Learn Sesam > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`environment-variables-secrets-2-1`
 
   `OData (Open Data Protocol) <https://www.odata.org/>`_
+
+  Env.var / secrets naming convensions (Should add a section about this under Architecture & Concepts)
 
 .. _microservice-hosting-5-1:
 
@@ -193,7 +190,7 @@ Microservice hosting
 .. sidebar:: Summary
 
   - Microservice source code is hosted in `Sesam's community at GitHub <https://github.com/sesam-community>`_
-  - Microserice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  - Microservice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
   - Auto-build scripts publish docker images to Sesam's community at DockerHub
   - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
@@ -256,7 +253,7 @@ Categories of Microservices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Extending on the topic of running microservices in Sesam, the following categories of microservices will be elaborated on in this section:
-  
+
   - Internal microservices
   - External microservices
 
@@ -276,17 +273,17 @@ External microservices can be hosted inside your Sesam node as a system or outsi
 
 An example of such a microservice is the `Github Autodeployer <https://github.com/sesam-community/github-autodeployer>`_. This microservice connects to the GitHub API and uploads the latest version of files present on the GitHub repository in question to a Sesam node. This allows for continous integration/continous deployment (CICD) workflows and allows for easy peer reviews as changes are made to specific pipe configs.
 
-Additional examples of external examples are listed below:  
+Additional examples of external examples are listed below:
 
     - `Statuspage <https://github.com/sesam-community/statuspage>`_
     - `Statuspage Monitoring Pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
 
 
 .. seealso::
-  
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
 
-  Systems: Beginner: :ref:`pipe-interaction-with-systems-2-1`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1` > :ref:`pipe-interaction-with-systems-2-1`
 
   `Sesam Community at GitHub <https://github.com/sesam-community>`_
 
@@ -300,7 +297,7 @@ Tasks for Microservices: Beginner – Tasks
 #. *Why do we use microservices in Sesam?*
 
 #. *Make a microservice successfully run in Sesam.*
-  
+
     Hint: `Sesam Community at GitHub <https://github.com/sesam-community>`_ is a good place to get inspiration.
 
     Condition: Successfull, in this case, means that the docker image spins up as intended.

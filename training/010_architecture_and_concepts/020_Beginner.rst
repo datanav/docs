@@ -1,7 +1,7 @@
 .. _architecture-and-concepts_beginner-1-1:
 
-Architecture and Concepts: Beginner
------------------------------------
+Beginner
+--------
 
 .. _different-types-of-architectures-1-1:
 
@@ -305,13 +305,13 @@ Entities:
 
 .. seealso::
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`systems-1-1`
-  
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`systems-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`datasets-1-1`
- 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`datasets-1-1`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`entities-json-keyvalpairs-1-1`
 
 .. _the_sesam_portal-1-1:
 
@@ -369,7 +369,7 @@ needed to start working with Sesam, namely the “Pipes” page and the
 
 .. seealso::
 
-  Tools: :ref:`sesam-management-studio`
+  :ref:`tools` > :ref:`sesam-management-studio`
 
 Pipes
 ^^^^^
@@ -441,7 +441,7 @@ Execution log:
 
 .. seealso::
 
-  Tools - Sesam Management Studio: :ref:`management-studio-pipes`
+  :ref:`tools` > :ref:`sesam-management-studio` > :ref:`management-studio-pipes`
 
 Systems
 ^^^^^^^
@@ -495,7 +495,7 @@ Status:
 
 .. seealso::
 
-  Tools - Sesam Management Studio: :ref:`management-studio-systems`
+  :ref:`tools` > :ref:`sesam-management-studio` > :ref:`management-studio-systems`
 
 
 .. _working-language-json-1-1:
@@ -633,7 +633,7 @@ name with an example:
 
 .. seealso::
 
-  Best Practices - Data modelling in Sesam: :ref:`best-practice-naming-conventions`
+  :ref:`best-practices` > :ref:`best-practice` > :ref:`best-practice-naming-conventions`
 
 .. _systems-1-1:
 
@@ -677,9 +677,9 @@ Once the connection is open the node can extract data from the tables in the dat
 
 .. seealso::
 
-  Learn Sesam: :ref:`systems-beginner-2-1`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
-  Developer Guide - Service Configuration: :ref:`system_section`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-beginner-2-1`
 
 .. _pipes-1-1:
 
@@ -705,9 +705,9 @@ Where to make new ref 1.1.6
 
 .. seealso::
 
-  Learn Sesam: :ref:`dtl-beginner-3-1`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section`
 
-  Developer Guide - Service Configuration: :ref:`pipe_section`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`
 
 .. _datasets-1-1:
 
@@ -748,13 +748,13 @@ Datasets are also often the source for internal pipes.
 
 .. seealso::
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`entities-json-keyvalpairs-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`naming-conventions-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
-  Learn Sesam - DTL: Beginner: :ref:`dataset-id-3-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`dataset-id-3-1`
 
 .. _datasets-vs-tables-1-1:
 
@@ -827,17 +827,17 @@ Sesam datasets and database tables that is important to point out:
 
 .. seealso::
 
-  Concepts: :ref:`concepts-datasets`
+  :ref:`concepts` > :ref:`concepts-datasets`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`id-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`id-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`entities-json-keyvalpairs-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`entities-json-keyvalpairs-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`naming-conventions-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
-  Learn Sesam - Architecture & Concepts: Beginner: :ref:`pipes-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
-  Learn Sesam - DTL: Beginner: :ref:`dataset-id-3-1`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`dataset-id-3-1`
 
 .. _entities-json-keyvalpairs-1-1:
 

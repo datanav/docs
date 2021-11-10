@@ -202,7 +202,7 @@ are micro-services to which a generic JSON push sink can send data.
 To set up a custom sink a micro-service that implements the :doc:`JSON push protocol <json-push>` should be
 developed and running.
 
-Once this is running it is possible to define a pipe in Sesam where the sink is a :ref:`JSON Push Sink <json_push_sink>`.
+Once this is running it is possible to define a pipe in Sesam where the sink is a :ref:`JSON Push Sink <json_sink>`.
 All data read from the pipe will be pushed to the sink.
 
 Sinks can be used to sit in front of legacy systems for no Sesam adaptor exists. The main job of these sinks is to make

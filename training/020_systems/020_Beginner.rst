@@ -1,7 +1,7 @@
 .. _systems-beginner-2-1:
 
-Systems: Beginner
------------------
+Beginner
+--------
 
 .. _what-is-a-system-in-sesam-2-1:
 
@@ -36,9 +36,9 @@ pipe configs.
 
 .. seealso::
 
-  Concepts - Configuration: :ref:`concepts-systems`
+  :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-systems`
 
-  Developer Guide - Service configuration: :ref:`system_section`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
 .. _pipe-interaction-with-systems-2-1:
 
@@ -65,12 +65,11 @@ There are three ways a pipe can interact with a system:
 
 .. seealso::
 
-  Concepts - Configuration: :ref:`concepts-pipes`
+  :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-pipes`
 
-  Architecture and Concepts: Beginner: :ref:`pipes-1-1`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
-  DTL: Beginner: :ref:`pipes-where-dtl-executes-3-1`
-
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`pipes-where-dtl-executes-3-1`
 
 .. _how-to-create-a-system-with-templates-2-1:
 
@@ -125,11 +124,11 @@ You can check the connectivity status by clicking the **Status** tab.
 
 .. seealso::
 
-  Best Practices - Data modelling in Sesam: :ref:`best-practice-naming-conventions`
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`url_system`
 
-  Developer Guide - Service Configuration: :ref:`url_system`
+  :ref:`best-practices` > :ref:`best-practice` > :ref:`best-practice-naming-conventions`
 
-  DTL - Beginner: :ref:`dtl-in-practice-3-1`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`dtl-in-practice-3-1`
 
 
 .. _environment-variables-secrets-2-1:
@@ -221,9 +220,9 @@ No changes to the actual system config is required.
 
 .. seealso::
 
-  Concepts - Configuration: :ref:`concepts-environment-variables`
+  :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-environment-variables`
 
-  Concepts - Configuration: :ref:`concepts-secrets`
+  :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-secrets`
 
 .. _json-push-pull-protocol-2-1:
 

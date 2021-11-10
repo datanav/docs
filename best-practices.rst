@@ -1,3 +1,5 @@
+.. _best-practices:
+
 ==============
 Best Practices
 ==============
@@ -5,7 +7,8 @@ Best Practices
 .. toctree::
    :maxdepth: 2
 
-   Data modelling in Sesam <data-modelling>
-   Working on a Sesam project <project-workflow>
-   Sesam in Microsoft Azure <azure>
-
+   Planning a Sesam project <pre-planning>
+   Setting up a Sesam environment <setup-environment>
+   Collect and Connect <collecting_data>
+   Data enrichment <data-enrichment>
+   Sharing data <sharing-data>

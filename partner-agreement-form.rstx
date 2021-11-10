@@ -1,0 +1,38 @@
+Partner Agreement
+=================
+
+.. code-block:: text
+
+   concerning
+   SESAM SaaS Services
+
+   SESAM.io AS
+   Org.no.: 922409676
+   ("Sesam")
+
+   is entering into a commercial business partner agreement with
+
+   [Partner]
+   Org.no.: *
+   ("Partner")
+
+   The agreement is signed in two copies, one for each Party:
+
+   Place, date:                  Place, date:
+   Name/title: Axel Borge, CEO   Name/title: [Partner to fill in]
+   Sesam.io AS                   PARTNER
+
+.. raw:: latex
+
+   \newpage
+
+.. include:: partner-agreement-part-1.rst
+
+.. code-block:: text
+
+   Contactperson Sesam:          Contactperson *Partner:
+   Name:                         Name:
+   Phone no:                     Phone no:
+   Email:                        Email:
+
+.. include:: partner-agreement-part-2.rst

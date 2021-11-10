@@ -1,8 +1,8 @@
 
 .. _microservices-advanced-5-4:
 
-Microservices: Advanced
------------------------
+Advanced
+--------
 
 
 .. _testing-5-4:

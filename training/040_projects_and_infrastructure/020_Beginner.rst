@@ -1,7 +1,7 @@
 .. _projects-and-infrastructure-beginner-4-1:
 
-Projects & Infrastructure Beginner
-----------------------------------
+Beginner
+--------
 
 .. _sesam-node-gui-4-1:
 
@@ -59,13 +59,13 @@ Finally, the "Subscription" tab. This tab is your, you could say, "manage my Ses
 
 .. seealso::
 
-  Learn Sesam > Architecture & Concepts: :ref:`systems-1-1`
+  :ref:`getting-started` > :ref:`getting-started-microservices`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`microservice_system`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`systems-1-1`
   
-  Learn Sesam > Architecture & Concepts: :ref:`pipes-1-1`
-
-  Getting started: :ref:`getting-started-microservices`
-
-  Developer Guide > Service Configuration > Systems: :ref:`microservice_system`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
 .. _sesam-cli-4-1:
 
@@ -109,11 +109,11 @@ Finally, alteration to environment variables, i.e. adding new ones or removing n
 
 .. seealso::
 
-  `Sesam Command Line Interface repository <https://github.com/sesam-community/sesam-py>`_
+  :ref:`best-practices` > :ref:`project-workflow` > :ref:`setting-up-a-new-sesam-project`
 
-  Tools > Sesam Client: :ref:`concepts-sesam-client`
+  :ref:`tools` > :ref:`sesam-client`
 
-  Best Practices > Working on a Sesam Project: :ref:`setting-up-a-new-sesam-project`
+  `Sesam CLI GitHub repository <https://github.com/sesam-community/sesam-py>`_
 
 .. _testing-and-testdata-4-1:
 
@@ -211,11 +211,11 @@ When the above pipe completes a run, given that the property ``"condition": "$EN
 
 .. seealso::
 
-  Learn Sesam > DTL: Data Transformation Language: :ref:`dtl-beginner-3-1`
+  :ref:`best-practices` > :ref:`project-workflow` > :ref:`setting-up-a-new-sesam-project`
 
-  Tools > Sesam Client: :ref:`concepts-sesam-client`
+  :ref:`tools` > :ref:`sesam-client`
 
-  Best Practices > Working on a Sesam Project: :ref:`setting-up-a-new-sesam-project`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`
 
 .. _documentation-4-1:
 
@@ -238,9 +238,9 @@ The Sesam Documentation
 
 The Sesam documentation can be found here: `Sesam documentation <https://docs.sesam.io/>`_. The documentation consists of anything from general topics to more technically specific topics. With regards to working on a project, the following links might be of particular interest to you:
 
-- `Getting Started <https://docs.sesam.io/getting-started.html>`_
-- `Best Practices <https://docs.sesam.io/best-practices.html>`_
-- `Developer Guide <https://docs.sesam.io/developer-guide.html>`_
+- :ref:`getting-started`
+- :ref:`best-practices`
+- :ref:`developer-guide`
 
 In addition, there is also the search function available on the Sesam documentation. This function is quite handy in case you want to search for something specific as you can search through the whole documentation.
 
@@ -254,16 +254,15 @@ DTL is in some aspects similar to any programming language you might know of. It
 
   - when searching for specific DTL functions in the DTL documentation, search by hitting ``Ctrl/Cmd + f`` and type in the specific DTL function you want to look at in the search dropdown.
 
-  - the `Service Configuration <https://docs.sesam.io/configuration.html>`_ is a good resource to look at when wanting to set up a new pipe and/or system.
-
+  - the :ref:`configuration` is a good resource to look at when wanting to set up a new pipe and/or system.
 
 .. seealso::
 
-  Learn Sesam > Projects & Infrastructure > Projects & Infrastructure Beginner: :ref:`sesam-node-gui-4-1`
-
   The Sesam Documentation: :ref:`sesam-master-data-hub`
 
-  Developer Guide > Service Configuration: :ref:`configuration`
+  :ref:`developer-guide` > :ref:`configuration`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`sesam-node-gui-4-1`
 
 .. _authentication&authorization-4-1:
 
@@ -282,11 +281,14 @@ To create a JWT you need to navigate to the following page:
 
 .. seealso::
 
-  Sesam in the Wild: :ref:`sesam-in-the-wild-beginner-6-1`
+  :ref:`sesam-in-the-wild` > :ref:`sesam-in-the-wild-beginner-6-1`
 
-  Developer Guide: :ref:`api-top`
+  :ref:`developer-guide` > :ref:`api-top`
 
-  Tools > Databrowser: :ref:`databrowser_ini_authorization_via_jwt_token`
+.. I think we should avoid linking to the databrowser as it is in the process of being deprecated.
+.. I'll leave the link in the source for now, but as a comment so it won't show up in the docs.
+
+  Tools > Databrowser > :ref:`databrowser_ini_authorization_via_jwt_token`
 
 .. _members-roles-and-permissions-4-1:
 
@@ -319,7 +321,7 @@ Permissions can be set and altered for:
 
 .. seealso::
 
-  Developer Guide > Security: :ref:`security_subscriptions_users_roles_and_permissions`
+  :ref:`developer-guide` > :ref:`security` > :ref:`security_subscriptions_users_roles_and_permissions`
 
 .. _tasks-for-projects-infrastructure-beginner-4-1:
 

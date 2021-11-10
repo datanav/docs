@@ -1,8 +1,8 @@
 
 .. _projects-infrastructure-intermediate-4-3:
 
-Projects & Infrastructure: Intermediate
----------------------------------------
+Intermediate
+------------
 
 .. _dev-ci-test-prod-nodes-4-3:
 

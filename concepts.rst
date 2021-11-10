@@ -1,3 +1,5 @@
+.. _concepts:
+
 ========
 Concepts
 ========
@@ -150,7 +152,7 @@ Sinks
 
 A :ref:`sink <sink_section>` is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
 
-Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_push_sink>` enables entities to be pushed to custom microservices or other Sesam service instances.
+Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_sink>` enables entities to be pushed to custom microservices or other Sesam service instances.
 
 .. image:: images/pipes-sink.png
     :width: 800px
@@ -197,6 +199,9 @@ Service Metadata
 
 The :ref:`service metadata <service_metadata_section>` is a singleton configuration entity that is used for service-wide settings.
 
+
+.. _concepts-features:
+
 Features
 --------
 
@@ -235,7 +240,7 @@ The :ref:`dataset sink <dataset_sink>` is capable of detecting that entities hav
 Dependency Tracking
 ===================
 
-One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property ``customer_id`` that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new ``customer-with-address`` structure that includes the address as a property. To do this they can use the :ref:`hops <hops_function>` function to connect the customer and address. This DTL transform forms part of a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed.
+One of the really smart things that Sesam can do is to understand complex dependencies in DTL. This is best described with an example. Imagine a dataset of customers and a dataset of addresses. Each address has a property ``customer_id`` that is the primary key of the customer entity to which it belongs. A user creates a DTL transform that processes all customers and creates a new ``customer-with-address`` structure that includes the address as a property. To do this they can use the :ref:`hops <hops_dtl_function>` function to connect the customer and address. This DTL transform forms part of a pipe and as such when a customer entity is updated, added or deleted it will be at the head of the dataset log and get processed the next time the pump runs. But what if the address changes? As far as the expected output the customer itself has also changed.
 
 This is in essence a problem of cache invalidation of complex queries. With Sesam, we have solved the problem. We are empowered to solve the problem thanks to our dedicated transform language. This allows us to introspect the transform to see where the dependencies are. Once we understand the dependencies we can create data structures and events that are able to understand that a change to an address should put a corresponding customer entity at the front of the dataset log again. Once it is there it will be pulled the next time the pump is run and a new customer entity containing the updated address is exposed.
 
@@ -255,11 +260,16 @@ There are many possible reasons why a pipe may fall out of sync. Configuration m
 Namespaces
 ==========
 
-:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:foo:bar"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``foo`` in this case is the namespace and ``bar`` is the identifier.
+:ref:`Namespaces <best-practice-namespace>` are inspired by `RDF <https://www.w3.org/RDF/>`_ (The Resource Description Framework). You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:global-person:john-doe"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``global-person`` in this case is the namespace and ``john-doe`` is the identifier.
 
 Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
 
 A namespaced identifier is a unique reference to an abstract thing. It is an identifer. In Sesam it is not a globally unique identifier, but it is a unique identifier inside one Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
+
+Namespaced identifiers and properties with namespaces will automatically expand to fully qualified URIs when exporting to RDF. URIs in RDF are similarly collapsed into namespaced identifiers and properties with namespaces on import. They can also be expanded and collapsed using DTL.
+
+Sesam can utilize RDF for input, transformation or producing data for external consumption
+`<https://docs.sesam.io/rdf-support.html?highlight=rdf#>`
 
 .. _concepts-global-datasets:
 
@@ -344,5 +354,8 @@ The available channels are:
 - ``nightly`` is released every night. Use this in development environments.
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
+.. Note::
+  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age. 
+  
 Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to Monday. 
 Security hotfixes will not wait for the scheduled window. Downgrades are not supported. 
