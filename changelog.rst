@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2021-11-11
+----------
+* Added a ``encode_error_strategy`` property to the :ref:`CSV endpoint <csv_endpoint_sink>` - it tells the sink how to deal with encoding errors when the encoding is different from "utf-8", the default is to use a "backslashed unicode" replacement but other strategies can be chosen
+
 2021-11-03
 ----------
 * Added missing :ref:`is-uuid <is_uuid_dtl_function>` and :ref:`is-bytes <is_bytes_dtl_function>` DTL functions
@@ -9,7 +13,7 @@ Changelog
 
 2021-10-25
 ----------
-* Added a ``byte_order_mark`` property to the :ref:`csv_endpoint <csv_endpoint_sink>` and :ref:`xml_endpoint <xml_endpoint_sink>` sinks. If ``true`` these sinks will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. It's ``false`` by default and should only be used in conjunction with a UTF-8 encoding.
+* Added a ``byte_order_mark`` property to the :ref:`CSV endpoint <csv_endpoint_sink>` and :ref:`XML endpoint <xml_endpoint_sink>` sinks. If ``true`` these sinks will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. It's ``false`` by default and should only be used in conjunction with a UTF-8 encoding.
 
 .. _changelog_2021_10_11:
 

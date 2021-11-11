@@ -6617,6 +6617,7 @@ Prototype
         "lineterminator": "\r\n",
         "quotechar": "\"",
         "encoding": "utf-8",
+        "encode_error_strategy": "replacement-strategy-to-use",
         "skip-deleted-entities": true,
         "filename": "my_data.csv",
         "content_disposition": "attachment"
@@ -6709,6 +6710,19 @@ Properties
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
        valid values.
      - ``"utf-8"``
+     -
+
+   * - ``encode_error_strategy``
+     - String enum
+     - An enumeration of "ignore", "replace", "xmlcharrefreplace" and "backslashreplace" that tells the sink how to deal
+       with illegal characters in the output data when the ``encoding`` property is different than ``utf-8``.
+       The default "backslashreplace" replaces the offending character(s) with backslash escaped unicode values
+       (i.e. the ``"ę"`` character would be replaced with ``"\u0119"`` if it's illegal for the chosen encoding). The
+       "replace" strategy will use a special unicode "replacement character" for unicode encodings,
+       see https://en.wikipedia.org/wiki/Specials_%28Unicode_block%29 for more details or simply the ``"?"`` character
+       if a non-unicode encoding. The "xmlcharrefreplace" replacement strategy uses numerical xml character values on
+       the form ``"&#NNN;"``. The "ignore" strategy is the simplest and just skips any illegal characters entirely.
+     - "backslashreplace"
      -
       .. _csv_endpoint_sink_param_skip_deleted_entities:
 
