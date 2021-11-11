@@ -511,4 +511,22 @@ As can be seen from the above example, Sesam standardizes the way in which entit
 Tasks for Microservices: Novice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Run a microservice in Sesam [could be sink, http, source]
+#. *Which request parameters can be found in the pull and push protocol?*
+
+#. *Which request parameter is responsible for enabling continuation support?*
+
+#. *Make a microservice successfully run in Sesam.*
+
+    Hint: `Sesam Community at GitHub <https://github.com/sesam-community>`_ is a good place to get inspiration.
+
+    Condition: Successfull, in this case, means that the docker image spins up as intended.
+
+#. *Read data from your newly created microservice into a pipe.*
+
+    Condition: Make sure data flows through the pipe and creates a dataset.
+
+#. *Write data via a microservice to a target system and verify data shows up.*
+
+    Condition: Make sure data is either created or updated in the system.
+
+    Hint: Updating data in a system is typically a bit more difficult to implement.
