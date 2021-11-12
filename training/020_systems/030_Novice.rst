@@ -9,17 +9,24 @@ Novice
 Systems as a pipe source
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-System configuration (mostly) defines the possibilities pipes have to
-pull data.
+.. sidebar:: Summary
 
-We need to write about what a system is in the context of a pipe source,
-with not only configs but explanations. Keep it simple don’t go into too
-many system types (json & SQL?). Write more text than configurations,
-draw stuff. (1-N)
+  Systems as a pipe source...
+
+  - should provide streams of entities as input to the pipes they are connected to
+  - can provide entities with **any** shape
+  - must provide Sesam with a unique identifier called ``_id``
+
+Using a system as a pipe source defines the possibilities this pipe has when
+pulling data. Sesam supports implementing multiple different `system types <https://docs.sesam.io/configuration.html#systems>`_, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a System.
+
+When a system is used as a pipe source, certain aspects come into consideration. Namely, that a `source <https://docs.sesam.io/configuration.html#sources>`_ should provide streams of entities as input to the pipes it is connected to. The entities that are provided can take any shape, i.e: they can have nested dictionaries. The only required property for entities within Sesam is the ``_id`` which is used as a unique identifier.    
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
 .. _systems-as-a-pipe-sink-2-2:
 
