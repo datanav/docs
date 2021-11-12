@@ -1,13 +1,19 @@
 Changelog
 =========
 
+.. _changelog_2021_11_11:
+
 2021-11-11
 ----------
 * Added a ``encode_error_strategy`` property to the :ref:`CSV endpoint <csv_endpoint_sink>` - it tells the sink how to deal with encoding errors when the encoding is different from "utf-8", the default is to use a "backslashed unicode" replacement but other strategies can be chosen
 
+.. _changelog_2021_11_09:
+
 2021-11-09
 ----------
 * Added a "discard-retries" pump operation to the service API - it is available in the UI as a "Reset retries queue" menu item on pipes. This operation will make the next pipe run ignore any previous write error retries by writing a special "pump-discard-retries" entity to the pipes execution log. This operation can only be done on non-running pipes.
+
+.. _changelog_2021_11_03:
 
 2021-11-03
 ----------
