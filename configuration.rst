@@ -4955,7 +4955,7 @@ Sinks
 =====
 
 Sinks are at the receiving end of pipes and are responsible for
-writing entities into a internal dataset or a target system.
+writing entities into an internal dataset or a target system.
 
 Sinks can support batching by implementing specific methods and
 accumulating entities in a buffer before writing the batch. The size of
