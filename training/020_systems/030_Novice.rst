@@ -44,7 +44,11 @@ context of a sink? What does the pipe see? What does the system see?
 .. _authentication-methods-2-2:
 
 System Authentication methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. The system of type microservice supports a wealth of different authentication methods whereas other systems such as for example the Oracle system uses a default authentication method consisting of the parameters: ``username``, ``password``, ``host``and ``database``.
+
+  
 
 | Default authentication methods built in for systems handling URLS
   $SECRET()
