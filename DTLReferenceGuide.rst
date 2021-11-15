@@ -4275,6 +4275,10 @@ Lists
        |
        | Returns ``"a"``.
        |
+       | ``["min", ["list", "B", "b", "A", "a"]]``
+       |
+       | Returns ``"A"`` (Based on `ASCII ordering <https://ascii.cl/>`_).
+       |
        | ``["min", "_.amount", "_S.orders"]]``
        |
        | Returns the order with the lowest amount.
