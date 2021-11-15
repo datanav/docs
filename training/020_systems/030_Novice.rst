@@ -26,13 +26,22 @@ draw stuff. (1-N)
 Systems as a pipe sink
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Same as above only with system as a sink. What is a system in the
-context of a sink? What does the pipe see? What does the system see?
-(1-N)
+.. sidebar:: Summary
+
+  Systems as a pipe sink...
+
+  - are responsible for writing entities to a target system
+  - should consider batching and the size of each batch
+
+As data is moving in the outbound stage of its dataflow, Sesam use sinks to expose data. Sinks are the receiving end of pipes and are responsible for writing entities to a target system.
+
+Pipes support `batching <https://docs.sesam.io/configuration.html#pipe-batching>`_ if the sink supports batching. It does this by accumulating source entities in a buffer before writing these to transforms and the sink. The size of each batch can be specified by using the ``batch_size`` property in your pipe. The default batch size is usually 100, but this will vary depending on the source- and sink-type. As an example, the `REST sink <https://docs.sesam.io/configuration.html#rest-sink>`_ will for instance use a ``batch_size`` of one as a default value.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`sink_section`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`pipe_batching`
 
 .. _authentication-methods-2-2:
 
