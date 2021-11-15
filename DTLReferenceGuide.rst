@@ -4996,7 +4996,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns the result of ``VALUE1 + VALUE2``. The result is always a single number (or ``null``).
      - | ``["+", 10, 3]``
        |
-       | Returns ``10``.
+       | Returns ``13``.
        |
        | ``["+", 10, ["list", 10, 20, 30]]``
        |
