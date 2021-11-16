@@ -244,6 +244,7 @@ Output from the example code above as seen below with a join to hr-system:
 
    <details>
    <summary><a>global-person example output</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -283,11 +284,6 @@ Output from the example code above as seen below with a join to hr-system:
       "~:hr:person"
     ]  
   }
-
-.. raw:: html
-
-   </details>
-
 
 .. _best-practice-naming:
 
@@ -429,6 +425,7 @@ The corresponding env variable are used in the condition property in the pipe. I
 
    <details>
    <summary><a>hr-person example pipe</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -502,12 +499,6 @@ The corresponding env variable are used in the condition property in the pipe. I
     }
   }
 
-.. raw:: html
-
-   </details>
-
-
-
 .. _best-practice-rdf-type:
 
 RDF type  
@@ -561,6 +552,7 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
 
    <details>
    <summary><a>global-person example pipe</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -626,11 +618,6 @@ Below the actual merge, or **“equality“** rules are set. Further down, in th
     }
   }
 
-.. raw:: html
-
-   </details>
-
-
 When running the global pipe, the result is a “global dataset” consisting of entities with joined data that has been through the listed transformations.
 
 The first property that greets us in a global dataset is called **"$ids"**, which will be a list of **namespaced identifiers**. When an entity is merged into another entity in a merge pipe, the pipe will add the _id of the source entity to the **"$ids"** property. Thus, the **ids** property consists of the ids of all the source entities that were merged to created that specific merged entity, typically looking like below.
@@ -655,6 +642,7 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
 
    <details>
    <summary><a>global-person example output</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -752,10 +740,6 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
     "salesforce-userprofile:phone_number": 24887159
   }
 
-.. raw:: html
-
-   </details>
-
 
 Preparation pipes
 =================
@@ -768,6 +752,7 @@ Below is an example of a preparation pipe, based on the global pipe above, where
 
    <details>
    <summary><a>address-hr example pipe</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -799,10 +784,6 @@ Below is an example of a preparation pipe, based on the global pipe above, where
     }
   }
 
-.. raw:: html
-
-   </details>
-
 In this case we need to make sure that we do not overwrite existing "StreetAddress" values with potential null-values (altough we should be able to trust the master data from the CRM system, mistakes do occur). We do not have to perform the same check for the properties from our golden records since in this case the hr-person data is part of the coalesce in the global-person pipe. Note that even though several of these properties is already the same in both the HR system and the CRM system, they do not have to be. The first time this integration runs there might be some unnecessary updates, but Sesam's built-in :ref:`change tracking <concepts-change-tracking>` will make sure only future changes will be passed through to the target system. 
 
 The result from the address-hr pipe with the input from the global-person example with crm-person:100 look like:
@@ -830,6 +811,7 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
 
    <details>
    <summary><a>address-hr-endpoint output example</a></summary>
+   </details>
 
 .. code-block:: python
 
@@ -850,10 +832,6 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
       "cron_expression": "*/10 * * * ?"
     }
   }
-
-.. raw:: html
-
-   </details>
 
 In this particular pipe we have set our own :doc:`cron expression <cron-expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
 
