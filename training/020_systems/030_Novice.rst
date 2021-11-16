@@ -46,9 +46,19 @@ context of a sink? What does the pipe see? What does the system see?
 System Authentication methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  System authentication methods...
+
+  - should ....
+
 Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. The system of type microservice supports a wealth of different authentication methods whereas other systems such as for example the Oracle system uses a default authentication method consisting of the parameters: ``username``, ``password``, ``host``and ``database``.
 
-  
+The Oracle system is one of Sesam's many in-built systems. Sesam's in-built systems will typically have a default authentication method and also a more limited set of choices when it comes to choosing an authentication method for one of these systems. The authentication example with the Oracle system is a typical scenario when connecting to a relational database, albeit many more exist i.e: SQL, MsSQL, PostgreSQL.        
+
+As such, you should be aware of the fact that different systems in Sesam will have different authentication methods that vary quite substantially.
+
+Enten har du støtte for det, ellers kan du bygge det selv...
 
 | Default authentication methods built in for systems handling URLS
   $SECRET()
