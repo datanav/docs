@@ -50,26 +50,21 @@ System Authentication methods
 
   System authentication methods...
 
-  - should ....
+  - are defined for each system type
+  - vary depending on your system
+  - can be extended upon
 
-Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. The system of type microservice supports a wealth of different authentication methods whereas other systems such as for example the Oracle system uses a default authentication method consisting of the parameters: ``username``, ``password``, ``host``and ``database``.
+    - by building and deploying a microservice system in `Docker <https://www.docker.com/>`_ 
 
-The Oracle system is one of Sesam's many in-built systems. Sesam's in-built systems will typically have a default authentication method and also a more limited set of choices when it comes to choosing an authentication method for one of these systems. The authentication example with the Oracle system is a typical scenario when connecting to a relational database, albeit many more exist i.e: SQL, MsSQL, PostgreSQL.        
+Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. This is also true when you look at them within a Sesam node. Generally speaking, Sesam supports a wide range of in-built systems and their authentication methods, albeit if you need to use a system in Sesam which is not readily available, you can build it yourself as a microservice. This flexibility within Sesam is quite unique and as such ~no limitation exist.
 
-As such, you should be aware of the fact that different systems in Sesam will have different authentication methods that vary quite substantially.
-
-Enten har du støtte for det, ellers kan du bygge det selv...
-
-| Default authentication methods built in for systems handling URLS
-  $SECRET()
-| Basic, Oauth2, JWT, microservices
-
-| Authentication methods for specific systems: ?? worth mentioning
-| SQL, oracle
+As an example of an in-built system in Sesam, the `Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_´s authentication method requires providing the parameters: ``username``, ``password``, ``host`` and ``database`` in order to authenticate. This example is a typical scenario when connecting to a relational database management system (RDBMS), albeit many more exist such as SQL, MsSQL, PostgreSQL, SMTP, REST etc..
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`sesam-community`
 
 .. _system-types-2-2:
 
