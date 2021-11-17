@@ -2175,6 +2175,17 @@ Properties
        ``:since`` must be included somewhere in the query string - for example
        "select * from view_name v where v.updates >= :since". If a list of strings is given, they will be
        converted to a single string by concatenation with the newline character.
+
+       .. WARNING::
+
+          The ``updated_query`` must cover the exact same ids as the
+          ``update`` query. If not you run the risk of a full sync
+          failing and then completing in incremental mode, which would
+          mean that the full sync is not covering all ids and thus end
+          up deleting ids not seen. Consider setting
+          ``is_chronological_full`` to ``false`` on pipes to prevent
+          the pipe offset from being set during a full sync.
+
      -
      -
 
