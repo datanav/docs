@@ -7298,7 +7298,7 @@ Properties
      - String or list of strings
      - A human readable description of the component (optional).
      -
-     - Yes
+     - 
 
    * - ``comment``
      - String or list of strings
