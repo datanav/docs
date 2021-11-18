@@ -88,7 +88,30 @@ Extending on systems, the types of systems Sesam provide vary quite substantiall
 - `The REST system <https://docs.sesam.io/configuration.html#the-rest-system>`_
 - `The Mircoservice system <https://docs.sesam.io/configuration.html#the-microservice-system>`_  
 
-Regardless of system type in Sesam its configuration will always be JSON. Important to consider in this aspect is that JSON is schemaless, which results in self-contained systems and makes for easier implementation in Sesam.  
+Regardless of system type in Sesam its configuration will always be JSON. Important to consider in this aspect is that JSON is schemaless, which results in self-contained systems and makes for easier implementation in Sesam. All systems share a number of common properties, which are shown below:
+
+.. code-block:: json
+  :caption: Common System Properties
+  :linenos:
+
+  {
+    "_id": "a_system_id",
+    "type": "system:some-type-of-system",
+    "name": "The Foo System",
+    "description": "This is a description of the system",
+    "comment": "This is a comment",
+    "worker_threads": 10,
+    "metadata": {
+       "some_key": "some_value"
+    }
+  }
+
+- ``_id`` a unique ID for your system (required)
+- ``name`` a human readable name for your system
+- ``description`` a description of the system
+- ``comment`` a comment about the system
+- ``metadata`` a set of keys and values adding metadata content to the system
+- ``worker_threads`` an integer value setting the number of maximum concurrent running pipes using this system (default is 10) 
 
 .. seealso::
 
