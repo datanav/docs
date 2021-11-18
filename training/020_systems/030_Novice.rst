@@ -75,3 +75,17 @@ System Types
 
 Tasks for Systems: Novice
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. *What does a system as a pipe source provide?*
+
+#. *What should you consider when using systems as a pipe sink?*
+
+#. *Does Sesam support different authentication methods?*
+
+#. *Why should you familiarize yourself with system types in Sesam?*
+
+#. *Pick a system type:* 
+  
+      Make your system run in Sesam
+
+      Use your system both as a pipe source and a pipe sink

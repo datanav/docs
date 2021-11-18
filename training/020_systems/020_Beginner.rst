@@ -236,24 +236,24 @@ See :ref:`json_pull_protocol` & :ref:`json_push_protocol`.
 Tasks for Systems: Beginner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- What is a system in Sesam?
+#. *What is a system in Sesam?*
 
-- From where in the Sesam Management Studio can a new system be created?
+#. *From where in the Sesam Management Studio can a new system be created?*
 
-- What is a Sesam environment variable?
+#. *What is a Sesam environment variable?*
 
-- What is a Sesam secret?
+#. *What is a Sesam secret?*
 
-- Name some of the benefits of using environment variables in a system config?
+#. *Name some of the benefits of using environment variables in a system config?*
 
-- Where are environment variables defined?
+#. *Where are environment variables defined?*
 
-- Where are secrets defined?
+#. *Where are secrets defined?*
 
-- What is the difference between environment variables and secrets?
+#. *What is the difference between environment variables and secrets?*
 
-- When should secrets be used instead of environment variables?
+#. *When should secrets be used instead of environment variables?*
 
-- How are environment variables referenced in Sesam configs?
+#. *How are environment variables referenced in Sesam configs?*
 
-- How are secrets referenced in Sesam configs?
+#. *How are secrets referenced in Sesam configs?*
