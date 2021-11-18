@@ -62,14 +62,37 @@ System Authentication methods
 System Types
 ~~~~~~~~~~~~
 
-| Mention all built in system types, is there a common denominator?
-| refer to appendix/documentation for more information
+.. sidebar:: Summary
 
-“Type”: “system_XXXX”
+  System types...
+
+  - in Sesam vary quite substantially
+  - have a set of supported functionality
+  - vary in origin, but when implemented in Sesam all system types are represented as JSON
+
+Extending on systems, the types of systems Sesam provide vary quite substantially. In order for you to work efficiently in a given Sesam node, you should familiarize yourself with these different system types as they will have varying functional possibilites. A comprehensive list is provided below to make sure you know which system types exist:
+
+- `The SQL systems <https://docs.sesam.io/configuration.html#the-sql-systems>`_
+- `The Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_
+- `The Oracle TNS system <https://docs.sesam.io/configuration.html#the-oracle-tns-system>`_
+- `The MSSQL system <https://docs.sesam.io/configuration.html#the-mssql-system>`_
+- `The Microsoft Azure SQL Data Warehouse system <https://docs.sesam.io/configuration.html#the-microsoft-azure-sql-data-warehouse-system>`_
+- `The MySQL system <https://docs.sesam.io/configuration.html#bulk-operations-in-microsoft-sql-server-and-azure-sql-data-warehouse-systems>`_
+- `The PostgreSQL system <https://docs.sesam.io/configuration.html#the-postgresql-system>`_
+- `The LDAP system <https://docs.sesam.io/configuration.html#the-ldap-system>`_
+- `The SMTP system <https://docs.sesam.io/configuration.html#the-smtp-system>`_
+- `The Solr system <https://docs.sesam.io/configuration.html#the-solr-system>`_
+- `The Elasticsearch system <https://docs.sesam.io/configuration.html#the-elasticsearch-system>`_
+- `The Twilio system <https://docs.sesam.io/configuration.html#the-twilio-system>`_
+- `The URL system <https://docs.sesam.io/configuration.html#the-url-system>`_
+- `The REST system <https://docs.sesam.io/configuration.html#the-rest-system>`_
+- `The Mircoservice system <https://docs.sesam.io/configuration.html#the-microservice-system>`_  
+
+Regardless of system type in Sesam its configuration will always be JSON. Important to consider in this aspect is that JSON is schemaless, which results in self-contained systems and makes for easier implementation in Sesam.  
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
 .. _tasks-for-systems-novice-2-2:
 
