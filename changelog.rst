@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2021_11_19:
+
+2021-11-19
+----------
+* The IP address of our log shipping receiver endpoint has changed from ``13.74.166.9`` to ``52.142.116.113``. If you run a self-hosted service and have blocked outgoing traffic then you need to update the firewall accordingly. See the :ref:`Self-hosted service <self_hosted_outbound_firewall_rules>` document.
+
 .. _changelog_2021_11_11:
 
 2021-11-11

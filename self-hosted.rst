@@ -61,6 +61,8 @@ Inbound firewall rules
      - Sesam IP
      - Any client that needs to connect to the sesam node api needs to have access to port 443 on the sesam-node IP. This does not need to happen over the internet and can be access given through local network/VPN or similar.
 
+.. _self_hosted_outbound_firewall_rules:
+
 Outbound firewall rules
 =======================
 
