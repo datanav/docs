@@ -6194,7 +6194,7 @@ The optional ``default`` property contains what value to use if the property is 
 default value for a particular column has been set in the table schema, this value should match the schema value.
 
 
-Translation table for the :ref:`Microsoft SQL Server <mssql-azure-dw_system>` and :ref:`Legacy Microsoft SQL server <mssql_system>`:
+Translation table for the :ref:`Microsoft SQL Server <mssql-sqlserver_system>` and :ref:`Legacy Microsoft SQL server <mssql_system>`:
 
 
 .. list-table::
@@ -7607,7 +7607,7 @@ The Legacy Microsoft SQL system
 The Legacy MSSQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
 
 Note that this system is a legacy system that's based on open source drivers and has been superceded by the
-:ref:`Microsoft SQL Server <mssql-azure-dw_system>` which uses official microsoft drivers.
+:ref:`Microsoft SQL Server <mssql-sqlserver_system>` which uses official microsoft drivers.
 
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
@@ -7710,6 +7710,7 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+.. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
 The Microsoft SQL Server system
@@ -7729,7 +7730,7 @@ Prototype
 
     {
         "_id": "sql_system_id",
-        "type": "system:mssql-azure-dw",
+        "type": "system:sqlserver",
         "name": "A Microsoft SQL server",
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
@@ -7798,13 +7799,16 @@ Example MS SQL Server configuration:
     {
         "_id": "sqlserver_db",
         "name": "MS SQL Server test database",
-        "type": "system:mssql-azure-dw",
+        "type": "system:sqlserver",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
         "host": "myserver.database.windows.net",
         "port": 1433,
         "database": "testdb"
     }
+
+Note that for backwards compatibility reasons the type "system:mssql-azure-dw" is still accepted as an alternative alias.
+
 
 .. _mssql-bulk-operations:
 
