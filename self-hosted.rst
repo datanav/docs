@@ -27,9 +27,9 @@ Software requirements
 ---------------------
 
 - Ubuntu >= 18.04 or RHEL >= 7. We prefer running Ubuntu if possible.
-  
+
 - Python3
-  
+
 - Sesam will install the *sesam-agent* which in turn will setup and configure docker.
 
 Firewall requirements
@@ -66,7 +66,7 @@ Outbound firewall rules
 
 .. WARNING::
 
-   These outbound firewall rules must be active for the service to operate fully. Not opening the ports for the specified domains may violate the terms of service. 
+   These outbound firewall rules must be active for the service to operate fully. Not opening the ports for the specified domains may violate the terms of service.
 
 .. list-table::
    :header-rows: 1
@@ -117,7 +117,7 @@ Outbound firewall rules
 
 .. WARNING::
 
-   ``*.sesam.io`` and ``*.sesam.cloud`` can be replaced with IPs ``137.116.234.60`` and ``13.74.166.9``. We do not recommend doing this as these IPs are subject to change at any time.
+   ``*.sesam.io`` and ``*.sesam.cloud`` can be replaced with IPs ``137.116.234.60`` and ``52.142.116.113``. We do not recommend doing this as these IPs are subject to change at any time.
 
 Installation
 ------------
@@ -127,9 +127,9 @@ Before starting the setup you will  need:
 - A subscription in the `Sesam portal <https://portal.sesam.io>`_
 
 - A license key
-  
+
 - A docker repository login (provided by Sesam support)
-  
+
 - A sesam-agent config (example below)
 
 .. _self_hosted_file_structure:
@@ -142,9 +142,9 @@ If you want your data stored on the root-disk directly, just create the datafold
 
 ::
 
-    mkdir -p /srv/data/sesam/node-00/data 
-    mkdir -p /sesam/node-00 
-    ln -s /srv/data/sesam/node-00/data /sesam/node-00/data 
+    mkdir -p /srv/data/sesam/node-00/data
+    mkdir -p /sesam/node-00
+    ln -s /srv/data/sesam/node-00/data /sesam/node-00/data
     mkdir -p /etc/sesam-agent
 
 License Key
@@ -201,7 +201,7 @@ Update the Sesam configuration file (``/etc/sesam-agent/config.json``) to includ
       "ssl_key": "/etc/nginx/includes.d/ssl/privkey.pem"
     }
 
-Restart nginx for things to take effect: 
+Restart nginx for things to take effect:
 
 ::
 
@@ -213,5 +213,5 @@ Migrate an old installation to use the sesam-agent
 Be sure to back up your data before proceeding. Before :ref:`Install the Agent <self_hosted_install_the_agent>` section you must make sure you have done the following:
 
 - Stop and remove all running containers.
-  
+
 - Copy or move the current store folder and license to the location configured under :ref:`File structure <self_hosted_file_structure>`.
