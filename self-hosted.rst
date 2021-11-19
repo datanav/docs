@@ -117,7 +117,7 @@ Outbound firewall rules
 
 .. WARNING::
 
-   ``*.sesam.io`` and ``*.sesam.cloud`` can be replaced with IPs ``137.116.234.60`` and ``52.142.116.113``. We do not recommend doing this as these IPs are subject to change at any time.
+   ``*.sesam.io`` and ``*.sesam.cloud`` can be replaced with IPs ``137.116.234.60`` and ``52.142.116.113``. The former is for downloading and upgrading the agent, and the latter is for log shipping. We do not recommend doing this as these IPs are subject to change at any time.
 
 Installation
 ------------
