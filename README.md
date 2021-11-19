@@ -22,3 +22,5 @@ MacOS specific installation:
 Tip: If the ```make html``` command fails, it may be that you need to install some additional
     applications. You can look at the "before_install" section in the ".travis.yml" file to see
     which applications are required.
+
+Use ```SPHINXOPTS= make html_no_saas``` instead of ```make html``` to build the html for the docs without the saas content (requires installation of pandoc locally).
