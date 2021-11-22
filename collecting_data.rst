@@ -107,7 +107,7 @@ Semantics as a method for classification of data
 ------------------------------------------------
 Another way of classifying data is to use standardized semantics to describe properties of a certain field. Sesam make use of RDF (https://www.w3.org/RDF/) to describe what a certain field means, but other types of semantics can be utilized.
 
-f one uses RDF or other type of methods to define semantics of input from sources, it will be easier to understand what a field is later down the line when you have to merge, enrich and enhance data into globals. And further on when creating preparation pipes to be able to send data to targets.
+If one uses RDF or other type of methods to define semantics of input from sources, it will be easier to understand what a field is later down the line when you have to merge, enrich and enhance data into globals. And further on when creating preparation pipes to be able to send data to targets.
 
 An example:
 In one source a field might be called first name and in another system a field might be called given name. Using semantics will define those as the same.
