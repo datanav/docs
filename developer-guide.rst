@@ -15,7 +15,7 @@ Developer Guide
    Pump Execution Dataset <pump-execution>
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>
-   Idempotency and non-idempotency <idempotency>
+   Non-idempotency <idempotency>
    Security <security>
    Notifications <notifications>
    Low-level debugging <low-level-debugging>
