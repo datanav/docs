@@ -7298,7 +7298,7 @@ Properties
      - String or list of strings
      - A human readable description of the component (optional).
      -
-     - 
+     -
 
    * - ``comment``
      - String or list of strings
@@ -7601,10 +7601,10 @@ Example Oracle TNS configuration:
 
 .. _mssql_system:
 
-The Legacy Microsoft SQL system
--------------------------------
+Legacy Microsoft SQL system
+---------------------------
 
-The Legacy MSSQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
+The Legacy Microsoft SQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
 
 Note that this system is a legacy system that's based on open source drivers and has been superceded by the
 :ref:`Microsoft SQL Server <mssql-sqlserver_system>` which uses official microsoft drivers.
@@ -7713,12 +7713,14 @@ Example MS SQL Server configuration:
 .. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
-The Microsoft SQL Server system
--------------------------------
+Microsoft SQL Server system
+---------------------------
 
 This system type represents a Microsoft SQL Server running on premise or in the cloud (Azure). It can also be used to
 connect to a `Microsoft Azure Synapse Analytics <https://azure.microsoft.com/en-us/services/synapse-analytics/#overview>`_ service.
 For the latter, you will need to set the ``dialect`` property to ``synapse``.
+
+This system uses the official Microsoft (ODBC) drivers.
 
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
