@@ -1129,8 +1129,8 @@ In this case the data from the source is not ordered chronologically, which mean
 
 .. _dataset_source:
 
-The dataset source
-------------------
+Dataset source
+--------------
 
 The dataset source is one of the most commonly used sources in a Sesam installation. It simply presents a stream of entities from a
 dataset stored in Sesam. Its configuration is very simple and looks like:
@@ -1251,8 +1251,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _merge_source:
 
-The merge source
-----------------
+Merge source
+------------
 
 The merge source is a source that is able to infer the sameness of
 entities across multiple datasets. The source uses a set of equality
@@ -1604,8 +1604,8 @@ already merged entities downstream.
 
 .. _union_datasets_source:
 
-The union datasets source
--------------------------
+Union datasets source
+---------------------
 
 The union datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
@@ -1727,8 +1727,8 @@ configuration, which is omitted here for brevity:
 
 .. _merge_datasets_source:
 
-The merge datasets source
--------------------------
+Merge datasets source
+---------------------
 
 The merge datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
@@ -1860,8 +1860,8 @@ configuration, which is omitted here for brevity:
 
 .. _diff_datasets_source:
 
-The diff datasets source (Experimental)
----------------------------------------
+Diff datasets source (Experimental)
+-----------------------------------
 
 The diff datasets source is similar to the ``merge dataset source``, except that
 it also compares the entities from the datasets. The comparison produces a diff and filters out
@@ -2003,8 +2003,8 @@ Example result
 
 .. _embedded_source:
 
-The embedded source
--------------------
+Embedded source
+---------------
 
 This is a data source that lets you embed the data inside the configuration of the source. This is convenient when you have a small and static dataset. Do not use this source to hold a large number of entities.
 
@@ -2071,8 +2071,8 @@ Example:
 
 .. _sql_source:
 
-The SQL source
---------------
+SQL source
+----------
 
 The `SQL <https://en.wikipedia.org/wiki/SQL>`_ database source is one of the most commonly used data sources.
 In short, it presents `database relations <https://en.wikipedia.org/wiki/Relation_(database)>`_ (i.e. ``tables``,
@@ -2325,8 +2325,8 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 
 .. _conditional_source:
 
-The conditional source
-----------------------
+Conditional source
+------------------
 
 The conditional source selects an active source based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -2387,8 +2387,8 @@ Properties
 
 .. _csv_source:
 
-The CSV source
---------------
+CSV source
+----------
 
 The CSV data source translates the rows of files in `CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_
 to entities.
@@ -2562,8 +2562,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _rdf_source:
 
-The RDF source
---------------
+RDF source
+----------
 
 The RDF data source is able to read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data
 in `N-Triples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_, `N3 <https://www.w3.org/TeamSubmission/n3/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
@@ -2687,8 +2687,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sdshare_source:
 
-The SDShare source
-------------------
+SDShare source
+--------------
 
 The SDShare data source can read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
 `SDShare specification <http://www.sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
@@ -2779,8 +2779,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _ldap_source:
 
-The LDAP source
----------------
+LDAP source
+-----------
 
 The LDAP source provides entities from a `LDAP catalog <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_
 configured by a :ref:`LDAP system <ldap_system>`.
@@ -2897,8 +2897,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _json_source:
 
-The JSON source
----------------
+JSON source
+-----------
 
 
 The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
@@ -3023,8 +3023,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _empty_source:
 
-The empty source
-----------------
+Empty source
+------------
 
 Sometimes it is useful for debugging or development purposes to have a data source that doesn't produce any entities:
 
@@ -3074,8 +3074,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _http_endpoint_source:
 
-The HTTP endpoint source
-------------------------
+HTTP endpoint source
+--------------------
 
 This is a special data source that registers an `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_
 receiver endpoint that one can post entities to. Entities posted here will be written to the pipe's sink.
@@ -3212,8 +3212,8 @@ into the ``my-entities`` dataset:
 
 .. _sparql_source:
 
-The SPARQL source
------------------
+SPARQL source
+-------------
 
 The SPARQL source fetches `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data about subjects from a
 `triplestore <https://en.wikipedia.org/wiki/Triplestore>`_ exposing a `SPARQL compliant <https://www.w3.org/TR/rdf-sparql-query/>`_ endpoint.
@@ -3333,8 +3333,8 @@ configuration, which is omitted here for brevity.
 
 .. _rest_source:
 
-The REST source (experimental)
-------------------------------
+REST source (experimental)
+--------------------------
 
 This is a data source that can communicate with a REST service that produce JSON output using HTTP requests.
 The REST source supports both pagination as part of the response body or pagination in the form of header properties
@@ -3810,8 +3810,8 @@ either a transform configuration object or a list of them.
 
 .. _dtl_transform:
 
-The DTL transform
------------------
+DTL transform
+-------------
 
 This is a transform that lets you apply :doc:`Data Transformation Language <DTLReferenceGuide>`
 transformations on the entities stream produced by the data source.
@@ -3882,8 +3882,8 @@ Transformation Language before writing them to the
 
 .. _json_schema_transform:
 
-The JSON Schema validation transform
-------------------------------------
+JSON Schema validation transform
+--------------------------------
 
 A transform that validates entities against a `JSON Schema <http://json-schema.org/>`_ document.
 If the document is valid then the field referenced by ``key_valid`` will be set to true, otherwise
@@ -3979,8 +3979,8 @@ then these would come out:
 
 .. _conditional_transform:
 
-The conditional transform
--------------------------
+Conditional transform
+---------------------
 
 The conditional transform selects an active transform based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -4041,8 +4041,8 @@ Properties
 
 .. _http_transform:
 
-The HTTP transform
-------------------
+HTTP transform
+--------------
 
 This transform performs `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ requests to a HTTP capable
 endpoint. The service at the endpoint then transforms the entities contained in the request body and returns them in
@@ -4117,8 +4117,8 @@ Example configuration
 
 .. _lower_keys_transform:
 
-The lower keys transform
-------------------------
+Lower keys transform
+--------------------
 
 This transform transforms all the keys of an entity to lower case (optionally recursively).
 
@@ -4232,8 +4232,8 @@ however, the result would instead become:
 
 .. _upper_keys_transform:
 
-The upper keys transform
-------------------------
+Upper keys transform
+--------------------
 
 This transform transforms all the keys of an entity to upper case (optionally recursively).
 The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
@@ -4242,8 +4242,8 @@ transformed to upper case. See previous section for details.
 
 .. _undirected_graph_transform:
 
-The undirected graph transform
-------------------------------
+Undirected graph transform
+--------------------------
 
 The undirected graph transform transforms a list of properties representing nodes in a graph into all its
 possible sets of edges, forming a complete graph. The transform will generate all possible edges in the
@@ -4364,8 +4364,8 @@ The transform will output the following edges of the graph as entities on its ou
 
 .. _emit_children_transform:
 
-The emit children transform
----------------------------
+Emit children transform
+-----------------------
 
 This transform will emit all child entities of its source
 entities. All entities in the ``$children`` property that have an
@@ -4398,8 +4398,8 @@ Example configuration
 
 .. _xml_transform:
 
-The XML transform
------------------
+XML transform
+-------------
 
 This transform will render entities on the form described in the :ref:`XML endpoint sink <xml_endpoint_sink>` to a string and
 embed it in the entity, which is then passed on to the transform chain.
@@ -4521,8 +4521,8 @@ it will produce the transformed entity:
 
 .. _rdf_transform:
 
-The RDF transform
------------------
+RDF transform
+-------------
 
 This transform will render entities to a N-Triples string and embed it in the entity, which is then passed on
 to the transform chain.
@@ -4614,8 +4614,8 @@ it will produce the transformed entity:
 
 .. _REST_transform:
 
-The REST transform
-------------------
+REST transform
+--------------
 
 This transform can communicate with a REST service using HTTP requests.
 
@@ -5016,8 +5016,8 @@ Properties
 
 .. _conditional_sink:
 
-The conditional sink
---------------------
+Conditional sink
+----------------
 
 The conditional sink selects an active sink based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -5078,8 +5078,8 @@ Properties
 
 .. _dataset_sink:
 
-The dataset sink
-----------------
+Dataset sink
+------------
 
 The dataset sink writes the entities it is given to an identified dataset. The configuration looks like:
 
@@ -5258,8 +5258,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _databrowser_sink:
 
-The Sesam Databrowser sink
---------------------------
+Sesam Databrowser sink
+----------------------
 
 The databrowser sink writes the entities it is given to a Solr index
 to be displayed by the Sesam Databrowser application. The input
@@ -5363,8 +5363,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _json_sink:
 
-The JSON push sink
-------------------
+JSON push sink
+--------------
 
 The JSON push sink implements a simple HTTP based protocol where
 individual entities or lists of entities are ``POSTed`` as JSON data
@@ -5468,8 +5468,8 @@ An example using a custom "application/json" content-type header needed by some 
 
 .. _sdshare_sink:
 
-The SDShare push sink
----------------------
+SDShare push sink
+-----------------
 
 The SDShare push sink is similar to the :ref:`JSON push sink <json_sink>`, but instead of posting JSON it
 translates the inbound entities to ``RDF`` and ``POSTs`` them in N-Triples form to a :ref:`HTTP endpoint <url_system>`
@@ -5534,8 +5534,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sms_sink:
 
-The SMS message sink
---------------------
+SMS message sink
+----------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
@@ -5676,8 +5676,8 @@ the templates in config or the entities themselves.
 
 .. _solr_sink:
 
-The Solr sink
--------------
+Solr sink
+---------
 
 The Solr sink writes the entities it is given to a Solr index.
 
@@ -5751,8 +5751,8 @@ Properties
 
 .. _elasticsearch_sink:
 
-The Elasticsearch sink
-----------------------
+Elasticsearch sink
+------------------
 
 The Elasticsearch sink writes the entities it is given to an
 Elasticsearch server/cluster.
@@ -5819,8 +5819,8 @@ Properties
 .. _sparql_sink:
 
 
-The SPARQL sink
----------------
+SPARQL sink
+-----------
 
 The SPARQL sink converts entities to RDF statements and writes them to a graph in a triplestore via a SPARQL compatible
 endpoint.
@@ -5914,8 +5914,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sql_sink:
 
-The SQL sink
-------------
+SQL sink
+--------
 
 The `SQL <https://en.wikipedia.org/wiki/SQL>`_  sink writes entities to a
 `relational database <https://en.wikipedia.org/wiki/Relational_database>`_ `table <https://en.wikipedia.org/wiki/Table_(database)>`_.
@@ -6284,8 +6284,8 @@ Translation table for the :ref:`Microsoft SQL Server <mssql-sqlserver_system>` a
 
 .. _mail_sink:
 
-The Email Message sink
-----------------------
+Email Message sink
+------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
@@ -6446,8 +6446,8 @@ on a best-effort basis; i.e. this might not preserve the information contained i
 
 .. _null_sink:
 
-The null sink
--------------
+Null sink
+---------
 
 The null sink is the equivalent of the empty data source; it will discard any entities written to it and do nothing (it
 never raises an error):
@@ -6477,8 +6477,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _http_endpoint_sink:
 
-The HTTP endpoint sink
-----------------------
+HTTP endpoint sink
+------------------
 
 This is a special data sink that registers an HTTP publisher endpoint
 that one can get entities from.
@@ -6584,8 +6584,8 @@ dataset::
 .. _csv_endpoint_sink:
 
 
-The CSV endpoint sink
----------------------
+CSV endpoint sink
+-----------------
 
 This is a data sink that registers an HTTP publisher endpoint that one can get entities in
 `CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_ from.
@@ -6789,8 +6789,8 @@ The data will be available at ``http://localhost:9042/api/publishers/my-entities
 
 .. _xml_endpoint_sink:
 
-The XML endpoint sink
----------------------
+XML endpoint sink
+-----------------
 
 This is a data sink that registers an HTTP publisher endpoint
 that one can get the entities in XML format from.
@@ -6983,8 +6983,8 @@ The XML document will be available at ``http://localhost:9042/api/publishers/my-
 
 .. _rest_sink:
 
-The REST sink
--------------
+REST sink
+---------
 
 This is a data sink that can communicate with a REST service using HTTP requests.
 
@@ -7322,8 +7322,8 @@ Properties
 
 .. _sql_system:
 
-The SQL systems
----------------
+SQL systems
+-----------
 
 The SQL system components represents a `RDBMS <https://en.wikipedia.org/wiki/Relational_database_management_system>`_
 and contains the necessary information to establish a connection to the RDBMS and manage these connections among the
@@ -7421,8 +7421,8 @@ The specific SQL systems available are:
 
 .. _oracle_system:
 
-The Oracle system
------------------
+Oracle system
+-------------
 
 The Oracle SQL system represents a `Oracle RDBMS <https://en.wikipedia.org/wiki/Oracle_Database>`_ available on the network.
 See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
@@ -7518,8 +7518,8 @@ Example Oracle configuration:
 
 .. _oracle_tns_system:
 
-The Oracle TNS system
----------------------
+Oracle TNS system
+-----------------
 
 The Oracle SQL system represents a Oracle RDBMS configured using a `TNS name <http://www.orafaq.com/wiki/Tnsnames.ora>`_
 See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
@@ -7601,8 +7601,8 @@ Example Oracle TNS configuration:
 
 .. _mssql_system:
 
-The Legacy Microsoft SQL system
--------------------------------
+Legacy Microsoft SQL system
+---------------------------
 
 The Legacy Microsoft SQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
 
@@ -7713,8 +7713,8 @@ Example MS SQL Server configuration:
 .. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
-The Microsoft SQL Server system
--------------------------------
+Microsoft SQL Server system
+---------------------------
 
 This system type represents a Microsoft SQL Server running on premise or in the cloud (Azure). It can also be used to
 connect to a `Microsoft Azure Synapse Analytics <https://azure.microsoft.com/en-us/services/synapse-analytics/#overview>`_ service.
@@ -7854,8 +7854,8 @@ which rows to update or delete.
 
 .. _mysql_system:
 
-The MySQL system
-----------------
+MySQL system
+------------
 
 The MySQL system represents a `MySQL database <https://en.wikipedia.org/wiki/MySQL>`_ available over the network:
 See the :ref:`supported column types <mysql_types>` list for a overview of which MySQL column types are supported and
@@ -7940,8 +7940,8 @@ Example MySQL configuration:
 
 .. _postgresql_system:
 
-The PostgreSQL system
----------------------
+PostgreSQL system
+-----------------
 
 The PostgreSQL system represents a `PostgreSQL RDBMS <https://en.wikipedia.org/wiki/PostgreSQL>`_ available on the network.
 See the :ref:`supported column types <postgresql_types>` list for a overview of which PostgreSQL column types are supported
@@ -8034,8 +8034,8 @@ Example PostgreSQL configuration:
 
 .. _ldap_system:
 
-The LDAP system
----------------
+LDAP system
+-----------
 
 The LDAP system contains the configuration needed to communicate with a
 `LDAP <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_ system. It is used by
@@ -8127,8 +8127,8 @@ Example configuration
 
 .. _smtp_system:
 
-The SMTP system
----------------
+SMTP system
+-----------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
 server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_sink>` to construct
@@ -8219,8 +8219,8 @@ Example configuration
 
 .. _solr_system:
 
-The Solr system
----------------
+Solr system
+-----------
 
 The Solr system represents the information needed to connect to a `Apache Solr <https://en.wikipedia.org/wiki/Apache_Solr>`_
 server for indexing JSON documents. It is used in conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
@@ -8278,8 +8278,8 @@ Example configuration
 
 .. _elasticsearch_system:
 
-The Elasticsearch system
-------------------------
+Elasticsearch system
+--------------------
 
 The Elasticsearch system represents the information needed to connect
 to an `Elasticsearch <https://en.wikipedia.org/wiki/Elasticsearch>`_ server/cluster for indexing JSON documents. It is
@@ -8330,8 +8330,8 @@ Example configuration
 
 .. _twilio_system:
 
-The Twilio system
------------------
+Twilio system
+-------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
 :ref:`SMS message sinks <sms_sink>` to construct and send SMS messages from entities.
@@ -8408,8 +8408,8 @@ Example configuration
 
 .. _url_system:
 
-The URL system
---------------
+URL system
+----------
 
 The URL system represents a `HTTP server <https://en.wikipedia.org/wiki/Web_server>`_ (i.e. a web server)
 serving `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url.
@@ -8597,8 +8597,8 @@ Example with ntlm configuration:
 
 .. _rest_system:
 
-The REST system
----------------
+REST system
+-----------
 
 The REST system represents a REST service (i.e. a web server) serving
 `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
@@ -8932,8 +8932,8 @@ Example configuration
 
 .. _microservice_system:
 
-The microservice system
------------------------
+Microservice system
+-------------------
 
 The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_sink>`.
 
