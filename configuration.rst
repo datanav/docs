@@ -7601,8 +7601,8 @@ Example Oracle TNS configuration:
 
 .. _mssql_system:
 
-Legacy Microsoft SQL system
----------------------------
+The Legacy Microsoft SQL system
+-------------------------------
 
 The Legacy Microsoft SQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
 
@@ -7713,8 +7713,8 @@ Example MS SQL Server configuration:
 .. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
-Microsoft SQL Server system
----------------------------
+The Microsoft SQL Server system
+-------------------------------
 
 This system type represents a Microsoft SQL Server running on premise or in the cloud (Azure). It can also be used to
 connect to a `Microsoft Azure Synapse Analytics <https://azure.microsoft.com/en-us/services/synapse-analytics/#overview>`_ service.
