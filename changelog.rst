@@ -7,6 +7,13 @@ Changelog
 ----------
 * The IP address of our log shipping receiver endpoint has changed from ``13.74.166.9`` to ``52.142.116.113``. If you run a self-hosted service and have blocked outgoing traffic then you need to update the firewall accordingly. See the :ref:`Self-hosted service <self_hosted_outbound_firewall_rules>` document.
 
+.. _changelog_2021_17_11:
+
+* Changed the name of "The Microsoft Azure SQL Data Warehouse system" to :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` and "The MSSQL system" to :ref:`"Legacy Microsoft SQL system" <mssql_system>`
+* The :ref:`"Legacy Microsoft SQL system" <mssql_system>` has been superceeded by the :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` and will likely be deprecated in the future
+* The :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` has a new type ``"system:sqlserver"`` which replaces the old ``"system:mssql-azure-dw"``, which is kept as an alias for now
+* Additional note: the recommended :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` uses official Microsoft (ODBC) drivers while the :ref:`"Legacy Microsoft SQL system" <mssql_system>` uses open source drivers. The Microsoft ODBC drivers should support all current Microsoft SQL Server compatible products, including Azure Synapse Analytics (previously known as Azure SQL DataWarehouse). Note that switching from the "Legacy Microsoft SQL system" (``"system:mssql``) to the preferred :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` (``"system:sqlserver"`` aka ``"system:mssql-azure-dw"``) can lead to minor data differences in properties due to the different driver backends
+
 .. _changelog_2021_11_11:
 
 2021-11-11

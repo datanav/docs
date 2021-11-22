@@ -6194,7 +6194,7 @@ The optional ``default`` property contains what value to use if the property is 
 default value for a particular column has been set in the table schema, this value should match the schema value.
 
 
-Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>`:
+Translation table for the :ref:`Microsoft SQL Server <mssql-sqlserver_system>` and :ref:`Legacy Microsoft SQL server <mssql_system>`:
 
 
 .. list-table::
@@ -7298,7 +7298,7 @@ Properties
      - String or list of strings
      - A human readable description of the component (optional).
      -
-     - 
+     -
 
    * - ``comment``
      - String or list of strings
@@ -7601,10 +7601,14 @@ Example Oracle TNS configuration:
 
 .. _mssql_system:
 
-The MSSQL system
-----------------
+The Legacy Microsoft SQL system
+-------------------------------
 
-The MSSQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
+The Legacy Microsoft SQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
+
+Note that this system is a legacy system that's based on open source drivers and has been superceded by the
+:ref:`Microsoft SQL Server <mssql-sqlserver_system>` which uses official microsoft drivers.
+
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -7616,7 +7620,7 @@ Prototype
     {
         "_id": "sql_system_id",
         "type": "system:mssql",
-        "name": "The Microsoft SQL Server Database",
+        "name": "Legacy Microsoft SQL Server Database",
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
@@ -7697,7 +7701,7 @@ Example MS SQL Server configuration:
 
     {
         "_id": "sqlserver_db",
-        "name": "MS SQL Server test database",
+        "name": "Legacy MS SQL Server test database",
         "type": "system:mssql",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
@@ -7706,12 +7710,17 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+.. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
-The Microsoft Azure SQL Data Warehouse system
----------------------------------------------
+The Microsoft SQL Server system
+-------------------------------
 
-This system type represents a `Microsoft Azure SQL Data Warehouse server <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is>`_ running in Azure.
+This system type represents a Microsoft SQL Server running on premise or in the cloud (Azure). It can also be used to
+connect to a `Microsoft Azure Synapse Analytics <https://azure.microsoft.com/en-us/services/synapse-analytics/#overview>`_ service.
+For the latter, you will need to set the ``dialect`` property to ``synapse``.
+
+This system uses the official Microsoft (ODBC) drivers.
 
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
@@ -7723,8 +7732,8 @@ Prototype
 
     {
         "_id": "sql_system_id",
-        "type": "system:mssql-azure-dw",
-        "name": "A Microsoft Azure SQL Data Warehouse server",
+        "type": "system:sqlserver",
+        "name": "A Microsoft SQL server",
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
@@ -7791,8 +7800,8 @@ Example MS SQL Server configuration:
 
     {
         "_id": "sqlserver_db",
-        "name": "MS Azure DW SQL Server test database",
-        "type": "system:mssql-azure-dw",
+        "name": "MS SQL Server test database",
+        "type": "system:sqlserver",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
         "host": "myserver.database.windows.net",
@@ -7800,12 +7809,15 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+Note that for backwards compatibility reasons the type "system:mssql-azure-dw" is still accepted as an alternative alias.
+
+
 .. _mssql-bulk-operations:
 
-Bulk operations in Microsoft SQL server and Azure SQL Data Warehouse systems
-----------------------------------------------------------------------------
+Bulk operations in Microsoft SQL server and Azure Synapse systems
+-----------------------------------------------------------------
 
-Both Microsoft SQL Server and Azure SQL Data Warehouse support bulk operations
+Both Microsoft SQL Server and Azure Synapse support bulk operations
 for uploading data. Sesam uses the
 `bcp utility <https://docs.microsoft.com/en-us/sql/tools/bcp-utility>`_ for bulk uploading.
 
