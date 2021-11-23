@@ -589,7 +589,7 @@ name with an example:
 
 .. seealso::
 
-  :ref:`best-practices` > :ref:`best-practice` > :ref:`best-practice-naming-conventions`
+  :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-naming-conventions`
 
 .. _systems-1-1:
 
