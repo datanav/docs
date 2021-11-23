@@ -31,7 +31,7 @@ Therefore, Sesam prefers to pull because then it is Sesam itself that has contro
 
 The problem with push is that Sesam receives the data but at the same time has no option to request the data again should the need arise.
 
-.. collectiing_data-Raw data:
+.. _collectiing_data-Raw data:
 
 Raw data
 ========
@@ -68,7 +68,7 @@ Principles of connecting data
 
 When connecting data in Sesam, it is important to understand :ref:`global datasets <best-practice-global-pipes>`. The raw data where additional properties were added are now ready to be connected to other data from other sources. This can be done in various ways so next few chapters will describe this in more detail.
 
-.. collecting_data-Global pipes / datasets:
+.. _collecting_data-Global pipes / datasets:
 
 Global pipes / datasets
 =======================
@@ -143,7 +143,7 @@ That's where JSONTRON/SCHEMATRON comes in. It can define certain rules on how an
 
 Use of JSONTRON/SCHEMATRON is not part of Sesam, microservices related to Sesam or what we normally do, but can be used as a finalizing effort to validate data before sending to targets by personnel to ensure high quality data to be sent. Use of JSONTRON/SCHEMATRON is only recommended for use when sending data outside an organization towards an external recipient either P2P or through a network infrastructure like a VAN or OpenPEPPOL. 
 
-.. collecting_data-Merge data in a global dataset or not:
+.. _collecting_data-Merge data in a global dataset or not:
 
 Merge data in a global dataset or not
 =====================================
@@ -156,7 +156,7 @@ In some cases, merging the data isn't logical. For instance, data like countries
 
 Also note that if a global dataset contains merged data, it does not necessarily mean that every other dataset in the global must be merged. Some data might be telling something about an entity but it's not necessary the same thing. 
 
-.. collecting_data-Defining global properties and golden records:
+.. _collecting_data-Defining global properties and golden records:
 
 Defining global properties and golden records
 =============================================
@@ -171,7 +171,7 @@ When modelling, we might like to create a set of global properties in the global
 
 Adding global properties does not mean that you must create a golden record, there are many scenarios where adding a property to a global dataset is useful. However, adding a global property should be done with consideration. Remember that to reset and rerun a global dataset has bigger implications than resetting and rerunning a preparation pipe, as there usually will be more downstream pipes that will be affected by it.
 
-.. collecting_data-Enhancing global datasets with data from other datasets:
+.. _collecting_data-Enhancing global datasets with data from other datasets:
 
 Enhancing global datasets with data from other datasets
 =======================================================
