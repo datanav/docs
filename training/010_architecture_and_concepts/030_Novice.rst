@@ -296,7 +296,7 @@ The dataset hr-person does not contain any data regarding "hours-pr-project" or 
 
 .. seealso::
 
-	:ref:`best-practices` > :ref:`collecting_data` > :ref:`collecting_data-Global pipes / datasets`
+	:ref:`best-practices` > :ref:`collecting-data` > :ref:`collecting_data-Global pipes / datasets`
 
 	:ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-workflow` > :ref:`best-practice-global-pipes`
 

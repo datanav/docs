@@ -1,3 +1,5 @@
+.. _collecting-data:
+
 ==========================
 Connect & collect patterns
 ==========================
