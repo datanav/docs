@@ -165,7 +165,7 @@ and the merged result, if we choose to retain the first ``"_id"`` of the above t
 	  ]
 	}
 
-What should immediately get your attention would be the ``"$ids"`` property in the merged result. Sesam utilizes this property to keep track of which ``"_id"``s have been merged and as such aids in data governance, as you do your data modelling.  
+What should immediately get your attention would be the ``"$ids"`` property in the merged result. Sesam utilizes this property to keep track of which ``"_id"s`` have been merged and as such aids in data governance, as you do your data modelling.  
 
 .. seealso::
 
