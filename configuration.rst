@@ -9521,7 +9521,7 @@ Incremental run:
 Background rescan:
   This is what a pump does when it is started by the :ref:`rescan_cron_expression <pump_rescan_cron_expression>` or
   :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
-  "start-rescan" pump-operation) and :ref:enable_background_rescan <pipe_settings_enable_background_rescan>` is set
+  "start-rescan" pump-operation) and :ref:`enable_background_rescan <pipe_settings_enable_background_rescan>` is set
   to ``true``. It will process all the source-entities, and do deletion tracking when finished.
 
   Only pipes with a :ref:`dataset sink <dataset_sink>` support background rescans. This is because a rescan run

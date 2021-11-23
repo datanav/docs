@@ -607,7 +607,7 @@ Changelog
 
 2018-06-06
 ----------
-* Changed default behaviour of the :ref:'CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
+* Changed default behaviour of the :ref:`CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
 * The :ref:`is_chronological <sql_source>` property on the :ref:`SQL source <sql_source>` is now dynamic as it is ``true`` if the ``updated_column`` and ``table`` properties are set.
 * Added the :ref:`is_chronological_full <sql_source>` property to the :ref:`SQL source <sql_source>` . If explicity set to ``false`` then a full run will not consider the source to be chronological even though it is chronological in incremental runs. The default value is the value of the ``is_chronological``, but can be set to ``false``.
 
@@ -910,7 +910,7 @@ Changelog
 
 2017-02-06
 ----------
-* Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
+* Added ``text_body_template`` and ``text_body_template_property`` properties to the :ref:`Email message sink <mail_sink>`. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
 
 2017-02-03
 ----------
