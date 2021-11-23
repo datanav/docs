@@ -176,7 +176,7 @@ Properties
      - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
        The default setting of this property is ``true`` which means signalling is turned on for all :ref:`dataset-type sources <dataset_source>` in the
-       installation. You can this feature on or off individually by setting the ``supports_signalling`` flag on the
+       installation. You can turn this feature on or off individually by setting the ``supports_signalling`` flag on the
        :ref:`dataset source <dataset_source>` (including variants like
        :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
        :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so

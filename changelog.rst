@@ -6,7 +6,7 @@ Changelog
 2021-11-23
 ----------
 
-* Changed the default value of the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section to ``true`` (i.e. it was previously ``false`` by default).
+* Changed the default value of the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section to ``true``. This property was previously ``false`` by default
 
 .. _changelog_2021_11_19:
 
