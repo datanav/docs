@@ -1,4 +1,4 @@
-.. _data-enrichment
+.. _data-enrichment:
 
 ===============
 Data enrichment

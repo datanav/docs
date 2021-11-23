@@ -1,4 +1,4 @@
-.. _sharing-data
+.. _sharing-data:
 
 Sharing data 
 ============	
