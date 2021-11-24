@@ -693,8 +693,6 @@ Datasets are also often the source for internal pipes.
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`dataset-id-3-1`
-
 .. _datasets-vs-tables-1-1:
 
 Datasets vs. tables
@@ -775,8 +773,6 @@ Sesam datasets and database tables that is important to point out:
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
-
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`dataset-id-3-1`
 
 .. _entities-json-keyvalpairs-1-1:
 
