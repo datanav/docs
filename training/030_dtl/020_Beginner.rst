@@ -331,10 +331,9 @@ Entity Data model – Data Types
 
   Sesam´s...
 
-  - Entity Data model is based on JSON and supports the most common datatypes literally and the uncommon
-ones as strings
+  - Entity Data model is based on JSON and supports the most common datatypes literally and the uncommon ones as strings
   - entity model requires a primary key ``_id``
-  - data types are extensive and a list can be found `here <https://docs.sesam.io/entitymodel.html>_
+  - data types are extensive and a list can be found `here <https://docs.sesam.io/entitymodel.html>`_
 
 .. _entity-dictionaries-and-id-3-1:
 
