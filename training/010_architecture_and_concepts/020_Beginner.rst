@@ -928,7 +928,7 @@ global-customer without needing to worry about the original origin of the attrib
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`source-subset-3-3`
 
-  :ref:`best-practice` > :ref:`best-practice-golden-record`
+  :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-golden-record`
 
 .. _special-sesam-attributes-1-1:
 
