@@ -366,7 +366,7 @@ Imagine you are working on a large dataset produced by a global pipe. You quickl
 
 .. seealso::
 
-  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms` > :ref:`dtl_transform-filter`
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _customize-data-structure-for-endpoints-1-2:
 
