@@ -126,7 +126,7 @@ You can check the connectivity status by clicking the **Status** tab.
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section` > :ref:`url_system`
 
-  :ref:`best-practices` > :ref:`best-practice` > :ref:`best-practice-naming-conventions`
+  :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-naming-conventions`
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`dtl-in-practice-3-1`
 
