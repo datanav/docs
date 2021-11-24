@@ -200,8 +200,8 @@ Sesam world map
 
 .. _the_parts_of_sesam-1-1:
 
-The parts of sesam @Erik
-~~~~~~~~~~~~~~~~~~~~~~~~
+The parts of sesam
+~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
@@ -452,23 +452,6 @@ Status:
 .. seealso::
 
   :ref:`tools` > :ref:`sesam-management-studio` > :ref:`management-studio-systems`
-
-
-.. _working-language-json-1-1:
-
-Working language JSON
-~~~~~~~~~~~~~~~~~~~~~
-
-Something general about JSON
-
-JSON configuration of pipes and systems
-
-DTL also validated as JSON?
-
-.. seealso::
-
-  TODO
-
 
 .. _naming-conventions-1-1:
 
