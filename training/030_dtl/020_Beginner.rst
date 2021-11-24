@@ -111,8 +111,6 @@ overview in the DTL Reference Guide. You will use this much.
 
   :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-transforms`
 
-  :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-dtl`
-
   :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-sinks`
 
   :ref:`concepts` > :ref:`concepts-config` > :ref:`concepts-pumps`
