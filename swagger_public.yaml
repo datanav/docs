@@ -326,6 +326,138 @@ paths:
               $ref: '#/definitions/PipeEntity'
 
 
+  '/pipes/{pipe_id}/log':
+    get:
+      operationId: api.view_utils._not_in_use_pipe_log
+      description:
+        Returns the entities in the execution log dataset
+      produces:
+        - application/json
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            An opaque value that can be used to efficiently skip already seen entities.
+
+        - name: history
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) all entities, including replaced ones, will be returned.
+            If this is false, only the latest version of the entities will be returned
+
+        - name: reverse
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is false (the default) the entities will be returned from the start of the dataset log.
+            If this is true, the entities will be returned from the end of the dataset log instead
+
+        - name: deleted
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) the entities marked as deleted will also be returned from the
+            dataset log. If this is false, the entities that are marked as deleted will not
+            included in result. If you request the complete history the deletes will always be included.
+
+      responses:
+        200:
+          description: The entities
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/DatasetEntity'
+    options:
+      operationId: api.view_utils._not_in_use_pipe_log_options
+      description:
+        Returns the OPTIONS with this endpoint
+      parameters:
+        - name: pipe_id
+          in: path
+          description: The id of the pipe
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            An opaque value that can be used to efficiently skip already seen entities.
+
+        - name: history
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) all entities, including replaced ones, will be returned.
+            If this is false, only the latest version of the entities will be returned
+
+        - name: reverse
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is false (the default) the entities will be returned from the start of the dataset log.
+            If this is true, the entities will be returned from the end of the dataset log instead
+
+        - name: deleted
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            If this is true (the default) the entities marked as deleted will also be returned from the
+            dataset log. If this is false, the entities that are marked as deleted will not
+            included in result. If you request the complete history the deletes will always be included.
+
+        - name: webhook
+          in: query
+          required: false
+          type: string
+          description:
+            "EXPERIMENTAL: If specified, the webhook URL will be POST-ed to whenever there is new data available in the
+            dataset after the request has been processed."
+
+        - name: token
+          in: query
+          required: false
+          type: string
+          description:
+            "EXPERIMENTAL: The token associated with the webhook. It's required if 'webhook' is set, if not then
+            a Badrequest is thrown."
+
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+
+
   '/pipes/{pipe_id}/generate-schema-definition':
     get:
       operationId: api.pipes.get_schema_definition
@@ -394,9 +526,14 @@ paths:
               Starts a new run of the pump. A pump is typically run automatically at scheduled intervals, but with this
               operation a pump can be started manually.
 
+          "start-rescan":
+
+              Starts a new rescan, unless a rescan is already running.
+
           "stop":
 
-              Stops the pump, if it is running. If the pump is not already running, this operation has no effect.
+              Stops the pump, if it is running (both rescans and normal pump runs are stopped). If the pump is not
+              running, this operation has no effect.
 
           "enable":
 
@@ -439,6 +576,19 @@ paths:
               potentially incorrect. Use this feature only during development, or when you intend to do a full sync
               soon after the reset.
 
+          "reset-rescan":
+
+              Make the next rescan runs start from the beginning of the source-dataset, even if the last rescan was
+              interrupted before it finished. (Normally, if the last rescan run was interrupted, the next rescan run
+              will resume from where the interrupted rescan run got to).
+
+          "discard-retries":
+
+              Writes a 'pump-discard-retries' entity to the pipe execution log. This will make the pump ignore any
+              pending retries due to write-errors on the next run, in effect discarding any retries of these previously
+              failed entities. Note that such discarded retryable entities are not written to the dead-letter dataset.
+
+
       produces:
         - application/json
       parameters:
@@ -465,6 +615,12 @@ paths:
           required: false
           type: string
           description: This is only used for the 'update-last-seen' operation.
+
+        - name: comment
+          in: formData
+          required: false
+          type: string
+          description: This is only used for the 'disable' operation
 
         - name: relation
           in: formData
@@ -1109,6 +1265,50 @@ paths:
       responses:
         200:
           description: OK
+
+  '/config-history/entity':
+    get:
+      operationId: api.config.get_history_for_config_entity
+      description:
+        Returns all configuration history for a specific config entity
+      parameters:
+        - name: entity_id
+          in: query
+          description: The id of the entity
+          required: true
+          type: string
+
+        - name: limit
+          in: query
+          required: false
+          type: integer
+          description:
+            Specifies the maximum number of entities to return. If this is not specified, all available entities are returned..
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            An opaque value that can be used to efficiently skip already seen entities.
+
+        - name: reverse
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If this is false (the default) the entities will be returned from the start of the dataset log.
+            If this is true, the entities will be returned from the end of the dataset log instead
+      produces:
+        - application/json
+      responses:
+        200:
+          description: The configuration history for the config entity
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ConfigEntity'
 
   '/':
     get:

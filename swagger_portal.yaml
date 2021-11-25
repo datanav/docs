@@ -3,6 +3,130 @@ info:
   version: 0.0.0
   title: SESAM Portal
 paths:
+  /api:
+    get:
+      operationId: api.root.get
+      description:
+        Returns information about the sesam portal.
+      produces:
+        - application/json
+
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            additionalProperties: false
+            required:
+              - status
+              - authentication_providers
+            properties:
+              status:
+                type: object
+                additionalProperties: false
+                required:
+                  - feature-level
+                properties:
+                  feature-level:
+                    description: A positive integer that indicates which api features this version of the sesam-portal supports.
+                    type: integer
+
+                  # TODO in IS-8199: remove "version and "revision"
+                  version:
+                    type: string
+
+                  revision:
+                    type: string
+
+                  teamcity-buildnumber:
+                    type: string
+                    description:
+                      This is an internal value that refers to the build-job that produced this version of the
+                      sesam portal.
+
+                  git-revision:
+                    type: string
+                    description:
+                      This is an internal value that refers to the git revision that was used to build this
+                      version of the sesam portal.
+
+                  build-date:
+                    type: string
+
+                  start_time:
+                    type: string
+
+                  uptime:
+                    type: string
+
+                  health_status:
+                    type: object
+                    additionalProperties: false
+                    required:
+                      - status
+                    properties:
+                      status:
+                        type: string
+                        enum: ["ok", "not ok"]
+
+                      message:
+                        description:
+                          If the status is not "ok", this property contains a human-readable message describing the problem.
+                        type: string
+
+                  is_itest_mode:
+                    type: boolean
+
+                  is_fallback_mode:
+                    type: boolean
+
+                  is_email_verification_required:
+                    type: boolean
+
+                  is_internal_users_enabled:
+                    type: boolean
+                  tos_version:
+                    type: number
+
+              authentication_providers:
+                description:
+                  This is a list of third party authentication providers.
+                type: array
+                items:
+                  type: object
+                  required:
+                    - id
+                    - login_url
+                  properties:
+                    id:
+                      type:
+                        string
+                      description:
+                        The unique id of the provider
+
+                    login_url:
+                      type: string
+                      description:
+                        The url to go to to start authenticating with this provider
+
+                    login_button_icon:
+                      type: string
+                      description:
+                        Optional. An url to the icon that should be used on the login-button for this provider.
+
+                    login_button_text:
+                      type: string
+                      description:
+                        Optional. The text to display on the login button.
+
+                    login_button_tooltip:
+                      type: string
+                      description:
+                        Optional. The mouse-over tooltip to display on the login button.
+              tos_version:
+                type: number
+                description: The current version of the Terms of Service
+
   /api/profile:
     get:
       description:
@@ -62,6 +186,16 @@ paths:
                       This property can only be modified by the special portal-admin users. The portal-admin
                       powers of such users are disabled by default, and must be explicitly activated by
                       setting this property to 'true'.
+                  providerWhitelist:
+                    type: array
+                    items:
+                      type: string
+                  providerIds:
+                    type: array
+                    items:
+                      type: string
+                  approvedTos:
+                    type: number
 
       responses:
         200:
@@ -175,6 +309,31 @@ paths:
       responses:
         200:
           description: OK
+
+  /api/jwt/zendesk:
+    get:
+      description:
+        Returns the JWT to be used with the Zendesk authentication api for the currently logged in user
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+        501:
+          description: Not implemented. Configuration for Zendesk is missing in the portal
+
+  /api/jwt/zendesk-chat:
+    get:
+      operationId: api.jwt.zendesk.get_zendesk_chat_jwt
+      description:
+        Returns the JWT to be used with the Zendesk Chat authentication api for the currently logged in user
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: OK
+        501:
+          description: Not implemented. Configuration for Zendesk is missing in the portal
 
   /api/subscriptions:
     get:
@@ -380,7 +539,7 @@ paths:
           type: string
         - name: jwt_settings
           in: body
-          description: Updated settings for the subscription
+          description: The JWT parameters.
           required: true
           schema:
             type: object
@@ -402,7 +561,12 @@ paths:
                   The expiration-date to set on the new JWT.  This is measured in number of seconds since the Epoch.
                 type: number
                 example: 2349343498
-
+              refresh_interval:
+                description:
+                  Optional. If this is specified, the resulting JWT must be refreshed at the specified rate. In this
+                  case the 'exp' property describes the last time the JWT can be refreshed.
+                type: number
+                example: 900
               principals:
                 description:
                   A list of the principals that the JWT should grant
@@ -703,6 +867,27 @@ paths:
         400:
           description: This endpoint will always return a 400 response
 
+  /api/subscriptions/{subscription_id}/notification-rules:
+    get:
+      description:
+        Returns a list of the notification rules for all pipes in the subscription
+      operationId: api.notifications.get_notification_rules_for_all_pipes
+
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/PipeNotificationRuleInfo"
+
   /api/subscriptions/{subscription_id}/pipes/{pipe_id}/notification-rules:
     post:
       description:
@@ -926,7 +1111,7 @@ paths:
     get:
       operationId: api.profile.get_notifications_for_user
       description:
-        Returns the notifications that should be displayed in the "Announcement"-list for this user.
+        Returns the notifications that should be displayed in the "Alerts"-list for this user.
 
       produces:
         - application/json
@@ -954,7 +1139,7 @@ paths:
           type: boolean
           default: false
           description:
-            Specified if dismissed notifications should be included in the results.
+            Specifies if dismissed notifications should be included in the results.
 
       responses:
         200:
@@ -964,6 +1149,101 @@ paths:
             items:
               $ref: '#/definitions/Notification'
 
+  /api/notifications-summary:
+    get:
+      operationId: api.profile.get_notifications_summary_for_user
+      description:
+        Returns the status of all subscriptions and pipes with notification-rules that the user have access to.
+        This endpoint implements the Sesam "json-pull" protocol (https://docs.sesam.io/json-pull.html).
+
+      produces:
+        - application/json
+
+      parameters:
+        - name: limit
+          in: query
+          description:
+            Specifies the maximum number of items to return. If this is not specified, all available items will
+            be returned
+          required: false
+          type: integer
+
+        - name: since
+          in: query
+          required: false
+          type: integer
+          description:
+            This is the 'since'-value in the sesam json-pull protocol (https://docs.sesam.io/json-pull.html)
+
+        - name: deleted
+          in: query
+          required: false
+          type: boolean
+          default: true
+          description:
+            Specifies if deleted entries should be included in the results.
+
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              type: object
+              additionalProperties: true
+              required:
+                - _id
+                - _updated
+                - _deleted
+                - subscription_id
+              properties:
+                _id:
+                  type: string
+                  description:
+                    The id of the pipe that this item represents
+
+                subscription_id:
+                  type: string
+                  description:
+                    The id of the subscription that this item belongs to
+
+                pipe_id:
+                  type: string
+                  description:
+                    The id of the pipe that this item represents. This property is optional and is only present if
+                    the item represents a pipe.
+
+                _updated:
+                  type: number
+
+                _deleted:
+                  type: boolean
+
+                status:
+                  type: string
+                  enum: ["ok", "failed"]
+                  description:
+                    If status is "ok" no notification-rules have triggered.
+                    If status is "failed" if at least one user-defined notification-rule has triggered.
+                    This property is not present in items where "_deleted" is true.
+
+                confidence:
+                  type: number
+                  minimum: 0
+                  maximum: 1
+                  description:
+                    This number specifies how confident the system is that the status is accurate. This is normally
+                    1, which means that the notification machinery is working as normal.
+                    If there is an internal problem with the notification machinery itself, the confidence will be
+                    between 1 and 0.
+
+                notifications:
+                  type: array
+                  description:
+                    This property is only present if "status"=="failed" (i.e one or more notificationsrules have an
+                    ongoing notification). It contains a list of detailed information about all ongoing notifications.
+                  items:
+                    $ref: '#/definitions/Notification'
 
   /api/monitoring/standard/{subscription_id}/pipes/{pipe_id}:
     get:
@@ -1027,11 +1307,94 @@ paths:
         200:
           description: OK
 
+  /api/sso:
+    get:
+      description:
+        Used for SSO authentication. If the portal detects that a user is in session, it creates a JWT and redirects to
+        a provided URL. If not, it serves a login page to authenticate. Right now, this only works with Zendesk.
+      parameters:
+        - name: return_to
+          in: query
+          description: The URL to return to after authentication
+          type: string
+      responses:
+        200:
+          description: OK
+
+  /api/login_implicit_flow:
+    get:
+      operationId: api.authentication.get_login_implicit_flow
+      description:
+        This is only used when logging in with openid connect providers that only support the "implicit flow" method.
+        In that case the "id_token" is returned as part for the fragment-part of the url (the bit after the "#"-sign),
+        which isn't sent to the backend. The login_implicit_flow page contains a javascript snippet that extracts the
+        id_token and calls the jwt_login endpoint.
+      produces:
+        - text/html
+      responses:
+        200:
+          description: OK
+
+  /api/jwt_login:
+    post:
+      operationId: api.jwt_login.jwt_login_post
+      description:
+        This is only used when logging in with openid connect providers that only support the "implicit flow" method.
+      responses:
+        200:
+          description: OK
+
+  /api/login/{provider_id}:
+    post:
+      description:
+        This starts an openid connect authentication prosess. The user will eventually be redirected back to the
+        '/login_callback/{provider_id}' endpoint.
+      operationId: api.authentication.login
+      responses:
+        302:
+          description:
+            A redirect to the authentication provider's login-page.
+
+      parameters:
+        - name: provider_id
+          in: path
+          description:
+            The name of the openid connect authentication provider. This must match
+            a provider that has been configured in the sesamportal.yaml file.
+          required: true
+          type: string
+
+  /api/login_callback/{provider_id}:
+    get:
+      description:
+        The user is redirected back here after authenticating with an
+        openid connect authentication provider.
+      operationId: api.authentication.login_callback
+      responses:
+        302:
+          description:
+            Redirect to the sesam portal frontpage
+
+      parameters:
+        - name: provider_id
+          in: path
+          description:
+            The name of the openid connect authentication provider. This must match
+            a provider that has been configured in the sesamportal.yaml file.
+          required: true
+          type: string
+
+        - name: code
+          in: query
+          description:
+            A short-lived authorization code from the authentication provider. The DAP backend will use this
+            code to retrieve the user's information from the authentication provider.
+          type: string
 
   /api/login:
     post:
       description:
-        This is called when the user wants to authenticate with a email-address and a password. If the login
+        This is called when the user wants to authenticate with an email-address and a password. If the login
         is successful, a new http session is created, and the sessionid is returned in a cookie.
       consumes:
         - application/x-www-form-urlencoded
@@ -1066,11 +1429,28 @@ paths:
 
   /api/logout:
     get:
+      operationId: api.authentication.logout
       description:
         Logs out the currently logged-in user, and clears the http session data.
+        This is the legacy logout that returns a json object (the same as the /api/profile
+        endpoint). This endpoint is deprected and should be removed once the gui has been
+        updated to use the "/api/logout2" endpoint.
       responses:
         200:
           description: OK
+          schema:
+            $ref: '#/definitions/Profile'
+
+  /api/logout2:
+    get:
+      operationId: api.authentication.logout2
+      description:
+        Logs out the currently logged-in user, and clears the http session data.
+      responses:
+        302:
+          description:
+            This redirect either to the sesam portal frontpage, or to a url that
+            lets the user log out properly from a third party authentication provider.
 
   /api/signup:
     post:
@@ -1177,6 +1557,13 @@ paths:
           schema:
             $ref: "#/definitions/NewSubscriptionInfo"
 
+        - name: expected_data_size
+          in: query
+          description: What is the expected data size of the subscription
+          required: false
+          type: integer
+          minimum: 0
+
       produces:
         - application/json
 
@@ -1199,6 +1586,13 @@ paths:
           description: The subscription id
           required: true
           type: string
+
+        - name: expected_data_size
+          in: query
+          description: What is the expected data size of the subscription
+          required: false
+          type: integer
+          minimum: 0
 
         - in: body
           name: subscription_info
@@ -1426,15 +1820,6 @@ paths:
             The current user already has a pending 'verify emailaddress email', so no new email can
             be sent at this time.
 
-  /api/status:
-    get:
-      description:
-        Returns misc information about the portal
-      responses:
-        200:
-          description: OK
-
-
   /api/payment/stripe_publishable_api_key:
     get:
       operationId: api.payment.get_stripe_publishable_api_key
@@ -1453,7 +1838,7 @@ paths:
       operationId: api.payment.get_stripe_coupon
       description:
         Returns a coupon if it exists
-      
+
       produces:
         - application/json
 
@@ -1469,6 +1854,20 @@ paths:
         200:
           description: OK
 
+  /api/sesam_status:
+    get:
+      description:
+        Proxy for querying the sesam statuspage API
+
+      produces:
+        - application/json
+
+      responses:
+        200:
+          description: OK
+        404:
+          description: Could not connect to sesam.statuspage.io
+
 
   /api/payment/subscription:
     post:
@@ -1476,7 +1875,7 @@ paths:
       description:
         Creates a new customer and subscription in Stripe and creates a PaymentMethod in the Sesam portal.
         Also creates a new gdpr subscription in the Sesam Portal (using the new paymentmethod).
-      
+
       produces:
         - application/json
 
@@ -1634,6 +2033,34 @@ paths:
       description:
         Returns a simple htmlpage that lets admins search for subscriptions and perform various operations
         on them.
+
+      parameters:
+        - name: search_type
+          in: query
+          description:
+            The type of items to search for.
+          type: string
+          enum: ["subscription", "paid_subscription",
+                 "paid_subscription_without_verified_paymentmethod",
+                 "user", "user_with_pending_trial_request", "user_with_any_trial_request",
+                 "unverified_paymentmethod", "verified_paymentmethod"]
+
+        - name: query
+          in: query
+          type: string
+          description:
+            Specifies the text to filter search for. An empty string means to display all the
+            items of the selected type.
+
+        - name: search_in_all_fields
+          in: query
+          type: boolean
+          default: false
+          description:
+            If this is set to false (the default), the query-text will only be matched against
+            a few selected fields (name and id, usually). If it is set to true, the query-text
+            will be matched against all the fields.
+
       responses:
         200:
           description: OK
@@ -1831,6 +2258,25 @@ paths:
         400:
           description: This endpoint will always return a 400 response
 
+  /api/admin/config/validation_hack_for_AllowedProvidersForDomains:
+    put:
+      operationId: api.admin.config.validation_hack_for_AllowedProvidersForDomains
+      description:
+        This is a dummy endpoint that is used to register the AllowedProvidersForDomains definition,
+        so that it can be used to validate configuration entities in the python code. The endpoint
+        just returns a 400 response.
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: config_entity
+          schema:
+            $ref: '#/definitions/AllowedProvidersForDomains'
+
+      responses:
+        400:
+          description: This endpoint will always return a 400 response
+
   /api/admin/config/validation_hack_for_AutoJoinSubscriptionGroup:
     put:
       operationId: api.admin.config.validation_hack_for_AutoJoinSubscriptionGroup
@@ -1948,6 +2394,143 @@ paths:
           description: OK
 
 
+  /api/subscriptions/{subscription_id}/subscription-settings:
+    get:
+      operationId: api.subscriptions.get_subscription_settings
+      description:
+        This endpoint is intended to be used by subscription sesam-nodes; these nodes needs a way to get
+        notified when a user has done something that changes a subscription's settings. For instance, this is
+        used by the self-service multinode to retrieve the ip-filtering rules to use.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          description:
+            Specifies that the endpoint should only return entities newer than the specified 'since' value.
+            The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+          required: false
+          type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SubscriptionSettings'
+
+  /api/subscriptions/{subscription_id}/pipe-settings:
+    get:
+      operationId: api.pipe_settings.get_all_pipe_settings_for_subscription
+      description:
+        Returns a list of pipe-setting dicts.
+        This endpoint is intended to be used by subscription sesam-nodes; these nodes needs a way to get
+        notified when a user has done something that changes a pipe's monitoring requirements.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+
+        - name: since
+          in: query
+          description:
+            Specifies that the endpoint should only return entities newer than the specified 'since' value.
+            The since-value should be set to the value of the "_updated"-attribute in the last seen entity.
+            See https://docs.sesam.io/configuration.html#continuation-support for details on how this works.
+          required: false
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PipeSettings'
+
+
+  /api/subscriptions/{subscription_id}/pipe-settings/{pipe_id}:
+    put:
+      operationId: api.pipe_settings.put_pipe_settings
+      description:
+        Update the settings of the specified pipe.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+        - name: pipe_id
+          in: path
+          description: The pipe id
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/UpdatedPipeSettings'
+
+    get:
+      operationId: api.pipe_settings.get_pipe_settings
+      description:
+        Returns the settings of the specified pipe.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+        - name: pipe_id
+          in: path
+          description: The pipe id
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PipeSettings'
+
+    delete:
+      operationId: api.pipe_settings.delete_pipe_settings
+      description:
+        Deletes the settings of the specified pipe.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+        - name: pipe_id
+          in: path
+          description: The pipe id
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            additionalProperties: false
+
+
   /api/subscriptions/{subscription_id}/revoked_json_web_tokens:
     get:
       operationId: api.subscription_api_jwts.get_revoked_json_web_tokens
@@ -2016,6 +2599,50 @@ paths:
             items:
               $ref: '#/definitions/LicenseEntity'
 
+
+  /api/subscriptions/{subscription_id}/resource-needs:
+    post:
+      operationId: api.subscriptions.post_resource_needs
+      description:
+        This endpoint is intended to be used by subscription sesam-nodes; these nodes needs a way to specify
+        that more hardware resources are required.
+      produces:
+        - application/json
+      parameters:
+        - name: subscription_id
+          in: path
+          description: The subscription id
+          required: true
+          type: string
+        - in: body
+          name: request_body
+          description: The new resource-needs
+          schema:
+            type: object
+            additionalProperties: false
+            # TODO in IS-11207(step2): Set 'required:' and get rid of the 'datahub' property once the self-service operator has been updated.
+            #required:
+            #  - provisioning_settings
+            properties:
+              datahub:
+                type: object
+                additionalProperties: true
+                description: This property is deprecated. Use 'provisioning_settings' instead.
+
+              provisioning_settings:
+                type: object
+                additionalProperties: false
+                required:
+                  - num_workers
+                properties:
+                  num_workers:
+                    type: integer
+                    description:
+                      Specifies that the number of worker boxes that this subscription needs.
+      responses:
+        200:
+          description: OK
+
   /api/provisioning/domain:
     get:
       operationId: api.provisioning.is_domain_available
@@ -2056,7 +2683,47 @@ paths:
       responses:
         '200':
           description: OK
-          
+
+  /.well-known/openid-configuration:
+    get:
+      description:
+        This endpoint returns the "OpenID Provider Configuration Response", as described at
+        https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse
+      operationId: api.openid_connect.get_configuration
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: OK
+
+  /api/openid_connect/token:
+    post:
+      description:
+        This is the "OpenID Connect Token endpoint", as described at
+        https://tools.ietf.org/html/rfc6749#section-3.2
+      operationId: api.openid_connect.token_endpoint_post
+      consumes:
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - name: grant_type
+          in: formData
+          type: string
+          enum: ["client_credentials", "refresh_token"]
+
+        - name: client_id
+          in: formData
+          type: string
+
+        - name: client_secret
+          in: formData
+          type: string
+
+      responses:
+        '200':
+          description: OK
 
 definitions:
   Feedback:
@@ -2071,7 +2738,7 @@ definitions:
         description: The email of the sender
       path:
         type: string
-        description: The path from where the feedback was submitted 
+        description: The path from where the feedback was submitted
 
   PaymentMethod:
     type: object
@@ -2387,10 +3054,16 @@ definitions:
             $ref: '#/definitions/PriceEstimateDynamicItem'
 
       dynamic_total:
-              description:
-                Transit-encoded decimal that specifies the total price for all the dynamic items.
-              type: string
-              example: "~f19.90"
+        description:
+          Transit-encoded decimal that specifies the total price for all the dynamic items.
+        type: string
+        example: "~f19.90"
+
+      expected_total_data_cost:
+        description:
+          Calculated total monthly cost of data (if the expected data size was provided, otherwise not present)
+        type: string
+        example: "~f19.90"
 
 
   PriceEstimateDynamicItem:
@@ -2419,10 +3092,13 @@ definitions:
           The 'main' type is given by the property-name used in the PriceEstimate to refer to this PriceEstimateFixedItem.
           The 'sub_type' specifies a more fine-grained type.
         type: string
-        enum: [# datahub has the "sizes" "small", "medium", "large" and "enterprise".
-               "small", "medium", "large", "enterprise",
+        enum: [# datahub has the "sizes" "developer", "single", "multi". "small", "medium", "large" and "xlarge" are legacy
+               "small", "medium", "large", "xlarge", "developer", "single", "multi",
 
-               # SLA and Search has the "sizes" "basic", "standard" and "enterprise".
+               # microservices have "enterprise" instead of "xlarge"
+               "enterprise",
+
+               # SLA and Search has the sizes "basic", "standard" and "enterprise".
                "basic", "standard",
 
                # VPN doesn't have a subtype, and this is represented by an empty string.
@@ -2468,6 +3144,14 @@ definitions:
 
           lastRequestTrial:
             $ref: '#/definitions/RequestTrial'
+          providerWhitelist:
+            type: array
+            items:
+              type: string
+          providerIds:
+            type: array
+            items:
+              type: string
 
       supported-operations:
         description:
@@ -2547,7 +3231,7 @@ definitions:
                   reason-code:
                     type: string
                     enum: ["no_such_user", "has_pending_reset_password_emails",
-                           "portal_is_in_readonly_mode"]
+                           "portal_is_in_readonly_mode", "user_from_jwt"]
 
           create_paymentmethod:
             allOf:
@@ -2649,6 +3333,11 @@ definitions:
         description: Specified if this subscription was create by assigning a precreated subscription.
         type: boolean
 
+      provisioner_version:
+        type: string
+        description: Specifies the version of the sesam provisioner that's been used to provision
+          this subscription. As of now that can either be "1", "2" or "snowflake"
+
       url:
         $ref: '#/definitions/SubscriptionURL'
 
@@ -2669,7 +3358,7 @@ definitions:
         $ref: '#/definitions/SubscriptionConnections'
 
       service:
-        # Specifies if the subscription is about in in-cloud or on-premise installation.
+        # Specifies if the subscription is about an in-cloud or on-premise installation.
         $ref: '#/definitions/SubscriptionService'
 
       paymentmethod_id:
@@ -2768,6 +3457,7 @@ definitions:
                   reason-code:
                     type: string
                     enum: ["not_logged_in",
+                           "user_from_jwt",
                            "user_does_not_have_required_permission",
                            "user_is_not_last_subscription_member",
                             "email_not_verified",
@@ -2790,7 +3480,7 @@ definitions:
                   reason-code:
                     type: string
                     enum: ["is_last_admin", "is_paymentmethod_owner", "email_not_verified",
-                           "portal_is_in_readonly_mode"]
+                           "portal_is_in_readonly_mode", "user_from_jwt"]
 
           invite_user:
             allOf:
@@ -2846,8 +3536,62 @@ definitions:
                            "email_not_verified",
                            "portal_is_in_readonly_mode"]
 
+  SubscriptionSettings:
+    description:
+      This is the information about a subscription that can be downloaded by that subscription's sesam-node. It is
+      a subset of the information in the "Subscription" type, plus some internal settings that are not exposed
+      in the end-user api endpoints.
+
+    type: object
+    additionalProperties: false
+    required:
+      - _id
+      - _updated
+      - name
+      - created
+    properties:
+      _id:
+        type: string
+        example: "12345"
+
+      _updated:
+        $ref: '#/definitions/SubscriptionUpdated'
+
+      name:
+        type: string
+        example: "3 month trial subscription"
+
+      type:
+        $ref: '#/definitions/SubscriptionType'
+
+      created:
+        type: string
+        example: "2016-06-24T09:38:51Z"
+
+      url:
+        $ref: '#/definitions/SubscriptionURL'
+
+      description:
+        $ref: '#/definitions/SubscriptionDescription'
+
+      products:
+        $ref: '#/definitions/Products'
+
+      provisioning_settings:
+        $ref: '#/definitions/ProvisioningSettings'
+
+      network:
+        $ref: '#/definitions/NetworkSettings'
+
+      audit:
+        $ref: '#/definitions/AuditInfo'
+
   ProvisioningResult:
     type: object
+    description:
+      This is a description of the current state of the provisioning for a subscription. This information is
+      read-only; to modify the provisioning-settings, the corresponding settings in the "products"-property must
+      be modified.
     additionalProperties: true
     properties:
       # TODO: will "microservices" appear here, too? And what about vpn?
@@ -2907,8 +3651,11 @@ definitions:
           tag:
             type: string
             description:
-              The docker image tag for the sesam-node container
+              The docker image tag that the sesam-node container is currently using.
             example: "nightly"
+
+      provisioning_settings:
+        $ref: '#/definitions/ProvisioningSettings'
 
       services:
         type: object
@@ -2952,6 +3699,11 @@ definitions:
                 size:
                   type: string
                   example: "small"
+                tag:
+                  type: string
+                  description:
+                    The docker image tag for the data access portal container
+                  example: "gdrp-nightly"
                 debuginfo:
                   description:
                     This property contains debug information that is only present in internal development environments.
@@ -3048,6 +3800,9 @@ definitions:
       service:
         # Specifies if the subscription is about in in-cloud or on-premise installation.
         $ref: '#/definitions/SubscriptionService'
+
+      provisioner_version:
+        $ref: '#/definitions/SubscriptionProvisionerVersion'
 
       products:
         # The products that should be included in this subscription.
@@ -3181,12 +3936,17 @@ definitions:
         $ref: '#/definitions/PaymentMethodDescription'
       is_verified:
         $ref: "#/definitions/PaymentMethodIsVerified"
-      is_verified:
-        $ref: "#/definitions/PaymentMethodIsVerified"
       owner:
         $ref: "#/definitions/PaymentMethodOwner"
 
-
+  SubscriptionProvisionerVersion:
+    description:
+      This specified the provisioner this subscription will be provisioned with. If this value is "1" or missing,
+      and the service specified is "in-cloud", the original provisioner is used. If the value is "2",
+      the new "sesam-provisioner" is used. If the version is "snowflake" the Portal won't provision this subscription.
+    type: string
+    enum:
+      ["1", "2", "snowflake"]
 
   SubscriptionURL:
     description:
@@ -3213,7 +3973,9 @@ definitions:
 
   SubscriptionService:
     description:
-      Specifies if the subscription is about in in-cloud or on-premise installation.
+      Specifies if the subscription is about in in-cloud or on-premise installation. This doesn't have bearing on
+      whether the Portal provisions this subscription or not, that is controlled by the provisioner_version property
+      as of IS-10634. All on-premise subscriptions have provisioner_version "snowflake" and some in-cloud ones too.
     type: string
     enum: ["in-cloud", "on-premise"]
     example: "in-cloud"
@@ -3269,8 +4031,24 @@ definitions:
           - size
         properties:
           size:
+            description:
+              This property describes the size of the node. As of Sep 2021, small, medium, large and xlarge are legacy
+              sizes. The UI maps small/medium to single and xlarge to multi.
             type: string
-            enum: ["small", "medium", "large", "enterprise"]
+            enum: ["small", "medium", "large", "xlarge", "developer", "single", "multi"]
+
+          developer_mode:
+            description:
+              This is a property that is set in some subscriptions to allow certain APIs such as reset node that
+              is dangerous to enable in a production environment
+            type: boolean
+
+          fixed_price_gb:
+            description:
+              This property specifies the number of GBs that are set as the threshold for the subscription fixed
+              price payment scheme. If this property exists, subscription is invoiced using fixed price scheme.
+            type: integer
+            minimum: 0
 
           maximum_store_disk_usage:
             description:
@@ -3283,11 +4061,30 @@ definitions:
             default: "local-replicated"
             enum: ["local-replicated", "geo-replicated"]
 
+          monitoring:
+            type: string
+            description:
+              This can be set to "standard" to enable monitoring for this subscription (this currently requires
+              some manual work by SESAM employees).
+            enum: ["standard"]
+
           version:
             type: string
             description:
-              The docker tag for the sesam-node container
+              The docker tag that the user wants the sesam-node container to use. The docker tag that is
+              currently in use is specified in the "provisioning_result"->"datahub"->"tag" property. There will
+              always be a delay between the time the user changes the "version"-property and the time when the
+              "provisioning_result"->"datahub"->"tag" property changes; at the very least the sesam-node needs
+              to be stopped and restarted with the new docker-image.
 
+          byok:
+            type: boolean
+            default: false
+            description:
+              'Setting this to true enables the "Bring Your Own Keys" feature in Azure.
+              See this page for some background on the BYOK feature:
+                https://docs.microsoft.com/en-us/azure/information-protection/byok-price-restrictions
+              Note that enabling this feature incurs additional costs.'
 
       gdpr_platform:
         description:
@@ -3387,15 +4184,11 @@ definitions:
         properties:
           level:
             type: string
-            enum: ["basic", "standard", "enterprise"]
+            enum: ["basic", "standard", "enterprise", "premium"]
 
       vpn:
         type: object
         additionalProperties: false
-        required:
-          - public-gateway
-          - onsite-ranges
-          - type
         properties:
           public-gateway:
             type: string
@@ -3424,6 +4217,95 @@ definitions:
             items:
               type: string
             example: ["192.168.0.2", "192.168.0.3"]
+
+          enable_snat:
+            type: boolean
+            default: false
+
+          tier:
+            type: integer
+            default: 1
+
+          connections:
+            type: array
+            default: []
+            items:
+              $ref: '#/definitions/VPNConnection'
+
+          sesam_gateway:
+            type: string
+            example: "18.10.0.11"
+
+          sesam_address_spaces:
+            type: array
+            items:
+              type: string
+            example: ["210.10.8.3"]
+
+      search:
+        description:
+          This controls whether to activate the search capability
+        type: boolean
+        default: false
+
+  VPNConnection:
+    description:
+      Describes the customer settings for a VPN connection
+    additionalProperties: false
+    type: object
+    properties:
+      gateway_address:
+        type: string
+        example: "46.101.228.139"
+
+      address_spaces:
+        type: array
+        items:
+          type: string
+        example: ["192.168.100.0/24"]
+
+      shared_key:
+        description:
+          This is the secret shared key that is used to authenticate against the VPN. This property is write-only
+          and will always look like "********" in the api-responses from the backend. If the special value
+          "********" is used in a PUT-request, the value is ignored and the current shared_key value will not
+          be changed. The intention is that the GUI can display and send the shared_key value as-is.
+        type: string
+        example: "verysecret"
+
+      _id:
+        description:
+          This is an internal unique id that is assigned to new vpn-connections by the backend.
+          The GUI will not display this value, but will include it as-is in PUT-requests.
+          (The portal backend uses this value to replace the placeholder "********" for the shared_key
+           property in PUT-requests; it needs a way to uniquely identify connections).
+        type: integer
+        example: 1
+
+
+  ProvisioningSettings:
+    description:
+      Describes the internal (i.e not end-user configurable) subscription settings
+    additionalProperties: true
+    type: object
+    properties:
+      num_workers:
+        description:
+          The number of server machines this subscription currently uses.
+        type: integer
+
+      max_workers:
+        description:
+          The maximum number of server machines this subscription is allowed to use.
+        type: integer
+
+      kubernets_upgrade_channel:
+        description:
+          'The upgrade channel to use to auto-upgrade the kubernetes cluster. See
+            https://docs.microsoft.com/en-us/azure/aks/upgrade-cluster#set-auto-upgrade-channel
+          for a detailed explanation and for a list of available channels.'
+        type: string
+        example: "stable"
 
   NetworkSettings:
     description:
@@ -3587,7 +4469,6 @@ definitions:
       - name
       - description
       - payload
-      - jwt_string
       - audit
       - supported-operations
 
@@ -3603,6 +4484,7 @@ definitions:
         description:
           A user-assigned description of this token.
         type: string
+
       supported-operations:
         description:
           Information about the various ui-actions that relates to this SubscriptionJWT
@@ -3641,12 +4523,16 @@ definitions:
             type: string
 
           iat:
-            description: standard "issued at" field. This is measured in the number of seconds since the Epoch.
+            description:
+              Standard "issued at" field. This is measured in the number of seconds since the Epoch.
             type: number
             example: 1485350743
 
           exp:
-            description: standard "expiration time" field.  This is measured in the number of seconds since the Epoch.
+            description:
+              Standard "expiration time" field.  This is measured in the number of seconds since the Epoch.
+              Note that if the 'refresh_interval' parameter is set, this is not the "exp" value that will actually
+              be in the jwt_string; instead the value will be "current_time + refresh_interval"
             type: number
             example: 2349343498
 
@@ -3683,8 +4569,27 @@ definitions:
             enum: ["group:Everyone"]
 
       jwt_string:
-        description: The actual signed JWT
+        description: The actual signed JWT. For security-reasons this is only returned when the JWT is created.
         type: string
+
+      client_id:
+        description:
+          Optional. The 'client_id' (if any) associated with this JWT. This is only present for tokens where the refresh_interval
+          has been set.
+        type: string
+
+      client_secret:
+        description:
+          Optional.  The 'client_secret' (if any) associated with this JWT. For security-reasons this is only returned
+          when the JWT is created. This is only present for tokens where the refresh_interval has been set.
+
+        type: string
+
+      refresh_interval:
+        description:
+          Optional. Specifies the interval (in seconds) at which the token must be refreshed.
+        type: number
+        example: 3600
 
       audit:
         $ref: '#/definitions/AuditInfo'
@@ -3726,7 +4631,7 @@ definitions:
       - type
     properties:
       type:
-        $ref: '#/definitions/PipeNotificationRuleInfoType'
+        $ref: '#/definitions/NotificationRuleInfoType'
       id:
         $ref: '#/definitions/PipeNotificationRuleInfoId'
       name:
@@ -3755,7 +4660,7 @@ definitions:
 
   PipeNotificationRuleInfo:
     description:
-      Information about an notification_rule on a pipe (as returned by the server).
+      Information about an notification_rule (as returned by the server).
     type: object
     additionalProperties: false
     required:
@@ -3765,7 +4670,13 @@ definitions:
       id:
         type: string
       type:
-        $ref: '#/definitions/PipeNotificationRuleInfoType'
+        $ref: '#/definitions/NotificationRuleInfoType'
+      pipe_id:
+        type: string
+        description:
+          This property is only present if the notification-rule
+          belongs to one specific pipe
+          (as opposed to belonging to the subscription itself).
       name:
         $ref: '#/definitions/PipeNotificationRuleInfoName'
       description:
@@ -3813,16 +4724,22 @@ definitions:
                  ] # This may be expanded later, for instance with "sms" and "irc".
 
 
-  PipeNotificationRuleInfoType:
+  NotificationRuleInfoType:
     description:
       The type of the notification_rule
     type: string
     enum: ["pump_started_overdue",
+           "pump_finished_overdue",
            "pump_completed_value_too_high_over_time",
            "pump_completed_value_too_low_over_time",
            "pump_completed_value_too_high",
            "pump_completed_value_too_low",
            "pattern_match",
+           "pump_failed",
+           "pump_offset_set",
+           "restore_completed",
+           "license_expiration_date",
+           "store_disk_usage_upper_limit"
            ]
 
   PipeNotificationRuleInfoId:
@@ -3861,7 +4778,7 @@ definitions:
       - schema
     properties:
       type:
-        $ref: '#/definitions/PipeNotificationRuleInfoType'
+        $ref: '#/definitions/NotificationRuleInfoType'
       name:
         type: string
         description: The human-readable name of the rule-type
@@ -3977,6 +4894,8 @@ definitions:
       - last_event_timestamp
       - event_count
       - alerts_will_be_visible_for_the_current_user
+      - is_ongoing
+
     properties:
       event_timestamp:
         type: string
@@ -4043,6 +4962,12 @@ definitions:
         type: string
         example: "2016-06-24T09:38:51Z"
 
+      is_ongoing:
+        description:
+          This is true if the notification is still "ongoing", meaning that the condition that caused the notification
+          to trigger hasn't since been resolved.
+        type: boolean
+
       alerts_will_be_visible_for_the_current_user:
         type: boolean
         description:
@@ -4065,7 +4990,30 @@ definitions:
         enum: ["auto-join-subscription-group",
                "pre-created-subscription",
                "rate-limits",
+               "allowed-providers-for-domains"
                ]
+
+# TODO: start using this directly in the swagger-file once connexion is updated to support openapi v3.0
+  #       (so that we can use "oneOf" in the swagger files.
+  #       The definition is currently used to do a manual check in the python-code.
+  AllowedProvidersForDomains:
+    allOf:
+      - $ref: '#/definitions/ConfigEntity'
+      - type: object
+        additionalProperties: false
+        required:
+          - _id
+          - type
+          - mapping
+        properties:
+          _id:
+            type: string
+          type:
+            type: string
+            enum: ["allowed-providers-for-domains"]
+          mapping:
+            description: Mapping between domains and allowed providers
+            type: object
 
 
   # TODO: start using this directly in the swagger-file once connexion is updated to support openapi v3.0
@@ -4205,6 +5153,96 @@ definitions:
                   items:
                     type: string
                   example: ["group:User"]
+
+
+  PipeSettings:
+    description:
+      This is the values that are returned by the sesam-portal in the "pipe-settings" endpoint.
+    type: object
+    additionalProperties: false
+    required:
+      - _id
+      - insights_enabled
+    properties:
+      _id:
+        type: string
+        description:
+          This is the id of the pipe that this entry describes.
+
+      _updated:
+        description:
+          An opaque value that can be used as the value of the "since" parameter in a later call.
+
+      _deleted:
+        type: boolean
+        description:
+          This is set to true if the entry for the pipe has once existed, but should now be removed.
+
+      insights_enabled:
+        $ref: '#/definitions/PipeSettingsInsightsEnabled'
+
+      monitoring_settings:
+        type: object
+        additionalProperties: false
+        required:
+          - log_events
+        properties:
+          log_events:
+            description:
+              The execution log event-types that should be written for this pipe.
+            type: object
+            additionalProperties: false
+            properties:
+              "pump-started":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+              "pump-completed":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+              "read-error":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+              "write-error":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+              "batch-write-error":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+              "pump-failed":
+                $ref: '#/definitions/PipeSettingsLogEvent'
+
+  UpdatedPipeSettings:
+    description:
+      This is the message that the gui sends when it wants to update the settings of a pipe.
+    type: object
+    additionalProperties: true # any additional properties are ignored.
+    properties:
+      _updated:
+        description:
+          This is required for optimistic locking and should be included if there already existed a
+          pipe-settings entry for the pipe.
+      insights_enabled:
+        $ref: '#/definitions/PipeSettingsInsightsEnabled'
+
+  PipeSettingsInsightsEnabled:
+    type: boolean
+    description:
+      Specifies if the "Insights"-tab should be displayed for this pipe.
+
+  PipeSettingsLogEvent:
+    type: object
+    required:
+      - triggers
+    properties:
+      triggers:
+        description:
+          A list of conditions that should cause the event to be logged. The event will be logged if at
+          least one of the conditions in the list is met.
+        type: array
+        items:
+          type: string
+          enum: [
+            "always",              # Unconditionally log the event
+            "entities_last_run",   # At least one entity was read from the source
+            "changes_last_run",    # At least one entity was written to the sink
+            "errors"               # An error occured
+          ]
+
 
 
   JWTRevocation:
