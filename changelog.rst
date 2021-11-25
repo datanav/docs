@@ -24,7 +24,7 @@ Changelog
 
 2021-11-09
 ----------
-* Added a "discard-retries" pump operation to the service API - it is available in the UI as a "Reset retries queue" menu item on pipes. This operation will make the next pipe run ignore any previous write error retries by writing a special "pump-discard-retries" entity to the pipes execution log. This operation can only be done on non-running pipes.
+* Added a "discard-retries" pump operation to the service API - it is available in the UI as a "Discard retry queue" menu item on pipes. This operation will make the next pipe run ignore any previous write error retries by writing a special "pump-discard-retries" entity to the pipes execution log. This operation can only be done on non-running pipes.
 
 .. _changelog_2021_11_03:
 
