@@ -13,7 +13,8 @@ Changelog
 2021-11-26
 ----------
 * :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
-Clustered Architecture.
+  Clustered Architecture.
+* :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
 
 .. _changelog_2021_11_19:
 

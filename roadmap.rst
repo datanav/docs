@@ -21,13 +21,6 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
-Self service VPN setup (Q4 2021)
---------------------------------
-
-VPN setup can be requested through support.
-
-We are looking into how to automate this process so that the end user can do this process faster.
-
 Extensions
 ----------
 
