@@ -75,9 +75,9 @@ Extending on systems, the types of systems Sesam provide vary quite substantiall
 - `The SQL systems <https://docs.sesam.io/configuration.html#the-sql-systems>`_
 - `The Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_
 - `The Oracle TNS system <https://docs.sesam.io/configuration.html#the-oracle-tns-system>`_
-- `The MSSQL system <https://docs.sesam.io/configuration.html#the-mssql-system>`_
-- `The Microsoft Azure SQL Data Warehouse system <https://docs.sesam.io/configuration.html#the-microsoft-azure-sql-data-warehouse-system>`_
-- `The MySQL system <https://docs.sesam.io/configuration.html#bulk-operations-in-microsoft-sql-server-and-azure-sql-data-warehouse-systems>`_
+- `The Legacy Microsoft SQL system <https://docs.sesam.io/configuration.html#legacy-microsoft-sql-system>`_
+- `The Microsoft SQL Server system <https://docs.sesam.io/configuration.html#microsoft-sql-server-system>`_
+- `The MySQL system <hhttps://docs.sesam.io/configuration.html#mysql-system>`_
 - `The PostgreSQL system <https://docs.sesam.io/configuration.html#the-postgresql-system>`_
 - `The LDAP system <https://docs.sesam.io/configuration.html#the-ldap-system>`_
 - `The SMTP system <https://docs.sesam.io/configuration.html#the-smtp-system>`_
