@@ -321,6 +321,16 @@ Extensions
 
 Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own microservice extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
 
+
+.. _concepts-integrated-search:
+
+Integrated Search
+=================
+
+Integrated data browsing gives you more insight into your data and relationships within. Once enabled, globals are
+indexed and available for free text search and navigation. Note that this incurs a 2x increase in data size needed for
+global pipes.
+
 Network Policy
 ==============
 

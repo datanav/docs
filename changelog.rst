@@ -8,6 +8,13 @@ Changelog
 
 * Changed the default value of the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section to ``true``. This property was previously ``false`` by default
 
+.. _changelog_2021_11_26:
+
+2021-11-26
+----------
+* :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
+Clustered Architecture.
+
 .. _changelog_2021_11_19:
 
 2021-11-19

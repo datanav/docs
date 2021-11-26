@@ -21,18 +21,6 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
-Integrated data browsing (Q4 2021)
-----------------------------------
-
-The current 'Databrowser' tool is hard to configure, not integrated into Management Studio and targeted at
-external users.
-
-We are looking at making a simpler tool that is integrated into Management Studio so that you
-can do more efficient development. This new tool will replace the existing 'Databrowser' tool.
-
-This feature will most likely only be available on the 'Scalable architecture',
-so it depends on the 'Scalable architecture everywhere' item on the roadmap.
-
 Self service VPN setup (Q4 2021)
 --------------------------------
 
