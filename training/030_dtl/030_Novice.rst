@@ -72,11 +72,58 @@ As can be seen from the above produced data, the property with the key "_positio
 "Add"
 ~~~~~
 
-Explain the add, based on ref 3.1.4 above
+.. sidebar:: Summary
+
+  "Add"...
+
+  - lets you define a new key and/or value
+  - does not necessarily rely upon the Source or Target
+
+["add"] lets you define a new key and/or value. As such, it does not necessarily rely upon the Source or
+Target. The following pipe config lists such definitions by using ["add"].
+
+.. code-block:: json
+
+  {
+    "_id": "mssql-accounts",
+    "type": "pipe",
+    "source": {
+     	"type": "sql",
+    	"system": "sesam-training",
+    	"table": "accounts"
+    },
+    "transform": {
+       "type": "dtl",
+       "rules": {
+          "default": [
+             ["copy", "*"],
+             ["add", "fakeKey", "fakeValue"],
+             ["add", "fakeKey2", "_T.fakeKey"],
+             ["add", "newEmail", "_S.Email"]
+          ]
+       }
+    }
+  }
+
+Which will produce the following dataset, when the pipe has completed a run:
+
+.. code-block:: json
+
+   {
+      "fakeKey": "fakeValue",
+      "fakeKey2": "fakeValue",
+      "newEmail": "thisIs@google.com",
+      "PostCode": 0461,
+      "Country": "Norway"
+   }
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _concat-concatination-3-2:
 
