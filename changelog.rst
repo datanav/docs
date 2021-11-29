@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2021_11_23:
+.. _changelog_2021_11_29:
 
-2021-11-23
+2021-11-29
 ----------
 
 * Changed the default value of the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section to ``true``. This property was previously ``false`` by default
