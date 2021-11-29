@@ -112,7 +112,7 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false,
+         "use_signalling_internally": true,
          "default_compaction_type": "sink",
          "symmetric_namespace_collapse": false
       },
@@ -175,16 +175,16 @@ Properties
      - Boolean
      - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
-       Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
-       installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
+       The default setting of this property is ``true`` which means signalling is turned on for all :ref:`dataset-type sources <dataset_source>` in the
+       installation. You can turn this feature on or off individually by setting the ``supports_signalling`` flag on the
        :ref:`dataset source <dataset_source>` (including variants like
        :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
        :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
        delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
-       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
-       be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
-       on the pipe source it will be turned on regardless of the pump schedule.
-     - ``false``
+       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based or the schedule interval
+       is equal or greater than an hour (3600 seconds), signalling will be disabled for the pipe source (if it's only set globally).
+       However, if you set ``supports_signalling`` explicitly on the pipe source it will be turned on regardless of the pump schedule.
+     - ``true``
      -
 
        .. _service_metadata_global_defaults_compaction_settings:
