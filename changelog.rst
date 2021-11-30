@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2021_11_30:
+
+2021-11-30
+----------
+
+* Renamed the "prefilters" property in the The :ref:`hops <hops_dtl_function>` DTL function to "subsets".
+  "prefilters" will still work as a deprecated alias for "subsets".
+
+
 .. _changelog_2021_11_29:
 
 2021-11-29
