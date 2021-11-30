@@ -321,15 +321,29 @@ Extensions
 
 Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can build and run your own microservice extension systems. The :ref:`microservice system <microservice_system>` allows you to use custom Docker images to host them inside the Sesam service.
 
+
+.. _concepts-integrated-search:
+
+Integrated Search
+=================
+
+Integrated data browsing gives you more insight into your data and relationships within. Once enabled, globals are
+indexed and available for free text search and navigation. Note that this incurs a 2x increase in data size needed for
+global pipes.
+
 Network Policy
 ==============
 
 One has the option of blocking all public access through it or denying all except for a whitelist of ip addresses and ranges. In the new architecture it is possible to push the IP white listing down to the reverse proxy and also allow public access and restricted access to pipes through custom rules on the pipes. There are no restrictions on outgoing traffic currently.
 
+.. _concepts-vpn:
+
 VPN
 ===
 
-You can extend Sesam into your own network using a IPSec-based Virtual Private Network. The :doc:`Sesam Management Studio <management-studio>` interface does not currently let you configure this. Please contact sales@sesam.io to configure your VPN.
+You can extend Sesam into your own network using a IPSec-based Virtual Private Network. You can configure VPN under
+Subscriptions Settings in the Management Studio. Note that there is a additional surcharge for VPN, see
+:doc:`pricing` for more information.
 
 Status Page
 ===========
