@@ -7,6 +7,8 @@ Best Practices
 
    Planning a Sesam project <pre-planning>
    Setting up a Sesam environment <setup-environment>
-   Collect and Connect <collecting_data>
-   Data enrichment <data-enrichment>
+   Collect <collecting_data>
+   Enrichment <data-enrichment>
+   Connect <connecting-data>
+   Transform <transform-data>
    Sharing data <sharing-data>
