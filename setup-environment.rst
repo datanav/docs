@@ -5,23 +5,21 @@ Subscriptions
 -------------
 
 To decide on the size of production and test environments for a Sesam subscription,
-one needs to consider the approximate number of datatypes and total entities.
+one needs to consider the approximate number of engines and data volume.
 
--  Medium: Up to 20 datatypes and 10 million entities.
+-  Single compute: 4 engines and up to 350 GB data.
 
--  Large: Up to 20 datatypes and 100 million entities.
-
--  Extra Large: Limitless, by a dynamically expanding cluster.
+-  Multi compute: 16 engines and up to 1 TB data.
 
 The following subscriptions are necessary for a complete Sesam
 environment:
 
--  Development: Every developer will need a small subscription, with no
+-  Development: Every developer will need a developer subscription, with no
    SLA or backup.
 
--  CI-test: A small subscription, including standard SLA.
+-  CI-test: A developer subscription, including standard SLA.
 
--  Test: Same size as production, including standard SLA and Backup.
+-  Test: Same size as in production, including standard SLA and Backup.
 
 -  Production: Size based on data as described above. Enterprise SLA and
    Backup.
