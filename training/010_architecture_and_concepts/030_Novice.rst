@@ -96,7 +96,7 @@ As can be seen in the above dataset, the property with the key "mssql-accounts:p
 .. _sesams-theoretical-approach-to-semantics-RDF-1-2:
 
 Sesams theoretical approach to semantics - RDF
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
