@@ -94,12 +94,61 @@ Concatenation of strings, examples etc
 rdf:type
 ~~~~~~~~
 
-Resource Description Framework (?) explain what it means in Sesam
-context
+.. sidebar:: Summary
+
+  "RDF"...
+
+  - stands for Resource Description Framework and is a standard for describing web resources and data interchange
+  - is applied in DTL by adding namespaced identifiers
+  - in Sesam could look like the following: ``{"rdf:type": "~:mssql-accounts:TheDanishKing"}``
+
+RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
+
+In DTL you will add an RDF property by doing the following:
+
+.. code-block:: json
+
+	{
+	  "_id": "mssql-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type", ["ni", "mssql-accounts", "accounts"]]
+	      ]
+	    }
+	  }
+	}
+
+When the above pipe configuration completes its run, it will produce the following:
+
+.. code-block:: json
+
+	{
+	  "mssql-accounts:country": "DK",
+	  "mssql-accounts:id": 40,
+	  "mssql-accounts:phone": "1-894-115-3398",
+	  "rdf:type": "~:mssql-accounts:accounts"
+	}
+
+As can be seen from the above pipe configuration, you have successfully added the RDF type property. The use of a namespace in this property allows for you to keep track of the origin of your entities, as well as retaining its business type. Therefore, it is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 .. seealso::
 
-  TODO
+	:ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-theoretical-approach-to-semantics-RDF-1-2`
+
+  :ref:`developer-guide` > :ref:`working-with-RDF`
+
+  :ref:`concepts` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _namespace-3-2:
 
