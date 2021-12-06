@@ -53,18 +53,27 @@ Pipes support `batching <https://docs.sesam.io/configuration.html#pipe-batching>
 .. _authentication-methods-2-2:
 
 System Authentication methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Default authentication methods built in for systems handling URLS
-  $SECRET()
-| Basic, Oauth2, JWT, microservices
+.. sidebar:: Summary
 
-| Authentication methods for specific systems: ?? worth mentioning
-| SQL, oracle
+  System authentication methods...
+
+  - are defined for each system type
+  - vary depending on your system
+  - can be extended upon
+
+    - by building and deploying a microservice system in `Docker <https://www.docker.com/>`_ 
+
+Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. This is also true when you look at them within a Sesam node. Generally speaking, Sesam supports a wide range of in-built systems and their authentication methods, albeit if you need to use a system in Sesam which is not readily available, you can build it yourself as a microservice. This flexibility within Sesam is quite unique and as such ~no limitation exist.
+
+As an example of an in-built system in Sesam, the `Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_´s authentication method requires providing the parameters: ``username``, ``password``, ``host`` and ``database`` in order to authenticate. This example is a typical scenario when connecting to a relational database management system (RDBMS), albeit many more exist such as SQL, MsSQL, PostgreSQL, SMTP, REST etc..
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`sesam-community`
 
 .. _system-types-2-2:
 
