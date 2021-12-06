@@ -3655,11 +3655,13 @@ Hops
           will be used to key the statistics gathered about its execution.
           The ``trace`` property should only be specified on the last HOP_SPEC argument.
 
-       9. ``prefilters``: OPTIONAL. A dict where the keys must be dataset aliases
+       9. ``subsets``: OPTIONAL. A dict where the keys must be dataset aliases
           specified in the ``datasets`` property. The values must be valid subset
           expressions, i.e. an ``eq`` DTL expression where the left hand side is
           the index expression and the right hand side is the value that represents
           the subset. Example: ``["eq", "_S.category", 72]``
+
+          (``prefilters`` is a deprecated alias for ``subsets``)
 
        | If multiple HOP_SPEC arguments are given, then the output of
          a HOP_SPEC is passed on as the input to the next. This is a
