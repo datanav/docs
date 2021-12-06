@@ -8,6 +8,13 @@ Novice
 Joining Data
 ~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Joining data...
+
+  - creates a comprehensive representation of a data object
+  - allows you to work more efficiently and logically when modelling your data
+
 When working with data, you will often find yourself in situations where you need to join data. By joining data you get a comprehensive representation of a data object that has relations to other isolated data objects. In general, you join data because it gives you a more complete picture of a data object and its relation to other data objects. This allows you to work more efficiently and logically when you model your data towards a target state.
 
 In Sesam you will also experience the need for joining data, and this is a functionality Sesam excels at. To outline the different possibilities when joining data, given the two data objects "foo" and "bar", the below example will be used. It draws upon the Sesam syntax and as such is something you will be using down the road. Here goes:
@@ -38,16 +45,25 @@ All of the four joins given above succeed for the two data objects given, becaus
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-merging`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language`
 
 .. _make-namespaced-identifiers-for-foreign-keys-make-ni-1-2:
 
 Make namespaced identifiers for foreign keys - make-ni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Continuing along the lines of joining data, namespaced identifiers (NIs) come into play. NIs in Sesam are used to reference an identifier or a NI in a related dataset. In order to create them, you can use either of the two functions: ["make-ni"] or ["ni"].
+.. sidebar:: Summary
 
-In the below example, ["make-ni"] will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
+  Namespaced identifiers...
+
+  - are used to reference an identifier in a related dataset
+  - can be created in DTL by using the functions ``["make-ni"]`` or ``["ni"]``
+
+Continuing along the lines of joining data, namespaced identifiers (NIs) come into play. NIs in Sesam are used to reference an identifier or a NI in a related dataset. In order to create them, you can use either of the two functions: ``["make-ni"]`` or ``["ni"]``.
+
+In the below example, ``["make-ni"]`` will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
 
 .. code-block:: json
 
@@ -87,16 +103,24 @@ and will result in the following dataset when run. For the purpose of spacing, o
 	}
 
 
-As can be seen in the above dataset, the property with the key "mssql-accounts:phone-ni" is the result of the function ["make-ni"] as defined in the above pipe config. The value can be used to join data between the pipes "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
+As can be seen in the above dataset, the property with the key "mssql-accounts:phone-ni" is the result of the function ``["make-ni"]`` as defined in the above pipe config. The value can be used to join data between the pipes "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _full-outer-join-merge-1-2:
 
 Full outer Join - Merge
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Merge...
+
+  - retains all entries from merged datasets
 
 Full outer join is something you will experience in the Sesam terminology as a "merge". A merge, like the full outer join, retains all entries from i.e. two merged data objects. Graphically, a full outer join will look like the following:
 
@@ -123,7 +147,7 @@ A note on the handling of null values. In Sesam null values are not existing. Me
 	  "second_entity:values": [1, 3, 4, 6]
 	}
 
-and the merged result, if we choose to retain the first "_id" of the above two data objects and join the data on the value property:
+and the merged result, if we choose to retain the first ``"_id"`` of the above two data objects and join the data on the value property:
 
 .. code-block:: json
 
@@ -141,16 +165,25 @@ and the merged result, if we choose to retain the first "_id" of the above two d
 	  ]
 	}
 
-What should immediately get your attention would be the "$ids" property in the merged result. Sesam utilizes this property to keep track of which "_id"s have been merged and as such aids in data governance, as you do your data modelling.  
+What should immediately get your attention would be the ``"$ids"`` property in the merged result. Sesam utilizes this property to keep track of which ``"_id"s`` have been merged and as such aids in data governance, as you do your data modelling.  
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-merging`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
 
 .. _left-join-hops-1-2:
 
 Left Join - Hops
 ~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Hops...
+
+  - appends data
+  - returns data even if there are no matches for a particular entry
 
 In addition to a full outer join it is also relevant to talk about the left join. This is because you in the Sesam terminology will use something we call "hops". The hops is similar to a left join, in that it appends data and returns data even if there are no matches for a particular entry in the join. As such, in cases where you append data, null values in Sesam are retained. A graphical representation of the left join can be viewed in the below figure:
 
@@ -182,7 +215,7 @@ To illustrate the graphical representation of a left join, the following practic
 	  "third_entity:string":"Third's the charm"
 	}
 
-When applying the hops, our point of reference will be the first data object from the above and we will name the new property "left_join_result". We will choose to join the data on the "value" property present in all of the above three data objects in order to return the "values" property. Albeit, the "values" property is only present on the first two data objects. The expected result can be seen below:
+When applying the hops, our point of reference will be the first data object from the above and we will name the new property ``"left_join_result"``. We will choose to join the data on the ``"value"`` property present in all of the above three data objects in order to return the ``"values"`` property. Albeit, the ``"values"`` property is only present on the first two data objects. The expected result can be seen below:
 
 .. code-block:: json
 
@@ -194,16 +227,23 @@ When applying the hops, our point of reference will be the first data object fro
     "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
   }
 
-As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property "left_join_result", where the last entry is null.  
+As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property ``"left_join_result"``, where the last entry is null.  
 
 .. seealso::
 
-  TODO
+	:ref:`best-practices` > :ref:`data-enrichment`
 
 .. _global-1-2:
 
 Global
 ~~~~~~
+
+.. sidebar:: Summary
+
+  Globals...
+
+  - provide all data related to a specific concept
+  - allows you to define golden records by using the ``["coalesce"]`` function
 
 Global datasets lie at the heart of a well managed Sesam architecture. They are created by global pipes and often consist of aggregated data from several different sources enabling a higher level of semantic structure to a Sesam node. A global dataset is your "one place to go" to find all the data related to a specific concept.
 
@@ -256,23 +296,37 @@ The dataset hr-person does not contain any data regarding "hours-pr-project" or 
 
 .. seealso::
 
-  TODO
+	:ref:`best-practices` > :ref:`collecting-data` > :ref:`collecting_data-Global pipes / datasets`
+
+	:ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-workflow` > :ref:`best-practice-global-pipes`
 
 .. _guidelines-inbound-and-outbound-pipes-1-2:
 
 Guidelines - inbound and outbound pipes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Inbound pipes...
+
+  - handles data when it enters Sesam
+  - should retain "raw" data integrity
+  - should ensure reusability with regards to modelling purposes
+
+  Outbound pipes...
+
+  - should be used for late schema binding to target systems
 
 As established above, an important aspect when modelling data in Sesam is the use of globals. Albeit before reaching the global stage and after completion of the global stage, when modelling your data the following guidelines apply:
 
 Inbound pipes
-#####################
+#############
 
 As data enters Sesam it is handled in inbound pipes. An inbound pipe should be as generic as possible with regards to the amount of shaping done on the data that flows through to its dataset. The reason being, in order for you to make the best possible modelling decisions downstream, you should look at the "raw" data first to get a complete understanding of the condition of the data. In addition, we want to assume as little as possible about how the data will be used by current and future recipients. Therefore,
 if we start shaping and customizing data too soon in the flow, it's much harder, if not impossible, to reuse the data for different purposes later. A rule of thumb is therefore to minimize the amount of DTL used in an inbound pipe and try to just copy everything, or close to everything. Special cases can occur when you need to do some shaping of the data before reaching the global stage. In such cases, you should aim at making the minimal required DTL changes in order for the data to retain as much of its original integrity as possible.
 
 Outbound pipes
-######################
+##############
 
 Following the flow of data as it leaves the global stage of modelling, the amount of DTL will increase in the preparation pipes. As you might recall, preparation pipes deliver data to the outbound pipes. It is therefore important to consider the state of the data as it enters an outbound pipe. The reason for this being, as with any inbound pipe, that you should aim at minimizing the amount of DTL needed to shape your data further. This will create robust consumable data that can be delivered seamlessly to your target systems as data flows through your outbound pipes. As with inbound pipes, special cases can occur, where you need to do some additional shaping before the data can be presented in a consumable shape for a given target system. Again, aim at making a minimal set of DTL changes. 
 
@@ -289,12 +343,22 @@ The amount of DTL in a given pipe with respect to modelling stage in Sesam shoul
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-workflow` > :ref:`best-practice-inbound-pipes`
+
+  :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-workflow` > :ref:`  best-practice-output-pipes`
 
 .. _filter-entities-on-the-way-out-1-2:
 
 Filter entities on the way out
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Filtering entities on the way out...
+
+  - ensures that you can work on subsets of datasets
+  - are typically used when you are working on large datasets
+  - makes sure *_deleted* entities are not received by your target system
 
 Filtering entities after the global stage of modelling is a common use case. Filtering gives the ability to work with subsets of a dataset. It is therefore often used when working on large datasets where you are only interested in a small section of the data. In addition, filtering is often used in outbound pipes as well. This is due to the fact that *_deleted* entities are processed continously as data flows through Sesam and do rarely leave Sesam when first introduced. The *_deleted* property is used in Sesam to flag whether an entity is deleted or not. As such an entity which is deleted will have the property: ``{"_deleted": true},`` whilst an entity that is not deleted will have the property: ``{"_deleted": false}.`` Additionally, *_deleted* entities are not usually something you would like to send to a target system. This is obviously not always the case, but in general that is how things tend to work.
 
@@ -302,12 +366,18 @@ Imagine you are working on a large dataset produced by a global pipe. You quickl
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _customize-data-structure-for-endpoints-1-2:
 
 Customize data structure for outbound flows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Customizing data structures for outbound flows...
+
+  - is concerned with late schema binding
 
 An *outbound* dataflow consists of all pipes downstream from a global pipe. In these outbound dataflows it is typically necessary to transform your data so that it aligns with the schema that your target system requires for consumption. Typical functions used when transforming data in the outbound stage could be: ``["add"], ["remove"], ["rename"], ["copy"].``
 
@@ -367,12 +437,20 @@ based on the declared DTL functions, this would produce the following:
 
 .. seealso::
 
-  TODO
+  :ref:`best-practices` > :ref:`sharing-data`
 
 .. _change-tracking-data-delta-1-2:
 
 Change tracking & data delta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Change tracking & data delta...
+
+  - allows Sesam to process and update data only when it changes
+  - ensures minimal latency
+  - increases agility when synchronizing systems
 
 Change tracking and data delta allows Sesam to process and update data only when it changes. This ensures minimal latency and increased agility both when importing data from source systems and when processing data through internal pipes towards target systems.
 
@@ -395,4 +473,10 @@ Secondly, the first time data flows through a pipe in Sesam that pipe's dataset 
 Tasks for Architecture and Concepts: Novice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. *Why is it important to remember to filter on _deleted entities in an outbound pipe?*
+#. *Why should inbound pipes retain raw data shape?*
+
+#. *Why is it important to remember to filter on _deleted entities in an outbound pipe?*
+
+#. *What is late schema binding?*
+
+#. *What are the three different categorizations of pipes in Sesam with regards to a dataflow?*

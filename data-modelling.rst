@@ -1,4 +1,4 @@
-.. _best-practice:
+.. _data-modelling:
 
 =======================
 Data modelling in Sesam
