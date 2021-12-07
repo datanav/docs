@@ -164,7 +164,7 @@ Global pipe config:
 	  }
   }
 
-As can be seen from the above pipe configuration, we merge the datasets ``"mssql-accounts``, ``pymsql-person`` and ``oracle-person``. In addition, we add the properties ``"Email"``, ``"PostCode"``, ``PrivateAddress`` and ``rename`` the property ``"Username"`` to be ``NewUsername"``. With regards to namespaces the aforementioned properties will take the namespace ``"global-person"``, albeit the ``rename`` property will not. This is because the ``rename`` function retains the initally applied namespace for the property you are renaming, which is a bit unique.
+As can be seen from the above pipe configuration, we merge the datasets ``"mssql-accounts``, ``pymsql-person`` and ``oracle-person``. In addition, we add the properties ``"Email"``, ``"PostCode"``, ``PrivateAddress`` and ``rename`` the property ``"AreaCode"`` to be ``Postcode"``. With regards to namespaces the aforementioned properties will take the namespace ``"global-person"``, albeit the ``rename`` property will not. This is because the ``rename`` function retains the initally applied namespace for the property you are renaming, which is a bit unique and in this case this will be ``"pymsql-person"``.
 
 With regards to picking the individual datasets that are merged in our pipe ``"global-person"``, this is exemplified for the properties ``"Email"``, ``"PostCode"`` and ``PrivateAddress``. These properties are prioritized in a list and to pick spesific properties from datasets you must use the entire namespace to ensure Sesam understands which specific properties you refer to.
 
