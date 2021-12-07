@@ -174,8 +174,6 @@ Finally, as mentioned initially, the NI is in reality a URL, and as such you can
 
 .. seealso::
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-theoretical-approach-to-semantics-RDF-1-2`
-
   :ref:`developer-guide` > :ref:`working-with-RDF`
 
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
