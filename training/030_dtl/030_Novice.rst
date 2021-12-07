@@ -103,16 +103,102 @@ context
 
 .. _namespace-3-2:
 
-Namespace
-~~~~~~~~~
+Namespaces
+~~~~~~~~~~
 
-Explain namespace in \_id (value) and keys.
+Namespaces...
 
-EXAMPLESSS
+  - is essential with regards to Sesam's semantic enrichment 
+  - aid in data lineage and shaping of data
+  - are applied automatically by default
+
+Namespaces in Sesam are part of our semantic enrichment. Namespaces aid in data lineage and shaping of data with respect to multiple system representations of the same object. In addition, this happens automatically by default.
+
+To show the usage of namespaces we will extend upon the previously introduced example in :ref:`copy-3-2`. As you might recall, data produced by the pipe DTL transformation produced the following:
+
+.. code-block:: json
+
+	{
+	  "mssql-accounts:country": "DK",
+	  "mssql-accounts:id": 40,
+	  "mssql-accounts:phone": "1-894-115-3398"
+	}
+
+In the above output, everything you see on the properties prior to the first ":" is Sesam's namespace enrichment. As such, the namespace ``"mssql-accounts"`` is applied as the namespace for all properties, including the ``_id`` that is transformed in your pipe configuration for ``"mssql-accounts"``.
+
+This is fairly straightforward, albeit imagine if you have merged multiple pipe datasets in for example a global, what happens then? How can you distinquish which properties originate from which pipe configuration? and how do you pick specific namespaces after these are merged? These questions will now be introduced and answered.  
+
+Global pipe config:
+
+.. code-block:: json
+  
+  {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+	    "type": "merge",
+	    "datasets": ["mssql-accounts pip1", "pymsql-person pip2", "oracle-person pip3"],
+	    "equality_sets": [
+	      ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
+	    ],
+	    "identity": "first",
+	    "strategy": "default",
+	    "version": 2
+	  },
+	  "transform": {
+	     "type": "dtl",
+	     "rules": {
+	        "default": [
+	           ["copy", "*"],
+	           ["comment", "*** Adding global properties ***"],
+	           ["add", "Email", ["coalesce", ["list", "_S.mssql-accounts:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress"]]],
+	           ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.mssql-accounts:Postcode"]]],
+	           ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-accounts:Address"]]],
+	           ["rename", "AreaCode", "Postcode"]
+	        ]
+	     }
+	  },
+	  "metadata": {
+	    "global": true,
+	    "tags": "person"
+	  }
+  }
+
+As can be seen from the above pipe configuration, we merge the datasets ``"mssql-accounts``, ``pymsql-person`` and ``oracle-person``. In addition, we add the properties ``"Email"``, ``"PostCode"``, ``PrivateAddress`` and ``rename`` the property ``"Username"`` to be ``NewUsername"``. With regards to namespaces the aforementioned properties will take the namespace ``"global-person"``, albeit the ``rename`` property will not. This is because the ``rename`` function retains the initally applied namespace for the property you are renaming, which is a bit unique.
+
+With regards to picking the individual datasets that are merged in our pipe ``"global-person"``, this is exemplified for the properties ``"Email"``, ``"PostCode"`` and ``PrivateAddress``. These properties are prioritized in a list and to pick spesific properties from datasets you must use the entire namespace to ensure Sesam understands which specific properties you refer to.
+
+To show how the above pipe configuration evaluates, look at the below result:
+
+.. code-block:: json
+	
+	{
+	  "mssql-accounts:Email": "christian89@hotmail.com",
+	  "mssql-accounts:Postcode": "6400",
+	  "mssql-accounts:Address": "Rojumvej 66",
+	  "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
+	  "oracle-person:PostNumber": 6400,
+	  "oracle-person:Address": "Rojumvej 66",
+	  "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
+	  "pymsql-person:AreaCode": "6851",
+	  "pymsql-person:Postcode": "6851",
+	  "pymsql-person:Address": "Danmarksgate 7",
+	  "global-person:Email": "christian89@hotmail.com",
+	  "global-person:Postcode": "6851",
+	  "global-person:PrivateAddress": "Danmarksgate 7"
+	}
+
+As can be seen from the above example, namespaces allow for investigating and understanding where properties come from, are changed or first introduced. In addition, namespaces ensure that Sesam's MDM can be carried out. 
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
 
 .. _make-ni-3-2:
 
