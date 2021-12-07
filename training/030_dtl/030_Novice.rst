@@ -119,11 +119,70 @@ EXAMPLESSS
 "Make-ni"
 ~~~~~~~~~
 
-Declaraiton of foreign key in Sesam, explain /reference Namespace
+.. sidebar:: Summary
+
+  "Make-ni"...
+
+  - creates namespaced identfiers (NIs) by using the ``["make-ni"]`` function
+  - in Sesam is a complete Uniform Resource Locator (URL)
+  - is used to declare foreign keys as you would in a relational database management system (RDBMS)
+
+The ``["make-ni"]`` DTL function allows for defining `namespaced identifiers <https://docs.sesam.io/concepts.html?highlight=namespaced%20identifiers#namespaces>`_ (NIs). A NI in Sesam is a complete Uniform Resource Locator (URL). As such, it is used to investigate how data is semantically linked in a Sesam node. In addition, it is also used to declare foreign keys as you would in a relational database management system (RDBMS), albeit in Sesam the references will naturally be between pipes.
+
+As a NI is produced, after a pipe has completed its run, it will be prefixed with ``~:`` followed by the namespace and its value. To exemplify, look at the below example:
+
+.. code-block:: json
+
+	{
+	  "_id": "mssql-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type",
+	          ["ni", "mssql-accounts", "accounts"]
+	        ],
+	        ["make-ni", "mssql-contacts", "phone"]
+	      ]
+	    }
+	  }
+	}
+
+The above pipe configuration will produce the following output:
+
+.. code-block:: json
+
+	{
+	  "mssql-accounts:country": "DK",
+	  "mssql-accounts:id": 40,
+	  "mssql-accounts:phone": "1-894-115-3398",
+	  "mssql-accounts:phone-ni": "~:mssql-contacts:1-894-115-3398",
+	  "mssql-accounts:position": "CEO",
+	  "rdf:type": "~:mssql-accounts:accounts"
+	}
+
+As can be seen from the above output, the property ``"mssql-accounts:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"mssql-contacts"``.
+
+Finally, as mentioned initially, the NI is in reality a URL, and as such you can press your NIs and navigate your Sesam node with respect to how data is semantically linked in your node.
 
 .. seealso::
 
-  TODO
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-theoretical-approach-to-semantics-RDF-1-2`
+
+  :ref:`developer-guide` > :ref:`working-with-RDF`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _eq-equality-3-2:
 
