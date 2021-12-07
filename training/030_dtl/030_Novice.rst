@@ -78,20 +78,20 @@ Explain the add, based on ref 3.1.4 above
 
   TODO
 
-.. _concat-concatination-3-2:
+.. _coalesce-3-2:
 
-"Concat" - Concatination
-~~~~~~~~~~~~~~~~~~~~~~~~
+"Coalesce"
+~~~~~~~~~~
 
 .. sidebar:: Summary
 
-  "Concat"...
+  "Coalesce"...
 
   - is one of Sesam's core Master Data Management (MDM) capabilities
   - lets you define a list of prioritized properties
   - can only evaluate string values
 
-Concatenation is one of Sesam's core Master Data Management (MDM) capabilities. ``["concat"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. ``["concat"]`` only works with string values, so remember to cast properties to strings when need be. An example has been drafted below to exemplify the use of both ``["concat"]`` and ``["string"]`` - used for type casting:
+Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``:
 
 .. code-block:: json
 
@@ -114,9 +114,9 @@ Concatenation is one of Sesam's core Master Data Management (MDM) capabilities. 
 	        "default": [
 	           ["copy", "*"],
 	           ["comment", "*** Adding global properties ***"],
-	           ["add", "Email", ["concat", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress"]]],
-	           ["add", "PostCode", ["concat", ["list", "_S.pymsql-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.mssql-person:Postcode"]]],
-	           ["add", "PrivateAddress", ["concat", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address"]]]
+	           ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+	           ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
+	           ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
 	        ]
 	     }
 	  },
@@ -231,10 +231,10 @@ Explain in the context of reading from global pipes
 
   TODO
 
-.. _coalesce-3-2:
+.. _concat-concatination-3-2:
 
-Coalesce
-~~~~~~~~
+"Concat" - concatenation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 ref 1.2.19
 
