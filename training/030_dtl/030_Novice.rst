@@ -174,8 +174,6 @@ Finally, as mentioned initially, the NI is in reality a URL, and as such you can
 
 .. seealso::
 
-  :ref:`developer-guide` > :ref:`working-with-RDF`
-
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
