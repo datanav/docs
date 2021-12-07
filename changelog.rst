@@ -335,7 +335,7 @@ Changelog
 2020-11-13
 ----------
 
-* :ref:`In the pump configuration section <pump_section>` the ``use_dead_letters`` property has been deprecated and the ``dead_letter_dataset`` property has been un-deprecated. Please update your configuration. The ``dead_letters_dataset`` should contain a per-pipe unique user dataset id. The motivation for this reversal is that we wish to migrate away from using system datasets for any "dead letters" in a pipe.
+* :ref:`In the pump configuration section <pump_section>` the ``use_dead_letter_dataset`` property has been deprecated and the ``dead_letter_dataset`` property has been un-deprecated. Please update your configuration. The ``dead_letters_dataset`` should contain a per-pipe unique user dataset id. The motivation for this reversal is that we wish to migrate away from using system datasets for any "dead letters" in a pipe.
 
 .. _changelog_2020_11_06:
 
