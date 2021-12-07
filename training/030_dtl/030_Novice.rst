@@ -151,9 +151,9 @@ Global pipe config:
 	        "default": [
 	           ["copy", "*"],
 	           ["comment", "*** Adding global properties ***"],
-	           ["add", "Email", ["coalesce", ["list", "_S.mssql-accounts:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress"]]],
-	           ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.mssql-accounts:Postcode"]]],
-	           ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-accounts:Address"]]],
+	           ["add", "Email", ["coalesce", ["list", "_S.mssql-accounts:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+	           ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.mssql-accounts:Postcode", "No PostCode provided"]]],
+	           ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-accounts:Address", "No PrivateAddress provided"]]],
 	           ["rename", "AreaCode", "Postcode"]
 	        ]
 	     }
