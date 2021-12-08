@@ -33,6 +33,9 @@ unstructured documentation (README, etc).
 We are looking at how to structure and describe microservices so that
 microservices can work and behave as builtin systems in Management Studio.
 
+We are also looking into how we can use OAuth 2.0 Authorization Code Grant Type of authorization for extensions that
+talk to providers that support this to make the authorization process more user friendly.
+
 This will also open up the possibility for us to turn the builtin systems into separate extensions.
 
 Age based deletion marker compaction
