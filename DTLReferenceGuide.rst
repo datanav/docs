@@ -3661,7 +3661,7 @@ Hops
           the index expression and the right hand side is the value that represents
           the subset. Example: ``["eq", "_S.category", 72]``
 
-          (``prefilters`` is a deprecated alias for ``subsets``)
+          (``subsets`` replaces the deprecated ``prefilters`` property)
 
        | If multiple HOP_SPEC arguments are given, then the output of
          a HOP_SPEC is passed on as the input to the next. This is a
@@ -3740,12 +3740,12 @@ Hops
               ["eq", "_S._id", "o.customer_id"]
               ["eq", "o.lines.product_id", "p.product_id"]
             ],
-            "prefilters": {
+            "subsets": {
               "o": ["eq", "_S.webshop_id", "myshop"]
             }
            }]
 
-       | Find the products that the customer has bought from a specific web shop. This example uses the ``prefilters``
+       | Find the products that the customer has bought from a specific web shop. This example uses the ``subsets``
          property to reference a subset of the ``orders`` dataset, i.e. the orders placed in the ``myshop`` web shop.
 
 Entity lookups
