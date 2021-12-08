@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2021_11_30:
+.. _changelog_2021_12_06:
 
-2021-11-30
+2021-12-06
 ----------
 
 * Renamed the "prefilters" property in the The :ref:`hops <hops_dtl_function>` DTL function to "subsets".
