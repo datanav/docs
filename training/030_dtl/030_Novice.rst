@@ -160,7 +160,7 @@ The above logic will return the property ``{"Old": true}``, if your source entit
 
 .. seealso::
 
-	:ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`eq_dtl_function`
+	:ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language`
 
 .. _merge-as-a-source-3-2:
 
