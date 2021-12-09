@@ -130,11 +130,37 @@ Declaraiton of foreign key in Sesam, explain /reference Namespace
 "Eq" - Equality
 ~~~~~~~~~~~~~~~
 
-Equality for joins [n-n]
+.. sidebar:: Summary
+
+  Equality...
+
+  - is part of Sesam's `conditional DTL functions <https://docs.sesam.io/quick-reference.html#dtl-functions>`_
+  - can be used both for join expressions as well as equality comparisons
+  - is a boolean evaluator, meaning comparisons are returned as either ``true`` or ``false``
+
+Equality is part of Sesam's `conditional DTL functions <https://docs.sesam.io/quick-reference.html#dtl-functions>`_. In terms of functionality however, it serves a dual purpose. The ``["eq"]`` function can be used both for join expressions as well as equality comparisons. Regardless, when using the equality function as either, the equality function is a boolean evaluator, meaning comparisons are returned as either ``true`` or ``false``. 
+
+Join expressions evaluates intersection whereas the equality comparison evaluates exact matches. In this section the equality comparison will be explained in detail, as the join expression is part of the section :ref:`merge-as-a-source-3-2`.
+
+To exemplify usage of the equality comparison, look to the below:
+
+``["eq", "_S.age", 42]``
+
+Which will return ``true`` if the source entity's age field equals 42.
+
+``["eq", "_S.hobbies", ["list", "soccer", "tennis"]]``
+
+Will return ``true`` if the hobbies are exactly equal to ``["soccer", "tennis"]``.
+
+Often times you will be using the equality comparison in conjunction with the if evaluator. An example is shown below:
+
+``["if", ["eq", "_S.age", 42], ["add", "Old", true]]]``
+
+The above logic will return the property ``{"Old": true}``, if your source entity's age field equals 42.
 
 .. seealso::
 
-  TODO
+	:ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`eq_dtl_function`
 
 .. _merge-as-a-source-3-2:
 
