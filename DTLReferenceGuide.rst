@@ -2871,19 +2871,19 @@ Bytes
        |
        | Returns true.
        |
-       | ``["is-uuid", "~bYWJj"]``
+       | ``["is-bytes", "~bYWJj"]``
        |
        | Returns true.
        |
-       | ``["is-uuid", "some-string"]``
+       | ``["is-bytes", "some-string"]``
        |
        | Returns false.
        |
-       | ``["is-uuid", ["list", "~bYWJj", "12345"]]``
+       | ``["is-bytes", ["list", "~bYWJj", "12345"]]``
        |
        | Returns true.
        |
-       | ``["is-uuid", ["list", "12345", "~bYWJj"]]]``
+       | ``["is-bytes", ["list", "12345", "~bYWJj"]]]``
        |
        | Returns false.
        |
