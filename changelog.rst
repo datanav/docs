@@ -1,6 +1,24 @@
 Changelog
 =========
 
+.. _changelog_2021_12_11:
+
+2021-12-11
+----------
+
+* Our security team has investigated the impact of CVE-2021-44228. The following components have been
+  analysed as they potentially could have have been affected:
+
+  #. Integrated search. This component uses Elasticsearch under the hood. The version of Elasticsearch that we use is
+     not affected according to this `Elastic Security announcement <https://discuss.elastic
+     .co/t/apache-log4j2-remote-code-execution-rce-vulnerability-cve-2021-44228-esa-2021-31/291476>`_.
+  #. Legacy Databrowser. This component uses Apache Solr under the hood. The version of Solr that we use is not
+     affected according to this `Solr Security announcement <https://solr.apache.org/security
+     .html#apache-solr-affected-by-apache-log4j-cve-2021-44228>`_.
+  #. Unofficial OCI images that are hosted as microservices. These components _can_ be affected, and our users
+     need to make sure they only run code that they trust.
+
+
 .. _changelog_2021_12_06:
 
 2021-12-06
