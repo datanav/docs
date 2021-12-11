@@ -7,7 +7,7 @@ Changelog
 ----------
 
 * Our security team has investigated the impact of CVE-2021-44228. The following components have been
-  analysed as they potentially could have have been affected:
+  analysed as they could potentially be affected:
 
   #. Integrated search. This component uses Elasticsearch under the hood. The version of Elasticsearch that we use is
      not affected according to this `Elastic Security announcement <https://discuss.elastic
