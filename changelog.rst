@@ -15,6 +15,9 @@ Changelog
   #. Legacy Databrowser. This component uses Apache Solr under the hood. The version of Solr that we use is not
      affected according to this `Solr Security announcement <https://solr.apache.org/security
      .html#apache-solr-affected-by-apache-log4j-cve-2021-44228>`_.
+  #. GDPR Portal. This component uses Apache Solr under the hood. The version of Solr that we use is not
+     affected according to this `Solr Security announcement <https://solr.apache.org/security
+     .html#apache-solr-affected-by-apache-log4j-cve-2021-44228>`_.
   #. Unofficial OCI images that are hosted as microservices. These components _can_ be affected, and our users
      need to make sure they only run code that they trust.
 
