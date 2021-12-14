@@ -148,8 +148,9 @@ Merge as a Source
   - as a source will join multiple datasets
   - in Sesam can be compared to a full outer join in a database
   - should use the properties ``"version"``, ``"strategy"`` and ``"identity"`` to work effectively
+  - as a source is typically used in global pipes
 
-Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation.
+Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation. 
 
 For merging to work effectively, the properties ``"version"``, ``"strategy"`` and ``"identity"`` should be used.
 
@@ -159,7 +160,7 @@ For merging to work effectively, the properties ``"version"``, ``"strategy"`` an
 
 - ``"identity"`` - can be set to either ``"first"`` or ``"composite"``.
 
-For the above to make sense for you, let us look at an example:
+Merging is typically done in global pipes and in the following example, this is also your point of reference.
 
 .. code-block:: json
 
@@ -182,31 +183,46 @@ For the above to make sense for you, let us look at an example:
 	  }
 	}
 
-As can be seen from the above pipe configuration ``"global-person"`` you will recoqnize the aformentioned properties. ``"version"`` is set to ``2``, ``"strategy"`` to ``"default"`` and ``"identity"`` to ``"first"``.
+As can be seen from the above pipe configuration ``"global-person"`` you will recognize the aformentioned properties. ``"version"`` being set to ``2``, ``"strategy"`` to ``"default"`` and ``"identity"`` to ``"first"``.
 
-The ``"strategy"`` property changes how the resulting entities look as these are merged in the ``"equality"`` property. The ``"default"`` value unions all the values and duplicates are not removed. In comparison the ``"compact"`` value tries to compact property values, i.e: duplicate values are removed and empty lists are removed.
+The ``"strategy"`` property changes how the resulting entities look as these are merged in the ``"equality"`` property. In this particular example we are merging on the property ``"phone"`` for the namespaces ``"mssql-contacts"`` and ``"mssql-accounts"`` and the ``["eq"]`` function is now used as a join expression. As namespaces are being merged, the ``"default"`` value in the ``"strategy"`` property unions all the values and duplicates are not removed. In comparison, if the ``"compact"`` value is used, the pipe will try to compact property values, i.e: duplicate values are removed and empty lists are removed.
 
-to retain the ``"_id"`` of the first dataset being merged in the resulting entity.
+With regards to the ``"identity"`` property, this property determines how the ``"_id"`` will look like, as entities are merged in your merge source. If the ``"identity"`` property is set to ``"first"`` the ``"_id"`` will become the first namespace that is merged in a given entity. As an example see the below, which shows the shape of an entity having been run through the above shown pipe configuration in ``"global-person"``:
 
+.. code-block:: json
 
+	{
+    "$ids": [
+      "~:mssql-contacts:40",
+      "~:mssql-accounts:40"
+    ],
+    "_id": "mssql-contacts:40",
+    "_updated": 239,
+    "mssql-accounts:country": "DK",
+    "mssql-accounts:id": 40,
+    "mssql-accounts:phone": "1-894-115-3398",
+    "mssql-accounts:phone-ni": "~:mssql-contacts:1-894-115-3398",
+    "mssql-accounts:position": "CTO",
+    "mssql-contacts:id": 40,
+    "mssql-contacts:name": "Bolton, Aladdin T.",
+    "mssql-contacts:phone": "1-894-115-3398",
+    "rdf:type": [
+      "~:mssql-contacts:contacts",
+      "~:mssql-accounts:accounts"
+    ]
+  }
 
-Examples, steal from PP training, show in tables vs json, everything
-coming in goes out.
-
--  Strategy
-
--  Identidy - \_id etter merge
-
--  datasets
-
-   15. .. rubric:: Filter as a transform
-          :name: filter-as-a-transform
-
-Explain in the context of reading from global pipes
+As you can see from the above merged result, the ``"_id"`` turned out as ``"mssql-contacts:40"`` as this is the entity that is placed at index null in the ``$ids`` array, which tells us which namespaces got merged based on our defined equality rules. If you were to change the ``"identity"`` to ``"composite"`` the ``"_id"`` would have turned out as ``1|mssql-contacts:40|2|mssql-accounts:40``.
 
 .. seealso::
 
-  TODO
+	:ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
 
 .. _coalesce-3-2:
 
