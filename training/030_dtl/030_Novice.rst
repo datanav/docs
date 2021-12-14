@@ -141,6 +141,55 @@ Equality for joins [n-n]
 Merge as a Source
 ~~~~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Merge...
+
+  - as a source will join multiple datasets
+  - in Sesam can be compared to a full outer join in a database
+  - should use the properties ``"version"``, ``"strategy"`` and ``"identity"`` to work effectively
+
+Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation.
+
+For merging to work effectively, the properties ``"version"``, ``"strategy"`` and ``"identity"`` should be used.
+
+- ``"version"`` - can be set to either ``1`` or ``2``. Use ``2`` to ensure the merge source is up to date.
+
+- ``"strategy"`` - can be set to either ``"defalt"`` or ``"compact"``. 
+
+- ``"identity"`` - can be set to either ``"first"`` or ``"composite"``.
+
+For the above to make sense for you, let us look at an example:
+
+.. code-block:: json
+
+	{
+	  "_id": "global-person",
+	  "type": "pipe",
+	  "source": {
+	    "type": "merge",
+	    "datasets": ["mssql-person pip1", "mssql-contacts pip2", "mssql-accounts pip3"],
+	    "equality": [
+	      ["eq", "pip2.phone", "pip3.phone"]
+	    ],
+	    "identity": "first",
+	    "strategy": "default",
+	    "version": 2
+	  },
+	  "metadata": {
+	    "global": true,
+	    "tags": ["person"]
+	  }
+	}
+
+As can be seen from the above pipe configuration ``"global-person"`` you will recoqnize the aformentioned properties. ``"version"`` is set to ``2``, ``"strategy"`` to ``"default"`` and ``"identity"`` to ``"first"``.
+
+The ``"strategy"`` property changes how the resulting entities look as these are merged in the ``"equality"`` property. The ``"default"`` value unions all the values and duplicates are not removed. In comparison the ``"compact"`` value tries to compact property values, i.e: duplicate values are removed and empty lists are removed.
+
+to retain the ``"_id"`` of the first dataset being merged in the resulting entity.
+
+
+
 Examples, steal from PP training, show in tables vs json, everything
 coming in goes out.
 
