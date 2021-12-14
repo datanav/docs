@@ -345,6 +345,8 @@ You can extend Sesam into your own network using a IPSec-based Virtual Private N
 Subscriptions Settings in the Management Studio. Note that there is a additional surcharge for VPN, see
 :doc:`pricing` for more information.
 
+List of supported VPN devices and configuration guides can be found at `https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices>`_.
+
 Status Page
 ===========
 
