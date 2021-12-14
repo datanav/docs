@@ -1390,13 +1390,11 @@ Properties
        following three entities in this particular order (ids omitted for brevity):
        ``{"x":1}``, ``{"y": [2, 1]}``, ``{"y": 2, "z": [3, 3]}``
 
-       * ``"default"`` - The default is to union all the values, which
-         results in all properties being lists of all the values from
-         all the entities. This is similar to how the
+       * ``"default"`` - The default is to union all the values. This is similar to how the
          :ref:`merge-union <dtl_transform-merge-union>` DTL function
          works. Duplicates are not removed.
 
-         Example: ``{"x": [1], "y": [2, 1, 2], "z": [3, 3]}``
+         Example: ``{"x": 1, "y": [2, 1, 2], "z": [3, 3]}``
 
        * ``"compact"`` - Similar to the default strategy, but tries to
          compact the property values; duplicate values are removed,
