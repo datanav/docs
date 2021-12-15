@@ -567,7 +567,7 @@ Transforms
 ==========
 
 A transform function is a function that has side-effects, typically
-modifiying the target entity, and has no return value.
+modifying the target entity, and has no return value.
 
 .. list-table::
    :header-rows: 1
@@ -1248,7 +1248,7 @@ modifiying the target entity, and has no return value.
        |
        | For each entity in VALUES copy all the properties of the value onto the
          target entity. If the property already exists on the target entity, add
-         the new values to the existing list of values.
+         the new values as a list of values.
      - | ``["merge-union", "_S.orders"]``
        |
        | Copies the properties of the entities in ``_S.orders`` to the target.
@@ -1257,7 +1257,7 @@ modifiying the target entity, and has no return value.
        | ``["merge-union",``
        |   ``["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
-       | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
+       | Add the properties ``a=[1, 2]`` and ``b=3`` to the target entity.
 
        .. _dtl_transform-create:
    * - ``create``
