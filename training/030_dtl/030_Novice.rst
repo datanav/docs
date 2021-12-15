@@ -197,6 +197,8 @@ The ``"_S"`` prior to using dot notation tells Sesam to use data that originates
 
 .. seealso::
 
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`variables`
+
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _apply-custom-functions-3-2:
