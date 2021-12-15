@@ -209,6 +209,12 @@ Basic, bare bruk på data fra \_S, forklar det uten å bruke hops
 Merge as a function
 ~~~~~~~~~~~~~~~~~~~
 
+As outlined in the example from :ref:`apply-custom-functions-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function. ``["merge"]`` and ``["merge-union"]`` are `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_. As such, these functions will incur side-effects, typically modifying the target entity.
+
+ 
+
+
+
 Source type Merge VS Transformation Merge
 
 Merging dictionaries up to the root level of entities.
