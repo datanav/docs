@@ -175,23 +175,29 @@ ref 1.2.19
 Nested dictionaries
 ~~~~~~~~~~~~~~~~~~~
 
-As you can see in *Example 3.2.17A: Dotted Notation*, we can get
-attributes inside dictionaries by using "."
+.. sidebar:: Summary
 
-Dotted notation
+  Nested dictionaries...
 
-list of dicts can give you list of values from a single key.
+  - can be accessed in Sesam by using dot notation (".")
 
-A: [{"foo":1},{"foo":2}] -> \_S.A.foo = [1,2]
+Nested dictionaries can be accessed in Sesam by using dot notation ("."). Dot notation ensures that you can access properties within an object, such as a list with nested dictionaries. To exemplify, the following example is used:
 
-1. ["add", "some-nested-attribute",
-   "_S.somedict.some-nested-attribute"] 
+``"My_list": [{"foo": 1}, {"foo": 2}]``
 
-*Example 3.2.17A: Dotted Notation*,
+Accessing the ``"foo"`` element in ``"My_list"`` via Sesam dot notation:
+
+``["add", "My_foo", "_S.My_list.foo"]``
+
+Will return:
+
+``"My_foo": [1,2]``
+
+The ``"_S"`` prior to using dot notation tells Sesam to use data that originates from your current dataset as its source.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _apply-custom-functions-3-2:
 
