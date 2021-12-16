@@ -12,8 +12,8 @@ change.
 Planned
 -------
 
-Scalable architecture everywhere (Q4 2021)
-==========================================
+Clustered architecture everywhere (Q4 2021)
+===========================================
 
 Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
 some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
@@ -99,12 +99,12 @@ external users.
 We are looking at making a simpler tool that is integrated into Management Studio so that you
 can do more efficient development. This new tool will replace the existing 'Databrowser' tool.
 
-This feature will most likely only be available on the 'Scalable architecture',
-so it depends on the 'Scalable architecture everywhere' item on the roadmap.
+This feature will most likely only be available on the 'Clustered architecture',
+so it depends on the 'Clustered architecture everywhere' item on the roadmap.
 
 .. note::
    :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
-   Scalable Architecture.
+   Clustered Architecture.
 
 General Available
 -----------------
@@ -119,4 +119,4 @@ VPN setup can be requested through support.
 We are looking into how to automate this process so that the end user can do this process faster.
 
 .. note::
-   :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Scalable Architecture.
+   :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
