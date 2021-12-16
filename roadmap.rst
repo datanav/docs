@@ -85,6 +85,17 @@ You also need to create two pipes in order to use "create-child" and "emit_child
 
 We are looking into how to support this without requiring the user to create two pipes.
 
+Multitenancy 
+============
+
+Today one subscription can have multiple configuration groups, but they are all part of one big configuration that share one namespace, metadata, environment variables, system roles and access rights.
+
+We are looking into how one subscription can contain multiple standalone configurations in one shared instance.
+
+Note that VPN will be tied to the shared instance so there will be some limitations to the VPN. There will also be limits on how many standalone configurations (tenants) you can have per single and multi compute. This feature will only be available on the 'Clustered architecture'.
+
+The goal is for our partners to be able to serve their customers with standalone configurations from a shared instance.
+
 Public Preview
 --------------
 
