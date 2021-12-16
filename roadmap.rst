@@ -12,8 +12,8 @@ change.
 Planned
 -------
 
-Scalable architecture everywhere (Q4 2021)
-==========================================
+Clustered architecture everywhere (Q4 2021)
+===========================================
 
 Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
 some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
