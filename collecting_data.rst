@@ -103,7 +103,7 @@ To meet this requirement for classifying data, we recommend generating a *global
 
 An example of this can be a product and product type coming in as one data object. The best practice is to split the raw data into two data objects. The product can go into *global-equipment* or another appropriate global used for products. The product type would be merged in to *global-classification* dataset. Product type is now ready to be used as a category for products needing this.
 
-.. _semantics-as-method-for-classification-of-data
+.. _semantics-as-method-for-classification-of-data:
 
 Semantics as a method for classification of data
 ------------------------------------------------
