@@ -787,7 +787,7 @@ Sinks
 Sinks are at the receiving end of pipes and are responsible for writing entities into an internal dataset or a target system.
 
 Sinks can support :ref:`batching <pipe_batching>` by implementing specific methods and accumulating entities in a buffer before writing the batch. The size of each batch can be specified using the batch_size property on the pipe. See the section on batching for more information. We also recommend that you read about 
-:ref:`the sinks <best-practice-output-pipes>` in the documentation and "Best practice" for best ways of working with them :ref:`here <best-practice-output-pipes>`.
+:ref:`the sinks <sink_section>` in the documentation.
 
 .. _getting-started-csv-endpoint:
 
