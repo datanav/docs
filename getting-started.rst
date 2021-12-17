@@ -520,7 +520,7 @@ If we don't need exact match, we can use ``["intersects"]`` instead; it will con
 Global datasets
 ^^^^^^^^^^^^^^^
 Global datasets are key to getting the most out of using Sesam. We combine data from sources with logically linked information to provide one common place to then retrieve this data from when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time.
-You can read more about global datasets; what they are, how to use them and how to develop them :ref:`here <best-practice-global>`.
+You can read more about global datasets :ref:`here <collecting_data-Global pipes / datasets>`.
 
 Namespace identifiers
 ^^^^^^^^^^^^^^^^^^^^^
