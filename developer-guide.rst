@@ -21,7 +21,6 @@ Developer Guide
    Low-level debugging <low-level-debugging>
    Source datatype mapping <source-datatype-mapping>
    Self-hosted service <self-hosted>
-   Data modelling in Sesam <data-modelling>
    Working on a Sesam project <project-workflow>
    Sesam in Microsoft Azure <azure>
    Deprecated features <deprecations>
