@@ -270,7 +270,7 @@ Sesam can `utilize RDF <https://docs.sesam.io/rdf-support.html?highlight=rdf#>`_
 Global datasets
 ===============
 
-The use of global datasets is described in depth in the :ref:`Best Practice <best-practice-global>` document. The principle is to have one go-to dataset to find data about a specific type of data. A global dataset typically co-locates and :ref:`merges <concepts-merging>` data from many different sources.
+The use of global datasets is described in depth in the :ref:`Best Practices <collecting_data-Global pipes / datasets>` section. The principle is to have one go-to dataset to find data about a specific type of data. A global dataset typically co-locates and :ref:`merges <concepts-merging>` data from many different sources.
 
 .. _concepts-merging:
 
