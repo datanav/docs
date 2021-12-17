@@ -125,7 +125,7 @@ to another will mean a reduction in data quality.
 
 In Sesam, the original
 data model will be retained in addition to the origin of the data by 
-using :ref:`namespaces <best-practice-namespace>`, and
+using :ref:`namespaces <concepts-namespaces>`, and
 thus the context in which they were created is retained as part of the
 data format. It ensures that data is not lost in the transmission from
 business system to data platform.
