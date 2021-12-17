@@ -51,7 +51,7 @@ Principles of connecting data
 
 When connecting data in Sesam, it is important to understand global datasets. The raw data where additional properties were added are now ready to be connected to other data from other sources. This can be done in various ways so the next few chapters will describe this in detail.
 
-.. collecting_data-Global pipes / datasets:
+.. _collecting_data-Global pipes / datasets:
 
 Global pipes / datasets
 =======================
