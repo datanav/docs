@@ -2149,7 +2149,7 @@ When we know that an attribute on entities in an input pipe is equal to the ``_i
 
 We have seen the NI attribute ``rdf:type`` on all the entities in our Sesam hub in these labs. This attribute is used to filter entities downstream, like we have been doing.
 
-Look up the ``ni`` function in the Developer Guide. You can also read more about namespaced identifiers in the :ref:`Best Practice <best-practice-namespaced-identifiers>` section of the docs.
+Look up the ``ni`` function in the Developer Guide. You can also read more about namespaced identifiers :ref:`here <concepts-namespaces>`.
 
 Task
 ++++
