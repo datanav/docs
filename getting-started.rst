@@ -1812,7 +1812,7 @@ This lab covers:
 - **Global dataset as pipe source**
 - **Pipe reset**
 
-As explained in our :ref:`Best Practices <best-practice>`, we want to use a global dataset as our data source when preparing data for export to another system. When we use a global dataset as a pipe's source, we have to specify what data from that global dataset we want to use. For this we use the DTL transform function ``filter``. With it we can select only the entities we want based on the condition we supply. If the condition resolves as ``false``, the entity is filtered and will not be written to the pipe's dataset.
+As explained in our :ref:`Best Practices <best-practices>`, we want to use a global dataset as our data source when preparing data for export to another system. When we use a global dataset as a pipe's source, we have to specify what data from that global dataset we want to use. For this we use the DTL transform function ``filter``. With it we can select only the entities we want based on the condition we supply. If the condition resolves as ``false``, the entity is filtered and will not be written to the pipe's dataset.
 
 The most common filtering we do is filter on ``rdf:type``. That is an attribute we add to entities as they enter Sesam to tag which system it comes from and what it contains. A filter on rdf:type can look like this:
 ::
