@@ -23,7 +23,7 @@ The problem with push is that Sesam receives the data but at the same time has n
 Raw data
 ========
 
-Data is fed into Sesam through :ref:`an inbound pipe <best-practice-inbound-pipes>`. Firstly, you will do an analysis of the data. Then add a raw pipe to make sure Sesam has a copy of the original data. From the result of the analysis, you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
+Data is fed into Sesam through an inbound pipe. Firstly, you will do an analysis of the data. Then add a raw pipe to make sure Sesam has a copy of the original data. From the result of the analysis, you will then add properties that will enhance the data in terms of modelling, reusability and connectivity, such as:
 
  - **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <best-practice-namespace>`. These references are usually key properties when semantically linking data together in a global dataset but are also useful when connecting data in preparation pipes.
  - When raw data is linked to data used to categorize it or other metadata, it is advisable to split it; keep data and metadata separate. The metadata used to categorize can be merged into a global like ``global-classification``.
