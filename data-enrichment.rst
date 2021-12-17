@@ -16,7 +16,7 @@ Data enrichment in Sesam is adding of new properties to an object either by the 
 Defining global properties
 ==========================
 
-For background on global properties, please read :ref:`here <best-practice-golden-record>`.
+For background on global properties, please read :ref:`here <collecting_data-Global pipes / datasets>`.
 
 There are 3 main reasons to introduce global properties:
 
