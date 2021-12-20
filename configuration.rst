@@ -8425,6 +8425,7 @@ Prototype
         "type": "system:url",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "jwt_token": null,
@@ -8482,6 +8483,13 @@ Properties
      - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
        HTTP server over SSL/TLS.
      - ``false``
+     -
+
+   * - ``custom_ca_pem_chain``
+     - String
+     - If ``verify_ssl`` is set to ``true`` this property can hold a chain of certificates (in PEM format) that
+       should be used to verify the SSL connection.
+     -
      -
 
    * - ``username``
@@ -8621,6 +8629,7 @@ Prototype
         "type": "system:rest",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "authentication": "basic",

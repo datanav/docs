@@ -10,6 +10,15 @@ Changelog
   ``prefilters`` had some known issues and is now deprecated. Note that you may have to reset the pipe if you
   change from ``prefilters`` to ``subsets``. All new pipes should use ``subsets`` to get the documented behaviour.
 
+.. _changelog_2021_12_17:
+
+2021-12-17
+----------
+
+* Added ``custom_ca_pem_chain``  property to the :ref:`URL system <url_system>` and :ref:`REST system <rest_system>`.
+  This property can hold a custom chain of certificates (in PEM format) that will be used to validate the SSL
+  connection if ``verify_ssl`` is set to ``true``.
+
 .. _changelog_2021_12_11:
 
 2021-12-11
