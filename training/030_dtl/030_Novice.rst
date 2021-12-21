@@ -244,51 +244,90 @@ Basics, uten apply
 Type examples
 ~~~~~~~~~~~~~
 
-Type eksempler:
+.. sidebar:: Summary
 
-• Datettime
+  Type...
 
-• Dict {}
+  - refers to a property being either a string, a list, a date etc.
+  - becomes more apparent when working towards a target schema
 
-• List
+When transforming data via DTL you inherently work with different types of properties. In this context, type refers to a property being either a string, a list, a date etc.. As such, you will most likely not consider types that important an aspect when adding properties to your entity, albeit when i.e. working towards a schema, you might experience the need for changing data type as schemas often times will have type and even format requirements.
 
-○ First
+To illustrate such a use case imagine working with date properties. Date is an obvious candidate in that date is composed of multiple dimensions of time, i.e: year, month, day, hours, minutes and seconds. Basically, this means that a given schema can have multiple different requirements for how date should look like when evaluated by a schema. In the below example, date will be used to exemplify the relevance of data type in Sesam.
 
-○ Unique/Distinct
+Source data:
 
-○ Last
+.. code-block:: json
+	
+	{
+		"_id": "salesforce-person:40",
+	  "$ids": [
+	    "~:salesforce-person:40",
+	    "~:erp-person:40"
+	  ],
+	  "salesforce-person:employmentID": 40,
+	  "salesforce-person:name": "Bolton, Aladdin T.",
+	  "erp-person:ID": 40,
+	  "erp-person:employmentPosition": "CTO",
+	  "erp-person:phone": "1-894-115-3398",
+	  "rdf:type": [
+	    "~:salesforce-person:person",
+	    "~:erp-person:person"
+	  ],
+	  "erp-person:updateDate": "~t2021-12-21T10:59:39.94248192Z"
+	}
 
-○ Count
+Pipe Configuration:
 
-○ nth
+.. code-block:: json
+	
+	{
+	  "_id": "transform-salesforce-person",
+	  "type": "pipe",
+	  "source": {
+	    "type": "dataset",
+	    "dataset": "global-person"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["if",
+	          ["eq",
+	            ["is-datetime", "_S.erp-person:updateDate"], true],
+	          [
+	            ["comment", "Adding properties for target schema: Salesforce"],
+	            ["add", "Date",
+	              ["datetime-format", "%Y-%m-%d", "_S.erp-person:updateDate"]
+	            ],
+	            ["add", "ID", "_S.salesforce-person:employmentID"],
+	            ["add", "Position", "_S.erp-person:employmentPosition"]
+	          ],
+	          ["filter"]
+	        ]
+	      ]
+	    }
+	  }
+	}
 
-• String
+Output:
 
-• Integer
+.. code-block:: json
 
-• Decimal
+	 {
+    "_id": "salesforce-person:40",
+    "transform-salesforce-person:Date": "2021-12-21",
+    "transform-salesforce-person:ID": 40,
+    "transform-salesforce-person:Position": "CTO"
+  }
 
-• Float
-
-• Boolean
-
-○ And
-
-○ Or
-
-○ Not
-
-○ In
-
-○ Eq
-
-○ If-null
-
-○ Is-empty
+As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean evaluator and used to decide whether entities should be filtered. ``["is-datetime"]`` is one of many DTL functions in Sesam that can evaluate types of data as these are used to transform your data as it moves through a Sesam dataflow. In addition, you should also recognize that we define our schema requirements as specified in the ``"[comment]"`` function.   
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language`
 
 .. _tasks-for-dtl-novice-3-2:
 
