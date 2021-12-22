@@ -26,5 +26,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build
         env:
-          DOCKER_BUILD_PUSH: 1
+          DOCKER_BUILD_PUSH: 1                  
+          VIRTUAL_ENV: venv
         run: make html && make docker

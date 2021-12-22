@@ -17,5 +17,7 @@ jobs:
       - name: Install pip requirements
         run: pip install -r requirements.txt
       - name: Build
+        env:
+          VIRTUAL_ENV: venv
         run: make html
       
