@@ -89,7 +89,6 @@ Explain the add, based on ref 3.1.4 above
 
   - is one of Sesam's core Master Data Management (MDM) capabilities
   - lets you define a list of prioritized properties
-  - can only evaluate string values
 
 Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``:
 
