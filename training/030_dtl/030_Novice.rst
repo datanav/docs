@@ -301,7 +301,7 @@ Tasks for DTL: Novice
 
 #. *What makes ``["coalesce"]`` one of Sesam's core MDM capabilities?*
 
-#. *Can ``["coalesce"]`` only evaluate string values?*
+#. *Can ``["concat"]`` only evaluate string values?*
 
 #. *What does RDF stand for and how does Sesam apply RDF in DTL?*
 
