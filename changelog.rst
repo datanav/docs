@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2022_01_03:
+
+2022-01-03
+----------
+
+* Added a new ``resolved_entity`` property to write-error entities in the execution log. It contains the entity
+  that was used to resolve the write-error if it is different from the original entity that caused the write-error.
+  This property is also set for any tracked dead letters that has been resolved (on the deleted dead letter).
+  Fixed a bug where the ``resolved`` property was not set (to ``true``) if a write-error entity was successfully
+  retried.
+
 .. _changelog_2021_12_20:
 
 2021-12-20
