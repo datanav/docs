@@ -12,7 +12,7 @@ Sesam will always store the previous version of a pipe or system that has been u
 A Sesam configuration should then always be stored in a separate version control system such as Git, Concurrent Versions System (CVS), Subversion, TeamCity, Mercurial or other.
 
 Downloading your Sesam configuration to your local version control system repository
------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 A Sesam configuration can be exported to a directory structure by using either the Sesam :ref:`client <concepts-sesam-client>`, API or portal. The exported directory structure should be located under your local copy of the repository of your chosen version control system.
 
