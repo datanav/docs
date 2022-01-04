@@ -112,7 +112,7 @@ Example:
          }
       },
       "global_defaults": {
-         "use_signalling_internally": false,
+         "use_signalling_internally": true,
          "default_compaction_type": "sink",
          "symmetric_namespace_collapse": false
       },
@@ -175,16 +175,16 @@ Properties
      - Boolean
      - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
-       Setting this option to ``true`` will enable signalling for all :ref:`dataset-type sources <dataset_source>` in the
-       installation. You can turn on this feature individually by setting the ``supports_signalling`` flag on the
+       The default setting of this property is ``true`` which means signalling is turned on for all :ref:`dataset-type sources <dataset_source>` in the
+       installation. You can turn this feature on or off individually by setting the ``supports_signalling`` flag on the
        :ref:`dataset source <dataset_source>` (including variants like
        :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
        :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
        delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
-       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based, signalling will
-       be disabled for the pipe source (if it's only set globally). However, if you set ``supports_signalling`` explicitly
-       on the pipe source it will be turned on regardless of the pump schedule.
-     - ``false``
+       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based or the schedule interval
+       is equal or greater than an hour (3600 seconds), signalling will be disabled for the pipe source (if it's only set globally).
+       However, if you set ``supports_signalling`` explicitly on the pipe source it will be turned on regardless of the pump schedule.
+     - ``true``
      -
 
        .. _service_metadata_global_defaults_compaction_settings:
@@ -767,6 +767,10 @@ Completeness
 
 When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe.  One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
+.. WARNING::
+
+   Completeness is implictly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
+
 Properties
 ^^^^^^^^^^
 
@@ -1125,8 +1129,8 @@ In this case the data from the source is not ordered chronologically, which mean
 
 .. _dataset_source:
 
-The dataset source
-------------------
+Dataset source
+--------------
 
 The dataset source is one of the most commonly used sources in a Sesam installation. It simply presents a stream of entities from a
 dataset stored in Sesam. Its configuration is very simple and looks like:
@@ -1247,8 +1251,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _merge_source:
 
-The merge source
-----------------
+Merge source
+------------
 
 The merge source is a source that is able to infer the sameness of
 entities across multiple datasets. The source uses a set of equality
@@ -1386,13 +1390,11 @@ Properties
        following three entities in this particular order (ids omitted for brevity):
        ``{"x":1}``, ``{"y": [2, 1]}``, ``{"y": 2, "z": [3, 3]}``
 
-       * ``"default"`` - The default is to union all the values, which
-         results in all properties being lists of all the values from
-         all the entities. This is similar to how the
+       * ``"default"`` - The default is to union all the values. This is similar to how the
          :ref:`merge-union <dtl_transform-merge-union>` DTL function
          works. Duplicates are not removed.
 
-         Example: ``{"x": [1], "y": [2, 1, 2], "z": [3, 3]}``
+         Example: ``{"x": 1, "y": [2, 1, 2], "z": [3, 3]}``
 
        * ``"compact"`` - Similar to the default strategy, but tries to
          compact the property values; duplicate values are removed,
@@ -1592,16 +1594,16 @@ already merged entities downstream.
    Do not remove a dataset from the ``datasets`` property nor change
    the order of the datasets in the ``datasets`` property. Doing so
    may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets. 
-   
+   though as this won't affect the order of the datasets.
+
    If config changes are required be aware of the following:
    Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
    For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
 
 .. _union_datasets_source:
 
-The union datasets source
--------------------------
+Union datasets source
+---------------------
 
 The union datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
@@ -1723,8 +1725,8 @@ configuration, which is omitted here for brevity:
 
 .. _merge_datasets_source:
 
-The merge datasets source
--------------------------
+Merge datasets source
+---------------------
 
 The merge datasets source is similar to the ``dataset source``, except
 it can process several datasets at once and keep track of each one in
@@ -1856,8 +1858,8 @@ configuration, which is omitted here for brevity:
 
 .. _diff_datasets_source:
 
-The diff datasets source (Experimental)
----------------------------------------
+Diff datasets source (Experimental)
+-----------------------------------
 
 The diff datasets source is similar to the ``merge dataset source``, except that
 it also compares the entities from the datasets. The comparison produces a diff and filters out
@@ -1999,8 +2001,8 @@ Example result
 
 .. _embedded_source:
 
-The embedded source
--------------------
+Embedded source
+---------------
 
 This is a data source that lets you embed the data inside the configuration of the source. This is convenient when you have a small and static dataset. Do not use this source to hold a large number of entities.
 
@@ -2067,8 +2069,8 @@ Example:
 
 .. _sql_source:
 
-The SQL source
---------------
+SQL source
+----------
 
 The `SQL <https://en.wikipedia.org/wiki/SQL>`_ database source is one of the most commonly used data sources.
 In short, it presents `database relations <https://en.wikipedia.org/wiki/Relation_(database)>`_ (i.e. ``tables``,
@@ -2140,7 +2142,7 @@ Properties
        if it is a compound primary key. If the property is not set and the ``table``
        property is used, the data source component will attempt to use table metadata
        to deduce the PK to use. In other words, you will have to set this property if
-       the ``query`` property us used.
+       the ``query`` property us used. Note that this property might be case sensitive.
      -
      -
 
@@ -2160,7 +2162,7 @@ Properties
        able to support ``since`` markers. You can provide the name of the column to use
        for such queries here. This must be a valid column name in the ``table`` or ``query``
        result sets and it must be of a data type that supports larger or equal (">=") tests
-       for the ``table`` case.
+       for the ``table`` case. Note that this property might be case sensitive.
      -
      -
 
@@ -2171,6 +2173,17 @@ Properties
        ``:since`` must be included somewhere in the query string - for example
        "select * from view_name v where v.updates >= :since". If a list of strings is given, they will be
        converted to a single string by concatenation with the newline character.
+
+       .. WARNING::
+
+          The ``updated_query`` must cover the exact same ids as the
+          ``update`` query. If not you run the risk of a full sync
+          failing and then completing in incremental mode, which would
+          mean that the full sync is not covering all ids and thus end
+          up deleting ids not seen. Consider setting
+          ``is_chronological_full`` to ``false`` on pipes to prevent
+          the pipe offset from being set during a full sync.
+
      -
      -
 
@@ -2310,8 +2323,8 @@ and the updated datestamp is in a column called ``updated``. This enables us to 
 
 .. _conditional_source:
 
-The conditional source
-----------------------
+Conditional source
+------------------
 
 The conditional source selects an active source based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -2372,8 +2385,8 @@ Properties
 
 .. _csv_source:
 
-The CSV source
---------------
+CSV source
+----------
 
 The CSV data source translates the rows of files in `CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_
 to entities.
@@ -2547,8 +2560,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _rdf_source:
 
-The RDF source
---------------
+RDF source
+----------
 
 The RDF data source is able to read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data
 in `N-Triples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_, `N3 <https://www.w3.org/TeamSubmission/n3/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
@@ -2672,8 +2685,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sdshare_source:
 
-The SDShare source
-------------------
+SDShare source
+--------------
 
 The SDShare data source can read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
 `SDShare specification <http://www.sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
@@ -2764,8 +2777,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _ldap_source:
 
-The LDAP source
----------------
+LDAP source
+-----------
 
 The LDAP source provides entities from a `LDAP catalog <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_
 configured by a :ref:`LDAP system <ldap_system>`.
@@ -2882,8 +2895,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _json_source:
 
-The JSON source
----------------
+JSON source
+-----------
 
 
 The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
@@ -3008,8 +3021,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _empty_source:
 
-The empty source
-----------------
+Empty source
+------------
 
 Sometimes it is useful for debugging or development purposes to have a data source that doesn't produce any entities:
 
@@ -3059,8 +3072,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _http_endpoint_source:
 
-The HTTP endpoint source
-------------------------
+HTTP endpoint source
+--------------------
 
 This is a special data source that registers an `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_
 receiver endpoint that one can post entities to. Entities posted here will be written to the pipe's sink.
@@ -3197,8 +3210,8 @@ into the ``my-entities`` dataset:
 
 .. _sparql_source:
 
-The SPARQL source
------------------
+SPARQL source
+-------------
 
 The SPARQL source fetches `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data about subjects from a
 `triplestore <https://en.wikipedia.org/wiki/Triplestore>`_ exposing a `SPARQL compliant <https://www.w3.org/TR/rdf-sparql-query/>`_ endpoint.
@@ -3318,8 +3331,8 @@ configuration, which is omitted here for brevity.
 
 .. _rest_source:
 
-The REST source (experimental)
-------------------------------
+REST source (experimental)
+--------------------------
 
 This is a data source that can communicate with a REST service that produce JSON output using HTTP requests.
 The REST source supports both pagination as part of the response body or pagination in the form of header properties
@@ -3495,7 +3508,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
        entities if missing from the source system (for continuation support). This is only relevant if
-       ``since_support`` as been set to ``true``. See the ``since_property_name`` and ``since_property_location``
+       ``supports_since`` as been set to ``true``. See the ``since_property_name`` and ``since_property_location``
        configuration properties as well. Note that this property can alternatively be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precendence
        if defined.
@@ -3504,7 +3517,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
 
    * - ``since_property_name``
      - String
-     - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
+     - The name of the property to relay continuation information. This is only relevant if ``supports_since`` as been
        set to ``true``. See ``since_property_location`` and ``updated_property`` as well. Note that this
        property can alternatively be defined in the specified ``operation`` section of the
        :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
@@ -3514,7 +3527,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``since_property_location``
      - String
      - A enumeration of "query" and "header". The location property to relay continuation information.
-       This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
+       This is only relevant if ``supports_since`` as been set to ``true``. See ``since_property_name`` and
        ``updated_property`` as well. Note that this property can alternatively be defined in the specified ``operation``
        section of the :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
      -
@@ -3633,7 +3646,7 @@ Configuration for REST source:
             "operation": "get-men"
             "id_expression" : "{{ id }}"
             "updated_expression" : "{{ seq }}",
-            "since_support": true,
+            "supports_since": true,
             "is_chronological": true,
             "is_since_comparable": true
         }
@@ -3795,8 +3808,8 @@ either a transform configuration object or a list of them.
 
 .. _dtl_transform:
 
-The DTL transform
------------------
+DTL transform
+-------------
 
 This is a transform that lets you apply :doc:`Data Transformation Language <DTLReferenceGuide>`
 transformations on the entities stream produced by the data source.
@@ -3867,8 +3880,8 @@ Transformation Language before writing them to the
 
 .. _json_schema_transform:
 
-The JSON Schema validation transform
-------------------------------------
+JSON Schema validation transform
+--------------------------------
 
 A transform that validates entities against a `JSON Schema <http://json-schema.org/>`_ document.
 If the document is valid then the field referenced by ``key_valid`` will be set to true, otherwise
@@ -3964,8 +3977,8 @@ then these would come out:
 
 .. _conditional_transform:
 
-The conditional transform
--------------------------
+Conditional transform
+---------------------
 
 The conditional transform selects an active transform based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -4026,8 +4039,8 @@ Properties
 
 .. _http_transform:
 
-The HTTP transform
-------------------
+HTTP transform
+--------------
 
 This transform performs `HTTP POST <https://en.wikipedia.org/wiki/POST_(HTTP)>`_ requests to a HTTP capable
 endpoint. The service at the endpoint then transforms the entities contained in the request body and returns them in
@@ -4102,8 +4115,8 @@ Example configuration
 
 .. _lower_keys_transform:
 
-The lower keys transform
-------------------------
+Lower keys transform
+--------------------
 
 This transform transforms all the keys of an entity to lower case (optionally recursively).
 
@@ -4217,8 +4230,8 @@ however, the result would instead become:
 
 .. _upper_keys_transform:
 
-The upper keys transform
-------------------------
+Upper keys transform
+--------------------
 
 This transform transforms all the keys of an entity to upper case (optionally recursively).
 The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
@@ -4227,8 +4240,8 @@ transformed to upper case. See previous section for details.
 
 .. _undirected_graph_transform:
 
-The undirected graph transform
-------------------------------
+Undirected graph transform
+--------------------------
 
 The undirected graph transform transforms a list of properties representing nodes in a graph into all its
 possible sets of edges, forming a complete graph. The transform will generate all possible edges in the
@@ -4349,13 +4362,15 @@ The transform will output the following edges of the graph as entities on its ou
 
 .. _emit_children_transform:
 
-The emit children transform
----------------------------
+Emit children transform
+-----------------------
 
 This transform will emit all child entities of its source
 entities. All entities in the ``$children`` property that have an
 ``_id`` property will be emitted. The parent entity will not be
 emitted.
+
+This transform should always be used in a separate pipe. If the ``emit_children`` transform is a part of a chained transform, Sesam won't be able to perform deletion tracking on the emitted child entities, as the parent entity will be removed from the sink dataset and not marked as deleted.
 
 Properties
 ^^^^^^^^^^
@@ -4381,8 +4396,8 @@ Example configuration
 
 .. _xml_transform:
 
-The XML transform
------------------
+XML transform
+-------------
 
 This transform will render entities on the form described in the :ref:`XML endpoint sink <xml_endpoint_sink>` to a string and
 embed it in the entity, which is then passed on to the transform chain.
@@ -4504,8 +4519,8 @@ it will produce the transformed entity:
 
 .. _rdf_transform:
 
-The RDF transform
------------------
+RDF transform
+-------------
 
 This transform will render entities to a N-Triples string and embed it in the entity, which is then passed on
 to the transform chain.
@@ -4597,8 +4612,8 @@ it will produce the transformed entity:
 
 .. _REST_transform:
 
-The REST transform
-------------------
+REST transform
+--------------
 
 This transform can communicate with a REST service using HTTP requests.
 
@@ -4949,7 +4964,7 @@ Sinks
 =====
 
 Sinks are at the receiving end of pipes and are responsible for
-writing entities into a internal dataset or a target system.
+writing entities into an internal dataset or a target system.
 
 Sinks can support batching by implementing specific methods and
 accumulating entities in a buffer before writing the batch. The size of
@@ -4999,8 +5014,8 @@ Properties
 
 .. _conditional_sink:
 
-The conditional sink
---------------------
+Conditional sink
+----------------
 
 The conditional sink selects an active sink based on a key typically controlled by an environment variable.
 It is typically used in devops to be able to use the same configuration in different type of environments (i.e. development,
@@ -5061,8 +5076,8 @@ Properties
 
 .. _dataset_sink:
 
-The dataset sink
-----------------
+Dataset sink
+------------
 
 The dataset sink writes the entities it is given to an identified dataset. The configuration looks like:
 
@@ -5241,8 +5256,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _databrowser_sink:
 
-The Sesam Databrowser sink
---------------------------
+Sesam Databrowser sink
+----------------------
 
 The databrowser sink writes the entities it is given to a Solr index
 to be displayed by the Sesam Databrowser application. The input
@@ -5346,8 +5361,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _json_sink:
 
-The JSON push sink
-------------------
+JSON push sink
+--------------
 
 The JSON push sink implements a simple HTTP based protocol where
 individual entities or lists of entities are ``POSTed`` as JSON data
@@ -5451,8 +5466,8 @@ An example using a custom "application/json" content-type header needed by some 
 
 .. _sdshare_sink:
 
-The SDShare push sink
----------------------
+SDShare push sink
+-----------------
 
 The SDShare push sink is similar to the :ref:`JSON push sink <json_sink>`, but instead of posting JSON it
 translates the inbound entities to ``RDF`` and ``POSTs`` them in N-Triples form to a :ref:`HTTP endpoint <url_system>`
@@ -5517,8 +5532,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sms_sink:
 
-The SMS message sink
---------------------
+SMS message sink
+----------------
 
 The SMS message sink is capable of sending ``SMS`` messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja``
@@ -5659,8 +5674,8 @@ the templates in config or the entities themselves.
 
 .. _solr_sink:
 
-The Solr sink
--------------
+Solr sink
+---------
 
 The Solr sink writes the entities it is given to a Solr index.
 
@@ -5734,8 +5749,8 @@ Properties
 
 .. _elasticsearch_sink:
 
-The Elasticsearch sink
-----------------------
+Elasticsearch sink
+------------------
 
 The Elasticsearch sink writes the entities it is given to an
 Elasticsearch server/cluster.
@@ -5802,8 +5817,8 @@ Properties
 .. _sparql_sink:
 
 
-The SPARQL sink
----------------
+SPARQL sink
+-----------
 
 The SPARQL sink converts entities to RDF statements and writes them to a graph in a triplestore via a SPARQL compatible
 endpoint.
@@ -5897,8 +5912,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _sql_sink:
 
-The SQL sink
-------------
+SQL sink
+--------
 
 The `SQL <https://en.wikipedia.org/wiki/SQL>`_  sink writes entities to a
 `relational database <https://en.wikipedia.org/wiki/Relational_database>`_ `table <https://en.wikipedia.org/wiki/Table_(database)>`_.
@@ -6177,7 +6192,7 @@ The optional ``default`` property contains what value to use if the property is 
 default value for a particular column has been set in the table schema, this value should match the schema value.
 
 
-Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`Microsoft Azure SQL Data Warehouse server <mssql-azure-dw_system>`:
+Translation table for the :ref:`Microsoft SQL Server <mssql-sqlserver_system>` and :ref:`Legacy Microsoft SQL server <mssql_system>`:
 
 
 .. list-table::
@@ -6267,8 +6282,8 @@ Translation table for the :ref:`Microsoft SQL server <mssql_system>` and :ref:`M
 
 .. _mail_sink:
 
-The Email Message sink
-----------------------
+Email Message sink
+------------------
 
 The mail message sink is capable of sending mail messages based on the entities it receives. The message to send can be
 constructed either by inline templates or from templates read from disk. These templates are assumed to be ``Jinja
@@ -6429,8 +6444,8 @@ on a best-effort basis; i.e. this might not preserve the information contained i
 
 .. _null_sink:
 
-The null sink
--------------
+Null sink
+---------
 
 The null sink is the equivalent of the empty data source; it will discard any entities written to it and do nothing (it
 never raises an error):
@@ -6460,8 +6475,8 @@ The outermost object would be your :ref:`pipe <pipe_section>` configuration, whi
 
 .. _http_endpoint_sink:
 
-The HTTP endpoint sink
-----------------------
+HTTP endpoint sink
+------------------
 
 This is a special data sink that registers an HTTP publisher endpoint
 that one can get entities from.
@@ -6567,8 +6582,8 @@ dataset::
 .. _csv_endpoint_sink:
 
 
-The CSV endpoint sink
----------------------
+CSV endpoint sink
+-----------------
 
 This is a data sink that registers an HTTP publisher endpoint that one can get entities in
 `CSV format <https://en.wikipedia.org/wiki/Comma-separated_values>`_ from.
@@ -6611,6 +6626,7 @@ Prototype
         "lineterminator": "\r\n",
         "quotechar": "\"",
         "encoding": "utf-8",
+        "encode_error_strategy": "replacement-strategy-to-use",
         "skip-deleted-entities": true,
         "filename": "my_data.csv",
         "content_disposition": "attachment"
@@ -6690,12 +6706,32 @@ Properties
      - ``"\""``
      -
 
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
+     -
+
    * - ``encoding``
      - String
      - Which encoding to use when converting the output to string values. The default is ``utf-8``. See
        `section 7.2.3 on this page <https://docs.python.org/3/library/codecs.html#codec-base-classes>`_ for a list of
        valid values.
      - ``"utf-8"``
+     -
+
+   * - ``encode_error_strategy``
+     - String enum
+     - An enumeration of "ignore", "replace", "xmlcharrefreplace" and "backslashreplace" that tells the sink how to deal
+       with illegal characters in the output data when the ``encoding`` property is different than ``utf-8``.
+       The default "backslashreplace" replaces the offending character(s) with backslash escaped unicode values
+       (i.e. the ``"ę"`` character would be replaced with ``"\u0119"`` if it's illegal for the chosen encoding). The
+       "replace" strategy will use a special unicode "replacement character" for unicode encodings,
+       see https://en.wikipedia.org/wiki/Specials_%28Unicode_block%29 for more details or simply the ``"?"`` character
+       if a non-unicode encoding. The "xmlcharrefreplace" replacement strategy uses numerical xml character values on
+       the form ``"&#NNN;"``. The "ignore" strategy is the simplest and just skips any illegal characters entirely.
+     - "backslashreplace"
      -
       .. _csv_endpoint_sink_param_skip_deleted_entities:
 
@@ -6751,8 +6787,8 @@ The data will be available at ``http://localhost:9042/api/publishers/my-entities
 
 .. _xml_endpoint_sink:
 
-The XML endpoint sink
----------------------
+XML endpoint sink
+-----------------
 
 This is a data sink that registers an HTTP publisher endpoint
 that one can get the entities in XML format from.
@@ -6839,6 +6875,13 @@ Properties
      - This can be set to ``false`` to make deleted entities appear in the XML output. The default is that
        deleted entities does not appear.
      - true
+     -
+
+   * - ``byte_order_mark``
+     - Boolean
+     - If ``true`` the sink will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. I should only be
+       used in conjunction with a UTF-8 encoding.
+     - ``false``
      -
 
    * - ``filename``
@@ -6938,8 +6981,8 @@ The XML document will be available at ``http://localhost:9042/api/publishers/my-
 
 .. _rest_sink:
 
-The REST sink
--------------
+REST sink
+---------
 
 This is a data sink that can communicate with a REST service using HTTP requests.
 
@@ -7253,7 +7296,7 @@ Properties
      - String or list of strings
      - A human readable description of the component (optional).
      -
-     - Yes
+     -
 
    * - ``comment``
      - String or list of strings
@@ -7277,8 +7320,8 @@ Properties
 
 .. _sql_system:
 
-The SQL systems
----------------
+SQL systems
+-----------
 
 The SQL system components represents a `RDBMS <https://en.wikipedia.org/wiki/Relational_database_management_system>`_
 and contains the necessary information to establish a connection to the RDBMS and manage these connections among the
@@ -7376,8 +7419,8 @@ The specific SQL systems available are:
 
 .. _oracle_system:
 
-The Oracle system
------------------
+Oracle system
+-------------
 
 The Oracle SQL system represents a `Oracle RDBMS <https://en.wikipedia.org/wiki/Oracle_Database>`_ available on the network.
 See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
@@ -7473,8 +7516,8 @@ Example Oracle configuration:
 
 .. _oracle_tns_system:
 
-The Oracle TNS system
----------------------
+Oracle TNS system
+-----------------
 
 The Oracle SQL system represents a Oracle RDBMS configured using a `TNS name <http://www.orafaq.com/wiki/Tnsnames.ora>`_
 See the :ref:`supported column types <oracle_types>` list for a overview of which Oracle column types are supported
@@ -7556,10 +7599,14 @@ Example Oracle TNS configuration:
 
 .. _mssql_system:
 
-The MSSQL system
-----------------
+Legacy Microsoft SQL system
+---------------------------
 
-The MSSQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
+The Legacy Microsoft SQL system represents a `Microsoft SQL Server <https://en.wikipedia.org/wiki/Microsoft_SQL_Server>`_ available over the network.
+
+Note that this system is a legacy system that's based on open source drivers and has been superceded by the
+:ref:`Microsoft SQL Server <mssql-sqlserver_system>` which uses official microsoft drivers.
+
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
 
@@ -7571,7 +7618,7 @@ Prototype
     {
         "_id": "sql_system_id",
         "type": "system:mssql",
-        "name": "The Microsoft SQL Server Database",
+        "name": "Legacy Microsoft SQL Server Database",
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
@@ -7652,7 +7699,7 @@ Example MS SQL Server configuration:
 
     {
         "_id": "sqlserver_db",
-        "name": "MS SQL Server test database",
+        "name": "Legacy MS SQL Server test database",
         "type": "system:mssql",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
@@ -7661,12 +7708,17 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+.. _mssql-sqlserver_system:
 .. _mssql-azure-dw_system:
 
-The Microsoft Azure SQL Data Warehouse system
----------------------------------------------
+Microsoft SQL Server system
+---------------------------
 
-This system type represents a `Microsoft Azure SQL Data Warehouse server <https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is>`_ running in Azure.
+This system type represents a Microsoft SQL Server running on premise or in the cloud (Azure). It can also be used to
+connect to a `Microsoft Azure Synapse Analytics <https://azure.microsoft.com/en-us/services/synapse-analytics/#overview>`_ service.
+For the latter, you will need to set the ``dialect`` property to ``synapse``.
+
+This system uses the official Microsoft (ODBC) drivers.
 
 See the :ref:`supported column types <sql_server_types>` list for a overview of which SQL Server column types
 are supported and how they are mapped to :ref:`Sesam types <entity_data_types>`.
@@ -7678,8 +7730,8 @@ Prototype
 
     {
         "_id": "sql_system_id",
-        "type": "system:mssql-azure-dw",
-        "name": "A Microsoft Azure SQL Data Warehouse server",
+        "type": "system:sqlserver",
+        "name": "A Microsoft SQL server",
         "username":"$ENV(username-variable)",
         "password":"$SECRET(password-variable)",
         "host":"fqdn-or-ip-address-here",
@@ -7746,8 +7798,8 @@ Example MS SQL Server configuration:
 
     {
         "_id": "sqlserver_db",
-        "name": "MS Azure DW SQL Server test database",
-        "type": "system:mssql-azure-dw",
+        "name": "MS SQL Server test database",
+        "type": "system:sqlserver",
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
         "host": "myserver.database.windows.net",
@@ -7755,12 +7807,15 @@ Example MS SQL Server configuration:
         "database": "testdb"
     }
 
+Note that for backwards compatibility reasons the type "system:mssql-azure-dw" is still accepted as an alternative alias.
+
+
 .. _mssql-bulk-operations:
 
-Bulk operations in Microsoft SQL server and Azure SQL Data Warehouse systems
-----------------------------------------------------------------------------
+Bulk operations in Microsoft SQL server and Azure Synapse systems
+-----------------------------------------------------------------
 
-Both Microsoft SQL Server and Azure SQL Data Warehouse support bulk operations
+Both Microsoft SQL Server and Azure Synapse support bulk operations
 for uploading data. Sesam uses the
 `bcp utility <https://docs.microsoft.com/en-us/sql/tools/bcp-utility>`_ for bulk uploading.
 
@@ -7797,8 +7852,8 @@ which rows to update or delete.
 
 .. _mysql_system:
 
-The MySQL system
-----------------
+MySQL system
+------------
 
 The MySQL system represents a `MySQL database <https://en.wikipedia.org/wiki/MySQL>`_ available over the network:
 See the :ref:`supported column types <mysql_types>` list for a overview of which MySQL column types are supported and
@@ -7883,8 +7938,8 @@ Example MySQL configuration:
 
 .. _postgresql_system:
 
-The PostgreSQL system
----------------------
+PostgreSQL system
+-----------------
 
 The PostgreSQL system represents a `PostgreSQL RDBMS <https://en.wikipedia.org/wiki/PostgreSQL>`_ available on the network.
 See the :ref:`supported column types <postgresql_types>` list for a overview of which PostgreSQL column types are supported
@@ -7977,8 +8032,8 @@ Example PostgreSQL configuration:
 
 .. _ldap_system:
 
-The LDAP system
----------------
+LDAP system
+-----------
 
 The LDAP system contains the configuration needed to communicate with a
 `LDAP <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_ system. It is used by
@@ -8070,8 +8125,8 @@ Example configuration
 
 .. _smtp_system:
 
-The SMTP system
----------------
+SMTP system
+-----------
 
 The SMTP system represents the information needed to connect to a `SMTP <https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_
 server for sending emails. It is used in conjunction with the :ref:`mail message sink <mail_sink>` to construct
@@ -8162,8 +8217,8 @@ Example configuration
 
 .. _solr_system:
 
-The Solr system
----------------
+Solr system
+-----------
 
 The Solr system represents the information needed to connect to a `Apache Solr <https://en.wikipedia.org/wiki/Apache_Solr>`_
 server for indexing JSON documents. It is used in conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
@@ -8221,8 +8276,8 @@ Example configuration
 
 .. _elasticsearch_system:
 
-The Elasticsearch system
-------------------------
+Elasticsearch system
+--------------------
 
 The Elasticsearch system represents the information needed to connect
 to an `Elasticsearch <https://en.wikipedia.org/wiki/Elasticsearch>`_ server/cluster for indexing JSON documents. It is
@@ -8273,8 +8328,8 @@ Example configuration
 
 .. _twilio_system:
 
-The Twilio system
------------------
+Twilio system
+-------------
 
 The `Twilio <https://en.wikipedia.org/wiki/Twilio>`_ system is a ``SMS system`` used with
 :ref:`SMS message sinks <sms_sink>` to construct and send SMS messages from entities.
@@ -8351,8 +8406,8 @@ Example configuration
 
 .. _url_system:
 
-The URL system
---------------
+URL system
+----------
 
 The URL system represents a `HTTP server <https://en.wikipedia.org/wiki/Web_server>`_ (i.e. a web server)
 serving `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url.
@@ -8370,6 +8425,7 @@ Prototype
         "type": "system:url",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "jwt_token": null,
@@ -8427,6 +8483,13 @@ Properties
      - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
        HTTP server over SSL/TLS.
      - ``false``
+     -
+
+   * - ``custom_ca_pem_chain``
+     - String
+     - If ``verify_ssl`` is set to ``true`` this property can hold a chain of certificates (in PEM format) that
+       should be used to verify the SSL connection.
+     -
      -
 
    * - ``username``
@@ -8540,8 +8603,8 @@ Example with ntlm configuration:
 
 .. _rest_system:
 
-The REST system
----------------
+REST system
+-----------
 
 The REST system represents a REST service (i.e. a web server) serving
 `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
@@ -8566,6 +8629,7 @@ Prototype
         "type": "system:rest",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "authentication": "basic",
@@ -8875,8 +8939,8 @@ Example configuration
 
 .. _microservice_system:
 
-The microservice system
------------------------
+Microservice system
+-------------------
 
 The microservice system is similar to the :ref:`URL system <url_system>`, except that it also spins up the microservice that it defines. This system can be used with the :ref:`JSON source <json_source>`, the :ref:`HTTP transform <http_transform>` and the :ref:`JSON push sink <json_sink>`.
 
@@ -9461,10 +9525,11 @@ Incremental run:
   i.e. the pipe will only process source-entities that has appeared after the previous run of the pipe. This is
   the most common way to run a pipe.
 
-Rescan:
+Background rescan:
   This is what a pump does when it is started by the :ref:`rescan_cron_expression <pump_rescan_cron_expression>` or
   :ref:`rescan_run_count <pump_rescan_run_count>` config-properties (or if it is manually started by the
-  "start-rescan" pump-operation). It will process all the source-entities, and do deletion tracking when finished.
+  "start-rescan" pump-operation) and :ref:`enable_background_rescan <pipe_settings_enable_background_rescan>` is set
+  to ``true``. It will process all the source-entities, and do deletion tracking when finished.
 
   Only pipes with a :ref:`dataset sink <dataset_sink>` support background rescans. This is because a rescan run
   needs a way to check that it isn't overwriting newer entities from an incremental run, and only the dataset sink

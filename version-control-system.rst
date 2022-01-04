@@ -11,7 +11,7 @@ Sesam will always store the previous version of a pipe or system that has been u
 
 A Sesam configuration should then always be stored in a separate version control system such as Git, Concurrent Versions System (CVS), Subversion, TeamCity, Mercurial or other.
 
-Dowloading your Sesam configuration to your local version control system repository
+Downloading your Sesam configuration to your local version control system repository
 -----------------------------------------------------------------------------------
 
 A Sesam configuration can be exported to a directory structure by using either the Sesam :ref:`client <concepts-sesam-client>`, API or portal. The exported directory structure should be located under your local copy of the repository of your chosen version control system.
@@ -31,11 +31,10 @@ For instance we recommend using this directory structure if your version control
 ::
 
     my-project-directory
-      ├ node
-      | ├ expected
-      | ├ pipes
-      | ├ systems
-      | └ variables
+      ├ expected
+      ├ pipes
+      ├ systems
+      ├ variables
       ├ README.md
       ├ LICENSE
       ├ .gitignore
@@ -44,4 +43,4 @@ For instance we recommend using this directory structure if your version control
 Recommended workflow for a Sesam project
 ----------------------------------------
 
-We strongly promote using either `Git-Flow <https://nvie.com/posts/a-successful-git-branching-model/>`_ or its simplified version `Github-Flow <https://guides.github.com/introduction/flow/>`_ as workflow for working with Sesam projects. To add a version number or tag to release we recommend using `semantic versioning <https://semver.org>`_.
+We strongly promote using the `Github-Flow <https://guides.github.com/introduction/flow/>`_ as workflow for working with Sesam projects. To add a version number or tag to release we recommend using `semantic versioning <https://semver.org>`_.

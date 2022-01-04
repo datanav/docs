@@ -8,7 +8,7 @@ PANDOCOPTS =
 PANDOC_INT = json
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -W
+SPHINXOPTS    ?= -W
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
@@ -88,6 +88,11 @@ partnerdocx:
 saas: saaspdf saasdocx
 
 html: saas partnerdocx
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+html_no_saas:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

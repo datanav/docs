@@ -567,7 +567,7 @@ Transforms
 ==========
 
 A transform function is a function that has side-effects, typically
-modifiying the target entity, and has no return value.
+modifying the target entity, and has no return value.
 
 .. list-table::
    :header-rows: 1
@@ -1248,7 +1248,7 @@ modifiying the target entity, and has no return value.
        |
        | For each entity in VALUES copy all the properties of the value onto the
          target entity. If the property already exists on the target entity, add
-         the new values to the existing list of values.
+         the new values as a list of values.
      - | ``["merge-union", "_S.orders"]``
        |
        | Copies the properties of the entities in ``_S.orders`` to the target.
@@ -1257,7 +1257,7 @@ modifiying the target entity, and has no return value.
        | ``["merge-union",``
        |   ``["list", {"a": 1}, {"a": 2, "b": 3}]]``
        |
-       | Add the properties ``a=[1, 2]`` and ``b=[3]`` to the target entity.
+       | Add the properties ``a=[1, 2]`` and ``b=3`` to the target entity.
 
        .. _dtl_transform-create:
    * - ``create``
@@ -2194,7 +2194,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - | *Arguments:*
        |   TIMEZONE_NAME(string{0|1})
        |   FORMATSTRING(string{1})
-       |   VALUES(value-expression{})
+       |   VALUES(value-expression{1})
        |
        | Translates all non-null input values to datetime values. The values must be strings
          matching the format string given. Any values that don't parse as datetime values will
@@ -2259,7 +2259,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - | *Arguments:*
        |   TIMEZONE_NAME(string{0|1})
        |   FORMATSTRING(string{1})
-       |   VALUES(value-expression{})
+       |   VALUES(value-expression{1})
        |
        | Translates all non-null input datetime values to strings. The strings will be formattet according to the format string.
          Any values that aren't datetime values will be silently ignored. Note that precision loss is possible since
@@ -2311,7 +2311,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - | *Arguments:*
        |   DATEPART(string{1})
        |   VALUE(integer{1})
-       |   VALUES(value-expression{})
+       |   VALUES(value-expression{1})
        |
        | Adds a fixed ``VALUE`` number (positive or negative) of ``DATEPART`` values to the the input values,
        | producing new datetime objects. ``DATEPART`` can be one of the following values:
@@ -2402,7 +2402,7 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - | *Arguments:*
        |   FROM_TIMEZONE(string{1})
        |   TO_TIMEZONE(string{1})
-       |   VALUES(value-expression{})
+       |   VALUES(value-expression{1})
        |
        | Shifts all the input datetime values from one timezone to another timezone. Any values that aren't datetime
          values will be silently ignored. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
@@ -2859,6 +2859,34 @@ Bytes
        |
        | Returns one bytes object: ``~bYWJj``.
 
+       .. _is_bytes_dtl_function:
+   * - ``is-bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a bytes literal or value or if
+         it is a list, that the first element in the list is a bytes type value or literal
+       |
+     - | ``["is-bytes", ["bytes", "abc"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", "~bYWJj"]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-bytes", ["list", "~bYWJj", "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", ["list", "12345", "~bYWJj"]]]``
+       |
+       | Returns false.
+       |
 
        .. _base64_encode_dtl_function:
    * - ``base64-encode``
@@ -2894,6 +2922,7 @@ Bytes
        |
        | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
        | the similar looking output and input)
+
 
 Encryption
 ----------
@@ -3376,6 +3405,34 @@ UUIDs
           that you are aware of the consequences of reprocessing
           entities.*
 
+       .. _is_uuid_dtl_function:
+   * - ``is-uuid``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a UUID literal or value or if
+         it is a list, that the first element in the list is a UUID type value or literal
+       |
+     - | ``["is-uuid", ["uuid"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
+       |
+       | Returns false.
+       |
 
 Nested transformations
 ----------------------
@@ -3598,11 +3655,13 @@ Hops
           will be used to key the statistics gathered about its execution.
           The ``trace`` property should only be specified on the last HOP_SPEC argument.
 
-       9. ``prefilters``: OPTIONAL. A dict where the keys must be dataset aliases
+       9. ``subsets``: OPTIONAL. A dict where the keys must be dataset aliases
           specified in the ``datasets`` property. The values must be valid subset
           expressions, i.e. an ``eq`` DTL expression where the left hand side is
           the index expression and the right hand side is the value that represents
           the subset. Example: ``["eq", "_S.category", 72]``
+
+          (``subsets`` replaces the deprecated ``prefilters`` property)
 
        | If multiple HOP_SPEC arguments are given, then the output of
          a HOP_SPEC is passed on as the input to the next. This is a
@@ -3681,12 +3740,12 @@ Hops
               ["eq", "_S._id", "o.customer_id"]
               ["eq", "o.lines.product_id", "p.product_id"]
             ],
-            "prefilters": {
+            "subsets": {
               "o": ["eq", "_S.webshop_id", "myshop"]
             }
            }]
 
-       | Find the products that the customer has bought from a specific web shop. This example uses the ``prefilters``
+       | Find the products that the customer has bought from a specific web shop. This example uses the ``subsets``
          property to reference a subset of the ``orders`` dataset, i.e. the orders placed in the ``myshop`` web shop.
 
 Entity lookups
@@ -3952,7 +4011,7 @@ Lists
        .. _list_dtl_function:
    * - ``list``
      - | *Arguments:*
-       |   VALUES(value-expression{>0})
+       |   VALUES(value-expression{>=0})
        |
        | Constructs a list of the values in VALUES.
      - | ``["list"]``
@@ -4217,6 +4276,10 @@ Lists
        | ``["min", ["list", {"x": 1}, "b", "a"]]``
        |
        | Returns ``"a"``.
+       |
+       | ``["min", ["list", "B", "b", "A", "a"]]``
+       |
+       | Returns ``"A"`` (Based on `ASCII ordering <https://ascii.cl/>`_).
        |
        | ``["min", "_.amount", "_S.orders"]]``
        |
@@ -4877,7 +4940,7 @@ Hashing
    * - ``hash128``
      - | *Arguments:*
        |   ALGORITM("murmur3")
-       |   VALUES(value-expression{>0})
+       |   VALUES(value-expression{1})
        |
        | Generates 128 bit integer hashes from bytes and strings. Values of
          other types are ignored. This function can be used to generate
@@ -4886,6 +4949,7 @@ Hashing
      - | ``["hash128", "murmur3", "abc"]``
        |
        | Returns ``79267961763742113019008347020647561319``.
+       |
        | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]]``
        |
        | Returns ``[[79267961763742113019008347020647561319,``
@@ -4934,7 +4998,7 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        | Returns the result of ``VALUE1 + VALUE2``. The result is always a single number (or ``null``).
      - | ``["+", 10, 3]``
        |
-       | Returns ``10``.
+       | Returns ``13``.
        |
        | ``["+", 10, ["list", 10, 20, 30]]``
        |
@@ -5349,4 +5413,3 @@ The :ref:`datetime-shift<datetime_shift_dtl_function>` dtl-function supports the
   TODO get this list from same pytz library version that the node uses
 
 'Africa/Abidjan', 'Africa/Accra', 'Africa/Addis_Ababa', 'Africa/Algiers', 'Africa/Asmara', 'Africa/Asmera', 'Africa/Bamako', 'Africa/Bangui', 'Africa/Banjul', 'Africa/Bissau', 'Africa/Blantyre', 'Africa/Brazzaville', 'Africa/Bujumbura', 'Africa/Cairo', 'Africa/Casablanca', 'Africa/Ceuta', 'Africa/Conakry', 'Africa/Dakar', 'Africa/Dar_es_Salaam', 'Africa/Djibouti', 'Africa/Douala', 'Africa/El_Aaiun', 'Africa/Freetown', 'Africa/Gaborone', 'Africa/Harare', 'Africa/Johannesburg', 'Africa/Juba', 'Africa/Kampala', 'Africa/Khartoum', 'Africa/Kigali', 'Africa/Kinshasa', 'Africa/Lagos', 'Africa/Libreville', 'Africa/Lome', 'Africa/Luanda', 'Africa/Lubumbashi', 'Africa/Lusaka', 'Africa/Malabo', 'Africa/Maputo', 'Africa/Maseru', 'Africa/Mbabane', 'Africa/Mogadishu', 'Africa/Monrovia', 'Africa/Nairobi', 'Africa/Ndjamena', 'Africa/Niamey', 'Africa/Nouakchott', 'Africa/Ouagadougou', 'Africa/Porto-Novo', 'Africa/Sao_Tome', 'Africa/Timbuktu', 'Africa/Tripoli', 'Africa/Tunis', 'Africa/Windhoek', 'America/Adak', 'America/Anchorage', 'America/Anguilla', 'America/Antigua', 'America/Araguaina', 'America/Argentina/Buenos_Aires', 'America/Argentina/Catamarca', 'America/Argentina/ComodRivadavia', 'America/Argentina/Cordoba', 'America/Argentina/Jujuy', 'America/Argentina/La_Rioja', 'America/Argentina/Mendoza', 'America/Argentina/Rio_Gallegos', 'America/Argentina/Salta', 'America/Argentina/San_Juan', 'America/Argentina/San_Luis', 'America/Argentina/Tucuman', 'America/Argentina/Ushuaia', 'America/Aruba', 'America/Asuncion', 'America/Atikokan', 'America/Atka', 'America/Bahia', 'America/Bahia_Banderas', 'America/Barbados', 'America/Belem', 'America/Belize', 'America/Blanc-Sablon', 'America/Boa_Vista', 'America/Bogota', 'America/Boise', 'America/Buenos_Aires', 'America/Cambridge_Bay', 'America/Campo_Grande', 'America/Cancun', 'America/Caracas', 'America/Catamarca', 'America/Cayenne', 'America/Cayman', 'America/Chicago', 'America/Chihuahua', 'America/Coral_Harbour', 'America/Cordoba', 'America/Costa_Rica', 'America/Creston', 'America/Cuiaba', 'America/Curacao', 'America/Danmarkshavn', 'America/Dawson', 'America/Dawson_Creek', 'America/Denver', 'America/Detroit', 'America/Dominica', 'America/Edmonton', 'America/Eirunepe', 'America/El_Salvador', 'America/Ensenada', 'America/Fort_Nelson', 'America/Fort_Wayne', 'America/Fortaleza', 'America/Glace_Bay', 'America/Godthab', 'America/Goose_Bay', 'America/Grand_Turk', 'America/Grenada', 'America/Guadeloupe', 'America/Guatemala', 'America/Guayaquil', 'America/Guyana', 'America/Halifax', 'America/Havana', 'America/Hermosillo', 'America/Indiana/Indianapolis', 'America/Indiana/Knox', 'America/Indiana/Marengo', 'America/Indiana/Petersburg', 'America/Indiana/Tell_City', 'America/Indiana/Vevay', 'America/Indiana/Vincennes', 'America/Indiana/Winamac', 'America/Indianapolis', 'America/Inuvik', 'America/Iqaluit', 'America/Jamaica', 'America/Jujuy', 'America/Juneau', 'America/Kentucky/Louisville', 'America/Kentucky/Monticello', 'America/Knox_IN', 'America/Kralendijk', 'America/La_Paz', 'America/Lima', 'America/Los_Angeles', 'America/Louisville', 'America/Lower_Princes', 'America/Maceio', 'America/Managua', 'America/Manaus', 'America/Marigot', 'America/Martinique', 'America/Matamoros', 'America/Mazatlan', 'America/Mendoza', 'America/Menominee', 'America/Merida', 'America/Metlakatla', 'America/Mexico_City', 'America/Miquelon', 'America/Moncton', 'America/Monterrey', 'America/Montevideo', 'America/Montreal', 'America/Montserrat', 'America/Nassau', 'America/New_York', 'America/Nipigon', 'America/Nome', 'America/Noronha', 'America/North_Dakota/Beulah', 'America/North_Dakota/Center', 'America/North_Dakota/New_Salem', 'America/Ojinaga', 'America/Panama', 'America/Pangnirtung', 'America/Paramaribo', 'America/Phoenix', 'America/Port-au-Prince', 'America/Port_of_Spain', 'America/Porto_Acre', 'America/Porto_Velho', 'America/Puerto_Rico', 'America/Punta_Arenas', 'America/Rainy_River', 'America/Rankin_Inlet', 'America/Recife', 'America/Regina', 'America/Resolute', 'America/Rio_Branco', 'America/Rosario', 'America/Santa_Isabel', 'America/Santarem', 'America/Santiago', 'America/Santo_Domingo', 'America/Sao_Paulo', 'America/Scoresbysund', 'America/Shiprock', 'America/Sitka', 'America/St_Barthelemy', 'America/St_Johns', 'America/St_Kitts', 'America/St_Lucia', 'America/St_Thomas', 'America/St_Vincent', 'America/Swift_Current', 'America/Tegucigalpa', 'America/Thule', 'America/Thunder_Bay', 'America/Tijuana', 'America/Toronto', 'America/Tortola', 'America/Vancouver', 'America/Virgin', 'America/Whitehorse', 'America/Winnipeg', 'America/Yakutat', 'America/Yellowknife', 'Antarctica/Casey', 'Antarctica/Davis', 'Antarctica/DumontDUrville', 'Antarctica/Macquarie', 'Antarctica/Mawson', 'Antarctica/McMurdo', 'Antarctica/Palmer', 'Antarctica/Rothera', 'Antarctica/South_Pole', 'Antarctica/Syowa', 'Antarctica/Troll', 'Antarctica/Vostok', 'Arctic/Longyearbyen', 'Asia/Aden', 'Asia/Almaty', 'Asia/Amman', 'Asia/Anadyr', 'Asia/Aqtau', 'Asia/Aqtobe', 'Asia/Ashgabat', 'Asia/Ashkhabad', 'Asia/Atyrau', 'Asia/Baghdad', 'Asia/Bahrain', 'Asia/Baku', 'Asia/Bangkok', 'Asia/Barnaul', 'Asia/Beirut', 'Asia/Bishkek', 'Asia/Brunei', 'Asia/Calcutta', 'Asia/Chita', 'Asia/Choibalsan', 'Asia/Chongqing', 'Asia/Chungking', 'Asia/Colombo', 'Asia/Dacca', 'Asia/Damascus', 'Asia/Dhaka', 'Asia/Dili', 'Asia/Dubai', 'Asia/Dushanbe', 'Asia/Famagusta', 'Asia/Gaza', 'Asia/Harbin', 'Asia/Hebron', 'Asia/Ho_Chi_Minh', 'Asia/Hong_Kong', 'Asia/Hovd', 'Asia/Irkutsk', 'Asia/Istanbul', 'Asia/Jakarta', 'Asia/Jayapura', 'Asia/Jerusalem', 'Asia/Kabul', 'Asia/Kamchatka', 'Asia/Karachi', 'Asia/Kashgar', 'Asia/Kathmandu', 'Asia/Katmandu', 'Asia/Khandyga', 'Asia/Kolkata', 'Asia/Krasnoyarsk', 'Asia/Kuala_Lumpur', 'Asia/Kuching', 'Asia/Kuwait', 'Asia/Macao', 'Asia/Macau', 'Asia/Magadan', 'Asia/Makassar', 'Asia/Manila', 'Asia/Muscat', 'Asia/Nicosia', 'Asia/Novokuznetsk', 'Asia/Novosibirsk', 'Asia/Omsk', 'Asia/Oral', 'Asia/Phnom_Penh', 'Asia/Pontianak', 'Asia/Pyongyang', 'Asia/Qatar', 'Asia/Qyzylorda', 'Asia/Rangoon', 'Asia/Riyadh', 'Asia/Saigon', 'Asia/Sakhalin', 'Asia/Samarkand', 'Asia/Seoul', 'Asia/Shanghai', 'Asia/Singapore', 'Asia/Srednekolymsk', 'Asia/Taipei', 'Asia/Tashkent', 'Asia/Tbilisi', 'Asia/Tehran', 'Asia/Tel_Aviv', 'Asia/Thimbu', 'Asia/Thimphu', 'Asia/Tokyo', 'Asia/Tomsk', 'Asia/Ujung_Pandang', 'Asia/Ulaanbaatar', 'Asia/Ulan_Bator', 'Asia/Urumqi', 'Asia/Ust-Nera', 'Asia/Vientiane', 'Asia/Vladivostok', 'Asia/Yakutsk', 'Asia/Yangon', 'Asia/Yekaterinburg', 'Asia/Yerevan', 'Atlantic/Azores', 'Atlantic/Bermuda', 'Atlantic/Canary', 'Atlantic/Cape_Verde', 'Atlantic/Faeroe', 'Atlantic/Faroe', 'Atlantic/Jan_Mayen', 'Atlantic/Madeira', 'Atlantic/Reykjavik', 'Atlantic/South_Georgia', 'Atlantic/St_Helena', 'Atlantic/Stanley', 'Australia/ACT', 'Australia/Adelaide', 'Australia/Brisbane', 'Australia/Broken_Hill', 'Australia/Canberra', 'Australia/Currie', 'Australia/Darwin', 'Australia/Eucla', 'Australia/Hobart', 'Australia/LHI', 'Australia/Lindeman', 'Australia/Lord_Howe', 'Australia/Melbourne', 'Australia/NSW', 'Australia/North', 'Australia/Perth', 'Australia/Queensland', 'Australia/South', 'Australia/Sydney', 'Australia/Tasmania', 'Australia/Victoria', 'Australia/West', 'Australia/Yancowinna', 'Brazil/Acre', 'Brazil/DeNoronha', 'Brazil/East', 'Brazil/West', 'CET', 'CST6CDT', 'Canada/Atlantic', 'Canada/Central', 'Canada/Eastern', 'Canada/Mountain', 'Canada/Newfoundland', 'Canada/Pacific', 'Canada/Saskatchewan', 'Canada/Yukon', 'Chile/Continental', 'Chile/EasterIsland', 'Cuba', 'EET', 'EST', 'EST5EDT', 'Egypt', 'Eire', 'Etc/GMT', 'Etc/GMT+0', 'Etc/GMT+1', 'Etc/GMT+10', 'Etc/GMT+11', 'Etc/GMT+12', 'Etc/GMT+2', 'Etc/GMT+3', 'Etc/GMT+4', 'Etc/GMT+5', 'Etc/GMT+6', 'Etc/GMT+7', 'Etc/GMT+8', 'Etc/GMT+9', 'Etc/GMT-0', 'Etc/GMT-1', 'Etc/GMT-10', 'Etc/GMT-11', 'Etc/GMT-12', 'Etc/GMT-13', 'Etc/GMT-14', 'Etc/GMT-2', 'Etc/GMT-3', 'Etc/GMT-4', 'Etc/GMT-5', 'Etc/GMT-6', 'Etc/GMT-7', 'Etc/GMT-8', 'Etc/GMT-9', 'Etc/GMT0', 'Etc/Greenwich', 'Etc/UCT', 'Etc/UTC', 'Etc/Universal', 'Etc/Zulu', 'Europe/Amsterdam', 'Europe/Andorra', 'Europe/Astrakhan', 'Europe/Athens', 'Europe/Belfast', 'Europe/Belgrade', 'Europe/Berlin', 'Europe/Bratislava', 'Europe/Brussels', 'Europe/Bucharest', 'Europe/Budapest', 'Europe/Busingen', 'Europe/Chisinau', 'Europe/Copenhagen', 'Europe/Dublin', 'Europe/Gibraltar', 'Europe/Guernsey', 'Europe/Helsinki', 'Europe/Isle_of_Man', 'Europe/Istanbul', 'Europe/Jersey', 'Europe/Kaliningrad', 'Europe/Kiev', 'Europe/Kirov', 'Europe/Lisbon', 'Europe/Ljubljana', 'Europe/London', 'Europe/Luxembourg', 'Europe/Madrid', 'Europe/Malta', 'Europe/Mariehamn', 'Europe/Minsk', 'Europe/Monaco', 'Europe/Moscow', 'Europe/Nicosia', 'Europe/Oslo', 'Europe/Paris', 'Europe/Podgorica', 'Europe/Prague', 'Europe/Riga', 'Europe/Rome', 'Europe/Samara', 'Europe/San_Marino', 'Europe/Sarajevo', 'Europe/Saratov', 'Europe/Simferopol', 'Europe/Skopje', 'Europe/Sofia', 'Europe/Stockholm', 'Europe/Tallinn', 'Europe/Tirane', 'Europe/Tiraspol', 'Europe/Ulyanovsk', 'Europe/Uzhgorod', 'Europe/Vaduz', 'Europe/Vatican', 'Europe/Vienna', 'Europe/Vilnius', 'Europe/Volgograd', 'Europe/Warsaw', 'Europe/Zagreb', 'Europe/Zaporozhye', 'Europe/Zurich', 'GB', 'GB-Eire', 'GMT', 'GMT+0', 'GMT-0', 'GMT0', 'Greenwich', 'HST', 'Hongkong', 'Iceland', 'Indian/Antananarivo', 'Indian/Chagos', 'Indian/Christmas', 'Indian/Cocos', 'Indian/Comoro', 'Indian/Kerguelen', 'Indian/Mahe', 'Indian/Maldives', 'Indian/Mauritius', 'Indian/Mayotte', 'Indian/Reunion', 'Iran', 'Israel', 'Jamaica', 'Japan', 'Kwajalein', 'Libya', 'MET', 'MST', 'MST7MDT', 'Mexico/BajaNorte', 'Mexico/BajaSur', 'Mexico/General', 'NZ', 'NZ-CHAT', 'Navajo', 'PRC', 'PST8PDT', 'Pacific/Apia', 'Pacific/Auckland', 'Pacific/Bougainville', 'Pacific/Chatham', 'Pacific/Chuuk', 'Pacific/Easter', 'Pacific/Efate', 'Pacific/Enderbury', 'Pacific/Fakaofo', 'Pacific/Fiji', 'Pacific/Funafuti', 'Pacific/Galapagos', 'Pacific/Gambier', 'Pacific/Guadalcanal', 'Pacific/Guam', 'Pacific/Honolulu', 'Pacific/Johnston', 'Pacific/Kiritimati', 'Pacific/Kosrae', 'Pacific/Kwajalein', 'Pacific/Majuro', 'Pacific/Marquesas', 'Pacific/Midway', 'Pacific/Nauru', 'Pacific/Niue', 'Pacific/Norfolk', 'Pacific/Noumea', 'Pacific/Pago_Pago', 'Pacific/Palau', 'Pacific/Pitcairn', 'Pacific/Pohnpei', 'Pacific/Ponape', 'Pacific/Port_Moresby', 'Pacific/Rarotonga', 'Pacific/Saipan', 'Pacific/Samoa', 'Pacific/Tahiti', 'Pacific/Tarawa', 'Pacific/Tongatapu', 'Pacific/Truk', 'Pacific/Wake', 'Pacific/Wallis', 'Pacific/Yap', 'Poland', 'Portugal', 'ROC', 'ROK', 'Singapore', 'Turkey', 'UCT', 'US/Alaska', 'US/Aleutian', 'US/Arizona', 'US/Central', 'US/East-Indiana', 'US/Eastern', 'US/Hawaii', 'US/Indiana-Starke', 'US/Michigan', 'US/Mountain', 'US/Pacific', 'US/Samoa', 'UTC', 'Universal', 'W-SU', 'WET' and 'Zulu'.
-

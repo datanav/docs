@@ -52,7 +52,7 @@ Production and test environment
    * - Multi compute - 16 Engines < 1 TB Data
      - €3,300.00
 
-.. list-table:: Data prices
+.. list-table:: Data prices [#]_
    :widths: 70 30
    :header-rows: 1
 
@@ -90,6 +90,7 @@ Production and test environment
      - €100.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
+.. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
 .. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
 

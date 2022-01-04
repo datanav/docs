@@ -1,9 +1,110 @@
 Changelog
 =========
 
+.. _changelog_2022_01_03:
+
+2022-01-03
+----------
+
+* Added a new ``resolved_entity`` property to write-error entities in the execution log. It contains the entity
+  that was used to resolve the write-error if it is different from the original entity that caused the write-error.
+  This property is also set for any tracked dead letters that has been resolved (on the deleted dead letter).
+  Fixed a bug where the ``resolved`` property was not set (to ``true``) if a write-error entity was successfully
+  retried.
+
+.. _changelog_2021_12_20:
+
+2021-12-20
+----------
+
+* Renamed the ``prefilters`` property in the :ref:`hops <hops_dtl_function>` DTL function to ``subsets``.
+  ``prefilters`` had some known issues and is now deprecated. Note that you may have to reset the pipe if you
+  change from ``prefilters`` to ``subsets``. All new pipes should use ``subsets`` to get the documented behaviour.
+
+.. _changelog_2021_12_17:
+
+2021-12-17
+----------
+
+* Added ``custom_ca_pem_chain``  property to the :ref:`URL system <url_system>` and :ref:`REST system <rest_system>`.
+  This property can hold a custom chain of certificates (in PEM format) that will be used to validate the SSL
+  connection if ``verify_ssl`` is set to ``true``.
+
+.. _changelog_2021_12_11:
+
+2021-12-11
+----------
+
+* Our security team has investigated the impact of CVE-2021-44228. The following components have been
+  analysed as they could potentially be affected:
+
+  #. Integrated search. This component uses Elasticsearch under the hood. The version of Elasticsearch that we use is
+     not affected according to this `Elastic Security announcement <https://discuss.elastic
+     .co/t/apache-log4j2-remote-code-execution-rce-vulnerability-cve-2021-44228-esa-2021-31/291476>`_.
+  #. Legacy Databrowser. This component uses Apache Solr under the hood. The version of Solr that we use is not
+     affected according to this `Solr Security announcement <https://solr.apache.org/security
+     .html#apache-solr-affected-by-apache-log4j-cve-2021-44228>`_.
+  #. GDPR Portal. This component uses Apache Solr under the hood. The version of Solr that we use is not
+     affected according to this `Solr Security announcement <https://solr.apache.org/security
+     .html#apache-solr-affected-by-apache-log4j-cve-2021-44228>`_.
+  #. Unofficial OCI images that are hosted as microservices. These components *can* be affected, and our users
+     need to make sure they only run code that they trust.
+
+.. _changelog_2021_11_29:
+
+2021-11-29
+----------
+
+* Changed the default value of the ``global_defaults.use_signalling_internally`` property of the :ref:`service metadata <service_metadata_section>` section to ``true``. This property was previously ``false`` by default
+
+.. _changelog_2021_11_26:
+
+2021-11-26
+----------
+* :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
+  Clustered Architecture.
+* :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
+
+.. _changelog_2021_11_19:
+
+2021-11-19
+----------
+* The IP address of our log shipping receiver endpoint has changed from ``13.74.166.9`` to ``52.142.116.113``. If you run a self-hosted service and have blocked outgoing traffic then you need to update the firewall accordingly. See the :ref:`Self-hosted service <self_hosted_outbound_firewall_rules>` document.
+
+.. _changelog_2021_17_11:
+
+* Changed the name of "The Microsoft Azure SQL Data Warehouse system" to :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` and "The MSSQL system" to :ref:`"Legacy Microsoft SQL system" <mssql_system>`
+* The :ref:`"Legacy Microsoft SQL system" <mssql_system>` has been superceeded by the :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` and will likely be deprecated in the future
+* The :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` has a new type ``"system:sqlserver"`` which replaces the old ``"system:mssql-azure-dw"``, which is kept as an alias for now
+* Additional note: the recommended :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` uses official Microsoft (ODBC) drivers while the :ref:`"Legacy Microsoft SQL system" <mssql_system>` uses open source drivers. The Microsoft ODBC drivers should support all current Microsoft SQL Server compatible products, including Azure Synapse Analytics (previously known as Azure SQL DataWarehouse). Note that switching from the "Legacy Microsoft SQL system" (``"system:mssql``) to the preferred :ref:`"Microsoft SQL Server system" <mssql-sqlserver_system>` (``"system:sqlserver"`` aka ``"system:mssql-azure-dw"``) can lead to minor data differences in properties due to the different driver backends
+
+.. _changelog_2021_11_11:
+
+2021-11-11
+----------
+* Added a ``encode_error_strategy`` property to the :ref:`CSV endpoint <csv_endpoint_sink>` - it tells the sink how to deal with encoding errors when the encoding is different from "utf-8", the default is to use a "backslashed unicode" replacement but other strategies can be chosen
+
+.. _changelog_2021_11_09:
+
+2021-11-09
+----------
+* Added a "discard-retries" pump operation to the service API - it is available in the UI as a "Discard retry queue" menu item on pipes. This operation will make the next pipe run ignore any previous write error retries by writing a special "pump-discard-retries" entity to the pipes execution log. This operation can only be done on non-running pipes.
+
+.. _changelog_2021_11_03:
+
+2021-11-03
+----------
+* Added missing :ref:`is-uuid <is_uuid_dtl_function>` and :ref:`is-bytes <is_bytes_dtl_function>` DTL functions
+
+.. _changelog_2021_10_25:
+
+2021-10-25
+----------
+* Added a ``byte_order_mark`` property to the :ref:`CSV endpoint <csv_endpoint_sink>` and :ref:`XML endpoint <xml_endpoint_sink>` sinks. If ``true`` these sinks will emit a UTF-8 byte order mark (BOM) to the start of the file/stream. It's ``false`` by default and should only be used in conjunction with a UTF-8 encoding.
+
 .. _changelog_2021_10_11:
 
-2019-10-11
+2021-10-11
 ----------
 * The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness>` value
   from the "X-Dataset-Completeness" http request header, if it is present.
@@ -274,7 +375,7 @@ Changelog
 2020-11-13
 ----------
 
-* :ref:`In the pump configuration section <pump_section>` the ``use_dead_letters`` property has been deprecated and the ``dead_letter_dataset`` property has been un-deprecated. Please update your configuration. The ``dead_letters_dataset`` should contain a per-pipe unique user dataset id. The motivation for this reversal is that we wish to migrate away from using system datasets for any "dead letters" in a pipe.
+* :ref:`In the pump configuration section <pump_section>` the ``use_dead_letter_dataset`` property has been deprecated and the ``dead_letter_dataset`` property has been un-deprecated. Please update your configuration. The ``dead_letters_dataset`` should contain a per-pipe unique user dataset id. The motivation for this reversal is that we wish to migrate away from using system datasets for any "dead letters" in a pipe.
 
 .. _changelog_2020_11_06:
 
@@ -570,7 +671,7 @@ Changelog
 
 2018-06-06
 ----------
-* Changed default behaviour of the :ref:'CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
+* Changed default behaviour of the :ref:`CSV source <csv_source>`: if ``dialect`` is set, this will override the default value of ``auto_dialect``. Previously you would have to both turn off ``auto_dialect`` and set ``dialect``. Note that if ``auto_dialect`` is ``false`` and no ``dialect`` has been set, the ``excel`` dialect is used as default.
 * The :ref:`is_chronological <sql_source>` property on the :ref:`SQL source <sql_source>` is now dynamic as it is ``true`` if the ``updated_column`` and ``table`` properties are set.
 * Added the :ref:`is_chronological_full <sql_source>` property to the :ref:`SQL source <sql_source>` . If explicity set to ``false`` then a full run will not consider the source to be chronological even though it is chronological in incremental runs. The default value is the value of the ``is_chronological``, but can be set to ``false``.
 
@@ -873,7 +974,7 @@ Changelog
 
 2017-02-06
 ----------
-* Added ``text_body_template`` and ``text_body_template_property``properties to the :ref:``EMail message sink <mail_sink>``. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
+* Added ``text_body_template`` and ``text_body_template_property`` properties to the :ref:`Email message sink <mail_sink>`. Use these to explicitly construct a plain-text version of your messages if sending multi-part messages.
 
 2017-02-03
 ----------
