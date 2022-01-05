@@ -38,17 +38,14 @@ Prototype
     {
         "_id":  "pump-started",
         "event_type": "pump-started",
-        "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
         "start_time": "iso-timestamp-in-UTC",
-        "source": {
-            "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-pump-started"
-        },
-        "sink": {
-            "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-pump-started"
-        },
+        "sync_type": "type-of-sync",
+        "pump_definition": "pump-configuration-id",
+        "user": {
+            "email": "some@user.com",
+            "remote_addr": "127.0.0.1",
+            "user_id": "some@user.com"
+        }
     }
 
 
@@ -71,25 +68,22 @@ Properties
      - String
      - The ``event_type`` value for pump-started entities is fixed and will always be "pump-started"
 
-   * - ``pump_definition``
-     - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump
-
-   * - ``pump_instance``
-     - String
-     - A GUID value representing the instantiated pump instance
+   * - ``sync_type``
+     - Enum<String>
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+       values: ``full``, ``partial`` or ``incremental``.
 
    * - ``start_time``
      - String
      - The ISO-formatted timestamp for the timestamp the pump started ("YYYY-MM-DDTHH:mm:SS.fZ")
 
-   * - ``source``
-     - Object
-     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
-
-   * - ``sink``
+   * - ``pump_definition``
      - String
-     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
+     - The ``_id`` value of the pump configuration used to instantiate the pump
+
+   * - ``user``
+     - Object
+     - Information about the user that started the run, if available.
 
 The pump-completed entity
 -------------------------
@@ -104,9 +98,9 @@ Prototype
         "_id":  "pump-completed",
         "event_type": "pump-completed",
         "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
         "start_time": "pump-started-timestamp-in-UTC",
         "end_time": "pump-ended-iso-timestamp-in-UTC",
+        "sync_type": "type-of-sync",
         "pump_started_location": 1234,
         "retry_entities_exist": false,
         "entities_succeeded": 123,
@@ -134,11 +128,12 @@ Properties
 
    * - ``pump_definition``
      - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump.
+     - The ``_id`` value of the pump configuration used to instantiate the pump
 
-   * - ``pump_instance``
-     - String
-     - A GUID value representing the instantiated pump instance.
+   * - ``sync_type``
+     - Enum<String>
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+       values: ``full``, ``partial`` or ``incremental``.
 
    * - ``start_time``
      - String
@@ -165,7 +160,6 @@ Properties
      - Integer
      - A counter with the number of entities that failed to be written to the pipe's sink during this run.
 
-
 The pump-failed entity
 ----------------------
 
@@ -180,7 +174,6 @@ Prototype
         "_id":  "pump-failed",
         "event_type": "pump-failed",
         "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
         "start_time": "pump-started-timestamp-in-UTC",
         "end_time": "pump-ended-iso-timestamp-in-UTC",
         "pump_started_location": 1234,
@@ -188,13 +181,20 @@ Prototype
         "entities_succeeded": 123,
         "entities_failed": 10,
         "reason_why_stopped": "traceback-info",
-        "source": {
-            "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-pump-started"
+        "sync_type": "type-of-sync",
+        "exception_entity": {
+          "_id": "id-of-the-entity",
+          "entity-property": "entity-value"
         },
-        "sink": {
-            "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-pump-started"
+        "node_build_info": {
+            "build": null,
+            "date": "2021-12-29T13:51:21.566325+00:00",
+            "dirty": true,
+            "git-revision": "6c8eb3c17",
+            "hash": "6c8eb3c17",
+            "release": "1.0",
+            "teamcity-buildnumber": null,
+            "version": "1.0.dev"
         }
     }
 
@@ -217,13 +217,14 @@ Properties
      - String
      - The ``event_type`` value for pump-failed entities is fixed and will always be "pump-failed".
 
+   * - ``sync_type``
+     - Enum<String>
+     - The ``sync_type`` value denotes the type of pipe run that produced this log entry. It can be one of the followin
+       values: ``full``, ``partial`` or ``incremental``.
+
    * - ``pump_definition``
      - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump.
-
-   * - ``pump_instance``
-     - String
-     - A GUID value representing the instantiated pump instance.
+     - The ``_id`` value of the pump configuration used to instantiate the pump
 
    * - ``start_time``
      - String
@@ -242,6 +243,10 @@ Properties
      - Boolean
      - A flag indicating if there was logged any entities that can be retried during this run.
 
+   * - ``exception_entity``
+     - Object
+     - A complete embedded copy of the entity that caused the failure (if available).
+
    * - ``entities_succeeded``
      - Integer
      - A counter with the number of entities that was successfully written to the pipe's sink during this run.
@@ -254,13 +259,9 @@ Properties
      - String
      - Information about why the pump failed. It contains among other things a stack trace of the execution failure.
 
-   * - ``source``
+   * - ``node_build_info``
      - Object
-     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
-
-   * - ``sink``
-     - String
-     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
+     - Information about the sesam instance the pipe was run on.
 
 The read-error entity
 ---------------------
@@ -276,16 +277,10 @@ Prototype
     {
         "_id":  "read-error:<GUID>",
         "event_type": "read-error",
-        "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
         "exception": "traceback-info-from-pump",
-        "original_exception": "the-exception-cast-by-source",
-        "source": {
-            "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-pump-started"
-        }
+        "original_exception": "the-exception-cast-by-source"
     }
 
 Properties
@@ -308,14 +303,6 @@ Properties
      - String
      - The ``event_type`` value for read-error entities is fixed and will always be "read-error".
 
-   * - ``pump_definition``
-     - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump.
-
-   * - ``pump_instance``
-     - String
-     - A GUID value representing the instantiated pump instance.
-
    * - ``error_code``
      - Integer
      - A integer value that will be either ``0``, meaning that the source was unable to establish communications with
@@ -335,10 +322,6 @@ Properties
      - Information about from the source about the read failure. It contains among other things a stack trace of the
        execution failure in the source.
 
-   * - ``source``
-     - Object
-     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
-
 The write-error entity
 ----------------------
 
@@ -354,23 +337,22 @@ Prototype
     {
         "_id":  "write-error:<entity_id>",
         "event_type": "write-error",
-        "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
         "error_code": 0,
         "event_time": "failure-ISO-timestamp-in-UTC",
         "retry_attempts": 0,
-        "retryable": true,
+        "retryable": false,
+        "resolved": true,
         "dead": false,
         "entity": {
           "_id": "id-of-the-entity",
           "entity-property": "entity-value"
         },
+        "resolved_entity": {
+          "_id": "id-of-the-entity-that-resolved-the-error-if-different",
+          "entity-property": "entity-value"
+        },
         "exception": "traceback-info-from-pump",
         "original_exception": "the-exception-cast-by-sink",
-        "sink": {
-            "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-pump-started"
-        }
     }
 
 Properties
@@ -392,14 +374,6 @@ Properties
    * - ``event_type``
      - String
      - The ``event_type`` value for write-error entities is fixed and will always be "write-error".
-
-   * - ``pump_definition``
-     - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump.
-
-   * - ``pump_instance``
-     - String
-     - A GUID value representing the instantiated pump instance.
 
    * - ``error_code``
      - Integer
@@ -424,6 +398,11 @@ Properties
        is written to the log for this entity, but marked as not retryable (i.e ``false`` value) so it can be skipped
        during retries.
 
+   * - ``resolved``
+     - Boolean
+     - A flag indicating if the entity was successfully resolved either by a newer version of the entity or because
+       a retry succeeded.
+
    * - ``dead``
      - Boolean
      - A flag indicating if the entity has been given up on, for example having exceeded some number of retries. If a
@@ -435,6 +414,11 @@ Properties
      - Object
      - A complete embedded copy of the failed entity.
 
+   * - ``resolved_entity``
+     - Object
+     - A complete embedded copy of the entity that resolved the write-error if it was retried (and if it differs from
+       ``entity``). This property will only be set if ``resolved`` is also ``true``.
+
    * - ``exception``
      - String
      - Information about from the pump failure. It a stack trace of the execution failure.
@@ -444,19 +428,10 @@ Properties
      - Information about from the sink about the write failure. It contains among other things a stack trace of the
        execution failure in the sink.
 
-   * - ``sink``
-     - Object
-     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
+The pump-offset-set entity
+--------------------------
 
-The notification entity
------------------------
-
-Sources can emit special types of entities containing a reserved property ``_notification``. If such an entity is
-encountered by the pump, a special entity is written to the execution log containing the emitted entity as a child
-entity. Note: *This entity is not written to the sink*.
-
-This type of entity is typically used to signal for example a entity warning or error that is not deemed
-serious enough to warrant a pump termination (for example a fixable parse error in configuration JSON files on disk).
+The "pump-offset-set" is written to the pump execution dataset when the pump offset has been set or reset explicitly.
 
 Prototype
 ^^^^^^^^^
@@ -464,22 +439,16 @@ Prototype
 ::
 
     {
-        "_id":  "notification:<entity_id>",
-        "event_type": "notification",
-        "pump_definition": "pump-configuration-id",
-        "pump_instance": "pump-instance-id",
-        "notification_time": "failure-ISO-timestamp-in-UTC",
-        "entity": {
-          "_id": "id-of-the-entity",
-          "entity-property": "entity-value"
-        },
-        "source": {
-            "the-full": "configuration-entity-of",
-            "the-source": "at-the-time-the-pump-started"
-        },
-        "sink": {
-            "the-full": "configuration-entity-of",
-            "the-sink": "at-the-time-the-pump-started"
+        "_id":  "pump-offset-set",
+        "event_time": "2022-01-04T13:20:28.630647Z",
+        "event_type": "pump-offset-set",
+        "is_reset": true,
+        "original_pipe_offset": "1033311",
+        "pipe_offset": "",
+        "user": {
+            "email": "some@user.com",
+            "remote_addr": "127.0.0.1",
+            "user_id": "some@user.com"
         }
     }
 
@@ -496,33 +465,28 @@ Properties
 
    * - ``_id``
      - String
-     - The ``_id`` value for notification entities is computed from the string prefix "notification:" concatenated with
-       the emitted entity ``_id`` property (usually a GUID).
+     - The ``_id`` value for pump-offset-set entities is fixed and will always be "pump-offset-set"
 
    * - ``event_type``
      - String
-     - The ``event_type`` value for notification entities is fixed and will always be "notification".
+     - The ``event_type`` value for pump-started entities is fixed and will always be "pump-offset-set"
 
-   * - ``pump_definition``
+   * - ``event_time``
      - String
-     - The ``_id`` value of the pump configuration used to instantiate the pump.
+     - The ISO-formatted timestamp for the timestamp the pump offset was set ("YYYY-MM-DDTHH:mm:SS.fZ")
 
-   * - ``pump_instance``
+   * - ``pipe_offset``
      - String
-     - A GUID value representing the instantiated pump instance.
+     - The pipe offset that was set.
 
-   * - ``notification_time``
+   * - ``original_pipe_offset``
      - String
-     - The ISO-formatted timestamp for the timestamp when the notification happened ("YYYY-MM-DDTHH:mm:SS.fZ").
+     - The pipe offset that was set before it was overwritten.
 
-   * - ``entity``
-     - Object
-     - A complete embedded copy of the entity emitted.
+   * - ``is_reset``
+     - Boolean
+     - A flag indicating if this was caused by someone resetting the pipe.
 
-   * - ``source``
+   * - ``user``
      - Object
-     - The full configuration for the source of the pipe the pump is part of as it was when the pump started
-
-   * - ``sink``
-     - Object
-     - The full configuration for the sink of the pipe the pump is part of as it was when the pump started
+     - Information about the user that started the run, if available.
