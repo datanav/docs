@@ -93,7 +93,7 @@ The Services depend on standard software. When purchasing access to the
 Services, the Customer does not purchase a copy of, or license to, the
 software used to deliver the Services, but consecutively pay for a
 subscription to access the Services. To the extent that separate
-license- or other terms apply for use of third party software and/ or
+license- or other terms apply for use of third party software and/or
 services included in the Services, these are set out together with the
 description of the Services in question. Any terms for third party
 software and/or services take precedence over the terms of this
