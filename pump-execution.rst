@@ -398,6 +398,7 @@ Properties
        is written to the log for this entity, but marked as not retryable (i.e ``false`` value) so it can be skipped
        during retries.
 
+       .. _execution_log_resolved_property:
    * - ``resolved``
      - Boolean
      - A flag indicating if the entity was successfully resolved either by a newer version of the entity or because
@@ -414,6 +415,7 @@ Properties
      - Object
      - A complete embedded copy of the failed entity.
 
+       .. _execution_log_resolved_entity:
    * - ``resolved_entity``
      - Object
      - A complete embedded copy of the entity that resolved the write-error if it was retried (and if it differs from
