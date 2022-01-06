@@ -46,10 +46,10 @@ The ``expected/`` folder has to be created when first downloading the node confi
     "erp_username": "test007@gmail.com",
     "salesforce_base_url": "https://salesforce.com/api/v2/",
     "salesforce_username": "test007",
-    "use_test_data": "yes"
+    "node-env": "test"
   } 
 
-As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"use_test_data": yes`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. 
+As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"node-env": "test"`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. 
 
 Finally, the ``node-metadata.conf.json`` is a json file that contain metadata about how a Sesam node is globally parameterized. A typical example is presented below:
 
