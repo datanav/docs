@@ -8,6 +8,21 @@ Novice
 Node config
 ~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  The Node config ...
+
+  - is a Sesam node´s skeletal structure
+  - should mirror your project environment
+
+    - recommended environments are:
+
+      - development
+      - test
+      - production
+
+  - consists of global and local configuration files   
+
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
 
 .. code-block::
@@ -17,47 +32,34 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     | ├ expected/
     | ├ pipes/
     | ├ systems/
-    | └ variables/
+    | ├ variables/
+    | └ node-metadata.conf.json    
     ├ README.md
     ├ LICENSE
     ├ .gitignore
     └ ++
 
-The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project and environment you are working on, i.e: ``sesam-development/``. In general, it is recommended to have a total of three Sesam nodes, which in project terms would be ``development/``, ``test/`` and ``production/``. For this example we are illustrating a workflow going from our ``sesam-development/`` project to our ``sesam-test/`` project. In addition, you will have files such as README.md, LICENSE and .gitignore placed in the root folder as well. As these files are generic, further description of these will be omitted for now. 
+The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project and environment you are working on, i.e: ``sesam-development/``. In general, it is recommended to have a total of three Sesam nodes, which in project terms would be ``development/``, ``test/`` and ``production/`` as this ensures CI/CD workflows can be carried out. For this example our environment is development, and as such we will be looking at the ``sesam-development/`` project for now. Finally, in the root folder, you will have files such as README.md, LICENSE and .gitignore. As these files are generic, further description of these will be omitted for now. 
 
-Moving on from your root folder, the next folder will be your ``node/`` folder. This folder is the one that holds the skeletal information pertaining to all the metadata in your Sesam node. In the ``node/`` folder you will find four subfolders: ``expected/``, ``pipes/``, ``systems/`` and ``variables/``. All of these subfolders only contain json files. This is an important aspect to remember, as everything in a Sesam node is json.    
+Moving on from your root folder, the next folder will be your ``node/`` folder. This folder is the one that holds the skeletal information pertaining to all the metadata in your Sesam node. In the ``node/`` folder you will find four subfolders: ``expected/``, ``pipes/``, ``systems/`` and ``variables/`` in addition to the json file ``node-metadata.conf.json``. The subfolders only contain json files. This is an important aspect to remember, as everything in a Sesam node is json.    
 
-The ``expected/`` folder has to be created when first downloading the node config via the Sesam-CLI. This approach is described in detail here :ref:`sesam-cli-4-1`. The ``expected/`` folder is used as a folder for all your json files used for running tests via the Sesam-CLI. The ``pipes/`` folder contains all your pipe json files whilst the ``systems/`` folder contains all your system json files. Finally, the ``variables/`` folder will contain all your defined variables. These are also provided in a json file.         
+The ``expected/`` folder has to be created when first downloading the node config via the Sesam-CLI. This approach is described in detail here :ref:`sesam-cli-4-1`. The ``expected/`` folder is used as a folder for all your json files used for running tests via the Sesam-CLI. The ``pipes/`` folder contains all your pipe json files whilst the ``systems/`` folder contains all your system json files. Finally, the ``variables/`` folder will contain all your defined variables. These are also provided in a json file. Finally, the ``node-metadata.conf.json`` is a json file that contain metadata about how a Sesam node is globally parameterized. A typical example is presented below:
 
+.. code-block:: json
 
+  {
+    "_id": "node",
+    "type": "metadata",
+    "namespaced_identifiers": true
+  }
 
-Mappestruktur, expected folder, node-metadata.conf.json
-
-Mappestruktur
-
-System
-
-Pipes
-
-Node-metadata.conf.json
-
-+expected
-
-Global metadata
-
-Namespaces
-
-Tag for å inkludere c++ ext.
-
-Dependency tracking hops limit
-
-signalling
-
-Referer mye til dokumentasjon
+The last entry in the above example ``"namespaced_identifiers": true`` is particularly important, as this entry ensures that `namespaces <https://docs.sesam.io/concepts.html#namespaces>`_ are added as data enters and moves through Sesam.
 
 .. seealso::
 
-  TODO
+  :ref:`learn-sesam` > :ref:`projects-and-infrastructure` > :ref:`projects-and-infrastructure-beginner-4-1` > :ref:`sesam-cli-4-1`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
 
 .. _deployment-4-2:
 
