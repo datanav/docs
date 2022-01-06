@@ -25,7 +25,7 @@ Node config
 
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
 
-``
+::
   my-project-directory/
     ├ node/
     | ├ expected/
@@ -37,7 +37,6 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     ├ LICENSE
     ├ .gitignore
     └ ++
-``
 
 The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project and environment you are working on, i.e: ``sesam-development/``. In general, it is recommended to have a total of three Sesam nodes, which in project terms would be ``development/``, ``test/`` and ``production/`` as this ensures CI/CD workflows can be carried out. For this example our environment is development, and as such we will be looking at the ``sesam-development/`` project for now. Finally, in the root folder, you will have files such as README.md, LICENSE and .gitignore. As these files are generic, further description of these will be omitted for now. 
 
