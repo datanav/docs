@@ -13,14 +13,6 @@ Node config
   The Node config ...
 
   - is a Sesam node´s skeletal structure
-  - should mirror your project environment
-
-    - recommended environments are:
-
-      - development
-      - test
-      - production
-
   - consists of global and local configuration files   
 
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
