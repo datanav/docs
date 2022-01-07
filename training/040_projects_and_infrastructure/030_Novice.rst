@@ -13,11 +13,12 @@ Node config
   The Node config ...
 
   - is a Sesam node´s skeletal structure
-  - consists of global and local configuration files   
+  - consists of global configuration files and local configuration files   
 
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
 
 ::
+
   my-project-directory/
     ├ node/
     | ├ expected/
@@ -25,6 +26,7 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     | ├ systems/
     | ├ variables/
     | | ├ development.json
+    | | ├ CI-test.json
     | | ├ test.json
     | | └ production.json
     | └ node-metadata.conf.json    
@@ -33,11 +35,11 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     ├ .gitignore
     └ ++
 
-The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project you are working on, i.e: ``sesam/``. In general, it is recommended to have a total of three Sesam nodes, which in project terms will be development, test and production as this ensures CI/CD workflows can be carried out. Distinct to each environment you will have an environment.json file in your ``variables/`` folder. This will be elaborated on when talking about the ``node/`` folder. Finally, in the root folder, you will have files such as README.md, LICENSE and .gitignore. As these files are generic, further description of these will be omitted for now. 
+The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project you are working on, i.e: ``sesam/``. In general, it is recommended to have a total of `four Sesam nodes <https://docs.sesam.io/setup-environment.html#subscriptions>`_, which in project terms will be development, CI-test, test and production as this ensures CI/CD workflows can be carried out. Distinct to each environment you will have an environment.json file in your ``variables/`` folder. This will be elaborated on when talking about the ``node/`` folder. Finally, in the root folder, you will have files such as ``README.md``, ``LICENSE`` and ``.gitignore``. As the ``LICENSE`` and ``.gitignore`` files are quite generic, further description of these will be omitted here. The ``README.md``file however will be specific to each project you are working on, and should ensure thorough documentation of the practices in place.  
 
 Moving on from your root folder, the next folder will be your ``node/`` folder. This folder is the one that holds the skeletal information pertaining to all the metadata in your Sesam node. In the ``node/`` folder you will find four subfolders: ``expected/``, ``pipes/``, ``systems/`` and ``variables/`` in addition to the json file ``node-metadata.conf.json``. The subfolders only contain json files. This is an important aspect to remember, as everything in a Sesam node is json.    
 
-The ``expected/`` folder has to be created when first downloading the node config via the Sesam-CLI. This approach is described in detail here :ref:`sesam-cli-4-1`. The ``expected/`` folder is used as a folder for all your files used when running tests via the Sesam-CLI. The ``pipes/`` folder contains all your pipe files whilst the ``systems/`` folder contains all your system files. Finally, the ``variables/`` folder will contain all your defined variables files pertaining to each environment. For this example our environment is development, and as such we will be looking at the ``development.json`` file placed in the ``variables/`` folder:
+The ``expected/`` folder is where all expected outputs from `outbound pipes <https://docs.sesam.io/data-modelling.html#outbound-pipes>`_ are stored. These are used by the Sesam-CLI and CI/CD workflows to verify correct outputs. This approach is described in detail here :ref:`sesam-cli-4-1`. The ``pipes/`` folder contains all your pipe files whilst the ``systems/`` folder contains all your system files. Finally, the ``variables/`` folder will contain all your defined variables files pertaining to each environment. For this example our environment is development, and as such we will be looking at the ``development.json`` file placed in the ``variables/`` folder:
 
 .. code-block:: json
 
