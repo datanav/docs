@@ -1,4 +1,3 @@
-
 Sesam Master Data Hub
 =====================
 
@@ -7,17 +6,10 @@ Sesam is a Master Data Hub built on a streaming dataflow data integration and pr
 .. toctree::
    :maxdepth: 2
 
-   Core principles <core-principles>
-   Key features <features>
-   Concepts <concepts>
-   Best Practices <best-practices>
-   Getting started <getting-started>
-   Quick Reference <quick-reference>
+   What is Sesam? <what-is-sesam>
+   Getting started <best-practices>
    Developer Guide <developer-guide>
-   Tools <tools>
+   Learn <learn>
    Community <community>
-   Behind the scenes <behind-the-scenes>
    Roadmap <roadmap>
    Legal <legal>
-   Changelog <changelog>
-

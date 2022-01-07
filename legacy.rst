@@ -1,11 +1,10 @@
-=====
-Tools
-=====
+============
+Deprecations
+============
 
 .. toctree::
    :maxdepth: 2
 
-   Management Studio <management-studio>
-   Sesam Client <sesam-client>
+   Deprecated features <deprecations>
    Databrowser <databrowser>
    GDPR platform <gdpr-platform>
