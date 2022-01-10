@@ -8,11 +8,19 @@ Novice
 "Copy"
 ~~~~~~
 
+.. sidebar:: Summary
+
+  "Copy" is...
+
+  - one of the most fundamental DTL functions you will be using in Sesam
+  - capable of evaluating asterisk
+  - convenient in that you can whitelist and blacklist data
+
 Copy is one of the most fundamental DTL functions you will be using in Sesam when transforming your source data to your target. The main reason for this is that it allows you to copy source data by the use of wildcards, i.e. asterisk (*). In the below example this has been implemented in order to copy all keys with the namespace "golden-object:" in them:
 
 ``["copy", "golden-object:*"]``
 
-In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist source data by providing arguments in the ``["copy"]`` function as follows:   
+In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist data by providing arguments in the ``["copy"]`` function as follows:   
 
 ``["copy", "*", "_*"]``
 
@@ -65,7 +73,11 @@ As can be seen from the above produced data, the property with the key "_positio
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _add-3-2:
 
