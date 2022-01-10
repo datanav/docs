@@ -90,7 +90,31 @@ Explain the add, based on ref 3.1.4 above
   - is one of Sesam's core Master Data Management (MDM) capabilities
   - lets you define a list of prioritized properties
 
-Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``:
+Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``.
+
+Source data:
+
+.. code-block:: json
+
+	{
+	  "mssql-person:Email": "christian89@hotmail.com",
+	  "mssql-person:Postcode": "6400",
+	  "mssql-person:Address": "Rojumvej 66"
+	}
+	
+	{
+		"oracle-person:EmailAddress": "hansMajestæt@gmail.com",
+	  "oracle-person:PostNumber": 6400,
+	  "oracle-person:Address": "Rojumvej 66"
+	}
+
+	{
+		"pymsql-person:Postaddress": "hansMajestæt@gmail.com",
+	  "pymsql-person:AreaCode": "6851",
+	  "pymsql-person:Address": "Danmarksgate 7",
+	}
+
+Pipe configuration:
 
 .. code-block:: json
 
@@ -125,7 +149,7 @@ Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["c
 	  }
   }
 
-When the above pipe runs, the following dataset will be produced:
+When the above pipe runs, the following output will be produced:
 
 .. code-block:: json
 
