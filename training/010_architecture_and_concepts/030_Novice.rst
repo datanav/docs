@@ -104,7 +104,7 @@ Sesams theoretical approach to semantics - RDF
 
   - stands for Resource Description Framework and is a standard for describing web resources and data interchange
   - consists of statements about a particular subject, which is given as a triple: ``subject predicate object``
-  - is applied in DTL by adding namespaced identifiers 
+  - is applied in DTL by adding namespaces and namespaced identifiers 
 
 RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
 
