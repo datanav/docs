@@ -730,15 +730,11 @@ DTL in practice
 
 .. sidebar:: Summary
 
-  DTL...
+   In this section you will learn how to:
 
-  - is Sesam's language for shaping data
-
-In this section you will learn how to:
-
-- create a pipe from scratch
-- view the output of a pipe
-- write a greeting to the world with DTL
+      - create a pipe from scratch
+      - view the output of a pipe
+      - write a greeting to the world with DTL
 
 .. _create-a-new-pipe-3-1:
 
