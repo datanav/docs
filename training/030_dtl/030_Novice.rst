@@ -76,11 +76,24 @@ As can be seen from the above produced data, the property with the key "_positio
 
   "Add"...
 
-  - lets you define a new key and/or value
+  - lets you define new properties
   - does not necessarily rely upon the Source or Target
 
-["add"] lets you define a new key and/or value. As such, it does not necessarily rely upon the Source or
-Target. The following pipe config lists such definitions by using ["add"].
+["add"] lets you define new properties. As such, it does not necessarily rely upon the Source or
+Target. The following source data, pipe configuration and output exemplifies using ["add"].
+
+Source data:
+
+.. code-block:: json
+
+  {
+    "ID": "user007",
+    "Email": "thisIs@google.com",
+    "PostCode": 0461,
+    "Country": "Norway"
+  }
+
+Pipe Configuration:
 
 .. code-block:: json
 
@@ -105,16 +118,17 @@ Target. The following pipe config lists such definitions by using ["add"].
     }
   }
 
-Which will produce the following dataset, when the pipe has completed a run:
+Which will produce the following output, when the pipe has completed a run:
 
 .. code-block:: json
 
    {
-      "fakeKey": "fakeValue",
-      "fakeKey2": "fakeValue",
-      "newEmail": "thisIs@google.com",
-      "PostCode": 0461,
-      "Country": "Norway"
+      "mssql-accounts:Email": "thisIs@google.com",
+      "mssql-accounts:fakeKey": "fakeValue",
+      "mssql-accounts:fakeKey2": "fakeValue",
+      "mssql-accounts:newEmail": "thisIs@google.com",
+      "mssql-accounts:PostCode": 0461,
+      "mssql-accounts:Country": "Norway"
    }
 
 .. seealso::
