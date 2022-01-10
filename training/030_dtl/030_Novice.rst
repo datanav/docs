@@ -96,23 +96,23 @@ Source data:
 
 .. code-block:: json
 
-	{
-	  "mssql-person:Email": "christian89@hotmail.com",
-	  "mssql-person:Postcode": "6400",
-	  "mssql-person:Address": "Rojumvej 66"
-	}
-	
-	{
-		"oracle-person:EmailAddress": "hansMajestæt@gmail.com",
-	  "oracle-person:PostNumber": 6400,
-	  "oracle-person:Address": "Rojumvej 66"
-	}
+  {
+    "mssql-person:Email": "christian89@hotmail.com",
+    "mssql-person:Postcode": "6400",
+    "mssql-person:Address": "Rojumvej 66"
+  }
 
-	{
-		"pymsql-person:Postaddress": "hansMajestæt@gmail.com",
-	  "pymsql-person:AreaCode": "6851",
-	  "pymsql-person:Address": "Danmarksgate 7",
-	}
+  {
+    "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
+    "oracle-person:PostNumber": 6400,
+    "oracle-person:Address": "Rojumvej 66"
+  }
+
+  {
+    "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
+    "pymsql-person:AreaCode": "6851",
+    "pymsql-person:Address": "Danmarksgate 7"
+  }
 
 Pipe configuration:
 
@@ -122,31 +122,31 @@ Pipe configuration:
     "_id": "global-person",
     "type": "pipe",
     "source": {
-	    "type": "merge",
-	    "datasets": ["mssql-person pip1", "pymsql-person pip2", "oracle-person pip3"],
-	    "equality_sets": [
-	      ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
-	    ],
-	    "identity": "first",
-	    "strategy": "default",
-	    "version": 2
-	  },
-	  "transform": {
-	     "type": "dtl",
-	     "rules": {
-	        "default": [
-	           ["copy", "*"],
-	           ["comment", "*** Adding global properties ***"],
-	           ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
-	           ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
-	           ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
-	        ]
-	     }
-	  },
-	  "metadata": {
-	    "global": true,
-	    "tags": "person"
-	  }
+      "type": "merge",
+      "datasets": ["mssql-person pip1", "pymsql-person pip2", "oracle-person pip3"],
+      "equality_sets": [
+        ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
+      ],
+      "identity": "first",
+      "strategy": "default",
+      "version": 2
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["comment", "*** Adding global properties ***"],
+          ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
+          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
+        ]
+      }
+    },
+    "metadata": {
+      "global": true,
+      "tags": "person"
+    }
   }
 
 When the above pipe runs, the following output will be produced:
@@ -164,15 +164,13 @@ When the above pipe runs, the following output will be produced:
 	  "pymsql-person:AreaCode": "6851",
 	  "pymsql-person:Address": "Danmarksgate 7",
 	  "global-person:Email": "christian89@hotmail.com",
-	  "global-person:Postcode": "6851",
+	  "global-person:PostCode": "6851",
 	  "global-person:PrivateAddress": "Danmarksgate 7"
 	}
 
 As can be seen from the above dataset, you should recognize the properties with the namespace "global-person", as these properties are our added global properties in the above pipe configuration. This example is in practice Sesam's core MDM transform capability. 
 
 .. seealso::
-
-  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
 
@@ -181,6 +179,8 @@ As can be seen from the above dataset, you should recognize the properties with 
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
