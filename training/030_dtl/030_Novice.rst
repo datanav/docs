@@ -84,11 +84,72 @@ As can be seen from the above produced data, the property with the key "_positio
 "Add"
 ~~~~~
 
-Explain the add, based on ref 3.1.4 above
+.. sidebar:: Summary
+
+  "Add"...
+
+  - lets you define new properties
+  - does not necessarily rely upon the Source or Target
+
+["add"] lets you define new properties. As such, it does not necessarily rely upon the Source or
+Target. The following source data, pipe configuration and output exemplifies using ["add"].
+
+Source data:
+
+.. code-block:: json
+
+  {
+    "ID": "user007",
+    "Email": "thisIs@google.com",
+    "PostCode": 0461,
+    "Country": "Norway"
+  }
+
+Pipe Configuration:
+
+.. code-block:: json
+
+  {
+    "_id": "mssql-accounts",
+    "type": "pipe",
+    "source": {
+     	"type": "sql",
+    	"system": "sesam-training",
+    	"table": "accounts"
+    },
+    "transform": {
+       "type": "dtl",
+       "rules": {
+          "default": [
+             ["copy", "*"],
+             ["add", "fakeKey", "fakeValue"],
+             ["add", "fakeKey2", "_T.fakeKey"],
+             ["add", "newEmail", "_S.Email"]
+          ]
+       }
+    }
+  }
+
+Which will produce the following output, when the pipe has completed a run:
+
+.. code-block:: json
+
+   {
+      "mssql-accounts:Email": "thisIs@google.com",
+      "mssql-accounts:fakeKey": "fakeValue",
+      "mssql-accounts:fakeKey2": "fakeValue",
+      "mssql-accounts:newEmail": "thisIs@google.com",
+      "mssql-accounts:PostCode": 0461,
+      "mssql-accounts:Country": "Norway"
+   }
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _concat-concatination-3-2:
 
