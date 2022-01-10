@@ -8,6 +8,19 @@ Beginner
 Sesam Node GUI
 ~~~~~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  The Sesam Node GUI...
+
+  - provides you with multiple navigation options
+  - and its tabs "Pipes" and "Systems" are crucial to know when working on a Sesam project
+
+    - as these will show all information needed for you to get an overview of how data moves through Sesam
+
+  - and its tabs "Datahub" and "Subscription" are essential when setting up your Sesam node
+
+    - as these will allow you to manage users, modify groups of users and update configuration configs
+
 The graphical user interface (GUI) in a Sesam node provides you with a multitude of options. In this section we are going to go through some of these options and explain how they are used when working on a project.
 
 On the below picture the Sesam GUI can be seen.  
