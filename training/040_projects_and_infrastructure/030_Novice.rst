@@ -13,7 +13,7 @@ Node config
   The Node config ...
 
   - is a Sesam node´s skeletal structure
-  - consists of global configuration files and local configuration files   
+  - consists of configuration files   
 
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
 
@@ -26,13 +26,13 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     | ├ systems/
     | ├ variables/
     | | ├ development.json
-    | | ├ CI-test.json
     | | ├ test.json
     | | └ production.json
     | └ node-metadata.conf.json    
     ├ README.md
     ├ LICENSE
     ├ .gitignore
+    ├ test-env.json
     └ ++
 
 The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project you are working on, i.e: ``sesam/``. In general, it is recommended to have a total of `four Sesam nodes <https://docs.sesam.io/setup-environment.html#subscriptions>`_, which in project terms will be development, CI-test, test and production as this ensures CI/CD workflows can be carried out. Distinct to each environment you will have an environment.json file in your ``variables/`` folder. This will be elaborated on when talking about the ``node/`` folder. Finally, in the root folder, you will have files such as ``README.md``, ``LICENSE`` and ``.gitignore``. As the ``LICENSE`` and ``.gitignore`` files are quite generic, further description of these will be omitted here. The ``README.md`` file however will be specific to each project you are working on, and should ensure thorough documentation of the practices in place.  
@@ -51,7 +51,7 @@ The ``expected/`` folder is where all expected outputs from `outbound pipes <htt
     "node-env": "test"
   } 
 
-As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"node-env": "test"`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. 
+As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"node-env": "test"`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. Additionally, the CI-test recommended Sesam node will have its variables defined by the file ``test-env.json`` placed in your root project folder. 
 
 Finally, the ``node-metadata.conf.json`` is a json file that contain metadata about how a Sesam node is globally parameterized. A typical example is presented below:
 
