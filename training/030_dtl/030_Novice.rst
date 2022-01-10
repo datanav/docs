@@ -18,7 +18,7 @@ In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist 
 
 The first argument in the above declaration copies everything from your source to your target by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values whose keys start with "_". For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
 
-Data entering the pipe mssql-accounts from the system "sesam-training":
+Data entering the pipe salesforce-accounts from the system "sesam-training":
 
 .. code-block:: json
 
@@ -34,7 +34,7 @@ Pipe config:
 .. code-block:: json
 
 	{
-	  "_id": "mssql-accounts",
+	  "_id": "salesforce-accounts",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -56,9 +56,9 @@ Data produced by the pipe DTL transformation:
 .. code-block:: json
 
 	{
-	  "mssql-accounts:country": "DK",
-	  "mssql-accounts:id": 40,
-	  "mssql-accounts:phone": "1-894-115-3398"
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398"
 	}
 
 As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]`` function.
@@ -100,7 +100,7 @@ rdf:type
 
   - stands for Resource Description Framework and is a standard for describing web resources and data interchange
   - is applied in DTL by adding namespaces and namespaced identifiers
-  - in Sesam could look like the following: ``{"rdf:type": "~:mssql-accounts:TheDanishKing"}``
+  - in Sesam could look like the following: ``{"rdf:type": "~:salesforce-accounts:accounts"}``
 
 RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
 
@@ -109,7 +109,7 @@ In DTL you will add an RDF property by doing the following:
 .. code-block:: json
 
 	{
-	  "_id": "mssql-accounts",
+	  "_id": "salesforce-accounts",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -121,7 +121,7 @@ In DTL you will add an RDF property by doing the following:
 	    "rules": {
 	      "default": [
 	        ["copy", "*"],
-	        ["add", "rdf:type", ["ni", "mssql-accounts", "accounts"]]
+	        ["add", "rdf:type", ["ni", "salesforce-accounts", "accounts"]]
 	      ]
 	    }
 	  }
@@ -132,17 +132,17 @@ When the above pipe configuration completes its run, it will produce the followi
 .. code-block:: json
 
 	{
-	  "mssql-accounts:country": "DK",
-	  "mssql-accounts:id": 40,
-	  "mssql-accounts:phone": "1-894-115-3398",
-	  "rdf:type": "~:mssql-accounts:accounts"
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398",
+	  "rdf:type": "~:salesforce-accounts:accounts"
 	}
 
 As can be seen from the above pipe configuration, you have successfully added the RDF type property. The use of a namespace in this property allows for you to keep track of the origin of your entities, as well as retaining its business type. Therefore, it is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 .. seealso::
 
-	:ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-theoretical-approach-to-semantics-RDF-1-2`
+	:ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-approach-to-semantics-RDF-1-2`
 
   :ref:`developer-guide` > :ref:`working-with-RDF`
 

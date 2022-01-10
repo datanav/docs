@@ -93,10 +93,10 @@ As can be seen in the above dataset, the property with the key "mssql-accounts:p
 
   TODO
 
-.. _sesams-theoretical-approach-to-semantics-RDF-1-2:
+.. _sesams-approach-to-semantics-RDF-1-2:
 
-Sesams theoretical approach to semantics - RDF
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sesams approach to semantics - RDF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
@@ -114,35 +114,7 @@ The RDF data model consists in essence of statements about a particular subject.
 
 	subject predicate object
 
-While subjects and predicates are always Uniform Ressource Identifiers (URIs), objects can be either a literal i.e: a quoted string, representing dates, numbers, strings etc. - or another subject (URI). A common representation of these RDF triples is `NTriples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, where each URI is enclosed in brackets and every statement, triple, ends with a punctuation mark. Semicolon can also be used to end a statement, meaning that the subject on the next line will be omitted, as an example see below:
-
-::
-
-	<http://company.com/employees/bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://company.com/schema/employee>;
-  <http://company.com/schema/first-name> "Bob";
-  <http://company.com/schema/employed-by> <http://company.com> .
-
-Above you see three individual statements regarding the subject http://company.com/employees/bob. Elaborating on this, it has an RDF type represented by the subject http://company.com/schema/employee and the employee has a literal property "Bob" who is employed by a company represented by the subject http://company.com.
-
-Now, this is fairly straight forward but perhaps a bit verbose in the long run. To alleviate this, you can use the concept of prefixes and `RDF CURIEs <https://www.w3.org/TR/curie/>`_. A prefix is the "constant" part of a URL, i.e. everything up to a certain path-element (usually the last). Using CURIEs means giving these common prefixes short hand names enabling us to rewrite the full URI to a shorter "prefix:path" form.
-
-Let us define some prefixes for the above example, and give them such short hand names. The example below is in `RDF Turtle format <https://www.w3.org/TR/turtle/>`_, which is a superset of NTriples. Turtle syntax supports prefixes and CURIEs and is often used when writing RDF manually or intended to be read by humans. In general, it is considered good practice to reduce full URIs to CURIEs using prefixes whenever possible. When working with RDF in Sesam you should try to follow this rule:
-
-::
-
-	PREFIX employees: <http://company.com/employees/>
-	PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-	PREFIX emp_schema: <http://company.com/schema/>
-
-Now, rewriting the original URIs with these short form CURIEs we get:
-
-::
-
-	<employees:bob> <rdf:type> <http://company.com/schema/employee> .
-	<employees:bob> <emp_schema:first-name> "Bob" .
-	<employees:bob> <emp_schema:employed-by> <http://company.com> .
-
-This is both shorter, easier to work with and also makes it easier to change the prefix without having to reprocess or reload any of your data.
+some text here about namespaces and NI's...
 
 .. seealso::
 
