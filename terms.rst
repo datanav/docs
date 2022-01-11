@@ -11,7 +11,7 @@ Terms of Service for Access and Use of SESAM Software as a Service
 1.1. Purpose
 ------------
 
-This documents contains terms of service for Customers' access to and
+This document contains terms of service for Customers' access to and
 use of SESAM Software as a Service (“Services”) provided by SESAM.IO AS
 922 409 676 (“SESAM”). The services consist of both free- and paid
 subscriptions and the term “Customer” is used regardless of whether a
@@ -93,7 +93,7 @@ The Services depend on standard software. When purchasing access to the
 Services, the Customer does not purchase a copy of, or license to, the
 software used to deliver the Services, but consecutively pay for a
 subscription to access the Services. To the extent that separate
-license- or other terms apply for use of third party software and/ or
+license- or other terms apply for use of third party software and/or
 services included in the Services, these are set out together with the
 description of the Services in question. Any terms for third party
 software and/or services take precedence over the terms of this
