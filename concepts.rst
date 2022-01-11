@@ -365,7 +365,7 @@ The available channels are:
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
 .. Note::
-  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age. 
-  
-Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to Monday. 
-Security hotfixes will not wait for the scheduled window. Downgrades are not supported. 
+  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age.
+
+Weekly and nightly upgrades are performed between 00-03 CET. Weekly upgrades are performed night to Monday.
+Security hotfixes will not wait for the scheduled window. Downgrades are not supported.
