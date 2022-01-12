@@ -147,7 +147,7 @@ As a NI is produced, after a pipe has completed its run, it will be prefixed wit
 	      "default": [
 	        ["copy", "*"],
 	        ["add", "rdf:type",
-	          ["ni", "salesforce-accounts", "accounts"]
+	          ["ni", "salesforce", "Account"]
 	        ],
 	        ["make-ni", "salesforce-contacts", "phone"]
 	      ]
@@ -165,7 +165,7 @@ The above pipe configuration will produce the following output:
 	  "salesforce-accounts:phone": "1-894-115-3398",
 	  "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
 	  "salesforce-accounts:position": "CEO",
-	  "rdf:type": "~:salesforce-accounts:accounts"
+	  "rdf:type": "~:salesforce:Account"
 	}
 
 As can be seen from the above output, the property ``"salesforce-accounts:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"salesforce-contacts"``.
