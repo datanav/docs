@@ -202,33 +202,38 @@ Apply - Custom Functions
 
   Apply...
 
-  - is an `expression language function <https://docs.sesam.io/DTLReferenceGuide.html?highlight=apply#expression-language>`_
-  - is categorized as a nested transformation function and should be used to transform nested elements
+  - is an `expression language function <https://docs.sesam.io/DTLReferenceGuide.html?#expression-language>`_
+  - is categorized as a `nested transformation function <https://docs.sesam.io/DTLReferenceGuide.html?#nested-transformations>`_
+  - is suitable for transforming nested data structures
 
-The ``["apply"]`` is an `expression language function <https://docs.sesam.io/DTLReferenceGuide.html?highlight=apply#expression-language>`_. An expression language function has no side-effects and returns a single value or a list of values. The ``["apply"]`` is categorized as a nested transformation and should be used to transform nested elements. To exemplify, the following example is used:
+The ``["apply"]`` is an expression language function.
+An expression language function has no side-effects and returns a single value or a list of values.
+The ``["apply"]`` is categorized as a nested transformation and can be used to transform nested elements.
+
+To exemplify, the following example is used:
 
 Source dataset:
 
 .. code-block:: json
 
-	{
-	  "My_list": [
-	    {
-	      "sensor_id": 1,
-	      "temp": "50 degrees"
-	    },
-	    {
-	      "sensor_id": 2
-	    }
-	  ],
-	  "id": 1
-	}
+  {
+    "My_list": [
+      {
+        "sensor_id": 1,
+        "temp": "50 degrees"
+      },
+      {
+        "sensor_id": 2
+      }
+    ],
+    "id": 1
+  }
 
 Pipe transform statement:
 
 .. code-block:: json
 
-	"transform": {
+  "transform": {
     "type": "dtl",
     "rules": {
       "default": [
@@ -254,7 +259,7 @@ Output:
 
 .. code-block:: json
 
-	{
+  {
     "_id": "arcgis-grid-measure:1",
     "arcgis-grid-measure:id": 1,
     "arcgis-grid-measure:newTemperature": "50 degrees",
@@ -267,7 +272,7 @@ Going into detail with respect to what happens in our ``"custom_function"``, you
 
 .. seealso::
 
-  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language`
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`nested_transformations`
 
 .. _merge-as-a-function-3-2:
 
