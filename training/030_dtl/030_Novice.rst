@@ -216,13 +216,13 @@ As you can see from the above merged result, the ``_id`` turned out as ``"salesf
 
 .. seealso::
 
-	:ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
-
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
 
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
 
   :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
 
 .. _coalesce-3-2:
 
