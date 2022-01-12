@@ -380,11 +380,66 @@ As can be seen from the above example, namespaces allow for investigating and un
 "Make-ni"
 ~~~~~~~~~
 
-Declaraiton of foreign key in Sesam, explain /reference Namespace
+.. sidebar:: Summary
+
+  "Make-ni"...
+
+  - creates namespaced identfiers (NIs) by using the ``["make-ni"]`` function
+  - in Sesam is a complete Uniform Resource Identifier (URI)
+  - is used to declare foreign keys as you would in a relational database management system (RDBMS)
+
+The ``["make-ni"]`` DTL function allows for defining `namespaced identifiers <https://docs.sesam.io/concepts.html?highlight=namespaced%20identifiers#namespaces>`_ (NIs). A NI in Sesam is a complete Uniform Resource Identifier (URI). As such, it is used to investigate how data is semantically linked in a Sesam node. In addition, it is also used to declare foreign keys as you would in a relational database management system (RDBMS), albeit in Sesam the references will naturally be between pipes.
+
+As a NI is produced, after a pipe has completed its run, it will be prefixed with ``~:`` followed by the namespace and its value. To exemplify, look at the below example:
+
+.. code-block:: json
+
+	{
+	  "_id": "salesforce-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type",
+	          ["ni", "salesforce", "Account"]
+	        ],
+	        ["make-ni", "salesforce-contacts", "phone"]
+	      ]
+	    }
+	  }
+	}
+
+The above pipe configuration will produce the following output:
+
+.. code-block:: json
+
+	{
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398",
+	  "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
+	  "salesforce-accounts:position": "CEO",
+	  "rdf:type": "~:salesforce:Account"
+	}
+
+As can be seen from the above output, the property ``"salesforce-accounts:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"salesforce-contacts"``.
+
+Finally, as mentioned initially, the NI is in reality a URI, and as such you can press your NIs and navigate your Sesam node with respect to how data is semantically linked in your node.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _eq-equality-3-2:
 
