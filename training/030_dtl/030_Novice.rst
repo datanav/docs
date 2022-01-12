@@ -487,23 +487,88 @@ The above logic will add the property ``"Old": true``, if your source entity's `
 Merge as a Source
 ~~~~~~~~~~~~~~~~~
 
-Examples, steal from PP training, show in tables vs json, everything
-coming in goes out.
+.. sidebar:: Summary
 
--  Strategy
+  Merge...
 
--  Identidy - \_id etter merge
+  - as a source will join multiple datasets
+  - in Sesam can be compared to a full outer join in a database
+  - should use the properties ``version``, ``strategy`` and ``identity`` to work effectively
+  - as a source is typically used in global pipes
 
--  datasets
+Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation. 
 
-   15. .. rubric:: Filter as a transform
-          :name: filter-as-a-transform
+For merging to work effectively, the properties ``version``, ``strategy`` and ``identity`` should be used.
 
-Explain in the context of reading from global pipes
+- ``version`` - can be set to either ``1`` or ``2``. Use ``2`` to ensure the merge source is up to date.
+
+- ``strategy`` - can be set to either ``"defalt"`` or ``"compact"``. 
+
+- ``identity`` - can be set to either ``"first"`` or ``"composite"``.
+
+Merging is typically done in global pipes and in the following example, this is also your point of reference.
+
+.. code-block:: json
+
+	{
+	  "_id": "global-person",
+	  "type": "pipe",
+	  "source": {
+	    "type": "merge",
+	    "datasets": ["salesforce-person pip1", "salesforce-contacts pip2", "salesforce-accounts pip3"],
+	    "equality": [
+	      ["eq", "pip2.phone", "pip3.phone"]
+	    ],
+	    "identity": "first",
+	    "strategy": "default",
+	    "version": 2
+	  },
+	  "metadata": {
+	    "global": true,
+	    "tags": ["person"]
+	  }
+	}
+
+As can be seen from the above pipe configuration ``"global-person"`` you will recognize the aformentioned properties. ``version`` being set to ``2``, ``strategy`` to ``"default"`` and ``identity`` to ``"first"``.
+
+The ``strategy`` property changes how the resulting entities look as these are merged in the ``equality`` property. In this particular example we are merging on the property ``phone`` for the namespaces ``"salesforce-contacts"`` and ``"salesforce-accounts"`` and the ``["eq"]`` function is now used as a join expression. As namespaces are being merged, the ``"default"`` value in the ``strategy`` property unions all the values and duplicates are not removed. In comparison, if the ``"compact"`` value is used, the pipe will try to compact property values, i.e: duplicate values are removed and empty lists are removed.
+
+With regards to the ``identity`` property, this property determines how the ``_id`` will look, as entities are merged in your merge source. If the ``identity`` property is set to ``"first"`` the ``_id`` will be picked from the first dataset in the datasets list involved in the merge. As an example see the below, which shows the shape of an entity having been run through the above shown pipe configuration in ``"global-person"``:
+
+.. code-block:: json
+
+	{
+    "$ids": [
+      "~:salesforce-contacts:40",
+      "~:salesforce-accounts:40"
+    ],
+    "_id": "salesforce-contacts:40",
+    "_updated": 239,
+    "salesforce-accounts:country": "DK",
+    "salesforce-accounts:id": 40,
+    "salesforce-accounts:phone": "1-894-115-3398",
+    "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
+    "salesforce-accounts:position": "CTO",
+    "salesforce-contacts:id": 40,
+    "salesforce-contacts:name": "Bolton, Aladdin T.",
+    "salesforce-contacts:phone": "1-894-115-3398",
+    "rdf:type": [
+      "~:salesforce:Contact",
+      "~:salesforce:Account"
+    ]
+  }
+
+As you can see from the above merged result, the ``_id`` turned out as ``"salesforce-contacts:40"`` as this is the entity that is placed at index null in the ``$ids`` array, which tells us which namespaces got merged based on our defined equality rules. If you were to change the ``identity`` to ``"composite"`` the ``_id`` would have turned out as ``"1|salesforce-contacts:40|2|salesforce-accounts:40"``.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
 
 .. _concat-concatination-3-2:
 
