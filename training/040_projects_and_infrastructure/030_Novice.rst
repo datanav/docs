@@ -10,7 +10,7 @@ Node config
 
 .. sidebar:: Summary
 
-  The Node config ...
+  The Node config...
 
   - is a Sesam node´s skeletal structure
   - consists of configuration files   
@@ -73,8 +73,44 @@ The last entry in the above example ``"namespaced_identifiers": true`` is partic
 
 .. _deployment-4-2:
 
-Deployment
-~~~~~~~~~~
+CI/CD Workflow
+~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  CI/CD Workflow...
+
+  - ...  
+
+Building upon the knowledge you just acquired reading the above section :ref:`node-config-4-2` is should now be obvious to you that Sesam advocate working in a CI/CD workflow. In order for you to carry out said workflow you need to know just how Sesam enables this. To start of explaining this, you should know about the software GIT. `GIT <https://git-scm.com/>`_ is a free and open source distributed version control system and is used in Sesam when implementing the CI/CD workflow, which is also briefly described here: :ref:`sesam-cli-4-1`. As such, you will want your Sesam project work to be continously integrated and then continously deployed. This ensures that incremental changes can be done in an agile manner and among other things, eases the way in which teams can work together whilst also minimizing the risk of erroneous deployments damaging an ecosystem.
+
+To implement said workflow, Sesam has developed a microservice named `Github Autodeployer <https://github.com/sesam-community/github-autodeployer>`_. This microservice connects to the GitHub API and integrates with a node config, as described in :ref:`node-config-4-2`, shared via GitHub. To implement the Github Autodeployer look to the below example system configuration in Sesam:
+
+.. code-block:: json
+
+  {
+    "_id": "github-autodeployer",
+    "type": "system:microservice",
+    "docker": {
+      "environment": {
+        "AUTODEPLOYER_PATH": "systems/github-autodeployer.conf.json",
+        "BRANCH": "master",
+        "DEPLOY_TOKEN": "$SECRET(sesam-autodeployer-key)",
+        "GIT_REPO": "git@github.com:MITdata/sesam.git",
+        "JWT": "$SECRET(autodeployer-jwt)",
+        "LOG_LEVEL": "INFO",
+        "SESAM_API_URL": "$ENV(sesam_base_url)",
+        "SYNC_ROOT": "node",
+        "TAG": "Hotfix-12.1.2",
+        "VARIABLES_FILE_PATH": "/node/variables/production.json"
+     },
+      "image": "sesamcommunity/github-autodeployer:2.1.5",
+      "port": 5000
+    }
+  }
+
+
+
 
 Når trenger man å resette pipes?/Når trenger man ikke det
 
