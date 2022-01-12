@@ -114,6 +114,25 @@ The RDF data model consists in essence of statements about a particular subject.
 
 	subject predicate object
 
+To put the above into perspective, let us imagine the following: You are importing data from HubSpot into your Sesam node. HubSpot is a CRM platform. As such, HubSpot will contain organisational data. What we are interested in illustrating is how Sesam applies its RDF standard to HubSpot data entering Sesam and also what the following example shows:
+
+HubSpot source data: 
+
+.. code-block:: json
+
+	{
+		"id": 1,
+		"name": "MIT",
+		"progress_state": 1,
+		"owner": "Nohar Vard"
+	},
+	{
+		"id": 2,
+		"name": "Harvard",
+		"progress_state": 2,
+		"owner": "Nom It"
+	}
+
 some text here about namespaces and NI's...
 
 .. seealso::
@@ -127,7 +146,7 @@ some text here about namespaces and NI's...
 .. _full-outer-join-merge-1-2:
 
 Full outer Join - Merge
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Full outer join is something you will experience in the Sesam terminology as a "merge". A merge, like the full outer join, retains all entries from i.e. two merged data objects. Graphically, a full outer join will look like the following:
 
