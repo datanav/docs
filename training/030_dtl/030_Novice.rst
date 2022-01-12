@@ -319,13 +319,13 @@ Tasks for DTL: Novice
 
 #. *What is ``["apply"]`` categorized as?*
 
-#. *Name the two ways in which "Merge as a function" can be used?*
+#. *Name the two ways in which "Merge as a function" can be used.*
 
 #. *What does ``["hops"]`` allow you to do?*
 
 #. *What are ``"_"`` properties categorized as?*
 
-#. *Name four type examples that exist in Sesam?*
+#. *Name four data types supported by Sesam.*
 
 #. *Create a pipe upstream from a global pipe, a global pipe and downstream from a global pipe.*
 
@@ -337,11 +337,11 @@ Tasks for DTL: Novice
 
 	In the global pipe:
 
-		- Merge at least three namespaces
+		- Merge data from at least three different namespaces.
 
-		- Check for relations between the merged namespaces.
+		- Check for contextual equivalence between the merged namespaces.
 
-			- In case of relations, define equalities.
+			- In case of contextual equivalence, define equalities.
 
 		- Use ``["coalesce"]``
 
