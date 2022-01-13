@@ -706,7 +706,7 @@ Merge as a function
   - ``["merge"]`` will **not** preserve duplicate values, keeping only the last
   - ``["merge-union"]`` will preserve duplicate values
 
-As outlined in the example from :ref:`apply-custom-functions-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
+As outlined in the example from :ref:`apply-custom-rules-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
 ``["merge"]`` and ``["merge-union"]`` are `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_.
 As such, these functions will incur side-effects, typically modifying your target entity.
 
