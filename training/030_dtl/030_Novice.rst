@@ -170,18 +170,18 @@ ref 1.2.19
 
   TODO
 
-.. _nested-dictionaries-3-2:
+.. _nested-data-structures-3-2:
 
-Nested dictionaries
-~~~~~~~~~~~~~~~~~~~
+Nested data structures
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
-  Nested dictionaries...
+  Nested data structures...
 
   - can be accessed in Sesam by using dot notation (".")
 
-Nested dictionaries can be accessed in Sesam by using dot notation ("."). Dot notation ensures that you can access properties within an object, such as a list with nested dictionaries. To exemplify, the following example is used:
+Nested data structures can be accessed in Sesam by using dot notation ("."). Dot notation ensures that you can access properties within an object, such as a list with nested dictionaries. To exemplify, the following example is used:
 
 ``"My_list": [{"foo": 1}, {"foo": 2}]``
 
@@ -192,8 +192,6 @@ Accessing the ``"foo"`` element in ``"My_list"`` via Sesam dot notation:
 Will return:
 
 ``"My_foo": [1,2]``
-
-The ``"_S"`` prior to using dot notation tells Sesam to use data that originates from your current dataset as its source.
 
 .. seealso::
 
