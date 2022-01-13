@@ -380,11 +380,66 @@ As can be seen from the above example, namespaces allow for investigating and un
 "Make-ni"
 ~~~~~~~~~
 
-Declaraiton of foreign key in Sesam, explain /reference Namespace
+.. sidebar:: Summary
+
+  "Make-ni"...
+
+  - creates namespaced identfiers (NIs) by using the ``["make-ni"]`` function
+  - in Sesam is a complete Uniform Resource Identifier (URI)
+  - is used to declare foreign keys as you would in a relational database management system (RDBMS)
+
+The ``["make-ni"]`` DTL function allows for defining `namespaced identifiers <https://docs.sesam.io/concepts.html?highlight=namespaced%20identifiers#namespaces>`_ (NIs). A NI in Sesam is a complete Uniform Resource Identifier (URI). As such, it is used to investigate how data is semantically linked in a Sesam node. In addition, it is also used to declare foreign keys as you would in a relational database management system (RDBMS), albeit in Sesam the references will naturally be between pipes.
+
+As a NI is produced, after a pipe has completed its run, it will be prefixed with ``~:`` followed by the namespace and its value. To exemplify, look at the below example:
+
+.. code-block:: json
+
+	{
+	  "_id": "salesforce-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type",
+	          ["ni", "salesforce", "Account"]
+	        ],
+	        ["make-ni", "salesforce-contacts", "phone"]
+	      ]
+	    }
+	  }
+	}
+
+The above pipe configuration will produce the following output:
+
+.. code-block:: json
+
+	{
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398",
+	  "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
+	  "salesforce-accounts:position": "CEO",
+	  "rdf:type": "~:salesforce:Account"
+	}
+
+As can be seen from the above output, the property ``"salesforce-accounts:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"salesforce-contacts"``.
+
+Finally, as mentioned initially, the NI is in reality a URI, and as such you can press your NIs and navigate your Sesam node with respect to how data is semantically linked in your node.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _eq-equality-3-2:
 
@@ -432,23 +487,88 @@ The above logic will add the property ``"Old": true``, if your source entity's `
 Merge as a Source
 ~~~~~~~~~~~~~~~~~
 
-Examples, steal from PP training, show in tables vs json, everything
-coming in goes out.
+.. sidebar:: Summary
 
--  Strategy
+  Merge...
 
--  Identidy - \_id etter merge
+  - as a source will join multiple datasets
+  - in Sesam can be compared to a full outer join in a database
+  - should use the properties ``version``, ``strategy`` and ``identity`` to work effectively
+  - as a source is typically used in global pipes
 
--  datasets
+Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation. 
 
-   15. .. rubric:: Filter as a transform
-          :name: filter-as-a-transform
+For merging to work effectively, the properties ``version``, ``strategy`` and ``identity`` should be used.
 
-Explain in the context of reading from global pipes
+- ``version`` - can be set to either ``1`` or ``2``. Use ``2`` to ensure the merge source is up to date.
+
+- ``strategy`` - can be set to either ``"defalt"`` or ``"compact"``. 
+
+- ``identity`` - can be set to either ``"first"`` or ``"composite"``.
+
+Merging is typically done in global pipes and in the following example, this is also your point of reference.
+
+.. code-block:: json
+
+	{
+	  "_id": "global-person",
+	  "type": "pipe",
+	  "source": {
+	    "type": "merge",
+	    "datasets": ["salesforce-person pip1", "salesforce-contacts pip2", "salesforce-accounts pip3"],
+	    "equality": [
+	      ["eq", "pip2.phone", "pip3.phone"]
+	    ],
+	    "identity": "first",
+	    "strategy": "default",
+	    "version": 2
+	  },
+	  "metadata": {
+	    "global": true,
+	    "tags": ["person"]
+	  }
+	}
+
+As can be seen from the above pipe configuration ``"global-person"`` you will recognize the aformentioned properties. ``version`` being set to ``2``, ``strategy`` to ``"default"`` and ``identity`` to ``"first"``.
+
+The ``strategy`` property changes how the resulting entities look as these are merged in the ``equality`` property. In this particular example we are merging on the property ``phone`` for the namespaces ``"salesforce-contacts"`` and ``"salesforce-accounts"`` and the ``["eq"]`` function is now used as a join expression. As namespaces are being merged, the ``"default"`` value in the ``strategy`` property unions all the values and duplicates are not removed. In comparison, if the ``"compact"`` value is used, the pipe will try to compact property values, i.e: duplicate values are removed and empty lists are removed.
+
+With regards to the ``identity`` property, this property determines how the ``_id`` will look, as entities are merged in your merge source. If the ``identity`` property is set to ``"first"`` the ``_id`` will be picked from the first dataset in the datasets list involved in the merge. As an example see the below, which shows the shape of an entity having been run through the above shown pipe configuration in ``"global-person"``:
+
+.. code-block:: json
+
+	{
+    "$ids": [
+      "~:salesforce-contacts:40",
+      "~:salesforce-accounts:40"
+    ],
+    "_id": "salesforce-contacts:40",
+    "_updated": 239,
+    "salesforce-accounts:country": "DK",
+    "salesforce-accounts:id": 40,
+    "salesforce-accounts:phone": "1-894-115-3398",
+    "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
+    "salesforce-accounts:position": "CTO",
+    "salesforce-contacts:id": 40,
+    "salesforce-contacts:name": "Bolton, Aladdin T.",
+    "salesforce-contacts:phone": "1-894-115-3398",
+    "rdf:type": [
+      "~:salesforce:Contact",
+      "~:salesforce:Account"
+    ]
+  }
+
+As you can see from the above merged result, the ``_id`` turned out as ``"salesforce-contacts:40"`` as this is the entity that is placed at index null in the ``$ids`` array, which tells us which namespaces got merged based on our defined equality rules. If you were to change the ``identity`` to ``"composite"`` the ``_id`` would have turned out as ``"1|salesforce-contacts:40|2|salesforce-accounts:40"``.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
 
 .. _concat-concatination-3-2:
 
@@ -461,52 +581,156 @@ ref 1.2.19
 
   TODO
 
-.. _nested-dictionaries-3-2:
+.. _nested-data-structures-3-2:
 
-Nested dictionaries
-~~~~~~~~~~~~~~~~~~~
+Nested data structures
+~~~~~~~~~~~~~~~~~~~~~~
 
-As you can see in *Example 3.2.17A: Dotted Notation*, we can get
-attributes inside dictionaries by using "."
+.. sidebar:: Summary
 
-Dotted notation
+  Nested data structures...
 
-list of dicts can give you list of values from a single key.
+  - can be accessed in Sesam by using dot notation (".")
 
-A: [{"foo":1},{"foo":2}] -> \_S.A.foo = [1,2]
+Nested data structures can be accessed in Sesam by using dot notation ("."). Dot notation ensures that you can access properties within an object, such as a list with nested dictionaries. To exemplify, the following example is used:
 
-1. ["add", "some-nested-attribute",
-   "_S.somedict.some-nested-attribute"] 
+``"My_list": [{"foo": 1}, {"foo": 2}]``
 
-*Example 3.2.17A: Dotted Notation*,
+Accessing the ``"foo"`` element in ``"My_list"`` via Sesam dot notation:
+
+``["add", "My_foo", "_S.My_list.foo"]``
+
+Will return:
+
+``"My_foo": [1,2]``
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`variables`
 
-.. _apply-custom-functions-3-2:
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
-Apply - Custom Functions
+.. _apply-custom-rules-3-2:
+
+Apply - Custom Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Basic, bare bruk på data fra \_S, forklar det uten å bruke hops
+.. sidebar:: Summary
+
+  Apply...
+
+  - is an `expression language function <https://docs.sesam.io/DTLReferenceGuide.html?#expression-language>`_
+  - is categorized as a `nested transformation function <https://docs.sesam.io/DTLReferenceGuide.html?#nested-transformations>`_
+  - is suitable for transforming nested data structures
+
+The ``["apply"]`` is an expression language function.
+An expression language function has no side-effects and returns a single value or a list of values.
+The ``["apply"]`` is categorized as a nested transformation and can be used to transform nested elements.
+
+To exemplify, the following example is used:
+
+Source dataset:
+
+.. code-block:: json
+
+  {
+    "My_list": [
+      {
+        "sensor_id": 1,
+        "temp": "50 degrees"
+      },
+      {
+        "sensor_id": 2
+      }
+    ],
+    "id": 1
+  }
+
+Pipe transform statement:
+
+.. code-block:: json
+
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "arcgis-grid-measure", "grid-measure"]
+        ],
+        ["merge",
+          ["apply", "custom_rule", "_S.My_list"]
+        ]
+      ],
+      "custom_rule": [
+        ["add", "lastSensorID", "_S.sensor_id"],
+        ["if",
+          ["neq", "_S.temp", null],
+          ["add", "newTemperature", "_S.temp"]
+        ]
+      ]
+    }
+  }
+
+Output:
+
+.. code-block:: json
+
+  {
+    "_id": "arcgis-grid-measure:1",
+    "arcgis-grid-measure:id": 1,
+    "arcgis-grid-measure:newTemperature": "50 degrees",
+    "arcgis-grid-measure:lastSensorID": 2
+  }
+
+Starting from the top, the source dataset ``My_list`` is a list where each element is a dictionary. Such a data object is an ideal candidate for use in a nested transformation, such as an ``["apply"]`` function, shown in the "Pipe transform statement". As you might recognize, the ``["apply"]`` is used to access elements in ``My_list``. In addition, the rule called ``"custom_rule"`` is referenced and then applied when the ``["apply"]`` funcion evaluates. In order for the result to become part of the dataset, you will need to also merge the result to the default rule, which is why we need the ``["merge"]`` wrapper.
+
+Going into detail with respect to what happens in our ``"custom_rule"``, you could state, that applying it is like using a for loop, in a programming language, to send in entries from a list to a function. As such, our ``"custom_rule"`` will be called for each element in the list that we pass onto it. This is also why ``"lastSensorID"`` evaluates to ``2``, since the last entry we pass onto it equals ``{"sensor_id": 2}``. The if statement that is applied in our ``"custom_rule"`` is an example of how the logic can disregard list elements and rather evaluate property values. This is a useful strategy you can apply to further making use of the ``["apply"]`` function, in addition to extending your transform capabilities.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`nested_transformations`
 
 .. _merge-as-a-function-3-2:
 
 Merge as a function
 ~~~~~~~~~~~~~~~~~~~
 
-Source type Merge VS Transformation Merge
+.. sidebar:: Summary
 
-Merging dictionaries up to the root level of entities.
+  Merge as a function...
+
+  - can be used both as ``["merge"]`` or ``["merge-union"]``
+  - are what we call `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_
+  - will incur side-effects, typically modifying your target entity
+  - ``["merge"]`` will **not** preserve duplicate values, keeping only the last
+  - ``["merge-union"]`` will preserve duplicate values
+
+As outlined in the example from :ref:`apply-custom-functions-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
+``["merge"]`` and ``["merge-union"]`` are `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_.
+As such, these functions will incur side-effects, typically modifying your target entity.
+
+The ``["merge"]`` function will copy all the properties from your target object onto your target entity.
+If the property already exists, it will be overwritten.
+This means that properties from later entries in for example a list, will win over earlier ones.
+In comparison, the ``["merge-union"]`` function will add all entries regardless of whether or not the property already exists on your target entity.
+To show the difference and implementation of these functions, look at the below example:
+
+``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+
+Which will produce the following result: ``{"a":2, "b":3}``, whereas the below:
+
+``["merge-union", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+
+will produce the following result: ``{"a":[1,2], "b":3}``
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _hops-3-2:
 
