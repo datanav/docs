@@ -193,9 +193,9 @@ A: [{"foo":1},{"foo":2}] -> \_S.A.foo = [1,2]
 
   TODO
 
-.. _apply-custom-functions-3-2:
+.. _apply-custom-rules-3-2:
 
-Apply - Custom Functions
+Apply - Custom Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
@@ -242,10 +242,10 @@ Pipe transform statement:
           ["ni", "arcgis-grid-measure", "grid-measure"]
         ],
         ["merge",
-          ["apply", "custom_function", "_S.My_list"]
+          ["apply", "custom_rule", "_S.My_list"]
         ]
       ],
-      "custom_function": [
+      "custom_rule": [
         ["add", "lastSensorID", "_S.sensor_id"],
         ["if",
           ["neq", "_S.temp", null],
@@ -266,9 +266,9 @@ Output:
     "arcgis-grid-measure:lastSensorID": 2
   }
 
-Starting from the top, the source dataset ``"My_list"`` is a list with nested dictionaries. Such a data object is an ideal candidate for use in a nested transformation, such as an ``["apply"]`` function, shown in the "Pipe transform statement". As you should recognize, the ``["apply"]`` is used to access the nested elements in the source property ``"My_list"``. In addition, the function called ``"custom_function"`` is referenced and then applied when the ``["apply"]`` funcion evaluates. In order for the result to become part of the dataset, you will need to also merge the result to the default rule, which is why we need the ``["merge"]`` wrapper.
+Starting from the top, the source dataset ``My_list`` is a list where each element is a dictionary. Such a data object is an ideal candidate for use in a nested transformation, such as an ``["apply"]`` function, shown in the "Pipe transform statement". As you might recognize, the ``["apply"]`` is used to access elements in ``My_list``. In addition, the rule called ``"custom_rule"`` is referenced and then applied when the ``["apply"]`` funcion evaluates. In order for the result to become part of the dataset, you will need to also merge the result to the default rule, which is why we need the ``["merge"]`` wrapper.
 
-Going into detail with respect to what happens in our ``"custom_function"``, you could state, that applying it is like using a for loop, in a programming language, to send in entries from a list to a function. As such, our ``"custom_function"`` will be called for each index in the list that we pass onto it. This is also why ``"lastSensorID"`` evaluates to ``2``, since the last entry we pass onto it equals ``{"foo": 2}``. The if statement that is applied in our ``"custom_function"`` is an example of how the logic can disregard list indexes and rather evaluate property values. This is a useful strategy you can apply to further making use of the ``["apply"]`` function, in addition to extending your transform capabilities.
+Going into detail with respect to what happens in our ``"custom_rule"``, you could state, that applying it is like using a for loop, in a programming language, to send in entries from a list to a function. As such, our ``"custom_rule"`` will be called for each element in the list that we pass onto it. This is also why ``"lastSensorID"`` evaluates to ``2``, since the last entry we pass onto it equals ``{"sensor_id": 2}``. The if statement that is applied in our ``"custom_rule"`` is an example of how the logic can disregard list elements and rather evaluate property values. This is a useful strategy you can apply to further making use of the ``["apply"]`` function, in addition to extending your transform capabilities.
 
 .. seealso::
 
