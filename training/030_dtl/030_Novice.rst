@@ -620,13 +620,41 @@ Basic, bare bruk på data fra \_S, forklar det uten å bruke hops
 Merge as a function
 ~~~~~~~~~~~~~~~~~~~
 
-Source type Merge VS Transformation Merge
+.. sidebar:: Summary
 
-Merging dictionaries up to the root level of entities.
+  Merge as a function...
+
+  - can be used both as ``["merge"]`` or ``["merge-union"]``
+  - are what we call `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_
+  - will incur side-effects, typically modifying your target entity
+  - ``["merge"]`` will **not** preserve duplicate values, keeping only the last
+  - ``["merge-union"]`` will preserve duplicate values
+
+As outlined in the example from :ref:`apply-custom-functions-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
+``["merge"]`` and ``["merge-union"]`` are `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_.
+As such, these functions will incur side-effects, typically modifying your target entity.
+
+The ``["merge"]`` function will copy all the properties from your target object onto your target entity.
+If the property already exists, it will be overwritten.
+This means that properties from later entries in for example a list, will win over earlier ones.
+In comparison, the ``["merge-union"]`` function will add all entries regardless of whether or not the property already exists on your target entity.
+To show the difference and implementation of these functions, look at the below example:
+
+``["merge", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+
+Which will produce the following result: ``{"a":2, "b":3}``, whereas the below:
+
+``["merge-union", ["list", {"a": 1}, {"a": 2, "b": 3}]]``
+
+will produce the following result: ``{"a":[1,2], "b":3}``
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
 .. _hops-3-2:
 
