@@ -778,7 +778,7 @@ Pipe configuration:
 .. code-block:: json
 
   {
-    "_id": "salesforce-erp-preparation",
+    "_id": "person-salesforce",
     "type": "pipe",
     "source": {
       "type": "dataset",
@@ -799,7 +799,7 @@ Pipe configuration:
             ["hops", {
               "datasets": ["erp-company ec"],
               "where": [
-                ["eq", "_S.salesforce-person:departmentID", "ec.department"]
+                ["eq", "_S.salesforce-person:departmentID", "ec.erp-company:department"]
               ]
             }]
           ],
@@ -809,8 +809,10 @@ Pipe configuration:
     }
   }
 
-As can be seen from the above pipe configuration ``"salesforce-erp-preparation"``, the ``["merge"]`` function is used to wrap the result from the ``["hops"]`` function.
-In the ``["hops"]`` function you can see how two namespaces are joined in the ``["eq"]`` statement, namely ``"salesforce-person"`` and the abbreviated form ``"ec"``.
+As can be seen from the above pipe configuration ``"person-salesforce"``, the ``["merge"]`` function is used to wrap the result from the ``["hops"]`` function. The ``["merge"]`` function ensures that the result from the ``["hops"]`` is added to the root level of the target entity.
+
+In the ``["hops"]`` function you can see how two namespaces are joined in the ``["eq"]`` statement, namely ``"salesforce-person"`` and the abbreviated form ``"ec"``. As such, when ``departmentID`` from ``"salesforce-person"`` equals ``department`` from ``"erp-company"``, we can enrich our data beyond what is readily available from the source.
+
 When this pipe completes its run, the following output will be produced: 
 
 .. code-block:: json
@@ -824,7 +826,7 @@ When this pipe completes its run, the following output will be produced:
     "erp-company:departmentManager": "Danmark Tordenskjold"
   }
 
-From the above output you should now recognize how ``["hops"]`` can be used to enrich your data beyond what is readily available from its source.
+From the above output you should now recognize how ``["hops"]`` can be used to enrich your data.
 
 .. seealso::
 
