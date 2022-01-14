@@ -785,7 +785,7 @@ After running the pipe, the same entity will be ``{"_deleted": true}`` in the ou
 This is an important aspect to remember to avoid confusion.
 As such, the ``_deleted`` field is added when an entity has been filtered out.
 
-In addition, ``_deleted`` is also used as a filter in your endpoint pipes, as you have to ensure that no deleted entities are exposed to the outside world.
+In addition, ``_deleted`` can also be used as a filter in your endpoint pipes, if you want to ensure that no deleted entities are exposed to the outside world.
 
 To show how this could look like in a pipe configuration, the following example has been drafted:
 
@@ -812,8 +812,9 @@ To show how this could look like in a pipe configuration, the following example 
 	  }
 	}
 
-As this pipe runs, entities will be filtered if they do not have a ``"position"`` of ``"Employee"`` and so the ``_filtered`` field will be ``true``.
-This exemplifies how you can utilize the ``_filtered`` field to make sure your DTL logic behaves as intended.
+As this pipe runs, entities will be filtered if they do not have a ``"position"`` of ``"Employee"`` and so the ``_filtered`` field will be ``true``. This exemplifies how you can utilize the ``_filtered`` field to make sure your DTL logic behaves as intended.
+
+Finally, user-defined ``_`` properties can serve as temporary properties as these wont be written to the sink dataset.
 
 .. seealso::
 
