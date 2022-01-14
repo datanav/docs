@@ -754,8 +754,15 @@ Basics, uten apply
 
   - in Sesam are categorized as `reserved fields <https://docs.sesam.io/entitymodel.html#reserved-fields>`_
   - provide different functionality for Sesam with regards to how entities are treated
+  - ``_id`` and ``_deleted`` are persisted when entities are written to datasets
+  - all other ``_`` properties are ignored
+  - user-defined ``_`` properties are suitable as temporary properties
 
-``_`` properties in Sesam are categorized as `reserved fields <https://docs.sesam.io/entitymodel.html#reserved-fields>`_. These fields provide different functionality for Sesam with regards to how entities are treated, as these move through a Sesam dataflow. Only the ``_id`` and ``_deleted``, will **not** be ignored when writing an entity to a dataset. Additionally, the reserved fields are *only* reserved at the root level, so nested entities can have them.
+Underscore (``_``) properties in Sesam are categorized as `reserved fields <https://docs.sesam.io/entitymodel.html#reserved-fields>`_.
+These fields provide different functionality for Sesam with regards to how entities are treated, as these move through a Sesam dataflow.
+Only the ``_id`` and ``_deleted``, will **not** be ignored when writing an entity to a dataset.
+
+Additionally, the reserved fields are *only* reserved at the root level, so nested entities can have them.
 
 Below, a complete list of these fields is provided:
 
@@ -768,7 +775,17 @@ Below, a complete list of these fields is provided:
  - ``_ts`` - a real-world timestamp for when the entity was added to the dataset
  - ``_updated`` - determines when the entity was modified and the value must either be a string or an integer value
 
-In general, reserved fields are used in order to make Sesam perform as intended and so they will largely affect the performance of a Sesam node without you even knowing. Albeit, you will immediately get to know ``_deleted``, ``_filtered`` and ``_id`` when creating dataflows in Sesam. An entity cannot exist without an ``_id``, so it is a given that you will get acquainted with that field immediately. With regards to the ``_filtered`` field this allows for you to evaluate and modify whether your DTL logic should transform specific states of an entity and will in general become more apparent as data moves towards exposure in a Sesam dataflow. To exemplify, when using ``["filter"]`` you will see ``{"_filtered": true}`` only in the result view of the pipe preview, and only if the current entity is filtered out. After running the pipe, the same entity will be ``{"_deleted": true}`` in the output dataset, but you will not see ``_filtered`` there. This is an important aspect to remember to avoid confusion. As such, the ``_deleted`` field is added when an entity has been filtered out. In addition, ``_deleted`` is also used as a filter in your endpoint pipes, as you have to ensure that no deleted entities are exposed to the outside world.
+In general, reserved fields are used in order to make Sesam perform as intended and so they will largely affect the performance of a Sesam node without you even knowing.
+Albeit, you will immediately get to know ``_deleted``, ``_filtered`` and ``_id`` when creating dataflows in Sesam.
+An entity cannot exist without an ``_id``, so it is a given that you will get acquainted with that field immediately.
+
+With regards to the ``_filtered`` field this allows you to evaluate and modify whether your DTL logic should transform specific states of an entity and will in general become more apparent as data moves towards exposure in a Sesam dataflow.
+To exemplify, when using ``["filter"]`` you will see ``{"_filtered": true}`` only in the result view of the pipe preview, and only if the current entity is filtered out.
+After running the pipe, the same entity will be ``{"_deleted": true}`` in the output dataset, but you will not see ``_filtered`` there.
+This is an important aspect to remember to avoid confusion.
+As such, the ``_deleted`` field is added when an entity has been filtered out.
+
+In addition, ``_deleted`` is also used as a filter in your endpoint pipes, as you have to ensure that no deleted entities are exposed to the outside world.
 
 To show how this could look like in a pipe configuration, the following example has been drafted:
 
@@ -795,7 +812,8 @@ To show how this could look like in a pipe configuration, the following example 
 	  }
 	}
 
-As this pipe runs, entities will be filtered if they do not have a ``"position"`` of ``"Employee"`` and so the ``_filtered`` field will be ``true``. This exemplifies how you can utilize the ``_filtered`` field to make sure your DTL logic behaves as intended.      
+As this pipe runs, entities will be filtered if they do not have a ``"position"`` of ``"Employee"`` and so the ``_filtered`` field will be ``true``.
+This exemplifies how you can utilize the ``_filtered`` field to make sure your DTL logic behaves as intended.
 
 .. seealso::
 
