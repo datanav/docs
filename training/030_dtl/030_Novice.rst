@@ -706,7 +706,7 @@ Merge as a function
   - ``["merge"]`` will **not** preserve duplicate values, keeping only the last
   - ``["merge-union"]`` will preserve duplicate values
 
-As outlined in the example from :ref:`apply-custom-functions-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
+As outlined in the example from :ref:`apply-custom-rules-3-2` on using the ``["merge"]`` function you will now learn more about the ``["merge"]`` function in addition to the ``["merge-union"]`` function.
 ``["merge"]`` and ``["merge-union"]`` are `transform functions <https://docs.sesam.io/DTLReferenceGuide.html#transforms>`_.
 As such, these functions will incur side-effects, typically modifying your target entity.
 
@@ -809,3 +809,57 @@ Type eksempler:
 
 Tasks for DTL: Novice
 ~~~~~~~~~~~~~~~~~~~~~
+
+#. *Can you whitelist and blacklist data in ``["copy"]``?*
+
+#. *What does ``["add"]`` allow you to define?*
+
+#. *What makes ``["coalesce"]`` one of Sesam's core MDM capabilities?*
+
+#. *Can ``["concat"]`` only evaluate string values?*
+
+#. *What does RDF stand for and how does Sesam apply RDF in DTL?*
+
+#. *Name three advantages of applying namespaces.*
+
+#. *What does ``["make-ni"]`` do?*
+
+#. *How is a NI used in Sesam?*
+
+#. *How can ``["eq"]`` be used and which kind of evaluator is it?*
+
+#. *Will "Merge as a Source" join multiple datasets? And when is it used with regards to a Sesam dataflow?*
+
+#. *How can nested dictionaries be accessed in Sesam?*
+
+#. *What is ``["apply"]`` categorized as?*
+
+#. *Name the two ways in which "Merge as a function" can be used.*
+
+#. *What does ``["hops"]`` allow you to do?*
+
+#. *What are ``"_"`` properties categorized as?*
+
+#. *Name four data types supported by Sesam.*
+
+#. *Create a pipe upstream from a global pipe, a global pipe and downstream from a global pipe.*
+
+	In the upstream pipe use:
+
+		- ``["copy"]``
+
+		- ``["make-ni"]``
+
+	In the global pipe:
+
+		- Merge data from at least three different namespaces.
+
+		- Check for sameness between the merged namespaces.
+
+			- In case of sameness, define equalities.
+
+		- Use ``["coalesce"]``
+
+	In the downstream pipe use:
+
+		- ``["hops"]``
