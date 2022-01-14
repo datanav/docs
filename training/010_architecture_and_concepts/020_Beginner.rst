@@ -200,8 +200,8 @@ Sesam world map
 
 .. _the_parts_of_sesam-1-1:
 
-The parts of sesam @Erik
-~~~~~~~~~~~~~~~~~~~~~~~~
+The parts of sesam
+~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
@@ -453,23 +453,6 @@ Status:
 
   :ref:`tools` > :ref:`sesam-management-studio` > :ref:`management-studio-systems`
 
-
-.. _working-language-json-1-1:
-
-Working language JSON
-~~~~~~~~~~~~~~~~~~~~~
-
-Something general about JSON
-
-JSON configuration of pipes and systems
-
-DTL also validated as JSON?
-
-.. seealso::
-
-  TODO
-
-
 .. _naming-conventions-1-1:
 
 Naming conventions
@@ -710,8 +693,6 @@ Datasets are also often the source for internal pipes.
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`dataset-id-3-1`
-
 .. _datasets-vs-tables-1-1:
 
 Datasets vs. tables
@@ -792,8 +773,6 @@ Sesam datasets and database tables that is important to point out:
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`pipes-1-1`
-
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`dataset-id-3-1`
 
 .. _entities-json-keyvalpairs-1-1:
 
