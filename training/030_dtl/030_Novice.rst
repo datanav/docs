@@ -339,9 +339,9 @@ Tasks for DTL: Novice
 
 		- Merge data from at least three different namespaces.
 
-		- Check for contextual equivalence between the merged namespaces.
+		- Check for sameness between the merged namespaces.
 
-			- In case of contextual equivalence, define equalities.
+			- In case of sameness, define equalities.
 
 		- Use ``["coalesce"]``
 
