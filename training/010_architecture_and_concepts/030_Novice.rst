@@ -118,13 +118,15 @@ Sesams approach to semantics - RDF
 
 .. sidebar:: Summary
 
-  "RDF"...
+  Resource Description Framework (RDF)...
 
-  - stands for Resource Description Framework and is a standard for describing web resources and data interchange
+  - is a standard for describing web resources and data interchange
   - consists of statements about a particular subject, which is given as a triple: ``subject predicate object``
-  - is applied in DTL by adding namespaces and namespaced identifiers 
+  - is applied in DTL by adding namespaces and namespaced identifiers
 
-RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
+Resource Description Framework (RDF) is a standard for describing web resources and data interchange.
+Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_,
+when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
 
 The RDF data model consists in essence of statements about a particular subject. This is given as a triple:
 
@@ -132,89 +134,97 @@ The RDF data model consists in essence of statements about a particular subject.
 
 	subject predicate object
 
-To put the above into perspective, let us imagine the following: You are importing data from HubSpot into your Sesam node. HubSpot is a CRM platform. As such, HubSpot will contain organisational data. What we are interested in illustrating is how Sesam applies its RDF standard to HubSpot data entering Sesam and also what the following example shows:
+To put the above into perspective, let us imagine the following:
+You are importing data from HubSpot into your Sesam node. HubSpot is a CRM platform.
+As such, HubSpot will contain organisational data.
+What we are interested in illustrating is how Sesam applies its RDF standard to HubSpot data entering Sesam and also what the following example shows:
 
 HubSpot example data: 
 
 .. code-block:: json
 
-	{
-		"results":
-		[
-			{
-			"id": 1,
-			"name": "MIT",
-			"progress_state": 1,
-			"owner": "Nohar Vard"
-			},
-			{
-				"id": 2,
-				"name": "Harvard",
-				"progress_state": 2,
-				"owner": "Nom It"
-			}
-		]
-	}
+  {
+    "results": [
+      {
+        "id": 1,
+        "name": "MIT",
+        "progress_state": 1,
+        "owner": "Nohar Vard"
+      },
+      {
+        "id": 2,
+        "name": "Harvard",
+        "progress_state": 2,
+        "owner": "Nom It"
+      }
+    ]
+  }
 
 Pipe configuration:
 
 .. code-block:: json
 
-	{
-	  "_id": "hubspot-organisation",
-	  "type": "pipe",
-	  "source": {
-    "type": "rest",
-    "system": "hubspot",
-    "id_expression": "{{ id }}",
-    "operation": "get",
-    "payload_property": "results",
-    "properties": {
-      "url": "companies?properties=*"
+  {
+    "_id": "hubspot-organisation",
+    "type": "pipe",
+    "source": {
+      "type": "rest",
+      "system": "hubspot",
+      "id_expression": "{{ id }}",
+      "operation": "get",
+      "payload_property": "results",
+      "properties": {
+        "url": "companies?properties=*"
+      }
     },
-	  "transform": {
-	    "type": "dtl",
-	    "rules": {
-	      "default": [
-	        ["copy", "*"],
-	        ["add", "rdf:type",
-	          ["ni", "hubspot-organisation", "organisation"]
-	        ]]
-	      ]
-	    }
-	  }
-	}
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["add", "rdf:type",
+            ["ni", "hubspot", "Organisation"]
+          ]
+        ]
+      }
+    }
+  }
 
 From the above pipe configuration you will get the following output when the pipe completes a run:
 
 .. code-block:: json
 
-	{
-		"_id": "hubspot-organisation:1",
-		"hubspot-organisation:id": 1,
-		"hubspot-organisation:name": "MIT",
-		"hubspot-organisation:progress_state": 1,
-		"hubspot-organisation:owner": "Nohar Vard",
-		"rdf:type": "~:hubspot-organisation:organisation"
-	},
-	{
-		"_id": "hubspot-organisation:2",
-		"hubspot-organisation:id": 2,
-		"hubspot-organisation:name": "Harvard",
-		"hubspot-organisation:progress_state": 2,
-		"hubspot-organisation:owner": "Nom It",
-		"rdf:type": "~:hubspot-organisation:organisation"
-	}
+  {
+    "_id": "hubspot-organisation:1",
+    "hubspot-organisation:id": 1,
+    "hubspot-organisation:name": "MIT",
+    "hubspot-organisation:progress_state": 1,
+    "hubspot-organisation:owner": "Nohar Vard",
+    "rdf:type": "~:hubspot:Organisation"
+  },
+  {
+    "_id": "hubspot-organisation:2",
+    "hubspot-organisation:id": 2,
+    "hubspot-organisation:name": "Harvard",
+    "hubspot-organisation:progress_state": 2,
+    "hubspot-organisation:owner": "Nom It",
+    "rdf:type": "~:hubspot:Organisation"
+  }
 
-Comparing the current state of the data with how it looked prior to having been exposed to the RDF standard in Sesam, you should recognize the semantic changes to the shape of the Hubspot example data. What you in practice see here, is Sesam's RDF standard applied to its data. Each property now consists of a subject, a predicate and an object. To exemplify: ``"hubspot-organisation`` is the subject, ``id"`` is a predicate and ``1`` is the object.   
+Comparing the current state of the data with how it looked prior to having been exposed to the RDF standard in Sesam,
+you should recognize the semantic changes to the shape of the Hubspot example data.
+What you in practice see here, is Sesam's RDF standard applied to its data.
+Each property now consists of a subject, a predicate and an object.
+
+To exemplify: ``hubspot-organisation`` is the subject, ``id`` is a predicate and ``1`` is the object.   
 
 .. seealso::
-
-	:ref:`developer-guide` > :ref:`working-with-RDF`
 
   :ref:`concepts` > :ref:`concepts-namespaces`
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
+
+  :ref:`developer-guide` > :ref:`working-with-RDF`
 
 .. _full-outer-join-merge-1-2:
 
