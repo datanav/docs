@@ -1,3 +1,5 @@
+.. _sharing-data:
+
 Sharing data 
 ============	
 The main benefit of Sesam is its ability to share data by delivering it in the form that each target system asks for. Instead of changing the systems to fit the data, Sesam speaks the target's language.

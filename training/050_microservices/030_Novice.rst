@@ -451,7 +451,9 @@ Synchronization of dataflow in microservices
 
   Synchronization of dataflow in microservices...
 
-  - should .....
+  - ensures continous enrichment of system source data
+  - use both the pull and push protocol
+  - should consider the property ``"batch_size"`` as you expose data
 
 Optimally, data should be both ingested and exposed to the same system when creating dataflows in a Sesam node. This is called synchronization and is the optimal way for a system's data to be continously enriched in a Sesam node.
 

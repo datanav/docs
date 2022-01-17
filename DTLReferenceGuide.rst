@@ -693,7 +693,7 @@ modifiying the target entity, and has no return value.
        |
        | A comment that spans multiple lines.
 
-       .. _`dtl_transform-filter`:
+       .. _dtl_transform-filter:
 
    * - ``filter``
      - | *Arguments:*
@@ -3434,6 +3434,8 @@ UUIDs
        |
        | Returns false.
        |
+
+.. _nested_transformations:
 
 Nested transformations
 ----------------------

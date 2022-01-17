@@ -33,43 +33,107 @@ When a system is used as a pipe source, certain aspects come into consideration.
 Systems as a pipe sink
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Same as above only with system as a sink. What is a system in the
-context of a sink? What does the pipe see? What does the system see?
-(1-N)
+.. sidebar:: Summary
+
+  Systems as a pipe sink...
+
+  - are responsible for writing entities to a target system
+  - should consider batching and the size of each batch
+
+As data is moving in the outbound stage of its dataflow, Sesam use sinks to expose data. Sinks are the receiving end of pipes and are responsible for writing entities to a target system.
+
+Pipes support `batching <https://docs.sesam.io/configuration.html#pipe-batching>`_ if the sink supports batching. It does this by accumulating source entities in a buffer before writing these to transforms and the sink. The size of each batch can be specified by using the ``batch_size`` property in your pipe. The default batch size is usually 100, but this will vary depending on the source- and sink-type. As an example, the `REST sink <https://docs.sesam.io/configuration.html#rest-sink>`_ will for instance use a ``batch_size`` of one as a default value.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`sink_section`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`pipe_batching`
 
 .. _authentication-methods-2-2:
 
 System Authentication methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Default authentication methods built in for systems handling URLS
-  $SECRET()
-| Basic, Oauth2, JWT, microservices
+.. sidebar:: Summary
 
-| Authentication methods for specific systems: ?? worth mentioning
-| SQL, oracle
+  System authentication methods...
+
+  - are defined for each system type
+  - vary depending on your system
+  - can be extended upon
+
+    - by building and deploying a microservice system in `Docker <https://www.docker.com/>`_ 
+
+Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. This is also true when you look at them within a Sesam node. Generally speaking, Sesam supports a wide range of in-built systems and their authentication methods, albeit if you need to use a system in Sesam which is not readily available, you can build it yourself as a microservice. This flexibility within Sesam is quite unique and as such ~no limitation exist.
+
+As an example of an in-built system in Sesam, the `Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_´s authentication method requires providing the parameters: ``username``, ``password``, ``host`` and ``database`` in order to authenticate. This example is a typical scenario when connecting to a relational database management system (RDBMS), albeit many more exist such as SQL, MsSQL, PostgreSQL, SMTP, REST etc..
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`sesam-community`
 
 .. _system-types-2-2:
 
 System Types
 ~~~~~~~~~~~~
 
-| Mention all built in system types, is there a common denominator?
-| refer to appendix/documentation for more information
+.. sidebar:: Summary
 
-“Type”: “system_XXXX”
+  System types...
+
+  - in Sesam vary quite substantially
+  - have a set of supported functionality
+  - vary in origin, but when implemented in Sesam all system types are represented as JSON
+
+Extending on systems, the types of systems Sesam provide vary quite substantially. In order for you to work efficiently in a given Sesam node, you should familiarize yourself with these different system types as they will have varying functional possibilites. A comprehensive list is provided below to make sure you know which system types exist:
+
+- `The SQL systems <https://docs.sesam.io/configuration.html#the-sql-systems>`_
+- `The Oracle system <https://docs.sesam.io/configuration.html#the-oracle-system>`_
+- `The Oracle TNS system <https://docs.sesam.io/configuration.html#the-oracle-tns-system>`_
+- `The Legacy Microsoft SQL system <https://docs.sesam.io/configuration.html#legacy-microsoft-sql-system>`_
+- `The Microsoft SQL Server system <https://docs.sesam.io/configuration.html#microsoft-sql-server-system>`_
+- `The MySQL system <hhttps://docs.sesam.io/configuration.html#mysql-system>`_
+- `The PostgreSQL system <https://docs.sesam.io/configuration.html#the-postgresql-system>`_
+- `The LDAP system <https://docs.sesam.io/configuration.html#the-ldap-system>`_
+- `The SMTP system <https://docs.sesam.io/configuration.html#the-smtp-system>`_
+- `The Solr system <https://docs.sesam.io/configuration.html#the-solr-system>`_
+- `The Elasticsearch system <https://docs.sesam.io/configuration.html#the-elasticsearch-system>`_
+- `The Twilio system <https://docs.sesam.io/configuration.html#the-twilio-system>`_
+- `The URL system <https://docs.sesam.io/configuration.html#the-url-system>`_
+- `The REST system <https://docs.sesam.io/configuration.html#the-rest-system>`_
+- `The Mircoservice system <https://docs.sesam.io/configuration.html#the-microservice-system>`_  
+
+Regardless of system type in Sesam its configuration will always be JSON. Important to consider in this aspect is that JSON is schemaless, which results in self-contained systems and makes for easier implementation in Sesam. All systems share a number of common properties, which are shown below:
+
+.. code-block:: json
+  :caption: Common System Properties
+  :linenos:
+
+  {
+    "_id": "a_system_id",
+    "type": "system:some-type-of-system",
+    "name": "The Foo System",
+    "description": "This is a description of the system",
+    "comment": "This is a comment",
+    "worker_threads": 10,
+    "metadata": {
+       "some_key": "some_value"
+    }
+  }
+
+- ``_id`` a unique ID for your system (required)
+- ``name`` a human readable name for your system
+- ``description`` a description of the system
+- ``comment`` a comment about the system
+- ``metadata`` a set of keys and values adding metadata content to the system
+- ``worker_threads`` an integer value setting the number of maximum concurrent running pipes using this system (default is 10) 
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
 .. _tasks-for-systems-novice-2-2:
 
