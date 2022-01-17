@@ -748,11 +748,79 @@ Basics, uten apply
 \_ Properties
 ~~~~~~~~~~~~~
 
-(_deleted, filtered, \_id, \_previous, \_updated, *\_hash? REF 1.2.24*)
+.. sidebar:: Summary
+
+  ``"_"`` Properties...
+
+  - in Sesam are categorized as `reserved fields <https://docs.sesam.io/entitymodel.html#reserved-fields>`_
+  - provide different functionality for Sesam with regards to how entities are treated
+  - ``_id`` and ``_deleted`` are persisted when entities are written to datasets
+  - all other ``_`` properties are ignored
+  - user-defined ``_`` properties are suitable as temporary properties
+
+Underscore (``_``) properties in Sesam are categorized as `reserved fields <https://docs.sesam.io/entitymodel.html#reserved-fields>`_.
+These fields provide different functionality for Sesam with regards to how entities are treated, as these move through a Sesam dataflow.
+Only the ``_id`` and ``_deleted``, will **not** be ignored when writing an entity to a dataset.
+
+Additionally, the reserved fields are *only* reserved at the root level, so nested entities can have them.
+
+Below, a complete list of these fields is provided:
+
+ - ``_deleted`` - if ``true`` the entity is treated as deleted
+ - ``_filtered`` - if ``true`` the entity is filtered
+ - ``_hash`` -  determines if an entity has changed over time and enables `change tracking <https://docs.sesam.io/concepts.html#change-tracking>`_
+ - ``_id`` - a string value that is the identity of the entity
+ - ``_previous`` - the previous version of the latest ``_updated`` value
+ - ``_tracked`` - if ``true``, the entity was added by `dependency tracking <https://docs.sesam.io/concepts.html#dependency-tracking>`_
+ - ``_ts`` - a real-world timestamp for when the entity was added to the dataset
+ - ``_updated`` - determines when the entity was modified and the value must either be a string or an integer value
+
+In general, reserved fields are used in order to make Sesam perform as intended and so they will largely affect the performance of a Sesam node without you even knowing.
+Albeit, you will immediately get to know ``_deleted``, ``_filtered`` and ``_id`` when creating dataflows in Sesam.
+An entity cannot exist without an ``_id``, so it is a given that you will get acquainted with that field immediately.
+
+With regards to the ``_filtered`` field this allows you to evaluate and modify whether your DTL logic should transform specific states of an entity and will in general become more apparent as data moves towards exposure in a Sesam dataflow.
+To exemplify, when using ``["filter"]`` you will see ``{"_filtered": true}`` only in the result view of the pipe preview, and only if the current entity is filtered out.
+After running the pipe, the same entity will be ``{"_deleted": true}`` in the output dataset, but you will not see ``_filtered`` there.
+This is an important aspect to remember to avoid confusion.
+As such, the ``_deleted`` field is added when an entity has been filtered out.
+
+In addition, ``_deleted`` can also be used as a filter in your endpoint pipes, if you want to ensure that no deleted entities are exposed to the outside world.
+
+To show how this could look like in a pipe configuration, the following example has been drafted:
+
+.. code-block:: json
+
+	{
+	  "_id": "person-salesforce",
+	  "type": "pipe",
+	  "source": {
+	    "type": "dataset",
+	    "dataset": "global-person"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["if",
+	          ["eq", "_S.position", "Employee"],
+	          ["copy", "*"],
+	          ["filter"]
+	        ]
+	      ]
+	    }
+	  }
+	}
+
+As this pipe runs, entities will be filtered if they do not have a ``"position"`` of ``"Employee"`` and so the ``_filtered`` field will be ``true``. This exemplifies how you can utilize the ``_filtered`` field to make sure your DTL logic behaves as intended.
+
+Finally, user-defined ``_`` properties can serve as temporary properties as these wont be written to the sink dataset.
 
 .. seealso::
 
-  TODO
+	:ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+	:ref:`developer-guide` > :ref:`entity_data_model` > :ref:`reserved-fields`
 
 .. _type-examples-3-2:
 
