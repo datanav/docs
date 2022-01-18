@@ -86,7 +86,7 @@ CI/CD Workflow
   - ensures that incremental changes can be implemented in an agile manner
   - minimizes risk of erroneous deployments damaging an ecosystem
 
-Building upon the knowledge you just acquired reading the above section :ref:`node-config-4-2` is should now be obvious to you that Sesam advocate working in a CI/CD workflow.
+Building upon the knowledge you just acquired reading the above section :ref:`node-config-4-2` it should now be known to you that Sesam advocate working in a CI/CD workflow.
 In order for you to carry out said workflow you need to know just how Sesam enables this.
 To start off explaining this, you should know about the :ref:`sesam-cli-4-1` and `GIT <https://git-scm.com/>`_.
 GIT is a free and open source distributed version control system (VCS) and is the recommended VCS when setting up the CI/CD workflow in a Sesam project.
@@ -136,9 +136,8 @@ The information relating to a Sesam node are the properties ``SESAM_API_URL`` an
 These properties allow you to connect to a given Sesam node's API.
 
 With regards to the node config, the properties ``GIT_REPO``, ``SYNC_ROOT`` and ``VARIABLES_FILE_PATH`` are all related to the skeletal structure of the node config.
-The ``GIT_REPO`` is equivalent to your root project folder,
-whilst the ``SYNC_ROOT`` is equivalent to the ``node/`` folder whilst finally the ``VARIABLES_FILE_PATH`` defines which of the variables files,
-placed in the ``variables/`` folder, should be used when the Github Autodeployer automatically uploads an updated node config to your Sesam node as you push changes via the Sesam CLI towards GitHub. 
+The ``GIT_REPO`` must contain the link to the GIT repo where your project's Sesam configuration resides.
+The ``SYNC_ROOT`` is equivalent to the ``node/`` folder. Finally, the ``VARIABLES_FILE_PATH`` defines which of the variables files should be used when the Github Autodeployer automatically uploads an updated node config to your Sesam node. 
 
 
 .. caution::
