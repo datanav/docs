@@ -272,7 +272,7 @@ rdf:type
 
 Resource Description Framework (RDF) is a standard for describing web resources and data interchange, albeit we will now look at RDF in the light of DTL and how ``rdf:type`` is being used in Sesam in that regard.
 
-``rdf:type`` in a Sesam dataflow is applied in the enrichment step. As such, this is one of the first things you will do when transforming data as it has entered Sesam. The use of a namespace in the ``rdf:type``property allows for you to keep track of the origin of your entities, as well as retaining its business type.
+``rdf:type`` in a Sesam dataflow is applied in the enrichment step. As such, this is one of the first things you will do when transforming data as it has entered Sesam. The use of a namespace in the ``rdf:type`` property allows for you to keep track of the origin of your entities, as well as retaining its business type.
 
 In DTL you will add an RDF property by doing the following:
 
