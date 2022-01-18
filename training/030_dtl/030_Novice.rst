@@ -266,14 +266,13 @@ rdf:type
 
   ``rdf:type``...
 
-  - is applied in DTL by adding namespaces and namespaced identifiers
   - is based on the source system id and the business type from that source system
   - in Sesam could look like the following: ``{"rdf:type": "~:salesforce:Account"}``
+  - is an ideal candidate when filtering entities in addition to aiding in data lineage
 
-Resource Description Framework (RDF) is a standard for describing web resources and data interchange.
-Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_,
-when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
+Resource Description Framework (RDF) is a standard for describing web resources and data interchange, albeit we will now look at RDF in the light of DTL and how ``rdf:type`` is being used in Sesam in that regard.
 
+``rdf:type`` in a Sesam dataflow is applied in the enrichment step. As such, this is one of the first things you will do when transforming data as it has entered Sesam. The use of a namespace in the ``rdf:type``property allows for you to keep track of the origin of your entities, as well as retaining its business type.
 
 In DTL you will add an RDF property by doing the following:
 
@@ -309,9 +308,7 @@ When the above pipe configuration completes its run, it will produce the followi
 	  "rdf:type": "~:salesforce:Account"
 	}
 
-As can be seen from the above pipe configuration, you have successfully added the RDF type property.
-The use of a namespace in this property allows you to keep track of the origin of your entities, as well as retaining its business type.
-Therefore, it is composed upon input and will be used to relate and filter like you would use a foreign key.
+As can be seen from the above pipe configuration, you have successfully added the RDF type property. The RDF type property, as initially stated, is prefixed with ``~:`` and composed of the source system origin ``salesforce`` followed by its business type ``Account``, which is aquired from the source. the composition of the ``rdf:type`` allows for Sesam to easily identify the source system and its business type, which makes it an ideal candidate when filtering entities in addition to aiding in data lineage as you model your data in a Sesam dataflow.
 
 .. seealso::
 
