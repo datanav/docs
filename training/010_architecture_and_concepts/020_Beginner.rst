@@ -934,13 +934,16 @@ As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a
 
 Rdf:type
 ^^^^^^^^
-The RDF type is metadata used to relate data and give some semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
+
+RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
+
+RDF in Sesam is used to relate data and add semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
 Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`working-with-RDF`
 
 .. _id-1-1:
 

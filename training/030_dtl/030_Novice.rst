@@ -26,7 +26,7 @@ In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist 
 
 The first argument in the above declaration copies everything from your source to your target by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values whose keys start with "_". For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
 
-Data entering the pipe mssql-accounts from the system "sesam-training":
+Data entering the pipe salesforce-accounts from the system "sesam-training":
 
 .. code-block:: json
 
@@ -42,7 +42,7 @@ Pipe config:
 .. code-block:: json
 
 	{
-	  "_id": "mssql-accounts",
+	  "_id": "salesforce-accounts",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -64,9 +64,9 @@ Data produced by the pipe DTL transformation:
 .. code-block:: json
 
 	{
-	  "mssql-accounts:country": "DK",
-	  "mssql-accounts:id": 40,
-	  "mssql-accounts:phone": "1-894-115-3398"
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398"
 	}
 
 As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]`` function.
@@ -262,12 +262,63 @@ As can be seen from the above dataset, you should recognize the properties with 
 rdf:type
 ~~~~~~~~
 
-Resource Description Framework (?) explain what it means in Sesam
-context
+.. sidebar:: Summary
+
+  ``rdf:type``...
+
+  - is based on the source system id and the business type from that source system
+  - in Sesam could look like the following: ``{"rdf:type": "~:salesforce:Account"}``
+  - is an ideal candidate when filtering entities in addition to aiding in data lineage
+
+Resource Description Framework (RDF) is a standard for describing web resources and data interchange, albeit we will now look at RDF in the light of DTL and how ``rdf:type`` is being used in Sesam in that regard.
+
+``rdf:type`` in a Sesam dataflow is applied in the enrichment step. As such, this is one of the first things you will do when transforming data as it has entered Sesam. The use of a namespace in the ``rdf:type`` property allows for you to keep track of the origin of your entities, as well as retaining its business type.
+
+In DTL you will add an RDF property by doing the following:
+
+.. code-block:: json
+
+	{
+	  "_id": "salesforce-accounts",
+	  "type": "pipe",
+	  "source": {
+	    "type": "sql",
+	    "system": "sesam-training",
+	    "table": "accounts"
+	  },
+	  "transform": {
+	    "type": "dtl",
+	    "rules": {
+	      "default": [
+	        ["copy", "*"],
+	        ["add", "rdf:type", ["ni", "salesforce", "Account"]]
+	      ]
+	    }
+	  }
+	}
+
+When the above pipe configuration completes its run, it will produce the following:
+
+.. code-block:: json
+
+	{
+	  "salesforce-accounts:country": "DK",
+	  "salesforce-accounts:id": 40,
+	  "salesforce-accounts:phone": "1-894-115-3398",
+	  "rdf:type": "~:salesforce:Account"
+	}
+
+As can be seen from the above pipe configuration, you have successfully added the RDF type property. The RDF type property, as initially stated, is prefixed with ``~:`` and composed of the source system origin ``salesforce`` followed by its business type ``Account``, which is aquired from the source. the composition of the ``rdf:type`` allows for Sesam to easily identify the source system and its business type, which makes it an ideal candidate when filtering entities in addition to aiding in data lineage as you model your data in a Sesam dataflow.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
+
+  :ref:`developer-guide` > :ref:`working-with-RDF`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-approach-to-semantics-RDF-1-2`
 
 .. _namespace-3-2:
 
