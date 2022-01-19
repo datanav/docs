@@ -664,7 +664,7 @@ Will return:
 .. _apply-custom-rules-3-2:
 
 Apply - Custom Rules
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
