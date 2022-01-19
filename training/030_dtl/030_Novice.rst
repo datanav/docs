@@ -758,7 +758,8 @@ Data from ``salesforce-person``:
     "salesforce-person:country": "DK",
     "salesforce-person:id": 40,
     "salesforce-person:age": 32,
-    "salesforce-person:departmentID": 3
+    "salesforce-person:departmentID": 3,
+    "rdf:type": "~:salesforce:Person"
   }
 
 Data from ``erp-company``:
@@ -770,7 +771,8 @@ Data from ``erp-company``:
     "erp-company:department": 3,
     "erp-company:position": "Engineer",
     "erp-company:positionStatus": "On leave",
-    "erp-company:departmentManager": "Danmark Tordenskjold"
+    "erp-company:departmentManager": "Danmark Tordenskjold",
+    "rdf:type": "~:erp:Company"
   }
 
 Pipe configuration:
@@ -788,9 +790,10 @@ Pipe configuration:
       "type": "dtl",
       "rules": {
         "default": [
-          ["copy",
-            ["list", "salesforce-person:country", "salesforce-person:id", "salesforce-person:departmentID"]
+          ["filter",
+            ["in", "~:salesforce:Person", "_S.rdf:type"]
           ],
+          ["copy", "*"],
           ["if",
             ["eq", "_S.salesforce-person:departmentID", null],
             ["filter"]
