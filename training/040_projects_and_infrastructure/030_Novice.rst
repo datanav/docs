@@ -91,16 +91,13 @@ In order for you to carry out said workflow you need to know just how Sesam enab
 To start off explaining this, you should know about the :ref:`sesam-cli-4-1` and `GIT <https://git-scm.com/>`_.
 GIT is a free and open source distributed version control system (VCS) and is the recommended VCS when setting up the CI/CD workflow in a Sesam project.
 
-.. The following statement might be assuming a bit too much, but at least if you want continuous integration and deployment in a Sesam project, this is our recommended way of doing it.
-.. I'm adding the comment here instead of in GitHub to presist it in case we want to rephrase later.
-
 As such, you will want your Sesam project work to be continously integrated and continously deployed.
 
 This ensures that incremental changes can be implemented in an agile manner and among other things,
 eases the way in which teams can work together whilst also minimizing risk of erroneous deployments damaging an ecosystem.
 
 To implement said workflow, Sesam has developed a microservice named `Github Autodeployer <https://github.com/sesam-community/github-autodeployer>`_.
-This microservice connects to the GitHub API and integrates with a node config, as described in :ref:`node-config-4-2`, shared via GitHub.
+This microservice connects to the GitHub API and integrates with a node config.
 The Github Autodeployer will regularly, based on a defined cron expression, compare the configuration of your Sesam node with the configuration present on GitHub.
 If the two are different, the Github Autodeployer will pull the GitHub configuration and overwrite your Sesam node configuration with it.
 
