@@ -321,7 +321,7 @@ Output:
     "transform-salesforce-person:Position": "CTO"
   }
 
-As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean evaluator and used to decide whether entities should be filtered. ``["is-datetime"]`` is one of many DTL functions in Sesam that can evaluate types of data as these are used to transform your data as it moves through a Sesam dataflow. In addition, you should also recognize that we define our schema requirements as specified in the ``"[comment]"`` function.   
+As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean evaluator and used to decide whether entities should be filtered. ``["is-datetime"]`` is one of many DTL functions in Sesam that can evaluate types of data as these are used to transform your data as it moves through a Sesam dataflow. Another aspect that is neat to remember going forward is the use of prefixes for types of data in Sesam. As can be seen from the property ``erp-person:updateDate`` the date is prefixed with the default ``~t`` whilst for example a float value would be prefixed with the default ``~f``. Finally, you should also recognize that we define our schema requirements as specified in the ``"[comment]"`` function.   
 
 .. seealso::
 
