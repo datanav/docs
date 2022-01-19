@@ -792,7 +792,7 @@ Pipe configuration:
             ["list", "salesforce-person:country", "salesforce-person:id", "salesforce-person:departmentID"]
           ],
           ["if",
-            ["eq", "_S.departmentID", null],
+            ["eq", "_S.salesforce-person:departmentID", null],
             ["filter"]
           ],
           ["merge",
@@ -803,7 +803,7 @@ Pipe configuration:
               ]
             }]
           ],
-          ["remove", ["list", "departmentID", "department"]]
+          ["remove", ["list", "salesforce-person:departmentID", "erp-company:department"]]
         ]
       }
     }
