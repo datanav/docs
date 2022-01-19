@@ -141,7 +141,7 @@ The ``SYNC_ROOT`` is equivalent to the ``node/`` folder. Finally, the ``VARIABLE
 
   Pay attention to how changes in your pipe configurations might affect the transform state of data downstream in a dataflow, as this might require you to restart pipes.
   A pipe restart are most of the time straight forward, albeit if a lot of data must be re-transformed, estimate some time for completion.
-  The pipe menu is elaborated `here <https://docs.sesam.io/management-studio.html?highlight=restart#pipe-menu>`_.
+  The pipe menu is elaborated in this `section <https://docs.sesam.io/management-studio.html?highlight=restart#pipe-menu>`_.
 
 .. seealso::
 
