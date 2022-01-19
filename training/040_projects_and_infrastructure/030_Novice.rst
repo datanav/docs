@@ -133,7 +133,7 @@ A solution architecture is an architectural description of a desired solution. S
 
 Which is represented in an architectural solution below, using the `Archimate modelling language <https://pubs.opengroup.org/architecture/archimate3-doc/toc.html>`_:
 
-.. _figure-p2p-1-1:
+.. _figure-sa-4-2:
 .. figure:: ./media/example_solution.png
    :align: center
 
