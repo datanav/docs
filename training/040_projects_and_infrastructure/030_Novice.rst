@@ -10,7 +10,7 @@ Node config
 
 .. sidebar:: Summary
 
-  The Node config ...
+  The Node config...
 
   - is a Sesam node´s skeletal structure
   - consists of configuration files   
@@ -97,6 +97,16 @@ Indexering
 Monitoring
 ~~~~~~~~~~
 
+.. sidebar:: Summary
+
+  Monitoring...
+
+  - of each node will automatically undertake periodic health checks
+  - of a pipe is done for each run in the pipe execution dataset
+  - of systems is done in logs and will vary depending on system type
+  - externally can be implemented by requesting resources i.e: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
+
+
 Sesam generates a set of different logs. These can be found `here <https://docs.sesam.io/behind-the-scenes.html?highlight=monitoring#logs>`_. With regards to the section topic being projects and infrastructure, you will be introduced to health checks and service status in addition to the pipe execution dataset and system logs now. Additionally, you will also be presented with the microservices `statuspage <https://github.com/sesam-community/statuspage>`_ and `statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ as means of external monitoring.
 
 Health checks and Service status
@@ -173,9 +183,9 @@ The pipe execution dataset keeps a record after each pump run of a given pipe. T
     "traceback": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2862, in _run_task\n    full_data_set = self.do_sync()\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 1986, in do_sync\n    raise e\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 1959, in do_sync\n    self._do_sync_step5_handle_results()\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2557, in _do_sync_step5_handle_results\n    if process_batch(entity_batch):\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2533, in process_batch\n    _entity_batch = self._do_sync_step3_transforms(_entity_batch)\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2169, in _do_sync_step3_transforms\n    entity_batch = pipe.transform.transform(entity_batch, metrics=self.metrics)\n  File \"/opt/venv/lib/python3.9/site-packages/lake/transforms/dtl_transform.py\", line 1517, in transform\n    transformed_entity_batch = self.cpp_transform(environment, entity_batch)\n  File \"lake/rapids/transforms/dtl_transform.pyx\", line 47, in lake.rapids.rapids_c.CppDTLTransform.cpp_transform\n  File \"lake/rapids/transforms/dtl_transform.pyx\", line 55, in lake.rapids.rapids_c.CppDTLTransform.cpp_transform\nlake.node.exceptions.TransformException: DTL transform failed with error: Target entity _id missing or is of invalid type: None"
   }
 
-As can be seen from the above dataset, this is a ``pump-failed`` dataset. Sesam also produces execution datasets for each ``pump-started`` and ``pump-completed`` run. Generally speaking it will often times be most relevant to look at ``pump-failed``datasets as for example a ``pump-completed`` will just tell you that everything ran as expected.
+As can be seen from the above dataset, this is a ``pump-failed`` entity. Sesam also produces entities for each ``pump-started`` and ``pump-completed`` run in the execution dataset. Generally speaking it will often times be most relevant to look at ``pump-failed``datasets as for example a ``pump-completed`` will just tell you that everything ran as expected.
 
-From the ``pump-failed`` dataset file presented, you will see the properties ``reason_why_stopped`` and ``traceback``. The ``reason_why_stopped`` property provides a brief description of why the pump failed whilst the ``traceback`` property provides a more detailed description of why the pump failed. In general, the property ``reason_why_stopped`` is a good first candidate to check when a pipe fails its run. In terms of automating monitoring you can set up mail notification when line of business related pipes fail a given run. This allows you to act quickly if fails should occur.  
+From the ``pump-failed`` entity presented above, you will see the properties ``reason_why_stopped`` and ``traceback``. The ``reason_why_stopped`` property provides a brief description of why the pump failed whilst the ``traceback`` property provides a more detailed description of why the pump failed. In general, the property ``reason_why_stopped`` is a good first candidate to check when a pipe fails its run. In terms of automating monitoring you can set up mail notification when line of business related pipes fail a given run. This allows you to act quickly if fails should occur.  
 
 System logs
 ###########
@@ -191,13 +201,25 @@ User defined logging should consider the following:
 External monitoring
 ###################
 
-External monitoring can be implemented by requesting resources from the :ref:`api-top`. This has been done in the microservices: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ which connects to the Statuspage API in addition the Service API in Sesam.
+External monitoring can be implemented by requesting resources from the :ref:`api-top`. This has been done in the microservices: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ which connects to the Statuspage API in addition the Service API in Sesam.
 
-The statuspage microservice monitors a Sesam node's health whereas the statuspage monitoring pipes microservice monitors pipes. What is convenient about the Statuspage API is that it provides the user with an overview dashboard of monitored instances in addition to sending out emails when and if a monitored instance fails.  
+The Statuspage microservice monitors a Sesam node's health whereas the Statuspage monitoring pipes microservice monitors pipes. What is convenient about the Statuspage API is that it provides the user with an overview of monitored instances in addition to sending out emails when and if a monitored instance fails.  
 
 .. seealso::
 
-  TODO
+  :ref:`sesam-community`
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Statuspage <https://github.com/sesam-community/statuspage>`_
+
+  `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`developer-guide` > :ref:`api-top`
+
+  :ref:`monitoring`
 
 .. _working-methods-4-2:
 
