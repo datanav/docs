@@ -10,7 +10,7 @@ Node config
 
 .. sidebar:: Summary
 
-  The Node config ...
+  The Node config...
 
   - is a Sesam node´s skeletal structure
   - consists of configuration files   
@@ -109,30 +109,40 @@ Execution logs/system dataset
 
   TODO
 
-.. _working-methods-4-2:
+.. _know-your-systems-4-2:
 
-Working Methods Flytte denne til Intermediate "Workflow"?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Know your systems
+~~~~~~~~~~~~~~~~~
 
-1. Dokumentere source-data og sink-data før en flyt
+.. sidebar:: Summary
 
-formater
+  Know your systems...
 
-datamengde
+  - ...
+  - ...
 
-frekvens
+The last aspect we will consider in this section is the fact that you should know your systems when working on a Sesam project. This may sound somewhat simple, albeit often times the complexity of systems, especially when integrating them with one another, is something that should not be easily overlooked.
 
-2. Analysere innkommende data for globala dataset
+What is interesting about systems is that they usually vary in format, will have specific query possibilities, authentification methods and should be implemented in Sesam with respect to a desired solution architecture.
 
-3. Lage testdata
+A solution architecture is an architectural description of a desired solution. Such a description will vary in complexity, in terms of what it conveys to a receiver, albeit it is extremely important that is it transparent in its proposed architecural solution. As an example, imagine drafting an architectural solution for the following line of business systems:
 
-4. Drøfte behov & Løsninger
+- Salesforce - project records
+- PostgreSQL - historic data for reporting
+- Visma - client specific data
 
-5. Velge løsning
+Which is represented in an architectural solution below, using the `Archimate modelling language <https://pubs.opengroup.org/architecture/archimate3-doc/toc.html>`_:
 
-6. Lag løsning
+.. _figure-p2p-1-1:
+.. figure:: ./media/example_solution.png
+   :align: center
 
-Mer?
+   Solution Architecture
+
+
+
+
+
 
 .. seealso::
 
