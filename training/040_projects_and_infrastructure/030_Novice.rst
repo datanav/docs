@@ -149,7 +149,7 @@ As can be seen from the above solution Sesam pulls data from said three systems,
 
   :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2` > :ref:`authentication-methods-2-2`
 
-  :ref:`learn-sesam` > :ref:`microservices` > :ref:`microservices-novice-5-2` > :ref:`authentication-with-microservices-5-2`
+  :ref:`learn-sesam` > :ref:`microservices-novice-5-2` > :ref:`authentication-with-microservices-5-2`
 
 .. _tasks-for-projects-infrastructure-novice-4-2:
 
