@@ -118,14 +118,14 @@ Know your systems
 
   Know your systems...
 
-  - ...
-  - ...
+  - especially when integrating them with one another
+  - as this will minimize the effort needed to create a robust architectural solution
 
 The last aspect we will consider in this section is the fact that you should know your systems when working on a Sesam project. This may sound somewhat simple, albeit often times the complexity of systems, especially when integrating them with one another, is something that should not be easily overlooked.
 
 What is interesting about systems is that they usually vary in format, will have specific query possibilities, authentification methods and should be implemented in Sesam with respect to a desired solution architecture.
 
-A solution architecture is an architectural description of a desired solution. Such a description will vary in complexity, in terms of what it conveys to a receiver, albeit it is extremely important that is it transparent in its proposed architecural solution. As an example, imagine drafting an architectural solution for the following line of business systems:
+A solution architecture is an architectural description of a desired solution. Such a description will vary in complexity, in terms of what it conveys to a receiver, albeit it is extremely important that it is transparent and adequately detailed in its proposed architecural solution to satisfy stakeholders. As an example, imagine drafting an architectural solution for the following line of business systems:
 
 - Salesforce - project records
 - PostgreSQL - historic data for reporting
@@ -139,14 +139,17 @@ Which is represented in an architectural solution below, using the `Archimate mo
 
    Solution Architecture
 
-
-
-
-
+As can be seen from the above solution Sesam pulls data from said three systems, undertakes the process called "Sesam dataflow" and then shares data so that it can be pushed to said three systems. In the architectural solution you can see how the different systems are described in detail with regards to their interface and service. As an example the interface of Salesforce is "Bulk API" and its service is "Salesforce Bulk API". In the solution it is recommended to create two global pipes namely "global-project" and "global-classification". This is important to consider, in that it hints Salesforce and Visma data can be merged into "global-project" as they probably contain contextual information about the same thing, a project. With regards to the systems implemented in this solution, it is important to acknowledge that the Salesforce system has a bulk API whilst the Visma is a REST API. As Sesam works with streams of data, Sesam prefers to pull data from a system as streams of changes, albeit bulk pulls also work just fine. You should however consider data volumes as reading large amount of data in bulks can be a time-consuming endeavour and might limit your suggested solution.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`json_pull_protocol`
+
+  :ref:`developer-guide` > :ref:`json_push_protocol`
+
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2` > :ref:`authentication-methods-2-2`
+
+  :ref:`learn-sesam` > :ref:`microservices` > :ref:`microservices-novice-5-2` > :ref:`authentication-with-microservices-5-2`
 
 .. _tasks-for-projects-infrastructure-novice-4-2:
 
