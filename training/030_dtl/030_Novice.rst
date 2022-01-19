@@ -788,11 +788,103 @@ will produce the following result: ``{"a":[1,2], "b":3}``
 Hops
 ~~~~
 
-Basics, uten apply
+.. sidebar:: Summary
+
+  Hops...
+
+  - can be used to perform joins across two or more namespaces
+  - allows you to enrich your data beyond what is readily available from the source you are working on
+
+
+Hops can be used to perform joins across two or more namespaces.
+In essence, hops allows you to enrich your data beyond what is readily available from the source you are working on.
+To exemplify, the below example shows how data from ``"salesforce-person"`` and ``"erp-company``"" are joined:
+
+Data from ``salesforce-person``:
+
+.. code-block:: json
+
+  {
+    "salesforce-person:_id": 40,
+    "salesforce-person:country": "DK",
+    "salesforce-person:id": 40,
+    "salesforce-person:age": 32,
+    "salesforce-person:departmentID": 3,
+    "rdf:type": "~:salesforce:Person"
+  }
+
+Data from ``erp-company``:
+
+.. code-block:: json
+
+  {
+    "erp-company:_id": 3,
+    "erp-company:department": 3,
+    "erp-company:position": "Engineer",
+    "erp-company:positionStatus": "On leave",
+    "erp-company:departmentManager": "Danmark Tordenskjold",
+    "rdf:type": "~:erp:Company"
+  }
+
+Pipe configuration:
+
+.. code-block:: json
+
+  {
+    "_id": "person-salesforce",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "global-person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["filter",
+            ["in", "~:salesforce:Person", "_S.rdf:type"]
+          ],
+          ["copy", "*"],
+          ["if",
+            ["eq", "_S.salesforce-person:departmentID", null],
+            ["filter"]
+          ],
+          ["merge",
+            ["hops", {
+              "datasets": ["erp-company ec"],
+              "where": [
+                ["eq", "_S.salesforce-person:departmentID", "ec.erp-company:department"]
+              ]
+            }]
+          ],
+          ["remove", ["list", "salesforce-person:departmentID", "erp-company:department"]]
+        ]
+      }
+    }
+  }
+
+As can be seen from the above pipe configuration ``"person-salesforce"``, the ``["merge"]`` function is used to wrap the result from the ``["hops"]`` function. The ``["merge"]`` function ensures that the result from the ``["hops"]`` is added to the root level of the target entity.
+
+In the ``["hops"]`` function you can see how two namespaces are joined in the ``["eq"]`` statement, namely ``"salesforce-person"`` and the abbreviated form ``"ec"``. As such, when ``departmentID`` from ``"salesforce-person"`` equals ``department`` from ``"erp-company"``, we can enrich our data beyond what is readily available from the source.
+
+When this pipe completes its run, the following output will be produced: 
+
+.. code-block:: json
+
+  {
+    "salesforce-person:_id": 40,
+    "salesforce-person:country": "DK",
+    "salesforce-person:id": 40,
+    "erp-company:position": "Engineer",
+    "erp-company:positionStatus": "On leave",
+    "erp-company:departmentManager": "Danmark Tordenskjold"
+  }
+
+From the above output you should now recognize how ``["hops"]`` can be used to enrich your data.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`path_expressions_and_hops`
 
 .. _underline-properties-3-2:
 
