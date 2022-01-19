@@ -10,7 +10,7 @@ Node config
 
 .. sidebar:: Summary
 
-  The Node config ...
+  The Node config...
 
   - is a Sesam node´s skeletal structure
   - consists of configuration files   
@@ -92,22 +92,134 @@ Indexering
 
   TODO
 
-.. _monitorering-4-2:
+.. _monitoring-4-2:
 
-Monitorering
-~~~~~~~~~~~~~
+Monitoring
+~~~~~~~~~~
 
-microservices
+.. sidebar:: Summary
 
-pipes
+  Monitoring...
 
-ekstern monitorering
+  - of each node will automatically undertake periodic health checks
+  - of a pipe is done for each run in the pipe execution dataset
+  - of systems is done in logs and will vary depending on system type
+  - externally can be implemented by requesting resources i.e: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
 
-Execution logs/system dataset
+
+Sesam generates a set of different logs. These can be found `here <https://docs.sesam.io/behind-the-scenes.html?highlight=monitoring#logs>`_. With regards to the section topic being projects and infrastructure, you will be introduced to health checks and service status in addition to the pipe execution dataset and system logs now. Additionally, you will also be presented with the microservices `statuspage <https://github.com/sesam-community/statuspage>`_ and `statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ as means of external monitoring.
+
+Health checks and Service status
+################################
+
+Each node will automatically undertake periodic health checks. These health checks ensure Sesam's product team can act if any node behaves unexpectedly. The service status aspect is composed of status codes which is used in parrallel with these health checks.
+
+Pipe execution dataset
+######################
+
+The pipe execution dataset keeps a record after each pump run of a given pipe. This dataset is in the shape of a json file. An example os said file can be seen below:
+
+.. code-block:: json
+
+  {
+    "_id": "pump-failed",
+    "_updated": 953,
+    "_previous": 951,
+    "_deleted": false,
+    "_ts": 1642412027429326,
+    "_hash": "f0b5ae4f77c6867a439b203c944a9225",
+    "end_time": "2022-01-17T09:33:47.427823Z",
+    "event_type": "pump-failed",
+    "exception_entity": {
+      "salesforce-account:results": [
+        {
+          "salesforce-account:id": 1,
+          "salesforce-account:name": "MIT",
+          "salesforce-account:owner": "Nohar Vard",
+          "salesforce-account:progress_state": 1
+        },
+        {
+          "salesforce-account:id": 2,
+          "salesforce-account:name": "Harvard",
+          "salesforce-account:owner": "Nom It",
+          "salesforce-account:progress_state": 2
+        }
+      ]
+    },
+    "metrics": {
+      "entities": {
+        "changes_last_run": 0,
+        "entities_last_run": 0,
+        "entities_per_second": 0,
+        "read_errors_last_run": 0,
+        "sink_time": 0,
+        "source_time": 0.00008929986506700516,
+        "transform_time": 0,
+        "write_errors_last_run": 0
+      }
+    },
+    "next_interval": 927.09,
+    "node_build_info": {
+      "build": "220106.961",
+      "date": "2022-01-06T17:15:10.342885+00:00",
+      "dirty": false,
+      "git-revision": "ff9500371",
+      "hash": "ff9500371",
+      "release": "1.0",
+      "teamcity-buildnumber": "220106.961",
+      "version": "1.0.220106.961"
+    },
+    "original_error_message": "",
+    "original_traceback": "",
+    "pipe": "mssql-accounts-2",
+    "pipe_offset": "",
+    "pump_definition": "pump:salesforce-account",
+    "pump_started_location": 952,
+    "reason_why_stopped": "DTL transform failed with error: Target entity _id missing or is of invalid type: None",
+    "retry_entities_exist": false,
+    "start_time": "2022-01-17T09:33:47.365728Z",
+    "sync_type": "full",
+    "total_time": 0.062095,
+    "traceback": "Traceback (most recent call last):\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2862, in _run_task\n    full_data_set = self.do_sync()\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 1986, in do_sync\n    raise e\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 1959, in do_sync\n    self._do_sync_step5_handle_results()\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2557, in _do_sync_step5_handle_results\n    if process_batch(entity_batch):\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2533, in process_batch\n    _entity_batch = self._do_sync_step3_transforms(_entity_batch)\n  File \"/opt/venv/lib/python3.9/site-packages/lake/task/datasynctask/datasynctask.py\", line 2169, in _do_sync_step3_transforms\n    entity_batch = pipe.transform.transform(entity_batch, metrics=self.metrics)\n  File \"/opt/venv/lib/python3.9/site-packages/lake/transforms/dtl_transform.py\", line 1517, in transform\n    transformed_entity_batch = self.cpp_transform(environment, entity_batch)\n  File \"lake/rapids/transforms/dtl_transform.pyx\", line 47, in lake.rapids.rapids_c.CppDTLTransform.cpp_transform\n  File \"lake/rapids/transforms/dtl_transform.pyx\", line 55, in lake.rapids.rapids_c.CppDTLTransform.cpp_transform\nlake.node.exceptions.TransformException: DTL transform failed with error: Target entity _id missing or is of invalid type: None"
+  }
+
+As can be seen from the above dataset, this is a ``pump-failed`` entity. Sesam also produces entities for each ``pump-started`` and ``pump-completed`` run in the execution dataset. Generally speaking it will often times be most relevant to look at ``pump-failed``datasets as for example a ``pump-completed`` will just tell you that everything ran as expected.
+
+From the ``pump-failed`` entity presented above, you will see the properties ``reason_why_stopped`` and ``traceback``. The ``reason_why_stopped`` property provides a brief description of why the pump failed whilst the ``traceback`` property provides a more detailed description of why the pump failed. In general, the property ``reason_why_stopped`` is a good first candidate to check when a pipe fails its run. In terms of automating monitoring you can set up mail notification when line of business related pipes fail a given run. This allows you to act quickly if fails should occur.  
+
+System logs
+###########
+
+System logs, as opposed to the execution dataset, varies depending on which system you are looking at. Some systems will only return a status code in its logs, i.e: an :ref:`oracle_system` will return 200 if everything is fine. This is however not the case for the :ref:`microservice_system`. A microservice system will have user defined logging and can therefore vary quite a bit.
+
+User defined logging should consider the following:
+
+  - status codes
+  - declarative and precise error messages
+  - critical steps in logic
+
+External monitoring
+###################
+
+External monitoring can be implemented by requesting resources from the :ref:`api-top`. This has been done in the microservices: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ which connects to the Statuspage API in addition the Service API in Sesam.
+
+The Statuspage microservice monitors a Sesam node's health whereas the Statuspage monitoring pipes microservice monitors pipes. What is convenient about the Statuspage API is that it provides the user with an overview of monitored instances in addition to sending out emails when and if a monitored instance fails.  
 
 .. seealso::
 
-  TODO
+  :ref:`sesam-community`
+
+  `Sesam's community at GitHub <https://github.com/sesam-community>`_
+
+  `Statuspage <https://github.com/sesam-community/statuspage>`_
+
+  `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
+
+  :ref:`developer-guide` > :ref:`api-top`
+
+  :ref:`monitoring`
 
 .. _working-methods-4-2:
 
