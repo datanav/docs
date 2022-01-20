@@ -151,40 +151,31 @@ Which will produce the following output, when the pipe has completed a run:
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
-.. _coalesce-3-2:
+.. _concat-concatination-3-2:
 
-"Coalesce"
-~~~~~~~~~~
+"Concat" - concatenation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. sidebar:: Summary
 
-  "Coalesce"...
+  "Concat"...
 
-  - is one of Sesam's core Master Data Management (MDM) capabilities
-  - lets you define a list of prioritized properties
+  - is used when you need to concatenate multiple properties into one property with a desired shape
+  - can only evaluate string values
 
-Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``.
+Concatenation is used when you need to concatenate multiple properties into one property with a desired shape. In Sesam concatenation is applied with the DTL function ["concat"]. Important to know here, is that ["concat"] can only evaluate string values. Therefore, you need to make sure that all provided properties in the ["concat"] function are string data types. To exemplify using concatenation in Sesam look to the below example.
 
 Source data:
 
 .. code-block:: json
 
   {
-    "mssql-person:Email": "christian89@hotmail.com",
-    "mssql-person:Postcode": "6400",
-    "mssql-person:Address": "Rojumvej 66"
-  }
-
-  {
-    "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
-    "oracle-person:PostNumber": 6400,
-    "oracle-person:Address": "Rojumvej 66"
-  }
-
-  {
-    "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
-    "pymsql-person:AreaCode": "6851",
-    "pymsql-person:Address": "Danmarksgate 7"
+      "ID": "user007",
+      "Email": "thisIs@google.com",
+      "PostCode": 0461,
+      "Country": "Norway",
+      "Adress": "Norwaystreet 8",
+      "FullName": "James Bond"
   }
 
 Pipe configuration:
@@ -192,68 +183,45 @@ Pipe configuration:
 .. code-block:: json
 
   {
-    "_id": "global-person",
+    "_id": "sesam-account",
     "type": "pipe",
     "source": {
-      "type": "merge",
-      "datasets": ["mssql-person pip1", "pymsql-person pip2", "oracle-person pip3"],
-      "equality_sets": [
-        ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
-      ],
-      "identity": "first",
-      "strategy": "default",
-      "version": 2
+      "type": "sql",
+      "system": "sesam",
+      "table": "accounts"
     },
     "transform": {
-      "type": "dtl",
-      "rules": {
-        "default": [
-          ["copy", "*"],
-          ["comment", "*** Adding global properties ***"],
-          ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
-          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
-          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
-        ]
-      }
-    },
-    "metadata": {
-      "global": true,
-      "tags": "person"
+       "type": "dtl",
+       "rules": {
+          "default": [
+             ["copy", "*"],
+             ["add", "DeliveryAddress", ["concat", "_S.Adress", " - ", ["string", "_S.PostCode"], " - ", "_S.Country", " - ", "_S.FullName"]]
+          ]
+       }
     }
   }
 
-When the above pipe runs, the following output will be produced:
+Which will produce the following output, when the pipe has completed a run:
 
 .. code-block:: json
 
-	{
-	  "mssql-person:Email": "christian89@hotmail.com",
-	  "mssql-person:Postcode": "6400",
-	  "mssql-person:Address": "Rojumvej 66",
-	  "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
-	  "oracle-person:PostNumber": 6400,
-	  "oracle-person:Address": "Rojumvej 66",
-	  "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
-	  "pymsql-person:AreaCode": "6851",
-	  "pymsql-person:Address": "Danmarksgate 7",
-	  "global-person:Email": "christian89@hotmail.com",
-	  "global-person:PostCode": "6851",
-	  "global-person:PrivateAddress": "Danmarksgate 7"
-	}
+   {
+      "sesam-account:ID": "user007",
+      "sesam-account:Email": "thisIs@google.com",
+      "sesam-account:PostCode": 0461,
+      "sesam-account:Country": "Norway",
+      "sesam-account:Adress": "Norwaystreet 8",
+      "sesam-account:FullName": "James Bond",
+      "sesam-account:DeliveryAddress": "Norwaystreet 8 - 0461 - Norway - James Bond"
+   }
 
-As can be seen from the above dataset, you should recognize the properties with the namespace "global-person", as these properties are our added global properties in the above pipe configuration. This example is in practice Sesam's core MDM transform capability. 
+As can be seen from the above output, we have successfully added the property ``DeliveryAddress`` and James Bond can get his order delivered. From the pipe configuration, we concatenate ``Address``, ``PostCode``, ``Country`` and ``FullName``. Important to recognize is the ["string"] function wrapping the ``PostCode`` property. This ensures that ["concat"] works as intended, in that all properties provided in the ["concat"] must be string values.
 
 .. seealso::
 
-  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
-
-  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
-
-  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
-
-  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
@@ -621,16 +589,111 @@ As you can see from the above merged result, the ``_id`` turned out as ``"salesf
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`source_section` > :ref:`merge_source`
 
-.. _concat-concatination-3-2:
+.. _coalesce-3-2:
 
-"Concat" - concatenation
-~~~~~~~~~~~~~~~~~~~~~~~~
+"Coalesce"
+~~~~~~~~~~
 
-ref 1.2.19
+.. sidebar:: Summary
+
+  "Coalesce"...
+
+  - is one of Sesam's core Master Data Management (MDM) capabilities
+  - lets you define a list of prioritized properties
+
+Coalesce is one of Sesam's core Master Data Management (MDM) capabilities. ``["coalesce"]`` lets you define a list of prioritized properties that will be evaluated so that you can make sure the first property that does not return ``null`` becomes the value of the property you are working on. An example has been drafted below to exemplify the use of ``["coalesce"]``.
+
+Source data:
+
+.. code-block:: json
+
+  {
+    "mssql-person:Email": "christian89@hotmail.com",
+    "mssql-person:Postcode": "6400",
+    "mssql-person:Address": "Rojumvej 66"
+  }
+
+  {
+    "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
+    "oracle-person:PostNumber": 6400,
+    "oracle-person:Address": "Rojumvej 66"
+  }
+
+  {
+    "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
+    "pymsql-person:AreaCode": "6851",
+    "pymsql-person:Address": "Danmarksgate 7"
+  }
+
+Pipe configuration:
+
+.. code-block:: json
+
+  {
+    "_id": "global-person",
+    "type": "pipe",
+    "source": {
+      "type": "merge",
+      "datasets": ["mssql-person pip1", "pymsql-person pip2", "oracle-person pip3"],
+      "equality_sets": [
+        ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
+      ],
+      "identity": "first",
+      "strategy": "default",
+      "version": 2
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"],
+          ["comment", "*** Adding global properties ***"],
+          ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
+          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
+        ]
+      }
+    },
+    "metadata": {
+      "global": true,
+      "tags": "person"
+    }
+  }
+
+When the above pipe runs, the following output will be produced:
+
+.. code-block:: json
+
+  {
+    "mssql-person:Email": "christian89@hotmail.com",
+    "mssql-person:Postcode": "6400",
+    "mssql-person:Address": "Rojumvej 66",
+    "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
+    "oracle-person:PostNumber": 6400,
+    "oracle-person:Address": "Rojumvej 66",
+    "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
+    "pymsql-person:AreaCode": "6851",
+    "pymsql-person:Address": "Danmarksgate 7",
+    "global-person:Email": "christian89@hotmail.com",
+    "global-person:PostCode": "6851",
+    "global-person:PrivateAddress": "Danmarksgate 7"
+  }
+
+As can be seen from the above dataset, you should recognize the properties with the namespace "global-person", as these properties are our added global properties in the above pipe configuration. This example is in practice Sesam's core MDM transform capability. 
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-namespaces`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-global-datasets`
+
+  :ref:`concepts` > :ref:`concepts-features` > :ref:`concepts-merging`
+
+  :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section` > :ref:`namespaces`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`dtl-transforms`
+
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language` > :ref:`namespaced-identifiers`
 
 .. _nested-data-structures-3-2:
 
