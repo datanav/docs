@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_01_20:
+
+2022-01-20
+----------
+
+* Added custom header functionality to HTTP transforms.
+
 .. _changelog_2022_01_12:
 
 2022-01-12

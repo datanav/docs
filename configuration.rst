@@ -4089,6 +4089,13 @@ Properties
      - 100
      -
 
+   * - ``headers``
+     - Dict<String,String>
+     - An optional set of header values to set in the HTTP request. Both keys and values must
+       evaluate to strings.
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -4110,7 +4117,10 @@ Example configuration
           "type": "http",
           "system":"my-http-transform-service",
           "url": "http://localhost:8080/transforms/deduplicate",
-          "batch_size": 5
+          "batch_size": 5,
+          "headers": {
+                "some-header": "some-value"
+          }
       }
 
 .. _lower_keys_transform:
@@ -5430,7 +5440,7 @@ Properties
 
    * - ``headers``
      - Dict<String,String>
-     - A optional set of header values to set in HTTP request made using this sink. Both keys and values must
+     - An optional set of header values to set in HTTP request made using this sink. Both keys and values must
        evaluate to strings.
      -
      -
