@@ -103,7 +103,7 @@ Output:
       "salesforce-lead:ContactPoint": "jamesb007@gmail.com"
    }
 
-As can be seen from the example, we only copy and rename fields from the source which has entered the pipe configuration and transformed in DTL-transforms defined there, resulting in a desired output. DTL however, is often more complex, For example, it can pull and use data from other datasets in your Sesam node or deal with nested structures in the source. So multiple options do exist and you will be exposed to most of these as you go through these sections. In case you cannot wait to have a look at all the possibilities, an overview of Sesam's DTL functions can be found in the :ref:`DTLReferenceGuide`. 
+As can be seen from the example, we only copy and rename fields from the source which has entered the pipe configuration and transformed in DTL transforms defined there, resulting in a desired output. DTL however, is often more complex, For example, it can pull and use data from other datasets in your Sesam node or deal with nested structures in the source. So multiple options do exist and you will be exposed to most of these as you go through these sections. In case you cannot wait to have a look at all the possibilities, an overview of Sesam's DTL functions can be found in the :ref:`DTLReferenceGuide`. 
 
 .. seealso::
 
