@@ -6,7 +6,7 @@ Changelog
 2022-01-20
 ----------
 
-* Added custom header functionality to :ref:`HTTP transforms <http_transforms>`.
+* Added custom header functionality to :ref:`HTTP transforms <http_transform>`.
 
 .. _changelog_2022_01_12:
 
