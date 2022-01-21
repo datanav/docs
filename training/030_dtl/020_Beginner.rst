@@ -327,9 +327,9 @@ Entity Data model – Data Types
 
 .. sidebar:: Summary
 
-  Sesam´s...
+  Sesam's...
 
-  - Entity Data model is based on JSON and supports the most common datatypes literally and the uncommon ones as strings
+  - entity data model is based on JSON and supports the most common datatypes literally and the uncommon ones such as strings
   - entity model requires a primary key ``_id``
   - data types are extensive and a list can be found `here <https://docs.sesam.io/entitymodel.html>`_
 
@@ -338,35 +338,30 @@ Entity Data model – Data Types
 Entities, Dictionaries and _id
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sesams Entity Data model is based on JSON – JavaScript Object notation –
+Sesam's entity data model is based on JavaScript Object Notation (JSON)
 and supports both the most common datatypes literally and the uncommon
-ones as strings. It is a dictionary built up by key-value pairs. The key
+ones such as strings. It is a dictionary built up by key-value pairs. The key
 is a string but the value can either be a literal value, a list or
 another dictionary.
 
 There is however one crucial difference between JSON dictionaries and
-the Sesam Entity Data model; our entity model requires a primary key
+the Sesam entity data model; our entity model requires a primary key
 ``_id`` as you have learned about in the previous topic. The value of the
-key ``_id`` must always be a string. In the dataset view it can be found
-in the list on the left hand side, on the top bar when viewing any
-entity or shown inside the entity dictionary by checking the box "Show
-System Attributes".
+key ``_id`` must always be a string. In the output tab of a pipe view the ``_id`` can be shown by checking the box "Show
+system attributes".
 
 An entity is therefore defined as a dictionary with the key ``_id`` as
-shown in *Example 3.1.3A: Entity*
+shown below:
 
-| \``\`
-| *Example 3.1.3A: Entity*
-| {"_id": "primary-key-as-String"}.
+.. code-block:: json
 
-\``\`
+   {"_id": "primary-key-as-String"}
 
-| *Example 3.1.3B: Dictionary* is not an entity, because it is missing
-  ``_id``.
-| \``\`
-| *Example 3.1.3B: Dictionary*
-| {}
-| \``\`
+As opposed to the above entity, the below is not a valid entity as it is missing an ``_id``.
+
+.. code-block:: json
+
+   {}
 
 .. seealso::
 
@@ -377,8 +372,7 @@ shown in *Example 3.1.3A: Entity*
 Data types
 ^^^^^^^^^^
 
-Sesam has many built in data types. I will list and explain them simply
-here and refer you to the `documentation <https://docs.sesam.io/entitymodel.html>`_ for further information.
+Sesam has many built in data types. These will be listed and briefly explained below. For further information refer to the `documentation <https://docs.sesam.io/entitymodel.html>`_.
 
 Dictionary: \`{"key": value}\`
 
