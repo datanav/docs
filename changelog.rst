@@ -6,14 +6,14 @@ Changelog
 2022-01-20
 ----------
 
-* Added custom header functionality to HTTP transforms.
+* Added custom header functionality to :ref:`HTTP transforms <http_transforms>`.
 
 .. _changelog_2022_01_12:
 
 2022-01-12
 ----------
 
-* Added domain name validation to ``docker.hosts`` property on microservice systems. This ensures that domain names are
+* Added domain name validation to ``docker.hosts`` property on :ref:`microservice systems <microservice_system>` . This ensures that domain names are
   on a format that is accepted by Kubernetes.
 
 .. _changelog_2022_01_03:
