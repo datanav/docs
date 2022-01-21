@@ -12,18 +12,18 @@ Pipes, where DTL executes
 
   A pipe...
 
-  - has an associated **pump** that pulls data entities from the **source**, pushes them through any **transforms**, and sends the results to the **sink**
+  - has an associated **pump** that pulls data from the **source**, pushes them through any **transforms**, and sends the results to the **sink**
   - is configured in the pipe configuration
-  - does not strictly have to have a DTL-transform, but most pipes have
+  - does not strictly have to have a DTL transform, but most pipes do
 
 Sesam consumes and produces streams of data in the form of lists of
 entities.
 
 Streams of entities flow through **pipes**. A pipe has an associated
-**pump** that pull data entities from the **source**, push them through
+**pump** that pull data from the **source**, push them through
 any **transforms**, and send the results to the **sink**. All of this is
-configured in the pipes configuration. As with water pipes, there is a
-flow inside the single pipe (segment), and pipes connect to other pipes
+configured in the pipe configuration. As with water pipes, there is a
+flow inside the single pipe, and pipes connect to other pipes
 and systems.
 
 Data transformation Language (DTL) as the name implies is a
@@ -31,30 +31,30 @@ transformation. It is part of the internal flow of the pipe and an
 entity enters and is transformed before the resulting entity is passed
 to the next step in the flow. Usually the sink.
 
-A pipe does not strictly have to have a DTL-transform, but most pipes have
-one. DTL is not used outside pipes in Sesam.
+A pipe does not strictly have to have a DTL transform, but most pipes do. DTL is not used outside pipes in Sesam.
 
 **Source** and **Target** are two central concepts in DTL. Source is
 data entering the flow and target is data exiting the flow. In some DTL
-functions this is implicit, like copy and rename. For other DTL
+functions this is implicit, like ["copy"] and ["rename"]. For other DTL
 functions you use built-in Variables "_S." (**S**\ ource) and "_T."
 (**T**\ arget).
 
 The simplest DTL transforms only copy or rename a subset of the fields
-from the source (single) entity that flows from pipe-source into
-DTL-transform. The source-concept is context based in pipes and DTL. You
-will see examples of this.
+from the source entity that flows from source into
+DTL transform. To exemplify, look at the below flow from source to pipe configuration and then to output.
 
-Example: (need to line up with other examples and have a nice layout)
+Source:
 
-(*Link to short video*?)
+.. code-block:: json
 
-(pipe with only embeded data?? Make the dataset)
+   {
 
-(pipe with this datasett as source??)
+      "_id": "salesforce-lead:007",
+      "salesforce-lead:Username": "James Bond",
+      "salesforce-lead:EmailAddress": "jamesb007@gmail.com"
+   }
 
-This is the config for a pipe that gets data entities from the dataset
-salesforce-lead and make new enteties from each entity and put them in
+Pipe configuration:
 
 .. code-block:: json
 
@@ -82,7 +82,7 @@ salesforce-lead and make new enteties from each entity and put them in
 
                ["copy", ["list", "_id", "Username"]],
 
-               ["rename","EmailAddress",":Contact-point"]
+               ["rename","EmailAddress","ContactPoint"]
 
             ]
 
@@ -92,12 +92,18 @@ salesforce-lead and make new enteties from each entity and put them in
 
    }
 
-DTL is often more complex. E.g. it can pull and use data from other data
-sets in your Sesam node or deal with nested structures in the source
-entity.
+Output:
 
-DTL has many functions that you can use to transform data. You find an
-overview in the DTL Reference Guide. You will use this much.
+.. code-block:: json
+
+   {
+
+      "_id": "salesforce-lead:007",
+      "salesforce-lead:Username": "James Bond",
+      "salesforce-lead:ContactPoint": "jamesb007@gmail.com"
+   }
+
+As can be seen from the example, we only copy and rename fields from the source which has entered the pipe configuration and transformed in DTL-transforms defined there, resulting in a desired output. DTL however, is often more complex, For example, it can pull and use data from other datasets in your Sesam node or deal with nested structures in the source. So multiple options do exist and you will be exposed to most of these as you go through these sections. In case you cannot wait to have a look at all the possibilities, an overview of Sesam's DTL functions can be found in the :ref:`DTLReferenceGuide`. 
 
 .. seealso::
 
