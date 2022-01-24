@@ -124,7 +124,15 @@ The Semantic graph data store
 
 Sesam's semantic graph data store is used as a semantic reference model within a Sesam node. It is provisioned by global datasets and how namespaces are being merged in global pipe configurations. As such, the Semantic graph data store will not be operative until the point when global pipes have been defined and have completed their first run.
 
-The Semantic graph data store can be accessed via the "Browse" tab in the Sesam Management Studio. Additionally, all defined namespaced identifiers (NIs) in Sesam are Uniform Resource Locators (URLs). As such, NIs can be used to navigate the semantic graph data store. This is both true when clicking a NI after having accessed the "Browse" tab but also when i.e. navigating pipe datasets and clicking a NI to be redirected to the "Browse" view to start your explorative analysis.    
+The Semantic graph data store can be accessed via the "Browse" tab in the Sesam Management Studio. Additionally, all defined namespaced identifiers (NIs) in Sesam are Uniform Resource Locators (URLs). As such, NIs can be used to navigate the semantic graph data store. This is both true when clicking a NI after having accessed the "Browse" tab but also when i.e. navigating pipe datasets and clicking a NI to be redirected to the "Browse" view to start your explorative analysis. Said "Browse" view is presented in the below picture:
+
+.. _figure-graphStore-6-2:
+.. figure:: ./media/graphStore.png
+   :align: center
+
+   The Semantic Graph Data Store
+
+As can be seen from the above picture, the "Browse" view lets you text filter presented entities. In this case the entities are filtered on *norway* and as such will render you a semantic reference model with respect to that. This exemplifies how you can easily navigate and "zoom in" on specific aspects that is of interest to you. Additionally, you can also see how you can filter on "Namespaces" and how "Results" are shown with respect to your filter selection. In this example a total of 6658 entities are shown and the specific entity ``~:dbr:Arctic_Air_(Norway)`` is presented. 
 
 .. seealso::
 
