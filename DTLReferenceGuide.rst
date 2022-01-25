@@ -3634,11 +3634,13 @@ Hops
           specified. If it is a string, then it should refer to a
           comma separated list of dataset aliases. In that case all
           the values of those aliases will be returned. If it is an
-          expression then the expression is evaluated on the hops
-          result and its result is returned. If not specified, then it
-          will return the last dataset alias in the list. This is the
-          default. It can only be specified on the last HOP_SPEC
-          argument. ``return`` cannot be used with ``recurse``.
+          expression then the expression is used as a template for
+          the hops result. In the template you can refer to the 
+          dataset aliases and the interpolated result is returned. If
+          not specified, then it will return the last dataset alias
+          in the list. This is the default. It can only be specified
+          on the last HOP_SPEC argument. ``return`` cannot be used
+          with ``recurse``.
 
        7. ``track-dependencies``: OPTIONAL. A boolean. The default is
           true. Can be used to disable
