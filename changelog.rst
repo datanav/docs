@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_01_25:
+
+2022-01-25
+----------
+
+* The :ref:`lower keys <lower_keys_transform>`, :ref:`upper keys <upper_keys_transform>` and :ref:`undirected graph <undirected_graph_transform>` transforms have been deprecated. :ref:`DTL transforms <dtl_transform>` can replace the functionality of lower keys and upper keys transforms.
+
 .. _changelog_2022_01_24:
 
 2022-01-24
