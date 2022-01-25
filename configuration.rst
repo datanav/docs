@@ -6112,9 +6112,16 @@ Properties
      - ``false``
      -
 
+       .. _remove_pk_char_sql:
+   * - ``remove_pk_char_trailing_spaces``
+     - Boolean
+     - If set, removes trailing spaces from primary key values if they are of type ``char`` or ``nchar``. SQL automatically pads strings with whitespace if the string is shorter than the predetermined length, but trailing spaces are disregarded when comparing values. This setting, when ``true``, ensures that the sink also disregards trailing spaces. If set to ``false``, you can run into issues with updating existing rows.
+     - ``true``
+     -
+
    * - ``whitelist``
      - List<String>
-     - Deprecated. The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
+     - Deprecated. The names of the properties (columns) to include when inserting rows into the target table. If there is a
        ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
      -
      -

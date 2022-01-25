@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_01_24:
+
+2022-01-24
+----------
+
+* Added a new property :ref:`remove_pk_char_trailing_spaces <remove_pk_char_sql>` to the :ref:`SQL sink <sql_sink>`. This property is enabled by default and fixes an issue with updating table rows when the primary key is of type ``nchar`` or ``char``.
+
 .. _changelog_2022_01_20:
 
 2022-01-20
