@@ -144,11 +144,9 @@ Explanation:
             "where": [
               ["eq", "_S._id", "o.cust_id"]
             ]
-          }]
-        ]
-      ]
+          }]]]
 
-6. | The expression above adds the ``orders`` property to the target
+1. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
      property with the ``cust_id`` property of entities in the
      ``orders`` dataset. The join is done by the ``apply-hops`` function,
@@ -201,13 +199,13 @@ Explanation:
       "amount": 500
     }]
 
-7. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
+2. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
      ``order_count`` property to the target entity. Note that the value
      is the number of order entities in the target entity's ``orders``
      property. Note that we can access properties on the target entity
      once we've added them.
 
-8. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
+3. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
      evaluates to true. If the filter is false the target entity is not
      emitted / created.
 
