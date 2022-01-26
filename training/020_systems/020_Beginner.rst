@@ -104,7 +104,6 @@ You should now have the following system config:
 .. _practice-system-config-initial:
 .. code-block:: json
   :caption: Practice system config - initial
-  :linenos:
 
   {
     "_id": "difi",
@@ -203,7 +202,6 @@ Then we change the system config to reference it:
 .. _practice-system-config-env-var-ref:
 .. code-block:: json
   :caption: Practice system config with environment variable reference
-  :linenos:
 
   {
     "_id": "difi",

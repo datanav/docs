@@ -770,7 +770,6 @@ You should now have the following pipe config:
 .. _practice-pipe-config-initial:
 .. code-block:: json
   :caption: Practice pipe config - initial
-  :linenos:
 
   {
     "_id": "practice",
@@ -819,7 +818,6 @@ Here you will see two entities:
 But they are both empty:
 
 .. code-block:: json
-  :linenos:
 
   {
   }
@@ -850,7 +848,6 @@ Now you will see that the output has changed:
 
 .. code-block:: json
   :caption: ``practice:1``
-  :linenos:
 
   {
     "practice:data": "One",
@@ -859,7 +856,6 @@ Now you will see that the output has changed:
 
 .. code-block:: json
   :caption: ``practice:2``
-  :linenos:
 
   {
     "practice:data": "Two",
@@ -872,7 +868,6 @@ run a pipe and view it's output.
 .. _practice-pipe-config-final:
 .. code-block:: json
   :caption: Practice pipe config - final
-  :linenos:
 
   {
     "_id": "practice",
