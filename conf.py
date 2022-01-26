@@ -302,3 +302,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+html_js_files = ['https://js.hs-scripts.com/19709964.js']
+html_js_files = [('https://js.hs-scripts.com/19709964.js', {'id':'hs-script-loader', 'async': 'async', 'defer':'defer'})]
