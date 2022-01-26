@@ -144,7 +144,9 @@ Explanation:
             "where": [
               ["eq", "_S._id", "o.cust_id"]
             ]
-          }]]]
+          }]
+        ]
+      ]
 
 1. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
