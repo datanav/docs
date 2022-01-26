@@ -19,14 +19,14 @@ Core Concepts
 
 DTL allows developers to describe a data transform. The DTL processor applies the transform to a stream of entities. For each entity in the stream the same transform is applied. The result of processing is a stream of new entities.
 
-A DTL transform describes how to construct new entities from the source entity. A transform can also perform hops that range across datasets in the datahub. These hops must start from the source entity.
+An entity coming into a DTL transform is called the *source entity*. The DTL transform describes how to construct new entities from the source entity. A transform can also perform hops that range across datasets in the datahub. These hops must start from the source entity.
 
 DTL consists of 'functions' that can pick and transform data and 'hops' that can traverse the data in the datahub. In combination these offer a powerful way to construct new data entities from existing data. DTL functions are composable and thus allowing complex computation to be expressed.
 
 Syntax
 ------
 
-DTL uses a JSON syntax to describe the transforms to perform. In general DTL uses functions over keywords and as such there are just a few terms that are baked into the language.
+DTL uses a JSON syntax to describe the transforms to perform. This allows us to define it directly in the pipe's configuration, which is also written in JSON. In general, DTL uses functions over keywords and as such there are just a few terms that are baked into the language.
 
 An example using the 'add' transform:
 
@@ -40,7 +40,7 @@ And composing functions:
 Annotated Example
 =================
 
-Lets say that we have two datasets ``person`` and ``orders``, and that
+Let's say that we have two datasets, ``person`` and ``orders``, and that
 we want to transform the *persons* by joining in their *orders* and
 apply a few other transform functions. In this section you'll find a
 complete DTL transform that takes entities from the ``person`` dataset,
@@ -122,7 +122,8 @@ Explanation:
 2. | There are two named ``rules`` specified in the DTL transform:
      ``default`` and ``order``. The ``default`` rule is mandatory and
      is the one that is applied to the entities in the ``person``
-     dataset.
+     dataset. You can think of it as the entry point of the execution, 
+     similar to a ``main`` function in many programming languages.
 
 3. | ``["copy", "_id"]`` copies the ``_id`` property from the source
      entity to the target entity.
@@ -130,21 +131,24 @@ Explanation:
 4. | ``["add", "type", "customer"]`` adds the ``type`` property to the target
      entity with the literal value ``"customer"``.
 
-5. | ``["add", "name", ["upper", "_S.name"]]`` add the ``name``
-     property to the target entity by uppercasing the name in the source
+5. | ``["add", "name", ["upper", "_S.name"]]`` adds the ``name``
+     property to the target entity, uppercasing the name in the source
      entity.
 
    ::
 
-       ["add", "orders",
-         ["sorted", "_.amount", ["apply-hops", "order", {
-           "datasets": ["orders o"],
-           "where": [
-             ["eq", "_S._id", "o.cust_id"]
-           ]
-       }]]]
+      ["add", "orders",
+        ["sorted", "_.amount",
+          ["apply-hops", "order", {
+            "datasets": ["orders o"],
+            "where": [
+              ["eq", "_S._id", "o.cust_id"]
+            ]
+          }]
+        ]
+      ]
 
-6. | The expression above adds the ``orders`` property to the target
+1. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
      property with the ``cust_id`` property of entities in the
      ``orders`` dataset. The join is done by the ``apply-hops`` function,
@@ -197,13 +201,13 @@ Explanation:
       "amount": 500
     }]
 
-7. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
+2. | ``["add", "order_count", ["count", "_T.orders"]]`` adds the
      ``order_count`` property to the target entity. Note that the value
      is the number of order entities in the target entity's ``orders``
      property. Note that we can access properties on the target entity
      once we've added them.
 
-8. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
+3. | Stop processing if the ``["filter", ["gt", "_T.order_count", 10]]``
      evaluates to true. If the filter is false the target entity is not
      emitted / created.
 
@@ -234,8 +238,8 @@ Variables
 
 There are four built-in variables in the Data Transformation
 Language. These are ``_S``, ``_T``, ``_P``, ``_B`` and ``_``. They refer to
-the source entity, the target entity, the parent context, bound endpoint variables and the
-current value respectively. ``_S`` and ``_T`` appear in pairs inside
+the source entity, the target entity, the parent context, the bound endpoint variables and the
+current , respectively. ``_S`` and ``_T`` appear in pairs inside
 each applied transform. ``_P`` appears inside the ``apply`` function
 and refers to the parent context. ``_`` is used to refer to the
 current value in functional expressions. The ``_B`` variable is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>` to hold variables
@@ -3634,11 +3638,13 @@ Hops
           specified. If it is a string, then it should refer to a
           comma separated list of dataset aliases. In that case all
           the values of those aliases will be returned. If it is an
-          expression then the expression is evaluated on the hops
-          result and its result is returned. If not specified, then it
-          will return the last dataset alias in the list. This is the
-          default. It can only be specified on the last HOP_SPEC
-          argument. ``return`` cannot be used with ``recurse``.
+          expression then the expression is used as a template for
+          the hops result. In the template you can refer to the 
+          dataset aliases and the interpolated result is returned. If
+          not specified, then it will return the last dataset alias
+          in the list. This is the default. It can only be specified
+          on the last HOP_SPEC argument. ``return`` cannot be used
+          with ``recurse``.
 
        7. ``track-dependencies``: OPTIONAL. A boolean. The default is
           true. Can be used to disable
