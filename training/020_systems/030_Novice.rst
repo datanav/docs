@@ -110,7 +110,6 @@ Regardless of system type in Sesam its configuration will always be JSON. Import
 
 .. code-block:: json
   :caption: Common System Properties
-  :linenos:
 
   {
     "_id": "a_system_id",

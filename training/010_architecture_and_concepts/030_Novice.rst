@@ -381,7 +381,6 @@ Creating global datasets allows you to:
 	For example we might assume that hr-person should be master for "email", crm-person should be master for "hours-pr-project" and economy-person should be master for weeky-hours-billed. This may be setup by the following logic:
 
 .. code-block:: json
-  :linenos:
 
   ["add", "email",
     ["coalesce",
@@ -392,7 +391,6 @@ Creating global datasets allows you to:
 In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
 
 .. code-block:: json
-  :linenos:	
 
   ["add", "hours-pr-project",
     ["coalesce",
