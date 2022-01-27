@@ -41,7 +41,7 @@ You can browse, add and discuss feature requests in the `Feature Request Forum <
 Ask public questions
 --------------------
 
-There are some unofficial questions and answers to be found on
+There are some informal questions and answers to be found on
 `Stack Overflow <https://stackoverflow.com/questions/tagged/sesam>`_.
 
 
