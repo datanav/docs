@@ -33,6 +33,19 @@ Ask public questions
 There are some unofficial questions and answers to be found on
 `Stack Overflow <https://stackoverflow.com/questions/tagged/sesam>`_.
 
+Feature Requests
+----------------
+
+You can browse, add and discuss feature requests in the `Feature Request Forum <https://support.sesam.io/hc/en-us/community/topics/360000504840-Feature-Requests>`_.
+
+Ask public questions
+--------------------
+
+There are some unofficial questions and answers to be found on
+`Stack Overflow <https://stackoverflow.com/questions/tagged/sesam>`_.
+
+
+
 Chat with others
 ----------------
 
