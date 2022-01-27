@@ -30,7 +30,7 @@ this is a collection of data from `Github <https://github.com/sesam-community>`_
 Ask public questions
 --------------------
 
-There are some unofficial questions and answers to be found on
+There are some informal questions and answers to be found on
 `Stack Overflow <https://stackoverflow.com/questions/tagged/sesam>`_.
 
 Feature Requests
