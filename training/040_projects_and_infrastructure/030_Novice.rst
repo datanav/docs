@@ -330,3 +330,35 @@ As can be seen from the above solution Sesam pulls data from said three systems,
 
 Tasks for Projects & Infrastructure: Novice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. *What does the node config consist of?*
+
+#. *What can be found in the ``/expected`` and ``/variables`` folders?*
+
+#. *Is the CI/CD workflow the preferred method to work on a Sesam project?*
+
+#. *What does the CI/CD workflow need in order for it to be operable?*
+
+#. *What are the benefits of working in a CI/CD workflow?*
+
+#. *Name three different means of monitoring in Sesam.* 
+
+#. *Can monitoring both be done for a node as a whole but also its pipes and systems?* 
+
+#. *Why do you need to know your systems when working on a Sesam project?*
+
+#. *Draft a solution architecture (in Power Point) for the following:* 
+  
+    Systems:
+
+      Hubspot - data must be synchronized
+        
+        - Datatype: Company
+    
+      MySQL - data is only pushed
+        
+        - Datatype: Company and Project
+    
+      Salesforce - data must be synchronized
+
+        - Datatype: Project
