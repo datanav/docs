@@ -4,7 +4,6 @@
 Beginner
 --------
 
-
 .. _what-is-a-microservice-5-1:
 
 What is a microservice?
@@ -42,7 +41,9 @@ Why use Microservices in Sesam?
 
 .. sidebar:: Summary
 
-  When built-in connectors are insufficient, use microservices.
+  Use microservices in Sesam...
+
+  - when built-in connectors are insufficient
 
 Most of the time you can use Sesam's build-in connectors to access
 external systems, but sometimes you will find that you need to connect
@@ -67,7 +68,7 @@ How are Microservices used in Sesam?
 
 .. sidebar:: Summary
 
-  Microservices in Sesam are:
+  Microservices in Sesam are...
 
   - defined in system configs
   - hosted in docker containers
@@ -189,18 +190,20 @@ Microservice hosting
 
 .. sidebar:: Summary
 
-  - Microservice source code is hosted in `Sesam's community at GitHub <https://github.com/sesam-community>`_
-  - Microservice docker images are hosted in `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
-  - Auto-build scripts publish docker images to Sesam's community at DockerHub
-  - `Sesam Community Guidelines <https://github.com/sesam-community/guidelines>`_
+  Microservice...
+
+  - source code is hosted in Sesam's `community at GitHub <https://github.com/sesam-community>`_
+  - docker images are hosted in Sesam's `community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+  - auto-build scripts publish docker images to Sesam's community at DockerHub
+  - guidelines can be found at Sesam's `Community Guidelines <https://github.com/sesam-community/guidelines>`_
 
 We have already touched on Sesam's communities at GitHub and DockerHub
 to find available microservices. Let us take a more detailed look at how
 microservice hosting is done with Sesam.
 
-We have `Sesam's community at GitHub <https://github.com/sesam-community>`_
+We have Sesam's `community at GitHub <https://github.com/sesam-community>`_
 for hosting microservice source code,
-and we have `Sesam's community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
+and we have Sesam's `community at DockerHub <https://hub.docker.com/u/sesamcommunity>`_
 for hosting microservice docker images.
 
 When writing microservices we recommend putting the source code into
@@ -229,19 +232,31 @@ for more information on how to use the auto-build script and also how to contrib
 Running a microservice in Sesam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Intro til Running I sesam
+.. sidebar:: Summary
 
-Forklare GUI
+  Running a microservice in Sesam...
 
-Pull & Restart
+  - can be accessed under the **Systems** tab
 
-   Status
+Microservices in Sesam can be accessed under the **Systems** tab. After navigating here, you will be at the **Systems** view. In this view you will see a list of all implemented systems. Each of these systems can be accessed. Accessing a specific system gives you additional navigation possibilities and views. An example of this is shown in the below picture:
 
-   Refresh
+.. _figure-micSesam-5-1:
+.. figure:: ./media/System-Sesam.png
+   :align: center
 
-Forklare Config
+   Config view
 
-Pipe source/sink/http
+As can be seen from the above picture, the system you are looking at is ``entity-diff-transform`` and you are seeing its **Config** view. The **Config** view is central in that it allows you to configure your system, as outlined in :ref:`how-are-microservices-used-in-sesam-5-1`. As you might recognize, ``entity-diff-transform`` is of the system type `microservice <https://docs.sesam.io/configuration.html#microservice-system>`_, which can be seen on line 3 of the system configuration. 
+
+Moving on to the **Status** view. This view is quite central when running a microservice in Sesam, as it allows for you to pull the docker image, restarting the system and inspecting its logs. To illustrate this, look at the below picture:
+
+.. _figure-micSesamView-5-1:
+.. figure:: ./media/Status-view.png
+   :align: center
+
+   Status view
+
+From the above picture you can see the **Pull and restart** button in addition to the **Refresh** button. These buttons allow for you to respectively pull a docker image in addition to restarting it and then refreshing the current view to verify that the microservice produces logs. Logs for a system is what you see in the **logs** square. Each entry in the square is a log made from the logic written into the microservice. As outlined initially in :ref:`what-is-a-microservice-5-1`, Sesam usually implement microservices written in Python 3. 
 
 .. seealso::
 
@@ -251,6 +266,12 @@ Pipe source/sink/http
 
 Categories of Microservices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. sidebar:: Summary
+
+  Categories of microservices...
+
+  - consist of internal and external microservices
 
 Extending on the topic of running microservices in Sesam, the following categories of microservices will be elaborated on in this section:
 
