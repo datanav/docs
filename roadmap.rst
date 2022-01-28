@@ -24,6 +24,14 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
+Property lineage (Q1 2022)
+==========================
+
+Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
+are composed using introspectable DTL in combination with schema collection allows us to continously track property lineage.
+
+We are working on making this lineage data available, as well as looking at ways to visualize it.
+
 Extensions
 ==========
 
