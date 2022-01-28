@@ -286,6 +286,13 @@ Transit encoding
 
 Sesam's entity data model is a `JSON <https://www.json.org/json-en.html>`_ compatible data model. JSON itself supports a limited number of data types, so in order to make the model richer, the entity data model supports a subset of the `Transit <https://github.com/cognitect/transit-format>`_ data types. Transit encoding is a technique for encoding a larger set of data types in JSON. See the :doc:`entity data model <entitymodel>` for more information about this encoding.
 
+.. _schema-inferencing:
+
+Schema collection
+=================
+
+Data in Sesam is dynamically typed. Properties can be added or removed and their types changed over time. Schema validation can be enforced, but it is optional. This dynamism makes the system agile. Automatic schema collection is enabled by default. Sesam tracks the changes to entities and will automatically generate a schema for the source entities and sink entities of pipes. In practice this means that you can see the structure of the data that went into the pipe and the data that came out of the pipe. This feature is the foundation that :ref:`property lineage <property-lineage>` builds on.
+
 .. _concepts-compaction:
 
 Compaction
