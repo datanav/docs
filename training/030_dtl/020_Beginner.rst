@@ -12,7 +12,7 @@ Pipes, where DTL executes
 
   A pipe...
 
-  - has an associated **pump** that pulls data from the **source**, pushes them through any **transforms**, and sends the results to the **sink**
+  - has an associated **pump** that pulls data from the **source**, pushes it through any **transforms**, and sends the results to the **sink**
   - is configured in the pipe configuration
   - does not strictly have to have a DTL transform, but most pipes do
 
@@ -20,7 +20,7 @@ Sesam consumes and produces streams of data in the form of lists of
 entities.
 
 Streams of entities flow through **pipes**. A pipe has an associated
-**pump** that pull data from the **source**, push them through
+**pump** that pulls data from the **source**, pushes it through
 any **transforms**, and send the results to the **sink**. All of this is
 configured in the pipe configuration. As with water pipes, there is a
 flow inside the single pipe, and pipes connect to other pipes
@@ -35,7 +35,7 @@ A pipe does not strictly have to have a DTL transform, but most pipes do. DTL is
 
 **Source** and **Target** are two central concepts in DTL. Source is
 data entering the flow and target is data exiting the flow. In some DTL
-functions this is implicit, like ["copy"] and ["rename"]. For other DTL
+functions this is implicit, like ``["copy"]`` and ``["rename"]``. For other DTL
 functions you use built-in Variables "_S." (**S**\ ource) and "_T."
 (**T**\ arget).
 
