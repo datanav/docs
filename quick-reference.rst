@@ -35,11 +35,8 @@ Configuration
        :ref:`emit_children <emit_children_transform>` ·
        :ref:`http <http_transform>` ·
        :ref:`json_schema <json_schema_transform>` ·
-       :ref:`lower_keys <lower_keys_transform>` ·
        :ref:`rdf <rdf_transform>` ·
        :ref:`rest <rest_transform>` ·
-       :ref:`undirected_graph <undirected_graph_transform>` ·
-       :ref:`upper_keys <upper_keys_transform>` ·
        :ref:`xml <xml_transform>`
 
    * - Sinks
