@@ -1,6 +1,6 @@
-===============
-Data enrichment
-===============
+==========
+Enrichment
+==========
 
 .. contents:: Table of Contents
    :depth: 2
