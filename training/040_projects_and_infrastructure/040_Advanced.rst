@@ -1,8 +1,8 @@
 
-.. _projects-infrastructure-intermediate-4-3:
+.. _projects-infrastructure-advanced-4-3:
 
-Intermediate
-------------
+Advanced
+--------
 
 .. _dev-ci-test-prod-nodes-4-3:
 
@@ -24,43 +24,10 @@ Tagging av brancher for deployment
 
   TODO
 
-.. _ci-cd-4-3:
+.. _optimistic-locking-4-3:
 
-Continoues Integration and Deployment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-ci-node
-
-kjører med test-data
-
-embedded data
-
-NB!! nye cli fra 1.18.1(separat testdata-fodler)
-
-NB!! ikke koblet til live systemer, ikke legg inn secrets som ikke skal
-være der
-
-node-env
-
-conditional source
-
-embedded data
-
-NB!! nye cli fra 1.18.1(separat testdata-folder)
-
-conditional transform
-
-Hvordan bruker vi versjonskontroll(git, vcs, svn)
-
-initiere repo (se docs)
-
-protected branches
-
-merge regler
-
-byggserver
-
-Autodeploy/vs ikke
+Optimistic Locking
+~~~~~~~~~~~~~~~~~~
 
 .. seealso::
 

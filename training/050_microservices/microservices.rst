@@ -12,6 +12,5 @@ Microservices
 
    Beginner <020_Beginner>
    Novice <030_Novice>
-   Intermediate <040_Intermediate>
-   Advanced <050_Advanced>
+   Advanced <040_Advanced>
    Epilogue <060_Epilogue>

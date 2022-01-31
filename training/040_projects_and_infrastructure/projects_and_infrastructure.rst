@@ -13,5 +13,5 @@ Projects & infrastructure
 
    Beginner <020_Beginner>
    Novice <030_Novice>
-   Intermediate <040_Intermediate>
+   Advanced <040_Advanced>
    Epilogue <060_Epilogue>
