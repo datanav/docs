@@ -897,15 +897,15 @@ global-customer without needing to worry about the original origin of the attrib
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`global-1-2`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`hops-1-3`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-advanced-1-3` > :ref:`hops-1-3`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`subset-1-3`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-advanced-1-3` > :ref:`subset-1-3`
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`merge-as-a-source-3-2`
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`hops-3-2`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`source-subset-3-3`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-advanced-3-3`: > :ref:`source-subset-3-3`
 
   :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-golden-record`
 
