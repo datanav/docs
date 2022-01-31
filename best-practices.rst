@@ -7,4 +7,4 @@ Best Practices
 
    Planning a Sesam project <pre-planning>
    Setting up a Sesam environment <setup-environment>
-   Creating a Sesam Dataflow <sesam-dataflow>
+   Creating a Dataflow in Sesam <sesam-dataflow>
