@@ -1,10 +1,10 @@
 .. _creating-a-sesam-dataflow:
 
-=========================
-Creating a Sesam Dataflow
-=========================
+============================
+Creating a Dataflow in Sesam
+============================
 
-The Sesam Dataflow consists of the following steps: *Collect*, *Enrich*, *Connect*, *Transform* and *Share*. Each of these steps ensure data is modelled to a standard which allows Sesam to operate optimally. As such, it is extremely important to get aquainted with these steps, why they are important and what they do. 
+An ideal dataflow in Sesam consists of the following conceptual steps: *Collect*, *Enrich*, *Connect*, *Transform* and *Share*. These steps are explained below. Following these principles ensures data is modelled in a way that allows Sesam to operate optimally, so it's important to get acquainted with them and the reasoning behind them.
 
 .. _collect:
 
