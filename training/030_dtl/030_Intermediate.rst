@@ -1,7 +1,7 @@
-.. _dtl-novice-3-2:
+.. _dtl-intermediate-3-2:
 
-Novice
-------
+Intermediate
+------------
 
 .. _copy-3-2:
 
@@ -20,7 +20,7 @@ Copy is one of the most fundamental DTL functions you will be using in Sesam whe
 
 ``["copy", "golden-object:*"]``
 
-In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist data by providing arguments in the ``["copy"]`` function as follows:   
+In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist data by providing arguments in the ``["copy"]`` function as follows:
 
 ``["copy", "*", "_*"]``
 
@@ -286,7 +286,7 @@ As can be seen from the above pipe configuration, you have successfully added th
 
   :ref:`developer-guide` > :ref:`working-with-RDF`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`sesams-approach-to-semantics-RDF-1-2`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-2` > :ref:`sesams-approach-to-semantics-RDF-1-2`
 
 .. _namespace-3-2:
 
@@ -297,7 +297,7 @@ Namespaces
 
   Namespaces...
 
-  - are essential with regards to Sesam's semantic enrichment 
+  - are essential with regards to Sesam's semantic enrichment
   - aid in data lineage and shaping of data
   - are applied automatically by default
 
@@ -316,12 +316,12 @@ To show the usage of namespaces we will extend upon the previously introduced ex
 In the above output, everything you see on the properties prior to the first ":" is Sesam's namespace enrichment.
 As such, the namespace ``mssql-accounts`` is applied as the namespace for all properties, including the ``_id`` that is transformed in your pipe configuration for ``mssql-accounts``.
 
-This is fairly straightforward, albeit imagine if you have merged multiple pipe datasets in for example a global, what happens then? How can you distinquish which properties originate from which pipe configuration? and how do you pick specific namespaces after these are merged? These questions will now be introduced and answered.  
+This is fairly straightforward, albeit imagine if you have merged multiple pipe datasets in for example a global, what happens then? How can you distinquish which properties originate from which pipe configuration? and how do you pick specific namespaces after these are merged? These questions will now be introduced and answered.
 
 Global pipe config:
 
 .. code-block:: json
-  
+
   {
     "_id": "global-person",
     "type": "pipe",
@@ -365,7 +365,7 @@ These properties are prioritized in a list and to pick spesific properties from 
 To show how the above pipe configuration evaluates, look at the below result:
 
 .. code-block:: json
-	
+
 	{
 	  "mssql-accounts:Email": "christian89@hotmail.com",
 	  "mssql-accounts:Postcode": "6400",
@@ -382,7 +382,7 @@ To show how the above pipe configuration evaluates, look at the below result:
 	  "global-person:PrivateAddress": "Danmarksgate 7"
 	}
 
-As can be seen from the above example, namespaces allow for investigating and understanding where properties come from, are changed or first introduced. In addition, namespaces ensure that Sesam's MDM can be carried out. 
+As can be seen from the above example, namespaces allow for investigating and understanding where properties come from, are changed or first introduced. In addition, namespaces ensure that Sesam's MDM can be carried out.
 
 .. seealso::
 
@@ -475,7 +475,7 @@ Finally, as mentioned initially, the NI is in reality a URI, and as such you can
 
 Equality is part of Sesam's `conditional DTL functions <https://docs.sesam.io/quick-reference.html#dtl-functions>`_.
 In terms of functionality however, it serves a dual purpose. The ``["eq"]`` function can be used both for join expressions as well as equality comparisons.
-Regardless, the ``["eq"]`` function is a boolean evaluator, meaning comparisons are returned as either ``true`` or ``false``. 
+Regardless, the ``["eq"]`` function is a boolean evaluator, meaning comparisons are returned as either ``true`` or ``false``.
 
 Join expressions evaluates intersection whereas the equality comparison evaluates exact matches.
 
@@ -515,13 +515,13 @@ Merge as a Source
   - should use the properties ``version``, ``strategy`` and ``identity`` to work effectively
   - as a source is typically used in global pipes
 
-Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation. 
+Using merge as a source will join multiple datasets. Merging in Sesam can be compared to a full outer join in a database. In practice this means that everything that originates from each dataset being merged, will be retained in the merged entity representation.
 
 For merging to work effectively, the properties ``version``, ``strategy`` and ``identity`` should be used.
 
 - ``version`` - can be set to either ``1`` or ``2``. Use ``2`` to ensure the merge source is up to date.
 
-- ``strategy`` - can be set to either ``"defalt"`` or ``"compact"``. 
+- ``strategy`` - can be set to either ``"defalt"`` or ``"compact"``.
 
 - ``identity`` - can be set to either ``"first"`` or ``"composite"``.
 
@@ -679,7 +679,7 @@ When the above pipe runs, the following output will be produced:
     "global-person:PrivateAddress": "Danmarksgate 7"
   }
 
-As can be seen from the above dataset, you should recognize the properties with the namespace "global-person", as these properties are our added global properties in the above pipe configuration. This example is in practice Sesam's core MDM transform capability. 
+As can be seen from the above dataset, you should recognize the properties with the namespace "global-person", as these properties are our added global properties in the above pipe configuration. This example is in practice Sesam's core MDM transform capability.
 
 .. seealso::
 
@@ -930,7 +930,7 @@ As can be seen from the above pipe configuration ``"person-salesforce"``, the ``
 
 In the ``["hops"]`` function you can see how two namespaces are joined in the ``["eq"]`` statement, namely ``"salesforce-person"`` and the abbreviated form ``"ec"``. As such, when ``departmentID`` from ``"salesforce-person"`` equals ``department`` from ``"erp-company"``, we can enrich our data beyond what is readily available from the source.
 
-When this pipe completes its run, the following output will be produced: 
+When this pipe completes its run, the following output will be produced:
 
 .. code-block:: json
 
@@ -1047,7 +1047,7 @@ To illustrate such a use case imagine working with date properties. Date is an o
 Source data:
 
 .. code-block:: json
-	
+
 	{
 		"_id": "salesforce-person:40",
 	  "$ids": [
@@ -1069,7 +1069,7 @@ Source data:
 Pipe Configuration:
 
 .. code-block:: json
-	
+
 	{
 	  "_id": "transform-salesforce-person",
 	  "type": "pipe",
@@ -1110,7 +1110,7 @@ Output:
     "transform-salesforce-person:Position": "CTO"
   }
 
-As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean evaluator and used to decide whether entities should be filtered. ``["is-datetime"]`` is one of many DTL functions in Sesam that can evaluate types of data as these are used to transform your data as it moves through a Sesam dataflow. Another aspect that is neat to remember going forward is the use of prefixes for types of data in Sesam. As can be seen from the property ``erp-person:updateDate`` the date is prefixed with the default ``~t`` whilst for example a float value would be prefixed with the default ``~f``. Finally, you should also recognize that we define our schema requirements as specified in the ``"[comment]"`` function.   
+As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean evaluator and used to decide whether entities should be filtered. ``["is-datetime"]`` is one of many DTL functions in Sesam that can evaluate types of data as these are used to transform your data as it moves through a Sesam dataflow. Another aspect that is neat to remember going forward is the use of prefixes for types of data in Sesam. As can be seen from the property ``erp-person:updateDate`` the date is prefixed with the default ``~t`` whilst for example a float value would be prefixed with the default ``~f``. Finally, you should also recognize that we define our schema requirements as specified in the ``"[comment]"`` function.
 
 .. seealso::
 
@@ -1118,10 +1118,10 @@ As outlined above in the pipe configuration, ``["is-datetime"]`` is a boolean ev
 
   :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`expression_language`
 
-.. _tasks-for-dtl-novice-3-2:
+.. _tasks-for-dtl-intermediate-3-2:
 
-Tasks for DTL: Novice
-~~~~~~~~~~~~~~~~~~~~~
+Tasks for DTL: Intermediate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. *Can you whitelist and blacklist data in ``["copy"]``?*
 

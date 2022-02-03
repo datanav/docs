@@ -1,7 +1,7 @@
-.. _projects-infrastructure-novice-4-2:
+.. _projects-infrastructure-intermediate-4-2:
 
-Novice
-------
+Intermediate
+------------
 
 .. _node-config-4-2:
 
@@ -13,7 +13,7 @@ Node config
   The Node config...
 
   - is a Sesam node´s skeletal structure
-  - consists of configuration files   
+  - consists of configuration files
 
 The node config in a Sesam node is like its skeletal structure. An example of said skeletal structure is presented below:
 
@@ -28,16 +28,16 @@ The node config in a Sesam node is like its skeletal structure. An example of sa
     | | ├ development.json
     | | ├ test.json
     | | └ production.json
-    | └ node-metadata.conf.json    
+    | └ node-metadata.conf.json
     ├ README.md
     ├ LICENSE
     ├ .gitignore
     ├ test-env.json
     └ ++
 
-The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project you are working on, i.e: ``sesam/``. In general, it is recommended to have a total of `four Sesam nodes <https://docs.sesam.io/setup-environment.html#subscriptions>`_, which in project terms will be development, CI-test, test and production as this ensures CI/CD workflows can be carried out. Distinct to each environment you will have an environment.json file in your ``variables/`` folder. This will be elaborated on when talking about the ``node/`` folder. Finally, in the root folder, you will have files such as ``README.md``, ``LICENSE`` and ``.gitignore``. As the ``LICENSE`` and ``.gitignore`` files are quite generic, further description of these will be omitted here. The ``README.md`` file however will be specific to each project you are working on, and should ensure thorough documentation of the practices in place.  
+The folder ``my-project-directory/`` will be your root folder. You will typically give this folder a name specific to the project you are working on, i.e: ``sesam/``. In general, it is recommended to have a total of `four Sesam nodes <https://docs.sesam.io/setup-environment.html#subscriptions>`_, which in project terms will be development, CI-test, test and production as this ensures CI/CD workflows can be carried out. Distinct to each environment you will have an environment.json file in your ``variables/`` folder. This will be elaborated on when talking about the ``node/`` folder. Finally, in the root folder, you will have files such as ``README.md``, ``LICENSE`` and ``.gitignore``. As the ``LICENSE`` and ``.gitignore`` files are quite generic, further description of these will be omitted here. The ``README.md`` file however will be specific to each project you are working on, and should ensure thorough documentation of the practices in place.
 
-Moving on from your root folder, the next folder will be your ``node/`` folder. This folder is the one that holds the skeletal information pertaining to all the metadata in your Sesam node. In the ``node/`` folder you will find four subfolders: ``expected/``, ``pipes/``, ``systems/`` and ``variables/`` in addition to the json file ``node-metadata.conf.json``. The subfolders only contain json files. This is an important aspect to remember, as everything in a Sesam node is json.    
+Moving on from your root folder, the next folder will be your ``node/`` folder. This folder is the one that holds the skeletal information pertaining to all the metadata in your Sesam node. In the ``node/`` folder you will find four subfolders: ``expected/``, ``pipes/``, ``systems/`` and ``variables/`` in addition to the json file ``node-metadata.conf.json``. The subfolders only contain json files. This is an important aspect to remember, as everything in a Sesam node is json.
 
 The ``expected/`` folder is where all expected outputs from `outbound pipes <https://docs.sesam.io/data-modelling.html#outbound-pipes>`_ are stored. These are used by the Sesam-CLI and CI/CD workflows to verify correct outputs. This approach is described in detail here :ref:`sesam-cli-4-1`. The ``pipes/`` folder contains all your pipe files whilst the ``systems/`` folder contains all your system files. Finally, the ``variables/`` folder will contain all your defined variables files pertaining to each environment. For this example our environment is development, and as such we will be looking at the ``development.json`` file placed in the ``variables/`` folder:
 
@@ -49,9 +49,9 @@ The ``expected/`` folder is where all expected outputs from `outbound pipes <htt
     "salesforce_base_url": "https://salesforce.com/api/v2/",
     "salesforce_username": "test007",
     "node-env": "test"
-  } 
+  }
 
-As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"node-env": "test"`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. Additionally, the CI-test recommended Sesam node will have its variables defined by the file ``test-env.json`` placed in your root project folder. 
+As can be seen from the above we have defined variables for an erp and salesforce system. This should tell you that these two systems are in use in your development environment. In addition, the property ``"node-env": "test"`` tells you that in your development environment the node is using embedded data to run all its dataflows. Embedded data is synonymous with test data and is described in detail here :ref:`best-practice-inbound-pipes`. Additionally, the CI-test recommended Sesam node will have its variables defined by the file ``test-env.json`` placed in your root project folder.
 
 Finally, the ``node-metadata.conf.json`` is a json file that contain metadata about how a Sesam node is globally parameterized. A typical example is presented below:
 
@@ -134,7 +134,7 @@ These properties allow you to connect to a given Sesam node's API.
 
 With regards to the node config, the properties ``GIT_REPO``, ``SYNC_ROOT`` and ``VARIABLES_FILE_PATH`` are all related to the skeletal structure of the node config.
 The ``GIT_REPO`` must contain the link to the GIT repo where your project's Sesam configuration resides.
-The ``SYNC_ROOT`` is equivalent to the ``node/`` folder. Finally, the ``VARIABLES_FILE_PATH`` defines which of the variables files should be used when the Github Autodeployer automatically uploads an updated node config to your Sesam node. 
+The ``SYNC_ROOT`` is equivalent to the ``node/`` folder. Finally, the ``VARIABLES_FILE_PATH`` defines which of the variables files should be used when the Github Autodeployer automatically uploads an updated node config to your Sesam node.
 
 
 .. caution::
@@ -248,7 +248,7 @@ The pipe execution dataset keeps a record after each pump run of a given pipe. T
 
 As can be seen from the above dataset, this is a ``pump-failed`` entity. Sesam also produces entities for each ``pump-started`` and ``pump-completed`` run in the execution dataset. Generally speaking it will often times be most relevant to look at ``pump-failed``datasets as for example a ``pump-completed`` will just tell you that everything ran as expected.
 
-From the ``pump-failed`` entity presented above, you will see the properties ``reason_why_stopped`` and ``traceback``. The ``reason_why_stopped`` property provides a brief description of why the pump failed whilst the ``traceback`` property provides a more detailed description of why the pump failed. In general, the property ``reason_why_stopped`` is a good first candidate to check when a pipe fails its run. In terms of automating monitoring you can set up mail notification when line of business related pipes fail a given run. This allows you to act quickly if fails should occur.  
+From the ``pump-failed`` entity presented above, you will see the properties ``reason_why_stopped`` and ``traceback``. The ``reason_why_stopped`` property provides a brief description of why the pump failed whilst the ``traceback`` property provides a more detailed description of why the pump failed. In general, the property ``reason_why_stopped`` is a good first candidate to check when a pipe fails its run. In terms of automating monitoring you can set up mail notification when line of business related pipes fail a given run. This allows you to act quickly if fails should occur.
 
 System logs
 ###########
@@ -266,7 +266,7 @@ External monitoring
 
 External monitoring can be implemented by requesting resources from the :ref:`api-top`. This has been done in the microservices: `Statuspage <https://github.com/sesam-community/statuspage>`_ and `Statuspage monitoring pipes <https://github.com/sesam-community/statuspage-monitoring-pipes>`_ which connects to the Statuspage API in addition the Service API in Sesam.
 
-The Statuspage microservice monitors a Sesam node's health whereas the Statuspage monitoring pipes microservice monitors pipes. What is convenient about the Statuspage API is that it provides the user with an overview of monitored instances in addition to sending out emails when and if a monitored instance fails.  
+The Statuspage microservice monitors a Sesam node's health whereas the Statuspage monitoring pipes microservice monitors pipes. What is convenient about the Statuspage API is that it provides the user with an overview of monitored instances in addition to sending out emails when and if a monitored instance fails.
 
 .. seealso::
 
@@ -322,14 +322,14 @@ As can be seen from the above solution Sesam pulls data from said three systems,
 
   :ref:`developer-guide` > :ref:`json_push_protocol`
 
-  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-novice-2-2` > :ref:`authentication-methods-2-2`
+  :ref:`learn-sesam` > :ref:`systems` > :ref:`systems-intermediate-2-2` > :ref:`authentication-methods-2-2`
 
-  :ref:`learn-sesam` > :ref:`microservices-novice-5-2` > :ref:`authentication-with-microservices-5-2`
+  :ref:`learn-sesam` > :ref:`microservices-intermediate-5-2` > :ref:`authentication-with-microservices-5-2`
 
-.. _tasks-for-projects-infrastructure-novice-4-2:
+.. _tasks-for-projects-infrastructure-intermediate-4-2:
 
-Tasks for Projects & Infrastructure: Novice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks for Projects & Infrastructure: Intermediate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. *What does the node config consist of?*
 
@@ -341,24 +341,24 @@ Tasks for Projects & Infrastructure: Novice
 
 #. *What are the benefits of working in a CI/CD workflow?*
 
-#. *Name three different means of monitoring in Sesam.* 
+#. *Name three different means of monitoring in Sesam.*
 
-#. *Can monitoring both be done for a node as a whole but also its pipes and systems?* 
+#. *Can monitoring both be done for a node as a whole but also its pipes and systems?*
 
 #. *Why do you need to know your systems when working on a Sesam project?*
 
-#. *Draft a solution architecture (in Power Point) for the following:* 
-  
+#. *Draft a solution architecture (in Power Point) for the following:*
+
     Systems:
 
       Hubspot - data must be synchronized
-        
+
         - Datatype: Company
-    
+
       MySQL - data is only pushed
-        
+
         - Datatype: Company and Project
-    
+
       Salesforce - data must be synchronized
 
         - Datatype: Project

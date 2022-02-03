@@ -1,8 +1,8 @@
 
-.. _systems-intermediate-2-3:
+.. _systems-advanced-2-3:
 
-Intermediate
-------------
+Advanced
+--------
 
 .. _microservice-system-2-3:
 
@@ -73,7 +73,7 @@ configuration to find the systems.
 
   TODO
 
-.. _tasks-for-systems-intermediate-2-3:
+.. _tasks-for-systems-advanced-2-3:
 
-Tasks for Systems: Intermediate
+Tasks for Systems: Advanced
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

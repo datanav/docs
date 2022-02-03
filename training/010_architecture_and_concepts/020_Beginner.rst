@@ -949,21 +949,21 @@ original origin of the attribute.
 
   :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`special-sesam-attributes-1-1`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`full-outer-join-merge-1-2`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-2` > :ref:`full-outer-join-merge-1-2`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`left-join-hops-1-2`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-2` > :ref:`left-join-hops-1-2`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-novice-1-2` > :ref:`global-1-2`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-2` > :ref:`global-1-2`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`hops-1-3`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-advanced` > :ref:`hops-1-3`
 
-  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-intermediate-1-3` > :ref:`subset-1-3`
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts-advanced` > :ref:`subset-1-3`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`merge-as-a-source-3-2`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`merge-as-a-source-3-2`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-novice-3-2`: > :ref:`hops-3-2`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`hops-3-2`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`source-subset-3-3`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-advanced`: > :ref:`source-subset-3-3`
 
   :ref:`developer-guide` > :ref:`data-modelling` > :ref:`best-practice-golden-record`
 
@@ -1042,9 +1042,9 @@ Sesam.
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`: > :ref:`entity-id-and-namespaces-3-1`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`namespace-3-2`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`namespace-3-2`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`make-ni-3-2`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`make-ni-3-2`
 
 .. _special-sesam-attributes_rdf-type:
 
@@ -1076,6 +1076,8 @@ as follows in the merged entity:
   :ref:`developer-guide` > :ref:`working-with-RDF`
 
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`rdf:type-3-2`
+  
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`rdf:type-3-2`
 
 .. _id-1-1:
 
