@@ -1075,8 +1075,6 @@ as follows in the merged entity:
 
   :ref:`developer-guide` > :ref:`working-with-RDF`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`rdf:type-3-2`
-  
   :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-2`: > :ref:`rdf:type-3-2`
 
 .. _id-1-1:
