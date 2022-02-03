@@ -1,7 +1,7 @@
-.. _architecture-and-concepts-intermediate-1-3:
+.. _architecture-and-concepts-advanced:
 
-Intermediate
-------------
+Advanced
+--------
 
 .. _hops-1-3:
 
@@ -23,7 +23,9 @@ Indeksering
 Incremental System queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dataset vs database-tabell (oppdatere data)
+Inkrementelle spørringer mot databaser,
+koble sammen historikk tabell med objekt tabell
+for å få oppdatertDato f.eks
 
 .. seealso::
 
@@ -72,7 +74,32 @@ For everything Sesam is bad at or can’t do.
 
   TODO
 
-.. _tasks-for-architecture-and-concepts-intermediate-1-3:
+.. _eventual-consistency:
 
-Tasks for Architecture and Concepts: Intermediate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Eventual Consistency
+~~~~~~~~~~~~~~~~~~~~
+
+Dependency tracking causes reprocessing of source entity in the pipe
+with the hops.
+
+Idempotency
+
+.. seealso::
+
+  TODO
+
+.. _create-child-emit-children:
+
+Create Child & Emit children
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Change-tracking
+
+.. seealso::
+
+  TODO
+
+.. _tasks-for-architecture-and-concepts-advanced:
+
+Tasks for Architecture and Concepts: Advanced
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

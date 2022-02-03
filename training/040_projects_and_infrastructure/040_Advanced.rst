@@ -1,7 +1,7 @@
 
-.. _projects-infrastructure-intermediate-4-3:
+.. _projects-infrastructure-advanced-4-3:
 
-Intermediate
+Advanced
 ------------
 
 .. _dev-ci-test-prod-nodes-4-3:
@@ -101,7 +101,7 @@ Deploy to prod
 
   TODO
 
-.. _tasks-for-projects-and-infrastructure-intermediate-4-3:
+.. _tasks-for-projects-and-infrastructure-advanced-4-3:
 
-Tasks for Projects & Infrastructure: Intermediate
+Tasks for Projects & Infrastructure: Advanced
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

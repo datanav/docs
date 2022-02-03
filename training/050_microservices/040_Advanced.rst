@@ -1,9 +1,8 @@
 
-.. _microservices-intermediate-5-3:
+.. _microservices-advanced-5-3:
 
-Intermediate
-------------
-
+Advanced
+--------
 
 .. _using-a-microservice-as-output-in-sesam-5-3:
 
@@ -40,6 +39,9 @@ Looking inside an Output Microservice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create vs update
+ - f.eks skal sende payload mot /create hvis API
+   svarer at entitet ikke finnes fra før,
+   eller sende mot /update hvis den finnes.
 
 Formattering
 
@@ -82,7 +84,7 @@ Videreutvikling
 
 Release/tagging
 
-Ref. Optimalisering 5.3.17
+Ref. Optimalisering 5.3.17 (yield spesielt)
 
 Requirements.txt
 
@@ -169,9 +171,60 @@ SOAP
 
   TODO
 
-.. _tasks-for-microservices-intermediate-5-3:
 
-Tasks for Microservices: Intermediate
+.. _testing-5-3:
+
+Testing
+~~~~~~~
+
+
+
+Env vars
+
+Lokal testing
+
+Returnerer riktig format (json som sesam kan lese)
+
+Unit testing
+
+[Experimental] Undersøke:
+
+| [Experimental] Morten? (docker-compose att: Gabriell)
+|  
+
+[Experimental] !!NB!! Definer testing i ms // Lag en test-ms-template //
+Implementer MVP testing på sesam-community [great expectations
+python-lib Daniel har info]!!
+
+.. seealso::
+
+  TODO
+
+.. _proxy-endpoint-5-3:
+
+Proxy Endpoint [Jonas]
+~~~~~~~~~~~~~~~~~~~~~~
+
+Kan lage en ms med frontend f.eks og eksponere den fra sesam
+
+.. seealso::
+
+  TODO
+
+.. _chaining-5-3:
+
+Chaining
+~~~~~~~~
+
+Ref advanced system 2.4.13.
+
+.. seealso::
+
+  TODO
+
+.. _tasks-for-microservices-advanced-5-3:
+
+Tasks for Microservices: Advanced
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Run a microservice in Sesam [could be sink, http, source]

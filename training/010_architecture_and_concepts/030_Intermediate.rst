@@ -1,7 +1,7 @@
-.. _architecture-and-concepts-novice-1-2:
+.. _architecture-and-concepts-intermediate-1-2:
 
-Novice
-------
+Intermediate
+------------
 
 .. _joining-data-1-2:
 
@@ -63,7 +63,7 @@ Make namespaced identifiers for foreign keys - make-ni
 
 Continuing along the lines of joining data, namespaced identifiers (NIs) come into play. NIs in Sesam are used to reference an identifier or a NI in a related dataset. In order to create them, you can use either of the two functions: ``["make-ni"]`` or ``["ni"]``.
 
-In the below example, ``["make-ni"]`` will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:  
+In the below example, ``["make-ni"]`` will be used. A NI in Sesam works like a foreign key in a relational database. As such, it shows the relation between data objects and enables the joining of these. The pipe config presented in the below example, shows exactly this:
 
 .. code-block:: json
 
@@ -139,7 +139,7 @@ You are importing data from HubSpot into your Sesam node. HubSpot is a CRM platf
 As such, HubSpot will contain organisational data.
 What we are interested in illustrating is how Sesam applies its RDF standard to HubSpot data entering Sesam and also what the following example shows:
 
-HubSpot example data: 
+HubSpot example data:
 
 .. code-block:: json
 
@@ -216,7 +216,7 @@ you should recognize the semantic changes to the shape of the Hubspot example da
 What you in practice see here, is Sesam's RDF standard applied to its data.
 Each property now consists of a subject, a predicate and an object.
 
-To exemplify: ``hubspot-organisation`` is the subject, ``id`` is a predicate and ``1`` is the object.   
+To exemplify: ``hubspot-organisation`` is the subject, ``id`` is a predicate and ``1`` is the object.
 
 .. seealso::
 
@@ -246,17 +246,17 @@ Full outer join is something you will experience in the Sesam terminology as a "
 
    Figure – Full Outer Join
 
-A note on the handling of null values. In Sesam null values are not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example: 
+A note on the handling of null values. In Sesam null values are not existing. Meaning, as opposed to a full outer join which will populate empty entries in the join between tables with null values, the merge in Sesam will by default never have to do this. To exemplify, look at the below example:
 
 .. code-block:: json
-	
+
 	{
 	  "_id": "first_entity:foo",
 	  "first_entity:value": 1,
 	  "first_entity:string":"Hello merge",
 	  "first_entity:values": [1, 2, 4, 5]
 	}
-	{			
+	{
 	  "_id": "second_entity:bar",
 	  "second_entity:value": 1,
 	  "second_entity:string":"This is retained",
@@ -281,7 +281,7 @@ and the merged result, if we choose to retain the first ``"_id"`` of the above t
 	  ]
 	}
 
-What should immediately get your attention would be the ``"$ids"`` property in the merged result. Sesam utilizes this property to keep track of which ``"_id"s`` have been merged and as such aids in data governance, as you do your data modelling.  
+What should immediately get your attention would be the ``"$ids"`` property in the merged result. Sesam utilizes this property to keep track of which ``"_id"s`` have been merged and as such aids in data governance, as you do your data modelling.
 
 .. seealso::
 
@@ -312,20 +312,20 @@ In addition to a full outer join it is also relevant to talk about the left join
 To illustrate the graphical representation of a left join, the following practical example has been drafted:
 
 .. code-block:: json
-	
+
 	{
 	  "_id": "first_entity:foo",
 	  "first_entity:value": 1,
 	  "first_entity:string":"Hello merge",
 	  "first_entity:values": [1, 2, 4, 5]
 	}
-	{			
+	{
 	  "_id": "second_entity:bar",
 	  "second_entity:value": 1,
 	  "second_entity:string":"This is retained",
 	  "second_entity:values": [1, 3, 4, 6]
 	}
-	{			
+	{
 	  "_id": "third_entity:the_runt",
 	  "third_entity:value": 1,
 	  "third_entity:string":"Third's the charm"
@@ -343,7 +343,7 @@ When applying the hops, our point of reference will be the first data object fro
     "first_entity:left_join_result": [{"second_entity:values": [1, 3, 4, 6], null}]
   }
 
-As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property ``"left_join_result"``, where the last entry is null.  
+As stated earlier, it is important to note that in this case, null values will be returned if the hops is not possible between individual data objects, which can be seen in the new property ``"left_join_result"``, where the last entry is null.
 
 .. seealso::
 
@@ -366,8 +366,8 @@ Global datasets lie at the heart of a well managed Sesam architecture. They are 
 Creating global datasets allows you to:
 
 - 	Semantically group and structure data
-		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue. 
-		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.   
+		A semantic grouping of the data makes the data itself easier to understand and more intuitive to work with, both in terms of existing architectures and new projects. For existing architectures, separating your data into relatable and recognizable structures allows for more efficient support and error handling. To have all raw source data related to a concept (ie. customer data) directly upstream from a pipe substantially decreases the time you need to localize and to correct a potential issue.
+		Semantic grouping also makes your Sesam architecture more scalable and results in fewer active connections over time.
 
 -	Setup master data management - Golden records
 		One effect of global datasets is the ability to perform active master data management through setting golden records. Golden records are where Sesam architectures may localize and prioritize their master data in order to create a flexible system-wide model. Through golden records you may prioritize which system knows a specific type of data best, which system knows it second best and so on. By ordering systems based on their quality of data for a specific data type Sesam may ensure the highest quality of data possible. Another benefit of golden records are their reusability. Once their logic has been created a golden record may be used by any project downstream from its global dataset, thus saving both time and energy.
@@ -388,13 +388,14 @@ Creating global datasets allows you to:
     ]
   ]
 
-In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on. 
+In this case, all three source datasets have an email property. If the email property from hr-person is not null it will be used for our global property. If it is null then the Email property from crm-person will be evaluated, and so on.
 
 .. code-block:: json
 
   ["add", "hours-pr-project",
     ["coalesce",
       ["list", "_S.crm-person:hours-pr-project", "_S.economy-person:hours-pr-project"]
+    ]
   ]
 
 
@@ -402,9 +403,9 @@ In this case, all three source datasets have an email property. If the email pro
     ["coalesce",
       ["list", "_S.economy-person:weekly-hours-billed", "_S.crm-person:weekly-hours-billed"]
     ]
-  ] 
+  ]
 
-The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations. 
+The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritations.
 The dataset hr-person does not contain any data regarding "hours-pr-project" or "weekly-hours-billed" and can therefore be left out of the prioritizations.
 
 
@@ -442,12 +443,12 @@ if we start shaping and customizing data too soon in the flow, it's much harder,
 Outbound pipes
 ##############
 
-Following the flow of data as it leaves the global stage of modelling, the amount of DTL will increase in the preparation pipes. As you might recall, preparation pipes deliver data to the outbound pipes. It is therefore important to consider the state of the data as it enters an outbound pipe. The reason for this being, as with any inbound pipe, that you should aim at minimizing the amount of DTL needed to shape your data further. This will create robust consumable data that can be delivered seamlessly to your target systems as data flows through your outbound pipes. As with inbound pipes, special cases can occur, where you need to do some additional shaping before the data can be presented in a consumable shape for a given target system. Again, aim at making a minimal set of DTL changes. 
+Following the flow of data as it leaves the global stage of modelling, the amount of DTL will increase in the preparation pipes. As you might recall, preparation pipes deliver data to the outbound pipes. It is therefore important to consider the state of the data as it enters an outbound pipe. The reason for this being, as with any inbound pipe, that you should aim at minimizing the amount of DTL needed to shape your data further. This will create robust consumable data that can be delivered seamlessly to your target systems as data flows through your outbound pipes. As with inbound pipes, special cases can occur, where you need to do some additional shaping before the data can be presented in a consumable shape for a given target system. Again, aim at making a minimal set of DTL changes.
 
 Summary
 #######
 
-The amount of DTL in a given pipe with respect to modelling stage in Sesam should increase until the point of modelling stage, where the intent of shaping data is primarily due to target system requirements, as visualized in the below *Figure - DTL Amount*. 
+The amount of DTL in a given pipe with respect to modelling stage in Sesam should increase until the point of modelling stage, where the intent of shaping data is primarily due to target system requirements, as visualized in the below *Figure - DTL Amount*.
 
 .. figure:: ./media/dtl-amount.png
    :align: center
@@ -506,7 +507,7 @@ As an example, the data presented below is produced by the pipe ``global-person`
 	  "global-person:position": "Engineer",
 	  "crm-account:positions": ["Engineer", "Salesmanager", "Accountant", "CTO"],
 	  "crm-account:hobbies": "Builds LEGO"
-	}   
+	}
 
 The shape of the data does not immediately satisfy your needs, as you are only interested in working with the properties whose key starts with the namespace ``global-person:``. To solve this you choose to use the copy function where you can define what namespaces you are interested in. In DTL this would be written as
 
@@ -523,21 +524,21 @@ and would produce the following data:
 	  "global-person:id": 40,
 	  "global-person:phone": "1-894-115-3398",
 	  "global-person:position": "Engineer"
-	} 
+	}
 
-After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following: 
-
-.. code-block:: json
-	
-	["remove", "country"] 
-
-and 
+After comparing the current shape of your data to the target system schema, you realize only the properties "id", "phone" and "position" are needed. In addition, you recognize that the first letter of the keys must be in capital. To solve this in DTL, you would do the following:
 
 .. code-block:: json
-	
+
+	["remove", "country"]
+
+and
+
+.. code-block:: json
+
 	["rename", "id", "Id"]
 	["rename", "phone", "Phone"]
-	["rename", "position", "Position"] 
+	["rename", "position", "Position"]
 
 based on the declared DTL functions, this would produce the following:
 
@@ -547,7 +548,7 @@ based on the declared DTL functions, this would produce the following:
 	  "global-person:Id": 40,
 	  "global-person:Phone": "1-894-115-3398",
 	  "global-person:Position": "Engineer"
-	} 
+	}
 
 .. seealso::
 
@@ -568,7 +569,7 @@ Change tracking & data delta
 
 Change tracking and data delta allows Sesam to process and update data only when it changes. This ensures minimal latency and increased agility both when importing data from source systems and when processing data through internal pipes towards target systems.
 
-Firstly, when reading data from a source system, if supported by the source, it may be possible to just ask for the data that have changed since the last time. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed. 
+Firstly, when reading data from a source system, if supported by the source, it may be possible to just ask for the data that have changed since the last time. This mechanism uses entries from the source, such as a last updated time stamp, to ensure that only data that have been created, deleted or modified are processed.
 
 Secondly, the first time data flows through a pipe in Sesam that pipe's dataset will be created. Datasets consist of entities and on each entity a ``_hash`` property will be created. This ``_hash`` property enables change tracking and data delta when data enters or flows through Sesam. When an entity's ``_hash`` value changes, any downstream pipes register this change and recognizes it as a new sequence number that needs to be processed again.
 
@@ -582,10 +583,10 @@ Secondly, the first time data flows through a pipe in Sesam that pipe's dataset 
 
   :ref:`developer-guide` > :ref:`entity_data_model` > :ref:`reserved-fields`
 
-.. _tasks-for-architecture-and-concepts-novice-1-2:
+.. _tasks-for-architecture-and-concepts-intermediate-1-2:
 
-Tasks for Architecture and Concepts: Novice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks for Architecture and Concepts: Intermediate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. *Why should inbound pipes retain raw data shape?*
 
