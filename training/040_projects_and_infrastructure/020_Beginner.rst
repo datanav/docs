@@ -294,7 +294,7 @@ To create a JWT you need to navigate to the following page:
 
 .. seealso::
 
-  :ref:`sesam-in-the-wild` > :ref:`sesam-in-the-wild-beginner-6-1`
+  :ref:`sesam-in-the-wild` > :ref:`sesam-in-the-wild`
 
   :ref:`developer-guide` > :ref:`api-top`
 
