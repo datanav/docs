@@ -1,8 +1,8 @@
 
-.. _systems-novice-2-2:
+.. _systems-intermediate-2-2:
 
-Novice
-------
+Intermediate
+------------
 
 .. _systems-as-a-pipe-source-2-2:
 
@@ -20,7 +20,7 @@ Systems as a pipe source
 Using a system as a pipe source defines the possibilities this pipe has when
 pulling data. Sesam supports implementing multiple different `system types <https://docs.sesam.io/configuration.html#systems>`_, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a System.
 
-When a system is used as a pipe source, certain aspects come into consideration. Namely, that a `source <https://docs.sesam.io/configuration.html#sources>`_ should provide streams of entities as input to the pipes it is connected to. The entities that are provided can take any shape, i.e: they can have nested dictionaries. The only required property for entities within Sesam is the ``_id`` which is used as a unique identifier.    
+When a system is used as a pipe source, certain aspects come into consideration. Namely, that a `source <https://docs.sesam.io/configuration.html#sources>`_ should provide streams of entities as input to the pipes it is connected to. The entities that are provided can take any shape, i.e: they can have nested dictionaries. The only required property for entities within Sesam is the ``_id`` which is used as a unique identifier.
 
 .. seealso::
 
@@ -63,7 +63,7 @@ System Authentication methods
   - vary depending on your system
   - can be extended upon
 
-    - by building and deploying a microservice system in `Docker <https://www.docker.com/>`_ 
+    - by building and deploying a microservice system in `Docker <https://www.docker.com/>`_
 
 Looking at systems from an isolated point of view, these can differ quite a bit when it comes to authentication methods. This is also true when you look at them within a Sesam node. Generally speaking, Sesam supports a wide range of in-built systems and their authentication methods, albeit if you need to use a system in Sesam which is not readily available, you can build it yourself as a microservice. This flexibility within Sesam is quite unique and as such ~no limitation exist.
 
@@ -104,7 +104,7 @@ Extending on systems, the types of systems Sesam provide vary quite substantiall
 - `The Twilio system <https://docs.sesam.io/configuration.html#the-twilio-system>`_
 - `The URL system <https://docs.sesam.io/configuration.html#the-url-system>`_
 - `The REST system <https://docs.sesam.io/configuration.html#the-rest-system>`_
-- `The Mircoservice system <https://docs.sesam.io/configuration.html#the-microservice-system>`_  
+- `The Mircoservice system <https://docs.sesam.io/configuration.html#the-microservice-system>`_
 
 Regardless of system type in Sesam its configuration will always be JSON. Important to consider in this aspect is that JSON is schemaless, which results in self-contained systems and makes for easier implementation in Sesam. All systems share a number of common properties, which are shown below:
 
@@ -128,16 +128,16 @@ Regardless of system type in Sesam its configuration will always be JSON. Import
 - ``description`` a description of the system
 - ``comment`` a comment about the system
 - ``metadata`` a set of keys and values adding metadata content to the system
-- ``worker_threads`` an integer value setting the number of maximum concurrent running pipes using this system (default is 10) 
+- ``worker_threads`` an integer value setting the number of maximum concurrent running pipes using this system (default is 10)
 
 .. seealso::
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`system_section`
 
-.. _tasks-for-systems-novice-2-2:
+.. _tasks-for-systems-intermediate-2-2:
 
-Tasks for Systems: Novice
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks for Systems: Intermediate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. *What does a system as a pipe source provide?*
 
@@ -147,8 +147,8 @@ Tasks for Systems: Novice
 
 #. *Why should you familiarize yourself with system types in Sesam?*
 
-#. *Pick a system type:* 
-  
+#. *Pick a system type:*
+
       Make your system run in Sesam
 
       Use your system both as a pipe source and a pipe sink

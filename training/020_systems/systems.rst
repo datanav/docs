@@ -20,6 +20,6 @@ customized solutions when Sesams built-in systems cannot.
    :maxdepth: 2
 
    Beginner <020_Beginner>
-   Novice <030_Novice>
-   Intermediate <040_Intermediate>
+   Intermediate <030_Intermediate>
+   Advanced <040_Advanced>
    Epilogue <060_Epilogue>

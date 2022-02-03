@@ -187,9 +187,8 @@ docs/
 --010_architecture_and_concepts/
 ---architecture_and_concepts.rst #index file
 ---020_Beginner.rst
----030_Novice.rst
----040_Intermediate.rst
----050_Advanced.rst              #Not present in all chapters
+---030_Intermediate.rst
+---040_Advanced.rst
 ---060_Expert.rst                #Not present in all chapters
 ---070_Epilogue.rst
 ---media/
