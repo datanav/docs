@@ -10,12 +10,14 @@ Different types of Architectures
 
 When modelling data, integration architectures lay the foundation
 for shaping and structuring data as it moves from one system
-to another. Within integration architectures, Point-to-point (P2P) and Enterprise Service Bus
-(ESB) architectures have been used extensively. Recently Data Driven Architecture (DDA) has
-enabled data to be used in new ways by focusing on data and its meaning.
+to another. Within integration architectures, Point-to-point (P2P) and
+Enterprise Service Bus (ESB) architectures have been used extensively.
 
-To show the evolution of integration architectures and why DDA is the natural step
-forward we will first introduce you to P2P and ESB.
+Recently Data Driven Architecture (DDA) has enabled data to be used in new ways
+by focusing on data and its meaning.
+
+To show the evolution of integration architectures and why DDA is the natural
+step forward we will first introduce you to P2P and ESB.
 
 .. _point-to-point-1-1:
 
@@ -28,16 +30,18 @@ Point-to-Point (P2P)
   - Easy to set up
   - Poor scaleability
 
-This kind of integration architecture is the simplest integration principle. As an example of P2P
-imagine sending a message generated in one System A to a single receiver
-in another System B. System A talks to System B.
+This kind of integration architecture is the simplest integration principle.
+As an example of P2P imagine sending a message generated in one System A to a
+single receiver in another System B. System A talks to System B.
 It is simple and therefore easy to manage, albeit what if another System C is
 introduced and needs to talk with both System A and System B?
+
 Introducing System C will increase the complexity of the architecture threefold,
-as we go from one integration between System A and System B A->B,
-to three integrations A->B, A->C, B->C.
-In this case P2P is not your best option, and the issue of
-scalability presents itself.
+as we go from one integration between System A and System B A->B, to three
+integrations A->B, A->C, B->C.
+
+In this case P2P is not your best option, and the issue of scalability presents
+itself.
 
 To illustrate how complexity can make P2P a
 non-viable option see figure :ref:`figure-p2p-1-1`:
@@ -71,10 +75,11 @@ The ESB is a robust integration architecture which can play a critical role in
 Service Oriented Architectures (SOA) by connecting diverse systems and services.
 The ESB takes on the responsibility of ensuring that data sent from one
 system conforms to the requirements of the receiving system. This core
-functionality is an important feature as to why the ESB is such a well-established
-architectural principle. In addition, the ESB aids in
-simplifying integration efforts when connecting differing applications
-that need to communicate with each other. See figure :ref:`figure-esb-1-1`.
+functionality is an important feature as to why the ESB is such a
+well-established architectural principle.
+In addition, the ESB aids in simplifying integration efforts when connecting
+differing applications that need to communicate with each other.
+See figure :ref:`figure-esb-1-1`.
 
 .. _figure-esb-1-1:
 .. figure:: ./media/Enterprise_Service_Bus.png
@@ -82,11 +87,11 @@ that need to communicate with each other. See figure :ref:`figure-esb-1-1`.
 
    Enterprise Service Bus
 
-Taking into account the positives from using an ESB for your integration architecture - some
-challenges still remain unresolved. Recent years transition towards more
-cloud-based solutions, hybrid solutions and the remaining tendency to
-focus on the systems in the ESB rather than the data itself has
-propelled what is called DDA.
+Taking into account the positives from using an ESB for your integration
+architecture - some challenges still remain unresolved.
+Recent years transition towards more cloud-based solutions, hybrid solutions and
+the remaining tendency to focus on the systems in the ESB rather than the data
+itself has propelled what is called DDA.
 
 
 Data Driven Architecture (DDA)
@@ -102,7 +107,8 @@ Data Driven Architecture (DDA)
 As opposed to both the P2P and the ESB integration architectures the Data
 Driven Architecture (DDA) does not focus on systems but rather the data
 these systems store and how it can be used in a data-centric ecosystem.
-This gives us an agile, robust integration architecture. See figure :ref:`figure-dda-1-1`.
+This gives us an agile, robust integration architecture.
+See figure :ref:`figure-dda-1-1`.
 
 .. _figure-dda-1-1:
 .. figure:: ./media/Data_Driven_Architecture.png
@@ -207,8 +213,9 @@ integration platform: systems, pipes and datasets.
    :alt: A general pipeline flow in Sesam depicting the three central parts of a Sesam integration, systems, pipes and datasets. The arrows symbolize the direction of data flow.
    :width: 100%
 
-   A general pipeline flow in Sesam depicting the three central parts of a Sesam integration,
-   systems, pipes and datasets. The arrows symbolize the direction of data flow.
+   A general pipeline flow in Sesam depicting the three central parts of a Sesam
+   integration, systems, pipes and datasets.
+   The arrows symbolize the direction of data flow.
 
 These are the fundamental parts which make up a Sesam integration pipeline:
 
@@ -219,20 +226,21 @@ Systems:
    beginning and end of the pipeline flows and are often referred to as
    “source systems” or “target systems” respectively. A system could
    connect to a REST API, directly to a database or simply send data to
-   a waiting http server. Sesam has several of these system type interfaces built
-   into the product. In situations where the built-in system types are not enough for your
+   a waiting http server. Sesam has several of these system type interfaces
+   built into the product.
+   In situations where the built-in system types are not enough for your
    requirements Sesam also supports user created systems as microservices.
    Microservices can interface with external systems according to your own
    specifications, making Sesam a very flexible and robust tool.
 
 Pipes:
    A pipe's main function is to move and transform data.
-   Pipes can read from or send to external systems and internal datasets, depending
-   on where the pipe is located in the dataflow.
-   The source of pipes must be defined, but the sink is by default a dataset with
-   the same name as the pipe.
-   Transformation of the data is done through Sesam’s own Data Transformation Language (DTL) which
-   allows you to enhance, filter or combine data.
+   Pipes can read from or send to external systems and internal datasets,
+   depending on where the pipe is located in the dataflow.
+   The source of pipes must be defined, but the sink is by default a dataset
+   with the same name as the pipe.
+   Transformation of the data is done through Sesam’s own Data Transformation
+   Language (DTL) which allows you to enhance, filter or combine data.
 
 Datasets:
    Datasets are Sesam’s storage units and can be compared
@@ -274,9 +282,10 @@ The Sesam portal
 
 Integrations, connections and configurations can be accessed inside
 the Sesam portal; the user interface of the Sesam product.
-The Sesam portal can be accessed at `portal.sesam.io <https://www.portal.sesam.io>`_
-The following section will show you the most commonly used components of the portal so that you can
-orient yourself, as well as manage existing integrations.
+The Sesam portal can be accessed at
+`portal.sesam.io <https://www.portal.sesam.io>`_.
+The following section will show you the most commonly used components of the
+portal so that you can orient yourself, as well as manage existing integrations.
 
 For a full explanation if the workings and functionality of the Sesam portal,
 please visit the :ref:`sesam-management-studio` section.
@@ -409,7 +418,8 @@ The systems page looks very much like the pipe tab in the Pipe overview above.
 
    Systems overview
 
-When entering a system you will se a set of tabs, just as we saw in a specific pipe.
+When entering a system you will se a set of tabs, just as we saw in a specific
+pipe.
 
 .. _figure-systems-graph-view-1-1:
 
@@ -518,7 +528,8 @@ and department.
 
 Our two inbound pipes connecting to the two tables containing HR data will
 therefore be named ``hr-employee`` and ``hr-department``.
-The pipe prefix ``hr-`` highlights that the "HR" system is upstream from the pipes.
+The pipe prefix ``hr-`` highlights that the "HR" system is upstream from the
+pipes.
 
 *Global pipes:*
 
@@ -648,10 +659,9 @@ firewall blocking your access.
 Pipes
 ~~~~~
 
-Pipes is the component in Sesam which moves and transforms data.
-You can read more about them in both this and other chapters.
-
-References in the seealso section below.
+Pipes are a critical component of Sesam because they move and transform data.
+Read more about them by following the references given in the **See Also**
+section below.
 
 .. seealso::
 
@@ -777,8 +787,8 @@ Sesam datasets and database tables which are important to point out:
   define any relevant constraints such as foreign keys, etc. based on
   domain knowledge.
   However the great advantage of being schemaless is that Sesam is very flexible
-  with handling vastly different data structures from different sources so you usually
-  do not have to spend any time on restructuring inbound data.
+  with handling vastly different data structures from different sources so you
+  usually do not have to spend any time on restructuring inbound data.
 
 * Tables often have a defined primary key but not always.
 
@@ -841,22 +851,25 @@ What are Globals?
 ^^^^^^^^^^^^^^^^^
 
 Globals are pipes which merge datasets that store similar entities which
-fall under the same concept. As an example, ``global-person`` can merge data from the
-datasets ``hr-employee`` and ``hr-customer``. This is because the concept of a "person"
-is the common denominator of both employees and customers.
+fall under the same concept. As an example, ``global-person`` can merge data
+from the datasets ``hr-employee`` and ``hr-customer``.
+This is because the concept of a "person" is the common denominator of both
+employees and customers.
 
 Why use globals?
 ^^^^^^^^^^^^^^^^
 
-Globals give us the opportunity to simplify and enhance our integrations by merging
-data which represent the same concept in the real world but normally is stored separately
-in the binary world.
-By using globals we also simplify the process of grabbing the data we need because if you
-know which concept or entity type an external system requires, you can quickly identify
-the global where this entity type is stored.
+Globals give us the opportunity to simplify and enhance our integrations by
+merging data which represent the same concept in the real world but normally is
+stored separately in the binary world.
+By using globals we also simplify the process of grabbing the data we need
+because if you know which concept or entity type an external system requires,
+you can quickly identify the global where this entity type is stored.
 If you only want to process a specific subset of the global
-then you can easily use the ``rdf:type`` attribute to narrow down which entities you want.
-More on :ref:`special-sesam-attributes_rdf-type` in the next topic :ref:`special-sesam-attributes-1-1`.
+then you can easily use the ``rdf:type`` attribute to narrow down which entities
+you want.
+More on :ref:`special-sesam-attributes_rdf-type` in the next topic
+:ref:`special-sesam-attributes-1-1`.
 
 
 
@@ -864,56 +877,73 @@ How do globals work?
 ^^^^^^^^^^^^^^^^^^^^
 
 A global is the collection of objects categorized as the same concept.
-In other words, globals are buckets for entities which fall under the same concept.
-To draw on this metaphor further, you can choose to either mix your bucket by setting equalities
-between the objects within it, or keep them separate inside the bucket.
-Of course more value is gained by mixing the objects within, but without doing so you
-still have a nicely labeled bucket which will simplify decisions of what data to use.
+In other words, globals are buckets for entities which fall under the same
+concept.
+To draw on this metaphor further, you can choose to either mix your bucket by
+setting equalities between the objects within it, or keep them separate inside
+the bucket.
+Of course more value is gained by mixing the objects within, but without doing
+so you still have a nicely labeled bucket which will simplify decisions of what
+data to use.
 
 Globals without equalities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is an example of an un-mixed bucket also known as a Global without equalities.
-We have the inbound pipes/datasets ``cab-address`` and ``hr-address``. Both these datasets
-store information about addresses, but the first is for our customers and the second
-for our employees. Unless a person might fall into both categories, there is no value
-to be gained by joining these entities together using equalities. We will therefore place these datasets
-into the ``global-address`` pipe without creating equalities between the datasets.
-The ``global-address`` pipe can now be used as a destination when you want to look up
-an employees or a customers address. Read more about hops here: :ref:`left-join-hops-1-2`.
+This is an example of an un-mixed bucket also known as a Global without
+equalities.
+We have the inbound pipes/datasets ``cab-address`` and ``hr-address``.
+Both these datasets store information about addresses, but the first is for our
+customers and the second for our employees.
+Unless a person might fall into both categories, there is no value to be gained
+by joining these entities together using equalities.
+We will therefore place these datasets into the ``global-address`` pipe without
+creating equalities between the datasets.
+The ``global-address`` pipe can now be used as a destination when you want to
+look up an employees or a customers address.
+Read more about hops here: :ref:`left-join-hops-1-2`.
 
 Globals with equalities
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This is an example of a mixed bucket also known as Globals with equalities.
-We have the inbound pipes/datasets ``shipping-customerinfo`` and ``sales-customer`` which read
-from a shipping system and a sales system respectively. The datasets produced by these pipes both
-store information about the same customers, but this data is currently stored separately.
-In other words, these systems and pipes talk about the same customers but with different perspectives.
+We have the inbound pipes/datasets ``shipping-customerinfo`` and
+``sales-customer`` which read from a shipping system and a sales system
+respectively.
+The datasets produced by these pipes both store information about the same
+customers, but this data is currently stored separately.
+In other words, these systems and pipes talk about the same customers but with
+different perspectives.
 The shipping system cares about how the customer wishes to receive their
-goods while the sales system cares about what goods the customer usually shops for and analytics
-about their habits.
-The entities (customers) in these datasets could for example be linked together by
-their email address or phone number.
-By merging these datasets together in the ``global-customer`` pipe, we can also join
-the customers from these different sources by setting an equality on for example Email.
-We now have an aggregated view of the customers which join together, giving us both
-perspectives in the same entity!
-This makes us able to pick data both from the shipping and the sales system when we
-wish to process data about any given customer.
+goods while the sales system cares about what goods the customer usually shops
+for and analytics about their habits.
+The entities (customers) in these datasets could for example be linked together
+by their email address or phone number.
+By merging these datasets together in the ``global-customer`` pipe, we can also
+join the customers from these different sources by setting an equality on for
+example Email.
+We now have an aggregated view of the customers which join together, giving us
+both perspectives in the same entity!
+This makes us able to pick data both from the shipping and the sales system when
+we wish to process data about any given customer.
 
-As a sidenote to this last example, we would now be able to define "golden records".
+As a sidenote to this last example, we would now be able to define
+"golden records".
 A golden record consists of the properties which together represent the most
 truthful version of an object.
-For example, both the ``shipping-customerinfo`` and ``sales-customer`` entities could have the
-attribute ``address``, but the version of the address received from the shipping system is always most up to date.
-In other words; the address received from the shipping system is more *truthful*.
-This means that in our global pipe we can add the attribute ``address`` with the address provided
-by our shipping system.
-This ``address`` attribute is automatically prefixed with the name of the pipe it was generated in, like ``global-customer:address``,
-unless other behaviour is specified - this is called :ref:`special-sesam-attributes_namespaces` and is explained in the next topic :ref:`special-sesam-attributes-1-1`.
-The ``global-customer:address`` attribute can thereafter be used in any outbound flows which use data from
-global-customer without needing to worry about the original origin of the attribute.
+For example, both the ``shipping-customerinfo`` and ``sales-customer``
+entities could have the attribute ``address``, but the version of the address
+received from the shipping system is always most up to date.
+In other words; the address received from the shipping system is more
+*truthful*.
+This means that in our global pipe we can add the attribute ``address`` with the
+address provided by our shipping system.
+This ``address`` attribute is automatically prefixed with the name of the pipe
+it was generated in, like ``global-customer:address``, unless other behaviour is
+specified - this is called :ref:`special-sesam-attributes_namespaces` and is
+explained in the next topic :ref:`special-sesam-attributes-1-1`.
+The ``global-customer:address`` attribute can thereafter be used in any outbound
+flows which use data from global-customer without needing to worry about the
+original origin of the attribute.
 
 .. seealso::
 
@@ -1029,7 +1059,8 @@ finally when exposing or producing data for
 
 RDF in Sesam is used to relate data and add semantic context.
 When used with a namespace, it keeps track of the origin of the data, as well as
-the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
+the business type. It is composed upon input and will be used to relate and
+filter like you would use a foreign key.
 
 Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look
 like the following: ``{"rdf:type": "~:foo:bar"}.``
@@ -1051,7 +1082,7 @@ as follows in the merged entity:
 \_id
 ^^^^
 You can read more about ``_id`` in the DTL Beginner chapter and elsewhere.
-Links in the seealso section below.
+Links in the **See Also** section below.
 
 .. seealso::
 
