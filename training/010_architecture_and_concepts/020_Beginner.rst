@@ -8,15 +8,14 @@ Beginner
 Different types of Architectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When modelling data, integration architectures (IA) lay the foundation
+When modelling data, integration architectures lay the foundation
 for shaping and structuring data as it moves from one system
-to another. Within IA, Point-to-point (P2P) and Enterprise Service Bus
-(ESB) have been used extensively. Recently Data Driven Architecture has
-mobilized data in new ways by placing data and its meaning at its center.
+to another. Within integration architectures, Point-to-point (P2P) and Enterprise Service Bus
+(ESB) architectures have been used extensively. Recently Data Driven Architecture (DDA) has
+enabled data to be used in new ways by focusing on data and its meaning.
 
-To show the evolution of Integration Architectures and why Data Driven
-Architecture is the natural step forward, we will first introduce you to
-P2P and ESB.
+To show the evolution of integration architectures and why DDA is the natural step
+forward we will first introduce you to P2P and ESB.
 
 .. _point-to-point-1-1:
 
@@ -29,7 +28,7 @@ Point-to-Point (P2P)
   - Easy to set up
   - Poor scaleability
 
-This kind of IA is the simplest integration principle. As an example of P2P
+This kind of integration architecture is the simplest integration principle. As an example of P2P
 imagine sending a message generated in one System A to a single receiver
 in another System B. System A talks to System B.
 It is simple and therefore easy to manage, albeit what if another System C is
@@ -51,13 +50,11 @@ non-viable option see figure :ref:`figure-p2p-1-1`:
 
 As illustrated on the right-hand side of the above figure “Complex
 integration”, you have to maintain multiple connections separately
-which, in this case, will make P2P time consuming and expensive to
-manage. Therefore, amongst other things, new architectural principles
-have been developed. One of the more prominent ones being the ESB.
+which can make P2P time consuming and expensive to maintain, manage and scale.
+Therefore new architectural principles have been developed - one of the more
+prominent ones being the ESB.
 
-.. seealso::
-
-  TODO
+.. _enterprise_service_bus:
 
 Enterprise Service Bus (ESB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,12 +67,12 @@ Enterprise Service Bus (ESB)
   - Scaleable
   - No centralized data storage
 
-The ESB is a more robust IA and plays a critical role in connecting
-diverse systems and services in a Service Oriented Architecture (SOA).
+The ESB is a robust integration architecture which can play a critical role in
+Service Oriented Architectures (SOA) by connecting diverse systems and services.
 The ESB takes on the responsibility of ensuring that data sent from one
-system conforms to the requirements in another system. This core
-functionality is an important feature as to why the ESB is such an
-established architectural principle. In addition, the ESB aids in
+system conforms to the requirements of the receiving system. This core
+functionality is an important feature as to why the ESB is such a well-established
+architectural principle. In addition, the ESB aids in
 simplifying integration efforts when connecting differing applications
 that need to communicate with each other. See figure :ref:`figure-esb-1-1`.
 
@@ -85,15 +82,12 @@ that need to communicate with each other. See figure :ref:`figure-esb-1-1`.
 
    Enterprise Service Bus
 
-Taking into account the positives from using an ESB for your IA - some
+Taking into account the positives from using an ESB for your integration architecture - some
 challenges still remain unresolved. Recent years transition towards more
 cloud-based solutions, hybrid solutions and the remaining tendency to
 focus on the systems in the ESB rather than the data itself has
-propelled what is called “Data Driven Architecture”.
+propelled what is called DDA.
 
-.. seealso::
-
-  TODO
 
 Data Driven Architecture (DDA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,10 +99,10 @@ Data Driven Architecture (DDA)
   - Very scaleable
   - Agile
 
-As opposed to both the P2P and the ESB integration principles the Data
+As opposed to both the P2P and the ESB integration architectures the Data
 Driven Architecture (DDA) does not focus on systems but rather the data
 these systems store and how it can be used in a data-centric ecosystem.
-This gives us an agile, robust IA. See figure :ref:`figure-dda-1-1`.
+This gives us an agile, robust integration architecture. See figure :ref:`figure-dda-1-1`.
 
 .. _figure-dda-1-1:
 .. figure:: ./media/Data_Driven_Architecture.png
@@ -131,7 +125,7 @@ possibilities a DDA provides.
 
 .. seealso::
 
-  TODO
+  :ref:`concepts` > :ref:`why-sesam`
 
 .. _datahub-1-1:
 
@@ -151,8 +145,9 @@ in DDA. A datahub can be described as a solution that consists of
 multiple different technologies, i.e., a data warehouse, microservices,
 databases etc.
 
-A Datahub shares data by connecting providers of data with consumers of
-data. As such, a datahub mediates and manages how data flows between systems and makes states of data visible to consumers outside the datahub.
+A Datahub shares data by connecting providers of data with consumers of data.
+It mediates and manages how data flows between systems and makes states of data
+visible to consumers outside the datahub.
 
 In a sense, you could say that a datahub is a digital representation of
 an enterprise and also what SESAM often becomes when it is used
@@ -186,17 +181,7 @@ Cons:
 
 .. seealso::
 
-  TODO
-
-.. _sesam_world_map-1-1:
-
-Sesam world map
-~~~~~~~~~~~~~~~
-
-.. seealso::
-
-  TODO
-
+  :ref:`core-principles`
 
 .. _the_parts_of_sesam-1-1:
 
@@ -209,13 +194,13 @@ The parts of sesam
 
   - **Systems** to interaface with external systems
   - **Pipes** to move and transform data
-  - **Datasets** to store data
-  - **Entities** that are the actual data stored in datasets
+  - **Datasets** to store entities
+  - **Entities** to represent objects as data in datasets
 
 In order to understand how Sesam works, it is important to understand
-the parts Sesam is made up of. There are three central re-occurring
-concepts in Sesam which you will encounter in your everyday life working
-with the integration platform: systems, pipes and datasets.
+the parts Sesam is made of. There are three central re-occurring
+concepts in Sesam which you will encounter in your everyday use of the
+integration platform: systems, pipes and datasets.
 
 .. figure:: ./media/Architecture_Beginner_Systems_pipes_datasets_A.png
    :align: center
@@ -229,39 +214,41 @@ These are the fundamental parts which make up a Sesam integration pipeline:
 
 Systems:
    A system’s main feature is to act as the interface to import and export data
-   into and out of Sesam nodes. The actual import and export is carried out by the pipes connected to the systems. The systems are  therefore found in the
+   into and out of Sesam nodes. The actual import and export is carried out by
+   the pipes connected to the systems. The systems are  therefore found in the
    beginning and end of the pipeline flows and are often referred to as
    “source systems” or “target systems” respectively. A system could
    connect to a REST API, directly to a database or simply send data to
-   a waiting http server. Sesam has several of these system types built
-   into the product to simplify the workings inside the portal. In
-   situations where the built-in system types are not enough for your
-   requirements Sesam also supports connecting systems to a microservice
-   which in turn can manipulate and delegate data according to your own
-   specifications, making Sesam a very robust and comprehensive tool.
+   a waiting http server. Sesam has several of these system type interfaces built
+   into the product. In situations where the built-in system types are not enough for your
+   requirements Sesam also supports user created systems as microservices.
+   Microservices can interface with external systems according to your own
+   specifications, making Sesam a very flexible and robust tool.
 
 Pipes:
-   A pipe's main functions are to actualize the import and export of data, to handle transformation of the data when needed as well as to specify
-   where the data is supposed to be sent. Manipulation of the data is
-   done through Sesam’s own Data Transformation Language (DTL) which
-   allows you to add, remove, transform or combine data according to
-   you own needs. A pipe generally acquires data from a system or from a
-   dataset depending on where the pipe is located inside the integration
-   pipeline.
+   A pipe's main function is to move and transform data.
+   Pipes can read from or send to external systems and internal datasets, depending
+   on where the pipe is located in the dataflow.
+   The source of pipes must be defined, but the sink is by default a dataset with
+   the same name as the pipe.
+   Transformation of the data is done through Sesam’s own Data Transformation Language (DTL) which
+   allows you to enhance, filter or combine data.
 
 Datasets:
    Datasets are Sesam’s storage units and can be compared
    to i.e., a table in an SQL database. Datasets are where the pipes store the
-   data they produce, unless a sink specifies otherwise. Sesam stores data in order to be able
-   to perform tracking and indexing, but you will learn more about these
-   functionalities later in this book (maybe a link?).
+   data they produce, unless a sink specifies otherwise.
+   Sesam stores data in order to perform tracking and indexing in addition
+   to acting as a smart cache for the source systems' data.
+   A dataset is only updated when data changes.
+   You will learn more about these functionalities later in this book.
 
 Entities:
-   A dataset consists of a list of entities. Entities in
-   Sesam can be compared to individual rows in an SQL table and can
-   represent anything from a person, a mechanical part to a contract. An
-   entity is defined by its primary key, which is represented in Sesam
-   as the value belonging to the key ``_id``.
+   A dataset consists of a list of entities.
+   An entity is a JSON dictionary ``{}`` with the identifying key ``_id``.
+   Example: ``{"_id": "identity"}``.
+   Entities in Sesam can be compared to individual rows in an SQL table and can
+   represent any object such as a person, a mechanical part or a contract.
 
 .. seealso::
 
@@ -280,20 +267,24 @@ The Sesam portal
 
 .. sidebar:: Summary
 
-  The **Dashboard** is where you see all your Sesam subscriptions (nodes)
-  and where you can order new ones.
+  The sesam Portal allows you to:
+  - See all your Sesam subscriptions (nodes) and order new ones.
+  - See an overview of a node and subsequent pipes and systems on it.
+  - Change node configuration settings
 
-Integrations, connections and configurations can all be accessed inside
-the Sesam portal; the user interface of the Sesam product. The Sesam
-portal can be accessed at portal.sesam.io and in this section you will
-learn the most commonly used parts of the portal such that you can
-orient yourself, as well as manage existing integrations. For a full
-explanation if the workings and functionality of the Sesam portal,
+Integrations, connections and configurations can be accessed inside
+the Sesam portal; the user interface of the Sesam product.
+The Sesam portal can be accessed at `portal.sesam.io <https://www.portal.sesam.io>`_
+The following section will show you the most commonly used components of the portal so that you can
+orient yourself, as well as manage existing integrations.
+
+For a full explanation if the workings and functionality of the Sesam portal,
 please visit the :ref:`sesam-management-studio` section.
 
 When logging in to the portal you will be met with a page like the figure below:
 
 .. _figure-sesam-portal-1-1:
+
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_A.png
    :align: center
    :alt: The Sesam Portal
@@ -304,16 +295,16 @@ When logging in to the portal you will be met with a page like the figure below:
 
 The cards on the Dashboard are often referred to as “subscriptions” or
 “nodes” and they represent separate instances of Sesam installations.
-Each node comes in different sizes (memory available) depending on the
-requirements of the customer/project/user. In this example you will be
-shown the portal inside the node called “Training Node”, but all nodes
-will have the same setup, only different set of systems, pipes and
-datasets.
+Sesam nodes come in different sizes depending on the requirements of the
+customer/project/user.
+In this example you will be shown the portal inside the node called
+“Training Node”.
 
 When entering the “Training Node” you will be met with the page seen in
 the figure below.
 
 .. _figure-training-node-landing-page-1-1:
+
 .. figure:: ./media/Architecture_Beginner_The_Sesam_Portal_B.png
    :align: center
    :alt: Training Node Landing Page
@@ -321,7 +312,7 @@ the figure below.
 
    Training Node Landing Page
 
-In this section we will only focus on the specific parts of the portal
+In this section we will focus on the specific parts of the portal
 needed to start working with Sesam, namely the “Pipes” page and the
 “Systems” page.
 
@@ -363,37 +354,41 @@ view, as seen below.
 
    Pipe graph view
 
-The graph view shows you which pipes are upstream and downstream to the
-specific pipe you have selected, and it also displays connections to
-related pipes (you will learn more about connected pipes later [link
-maybe?]). For now, we will focus on four of the pipe’s tabs: Config,
-Input, Output and the Execution log.
+The graph view shows you which pipes are one level upstream and one level
+downstream to the specific pipe you have selected as well.
+It also displays connections to  :ref:`hops<left-join-hops-1-2>`-related pipes
+which you will learn more about later.
+
+For now, we will focus on four of the pipe’s tabs:
+Config, Input, Output and the Execution log.
 
 Config:
-   The config tab is where the actual coding takes
-   place. This is where you define what this specific pipe is supposed
-   to do. A pipe config is written in DTL which you will learn more
-   about in :ref:`dtl-beginner-3-1`.
+   The config tab is where the pipe configuration can be viewed and changed.
+   This is where you define what data the pipe reads, how it transform the
+   data, where it places the data and much more.
+   Pipe configurations are written in DTL which you will learn more about in
+   :ref:`DTL: Beginner <dtl-beginner-3-1>`.
 
 Input:
    Whenever a pipe uses one or several datasets as a source,
-   the source entities will be displayed here. These are the entities
-   the pipe will perform some sort of transformation on.
+   the source entities will be displayed here.
+   These are the entities the pipe will perform some sort of transformation on.
 
 Output:
-   The output tab shows the entities after the DTL
-   transformation. The way you see the output depends on whether the
-   data is stored in a dataset or sent to a target system.
-   The pipe you are looking at needs to have run at least once for there to be any output.
+   The output tab shows the entities produced by the pipe.
+   If the pipe places its output in a dataset then you will see the dataset, if
+   it is sent to a system you will see examples of how the data looks when sent.
+   The pipe you are looking at needs to have run at least once for there to be
+   any output.
 
 Execution log:
-   The execution log supplies us with information on
-   the state of the pipe. If a pipe runs as it should the execution log
-   will display information on how many entities it has processed, how
-   much time the processing took and much more. If a pipe is not able
-   to process all the data, the execution log will display a failed pipe
-   run as well as error messages which may assist you to locate the
-   error. The execution log is a vital tool for troubleshooting.
+   All pipes have a pump which logs when the pump starts, fails or completes and
+   writes this information to the excecution log.
+   There are also logs which correspond to single and batch read/write errors.
+   If a pipe runs as it should the execution log will display information on how
+   many entities it has processed, how much time the processing took and more.
+   The execution log is a vital tool for troubleshooting as tracebacks for
+   failures are shown there.
 
 .. seealso::
 
@@ -404,6 +399,8 @@ Systems
 
 The systems page looks very much like the pipe tab in the Pipe overview above.
 
+.. _figure-systems-dashboard-view-1-1:
+
 .. figure:: ./media/systems-overview.png
    :align: center
    :alt: Sesam Node System overview
@@ -413,6 +410,8 @@ The systems page looks very much like the pipe tab in the Pipe overview above.
    Systems overview
 
 When entering a system you will se a set of tabs, just as we saw in a specific pipe.
+
+.. _figure-systems-graph-view-1-1:
 
 .. figure:: ./media/system-graph.png
    :align: center
@@ -436,18 +435,18 @@ Config:
    whose values can be accessed inside the microservice.
 
 Secrets:
-   In the Secrets tab you may store sensitive information
-   you do not wish everyone on the node to have access to. These secrets
-   are often passwords or token used to authorization and
-   authentication. Secrets stored in the system tabs are local secrets
-   and may only be used by the specific system in which they are
-   defined.
+   In the Secrets tab you may store sensitive variables specific to the system.
+   These secrets are often passwords or token used for authorization and
+   authentication. They cannot be read by users, only overwritten.
+   Secrets stored in the system tabs are local secrets and may only be used by
+   the specific system in which they are defined.
 
 Status:
-   In the Status tab you can monitor the health of your
-   system. When connected to built-in systems this tab shows you whether
-   you are connected correctly. When connected to Microservices this tab
-   displays connection status and logging provided by the Microservice.
+   In the Status tab you can monitor the health of your system.
+   When connected to built-in systems this tab shows you whether you are
+   connected correctly.
+   When a system is of the Microservice type the status tab displays connection
+   status and logging provided by the Microservice.
 
 .. seealso::
 
@@ -469,9 +468,10 @@ Naming conventions
   - Preparation pipes: *<data-type>*\ `-`\ *<target-system>* (`user-hr`)
   - Endpoint pipes: *<data-type>*\ `-`\ *<target-system>*\ `-endpoint` (`user-hr-endpoint`)
 
-When constructing an integration flow in Sesam the use of a standardized
-naming convention becomes essential as the project grows to more than a few pipes.
-A standardized naming convention helps you to easily structure your Sesam architecture such that:
+When constructing an integration in Sesam the use of a standardized naming
+convention becomes essential as the project grows.
+A standardized naming convention helps you to easily structure your Sesam
+architecture such that:
 
 -  Localizing specific flows becomes easier.
 
@@ -486,66 +486,73 @@ A standardized naming convention helps you to easily structure your Sesam archit
 
 -  Support will be more efficient.
 
-In Sesam we focus on naming pipes, datasets and systems in way that
-explains the function of that specific structure. The following points
-are the naming rules Sesam suggests you follow when constructing your
-integration flows.
+In Sesam we focus on naming pipes, datasets and systems in way that explains the
+function of specific components.
+The following points are the naming rules Sesam suggests you follow when
+constructing your integrations.
 
 **Systems**
 
-A system name should describe the source/target system from the
-customers perspective, not from Sesam’s perspective. If a customer has
-employee data inside a HR system named “HR”, but the data from “HR” is
-supplied by an API provider called “API provider”, the Sesam system
-should be named “hr”. The same rule applies if the HR data was populated
-in a database which Sesam connects to. Naming the system after the
-database might seem intuitive at first glance but naming from the
-customers perspective makes communication and troubleshooting much
-easier in the long run.
+A system name should describe the source/target system from the customers
+perspective, not from Sesam’s perspective.
+If a customer has employee data inside a HR system named "HR", but the data from
+"HR" is supplied by an API provider called "API provider", the Sesam system
+should be named ``hr``.
+
+The same rule applies if the HR data was populated in a database which
+Sesam connects to.
+Naming the system after the database might seem intuitive at first glance but
+naming from the customers perspective makes communication and troubleshooting
+much easier in the long run.
 
 **Pipes**
 
 *Inbound pipes:*
 
-Inbound pipes should be named according to endpoint/table they connect to
-in the source system and prefixed with the source system name such that
-there is a clear and intuitive way of tracking their content. Let us use
-the same example as for naming system. I this case the HR system in the
-previous example populate its data in two tables: employee and
-department. Our two inbound pipes connecting to the two tables containing
-HR data will therefore be named “hr-employee” and “hr-department”. The
-system name prefixed highlights that the HR system is upstream from the
-pipes.
+Inbound pipes should be named according to the endpoint/table they connect to in
+the source system and prefixed with the source system name such that there is a
+clear and intuitive way of tracking their content.
+Let us use the same example as for naming a system.
+The HR system in the previous example populate its data in two tables: employee
+and department.
+
+Our two inbound pipes connecting to the two tables containing HR data will
+therefore be named ``hr-employee`` and ``hr-department``.
+The pipe prefix ``hr-`` highlights that the "HR" system is upstream from the pipes.
 
 *Global pipes:*
 
 Global pipes should be named according to the semantic relation
 connecting the datasets used as the global pipes source and prefixed
-with “global”. These semantic relations may vary between projects and
-customers, but some are generally always occurring such as
-global-person, global-company, global-customer or global-project.
+with ``global-``.
+These semantic relations may vary between projects and customers, but some are
+generally always occurring such as ``global-person``, ``global-company``,
+``global-customer`` or ``global-project``.
 
 *Preparation pipes:*
 
-Preparation pipe naming can be more diverse but should explain the type
-of data it transforms as well as the target system. If the inbound pipe
-importing a table “person” from a system “HR” is named “hr-person", the
-corresponding preparation pipe preparing data to be pushed to the table
-“person” should be named “person-hr". We use the system name as a
-postfix in this case to highlight the fact that this data has the HR
-system down-stream. In many cases you might require several preparations
-pipes between the global pipe and the endpoint pipe. In these cases, in
-addition to the type of data transformed as the downstream target
-system, the pipe name should reflect the functionality of that specific
-preparation pipe. As an example, if a preparation pipe splits entities
-into child entities, the children functionality should be part of the
-pipe name i.e., “person-child-hr".
+Preparation pipe naming can be more diverse but should be prefixed by the type
+of data it transforms as well as the designated target system.
+If the inbound pipe which imports the table "person" from a system “HR” is named
+``hr-person``, the corresponding preparation pipe preparing data to be pushed to
+the table “person” should be named ``person-hr``.
+
+We use the system name as a postfix in this case to highlight the fact that this
+pipe has the ``hr`` system down-stream.
+
+In many cases you might require several preparation pipes between the global
+pipe and the endpoint pipe.
+In these cases, in addition to the type of data transformed and the downstream
+target system, the pipe name should reflect the functionality of that specific
+preparation pipe.
+As an example, if a preparation pipe splits entities into child entities, the
+children functionality should be part of the pipe name i.e. ``person-child-hr``.
 
 *Outbound pipes:*
 
 An outbound pipe should have the same name as the name of the pipe
 generating the outbound pipe’s source dataset, only postfixed with
-“endpoint” i.e., “person-child-hr-endpoint”.
+``-endpoint`` i.e., ``person-child-hr-endpoint``.
 
 The following flow shows a typical Sesam flow with each pipe’s preferred
 name with an example:
@@ -585,15 +592,17 @@ Systems
 
 Systems are one of Sesam's core components.
 Systems can connect to external providers such as SQL databases, REST APIs,
-Microservices and more, to either import data into Sesam or export data out from Sesam.
+Microservices and more, to either import data into Sesam or export data out from
+Sesam.
 Systems are therefore the start and end points of every dataflow.
 
-Systems may cover other functionalities as well, but we will cover those special cases
-later.
+Systems may cover other functionalities as well, but we will cover those special
+cases later.
 
-In this section we will show you an example of the most commom system in a Sesam installation,
-the mssql system. We will also show how this system can connect to pipes to
-either import or export data, depending on your need.
+In this section we will show you an example of the most commom system in a Sesam
+installation, the mssql system.
+We will also show how this system can connect to pipes to either import or
+export data, depending on your need.
 
 The MSSQL system
 ^^^^^^^^^^^^^^^^
@@ -604,7 +613,14 @@ The MSSQL system
 
    MSSQL system config
 
-Since they are a relatively common way to store data, Sesam has a ready built-in connector for MSSQL databases. The MSSQL system inside Sesam connects to an MSSQL database by sending the host, database and port information, as well as authentication parameters, through a built in connector inside Sesam. Note that in the system config we also have to specify the system type ``system:mssql``.
+Since they are a relatively common way to store data, Sesam has a ready built-in
+connector for MSSQL databases.
+The MSSQL system inside Sesam connects to an MSSQL database by sending the host,
+database and port information, as well as authentication parameters, through a
+built in connector inside Sesam.
+
+Note that in the system config we also have to specify the system type
+``system:mssql``.
 
 .. figure:: ./media/mssql-system-status.png
    :align: right
@@ -612,7 +628,14 @@ Since they are a relatively common way to store data, Sesam has a ready built-in
 
    MSSQL system status.
 
-Once the connection is open the node can extract data from the tables in the database through inbound pipes connected to the system. You can see if the connection to the MSSQL database is open by going to the "Status" tab on the system page. Should the system health state "failure" in your connectivity, this could be because you have some parameter values in your config wrong, or there might be a firewall blocking your access.
+Once the connection is open the node can extract data from the tables in the
+database through inbound pipes connected to the system.
+You can see if the connection to the MSSQL database is open by going to the
+"Status" tab on the system page.
+
+Should the system health state "failure" in your connectivity, this could be
+because you have some parameter values in your config wrong, or there might be a
+firewall blocking your access.
 
 .. seealso::
 
@@ -625,28 +648,20 @@ Once the connection is open the node can extract data from the tables in the dat
 Pipes
 ~~~~~
 
-Something more general about pipes maybe in context of systems and
-datasets
+Pipes is the component in Sesam which moves and transforms data.
+You can read more about them in both this and other chapters.
 
-Inbound(Input?)/Preparation/Outbound(Output?)
-
-Very low level but enough to connect to system?
-
-and refer to pipes chapter
-
-Pump
-
-Input & output(sink)
-
-Namegivingconventions ref. 1.1.8
-
-Where to make new ref 1.1.6
+References in the seealso section below.
 
 .. seealso::
 
   :ref:`developer-guide` > :ref:`configuration` > :ref:`pipe_section`
 
-  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1` > :ref:`pipes-where-dtl-executes-3-1`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`the_parts_of_sesam-1-1`
+
+  :ref:`learn-sesam` > :ref:`architecture_and_concepts` > :ref:`architecture-and-concepts_beginner-1-1` > :ref:`naming-conventions-1-1`
 
 .. _datasets-1-1:
 
@@ -671,19 +686,24 @@ A dataset with two entities concerning people could look like this:
 
    [
      {
-       "id": "1",
+       "_id": "1",
+       "id": 1,
        "name": "Jane Doe"
      },
      {
-       "id": "2",
+       "_id": "2",
+       "id": 2,
        "name": "John Doe"
      }
    ]
 
+Note that the value from the identifier ``id`` has been converted to string and
+stored as the primary key ``_id``.
+
 Dataset is the default sink type for internal pipes in Sesam, so if no sink
 config is specified for a pipe it's output will be a dataset.
 
-Datasets are also often the source for internal pipes.
+Datasets are the source for both internal & endpoint pipes.
 
 .. seealso::
 
@@ -706,11 +726,13 @@ Continuing with the example from the previous section:
 
    [
      {
-       "id": "1",
+       "_id": "1",
+       "id": 1,
        "name": "Jane Doe"
      },
      {
-       "id": "2",
+       "_id": "2",
+       "id": 2,
        "name": "John Doe"
      }
    ]
@@ -728,7 +750,7 @@ Notice that property names in Sesam usually correspond to columns
 in a database table and property values correspond to cell values.
 
 Despite the similarities, there are some key differences between
-Sesam datasets and database tables that is important to point out:
+Sesam datasets and database tables which are important to point out:
 
 * Database tables are for the most part storage of mutable records.
   When a record is updated, the table cells where updated data is
@@ -779,7 +801,14 @@ Sesam datasets and database tables that is important to point out:
 Entities / JSON (Key-value pairs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As stated earlier in this section, a dataset consists of a list of entities. An entity is a JSON type dictionary containing a set of key-value pairs identified by its unique identifier. A key-value pair is two related data elements. A key is a constant and defines what that data element is concerned with, i.e., postCode, email, phoneNumber, etc. Meanwhile, the value provides contextual information for a specific key. This could look like the following:
+As stated earlier in this section, a dataset consists of a list of entities.
+An entity is a JSON type dictionary containing a set of key-value pairs
+identified by its unique identifier.
+A key-value pair is two related data elements.
+A key is a constant and defines what that data element is concerned with,
+i.e., postCode, email, phoneNumber, etc.
+Meanwhile, the value provides contextual information for a specific key.
+This could look like the following:
 
 .. code-block:: json
 
@@ -793,8 +822,7 @@ As stated earlier in this section, a dataset consists of a list of entities. An 
 
 
 .. seealso::
-
-  TODO
+  :ref:`developer-guide` > :ref:`entity_data_model`
 
 .. _globals-as-a-concept-1-1:
 
@@ -919,47 +947,119 @@ Special sesam attributes
 Namespaces
 ^^^^^^^^^^
 
-Namespaces in Sesam are primarily used on properties, and its main functions are to ensure uniqueness across sources and to maintain the origin of the properties. "global-person:fullname" is an example of a namespaced property, where "global-person" is the namespace and "fullname" is the property name.
+Namespaces in Sesam are used on the value of identifiers and properties.
+It serves to ensure uniqueness across sources and to maintain the origin of the
+properties.
+The namespace used in properties is by default the pipe name which produces
+the property.
 
-Namespaced identifiers (NIs) are identifiers (i.e. property values) given a namespace.
-"source:reference": "~:foo:bar" is an example of a NI, where "source" is the property namespace, "reference" is the property name, "foo" is the namespace of the referenced data and "bar" is the identifier usually matching an identifier in the referenced data. The "~" is the Sesam syntax for defining a datatype as a NI.
+For example, given an enrichment pipe ``crm-person`` which reads this entity
+from it's source dataset:
 
-As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a visual indication of how data is connected, and enables easier and more precise joins. However, Sesam does not enforce any relationship between NIs and the referenced properties. You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in Sesam.
+.. code-block:: json
+
+   [
+     {
+       "_id": "1",
+       "id": 1,
+       "name": "Jane Doe",
+       "age": "42"
+     },
+   ]
+
+When the pipe ``crm-person`` processes this entity with ``_id`` as the
+identifier and ``id``, ``name`` & ``age`` as properties, the properties will be
+prefixed with ``crm-person:`` while the value of the identifier ``_id`` will be
+prefixed with ``crm-person:`` as follows:
+
+.. code-block:: json
+
+   [
+     {
+       "_id": "crm-person:1",
+       "crm-person:id": 1,
+       "crm-person:name": "Jane Doe",
+       "crm-person:age": 42
+     },
+   ]
+
+Downstream pipes will not change the namespace of the properties unless they
+explicitly add them as new properties, meaning that functions such as ``copy``
+will retain namespace, while ``add`` will not.
+
+Namespaced identifiers (NIs) are identifiers (i.e. property values) given a
+namespace.
+
+"source:reference": "~:foo:bar" is an example of a NI, where "source" is the
+property namespace, "reference" is the property name, "foo" is the namespace of
+the referenced data and "bar" is the identifier usually matching the identifier
+``_id`` in the referenced data. The prefix ``~:`` is the Sesam syntax for
+defining a datatype as a NI.
+
+As such, NIs in Sesam are similar to foreign keys in databases in that NIs are a
+visual indication of how data is connected, and enables easier and more precise
+joins.
+
+However, Sesam does not enforce any relationship between NIs and the referenced
+properties.
+
+You use the functions ["make-ni"] or ["ni"] to create NIs when modelling data in
+Sesam.
 
 .. seealso::
 
-  TODO
+  :ref:`developer-guide` > :ref:`DTLReferenceGuide` > :ref:`namespace_aware_functions`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`: > :ref:`entity-id-and-namespaces-3-1`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`namespace-3-2`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`make-ni-3-2`
 
 .. _special-sesam-attributes_rdf-type:
 
 Rdf:type
 ^^^^^^^^
 
-RDF stands for Resource Description Framework and is a standard for describing web resources and data interchange. Sesam has several features to facilitate working with RDF data both as `input <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-input>`_, when doing transforms and finally when exposing or producing data for `external consumption <https://docs.sesam.io/rdf-support.html?highlight=rdf#rdf-output>`_.
+RDF stands for Resource Description Framework and is a standard for describing
+web resources and data interchange. Sesam has several features to facilitate
+working with RDF data both as :ref:`input<rdf-input>` when doing transforms and
+finally when exposing or producing data for
+:ref:`external consumption<rdf-output>`.
 
-RDF in Sesam is used to relate data and add semantic context. When used with a namespace, it keeps track of the origin of the data, as well as the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
+RDF in Sesam is used to relate data and add semantic context.
+When used with a namespace, it keeps track of the origin of the data, as well as
+the business type. It is composed upon input and will be used to relate and filter like you would use a foreign key.
 
-Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look like the following: ``{"rdf:type": "~:foo:bar"}.``
+Using the above NI "~:foo:bar", an RDF type defined property in Sesam could look
+like the following: ``{"rdf:type": "~:foo:bar"}.``
+
+When an entity from the system ``foo`` of the type ``bar`` merges with an entity
+from the system ``hello`` of the type ``person``, the ``rdf:type`` will look
+as follows in the merged entity:
+
+``{"rdf:type": "~:foo:bar"}.``
 
 .. seealso::
 
   :ref:`developer-guide` > :ref:`working-with-RDF`
 
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-intermediate-3-3`: > :ref:`rdf:type-3-2`
+
 .. _id-1-1:
 
 \_id
 ^^^^
-The identity (_id) of systems, pipes and datasets must be unique and consistent as data moves via systems, through pipes and into datasets.
-
-The _id of a system is usually defined by the name of your source system i.e., salesforce. In case you need two systems in Sesam that both originate from salesforce, you'll need to make two unique names for each of these i.e., salesforce and salesforce-rest.
-
-For pipes, the _id is typically defined by establishing which properties in the pipe´s dataset are unique across its entities. This could typically be primary key(s) when data is imported from a database or potentially a unique property or even concatenated properties when data is imported from an API.
-
-When data reaches a pipe's dataset, the _id will be identical to what you defined the _id to be, in that pipe's config.
+You can read more about ``_id`` in the DTL Beginner chapter and elsewhere.
+Links in the seealso section below.
 
 .. seealso::
 
-  TODO
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`: > :ref:`entities-pipes-and-id-3-1`
+
+  :ref:`learn-sesam` > :ref:`dtl` > :ref:`dtl-beginner-3-1`: > :ref:`entity-id-and-namespaces-3-1`
+
+  :ref:`developer-guide` > :ref:`entity_data_model`
 
 .. _tasks-for-architecture-and-concepts-beginner-1-1:
 

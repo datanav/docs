@@ -78,6 +78,8 @@ Now, rewriting the original URIs with these short form CURIEs we get:
 This is both shorter, easier to work with and also makes it easier to *change the prefix* without having to
 reprocess or reload any of our data.
 
+.. _rdf-input:
+
 RDF input
 =========
 
@@ -89,6 +91,8 @@ Sesam supports RDF input from several different sources:
 
 Additionally, you can set up a :ref:`HTTP endpoint source <http_endpoint_source>` which includes a `SDShare Push` capable
 HTTP endpoint where you can post RDF data in NTriples format in accordance with the ``SDShare Push protocol``.
+
+.. _rdf-output:
 
 RDF output
 ==========

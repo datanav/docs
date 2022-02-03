@@ -24,6 +24,8 @@ Sesam gets raw data from source systems and stores it in datasets. Pipes can be 
 
 The primary building block for building :ref:`flows <concepts-flows>` is the :ref:`pipe <concepts-pipes>`. A pipe gets data from a :ref:`source <concepts-sources>`, :ref:`transforms <concepts-transforms>` it and writes it to a :ref:`sink <concepts-sinks>`. The data that flows through pipes are streams of :doc:`entities <entitymodel>` – which are like JSON objects. Pipes are the active component that gets data into the data hub, makes data flow through it and provides data to target systems.
 
+.. _why-sesam:
+
 Why Sesam
 ---------
 
@@ -354,7 +356,7 @@ The available channels are:
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
 .. Note::
-  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age. 
-  
-Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to Monday. 
-Security hotfixes will not wait for the scheduled window. Downgrades are not supported. 
+  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age.
+
+Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to Monday.
+Security hotfixes will not wait for the scheduled window. Downgrades are not supported.
