@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_02_04:
+
+2022-02-04
+----------
+
+* The :ref:`hash128 <hash128_dtl_function>` DTL function now takes an optional seed argument.
+
 .. _changelog_2022_01_25:
 
 2022-01-25

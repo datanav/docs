@@ -122,7 +122,7 @@ Explanation:
 2. | There are two named ``rules`` specified in the DTL transform:
      ``default`` and ``order``. The ``default`` rule is mandatory and
      is the one that is applied to the entities in the ``person``
-     dataset. You can think of it as the entry point of the execution, 
+     dataset. You can think of it as the entry point of the execution,
      similar to a ``main`` function in many programming languages.
 
 3. | ``["copy", "_id"]`` copies the ``_id`` property from the source
@@ -3639,7 +3639,7 @@ Hops
           comma separated list of dataset aliases. In that case all
           the values of those aliases will be returned. If it is an
           expression then the expression is used as a template for
-          the hops result. In the template you can refer to the 
+          the hops result. In the template you can refer to the
           dataset aliases and the interpolated result is returned. If
           not specified, then it will return the last dataset alias
           in the list. This is the default. It can only be specified
@@ -4946,12 +4946,17 @@ Hashing
    * - ``hash128``
      - | *Arguments:*
        |   ALGORITM("murmur3")
+       |   SEED(integer-expression{0|1})
        |   VALUES(value-expression{1})
        |
        | Generates 128 bit integer hashes from bytes and strings. Values of
          other types are ignored. This function can be used to generate
          content hashes. The only supported algoritm is "murmur3"
          (`MurmurHash3 <https://en.wikipedia.org/wiki/MurmurHash>`_).
+
+       | The function takes an optional seed argument. The seed
+         can be used to randomize the hash function.
+
      - | ``["hash128", "murmur3", "abc"]``
        |
        | Returns ``79267961763742113019008347020647561319``.
