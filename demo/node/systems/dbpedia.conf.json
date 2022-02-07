@@ -1,0 +1,16 @@
+{
+  "_id": "dbpedia",
+  "type": "system:rest",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  "operations": {
+    "sparql": {
+      "method": "POST",
+      "url": ""
+    }
+  },
+  "url_pattern": "https://dbpedia.org/%s?&timeout=60000",
+  "verify_ssl": true,
+  "worker_threads": 3
+}

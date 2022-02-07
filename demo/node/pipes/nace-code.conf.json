@@ -1,0 +1,10 @@
+{
+  "_id": "nace-code",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "nace-code-raw"
+  },
+  "add_namespaces": true,
+  "symmetric_namespace_collapse": true
+}

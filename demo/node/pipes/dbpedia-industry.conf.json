@@ -1,0 +1,9 @@
+{
+  "_id": "dbpedia-industry",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "dbpedia-industry-raw"
+  },
+  "add_namespaces": true
+}

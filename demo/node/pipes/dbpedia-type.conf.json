@@ -1,0 +1,12 @@
+{
+  "_id": "dbpedia-type",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "dbpedia-type-raw"
+  },
+  "pump": {
+    "schedule_interval": 5
+  },
+  "add_namespaces": true
+}

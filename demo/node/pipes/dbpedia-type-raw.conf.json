@@ -1,0 +1,16 @@
+{
+  "_id": "dbpedia-type-raw",
+  "type": "pipe",
+  "source": {
+    "type": "sparql",
+    "system": "dbpedia",
+    "fragment_query": ["CONSTRUCT { ?subject ?property ?value} WHERE {  ?subject ?property ?value. ?subject a ?type . ?subject rdfs:label ?label  FILTER (( lang(?label) = \"\" || langMatches(lang(?label), \"en\")) && ?subject = <${uri}>) }"],
+    "fragments_query": ["SELECT DISTINCT ?id bif:dateadd(\"second\",  ?rev , xsd:dateTime(\"0001-01-01Z\")) as ?updated WHERE {{ ?id a ?Concept . ?x dbo:type ?id . ?x a dbo:Company . ?id dbo:wikiPageRevisionID ?rev . filter ( ?rev > bif:datediff(\"second\", xsd:dateTime(\"0001-01-01Z\"), xsd:dateTime(\"${since}\")))} UNION { ?id a ?Concept . ?x rdf:type ?id . ?x a dbo:Company .  ?id dbo:wikiPageRevisionID ?rev . filter ( ?rev > bif:datediff(\"second\", xsd:dateTime(\"0001-01-01Z\"), xsd:dateTime(\"${since}\")))}} order by ?rev  limit 1000"],
+    "initial_since_value": "0001-01-01Z",
+    "url": "sparql"
+  },
+  "pump": {
+    "schedule_interval": 5
+  },
+  "add_namespaces": false
+}

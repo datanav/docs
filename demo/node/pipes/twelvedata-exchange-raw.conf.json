@@ -1,0 +1,17 @@
+{
+  "_id": "twelvedata-exchange-raw",
+  "type": "pipe",
+  "source": {
+    "type": "rest",
+    "system": "twelvedata",
+    "id_expression": "{{ code }}",
+    "operation": "exchanges",
+    "payload_property": "data",
+    "rate_limiting_delay": 60,
+    "rate_limiting_retries": 3
+  },
+  "pump": {
+    "cron_expression": "0 5 * * ?"
+  },
+  "add_namespaces": false
+}

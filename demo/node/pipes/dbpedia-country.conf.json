@@ -1,0 +1,9 @@
+{
+  "_id": "dbpedia-country",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "dbpedia-country-raw"
+  },
+  "add_namespaces": true
+}

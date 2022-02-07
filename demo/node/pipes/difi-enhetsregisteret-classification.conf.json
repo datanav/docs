@@ -1,0 +1,49 @@
+{
+  "_id": "difi-enhetsregisteret-classification",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "difi-enhetsregisteret"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["create",
+          ["filter",
+            ["is-not-null", "_."],
+            ["map",
+              ["if",
+                ["and",
+                  ["is-ni", "_.value"],
+                  ["eq", "ni",
+                    ["last",
+                      ["split", "-", "_.key"]
+                    ]
+                  ]
+                ],
+                ["dict", "_id",
+                  ["concat",
+                    ["ni-ns", "_.value"], ":",
+                    ["ni-id", "_.value"]
+                  ], "rdf:type",
+                  ["ni",
+                    ["replace", "difi-", "difi:",
+                      ["ni-ns", "_.value"]
+                    ]
+                  ],
+                  ["concat",
+                    ["ni-ns", "_.value"], ":value"],
+                  ["ni-id", "_.value"]
+                ]
+              ],
+              ["key-values", "_S."]
+            ]
+          ]
+        ],
+        ["discard"]
+      ]
+    }
+  },
+  "add_namespaces": false
+}

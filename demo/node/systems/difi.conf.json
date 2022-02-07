@@ -1,0 +1,5 @@
+{
+  "_id": "difi",
+  "type": "system:url",
+  "url_pattern": "http://hotell.difi.no/download/%s"
+}
