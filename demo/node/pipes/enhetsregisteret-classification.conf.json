@@ -1,0 +1,161 @@
+{
+  "_id": "enhetsregisteret-classification",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "enhetsregisteret-raw"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["if",
+          ["is-not-empty", "_S.avvikling"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-avvikling:", "_S.avvikling"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-avvikling"], "enhetsregisteret-avvikling:value", "_S.avvikling"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.regiaa"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-konkurs:", "_S.konkurs"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-konkurs"], "enhetsregisteret-konkurs:value", "_S.konkurs"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.avvikling"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-regiaa:", "_S.regiaa"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-regiaa"], "enhetsregisteret-regiaa:value", "_S.regiaa"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.regifr"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-regifr:", "_S.regifr"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-regifr"], "enhetsregisteret-regifr:value", "_S.regifr"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.regimva"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-regimva:", "_S.regimva"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-regimva"], "enhetsregisteret-regimva:value", "_S.regimva"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.regifriv"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-regifriv:", "_S.regifriv"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-regifriv"], "enhetsregisteret-regifriv:value", "_S.regifriv"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.tvangsavvikling"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-tvangsavvikling:", "_S.tvangsavvikling"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-tvangsavvikling"], "enhetsregisteret-tvangsavvikling:value", "_S.tvangsavvikling"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.organisasjonsform"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-organisasjonsform:", "_S.organisasjonsform"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-organisasjonsform"], "enhetsregisteret-organisasjonsform:value", "_S.organisasjonsform"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.forradrland"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-land:", "_S.forradrland"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-land"], "enhetsregisteret-land:value", "_S.forradrland"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.ppostland"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-land:", "_S.ppostland"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-land"], "enhetsregisteret-land:value", "_S.ppostland"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.forradrpostnr"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-postnummer:", "_S.forradrpostnr"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-postnummer"], "enhetsregisteret-postnummer:value", "_S.forradrpoststed"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.ppostnr"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-postnummer:", "_S.ppostnr"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-postnummer"], "enhetsregisteret-postnummer:value", "_S.ppoststed"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.sektorkode"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-sektorkode:", "_S.sektorkode"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-sektorkode"], "enhetsregisteret-sektorkode:value", "_S.sektorkode"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.forradrkommnr"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-kommnr:", "_S.forradrkommnr"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-kommnr"], "enhetsregisteret-kommnr:value", "_S.forradrkommnavn"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.nkode"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-nkode:", "_S.nkode"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-nkode"], "enhetsregisteret-nkode:value", "_S.nkode"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.nkode1"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-nkode:", "_S.nkode1"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-nkode"], "enhetsregisteret-nkode:value", "_S.nkode1"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.nkode2"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-nkode:", "_S.nkode2"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-nkode"], "enhetsregisteret-nkode:value", "_S.nkode2"]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.nkode3"],
+          ["create",
+            ["dict", "_id",
+              ["concat", "enhetsregisteret-nkode:", "_S.nkode3"], "rdf:type",
+              ["ni", "difi", "enhetsregisteret-nkode"], "enhetsregisteret-nkode:value", "_S.nkode3"]
+          ]
+        ],
+        ["discard"]
+      ]
+    }
+  },
+  "add_namespaces": true
+}

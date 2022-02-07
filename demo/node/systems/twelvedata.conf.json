@@ -1,0 +1,17 @@
+{
+  "_id": "twelvedata",
+  "type": "system:rest",
+  "operations": {
+    "exchanges": {
+      "method": "GET",
+      "url": "exchanges"
+    },
+    "stocks": {
+      "method": "GET",
+      "url": "stocks"
+    }
+  },
+  "url_pattern": "https://api.twelvedata.com/%s",
+  "verify_ssl": true,
+  "worker_threads": 2
+}
