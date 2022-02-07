@@ -677,8 +677,8 @@ Properties
    * - ``compaction.growth_threshold``
      - Float
      - The growth factor required for the automatically scheduled compaction to kick
-       in. Uses the minimum value of ``1.0`` by default, meaning that no new offsets
-       need to be written to the dataset for compaction to run.
+       in. Uses the minimum value of ``1.0`` by default, meaning that compaction will always
+       run when new entities are written to the dataset.
      - ``1.0``
      - No
 
