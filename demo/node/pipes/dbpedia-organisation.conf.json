@@ -5,8 +5,6 @@
     "type": "dataset",
     "dataset": "dbpedia-organisation-raw"
   },
-  "pump": {
-    "schedule_interval": 5
-  },
-  "add_namespaces": true
+  "add_namespaces": false,
+  "description": "add_namespaces in the config is set to false because of the raw format from dbpedia. This is to support the conceptual naming-convention"
 }
