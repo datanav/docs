@@ -1,0 +1,28 @@
+{
+  "_id": "classification-synapse",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "global-classification"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["comment", "*** Add global properties ***"],
+        ["copy", "$ids"],
+        ["copy", "rdf:type"],
+        ["copy", "global-*:*"],
+        ["comment", "*** Flatten arrays ***"],
+        ["merge",
+          ["map-dict", "_.",
+            ["substring", 0, 3900,
+              ["join", ";",
+                ["string", "_."]
+              ]
+            ], "_T."]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "nace",
+  "type": "system:url",
+  "url_pattern": "https://github.com/ipsoeu/ramon-ld/raw/master/%s",
+  "verify_ssl": true
+}

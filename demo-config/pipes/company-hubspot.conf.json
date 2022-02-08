@@ -1,0 +1,71 @@
+{
+  "_id": "company-hubspot",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "completeness": false,
+    "dataset": "global-organisation",
+    "include_replaced": false,
+    "subset": ["eq",
+      ["is-not-empty", "_S.global-organisation:domain"], true]
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["comment", "*** Filter data ***"],
+        ["add", "_x",
+          ["apply-hops", "broader", {
+            "datasets": ["global-classification t"],
+            "where": [
+              ["eq", "_S.global-organisation:classification", "t.$ids"]
+            ]
+          }]
+        ],
+        ["filter",
+          ["and",
+            ["is-not-empty",
+              ["intersection",
+                ["list", "~:dbr:Information_technology", "~:nace-2008:62", "~:nace-2008:63"], "_T._x.$ids"]
+            ]
+          ]
+        ],
+        ["comment", "*** Add hubspot properties ***"],
+        ["add", "_id",
+          ["replace", ":", "-", "_S._id"]
+        ],
+        ["add", "id",
+          ["first", "_S.hubspot-company:id"]
+        ],
+        ["add", "$hash",
+          ["first", "_S.hubspot-company:updatedAt"]
+        ],
+        ["add", "sesam-id", "_S._id"],
+        ["add", "properties",
+          ["apply", "properties", "_S."]
+        ]
+      ],
+      "broader": [
+        ["comment", "*** Recurcive data ***"],
+        ["merge-union",
+          ["hops", {
+            "datasets": ["global-classification t"],
+            "where": [
+              ["eq", "_S.skos:broader", "t.$ids"]
+            ],
+            "recurse": true,
+            "max_depth": 5
+          }]
+        ]
+      ],
+      "properties": [
+        ["add", "name", "_S.global-organisation:name"],
+        ["add", "website", "_S.global-organisation:domain"],
+        ["add", "about_us",
+          ["first", "_S.global-organisation:company-id"]
+        ]
+      ]
+    }
+  },
+  "remove_namespaces": true
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "difi-enhetsregisteret-enrich",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "difi-enhetsregisteret-collect",
+    "subset": ["eq",
+      ["or",
+        ["eq", "_S.organisasjonsform", "AS"],
+        ["or",
+          ["eq", "_S.organisasjonsform", "SF"],
+          ["eq", "_S.organisasjonsform", "ASA"]
+        ]
+      ], true]
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["comment", "*** Add clasification ***"],
+        ["make-ni", "difi-enhetsregisteret", "hovedenhet"],
+        ["make-ni", "difi-enhetsregisteret-avvikling", "avvikling"],
+        ["make-ni", "difi-enhetsregisteret-konkurs", "konkurs"],
+        ["make-ni", "difi-enhetsregisteret-regiaa", "regiaa"],
+        ["make-ni", "difi-enhetsregisteret-regifr", "regifr"],
+        ["make-ni", "difi-enhetsregisteret-regimva", "regimva"],
+        ["make-ni", "difi-enhetsregisteret-regifriv", "regifriv"],
+        ["make-ni", "difi-enhetsregisteret-tvangsavvikling", "tvangsavvikling"],
+        ["make-ni", "difi-enhetsregisteret-organisasjonsform", "organisasjonsform"],
+        ["make-ni", "difi-enhetsregisteret-land", "forradrland"],
+        ["make-ni", "difi-enhetsregisteret-land", "ppostland"],
+        ["make-ni", "difi-enhetsregisteret-postnummer", "forradrpostnr"],
+        ["make-ni", "difi-enhetsregisteret-postnummer", "ppostnr"],
+        ["make-ni", "difi-enhetsregisteret-sektorkode", "sektorkode"],
+        ["make-ni", "difi-enhetsregisteret-kommnr", "forradrkommnr"],
+        ["make-ni", "difi-enhetsregisteret-nkode", "nkode1"],
+        ["make-ni", "difi-enhetsregisteret-nkode", "nkode2"],
+        ["make-ni", "difi-enhetsregisteret-nkode", "nkode3"],
+        ["add", "classification",
+          ["map-values", "_.", "_T."]
+        ],
+        ["comment", "*** Add data and type ***"],
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "difi", "difi-enhetsregisteret"]
+        ],
+        ["comment", "*** Fix data types ***"],
+        ["add", "ansatte_dato-date",
+          ["datetime-parse", "%d.%m.%Y", "_S.ansatte_dato"]
+        ],
+        ["add", "regdato-date",
+          ["datetime-parse", "%d.%m.%Y", "_S.regdato"]
+        ]
+      ]
+    }
+  },
+  "add_namespaces": true,
+  "namespaces": {
+    "identity": "difi-enhetsregisteret",
+    "property": "difi-enhetsregisteret"
+  }
+}
