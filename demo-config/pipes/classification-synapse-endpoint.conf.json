@@ -1,0 +1,62 @@
+{
+  "_id": "classification-synapse-endpoint",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "classification-synapse"
+  },
+  "sink": {
+    "type": "sql",
+    "system": "synapse",
+    "batch_size": 10000,
+    "create_table_if_missing": true,
+    "lenient": true,
+    "primary_key": "_id",
+    "recreate_table_on_first_run": true,
+    "schema_definition": [{
+      "type": "string",
+      "name": "_id",
+      "allow_null": false,
+      "max_size": 4000,
+      "min_size": 1,
+      "primary_key": true,
+      "source_property": "_id"
+    }, {
+      "type": "string",
+      "name": "$ids",
+      "allow_null": true,
+      "max_size": 4000,
+      "min_size": 1,
+      "source_property": "$ids"
+    }, {
+      "type": "string",
+      "name": "rdf:type",
+      "allow_null": true,
+      "max_size": 4000,
+      "min_size": 1,
+      "source_property": "rdf:type"
+    }, {
+      "type": "string",
+      "name": "global-classification:value",
+      "allow_null": true,
+      "max_size": 4000,
+      "min_size": 1,
+      "source_property": "global-classification:value"
+    }],
+    "table": "global-classification",
+    "use_bulk_operations": true
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["discard",
+          ["not", "_S._deleted"]
+        ],
+        ["copy", "*"]
+      ]
+    }
+  },
+  "batch_size": 10000,
+  "remove_namespaces": false
+}

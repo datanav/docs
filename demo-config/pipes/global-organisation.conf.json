@@ -1,0 +1,123 @@
+{
+  "_id": "global-organisation",
+  "type": "pipe",
+  "source": {
+    "type": "merge",
+    "datasets": ["dbpedia-organisation do", "difi-enhetsregisteret-enrich er", "hubspot-company-enrich hc", "twelvedata-stock ts"],
+    "equality_sets": [
+      ["do._id", "er._id", "hc._id", "ts._id", "hc.sesam-id"],
+      [
+        ["concat", "ts.twelvedata-stock:exchange", ":", "ts.twelvedata-stock:symbol"],
+        ["upper",
+          ["replace", " ", "", "do.dbp:tradedAs"]
+        ]
+      ],
+      ["er.difi-enhetsregisteret:orgnr", "hc.hubspot-company:properties.hubspot-company:about_us"],
+      [
+        ["lower",
+          ["replace", "www.", "",
+            ["replace", "http://", "",
+              ["replace", "https://", "",
+                ["string", "do.foaf:homepage"]
+              ]
+            ]
+          ]
+        ],
+        ["lower",
+          ["replace", "www.", "",
+            ["replace", "http://", "",
+              ["replace", "https://", "",
+                ["string", "do.dbp:website"]
+              ]
+            ]
+          ]
+        ],
+        ["lower",
+          ["replace", "www.", "",
+            ["replace", "http://", "",
+              ["replace", "https://", "", "er.url"]
+            ]
+          ]
+        ],
+        ["lower",
+          ["replace", "www.", "",
+            ["replace", "http://", "",
+              ["replace", "https://", "", "hc.hubspot-company:website"]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "identity": "first",
+    "strategy": "compact",
+    "version": 2
+  },
+  "sink": {
+    "indexes": "$ids"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["comment", "*** Add classification ***"],
+        ["copy", "difi-enhetsregisteret:classification"],
+        ["copy", "rdf:type"],
+        ["copy", "dbo:type"],
+        ["copy", "dbo:industry"],
+        ["add", "classification",
+          ["flatten",
+            ["map-values", "_.", "_T."]
+          ]
+        ],
+        ["comment", "*** Copy data ***"],
+        ["copy", "*"],
+        ["comment", "*** Add global properties ***"],
+        ["add", "name",
+          ["first",
+            ["coalesce",
+              ["list", "_S.hubspot-company:properties.hubspot-company:name", "_S.difi-enhetsregisteret:navn", "_S.rdfs:label", "_S.twelvedata-stock:name", "_S.name", "No name"]
+            ]
+          ]
+        ],
+        ["add", "company-id",
+          ["coalesce",
+            ["list", "_S.difi-enhetsregisteret:orgnr", "_S.dbo:number", "_S.hubspot-company:id", "_S.hubspot-company:id", "_S._id"]
+          ]
+        ],
+        ["add", "_domain",
+          ["lower",
+            ["first",
+              ["split", "/",
+                ["replace", "www.", "",
+                  ["replace", "http://", "",
+                    ["replace", "https://", "",
+                      ["string",
+                        ["first",
+                          ["coalesce",
+                            ["list", "_S.difi-enhetsregisteret:url", "_S.dbp:domain", "_S.dbo:domain", "_S.dbp:domains", "_S.dbo:url", "_S.dbp:website"]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_T._domain"],
+          ["add", "domain",
+            ["first", "_T._domain"]
+          ]
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "global": true
+  },
+  "compaction": {
+    "compaction_interval": 86400
+  }
+}

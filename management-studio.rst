@@ -10,7 +10,7 @@ Sesam Management Studio
 Introduction
 ============
 
-Sesam Management Studio (SMS) is used to configure, manage and administer Sesam nodes.
+Sesam Management Studio is used to configure, manage and administer Sesam nodes.
 
 Management studio can be found here `https://portal.sesam.io <https://portal.sesam.io>`_.
 
@@ -28,40 +28,19 @@ When pressing **Overview**, it shows the Sesam integration for the particular no
 .. image:: images/overview.png
     :width: 600px
     :align: center
-    :alt: DataSet
-
-Datasets
-========
-
-This contains a list of each dataset in this node. By clicking on a dataset, it takes you into the entities this dataset consists of. From here you can **“Go to pipe”** which takes you straight to pipe used to generate this dataset. You can also “delete” this dataset” by pressing **“Delete“** button. If the pipe has recently been running, you can press **“Refresh”** to get latest update. 
-
-.. image:: images/Datasets.png
-    :width: 600px
-    :align: center
-    :alt: DataSet
-
-At the bottom of the screen you find the **“Compare”** button which allows you to compare current entity to previous version if the entity has changed.
-
-Pressing **“...”** after the name of dataset, you get two options as seen in image below:
-
-.. image:: images/datasets_menu.png
-    :width: 600px
-    :align: center
-    :alt: DataSet
-
-The option “Create a downstream pipe” means to create the next step in the dataflow. Pressing this takes you into “new pipe” with the current dataset as source. By pressing **“Go to pipe”** it takes you to the pipe that produced the current dataset. 
+    :alt: Overview
 
 .. _management-studio-pipes:
 
 Pipes
 =====
 
-The pipes page contains a list of pipes generated for a particular node. 
+The pipes page contains a list of pipes generated for a particular node.
 
 .. image:: images/pipes.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: Pipes
 
 Double clicking on a pipe takes you into this pipe's working area.
 
@@ -70,7 +49,7 @@ By pressing **"..."** to the right of the pipe name, a menu with various options
 .. image:: images/pipesmenu.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: PipesMenu
 
 .. _management-studio-pipe-menu:
 
@@ -118,7 +97,7 @@ New Pipe
 
 When pressing the button **"New Pipe"**, it takes you into template for generating a pipe from scratch.
 
-First we have to add value to "_id" or pipe cannot be saved. The naming conventions of pipe or the "id" can be found here: 
+First we have to add value to "_id" or pipe cannot be saved. The naming conventions of pipe or the "id" can be found here:
 :ref:`Naming conventions <getting-started-naming-conventions>`
 
 As seen below, we have several tabs called "Panels" in Sesam. Press **"Templates"** and the available templates for each part of the pipe is available.
@@ -161,7 +140,7 @@ Next to **Templates** tab, we find **Schema**. When pressing it, the **Schema** 
 .. image:: images/new-pipe-schema.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: Schema
 
 Editor Preferences
 ^^^^^^^^^^^^^^^^^^
@@ -170,12 +149,12 @@ The tab to the far right takes you to page where you can choose some preferences
 
 As you can see below you have some choices (and short explanation on what they mean) like *"Automatic auto completion"*, *"Close nested array on new line"* amongst others. Please have a look and click on the ones you would like to implement.
 
-To the right side of the interface there is a list of available **keyboard shortcuts** which makes working in Sesam easier. 
+To the right side of the interface there is a list of available **keyboard shortcuts** which makes working in Sesam easier.
 
 .. image:: images/new-pipe-editorpref.png
     :width: 800px
     :align: center
-    :alt: Generic pipe concept
+    :alt: EditorPreferences
 
 Systems
 =======
@@ -189,7 +168,7 @@ As with pipes and datasets, you can press "..." next to the system name and from
 .. image:: images/systems.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: Systems
 
 .. _management-studio-flows:
 
@@ -202,7 +181,7 @@ On the Flows page you can get information about a flow as a whole, whether any p
 .. image:: images/dataflow.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: Flows
 
 Settings
 ========
@@ -214,14 +193,14 @@ Settings for datahub manages queues, logs and permissions for your node. It also
 .. image:: images/settings_datahub.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: SettingsDatahub
 
-For subscription Sesam has settings for e.g. license, JWT token and Network. 
+For subscription Sesam has settings for e.g. license, JWT token and Network.
 
 .. image:: images/settings_subscription.png
     :width: 600px
     :align: center
-    :alt: DataSet
+    :alt: SettingsSubscription
 
 User accounts
 =============
@@ -243,149 +222,3 @@ On the other hand: most of the third party authentication providers supplies a v
 To avoid someone else to be able to log in with your email-address, the first login with a verified email-address
 will disable any unverified user credentials that has been previously used. All other settings on the existing user
 account will be kept, though.
-
-Preview of new features
-=======================
-
-There is a version of the Management Studio with a preview of all the latest features available on `https://beta.portal.sesam.io <https://beta.portal.sesam.io>`_. It uses the same login credentials as the regular portal.
-
-Elasticsearch [in development]
-==============================
-.. warning:: The data that is indexed will be available to all users!
-.. warning:: This is an experimental feature and will be changed in the future.
-
-We are in the middle of making the Dataset Inspector's free text search work with Elasticsearch. Although this feature is very experimental, it can still be tested
-by having:
-
-1. A microservice system called "elasticsearch-freetext", running Elasticsearch 7.
-2. An index with the same name as the dataset you want to search.
-3. Every entity as a doc in the index, with the id of the doc being the entity's _updated value.
-
-If all of those conditions are met, the Dataset Inspector will use Elasticsearch to do the freetext search. If not, the old way of searching free text will be used.
-
-
-Setting up Elasticsearch as a microservice.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Read more about the microservice system :ref:`here. <microservice_system>`
-
-Here is a sample microservice config for Elasticsearch:
-::
-
-    {
-      "_id": "elasticsearch-freetext",
-      "connect_timeout": 3600,
-      "docker": {
-        "environment": {
-          "discovery.type": "single-node"
-        },
-        "image": "elasticsearch:7.7.0",
-        "memory": 4000,
-        "port": 9200
-      },
-      "read_timeout": 3600,
-      "type": "system:microservice"
-    }
-
-
-Create an index
-^^^^^^^^^^^^^^^
-
-Then next thing we want to do is to create an index with the same name as the dataset you want to search. This new index will also need some simple mappings
-to work as intended. By supplying the mappings, Elasticsearch will automatically create the index, so we can do both at the same time by 
-doing the following http request to the microservice system:
-
-::
-
-    PUT /systems/elasticsearch-freetext/proxy/{index name}
-    Content-Type: application/json
-    {
-      "mappings": {
-        "properties": {
-          "__id": {
-            "type":  "keyword"
-          }
-        }
-      }
-    }
-
-
-.. note:: Remember to change {index name} to the name of the dataset you want to search.
-
-
-Fill the index
-^^^^^^^^^^^^^^
-
-Next up we will create a pipe that will fill the newly created index with entities.
-
-The way we willd do this is to first create a REST system that will communicate with our microservice system:
-
-::
-
-    {
-      "_id": "elasticsearch-freetext-rest",
-      "type": "system:rest",
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "operations": {
-        "doc": {
-          "headers": {
-            "Content-type": "application/json"
-          },
-          "method": "POST",
-          "payload-type": "json",
-          "url": "_doc/{{ properties._id }}"
-        }
-      },
-      "url_pattern": "{sub URL}/systems/elasticsearch-freetext/proxy/%s",
-      "verify_ssl": true
-    }
-
-
-.. note:: Remember to change the {sub URL} to the URL of your subscription.
-
-
-::
-
-  {
-    "_id": "{dataset}-elasticsearch-freetext-rest",
-    "type": "pipe",
-    "source":
-    {
-      "type": "dataset",
-      "dataset": "{dataset}"
-    },
-    "sink":
-    {
-      "type": "rest",
-      "system": "elasticsearch-freetext-rest"
-    },
-    "transform": [
-    {
-      "type": "dtl",
-      "rules":
-      {
-        "default": [
-          ["add", "properties",
-            ["dict", "_id", "_S._updated"]
-          ],
-          ["add", "operation", "doc"],
-          ["add", "payload",
-            ["map-dict",
-              ["if",
-                ["not",
-                  ["matches", "_*", "_."]
-                ], "_.",
-                ["concat", "_", "_."]
-              ], "_.", "_S."]
-          ]
-        ]
-      }
-    }]
-  }
-
-.. note:: Remember to change {dataset} to the id of the dataset you want to search
-.. note:: The dtl transforms all the system attributes to start with "__" instead of "_". This is because single underscore is reserved for internal ES attributes (such as _id). The Dataset Inspector transforms them into single underscores again when getting them from the ES index.
-
-After running the pipe, the ES index should be filled up with the entities from the source dataset, and the Dataset Inspector should pick that up and use the index to do free text searches.
-
