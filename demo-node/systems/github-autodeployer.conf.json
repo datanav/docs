@@ -6,11 +6,11 @@
       "AUTODEPLOYER_PATH": "systems/github-autodeployer.conf.json",
       "BRANCH": "master",
       "DEPLOY_TOKEN": "$SECRET(sesam-autodeployer-key)",
-      "GIT_REPO": "git@github.com:datanav/docs/demo.git",
+      "GIT_REPO": "git@github.com:datanav/docs/demo-node.git",
       "JWT": "$SECRET(autodeployer-jwt)",
       "LOG_LEVEL": "INFO",
       "SESAM_API_URL": "$ENV(sesam_base_url)",
-      "SYNC_ROOT": "node",
+      "SYNC_ROOT": "demo-node",
       "TAG": "Hotfix-12.1.2"
     },
     "image": "sesamcommunity/github-autodeployer:2.1.5",
