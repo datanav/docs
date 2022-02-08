@@ -112,13 +112,12 @@ To implement the Github Autodeployer look to the below example system configurat
       "environment": {
         "AUTODEPLOYER_PATH": "systems/github-autodeployer.conf.json",
         "BRANCH": "master",
-        "DEPLOY_TOKEN": "$SECRET(sesam-autodeployer-key)",
+        "DEPLOY_TOKEN": "$SECRET(sesam_autodeployer_key)",
         "GIT_REPO": "git@github.com:MITdata/sesam.git",
-        "JWT": "$SECRET(autodeployer-jwt)",
+        "JWT": "$SECRET(sesam_jwt)",
         "LOG_LEVEL": "INFO",
         "SESAM_API_URL": "$ENV(sesam_base_url)",
         "SYNC_ROOT": "node",
-        "TAG": "Hotfix-12.1.2",
         "VARIABLES_FILE_PATH": "/node/variables/production.json"
      },
       "image": "sesamcommunity/github-autodeployer:2.1.5",
