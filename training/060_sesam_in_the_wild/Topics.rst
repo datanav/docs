@@ -4,11 +4,6 @@
 Sesam in the Wild
 -----------------
 
-.. _topics-6-2:
-
-Topics
-~~~~~~
-
 .. _creating-mapping-data-for-enrichment-6-2:
 
 Creating mapping data for enrichment
