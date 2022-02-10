@@ -214,9 +214,9 @@ From the above pipe configuration you will get the following output when the pip
 Comparing the current state of the data with how it looked prior to having been exposed to the RDF standard in Sesam,
 you should recognize the semantic changes to the shape of the Hubspot example data.
 What you in practice see here, is Sesam's RDF standard applied to its data.
-Each property now consists of a subject, a predicate and an object.
+Each property now consists of a predicate and an object and the pipe ``_id`` is its subject.
 
-To exemplify: ``hubspot-organisation`` is the subject, ``id`` is a predicate and ``1`` is the object.
+To exemplify: ``hubspot-organisation`` is the subject, ``hubspot-organisation:id`` is an example of a predicate and its value ``1`` is an example of an object.
 
 .. seealso::
 
