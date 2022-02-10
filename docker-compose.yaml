@@ -1,14 +1,22 @@
 version: "3.9"
+# This is for convinience if you like to use docker-compose rather than direct docker commands 
+# or your own run scripts.
+# Examples:
+# docker-compose up  # set up volumes etc and run services (build html target in this case)
+# docker-compose run build-docs make clean # clean the _build directory
+# docker-compose run build-docs bash # run service image interactivly with a bash shell
+# docker-compose down # cleanup docker (oposit of up). Remove volumes etc.
+# docker-compose build # build a new image if Dockerfile changed
 services:
   build-docs:
     image: mofsesam/builddocs
     build: .
     volumes:
       - ".:/docs:rw"
-  web:
-    image: nginx:stable
-    ports:
-      - "8080:80"
-    volumes:
-      - "./_build/html:/usr/share/nginx/html:ro"
+  # web:
+  #   image: nginx:stable
+  #   ports:
+  #     - "8080:80"
+  #   volumes:
+  #     - "./_build/html:/usr/share/nginx/html:ro"
 
