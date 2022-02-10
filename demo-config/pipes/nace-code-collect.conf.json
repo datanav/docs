@@ -1,5 +1,5 @@
 {
-  "_id": "nace-code-raw",
+  "_id": "nace-code-collect",
   "type": "pipe",
   "source": {
     "type": "rdf",

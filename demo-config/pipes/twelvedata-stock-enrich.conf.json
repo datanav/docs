@@ -1,9 +1,9 @@
 {
-  "_id": "twelvedata-stock",
+  "_id": "twelvedata-stock-enrich",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "twelvedata-stock-raw"
+    "dataset": "twelvedata-stock-collect"
   },
   "transform": {
     "type": "dtl",

@@ -1,9 +1,9 @@
 {
-  "_id": "difi-enhetsregisteret",
+  "_id": "difi-enhetsregisteret-enrich",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "difi-enhetsregisteret-raw",
+    "dataset": "difi-enhetsregisteret-collect",
     "subset": ["eq",
       ["or",
         ["eq", "_S.organisasjonsform", "AS"],

@@ -1,5 +1,5 @@
 {
-  "_id": "hubspot-company-raw",
+  "_id": "hubspot-company-collect",
   "type": "pipe",
   "source": {
     "type": "rest",

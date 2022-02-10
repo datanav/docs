@@ -1,5 +1,5 @@
 {
-  "_id": "twelvedata-stock-raw",
+  "_id": "twelvedata-stock-collect",
   "type": "pipe",
   "source": {
     "type": "rest",

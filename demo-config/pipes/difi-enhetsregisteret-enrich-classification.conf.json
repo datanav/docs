@@ -1,9 +1,9 @@
 {
-  "_id": "difi-enhetsregisteret-classification",
+  "_id": "difi-enhetsregisteret-enrich-classification",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "difi-enhetsregisteret"
+    "dataset": "difi-enhetsregisteret-enrich"
   },
   "transform": {
     "type": "dtl",

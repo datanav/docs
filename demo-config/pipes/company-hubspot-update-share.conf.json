@@ -1,9 +1,9 @@
 {
-  "_id": "company-hubspot-update",
+  "_id": "company-hubspot-update-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "company-hubspot",
+    "dataset": "company-hubspot-transform",
     "subset": ["eq",
       ["is-not-empty", "_S.id"], true]
   },

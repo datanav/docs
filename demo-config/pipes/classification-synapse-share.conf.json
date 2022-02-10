@@ -1,9 +1,9 @@
 {
-  "_id": "organisation-classification-synapse-endpoint",
+  "_id": "classification-synapse-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "organisation-classification-synapse"
+    "dataset": "classification-synapse-transform"
   },
   "sink": {
     "type": "sql",
@@ -23,25 +23,30 @@
       "source_property": "_id"
     }, {
       "type": "string",
-      "name": "global-classification:_id",
+      "name": "$ids",
       "allow_null": true,
       "max_size": 4000,
       "min_size": 1,
-      "source_property": "global-classification:_id"
+      "source_property": "$ids"
     }, {
       "type": "string",
-      "name": "global-organisation:_id",
+      "name": "rdf:type",
       "allow_null": true,
       "max_size": 4000,
       "min_size": 1,
-      "source_property": "global-organisation:_id"
+      "source_property": "rdf:type"
+    }, {
+      "type": "string",
+      "name": "global-classification:value",
+      "allow_null": true,
+      "max_size": 4000,
+      "min_size": 1,
+      "source_property": "global-classification:value"
     }],
-    "table": "global-organisation-classification",
+    "table": "global-classification",
     "use_bulk_operations": true
   },
-  "transform": [{
-    "type": "emit_children"
-  }, {
+  "transform": {
     "type": "dtl",
     "rules": {
       "default": [
@@ -51,7 +56,7 @@
         ["copy", "*"]
       ]
     }
-  }],
+  },
   "batch_size": 10000,
   "remove_namespaces": false
 }

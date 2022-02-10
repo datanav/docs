@@ -1,9 +1,17 @@
 {
-  "_id": "dbpedia-industry",
+  "_id": "dbpedia-industry-enrich",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "dbpedia-industry-raw"
+    "dataset": "dbpedia-industry-collect"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"]
+      ]
+    }
   },
   "add_namespaces": false,
   "description": "add_namespaces in the config is set to false because of the raw format from dbpedia. This is to support the conceptual naming-convention"

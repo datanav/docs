@@ -1,9 +1,9 @@
 {
-  "_id": "hubspot-company",
+  "_id": "hubspot-company-enrich",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "hubspot-company-raw"
+    "dataset": "hubspot-company-collect"
   },
   "transform": {
     "type": "dtl",

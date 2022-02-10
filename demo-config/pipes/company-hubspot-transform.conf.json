@@ -1,5 +1,5 @@
 {
-  "_id": "company-hubspot",
+  "_id": "company-hubspot-transform",
   "type": "pipe",
   "source": {
     "type": "dataset",

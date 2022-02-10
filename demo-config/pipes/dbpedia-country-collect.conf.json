@@ -1,5 +1,5 @@
 {
-  "_id": "dbpedia-country-raw",
+  "_id": "dbpedia-country-collect",
   "type": "pipe",
   "source": {
     "type": "sparql",

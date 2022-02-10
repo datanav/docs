@@ -1,5 +1,5 @@
 {
-  "_id": "difi-enhetsregisteret-raw",
+  "_id": "difi-enhetsregisteret-collect",
   "type": "pipe",
   "source": {
     "type": "csv",
