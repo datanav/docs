@@ -16,7 +16,7 @@
     "schema_definition": [{
       "type": "string",
       "name": "_id",
-      "allow_nul": false,
+      "allow_null": false,
       "max_size": 4000,
       "min_size": 1,
       "primary_key": true,
