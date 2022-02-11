@@ -1,0 +1,52 @@
+{
+  "_id": "company-hubspot-update-share",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "company-hubspot-transform",
+    "subset": ["eq",
+      ["is-not-empty", "_S.id"], true]
+  },
+  "sink": {
+    "type": "rest",
+    "system": "hubspot",
+    "operation": "update"
+  },
+  "transform": [{
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["discard",
+          ["is-not-empty", "_S.id"]
+        ],
+        ["copy", "*"]
+      ]
+    }
+  }, {
+    "type": "rest",
+    "system": "hubspot",
+    "operation": "hash",
+    "replace_entity": false
+  }, {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["add", "hash_from_http_source",
+          ["hash128", "murmur3",
+            ["json-transit", "_S.response"]
+          ]
+        ],
+        ["discard",
+          ["eq", "_T.hash_from_http_source", "_S.$hash"]
+        ],
+        ["add", "::payload",
+          ["dict", "properties", "_S.properties"]
+        ],
+        ["add", "::properties",
+          ["dict", "id", "_S.id", "url", "companies"]
+        ]
+      ]
+    }
+  }],
+  "batch_size": 1
+}
