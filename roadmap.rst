@@ -12,6 +12,8 @@ change.
 Planned
 -------
 
+.. _roadmap_clustered_architecture:
+
 Clustered architecture everywhere (Q4 2021)
 ===========================================
 

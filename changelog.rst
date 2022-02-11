@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_02_11:
+
+2022-02-11
+----------
+
+* As part of the :ref:`Clustered architecture everywhere <roadmap_clustered_architecture>` initiative we are now in the process of migrating in-cloud subscriptions over to it. You can find the provisioning status of a subscription in ``Subscription`` > ``Basics`` in the :doc:`Management Studio <management-studio>`. There you can see which provisioner version it is running (``version 1`` is old single machine service, ``version 2`` is the new clustered service, if self-hosted it will say ``self-hosted``).
+
 .. _changelog_2022_02_04:
 
 2022-02-04
