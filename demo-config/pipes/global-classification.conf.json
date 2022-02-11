@@ -3,7 +3,7 @@
   "type": "pipe",
   "source": {
     "type": "merge",
-    "datasets": ["difi-enhetsregisteret-classification ec", "nace-code-enrich nc", "twelvedata-exchange-enrich te", "dbpedia-industry-enrich di", "dbpedia-type-enrich dt", "hubspot-company-enrich-classification hcce", "dbpedia-country-enrich dc"],
+    "datasets": ["difi-enhetsregisteret-classification ec", "nace-code-enrich nc", "twelvedata-exchange-enrich te", "dbpedia-industry-enrich di", "dbpedia-type-enrich dt", "hubspot-company-classification hcce", "dbpedia-country-enrich dc"],
     "equality_sets": [
       ["nc.dct:identifier",
         ["substring", 0, 5, "ec.difi-enhetsregisteret-nkode:value"]
