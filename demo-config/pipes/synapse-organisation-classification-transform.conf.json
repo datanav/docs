@@ -1,5 +1,5 @@
 {
-  "_id": "organisation-classification-synapse-transform",
+  "_id": "synapse-organisation-classification-transform",
   "type": "pipe",
   "source": {
     "type": "dataset",

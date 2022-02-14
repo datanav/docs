@@ -1,5 +1,5 @@
 {
-  "_id": "hubspot-company-enrich-classification",
+  "_id": "hubspot-company-classification",
   "type": "pipe",
   "source": {
     "type": "dataset",

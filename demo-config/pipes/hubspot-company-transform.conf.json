@@ -55,6 +55,10 @@
               ]
             ]
           ]
+        ],
+        ["add", "sesam-id", "_S._id"],
+        ["add", "properties",
+          ["apply", "properties", "_S."]
         ]
       ],
       "broader": [

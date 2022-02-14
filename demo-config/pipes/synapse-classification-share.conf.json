@@ -1,9 +1,9 @@
 {
-  "_id": "organisation-synapse-share",
+  "_id": "synapse-classification-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "organisation-synapse-transform"
+    "dataset": "synapse-classification-transform"
   },
   "sink": {
     "type": "sql",
@@ -37,27 +37,13 @@
       "source_property": "rdf:type"
     }, {
       "type": "string",
-      "name": "global-organisation:company-id",
+      "name": "global-classification:value",
       "allow_null": true,
       "max_size": 4000,
       "min_size": 1,
-      "source_property": "global-organisation:company-id"
-    }, {
-      "type": "string",
-      "name": "global-organisation:name",
-      "allow_null": true,
-      "max_size": 4000,
-      "min_size": 1,
-      "source_property": "global-organisation:name"
-    }, {
-      "type": "string",
-      "name": "global-organisation:classification",
-      "allow_null": true,
-      "max_size": 4000,
-      "min_size": 1,
-      "source_property": "global-organisation:classification"
+      "source_property": "global-classification:value"
     }],
-    "table": "global-organisation",
+    "table": "global-classification",
     "use_bulk_operations": true
   },
   "transform": {
