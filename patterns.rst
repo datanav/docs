@@ -38,6 +38,10 @@ Make periodic entities from a versioned history
 We do that in Sesam Sesam from the datasets we read Sesam Portal that only has a current view of the world in
 latest.
 
+Empty response pattern
+----------------------
+Source produces an empty array for some reason (during restarts, authenticaion problems, etc). Use circuit breakers.
+
 Enrich patterns
 ===============
 
