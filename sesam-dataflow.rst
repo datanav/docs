@@ -43,13 +43,6 @@ A two step approach
 
 To fullfil both goals of raw data retention and the ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the verbatim raw dataset. From the input pipe’s point of view, elaborated in the :ref:`enrich` step, the raw dataset is the data source as if it was from the external system itself.
 
-.. _collect-ownership-&-availability:
-
-A word about data ownership and data availability
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In the case when data is only available within Sesam, Sesam will become the de facto data owner and should be considered and labelled as such in broader architectural documentation and resources. Also, it is necessary to ensure those datasets are preserved, by setting them up as high availability pipes. High availability pipes have built in mechanisms for data redundancy, securing data retention.
-
 .. _collect-test-data:
 
 Test data
