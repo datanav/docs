@@ -710,7 +710,7 @@ circuit breaker was tripped. Committing it will expose the uncommitted
 entities. Both operations resets the circuit breaker so that pipe can
 run again.
 
-Compaction will not be performed on a datasets with a tripped circuit
+Compaction will not be performed on datasets with a tripped circuit
 breaker. It is also not possible to repost entities to these datasets.
 
 You can rollback or commit the circuit breaker on the dataset page in
