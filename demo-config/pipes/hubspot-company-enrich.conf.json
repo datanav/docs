@@ -11,7 +11,7 @@
       "default": [
         ["add", "sesam-id",
           ["hops", {
-            "datasets": ["company-hubspot-insert chi"],
+            "datasets": ["hubspot-company-insert-share chi"],
             "where": [
               ["eq", "_S.id", "chi.id"]
             ],
