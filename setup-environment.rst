@@ -7,9 +7,9 @@ Subscriptions
 To decide on the size of production and test environments for a Sesam subscription,
 one needs to consider the approximate number of engines and data volume.
 
--  Single compute: 4 engines and up to 350 GB data.
+-  Single compute: Up to 20 datatypes and 10 million entities.
 
--  Multi compute: 16 engines and up to 1 TB data.
+-  Multi compute: Limitless, by a dynamically expanding cluster.
 
 The following subscriptions are necessary for a complete Sesam
 environment:
