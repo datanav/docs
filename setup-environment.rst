@@ -5,7 +5,7 @@ Subscriptions
 -------------
 
 To decide on the size of production and test environments for a Sesam subscription,
-one needs to consider the approximate number of engines and data volume.
+one needs to consider the approximate number of datatypes and total entities.
 
 -  Single compute: Up to 20 datatypes and 10 million entities.
 
