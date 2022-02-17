@@ -37,8 +37,24 @@
         ["add", "id",
           ["first", "_S.hubspot-company:id"]
         ],
+        ["add", "sesam-id", "_S._id"],
+        ["add", "properties",
+          ["apply", "properties", "_S."]
+        ],
+        ["comment", "*** Add optimistic locking property ***"],
         ["add", "$hash",
-          ["first", "_S.hubspot-company:updatedAt"]
+          ["hash128", "murmur3",
+            ["json-transit",
+              ["first",
+                ["apply-hops", "raw-entity-for-hash", {
+                  "datasets": ["hubspot-company-collect hcc"],
+                  "where": [
+                    ["eq", "_S.hubspot-company:id", "hcc.id"]
+                  ]
+                }]
+              ]
+            ]
+          ]
         ],
         ["add", "sesam-id", "_S._id"],
         ["add", "properties",
@@ -64,6 +80,9 @@
         ["add", "about_us",
           ["first", "_S.global-organisation:company-id"]
         ]
+      ],
+      "raw-entity-for-hash": [
+        ["copy", "*", "_*"]
       ]
     }
   },

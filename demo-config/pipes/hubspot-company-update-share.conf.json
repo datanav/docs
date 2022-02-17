@@ -31,8 +31,13 @@
     "type": "dtl",
     "rules": {
       "default": [
+        ["add", "hash_from_http_source",
+          ["hash128", "murmur3",
+            ["json-transit", "_S.response"]
+          ]
+        ],
         ["discard",
-          ["eq", "_S.response.updatedAt", "_S.$hash"]
+          ["eq", "_T.hash_from_http_source", "_S.$hash"]
         ],
         ["add", "::payload",
           ["dict", "properties", "_S.properties"]
