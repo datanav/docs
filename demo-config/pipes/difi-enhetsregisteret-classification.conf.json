@@ -1,9 +1,9 @@
 {
-  "_id": "hubspot-company-classification-enrich",
+  "_id": "difi-enhetsregisteret-classification",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "hubspot-company-enrich"
+    "dataset": "difi-enhetsregisteret-enrich"
   },
   "transform": {
     "type": "dtl",

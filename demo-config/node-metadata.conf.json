@@ -16,6 +16,7 @@
   "namespaced_identifiers": true,
   "namespaces": {
     "default": {
+      "_": "https://www.sesam.com/demo/",
       "a": "http://www.w3.org/2005/Atom",
       "address": "http://schemas.talis.com/2005/address/schema#",
       "admin": "http://webns.net/mvcb/",
@@ -260,8 +261,7 @@
       "yago": "http://dbpedia.org/class/yago/",
       "yago-res": "http://yago-knowledge.org/resource/",
       "yt": "http://gdata.youtube.com/schemas/2007",
-      "zem": "http://s.zemanta.com/ns#",
-      "_": "https://www.sesam.com/demo/"
+      "zem": "http://s.zemanta.com/ns#"
     }
   },
   "sesam-provisioner-temporary-deployment-trigger": "2022-01-28T23:00:30.880329+00:00",

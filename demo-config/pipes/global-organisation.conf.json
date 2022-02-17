@@ -3,7 +3,7 @@
   "type": "pipe",
   "source": {
     "type": "merge",
-    "datasets": ["dbpedia-organisation do", "difi-enhetsregisteret-enrich er", "hubspot-company-enrich hc", "twelvedata-stock ts"],
+    "datasets": ["dbpedia-organisation-enrich do", "difi-enhetsregisteret-enrich er", "hubspot-company-enrich hc", "twelvedata-stock-enrich ts"],
     "equality_sets": [
       ["do._id", "er._id", "hc._id", "ts._id", "hc.sesam-id"],
       [

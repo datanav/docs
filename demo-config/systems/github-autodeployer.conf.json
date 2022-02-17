@@ -10,8 +10,7 @@
       "JWT": "$SECRET(autodeployer-jwt)",
       "LOG_LEVEL": "INFO",
       "SESAM_API_URL": "$ENV(sesam_base_url)",
-      "SYNC_ROOT": "demo-config",
-      "TAG": "Hotfix-12.1.2"
+      "SYNC_ROOT": "demo-config"
     },
     "image": "sesamcommunity/github-autodeployer:2.1.5",
     "port": 5000

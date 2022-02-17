@@ -1,9 +1,9 @@
 {
-  "_id": "company-hubspot-insert",
+  "_id": "hubspot-company-insert-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "company-hubspot",
+    "dataset": "hubspot-company-transform",
     "subset": ["eq",
       ["is-empty", "_S.id"], true]
   },
@@ -17,7 +17,7 @@
         ["discard",
           ["is-not-empty",
             ["hops", {
-              "datasets": ["company-hubspot-insert chi"],
+              "datasets": ["hubspot-company-insert-share chi"],
               "where": [
                 ["eq", "_S.sesam-id", "chi.sesam-id"]
               ]
@@ -53,6 +53,6 @@
   },
   "add_namespaces": false,
   "disable_set_last_seen": true,
-  "exclude_completeness": ["company-hubspot"],
+  "exclude_completeness": ["hubspot-company-transform"],
   "reprocessing_policy": "continue"
 }

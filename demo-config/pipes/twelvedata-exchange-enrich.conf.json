@@ -1,9 +1,9 @@
 {
-  "_id": "twelvedata-exchange",
+  "_id": "twelvedata-exchange-enrich",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "twelvedata-exchange-raw"
+    "dataset": "twelvedata-exchange-collect"
   },
   "transform": {
     "type": "dtl",

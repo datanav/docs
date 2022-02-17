@@ -1,9 +1,9 @@
 {
-  "_id": "organisation-classification-synapse-endpoint",
+  "_id": "synapse-organisation-classification-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "organisation-classification-synapse"
+    "dataset": "synapse-organisation-classification-transform"
   },
   "sink": {
     "type": "sql",

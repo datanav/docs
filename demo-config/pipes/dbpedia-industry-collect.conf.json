@@ -1,5 +1,5 @@
 {
-  "_id": "dbpedia-industry",
+  "_id": "dbpedia-industry-collect",
   "type": "pipe",
   "source": {
     "type": "sparql",
@@ -11,5 +11,6 @@
   },
   "pump": {
     "schedule_interval": 5
-  }
+  },
+  "add_namespaces": false
 }

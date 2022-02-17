@@ -1,9 +1,9 @@
 {
-  "_id": "organisation-synapse-endpoint",
+  "_id": "synapse-organisation-share",
   "type": "pipe",
   "source": {
     "type": "dataset",
-    "dataset": "organisation-synapse"
+    "dataset": "synapse-organisation-transform"
   },
   "sink": {
     "type": "sql",

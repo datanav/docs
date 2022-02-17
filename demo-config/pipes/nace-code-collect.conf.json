@@ -1,5 +1,5 @@
 {
-  "_id": "nace-code",
+  "_id": "nace-code-collect",
   "type": "pipe",
   "source": {
     "type": "rdf",
@@ -8,5 +8,5 @@
     "sort_lists": true,
     "url": "nace/2008.rdf"
   },
-  "symmetric_namespace_collapse": true
+  "add_namespaces": false
 }
