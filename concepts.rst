@@ -377,7 +377,7 @@ To enable the VPN feature on your subscription:
 - Tick the checkbox "Enable VPN"
 
 
-You should now have a VPN tab available under subscription on the left menu where the rest of the configuration will happen.
+Navigate to Subscription on the left menu and select the new VPN tab. This is where the rest of the configuration will be done.
 
 Take note of the Sesam Peer VPN Gateway and Sesam address spaces and configure your on-premises VPN device accordingly.
 You can find a list of supported VPN devices and configuration guides at `https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices>`_.
