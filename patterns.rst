@@ -12,6 +12,9 @@ to name these patterns as it makes it easier to refer to it when discussing prob
 
 Here we present a list of them grouped by which step the problem manifests itself.
 
+.. note::
+  This document is work in progress, but we publish it as it might contain useful tips.
+
 Collect patterns
 ================
 
@@ -31,16 +34,15 @@ Fetch more data based on some input source, requires rescan all the time, perhap
 
 Recreate best effort history from a source
 ------------------------------------------
-We become master, pipe should be durable.
+We become master, pipe should be durable (coming feature).
 
 Make periodic entities from a versioned history
 -----------------------------------------------
-We do that in Sesam Sesam from the datasets we read Sesam Portal that only has a current view of the world in
-latest.
+If a source provides a list of older versions of an entity, one way to materialize this is to convert this into periodic entities instead. This might make it easier to work with if your domain uses fixed periods for other purposes. One way to do this is to use the fixed periods as source and then for each period hop to the versioned dataset and join in the relevant version for this period.
 
 Sporadic empty response
 -----------------------
-Source sometimes produces an empty array for some reason (during restarts, authenticaion problems, etc). Use circuit breakers.
+Source sometimes produces an empty array for some reason (during restarts, authenticaion problems, etc). Use :ref:`circuit breakers <concepts-circuit-breakers>`.
 
 Enrich patterns
 ===============
@@ -49,7 +51,7 @@ Extract foreign references as separate datatypes
 ------------------------------------------------
 Don't make NIs to stuff that is outside your control, keep the namespace local to the system. Extract the
 properties to new separate datatypes. If you don't have them as objects you can't merge them with the same concept from
-other sources. Time is not a good candidate for NI. Postnummer is an example. If you make a ni make it reference your
+other sources. Time is not a good candidate for NI. Postal codes is an example. If you make a ni make it reference your
 own namespace. Use create.
 
 Adding type information
@@ -62,8 +64,7 @@ Gives you flat structures. Can be easier to work with.
 
 Splitting out lists of sub objects
 ----------------------------------
-Aggregate objects, are the sub objects part of the parent or can they live on their own? Use create-child and
-emit_children.
+Aggregate objects, are the sub objects part of the parent or can they live on their own? Use :ref:`create-child <dtl_transform-create-child>` and :ref:`emit_children <emit_children_transform>`.
 
 Connect patterns
 ================
