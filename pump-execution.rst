@@ -1,9 +1,6 @@
 The Pump Execution Dataset
 ==========================
 
-.. contents:: Table of Contents
-   :depth: 2
-
 The pump execution dataset is a log which contains entities with
 information about a particular pump's execution history. The dataset
 id is computed from the pump's ``_id`` property as

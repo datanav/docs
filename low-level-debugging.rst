@@ -2,10 +2,6 @@
 Low-level debugging
 ===================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 This page contains tips and tricks for doing various low-level debugging tasks. This information is only relevant
 for system administrators who are hosting a sesam instance, since most of the techiques require access to the
 filesystem of the box that the sesam instance is running on.

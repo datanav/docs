@@ -4,10 +4,6 @@
 GDPR data access portal
 =======================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 Logging into the GDPR data access portal
 ========================================
 

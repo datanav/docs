@@ -1,6 +1,6 @@
-=========================
-Key features and benefits
-=========================
+============
+Key benefits
+============
 
 The unique combination of Sesam's key features leads to simplified management 
 of master data in data driven environments. The service includes most of

@@ -1,5 +1,5 @@
-Setting up a Sesam environment
-==============================
+Setting up an environment
+=========================
 
 Subscriptions
 -------------

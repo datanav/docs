@@ -2,10 +2,6 @@
 Getting started with Sesam's GDPR Platform
 ==========================================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 Introduction
 ============
 

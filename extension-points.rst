@@ -3,10 +3,6 @@ Developer Extension Points
 ==========================
 
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 There are many native Sesam components for collecting, transforming and using data. Sometimes however, there may be
 custom :ref:`data sources <source_section>`, :ref:`transforms <transform_section>` and :ref:`sinks <sink_section>` that
 are needed. To help in these situations there are well defined patterns and integration points that can be used.

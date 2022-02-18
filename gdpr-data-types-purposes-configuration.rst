@@ -4,10 +4,6 @@
 GDPR data types and purposes configuration
 ==========================================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 Note that this document assumes you are familiar with GDPR concepts and nomenclature.
 
 Configuring the GDPR data types and purposes

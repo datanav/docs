@@ -4,20 +4,18 @@ Sesam Master Data Hub
 
 Sesam is a Master Data Hub built on a streaming dataflow data integration and processing system. It is optimised for collecting or receiving data from source systems,  :ref:`transforming data <getting-started-transformations>`, and :ref:`pushing or providing data <getting-started-sinks>` to target :ref:`systems <system_section>`.
 
+.. image:: images/datahub.jpg
+    :width: 800px
+    :align: center
+    :alt: Sesam
+
 .. toctree::
-   :maxdepth: 2
+   :hidden:
 
-   Core principles <core-principles>
-   Key features <features>
-   Concepts <concepts>
-   Best Practices <best-practices>
-   Getting started <getting-started>
-   Quick Reference <quick-reference>
-   Developer Guide <developer-guide>
-   Tools <tools>
+   What is Sesam <index-whatis>
+   Developer <index-developer>
+   Learn Sesam <index-learn>
    Community <community>
-   Behind the scenes <behind-the-scenes>
-   Roadmap <roadmap>
    Legal <legal>
-   Changelog <changelog>
-
+   Quick Reference <quick-reference>
+   Support <https://support.sesam.io>

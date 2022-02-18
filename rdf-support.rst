@@ -2,10 +2,6 @@
 Working with RDF
 ================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 
 Introduction
 ============
