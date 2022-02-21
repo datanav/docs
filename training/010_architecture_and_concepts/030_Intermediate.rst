@@ -68,7 +68,7 @@ In the below example, ``["make-ni"]`` will be used. A NI in Sesam works like a f
 .. code-block:: json
 
 	{
-	  "_id": "mssql-accounts",
+	  "_id": "sesam-account",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -81,9 +81,9 @@ In the below example, ``["make-ni"]`` will be used. A NI in Sesam works like a f
 	      "default": [
 	        ["copy", "*"],
 	        ["add", "rdf:type",
-	          ["ni", "mssql-accounts", "accounts"]
+	          ["ni", "sesam", "Account"]
 	        ],
-	        ["make-ni", "mssql-contacts", "phone"]
+	        ["make-ni", "sesam-contact", "phone"]
 	      ]
 	    }
 	  }
@@ -94,16 +94,16 @@ and will result in the following dataset when run. For the purpose of spacing, o
 .. code-block:: json
 
 	{
-	  "mssql-accounts:country": "DK",
-	  "mssql-accounts:id": 40,
-	  "mssql-accounts:phone": "1-894-115-3398",
-	  "mssql-accounts:phone-ni": "~:mssql-contacts:1-894-115-3398",
-	  "mssql-accounts:position": "CEO",
-	  "rdf:type": "~:mssql-accounts:accounts"
+	  "sesam-account:country": "DK",
+	  "sesam-account:id": 40,
+	  "sesam-account:phone": "1-894-115-3398",
+	  "sesam-account:phone-ni": "~:sesam-contact:1-894-115-3398",
+	  "sesam-account:position": "CEO",
+	  "rdf:type": "~:sesam:Account"
 	}
 
 
-As can be seen in the above dataset, the property with the key "mssql-accounts:phone-ni" is the result of the function ``["make-ni"]`` as defined in the above pipe config. The value can be used to join data between the pipes "mssql-accounts" and "mssql-contacts" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
+As can be seen in the above dataset, the property with the key "sesam-account:phone-ni" is the result of the function ``["make-ni"]`` as defined in the above pipe config. The value can be used to join data between the pipes "sesam-account" and "sesam-contact" so that data can be merged to create complete representations of a related set of data objects. In Sesam, a merge is typically done on different datasets in the global stage of data modelling.
 
 .. seealso::
 

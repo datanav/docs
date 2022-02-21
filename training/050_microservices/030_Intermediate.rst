@@ -323,7 +323,7 @@ In order to activate the use of ``since`` when pulling data from a microservice 
 .. code-block:: json
 
   {
-    "_id": "contacts-test",
+    "_id": "contact-test",
     "type": "pipe",
     "source": {
       "type": "json",

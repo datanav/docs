@@ -26,7 +26,7 @@ In addition, ``["copy"]`` is convenient in that you can whitelist and blacklist 
 
 The first argument in the above declaration copies everything from your source to your target by the use of asterisk, whilst the second argument with the "_" prefix before the asterisk blacklists all values whose keys start with "_". For declarative purposes, this could be written as ``["copy", "<whitelist>", "<blacklist>"].`` The following example has been drafted to visually present this effect.
 
-Data entering the pipe salesforce-accounts from the system "sesam-training":
+Data entering the pipe sesam-account from the system "sesam-training":
 
 .. code-block:: json
 
@@ -42,7 +42,7 @@ Pipe config:
 .. code-block:: json
 
 	{
-	  "_id": "salesforce-accounts",
+	  "_id": "sesam-account",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -64,9 +64,9 @@ Data produced by the pipe DTL transformation:
 .. code-block:: json
 
 	{
-	  "salesforce-accounts:country": "DK",
-	  "salesforce-accounts:id": 40,
-	  "salesforce-accounts:phone": "1-894-115-3398"
+	  "sesam-account:country": "DK",
+	  "sesam-account:id": 40,
+	  "sesam-account:phone": "1-894-115-3398"
 	}
 
 As can be seen from the above produced data, the property with the key "_position" has been filtered by the blacklist parameter "_*" in the ``["copy"]`` function.
@@ -110,7 +110,7 @@ Pipe Configuration:
 .. code-block:: json
 
   {
-    "_id": "mssql-accounts",
+    "_id": "sesam-account",
     "type": "pipe",
     "source": {
      	"type": "sql",
@@ -135,12 +135,12 @@ Which will produce the following output, when the pipe has completed a run:
 .. code-block:: json
 
    {
-      "mssql-accounts:Email": "thisIs@google.com",
-      "mssql-accounts:fakeKey": "fakeValue",
-      "mssql-accounts:fakeKey2": "fakeValue",
-      "mssql-accounts:newEmail": "thisIs@google.com",
-      "mssql-accounts:PostCode": 0461,
-      "mssql-accounts:Country": "Norway"
+      "sesam-account:Email": "thisIs@google.com",
+      "sesam-account:fakeKey": "fakeValue",
+      "sesam-account:fakeKey2": "fakeValue",
+      "sesam-account:newEmail": "thisIs@google.com",
+      "sesam-account:PostCode": 0461,
+      "sesam-account:Country": "Norway"
    }
 
 .. seealso::
@@ -187,7 +187,7 @@ Pipe configuration:
     "type": "pipe",
     "source": {
       "type": "sql",
-      "system": "sesam",
+      "system": "sesam-training",
       "table": "accounts"
     },
     "transform": {
@@ -235,7 +235,7 @@ rdf:type
   ``rdf:type``...
 
   - is based on the source system id and the business type from that source system
-  - in Sesam could look like the following: ``{"rdf:type": "~:salesforce:Account"}``
+  - in Sesam could look like the following: ``{"rdf:type": "~:sesam:Account"}``
   - is an ideal candidate when filtering entities in addition to aiding in data lineage
 
 Resource Description Framework (RDF) is a standard for describing web resources and data interchange, albeit we will now look at RDF in the light of DTL and how ``rdf:type`` is being used in Sesam in that regard.
@@ -247,7 +247,7 @@ In DTL you will add an RDF property by doing the following:
 .. code-block:: json
 
 	{
-	  "_id": "salesforce-accounts",
+	  "_id": "sesam-account",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -259,7 +259,7 @@ In DTL you will add an RDF property by doing the following:
 	    "rules": {
 	      "default": [
 	        ["copy", "*"],
-	        ["add", "rdf:type", ["ni", "salesforce", "Account"]]
+	        ["add", "rdf:type", ["ni", "sesam", "Account"]]
 	      ]
 	    }
 	  }
@@ -270,13 +270,13 @@ When the above pipe configuration completes its run, it will produce the followi
 .. code-block:: json
 
 	{
-	  "salesforce-accounts:country": "DK",
-	  "salesforce-accounts:id": 40,
-	  "salesforce-accounts:phone": "1-894-115-3398",
-	  "rdf:type": "~:salesforce:Account"
+	  "sesam-account:country": "DK",
+	  "sesam-account:id": 40,
+	  "sesam-account:phone": "1-894-115-3398",
+	  "rdf:type": "~:sesam:Account"
 	}
 
-As can be seen from the above pipe configuration, you have successfully added the RDF type property. The RDF type property, as initially stated, is prefixed with ``~:`` and composed of the source system origin ``salesforce`` followed by its business type ``Account``, which is aquired from the source. the composition of the ``rdf:type`` allows for Sesam to easily identify the source system and its business type, which makes it an ideal candidate when filtering entities in addition to aiding in data lineage as you model your data in a Sesam dataflow.
+As can be seen from the above pipe configuration, you have successfully added the RDF type property. The RDF type property, as initially stated, is prefixed with ``~:`` and composed of the source system origin ``sesam`` followed by its business type ``Account``, which is aquired from the source. the composition of the ``rdf:type`` allows for Sesam to easily identify the source system and its business type, which makes it an ideal candidate when filtering entities in addition to aiding in data lineage as you model your data in a Sesam dataflow.
 
 .. seealso::
 
@@ -308,13 +308,13 @@ To show the usage of namespaces we will extend upon the previously introduced ex
 .. code-block:: json
 
 	{
-	  "mssql-accounts:country": "DK",
-	  "mssql-accounts:id": 40,
-	  "mssql-accounts:phone": "1-894-115-3398"
+	  "sesam-account:country": "DK",
+	  "sesam-account:id": 40,
+	  "sesam-account:phone": "1-894-115-3398"
 	}
 
 In the above output, everything you see on the properties prior to the first ":" is Sesam's namespace enrichment.
-As such, the namespace ``mssql-accounts`` is applied as the namespace for all properties, including the ``_id`` that is transformed in your pipe configuration for ``mssql-accounts``.
+As such, the namespace ``sesam-account`` is applied as the namespace for all properties, including the ``_id`` that is transformed in your pipe configuration for ``sesam-account``.
 
 This is fairly straightforward, albeit imagine if you have merged multiple pipe datasets in for example a global, what happens then? How can you distinquish which properties originate from which pipe configuration? and how do you pick specific namespaces after these are merged? These questions will now be introduced and answered.
 
@@ -327,7 +327,7 @@ Global pipe config:
     "type": "pipe",
     "source": {
       "type": "merge",
-      "datasets": ["mssql-accounts pip1", "pymsql-person pip2", "oracle-person pip3"],
+      "datasets": ["sesam-account pip1", "sesam-person pip2", "oracle-person pip3"],
       "equality_sets": [
         ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
       ],
@@ -341,9 +341,9 @@ Global pipe config:
         "default": [
           ["copy", "*"],
           ["comment", "*** Adding global properties ***"],
-          ["add", "Email", ["coalesce", ["list", "_S.mssql-accounts:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
-          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.mssql-accounts:Postcode", "No PostCode provided"]]],
-          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-accounts:Address", "No PrivateAddress provided"]]],
+          ["add", "Email", ["coalesce", ["list", "_S.sesam-account:Email", "_S.sesam-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+          ["add", "PostCode", ["coalesce", ["list", "_S.sesam-person:AreaCode", ["string", "_S.oracle-person:PostNumber"], "_S.sesam-account:Postcode", "No PostCode provided"]]],
+          ["add", "PrivateAddress", ["coalesce", ["list", "_S.sesam-person:Address", "_S.oracle-person:Address", "_S.sesam-account:Address", "No PrivateAddress provided"]]],
           ["rename", "AreaCode", "Postcode"]
         ]
       }
@@ -354,10 +354,10 @@ Global pipe config:
     }
   }
 
-As can be seen from the above pipe configuration, we merge the datasets ``mssql-accounts``, ``pymsql-person`` and ``oracle-person``.
+As can be seen from the above pipe configuration, we merge the datasets ``sesam-account``, ``sesam-person`` and ``oracle-person``.
 In addition, we add the properties ``Email``, ``PostCode``, ``PrivateAddress``, and ``rename`` the property ``AreaCode`` to be ``Postcode``.
 With regards to namespaces the aforementioned properties will take the namespace ``global-person``, albeit the ``rename`` property will not.
-This is because the ``rename`` function retains the initally applied namespace for the property you are renaming, which is a bit unique and in this case this will be ``pymsql-person``.
+This is because the ``rename`` function retains the initally applied namespace for the property you are renaming, which is a bit unique and in this case this will be ``sesam-person``.
 
 With regards to picking the individual datasets that are merged in our pipe ``global-person``, this is exemplified for the properties ``Email``, ``PostCode`` and ``PrivateAddress``.
 These properties are prioritized in a list and to pick spesific properties from datasets you must use the entire namespace to ensure Sesam understands which specific properties you refer to.
@@ -367,16 +367,16 @@ To show how the above pipe configuration evaluates, look at the below result:
 .. code-block:: json
 
 	{
-	  "mssql-accounts:Email": "christian89@hotmail.com",
-	  "mssql-accounts:Postcode": "6400",
-	  "mssql-accounts:Address": "Rojumvej 66",
+	  "sesam-account:Email": "christian89@hotmail.com",
+	  "sesam-account:Postcode": "6400",
+	  "sesam-account:Address": "Rojumvej 66",
 	  "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
 	  "oracle-person:PostNumber": 6400,
 	  "oracle-person:Address": "Rojumvej 66",
-	  "pymsql-person:Postaddress": "hansMajestæt@gmail.com",
-	  "pymsql-person:AreaCode": "6851",
-	  "pymsql-person:Postcode": "6851",
-	  "pymsql-person:Address": "Danmarksgate 7",
+	  "sesam-person:Postaddress": "hansMajestæt@gmail.com",
+	  "sesam-person:AreaCode": "6851",
+	  "sesam-person:Postcode": "6851",
+	  "sesam-person:Address": "Danmarksgate 7",
 	  "global-person:Email": "christian89@hotmail.com",
 	  "global-person:Postcode": "6851",
 	  "global-person:PrivateAddress": "Danmarksgate 7"
@@ -414,7 +414,7 @@ As a NI is produced, after a pipe has completed its run, it will be prefixed wit
 .. code-block:: json
 
 	{
-	  "_id": "salesforce-accounts",
+	  "_id": "sesam-account",
 	  "type": "pipe",
 	  "source": {
 	    "type": "sql",
@@ -427,9 +427,9 @@ As a NI is produced, after a pipe has completed its run, it will be prefixed wit
 	      "default": [
 	        ["copy", "*"],
 	        ["add", "rdf:type",
-	          ["ni", "salesforce", "Account"]
+	          ["ni", "sesam", "Account"]
 	        ],
-	        ["make-ni", "salesforce-contacts", "phone"]
+	        ["make-ni", "sesam-contact", "phone"]
 	      ]
 	    }
 	  }
@@ -440,15 +440,15 @@ The above pipe configuration will produce the following output:
 .. code-block:: json
 
 	{
-	  "salesforce-accounts:country": "DK",
-	  "salesforce-accounts:id": 40,
-	  "salesforce-accounts:phone": "1-894-115-3398",
-	  "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
-	  "salesforce-accounts:position": "CEO",
-	  "rdf:type": "~:salesforce:Account"
+	  "sesam-account:country": "DK",
+	  "sesam-account:id": 40,
+	  "sesam-account:phone": "1-894-115-3398",
+	  "sesam-account:phone-ni": "~:sesam-contact:1-894-115-3398",
+	  "sesam-account:position": "CEO",
+	  "rdf:type": "~:sesam:Account"
 	}
 
-As can be seen from the above output, the property ``"salesforce-accounts:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"salesforce-contacts"``.
+As can be seen from the above output, the property ``"sesam-account:phone-ni"`` is the namespace that tells you that this is your recently created NI. The value of your NI is in practice your foreign key and tells you that the value of "phone" is a reference to the pipe named ``"sesam-contact"``.
 
 Finally, as mentioned initially, the NI is in reality a URI, and as such you can press your NIs and navigate your Sesam node with respect to how data is semantically linked in your node.
 
@@ -534,7 +534,7 @@ Merging is typically done in global pipes and in the following example, this is 
 	  "type": "pipe",
 	  "source": {
 	    "type": "merge",
-	    "datasets": ["salesforce-person pip1", "salesforce-contacts pip2", "salesforce-accounts pip3"],
+	    "datasets": ["sesam-person pip1", "sesam-contact pip2", "sesam-account pip3"],
 	    "equality": [
 	      ["eq", "pip2.phone", "pip3.phone"]
 	    ],
@@ -550,7 +550,7 @@ Merging is typically done in global pipes and in the following example, this is 
 
 As can be seen from the above pipe configuration ``"global-person"`` you will recognize the aformentioned properties. ``version`` being set to ``2``, ``strategy`` to ``"default"`` and ``identity`` to ``"first"``.
 
-The ``strategy`` property changes how the resulting entities look as these are merged in the ``equality`` property. In this particular example we are merging on the property ``phone`` for the namespaces ``"salesforce-contacts"`` and ``"salesforce-accounts"`` and the ``["eq"]`` function is now used as a join expression. As namespaces are being merged, the ``"default"`` value in the ``strategy`` property unions all the values and duplicates are not removed. In comparison, if the ``"compact"`` value is used, the pipe will try to compact property values, i.e: duplicate values are removed and empty lists are removed.
+The ``strategy`` property changes how the resulting entities look as these are merged in the ``equality`` property. In this particular example we are merging on the property ``phone`` for the namespaces ``"sesam-contact"`` and ``"sesam-account"`` and the ``["eq"]`` function is now used as a join expression. As namespaces are being merged, the ``"default"`` value in the ``strategy`` property unions all the values and duplicates are not removed. In comparison, if the ``"compact"`` value is used, the pipe will try to compact property values, i.e: duplicate values are removed and empty lists are removed.
 
 With regards to the ``identity`` property, this property determines how the ``_id`` will look, as entities are merged in your merge source. If the ``identity`` property is set to ``"first"`` the ``_id`` will be picked from the first dataset in the datasets list involved in the merge. As an example see the below, which shows the shape of an entity having been run through the above shown pipe configuration in ``"global-person"``:
 
@@ -558,26 +558,26 @@ With regards to the ``identity`` property, this property determines how the ``_i
 
 	{
     "$ids": [
-      "~:salesforce-contacts:40",
-      "~:salesforce-accounts:40"
+      "~:sesam-contact:40",
+      "~:sesam-account:40"
     ],
-    "_id": "salesforce-contacts:40",
+    "_id": "sesam-contact:40",
     "_updated": 239,
-    "salesforce-accounts:country": "DK",
-    "salesforce-accounts:id": 40,
-    "salesforce-accounts:phone": "1-894-115-3398",
-    "salesforce-accounts:phone-ni": "~:salesforce-contacts:1-894-115-3398",
-    "salesforce-accounts:position": "CTO",
-    "salesforce-contacts:id": 40,
-    "salesforce-contacts:name": "Bolton, Aladdin T.",
-    "salesforce-contacts:phone": "1-894-115-3398",
+    "sesam-account:country": "DK",
+    "sesam-account:id": 40,
+    "sesam-account:phone": "1-894-115-3398",
+    "sesam-account:phone-ni": "~:sesam-contact:1-894-115-3398",
+    "sesam-account:position": "CTO",
+    "sesam-contact:id": 40,
+    "sesam-contact:name": "Bolton, Aladdin T.",
+    "sesam-contact:phone": "1-894-115-3398",
     "rdf:type": [
-      "~:salesforce:Contact",
-      "~:salesforce:Account"
+      "~:sesam:Contact",
+      "~:sesam:Account"
     ]
   }
 
-As you can see from the above merged result, the ``_id`` turned out as ``"salesforce-contacts:40"`` as this is the entity that is placed at index null in the ``$ids`` array, which tells us which namespaces got merged based on our defined equality rules. If you were to change the ``identity`` to ``"composite"`` the ``_id`` would have turned out as ``"1|salesforce-contacts:40|2|salesforce-accounts:40"``.
+As you can see from the above merged result, the ``_id`` turned out as ``"sesam-contact:40"`` as this is the entity that is placed at index null in the ``$ids`` array, which tells us which namespaces got merged based on our defined equality rules. If you were to change the ``identity`` to ``"composite"`` the ``_id`` would have turned out as ``"1|sesam-contact:40|2|sesam-account:40"``.
 
 .. seealso::
 
@@ -608,9 +608,9 @@ Source data:
 .. code-block:: json
 
   {
-    "mssql-person:Email": "christian89@hotmail.com",
-    "mssql-person:Postcode": "6400",
-    "mssql-person:Address": "Rojumvej 66"
+    "sesam-person:Email": "christian89@hotmail.com",
+    "sesam-person:Postcode": "6400",
+    "sesam-person:Address": "Rojumvej 66"
   }
 
   {
@@ -634,7 +634,7 @@ Pipe configuration:
     "type": "pipe",
     "source": {
       "type": "merge",
-      "datasets": ["mssql-person pip1", "pymsql-person pip2", "oracle-person pip3"],
+      "datasets": ["sesam-person pip1", "pymsql-person pip2", "oracle-person pip3"],
       "equality_sets": [
         ["pip1.Email", "pip2.Postaddress", "pip3.EmailAddress"]
       ],
@@ -648,9 +648,9 @@ Pipe configuration:
         "default": [
           ["copy", "*"],
           ["comment", "*** Adding global properties ***"],
-          ["add", "Email", ["coalesce", ["list", "_S.mssql-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
-          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.mssql-person:Postcode", "No PostCode provided"]]],
-          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.mssql-person:Address", "No PrivateAddress provided"]]]
+          ["add", "Email", ["coalesce", ["list", "_S.sesam-person:Email", "_S.pymsql-person:Postaddress", "_S.oracle-person:EmailAddress", "No Email provided"]]],
+          ["add", "PostCode", ["coalesce", ["list", "_S.pymsql-person:AreaCode", "_S.oracle-person:PostNumber", "_S.sesam-person:Postcode", "No PostCode provided"]]],
+          ["add", "PrivateAddress", ["coalesce", ["list", "_S.pymsql-person:Address", "_S.oracle-person:Address", "_S.sesam-person:Address", "No PrivateAddress provided"]]]
         ]
       }
     },
@@ -665,9 +665,9 @@ When the above pipe runs, the following output will be produced:
 .. code-block:: json
 
   {
-    "mssql-person:Email": "christian89@hotmail.com",
-    "mssql-person:Postcode": "6400",
-    "mssql-person:Address": "Rojumvej 66",
+    "sesam-person:Email": "christian89@hotmail.com",
+    "sesam-person:Postcode": "6400",
+    "sesam-person:Address": "Rojumvej 66",
     "oracle-person:EmailAddress": "hansMajestæt@gmail.com",
     "oracle-person:PostNumber": 6400,
     "oracle-person:Address": "Rojumvej 66",
