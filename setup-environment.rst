@@ -17,7 +17,7 @@ environment:
 -  Development: Every developer will need a developer subscription, with no
    SLA or backup.
 
--  CI-test: A developer subscription, including standard SLA.
+-  CI-test: A developer subscription, with no SLA.
 
 -  Test: Same size as in production, including standard SLA and Backup.
 
