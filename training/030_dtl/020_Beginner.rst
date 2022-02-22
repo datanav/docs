@@ -153,7 +153,7 @@ components in Sesam.
 This unique identity allows for precise references between
 configurations and precise connections between data entities.
 
-See <ref to ``_id`` restrictions> for more information on how to create
+See :ref:`reserved-fields` for more information on how to create
 valid identifiers.
 
 .. seealso::
