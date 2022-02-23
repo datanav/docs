@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_02_23:
+
+* Corrected a bug that for multinode environments would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
+
+2022-02-11
+----------
+
 .. _changelog_2022_02_11:
 
 2022-02-11
