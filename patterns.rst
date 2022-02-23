@@ -118,4 +118,4 @@ Focus should be on exposing data.
 
 Ensure proper sink and pump configuration
 -----------------------------------------
-the ``"sink"`` and ``"pump"`` dictonaries should be configured to achieve optimal delivery of data.
+The ``"sink"`` and ``"pump"`` dictonaries should be configured to achieve optimal delivery of data.
