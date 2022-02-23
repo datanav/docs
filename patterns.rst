@@ -7,7 +7,7 @@ Patterns
    :depth: 2
    :local:
 
-We've identified a set of patterns when working with problems related to data flows in Sesam. We find it very useful
+We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful
 to name these patterns as it makes it easier to refer to it when discussing problems.
 
 Here we present a list of them grouped by which step the problem manifests itself.
@@ -75,7 +75,7 @@ Should be added as new properties, you might need the dirty data.
 
 Manual merge
 ------------
-Hardhoded dataset with manually connected ids, could also be an external source with manual input. Linking table.
+Hardcoded dataset with manually connected ids, could also be an external source with manual input. Linking table.
 
 External merge
 --------------
@@ -90,12 +90,32 @@ Golden property based on last updated
 Make sure you have a reliable timestamp from the source that you propagate. Think about feedback loops if data is
 synced back.
 
+In case of feedback loops
+-------------------------
+Ensure you have defined ``"set_initial_offset": "onload"`` to ensure the pipe can run even though the pipe hasn't been populated yet.
+
 Transform patterns
 ==================
 
-No patterns described yet.
+Late schema binding
+-------------------
+Ensure transformations are done in accordance to target schema.
+
+Optimistic locking
+------------------
+Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
+
+In case of feedback loops
+-------------------------
+Ensure you have defined ``"set_initial_offset": "onload"`` to ensure the pipe can run even though the pipe hasn't been populated yet.
 
 Share patterns
 ==============
 
-No patterns described yet.
+Limit the amount of DTL
+-----------------------
+Focus should be on exposing data.
+
+Ensure proper sink and pump configuration
+-----------------------------------------
+the ``"sink"`` and ``"pump"`` dictonaries should be configured to achieve optimal delivery of data.
