@@ -23,5 +23,6 @@ Developer Guide
    Self-hosted service <self-hosted>
    Data modelling in Sesam <data-modelling>
    Working on a Sesam project <project-workflow>
+   Patterns <patterns>
    Sesam in Microsoft Azure <azure>
    Deprecated features <deprecations>
