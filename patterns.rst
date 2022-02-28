@@ -90,10 +90,6 @@ Golden property based on last updated
 Make sure you have a reliable timestamp from the source that you propagate. Think about feedback loops if data is
 synced back.
 
-In case of feedback loops
--------------------------
-Ensure you have defined ``"set_initial_offset": "onload"`` to ensure the pipe can run even though the pipe hasn't been populated yet.
-
 Transform patterns
 ==================
 
@@ -105,17 +101,9 @@ Optimistic locking
 ------------------
 Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
-In case of feedback loops
--------------------------
-Ensure you have defined ``"set_initial_offset": "onload"`` to ensure the pipe can run even though the pipe hasn't been populated yet.
-
 Share patterns
 ==============
 
-Limit the amount of DTL
------------------------
+Exposing data
+-------------
 Focus should be on exposing data.
-
-Ensure proper sink and pump configuration
------------------------------------------
-The ``"sink"`` and ``"pump"`` dictonaries should be configured to achieve optimal delivery of data.
