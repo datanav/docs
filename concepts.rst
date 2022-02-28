@@ -286,6 +286,13 @@ Transit encoding
 
 Sesam's entity data model is a `JSON <https://www.json.org/json-en.html>`_ compatible data model. JSON itself supports a limited number of data types, so in order to make the model richer, the entity data model supports a subset of the `Transit <https://github.com/cognitect/transit-format>`_ data types. Transit encoding is a technique for encoding a larger set of data types in JSON. See the :doc:`entity data model <entitymodel>` for more information about this encoding.
 
+.. _schema-inferencing:
+
+Schema collection
+=================
+
+Data in Sesam is dynamically typed. Properties can be added or removed and their types changed over time. Schema validation can be enforced, but it is optional. This dynamism makes the system agile. Automatic schema collection is enabled by default. Sesam tracks the changes to entities and will automatically generate a schema for the source entities and sink entities of pipes. In practice this means that you can see the structure of the data that went into the pipe and the data that came out of the pipe. This feature is the foundation that :ref:`property lineage <property-lineage>` builds on.
+
 .. _concepts-compaction:
 
 Compaction
@@ -327,6 +334,20 @@ Sesam provides a finite number of :ref:`systems <concepts-systems>`, but you can
 Integrated Search
 =================
 
+Integrated Search is now available for all subscriptions with clustered architecture. This is how you can activate the new feature:  
+
+- Login to portal.sesam.io  
+
+- Select the subscription you want to use  
+
+- Navigate to Subscription on the left menu  
+
+- Click on Products tab  
+
+- Click on “Enable Integrated Search”  
+
+If your subscription is not yet on a clustered architecture please take contact with support to start the migration.  
+
 Integrated data browsing gives you more insight into your data and relationships within. Once enabled, globals are
 indexed and available for free text search and navigation. Note that this incurs a 2x increase in data size needed for
 global pipes.
@@ -365,7 +386,7 @@ The available channels are:
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
 .. Note::
-  We can for any reason choose to not promote new versions of any software channel, build dates will corespond to a minimum, not a maximum age. 
-  
-Weekly and nightly upgrades are performed between 00-03 UTC. Weekly upgrades are performed night to Monday. 
-Security hotfixes will not wait for the scheduled window. Downgrades are not supported. 
+  We can for any reason choose to not promote new versions of any software channel, build dates will correspond to a minimum, not a maximum age.
+
+Weekly and nightly upgrades are performed between 00-03 CET. Weekly upgrades are performed night to Monday.
+Security hotfixes will not wait for the scheduled window. Downgrades are not supported.

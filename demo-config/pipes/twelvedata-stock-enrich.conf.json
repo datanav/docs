@@ -1,0 +1,25 @@
+{
+  "_id": "twelvedata-stock-enrich",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "twelvedata-stock-collect"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "twelvedata", "stock"]
+        ],
+        ["comment", "*** Add identifiers ***"],
+        ["make-ni", "twelvedata-exchange", "exchange"],
+        ["make-ni", "twelvedata-country", "country"],
+        ["make-ni", "twelvedata-currency", "currency"],
+        ["make-ni", "twelvedata-stock-type", "type"]
+      ]
+    }
+  },
+  "add_namespaces": true
+}

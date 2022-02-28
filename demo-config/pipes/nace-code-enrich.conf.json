@@ -1,0 +1,17 @@
+{
+  "_id": "nace-code-enrich",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "nace-code-collect"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"]
+      ]
+    }
+  },
+  "symmetric_namespace_collapse": true
+}

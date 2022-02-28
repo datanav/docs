@@ -12,7 +12,9 @@ change.
 Planned
 -------
 
-Clustered architecture everywhere (Q4 2021)
+.. _roadmap_clustered_architecture:
+
+Clustered architecture everywhere (Q1 2022)
 ===========================================
 
 Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
@@ -23,6 +25,16 @@ We are looking into how we can get the clustered architecture everywhere.
 
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
+
+.. _property-lineage:
+
+Property lineage (Q1 2022)
+==========================
+
+Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
+are composed using introspectable DTL in combination with :ref:`schema collection <schema-inferencing>` allows us to continously track property lineage.
+
+We are working on making this lineage data available, as well as looking at ways to visualize it.
 
 Extensions
 ==========
@@ -85,7 +97,7 @@ You also need to create two pipes in order to use "create-child" and "emit_child
 
 We are looking into how to support this without requiring the user to create two pipes.
 
-Multitenancy 
+Multitenancy
 ============
 
 Today one subscription can have multiple configuration groups, but they are all part of one big configuration that share one namespace, metadata, environment variables, system roles and access rights.

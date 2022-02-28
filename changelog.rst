@@ -1,6 +1,85 @@
 Changelog
 =========
 
+.. _changelog_2022_02_23:
+
+2022-02-23
+----------
+
+* Corrected a bug that for multi subscriptions would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
+
+.. _changelog_2022_02_11:
+
+2022-02-11
+----------
+
+* As part of the :ref:`Clustered architecture everywhere <roadmap_clustered_architecture>` initiative we are now in the process of migrating in-cloud subscriptions over to it. You can find the provisioning status of a subscription in ``Subscription`` > ``Basics`` in the :doc:`Management Studio <management-studio>`. There you can see which provisioner version it is running (``version 1`` is old single machine service, ``version 2`` is the new clustered service, if self-hosted it will say ``self-hosted``).
+
+.. _changelog_2022_02_04:
+
+2022-02-04
+----------
+
+* The :ref:`hash128 <hash128_dtl_function>` DTL function now takes an optional seed argument.
+
+.. _changelog_2022_01_25:
+
+2022-01-25
+----------
+
+* The :ref:`lower keys <lower_keys_transform>`, :ref:`upper keys <upper_keys_transform>` and :ref:`undirected graph <undirected_graph_transform>` transforms have been deprecated. :ref:`DTL transforms <dtl_transform>` can replace the functionality of lower keys and upper keys transforms.
+
+.. _changelog_2022_01_24:
+
+2022-01-24
+----------
+
+* Added a new property :ref:`remove_pk_char_trailing_spaces <remove_pk_char_sql>` to the :ref:`SQL sink <sql_sink>`. This property is enabled by default and fixes an issue with updating table rows when the primary key is of type ``nchar`` or ``char``.
+
+.. _changelog_2022_01_20:
+
+2022-01-20
+----------
+
+* Added custom header functionality to :ref:`HTTP transforms <http_transform>`.
+
+.. _changelog_2022_01_12:
+
+2022-01-12
+----------
+
+* Added domain name validation to ``docker.hosts`` property on :ref:`microservice systems <microservice_system>`. This ensures that domain names are
+  on a format that is accepted by Kubernetes.
+
+.. _changelog_2022_01_03:
+
+2022-01-03
+----------
+
+* Added a new :ref:`resolved_entity <execution_log_resolved_entity>` property to write-error entities in the :doc:`execution log <pump-execution>`.
+  It contains the entity that was used to resolve the write-error if it is different from the original entity that
+  caused the write-error. This property is also set for any tracked dead letters that has been resolved
+  (on the deleted dead letter). Fixed a bug where the :ref:`resolved <execution_log_resolved_property>` property was not set (to ``true``) if a
+  write-error entity was successfully retried.
+
+.. _changelog_2021_12_20:
+
+2021-12-20
+----------
+
+* Renamed the ``prefilters`` property in the :ref:`hops <hops_dtl_function>` DTL function to ``subsets``.
+  ``prefilters`` had some known issues and is now deprecated. Note that you may have to reset the pipe if you
+  change from ``prefilters`` to ``subsets``. All new pipes should use ``subsets`` to get the documented behaviour.
+
+.. _changelog_2021_12_17:
+
+2021-12-17
+----------
+
+* Added ``custom_ca_pem_chain``  property to the :ref:`URL system <url_system>` and :ref:`REST system <rest_system>`.
+  This property can hold a custom chain of certificates (in PEM format) that will be used to validate the SSL
+  connection if ``verify_ssl`` is set to ``true``.
+
 .. _changelog_2021_12_11:
 
 2021-12-11
@@ -86,7 +165,7 @@ Changelog
 2021-09-29
 ----------
 
-* Added a new :doc:`Quick Reference <quick-reference>` document for faster and easier navigation to configuration types and DTL transforms and functions.
+* Added a new :ref:`Quick Reference <quick-reference>` document for faster and easier navigation to configuration types and DTL transforms and functions.
 
 .. _changelog_2021_09_28:
 

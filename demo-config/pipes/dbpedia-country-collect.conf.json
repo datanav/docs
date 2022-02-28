@@ -1,0 +1,16 @@
+{
+  "_id": "dbpedia-country-collect",
+  "type": "pipe",
+  "source": {
+    "type": "sparql",
+    "system": "dbpedia",
+    "fragment_query": ["CONSTRUCT { ?subject dbo:wikiPageWikiLink ?page . ?subject ?property ?value} WHERE {  ?subject dbo:wikiPageWikiLink ?page . ?page ?property ?value.   FILTER ( ?subject = <${uri}>) }"],
+    "fragments_query": ["SELECT DISTINCT ?id bif:dateadd(\"second\",  ?rev , xsd:dateTime(\"0001-01-01Z\")) as ?updated WHERE { ?id dbp:wikiPageUsesTemplate dbr:Template:R_from_ISO_3166 .  ?id dbo:wikiPageRevisionID ?rev . filter ( ?rev > bif:datediff(\"second\", xsd:dateTime(\"0001-01-01Z\"), xsd:dateTime(\"${since}\")))} order by ?rev  limit 1000"],
+    "initial_since_value": "0001-01-01Z",
+    "url": "sparql"
+  },
+  "pump": {
+    "schedule_interval": 5
+  },
+  "add_namespaces": false
+}

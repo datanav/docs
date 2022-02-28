@@ -1,0 +1,37 @@
+{
+  "_id": "synapse-organisation-classification-transform",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "global-organisation"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["comment", "*** Create links ***"],
+        ["create-child",
+          ["apply-hops", "child", {
+            "datasets": ["global-classification gs"],
+            "where": [
+              ["eq", "_S.global-organisation:classification", "gs.$ids"]
+            ]
+          }]
+        ]
+      ],
+      "child": [
+        ["comment", "*** Create link item ***"],
+        ["add", "_id",
+          ["replace", ":", "-",
+            ["concat", "_P._S._id", "_S._id"]
+          ]
+        ],
+        ["add", "global-organisation:_id", "_P._S._id"],
+        ["add", "global-classification:_id", "_S._id"]
+      ]
+    }
+  },
+  "namespaces": {
+    "identity": "global-organisation-classification"
+  }
+}

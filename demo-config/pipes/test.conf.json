@@ -1,0 +1,10 @@
+{
+  "_id": "test",
+  "type": "pipe",
+  "source": {
+    "type": "embedded",
+    "entities": [{
+      "_id": "test"
+    }]
+  }
+}
