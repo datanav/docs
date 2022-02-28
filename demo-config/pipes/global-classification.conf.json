@@ -1,0 +1,43 @@
+{
+  "_id": "global-classification",
+  "type": "pipe",
+  "source": {
+    "type": "merge",
+    "datasets": ["difi-enhetsregisteret-classification ec", "nace-code-enrich nc", "twelvedata-exchange-enrich te", "dbpedia-industry-enrich di", "dbpedia-type-enrich dt", "hubspot-company-classification hcce", "dbpedia-country-enrich dc"],
+    "equality_sets": [
+      ["nc.dct:identifier",
+        ["substring", 0, 5, "ec.difi-enhetsregisteret-nkode:value"]
+      ],
+      [
+        ["lower", "dc.rdfs:label"],
+        ["lower", "hcce.hubspot-company-country:value"],
+        ["lower", "ec.difi-enhetsregisteret-land:value"]
+      ]
+    ],
+    "identity": "first",
+    "strategy": "compact",
+    "version": 2
+  },
+  "sink": {
+    "indexes": "$ids"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "value",
+          ["first",
+            ["coalesce",
+              ["list", "_S.skos:prefLabel", "_S.dct:title", "_S.value", "_S.name", "_S.rdfs:label", "No value"]
+            ]
+          ]
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "global": true
+  },
+  "exclude_completeness": [""]
+}

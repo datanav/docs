@@ -1,0 +1,81 @@
+{
+  "_id": "hubspot-company-enrich",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "hubspot-company-collect"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["add", "sesam-id",
+          ["hops", {
+            "datasets": ["hubspot-company-insert-share chi"],
+            "where": [
+              ["eq", "_S.id", "chi.id"]
+            ],
+            "return": "chi.sesam-id"
+          }]
+        ],
+        ["filter",
+          ["not", "_S._deleted"]
+        ],
+        ["add", "_id",
+          ["last",
+            ["split", ":", "_S.id"]
+          ]
+        ],
+        ["copy", "*"],
+        ["add", "country-ni",
+          ["ni", "hubspot-company-country", "_S.properties.country"]
+        ],
+        ["add", "properties",
+          ["dict",
+            ["items", "_S.properties"]
+          ]
+        ],
+        ["add", "company-ni",
+          ["map",
+            ["ni", "hubspot-company", "_."], "_S.associations.companies.results.id"]
+        ],
+        ["add", "contact-ni",
+          ["map",
+            ["ni", "hubspot-contact", "_."], "_S.associations.contacts.results.id"]
+        ],
+        ["add", "deal-ni",
+          ["map",
+            ["ni", "hubspot-deal", "_."], "_S.associations.deals.results.id"]
+        ],
+        ["add", "product-ni",
+          ["map",
+            ["ni", "hubspot-product", "_."], "_S.associations.products.results.id"]
+        ],
+        ["add", "ticket-ni",
+          ["map",
+            ["ni", "hubspot-ticket", "_."], "_S.associations.tickets.results.id"]
+        ],
+        ["add", "quote-ni",
+          ["map",
+            ["ni", "hubspot-quote", "_."], "_S.associations.quotes.results.id"]
+        ],
+        ["add", "line-item-ni",
+          ["map",
+            ["ni", "hubspot-line-item", "_."], "_S.associations.line-items.results.id"]
+        ],
+        ["add", "rdf:type",
+          ["ni", "hubspot:contact"]
+        ],
+        ["remove", "$ids"],
+        ["add", "_id",
+          ["concat", "hubspot-company:", "_T.id"]
+        ]
+      ]
+    }
+  },
+  "add_namespaces": true,
+  "namespaces": {
+    "identity": "hubspot-company",
+    "property": "hubspot-company"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "twelvedata-exchange-enrich",
+  "type": "pipe",
+  "source": {
+    "type": "dataset",
+    "dataset": "twelvedata-exchange-collect"
+  },
+  "transform": {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"],
+        ["add", "rdf:type",
+          ["ni", "twelvedata", "exchange"]
+        ],
+        ["comment", "*** Add identifiers and object***"],
+        ["if",
+          ["is-not-empty", "_S.country"],
+          [
+            ["make-ni", "twelvedata-country", "country"],
+            ["create",
+              ["dict", "_id",
+                ["concat", "twelvedata-country:", "_S.country"], "rdf:type",
+                ["ni", "twelvedata", "country"], "twelvedata-country:value", "_S.country"]
+            ]
+          ]
+        ],
+        ["if",
+          ["is-not-empty", "_S.timezone"],
+          [
+            ["make-ni", "twelvedata-timezone", "timezone"],
+            ["create",
+              ["dict", "_id",
+                ["concat", "twelvedata-timezone:", "_S.timezone"], "rdf:type",
+                ["ni", "twelvedata", "timezone"], "twelvedata-timezone:value", "_S.timezone"]
+            ]
+          ]
+        ],
+        ["comment", "*** Add main ***"],
+        ["make-ni", "twelvedata-exchange", "name", "main-ni"],
+        ["create",
+          ["apply", "main", "_T."]
+        ]
+      ],
+      "main": [
+        ["copy", "*"],
+        ["add", "_id",
+          ["concat", "twelvedata-exchange:", "_S.name"]
+        ],
+        ["remove", "code"],
+        ["remove", "main"]
+      ]
+    }
+  },
+  "add_namespaces": true
+}

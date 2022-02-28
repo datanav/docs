@@ -677,9 +677,9 @@ Properties
    * - ``compaction.growth_threshold``
      - Float
      - The growth factor required for the automatically scheduled compaction to kick
-       in. The default value is that there must have been 10% new offsets written to
-       the dataset since the last compaction. ``1.0`` is the minimum value allowed.
-     - ``1.10``
+       in. Uses the minimum value of ``1.0`` by default, meaning that compaction will always
+       run when new entities are written to the dataset.
+     - ``1.0``
      - No
 
    * - ``compaction.compaction_interval``
@@ -703,6 +703,11 @@ A circuit breaker is a safety mechanism that one can enable on the
 the number of entities written to a dataset in a pipe run exceeds a
 certain configurable limit.
 
+Note that a circuit breaker is only activated if the sink dataset is
+populated. In practice this means that the pipe must have ran to
+completion at least once. This is to avoid tripping it on the initial
+sync.
+
 A tripped circuit breaker will prevent the pipe from running.
 It can either be rolled back or committed. Rolling it back
 will delete any entities that were written in the pipe run before the
@@ -710,7 +715,7 @@ circuit breaker was tripped. Committing it will expose the uncommitted
 entities. Both operations resets the circuit breaker so that pipe can
 run again.
 
-Compaction will not be performed datasets with a tripped circuit
+Compaction will not be performed on datasets with a tripped circuit
 breaker. It is also not possible to repost entities to these datasets.
 
 You can rollback or commit the circuit breaker on the dataset page in
@@ -4089,6 +4094,13 @@ Properties
      - 100
      -
 
+   * - ``headers``
+     - Dict<String,String>
+     - An optional set of header values to set in the HTTP request. Both keys and values must
+       evaluate to strings.
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -4110,255 +4122,11 @@ Example configuration
           "type": "http",
           "system":"my-http-transform-service",
           "url": "http://localhost:8080/transforms/deduplicate",
-          "batch_size": 5
+          "batch_size": 5,
+          "headers": {
+                "some-header": "some-value"
+          }
       }
-
-.. _lower_keys_transform:
-
-Lower keys transform
---------------------
-
-This transform transforms all the keys of an entity to lower case (optionally recursively).
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "lower_keys",
-        "recurse": false
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``recurse``
-     - Boolean
-     - An optional flag to indicate whether to do the case conversion recursively or not (default is false, which means
-       no recursion).
-     - false
-     -
-
-Example
-^^^^^^^
-
-With the default transform configuration:
-
-::
-
-    {
-        "type": "lower_keys",
-    }
-
-And given the the input entity:
-
-::
-
-    {
-        "_id": "http://psi.test.com/2",
-        "Born": "1980-01-23",
-        "CODE": "AB32",
-        "Status": {
-            "http://psi.foo.com/married": true,
-            "Spouse": "Pam",
-            "URL1": "~rhttp://www.foo.com",
-            "URL2": "~rhttp://psi.foo.com/url2",
-            "CODE": 123,
-            "Child": {
-                "t_c": "C",
-                "http://psi.test.com/hello": "http://psi.foo.com/world",
-                "http://psi.tests.com/S": "bye"
-            }
-        }
-    }
-
-The transform will output the following transformed entity:
-
-::
-
-    {
-        "_id": "http://psi.test.com/2",
-        "born": "1980-01-23",
-        "code": "AB32",
-        "status": {
-            "http://psi.foo.com/married": true,
-            "Spouse": "Pam",
-            "URL1": "~rhttp://www.foo.com",
-            "URL2": "~rhttp://psi.foo.com/url2",
-            "CODE": 123,
-            "Child": {
-                "t_c": "C",
-                "http://psi.test.com/hello": "http://psi.foo.com/world",
-                "http://psi.tests.com/S": "bye"
-            }
-        }
-    }
-
-Note that only the root keys are transformed. If the ``recurse`` property is set to ``true`` in the configuration,
-however, the result would instead become:
-
-::
-
-    {
-        "_id": "http://psi.test.com/2",
-        "born": "1980-01-23",
-        "code": "AB32",
-        "status": {
-            "http://psi.foo.com/married": true,
-            "spouse": "Pam",
-            "url1": "~rhttp://www.foo.com",
-            "url2": "~rhttp://psi.foo.com/url2",
-            "code": 123,
-            "child": {
-                "t_c": "C",
-                "http://psi.test.com/hello": "http://psi.foo.com/world",
-                "http://psi.tests.com/s": "bye"
-            }
-        }
-    }
-
-.. _upper_keys_transform:
-
-Upper keys transform
---------------------
-
-This transform transforms all the keys of an entity to upper case (optionally recursively).
-The transform mirrors the :ref:`lower case transform <lower_keys_transform>` exactly except for the keys being
-transformed to upper case. See previous section for details.
-
-
-.. _undirected_graph_transform:
-
-Undirected graph transform
---------------------------
-
-The undirected graph transform transforms a list of properties representing nodes in a graph into all its
-possible sets of edges, forming a complete graph. The transform will generate all possible edges in the
-graph, which will be twice the number of entities as there are values in the aggregate of the list of properties given.
-See the example section for an example.
-
-Prototype
-^^^^^^^^^
-
-::
-
-    {
-        "type": "undirected_graph",
-        "nodes": ["_id", "sameAs"],
-        "from": "from-property",
-        "to": "to-property"
-    }
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``nodes``
-     - List<String>
-     - A list of entity property names that should be used to pick the nodes of the graph. The properties must refer
-       to a value that is either a string or a URI, or a list of strings or URIs. No other value types are allowed in
-       the transform.
-     - ["_id", "sameAs"]
-     -
-
-   * - ``from``
-     - String
-     - The name of the property to use as "from" point in the generated entity for an edge in the graph.
-     - "from"
-     -
-
-   * - ``to``
-     - String
-     - The name of the property to use as the "to" point in the generated entity for an edge in the graph.
-     - "to"
-     -
-
-Example
-^^^^^^^
-
-Given the configuration:
-
-::
-
-    {
-        "transform": [
-           {
-             "type": "undirected_graph",
-             "nodes": ["_id", "map"],
-             "from": "from",
-             "to": "to"
-           }
-        ]
-    }
-
-And the input entity:
-
-::
-
-    {
-       "_id": "foo",
-       "map": ["bar", "zoo"]
-    }
-
-The transform will output the following edges of the graph as entities on its output stream:
-
-::
-
-   {
-       "_id": "foo.bar",
-       "from": "foo",
-       "to": "bar"
-   }
-
-   {
-       "_id": "foo.zoo",
-       "from": "foo",
-       "to": "zoo"
-   }
-
-   {
-       "_id": "bar.foo",
-       "from": "bar",
-       "to": "foo"
-   }
-
-   {
-       "_id": "bar.zoo",
-       "from": "bar",
-       "to": "zoo"
-   }
-
-   {
-       "_id": "zoo.foo",
-       "from": "zoo",
-       "to": "foo"
-   }
-
-   {
-       "_id": "zoo.bar",
-       "from": "zoo",
-       "to": "bar"
-   }
 
 .. _emit_children_transform:
 
@@ -5430,7 +5198,7 @@ Properties
 
    * - ``headers``
      - Dict<String,String>
-     - A optional set of header values to set in HTTP request made using this sink. Both keys and values must
+     - An optional set of header values to set in HTTP request made using this sink. Both keys and values must
        evaluate to strings.
      -
      -
@@ -6102,9 +5870,16 @@ Properties
      - ``false``
      -
 
+       .. _remove_pk_char_sql:
+   * - ``remove_pk_char_trailing_spaces``
+     - Boolean
+     - If set, removes trailing spaces from primary key values if they are of type ``char`` or ``nchar``. SQL automatically pads strings with whitespace if the string is shorter than the predetermined length, but trailing spaces are disregarded when comparing values. This setting, when ``true``, ensures that the sink also disregards trailing spaces. If set to ``false``, you can run into issues with updating existing rows.
+     - ``true``
+     -
+
    * - ``whitelist``
      - List<String>
-     - Deprecated. The names of the properties (columns) to include when inserting rows into the target tablke. If there is a
+     - Deprecated. The names of the properties (columns) to include when inserting rows into the target table. If there is a
        ``blacklist`` also specified, the whitelist will be filtered against the contents of the blacklist.
      -
      -
@@ -8425,6 +8200,7 @@ Prototype
         "type": "system:url",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "jwt_token": null,
@@ -8482,6 +8258,13 @@ Properties
      - Indicate to the client if it should attempt to verify the SSL certificate when communicating with the
        HTTP server over SSL/TLS.
      - ``false``
+     -
+
+   * - ``custom_ca_pem_chain``
+     - String
+     - If ``verify_ssl`` is set to ``true`` this property can hold a chain of certificates (in PEM format) that
+       should be used to verify the SSL connection.
+     -
      -
 
    * - ``username``
@@ -8621,6 +8404,7 @@ Prototype
         "type": "system:rest",
         "url_pattern": "http://host:port/path/%s",
         "verify_ssl": false,
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
         "username": null,
         "password": null,
         "authentication": "basic",

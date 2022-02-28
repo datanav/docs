@@ -740,6 +740,7 @@ Below is a whole entity of the above global pipe and as seen, it gives an aggreg
     "salesforce-userprofile:phone_number": 24887159
   }
 
+.. _best-practice-preparation-pipes:
 
 Preparation pipes
 =================

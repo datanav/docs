@@ -1,4 +1,4 @@
-.. _QuickReference:
+.. _quick-reference:
 
 =================
  Quick Reference
@@ -7,75 +7,71 @@
 Configuration
 =============
 
-.. topic:: Sources
+.. list-table::
+   :widths: 30, 70
 
-   :ref:`conditional <conditional_source>` ·
-   :ref:`csv <csv_source>` ·
-   :ref:`dataset <dataset_source>` ·
-   :ref:`diff_datasets <diff_datasets_source>` ·
-   :ref:`embedded <embedded_source>` ·
-   :ref:`empty <empty_source>` ·
-   :ref:`http_endpoint <http_endpoint_source>` ·
-   :ref:`json <json_source>` ·
-   :ref:`ldap <ldap_source>` ·
-   :ref:`merge <merge_source>` ·
-   :ref:`merge_datasets <merge_datasets_source>` ·
-   :ref:`rdf <rdf_source>` ·
-   :ref:`rest <rest_source>` ·
-   :ref:`sdshare <sdshare_source>` ·
-   :ref:`sparql <sparql_source>` ·
-   :ref:`sql <sql_source>` ·
-   :ref:`union_datasets <union_datasets_source>`
+   * - Sources
+     - :ref:`conditional <conditional_source>` ·
+       :ref:`csv <csv_source>` ·
+       :ref:`dataset <dataset_source>` ·
+       :ref:`diff_datasets <diff_datasets_source>` ·
+       :ref:`embedded <embedded_source>` ·
+       :ref:`empty <empty_source>` ·
+       :ref:`http_endpoint <http_endpoint_source>` ·
+       :ref:`json <json_source>` ·
+       :ref:`ldap <ldap_source>` ·
+       :ref:`merge <merge_source>` ·
+       :ref:`merge_datasets <merge_datasets_source>` ·
+       :ref:`rdf <rdf_source>` ·
+       :ref:`rest <rest_source>` ·
+       :ref:`sdshare <sdshare_source>` ·
+       :ref:`sparql <sparql_source>` ·
+       :ref:`sql <sql_source>` ·
+       :ref:`union_datasets <union_datasets_source>`
 
-.. topic:: Transforms
+   * - Transforms
+     - :ref:`conditional <conditional_transform>` ·
+       :ref:`dtl <dtl_transform>` ·
+       :ref:`emit_children <emit_children_transform>` ·
+       :ref:`http <http_transform>` ·
+       :ref:`json_schema <json_schema_transform>` ·
+       :ref:`rdf <rdf_transform>` ·
+       :ref:`rest <rest_transform>` ·
+       :ref:`xml <xml_transform>`
 
-   :ref:`conditional <conditional_transform>` ·
-   :ref:`dtl <dtl_transform>` ·
-   :ref:`emit_children <emit_children_transform>` ·
-   :ref:`http <http_transform>` ·
-   :ref:`json_schema <json_schema_transform>` ·
-   :ref:`lower_keys <lower_keys_transform>` ·
-   :ref:`rdf <rdf_transform>` ·
-   :ref:`rest <rest_transform>` ·
-   :ref:`undirected_graph <undirected_graph_transform>` ·
-   :ref:`upper_keys <upper_keys_transform>` ·
-   :ref:`xml <xml_transform>`
+   * - Sinks
+     - :ref:`conditional <conditional_sink>` ·
+       :ref:`csv_endpoint <csv_endpoint_sink>` ·
+       :ref:`databrowser <databrowser_sink>` ·
+       :ref:`dataset <dataset_sink>` ·
+       :ref:`elasticsearch <elasticsearch_sink>` ·
+       :ref:`http_endpoint <http_endpoint_sink>` ·
+       :ref:`json <json_sink>` ·
+       :ref:`mail <mail_sink>` ·
+       :ref:`null <null_sink>` ·
+       :ref:`rest <rest_sink>` ·
+       :ref:`sdshare <sdshare_sink>` ·
+       :ref:`sms <sms_sink>` ·
+       :ref:`solr <solr_sink>` ·
+       :ref:`sparql <sparql_sink>` ·
+       :ref:`sql <sql_sink>` ·
+       :ref:`xml_endpoint <xml_endpoint_sink>`
 
-.. topic:: Sinks
-
-   :ref:`conditional <conditional_sink>` ·
-   :ref:`csv_endpoint <csv_endpoint_sink>` ·
-   :ref:`databrowser <databrowser_sink>` ·
-   :ref:`dataset <dataset_sink>` ·
-   :ref:`elasticsearch <elasticsearch_sink>` ·
-   :ref:`http_endpoint <http_endpoint_sink>` ·
-   :ref:`json <json_sink>` ·
-   :ref:`mail <mail_sink>` ·
-   :ref:`null <null_sink>` ·
-   :ref:`rest <rest_sink>` ·
-   :ref:`sdshare <sdshare_sink>` ·
-   :ref:`sms <sms_sink>` ·
-   :ref:`solr <solr_sink>` ·
-   :ref:`sparql <sparql_sink>` ·
-   :ref:`sql <sql_sink>` ·
-   :ref:`xml_endpoint <xml_endpoint_sink>`
-
-.. topic:: Systems
-
-   :ref:`elasticsearch <elasticsearch_system>` ·
-   :ref:`ldap <ldap_system>` ·
-   :ref:`microservice <microservice_system>` ·
-   :ref:`mssql <mssql_system>` ·
-   :ref:`mssql-azure-dw <mssql-azure-dw_system>` ·
-   :ref:`mysql <mysql_system>` ·
-   :ref:`oracle <oracle_system>` ·
-   :ref:`oracle_tns <oracle_tns_system>` ·
-   :ref:`postgresql <postgresql_system>` ·
-   :ref:`rest <rest_system>` ·
-   :ref:`smtp <smtp_system>` ·
-   :ref:`solr <solr_system>` ·
-   :ref:`twilio <twilio_system>` ·
-   :ref:`url <url_system>`
+   * - Systems
+     - :ref:`elasticsearch <elasticsearch_system>` ·
+       :ref:`ldap <ldap_system>` ·
+       :ref:`microservice <microservice_system>` ·
+       :ref:`mssql <mssql_system>` ·
+       :ref:`mssql-azure-dw <mssql-azure-dw_system>` ·
+       :ref:`mysql <mysql_system>` ·
+       :ref:`oracle <oracle_system>` ·
+       :ref:`oracle_tns <oracle_tns_system>` ·
+       :ref:`postgresql <postgresql_system>` ·
+       :ref:`rest <rest_system>` ·
+       :ref:`smtp <smtp_system>` ·
+       :ref:`solr <solr_system>` ·
+       :ref:`twilio <twilio_system>` ·
+       :ref:`url <url_system>`
 
 
 DTL Transforms
@@ -214,7 +210,7 @@ DTL Functions
    * - UUIDs
      - :ref:`uuid <uuid_dtl_function>` ·
        :ref:`is-uuid <is_uuid_dtl_function>`
-            
+
    * - Nested transformations
      - :ref:`apply <apply_dtl_function>` ·
        :ref:`apply-hops <apply_hops_dtl_function>`
