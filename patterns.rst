@@ -7,7 +7,7 @@ Patterns
    :depth: 2
    :local:
 
-We've identified a set of patterns when working with problems related to data flows in Sesam. We find it very useful
+We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful
 to name these patterns as it makes it easier to refer to them when discussing problems.
 
 Here we present a list of them, grouped by the step in the dataflow that the problem manifests itself at.
@@ -93,9 +93,17 @@ synced back.
 Transform patterns
 ==================
 
-No patterns described yet.
+Late schema binding
+-------------------
+Ensure transformations are done in accordance to target schema.
+
+Optimistic locking
+------------------
+Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
 Share patterns
 ==============
 
-No patterns described yet.
+Exposing data
+-------------
+Focus should be on exposing data.
