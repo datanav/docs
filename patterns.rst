@@ -105,6 +105,10 @@ Only process the relevant entities from a global using subset
 -------------------------------------------------------------
 You should use the :ref:`subset <dataset_source>` property to pick subsets of a complete dataset, i.e: after a merge source has been used upstream. 
 
+.. note::
+
+  If entities move between subsets, then you need to deal with these deletes.
+
 Share patterns
 ==============
 
