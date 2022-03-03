@@ -101,6 +101,14 @@ Optimistic locking
 ------------------
 Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
+Subsets
+-------
+If your source supports it, you should use the :ref:`subset <dataset_source>` property to pick subsets of a complete dataset, i.e: after a merge source has been used upstream. 
+
+.. note::
+  
+  As the subset is still under development, you should still use the ``filter`` function in your transform statement to ensure your defined subsections are only being transformed.
+
 Share patterns
 ==============
 
