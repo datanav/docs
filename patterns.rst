@@ -101,13 +101,11 @@ Optimistic locking
 ------------------
 Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
-Only process the relevant entities from a global using subset
--------------------------------------------------------------
-You should use the :ref:`subset <dataset_source>` property to pick subsets of a complete dataset, i.e: after a merge source has been used upstream. 
+A “Best Effort” to extract entities using create and subset
+-----------------------------------------------------------
+If you use the :ref:`create <dtl-transforms>` and :ref:`subset <dataset_source>` properties to extract entities from a dataset and you do a full sync for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset. 
 
-.. note::
-
-  This pattern is sensitive to multiple versions of the entity id in one complete pipe run, i.e: if entities move between subsets, then you need to deal with these moves, as they will create old entity versions, which will be deletes.
+Therefore, you should materialise the subset in a separate dataset before “picking” your derived entities using subset to minimise the risk of creating entities that are not in the latest versions of your subset.
 
 Share patterns
 ==============
