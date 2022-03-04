@@ -107,7 +107,7 @@ You should use the :ref:`subset <dataset_source>` property to pick subsets of a 
 
 .. note::
 
-  If entities move between subsets, then you need to deal with these deletes.
+  This pattern is sensitive to multiple versions of the entity id in one complete pipe run, i.e: if entities move between subsets, then you need to deal with these moves, as they will create old entity versions, which will be deletes.
 
 Share patterns
 ==============
