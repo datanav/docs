@@ -101,11 +101,11 @@ Optimistic locking
 ------------------
 Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
-A “Best Effort” to extract entities using create and subset
------------------------------------------------------------
-If you use the :ref:`create <dtl-transforms>` and :ref:`subset <dataset_source>` properties to extract entities from a dataset and you do a full sync for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset. 
+How to extract entities
+-----------------------
+In general, using :ref:`subset <dataset_source>` to extract entities is straight forward. Albeit, edge cases do exist. In example, if you use the :ref:`create <dtl-transforms>` and :ref:`subset <dataset_source>` properties to extract entities from a dataset following a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset. 
 
-Therefore, you should materialise the subset in a separate dataset before “picking” your derived entities using subset to minimise the risk of creating entities that are not in the latest versions of your subset.
+Therefore, in such cases subset cannot be used and you should rather use :ref:`filtering <dtl-transforms>` to extract your desired entities.
 
 Share patterns
 ==============
