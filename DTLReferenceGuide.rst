@@ -3585,6 +3585,7 @@ Paths
        | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
          to explicity reference the ``"a"`` property in the current namespace ``"bar"``.
 
+.. _hops:
 
 Hops
 ----

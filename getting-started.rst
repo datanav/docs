@@ -3297,7 +3297,7 @@ The embedded entities are removed in this code snippet for brevity. They are fou
 
 Output:
 
-.. image:: images/getting-started/labs/lab-rdf:type.png
+.. image:: images/getting-started/labs/lab-rdf-type.png
     :width: 800px
     :align: center
     :alt: Entity resulting from lab task as seen in the pipe's "Output"-tab

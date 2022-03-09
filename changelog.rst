@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_03_03:
+
+2022-03-03
+----------
+
+* Pipes with ``manual`` or ``off`` pump mode can now be disabled and enabled.
+
 .. _changelog_2022_02_23:
 
 2022-02-23

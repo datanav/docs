@@ -107,6 +107,14 @@ In general, using :ref:`subset <dataset_source>` to extract entities is straight
 
 Therefore, in such cases subset cannot be used and you should rather use :ref:`filtering <dtl-transforms>` to extract your desired entities.
 
+Defining hierarchies for recursion
+----------------------------------
+:ref:`Recursive hops <hops>` should be used when your data exhibits inverse relationships.
+
+An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data. 
+
+When doing recursive hops you should define the property ``max_depth`` to safeguard against never ending recursions. 
+
 Share patterns
 ==============
 
