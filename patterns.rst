@@ -103,7 +103,7 @@ Should be added via an external transform and then two hash values should be com
 
 How to extract entities
 -----------------------
-To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To extract a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
+To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
 
 .. warning::
 
