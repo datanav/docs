@@ -101,6 +101,14 @@ Optimistic locking
 ------------------
 Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
+How to extract entities
+-----------------------
+To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
+
+.. warning::
+
+  If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
+
 Defining hierarchies for recursion
 ----------------------------------
 :ref:`Recursive hops <hops>` should be used when your data exhibits inverse relationships.
