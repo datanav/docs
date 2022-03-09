@@ -103,9 +103,11 @@ Should be added via an external transform and then two hash values should be com
 
 How to extract entities
 -----------------------
-In general, using :ref:`subset <dataset_source>` to extract entities is straight forward. Albeit, edge cases do exist. In example, if you use the :ref:`create <dtl-transforms>` and :ref:`subset <dataset_source>` properties to extract entities from a dataset following a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset. 
+To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To extract a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
 
-Therefore, in such cases subset cannot be used and you should rather use :ref:`filtering <dtl-transforms>` to extract your desired entities.
+.. warning::
+
+  If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
 
 Defining hierarchies for recursion
 ----------------------------------
