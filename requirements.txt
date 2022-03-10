@@ -3,7 +3,8 @@ commonmark==0.9.1
 recommonmark==0.7.1
 docutils==0.16
 
-furo==2022.2.14.1
+#furo==2022.2.14.1
+pydata-sphinx-theme==0.7.2
 
 sesamclient==0.2.68
 sphinx-argparse==0.3.1
