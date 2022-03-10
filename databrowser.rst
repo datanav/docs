@@ -1,9 +1,10 @@
-===========
+.. _databrowser:
+
 Databrowser
 ===========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Databrowser Guide <databrowser-guide>
    Authentication and authorization <databrowser-auth>

@@ -819,7 +819,7 @@ Changelog
 
 2017-11-23
 ----------
-* Added :doc:`Databrowser documentation <databrowser>`.
+* Added :ref:`Databrowser documentation <databrowser>`.
 
 
 2017-11-22

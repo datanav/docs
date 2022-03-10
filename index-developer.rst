@@ -1,5 +1,5 @@
-Developer reference
-===================
+User guide
+==========
 
 .. toctree::
    :maxdepth: 1
@@ -7,12 +7,12 @@ Developer reference
    Project kickstart <best-practices>
    Building blocks <developer-guide>
    Features <product-features>
+   Data Transformation Language (DTL) <DTLReferenceGuide>
+   Design patterns <patterns>
    Data synchronization <index-synchronization>
    Data modelling <index-datamodelling>
    Data platforms <index-dataplatforms>
    Operations <index-operations>
-   Data Transformation Language (DTL) <DTLReferenceGuide>
-   Design patterns <patterns>
    Changelog <changelog>
    Roadmap <roadmap>
    Tools <tools>

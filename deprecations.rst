@@ -1,17 +1,17 @@
 .. _deprecations:
 
-.. toctree::
-   :hidden:
-   :maxdepth: 0
-
-   Databrowser <databrowser>
-
 ============
 Deprecations
 ============
 
 This document contains deprecated sections from the documentation. Do
 not make use of these features.
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Databrowser <databrowser>
 
 DTL Functions
 =============

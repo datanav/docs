@@ -7,7 +7,7 @@ Operations
    Security <security>
    Notifications <notifications>
    Pump Execution Dataset <pump-execution>
-   Working on a Sesam project <project-workflow>
+   Configuration Management <project-workflow>
    Self-hosted service <self-hosted>
    Debugging <low-level-debugging>
    Behind the scenes <behind-the-scenes>
