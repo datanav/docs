@@ -4,6 +4,7 @@ User guide
 .. toctree::
    :maxdepth: 1
 
+   Quick Reference <quick-reference>
    Project kickstart <best-practices>
    Building blocks <developer-guide>
    Features <product-features>

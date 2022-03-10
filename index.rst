@@ -14,8 +14,8 @@ Sesam is a Master Data Hub built on a streaming dataflow data integration and pr
 
    What is Sesam <index-whatis>
    User Guide <index-developer>
-   Learn Sesam <index-learn>
+   Learn <index-learn>
    Community <community>
    Legal <legal>
-   Quick Reference <quick-reference>
    Support <https://support.sesam.io>
+   Login <https://portal.sesam.io>
