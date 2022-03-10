@@ -13,9 +13,9 @@ User guide
    Data modelling <index-datamodelling>
    Data platforms <index-dataplatforms>
    Operations <index-operations>
-   Changelog <changelog>
    Roadmap <roadmap>
    Tools <tools>
    Service Configuration <configuration>
    Service API <api>
    Deprecated features <deprecations>
+   Changelog <changelog>
