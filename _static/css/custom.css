@@ -4,16 +4,19 @@ h3 {
     /* color: green; */
 }
 
-/*
-.sidebar-drawer {
-	place-content: start;
-	width: 15%;
+.container-xl {
+	min-width: 100%
 }
 
-.content {
-	width: 80%;
+.bd-sidebar {
+	max-width: 20%;
 }
 
-.toc-drawer {
-	place-content: end;
-}*/
+.bd-toc {
+	min-width: 20%;
+	max-width: 20%;
+}
+
+.bd-content {
+	min-width: 60%;
+}
