@@ -20,3 +20,29 @@ h3 {
 .bd-content {
 	min-width: 60%;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #1E1E1E;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+a.nav-link {
+	font-size: 1.2em;
+}
+
+.navbar-brand {
+	padding: 12px;
+}
+
+.navbar-collapse {
+	align-items: flex-start;
+    justify-content: left;
+    max-width: 80%;
+}
