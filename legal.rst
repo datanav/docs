@@ -3,7 +3,7 @@ Legal
 =====
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Terms of Service <terms>
    Description of the Services <legal-service>

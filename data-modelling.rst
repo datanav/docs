@@ -4,12 +4,6 @@
 Data modelling in Sesam
 =======================
 
-
-.. contents:: Table of Contents
-   :depth: 3
-   :local:
-
-
 Summary
 -------
 Sesam is an Master Data Hub using a unique approach for collecting, connecting and sharing data. With Sesam data can quickly be re-purposed, re-structured and used, without changing the legacy systems that own the original data. Making all the valuable data within your company available for the whole organization. 

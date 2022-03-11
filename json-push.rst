@@ -3,10 +3,6 @@ JSON Push Protocol
 ==================
 
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 The JSON Push protocol is an HTTP-based protocol that uses POST
 requests to perfom incremental or full data syncs across to an HTTP
 endpoint. It supports splitting up the data into smaller batches, so

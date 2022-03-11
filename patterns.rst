@@ -1,11 +1,6 @@
-========
-Patterns
-========
-
-
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
+===============
+Design patterns
+===============
 
 We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful
 to name these patterns as it makes it easier to refer to them when discussing problems.

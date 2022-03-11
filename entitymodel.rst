@@ -2,10 +2,6 @@
 Entity Data Model
 =================
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 Sesam uses an entity data model as the core representation of
 data. Each entity is a dictionary of key-value pairs. Each key is a
 string and the value can be either a literal value, a list or another

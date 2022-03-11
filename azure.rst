@@ -2,10 +2,6 @@
 Sesam in Microsoft Azure
 ========================
 
-.. contents:: Table of Contents
-   :depth: 1
-   :local:
-
 Introduction
 ============
 

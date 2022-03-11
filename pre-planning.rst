@@ -1,5 +1,5 @@
-Planning a Sesam project
-============================
+Planning a project
+==================
 
 The main planning task before starting a Sesam project is to create
 an overview of what master data types are needed, their sources, and how

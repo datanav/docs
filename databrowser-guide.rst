@@ -8,9 +8,6 @@ The Sesam Databrowser is a generic browser that lets you inspect
 information as it exists in the data hub. The interaction principle is a
 combination of search and traditional navigation.
 
-.. contents:: Table of Contents
-   :depth: 3
-
 The startpage
 ^^^^^^^^^^^^^
 

@@ -7,5 +7,4 @@ Tools
 
    Management Studio <management-studio>
    Sesam Client <sesam-client>
-   Databrowser <databrowser>
    GDPR platform <gdpr-platform>

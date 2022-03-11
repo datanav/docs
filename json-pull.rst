@@ -3,10 +3,6 @@ JSON Pull Protocol
 ==================
 
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 The JSON Pull protocol is an HTTP-based protocol that uses GET
 requests to retrieve streams of :doc:`entities <entitymodel>`. It
 supports splitting up the data across multiple requests.

@@ -2,10 +2,6 @@
 Roadmap
 =======
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 This roadmap highlights some of features we are currently working on. This roadmap might be subject to
 change.
 

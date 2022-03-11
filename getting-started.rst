@@ -5,11 +5,6 @@ Getting started
 ===============
 
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
-
 Introduction
 ------------
 Welcome to this introduction to Sesam! This is a basic course that will guide you through what Sesam is, what it does and how it works.

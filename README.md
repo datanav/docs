@@ -13,7 +13,7 @@
     ```pip install -r requirements.txt```
 
 * Run ```make html```
-* Open ```_build/html/index.html``` in your browser
+* Open ```_build/html/index.html``` in your browser or ```cd _build/html && python3 -m http.server``` to get search summaries
 
 MacOS specific installation:
 

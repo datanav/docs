@@ -4,13 +4,14 @@
 Deprecations
 ============
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 This document contains deprecated sections from the documentation. Do
 not make use of these features.
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Databrowser <databrowser>
 
 DTL Functions
 =============
