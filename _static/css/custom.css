@@ -44,3 +44,9 @@ li a {
 .navbar-brand {
 	padding: 12px;
 }
+
+.navbar-collapse {
+	align-items: flex-start;
+    justify-content: left;
+    max-width: 79%;
+}
