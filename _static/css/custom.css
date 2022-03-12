@@ -1,9 +1,5 @@
 /* add any theme overrides here */
 
-h3 {
-    /* color: green; */
-}
-
 .container-xl {
 	min-width: 100%
 }
@@ -33,14 +29,16 @@ h3 {
 	font-size: 1.5em;
 }
 
-li a {
+a.nav-link {
 	font-size: 1.2em;
-}
-
-.mr-auto {
-	margin-right: 0!important;
 }
 
 .navbar-brand {
 	padding: 12px;
+}
+
+.navbar-collapse {
+	align-items: flex-start;
+    justify-content: left;
+    max-width: 79%;
 }
