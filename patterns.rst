@@ -9,6 +9,13 @@ Here we present a list of them, grouped by the step in the dataflow that the pro
 
 .. note::
   This document is work in progress, but we publish it as it might contain useful tips.
+  
+Generic patterns
+================
+
+Rewriting identity
+------------------
+When rewriting ``_id`` you should always add a ``["add", "$original_id", "_S._id"]`` in order to be able to trace and debug. Multiple upstream entities could map to the same identity, and this can be very hard to figure out without this information.
 
 Collect patterns
 ================
