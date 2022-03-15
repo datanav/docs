@@ -1,6 +1,5 @@
-
-Import to Sesam node
-^^^^^^^^^^^^^^^^^^^^
+Using a microservice
+====================
 
 Now that the Docker image has been pushed to our Docker platform we need to spin up the container in our Sesam node.
 

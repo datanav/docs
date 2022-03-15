@@ -1,5 +1,5 @@
-Testing
-^^^^^^^
+Testing a microservice
+======================
 
 To test that you can run a container from your image locally you can run it directly in the terminal. First we need to login to Docker. Run the command docker login and enter your Docker Hub **username** and **password** when prompted.
 

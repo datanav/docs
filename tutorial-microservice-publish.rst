@@ -1,5 +1,12 @@
-Push to Docker Hub
-^^^^^^^^^^^^^^^^^^
+Publish to Docker Hub
+=====================
+First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
+
+.. image:: images/getting-started/Docker-repo.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
 Now we need to push the image to the repository:
 
 To check that the you have created image run the command:

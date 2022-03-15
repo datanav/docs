@@ -11,6 +11,7 @@ After you have completed these tutorials you would have:
 
 #. Signed up for Sesam
 #. Connected to a subscription
+#. Uploaded a baseline configuration
 
 Steps
 -----
@@ -18,5 +19,6 @@ Steps
 .. toctree::
    :maxdepth: 1
 
-   Setting up our Sesam instance  <tutorial-setting-up>
+   Setting up our Sesam instance  <tutorial-signup>
+   Uploading a baseline configuration  <tutorial-upload-baseline-config>
 

@@ -1,29 +1,7 @@
-Workflow
-========
-Microservices in Sesam run in docker containers. These containers run on our Sesam-node in what we call a system. Below is a visual representation of the flow of hosting our microservice in Sesam.
+Creating a microservice
+=======================
 
-.. image:: images/getting-started/workflow-ms.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice.
-
-The Docker image is then pushed up to a repository on Docker Hub (or any Docker platform. When hosted in the repository the image can be pulled by anyone with access.
-
-Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an inbound pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems.
-
-Microservices with Docker
-=========================
-
-First you need to sign up on `Docker <https://www.docker.com>`__ and create a new repository.
-
-.. image:: images/getting-started/Docker-repo.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Then download `Docker Desktop <https://www.docker.com/get-started>`__.
+Download `Docker Desktop <https://www.docker.com/get-started>`__.
 
 You now need to download Python. Here we're using Python 3.6 but you can use any version after 3.5. Then install pip and Flask.
 
@@ -34,7 +12,8 @@ Flask is a web framework used by Pything to develop web services nad pip is a de
     :align: center
     :alt: Generic pipe concept
 
-First things first, we need to decice which IDE (integrated development environment) you want to use. In this exercise we will use *Pycharm*, but there are various other options so if you are currently using another one, that is not a problem.
+First things first, we need to decide which IDE (integrated development environment) you want to use. In this
+exercise we will use *Pycharm*, but there are various other options so if you are currently using another one, that is not a problem.
 
 You are now ready to create the microservice. We will generate a folder and a couple of files that a microservice always need to run. Firstly we need to create a **Dockerfile**. A `Dockerfile <https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>`__ is a text file that Docker reads in from top to bottom. It contains instructions which informs Docker *how* the Docker image should get built. To read more about Docker, Docker image, Docker build, it is helpful to browse the `Docker documentation <https://docs.docker.com>`__ . In addition we need to generate the actual program which is stored in a python file (.py).
 

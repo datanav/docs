@@ -1,15 +1,23 @@
 .. _getting-started-microservices:
 
 Microservices
--------------
-The DTL in Sesam is a powerful tool to transform our data. But sometimes we need to do something with our data that is outside the scope of the DTL. We can then create a microservice that does what we need and run it inside Sesam to serve those needs. We can also use a microservice when we need to connect to an external system where the connection point is not compatible with the Sesam source systems. The microservice can be made according to our preferences and in any language.
+=============
 
-.. image:: images/getting-started/MS-types.jpg
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
+Introduction
+------------
+This guide will help you build and use a Sesam extension using microservices.
 
-As shown above, irrespective of nature or technologies of external system, we can easily connect with them using microservices to read, write and update data. Microservices add flexibility to do more with data than may be possible with DTL.
+We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice.
+
+The Docker image is then pushed up to a repository on Docker Hub (or any Docker platform. When hosted in the repository the image can be pulled by anyone with access.
+
+Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an inbound pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems.
+
+After you have completed these tutorials you would have:
+
+#. Created and tested a microservice
+#. Used the microservice in your Sesam subscription
+
 
 Steps
 -----
