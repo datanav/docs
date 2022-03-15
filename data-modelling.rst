@@ -35,7 +35,7 @@ Following the above mentioned principles when importing data and creating global
     :align: center
     :alt: Generic pipe concept    
 
-To read about the main concepts and how to get started in Sesam, please click :ref:`here <getting-started-glossary>`.
+To read about the main concepts and how to get started in Sesam, please click :ref:`here <getting-started>`.
 
 .. _best-practice-global:
 
@@ -52,7 +52,7 @@ Global datasets can be populated by:
 
 - simply add datasets to a global dataset without merging, 
 - merging data from various sources without modifications,  
-- selectively merge data, by selecting which properties to merge through transformations. More information on implementing such transformations can be obtained :ref:`here <getting-started-transformations>`.
+- selectively merge data, by selecting which properties to merge through transformations.
 
 It is important to remember that a global dataset requires either business knowledge or a sound understanding of the data from the different sources. Global datasets will work to their fullest potential if they include all of the semantically linked data elements relating to the subject matter. 
 

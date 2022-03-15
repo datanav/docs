@@ -92,8 +92,7 @@ New Pipe
 
 When pressing the button **"New Pipe"**, it takes you into template for generating a pipe from scratch.
 
-First we have to add value to "_id" or pipe cannot be saved. The naming conventions of pipe or the "id" can be found here:
-:ref:`Naming conventions <getting-started-naming-conventions>`
+First we have to add value to "_id" or pipe cannot be saved.
 
 As seen below, we have several tabs called "Panels" in Sesam. Press **"Templates"** and the available templates for each part of the pipe is available.
 
