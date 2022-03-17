@@ -37,9 +37,9 @@ We are working on making this lineage data available, as well as looking at ways
 Metrics API (Q2 2022)
 =====================
 
-We are looking into exposing subscription and pipe metrics in an API to make it easy to use metrics in external tools.
+We are looking into exposing subscription and pipe metrics in a Prometheus-compatible API to make it easy to use metrics in external tools.
 
-This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and unlimited number of pipe notifications.
+This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and an unlimited number of pipe notifications.
 
 Durable data (Q2 2022)
 ======================
