@@ -1,6 +1,6 @@
-==========================
-Working on a Sesam project
-==========================
+========================
+Configuration Management
+========================
 
 When setting up a new Sesam project there are several tasks that needs to be done in order to ensure a good working environment for the project and its team. One thing is the Sesam installation itself, but in every software development project, concepts such as version control, continuous integration (CI) testing and automatic deployment are key factors for a successful project.
 
