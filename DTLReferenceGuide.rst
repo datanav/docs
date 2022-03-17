@@ -562,8 +562,8 @@ of the argument. Here are some cardinalites that you'll come across:
 
 .. _dtl-transforms:
 
-Transforms
-==========
+Transform Functions
+===================
 
 A transform function is a function that has side-effects, typically
 modifying the target entity, and has no return value.
@@ -1311,10 +1311,10 @@ modifying the target entity, and has no return value.
          on the target entity.
 
 
-Expression language
-===================
+Expression Functions
+====================
 
-An expression language function is a function that has no side-effects
+An expression function is a function that has no side-effects
 and returns a single value or a list of values.
 
 Boolean logic

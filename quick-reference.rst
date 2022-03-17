@@ -74,8 +74,8 @@ Configuration
        :ref:`url <url_system>`
 
 
-DTL Transforms
-==============
+DTL Transform Functions
+=======================
 
 .. list-table::
    :widths: 30, 70
@@ -107,8 +107,8 @@ DTL Transforms
    * - Comments
      - :ref:`comment <dtl_transform-comment>`
 
-DTL Functions
-=============
+DTL Expression Functions
+========================
 
 .. list-table::
    :widths: 30, 70
