@@ -24,13 +24,32 @@ and might open up the possibility of running Sesam in a self-hosted Kubernetes c
 
 .. _property-lineage:
 
-Property lineage (Q1 2022)
+Property lineage (Q2 2022)
 ==========================
 
 Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
 are composed using introspectable DTL in combination with :ref:`schema collection <schema-inferencing>` allows us to continously track property lineage.
 
 We are working on making this lineage data available, as well as looking at ways to visualize it.
+
+.. _metrics-api:
+
+Metrics API (Q2 2022)
+=====================
+
+We are looking into exposing subscription and pipe metrics in an API to make it easy to use metrics in external tools.
+
+This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and unlimited number of pipe notifications.
+
+Durable data (Q2 2022)
+======================
+
+Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
+
+For http_endpoint sources and non-idempotent sinks, this can be a problem.
+
+We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
+
 
 Extensions
 ==========
@@ -64,15 +83,6 @@ Expose invoices and contracts in the portal
 Invoices and contracts can be requested through support.
 
 We are looking into how to expose invoices and contracts in the portal to make them more accessible.
-
-Durable data
-============
-
-Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
-
-For http_endpoint sources and non-idempotent sinks, this can be a problem.
-
-We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
 
 High level configuration
 ========================
