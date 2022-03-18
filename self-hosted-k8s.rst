@@ -21,9 +21,9 @@ requirements and the installation steps necessary to get Sesam running on your K
 Hardware requirements
 ---------------------
 
-v
+To be decided.
 
 Software requirements
 ---------------------
 
-TBD
+To be decided.
