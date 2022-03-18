@@ -14,9 +14,6 @@ collecting or receiving data from source systems, transforming data, and pushing
    :hidden:
 
    What is Sesam <index-whatis>
-   User Guide <index-developer>
+   Documentation <index-developer>
    Learn <index-learn>
    Community <community>
-   Legal <legal>
-   Support <https://support.sesam.io>
-   Login <https://portal.sesam.io>
