@@ -5,7 +5,7 @@ It is common today to move IT solutions to the cloud, and many cloud platforms p
 
 In this section we will show you which providers Sesam supports as well as how to connect Sesam to their overall architecture. 
 
-.. rubric:: In this section
+.. rubric:: In this section:
 
 .. toctree::
    :maxdepth: 1
