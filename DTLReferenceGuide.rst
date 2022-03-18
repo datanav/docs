@@ -1501,6 +1501,91 @@ Booleans
        |
        | Returns true.
 
+Bytes
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _bytes_dtl_function:
+   * - ``bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
+       |
+     - | ``["bytes", "abc"]``
+       |
+       | Returns one bytes object: ``~bYWJj``.
+
+       .. _is_bytes_dtl_function:
+   * - ``is-bytes``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a bytes literal or value or if
+         it is a list, that the first element in the list is a bytes type value or literal
+       |
+     - | ``["is-bytes", ["bytes", "abc"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", "~bYWJj"]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-bytes", ["list", "~bYWJj", "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-bytes", ["list", "12345", "~bYWJj"]]]``
+       |
+       | Returns false.
+       |
+
+       .. _base64_encode_dtl_function:
+   * - ``base64-encode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 encoded version of its input bytes.
+         Non-bytes values are ignored.
+     - | ``["base64-encode", ["bytes", "abc"]]``
+       |
+       | Returns ``"YWJj"``.
+       |
+       | ``["base64-encode", ["list", 1, ["bytes", "abc"], 2, ["bytes", "def"], 3]]``
+       |
+       | Returns ``["YWJj", "ZGVm"]``.
+       |
+
+
+       .. _base64_decode_dtl_function:
+   * - ``base64-decode``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the base64 decoded version of its input strings.
+         Non-string values and non-base64 encoded values are ignored.
+     - | ``["base64-decode", "YWJj"]``
+       |
+       | Returns ``"~babc"``.
+       |
+       | ``["base64-decode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
+       |
+       | Returns ``["~bYWJj", "~bZGVm"]``.
+       |
+       | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
+       | the similar looking output and input)
 
 Comparisons
 -----------
@@ -1725,396 +1810,6 @@ Conditionals
        | or ``"teenager"`` if the value of ``_S.age`` is greater than or equal to ``13``,
        | or ``"toddler"`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``"unknown"``.
-
-.. _nulls:
-
-Nulls
------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _is_null_dtl_function:
-   * - ``is-null``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns ``true`` if value is either ``null``, an
-         empty list, or a list where the first element in the list is ``null``.
-       |
-     - | ``["is-null", null]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-null", 1]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-null", ["list"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-null", ["list", null]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-null", ["list", null, 123]]``
-       |
-       | Returns ``true``. Note that the function only looks at the first value
-         in the list.
-       |
-       | ``["is-null", ["list", 1, "12345"]]``
-       |
-       | Returns ``false``.
-
-       .. _is_not_null_dtl_function:
-   * - ``is-not-null``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns ``false`` if value is either ``null``, an
-         empty list, or a list where the first element in the list is ``null``.
-       |
-     - | ``["is-not-null", null]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-not-null", 1]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-not-null", ["list"]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-not-null", ["list", null]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-not-null", ["list", null, 123]]``
-       |
-       | Returns ``false``. Note that the function only looks at the first value
-         in the list.
-       |
-       | ``["is-not-null", ["list", 1, "12345"]]``
-       |
-       | Returns ``true``.
-
-       .. _if_null_dtl_function:
-   * - ``if-null``
-     - | *Arguments:*
-       |   VALUE(value-expression{1})
-       |   FALLBACK-VALUE(value-expression{1})
-       |
-       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise
-         FALLBACK-VALUE is returned.
-       |
-     - | ``["if-null", null, 2]``
-       |
-       | Returns ``2``.
-       |
-       | ``["if-null", 1, 2]``
-       |
-       | Returns ``1``.
-       |
-       | ``["if-null", ["list", null], 2]``
-       |
-       | Returns ``2``.
-       |
-       | ``["if-null", ["list", null, 123], 2]``
-       |
-       | Returns ``2``.
-       |
-       | ``["if-null", ["list", 1, "12345"], 2]``
-       |
-       | Returns ``[1, "12345"]``.
-
-       .. _coalesce_dtl_function:
-   * - ``coalesce``
-     - | *Arguments:*
-       |   FUNCTION(function-expression{0|1}),
-       |   VALUES(value-expression{1})
-       |
-       | Returns the first value in VALUES that makes the FUNCTION expression
-         return a trueish value. The FUNCTION expression argument is optional,
-         so if it is not given the first non-null value in VALUES is returned.
-     - | ``["coalesce", "_S.tags"]``
-       |
-       | Returns the first value in the source entity's ``tags``
-         field that is not null.
-       |
-       | ``["coalesce",``
-       |     ``["gt", "_.expenses", 1000], "_S.hobbies"]``
-       |
-       | Returns the first hobby that has expenses greater than 1000.
-
-Numbers
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _integer_dtl_function:
-   * - ``integer``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to integers. If no default value expression
-         is given, values that don't parse as integers will be silently ignored.
-         If not, the evaluated value from the default expression will be used
-         as a replacement value.
-       |
-       | Values that starts with ``"0x"`` are parsed as hexadecimal values in two's complement
-         format.
-     - | ``["integer", "1"]``
-       |
-       | Returns one integer: 1.
-       |
-       | ``["integer",``
-       |   ``["list", "1", "~rhttp://www.example.org/", 124.4, 12345]]``
-       |
-       | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
-       |
-       | ``["integer", ["integer", 0],``
-       |    ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
-         string value are replaced with the literal value 0
-       |
-       | ``["integer", ["string", "n/a"],``
-       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
-         and the string value are replaced with the literal value "n/a"
-       |
-       | ``["integer", ["string", "_."],``
-       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
-       |
-       | Returns a list of integers: [1, "http://www.example.org/", "10^2", 12345].
-         The URI value and the non-integer string value are replaced with the
-         their respective string casts.
-       |
-       | ``["integer", "0x00ff"]``
-       |
-       | Returns one integer: 255.
-       |
-       |
-       | ``["integer", "0xff"]``
-       |
-       | Returns one integer: -1.
-       |
-
-       .. _is_integer_dtl_function:
-   * - ``is-integer``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is an integer literal or
-         if it is a list, that the first element in the list is an integer
-       |
-     - | ``["is-integer", 1]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-integer", "1"]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-integer", ["list", 1, "12345"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-integer", ["list", "1", 2]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-integer", ["list", ["integer", "1"], 2]]``
-       |
-       | Returns ``true``.
-
-       .. _decimal_dtl_function:
-   * - ``decimal``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to decimals (a fractional number with
-         unlimited precision). If no default value expression is given,
-         values that don't parse as decimal values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value.
-       |
-     - | ``["decimal", "1.0"]``
-       |
-       | Returns one decimal value: 1.0
-       |
-       | ``["decimal",``
-       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
-       |
-       | Returns a list of decimal values: [1.0, 2.2]. The URI and
-         non-decimal string value are ignored.
-       |
-       | ``["decimal", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-decimal string value are replaced with the literal value: false
-       |
-       | ``["decimal", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["decimal", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
-         is replaced with its string cast.
-
-       .. _is_decimal_dtl_function:
-   * - ``is-decimal``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a decimal literal or
-         if it is a list, that the first element in the list is a decimal
-       |
-     - | ``["is-decimal", 1.0]``
-       |
-       | Returns false (it is a float literal).
-       |
-       | ``["is-decimal", ["decimal", "1.23"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-decimal", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", 1.0, "12345"]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", "1.0", 2.0]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
-       |
-       | Returns true.
-
-       .. _float_dtl_function:
-   * - ``float``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to floats (a  IEEE 754 binary 64 format).
-         if no default value expression is given,
-         values that don't parse as float values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value. Note that if you cast decimals to floats
-         you can lose precision.
-       |
-     - | ``["float", "1.0"]``
-       |
-       | Returns one float value: 1.0
-       |
-       | ``["float",``
-       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
-       |
-       | Returns a list of float values: [1.0, 2.2]. The URI and
-         non-numeric string value are ignored.
-       |
-       | ``["float", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-numeric string value are replaced with the literal value: false
-       |
-       | ``["float", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["float", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
-         is replaced with its string cast.
-
-       .. _is_float_dtl_function:
-   * - ``is-float``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a float literal or
-         if it is a list, that the first element in the list is a float value
-       |
-     - | ``["is-float", 1.0]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", ["decimal", "1.23"]]``
-       |
-       | Returns false (it is a decimal literal).
-       |
-       | ``["is-float", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", 1.0, "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", ["list", "1.0", 2.0]]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
-       |
-       | Returns false.
-
-       .. _hex_dtl_function:
-   * - ``hex``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to a string containing an hexadecimal representation of the value
-         in two's complement format.
-       | Values that don't parse as integers will be silently ignored.
-     - | ``["hex", 1]``
-       |
-       | Returns one string: ``"0x01"``.
-       |
-       | ``["hex", 255]``
-       |
-       | Returns one string: ``"0x00ff"``.
-       |
-       | ``["hex", -1]``
-       |
-       | Returns one string: ``"0xff"``.
-       |
-       | ``["hex",``
-       |   ``["list", 1, "~rhttp://www.example.org/", 124.4, 12345]]``
-       |
-       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
-
 
 Date and time
 -------------
@@ -2456,8 +2151,8 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns false.
 
-Strings
--------
+Dictionaries
+------------
 
 .. list-table::
    :header-rows: 1
@@ -2467,461 +2162,137 @@ Strings
      - Description
      - Examples
 
-       .. _string_dtl_function:
-   * - ``string``
+       .. _items_dtl_function:
+   * - ``items``
+     - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a list of key+value tuples.
+         For each key+value pair in the dictionaries one pair is added to the output
+         list. Non-dictionary values are ignored. Note that entities are dictionaries,
+         so you can use this function with them.
+     - | ``["items",``
+       |     ``["list", {"A": 1, "B": 2}, {"C": 3}]]``
+       |
+       | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
+       |
+       | ``["items", ["list", "X", 123, {"A": 1}]]``
+       |
+       | Returns ``[["A", 1]]``.
+
+       .. _dict_dtl_function:
+   * - ``dict``
+     - | *Arguments:*
+       |   EMPTY{0} or ITEMS(value-expression{1}) or (KEY, VALUE){>=0)
+       |
+       | If EMPTY, i.e. no arguments given, then an empty dict (``{}``) is returned.
+       |
+       | If ITEMS specified, then it takes a list of key+value pair tuples and
+         returns a dictionary with those tuples as keys and values. Note that
+         last key  wins. Values that are not two-element tuples are ignored.
+       |
+       | If KEY+VALUE pairs are given, then a new dict with those pairs as keys and
+         values. Note that last key  wins.
+     - | ``["dict"]``
+       |
+       | Returns ``{}``.
+       |
+       | ``["dict",``
+       |     ``["list",``
+       |         ``["list", "A", 1],``
+       |         ``["list", "B", 2],``
+       |         ``["list", "C", 3]]]``
+       |
+       | Returns ``{"A": 1, "B": 2, "C": 3}``.
+       |
+       | ``["dict", ["list", "X", 123, ["list", "A", 1]]``
+       |
+       | Returns ``{"A": 1}``.
+       |
+       | ``["dict",``
+       |   ``"a", ["upper", "a"],``
+       |   ``["lower", "B"], "B"]``
+       |
+       | Returns ``{"a": "A", "b": "B"}``.
+
+       .. _is_dict_dtl_function:
+   * - ``is-dict``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all non-null input values to strings.
-
-       .. NOTE::
-
-          Complex types like list and dict are JSON encoded (no transit encoding).
-          Bytes are decoded to strings using ``utf-8`` encoding.
-     - | ``["string", 1]``
+       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
+       | in the list is a dictionary
        |
-       | Returns one string: ``"1"``.
-       |
-       | ``["string", "hello"]``
-       |
-       | Returns one string: ``"hello"``.
-       |
-       | ``["string", null]``
-       |
-       | Returns ``null``.
-       |
-       | ``["string",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.example.org/", "124.4", "12345"]``.
-
-       .. _is_string_dtl_function:
-   * - ``is-string``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a string literal or if
-         it is a list, that the first element
-       | in the list is a string
-       |
-     - | ``["is-string", "foo:bar"]``
+     - | ``["is-dict", "_S."]``
        |
        | Returns true.
        |
-       | ``["is-string", 1]``
+       | ``["is-dict", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", 123, {"a": 1}]``
        |
        | Returns false.
        |
-       | ``["is-string", ["list", "foo:bar", 12345]]``
-       |
-       | Returns true
-       |
-       | ``["is-string", ["list", 1, "foo:bar"]]``
+       | ``["is-dict", "abc"]``
        |
        | Returns false
 
-       .. _upper_dtl_function:
-   * - ``upper``
+       .. _keys_dtl_function:
+   * - ``keys``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
+       |   DICTS(value-expression{1})
        |
-       | Returns the uppercase version of its input strings.
-         Non-string values are ignored.
-     - | ``["upper", ["list", "a", "b", "c"]]``
+       | Takes a list of dictionaries in and outputs a list of keys.
+         For each key+value pair in the dictionaries one key is added to the output
+         list. Non-dict values are ignored.
+     - | ``["keys",``
+       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
        |
-       | Returns ``["A", "B", "C"]``.
+       | Returns ``["A", "B", "A", "C"]``.
        |
-       | ``["upper", "_S.name"]``
+       | ``["keys", ["list", "X", 123, {"A": 1}]]``
        |
-       | Returns an uppercased version of the source entity's name.
+       | Returns ``["A"]``.
 
-       .. _lower_dtl_function:
-   * - ``lower``
+       .. _values_dtl_function:
+   * - ``values``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
+       |   DICTS(value-expression{1})
        |
-       | Returns the lowercase version of its input strings.
-         Non-string values are ignored.
-     - | ``["lower", ["list", "A", "B", "C"]]``
+       | Takes a list of dictionaries in and outputs a list of values.
+         For each key+value pair in the dictionaries one value is added to the output
+         list. Non-dict values are ignored.
+     - | ``["values",``
+       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
        |
-       | Returns ``["a", "b", "c"]``.
+       | Returns ``[1, 2, 1, 3]``.
        |
-       | ``["lower", "_S.name"]``
+       | ``["values", ["list", "X", 123, {"A": 1}]]``
        |
-       | Returns a lowercased version of the source entity's name.
+       | Returns ``[1]``.
 
-       .. _length_dtl_function:
-   * - ``length``
+       .. _key_values_dtl_function:
+   * - ``key-values``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the length (number of characters) of its input strings.
-         Non-string values are ignored.
-     - | ``["length", ["list", "", "a", "bb", "ccc"]]``
-       |
-       | Returns ``[0, 1, 2, 3]``.
-       |
-       | ``["length", "_S.name"]``
-       |
-       | Returns the length of the source entity's name.
-
-       .. _concat_dtl_function:
-   * - ``concat``
-     - | *Arguments:*
-       |   VALUES(value-expression{>1})
-       |
-       | Returns a concatenated string of its input strings.
-         Non-string values are ignored.
-     - | ``["concat", ["list", "a", "b", "c"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["concat", "_S.tags"]``
-       |
-       | Returns a concatenated version of the source entity's tags.
-       |
-       | ``["concat", "Hello ", "_S.name", "!"]``
-       |
-       | Returns ``"Hello John!"`` if the ``name`` property is ``John``.
-       |
-       | ``["concat", "a", ["list", "b", "c"], "d", 123, ["list", "!"]]``
-       |
-       | Returns ``"abcd!"``.
-       |
-       | ``["concat", 123, 3.14]``
-       |
-       | Returns ``""``, because non-string values are ignored.
-
-       .. _join_dtl_function:
-   * - ``join``
-     - | *Arguments:*
-       |   SEPARATOR(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a string created by joining its input strings by SEPARATOR.
-         Non-string values are ignored.
-     - | ``["join", "-", ["list", "a", "b", 123, "c"]]``
-       |
-       | Returns ``"a-b-c"``.
-       |
-       | ``["join", "-", "_S.tags"]``
-       |
-       | Returns a joined string of the source entity's tags separated by dashes.
-
-       .. _split_dtl_function:
-   * - ``split``
-     - | *Arguments:*
-       |   SEPARATOR(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a list of strings created by splitting its input strings by SEPARATOR.
-         Non-string values are ignored.
-     - | ``["split", "-", "a-b-c"]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       |
-       | ``["split", "", "abc"]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       | ``["split", "", ["list", "ab", "cd", "e"]]``
-       |
-       | Returns ``["a", "b", "c", "d", "e"]``.
-       |
-       | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
-       |
-       | Returns ``["a", "b", "c", "d", "e"]``.
-       |
-       | ``["split", "-", "_S.uuid"]``
-       |
-       | Returns a list of strings of the source entity's tags separated by dashes.
-
-       .. _strip_dtl_function:
-   * - ``strip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from both sides. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``["ab", "cd", "ef"]``.
-       |
-       | ``["strip", "  abc"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["strip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed.
-       |
-       | ``["strip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123", "456"]``.
-
-       .. _lstrip_dtl_function:
-   * - ``lstrip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from the left side. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``["ab ", "cd ", "ef"]``.
-       |
-       | ``["lstrip", "  abc"]]``
-       |
-       | Returns ``"abc"``.
-       |
-       | ``["lstrip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed
-         from the left.
-       |
-       | ``["lstrip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123xyx", "456yx"]``.
-
-       .. _rstrip_dtl_function:
-   * - ``rstrip``
-     - | *Arguments:*
-       |   CHARACTERS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a version of its input strings where characters in CHARACTERS are removed
-         from the right side. Non-string values are ignored. The default value of
-         CHARACTERS is all whitespace characters.
-     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
-       |
-       | Returns ``[" ab", "cd", "ef"]``.
-       |
-       | ``["rstrip", "  abc"]]``
-       |
-       | Returns ``"  abc"``.
-       |
-       | ``["rstrip", "_S.name"]``
-       |
-       | Returns a stripped version of the source entity's name where whitespace is removed
-         from the right.
-       |
-       | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
-       |
-       | Returns ``["123", "xy456"]``.
-
-       .. _ljust_dtl_function:
-   * - ``ljust``
-     - | *Arguments:*
-       |   WIDTH(integer-expression{1})
-       |   FILL_CHARACTER(character-expression{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a left-justified version of its input strings. The WIDTH defines the minimum
-         length of the returned strings. If the input strings are longer than WIDTH, then the
-         input string is returned as-is. If the input string is shorter than WIDTH then it is
-         justified to the left using the FILL_CHARACTER.
-       |
-       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
-         not a single character then the function returns ``null``.
-     - | ``["ljust", 10, "0", "123"]``
-       |
-       | Returns ``"1230000000"``.
-       |
-       | ``["ljust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
-       |
-       | Returns ``["abc  ", "def  ", "ghijklm"]``.
-
-       .. _rjust_dtl_function:
-   * - ``rjust``
-     - | *Arguments:*
-       |   WIDTH(integer-expression{1})
-       |   FILL_CHARACTER(character-expression{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns a right-justified version of its input strings. The WIDTH defines the minimum
-         length of the returned strings. If the input strings are longer than WIDTH, then the
-         input string is returned as-is. If the input string is shorter than WIDTH then it is
-         justified to the right using the FILL_CHARACTER.
-       |
-       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
-         not a single character then the function returns ``null``.
-     - | ``["rjust", 10, "0", "123"]``
-       |
-       | Returns ``"0000000123"``.
-       |
-       | ``["rjust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
-       |
-       | Returns ``["  abc", "  def", "ghijklm"]``.
-
-       .. _replace_dtl_function:
-   * - ``replace``
-     - | *Arguments:*
-       |   (REPLACEMENTS(dict{1}) or
-            (OLD_STRING(string{1})
-             NEW_STRING(string{1})))
-       |   VALUES(value-expression{1})
-       |
-       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES, or replaces the keys
-         in the REPLACEMENT dict with the respective values. Non-string values
-         are ignored.
-     - | ``["replace", "http://", "https://",``
-       |   ``"http://www.sesam.io/"]``
-       |
-       | Returns ``"https://www.sesam.io/"``.
-       |
-       | ``["replace", ":", ".", "_S.date"]]``
-       |
-       | Returns a date string where the colon has been replaced by a period.
-       |
-       | ``["replace", {"Hello": "HELLO", "world": "WORLD"}, "Hello world!"]]``
-       |
-       | Returns ``"HELLO WORLD!"``.
-       |
-       | ``["replace", ["dict", "a", "A", "b", "B"], "abc"]]``
-       |
-       | Returns ``"ABc"``.
-
-       .. _substring_dtl_function:
-   * - ``substring``
-     - | *Arguments:*
-       |   START_INDEX(integer{1})
-       |   END_INDEX(integer{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Extracts the substring between START_INDEX and END_INDEX. If the indexes are negative they start from the end.
-
-     - | ``["substring", 2, 4, "abcdef"]``
-       |
-       | Returns ``"cd"``.
-       |
-       | ``["substring", 2, "abcdef"]``
-       |
-       | Returns ``"cdef"``.
-       |
-       | ``["substring", -3, -1, "abcdef"]``
-       |
-       | Returns ``"de"``.
-
-       .. _matches_dtl_function:
-   * - ``matches``
-     - | *Arguments:*
-       |   PATTERN(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
-         wildcard characters can be used. Non-string values are not matched and will cause the
-         function to return false. If PATTERN contains multiple string values then only the
-         first one is used.
-     - | ``["matches", "a*p*a", ["list", "alpha", "alpaca"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["matches", "*_sport", "_S.tags"]``
-       |
-       | Returns ``true``, unless ``_S.tags`` is empty or ``null``, if all the tags that have a "_sport" suffix.
-       |
-       | ``["matches", "*", null]``
-       |
-       | Returns ``false``.
-       |
-       | ``["matches", "*", ["list"]]``
-       |
-       | Returns ``false``.
-
-Bytes
------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _bytes_dtl_function:
-   * - ``bytes``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
-       |
-     - | ``["bytes", "abc"]``
-       |
-       | Returns one bytes object: ``~bYWJj``.
-
-       .. _is_bytes_dtl_function:
-   * - ``is-bytes``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a bytes literal or value or if
-         it is a list, that the first element in the list is a bytes type value or literal
-       |
-     - | ``["is-bytes", ["bytes", "abc"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-bytes", "~bYWJj"]``
-       |
-       | Returns true.
-       |
-       | ``["is-bytes", "some-string"]``
-       |
-       | Returns false.
-       |
-       | ``["is-bytes", ["list", "~bYWJj", "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-bytes", ["list", "12345", "~bYWJj"]]]``
-       |
-       | Returns false.
-       |
-
-       .. _base64_encode_dtl_function:
-   * - ``base64-encode``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the base64 encoded version of its input bytes.
-         Non-bytes values are ignored.
-     - | ``["base64-encode", ["bytes", "abc"]]``
-       |
-       | Returns ``"YWJj"``.
-       |
-       | ``["base64-encode", ["list", 1, ["bytes", "abc"], 2, ["bytes", "def"], 3]]``
-       |
-       | Returns ``["YWJj", "ZGVm"]``.
-       |
-
-
-       .. _base64_decode_dtl_function:
-   * - ``base64-decode``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the base64 decoded version of its input strings.
-         Non-string values and non-base64 encoded values are ignored.
-     - | ``["base64-decode", "YWJj"]``
-       |
-       | Returns ``"~babc"``.
-       |
-       | ``["base64-decode", ["list", 1, "YWJj", 2, "ZGVm", 3]]``
-       |
-       | Returns ``["~bYWJj", "~bZGVm"]``.
-       |
-       | (Note that the JSON string representation of a bytes object is represented as a base64 encoded string, hence
-       | the similar looking output and input)
-
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a list of dictionaries with "key"
+         and "value" keys. For each key+value pair in the dictionaries one dict is added
+         to the output list. Non-dictionary values are ignored. Note that entities are
+         dictionaries, so you can use this function with them.
+     - | ``["key-values",``
+       |     ``["list", {"A": 1, "B": 2}, 123, {"C": 3, "A": 1}]]``
+       |
+       | Returns ``[{"key": "A", "value": 1},``
+       |            ``{"key": "B", "value": 2},``
+       |            ``{"key": "C", "value": 3},``
+       |            ``{"key": "A", "value": 1}]``.
+       |
+       | ``["key-values", {"hello": "world"}]``
+       |
+       | Returns ``{"key": "hello", "value": "world"}``.
 
 Encryption
 ----------
@@ -3093,8 +2464,8 @@ Encryption
        |
        | Returns a string: ``"secret message"``
 
-JSON
-----
+Entity lookups
+--------------
 
 .. list-table::
    :header-rows: 1
@@ -3104,337 +2475,27 @@ JSON
      - Description
      - Examples
 
-       .. _json_dtl_function:
-   * - ``json``
+       .. _lookup_entity_dtl_function:
+   * - ``lookup-entity``
      - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to JSON strings (no transit encoding).
-         The keys of dicts are sorted lexically.
-     - | ``["json", 1]``
-       |
-       | Returns one string: ``"1"``.
-       |
-       | ``["json", "hello"]``
-       |
-       | Returns one string: ``"\"hello\""``.
-       |
-       | ``["json",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"http://www.example.org/", "124.4", "12345"]``.
-
-       .. _json_transit_dtl_function:
-   * - ``json-transit``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to transit encoded JSON strings.
-         The keys of dicts are sorted lexically. This function behaves like
-         the ``json`` function, except that it transit encodes values.
-     - | ``["json-transit", 1]``
-       |
-       | Returns one string: ``"1"``.
-       |
-       | ``["json-transit", "hello"]``
-       |
-       | Returns one string: ``"\"hello\""``.
-       |
-       | ``["json-transit",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"~rhttp://www.example.org/", "124.4", "12345"]``.
-
-       .. _json_parse_dtl_function:
-   * - ``json-parse``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Parses all input values as JSON strings (no transit decoding).
-       |
-       | If no default value expression is given, then invalid values that don't
-         parse as valid JSON will be silently ignored. If not, the evaluated value
-         from the default expression will be used as a replacement value.
-
-     - | ``["json-parse", "1"]``
-       |
-       | Returns one number: ``1``.
-       |
-       | ``["json-parse", "\"hello\""]``
-       |
-       | Returns one string: ``"hello"``.
-       |
-       | ``["is-uri", ["json-parse",``
-       |   ``"\"~rhttp://www.example.org/\""]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["json-parse", "{\"a\": 1, \"b\": 2}"``
-       |
-       | Returns a dictionary: ``{"a": 1, "b": 2}",``
-       |
-       | ``["json-parse", "hello"]``
-       |
-       | Returns ``null`` because ``hello`` is not a valid JSON string.
-       |
-       | ``["json-parse",``
-       |   ``["list", "hello", "123", "null",``
-       |     ``"\"abc\"", "\"~rhttp://example.org/\""]]``
-       |
-       | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
-         is a valid JSON expression, so ``null`` is included in the result list. Note
-         also that ``"~rhttp://www.example.org/"`` is not parsed as a URI since we don't do
-         transit decoding here.
-       |
-       | ``["json-parse", "no-value", "hello"]``
-       |
-       | Returns ``"no-value"`` because ``hello`` is not a valid JSON string.
-       |
-       | ``["json-parse", "no-value", "null"]``
-       |
-       | Returns ``null`` because ``"null"`` is a valid JSON string.
-
-       .. _json_transit_parse_dtl_function:
-   * - ``json-transit-parse``
-     - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Parses all input values as transit-encoded JSON strings.
-       |
-       | If no default value expression is given, then invalid values that don't
-         parse as valid JSON will be silently ignored. If not, the evaluated value
-         from the default expression will be used as a replacement value.
-       |
-       | This function behaves like
-         the ``json-parse`` function, except that it transit decodes values.
-     - | ``["json-transit-parse", "1"]``
-       |
-       | Returns one number: ``1``.
-       |
-       | ``["json-transit-parse", "\"hello\""]``
-       |
-       | Returns one string: ``"hello"``.
-       |
-       | ``["is-uri", ["json-transit-parse",``
-       |   ``"\"~rhttp://www.example.org/\""]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["json-transit-parse", "hello"]``
-       |
-       | Returns ``null`` because ``hello`` is not a valid JSON string.
-       |
-       | ``["json-transit-parse",``
-       |   ``["list", "hello", "123", "null",``
-       |     ``"\"abc\"", "\"~rhttp://example.org/\""]]``
-       |
-       | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
-         is a valid JSON expression, so ``null`` is included in the result list. Note
-         also that "~rhttp://www.example.org/" is parsed as a URI since we are
-         doing transit decoding.
-       |
-       | ``["json-transit-parse",``
-       |   ``"no-value", "~rhttp://example.org/"]``
-       |
-       | Returns ``"no-value"`` because ``~rhttp://example.org/`` is not
-         a valid JSON string.
-       |
-       | ``["is-uri",``
-       |   ``["json-transit-parse",``
-       |     ``"no-value", "\"~rhttp://example.org/\""]]``
-       |
-       | Returns ``true`` because ``"\"~rhttp://example.org/\""`` is a valid JSON string
-         and the return value is a URI.
-
-URIs
-----
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _uri_dtl_function:
-   * - ``uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates input values to URIs. Only strings in VALUES will be
-         cast to URIs. Note that *no* URI escaping is done on the strings.
-     - | ``["uri", "http://www.example.org/"]``
-       |
-       | Returns one URI.
-       |
-       | ``["uri",``
-       |    ``["list", "http://www.example.org/",``
-       |       ``"http://www.sesam.io/", 12345]]``
-       |
-       | Returns a list of two URIs. The number is silently ignored because
-         it is not a string.
-
-       .. _is_uri_dtl_function:
-   * - ``is-uri``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a URI literal, or if it is
-         a list, that the first element in the list is a URI.
-     - | ``["is-uri", ["uri", "foo:bar"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-uri", "foo:bar"]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
-       |
-       | Returns ``false``.
-
-       .. _url_quote_dtl_function:
-   * - ``url-quote``
-     - | *Arguments:*
-       |   SAFE_CHARS(string{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Returns the URL quoted versions of any string or list of strings in the
-         argument list. Any non-strings are ignored and is not returned in the
-         result. Returns either a single string (if the input is a single
-         string literal) or a list (of strings).
-       |
-       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
-         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
-         argument must be a string that contains zero or more ASCII characters that should
-         not be encoded. Note that this only is applicable for ASCII characters.
-     - | ``["url-quote", "/foo bar/baz"]``
-       |
-       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
-         To avoid this you can add the SAFE_CHARS argument:
-       |
-       | ``["url-quote", "/", "/foo bar/baz"]``
-       |
-       | Returns ``/foo%20bar/baz``.
-       |
-       | ``["url-quote",``
-       |   ``["list", "å", 1, 2,``
-       |     ``["uri", "http://example.com"], "foo bar"]]``
-       |
-       | Returns ``["%C3%A5", "foo%20bar]``.
-
-       .. _url_unquote_dtl_function:
-   * - ``url-unquote``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Returns the URL unquoted versions of any string or list of strings in the
-         argument list. Any non-strings are ignored and is not returned in the
-         result. Returns either a single string (if the input is a single
-         string literal) or a list (of strings).
-       |
-     - | ``["url-unquote", "%2Ffoo%20bar%2Fbaz"]``
-       |
-       | Returns ``/foo bar/baz``.
-       |
-       | ``["url-quote",``
-       |   ``["list", 1, "%C3%A5", ["uri", "http://example.com"], "foo%20bar"]``
-       |
-       | Returns ``["å", "foo bar"]``.
-
-UUIDs
------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _uuid_dtl_function:
-   * - ``uuid``
-     - | *Arguments:*
-       |   VALUES(value-expression{0|1})
-       |
-       | Create a new UUID object (version 4 ). It can optionally cast a single string or list of string UUID representations to
-         UUID objects. Any input that can't be cast to a UUID object will be ignored.
-       |
-     - | ``["uuid"]``
-       |
-       | Returns a new random UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
-       |
-       | ``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
-       |
-       | Returns a new UUID object cast from the input argument: "~uabc98f65-ddf5-1234-a8f5-82f6d8e69726".
-       |
-       | ``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
-       |
-       | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
-       | Note that the mismatched input argument ``2`` is ignored.
+       |   DATASET_ID(string{1})
+       |   ENTITY_ID(string{1})
+       |
+       | Returns an entity in the given dataset.
+     - | ``["lookup-entity", "code-table", "foo"]``
+       |
+       | Looks up the entity with the ``_id`` property value of ``foo`` in the ``code-table`` dataset.
+       | Note that the dataset referenced has to be populated before the DTL transform can run.
+       | If the entity doesn't exist in the dataset, ``null`` is returned.
 
        .. WARNING::
 
-          This function is non-deterministic and will return a
-          different value every time it is evaluated. Be aware that if
-          the pipe is rewound or reset then it will produce a
-          different output. Dependency tracking will also have a
-          similar effect as to produce a different value when entities
-          are reprocessed.
+          This function does not support dependency tracking, so if
+          the entity that is looked up changes then you may want to
+          reset the pipe. This will not happen automatically.
 
-          *Use this function with care and make sure
-          that you are aware of the consequences of reprocessing
-          entities.*
-
-       .. _is_uuid_dtl_function:
-   * - ``is-uuid``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a UUID literal or value or if
-         it is a list, that the first element in the list is a UUID type value or literal
-       |
-     - | ``["is-uuid", ["uuid"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", "some-string"]``
-       |
-       | Returns false.
-       |
-       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
-       |
-       | Returns false.
-       |
-
-Nested transformations
-----------------------
+Hashing
+-------
 
 .. list-table::
    :header-rows: 1
@@ -3444,141 +2505,29 @@ Nested transformations
      - Description
      - Examples
 
-       .. _apply_dtl_function:
-   * - ``apply``
+       .. _hash128_dtl_function:
+   * - ``hash128``
      - | *Arguments:*
-       |   RULE_ID(string{1}),
+       |   ALGORITM("murmur3")
+       |   SEED(integer-expression{0|1})
        |   VALUES(value-expression{1})
        |
-       | Applies the RULE_ID transform rule on the entities in VALUES.
-         RULE_ID must be the id of a transform rule in the current DTL
-         specification.
-     - | ``["apply", "order", "_S.orders"]``
-       |
-       | This will transform the order entities in the source entity's
-         ``orders`` field using the ``order`` transform rules. The output is
-         the transformed order entities.
+       | Generates 128 bit integer hashes from bytes and strings. Values of
+         other types are ignored. This function can be used to generate
+         content hashes. The only supported algoritm is "murmur3"
+         (`MurmurHash3 <https://en.wikipedia.org/wiki/MurmurHash>`_).
 
-       .. _apply_hops_dtl_function:
-   * - ``apply-hops``
-     - | *Arguments:*
-       |   RULE_ID(string{1}),
-       |   HOPS_SPEC(dict{>1})
-       |
-       | This function is a combined ``hops`` and ``apply`` function. It
-         evaluates the hops, and then passes the result through
-         the RULE_ID transform rule.
+       | The function takes an optional seed argument. The seed
+         can be used to randomize the hash function.
 
-       | See the :ref:`apply <apply_dtl_function>`
-         and the :ref:`hops <hops_dtl_function>` functions for more information
-         about the parts.
-
-       .. NOTE::
-
-          Use this function instead of ``apply`` if you use ``hops`` inside
-          the transformation rule. This is required so that
-          `dependency tracking <concepts.html#dependency-tracking>`_
-          can work. Calling ``apply`` on a rule that contains ``hops`` or
-          ``apply-hops`` is not allowed.
-
-     - | ``["apply-hops", "order", {``
-       |   ``"datasets": ["orders o"],``
-       |   ``"where": ["eq", "_S._id", "o.cust_id"]``
-       |  ``}]``
+     - | ``["hash128", "murmur3", "abc"]``
        |
-       | This will retrieve orders from the hops expression and then
-         transform them using the ``order`` transformation rule. The output
-         is the transformed order entities.
-
-
-Paths
------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _path_dtl_function:
-   * - ``path``
-     - | *Arguments:*
-       |   PROPERTY_PATH(value-expression{1}),
-       |   VALUES(value-expression{1})
+       | Returns ``79267961763742113019008347020647561319``.
        |
-       | Traverses the PROPERTY_PATH path for each of the entities in
-         VALUES. The result is all the values at the end of
-         the traversal. This may be a single value or a list of values.
-         PROPERTY_PATH is an expression that should resolve
-         to a string or a list of strings. Those strings are treated as
-         literals, i.e. property names, so no variables can be used. Only
-         properties on the entity can be traversed. If you want to traverse
-         to other entities use the ``hops`` function instead.
-
-       .. NOTE::
-
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
-
-         If namespaced identifiers are enabled and the path element is not
-         a fully qualified namespaced identifier then all properties with
-         the path element as its identifier part will be part of the result.
-         In practice the result is the union of all those properties.
-
-     - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
+       | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]]``
        |
-       | Traverses the ``age`` field of the VALUES entities.
-         Returns ``[23, 24]``.
-       |
-       | ``["path", ["list", "order_lines", "item_name"], "_S.orders"]``
-       |
-       | This will traverse from the source entity's orders to the
-         order lines and then return their item names. The output is a
-         list of product item names.
-       |
-       | ``["path", "age", {"age": 24}]``
-       |
-       | Returns ``24``.
-       |
-       | ``["path", "foo", {"bar": 123}]``
-       |
-       | Returns ``null``.
-       |
-       | ``["path", ["list", "a", "b"],``
-       |   ``["list", {"a": {"b": 1}}, {"a": [{"b": 2}, {"b": 3}]}]]``
-       |
-       | Returns ``[1, 2, 3]``.
-       |
-       | **With namespaced identifiers enabled:**
-       |
-       | ``{``
-       |   ``"namespaced_identifiers": true,``
-       |   ``"namespaces": {``
-       |     ``"identity": "foo",``
-       |     ``"property": "bar"``
-       |   ``}``
-       | ``}``
-       |
-       | ``["path", "foo:a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
-       |
-       | Returns ``2`` as the path element ``"foo:a"`` is a fully qualified
-         namespaced identifier.
-       |
-       | ``["path", "a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
-       |
-       | Returns ``[1, 2, 3, 4]``, i.e. the union of all the values in all
-         the properties that have ``a`` in their identifiers part.
-       |
-       | ``["path", "::a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
-       |
-       | Returns ``1`` as ``"::a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
-         to explicity reference the unqualified ``a`` property.
-       |
-       | ``["path", ":a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
-       |
-       | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
-         to explicity reference the ``"a"`` property in the current namespace ``"bar"``.
+       | Returns ``[[79267961763742113019008347020647561319,``
+       |           ``114697464648834432121201791580882983835]]``.
 
 .. _hops:
 
@@ -3750,8 +2699,8 @@ Hops
        | Find the products that the customer has bought from a specific web shop. This example uses the ``subsets``
          property to reference a subset of the ``orders`` dataset, i.e. the orders placed in the ``myshop`` web shop.
 
-Entity lookups
---------------
+JSON
+----
 
 .. list-table::
    :header-rows: 1
@@ -3761,243 +2710,159 @@ Entity lookups
      - Description
      - Examples
 
-       .. _lookup_entity_dtl_function:
-   * - ``lookup-entity``
-     - | *Arguments:*
-       |   DATASET_ID(string{1})
-       |   ENTITY_ID(string{1})
-       |
-       | Returns an entity in the given dataset.
-     - | ``["lookup-entity", "code-table", "foo"]``
-       |
-       | Looks up the entity with the ``_id`` property value of ``foo`` in the ``code-table`` dataset.
-       | Note that the dataset referenced has to be populated before the DTL transform can run.
-       | If the entity doesn't exist in the dataset, ``null`` is returned.
-
-       .. WARNING::
-
-          This function does not support dependency tracking, so if
-          the entity that is looked up changes then you may want to
-          reset the pipe. This will not happen automatically.
-
-
-Namespaced identifiers
-----------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _ni_dtl_function:
-   * - ``ni``
-     - | *Arguments:*
-       |   NAMESPACE(string{0|1}),
-       |   VALUES(value-expression{1})
-       |
-       | Translates input values to namespaced identifiers. Strings and URIs in VALUES
-         will be cast to namespaced identifiers. Note that no escaping is done on
-         the strings.
-       |
-       | If NAMESPACE is omitted, then the global namespace is used.
-       |
-       | URIs can be passed as values in VALUES only when NAMESPACE is not specified.
-         The URIs will be collapsed, i.e. the prefix part of URIs will be collapsed into
-         a namespace. If the prefix has been declared as a :ref:`namespace <namespaces>`
-         then that namespace will be used, otherwise a generated namespace will be added.
-     - | Constructs a new namespaced identifier.
-       |
-       | ``["ni", "foo", "bar"]``
-       |
-       | This will produce a namespaced identifier ``"~:foo:bar"``.
-       |
-       | ``["ni", "bar"]``
-       |
-       | This will produce a namespaced identifier in the global namespace; ``"~:bar"``.
-       |
-       | ``["ni", "foo", ["list", "bar", "x:y"]]``
-       |
-       | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``
-       |
-       | ``["ni", "foo", ["uri, "http://example.org/"]]``
-       |
-       | Returns ``null`` because URIs are not supported when NAMESPACE is specified.
-       |
-       | ``["ni", ["uri, "http://example.org/bar"]]``
-       |
-       | Returns ``"~:_:bar"``, i.e. a NI with the ``_`` namespace and ``bar`` as identifier.
-         Note that the ``http://example.org/`` URI prefix is mapped to the  ``_`` namespace
-         by default.
-       |
-       | ``["ni", ["uri, "http://unknown.org/something/baz"]]``
-       |
-       | If the ``"http://unknown.org/something/"`` URI prefix has not been declared as a
-         namespace then it will return ``"~:your-pipe-1:baz"`` if the current pipe id is
-         ``your-pipe``. The ``-1`` part is a sequence counter, so if you introduce other
-         namespaces in your pipe they'll be assigned unique namespace ids. If the URI prefix
-         had already been mapped to the ``unknown`` namespace then the expression would have
-         returned ``"~:unknown:baz"``
-
-       .. _is_ni_dtl_function:
-   * - ``is-ni``
+       .. _json_dtl_function:
+   * - ``json``
      - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a namespaced
-         identifier literal, or if it is a list, that the first element
-         in the list is a namespaced identifier.
-     - | ``["is-ni", ["ni", "foo:bar"]]``
+       | Translates all input values to JSON strings (no transit encoding).
+         The keys of dicts are sorted lexically.
+     - | ``["json", 1]``
        |
-       | Returns ``true``.
+       | Returns one string: ``"1"``.
        |
-       | ``["is-ni", "foo:bar"]``
+       | ``["json", "hello"]``
+       |
+       | Returns one string: ``"\"hello\""``.
+       |
+       | ``["json",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.example.org/", "124.4", "12345"]``.
+
+       .. _json_transit_dtl_function:
+   * - ``json-transit``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to transit encoded JSON strings.
+         The keys of dicts are sorted lexically. This function behaves like
+         the ``json`` function, except that it transit encodes values.
+     - | ``["json-transit", 1]``
+       |
+       | Returns one string: ``"1"``.
+       |
+       | ``["json-transit", "hello"]``
+       |
+       | Returns one string: ``"\"hello\""``.
+       |
+       | ``["json-transit",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"~rhttp://www.example.org/", "124.4", "12345"]``.
+
+       .. _json_parse_dtl_function:
+   * - ``json-parse``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Parses all input values as JSON strings (no transit decoding).
+       |
+       | If no default value expression is given, then invalid values that don't
+         parse as valid JSON will be silently ignored. If not, the evaluated value
+         from the default expression will be used as a replacement value.
+
+     - | ``["json-parse", "1"]``
+       |
+       | Returns one number: ``1``.
+       |
+       | ``["json-parse", "\"hello\""]``
+       |
+       | Returns one string: ``"hello"``.
+       |
+       | ``["is-uri", ["json-parse",``
+       |   ``"\"~rhttp://www.example.org/\""]]``
        |
        | Returns ``false``.
        |
-       | ``["is-ni", ["list", ["ni", "foo:bar"], 12345]]``
+       | ``["json-parse", "{\"a\": 1, \"b\": 2}"``
+       |
+       | Returns a dictionary: ``{"a": 1, "b": 2}",``
+       |
+       | ``["json-parse", "hello"]``
+       |
+       | Returns ``null`` because ``hello`` is not a valid JSON string.
+       |
+       | ``["json-parse",``
+       |   ``["list", "hello", "123", "null",``
+       |     ``"\"abc\"", "\"~rhttp://example.org/\""]]``
+       |
+       | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
+         is a valid JSON expression, so ``null`` is included in the result list. Note
+         also that ``"~rhttp://www.example.org/"`` is not parsed as a URI since we don't do
+         transit decoding here.
+       |
+       | ``["json-parse", "no-value", "hello"]``
+       |
+       | Returns ``"no-value"`` because ``hello`` is not a valid JSON string.
+       |
+       | ``["json-parse", "no-value", "null"]``
+       |
+       | Returns ``null`` because ``"null"`` is a valid JSON string.
+
+       .. _json_transit_parse_dtl_function:
+   * - ``json-transit-parse``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Parses all input values as transit-encoded JSON strings.
+       |
+       | If no default value expression is given, then invalid values that don't
+         parse as valid JSON will be silently ignored. If not, the evaluated value
+         from the default expression will be used as a replacement value.
+       |
+       | This function behaves like
+         the ``json-parse`` function, except that it transit decodes values.
+     - | ``["json-transit-parse", "1"]``
+       |
+       | Returns one number: ``1``.
+       |
+       | ``["json-transit-parse", "\"hello\""]``
+       |
+       | Returns one string: ``"hello"``.
+       |
+       | ``["is-uri", ["json-transit-parse",``
+       |   ``"\"~rhttp://www.example.org/\""]]``
        |
        | Returns ``true``.
        |
-       | ``["is-ni", ["list", 1, ["ni", "foo:bar"]]]``
+       | ``["json-transit-parse", "hello"]``
        |
-       | Returns ``false``.
-
-       .. _ni_ns_dtl_function:
-   * - ``ni-ns``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
+       | Returns ``null`` because ``hello`` is not a valid JSON string.
        |
-     - | Extracts the namespace part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
+       | ``["json-transit-parse",``
+       |   ``["list", "hello", "123", "null",``
+       |     ``"\"abc\"", "\"~rhttp://example.org/\""]]``
        |
-       | ``["ni-ns", "~:foo:bar"]``
+       | Returns ``[123, null, "abc", "~rhttp://example.org/"]``. Note that ``null``
+         is a valid JSON expression, so ``null`` is included in the result list. Note
+         also that "~rhttp://www.example.org/" is parsed as a URI since we are
+         doing transit decoding.
        |
-       | Returns ``"foo"``.
+       | ``["json-transit-parse",``
+       |   ``"no-value", "~rhttp://example.org/"]``
        |
-       | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
+       | Returns ``"no-value"`` because ``~rhttp://example.org/`` is not
+         a valid JSON string.
        |
-       | Returns ``["foo", "bar"]``
-
-       .. _ni_id_dtl_function:
-   * - ``ni-id``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
+       | ``["is-uri",``
+       |   ``["json-transit-parse",``
+       |     ``"no-value", "\"~rhttp://example.org/\""]]``
        |
-     - | Extracts the namespace id part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
-       |
-       | ``["ni-id", "~:foo:bar"]``
-       |
-       | Returns ``"bar"``.
-       |
-       | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
-       |
-       | Returns ``["bar", "baz"]``
-
-       .. _ni_collapse_dtl_function:
-   * - ``ni-collapse``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-     - | Uses the ``namespaces.default`` service metadata contents to produce a namespaced identifier from URLs.
-         VALUES that are not URLs are ignored (i.e. it accepts strings and URI parameters). If there is no longest
-         matching prefix in the ``namespaces.default`` settings, the functions will return a NI that contains the
-         original input (i.e. the The ``http`` and ``https`` prefixes are implicitly defined). Non-http URIs are not
-         supported.
-         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
-         service metadata option set to ``true``.
-
-       |
-       | Given this ``namespaces.default`` mapping in the service metadata:
-       |
-       |  ``{``
-            ``"foo": "http://psi.test.no/",``
-            ``"sesam_male": "http://sesam.io/people/male/",``
-            ``"sesam_female": "http://sesam.io/people/female/",``
-            ``"sesam": "http://sesam.io/people/"``
-          ``}``
-       |
-       | The following examples will produce this output:
-       |
-       | ``["ni-collapse", "http://psi.test.no/bar"]``
-       |
-       | Returns ``"~:foo:bar"``.
-       |
-       | ``["ni-collapse", ["list", "http://psi.test.no/bar", "http://psi.test.no/baz"]]``
-       |
-       | Returns ``["~:foo:bar", "~:foo:baz"]``
-       |
-       | ``["ni-collapse", "http://sesam.io/people/employees"]``
-       |
-       | Returns ``"~:sesam:employees"``
-       |
-       | ``["ni-collapse", "http://sesam.io/people/male/john"]``
-       |
-       | Returns ``"~:sesam_male:john"``
-       |
-       | ``["ni-collapse", "http://sesam.io/people/female/jane"]``
-       |
-       | Returns ``"~:sesam_female:jane"``
-       |
-       | The ``http`` and ``https`` namespaces are implicitly defined, so a URI that doesn't match any prefix will work:
-       |
-       | ``["ni-collapse", "http://example.com/path"]``
-       |
-       | Returns ``"~:http://example.com/path"``
-
-       .. _ni_expand_dtl_function:
-   * - ``ni-expand``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-     - | Uses the ``namespaces.default`` service metadata contents to produce a URL string from a namespaced identifier.
-         VALUES that are not NIs are ignored. If there is no longest matching prefix in the ``namespaces.default``
-         settings, the functions will return a string cast of the NI.
-         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
-         service metadata option set to ``true``.
-
-       |
-       | Given this ``namespaces.default`` mapping in the service metadata:
-       |
-       |  ``{``
-            ``"foo": "http://psi.test.no/",``
-            ``"sesam_male": "http://sesam.io/people/male/",``
-            ``"sesam_female": "http://sesam.io/people/female/",``
-            ``"sesam": "http://sesam.io/people/"``
-          ``}``
-       |
-       | The following examples will produce this output:
-       |
-       | ``["ni-expand", "~:foo:bar"]``
-       |
-       | Returns ``http://psi.test.no/bar``.
-       |
-       | ``["ni-expand", ["list", "~:foo:bar", "~:foo:baz"]]``
-       |
-       | Returns ``["http://psi.test.no/bar", "http://psi.test.no/baz"]``
-       |
-       | ``["ni-expand", "~:sesam:employees"]``
-       |
-       | Returns ``"http://sesam.io/people/employees"``
-       |
-       | ``["ni-expand", "~:sesam_male:john"]``
-       |
-       | Returns ``"http://sesam.io/people/male/john"``
-       |
-       | ``["ni-expand", "~:sesam_female:jane"]``
-       |
-       | Returns ``"http://sesam.io/people/female/jane"``
-       |
-       | ``["ni-expand", "~:http://example.com/path"]``
-       |
-       | Returns ``"http://example.com/path"``
-       |
-       | ``["ni-expand", "~:unknown:path"]``
-       |
-       | Returns ``"unknown:path"``
+       | Returns ``true`` because ``"\"~rhttp://example.org/\""`` is a valid JSON string
+         and the return value is a URI.
 
 Lists
 -----
@@ -4642,327 +3507,6 @@ Lists
        | Returns ``{"A": ["a"], "B": ["b"]}``. Same as above, but we specify
          a STRING_FUNCTION function that creates string keys.
 
-
-Sets
-----
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _union_dtl_function:
-   * - ``union``
-     - | *Arguments:*
-       |   VALUES1(value-expression{1})
-       |   VALUES2(value-expression{1})
-       |
-       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the elements that
-         are either in VALUES1 or in VALUES2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the union operator. The
-         return type is a list of distinct values.
-     - | ``["union",``
-       |     ``["list", "A", "B"], ["list", "B", "C"]]``
-       |
-       | Returns ``["A", "B", "C"]``.
-       |
-       | ``["union", "A", ["list", "B", "C"]]``
-       |
-       | Returns ``["A", "B", "C"]``.
-
-       .. _intersection_dtl_function:
-   * - ``intersection``
-     - | *Arguments:*
-       |   VALUES1(value-expression{1})
-       |   VALUES2(value-expression{1})
-       |
-       | Returns the intersection of the two sets VALUES1 and VALUES2, i.e. the elements
-         that are in both VALUES1 and VALUES2. The two arguments do not have to be real sets,
-         but will be coerced into sets before applying the intersection operator. The
-         return type is a list of distinct values.
-     - | ``["intersection",``
-       |     ``["list", "A", "B"], ["list", "B", "C"]]``
-       |
-       | Returns ``["B"]``.
-       |
-       | ``["intersection", "B", ["list", "B", "C"]]``
-       |
-       | Returns ``["B"]``.
-       |
-       | ``["intersection", "A", ["list", "B", "C"]]``
-       |
-       | Returns ``[]``.
-
-       .. _intersects_dtl_function:
-   * - ``intersects``
-     - | *Arguments:*
-       |   VALUES1(value-expression{1})
-       |   VALUES2(value-expression{1})
-       |
-       | Same as ``intersection``, but returns a boolean value. Returns true if the two
-         arguments have elements in common.
-     - | ``["intersects",``
-       |     ``["list", "A", "B"], ["list", "B", "C"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["intersects", "B", ["list", "B", "C"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["intersects", "A", ["list", "B", "C"]]``
-       |
-       | Returns ``false``.
-
-       .. _difference_dtl_function:
-   * - ``difference``
-     - | *Arguments:*
-       |   VALUES1(value-expression{1})
-       |   VALUES2(value-expression{1})
-       |
-       | Returns the difference of the two sets VALUES1 and VALUES2, i.e. the elements
-         that are in VALUES1, but not in VALUES2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the difference operator. The
-         return type is a list of distinct values.
-     - | ``["difference",``
-       |    ``["list", "A", "B"], ["list", "B"]]``
-       |
-       | Returns ``["A"]``.
-       |
-       | ``["difference", "A", ["list", "B", "C"]]``
-       |
-       | Returns ``["A"]``.
-       |
-       | ``["difference",``
-       |   ``["list", "A", "B", "C", "D"],``
-       |   ``["list", "A", "B", "E"]]``
-       |
-       | Returns ``["C", "D"]``.
-
-
-Dictionaries
-------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _items_dtl_function:
-   * - ``items``
-     - | *Arguments:*
-       |   DICTS(value-expression{1})
-       |
-       | Takes a list of dictionaries in and outputs a list of key+value tuples.
-         For each key+value pair in the dictionaries one pair is added to the output
-         list. Non-dictionary values are ignored. Note that entities are dictionaries,
-         so you can use this function with them.
-     - | ``["items",``
-       |     ``["list", {"A": 1, "B": 2}, {"C": 3}]]``
-       |
-       | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
-       |
-       | ``["items", ["list", "X", 123, {"A": 1}]]``
-       |
-       | Returns ``[["A", 1]]``.
-
-       .. _dict_dtl_function:
-   * - ``dict``
-     - | *Arguments:*
-       |   EMPTY{0} or ITEMS(value-expression{1}) or (KEY, VALUE){>=0)
-       |
-       | If EMPTY, i.e. no arguments given, then an empty dict (``{}``) is returned.
-       |
-       | If ITEMS specified, then it takes a list of key+value pair tuples and
-         returns a dictionary with those tuples as keys and values. Note that
-         last key  wins. Values that are not two-element tuples are ignored.
-       |
-       | If KEY+VALUE pairs are given, then a new dict with those pairs as keys and
-         values. Note that last key  wins.
-     - | ``["dict"]``
-       |
-       | Returns ``{}``.
-       |
-       | ``["dict",``
-       |     ``["list",``
-       |         ``["list", "A", 1],``
-       |         ``["list", "B", 2],``
-       |         ``["list", "C", 3]]]``
-       |
-       | Returns ``{"A": 1, "B": 2, "C": 3}``.
-       |
-       | ``["dict", ["list", "X", 123, ["list", "A", 1]]``
-       |
-       | Returns ``{"A": 1}``.
-       |
-       | ``["dict",``
-       |   ``"a", ["upper", "a"],``
-       |   ``["lower", "B"], "B"]``
-       |
-       | Returns ``{"a": "A", "b": "B"}``.
-
-       .. _is_dict_dtl_function:
-   * - ``is-dict``
-     - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
-       | in the list is a dictionary
-       |
-     - | ``["is-dict", "_S."]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", {"a": 1}, 123]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", 123, {"a": 1}]``
-       |
-       | Returns false.
-       |
-       | ``["is-dict", "abc"]``
-       |
-       | Returns false
-
-       .. _keys_dtl_function:
-   * - ``keys``
-     - | *Arguments:*
-       |   DICTS(value-expression{1})
-       |
-       | Takes a list of dictionaries in and outputs a list of keys.
-         For each key+value pair in the dictionaries one key is added to the output
-         list. Non-dict values are ignored.
-     - | ``["keys",``
-       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
-       |
-       | Returns ``["A", "B", "A", "C"]``.
-       |
-       | ``["keys", ["list", "X", 123, {"A": 1}]]``
-       |
-       | Returns ``["A"]``.
-
-       .. _values_dtl_function:
-   * - ``values``
-     - | *Arguments:*
-       |   DICTS(value-expression{1})
-       |
-       | Takes a list of dictionaries in and outputs a list of values.
-         For each key+value pair in the dictionaries one value is added to the output
-         list. Non-dict values are ignored.
-     - | ``["values",``
-       |     ``["list", {"A": 1, "B": 2}, {"A": 1, "C": 3}]]``
-       |
-       | Returns ``[1, 2, 1, 3]``.
-       |
-       | ``["values", ["list", "X", 123, {"A": 1}]]``
-       |
-       | Returns ``[1]``.
-
-       .. _key_values_dtl_function:
-   * - ``key-values``
-     - | *Arguments:*
-       |   DICTS(value-expression{1})
-       |
-       | Takes a list of dictionaries in and outputs a list of dictionaries with "key"
-         and "value" keys. For each key+value pair in the dictionaries one dict is added
-         to the output list. Non-dictionary values are ignored. Note that entities are
-         dictionaries, so you can use this function with them.
-     - | ``["key-values",``
-       |     ``["list", {"A": 1, "B": 2}, 123, {"C": 3, "A": 1}]]``
-       |
-       | Returns ``[{"key": "A", "value": 1},``
-       |            ``{"key": "B", "value": 2},``
-       |            ``{"key": "C", "value": 3},``
-       |            ``{"key": "A", "value": 1}]``.
-       |
-       | ``["key-values", {"hello": "world"}]``
-       |
-       | Returns ``{"key": "hello", "value": "world"}``.
-
-
-Tuples
-------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _tuples_dtl_function:
-   * - ``tuples``
-     - | *Arguments:*
-       |   VALUES(value-expression{>0})
-       |
-       | Constructs a list of tuples, the product of the values given in the
-         arguments. The tuple length is equal to the number
-         of function arguments. ``null`` values are ignored.
-       |
-       | This function is a good choice when you need to do joins on
-         composite keys.
-     - | ``["tuples"]``
-       |
-       | Returns ``[]``.
-       |
-       | ``["tuples", "a", "b", "c"]``
-       |
-       | Returns ``[["a", "b", "c"]]``.
-       |
-       | ``["tuples", ["list", 1, 2], 3]``
-       |
-       | Returns ``[[1, 3], [2, 3]]``.
-       |
-       | ``["tuples",``
-       |   ``["list", 1, 2], ["list", 3, null, 4, 5]]``
-       |
-       | Returns ``[[1, 3], [1, 4], [1, 5],``
-       |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
-
-Hashing
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 30, 50
-
-   * - Function
-     - Description
-     - Examples
-
-       .. _hash128_dtl_function:
-   * - ``hash128``
-     - | *Arguments:*
-       |   ALGORITM("murmur3")
-       |   SEED(integer-expression{0|1})
-       |   VALUES(value-expression{1})
-       |
-       | Generates 128 bit integer hashes from bytes and strings. Values of
-         other types are ignored. This function can be used to generate
-         content hashes. The only supported algoritm is "murmur3"
-         (`MurmurHash3 <https://en.wikipedia.org/wiki/MurmurHash>`_).
-
-       | The function takes an optional seed argument. The seed
-         can be used to randomize the hash function.
-
-     - | ``["hash128", "murmur3", "abc"]``
-       |
-       | Returns ``79267961763742113019008347020647561319``.
-       |
-       | ``["hash128", "murmur3", ["combine", "abc", 123, "def"]]``
-       |
-       | Returns ``[[79267961763742113019008347020647561319,``
-       |           ``114697464648834432121201791580882983835]]``.
-
-
 Math
 ----
 
@@ -5385,7 +3929,6 @@ are lists, the first value is used. If either argument evaluates to ``null``, th
        |
        | Returns ``[0.0, ~0.0]``.
 
-
 Misc
 ----
 
@@ -5408,7 +3951,1452 @@ Misc
        |
        | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
 
+Namespaced identifiers
+----------------------
 
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _ni_dtl_function:
+   * - ``ni``
+     - | *Arguments:*
+       |   NAMESPACE(string{0|1}),
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to namespaced identifiers. Strings and URIs in VALUES
+         will be cast to namespaced identifiers. Note that no escaping is done on
+         the strings.
+       |
+       | If NAMESPACE is omitted, then the global namespace is used.
+       |
+       | URIs can be passed as values in VALUES only when NAMESPACE is not specified.
+         The URIs will be collapsed, i.e. the prefix part of URIs will be collapsed into
+         a namespace. If the prefix has been declared as a :ref:`namespace <namespaces>`
+         then that namespace will be used, otherwise a generated namespace will be added.
+     - | Constructs a new namespaced identifier.
+       |
+       | ``["ni", "foo", "bar"]``
+       |
+       | This will produce a namespaced identifier ``"~:foo:bar"``.
+       |
+       | ``["ni", "bar"]``
+       |
+       | This will produce a namespaced identifier in the global namespace; ``"~:bar"``.
+       |
+       | ``["ni", "foo", ["list", "bar", "x:y"]]``
+       |
+       | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``
+       |
+       | ``["ni", "foo", ["uri, "http://example.org/"]]``
+       |
+       | Returns ``null`` because URIs are not supported when NAMESPACE is specified.
+       |
+       | ``["ni", ["uri, "http://example.org/bar"]]``
+       |
+       | Returns ``"~:_:bar"``, i.e. a NI with the ``_`` namespace and ``bar`` as identifier.
+         Note that the ``http://example.org/`` URI prefix is mapped to the  ``_`` namespace
+         by default.
+       |
+       | ``["ni", ["uri, "http://unknown.org/something/baz"]]``
+       |
+       | If the ``"http://unknown.org/something/"`` URI prefix has not been declared as a
+         namespace then it will return ``"~:your-pipe-1:baz"`` if the current pipe id is
+         ``your-pipe``. The ``-1`` part is a sequence counter, so if you introduce other
+         namespaces in your pipe they'll be assigned unique namespace ids. If the URI prefix
+         had already been mapped to the ``unknown`` namespace then the expression would have
+         returned ``"~:unknown:baz"``
+
+       .. _is_ni_dtl_function:
+   * - ``is-ni``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a namespaced
+         identifier literal, or if it is a list, that the first element
+         in the list is a namespaced identifier.
+     - | ``["is-ni", ["ni", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-ni", ["list", ["ni", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", ["list", 1, ["ni", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
+       .. _ni_ns_dtl_function:
+   * - ``ni-ns``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-ns", "~:foo:bar"]``
+       |
+       | Returns ``"foo"``.
+       |
+       | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["foo", "bar"]``
+
+       .. _ni_id_dtl_function:
+   * - ``ni-id``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace id part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-id", "~:foo:bar"]``
+       |
+       | Returns ``"bar"``.
+       |
+       | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["bar", "baz"]``
+
+       .. _ni_collapse_dtl_function:
+   * - ``ni-collapse``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Uses the ``namespaces.default`` service metadata contents to produce a namespaced identifier from URLs.
+         VALUES that are not URLs are ignored (i.e. it accepts strings and URI parameters). If there is no longest
+         matching prefix in the ``namespaces.default`` settings, the functions will return a NI that contains the
+         original input (i.e. the The ``http`` and ``https`` prefixes are implicitly defined). Non-http URIs are not
+         supported.
+         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
+         service metadata option set to ``true``.
+
+       |
+       | Given this ``namespaces.default`` mapping in the service metadata:
+       |
+       |  ``{``
+            ``"foo": "http://psi.test.no/",``
+            ``"sesam_male": "http://sesam.io/people/male/",``
+            ``"sesam_female": "http://sesam.io/people/female/",``
+            ``"sesam": "http://sesam.io/people/"``
+          ``}``
+       |
+       | The following examples will produce this output:
+       |
+       | ``["ni-collapse", "http://psi.test.no/bar"]``
+       |
+       | Returns ``"~:foo:bar"``.
+       |
+       | ``["ni-collapse", ["list", "http://psi.test.no/bar", "http://psi.test.no/baz"]]``
+       |
+       | Returns ``["~:foo:bar", "~:foo:baz"]``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/employees"]``
+       |
+       | Returns ``"~:sesam:employees"``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/male/john"]``
+       |
+       | Returns ``"~:sesam_male:john"``
+       |
+       | ``["ni-collapse", "http://sesam.io/people/female/jane"]``
+       |
+       | Returns ``"~:sesam_female:jane"``
+       |
+       | The ``http`` and ``https`` namespaces are implicitly defined, so a URI that doesn't match any prefix will work:
+       |
+       | ``["ni-collapse", "http://example.com/path"]``
+       |
+       | Returns ``"~:http://example.com/path"``
+
+       .. _ni_expand_dtl_function:
+   * - ``ni-expand``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Uses the ``namespaces.default`` service metadata contents to produce a URL string from a namespaced identifier.
+         VALUES that are not NIs are ignored. If there is no longest matching prefix in the ``namespaces.default``
+         settings, the functions will return a string cast of the NI.
+         NOTE: this function is experimental and is meant to work with the ``global_defaults.symmetric_namespace_collapse``
+         service metadata option set to ``true``.
+
+       |
+       | Given this ``namespaces.default`` mapping in the service metadata:
+       |
+       |  ``{``
+            ``"foo": "http://psi.test.no/",``
+            ``"sesam_male": "http://sesam.io/people/male/",``
+            ``"sesam_female": "http://sesam.io/people/female/",``
+            ``"sesam": "http://sesam.io/people/"``
+          ``}``
+       |
+       | The following examples will produce this output:
+       |
+       | ``["ni-expand", "~:foo:bar"]``
+       |
+       | Returns ``http://psi.test.no/bar``.
+       |
+       | ``["ni-expand", ["list", "~:foo:bar", "~:foo:baz"]]``
+       |
+       | Returns ``["http://psi.test.no/bar", "http://psi.test.no/baz"]``
+       |
+       | ``["ni-expand", "~:sesam:employees"]``
+       |
+       | Returns ``"http://sesam.io/people/employees"``
+       |
+       | ``["ni-expand", "~:sesam_male:john"]``
+       |
+       | Returns ``"http://sesam.io/people/male/john"``
+       |
+       | ``["ni-expand", "~:sesam_female:jane"]``
+       |
+       | Returns ``"http://sesam.io/people/female/jane"``
+       |
+       | ``["ni-expand", "~:http://example.com/path"]``
+       |
+       | Returns ``"http://example.com/path"``
+       |
+       | ``["ni-expand", "~:unknown:path"]``
+       |
+       | Returns ``"unknown:path"``
+
+Nested transformations
+----------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _apply_dtl_function:
+   * - ``apply``
+     - | *Arguments:*
+       |   RULE_ID(string{1}),
+       |   VALUES(value-expression{1})
+       |
+       | Applies the RULE_ID transform rule on the entities in VALUES.
+         RULE_ID must be the id of a transform rule in the current DTL
+         specification.
+     - | ``["apply", "order", "_S.orders"]``
+       |
+       | This will transform the order entities in the source entity's
+         ``orders`` field using the ``order`` transform rules. The output is
+         the transformed order entities.
+
+       .. _apply_hops_dtl_function:
+   * - ``apply-hops``
+     - | *Arguments:*
+       |   RULE_ID(string{1}),
+       |   HOPS_SPEC(dict{>1})
+       |
+       | This function is a combined ``hops`` and ``apply`` function. It
+         evaluates the hops, and then passes the result through
+         the RULE_ID transform rule.
+
+       | See the :ref:`apply <apply_dtl_function>`
+         and the :ref:`hops <hops_dtl_function>` functions for more information
+         about the parts.
+
+       .. NOTE::
+
+          Use this function instead of ``apply`` if you use ``hops`` inside
+          the transformation rule. This is required so that
+          `dependency tracking <concepts.html#dependency-tracking>`_
+          can work. Calling ``apply`` on a rule that contains ``hops`` or
+          ``apply-hops`` is not allowed.
+
+     - | ``["apply-hops", "order", {``
+       |   ``"datasets": ["orders o"],``
+       |   ``"where": ["eq", "_S._id", "o.cust_id"]``
+       |  ``}]``
+       |
+       | This will retrieve orders from the hops expression and then
+         transform them using the ``order`` transformation rule. The output
+         is the transformed order entities.
+
+.. _nulls:
+
+Nulls
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _is_null_dtl_function:
+   * - ``is-null``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns ``true`` if value is either ``null``, an
+         empty list, or a list where the first element in the list is ``null``.
+       |
+     - | ``["is-null", null]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-null", 1]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-null", ["list"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-null", ["list", null]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-null", ["list", null, 123]]``
+       |
+       | Returns ``true``. Note that the function only looks at the first value
+         in the list.
+       |
+       | ``["is-null", ["list", 1, "12345"]]``
+       |
+       | Returns ``false``.
+
+       .. _is_not_null_dtl_function:
+   * - ``is-not-null``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns ``false`` if value is either ``null``, an
+         empty list, or a list where the first element in the list is ``null``.
+       |
+     - | ``["is-not-null", null]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", 1]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-not-null", ["list"]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", ["list", null]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-not-null", ["list", null, 123]]``
+       |
+       | Returns ``false``. Note that the function only looks at the first value
+         in the list.
+       |
+       | ``["is-not-null", ["list", 1, "12345"]]``
+       |
+       | Returns ``true``.
+
+       .. _if_null_dtl_function:
+   * - ``if-null``
+     - | *Arguments:*
+       |   VALUE(value-expression{1})
+       |   FALLBACK-VALUE(value-expression{1})
+       |
+       | If ``is-null`` is false for VALUE then VALUE is returned, otherwise
+         FALLBACK-VALUE is returned.
+       |
+     - | ``["if-null", null, 2]``
+       |
+       | Returns ``2``.
+       |
+       | ``["if-null", 1, 2]``
+       |
+       | Returns ``1``.
+       |
+       | ``["if-null", ["list", null], 2]``
+       |
+       | Returns ``2``.
+       |
+       | ``["if-null", ["list", null, 123], 2]``
+       |
+       | Returns ``2``.
+       |
+       | ``["if-null", ["list", 1, "12345"], 2]``
+       |
+       | Returns ``[1, "12345"]``.
+
+       .. _coalesce_dtl_function:
+   * - ``coalesce``
+     - | *Arguments:*
+       |   FUNCTION(function-expression{0|1}),
+       |   VALUES(value-expression{1})
+       |
+       | Returns the first value in VALUES that makes the FUNCTION expression
+         return a trueish value. The FUNCTION expression argument is optional,
+         so if it is not given the first non-null value in VALUES is returned.
+     - | ``["coalesce", "_S.tags"]``
+       |
+       | Returns the first value in the source entity's ``tags``
+         field that is not null.
+       |
+       | ``["coalesce",``
+       |     ``["gt", "_.expenses", 1000], "_S.hobbies"]``
+       |
+       | Returns the first hobby that has expenses greater than 1000.
+
+Numbers
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _integer_dtl_function:
+   * - ``integer``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to integers. If no default value expression
+         is given, values that don't parse as integers will be silently ignored.
+         If not, the evaluated value from the default expression will be used
+         as a replacement value.
+       |
+       | Values that starts with ``"0x"`` are parsed as hexadecimal values in two's complement
+         format.
+     - | ``["integer", "1"]``
+       |
+       | Returns one integer: 1.
+       |
+       | ``["integer",``
+       |   ``["list", "1", "~rhttp://www.example.org/", 124.4, 12345]]``
+       |
+       | Returns a list of integers: [1, 124, 12345]. The URI value is ignored.
+       |
+       | ``["integer", ["integer", 0],``
+       |    ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, 0, 0, 12345]. The URI value and the
+         string value are replaced with the literal value 0
+       |
+       | ``["integer", ["string", "n/a"],``
+       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, "n/a", "n/a", 12345]. The URI value
+         and the string value are replaced with the literal value "n/a"
+       |
+       | ``["integer", ["string", "_."],``
+       |   ``["list", "1", "~rhttp://www.example.org/", "10^2", 12345]]``
+       |
+       | Returns a list of integers: [1, "http://www.example.org/", "10^2", 12345].
+         The URI value and the non-integer string value are replaced with the
+         their respective string casts.
+       |
+       | ``["integer", "0x00ff"]``
+       |
+       | Returns one integer: 255.
+       |
+       |
+       | ``["integer", "0xff"]``
+       |
+       | Returns one integer: -1.
+       |
+
+       .. _is_integer_dtl_function:
+   * - ``is-integer``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is an integer literal or
+         if it is a list, that the first element in the list is an integer
+       |
+     - | ``["is-integer", 1]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", "1"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", 1, "12345"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", ["list", "1", 2]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", ["integer", "1"], 2]]``
+       |
+       | Returns ``true``.
+
+       .. _decimal_dtl_function:
+   * - ``decimal``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to decimals (a fractional number with
+         unlimited precision). If no default value expression is given,
+         values that don't parse as decimal values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value.
+       |
+     - | ``["decimal", "1.0"]``
+       |
+       | Returns one decimal value: 1.0
+       |
+       | ``["decimal",``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
+       |
+       | Returns a list of decimal values: [1.0, 2.2]. The URI and
+         non-decimal string value are ignored.
+       |
+       | ``["decimal", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-decimal string value are replaced with the literal value: false
+       |
+       | ``["decimal", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["decimal", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
+         is replaced with its string cast.
+
+       .. _is_decimal_dtl_function:
+   * - ``is-decimal``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a decimal literal or
+         if it is a list, that the first element in the list is a decimal
+       |
+     - | ``["is-decimal", 1.0]``
+       |
+       | Returns false (it is a float literal).
+       |
+       | ``["is-decimal", ["decimal", "1.23"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-decimal", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", 1.0, "12345"]]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
+       |
+       | Returns true.
+
+       .. _float_dtl_function:
+   * - ``float``
+     - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to floats (a  IEEE 754 binary 64 format).
+         if no default value expression is given,
+         values that don't parse as float values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value. Note that if you cast decimals to floats
+         you can lose precision.
+       |
+     - | ``["float", "1.0"]``
+       |
+       | Returns one float value: 1.0
+       |
+       | ``["float",``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
+       |
+       | Returns a list of float values: [1.0, 2.2]. The URI and
+         non-numeric string value are ignored.
+       |
+       | ``["float", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-numeric string value are replaced with the literal value: false
+       |
+       | ``["float", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["float", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
+         is replaced with its string cast.
+
+       .. _is_float_dtl_function:
+   * - ``is-float``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a float literal or
+         if it is a list, that the first element in the list is a float value
+       |
+     - | ``["is-float", 1.0]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["decimal", "1.23"]]``
+       |
+       | Returns false (it is a decimal literal).
+       |
+       | ``["is-float", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", 1.0, "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-float", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
+       |
+       | Returns false.
+
+       .. _hex_dtl_function:
+   * - ``hex``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to a string containing an hexadecimal representation of the value
+         in two's complement format.
+       | Values that don't parse as integers will be silently ignored.
+     - | ``["hex", 1]``
+       |
+       | Returns one string: ``"0x01"``.
+       |
+       | ``["hex", 255]``
+       |
+       | Returns one string: ``"0x00ff"``.
+       |
+       | ``["hex", -1]``
+       |
+       | Returns one string: ``"0xff"``.
+       |
+       | ``["hex",``
+       |   ``["list", 1, "~rhttp://www.example.org/", 124.4, 12345]]``
+       |
+       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
+
+Paths
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _path_dtl_function:
+   * - ``path``
+     - | *Arguments:*
+       |   PROPERTY_PATH(value-expression{1}),
+       |   VALUES(value-expression{1})
+       |
+       | Traverses the PROPERTY_PATH path for each of the entities in
+         VALUES. The result is all the values at the end of
+         the traversal. This may be a single value or a list of values.
+         PROPERTY_PATH is an expression that should resolve
+         to a string or a list of strings. Those strings are treated as
+         literals, i.e. property names, so no variables can be used. Only
+         properties on the entity can be traversed. If you want to traverse
+         to other entities use the ``hops`` function instead.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+
+         If namespaced identifiers are enabled and the path element is not
+         a fully qualified namespaced identifier then all properties with
+         the path element as its identifier part will be part of the result.
+         In practice the result is the union of all those properties.
+
+     - | ``["path", "age", ["list", {"age": 23}, {"age": 24}]]``
+       |
+       | Traverses the ``age`` field of the VALUES entities.
+         Returns ``[23, 24]``.
+       |
+       | ``["path", ["list", "order_lines", "item_name"], "_S.orders"]``
+       |
+       | This will traverse from the source entity's orders to the
+         order lines and then return their item names. The output is a
+         list of product item names.
+       |
+       | ``["path", "age", {"age": 24}]``
+       |
+       | Returns ``24``.
+       |
+       | ``["path", "foo", {"bar": 123}]``
+       |
+       | Returns ``null``.
+       |
+       | ``["path", ["list", "a", "b"],``
+       |   ``["list", {"a": {"b": 1}}, {"a": [{"b": 2}, {"b": 3}]}]]``
+       |
+       | Returns ``[1, 2, 3]``.
+       |
+       | **With namespaced identifiers enabled:**
+       |
+       | ``{``
+       |   ``"namespaced_identifiers": true,``
+       |   ``"namespaces": {``
+       |     ``"identity": "foo",``
+       |     ``"property": "bar"``
+       |   ``}``
+       | ``}``
+       |
+       | ``["path", "foo:a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``2`` as the path element ``"foo:a"`` is a fully qualified
+         namespaced identifier.
+       |
+       | ``["path", "a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``[1, 2, 3, 4]``, i.e. the union of all the values in all
+         the properties that have ``a`` in their identifiers part.
+       |
+       | ``["path", "::a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``1`` as ``"::a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to explicity reference the unqualified ``a`` property.
+       |
+       | ``["path", ":a", {"a": 1, "foo:a": 2, "bar:a": [3, 4]}]``
+       |
+       | Returns ``[3, 4]`` as ``":a"`` uses the :ref:`NI escape syntax <ni_escape_syntax>`
+         to explicity reference the ``"a"`` property in the current namespace ``"bar"``.
+
+Sets
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _union_dtl_function:
+   * - ``union``
+     - | *Arguments:*
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
+       |
+       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the elements that
+         are either in VALUES1 or in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the union operator. The
+         return type is a list of distinct values.
+     - | ``["union",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
+       |
+       | Returns ``["A", "B", "C"]``.
+       |
+       | ``["union", "A", ["list", "B", "C"]]``
+       |
+       | Returns ``["A", "B", "C"]``.
+
+       .. _intersection_dtl_function:
+   * - ``intersection``
+     - | *Arguments:*
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
+       |
+       | Returns the intersection of the two sets VALUES1 and VALUES2, i.e. the elements
+         that are in both VALUES1 and VALUES2. The two arguments do not have to be real sets,
+         but will be coerced into sets before applying the intersection operator. The
+         return type is a list of distinct values.
+     - | ``["intersection",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
+       |
+       | Returns ``["B"]``.
+       |
+       | ``["intersection", "B", ["list", "B", "C"]]``
+       |
+       | Returns ``["B"]``.
+       |
+       | ``["intersection", "A", ["list", "B", "C"]]``
+       |
+       | Returns ``[]``.
+
+       .. _intersects_dtl_function:
+   * - ``intersects``
+     - | *Arguments:*
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
+       |
+       | Same as ``intersection``, but returns a boolean value. Returns true if the two
+         arguments have elements in common.
+     - | ``["intersects",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["intersects", "B", ["list", "B", "C"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["intersects", "A", ["list", "B", "C"]]``
+       |
+       | Returns ``false``.
+
+       .. _difference_dtl_function:
+   * - ``difference``
+     - | *Arguments:*
+       |   VALUES1(value-expression{1})
+       |   VALUES2(value-expression{1})
+       |
+       | Returns the difference of the two sets VALUES1 and VALUES2, i.e. the elements
+         that are in VALUES1, but not in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the difference operator. The
+         return type is a list of distinct values.
+     - | ``["difference",``
+       |    ``["list", "A", "B"], ["list", "B"]]``
+       |
+       | Returns ``["A"]``.
+       |
+       | ``["difference", "A", ["list", "B", "C"]]``
+       |
+       | Returns ``["A"]``.
+       |
+       | ``["difference",``
+       |   ``["list", "A", "B", "C", "D"],``
+       |   ``["list", "A", "B", "E"]]``
+       |
+       | Returns ``["C", "D"]``.
+
+Strings
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _string_dtl_function:
+   * - ``string``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to strings.
+
+       .. NOTE::
+
+          Complex types like list and dict are JSON encoded (no transit encoding).
+          Bytes are decoded to strings using ``utf-8`` encoding.
+     - | ``["string", 1]``
+       |
+       | Returns one string: ``"1"``.
+       |
+       | ``["string", "hello"]``
+       |
+       | Returns one string: ``"hello"``.
+       |
+       | ``["string", null]``
+       |
+       | Returns ``null``.
+       |
+       | ``["string",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"http://www.example.org/", "124.4", "12345"]``.
+
+       .. _is_string_dtl_function:
+   * - ``is-string``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a string literal or if
+         it is a list, that the first element
+       | in the list is a string
+       |
+     - | ``["is-string", "foo:bar"]``
+       |
+       | Returns true.
+       |
+       | ``["is-string", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-string", ["list", "foo:bar", 12345]]``
+       |
+       | Returns true
+       |
+       | ``["is-string", ["list", 1, "foo:bar"]]``
+       |
+       | Returns false
+
+       .. _upper_dtl_function:
+   * - ``upper``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the uppercase version of its input strings.
+         Non-string values are ignored.
+     - | ``["upper", ["list", "a", "b", "c"]]``
+       |
+       | Returns ``["A", "B", "C"]``.
+       |
+       | ``["upper", "_S.name"]``
+       |
+       | Returns an uppercased version of the source entity's name.
+
+       .. _lower_dtl_function:
+   * - ``lower``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the lowercase version of its input strings.
+         Non-string values are ignored.
+     - | ``["lower", ["list", "A", "B", "C"]]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["lower", "_S.name"]``
+       |
+       | Returns a lowercased version of the source entity's name.
+
+       .. _length_dtl_function:
+   * - ``length``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the length (number of characters) of its input strings.
+         Non-string values are ignored.
+     - | ``["length", ["list", "", "a", "bb", "ccc"]]``
+       |
+       | Returns ``[0, 1, 2, 3]``.
+       |
+       | ``["length", "_S.name"]``
+       |
+       | Returns the length of the source entity's name.
+
+       .. _concat_dtl_function:
+   * - ``concat``
+     - | *Arguments:*
+       |   VALUES(value-expression{>1})
+       |
+       | Returns a concatenated string of its input strings.
+         Non-string values are ignored.
+     - | ``["concat", ["list", "a", "b", "c"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["concat", "_S.tags"]``
+       |
+       | Returns a concatenated version of the source entity's tags.
+       |
+       | ``["concat", "Hello ", "_S.name", "!"]``
+       |
+       | Returns ``"Hello John!"`` if the ``name`` property is ``John``.
+       |
+       | ``["concat", "a", ["list", "b", "c"], "d", 123, ["list", "!"]]``
+       |
+       | Returns ``"abcd!"``.
+       |
+       | ``["concat", 123, 3.14]``
+       |
+       | Returns ``""``, because non-string values are ignored.
+
+       .. _join_dtl_function:
+   * - ``join``
+     - | *Arguments:*
+       |   SEPARATOR(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a string created by joining its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["join", "-", ["list", "a", "b", 123, "c"]]``
+       |
+       | Returns ``"a-b-c"``.
+       |
+       | ``["join", "-", "_S.tags"]``
+       |
+       | Returns a joined string of the source entity's tags separated by dashes.
+
+       .. _split_dtl_function:
+   * - ``split``
+     - | *Arguments:*
+       |   SEPARATOR(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a list of strings created by splitting its input strings by SEPARATOR.
+         Non-string values are ignored.
+     - | ``["split", "-", "a-b-c"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["split", "", "abc"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       | ``["split", "", ["list", "ab", "cd", "e"]]``
+       |
+       | Returns ``["a", "b", "c", "d", "e"]``.
+       |
+       | ``["split", "-", ["list", "a-b", "c-d", "e"]]``
+       |
+       | Returns ``["a", "b", "c", "d", "e"]``.
+       |
+       | ``["split", "-", "_S.uuid"]``
+       |
+       | Returns a list of strings of the source entity's tags separated by dashes.
+
+       .. _strip_dtl_function:
+   * - ``strip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from both sides. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["strip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab", "cd", "ef"]``.
+       |
+       | ``["strip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["strip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed.
+       |
+       | ``["strip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123", "456"]``.
+
+       .. _lstrip_dtl_function:
+   * - ``lstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the left side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["lstrip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``["ab ", "cd ", "ef"]``.
+       |
+       | ``["lstrip", "  abc"]]``
+       |
+       | Returns ``"abc"``.
+       |
+       | ``["lstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the left.
+       |
+       | ``["lstrip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123xyx", "456yx"]``.
+
+       .. _rstrip_dtl_function:
+   * - ``rstrip``
+     - | *Arguments:*
+       |   CHARACTERS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a version of its input strings where characters in CHARACTERS are removed
+         from the right side. Non-string values are ignored. The default value of
+         CHARACTERS is all whitespace characters.
+     - | ``["rstrip", ["list", " ab ", "cd ", "ef"]]``
+       |
+       | Returns ``[" ab", "cd", "ef"]``.
+       |
+       | ``["rstrip", "  abc"]]``
+       |
+       | Returns ``"  abc"``.
+       |
+       | ``["rstrip", "_S.name"]``
+       |
+       | Returns a stripped version of the source entity's name where whitespace is removed
+         from the right.
+       |
+       | ``["rstrip", "xy", ["list", "123xyx", "xy456yx"]]``
+       |
+       | Returns ``["123", "xy456"]``.
+
+       .. _ljust_dtl_function:
+   * - ``ljust``
+     - | *Arguments:*
+       |   WIDTH(integer-expression{1})
+       |   FILL_CHARACTER(character-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a left-justified version of its input strings. The WIDTH defines the minimum
+         length of the returned strings. If the input strings are longer than WIDTH, then the
+         input string is returned as-is. If the input string is shorter than WIDTH then it is
+         justified to the left using the FILL_CHARACTER.
+       |
+       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
+         not a single character then the function returns ``null``.
+     - | ``["ljust", 10, "0", "123"]``
+       |
+       | Returns ``"1230000000"``.
+       |
+       | ``["ljust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
+       |
+       | Returns ``["abc  ", "def  ", "ghijklm"]``.
+
+       .. _rjust_dtl_function:
+   * - ``rjust``
+     - | *Arguments:*
+       |   WIDTH(integer-expression{1})
+       |   FILL_CHARACTER(character-expression{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns a right-justified version of its input strings. The WIDTH defines the minimum
+         length of the returned strings. If the input strings are longer than WIDTH, then the
+         input string is returned as-is. If the input string is shorter than WIDTH then it is
+         justified to the right using the FILL_CHARACTER.
+       |
+       | Non-string values are ignored. If the WIDTH is not an integer or FILL_CHARACTER is
+         not a single character then the function returns ``null``.
+     - | ``["rjust", 10, "0", "123"]``
+       |
+       | Returns ``"0000000123"``.
+       |
+       | ``["rjust", 5, " ", ["list", "abc", "def", "ghijklm"]]``
+       |
+       | Returns ``["  abc", "  def", "ghijklm"]``.
+
+       .. _replace_dtl_function:
+   * - ``replace``
+     - | *Arguments:*
+       |   (REPLACEMENTS(dict{1}) or
+            (OLD_STRING(string{1})
+             NEW_STRING(string{1})))
+       |   VALUES(value-expression{1})
+       |
+       | Replaces occurrences of OLD_STRING with NEW_STRING in VALUES, or replaces the keys
+         in the REPLACEMENT dict with the respective values. Non-string values
+         are ignored.
+     - | ``["replace", "http://", "https://",``
+       |   ``"http://www.sesam.io/"]``
+       |
+       | Returns ``"https://www.sesam.io/"``.
+       |
+       | ``["replace", ":", ".", "_S.date"]]``
+       |
+       | Returns a date string where the colon has been replaced by a period.
+       |
+       | ``["replace", {"Hello": "HELLO", "world": "WORLD"}, "Hello world!"]]``
+       |
+       | Returns ``"HELLO WORLD!"``.
+       |
+       | ``["replace", ["dict", "a", "A", "b", "B"], "abc"]]``
+       |
+       | Returns ``"ABc"``.
+
+       .. _substring_dtl_function:
+   * - ``substring``
+     - | *Arguments:*
+       |   START_INDEX(integer{1})
+       |   END_INDEX(integer{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Extracts the substring between START_INDEX and END_INDEX. If the indexes are negative they start from the end.
+
+     - | ``["substring", 2, 4, "abcdef"]``
+       |
+       | Returns ``"cd"``.
+       |
+       | ``["substring", 2, "abcdef"]``
+       |
+       | Returns ``"cdef"``.
+       |
+       | ``["substring", -3, -1, "abcdef"]``
+       |
+       | Returns ``"de"``.
+
+       .. _matches_dtl_function:
+   * - ``matches``
+     - | *Arguments:*
+       |   PATTERN(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns true if all the values in VALUES match the pattern in PATTERN. The '*' and '?'
+         wildcard characters can be used. Non-string values are not matched and will cause the
+         function to return false. If PATTERN contains multiple string values then only the
+         first one is used.
+     - | ``["matches", "a*p*a", ["list", "alpha", "alpaca"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["matches", "*_sport", "_S.tags"]``
+       |
+       | Returns ``true``, unless ``_S.tags`` is empty or ``null``, if all the tags that have a "_sport" suffix.
+       |
+       | ``["matches", "*", null]``
+       |
+       | Returns ``false``.
+       |
+       | ``["matches", "*", ["list"]]``
+       |
+       | Returns ``false``.
+
+Tuples
+------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _tuples_dtl_function:
+   * - ``tuples``
+     - | *Arguments:*
+       |   VALUES(value-expression{>0})
+       |
+       | Constructs a list of tuples, the product of the values given in the
+         arguments. The tuple length is equal to the number
+         of function arguments. ``null`` values are ignored.
+       |
+       | This function is a good choice when you need to do joins on
+         composite keys.
+     - | ``["tuples"]``
+       |
+       | Returns ``[]``.
+       |
+       | ``["tuples", "a", "b", "c"]``
+       |
+       | Returns ``[["a", "b", "c"]]``.
+       |
+       | ``["tuples", ["list", 1, 2], 3]``
+       |
+       | Returns ``[[1, 3], [2, 3]]``.
+       |
+       | ``["tuples",``
+       |   ``["list", 1, 2], ["list", 3, null, 4, 5]]``
+       |
+       | Returns ``[[1, 3], [1, 4], [1, 5],``
+       |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
+
+URIs
+----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _uri_dtl_function:
+   * - ``uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to URIs. Only strings in VALUES will be
+         cast to URIs. Note that *no* URI escaping is done on the strings.
+     - | ``["uri", "http://www.example.org/"]``
+       |
+       | Returns one URI.
+       |
+       | ``["uri",``
+       |    ``["list", "http://www.example.org/",``
+       |       ``"http://www.sesam.io/", 12345]]``
+       |
+       | Returns a list of two URIs. The number is silently ignored because
+         it is not a string.
+
+       .. _is_uri_dtl_function:
+   * - ``is-uri``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a URI literal, or if it is
+         a list, that the first element in the list is a URI.
+     - | ``["is-uri", ["uri", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-uri", ["list", ["uri", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
+       .. _url_quote_dtl_function:
+   * - ``url-quote``
+     - | *Arguments:*
+       |   SAFE_CHARS(string{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL quoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+       |
+       | If you want some ASCII characters to not be encoded, e.g. the slash character ``/``,
+         then specify the ``SAFE_CHARS`` argument. The default value is "". The ``SAFE_CHARS``
+         argument must be a string that contains zero or more ASCII characters that should
+         not be encoded. Note that this only is applicable for ASCII characters.
+     - | ``["url-quote", "/foo bar/baz"]``
+       |
+       | Returns ``%2Ffoo%20bar%2Fbaz``. Note that the ``/`` characters have been encoded.
+         To avoid this you can add the SAFE_CHARS argument:
+       |
+       | ``["url-quote", "/", "/foo bar/baz"]``
+       |
+       | Returns ``/foo%20bar/baz``.
+       |
+       | ``["url-quote",``
+       |   ``["list", "å", 1, 2,``
+       |     ``["uri", "http://example.com"], "foo bar"]]``
+       |
+       | Returns ``["%C3%A5", "foo%20bar]``.
+
+       .. _url_unquote_dtl_function:
+   * - ``url-unquote``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Returns the URL unquoted versions of any string or list of strings in the
+         argument list. Any non-strings are ignored and is not returned in the
+         result. Returns either a single string (if the input is a single
+         string literal) or a list (of strings).
+       |
+     - | ``["url-unquote", "%2Ffoo%20bar%2Fbaz"]``
+       |
+       | Returns ``/foo bar/baz``.
+       |
+       | ``["url-quote",``
+       |   ``["list", 1, "%C3%A5", ["uri", "http://example.com"], "foo%20bar"]``
+       |
+       | Returns ``["å", "foo bar"]``.
+
+UUIDs
+-----
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
+       .. _uuid_dtl_function:
+   * - ``uuid``
+     - | *Arguments:*
+       |   VALUES(value-expression{0|1})
+       |
+       | Create a new UUID object (version 4 ). It can optionally cast a single string or list of string UUID representations to
+         UUID objects. Any input that can't be cast to a UUID object will be ignored.
+       |
+     - | ``["uuid"]``
+       |
+       | Returns a new random UUID object on the form "~u9f598f65-eea5-4906-a8f5-82f6d8e69726".
+       |
+       | ``["uuid", "abc98f65-ddf5-1234-a8f5-82f6d8e69726"]``
+       |
+       | Returns a new UUID object cast from the input argument: "~uabc98f65-ddf5-1234-a8f5-82f6d8e69726".
+       |
+       | ``["uuid", ["list", "abc98f65-ddf5-1234-a8f5-82f6d8e601a8", 2, "9f598f65-eea5-4906-a8f5-82f6d8e69726"]]``
+       |
+       | Returns two UUID objects: ["~uabc98f65-ddf5-1234-a8f5-82f6d8e69726", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]
+       | Note that the mismatched input argument ``2`` is ignored.
+
+       .. WARNING::
+
+          This function is non-deterministic and will return a
+          different value every time it is evaluated. Be aware that if
+          the pipe is rewound or reset then it will produce a
+          different output. Dependency tracking will also have a
+          similar effect as to produce a different value when entities
+          are reprocessed.
+
+          *Use this function with care and make sure
+          that you are aware of the consequences of reprocessing
+          entities.*
+
+       .. _is_uuid_dtl_function:
+   * - ``is-uuid``
+     - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a UUID literal or value or if
+         it is a list, that the first element in the list is a UUID type value or literal
+       |
+     - | ``["is-uuid", ["uuid"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
+       |
+       | Returns false.
+       |
 
 .. _supported_timezones:
 

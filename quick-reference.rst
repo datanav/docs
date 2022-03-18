@@ -29,16 +29,6 @@ Configuration
        :ref:`sql <sql_source>` ·
        :ref:`union_datasets <union_datasets_source>`
 
-   * - Transforms
-     - :ref:`conditional <conditional_transform>` ·
-       :ref:`dtl <dtl_transform>` ·
-       :ref:`emit_children <emit_children_transform>` ·
-       :ref:`http <http_transform>` ·
-       :ref:`json_schema <json_schema_transform>` ·
-       :ref:`rdf <rdf_transform>` ·
-       :ref:`rest <rest_transform>` ·
-       :ref:`xml <xml_transform>`
-
    * - Sinks
      - :ref:`conditional <conditional_sink>` ·
        :ref:`csv_endpoint <csv_endpoint_sink>` ·
@@ -73,6 +63,16 @@ Configuration
        :ref:`twilio <twilio_system>` ·
        :ref:`url <url_system>`
 
+   * - Transforms
+     - :ref:`conditional <conditional_transform>` ·
+       :ref:`dtl <dtl_transform>` ·
+       :ref:`emit_children <emit_children_transform>` ·
+       :ref:`http <http_transform>` ·
+       :ref:`json_schema <json_schema_transform>` ·
+       :ref:`rdf <rdf_transform>` ·
+       :ref:`rest <rest_transform>` ·
+       :ref:`xml <xml_transform>`
+
 
 DTL Transform Functions
 =======================
@@ -80,10 +80,17 @@ DTL Transform Functions
 .. list-table::
    :widths: 30, 70
 
+   * - Comments
+     - :ref:`comment <dtl_transform-comment>`
+
    * - Conditionals
      - :ref:`case <dtl_transform-case>` ·
        :ref:`case-eq <dtl_transform-case-eq>` ·
        :ref:`if <dtl_transform-if>`
+
+   * - Creation
+     - :ref:`create <dtl_transform-create>` ·
+       :ref:`create-child <dtl_transform-create-child>`
 
    * - Filters
      - :ref:`discard <dtl_transform-discard>` ·
@@ -99,13 +106,6 @@ DTL Transform Functions
        :ref:`merge-union <dtl_transform-merge-union>` ·
        :ref:`remove <dtl_transform-remove>` ·
        :ref:`rename <dtl_transform-rename>`
-
-   * - Creation
-     - :ref:`create <dtl_transform-create>` ·
-       :ref:`create-child <dtl_transform-create-child>`
-
-   * - Comments
-     - :ref:`comment <dtl_transform-comment>`
 
 DTL Expression Functions
 ========================
@@ -123,6 +123,12 @@ DTL Expression Functions
    * - Booleans
      - :ref:`boolean <boolean_dtl_function>` ·
        :ref:`is-boolean <is_boolean_dtl_function>`
+
+   * - Bytes
+     - :ref:`bytes <bytes_dtl_function>` ·
+       :ref:`is-bytes <is_bytes_dtl_function>` ·
+       :ref:`base64-encode <base64_encode_dtl_function>` ·
+       :ref:`base64-decode <base64_decode_dtl_function>`       
 
    * - Comparisons
      - :ref:`eq <eq_dtl_function>` ·
@@ -144,15 +150,6 @@ DTL Expression Functions
        :ref:`if-null <if_null_dtl_function>` ·
        :ref:`coalesce <coalesce_dtl_function>`
 
-   * - Numbers
-     - :ref:`integer <integer_dtl_function>` ·
-       :ref:`is-integer <is_integer_dtl_function>` ·
-       :ref:`decimal <decimal_dtl_function>` ·
-       :ref:`is-decimal <is_decimal_dtl_function>` ·
-       :ref:`float <float_dtl_function>` ·
-       :ref:`is-float <is_float_dtl_function>` ·
-       :ref:`hex <hex_dtl_function>`
-
    * - Date and time
      - :ref:`now <now_dtl_function>` ·
        :ref:`datetime <datetime_dtl_function>` ·
@@ -161,31 +158,15 @@ DTL Expression Functions
        :ref:`datetime-plus <datetime_plus_dtl_function>` ·
        :ref:`datetime-diff <datetime_diff_dtl_function>` ·
        :ref:`datetime-shift <datetime_shift_dtl_function>` ·
-       :ref:`is-datetime <is_datetime_dtl_function>`
+       :ref:`is-datetime <is_datetime_dtl_function>`       
 
-   * - Strings
-     - :ref:`string <string_dtl_function>` ·
-       :ref:`is-string <is_string_dtl_function>` ·
-       :ref:`upper <upper_dtl_function>` ·
-       :ref:`lower <lower_dtl_function>` ·
-       :ref:`length <length_dtl_function>` ·
-       :ref:`concat <concat_dtl_function>` ·
-       :ref:`join <join_dtl_function>` ·
-       :ref:`split <split_dtl_function>` ·
-       :ref:`strip <strip_dtl_function>` ·
-       :ref:`lstrip <lstrip_dtl_function>` ·
-       :ref:`rstrip <rstrip_dtl_function>` ·
-       :ref:`ljust <ljust_dtl_function>` ·
-       :ref:`rjust <rjust_dtl_function>` ·
-       :ref:`replace <replace_dtl_function>` ·
-       :ref:`substring <substring_dtl_function>` ·
-       :ref:`matches <matches_dtl_function>`
-
-   * - Bytes
-     - :ref:`bytes <bytes_dtl_function>` ·
-       :ref:`is-bytes <is_bytes_dtl_function>` ·
-       :ref:`base64-encode <base64_encode_dtl_function>` ·
-       :ref:`base64-decode <base64_decode_dtl_function>`
+   * - Dictionaries
+     - :ref:`items <items_dtl_function>` ·
+       :ref:`dict <dict_dtl_function>` ·
+       :ref:`is-dict <is_dict_dtl_function>` ·
+       :ref:`keys <keys_dtl_function>` ·
+       :ref:`values <values_dtl_function>` ·
+       :ref:`key-values <key_values_dtl_function>`       
 
    * - Encryption
      - :ref:`encrypt <encrypt_dtl_function>` ·
@@ -195,42 +176,20 @@ DTL Expression Functions
        :ref:`decrypt-pki <decrypt_pki_dtl_function>` ·
        :ref:`decrypt-pgp <decrypt_pgp_dtl_function>`
 
-   * - JSON
-     - :ref:`json <json_dtl_function>` ·
-       :ref:`json-transit <json_transit_dtl_function>` ·
-       :ref:`json-parse <json_parse_dtl_function>` ·
-       :ref:`json-transit-parse <json_transit_parse_dtl_function>`
+   * - Entity lookups
+     - :ref:`lookup-entity <lookup_entity_dtl_function>`       
 
-   * - URIs
-     - :ref:`uri <uri_dtl_function>` ·
-       :ref:`is-uri <is_uri_dtl_function>` ·
-       :ref:`url-quote <url_quote_dtl_function>` ·
-       :ref:`url-unquote <url_unquote_dtl_function>`
-
-   * - UUIDs
-     - :ref:`uuid <uuid_dtl_function>` ·
-       :ref:`is-uuid <is_uuid_dtl_function>`
-
-   * - Nested transformations
-     - :ref:`apply <apply_dtl_function>` ·
-       :ref:`apply-hops <apply_hops_dtl_function>`
-
-   * - Paths
-     - :ref:`path <path_dtl_function>`
+   * - Hashing
+     - :ref:`hash128 <hash128_dtl_function>`
 
    * - Hops
      - :ref:`hops <hops_dtl_function>`
 
-   * - Entity lookups
-     - :ref:`lookup-entity <lookup_entity_dtl_function>`
-
-   * - Namespaced identifiers
-     - :ref:`ni <ni_dtl_function>` ·
-       :ref:`is-ni <is_ni_dtl_function>` ·
-       :ref:`ni-ns <ni_ns_dtl_function>` ·
-       :ref:`ni-id <ni_id_dtl_function>` ·
-       :ref:`ni-collapse <ni_collapse_dtl_function>` ·
-       :ref:`ni-expand <ni_expand_dtl_function>`
+   * - JSON
+     - :ref:`json <json_dtl_function>` ·
+       :ref:`json-transit <json_transit_dtl_function>` ·
+       :ref:`json-parse <json_parse_dtl_function>` ·
+       :ref:`json-transit-parse <json_transit_parse_dtl_function>`  
 
    * - Lists
      - :ref:`list <list_dtl_function>` ·
@@ -257,27 +216,7 @@ DTL Expression Functions
        :ref:`map <map_dtl_function>` ·
        :ref:`map-values <map_values_dtl_function>` ·
        :ref:`map-dict <map_dict_dtl_function>` ·
-       :ref:`group-by <group_by_dtl_function>`
-
-   * - Sets
-     - :ref:`union <union_dtl_function>` ·
-       :ref:`intersection <intersection_dtl_function>` ·
-       :ref:`intersects <intersects_dtl_function>` ·
-       :ref:`difference <difference_dtl_function>`
-
-   * - Dictionaries
-     - :ref:`items <items_dtl_function>` ·
-       :ref:`dict <dict_dtl_function>` ·
-       :ref:`is-dict <is_dict_dtl_function>` ·
-       :ref:`keys <keys_dtl_function>` ·
-       :ref:`values <values_dtl_function>` ·
-       :ref:`key-values <key_values_dtl_function>`
-
-   * - Tuples
-     - :ref:`tuples <tuples_dtl_function>`
-
-   * - Hashing
-     - :ref:`hash128 <hash128_dtl_function>`
+       :ref:`group-by <group_by_dtl_function>`            
 
    * - Math
      - :ref:`plus <plus_dtl_function>` ·
@@ -302,4 +241,65 @@ DTL Expression Functions
        :ref:`tan <tan_dtl_function>`
 
    * - Misc
-     - :ref:`fail! <fail_dtl_function>`
+     - :ref:`fail! <fail_dtl_function>`       
+
+   * - Namespaced identifiers
+     - :ref:`ni <ni_dtl_function>` ·
+       :ref:`is-ni <is_ni_dtl_function>` ·
+       :ref:`ni-ns <ni_ns_dtl_function>` ·
+       :ref:`ni-id <ni_id_dtl_function>` ·
+       :ref:`ni-collapse <ni_collapse_dtl_function>` ·
+       :ref:`ni-expand <ni_expand_dtl_function>`
+
+   * - Nested transformations
+     - :ref:`apply <apply_dtl_function>` ·
+       :ref:`apply-hops <apply_hops_dtl_function>`
+
+   * - Numbers
+     - :ref:`integer <integer_dtl_function>` ·
+       :ref:`is-integer <is_integer_dtl_function>` ·
+       :ref:`decimal <decimal_dtl_function>` ·
+       :ref:`is-decimal <is_decimal_dtl_function>` ·
+       :ref:`float <float_dtl_function>` ·
+       :ref:`is-float <is_float_dtl_function>` ·
+       :ref:`hex <hex_dtl_function>`
+
+   * - Paths
+     - :ref:`path <path_dtl_function>`
+
+   * - Sets
+     - :ref:`union <union_dtl_function>` ·
+       :ref:`intersection <intersection_dtl_function>` ·
+       :ref:`intersects <intersects_dtl_function>` ·
+       :ref:`difference <difference_dtl_function>`
+
+   * - Strings
+     - :ref:`string <string_dtl_function>` ·
+       :ref:`is-string <is_string_dtl_function>` ·
+       :ref:`upper <upper_dtl_function>` ·
+       :ref:`lower <lower_dtl_function>` ·
+       :ref:`length <length_dtl_function>` ·
+       :ref:`concat <concat_dtl_function>` ·
+       :ref:`join <join_dtl_function>` ·
+       :ref:`split <split_dtl_function>` ·
+       :ref:`strip <strip_dtl_function>` ·
+       :ref:`lstrip <lstrip_dtl_function>` ·
+       :ref:`rstrip <rstrip_dtl_function>` ·
+       :ref:`ljust <ljust_dtl_function>` ·
+       :ref:`rjust <rjust_dtl_function>` ·
+       :ref:`replace <replace_dtl_function>` ·
+       :ref:`substring <substring_dtl_function>` ·
+       :ref:`matches <matches_dtl_function>`
+
+   * - Tuples
+     - :ref:`tuples <tuples_dtl_function>`       
+
+   * - URIs
+     - :ref:`uri <uri_dtl_function>` ·
+       :ref:`is-uri <is_uri_dtl_function>` ·
+       :ref:`url-quote <url_quote_dtl_function>` ·
+       :ref:`url-unquote <url_unquote_dtl_function>`
+
+   * - UUIDs
+     - :ref:`uuid <uuid_dtl_function>` ·
+       :ref:`is-uuid <is_uuid_dtl_function>`
