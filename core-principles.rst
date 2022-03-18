@@ -1,3 +1,5 @@
+.. _core_principles:
+
 ===============
 Core principles
 ===============
@@ -42,6 +44,8 @@ data in a data platform that is neither unstructured nor in time
 series. Examples of master data slightly outside the usual definition
 are: order and invoice information, work orders, timesheet, document
 metadata, as well as any type of category.
+
+.. _dynamic_data_model:
 
 Parallel and continuously function-adapted data models, not static and canonical
 --------------------------------------------------------------------------------
