@@ -6,6 +6,8 @@ In order to use Sesam to its full potential we have designed several tools that 
 
 In this section you learn both what these tools are, how they work and how we can use them effectively. 
 
+.. rubric:: In this section:
+
 .. toctree::
    :maxdepth: 2
 

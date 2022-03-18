@@ -7,6 +7,8 @@ Sesam also supports custom microservices for those occasions where extra functio
 
 In this section you will learn how to synchronize your data streams into and out from the platform such that all enterprise data needed inside Sesam may flow continuously and seamlessly. 
 
+.. rubric:: In this section:
+
 .. toctree::
    :maxdepth: 1
 

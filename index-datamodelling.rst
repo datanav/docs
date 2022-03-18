@@ -5,6 +5,8 @@ Data modelling is the core of any platform aimed to integrate data. Sesam has sp
 
 In this section we will show you both how single data entities are modelled in Sesam, as well as the modelling of the dataflows that utilizes them. 
 
+.. rubric:: In this section:
+
 .. toctree::
    :maxdepth: 1
 
