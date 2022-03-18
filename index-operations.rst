@@ -1,6 +1,8 @@
 Operations
 ==========
 
+In every situation where you manage large quantities of data maintaining control of the dataflows is essential. In this section we will describe tailored functionalities Sesam provides in order to ensure a secure, stable and easily maintained solution. 
+
 .. toctree::
    :maxdepth: 1
 
