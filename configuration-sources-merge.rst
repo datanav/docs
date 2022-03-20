@@ -348,4 +348,4 @@ already merged entities downstream.
 
    If config changes are required be aware of the following:
    Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
-   For both merge source version ``1`` and ``2`` any removal of datasets will require a reset of the pipe.
+   For both merge source version ``1`` and ``2`` any removal of datasets will require a full run of the pipe. If you use rescan in the background, the incremental run will produce results based on the current state that includes the datasets marked for removal.
