@@ -66,26 +66,73 @@ Sesam has a built-in monitoring function to help to ensure data flows as expecte
 Enrich
 ------
 
-The enrichment step is concerned with adding :ref:`namespaces <concepts-namespaces>` and :ref:`namespaced identifiers <best-practice-namespace>`. Sesam makes use of RDF (https://www.w3.org/RDF/) to apply this enrichment and as such describe what a certain field means. Other types of semantics can be utilized if need be.
+The enrichment step is concerned with providing semantics in three main areas:
 
-.. _semantics-as-a-method-of-enrichment:
+#. adding :ref:`rdf:type <best-practice-rdf-type>` to define the entity's business type,
+#. adding :ref:`namespaces <concepts-namespaces>` to preserve property lineage and avoid property name conflicts across sources,
+#. adding :ref:`namespaced identifiers <best-practice-namespace>` to define how the business entity type relates to other business entity types from the same source.
 
-Semantics as a method of enrichment
+Other types of semantics can be utilized if needed.
+
+.. tip::
+
+    If raw data entities also consist of metadata used for classification,
+    it is advisable to separate out this metadata and put in ``global-classification``.
+
+.. _semantic-enrichment-rdf-type:
+
+Semantic enrichment with rdf:type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To classify business entities it is a best practice to add a property ``rdf:type``.
+The ``rdf:type`` should be added as a namespaced identifier to enable potential URI expansion.
+Use the source from which the business entity orginated as namespace and the business entity type as identifier.
+
+For example, employees from SAP could be given ``rdf:type`` `"~:sap:Employee"`.
+
+``rdf:type`` is often used as filter criteria in various contexts, especially in the :ref:`transform` step and when joining data using ``hops``.
+
+.. _semantic-enrichment-namespaces:
+
+Semantic enrichment with namespaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Classifying data in Sesam is done by using semantics to describe properties of a certain field. If one uses RDF or other methods to define semantics of input from sources, it will be easier to understand what a field is in the latter steps in a Sesam dataflow.
+Namespace support is a central feature of Sesam.
+Adding namespaces to entity properties ensures property lineage, and thus enables tracing of properties back to their origin.
+Using namespaces also ensures that properties with identical names from different sources do not conflict with each other.
 
-As an example, imagine a source having a field called *first name*, albeit in another system a similar field might be called *given name*. Using semantics, you can clarify whether these are the same, where they originate from and how they should be related. By using semantics, like RDF, Uniform Resource Identifiers (URI) can be created. If not using standards, one should make a data catalog that defines the semantics of the input sources and output targets. As such, ensuring that proper enrichment can be carried out.
+As an example, imagine two business entities from two different sources both having a property ``first-name``.
+By adding namespaces, these two entities could safely be merged by preserving their properties in separate namespaces:
+``<source a>:first-name`` and ``<source b>:first-name``.
 
-The following are benefits of semantic enrichment:
+See :ref:`concepts-namespaces` for more details.
 
-- **References to other datasets**: if a property is a reference or relation to another dataset, such as a foreign key field in a relational database, you should add an additional property that contains a reference to that dataset. This should be in the form of a :ref:`namespaced identifier <best-practice-namespace>`. These references are usually key properties when semantically linking data together in a global dataset, :ref:`connect`, but are also useful when connecting data in preparation pipes, :ref:`transform`.
+.. _semantic-enrichment-namespaced-identifiers:
 
-    .. hint::
+Semantic enrichment with namespaced identifiers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-        - When raw data is linked to data used to categorize it or other metadata, it is advisable to split it; keep data and metadata separate. The metadata used to categorize can be merged into a global like ``global-classification``.
+Namespaced identifiers (NIs) in Sesam are like foreign keys in relational databases.
+Sesam, being schemaless, does not enforce any relations between datasets,
+but NIs are a handy way of defining these relations semantically.
 
--  :ref:`An RDF type <best-practice-rdf-type>`: this is a property providing a qualifier of what the data is and can be seen as metadata used to relate data and provide a semantic context to the data. When used with a namespace, it keeps track of the origin of the data, as well as the business type. An RDF type is useful in terms of filtering data, both from global datasets and in :ref:`hops <hops_dtl_function>` to other datasets.
+NIs are usually derived from source properties that are either explicitly defined as, or inferred to be, foreign keys.
+Adding NIs by using ``make-ni`` on relevant source properties will both ensure that the original source properties are preserved and that their NI counterparts are added as separate properties.
+
+On some occasions NIs must be added by other means, typically by using the ``add`` and ``ni`` functions.
+
+Regardless, make sure the NIs reference actual entity identifiers (primary key equivalents) in the related datasets.
+
+.. important::
+
+  NIs should only reference business entities from the *same* source,
+  the same way foreign keys in relational databases references primary keys in tables within the *same* database.
+  At the :ref:`enrich` step we do not want to make assumptions about how (if at all) data from one particular source relates to data from *other* sources.
+  That is done in the :ref:`connect` step.
+
+NIs are prime candidates for :ref:`hops <hops_dtl_function>` equalities since they reference entity identifiers in related datasets.
+
+See :ref:`best-practice-namespace` for more details.
 
 .. _connect:
 
