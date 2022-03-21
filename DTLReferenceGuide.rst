@@ -21,15 +21,17 @@ DTL consists of 'functions' that can pick and transform data and 'hops' that can
 Syntax
 ------
 
-DTL uses a JSON syntax to describe the transforms to perform. This allows us to define it directly in the pipe's configuration, which is also written in JSON. In general, DTL uses functions over keywords and as such there are just a few terms that are baked into the language.
+DTL uses a JSON syntax to describe the transforms to perform.
+This allows us to define it directly in the pipe's configuration, which is also written in JSON.
+In general, DTL uses functions over keywords and as such there are just a few terms that are baked into the language.
 
-An example using the 'add' transform:
+An example using the ``add`` transform:
 
-  ["add", "name", "_S.firstname"]
+  ``["add", "name", "_S.firstname"]``
 
 And composing functions:
 
-  ["add", "name", ["concat", ["upper", "_S.lastname"], ", ", "_S.firstname"]]
+  ``["add", "name", ["concat", ["upper", "_S.lastname"], ", ", "_S.firstname"]]``
 
 
 Annotated Example
