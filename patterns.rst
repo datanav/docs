@@ -36,7 +36,7 @@ Fetch more data based on some input source, requires rescan all the time. Perhap
 
 Recreate best effort history from a source
 ------------------------------------------
-We become master, pipe should be durable (coming feature).
+We become master, pipe should be durable (coming feature). Add a last modified timestamp to the entities. If you do not make a unique ``_id`` (e.g. append the last modified timestamp to it) you need to turn off compaction to keep all data.
 
 Make periodic entities from a versioned history
 -----------------------------------------------
@@ -60,28 +60,39 @@ Adding type information
 -----------------------
 Useful to pick out relevant subsets from the globals later. Add data type property (``rdf:type`` or ``$type``).
 
-Flattening complex objects
---------------------------
-Gives you flat structures, which can be easier to work with.
-
 Splitting out lists of sub-objects
 ----------------------------------
 Aggregate objects --- are the sub-objects part of the parent or can they live on their own? Use :ref:`create-child <dtl_transform-create-child>` and :ref:`emit_children <emit_children_transform>`.
 
+Keep the data in its original structure
+---------------------------------------
+Data modeller expects data in the same structure as the system that produced it, and often need to send back the original structure.
+
+Normalising data
+----------------
+Convert data to Sesam types and add them as new properties. Try to use different namespaces for the original data vs the normalised data.
+
+Extract reference properties as reference/classification entities
+-----------------------------------------------------------------
+Having references as separate entities makes it possible to merge them with other reference entities from other systems and make it possible to map data from one system to another in the connect phase.
+
+To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
+
+.. warning::
+
+  If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
+
+
 Connect patterns
 ================
 
-Washing data
-------------
+Cleaning data
+-------------
 Should be added as new properties, you might need the dirty data.
-
-Manual merge
-------------
-Hardcoded dataset with manually connected IDs, could also be an external source with manual input. Linking table.
 
 External merge
 --------------
-AI connected objects, same pattern as manual merge. `Duke <https://github.com/larsga/Duke>`_ is an example. Produces link objects.
+Hardcoded dataset with manually connected IDs, could also be an external source with manual input. Linking table. AI connected objects. `Duke <https://github.com/larsga/Duke>`_ is an example. Produces link objects.
 
 Golden property based on priority
 ---------------------------------
@@ -90,30 +101,27 @@ Use :ref:`coalesce <coalesce_dtl_function>`.
 Golden property based on last updated
 -------------------------------------
 Make sure you have a reliable timestamp from the source that you propagate. Think about feedback loops if data is
-synced back.
+synced back. Can be good to standardise on e.g. ``$last_updated``.
+
+Golden property based on quality
+--------------------------------
+Make a normalised quality score across the sources you want to pick from, and pick the property from the source that has the most relevant score.
+
+Feedback loop (perhaps move to new "Enhanced patterns" phase)
+-------------------------------------------------------------
+Expensive hops or external transforms is best to do in a separate dataflow. This allows you to optimise what you process using subsets, the primary dataflow does not have to wait for this data, it will be processed later if it applied to the entity. Entities might be processed twice if the feedback affected the entity. Use the ``_id`` of the merge source as the identifier. Make sure the feedback is marked as deleted when the data that produced it no longer exists (otherwise entities will never be deleted due to the feedback entity itself).
 
 Transform patterns
 ==================
 
 Late schema binding
 -------------------
-Ensure transformations are done in accordance to target schema.
+Ensure transformations are done in accordance to target schema. Only map using the datatypes namespace (bidirectional sync might not support patching, and you need the entire original object when sharing), and the global namespace. If you reference other namespaces you can no longer do all refactoring in the connect phase. 
 
-Optimistic locking
-------------------
-Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
-
-How to extract entities
------------------------
-To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
-
-.. warning::
-
-  If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
 
 Defining hierarchies for recursion
 ----------------------------------
-:ref:`Recursive hops <hops>` should be used when your data exhibits inverse relationships.
+:ref:`Recursive hops <hops>` should be used when your data exhibits inverse relationships. Typically used when filtering on reference/classification properties.
 
 An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data. 
 
@@ -121,6 +129,10 @@ When doing recursive hops you should define the property ``max_depth`` to safegu
 
 Share patterns
 ==============
+
+Optimistic locking
+------------------
+Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
 
 Exposing data
 -------------
