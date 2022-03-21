@@ -1,5 +1,9 @@
 .. This file is included by the "databrowser-auth.rst" and the "gdpr-platform-configuration.rst" files.
 
+.. warning::
+
+  The databrowser will reach end-of-life December 31st 2023. See :ref:`changelog for more information <changelog_2022_03_21>`.
+
 To enable openid connect authentication, you first need one or more external authentication services. You must
 then tell the data access portal to use the authentication service(s). This is done by setting the "authentication_providers" config variable like this::
 
