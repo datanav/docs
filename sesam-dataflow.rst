@@ -66,7 +66,7 @@ Sesam has a built-in monitoring function to help to ensure data flows as expecte
 Enrich
 ------
 
-The enrichment step is concerned with providing sematics in three main areas:
+The enrichment step is concerned with providing semantics in three main areas:
 
 #. adding :ref:`rdf:type <best-practice-rdf-type>` to define the entity's business type,
 #. adding :ref:`namespaces <concepts-namespaces>` to preserve property lineage and avoid property name conflicts across sources,
@@ -112,11 +112,11 @@ See :ref:`concepts-namespaces` for more details.
 Semantic enrichment with namespaced identifiers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Namespaced identifiers (NIs) in Sesam are like foreign keys (FKs) in relational databases.
+Namespaced identifiers (NIs) in Sesam are like foreign keys in relational databases.
 Sesam, being schemaless, does not enforce any relations between datasets,
 but NIs are a handy way of defining these relations semantically.
 
-NIs are usually derived from source properties that are either explicitly defined as, or inferred to be, FKs.
+NIs are usually derived from source properties that are either explicitly defined as, or inferred to be, foreign keys.
 Adding NIs by using ``make-ni`` on relevant source properties will both ensure that the original source properties are preserved and that their NI counterparts are added as separate properties.
 
 On some occasions NIs must be added by other means, typically by using the ``add`` and ``ni`` functions.
@@ -126,7 +126,7 @@ Regardless, make sure the NIs reference actual entity identifiers (primary key e
 .. important::
 
   NIs should only reference business entities from the *same* source,
-  the same way FKs in relational databases references primary keys in tables within the *same* database.
+  the same way foreign keys in relational databases references primary keys in tables within the *same* database.
   At the :ref:`enrich` step we do not want to make assumptions about how (if at all) data from one particular source relates to data from *other* sources.
   That is done in the :ref:`connect` step.
 
