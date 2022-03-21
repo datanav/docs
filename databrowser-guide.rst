@@ -1,3 +1,7 @@
+.. warning::
+
+  The databrowser will reach end-of-life December 31st 2023.
+
 The Sesam Databrowser
 =====================
 
