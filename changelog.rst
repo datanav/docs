@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2022_03_21:
+
+2022-03-21
+----------
+
+* Added a property ``ignore_non_existent_datasets`` to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources. By default, listing one or or more datasets in ``initial_datasets`` that do not exist does not prevent the source from being populated. Setting ``ignore_non_existent_datasets`` to ``false`` changes this behaviour so that the source will not be populated if any datasets in ``initial_datasets`` do not exist on the node.
+* Fixed a bug where the ``initial_datasets`` property was initialized as an empty list in the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``initial_datasets`` was not explicitly set. The property now defaults correctly to the same list of datasets listed in ``datasets``. This is a breaking change.
+* The :ref:`dataset <dataset_source>` and :ref:`diff_datasets <diff_datasets_source>` now warn the user if any input datasets do not exist. This also applies to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``ignore_non_existent_datasets`` is ``false``.
+
 .. _changelog_2022_03_10:
 
 2022-03-10
