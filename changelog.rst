@@ -32,6 +32,7 @@ Changelog
 ----------
 
 * Restructured this documentation site. :doc:`What's Sesam <index-whatis>` is targeted at architects and decision makers. :doc:`User guide <index-developer>` is targeted at users of Sesam, with new subsections for :doc:`Data synchronization <index-synchronization>`, :doc:`Data modelling <index-datamodelling>`, :doc:`Data platforms <index-dataplatforms>` and :doc:`Operations <index-operations>`.
+* Added support for :ref:`Durable Data <concepts-durable-data>`.
 
 .. _changelog_2022_03_03:
 

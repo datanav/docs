@@ -115,6 +115,20 @@ Circuit Breakers
 
 A :ref:`circuit breaker <circuit_breakers_section>` is a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if a larger than expected number of entities are written to a dataset in a pipe run. When tripped, the pipe will refuse to run and it has to be untripped manually. This safety mechanism is there to prevent unforeseen tsunamis of changes and to prevent them from propagating downstream.
 
+.. _concepts-durable-data:
+
+Durable Data
+============
+
+For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery
+data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources,
+as the data that was lost can be pulled again. For pipes with http_endpoint sources and non-idempotent sinks, this can
+be a problem. You can enable this payed feature pr pipe, if enabled the pipe will use a different and more
+durable storage mechanism that reduces the likelihood of this happening. Note that this incurs a 3x increase in data
+size needed for the pipes that has this feature enabled.
+
+TODO link to reference documentation for this property
+
 .. _concepts-notifications:
 
 Notifications
