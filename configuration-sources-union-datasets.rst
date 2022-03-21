@@ -57,6 +57,14 @@ source, except ``datasets`` can be a list of datasets ids.
      -
      -
 
+   * - ``ignore_non_existent_datasets``
+     - Boolean
+     - If set to ``false``, datasets listed in ``initial_datasets`` that do not exist will prevent the source from
+       being populated. With the default value (``true``) the source will be populated even if one or more datasets
+       in ``initial_datasets`` do not exist.
+     - true
+     -
+
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the

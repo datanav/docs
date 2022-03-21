@@ -88,6 +88,14 @@ Properties
      -
      -
 
+   * - ``ignore_non_existent_datasets``
+     - Boolean
+     - If set to ``false``, datasets listed in ``initial_datasets`` that do not exist will prevent the source from
+       being populated. With the default value (``true``) the source will be populated even if one or more datasets
+       in ``initial_datasets`` do not exist.
+     - true
+     -
+
    * - ``equality``
      - List<EqFunctions{>=0}>
      - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.
