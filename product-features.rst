@@ -120,12 +120,7 @@ A :ref:`circuit breaker <circuit_breakers_section>` is a safety mechanism that o
 Durable Data
 ============
 
-For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery
-data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources,
-as the data that was lost can be pulled again. For pipes with http_endpoint sources and non-idempotent sinks, this can
-be a problem. You can enable this payed feature pr pipe, if enabled the pipe will use a different and more
-durable storage mechanism that reduces the likelihood of this happening. Note that this incurs a 3x increase in data
-size needed for the pipes that has this feature enabled.
+For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This might not a huge problem when Sesam is pulling data from sources, as the data that was lost can be pulled again. For pipes with http_endpoint sources and non-idempotent sinks, this will most likely be a problem. In our cloud subscriptions you now have the possibility to request that a pipes data is stored in three replicas. This reduces the likelihood of data loss. Note that this incurs a 3x increase in data size for the pipes that has this feature enabled.
 
 TODO link to reference documentation for this property
 
