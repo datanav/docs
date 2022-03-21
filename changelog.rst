@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_03_21:
+
+2022-03-21
+----------
+
+* The :doc:`Databrowser <databrowser>` tool will reach end-of-life December 31st 2023. It is superseded by the
+  :ref:`Integrated Search <concepts-integrated-search>` feature. We will notify the current subscribers soon.
+
 .. _changelog_2022_03_10:
 
 2022-03-10
