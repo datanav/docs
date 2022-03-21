@@ -228,19 +228,20 @@ Things to note:
 
 .. _variables:
 
-Variables
-=========
+Built-in Variables
+==================
 
-There are four built-in variables in the Data Transformation
-Language. These are ``_S``, ``_T``, ``_P``, ``_B`` and ``_``. They refer to
-the source entity, the target entity, the parent context, the bound endpoint variables and the
-current , respectively. ``_S`` and ``_T`` appear in pairs inside
-each applied transform. ``_P`` appears inside the ``apply`` function
-and refers to the parent context. ``_`` is used to refer to the
-current value in functional expressions. The ``_B`` variable is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>` to hold variables
-defined by URL parameters (i.e. a URL variable ``foo`` given to the endpoint API on the form
-``http://my_host:port/api/publishers/my_endpoint?foo=bar`` will be reflected in the ``_B`` map as a key ``foo`` with
-the value ``bar``). It is useful for parameterizing the transform on an endpoint sink.
+There are six built-in variables in the DTL.
+These are ``_S``, ``_T``, ``_P``, ``_R``, ``_B`` and ``_``.
+They refer to the source entity, the target entity, the parent context,
+the root context, the bound endpoint variables and the current value, respectively.
+
+``_S`` and ``_T`` appear in pairs inside each applied transform.
+``_P`` appears inside the ``apply`` function and refers to the parent context.
+``_R`` is used to refer to the root context containing both ``_S`` and ``_T``.
+``_B`` is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>`
+to hold variables defined by URL parameters.
+``_`` is used to refer to the current value in functional expressions.
 
 .. list-table::
    :header-rows: 1
@@ -309,6 +310,16 @@ the value ``bar``). It is useful for parameterizing the transform on an endpoint
        |
        | The root target entity's ``description`` field must have a
          length of less than 50 characters.
+
+       .. _b_variable:
+
+   * - ``_B``
+     - A dict that contains properties bound to URL parameters. 
+       It is useful for parameterizing the transform on an endpoint sink.
+       
+     - | A URL parameter ``foo`` given to the endpoint API on the form  
+       | ``http://my_host:port/api/publishers/my_endpoint?foo=bar``
+       | will be reflected in ``_B`` as a key ``foo`` with the value "`bar`".
 
        .. _underscore_variable:
 
