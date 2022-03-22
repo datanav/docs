@@ -121,7 +121,6 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     "footer_items": "copyright.html",
     "navbar_end": "right-menu.html",
-    "left_sidebar_end": "sidebar-ethical-ads",
     #     "announcement": "This is a preview of the upcoming Sesam Documentation. For the official documentation go to <a href=\"https://docs.sesam.io\">docs.sesam.io</a>",
     # "sidebar_hide_name": True
 }
@@ -167,8 +166,11 @@ html_css_files = [
 # typographically correct entities.
 #html_use_smartypants = True
 
-# Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+ #Custom sidebar templates, maps document names to template names.
+html_sidebars = {
+    "**": ["search-field", "sidebar-nav-bs", "left-sidebar-bottom.html"]
+
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

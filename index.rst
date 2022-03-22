@@ -16,4 +16,3 @@ collecting or receiving data from source systems, transforming data, and pushing
    What is Sesam <index-whatis>
    Documentation <index-developer>
    Learn <index-learn>
-   Community <community>
