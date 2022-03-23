@@ -42,3 +42,7 @@ a.nav-link {
     justify-content: left;
     max-width: 79%;
 }
+
+.bd-links {
+    max-height: 70vh;
+}
