@@ -4,7 +4,7 @@ recommonmark==0.7.1
 docutils==0.16
 
 #furo==2022.2.14.1
-pydata-sphinx-theme==0.7.2
+pydata-sphinx-theme==0.8.0
 
 sesamclient==0.2.68
 sphinx-argparse==0.3.1
