@@ -21,6 +21,7 @@ requirements and the installation steps necessary to get Sesam running on your K
 Hardware requirements
 ---------------------
 
+- Kubernetes cluster running version 1.22 or newer.
 - One worker node with at least 8 CPU cores and 32 GB of RAM.
 
 Software requirements
