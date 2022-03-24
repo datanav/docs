@@ -44,7 +44,7 @@ If a source provides a list of older versions of an entity, one way to materiali
 
 Sporadic empty response
 -----------------------
-Source sometimes produces an empty array for some reason (during restarts, authenticaion problems, etc). Use :ref:`circuit breakers <concepts-circuit-breakers>`.
+Source sometimes produces an empty array for some reason (during restarts, authentication problems, etc). Use :ref:`circuit breakers <concepts-circuit-breakers>`.
 
 Avoid unnecessary load on source systems
 ----------------------------------------
