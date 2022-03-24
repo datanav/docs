@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_03_24:
+
+2022-03-24
+----------
+
+* Subscriptions created in the portal are now provisioned with the :ref:`Clustered architecture <changelog_2022_02_11>`.
+
 .. _changelog_2022_03_21:
 
 2022-03-21
