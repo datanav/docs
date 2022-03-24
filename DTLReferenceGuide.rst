@@ -46,67 +46,67 @@ Given the following *source entity* (from the ``person`` dataset):
 
 ::
 
-    {
-      "_id": "1",
-      "name": "John Smith",
-      "age": 25
-    }
+  {
+    "_id": "1",
+    "name": "John Smith",
+    "age": 25
+  }
 
 We then want to transform it into the following *target entity*:
 
 ::
 
-    {
-      "_id": "1",
-      "type": "customer",
-      "name": "JOHN SMITH",
-      "orders": [
-        {"_id": 100, "amount": 320 },
-        {"_id": 200, "amount": 500 }
-      ],
-      "order_count": 2
-    }
+  {
+    "_id": "1",
+    "type": "customer",
+    "name": "JOHN SMITH",
+    "orders": [
+      {"_id": 100, "amount": 320 },
+      {"_id": 200, "amount": 500 }
+    ],
+    "order_count": 2
+  }
 
 A pipe with the ``dtl`` transform below lets us transform persons into
 persons with orders:
 
 ::
 
-    {
-      "_id": "person-with-orders",
-      "type": "pipe",
-      "source": {
-          "type": "dataset",
-          "dataset": "person"
-      },
-      "transform": {
-        "type": "dtl",
-        "rules": {
-            "default": [
-                ["copy", "_id"],
-                ["add", "type", "customer"],
-                ["add", "name", ["upper", "_S.name"]],
-                ["add", "orders",
-                  ["sorted", "_.amount", ["apply-hops", "order", {
-                    "datasets": ["orders o"],
-                    "where": [
-                      ["eq", "_S._id", "o.cust_id"]
-                    ]
-                }]]],
-                ["add", "order_count", ["count", "_T.orders"]],
-                ["filter", ["gt", "_T.order_count", 10]]
-            ],
-            "order": [
-                ["copy", "_id"],
-                ["add", "amount", "_S.amount"]
-            ]
-        }
-      },
-      "sink": {
-          "type": "dataset",
-          "dataset": "person-with-orders"
+  {
+    "_id": "person-with-orders",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "person"
+    },
+    "transform": {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "_id"],
+          ["add", "type", "customer"],
+          ["add", "name", ["upper", "_S.name"]],
+          ["add", "orders",
+            ["sorted", "_.amount", ["apply-hops", "order", {
+              "datasets": ["orders o"],
+              "where": [
+                ["eq", "_S._id", "o.cust_id"]
+              ]
+          }]]],
+          ["add", "order_count", ["count", "_T.orders"]],
+          ["filter", ["gt", "_T.order_count", 10]]
+        ],
+        "order": [
+          ["copy", "_id"],
+          ["add", "amount", "_S.amount"]
+        ]
       }
+    },
+    "sink": {
+      "type": "dataset",
+      "dataset": "person-with-orders"
     }
+  }
 
 Explanation:
 
@@ -132,16 +132,16 @@ Explanation:
 
    ::
 
-      ["add", "orders",
-        ["sorted", "_.amount",
-          ["apply-hops", "order", {
-            "datasets": ["orders o"],
-            "where": [
-              ["eq", "_S._id", "o.cust_id"]
-            ]
-          }]
-        ]
+    ["add", "orders",
+      ["sorted", "_.amount",
+        ["apply-hops", "order", {
+          "datasets": ["orders o"],
+          "where": [
+            ["eq", "_S._id", "o.cust_id"]
+          ]
+        }]
       ]
+    ]
 
 1. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
@@ -374,13 +374,13 @@ There are three ways that one can access properties on entities:
 
    ::
 
-       ["hops", {
-           "datasets": ["orders o"],
-           "where": [
-             ["eq", "_S._id", "o.cust_id"],
-             ["eq", "o.type", "BILLING"]
-           ]
-       }]
+     ["hops", {
+       "datasets": ["orders o"],
+       "where": [
+         ["eq", "_S._id", "o.cust_id"],
+         ["eq", "o.type", "BILLING"]
+       ]
+     }]
 
    The ``hops`` function can be used to perform :ref:`joins <joins>` across two or
    more datasets, so if you want to navigate beyond the current entity
