@@ -22,7 +22,7 @@ Sesam provides a `public GitHub repository <https://github.com/sesam-community>`
 
     .. tip::
 
-        Try to minimize the logic performed in microservices. Often it might make sense to just perform transformations on the data inside a microservice instead of sending the data to Sesam and performing the same operations there. But bare in mind :ref:`Sesam's data model <core_principles>`: we want to, to as large extent as possible, keep the source system's original data model in Sesam. Also, once we start changing data inside microservices it might be hard to troubleshoot errors since logic is spread out over different instanses. 
+        Try to minimize the logic performed in microservices. Often it might make sense to just perform transformations on the data inside a microservice instead of sending the data to Sesam and performing the same operations there. But bare in mind :ref:`Sesam's data model <core_principles>`: we want to, to the largest extent possible, keep the source system's original data model in Sesam. Also, once we start changing data inside microservices, it might be more time demanding to troubleshoot errors since logic is spread out over different instances. 
 
 
 .. _creating_a_microservice :
@@ -30,7 +30,7 @@ Sesam provides a `public GitHub repository <https://github.com/sesam-community>`
 Creating a microservice
 -----------------------
 
-Below you will find a template for a simplified microservice. It will form the baseline to which we will add the different functionalities available for a microservice in use in a Sesam installation. 
+Below you will find a template for a simplified microservice for use in Sesam. It will form the baseline to which we will add the different Sesam functionalities. 
 
 .. raw:: html
 
@@ -59,7 +59,7 @@ Below you will find a template for a simplified microservice. It will form the b
 
   access_token = os.environ.get('ACCESS_TOKEN')
 
-  @app.route("/post_entities/<url>", methods=["GET"])
+  @app.route("/<url>", methods=["POST"])
   def post_func(url):
       headers = {"Authorization": "Bearer {}".format(access_token)}
       entities = request.get_json()
@@ -68,11 +68,13 @@ Below you will find a template for a simplified microservice. It will form the b
           response = requests.post(url=url, headers=headers, data=entity)
           if response.status_code != 200:
               raise AssertionError("Unexpected response status code: %d with response text %s" % (response.status_code, response.text))
+          else:
+              logger.info("Entity {} send successfully").format(entity["_id"])
 
       return "Some return message"
       
 
-  @app.route("/get_entities/<url>", methods=["GET"])
+  @app.route("/<url>", methods=["GET"])
   def get_func(url):
       headers = {"Authorization": "Bearer {}".format(access_token)}
 
@@ -97,20 +99,20 @@ Passing variables to a microservice
 
 In Sesam there are three typical ways of passing variables from Sesam into a microservice: 
 
-- By setting environmental variables directly to the Docker container in which the microservice runs. We will explain how this is done through Sesam in the :ref:`Using a microservice <using_a_microservice>` section.
-- Through `dynamic URL's <https://stackoverflow.com/questions/35107885/how-to-generate-dynamic-urls-in-flask>`_ in the route decorator.
+- By setting environmental variables directly to the Docker container in which the microservice runs. These are defined as docker specific parameters in the :ref:`microservice system configuration <microservice_system>`.
+- Through `dynamic URL's <https://stackoverflow.com/questions/35107885/how-to-generate-dynamic-urls-in-flask>`_ in the route decorator. Example of this from the microservice perspective may be seen in line's 20 and 35 in the microservice template above. The pipe perspective of these connections can be seen :ref:`here <dynamic_url_pipe>`.
 - Through the request parameters  in the :ref:`JSON pull <json_pull>` and :ref:`JSON push <json_push>` protocols.
 
-Environmental variables are usually system specific varables, i.e. they are used throughout the whole microservice and not for a spesific route. Example of these might be access tokens, base URL's or headers.
+Environmental variables are usually system specific varables, i.e. they are used throughout the whole microservice and not for a spesific endpoint. Example of these might be access tokens, base URL's or headers. 
 
-Variables through dynamic URL's are generally pipe spesific variables that are only used for specific routes. These variables include variables such as endpoint URL's or entity data that are specific for that pipe.
+Variables through dynamic URL's are generally pipe spesific variables that are only used for specific endpoints. These variables include variables such as endpoint URL's or entity data that are specific for that pipe.
 
 The request parameters are set variables containing information about the the request and state of the pipe such as batch information and since values. 
 
 Logs from a microservice
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The best way to display information from the microservice in Sesam is to setup logging statements. These logs can later be viewed in the microservice system's **Status page** (link). You will also be able to see some error messages and full tracebacks in the **execution logs** (link) of the pipes executing the microservice's routes. These messages can however be hard to read, and does not always log all the needed information.   
+The best way to display information from the microservice in Sesam is to set up logging statements inside the microservice (an example of this can be seen in line 30 in the microservice template above). These logs can later be viewed in the microservice system's **Status page**. You will also be able to see some error messages and full tracebacks in the **execution logs** of the pipes executing the microservice's routes. These messages can however be hard to read, and does not always log all the needed information.   
 
 Importing data to Sesam
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -191,6 +193,8 @@ Our microservice template including continuation support is displayed below.
 
    </details>
 
+.. _microservice_memory_awareness:
+
 Memory awareness
 ****************
 
@@ -198,25 +202,14 @@ An other important concept to be aware of if memory usage of your microservices.
 
 For container size we advise to create as minimalistic containers as possible (especially when concidering container OS), and for the required memory when importing/exporting data we suggest to stream data directly to Sesam instead of storing it in the Docker container.  
 
-Below is an example of the microservice template where we stream entities back to Sesam instead of storing them in the Docker container.
+Below you'll find links to microservices currently in use in Sesam where data is streamed back to Sesam.
 
-.. raw:: html
-
-   <details open>
-   <summary><a>Microservice template streaming</a></summary>
-
-.. code-block:: python
-  :linenos:
-
-  TO BE DONE
-
-.. raw:: html
-
-   </details>
+- `Simple OData <https://github.com/sesam-community/simple-odata>`_
+- `rest-transform <https://github.com/sesam-community/rest-transform>`_
 
 Exporting data from Sesam
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-In addition to **memory awareness** and **passing variables to a microservice**, as mentioned above, there are a couple of Sesam functionalities you should be aware of when create route for exporting data from Sesam in a microservice.
+In addition to :ref:`memory awareness <microservice_memory_awareness>` and :ref:`passing variables to a microservice <passing_variables_to_a_microservice>`, as mentioned above, there are a couple of Sesam functionalities you should be aware of when create route for exporting data from Sesam in a microservice.
 
 When using the :ref:`JSON push sink <json_sink>` to send entities from Sesam to the microservice Sesam includes each entity's system attributes (:ref:`reserved fields <reserved_fields>`). There might very well be use for them in the microservice, but if there is not these may have to be removed before sending the data from the microservice to the target system. This may be especially for entities with *"_deleted": true*. This means the entity is marked as deleted in Sesam and might require some extra functionality to be handeled in the microservice. 
 
@@ -230,9 +223,7 @@ One explicit use-case for external transformations is to perform the Sesam versi
 
 Optimistic locking with microservices
 *************************************
-**Starten av denne delen skal muligens være et annet sted i docs, men ligger her pr. nå**
-
-Optimistic locking in Sesam is a key component in bidirectional syncronization of golden records, the product of Sesam's Master Data Management (MDM) (**we should really have a section on MDM in Sesam...**). We utilize optimistic locking in order to minimize the chances of overwriting data in the target system Sesam has yet to import and process. 
+Optimistic locking in Sesam is a key component in bidirectional syncronization of golden records, the product of Sesam's Master Data Management. We utilize optimistic locking in order to minimize the chances of overwriting data in the target system Sesam has yet to import and process. 
 
 **Use-case**:
 Imagine Sesam importing person data from systems A, B and C. They all undergo MDM in Sesam in order to create golden recods by combining the data from all three systems. Sesam have now created a new set of golden records which quality is potentionally much highar than the quality in the three source systems. We therefore wish to sync this data back to all three systems to achieve consistency on all levels. However, before sending the golden record #1 back to system A, someone updates the corresponding row in system A. We now risk overwriting those changes with our golden record, changes that really should be sent into Sesam's MDM for processing. 
@@ -272,8 +263,9 @@ The example below shows an example on how this may look inside out microservice 
   access_token = os.environ.get('ACCESS_TOKEN')
 
 
-  @app.route("/single_entity_lookup/<url>", methods=["POST", "GET"])
-  def post_func(url):
+  @app.route("/single_entity_lookup", methods=["POST", "GET"])
+  def post_func():
+      url = "some url"
       headers = {"Authorization": "Bearer {}".format(access_token)}
       payload = request.get_json()
 
@@ -350,33 +342,138 @@ In this example the access token (stored as a :ref:`secret <secrets_manager>` in
 
 The following pipe sink configuration and pytohn snippet shows an example of how dynamic URL's may be used to send pipe specific variables to a specific microservice route:
 
+.. _dynamic_url_pipe:
+
 ::
 
   {
       "type": "json",
       "system": "test-system",
-      "url": "my-route/test-endpoint"
+      "url": "test-endpoint"
    }
 
 .. code-block:: python
 
-  @app.route("/my_route/<endpoint-url>", methods=["POST", "GET"])
+  @app.route("/<endpoint-url>", methods=["POST", "GET"])
   def my_func(endpoint-url):
 
 In this example the endpoint url is accessed only by this specific route in the microservice.
 
+Change tracking with a microservice
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In order to utilize change tracking for a microservice we have to enable continuation support to it. You can read about how to set up continuation support to a pipe connected to a microservice :ref:`here <continuation_support_microservices>`. 
 
+    .. important::
 
+        When using continuation support for a microservice, just as with any other source system in Sesam, Sesam will not automatically detect deleted data from the source. In order to enable :ref:`deletion tracking <concepts-deletion-tracking>` with a pipe with continuation support you need to set up logic for a full sync every now and then. Once a full sync (e.g. with the :ref:`pump's <pump_section>` rescan cron expression) has been performed deleted entities will be marked as deleted downstream of the input pipe as well.  
 
+        
+External transformations
+^^^^^^^^^^^^^^^^^^^^^^^^
+In difference to connecting to a microservice through the source or the sink section of a pipe, an external transformation connects to a microservice through the transform section of a pipe, hence the name external transformation. When connecting to a microservice we use the :ref:`http transform <http_transform>` where the microservice route connected to pipe receives the data from the pipe, does what ever actions the microservice needs to do and sends the data back to Sesam.
 
+In the example below a pipe sends all the data from the source dataset (transform #1) into a microservice (transform #2). The microservice eventually sends the data back to the same pipe which copies all the data it receives from the microservice (transform #3) to the sink dataset. 
 
+.. raw:: html
 
-TODO:
+   <details open>
+   <summary><a>Example pipe with external transformation</a></summary>
 
-- continuation support
-- _deleted and other system attributes
-- optimistic locking
-- execution log
-- external transformations
+:: 
 
+  {
+    "_id": "external-transformation",
+    "type": "pipe",
+    "source": {
+      "type": "dataset",
+      "dataset": "test"
+    },
+    "transform": [{
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"]
+        ]
+      }
+    }, {
+      "type": "http",
+      "system": "test-system",
+      "url": "test-route-url"
+    }, {
+      "type": "dtl",
+      "rules": {
+        "default": [
+          ["copy", "*"]
+        ]
+      }
+    }]
+  }
 
+.. raw:: html
+
+   </details>
+
+Optimistic locking with microservices - pipes
+*********************************************
+
+When applying optimistic locking in a pipe there are two important questions we need answered:
+
+- Will we over-write data?
+- Do we have to send this data?
+
+In terms ov over-writing data, this is the whole core of why we do optimistic locking. We can answer this question by comparing the last data we imported from the source with the lookup-data. If they are different, that means the source has been updated after we last imported data, and we should therefore drop the current payload and wait for the next imported data to propagat downstream.
+
+Bare in mind that there might be situations where your payload matches the lookup data. In these cases an update is unnecessary and we should therefore not overload the API with these requests. 
+
+The transform congig below showcases both of these tests.
+
+.. raw:: html
+
+   <details open>
+   <summary><a>Example transform with optimistic locking</a></summary>
+
+::
+
+  "transform": [{
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["copy", "*"]
+      ]
+    }
+  }, {
+    "type": "http",
+    "system": "test-ms",
+    "url": "test-url"
+  }, {
+    "type": "dtl",
+    "rules": {
+      "default": [
+        ["add", "hash_from_http_source",
+          ["hash128", "murmur3",
+            ["json-transit", "_S.response"]
+          ]
+        ],
+        ["add", "hash_from_http_payload",
+          ["hash128", "murmur3",
+            ["json-transit", "_S.payload"]
+          ]
+        ],
+        ["comment", "discard entities if the source has had an update"],
+        ["discard",
+          ["eq", "_T.hash_from_http_source", "_S.$hash"]
+        ],
+        ["comment", "discard entities if the source data matches the payload data"],
+        ["discard",
+          ["eq", "_T.hash_from_http_source", "_T.hash_from_http_payload"]
+        ]
+
+      ]
+    }
+  }]
+
+.. raw:: html
+
+   </details>
+
+If the entity passes both tests we can safely send it to the microservice in order to update the source.
