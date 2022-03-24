@@ -46,6 +46,10 @@ Sporadic empty response
 -----------------------
 Source sometimes produces an empty array for some reason (during restarts, authenticaion problems, etc). Use :ref:`circuit breakers <concepts-circuit-breakers>`.
 
+Avoid unnecessary load on source systems
+----------------------------------------
+For sources that support incremental sync and where pulling all the data might incur additional cost, system instability or other problems, you should make a pristine copy of the data as the first pipe in Sesam. You should add namespaces and do any other modification in a secondary pipe, so that you can make changes to these modifications without causing unnecessary load on the source system.
+
 Enrich patterns
 ===============
 
