@@ -1,15 +1,15 @@
 What is Sesam
 =============
 
-Sesam is a master data hub that simplifies the process of making
-up-to-date master data available in a data platform architecture. Sesam
-enables rapid development of solutions that can be effectively
-managed on top of a data platform. 
+Sesam is a Master Data Hub  that simplifies the process of making up-to-date master data available in a data platform architecture. 
 
-Sesam is a data platform component that collects data from source systems and connects all representations of an object across a variety of source systems in a continuously updated
-and dynamic `data model <https://en.wikipedia.org/wiki/Data_model>`_, and makes the data easily accessible inside the data platform.
+The updated data within the Sesam Data Hub is not only consumable by analytical components in the data platform, but is also synchronized back to the source systems to ensure data consistency both in analysis and systems that produce the data.
 
-.. rubric:: In this section:
+With Sesam you can rapidly develop solutions that are effectively managed on top of your data platform.
+As a data platform component, Sesam improves data-consistency by collecting data from source systems and connecting all representations of an object across a variety of source systems in a continuously updated and dynamic `data model <https://en.wikipedia.org/wiki/Data_model>`_.
+
+
+.. rubric:: Get to know Sesam:
 
 .. toctree::
    :maxdepth: 1
