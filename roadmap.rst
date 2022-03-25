@@ -22,15 +22,6 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
-.. _roadmap_dev_pro:
-
-Developer Pro (Q1 2022)
-=======================
-
-For bigger projects that has a very high pipe count or microservices that require a lot of resources, the current Developer subscription with 1 engine can be underpowered.
-
-We are investigating if we should introduce a new subcription size "Developer Pro" that will run 2 engines and be closer to a "Single" subscription with regards to performance. The fixed price for this new development subscription is estimated to €250/month.
-
 .. _property-lineage:
 
 Property lineage (Q2 2022)
@@ -127,6 +118,19 @@ Public Preview
 --------------
 
 The following items are now available for experimental use.
+
+.. _roadmap_dev_pro:
+
+Developer Pro
+=============
+
+For bigger projects that has a very high pipe count or microservices that require a lot of resources, the current Developer subscription with 1 engine can be underpowered.
+
+We are investigating if we should introduce a new subcription size "Developer Pro" that will run 2 engines and be closer to a "Single" subscription with regards to performance. The fixed price for this new development subscription is estimated to €250/month.
+
+.. note::
+   :ref:`Developer Pro <pricing-developer>` is now available for new subscriptions and as an upgrade to existing subscriptions.
+
 
 Integrated data browsing
 ========================

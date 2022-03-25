@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_03_25:
+
+2022-03-25
+----------
+
+* New developer subscription size :ref:`Developer Pro <pricing-developer>` is now available.
+
 .. _changelog_2022_03_24:
 
 2022-03-24
