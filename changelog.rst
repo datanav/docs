@@ -7,6 +7,7 @@ Changelog
 ----------
 
 * New developer subscription size :ref:`Developer Pro <pricing-developer>` is now available.
+* Added support for :ref:`Durable Data <concepts-durable-data>`.
 
 .. _changelog_2022_03_24:
 

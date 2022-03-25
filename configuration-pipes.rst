@@ -33,6 +33,8 @@ The following *JSON* snippet shows the general form of a pipe definition.
         "sink": {
         },
         "pump": {
+        },
+        "metadata": {
         }
     }
 
@@ -477,6 +479,34 @@ Properties
          If all datasets are excluded a new completeness timestamp value will be generated in this pipe.
      - ``[]``
      -
+
+.. _pipe_metadata:
+.. _pipe_metadata_durable:
+
+Metadata
+--------
+
+Pipe metadata can be used to annotate a pipe in various user-defined ways. Some keys (documented below) are
+reserved for internal use, but otherwise the users are free to add their own metadata settings.
+
+Properties
+^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10
+
+   * - Property
+     - Type
+     - Description
+     - Default
+
+   * - ``metadata.durable``
+     - Boolean
+     - When set to true, this pipe will store its state and data on a high-durability disk. This makes the pipe more
+       resilient to data-loss, but will also incur an additional cost, see :ref:`Durable Data <concepts-durable-data>`
+       for more details.
+     - ``false``
 
 
 Example configuration

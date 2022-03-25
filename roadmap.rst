@@ -41,16 +41,6 @@ We are looking into exposing subscription and pipe metrics in a Prometheus-compa
 
 This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and an unlimited number of pipe notifications.
 
-Durable data (Q2 2022)
-======================
-
-Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
-
-For http_endpoint sources and non-idempotent sinks, this can be a problem.
-
-We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
-
-
 Extensions
 ==========
 
@@ -131,6 +121,17 @@ We are investigating if we should introduce a new subcription size "Developer Pr
 .. note::
    :ref:`Developer Pro <pricing-developer>` is now available for new subscriptions and as an upgrade to existing subscriptions.
 
+Durable data
+============
+
+Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
+
+For http_endpoint sources and non-idempotent sinks, this can be a problem.
+
+We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
+
+.. note::
+   :ref:`Durable data <concepts-durable-data>` is now available on all cloud subscriptions.
 
 Integrated data browsing
 ========================
