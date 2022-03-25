@@ -15,7 +15,7 @@ recommend the former, but there are scenarios where you would want to host it yo
 requirements and the installation steps necessary to get Sesam running on your Kubernetes cluster.
 
 .. Note::
-   Self hosted subscriptions are required to run the latest image of their chosen `software channel <https://docs.sesam.io/concepts.html#software-channels>`_.
+   Self hosted subscriptions are required to run the latest image of their chosen :ref:`software channel <concepts-software-channels>`.
 
 
 Hardware requirements
