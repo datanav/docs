@@ -46,3 +46,12 @@ a.nav-link {
 .bd-links {
     max-height: 70vh;
 }
+
+.mt-5 {
+	margin-top: 3rem!important;
+}
+
+@media (min-width: 720px)
+.mt-md-0, .my-md-0 {
+	margin-top: 3rem!important;
+}
