@@ -55,3 +55,12 @@ a.nav-link {
 .mt-md-0, .my-md-0 {
 	margin-top: 3rem!important;
 }
+
+body {
+	position: relative;
+}
+
+footer {
+	position: absolute;
+	bottom:  -12em;
+}
