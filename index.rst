@@ -20,9 +20,9 @@ New to Sesam? These topics will get you started on the right foot.
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
-    **Getting started**
+    **What is Sesam**
 
-    Want to try Sesam? This easy step-by-step guide will set you up!
+    Learn more about Sesam and what benefits it can give your platform.
 
     .. link-button:: guide-getting-started.html
         :type: url
@@ -167,16 +167,30 @@ Learn how to use Sesam effectively by following these tutorials.
 |
 |
 
+
 .. panels::
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
+    **Getting started**
+
+    This easy step-by-step guide will set you up so you are ready to start using Sesam.
+
+
+    .. link-button:: guide-getting-started.html
+        :type: url
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
     **Data synchronization**
 
     Want to try Sesam? This easy step-by-step guide will set you up!
 
     .. link-button:: index-learn-synchronization.html
-        :type: url
-        :text: Read more
-        :classes: btn-outline-primary btn-block
+            :type: url
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    **Much more to come**
 
+    We are constantly working on more guides and tutorials to help you learn and use Sesam.

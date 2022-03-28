@@ -50,11 +50,13 @@ a.nav-link {
 
 .btn-block {
     display: block;
-    width: 35%;
     border-width:  2px;
+    max-width:  200px;
     text-align: center;
-    margin: auto; 
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+  
 }
 
 .btn-outline-primary{
