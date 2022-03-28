@@ -34,4 +34,7 @@ Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-
 Sample architecture
 -------------------
 
-TODO Sample architecture with Data Fabric, Data Mesh and Sesam.
+.. image:: images/dataproduct.svg
+    :width: 800px
+    :align: center
+    :alt: Data as product example
