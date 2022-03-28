@@ -1,7 +1,11 @@
 .. _service_metadata_section:
 
-Service metadata
-================
+=====================
+ Service metadata
+=====================
+
+Introduction
+------------
 
 There is an optional special configuration entity used to represent
 the service instance's metadata. The metadata is used to
