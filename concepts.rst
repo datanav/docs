@@ -10,8 +10,8 @@ A global is a collection of merged data types that can be mapped to a global nam
 
 .. _whatis-datatype:
 
-Data type
----------
+Datatype
+--------
 
 Typically represents one concept within a system, e.g. customers in a CRM system.
 
