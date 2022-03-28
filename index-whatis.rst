@@ -16,4 +16,5 @@ and dynamic `data model <https://en.wikipedia.org/wiki/Data_model>`_, and makes 
 
    Core principles <core-principles>
    Key benefits <features>
+   Concepts <concepts>
    Data as a product <data-product>
