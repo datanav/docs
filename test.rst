@@ -1,11 +1,8 @@
 
-.. toctree::
-   :hidden:
-
-   What is Sesam <index-whatis>
-   Documentation <index-developer>
-   Learn <index-learn>
-
+:orphan:
+|
+|
+|
 .. rst-class:: center-title
    
 Get to know Sesam
@@ -25,7 +22,7 @@ New to Sesam? These topics will get you started on the right foot.
     Want to try Sesam? This easy step-by-step guide will set you up!
 
     .. link-button:: guide-getting-started.html
-        :type: url
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -34,7 +31,7 @@ New to Sesam? These topics will get you started on the right foot.
     Read about the fundamental principles to ensure effective Master data management.
 
     .. link-button:: core-principles.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -43,7 +40,7 @@ New to Sesam? These topics will get you started on the right foot.
     Have a look at some features that make Sesam flexible, agile and effective.
 
     .. link-button:: features.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
 
@@ -68,7 +65,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     In a hurry? Check this references to rapidly find what you are looking for.
 
     .. link-button:: quick-reference.html
-        :type: url
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -77,7 +74,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     These are the building blocks in Sesam, get to know them in this section.
 
     .. link-button:: developer-guide.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -86,7 +83,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Check some of the product features that make Sesam flexible, agile and effective.
 
     .. link-button:: product-features.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -95,7 +92,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Read about DTL and how it can empower data transformations.
     
     .. link-button:: DTLReferenceGuide.html
-        :type: url
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -104,7 +101,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Here you will find a list of identified patterns related to dataflows in Sesam.
 
     .. link-button:: patterns.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -113,7 +110,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Read everything you need to know about data synchronization in Sesam.
 
     .. link-button:: index-synchronization.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -123,7 +120,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Read about the core of any platform aimed to integrate data. 
     
     .. link-button:: index-datamodelling.html
-        :type: url
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -132,7 +129,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     See how Sesam works within cloud providers like Azure, Amazon and Google.
 
     .. link-button:: index-dataplatforms.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -141,7 +138,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     Read about some of the tailored functionalities Sesam provides for a secure solution.
 
     .. link-button:: index-dataplatforms.html
-            :type: url
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -176,7 +173,6 @@ Learn how to use Sesam effectively by following these tutorials.
     Want to try Sesam? This easy step-by-step guide will set you up!
 
     .. link-button:: index-learn-synchronization.html
-        :type: url
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
-

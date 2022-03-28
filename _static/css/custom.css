@@ -46,3 +46,49 @@ a.nav-link {
 .bd-links {
     max-height: 70vh;
 }
+
+
+.btn-block {
+    display: block;
+    width: 35%;
+    border-width:  2px;
+    text-align: center;
+    margin: auto; 
+    
+}
+
+.btn-outline-primary{
+
+	border-width:  2px;
+	text-align: center; 
+
+}
+
+
+.btn-all-sections {
+  background-color: #007bff;
+  color:  white;
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn-all {
+  background-color: #009fdc; 
+  color: white !important; 
+  }
+
+.btn-all:hover {
+  background-color: #023258;
+  color: white;
+}
+
+.center-title {
+text-align:  center !important;
+}
