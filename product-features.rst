@@ -99,7 +99,7 @@ Data in Sesam is dynamically typed. Properties can be added or removed and their
 Config groups
 =============
 
-TODO
+See :ref:`the config groups API <api-config-groups>` for more information.
 
 .. _concepts-compaction:
 
