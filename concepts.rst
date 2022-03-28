@@ -13,7 +13,7 @@ A global is a collection of merged data types that can be mapped to a global nam
 Data type
 ---------
 
-Typically represents one concept within a system.
+Typically represents one concept within a system, e.g. customers in a CRM system.
 
 .. _whatis-connector:
 

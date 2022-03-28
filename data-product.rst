@@ -8,19 +8,28 @@ Sesam groups data into global datasets that can be managed in accordance with th
 Data Ownership by Domain
 ------------------------
 
-Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. The :doc:`permissions system <security>` and :ref:`config groups <concepts-configgroup>` can be used to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
+Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. One Sesam subscription can use the :doc:`permissions system <security>` and :ref:`config groups <concepts-configgroup>` to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
 
 Data Products
 -------------
 
-Data Products are typically built from :ref:`global datasets <whatis-global>` within a domain. The global as-is will provide the consumer with unlimited access to the underlying data. It also means that the structure will change if any of the sources change. For analytics and machine learning this can be the desired behaviour. For other domains it can be better to only publish the global data model.
-
-`Confluents <https://developer.confluent.io/learn-kafka/data-mesh/intro/>`_
+`Data Products <https://martinfowler.com/articles/data-mesh-principles.html#DataAsAProduct>`_ are typically built from :ref:`global datasets <whatis-global>` within a domain. The global as-is will provide the consumer with unlimited access to the underlying data. It also means that the structure will change if any of the sources change. For analytics and machine learning this can be the desired behaviour. For other domains it can be better to only publish a transformed global or other data model.
 
 Data fabric
 -----------
 
-TODO What features does Sesam cover in the Data Fabric concept?
+Can achieve consistency (security, data format, protocols) with datasets and published endpoints. Sesam can encapsulate and expose legacy systems using these standards.
+
+Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/>`_ and how they relate to features in Sesam:
+
+- Data access (:ref:`outgoing published endpoints <http_endpoint_sink>`, :ref:`incoming sources <source_section>`)
+- Discovery (:ref:`data catalog <schema-inferencing>`)
+- Transformation (:ref:`DTL <DTLReferenceGuide>`)
+- Integration (:doc:`entity model <entitymodel>`, :ref:`merge <merge_source>`, :ref:`namespaces <concepts-namespaces>`)
+- Security (:doc:`permissions <security>`)
+- Governance
+- Lineage (:ref:`property lineage <property-lineage>`)
+- Orchestration (:doc:`data flows <sesam-dataflow>`, :ref:`schedules <concepts-scheduling-and-signalling>`, :ref:`completeness <concepts-completeness>`)
 
 Sample architecture
 -------------------
