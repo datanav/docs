@@ -47,6 +47,79 @@ a.nav-link {
     max-height: 70vh;
 }
 
+/* START **Buttons used in index pages*/
+.btn-block {
+    display: block;
+    border-width:  2px;
+    min-width: 35%;
+    text-align: left !important;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+ }
+
+ @media screen and (max-width: 535px) {
+  .btn-block {
+    max-width: 200px !important;
+  }
+}
+
+ /*@media screen and (min-width: 1100px) {
+  .btn-block {
+    max-width: 80%;
+  }
+}*/
+
+@media screen and (min-width: 2000px) {
+  .btn-block {
+    max-width: 30%;
+    margin: left;
+  }
+}
+
+.btn-outline-primary{
+
+	border-width:  2px;
+	text-align: center; 
+
+}
+	/* START ** Buttons for see all sections*/
+	.btn-all-sections {
+	  background-color: #007bff;
+	  color:  white;
+	  border: none;
+	  padding: 15px 15px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 2px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	}
+
+	.btn-all {
+	  background-color: #009fdc; 
+	  color: white !important; 
+	  }
+
+	.btn-all:hover {
+	  background-color: #023258;
+	  color: white;
+	}
+
+	/* END ** Buttons for see all sections*/
+/* END ** Buttons used in index pages*/
+
+/* Center titles on index pages*/
+.center-title {
+text-align:  center !important;
+}
+
+.bg-info {
+	background-color:  #e6f3f2 !important;
+}
+
 .mt-5 {
 	margin-top: 3rem!important;
 }
@@ -62,5 +135,5 @@ body {
 
 footer {
 	position: absolute;
-	bottom:  -12em;
+	bottom:  -8em;
 }
