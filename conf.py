@@ -120,7 +120,7 @@ html_theme = 'pydata_sphinx_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "footer_items": "copyright.html",
+    "footer_items": ["copyright.html", "left-sidebar-bottom.html"],
     "navbar_end": "right-menu.html",
     #     "announcement": "This is a preview of the upcoming Sesam Documentation. For the official documentation go to <a href=\"https://docs.sesam.io\">docs.sesam.io</a>",
     # "sidebar_hide_name": True
@@ -169,7 +169,7 @@ html_css_files = [
 
  #Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-    "**": ["search-field", "sidebar-nav-bs", "left-sidebar-bottom.html"]
+    "**": ["search-field", "sidebar-nav-bs"]
 
 }
 
