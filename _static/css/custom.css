@@ -113,20 +113,11 @@ a.nav-link {
 
 /* Center titles on index pages*/
 .center-title {
-text-align:  center !important;
+	text-align:  center !important;
 }
 
 .bg-info {
 	background-color:  #e6f3f2 !important;
-}
-
-.mt-5 {
-	margin-top: 3rem!important;
-}
-
-@media (min-width: 720px)
-.mt-md-0, .my-md-0 {
-	margin-top: 3rem!important;
 }
 
 body {
@@ -136,4 +127,14 @@ body {
 footer {
 	position: absolute;
 	bottom:  -8em;
+}
+
+.footer-item {
+	display:  inline-block;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
