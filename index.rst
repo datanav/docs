@@ -17,6 +17,7 @@ New to Sesam? These topics will get you started on the right foot.
 |
 
 .. panels::
+    :body: text-left
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
@@ -60,6 +61,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 |
 
 .. panels::
+    :body: text-left
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
@@ -169,6 +171,7 @@ Learn how to use Sesam effectively by following these tutorials.
 
 
 .. panels::
+    :body: text-left
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
@@ -191,6 +194,8 @@ Learn how to use Sesam effectively by following these tutorials.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
+    :body: bg-info text-left text-white
+
     **Much more to come**
 
     We are constantly working on more guides and tutorials to help you learn and use Sesam.

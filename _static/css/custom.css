@@ -47,16 +47,34 @@ a.nav-link {
     max-height: 70vh;
 }
 
-
+/* START **Buttons used in index pages*/
 .btn-block {
     display: block;
     border-width:  2px;
-    max-width:  200px;
-    text-align: center;
-    margin-top: 20px;
+    min-width: 35%;
+    text-align: left !important;
+    margin-top: 40px;
     margin-bottom: 20px;
-    margin: auto;
-  
+
+ }
+
+ @media screen and (max-width: 535px) {
+  .btn-block {
+    max-width: 200px !important;
+  }
+}
+
+ /*@media screen and (min-width: 1100px) {
+  .btn-block {
+    max-width: 80%;
+  }
+}*/
+
+@media screen and (min-width: 2000px) {
+  .btn-block {
+    max-width: 30%;
+    margin: left;
+  }
 }
 
 .btn-outline-primary{
@@ -65,32 +83,39 @@ a.nav-link {
 	text-align: center; 
 
 }
+	/* START ** Buttons for see all sections*/
+	.btn-all-sections {
+	  background-color: #007bff;
+	  color:  white;
+	  border: none;
+	  padding: 15px 15px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 2px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	}
 
+	.btn-all {
+	  background-color: #009fdc; 
+	  color: white !important; 
+	  }
 
-.btn-all-sections {
-  background-color: #007bff;
-  color:  white;
-  border: none;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+	.btn-all:hover {
+	  background-color: #023258;
+	  color: white;
+	}
 
-.btn-all {
-  background-color: #009fdc; 
-  color: white !important; 
-  }
+	/* END ** Buttons for see all sections*/
+/* END ** Buttons used in index pages*/
 
-.btn-all:hover {
-  background-color: #023258;
-  color: white;
-}
-
+/* Center titles on index pages*/
 .center-title {
 text-align:  center !important;
+}
+
+.bg-info {
+	background-color:  #e6f3f2 !important;
 }
