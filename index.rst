@@ -55,6 +55,7 @@ New to Sesam? These topics will get you started on the right foot.
 .. rst-class:: center-title
 Documentation
 =============
+
 Read about the different topics in documentation to ensure proper use of Sesam and empower your data platforms.
 
 |
