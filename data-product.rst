@@ -13,7 +13,7 @@ Sesam can be used by one of more `domains in an organisation <https://martinfowl
 Data Products
 -------------
 
-`Data Products <https://martinfowler.com/articles/data-mesh-principles.html#DataAsAProduct>`_ are typically built from :ref:`global datasets <whatis-global>` within a domain. The global as-is will provide the consumer with unlimited access to the underlying data. It also means that the structure will change if any of the sources change. For analytics and machine learning this can be the desired behaviour. For other domains it can be better to only publish a transformed global or other data model.
+`Data Products <https://martinfowler.com/articles/data-mesh-principles.html#DataAsAProduct>`_ are typically built from :ref:`global datasets <whatis-global>` within a domain. The global as-is will provide the consumer with unlimited access to the underlying data. It also means that the structure will change if any of the sources change. For analytics and machine learning this can be the desired behaviour. For other domains it can be better to publish one or more transformed globals or other data models.
 
 Data fabric
 -----------
@@ -23,7 +23,7 @@ Can achieve consistency (security, data format, protocols) with datasets and pub
 Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/>`_ and how they relate to features in Sesam:
 
 - Data access (:ref:`outgoing published endpoints <http_endpoint_sink>`, :ref:`incoming sources <source_section>`)
-- Discovery (:ref:`data catalog <schema-inferencing>`)
+- Discovery (:ref:`integrated search <concepts-integrated-search>`, :ref:`schemas <schema-inferencing>`)
 - Transformation (:ref:`DTL <DTLReferenceGuide>`)
 - Integration (:doc:`entity model <entitymodel>`, :ref:`merge <merge_source>`, :ref:`namespaces <concepts-namespaces>`)
 - Security (:doc:`permissions <security>`)
