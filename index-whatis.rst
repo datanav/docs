@@ -14,7 +14,7 @@ As a data platform component, Sesam improves data-consistency by collecting data
 .. toctree::
    :maxdepth: 1
 
+   Data architecture <data-architecture>
    Core principles <core-principles>
    Key benefits <features>
    Concepts <concepts>
-   Data architecture <data-architecture>
