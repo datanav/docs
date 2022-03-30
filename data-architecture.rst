@@ -1,4 +1,4 @@
-Data as a product
+Data architecture
 =================
 
 Sesam is a semantic data hub for master data synchronisation and management. It follows the data fabric concept of hybrid data management using semantic technology, providing a knowledge graph of data, metadata, and operational data.
