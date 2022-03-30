@@ -93,8 +93,8 @@ You also need to create two pipes in order to use "create-child" and "emit_child
 
 We are looking into how to support this without requiring the user to create two pipes.
 
-Multitenancy
-============
+Multiple configurations
+=======================
 
 Today one subscription can have multiple configuration groups, but they are all part of one big configuration that share one namespace, metadata, environment variables, system roles and access rights.
 
