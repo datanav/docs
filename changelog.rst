@@ -58,7 +58,7 @@ Changelog
 Changes to the user experience:
 
 * Pipes are now being provisioned asynchronous, this is reflected in the UI.
-* Config upload when using sesam-py can report taking a little longer. Test CI test overall length should remain similar.
+* Config upload when using sesam-py can report taking a little longer.
 
 
 .. _changelog_2022_02_04:
