@@ -6,11 +6,13 @@
 
 .bd-sidebar {
 	max-width: 20%;
+	position: sticky;
 }
 
 .bd-toc {
 	min-width: 20%;
 	max-width: 20%;
+	position: sticky;
 }
 
 .bd-content {
@@ -137,4 +139,32 @@ footer .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+/* Media Queries */
+
+@media (max-width: 720px) {
+	body {
+		font-size: 0.8rem;
+	}
+
+	.bd-sidebar {
+		height: 50vh;
+    	max-width: 100%;
+	}
+
+	.left-navbar-end-item {
+		bottom: 6em;
+	}
+}
+
+@media (max-width: 1024px) {
+	body {
+		font-size: 0.9rem;
+	}
+
+	.left-navbar-end-item {
+		left: 10px;
+		font-size: 0.8rem;
+	}
 }
