@@ -27,4 +27,4 @@ A connector is the collection of components required to synchronize one or more 
 Namespaces
 ----------
 
-Namespaces is how Sesam managed to know where properties originate from. It allows us to merge data from multiple sources without losing context.
+Namespaces is how Sesam manages to know where properties originate from. It allows us to merge data from multiple sources without losing context.
