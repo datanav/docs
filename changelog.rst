@@ -55,6 +55,12 @@ Changelog
 
 * As part of the :ref:`Clustered architecture everywhere <roadmap_clustered_architecture>` initiative we are now in the process of migrating in-cloud subscriptions over to it. You can find the provisioning status of a subscription in ``Subscription`` > ``Basics`` in the :doc:`Management Studio <management-studio>`. There you can see which provisioner version it is running (``version 1`` is old single machine service, ``version 2`` is the new clustered service, if self-hosted it will say ``self-hosted``).
 
+Changes to the user experience:
+
+* Pipes are now being provisioned asynchronous, this is reflected in the UI.
+* Config upload when using sesam-py can report taking a little longer. Test CI test overall length should remain similar.
+
+
 .. _changelog_2022_02_04:
 
 2022-02-04
