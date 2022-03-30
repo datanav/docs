@@ -212,7 +212,7 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - A counter that indicates to the pump how many write errors it accepts in its execution history dataset. If the number of
        retryable and not "dead" failed entities in the dataset exceeds this number, the pump will refuse to
        write any more failed entities to the execution dataset and terminate, even if the ``max_retries_per_entity`` or
-       ``max_retries_per_entity`` is not reached at that point. This purpose of this property is to limit the size of the
+       ``max_consecutive_write_errors`` is not reached at that point. This purpose of this property is to limit the size of the
        pump execution dataset in the case where a target system is unreachable (or misconfigured). The default value (0) effectively
        disables retries for write errors.
      - 0
