@@ -16,10 +16,10 @@ Hubspot companies
 
 The demo implements a bi-directional synchronization of the `companies in Hubspot <https://developers.hubspot.com/docs/api/crm/companies>`_ data.
 
-The global models
+The global model
 ----------------
 
-The :ref:`globals <whatis-global>` in the demo is a subset of the Hubspot model and contains mappings for the Hubspot properties that we want to manage with Sesam.
+The :ref:`global model <whatis-global-model>` in the demo is a subset of the Hubspot model and contains mappings for the Hubspot properties that we want to manage with Sesam.
 
 The other services
 ------------------

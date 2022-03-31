@@ -8,6 +8,13 @@ Global
 
 A global is a collection of merged data types that can be mapped to a global namespace.
 
+.. _whatis-global-model:
+
+Global model
+------------
+
+A global model is the collection of globals and the global properties.
+
 .. _whatis-datatype:
 
 Datatype
