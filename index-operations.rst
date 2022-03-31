@@ -1,7 +1,7 @@
 Operations
 ==========
 
-In every situation where you manage large quantities of data maintaining control of the dataflows is essential. In this section we will describe tailored functionalities Sesam provides in order to ensure a secure, stable and easily maintained solution. 
+In every situation where you manage large quantities of data maintaining control of the dataflows is essential. In this section we will describe tailored functionalities Sesam provides in order to ensure a secure, stable and easily maintained solution.
 
 .. rubric:: In this section:
 
@@ -9,6 +9,7 @@ In every situation where you manage large quantities of data maintaining control
    :maxdepth: 1
 
    Security <security>
+   Metrics <metrics>
    Notifications <notifications>
    Pump Execution Dataset <pump-execution>
    Configuration Management <configuration-management>
