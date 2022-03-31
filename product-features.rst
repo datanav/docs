@@ -138,6 +138,13 @@ Notifications
 
 Monitoring of pipes can be enabled. Once a pipe is being monitored, you can add :doc:`notification rules <notifications>` to pipes and be alerted when those rules are triggered. You can get notification alerts in the user-interface or by email.
 
+.. _concepts-metrics-api:
+
+Metrics API
+===========
+
+If Monitoring and Metrics is enabled, you can access subscription and pipe metrics in the :ref:`Prometheus-compatible metrics API <api-metrics>` endpoint from your external monitoring tools.
+
 .. _concepts-extensions:
 
 Extensions

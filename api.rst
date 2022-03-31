@@ -283,3 +283,10 @@ endpoint places the uploaded config into the "default" config-group).
 
 Note: The `/api/config PUT <./api.html#put--config>`_ and `/api/config/{config-group} PUT <./api.html#put--config-config-group>`_
 endpoints will replace **all** the config in the specified config-group.
+
+.. _api-metrics:
+
+Metrics endpoint
+================
+
+TODO Geir Ove

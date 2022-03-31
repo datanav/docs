@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_03_31:
+
+2022-03-31
+----------
+
+* Added support for :ref:`Metrics <concepts-metrics-api>`.
+* New data option `Metrics and monitoring` in :ref:`test and production pricing <pricing-production>` replaces the pr. pipe monitoring option. Pipe monitoring will still be available for existing subscription that is already using this.
+
 .. _changelog_2022_03_25:
 
 2022-03-25

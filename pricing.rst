@@ -42,7 +42,9 @@ by using the :doc:`Sesam Client <sesam-client>`.
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
      - €250.00
 
-Production and test environment 
+.. _pricing-production:
+
+Production and test environment
 -------------------------------
 
 .. list-table:: Runtime environments [#]_
@@ -66,19 +68,8 @@ Production and test environment
      - €14.00
    * - VPN
      - €2.00
-
-.. list-table:: Monitoring
-   :widths: 70 30
-   :header-rows: 1
-
-   * - Monitoring
-     - Pr Pipe
-   * - Basic - Status
-     - €0.00
-   * - Standard - Insight
-     - €5.00
-   * - Enterprise - Notifications
-     - €20.00
+   * - Monitoring and metrics
+     - €4.00
 
 .. list-table:: SLA [#]_
    :widths: 70 30
