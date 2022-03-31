@@ -25,5 +25,4 @@ In this section you will learn how to synchronize your data streams into and out
    JSON Push Protocol <json-push>
    Developer Extension Points <extension-points>
    Source datatype mapping <source-datatype-mapping>
-   Microservices <microservices>
 

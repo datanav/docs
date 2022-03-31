@@ -1,21 +1,24 @@
+.. _tutorial_microservices_continuation_support:
+
 ====================================
 Microservices - Continuation support
 ====================================
 
 *In this lesson we will look closer into continuation support and change tracking for data imported from a microservice. When finished with this lesson you will have learned to include the necessary logic for implementing continuation support in a Sesam microservice as well as added the corresponding support inside a Sesam input pipe. You will be given information to a public API and a microservice template in which you will have to add the needed logic to import changes from that API into a Sesam pipe*
 
-Pre-requisites
---------------
+.. admonition:: Pre-requisits
 
-| **Sesam specific pre-requisites**
-| This lesson covers how to implement change tracking through continuation support in microservices. Before starting on this lesson expect a general understanding on input pipes in Sesam and we recommend that you read about :ref:`Microservices <microservices>` in docs. 
+  **Sesam specific pre-requisites**
 
-| **Other useful pre-requisites**
-| In order to finish this lesson the following bullets point will also help:
+  This lesson covers how to implement change tracking through continuation support in microservices. Before starting on this lesson we expect a general understanding on input pipes in Sesam and we recommend that you do the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>`. 
 
-- An account on DockerHub (a public account is free of charge and very quickly set up)
-- An understanding on how to create Docker images
-- Coding experience (we use Python in our examples, but any coding language works as long as you can translate to it from Python)
+  **Other useful pre-requisites**
+  
+  In order to finish this lesson the following bullets point will also help:
+
+  - An account on DockerHub (a public account is free of charge and very quickly set up)
+  - An understanding on how to create Docker images
+  - Coding experience (we use Python in this example, but any coding language works as long as you can translate to it from Python)
 
 Disclaimer
 ----------
@@ -33,7 +36,7 @@ Assignment
 ----------
 Write a microservice with :ref:`continuation support <continuation_support_microservices>` that connects to your personal GitHub instance through the `GitHub API <https://docs.github.com/en/rest/reference/repos>`_ and collects metadata for all your repositories. Create a Docker image from the microservice and connect that Docker image to your Sesam node inside a :ref:`Microservice System <microservice_system>` and set up an input pipe that collects the repository data from the Microservice system. You can make sure that only updates are collected by making a minor change to one of your repositories inside GitHub and see if the pipe registers the change.
 
-To start of we will provide you with a microservice template written in Python that you may use if you wish:
+To start of we will provide you with the same microservice template as given in :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>`:
 
 .. raw:: html
 
