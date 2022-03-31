@@ -19,7 +19,7 @@ The demo implements a bi-directional synchronization of the `companies in Hubspo
 The global model
 ----------------
 
-The global model in the demo is a subset of the Hubspot model and contains mappings for the Hubspot properties that we want to manage with Sesam.
+The :ref:`global model <whatis-global-model>` in the demo is a subset of the Hubspot model and contains mappings for the Hubspot properties that we want to manage with Sesam.
 
 The other services
 ------------------
@@ -34,6 +34,6 @@ The demo combines `company data from DBpedia <https://dbpedia.org/ontology/Compa
 Multi-tenancy
 -------------
 
-The demo also contains a setup for handling multiple tenants in one subscription. The setup contains the shared data from the public data sources, and a generator that uses a configuration template in `global-config` to generate a configuration for each tenant defined in `global-customer`. These configurations are added as separate :ref:`config groups <concepts-configgroup>`. The configuration template uses a copy of the shared data for each tenant to keep the data isolated between the tenants.
+The demo also contains a setup for handling multiple tenants in one subscription. The setup contains the shared data from the public data sources, and a generator that uses a configuration template in ``global-config`` to generate a configuration for each tenant defined in ``global-customer``. The configuration template is a list of system and pipe :ref:`configurations <configuration-general>` that will be prefixed to make them unique per tenant. These configurations are added as separate :ref:`config groups <concepts-configgroup>`. The configuration template uses a copy of the shared data for each tenant to keep the data isolated between the tenants.
 
 The demo uses an :ref:`embedded source <embedded_source>` for both customers and the template to keep it simple. This can easily be extended to get the list of customers from an external source, as well as the template from an external version control system.
