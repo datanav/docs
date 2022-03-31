@@ -12,6 +12,8 @@
 
     ```pip install -r requirements.txt```
 
+Note that pydata-sphinx-theme requires minimum python 3.7!
+
 * Run ```make html```
 * Open ```_build/html/index.html``` in your browser or ```cd _build/html && python3 -m http.server``` to get search summaries
 

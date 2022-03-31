@@ -283,3 +283,26 @@ endpoint places the uploaded config into the "default" config-group).
 
 Note: The `/api/config PUT <./api.html#put--config>`_ and `/api/config/{config-group} PUT <./api.html#put--config-config-group>`_
 endpoints will replace **all** the config in the specified config-group.
+
+.. _api-metrics:
+
+Metrics endpoint
+================
+
+If the ``Monitoring and metrics`` product is enabled on the Sesam
+subscription, then the ``/api/metrics`` endpoint is available. This
+API endpoint exposes `Prometheus <https://prometheus.io/>`_ compatible
+metrics.
+
+Note that you need a JWT token with ``Admin`` role to be able to
+scrape the endpoint.
+
+Example:
+
+::
+
+   curl -s -H "Authorization: bearer $JWT" "$SESAM_API_URL/metrics"
+
+
+See the :doc:`Metrics <metrics>` documentation for more information
+about the metrics exposed.

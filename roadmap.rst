@@ -32,15 +32,6 @@ are composed using introspectable DTL in combination with :ref:`schema collectio
 
 We are working on making this lineage data available, as well as looking at ways to visualize it.
 
-.. _metrics-api:
-
-Metrics API (Q2 2022)
-=====================
-
-We are looking into exposing subscription and pipe metrics in a Prometheus-compatible API to make it easy to use metrics in external tools.
-
-This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and an unlimited number of pipe notifications.
-
 Extensions
 ==========
 
@@ -108,6 +99,19 @@ Public Preview
 --------------
 
 The following items are now available for experimental use.
+
+
+.. _roadmap_metrics_api:
+
+Metrics API
+===========
+
+We are looking into exposing subscription and pipe metrics in a Prometheus-compatible API to make it easy to use metrics in external tools.
+
+This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and an unlimited number of pipe notifications.
+
+.. note::
+   :ref:`Metrics <concepts-metrics-api>` is now available for subscriptions running on the Clustered Architecture.
 
 .. _roadmap_dev_pro:
 
