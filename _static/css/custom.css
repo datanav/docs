@@ -110,6 +110,17 @@ a.nav-link {
 	  color: white;
 	}
 
+	.btn-tutorial {
+    display: block;
+    border-width: 2px;
+    min-width: 20%;
+    text-align: left !important;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-width: 2em;
+
+
+
 	/* END ** Buttons for see all sections*/
 /* END ** Buttons used in index pages*/
 
