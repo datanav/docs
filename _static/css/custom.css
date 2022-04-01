@@ -122,6 +122,18 @@ a.nav-link {
 	background-color:  #e6f3f2 !important;
 }
 
+.card-body {
+	min-height: 16em;
+}
+
+.card-text > a {
+	text-align-last: center;
+	position: absolute;
+	bottom: 10px;
+	max-width: 80%;
+	left: 10%;
+}
+
 body {
 	position: relative;
 }
@@ -166,5 +178,24 @@ footer .container {
 	.left-navbar-end-item {
 		left: 10px;
 		font-size: 0.8rem;
+	}
+}
+
+@media (min-width: 300px) and (max-width: 533px) {
+	.card-text > a {
+    	min-width: 80%;
+    	left: 10%;
+	}
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+	.card-body {
+		min-height: 20em;
+	}
+}
+
+@media (min-width: 1024px) {
+	.card-body {
+		min-height: 18em;
 	}
 }
