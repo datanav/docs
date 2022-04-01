@@ -25,7 +25,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Learn more about Sesam and what benefits it can give your platform.
 
-    .. link-button:: guide-getting-started.html
+    .. link-button:: index-whatis.html
         :type: url
         :text: Read more
         :classes: btn-outline-primary btn-block
