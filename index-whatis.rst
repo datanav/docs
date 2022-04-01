@@ -18,3 +18,4 @@ As a data platform component, Sesam improves data-consistency by collecting data
    Core principles <core-principles>
    Key benefits <features>
    Concepts <concepts>
+   Demo <demo>
