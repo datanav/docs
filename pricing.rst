@@ -68,7 +68,7 @@ Production and test environment
      - €14.00
    * - VPN
      - €2.00
-   * - Monitoring and metrics
+   * - Metrics and monitoring
      - €4.00
 
 .. list-table:: SLA [#]_
