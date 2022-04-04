@@ -92,12 +92,37 @@ a.reference.external.nav-link.button.button-support {
 	text-align: center; 
 
 }
-	/* START ** Buttons for see all sections*/
+
+.tutorial-start {
+	background-color: #007bff;
+	border-width: 2px;
+	border-radius: 17;
+	color: #ffffff;
+	padding: 15px 15px;
+	text-align: left;
+	text-decoration: none !important;
+	transition-duration: 0.4s;
+	display: inline-block;
+	font-size: 1em;
+	margin: 4px 2px;
+	cursor: pointer;
+
+
+}
+
+.tutorial-start:hover {
+	  background-color: #023258;
+	  color: white;
+	  text-decoration: underline;
+	}
+
+
+	/* START ** Buttons to see all sections*/
 	.btn-all-sections {
 	  background-color: #007bff;
 	  color:  white;
 	  border: none;
-	  padding: 15px 15px;
+	  padding: 10px 10px;
 	  text-align: center;
 	  text-decoration: none;
 	  display: inline-block;
@@ -130,7 +155,7 @@ a.reference.external.nav-link.button.button-support {
 }
 
 .card-body {
-	min-height: 16em;
+	min-height: 12em;
 }
 
 .card-text > a {
@@ -144,7 +169,6 @@ a.reference.external.nav-link.button.button-support {
 }
 
 .card-text > a > span {
-    text-decoration: underline;
     position: relative;
     left: -10px;
 }
