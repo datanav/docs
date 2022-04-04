@@ -1,5 +1,7 @@
 /* add any theme overrides here */
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
+
 .container-xl {
 	min-width: 100%
 }
@@ -206,4 +208,27 @@ footer .container {
 	.card-body {
 		min-height: 18em;
 	}
+}
+
+  /*****************************************************************************
+  * Font family
+  **/
+:root {
+    --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
+    --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
+    --pst-font-family-monospace: Courier, var(--pst-font-family-monospace-system);
+}
+
+
+body {
+
+	font-family: 'Barlow', sans-serif;
+	font-size: 1.2em;
+}
+
+.p {
+	font-family: 'Barlow', sans-serif;
+
+  /*****************************************************************************
+}
 }
