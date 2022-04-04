@@ -17,8 +17,10 @@ This is an introduction to this guide. Lorem ipsum dolor coloris mati tamores do
     **Guide name:** This guide includes 2 tutorials
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. dropdown:: **First tutorial:** Estimated time: 5 min
+    .. dropdown:: **First tutorial:**
         :open:
+
+        :opticon:`clock` 10 minutes
 
         Some text lorem ipsum dolor coloris dami kus dani kach wela matac iris damis faro mica mano.
 
@@ -27,9 +29,11 @@ This is an introduction to this guide. Lorem ipsum dolor coloris mati tamores do
             :text: Read this tutorial
             :classes: btn-tutorial btn-outline-primary
         
-    .. dropdown:: **Second tutorial:** Estimated time: 5 min
+    .. dropdown:: **Second tutorial:**
         :open:
     
+        :opticon:`clock` 10 minutes
+
         Some text lorem ipsum dolor coloris dami kus dani kach wela matac iris damis faro mica mano.
 
         .. link-button:: first-tutorial.html
