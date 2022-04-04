@@ -5,11 +5,11 @@ Guide title
 
 This is an introduction to this guide. Lorem ipsum dolor coloris mati tamores dow.
 
-.. admonition:: Pre-requists
+.. admonition:: Prerequists
 
-   * Get familar with concepts
-   * Complete Getting started tutorial
-   * Other pre-requisits
+   * Get familar with `Sesam concepts <concepts.html>`__
+   * Complete   `Getting started <guide-getting-started.html>`__ tutorial
+   * Other prerequisits
 
 .. panels::
     :column: col-lg-12 p-2 
