@@ -143,6 +143,8 @@ a.reference.external.nav-link.button.button-support {
 
 .card-text > a > span {
     text-decoration: underline;
+    position: relative;
+    left: -10px;
 }
 
 body {
