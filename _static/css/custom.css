@@ -1,5 +1,7 @@
 /* add any theme overrides here */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .container-xl {
 	min-width: 100%
 }
@@ -206,4 +208,22 @@ footer .container {
 	.card-body {
 		min-height: 18em;
 	}
+}
+
+  /*****************************************************************************
+  * Font family
+  **/
+:root {
+    --pst-font-family-base: 'Roboto', var(--pst-font-family-base-system);
+    --pst-font-family-heading: 'Roboto', var(--pst-font-family-base-system);
+    --pst-font-family-monospace: Courier, var(--pst-font-family-monospace-system);
+}
+
+
+.body {
+
+	font-family: 'Roboto', sans-serif !important;
+}
+
+  /*****************************************************************************
 }
