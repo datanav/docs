@@ -158,17 +158,27 @@ a.tutorial-start:visited {
 }
 
 .card-body {
-	min-height: 12em;
+	min-height: 16em;
+}
+
+.col-lg-12 {
+    height: 14em;
+}
+
+a.sphinx-bs.btn.text-wrap.btn-all-sections.btn-all.reference.external {
+   left: 10px;
 }
 
 .card-text > a {
 	text-align-last: center;
     position: absolute;
     bottom: 10px;
+    left: 16px;
     max-width: 80%;
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 10px;
 }
 
 .card-text > a > span {
@@ -223,11 +233,49 @@ footer .container {
 	}
 }
 
-/*@media (min-width: 300px) and (max-width: 533px) {}*/
+@media (max-width: 299px) {
+	.card-body {
+    	height: 18em;
+	}
+	.col-lg-12 {
+    	height: 20em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 18em;
+	}
+	.navbar #navbar-start {
+    	margin-left: 1em;
+    	max-width: 12em;
+	}
+}
 
-@media (min-width: 720px) and (max-width: 1024px) {
+@media (min-width: 300px) and (max-width: 767px) {
+	.col-lg-12 {
+    	height: 16em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 18em;
+	}
+}
+
+@media (min-width: 719px) and (max-width: 767px) {
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 22em;
+	}
+	.row {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
 	.card-body {
 		min-height: 20em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 20em;
+	}
+	.row {
+		justify-content: center;
 	}
 }
 
@@ -235,11 +283,14 @@ footer .container {
 	.card-body {
 		min-height: 18em;
 	}
+	.col-lg-12 {
+    	height: 16em;
+	}
 }
 
-  /*****************************************************************************
-  * Font family
-  **/
+/*****************************************************************************
+* Font family
+**/
 :root {
     --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
@@ -248,14 +299,11 @@ footer .container {
 
 
 body {
-
 	font-family: 'Barlow', sans-serif;
 	font-size: 1.2em;
 }
 
 .p {
 	font-family: 'Barlow', sans-serif;
-
-  /*****************************************************************************
 }
-}
+/*****************************************************************************
