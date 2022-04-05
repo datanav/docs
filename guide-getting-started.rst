@@ -13,7 +13,7 @@ Getting started
 In order to start using Sesam, you will need to sign up, create an instance and upload a baseline configuration. 
 This step-by-step guide will help you getting started.
 
-.. admonition::  Good to know
+.. admonition::  Goals
    
    After you complete these tutorials you would have:
 
@@ -25,30 +25,29 @@ This step-by-step guide will help you getting started.
 |
 
 .. panels::
-    :column: col-lg-12 p-2 
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
-    **Getting started:** This guide includes 2 tutorials
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    **1. Setting up your Sesam instance**
 
-    .. dropdown:: **1. Setting up our Sesam instance**
-        :open:
+    :badge:`Estimated time: 10 min,badge-light`
 
-        :badge:`Estimated time: 10 min,badge-light`
+    This tutorial will show you how to sign up and set up your first Sesam instance.
 
-        This tutorial will show you how to sign up and set up your first Sesam instance.
+    .. link-button:: tutorial-signup.html
+        :type: url
+        :text: Start this tutorial
+        :classes: tutorial-start
+    ---
 
-        .. link-button:: tutorial-signup.html
-            :type: url
-            :text: Start this tutorial
-            :classes: tutorial-start
-        
-    .. dropdown:: **2. Upload config**
-            
-        :badge:`Estimated time: 3 min,badge-light`
+    **2. Upload config**
 
-        This tutorial will show you how to upload the baseline config.
+    :badge:`Estimated time: 3 min,badge-light`
 
-        .. link-button:: tutorial-upload-baseline-config.html
-            :type: url
-            :text: Start this tutorial
-            :classes: tutorial-start
+    This tutorial will show you how to upload the baseline config.
+
+    .. link-button:: tutorial-upload-baseline-config.html
+        :type: url
+        :text: Start this tutorial
+        :classes: tutorial-start
