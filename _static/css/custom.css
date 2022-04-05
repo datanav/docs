@@ -157,7 +157,7 @@ a.tutorial-start:visited {
 	background-color:  #e6f3f2 !important;
 }
 
-.card-body {
+.custom-card {
 	min-height: 16em;
 }
 
@@ -186,6 +186,10 @@ a.sphinx-bs.btn.text-wrap.btn-all-sections.btn-all.reference.external {
     left: -10px;
 }
 
+.summary-content.card-body.docutils {
+    min-height: 12em;
+}
+
 body {
 	position: relative;
 }
@@ -207,7 +211,7 @@ footer .container {
 
 /* Media Queries */
 
-@media (max-width: 720px) {
+@media (max-width: 719px) {
 	body {
 		font-size: 0.8rem;
 	}
@@ -219,6 +223,12 @@ footer .container {
 
 	.left-navbar-end-item {
 		bottom: 6em;
+	}
+}
+
+@media (min-width: 720px) and (max-width: 959px) {
+	.bd-sidebar {
+		max-width: 30%;
 	}
 }
 
@@ -234,30 +244,37 @@ footer .container {
 }
 
 @media (max-width: 299px) {
-	.card-body {
+	.custom-card {
     	height: 18em;
+    	min-width: 14em;
 	}
 	.constrained-card {
     	height: 20em;
 	}
-	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
-    	min-width: 18em;
-	}
 	.navbar #navbar-start {
     	margin-left: 1em;
-    	max-width: 12em;
+    	max-width: 10em;
 	}
 	.navbar-collapse {
 		font-size: 1rem;
 	}
 }
 
-@media (min-width: 300px) and (max-width: 767px) {
-	.constrained-card {
-    	height: 16em;
+@media (min-width: 300px) and (max-width: 539px) {
+	.custom-card {
+		min-height: 14em;
 	}
-	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
-    	min-width: 18em;
+	.constrained-card {
+    	height: 14em;
+	}
+	.navbar-collapse {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+	.constrained-card {
+    	height: 14em;
 	}
 	.navbar-collapse {
 		font-size: 1.2rem;
@@ -265,8 +282,8 @@ footer .container {
 }
 
 @media (min-width: 719px) and (max-width: 767px) {
-	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
-    	min-width: 22em;
+	.custom-card {
+    	min-width: 20em;
 	}
 	.row {
 		justify-content: center;
@@ -281,6 +298,10 @@ footer .container {
     	margin-left: 10px;
     	padding-bottom: 10px;
 	}
+	.bd-search {
+		right: 10px;
+		padding-right: 0;
+	}
 }
 
 @media (min-width: 960px) and (max-width: 1030px) {
@@ -290,11 +311,9 @@ footer .container {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-	.card-body {
-		min-height: 20em;
-	}
-	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
-    	min-width: 20em;
+	.custom-card {
+		min-height: 16em;
+		min-width: 18em;
 	}
 	.row {
 		justify-content: center;
@@ -302,7 +321,7 @@ footer .container {
 }
 
 @media (min-width: 1024px) {
-	.card-body {
+	.custom-card {
 		min-height: 18em;
 	}
 	.constrained-card {
