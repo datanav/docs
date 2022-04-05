@@ -85,37 +85,36 @@ a.reference.external.nav-link.button.button-support {
 }
 
 .btn-outline-primary{
-
 	border-width:  2px;
 	text-align: center; 
-
 }
-	/* START ** Buttons for see all sections*/
-	.btn-all-sections {
-	  background-color: #007bff;
-	  color:  white;
-	  border: none;
-	  padding: 15px 15px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 2px 2px;
-	  transition-duration: 0.4s;
-	  cursor: pointer;
-	}
 
-	.btn-all {
-	  background-color: #009fdc; 
-	  color: white !important; 
-	  }
+/* START ** Buttons for see all sections*/
+.btn-all-sections {
+  background-color: #007bff;
+  color:  white;
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-	.btn-all:hover {
-	  background-color: #023258;
-	  color: white;
-	}
+.btn-all {
+  background-color: #009fdc; 
+  color: white !important; 
+  }
 
-	/* END ** Buttons for see all sections*/
+.btn-all:hover {
+  background-color: #023258;
+  color: white;
+}
+
+/* END ** Buttons for see all sections*/
 /* END ** Buttons used in index pages*/
 
 /* Center titles on index pages*/
@@ -131,18 +130,27 @@ a.reference.external.nav-link.button.button-support {
 	min-height: 16em;
 }
 
+.col-lg-12 {
+    height: 14em;
+}
+
+a.sphinx-bs.btn.text-wrap.btn-all-sections.btn-all.reference.external {
+   left: 10px;
+}
+
 .card-text > a {
 	text-align-last: center;
     position: absolute;
     bottom: 10px;
+    left: 16px;
     max-width: 80%;
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 10px;
 }
 
 .card-text > a > span {
-    text-decoration: underline;
     position: relative;
     left: -10px;
 }
@@ -194,16 +202,57 @@ footer .container {
 	}
 }
 
-/*@media (min-width: 300px) and (max-width: 533px) {}*/
+@media (max-width: 299px) {
+	.card-body {
+    	height: 18em;
+	}
+	.col-lg-12 {
+    	height: 20em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 18em;
+	}
+	.navbar #navbar-start {
+    	margin-left: 1em;
+    	max-width: 12em;
+	}
+}
 
-@media (min-width: 720px) and (max-width: 1024px) {
+@media (min-width: 300px) and (max-width: 767px) {
+	.col-lg-12 {
+    	height: 16em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 18em;
+	}
+}
+
+@media (min-width: 719px) and (max-width: 767px) {
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 22em;
+	}
+	.row {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
 	.card-body {
 		min-height: 20em;
+	}
+	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
+    	min-width: 20em;
+	}
+	.row {
+		justify-content: center;
 	}
 }
 
 @media (min-width: 1024px) {
 	.card-body {
 		min-height: 18em;
+	}
+	.col-lg-12 {
+    	height: 16em;
 	}
 }
