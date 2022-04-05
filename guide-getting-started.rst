@@ -13,7 +13,7 @@ Getting started
 In order to start using Sesam, you will need to sign up, create an instance and upload a baseline configuration. 
 This step-by-step guide will help you getting started.
 
-.. admonition::  Good to know
+.. admonition::  Objectives:
    
    After you complete these tutorials you would have:
 
@@ -43,7 +43,8 @@ This step-by-step guide will help you getting started.
             :classes: tutorial-start
         
     .. dropdown:: **2. Upload config**
-            
+        :open:
+        
         :badge:`Estimated time: 3 min,badge-light`
 
         This tutorial will show you how to upload the baseline config.
