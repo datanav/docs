@@ -161,7 +161,7 @@ a.tutorial-start:visited {
 	min-height: 16em;
 }
 
-.col-lg-12 {
+.constrained-card {
     height: 14em;
 }
 
@@ -237,7 +237,7 @@ footer .container {
 	.card-body {
     	height: 18em;
 	}
-	.col-lg-12 {
+	.constrained-card {
     	height: 20em;
 	}
 	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
@@ -247,14 +247,20 @@ footer .container {
     	margin-left: 1em;
     	max-width: 12em;
 	}
+	.navbar-collapse {
+		font-size: 1rem;
+	}
 }
 
 @media (min-width: 300px) and (max-width: 767px) {
-	.col-lg-12 {
+	.constrained-card {
     	height: 16em;
 	}
 	.d-flex.col-lg-4.col-md-4.col-sm-6.col-xs-12.p-2.docutils {
     	min-width: 18em;
+	}
+	.navbar-collapse {
+		font-size: 1.2rem;
 	}
 }
 
@@ -264,6 +270,22 @@ footer .container {
 	}
 	.row {
 		justify-content: center;
+	}
+	.navbar-collapse {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 959px) {
+	.navbar-collapse {
+    	margin-left: 10px;
+    	padding-bottom: 10px;
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1030px) {
+	.navbar-collapse {
+		font-size: 1rem;
 	}
 }
 
@@ -283,7 +305,7 @@ footer .container {
 	.card-body {
 		min-height: 18em;
 	}
-	.col-lg-12 {
+	.constrained-card {
     	height: 16em;
 	}
 }

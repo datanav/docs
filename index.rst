@@ -149,7 +149,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    :column: col-lg-12 p-2
+    :column: col-lg-12 p-2 constrained-card
     **Want to read more?** 
     
     See all the topics in documentation here.
