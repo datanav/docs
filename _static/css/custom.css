@@ -186,6 +186,10 @@ a.sphinx-bs.btn.text-wrap.btn-all-sections.btn-all.reference.external {
     left: -10px;
 }
 
+.section a {
+	text-decoration: underline;
+}
+
 .summary-content.card-body.docutils {
     min-height: 12em;
 }
