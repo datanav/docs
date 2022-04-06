@@ -3,7 +3,7 @@
 Sign up
 =======
 
-In order to use sesam you will need to sign up and request acces to a trial subscription, or existing subscription.
+In order to use sesam you will need to sign up and request access to a trial subscription, or existing subscription.
 
     #. Sign up to Sesam here `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__ .
 
@@ -25,9 +25,9 @@ Once you've signed up, you'll meet a dashboard with an overview of available sub
 
 **Follow these steps to set up your private subscription:**
 
-    #. Click on "Request private trial" if you want to use a private subscription.
+    #. On the dashboard, click on "Request private trial".
 
-    #. Wait for the Sesam team to give you acces to your requested private trial. Once it is done, your requested subscription will be shown in the Dashboard. 
+    #. Wait for the Sesam team to give you access to your requested private trial. Once it is done, your requested subscription will be shown in the Dashboard. 
 
 ..
  .. image:: images/getting-started/dashboard-view.png
@@ -51,11 +51,11 @@ Once you've signed up, you'll meet a dashboard with an overview of available sub
 |
 
 
-.. _getting-started-acces-existing-subscription:
+.. _getting-started-access-existing-subscription:
 
 |
 
 Access existing subscriptions
 =============================
 
-Access existing Sesam instances after signing up by obtaining an invitation from someone with management permissions for the desired subscription.
+Access existing Sesam subscriptions after signing up by obtaining an invitation from someone with management permissions.
