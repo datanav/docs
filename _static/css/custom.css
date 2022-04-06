@@ -176,6 +176,10 @@ a.tutorial-start:visited {
     left: -10px;
 }
 
+.section a {
+	text-decoration: underline;
+}
+
 body {
 	position: relative;
 }
