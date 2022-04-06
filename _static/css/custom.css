@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
 
+.section a {
+	text-decoration: underline;
+}
+
 .container-xl {
 	min-width: 100%
 }
@@ -95,12 +99,10 @@ a.reference.external.nav-link.button.button-support {
 
 .tutorial-start {
 	background-color: #007bff;
-	border-width: 2px;
 	border-radius: 17;
 	color: #ffffff;
-	padding: 15px 15px;
+	padding: 8px 8px;
 	text-align: left;
-	text-decoration: none !important;
 	transition-duration: 0.4s;
 	display: inline-block;
 	font-size: 1em;

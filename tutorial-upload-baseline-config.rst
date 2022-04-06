@@ -1,20 +1,22 @@
-.. _getting-started-upload-config:
+.. _getting-started-upload-baseline-configuration:
 
-Upload config
-=============
+Upload baseline configuration
+=============================
 
-Please note that uploading a config as described below **will overwrite** any config already on the node. You should have a node dedicated for the purpose if you are going set it up for this guide and its labs.
+.. warning::
 
-Download the :download:`getting-started-config.json<files/getting-started-config.json>` and save it locally on your computer.
+  Please note that uploading a config as described below **will overwrite** any config already on the node. You should have a node dedicated for the purpose if you are going set it up for this guide and its labs.
 
-Go to your 'Requested private trial node' on the Sesam portal. Click on **Datahub** in the left menu and select the **Tools tab**.
+#. Download the :download:`getting-started-config.json<files/getting-started-config.json>` and save it locally on your computer.
+
+#. Go to your 'Requested private trial node' on the Sesam portal. Click on **Datahub** in the left menu and select the **Tools tab**.
 
 .. image:: images/getting-started/importdata.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept
 
-Upload the getting-started-config.json file through the drag & drop interface. Then go to the **Variables** tab and paste the below code as environment variables.
+#. Upload the getting-started-config.json file through the drag & drop interface. Then go to the **Variables** tab and paste the below code as environment variables.
 
 ::
 
