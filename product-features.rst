@@ -89,10 +89,10 @@ Sesam's entity data model is a `JSON <https://www.json.org/json-en.html>`_ compa
 
 .. _schema-inferencing:
 
-Schema collection
-=================
+Schema inferencing
+==================
 
-Data in Sesam is dynamically typed. Properties can be added or removed and their types changed over time. Schema validation can be enforced, but it is optional. This dynamism makes the system agile. Automatic schema collection is enabled by default. Sesam tracks the changes to entities and will automatically generate a schema for the source entities and sink entities of pipes. In practice this means that you can see the structure of the data that went into the pipe and the data that came out of the pipe. This feature is the foundation that :ref:`property lineage <property-lineage>` builds on.
+Data in Sesam is dynamically typed. Properties can be added or removed and their types changed over time. Schema validation can be enforced, but it is optional. This dynamism makes the system agile. Automatic schema inferencing is enabled by default. Sesam tracks the changes to entities and will automatically generate a schema for the source entities and sink entities of pipes. In practice this means that you can see the structure of the data that went into the pipe and the data that came out of the pipe. This feature is the foundation that :ref:`property lineage <property-lineage>` builds on.
 
 .. _schema-models:
 
@@ -102,9 +102,7 @@ Schema models
 A model is a set of entity types. An entity type is a JSON schema, so in practice a model is an array of JSON schemas.
 
 The purpose of a model is to serve as mechanism for grouping entity types, but also allow the user to add descriptions of properties to the JSON schema. Those descriptions are then aggregated up on the property landing page in the Management Studio.
-
-
-Schema collection generates entity types for the pipe source and pipe sink. The sink entity types are automatically mapped to implicit models. You can find these in ``Browse`` > ``Models`` in the Management Studio. You can also filter entity types by model in ``Browse`` > ``Entity types``.
+Schema inferencing generates entity types for the pipe source and pipe sink. The sink entity types are automatically mapped to implicit models. You can find these in ``Browse`` > ``Models`` in the Management Studio. You can also filter entity types by model in ``Browse`` > ``Entity types``.
 
 There are three built-in implicit models:
 
