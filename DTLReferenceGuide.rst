@@ -672,7 +672,7 @@ modifying the target entity, and has no return value.
           If you need to specify multiple transforms then wrap them in a list.
 
      - | ``["case",``
-       |   ``["gte", "_S.age", 18], ["add", "group", "adult"]],``
+       |   ``["gte", "_S.age", 18], ["add", "group", "adult"],``
        |   ``["gte", "_S.age", 13], ["add", "group", "teenager"],``
        |   ``["gte", "_S.age", 2], ["add", "group", "toddler"],``
        |   ``["lt", "_S.age", 2], ["add", "group", "baby"],``
