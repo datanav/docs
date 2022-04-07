@@ -6,6 +6,8 @@ The unique combination of Sesam's key features leads to simplified management
 of master data in data driven environments. The service includes most of
 the core features needed to build a data-fabric based platform.
 
+.. _delta-stream-processing:
+
 Delta stream processing
 -----------------------
 
