@@ -12,11 +12,11 @@ Sesam supports implementing multiple different :ref:`system types <system_sectio
 
 .. admonition:: Objectives
 
-  What are the objectives of this tutorial? What will the user have on his subscription if this tutorial is finished?
+  You should aim to achieve the following objectives as you go through this tutorial:
 
-  - Objective 1
-  - Objective 2
-  - Objective 3
+  - Get an overview of the different types of source systems provided by Sesam
+  - Understand and remember the most important aspects when working with a source system
+  - Successfully create a source system in your Sesam subscription
 
 When a System is used as a source it is especially important to recognize that providing streams of entities as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently, even if the amount of data residing in the source System increases exponentially. As such, avoiding bulk readings of data, as the amount of data residing in your source System increases, should be avoided.
 
@@ -34,7 +34,7 @@ The source system you will be working with in this tutorial is Twelvedata. `Twel
 
 As the REST API for Twelvedata stock exchange is open, you can easily connect and pull data from this system.
 
-We created a template to get you started. Follow these steps to to add `Twelvedata <https://twelvedata.com/>`_ as a system:
+We created a template to get you started. Follow these steps to to add Twelvedata as a system:
 
 #. Log in to `Sesam portal <https:portal.sesam.io>`_
 #. Select the subscription you want to work on
