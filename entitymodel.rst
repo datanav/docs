@@ -13,12 +13,13 @@ with. The following data prototype explains these special properties.
 ::
 
   {
-  	"_id": "the identity of the entity",
-  	"_updated": "a token indicating when this was modified",
-  	"_deleted": "indicating if the entity should be treated as deleted",
+        "_id": "the identity of the entity",
+        "_updated": "a token indicating when this was modified",
+        "_deleted": "indicating if the entity should be treated as deleted",
         "_hash": "a hash string of the entity's content",
         "_previous": "the _updated token of the previous version",
-        "_ts": "timestamp for when entity was registered in source"
+        "_ts": "timestamp for when entity was registered in source",
+        "_filtered: "true if the pipe transforms filtered out the entity"
   }
 
 The entity data model supports a wide range of data types including,
@@ -48,7 +49,7 @@ level, so child entities can have them.
      - This is the primary key of the entity. The value is always a
        string.
      - Yes
-       
+
        .. _deleted_field:
    * - ``_deleted``
      - If ``true``, then the entity is deleted. All other values are
@@ -85,6 +86,7 @@ level, so child entities can have them.
 
        *This field is generated automatically when writing an entity to a dataset.*
      -
+
        .. _ts_field:
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
@@ -95,10 +97,26 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _filtered_field:
+   * - ``_filtered``
+     - This boolean field is added automatically by DTL if the entity
+       was filtered out by the :ref:`filter <dtl_transform-filter>`
+       transform function. The purpose of it is to signal to the sink
+       that the entity should be deleted if it exists in the
+       sink. Only the :ref:`dataset sink <dataset_sink>` supports this
+       currently. If the sink does not support it then the entity will
+       be discarded instead of passed along to the sink.
+     -
+
        .. _tracked_field:
    * - ``_tracked``
      - If ``true`` then the entity was added to the dataset by
        `dependency tracking <concepts.html#dependency-tracking>`_.
+
+       Note that this property has been superceeded by a new way of
+       doing dependency tracking that does not require modifying
+       entites. If you see this property then the entity was likely
+       materialized by the old implementation.
 
        *This field is generated automatically by the dependency tracking.*
      -
