@@ -1,5 +1,17 @@
 .. _guide-collect:
 
+.. toctree::
+      :maxdepth: 1
+      :hidden:
+
+      Source systems in Sesam  <tutorial-collect-source-systems>
+      Inbound pipes  <tutorial-collect-inbound-pipes>
+      Data transformation <tutorial-collect-data-transformation>
+      A pipe's pump and sink <tutorial-collect-pump-sink>
+      Data change tracking <tutorial-collect-change-tracking>
+      Sesam's generic data model <tutorial-collect-generic-data-model>
+      Continuation support <tutorial-collect-continuation-support>
+
 Collect
 =======
 
@@ -36,7 +48,7 @@ You will now be guided through these in chronological stepwise tutorials provide
 
         Lorem ipsum
 
-        .. link-button:: xx.html
+        .. link-button:: tutorial-collect-source-systems.html
             :type: url
             :text: Start this tutorial
             :classes: tutorial-start
@@ -115,19 +127,3 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
 
-
-..
-   Steps
-   -----
-
-..
-   .. toctree::
-      :maxdepth: 1
-
-      Source systems in Sesam  <tutorial-collect-source-systems>
-      Inbound pipes  <tutorial-collect-inbound-pipes>
-      Data transformation <tutorial-collect-data-transformation>
-      A pipe's pump and sink <tutorial-collect-pump-sink>
-      Data change tracking <tutorial-collect-change-tracking>
-      Sesam's generic data model <tutorial-collect-generic-data-model>
-      Continuation support <tutorial-collect-continuation-support>
