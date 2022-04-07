@@ -303,3 +303,24 @@ DTL Expression Functions
    * - UUIDs
      - :ref:`uuid <uuid_dtl_function>` ·
        :ref:`is-uuid <is_uuid_dtl_function>`
+
+Entity model
+============
+
+.. list-table::
+   :widths: 30, 70
+
+   * - Reserved fields
+     - :ref:`_id <id_field>` ·
+       :ref:`_deleted <deleted_field>` ·
+       :ref:`_updated <updated_field>` ·
+       :ref:`_hash <hash_field>` ·
+       :ref:`_previous <previous_field>` ·
+       :ref:`_ts <ts_field>` ·
+       :ref:`_tracked <tracked_field>`
+
+   * - Special fields
+     - :ref:`$ids <dollar_ids_field>` ·
+       :ref:`$children <dollar_children>` ·
+       :ref:`$replaced <dollar_replaced>`
+

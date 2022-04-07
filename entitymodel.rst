@@ -48,12 +48,14 @@ level, so child entities can have them.
      - This is the primary key of the entity. The value is always a
        string.
      - Yes
-
+       
+       .. _deleted_field:
    * - ``_deleted``
      - If ``true``, then the entity is deleted. All other values are
        interpreted as if the entity is not deleted.
      -
 
+       .. _updated_field:
    * - ``_updated``
      - The sequence of the entity. The value must be either a string
        or an integer value. The value is used to tell the order of the
@@ -63,6 +65,7 @@ level, so child entities can have them.
        to the ``since`` request parameter in HTTP endpoints.
      -
 
+       .. _hash_field:
    * - ``_hash``
      - A string containing the hash of the entity's content. This value
        is used to decide when an entity has changed. Of the reserved
@@ -71,6 +74,7 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _previous_field:
    * - ``_previous``
      - A pointer back to the previous version of this entity. The
        value refers to the ``_updated`` field of the previous version
@@ -81,7 +85,7 @@ level, so child entities can have them.
 
        *This field is generated automatically when writing an entity to a dataset.*
      -
-
+       .. _ts_field:
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
        the dataset. The value is an integer representing the number
@@ -91,6 +95,7 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _tracked_field:
    * - ``_tracked``
      - If ``true`` then the entity was added to the dataset by
        `dependency tracking <concepts.html#dependency-tracking>`_.
