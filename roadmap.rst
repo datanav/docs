@@ -28,7 +28,7 @@ Property lineage (Q2 2022)
 ==========================
 
 Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
-are composed using introspectable DTL in combination with :ref:`schema collection <schema-inferencing>` allows us to continously track property lineage.
+are composed using introspectable DTL in combination with :ref:`schema inferencing <schema-inferencing>` allows us to continously track property lineage.
 
 We are working on making this lineage data available, as well as looking at ways to visualize it.
 

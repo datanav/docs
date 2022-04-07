@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_04_07:
+
+2022-04-07
+----------
+
+* :ref:`Schema inferencing <schema-inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces>`.
+
 .. _changelog_2022_03_31:
 
 2022-03-31
