@@ -1,4 +1,4 @@
-.. _custom_transform:
+.. _custom_data_transform:
 
 ===========================
 Creating a Custom Transform

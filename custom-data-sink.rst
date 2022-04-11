@@ -9,7 +9,7 @@ The last extension point is the ability to create custom sinks. A custom data si
 Sinks can be used to sit in front of legacy systems for which no Sesam adaptor exists. The main job of these sinks is to make
 the legacy system appear to be idempotent.
 
-Just as with the :ref:`Custom Data Source <custom_data_source>` and the :ref:`Custom Transform <custom_transform>` you need to define a system (such as the :ref:`HTTP system <http_system>` or the :ref:`Microservice system <microservice_system>`) connected to an external service.
+Just as with the :ref:`Custom Data Source <custom_data_source>` and the :ref:`Custom Transform <custom_data_transform>` you need to define a system (such as the :ref:`HTTP system <url_system>` or the :ref:`Microservice system <microservice_system>`) connected to an external service.
 
 Custom Data Sink - The URL system
 ---------------------------------
