@@ -1,4 +1,3 @@
-
 .. _merge_source:
 
 Merge source
@@ -19,6 +18,15 @@ of the resulting entity changes. Those entities will also have the
 If an entity is deleted in its source dataset then the entity will not
 be merged, but instead output as a standalone entity with ``_deleted``
 set to ``true``.
+
+.. WARNING::
+
+   The merge source version 2 with ``identity`` set to ``first`` does
+   support the same entity id originating from more than one source
+   dataset, but *only* iff there is an equality set on the ``_id``
+   property or the ``$ids`` property for all the datasets that have
+   overlapping entity ids.
+
 
 Prototype
 ^^^^^^^^^
