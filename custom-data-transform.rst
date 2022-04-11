@@ -72,3 +72,24 @@ In order to help build these microservices the following template projects for c
     - The `Python template <https://github.com/sesam-io/python-transform-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 
 The transform will stream an array of JSON objects to the registered endpoint and expect back a list of entities. The result of the HTTP transform is passed along the transformation pipeline and into the pipe's sink.
+
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg-12
+    :column: col-lg-6 p-1
+
+    :badge:`Tutorials, badge-success text-white`
+    
+    **Custom Data Source - The HTTP Transform**
+
+    Look closer into how to create a custom data transform with a microservice. 
+
+ 
+    .. link-button:: tutorial-custom-data-transform-http-transform.html
+        :type: url
+        :text: Start tutorial
+        :classes: btn-all-sections btn-all
+
+|

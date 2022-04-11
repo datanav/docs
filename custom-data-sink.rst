@@ -39,6 +39,27 @@ The configuration of the custom URL sink is very similar to the :ref:`custom URL
       }
     }
 
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg-12
+    :column: col-lg-6 p-1
+
+    :badge:`Tutorials, badge-success text-white`
+    
+    **Custom Data Sink - The URL System**
+
+    Look closer into how to create a custom data sink using the URL System. 
+
+ 
+    .. link-button:: tutorial-custom-data-ssink-url-system.html
+        :type: url
+        :text: Start tutorial
+        :classes: btn-all-sections btn-all
+
+|
+
 Custom Data Sink - The Microservice system
 ------------------------------------------
 
@@ -87,3 +108,24 @@ The following templates for custom microservice data sinks are available:
         When using the JSON push sink to send entities from Sesam to the microservice Sesam includes each entity's :ref:`reserved fields <reserved_fields>`. There might very well be use for them in the microservice, but if there is not these may have to be removed before sending the data from the microservice to the target system. This may be especially prudent for entities with ``“_deleted”: true``. This means the entity is marked as deleted in Sesam and might require some extra functionality to be handeled in the microservice.
 
         When Sesam sends data through the JSON push sink it sends the data in batches. In addition Sesam will always send one final batch without any data inside it. Therefore, if you have a JSON push sink batch size of 100 (the default value) and try to send 150 entities Sesam will send three different batches. The first batch will contain 100 entities, the second 50 entities and the last one 0 entities. This is good to have in mind when setting up the microservice.
+
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg-12
+    :column: col-lg-6 p-1
+
+    :badge:`Tutorials, badge-success text-white`
+    
+    **Custom Data Sink - The Microservice System**
+
+    Look closer into how to create a custom data sink using the Microservice System. 
+
+ 
+    .. link-button:: tutorial-custom-data-sink-microservice-system.html
+        :type: url
+        :text: Start tutorial
+        :classes: btn-all-sections btn-all
+
+|
