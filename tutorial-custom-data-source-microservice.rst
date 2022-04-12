@@ -1,24 +1,19 @@
 .. _tutorial_custom_data_source_microservice:
 
-============================================
-Custom Data Source - The Microservice System
-============================================
+Customize Data Source - The Microservice System
+===============================================
 
-*In this lesson we will look closer into how to crate a custom data source with a microservice. When finished with this tutorial you will have built both the microservice and set up the required configurations in Sesam in order to import data from an external REST API. You will be given information on how to access the API as well as a microservice template in which you will have to add the needed logic to import data from that API into a Sesam pipe*.
+In this lesson we will look closer into how to crate a custom data source with a microservice. When finished with this tutorial you will have built both the microservice and set up the required configurations in Sesam in order to import data from an external REST API. You will be given information on how to access the API as well as a microservice template in which you will have to add the needed logic to import data from that API into a Sesam pipe.
 
-.. admonition:: Pre-requisits
+.. admonition:: Prerequisits
 
-  **Sesam specific pre-requisites**
-  
-  Before starting on this lesson we expect a general understanding on input pipes in Sesam and we recommend that you read about :ref:`Custom Data Source - The Microservice System <custom_data_source_microservice>` in the Sesam documentation. 
-  
-  **Other useful pre-requisites**
-  In order to finish this lesson the following bullets point will also help:
-
-  - An account on DockerHub (a public account is free of charge and very quickly set up)
-  - A developer account on HubSpot (free)
-  - An understanding on how to create Docker images
-  - Coding experience (we use Python in this example, but any coding language works as long as you can translate to it from Python)
+  Before starting on this tutorial we suggest you get familiar with input pipes [link] aswell as the :ref:`Custom Data Source - The Microservice System <custom_data_source_microservice>` article in our documentation. 
+    
+  Good to have:
+    - An account on DockerHub (free)
+    - A developer account on HubSpot (free)
+    - An understanding on how to create Docker images
+    - Coding experience (we use Python in this example, but any coding language works as long as you can translate to it from Python)
 
 .. tip::
     - Set your sensitive variables as secrets in Sesam and send those secrets to the microservice as environmental variables.

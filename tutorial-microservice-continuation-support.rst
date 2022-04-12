@@ -1,14 +1,20 @@
 .. _tutorial_microservices_continuation_support:
 
-====================================
 Microservices - Continuation support
 ====================================
 
-*In this lesson we will look closer into continuation support and change tracking for data imported from a microservice. When finished with this lesson you will have learned to include the necessary logic for implementing continuation support in a Sesam microservice as well as added the corresponding support inside a Sesam input pipe.*
+In this lesson we will look closer into :ref:`continuation support <continuation_support_microservices>` and change tracking for data imported from a microservice.
+
+.. admonition::  Objectives:
+   
+    After you complete these tutorials you would have learned the following:
+
+    #. How to implement continuation support in a Microservice
+    #. How to implement continuation support in an input pipe
 
 .. admonition:: Pre-requisits
 
-  **Sesam specific pre-requisites**
+  **Prerequisites**
 
   This lesson covers how to implement change tracking through continuation support in microservices. Before starting on this lesson we expect a general understanding on input pipes in Sesam and we recommend that you do the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>`. 
 
