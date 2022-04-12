@@ -98,6 +98,26 @@ Note that in the example below we have set ``supports_since`` to ``true``, which
       "url_pattern": "http://localhost:5000/api/%s"
     }
 
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg-12
+    :column: col-lg-6 p-1
+
+    :badge:`Tutorials, badge-success text-white`
+    
+    **Custom Data Source - The URL System**
+
+    Look closer into how to create a custom data source with a URL system. 
+
+ 
+    .. link-button:: tutorial-custom-data-source-url-system.html
+        :type: url
+        :text: Start tutorial
+        :classes: btn-all-sections btn-all
+
+|
 
 .. _custom_data_source_microservice:
 

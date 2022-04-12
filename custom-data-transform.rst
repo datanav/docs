@@ -19,7 +19,7 @@ The set of transforms is wrapped in an array, and in this case the first transfo
 Custom Transform - The HTTP transform
 -------------------------------------
 
-In the following configurations we will see how the :ref:`HTTP transform <http_transform>` in combination with the :ref:`URL system <url_system>` can be used to create a Custom Data Transform. In the example below we show an example of an HTTP transform connected to a Microservice system.
+In the following configurations we will see how the :ref:`HTTP transform <http_transform>` in combination with the :ref:`URL system <url_system>` can be used to create a Custom Data Transform. In the example below we show an example of an HTTP transform connected to a Microservice system. 
 
 .. code-block:: json
   :linenos:
@@ -67,7 +67,7 @@ In the following configurations we will see how the :ref:`HTTP transform <http_t
       }
     }
 
-In order to help build these microservices the following template projects for common languages are provided.
+In addition to the information on :ref:`Microservices in Sesam <microservices_in_sesam>`, following microservice template projects for common languages are provided.
 
     - The `Python template <https://github.com/sesam-io/python-transform-template>`__. Requires Python 3 and uses the `Flask <http://flask.pocoo.org>`_ framework.
 

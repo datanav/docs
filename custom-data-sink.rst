@@ -97,7 +97,7 @@ The microservice custom sink works the same way as the microservice custom sourc
     }
 
 
-The following templates for custom microservice data sinks are available:
+There are some tips on how to create a microservice in :ref:`Microservices in Sesam <microservices_in_sesam>`. In addition to those, the following templates for custom microservice data sinks are available:
 
     - The `ASP.NET template <https://github.com/sesam-io/aspnet-datasink-template>`__.  This template uses ASP.NET 1.0 and .NET Core 1.0, and is fully cross platform.
 
