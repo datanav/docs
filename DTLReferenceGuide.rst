@@ -457,8 +457,8 @@ the former will have better precision.
 
 .. _namespace_aware_functions:
 
-Namespaces
-==========
+Namespace aware functions
+=========================
 
 The following functions are namespace aware: :ref:`add
 <dtl_transform-add>`, :ref:`default <dtl_transform-default>`,
