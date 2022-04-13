@@ -1,5 +1,8 @@
 .. _guide-collect:
 
+Collect
+=======
+
 .. toctree::
       :maxdepth: 1
       :hidden:
@@ -12,8 +15,6 @@
       Sesam's generic data model <tutorial-collect-generic-data-model>
       Continuation support <tutorial-collect-continuation-support>
 
-Collect
-=======
 
 This guide will help you learn and apply Sesam's :ref:`collect patterns <collect-pattern>`.
 
