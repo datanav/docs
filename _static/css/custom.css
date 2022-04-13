@@ -2,6 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
 
+.breadcrumb {
+background-color: #fafafa;
+margin-bottom: 3em;
+font-size: 1em;
+margin-top: -1.3em;
+}
+
+@media screen and (max-width: 535px) {
+  .breadcrumb {
+    display: none;
+  }
+}
+
 .navbar-light{
 	background-color: #40363c !important;
 }
