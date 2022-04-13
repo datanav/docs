@@ -21,3 +21,8 @@
     &copy; {{ copyright }}
   </div>
 {%- endblock %}
+
+{%- block docs_body %}
+  {% include "breadcrumb.html" %}
+  {{ super() }}
+{%- endblock %}
