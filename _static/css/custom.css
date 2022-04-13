@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
 
+.navbar-light{
+	background-color: #40363c !important;
+}
 .section a {
 	text-decoration: underline;
 }
@@ -37,10 +40,17 @@ h3 {
 	font-size: 1.5em;
 }
 
+/* Top menu customization */
+/*START*/
 a.nav-link {
 	font-size: 1.2em;
+	color: white !important;
 }
 
+a.nav-link:hover {
+	text-decoration: underline;
+}
+/*---------END----------*/
 .navbar-brand {
 	padding: 12px;
 }
@@ -122,32 +132,32 @@ a.tutorial-start:visited {
 	color: white;
 }
 
-	/* START ** Buttons to see all sections*/
-	.btn-all-sections {
-	  background-color: #007bff;
-	  color:  white;
-	  border: none;
-	  padding: 10px 10px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 2px 2px;
-	  transition-duration: 0.4s;
-	  cursor: pointer;
+/*Buttons to see all sections*/
+.btn-all-sections {
+	background-color: #007bff;
+	color:  white;
+	border: none;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 2px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 	}
 
-	.btn-all {
-	  background-color: #009fdc; 
-	  color: white !important; 
-	  }
+.btn-all {
+	background-color: #009fdc; 
+	color: white !important; 
+}
 
-	.btn-all:hover {
-	  background-color: #023258;
-	  color: white;
-	}
+.btn-all:hover {
+	background-color: #023258;
+	color: white;
+}
 
-	/* END ** Buttons for see all sections*/
+	/*---------END----------*/
 /* END ** Buttons used in index pages*/
 
 /* Center titles on index pages*/
@@ -339,9 +349,8 @@ footer .container {
 	}
 }
 
-/*****************************************************************************
-* Font family
-**/
+/*Font family*/
+/*---------START----------*/
 :root {
     --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
@@ -357,4 +366,4 @@ body {
 .p {
 	font-family: 'Barlow', sans-serif;
 }
-/*****************************************************************************
+/*---------END----------*/
