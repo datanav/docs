@@ -51,6 +51,11 @@ a.nav-link:hover {
 	text-decoration: underline;
 }
 /*---------END----------*/
+
+.toc-entry>.nav-link {
+	color:  #1E1E1E !important;
+}
+
 .navbar-brand {
 	padding: 12px;
 }
