@@ -3997,11 +3997,11 @@ Namespaced identifiers
        |
        | ``["ni", "bar"]``
        |
-       | This will produce a namespaced identifier in the global namespace; ``"~:bar"``.
+       | This will produce a namespaced identifier in the global namespace ``"~:bar"``.
        |
        | ``["ni", "foo", ["list", "bar", "x:y"]]``
        |
-       | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``
+       | This will produce a list of two namespaced identifiers: ``["~:foo:bar", "~:foo:x:y"]``.
        |
        | ``["ni", "foo", ["uri, "http://example.org/"]]``
        |
@@ -4020,7 +4020,7 @@ Namespaced identifiers
          ``your-pipe``. The ``-1`` part is a sequence counter, so if you introduce other
          namespaces in your pipe they'll be assigned unique namespace ids. If the URI prefix
          had already been mapped to the ``unknown`` namespace then the expression would have
-         returned ``"~:unknown:baz"``
+         returned ``"~:unknown:baz"``.
 
        .. _is_ni_dtl_function:
    * - ``is-ni``
@@ -4060,7 +4060,7 @@ Namespaced identifiers
        |
        | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
        |
-       | Returns ``["foo", "bar"]``
+       | Returns ``["foo", "bar"]``.
 
        .. _ni_id_dtl_function:
    * - ``ni-id``
@@ -4076,7 +4076,7 @@ Namespaced identifiers
        |
        | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
        |
-       | Returns ``["bar", "baz"]``
+       | Returns ``["bar", "baz"]``.
 
        .. _ni_collapse_dtl_function:
    * - ``ni-collapse``
@@ -4109,25 +4109,25 @@ Namespaced identifiers
        |
        | ``["ni-collapse", ["list", "http://psi.test.no/bar", "http://psi.test.no/baz"]]``
        |
-       | Returns ``["~:foo:bar", "~:foo:baz"]``
+       | Returns ``["~:foo:bar", "~:foo:baz"]``.
        |
        | ``["ni-collapse", "http://sesam.io/people/employees"]``
        |
-       | Returns ``"~:sesam:employees"``
+       | Returns ``"~:sesam:employees"``.
        |
        | ``["ni-collapse", "http://sesam.io/people/male/john"]``
        |
-       | Returns ``"~:sesam_male:john"``
+       | Returns ``"~:sesam_male:john"``.
        |
        | ``["ni-collapse", "http://sesam.io/people/female/jane"]``
        |
-       | Returns ``"~:sesam_female:jane"``
+       | Returns ``"~:sesam_female:jane"``.
        |
        | The ``http`` and ``https`` namespaces are implicitly defined, so a URI that doesn't match any prefix will work:
        |
        | ``["ni-collapse", "http://example.com/path"]``
        |
-       | Returns ``"~:http://example.com/path"``
+       | Returns ``"~:http://example.com/path"``.
 
        .. _ni_expand_dtl_function:
    * - ``ni-expand``
@@ -4158,27 +4158,27 @@ Namespaced identifiers
        |
        | ``["ni-expand", ["list", "~:foo:bar", "~:foo:baz"]]``
        |
-       | Returns ``["http://psi.test.no/bar", "http://psi.test.no/baz"]``
+       | Returns ``["http://psi.test.no/bar", "http://psi.test.no/baz"]``.
        |
        | ``["ni-expand", "~:sesam:employees"]``
        |
-       | Returns ``"http://sesam.io/people/employees"``
+       | Returns ``"http://sesam.io/people/employees"``.
        |
        | ``["ni-expand", "~:sesam_male:john"]``
        |
-       | Returns ``"http://sesam.io/people/male/john"``
+       | Returns ``"http://sesam.io/people/male/john"``.
        |
        | ``["ni-expand", "~:sesam_female:jane"]``
        |
-       | Returns ``"http://sesam.io/people/female/jane"``
+       | Returns ``"http://sesam.io/people/female/jane"``.
        |
        | ``["ni-expand", "~:http://example.com/path"]``
        |
-       | Returns ``"http://example.com/path"``
+       | Returns ``"http://example.com/path"``.
        |
        | ``["ni-expand", "~:unknown:path"]``
        |
-       | Returns ``"unknown:path"``
+       | Returns ``"unknown:path"``.
 
 Nested transformations
 ----------------------
