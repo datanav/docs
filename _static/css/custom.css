@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
 
 .navbar-light{
-	background-color: #40363c !important;
+	background-color: #40363c;
 }
 .section a {
 	text-decoration: underline;
