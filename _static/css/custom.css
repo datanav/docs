@@ -308,6 +308,10 @@ footer .container {
 	.navbar-collapse {
 		font-size: 1.2rem;
 	}
+	.bd-sidebar {
+		height: 25vh;
+    	max-width: 100%;
+	}
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
