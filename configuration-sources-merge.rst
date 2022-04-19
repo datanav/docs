@@ -182,6 +182,13 @@ Properties
      - ``"default"``
      - No
 
+   * - ``max_merged``
+     - Integer
+     - Sets the maximum number of entities that can be merged at a time.
+       The merge pipe will fail if more than ``max_merged`` entities are attempted merged into a single entity.
+     - 100
+     -
+
    * - ``supports_signalling``
      - Boolean
      - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
