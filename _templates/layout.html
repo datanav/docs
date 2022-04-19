@@ -15,19 +15,6 @@
   <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/19709964.js"></script>
 <!-- End of HubSpot Embed Code -->
 
-<!-- A hacky way to hide the breadcrumb from the only index pages -->
-<script> 
-  const blackList = ['index.html', 'index-whatis', 'index-developer', 'index-learn'];
-  const loc = window.location.href;
-  const breadcrumb = document.querySelector(".breadcrumb");
-  const tokens = loc.split('/');
-  const lastUrlToken = tokens[tokens.length-1];
-  if(lastUrlToken === '' || lastUrlToken.startsWith('#')) breadcrumb.style.display = 'none';
-  for(b of blackList) {
-    if(lastUrlToken.includes(b)) breadcrumb.style.display = 'none';
-  }
-</script>
-
 {% endblock %}
 
 {%- block footer_wrapper %}
@@ -37,6 +24,9 @@
 {%- endblock %}
 
 {%- block docs_body %}
-  {% include "breadcrumb.html" %}
+  {% if pagename != 'index' and pagename != 'index-whatis' %}
+    {% include "breadcrumb.html" %}    
+  {% endif %}
+  
   {{ super() }}
 {%- endblock %}
