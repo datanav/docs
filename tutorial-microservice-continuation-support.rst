@@ -7,7 +7,7 @@ In this lesson we will look closer into :ref:`continuation support <continuation
 
 .. admonition::  Objectives:
    
-    After you complete these tutorials you would have learned the following:
+    After you complete this tutorial you would have learned the following:
 
     #. How to implement continuation support in a Microservice
     #. How to implement continuation support in an input pipe

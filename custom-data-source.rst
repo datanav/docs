@@ -126,7 +126,7 @@ Custom Data Source - The Microservice system
 
 If the built-in :ref:`URL system <url_system>` is not enough to cover your required functionality, a microservice could be a good solution. When creating a microservice as a custom data source there are a few thing to bare in mind in order to gain optimal functionality.
 
-To set up a microservice custom source a microservice that implements the :doc:`JSON push protocol <json-push>` should be
+To set up a microservice custom source a microservice that implements the :doc:`JSON pull protocol <json-pull>` should be
 developed and running.
 
 Once this is running it is possible to define a pipe in Sesam where the source is a :ref:`JSON source <json_source>`. All data read by the microservice will be sent to the source, preferable as a stream.
