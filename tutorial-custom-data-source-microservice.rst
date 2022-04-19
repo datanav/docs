@@ -187,11 +187,11 @@ Secondly, and through the url source parameter, we need to specify which Microse
         "url": "get_contacts"
       }
 
-Since HubSpot does not return any ``_id``  attribute for contacts we need to declare this in the pipe as this attribute is a requirement for all entities in Sesam.
+We also wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation..
 
 .. code-block:: json
   :linenos:
-  :emphasize-lines: 15
+  :emphasize-lines: 14
 
     {
       "_id": "hubspot-contacts-collect",
@@ -214,11 +214,11 @@ Since HubSpot does not return any ``_id``  attribute for contacts we need to dec
       "add_namespaces": false
     }
 
-Finally we wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation..
+Finally, since HubSpot does not return any ``_id``  attribute for contacts we need to declare this in the pipe as this attribute is a requirement for all entities in Sesam.
 
 .. code-block:: json
   :linenos:
-  :emphasize-lines: 14
+  :emphasize-lines: 15
 
     {
       "_id": "hubspot-contacts-collect",
