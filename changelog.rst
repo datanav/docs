@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_04_19:
+
+2022-04-19
+----------
+
+* Added a new property ``max_merged`` to the :ref:`merge source <merge_source>`.
+
 .. _changelog_2022_04_07:
 
 2022-04-07
