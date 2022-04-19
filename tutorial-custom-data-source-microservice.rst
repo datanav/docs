@@ -156,7 +156,7 @@ Connect a pipe to the system
 ----------------------------
 The final step is to connect a pipe to the Microservice system that triggers when the contacts should be imported. 
 
-#. First we need to create a new pipe with a :ref:`json source <json_source>` poiting to the Microservice system. 
+First we need to create a new pipe with a :ref:`json source <json_source>` poiting to the Microservice system. 
 
 .. code-block:: json
   :linenos:
@@ -171,7 +171,7 @@ The final step is to connect a pipe to the Microservice system that triggers whe
         "completeness": false,
     },
 
-#. Secondly, and through the url source parameter, we need to specify which Microservice route the pipe will connect to. In our case the contacts are imported from the ``get_contacts`` route.
+Secondly, and through the url source parameter, we need to specify which Microservice route the pipe will connect to. In our case the contacts are imported from the ``get_contacts`` route.
 
 .. code-block:: json
   :linenos:
@@ -187,7 +187,7 @@ The final step is to connect a pipe to the Microservice system that triggers whe
         "url": "get_contacts"
       }
 
-#. Since HubSpot does not return any ``_id``  attribute for contacts we need to declare this in the pipe as this attribute is a requirement for all entities in Sesam.
+Since HubSpot does not return any ``_id``  attribute for contacts we need to declare this in the pipe as this attribute is a requirement for all entities in Sesam.
 
 .. code-block:: json
   :linenos:
@@ -214,7 +214,7 @@ The final step is to connect a pipe to the Microservice system that triggers whe
       "add_namespaces": false
     }
 
-#. Finally we wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation..
+Finally we wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation..
 
 .. code-block:: json
   :linenos:
