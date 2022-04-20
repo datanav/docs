@@ -15,7 +15,7 @@ In this tutorial we will look closer into how to create a :ref:`custom data sour
 
 .. admonition:: Prerequisits
 
-  Before starting on this tutorial we suggest you get familiar with input pipes [link] aswell as the :ref:`Custom Data Source - The Microservice System <custom_data_source_microservice>` article in our documentation. 
+  Before starting on this tutorial we suggest you get familiar with :ref:`pipes <pipe_section>` as well as the :ref:`Custom Data Source - The Microservice System <custom_data_source_microservice>` article in our documentation. 
     
   You should also acquire:
     - An account on `DockerHub <https://hub.docker.com/>`_ (free)
