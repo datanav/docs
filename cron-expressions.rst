@@ -1,3 +1,5 @@
+.. _cron_expressions:
+
 Cron expressions
 ================
 
@@ -14,7 +16,7 @@ https://en.wikipedia.org/wiki/Cron but note that the special character
 Syntax
 ------
 
-A cron-expression is a string of 5 or 6 fields separated by space
+A cron expression is a string of 5 or 6 fields separated by space
 character. The string is parsed from left to right and denotes in
 sequence:
 
