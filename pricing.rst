@@ -20,6 +20,10 @@ If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
 will be billed with 5 quantities of Multi computes.
 
+.. note::
+
+  :ref:`Integrated search <concepts-integrated-search>` will increase the data consumption by 2x, :ref:`Durable data <concepts-durable-data>` will increase the data consumption by 3x. These features are additative, if both are enabled the data consumption will only increase by 5x.
+
 The fees for the Services are set out below in Euro exclusive of VAT:
 
 .. _pricing-developer:
