@@ -14,7 +14,7 @@ In this tutorial we will look closer into :ref:`continuation support <continuati
 
 .. admonition:: Prerequisits
 
-  Before starting on this lesson we expect a general understanding of :ref:`pipes <pipe_section>` in Sesam and we recommend that you do the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>` as this tutorial is heavily based its results. We also recommend you read the section concerning :ref:`Continuation support for Microservices <continuation_support_microservices>` in our documentation. 
+  Before starting on this lesson we expect a general understanding of :ref:`inbound pipes <best-practice-inbound-pipes>` in Sesam and we recommend that you do the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>` as this tutorial is heavily based its results. We also recommend you read the section concerning :ref:`Continuation support for Microservices <continuation_support_microservices>` in our documentation. 
 
   You should also acquire:
     - An account on `DockerHub <https://hub.docker.com/>`_ (free)
