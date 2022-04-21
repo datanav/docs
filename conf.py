@@ -30,7 +30,8 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 # ones.
 extensions = ['sphinxarg.ext',
               'sphinxcontrib.openapi',
-              'sphinx_panels'
+              'sphinx_panels',
+              'notfound.extension'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -300,3 +301,6 @@ html_show_sphinx = False
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# https://sphinx-notfound-page.readthedocs.io/en/latest/configuration.html
+notfound_no_urls_prefix = True
