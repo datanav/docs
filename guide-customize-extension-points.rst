@@ -7,13 +7,9 @@ Customize Extension Points
     :maxdepth: 1
     :hidden:
 
-        Customize Data Source - The URL system  <tutorial-custom-data-source-url-system>
+
         Customize Data Source - The Microservice system  <tutorial-custom-data-source-microservice>
         Customize Data Source - Microservices & Continuation support  <tutorial-microservice-continuation-support>
-        Customize Data Source - The HTTP Endpoint Source <tutorial-custom-data-source-http-endpoint-source>
-        Customize Data Transform - The HTTP Tranform <tutorial-custom-data-transform-http-transform>
-        Customize Data Sink - The URL Sink <tutorial-custom-data-sink-url-system>
-        Customize Data Sink - The Microservice Sink <tutorial-custom-data-sink-microservice-system> 
 
 This section will help understand and implement the various Extension Points available in Sesam through custom data sources, custom data transforms and custom data sinks. You will also learn how to build and use microservices in your Sesam subscription.  
 
