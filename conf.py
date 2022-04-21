@@ -30,7 +30,8 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 # ones.
 extensions = ['sphinxarg.ext',
               'sphinxcontrib.openapi',
-              'sphinx_panels'
+              'sphinx_panels',
+              'notfound.extension'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
