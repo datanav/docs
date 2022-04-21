@@ -301,3 +301,6 @@ html_show_sphinx = False
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# https://sphinx-notfound-page.readthedocs.io/en/latest/configuration.html
+notfound_no_urls_prefix = True
