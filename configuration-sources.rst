@@ -70,7 +70,7 @@ the source*. Within an entity the marker is carried in the
 
 
 
-Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
+Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <microservices_in_Sesam>`, see the example at the bottom of this section.
 
 There are four characteristics that describe continuation
 support. All sources have these and there are three properties
@@ -229,7 +229,7 @@ reason. The :doc:`api` can also tell you what the current
 Continuation support for Microservices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you wish to activate continuation support for a :ref:`microservice <getting-started-microservices>` the pipe source needs to have the "supports_since" parameter set as true, as well as either the "is_since_comparable" or "is_chronological" strategy. An example of this is shown in the Sesam config example below.
+If you wish to activate continuation support for a :ref:`microservice <microservices_in_Sesam>` the pipe source needs to have the "supports_since" parameter set as true, as well as either the "is_since_comparable" or "is_chronological" strategy. An example of this is shown in the Sesam config example below.
 
 .. raw:: html
 
