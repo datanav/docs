@@ -64,6 +64,12 @@ the Sesam components and it is assumed to be interpretable *only by
 the source*. Within an entity the marker is carried in the
 ``_updated`` property if supported by its source.
 
+    .. important::
+
+        When using continuation support, Sesam will not be able to do automatic deletion tracking. If you wish to include deleted entities in your import, make sure you regularly set a full sync on the imported data. 
+
+
+
 Sesam supports a diverse set of core data sources. For many of the built-in source modules, such as many of the SQL sources, all you need to to is to place the property :ref:`updated_column <sql_source>` in the :ref:`source <source_section>` section of your config. It's corresponding value should be the column (if it exists) inside the SQL table which contains time-stamp or sequence information from when the row was last updated. For continuation support in a :ref:`microservice <getting-started-microservices>`, see the example at the bottom of this section.
 
 There are four characteristics that describe continuation
@@ -217,6 +223,8 @@ update or reset the ``pipe_offset`` value manually. This is useful in
 cases where one wants to reprocess the data from scratch for some
 reason. The :doc:`api` can also tell you what the current
 ``pipe_offset`` value is.
+
+.. _continuation_support_microservices:
 
 Continuation support for Microservices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

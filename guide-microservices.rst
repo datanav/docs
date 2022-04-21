@@ -5,19 +5,35 @@ Microservices
 
 Introduction
 ------------
-This guide will help you build and use a Sesam extension using microservices.
+This guide will help you build and use microservices inside your Sesam instance. 
 
-We start by building a Docker image from our microservice. A Docker image is the blueprint for creating a container with our microservice.
+    .. tip::
 
-The Docker image is then pushed up to a repository on Docker Hub (or any Docker platform. When hosted in the repository the image can be pulled by anyone with access.
+        Microservices may help you increase your node's connectivity capabilities, but make sure that these aren't functionalities covered in the built-in Sesam functionalities already. Quite often people create microservices only to discover that either someone has already created one or that the desired functionality was already covered in the Sesam software. 
 
-Finally, we pull the image from our Docker Hub repository (although private repositories are also supported) and spin up a container on our Sesam node. The container is created from the image and started. The Docker-commands for this are performed by Sesam. We simply specify the location of the image on Docker Hub in our Sesam system configuration and the container is spun up automatically. Once the Docker image location is defined in the System config Sesam will spin up the correponding container automatically. Finally to transfer data between Sesam datahub and the microservice, we need an inbound pipe or endpoint pipe depending on solution. For example a SQL database sends data to a Sesam pipe via a default microservice available inside your Sesam node, and similarly for data going out of Sesam to target systems.
+        Sesam has a public git repository located `here <https://www.github.com/sesam-community>`_ where we publish microservices that we ourselves have found very useful.
 
-After you have completed these tutorials you would have:
 
-#. Created and tested a microservice
-#. Used the microservice in your Sesam subscription
+This guide is divided into two sections: :ref:`Creating a microservice <tutorial_microservice_create>` and :ref:`Using a microservice in Sesam <tutorial_microservice_use>`. 
 
+In "Creating a microservice" we will go through all the important aspects to have in mind when creating a microservice for use in Sesam. These concepts covers:
+
+  - How Sesam passes data to and receives data from a microservice (incl. streaming, empty list last batch and system attributes/_deleted)
+  - Passing variables between the microservice and Sesam
+  - How to enable change tracking in a pipe connected to a microservice
+  - Support for optimistic locking in a microservice
+  - Memory awareness
+  - Logging
+  - Basic testing
+
+
+In "Using a microservice in Sesam" we will talk about how the microservice communicates with your Sesam instance. These concepts covers:
+
+  - Connecting Sesam to a Docker image
+  - System config (incl env. vars)
+  - Connecting microservice system to a pipe
+  - Status page
+  - Passing arguments from pipe
 
 Steps
 -----
@@ -26,10 +42,17 @@ Steps
    :maxdepth: 1
 
    Creating a microservice  <tutorial-microservice-create>
-   Testing a microservice  <tutorial-microservice-test>
-   Publish to Docker Hub <tutorial-microservice-publish>
    Using a microservice <tutorial-microservice-use>
 
+
+
+Lessons
+-------
+
+.. toctree::
+   :maxdepth: 1
+
+   Microservices - Continuation support  <lesson-microservice-continuation-support>
 
 
 

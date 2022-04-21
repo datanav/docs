@@ -1,3 +1,5 @@
+.. _tutorial_microservice_create:
+
 Creating a microservice
 =======================
 

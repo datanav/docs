@@ -1,3 +1,5 @@
+.. _tutorial_microservice_use:
+
 Using a microservice
 ====================
 

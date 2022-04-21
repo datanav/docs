@@ -27,6 +27,8 @@ string, integer, decimal, boolean, namespaced identifier, URI, bytes
 and datetime. Over the wire both a binary and JSON representation is
 used.
 
+.. _reserved_fields :
+
 Reserved fields
 ---------------
 
