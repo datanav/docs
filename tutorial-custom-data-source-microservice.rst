@@ -13,7 +13,7 @@ In this tutorial we will look closer into how to create a :ref:`custom data sour
     #. How to set up an input pipe to import data from the Microservice
 
 
-.. admonition:: Prerequisits
+.. admonition:: Prerequisites
 
   Before starting on this tutorial we suggest you get familiar with :ref:`inbound pipes <best-practice-inbound-pipes>` as well as the :ref:`Custom Data Source - The Microservice System <custom_data_source_microservice>` article in our documentation. 
     

@@ -12,7 +12,7 @@ In this tutorial we will look closer into :ref:`continuation support <continuati
     #. How to implement continuation support in a Microservice
     #. How to implement continuation support in an input pipe
 
-.. admonition:: Prerequisits
+.. admonition:: Prerequisites
 
   Before starting on this lesson we expect a general understanding of :ref:`inbound pipes <best-practice-inbound-pipes>` in Sesam and we recommend that you do the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>` as this tutorial is heavily based its results. We also recommend you read the section concerning :ref:`Continuation support for Microservices <continuation_support_microservices>` in our documentation. 
 
