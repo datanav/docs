@@ -10,7 +10,7 @@ To help in these situations there are well defined patterns and integration poin
 
 There are two ways of customizing a connection to a Developer Extension Point:
 
-- By using the :ref:`URL system <url_system>` to connect to an external endpoint with the :ref:`JSON pull protocol <json_pull>` or the :ref:`JSON push protocol <json_push>`
+- By using the :ref:`URL system <url_system>` to connect to an external endpoint with the :ref:`JSON pull protocol <json_pull>` or the :doc:`JSON push protocol <json-push>`
 - By creating a microservice and connecting it to a :ref:`Microservice system <microservice_system>` 
 
 These connections can be used to configure either a :ref:`custom data source <custom_data_source>`, a :ref:`custom transform <custom_data_transform>` or a :ref:`custom data sink <custom_data_sink>`.

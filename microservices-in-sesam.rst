@@ -15,7 +15,7 @@ In Sesam there are three typical ways of passing variables from Sesam into a mic
 
 - By setting environmental variables directly to the Docker container in which the microservice runs. These are defined as docker specific parameters in the :ref:`microservice system configuration <microservice_system>`.
 - Through `dynamic URL's <https://stackoverflow.com/questions/35107885/how-to-generate-dynamic-urls-in-flask>`_. An example of these can be seen in the tutorial :ref:`Custom Data Source - The Microservice System - Import data <tutorial_custom_data_source_microservice>`.
-- Through the request parameters  in the :ref:`JSON pull <json_pull>` and :ref:`JSON push <json_push>` protocols.
+- Through the request parameters  in the :ref:`JSON pull <json_pull>` and :doc:`JSON push <json-push>` protocols.
 
 Environmental variables are usually system specific varables, i.e. they are used throughout the whole microservice and not for a spesific endpoint. Example of these might be access tokens, base URL's or headers. 
 

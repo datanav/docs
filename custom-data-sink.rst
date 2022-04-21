@@ -63,7 +63,7 @@ The configuration of the custom URL sink is very similar to the :ref:`custom URL
 Custom Data Sink - The Microservice system
 ------------------------------------------
 
-The microservice custom sink works the same way as the microservice custom source, only now with data being passed from a Sesam pipe's sink to the microservice thgou the :ref:`JSON push sink <json_push>`. 
+The microservice custom sink works the same way as the microservice custom source, only now with data being passed from a Sesam pipe's sink to the microservice thgou the :doc:`JSON push sink <json-push>`. 
 
 .. code-block:: json
   :linenos:
