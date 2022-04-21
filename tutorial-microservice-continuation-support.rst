@@ -23,7 +23,7 @@ In this tutorial we will look closer into :ref:`continuation support <continuati
     - Coding experience (we use Python in this example, but any coding language works as long as you can translate to it from Python)
 
 .. important::
-    - Each API has different functionalities, and not every API supports query parameters to only access updated data. It's important to throuroughly read the API's documentation in order to set the correct query parameter as you since parameter.
+    - Each API has different functionalities, and not every API supports query parameters to only access updated data. It's important to thoroughly read the API's documentation in order to set the correct query parameter as you since parameter.
 
 Use-case
 --------
@@ -127,9 +127,9 @@ We also need to make sure that the pipe's ``pipe_offset`` is sent back to the Mi
       ...
 
 The code snippet above separates the logic into two cases: 
-#. The first covers every situation where we wish to ask the API for updated contacts only.
+    #. The first covers every situation where we wish to ask the API for updated contacts only.
 
-#. The second case covers situations where we wish to perform a full sync. A full sync can be triggered by resetting the pipe. 
+    #. The second case covers situations where we wish to perform a full sync. A full sync can be triggered by resetting the pipe. 
 
 This effectively removes the pipe's ``pipe_offset`` and removes the ``since`` parameter from the request to the Microservice.
 
@@ -188,7 +188,7 @@ Finally we need to adapt the pipe to handle the ``_updated`` property which the 
         }
       },
       "pump": {
-        "cron_expression": "0 0 ? * *"
+        "rescan_cron_expression": "0 0 ? * *"
       },
       "add_namespaces": false
     }
@@ -221,7 +221,7 @@ We do this by using a :ref:`cron expression <cron_expressions>`, like highlighte
         }
       },
       "pump": {
-        "cron_expression": "0 0 ? * *"
+        "rescan_cron_expression": "0 0 ? * *"
       },
       "add_namespaces": false
     }

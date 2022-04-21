@@ -88,7 +88,7 @@ To start off, we provide you with a microservice template written in Python that
  
 .. admonition::  Remember:
    
-  Testing how a microservice interacts with Sesam directly in Sesam can be troublesome as you have to create a Docker image and spin up the corresponding container in Sesam for each code change. Make sure you test the microservice thouroughly locally before creating the docker image.
+  Testing how a microservice interacts with Sesam directly in Sesam can be troublesome as you have to create a Docker image and spin up the corresponding container in Sesam for each code change. Make sure you test the microservice thoroughly locally before creating the docker image.
 
 
 Error handling
@@ -117,7 +117,7 @@ From a Microservice perspective this means the entities Sesam will pull from the
 
 Connect the Microservice to Sesam
 ---------------------------------
-When the Docker image has been created and hosted online we can connect it to a :ref:`Microservice system <microservice_system>` in Sesam and spin up the container. We do this by declaring where where the image is located and which port the Microservice runs on. In the config to the Microservice system we can also declare environmental variables to be used inside the Microservice. In this example we will send the API key and the base url from Sesam as environtal variables.
+When the Docker image has been created and hosted online we can connect it to a :ref:`Microservice system <microservice_system>` in Sesam and spin up the container. We do this by declaring where the image is located and which port the Microservice runs on. In the config to the Microservice system we can also declare environmental variables to be used inside the Microservice. In this example we will send the API key and the base url from Sesam as environtal variables.
 
 .. code-block:: json
   :linenos:
@@ -156,7 +156,7 @@ Connect a pipe to the system
 ----------------------------
 The final step is to connect a pipe to the Microservice system that triggers when the contacts should be imported. 
 
-First we need to create a new pipe with a :ref:`json source <json_source>` poiting to the Microservice system. 
+First we need to create a new pipe with a :ref:`json source <json_source>` pointing to the Microservice system. 
 
 .. code-block:: json
   :linenos:
@@ -187,7 +187,7 @@ Secondly, and through the url source parameter, we need to specify which Microse
         "url": "get_contacts"
       }
 
-We also wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation..
+We also wish to copy all the data imported and save it to the pipe's resulting dataset. This is done by the ``["copy", "*"]`` transformation.
 
 .. code-block:: json
   :linenos:
@@ -246,7 +246,7 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 If for some reason the import does not work, the pipe's ``Execution log`` is a good place to start. Here you will find error messages from the Microservice, which might help you troubleshoot.
 
-An other good troubleshooting tactic is to log your progress inside the Microservice. These log can be viewed in the Microservice's ``status`` page and may provide more insights than the pipe's ``Execution log``.
+Another good troubleshooting tactic is to log your progress inside the Microservice. These log can be viewed in the Microservice's ``status`` page and may provide more insights than the pipe's ``Execution log``.
 
 Results
 -------
