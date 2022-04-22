@@ -26,7 +26,7 @@ You will now be guided through these in chronological stepwise tutorials provide
    After you have completed these tutorials you will have:
 
    #. Learned about Sesam's source systems and created one
-   #. Have created an inbound pipe
+   #. Created an inbound pipe
    #. Made required data transformation in your recently created inbound pipe
    #. Configured its pump and verified a populated sink
    #. Tested data change tracking

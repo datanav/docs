@@ -30,40 +30,41 @@ With the above in mind, let us create a source system in Sesam.
   - Can provide entities with **any** shape
   - Must provide Sesam with a unique identifier called ``_id``
 
-The source system you will be working with in this tutorial is Twelvedata. `Twelvedata <https://twelvedata.com/>`_ provides the user with insight concerned with financial data. You will connect to Twelvedata in Sesam with the use of the system type :ref:`REST <rest_source>` and you will create operations that support only GET. The resources you will request are "stock" and "exchange" information. 
+The source system you will be working with in this tutorial is `HubSpot <https://www.hubspot.com/>`_. You will connect to the HubSpot API in Sesam with the use of the system type :ref:`REST <rest_source>` and you will create operations that support only GET. The datatype you will be requesting is the ``contact`` datatype.
 
-As the REST API for Twelvedata stock exchange is open, you can easily connect and pull data from this system.
+.. admonition:: Prerequisites
 
-We created a template to get you started. Follow these steps to to add Twelvedata as a system:
+  #. You will need to create a HubSpot App Developer account in order to connect to the HubSpot API. This can be created here: `HubSpot <https://developers.hubspot.com/get-started>`_.
+  #. After creating your App Developer account, create an App Test Account. You will need this to interact with the HubSpot API. 
+  #. Navigate to your settings section and pick the "Integrations" -> "API Key" tab.
+  #. Create and save your API Key. 
+
+We created a template to get you started in Sesam. Follow these steps to add HubSpot as a system:
 
 #. Log in to `Sesam portal <https:portal.sesam.io>`_
 #. Select the subscription you want to work on
 #. Navigate to **Systems**
 #. Click on **New system**
 #. Paste and save the following DTL configuration:
+#. Add your system secret ``hubspot-jwt`` in the Secrets tab
 
 .. code-block:: json
   :linenos:
 
   {
-    "_id": "twelvedata",
+    "_id": "hubspot",
     "type": "system:rest",
     "operations": {
-      "exchanges": {
+      "get-contacts": {
         "method": "GET",
-        "url": "exchanges"
-      },
-      "stocks": {
-        "method": "GET",
-        "url": "stocks"
+        "url": "contacts/v1/lists/all/contacts/all?hapikey=$SECRET(hubspot-jwt)"
       }
     },
-    "url_pattern": "https://api.twelvedata.com/%s",
-    "verify_ssl": true,
-    "worker_threads": 2
+    "url_pattern": "https://api.hubapi.com/%s",
+    "verify_ssl": true
   }
 
-After having successfully created your REST system, you are now ready to move onto the next tutorial on :ref:`inbound pipes <tutorial-collect-inbound-pipes>` to start using your recently created REST system. 
+After having successfully created your REST system, you are now ready to move onto the next tutorial on :ref:`inbound pipes <tutorial-collect-inbound-pipes>` to start using your recently created REST system and import the datatype ``contact``. 
 
 .. hint::
 
