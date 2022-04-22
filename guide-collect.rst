@@ -28,12 +28,12 @@ You will now be guided through these in chronological stepwise tutorials provide
    
    After you have completed these tutorials you will have:
 
-   #. Learned about Sesam's source systems and created one
-   #. Created an inbound pipe
+   #. Learned about Sesam's :ref:`source systems <system_section>` and created one
+   #. Learned about inbound pipes and created one
    #. Made required data transformation in your recently created inbound pipe
-   #. Configured its pump and verified a populated sink
-   #. Tested data change tracking
-   #. Learned about Sesam's generic data model
+   #. Configured its :ref:`pump <concepts-pumps>` and verified a populated :ref:`sink <concepts-sinks>`
+   #. Tested data :ref:`change tracking <concepts-change-tracking>`
+   #. Learned about Sesam's :ref:`generic data model <entity-data-model>`
    #. Applied :ref:`continuation support <concepts-continuation-support>`
 
 |
@@ -55,20 +55,8 @@ You will now be guided through these in chronological stepwise tutorials provide
             :type: url
             :text: Start this tutorial
             :classes: tutorial-start
-
-    2. The URL system (coming soon)
-
-    ..
-        :badge:`Estimated time: 10 min,badge-light`
-
-        This tutorial will show you how to...
-
-        .. link-button:: tutorial-custom-data-source-url-system
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
         
-    3. Inbound pipes (coming soon)
+    2. Inbound pipes (coming soon)
         
     ..
         :open:
@@ -83,7 +71,7 @@ You will now be guided through these in chronological stepwise tutorials provide
             :classes: tutorial-start
 
 
-    4. Data transformation (coming soon)
+    3. Data transformation (coming soon)
         
     ..
         :open:
@@ -97,7 +85,7 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
         
-    5. A pipe's pump and sink (coming soon)
+    4. A pipe's pump and sink (coming soon)
 
     ..
         :open:
@@ -111,7 +99,7 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
 
-    6. Data change tracking (coming soon)
+    5. Data change tracking (coming soon)
         
     ..
         :open:
@@ -126,7 +114,7 @@ You will now be guided through these in chronological stepwise tutorials provide
             :classes: tutorial-start
 
 
-    7. Sesam's generic data model (coming soon)
+    6. Sesam's generic data model (coming soon)
         
     ..
         :open:
@@ -140,7 +128,7 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
         
-    8. Continuation support (coming soon)
+    7. Continuation support (coming soon)
         
     ..
         :open:

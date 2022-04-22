@@ -3,7 +3,7 @@
 Source systems in Sesam
 =======================
 
-Sesam supports implementing multiple types of :ref:`systems<system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
+Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
 
 
 .. admonition:: Objectives
