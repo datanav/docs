@@ -1,3 +1,5 @@
+:orphan:
+
 .. _tutorial-collect-data-transformation:
 
 Data transformation

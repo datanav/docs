@@ -1,3 +1,5 @@
+:orphan:
+
 .. _tutorial-collect-continuation-support:
 
 Continuation support

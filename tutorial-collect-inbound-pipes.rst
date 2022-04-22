@@ -1,3 +1,5 @@
+:orphan:
+
 .. _tutorial-collect-inbound-pipes:
 
 Inbound pipes

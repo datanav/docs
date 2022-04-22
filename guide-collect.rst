@@ -8,6 +8,8 @@ Collect
       :hidden:
 
       Source systems in Sesam  <tutorial-collect-source-systems>
+      
+..
       Inbound pipes  <tutorial-collect-inbound-pipes>
       Data transformation <tutorial-collect-data-transformation>
       A pipe's pump and sink <tutorial-collect-pump-sink>
@@ -47,14 +49,28 @@ You will now be guided through these in chronological stepwise tutorials provide
 
         :badge:`Estimated time: 10 min,badge-light`
 
-        Lorem ipsum
+        Understand the most important aspects when working with a source system, and create your first REST system.
 
         .. link-button:: tutorial-collect-source-systems.html
             :type: url
             :text: Start this tutorial
             :classes: tutorial-start
+
+    2. The URL system (coming soon)
+
+    ..
+        :badge:`Estimated time: 10 min,badge-light`
+
+        This tutorial will show you how to...
+
+        .. link-button:: tutorial-custom-data-source-url-system
+            :type: ref
+            :text: Start this tutorial
+            :classes: tutorial-start
         
-    .. dropdown:: **2. Inbound pipes**
+    3. Inbound pipes (coming soon)
+        
+    ..
         :open:
         
         :badge:`Estimated time: 3 min,badge-light`
@@ -67,7 +83,9 @@ You will now be guided through these in chronological stepwise tutorials provide
             :classes: tutorial-start
 
 
-    .. dropdown:: **3. Data transformation**
+    4. Data transformation (coming soon)
+        
+    ..
         :open:
 
         :badge:`Estimated time: 10 min,badge-light`
@@ -79,7 +97,9 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
         
-    .. dropdown:: **4. A pipe's pump and sink**
+    5. A pipe's pump and sink (coming soon)
+
+    ..
         :open:
         
         :badge:`Estimated time: 3 min,badge-light`
@@ -91,9 +111,11 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
 
-    .. dropdown:: **5. Data change tracking**
-        :open:
+    6. Data change tracking (coming soon)
         
+    ..
+        :open:
+
         :badge:`Estimated time: 3 min,badge-light`
 
         Lorem ipsum
@@ -104,7 +126,9 @@ You will now be guided through these in chronological stepwise tutorials provide
             :classes: tutorial-start
 
 
-    .. dropdown:: **6. Sesam's generic data model**
+    7. Sesam's generic data model (coming soon)
+        
+    ..
         :open:
 
         :badge:`Estimated time: 10 min,badge-light`
@@ -116,7 +140,9 @@ You will now be guided through these in chronological stepwise tutorials provide
             :text: Start this tutorial
             :classes: tutorial-start
         
-    .. dropdown:: **7. Continuation support**
+    8. Continuation support (coming soon)
+        
+    ..
         :open:
         
         :badge:`Estimated time: 3 min,badge-light`
