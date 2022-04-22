@@ -25,6 +25,8 @@ Source with since support but no deletions
 Provides data with changes but no information about deletions. Requires periodic rescans. Called *update-in-place
 systems*.
 
+.. _pattern_source_only_deltas:
+
 Source that only provides delta streams
 ---------------------------------------
 If you restart the pipe you lose a lot of data. Make two pipes, disable, reset and use durable pipe,
@@ -133,6 +135,8 @@ When doing recursive hops you should define the property ``max_depth`` to safegu
 
 Share patterns
 ==============
+
+.. _optimistic_locking:
 
 Optimistic locking
 ------------------

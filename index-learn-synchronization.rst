@@ -9,4 +9,4 @@ Guides
 .. toctree::
    :maxdepth: 1
 
-   Microservices <guide-microservices>
+   Customize Extension Points <guide-customize-extension-points>

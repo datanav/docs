@@ -1,11 +1,13 @@
+.. _cron_expressions:
+
 Cron expressions
 ================
 
 Cron expressions encode a repeating interval of time. The format
 supported by the pump machinery of the Sesam node is explained in more
 detail below. It mostly follows the explanation here:
-https://en.wikipedia.org/wiki/Cron but note that the special character
-``W`` and ``#`` is not supported by our implementation.
+https://en.wikipedia.org/wiki/Cron but note that the special characters
+``W`` and ``#`` are not supported by our implementation.
 
 .. NOTE::
 
@@ -14,7 +16,7 @@ https://en.wikipedia.org/wiki/Cron but note that the special character
 Syntax
 ------
 
-A cron-expression is a string of 5 or 6 fields separated by space
+A cron expression is a string of 5 or 6 fields separated by space
 character. The string is parsed from left to right and denotes in
 sequence:
 
