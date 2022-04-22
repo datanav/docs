@@ -34,7 +34,7 @@ The source system you will be working with in this tutorial is `HubSpot <https:/
 
 .. admonition:: Prerequisites
 
-  #. You will need to create a HubSpot App Developer account in order to connect to the HubSpot API. This can be created here: `HubSpot <https://developers.hubspot.com/get-started>`_.
+  #. You will need to create a HubSpot App Developer account in order to connect to the HubSpot API. This can be created here: `HubSpot App Developer Account <https://developers.hubspot.com/get-started>`_.
   #. After creating your App Developer account, create an App Test Account. You will need this to interact with the HubSpot API. 
   #. Navigate to your settings section and pick the "Integrations" -> "API Key" tab.
   #. Create and save your API Key. 
