@@ -7,9 +7,9 @@ Changelog
 ----------
 
 * Added a new property ``max_merged`` with a default value of 100 entities to the :ref:`merge source <merge_source>`.
-Pipes that attempt to merge more entities than ``max_merged`` will fail with this change. The motivation for adding this
-new property is that merge pipes generally should not be merging that many entities in the first place, and the merge
-process can end up using excessive amounts of RAM.
+  Pipes that attempt to merge more entities than ``max_merged`` will fail with this change. The motivation for adding this
+  new property is that merge sources generally should not be merging that many entities in the first place, and the merge
+  process can end up using excessive amounts of RAM.
 
 .. _changelog_2022_04_07:
 
