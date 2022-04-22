@@ -8,10 +8,11 @@ pydata-sphinx-theme==0.8.0
 
 sesamclient==0.2.68
 sphinx-argparse==0.3.1
-Sphinx==4.4.0
+Sphinx==4.5.0
 sphinxcontrib-httpdomain==1.8.0
 sphinxcontrib-openapi==0.7.0
 
 # https://github.com/Tribler/tribler/issues/6624
 mistune==0.8.4
 sphinx-panels==0.6.0
+sphinx-notfound-page==0.8

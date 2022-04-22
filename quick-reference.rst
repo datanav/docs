@@ -128,7 +128,7 @@ DTL Expression Functions
      - :ref:`bytes <bytes_dtl_function>` ·
        :ref:`is-bytes <is_bytes_dtl_function>` ·
        :ref:`base64-encode <base64_encode_dtl_function>` ·
-       :ref:`base64-decode <base64_decode_dtl_function>`       
+       :ref:`base64-decode <base64_decode_dtl_function>`
 
    * - Comparisons
      - :ref:`eq <eq_dtl_function>` ·
@@ -158,7 +158,7 @@ DTL Expression Functions
        :ref:`datetime-plus <datetime_plus_dtl_function>` ·
        :ref:`datetime-diff <datetime_diff_dtl_function>` ·
        :ref:`datetime-shift <datetime_shift_dtl_function>` ·
-       :ref:`is-datetime <is_datetime_dtl_function>`       
+       :ref:`is-datetime <is_datetime_dtl_function>`
 
    * - Dictionaries
      - :ref:`items <items_dtl_function>` ·
@@ -166,7 +166,7 @@ DTL Expression Functions
        :ref:`is-dict <is_dict_dtl_function>` ·
        :ref:`keys <keys_dtl_function>` ·
        :ref:`values <values_dtl_function>` ·
-       :ref:`key-values <key_values_dtl_function>`       
+       :ref:`key-values <key_values_dtl_function>`
 
    * - Encryption
      - :ref:`encrypt <encrypt_dtl_function>` ·
@@ -177,7 +177,7 @@ DTL Expression Functions
        :ref:`decrypt-pgp <decrypt_pgp_dtl_function>`
 
    * - Entity lookups
-     - :ref:`lookup-entity <lookup_entity_dtl_function>`       
+     - :ref:`lookup-entity <lookup_entity_dtl_function>`
 
    * - Hashing
      - :ref:`hash128 <hash128_dtl_function>`
@@ -189,7 +189,7 @@ DTL Expression Functions
      - :ref:`json <json_dtl_function>` ·
        :ref:`json-transit <json_transit_dtl_function>` ·
        :ref:`json-parse <json_parse_dtl_function>` ·
-       :ref:`json-transit-parse <json_transit_parse_dtl_function>`  
+       :ref:`json-transit-parse <json_transit_parse_dtl_function>`
 
    * - Lists
      - :ref:`list <list_dtl_function>` ·
@@ -216,7 +216,7 @@ DTL Expression Functions
        :ref:`map <map_dtl_function>` ·
        :ref:`map-values <map_values_dtl_function>` ·
        :ref:`map-dict <map_dict_dtl_function>` ·
-       :ref:`group-by <group_by_dtl_function>`            
+       :ref:`group-by <group_by_dtl_function>`
 
    * - Math
      - :ref:`plus <plus_dtl_function>` ·
@@ -241,7 +241,7 @@ DTL Expression Functions
        :ref:`tan <tan_dtl_function>`
 
    * - Misc
-     - :ref:`fail! <fail_dtl_function>`       
+     - :ref:`fail! <fail_dtl_function>`
 
    * - Namespaced identifiers
      - :ref:`ni <ni_dtl_function>` ·
@@ -292,7 +292,7 @@ DTL Expression Functions
        :ref:`matches <matches_dtl_function>`
 
    * - Tuples
-     - :ref:`tuples <tuples_dtl_function>`       
+     - :ref:`tuples <tuples_dtl_function>`
 
    * - URIs
      - :ref:`uri <uri_dtl_function>` ·
@@ -303,3 +303,24 @@ DTL Expression Functions
    * - UUIDs
      - :ref:`uuid <uuid_dtl_function>` ·
        :ref:`is-uuid <is_uuid_dtl_function>`
+
+Entity model
+============
+
+.. list-table::
+   :widths: 30, 70
+
+   * - Reserved fields
+     - :ref:`_id <id_field>` ·
+       :ref:`_deleted <deleted_field>` ·
+       :ref:`_updated <updated_field>` ·
+       :ref:`_hash <hash_field>` ·
+       :ref:`_previous <previous_field>` ·
+       :ref:`_ts <ts_field>` ·
+       :ref:`_filtered <filtered_field>` ·
+       :ref:`_tracked <tracked_field>`
+
+   * - Special fields
+     - :ref:`$ids <dollar_ids_field>` ·
+       :ref:`$children <dollar_children>` ·
+       :ref:`$replaced <dollar_replaced>`
