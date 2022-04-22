@@ -14,10 +14,19 @@
 <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/19709964.js"></script>
 <!-- End of HubSpot Embed Code -->
+
 {% endblock %}
 
 {%- block footer_wrapper %}
   <div class="footer">
     &copy; {{ copyright }}
   </div>
+{%- endblock %}
+
+{%- block docs_body %}
+  {% if pagename != 'index' and pagename != 'index-whatis' and pagename != 'index-learn' and pagename != 'index-developer' %}
+    {% include "breadcrumb.html" %}    
+  {% endif %}
+  
+  {{ super() }}
 {%- endblock %}

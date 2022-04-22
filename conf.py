@@ -30,7 +30,8 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 # ones.
 extensions = ['sphinxarg.ext',
               'sphinxcontrib.openapi',
-              'sphinx_panels'
+              'sphinx_panels',
+              'notfound.extension'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -135,7 +136,7 @@ html_theme_options = {
 html_title = "Sesam Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = "Docs"
+html_short_title = "Home"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -300,3 +301,6 @@ html_show_sphinx = False
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# https://sphinx-notfound-page.readthedocs.io/en/latest/configuration.html
+notfound_no_urls_prefix = True

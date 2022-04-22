@@ -13,18 +13,21 @@ with. The following data prototype explains these special properties.
 ::
 
   {
-  	"_id": "the identity of the entity",
-  	"_updated": "a token indicating when this was modified",
-  	"_deleted": "indicating if the entity should be treated as deleted",
+        "_id": "the identity of the entity",
+        "_updated": "a token indicating when this was modified",
+        "_deleted": "indicating if the entity should be treated as deleted",
         "_hash": "a hash string of the entity's content",
         "_previous": "the _updated token of the previous version",
-        "_ts": "timestamp for when entity was registered in source"
+        "_ts": "timestamp for when entity was registered in source",
+        "_filtered: "true if the pipe transforms filtered out the entity"
   }
 
 The entity data model supports a wide range of data types including,
 string, integer, decimal, boolean, namespaced identifier, URI, bytes
 and datetime. Over the wire both a binary and JSON representation is
 used.
+
+.. _reserved_fields :
 
 Reserved fields
 ---------------
@@ -49,11 +52,13 @@ level, so child entities can have them.
        string.
      - Yes
 
+       .. _deleted_field:
    * - ``_deleted``
      - If ``true``, then the entity is deleted. All other values are
        interpreted as if the entity is not deleted.
      -
 
+       .. _updated_field:
    * - ``_updated``
      - The sequence of the entity. The value must be either a string
        or an integer value. The value is used to tell the order of the
@@ -63,6 +68,7 @@ level, so child entities can have them.
        to the ``since`` request parameter in HTTP endpoints.
      -
 
+       .. _hash_field:
    * - ``_hash``
      - A string containing the hash of the entity's content. This value
        is used to decide when an entity has changed. Of the reserved
@@ -71,6 +77,7 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _previous_field:
    * - ``_previous``
      - A pointer back to the previous version of this entity. The
        value refers to the ``_updated`` field of the previous version
@@ -82,6 +89,7 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _ts_field:
    * - ``_ts``
      - This the real-world timestamp for when the entity was added to
        the dataset. The value is an integer representing the number
@@ -91,9 +99,26 @@ level, so child entities can have them.
        *This field is generated automatically when writing an entity to a dataset.*
      -
 
+       .. _filtered_field:
+   * - ``_filtered``
+     - This boolean field is added automatically by DTL if the entity
+       was filtered out by the :ref:`filter <dtl_transform-filter>`
+       transform function. The purpose of it is to signal to the sink
+       that the entity should be deleted if it exists in the
+       sink. Only the :ref:`dataset sink <dataset_sink>` supports this
+       currently. If the sink does not support it then the entity will
+       be discarded instead of passed along to the sink.
+     -
+
+       .. _tracked_field:
    * - ``_tracked``
      - If ``true`` then the entity was added to the dataset by
        `dependency tracking <concepts.html#dependency-tracking>`_.
+
+       Note that this property has been superceeded by a new way of
+       doing dependency tracking that does not require modifying
+       entites. If you see this property then the entity was likely
+       materialized by the old implementation.
 
        *This field is generated automatically by the dependency tracking.*
      -

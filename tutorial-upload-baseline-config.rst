@@ -44,17 +44,17 @@ Do the following on the pipe tab to populate your subscription:
 Config contents
 ---------------
 
-Your subscription now contains eight input pipes:
+Your subscription now contains 8 input pipes:
 
-- 6 of them have embedded person data
-- 1 has postal codes
-- 1 the last one has embedded orders from a webshop. 
+- 6 pipes have embedded person data.
+- 1 pipe has postal codes.
+- 1 pipe has embedded orders from a webshop.
 
 In addition there is:
 
-- 1 merge pipe for person data
-- 2 global pipes
-- 2 example pipes for modelling and exporting person address data. 
+- 1 merge pipe for person data.
+- 2 global pipes.
+- 2 example pipes for modelling and exporting person address data.
 
 Have a look at how the pipes are connected by navigating between them through their Graph-tabs. The "merged-person" pipe is a good place to start.
 

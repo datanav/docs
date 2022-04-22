@@ -10,5 +10,4 @@ Guides
    :maxdepth: 1
 
    Collect <guide-collect>
-   Microservices <guide-microservices>
-
+   Customize Extension Points <guide-customize-extension-points>
