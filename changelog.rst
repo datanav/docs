@@ -6,6 +6,7 @@ Changelog
 2022-04-25
 ----------
 
+* Documented the :ref:`resource quotas <microservice_system_resource_quotas>` for microservices.
 * The default value of ``max_merged`` in the :ref:`merge source <merge_source>` is now set as a global default in the
   :ref:`service metadata <service_metadata_global_defaults_max_merged>`, and
   the default value has been increased to 50000 entities. This is a very high number of entities for the merge source

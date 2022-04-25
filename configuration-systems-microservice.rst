@@ -13,6 +13,38 @@ A microservice must communicate with the outside world using either the ``HTTP``
 
 The system provides session handling, connection pooling and authentication services to sources, transforms and sinks which need to communicate with the microservice.
 
+.. _microservice_system_resource_quotas:
+
+Resource quotas
+^^^^^^^^^^^^^^^
+
+The table below shows the total resource quotas available for the microservices per subscription type. These quotas are currently not enforced, but might they be in the future.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40, 30
+
+   * - Subscription type
+     - Memory quota
+     - CPU quota
+
+   * - ``developer``
+     - 1GB RAM
+     - 0.25 CPU
+
+   * - ``developer-pro``
+     - 4GB RAM
+     - 0.75 CPU
+
+   * - ``single``
+     - 8GB RAM
+     - 1 CPU
+
+   * - ``multi``
+     - 16GB RAM per compute
+     - 2 CPUs per compute
+
+
 Prototype
 ^^^^^^^^^
 
@@ -245,4 +277,3 @@ Example configuration
             }
         }
     }
-
