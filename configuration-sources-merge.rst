@@ -184,9 +184,13 @@ Properties
 
    * - ``max_merged``
      - Integer
-     - Sets the maximum number of entities that can be merged at a time.
+     - Sets the maximum number of entities that can be merged at a time (not supported in version 1).
        The merge pipe will fail if more than ``max_merged`` entities are attempted merged into a single entity.
-     - 100
+       Note that the default value for this property is set in the
+       :ref:`service metadata <service_metadata_global_defaults_max_merged>`, and it is recommended to reduce
+       this value to limit potential memory usage. The merge source will use an excessive amount of RAM if the number of
+       merged entities is too high.
+     - ``50000``
      -
 
    * - ``supports_signalling``
