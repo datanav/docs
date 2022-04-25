@@ -167,6 +167,14 @@ Properties
      -
      -
 
+   * - ``infer_pipe_entity_types``
+     - Boolean
+     - :ref:`Schema inferencing <schema-inferencing>` is enabled for
+       all pipes by default. Setting this property to false will
+       disable schema inferencing for this pipe.
+     - ``true``
+     -
+
    * - ``dependency_tracking.dependency_warning_threshold``
      - Integer
      - The number of entities that dependency tracking can keep in memory at a given time. If this number is exceeded then a warning message is written to the log. The default value is inherited from the :ref:`service metadata <service_metadata_dependency_tracking_dependency_warning_threshold>`.
