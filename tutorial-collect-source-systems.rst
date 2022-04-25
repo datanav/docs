@@ -1,7 +1,8 @@
 .. _tutorial-collect-source-systems:
 
+------------------------
 Source systems in Sesam
-=======================
+------------------------
 
 In this tutorial we will look closer at source systems in Sesam. A source system is any system that is used in Sesam as a source to a connected :ref:`pipe <concepts-pipes>`. Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
 
@@ -68,20 +69,19 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
 
   You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` section of the docs.
 
+.. panels::
+    :column: col-lg-12 p-2 
 
-Test your skills
-================
+    **Test your skills**
+    ^^^^^^^^^^^^^^^^^^^^
 
-.. dropdown:: What does a system as a pipe source provide?
-        
-        It provides streams of entities as input to the pipe they are connected to.
+    .. dropdown:: What does a system as a pipe source provide?
+          
+          It provides streams of entities as input to the pipe they are connected to.
 
-.. dropdown:: Can systems as a pipe source provide entities with any shape?
-        
-        Yes they can.
-
-
-
+    .. dropdown:: Can systems as a pipe source provide entities with any shape?
+          
+          Yes they can.
 
 
 
