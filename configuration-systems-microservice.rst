@@ -159,22 +159,6 @@ Properties
      - ``25``
      -
 
-   * - ``docker.cpu_period``
-     - Integer
-     - The percentage of CPU time the OS scheduler is allowed use (see `the Docker documentation <https://docs.docker.com/engine/reference/run/#cpu-period-constraint>`_ for details).
-       Note that the value is divided by 1000 with respects to the range in the Docker documentation. You should not
-       normally change the default value.
-     - ``100``
-     -
-
-   * - ``docker.cpuset_cpus``
-     - String
-     - A string expression representing the CPU cores the container is allowed to use, see ``docker.cpu_quota``.
-       The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
-       4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
-     - ``null``
-     -
-
        .. _microservices_system_docker_hosts:
    * - ``docker.hosts``
      - Dict<String,String>
