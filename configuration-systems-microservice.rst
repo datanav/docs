@@ -233,6 +233,9 @@ Properties
      - ``true``
      -
 
+Documentation for deprecated properties can be found :ref:`here <microservice_system_deprecations>`.
+
+
 Microservice APIs
 ^^^^^^^^^^^^^^^^^
 

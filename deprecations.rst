@@ -951,6 +951,8 @@ Systems
 Deprecated Properties
 ---------------------
 
+.. _microservice_system_deprecations:
+
 Microservice system
 ^^^^^^^^^^^^^^^^^^^
 
