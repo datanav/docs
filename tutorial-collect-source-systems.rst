@@ -3,8 +3,7 @@
 Source systems in Sesam
 =======================
 
-Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
-
+In this tutorial we will look closer at source systems in Sesam. A source system is any system that is used in Sesam as a source to a connected :ref:`pipe <concepts-pipes>`. Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
 
 .. admonition:: Objectives
 
@@ -22,8 +21,7 @@ Sesam supports implementing multiple types of :ref:`systems <system_section>`, i
   #. Navigate to your settings section and pick the "Integrations" -> "API Key" tab.
   #. Create and save your API Key. 
 
-
-When a system is used as a source it is especially important to recognize that providing streams of entities as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently, even if the amount of data residing in the source system increases exponentially. As such, avoiding bulk readings of data, as the amount of data residing in your source system increases, should be avoided.
+When a system is used as a source it is especially important to recognize that providing streams of entities, as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently. This holds true even if the amount of data residing in the source system increases exponentially. As such, avoiding bulk readings of data, as the amount of data residing in your source system increases, should be avoided.
 
 With the above in mind, let us create a source system in Sesam.
 
@@ -35,7 +33,7 @@ With the above in mind, let us create a source system in Sesam.
   - Can provide entities with **any** shape
   - Must provide Sesam with a unique identifier called ``_id``
 
-The source system you will be working with in this tutorial is `HubSpot <https://www.hubspot.com/>`_. You will connect to the HubSpot API in Sesam with the use of the system type :ref:`REST <rest_source>` and you will create operations that support only GET. The datatype you will be requesting is the ``contact`` datatype.
+The system you will be working with in this tutorial is `HubSpot <https://www.hubspot.com/>`_. You will connect to the HubSpot API in Sesam with the use of the system type :ref:`REST <rest_source>` and you will create operations that support only GET. The datatype you will be requesting is the ``contact`` datatype.
 
 We created a template to get you started in Sesam. Follow these steps to add HubSpot as a system:
 
@@ -76,7 +74,7 @@ Test your skills
 
 .. dropdown:: What does a system as a pipe source provide?
         
-        It provides streams of entities as input to the pipe their are connected to.
+        It provides streams of entities as input to the pipe they are connected to.
 
 .. dropdown:: Can systems as a pipe source provide entities with any shape?
         
