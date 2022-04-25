@@ -77,7 +77,7 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
 
     .. dropdown:: What does a system as a pipe source provide?
           
-          It provides streams of entities as input to the pipe they are connected to.
+          It provides streams of entities as input to the pipes they are connected to.
 
     .. dropdown:: Can systems as a pipe source provide entities with any shape?
           
