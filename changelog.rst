@@ -1,6 +1,18 @@
 Changelog
 =========
 
+.. _changelog_2022_04_25:
+
+2022-04-25
+----------
+
+* The default value of ``max_merged`` in the :ref:`merge source <merge_source>` is now set as a global default in the
+  :ref:`service metadata <service_metadata_global_defaults_max_merged>`, and
+  the default value has been increased to 50000 entities. This is a very high number of entities for the merge source
+  to handle at once, and merge sources will start using up large amounts of RAM before hitting this default limit. It
+  is recommended to reduce this limit to prevent such high memory usage and then reconfigure any pipes that attempt to
+  merge too many entities.
+
 .. _changelog_2022_04_19:
 
 2022-04-19

@@ -195,6 +195,18 @@ Properties
        will also alter the URI/NI collapse and expand behaviour of the RDF and SPARQL source and sink.
      - False
      -
+
+       .. _service_metadata_global_defaults_max_merged:
+
+   * - ``global_defaults.max_merged``
+     - Integer
+     - Sets the maximum number of entities that can be merged at a time with pipes using the :ref:`merge source <merge_source>`.
+       The pipes will fail if more than ``max_merged`` entities are attempted merged into a single entity.
+       It is recommended to reduce this value to limit potential memory usage, as the merge pipe will use an excessive
+       amount of RAM if the number of merged entities is too high.
+     - ``50000``
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
