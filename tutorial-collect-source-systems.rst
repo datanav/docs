@@ -38,8 +38,6 @@ The system you will be working with in this tutorial is `HubSpot <https://www.hu
 
 We created a template to get you started in Sesam. Follow these steps to add HubSpot as a system:
 
-#. Log in to `Sesam portal <https:portal.sesam.io>`_
-#. Select the subscription you want to work on
 #. Navigate to **Systems**
 #. Click on **New system**
 #. Paste and save the DTL configuration below
