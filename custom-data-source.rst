@@ -98,26 +98,6 @@ Note that in the example below we have set ``supports_since`` to ``true``, which
       "url_pattern": "http://localhost:5000/api/%s"
     }
 
-|
-
-.. panels::
-    :body: text-left
-    :container: container-lg-12
-    :column: col-lg-6 p-1
-
-    :badge:`Tutorials, badge-success text-white`
-    
-    **Custom Data Source - The URL System**
-
-    Look closer into how to create a custom data source with a URL system. 
-
- 
-    .. link-button:: tutorial-custom-data-source-url-system.html
-        :type: url
-        :text: Start tutorial
-        :classes: btn-all-sections btn-all
-
-|
 
 .. _custom_data_source_microservice:
 
@@ -138,19 +118,20 @@ For more information on how microservices can be used in Sesam please see the :r
 .. panels::
     :body: text-left
     :container: container-lg-12
-    :column: col-lg-6 p-1
+    :column: col-lg-8 p-1
 
     :badge:`Tutorials, badge-success text-white`
     
     **Custom Data Source - The Microservice System**
 
-    Look closer into how to create a custom data source with a microservice. 
+    Learn how to create a custom data source with a microservice. 
 
- 
-    .. link-button:: tutorial-custom-data-source-microservice.html
-        :type: url
+    |
+    
+    .. link-button:: tutorial_custom_data_source_microservice
+        :type: ref
         :text: Start tutorial
-        :classes: btn-all-sections btn-all
+        :classes: tutorial-start
 
 |
 
@@ -211,18 +192,16 @@ Whenever possible we advise to always setup a microservice to only import change
     :badge:`Tutorials, badge-success text-white`
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    **Learn about continuation support**
+    **Continuation support and change tracking**
 
     Look closer into continuation support and change tracking for data imported from a microservice. 
 
-    When finished with this tutorial you will have learned to include the necessary logic for implementing continuation support in a Sesam microservice as well as added the corresponding support inside a Sesam input pipe. 
-
     |
     
-    .. link-button:: tutorial-custom-data-source-microservice.html
-        :type: url
+    .. link-button:: tutorial_microservices_continuation_support
+        :type: ref
         :text: Start tutorial
-        :classes: btn-all-sections btn-all
+        :classes: tutorial-start
 
 |
 
@@ -259,27 +238,8 @@ The the following URL can be used as an endpoint to receive JSON according to th
 
 Once this is configured any custom code, event handler, or queue reader can post data to Sesam.
 
-    .. important::
+.. important::
 
-        The http endpoint source works much like source with since support in that every time data is pushed to the source from an external provider, Sesam registers this as stream of changes. One of the effects of this is that data that used to be included in the push, but is not anymore, is not marked as deleted automatically downstream. You can read about how to avoid this :ref:`here <pattern_source_only_deltas>`  
+    The http endpoint source works much like source with since support in that every time data is pushed to the source from an external provider, Sesam registers this as stream of changes. 
 
-|
-
-.. panels::
-    :body: text-left
-    :container: container-lg-12
-    :column: col-lg-6 p-1
-
-    :badge:`Tutorials, badge-success text-white`
-    
-    **Custom Data Source - Pushing Data Into the Hub**
-
-    Look closer into how to create a custom data source that pushed data into the hub. 
-
- 
-    .. link-button:: tutorial-custom-data-source-http-endpoint-source.html
-        :type: url
-        :text: Start tutorial
-        :classes: btn-all-sections btn-all
-
-|
+    One of the effects of this is that data that used to be included in the push, but is not anymore, is not marked as deleted automatically downstream. You can read about how to avoid this :ref:`here <pattern_source_only_deltas>`.
