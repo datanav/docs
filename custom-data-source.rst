@@ -242,4 +242,4 @@ Once this is configured any custom code, event handler, or queue reader can post
 
     The http endpoint source works much like source with since support in that every time data is pushed to the source from an external provider, Sesam registers this as stream of changes. 
 
-    One of the effects of this is that data that used to be included in the push, but is not anymore, is not marked as deleted automatically downstream. You can read about how to avoid this :ref:`here <pattern_source_only_deltas>`  
+    One of the effects of this is that data that used to be included in the push, but is not anymore, is not marked as deleted automatically downstream. You can read about how to avoid this :ref:`here <pattern_source_only_deltas>`  here.

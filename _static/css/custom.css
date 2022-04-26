@@ -134,7 +134,7 @@ a.reference.external.nav-link.button.button-support {
 	transition-duration: 0.4s;
 	display: inline-block;
 	font-size: 1em;
-	margin-top:  50px !important;
+	margin: 4px 2px;
 	cursor: pointer;
 
 
@@ -168,7 +168,6 @@ a.tutorial-start:visited {
 .btn-all {
 	background-color: #009fdc; 
 	color: white !important; 
-
 }
 
 .btn-all:hover {
