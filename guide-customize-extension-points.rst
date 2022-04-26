@@ -14,6 +14,4 @@ This section will help understand and implement the various Extension Points ava
 .. toctree::
    :maxdepth: 1
 
-   Tutorials for Custom Data Sources <guide-customize-data-source>
-   Tutorials for Custom Data Transforms <guide-customize-data-transform>
-   Tutorials for Custom Data Sinks <guide-customize-data-sink>
+   How to Customize Data Sources <guide-customize-data-source>
