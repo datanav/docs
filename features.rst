@@ -22,10 +22,8 @@ low-latency service.
 
 **Benefits of delta stream processing:**
 
-- Sesam processes only deltas, so that no systems connected by Sesam need to reprocess existing data. 
-
-- This reduces system processing time and update delays by at least 95% compared to bulk ETL jobs.
-
+- Reduced processing cost.
+- Reduced processing time by at least 95% compared to bulk ETL jobs.
 - Completely removes unnecessary data updates.
 
 |
@@ -48,11 +46,10 @@ the transformations in pipes.
 
 **Benefits of graph-based dependency tracking:**
 
-- Processes complex objects from multiple sources as delta streams. 
-- Ensures that complete reprocessing is never required, no matter the number of sources, the complexity of the transformations, or the number of target systems and data schemas involved.
+- Heavily reduced operating costs by processing complex objects from multiple sources as delta streams. 
+- Reduces processing time by ensuring that complete reprocessing is never required, no matter the number of sources, the complexity of the transformations, or the number of target systems and data schemas involved.
 - Sesam uses metadata configuration, so that all data flows uniformly, without the need for custom code.
-- Complete transparency.
-- Heavily reduced operating costs.
+- Improves data governance through complete transparency.
 
 |
 
@@ -83,12 +80,14 @@ When all source properties and global properties are available as a single compo
 
 **Benefits of semantic data storage with dynamic multi-schema:**
 
-- Data never loses its origin and context.
-- Data never gets corrupted or lost in translation.
-- Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
-- Sesam connects every representation of any single object, and stores it as a multi-schema global object, so that any source system only needs to share its data once, and in its native schema. 
-- Reduces the number of integrations by 90% 
-- Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
-- Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time.
-- Any standardized data model can be implemented independently and be stored in a single object. 
+*Improved data quality and governance:*
+	- Data never loses its origin and context.
+	- Data never gets corrupted or lost in translation.
+	- Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
+	
+*Improved operational efficiency:*
+	- Reduces cost and processing time as a source system only needs to share its data once, and in its native schema. 
+	- Reduces the number of integrations by up to 90%
+	- Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
+	- Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object.
 
