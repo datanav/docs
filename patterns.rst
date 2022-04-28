@@ -138,7 +138,7 @@ An inverse relationship allows for you to `broaden or narrow <https://www.w3.org
 When doing recursive hops you should define the property ``max_depth`` to safeguard against never ending recursions.
 
 Re-mapping references to target identifiers
-----------------------------------------
+-------------------------------------------
 You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.
 
 Share patterns
