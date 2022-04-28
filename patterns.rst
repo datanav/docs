@@ -117,6 +117,10 @@ Feedback loop (perhaps move to new "Enhanced patterns" phase)
 -------------------------------------------------------------
 Expensive hops or external transforms is best to do in a separate dataflow. This allows you to optimise what you process using subsets, the primary dataflow does not have to wait for this data, it will be processed later if it applied to the entity. Entities might be processed twice if the feedback affected the entity. Use the ``_id`` of the merge source as the identifier. Make sure the feedback is marked as deleted when the data that produced it no longer exists (otherwise entities will never be deleted due to the feedback entity itself).
 
+Hungarian notation references
+-----------------------------
+When referencing from one global to another global, one can  encode which global the reference points to in order to make it easier to understand what the reference is. E.g. a parent reference from global-person to global-person could be `parent-person-ni`. The reference name in this case is `parent` and the reference points to `global-person` and is of type `namespaced identifier`.
+
 Transform patterns
 ==================
 
@@ -131,7 +135,11 @@ Defining hierarchies for recursion
 
 An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data. 
 
-When doing recursive hops you should define the property ``max_depth`` to safeguard against never ending recursions. 
+When doing recursive hops you should define the property ``max_depth`` to safeguard against never ending recursions.
+
+Re-mapping references to target identifiers
+----------------------------------------
+You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.
 
 Share patterns
 ==============
@@ -145,3 +153,15 @@ Should be added via an external transform and then two hash values should be com
 Exposing data
 -------------
 Focus should be on exposing data.
+
+Capture response with transform
+-------------------------------
+Use transform instead of a sink to capture results back into a dataset. This transform will have side effects and this pipe needs to be durable to avoid reprocessing in case of data loss. Batch size needs to be set to 1 to avoid duplicates as this is not transactional. Do not mix dependency tracking in this pipe as it can also cause duplicates. Avoid the preview API as this will trigger the transform.
+
+External reference
+------------------
+If datatype has a property where you can store external references, you can merge on this when collecting the shared data back. Conflict resolution?
+
+Update or insert
+----------------
+Split into two separate pipelines. Update typically uses the "optimistic locking" pattern, inserts use the "capture response with transform" pattern.
