@@ -29,8 +29,8 @@ Introduction Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
   Before starting on this tutorial we suggest...
     
   You should also acquire:
-    - An account on `DockerHub <https://hub.docker.com/>`_ (free)
-    - A `Hubspot developer account <https://developers.hubspot.com/>`_ (free)
+    - 
+    - 
 
 |
 |
