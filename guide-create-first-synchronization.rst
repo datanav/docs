@@ -11,7 +11,7 @@ Create your first synchronization
     Enrich data<tutorial-getting-started-enrich>
     Connect data<tutorial-getting-started-connect>
     Transform data<tutorial-getting-started-transform>
-    Share data <tutorial-getting-started-share>
+    Share data<tutorial-getting-started-share>
 
 
 Introduction Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
