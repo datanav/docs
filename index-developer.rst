@@ -6,7 +6,7 @@ Documentation
 
    Quick Reference <quick-reference>
    Project kickstart <best-practices>
-   Building blocks <developer-guide>
+   Building blocks <building-blocks>
    Features <product-features>
    Data Transformation Language (DTL) <DTLReferenceGuide>
    Design patterns <patterns>
