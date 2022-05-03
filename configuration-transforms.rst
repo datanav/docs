@@ -13,26 +13,51 @@ Transforms can be configured on a pipe by specifying the
 "``transform``" property. The field is optional, and can contain
 either a transform configuration object or a list of them.
 
+Prototype
+---------
+
+The following *JSON* snippet shows the general form of a transform definition.
+
 ::
 
-   {
-       "_id": "mypipe",
-       "name": "Name of pipe",
-       "type": "pipe",
-       ...
-       "source": {
-          ...
-       },
-       ..
-       "transform": {
-          "name": "name of transform (NOTE: deprecated)",
-          "comment": "This is a comment",
-          "description": "description of the transform (optional)"
-           ...the rest of the transform configuration goes here...
-       }
-    }}
+    {
+        "type": "a-transform-type"
+        "comment": "This is a comment"
+        ..
+    }
 
+.. _transform_properties:
 
+Properties
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 10, 60, 10, 3
+
+   * - Property
+     - Type
+     - Description
+     - Default
+     - Req
+
+   * - ``type``
+     - String
+     - The type of the transform, the allowed types are described below
+     -
+     - Yes
+
+   * - ``comment``
+     - String or list of strings
+     - A human readable comment on the transform.
+     -
+     -
+
+   * - ``side_effects``
+     - Boolean
+     - Set to ``true`` if the transform has side-effects. A side-effect means that it causes changes to the system that it talks to. If the transform alters the system in any way, then this property must be set to ``true`` to prevent inadvertent changes to the system by features like pipe preview.
+     - ``false``
+     -
 
 
 .. toctree::
