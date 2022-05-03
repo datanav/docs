@@ -8,19 +8,17 @@ Getting started
    :hidden:
 
    Sign up to Sesam  <tutorial-signup>
-   Upload a baseline configuration  <tutorial-upload-baseline-config>
 
-In order to start using Sesam, you will need to sign up, connect to a subscription and upload a baseline configuration. 
+In order to start using Sesam, you will need to sign up and connect to a Sesam subscription. 
 
 This step-by-step guide will help you getting started.
 
 .. admonition::  Objectives:
    
-   After you complete these tutorials you would have:
+   After you complete these tutorials you will have:
 
    #. Signed up for Sesam
    #. Connected to a subscription
-   #. Uploaded a baseline configuration
 
 |
 |
@@ -28,7 +26,7 @@ This step-by-step guide will help you getting started.
 .. panels::
     :column: col-lg-12 p-2 
 
-    **Getting started:** This guide includes 2 tutorials
+    **Getting started:** This guide includes 1 tutorial
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     .. dropdown:: **1. Sign up to Sesam**
@@ -43,14 +41,4 @@ This step-by-step guide will help you getting started.
             :text: Start this tutorial
             :classes: tutorial-start
         
-    .. dropdown:: **2. Upload baseline configuration**
-        :open:
-        
-        :badge:`Estimated time: 3 min,badge-light`
 
-        This tutorial will show you how to upload the baseline configuration to your subscription.
-
-        .. link-button:: tutorial-upload-baseline-config.html
-            :type: url
-            :text: Start this tutorial
-            :classes: tutorial-start
