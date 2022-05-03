@@ -33,9 +33,9 @@ The following are two simple examples showing the shape of entities that can be 
 Streams of entities flow through :ref:`pipes<concepts-pipes>`. A pipe has an associated :ref:`pump<concepts-pumps>` that is scheduled to regularly pull data entities from the :ref:`source<concepts-sources>` , push them through  :ref:`transforms<concepts-transforms>` then send the results to the :ref:`sink<concepts-sinks>` . 
 
 
-.. NOTE::
+.. Important::
 
-   Sesam's service API is not built to serve a large number of concurrent clients. Sesam is primarily an asynchronous batching and stream processing system. The Service API is not meant to be used by user-facing applications that have low latency and high throughput requirements. For that reason we do not currently give any guarantees in this regard. In practice means that if you have such a requirement you should stream the data out of Sesam and host it in a dedicated publishing systems that can scale its endpoints.
+   Sesam's Service API is not built to serve a large number of concurrent clients. Sesam is primarily an asynchronous batching and stream processing system. The Service API is not meant to be used by user-facing applications that have low latency and high throughput requirements. For that reason we do not currently give any guarantees in this regard. In practice means that if you have such a requirement you should stream the data out of Sesam and host it in a dedicated publishing systems that can scale its endpoints.
 
 .. _concepts-datasets:
 
