@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_05_03:
+
+2022-05-03
+----------
+
+* Transforms now have a :ref:`side_effects <transform_properties>` property that specifies if the transform has side-effects or not. A side-effect means that it causes changes to the system that it talks to. If the transform alters the system in any way, then this property must be set to true to prevent inadvertent changes to the system by features like pipe preview.
+
+
 .. _changelog_2022_04_25:
 
 2022-04-25

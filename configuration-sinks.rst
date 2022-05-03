@@ -1,4 +1,3 @@
-
 .. _sink_section:
 
 Sinks
