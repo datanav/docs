@@ -71,7 +71,7 @@ Properties
    * - ``primary_key``
      - List<String> or String
      - The value of this property can be a single string with the name of the column
-       that contains the ``primary key`` (PK) of the table, or a list of strings
+       that contains a ``unique key``, such as the primary key (PK) of the table, or a list of strings
        if it is a compound primary key. If the property is not set the component will
        attempt to use table metadata reflection to deduce the PK to use.
      -
