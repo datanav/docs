@@ -26,14 +26,15 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
    #. Created a Connect pipe
    #. Created a Transform pipe
    #. Created a Share pipe
-   #. Seen the data sybnchronized into HubSpot
+   #. Seen the data synchronized into HubSpot
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest getting to know :doc:`what Sesam is <index-whatis>` as well as reading about :doc:`building blocks <developer-guide>` in Sesam.
+  Before starting on this tutorial we suggest you read :doc:`what Sesam is <index-whatis>` as well as :doc:`building blocks <developer-guide>` in Sesam.
     
   You should also acquire:
     - A `Hubspot developer account <https://developers.hubspot.com/>`_ (free)
+    - Set up a `test account in Hubspot <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
 
 |
 |
@@ -44,10 +45,10 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
     **Create your first synchronization:** This guide includes 5 tutorials
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. dropdown:: **1. Collect data**
-        :open:
+    .. dropdown:: **1. Collect data** (coming soon)
 
-        :badge:`Estimated time: 5 min,badge-light`
+        ..
+            :badge:`Estimated time: 5 min,badge-light`
 
         Coming soon
 
@@ -59,10 +60,10 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
                 :text: Start this tutorial
                 :classes: tutorial-start
         
-    .. dropdown:: **2. Enrich data**
-        :open:
-        
-        :badge:`Estimated time: 5 min,badge-light`
+    .. dropdown:: **2. Enrich data** (coming soon)
+
+        ..
+            :badge:`Estimated time: 5 min,badge-light`
 
         Coming soon
 
@@ -74,10 +75,10 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
                 :text: Start this tutorial
                 :classes: tutorial-start
 
-    .. dropdown:: **Connect data**
-        :open:
+    .. dropdown:: **Connect data** (coming soon)
         
-        :badge:`Estimated time: 5 min,badge-light`
+        ..
+            :badge:`Estimated time: 5 min,badge-light`
 
         Coming soon
 
@@ -89,10 +90,10 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
                 :text: Start this tutorial
                 :classes: tutorial-start
 
-    .. dropdown:: **Transform data**
-        :open:
-        
-        :badge:`Estimated time: 5 min,badge-light`
+    .. dropdown:: **Transform data** (coming soon)
+
+        ..
+            :badge:`Estimated time: 5 min,badge-light`
 
         Coming soon
 
@@ -105,10 +106,10 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
                 :classes: tutorial-start
 
 
-    .. dropdown:: **Share data**
-        :open:
+    .. dropdown:: **Share data** (coming soon)
         
-        :badge:`Estimated time: 5 min,badge-light`
+        ..
+            :badge:`Estimated time: 5 min,badge-light`
 
         Coming soon
 
