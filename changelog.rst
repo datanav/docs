@@ -1,6 +1,15 @@
 Changelog
 =========
 
+
+.. _changelog_2022_05_03:
+
+2022-05-03
+----------
+
+* Transforms now have a :ref:`side_effects <transform_properties>` property that specifies if the transform has side-effects or not. A side-effect means that it causes changes to the system that it talks to. If the transform alters the system in any way, then this property must be set to true to prevent inadvertent changes to the system by features like pipe preview.
+* Corrected a bug that for multi subscriptions would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
+
 .. _changelog_2022_04_25:
 
 2022-04-25
@@ -78,13 +87,6 @@ Changelog
 ----------
 
 * Pipes with ``manual`` or ``off`` pump mode can now be disabled and enabled.
-
-.. _changelog_2022_02_23:
-
-2022-02-23
-----------
-
-* Corrected a bug that for multi subscriptions would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
 
 .. _changelog_2022_02_11:
 

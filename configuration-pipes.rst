@@ -77,6 +77,12 @@ Properties
      -
      - Yes
 
+   * - ``type``
+     - String
+     - The type of the component, for pipes the only allowed value is "pipe"
+     -
+     - Yes
+
    * - ``name``
      - String
      - A human readable name of the component.
@@ -85,21 +91,15 @@ Properties
 
    * - ``description``
      - String or list of strings
-     - A human readable description of the component (optional).
+     - A human readable description of the component.
      -
-     - Yes
+     -
 
    * - ``comment``
      - String or list of strings
-     - A human readable comment on the component (optional).
+     - A human readable comment on the component.
      -
      -
-
-   * - ``type``
-     - String
-     - The type of the component, for pipes the only allowed value is "pipe"
-     -
-     - Yes
 
    * - ``batch_size``
      - Integer(>=1)
