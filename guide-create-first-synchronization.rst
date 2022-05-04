@@ -34,6 +34,7 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
     
   You should also acquire:
     - A `Hubspot developer account <https://developers.hubspot.com/>`_ (free)
+
 |
 |
 
@@ -48,48 +49,60 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
 
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to collect data from your source system(s).
+        Coming soon
 
-        .. link-button:: tutorial-getting-started-collect
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
+        ..
+            This tutorial will show you how to collect data from your source system(s).
+
+            .. link-button:: tutorial-getting-started-collect
+                :type: ref
+                :text: Start this tutorial
+                :classes: tutorial-start
         
     .. dropdown:: **2. Enrich data**
         :open:
         
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to enrich data you collected from your source system(s).
+        Coming soon
 
-        .. link-button:: tutorial-getting-started-enrich
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
+        ..
+            This tutorial will show you how to enrich data you collected from your source system(s).
+
+            .. link-button:: tutorial-getting-started-enrich
+                :type: ref
+                :text: Start this tutorial
+                :classes: tutorial-start
 
     .. dropdown:: **Connect data**
         :open:
         
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to connect the data your enriched.
+        Coming soon
 
-        .. link-button:: tutorial-getting-started-connect
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
+        ..
+            This tutorial will show you how to connect the data your enriched.
+
+            .. link-button:: tutorial-getting-started-connect
+                :type: ref
+                :text: Start this tutorial
+                :classes: tutorial-start
 
     .. dropdown:: **Transform data**
         :open:
         
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to transform the data and make it ready for sharing with your target system.
+        Coming soon
 
-        .. link-button:: tutorial-getting-started-transform
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
+        ..
+            This tutorial will show you how to transform the data and make it ready for sharing with your target system.
+
+            .. link-button:: tutorial-getting-started-transform
+                :type: ref
+                :text: Start this tutorial
+                :classes: tutorial-start
 
 
     .. dropdown:: **Share data**
@@ -97,9 +110,12 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
         
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to share the data with your target system.
+        Coming soon
 
-        .. link-button:: tutorial-getting-started-share
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
+        ..
+            This tutorial will show you how to share the data with your target system.
+
+            .. link-button:: tutorial-getting-started-share
+                :type: ref
+                :text: Start this tutorial
+                :classes: tutorial-start
