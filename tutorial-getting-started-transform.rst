@@ -1,3 +1,5 @@
+:orphan:
+
 .. _tutorial_getting_started_transform:
 
 Transform data

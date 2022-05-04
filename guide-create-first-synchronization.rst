@@ -3,19 +3,12 @@
 Create your first synchronization
 =================================
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
+    .. toctree::
+       :maxdepth: 1
+       :hidden:
 
-    Collect data<tutorial-getting-started-collect>
-    Enrich data<tutorial-getting-started-enrich>
-    Connect data<tutorial-getting-started-connect>
-    Transform data<tutorial-getting-started-transform>
-    Share data<tutorial-getting-started-share>
 
 In this guide you will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
-
-In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.  
 
 .. admonition::  Objectives:
    
@@ -30,11 +23,12 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest you read :doc:`what Sesam is <index-whatis>` as well as :doc:`building blocks <developer-guide>` in Sesam.
+    In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.  
+
     
-  You should also acquire:
-    - A `Hubspot developer account <https://developers.hubspot.com/>`_ (free)
-    - A `test account in Hubspot <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
+  You should also familiarize youself with:
+    - :doc:`What is Sesam <index-whatis>`
+    - :doc:`Building Blocks in Sesam <developer-guide>`
 
 |
 |
