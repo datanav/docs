@@ -34,7 +34,7 @@ In this guide, as in the main set of tutorials outside "Getting Started", we wil
     
   You should also acquire:
     - A `Hubspot developer account <https://developers.hubspot.com/>`_ (free)
-    - Set up a `test account in Hubspot <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
+    - A `test account in Hubspot <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
 
 |
 |
