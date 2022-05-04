@@ -9,7 +9,7 @@ Getting started
 
    Sign up to Sesam  <tutorial-signup>
    Upload a baseline configuration  <tutorial-upload-baseline-config>
-   Create first synchronization <guide-create-first-synchronization>
+   Create your first synchronization <guide-create-first-synchronization>
 
 In order to start using Sesam, you will need to sign up, connect to a subscription and upload a baseline configuration. 
 
@@ -22,6 +22,7 @@ This step-by-step guide will help you getting started.
    #. Signed up for Sesam
    #. Connected to a subscription
    #. Uploaded a baseline configuration
+   #. Created your first synchronization
 
 |
 |
@@ -29,8 +30,8 @@ This step-by-step guide will help you getting started.
 .. panels::
     :column: col-lg-12 p-2 
 
-    **Getting started:** This guide includes 2 tutorials
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    **Getting started:** This guide includes 2 tutorials and 1 guide
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     .. dropdown:: **1. Sign up to Sesam**
         :open:
