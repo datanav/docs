@@ -61,7 +61,7 @@ This step-by-step guide will help you getting started.
         
         :badge:`Estimated time: 30 min,badge-light`
 
-        This guide will help you set up your first synchrinization in Sesam.
+        This guide will help you set up your first synchronization in Sesam.
 
         .. link-button:: guide-create-first-synchronization
             :type: ref
