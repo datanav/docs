@@ -7,6 +7,7 @@ Create your first synchronization
    :maxdepth: 1
    :hidden:
 
+   Collect <tutorial-getting-started-collect>
 
 In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
@@ -22,11 +23,13 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
    #. Seen the data synchronized into HubSpot
 
 .. admonition:: Prerequisites
+    
+    - Completed `Sign up tutorial <tutorial-signup>`_
 
     In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.  
 
     
-  You should also familiarize youself with:
+    You should also familiarize youself with:
     - :doc:`What is Sesam <index-whatis>`
     - :doc:`Building Blocks in Sesam <developer-guide>`
 
@@ -40,10 +43,11 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     .. dropdown:: **1. Collect data**
-        
+        :open:
+
         :badge:`Estimated time: 5 min,badge-light`
 
-        This tutorial will show you how to collect data from the systems HubSpot and Twelvedata in addition to pulling data from them in inbound pipes.
+        This tutorial will show you how to collect data from the systems HubSpot and Twelvedata.
 
         .. link-button:: tutorial-getting-started-collect
             :type: ref

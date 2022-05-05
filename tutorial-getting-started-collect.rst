@@ -5,7 +5,9 @@
 Collect data
 ============
 
-In this tutorial we will look closer at how to connect to the systems HubSpot and Twelvedata. `HubSpot <https://www.hubspot.com/>`_ is a CRM system whilst `Twelvedata <https://twelvedata.com/>`_ is a system containing financial data such as stock information. After having succesfully connected to these systems you will create inbound pipes for each relevant datatype we want to work on as we go through a Sesam dataflow in the getting started guide.
+In this tutorial we will look closer at how to connect to the systems HubSpot and Twelvedata. `HubSpot <https://www.hubspot.com/>`_ is a CRM system whilst `Twelvedata <https://twelvedata.com/>`_ is a system containing financial data such as stock information. 
+
+After having succesfully connected to these systems you will create inbound pipes for each relevant datatype we want to work on as we go through a Sesam dataflow in the getting started guide.
 
 .. admonition::  Objectives:
 
@@ -13,10 +15,19 @@ In this tutorial we will look closer at how to connect to the systems HubSpot an
 
     #. How to create a system
     #. How to create an inbound pipe
-    #. How to run an inbound pipe
+    #. Import data from a data source into sesam
 
-As mentioned initially you will be working with the systems HubSpot and Twelvedata. Twelvedata is open source, so you can go ahead and follow the below steps in order to add Twelvedata as a system in Sesam:
 
+Create a system
+^^^^^^^^^^^^^^^
+
+First, we will start by adding a new system for Twelvedata, which is an open data source. 
+
+Follow the below steps in order to add Twelvedata as a system in Sesam:
+
+In the `Sesam portal <https://portal.sesam.io/>`_:
+
+#. Navigate to your subscription
 #. Navigate to **Systems**
 #. Click on **New system**
 #. Paste and save the DTL configuration below
@@ -62,7 +73,14 @@ To add HubSpot as a system, you should copy your recently created API key as out
   	"verify_ssl": true
   }
 
-After having successfully created both systems, you are now ready to move onto the next aspect of this tutorial, namely the creation of inbound pipes. Inbound pipes are the naming convention used for pipes that receive their data from a source system. The first inbound pipe we want to work on is the inbound pipe that connects to our ``twelvedata`` system. We want to pull in the ``stock`` datatype that exists in the Tvelwedata system. Follow the below steps to create your inbound pipe ``twelvedata-stock-collect``:
+After having successfully created both systems, you are now ready to move onto the next aspect of this tutorial, namely the creation of inbound pipes. 
+
+Create an inbound pipe
+^^^^^^^^^^^^^^^^^^^^^^
+
+Inbound pipes are the naming convention used for pipes that receive their data from a source system. 
+
+The first inbound pipe we want to work on is the inbound pipe that connects to our ``twelvedata`` system. We want to pull in the ``stock`` datatype that exists in the Tvelwedata system. Follow the below steps to create your inbound pipe ``twelvedata-stock-collect``:
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
@@ -89,6 +107,10 @@ After having successfully created both systems, you are now ready to move onto t
     },
     "add_namespaces": false
   }
+
+
+Add another inbound pipe for Hubspot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The last thing to do in this tutorial is to create the inbound pipe for HubSpot. We want to pull in the ``company`` datatype from HubSpot. Again, follow the below steps to create your inbound pipe ``hubspot-company-collect``:
 
