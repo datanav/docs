@@ -3,6 +3,10 @@
 Collect data
 ============
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
 In this tutorial we will look closer at how to connect to the systems HubSpot and Twelvedata. `HubSpot <https://www.hubspot.com/>`_ is a CRM system whilst `Twelvedata <https://twelvedata.com/>`_ is a system containing financial data such as stock information. After having succesfully connected to these systems you will create inbound pipes for each relevant datatype we want to work on as we go through a Sesam dataflow in the getting started guide.
 
 .. admonition::  Objectives:
