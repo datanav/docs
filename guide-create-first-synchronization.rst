@@ -8,11 +8,11 @@ Create your first synchronization
        :hidden:
 
 
-In this guide you will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
+In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
 .. admonition::  Objectives:
    
-   After you complete these tutorials you would have:
+   After you complete these tutorials you will have:
 
    #. Created a Collect pipe
    #. Created a Enrich pipe
@@ -39,20 +39,16 @@ In this guide you will show you how a general simplistic Sesam synchronization m
     **Create your first synchronization:** This guide includes 5 tutorials
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. dropdown:: **1. Collect data** (coming soon)
+    .. dropdown:: **1. Collect data**
+        
+        :badge:`Estimated time: 5 min,badge-light`
 
-        ..
-            :badge:`Estimated time: 5 min,badge-light`
+        This tutorial will show you how to collect data from the systems HubSpot and Twelvedata in addition to pulling data from them in inbound pipes.
 
-        Coming soon
-
-        ..
-            This tutorial will show you how to collect data from your source system(s).
-
-            .. link-button:: tutorial-getting-started-collect
-                :type: ref
-                :text: Start this tutorial
-                :classes: tutorial-start
+        .. link-button:: tutorial-getting-started-collect
+            :type: ref
+            :text: Start this tutorial
+            :classes: tutorial-start
         
     .. dropdown:: **2. Enrich data** (coming soon)
 
