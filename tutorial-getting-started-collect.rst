@@ -5,7 +5,9 @@
 Collect data
 ============
 
-In this tutorial we will look closer at how to connect Sesam to two different data providers: CRM and `Twelvedata <https://twelvedata.com/>`_. CRM is a data provider for i.e. company or person data whilst Twelvedata is a data provider containing financial data such as stock information. After having succesfully connected to these providers you will create inbound pipes for each relevant datatype we want to work with, as we go through a Sesam dataflow in the getting started guide.
+In this tutorial we will look closer at how to connect Sesam to two different data providers: CRM and `Twelvedata <https://twelvedata.com/>`_. CRM is a data provider for i.e. company or person data whilst Twelvedata is a data provider containing financial data such as stock information. 
+
+After having succesfully connected to these providers you will create inbound pipes for each relevant datatype we want to work with, as we go through a Sesam dataflow in the getting started guide.
 
 .. admonition::  Objectives:
 
@@ -69,7 +71,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 	  }
 	}
 
-After having successfully created both systems, you are now ready to move onto the next aspect of this tutorial, namely the creation of inbound pipes. 
+After having successfully created both systems, you are now ready to move onto the next step of this tutorial, the creation of inbound pipes. 
 
 |
 |
@@ -77,7 +79,7 @@ After having successfully created both systems, you are now ready to move onto t
 Create inbound pipes
 ^^^^^^^^^^^^^^^^^^^^
 
-Inbound pipes are the naming convention used for pipes that receive their data from a source system. 
+Inbound pipes is the naming convention used for pipes that receive their data from a source system. 
 
 The first inbound pipe we want to work on is the inbound pipe that connects to our ``twelvedata`` system. We want to pull in the ``stock`` datatype that exists in the Tvelwedata system. Follow the below steps to create your inbound pipe ``twelvedata-stock-collect``:
 
@@ -97,7 +99,7 @@ The first inbound pipe we want to work on is the inbound pipe that connects to o
       "system": "twelvedata",
       "id_expression": "{{ exchange }}-{{ symbol }}",
       "operation": "stocks",
-      "payload_property": "data",
+      "payload_property": "data"
     },
     "pump": {
       "cron_expression": "0 6 * * ?"
