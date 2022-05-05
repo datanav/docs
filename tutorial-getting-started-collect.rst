@@ -38,7 +38,7 @@ As mentioned initially you will be working with the systems HubSpot and Twelveda
 	  "worker_threads": 2
 	}
 
-To add HubSpot as a system, you should copy your recently created API key as outlined in the :doc:`create your first synchronization guide <guide_create_first_synchronization>`. We need to add this as a system secret to ensure we can access the HubSpot API within your Sesam subscription. When ready, you can move on and follow the below steps again to add HubSpot as a system.
+To add HubSpot as a system, you should copy your recently created API key as outlined in the :ref:`create your first synchronization guide <guide_create_first_synchronization>`. We need to add this as a system secret to ensure we can access the HubSpot API within your Sesam subscription. When ready, you can move on and follow the below steps again to add HubSpot as a system.
 
 #. Navigate to **Systems**
 #. Click on **New system**
