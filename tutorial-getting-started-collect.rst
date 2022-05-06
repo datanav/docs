@@ -3,9 +3,10 @@
 Collect data
 ============
 
-In this Getting Started tutorial we will connect Sesam to two different data providers: a CRM provider and the Norwegian Enhetsregisteret. The CRM provider will contain some company data we wish to send to HubSpot. We will later in Getting Started use the data imported from Enhetsregisteret to improve on the data quality from the CRM before sending the data to HubSpot. 
+In this tutorial we will connect Sesam to two different data sources: your newly created Hubspot account and the Norwegian Central Coordinating Register for Legal Entities, "Enhetsregisteret".
+Later in Getting Started we will use the data imported from Enhetsregisteret to improve on the data quality from HubSpot before sending the data to back to HubSpot. 
 
-After having succesfully connected to these providers you will create inbound pipes for each relevant datatype we want to work with. The data passed through these inbound pipes will be used throughout the Getting Started guide.
+After having succesfully connected to these providers you will create inbound pipes for each relevant datatype we want to work with.
 
 .. admonition::  Objectives:
 
@@ -17,7 +18,7 @@ After having succesfully connected to these providers you will create inbound pi
 
 .. admonition::  Info:
 
-    Both the CRM provider and Norwegian Enhetsregisteret are mock providers in this tutorial. The data you will import to Sesam is actually test data generate for this specific tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario however and therefore well serves the purposes of Getting started.
+    The Norwegian Enhetsregisteret are mock providers in this tutorial. The data you will import to Sesam is actually test data generate for this specific tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario however and therefore well serves the purposes of Getting started.
 
 |
 |
@@ -27,7 +28,7 @@ After having succesfully connected to these providers you will create inbound pi
 Create systems
 ^^^^^^^^^^^^^^
 
-First, we will start by adding a new system for the CRM connection. 
+First, we will start by adding a new system for the HubSpot connection. 
 
 Follow the below steps in order to add the CRM provider as a system in Sesam:
 
@@ -36,17 +37,27 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 #. Navigate to **Systems**
 #. Click on **New system**
 #. Paste and save the DTL configuration below
+#. Add your hubspot API key in your as a ``Secret`` by going into ``Datahub`` -> ``Variables``. Use the ``Secret`` name "hubspot-api-key". 
 
 .. code-block:: json
   :linenos:
 
     {
-      "_id": "crm",
-      "type": "system:microservice",
-      "docker": {
-        "image": "sesamcommunity/learn-sesam-crm:v1.1.2",
-        "port": 5000
-      }
+      "_id": "hubspot",
+      "type": "system:rest",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "operations": {
+        "get_companies": {
+          "method": "GET",
+          "url": "companies?"
+        }
+      },
+      "rate_limiting_delay": 60,
+      "rate_limiting_retries": 3,
+      "url_pattern": "https://api.hubapi.com/crm/v3/objects/%shapikey=$SECRET(hubspot-api-key)",
+      "verify_ssl": true
     }
 
 
@@ -80,7 +91,7 @@ Create inbound pipes
 
 "Inbound pipes" is the naming convention used for pipes that receive their data from a source system. 
 
-The first inbound pipe we want to work on is the pipe that connects to our ``crm`` system. We want to pull in the ``company`` datatype that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``crm-company-collect``:
+The first inbound pipe we want to work on is the pipe that connects to our ``HubSpot`` system. We want to pull in the ``company`` datatype that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``hubspot-company-collect``:
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
@@ -91,15 +102,19 @@ The first inbound pipe we want to work on is the pipe that connects to our ``crm
   :linenos:
   
     {
-      "_id": "crm-company-collect",
+      "_id": "hubspot-company-collect",
       "type": "pipe",
       "source": {
-        "type": "json",
-        "system": "crm",
-        "url": "/company"
+        "type": "rest",
+        "system": "hubspot",
+        "id_expression": "{{ id }}",
+        "operation": "get_companies",
+        "payload_property": "results"
       },
       "add_namespaces": false
     }
+
+
 
 
 The last thing to do in this tutorial is to create the inbound pipe for Enhetsregisteret. We want to pull in the ``enhetsregisteret`` datatype from the provider. Again, follow the below steps to create your inbound pipe ``enhetsregisteret-company-collect``:
