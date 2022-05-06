@@ -147,6 +147,10 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
       "add_namespaces": false
     }
 
+.. admonition::  Reminder:
+
+    YRemember to import the following :download:`csv file <files/learn-hubspot-embedded-company.csv>` to your HubSpot company data.
+
 
 Having completed the Collect data tutorial, you are now ready to move onto the :doc:`Getting Started Enrich tutorial <tutorial-getting-started-enrich>`. 
 
