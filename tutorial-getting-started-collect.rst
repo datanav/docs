@@ -162,11 +162,9 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
       "add_namespaces": false
     }
 
+..
+  .. note::
 
-Having completed the Collect data tutorial, you are now ready to move onto the :doc:`Getting Started Enrich tutorial <tutorial-getting-started-enrich>`. 
-
-.. note::
-
-    If you want to look closer into the details of the collect phase, look into the tutorials for collect.
+      If you want to look closer into the details of the collect phase, look into the tutorials for collect.
 
 
