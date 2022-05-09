@@ -57,7 +57,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
       "operations": {
         "get_companies": {
           "method": "GET",
-          "url": "companies?"
+          "url": "{{ properties.url }}associations=contacts,companies,deals,tickets,products,quotes&"
         }
       },
       "rate_limiting_delay": 60,
@@ -65,6 +65,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
       "url_pattern": "https://api.hubapi.com/crm/v3/objects/%shapikey=$SECRET(hubspot-api-key)",
       "verify_ssl": true
     }
+
 
 The Enhetsregistret System
 **************************
@@ -124,10 +125,15 @@ The first inbound pipe we want to work on is the pipe that connects to our ``Hub
         "system": "hubspot",
         "id_expression": "{{ id }}",
         "operation": "get_companies",
-        "payload_property": "results"
+        "payload_property": "results",
+        "properties": {
+          "url": "companies?properties=about_us,address,city,country,description,domain,founded_year,is_public,linkedin_company_page,name,numberofemployees,state,timezone,website,zip&"
+        }
       },
       "add_namespaces": false
     }
+
+
 
 The Enhetsregisteret Inbound Pipe
 *********************************
