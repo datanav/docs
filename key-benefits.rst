@@ -1,13 +1,15 @@
-============
+############
 Key benefits
-============
+############
 
 The unique combination of Sesam's key features leads to simplified management 
 of master data in data driven environments. The service includes most of
 the core features needed to build a data-fabric based platform.
 
+|
+
 Delta stream processing
------------------------
+=======================
 
 Delta processing means that only data that has changed is ever processed
 by Sesam. 
@@ -28,9 +30,8 @@ low-latency service.
 
 |
 
-
 Graph-based dependency tracking
--------------------------------
+===============================
 
 Graph-based dependency tracking ensures that every composite object is
 always updated as a delta stream throughout the Sesam service, no matter
@@ -54,7 +55,7 @@ the transformations in pipes.
 |
 
 Semantic data storage with dynamic multi-schema
------------------------------------------------
+===============================================
 
 In Sesam the output of any delta stream processing pipe is stored in
 semantic datasets. 
@@ -73,7 +74,7 @@ original properties.
 
 **How it works:**
 
-Sesam supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object.
+Sesam supports continuously evolving global properties in the multi-schema data store, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object.
 
 When all source properties and global properties are available as a single composite object, the cost and time of acquiring data and transforming the data into a target system in its native schema is heavily reduced.
 
@@ -90,4 +91,3 @@ When all source properties and global properties are available as a single compo
 	- Reduces the number of integrations by up to 90%
 	- Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
 	- Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object.
-
