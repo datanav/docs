@@ -168,6 +168,7 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
     }
 
 When done you should have 10 entities in the output of each of the two inbound pipes.
+
 ..
   .. note::
 
