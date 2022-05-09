@@ -43,7 +43,8 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 #. Navigate to **Systems**
 #. Click on **New system**
 #. Paste and save the DTL configuration below
-#. Add your hubspot API key in your Sesam subscription as a ``Secret`` by going into ``Datahub`` -> ``Variables``. Use the ``Secret`` name "hubspot-api-key". 
+#. Add your hubspot API key in your Sesam subscription as a ``Secret`` by going into ``Datahub`` -> ``Variables``. 
+#. Use the ``Secret`` name "hubspot-api-key". 
 
 .. code-block:: json
   :linenos:
@@ -113,6 +114,8 @@ The first inbound pipe we want to work on is the pipe that connects to our ``Hub
 #. Click on **New pipe**
 #. Paste and save the DTL configuration below
 #. Press **Start** to ensure your pipe runs 
+#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+
 
 .. code-block:: json
   :linenos:
@@ -144,6 +147,8 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
 #. Click on **New pipe**
 #. Paste and save the DTL configuration below
 #. Press **Start** to ensure your pipe runs 
+#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+
 
 .. code-block:: json
   :linenos:
@@ -167,6 +172,8 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
       },
       "add_namespaces": false
     }
+
+When done you should have 10 entities in the output of each of the two inbound pipes.
 
 ..
   .. note::
