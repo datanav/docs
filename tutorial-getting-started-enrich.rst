@@ -3,7 +3,9 @@
 Enrich data
 ===========
 
-In this tutorial we will look closer into how to semantically enrich your data. We add semantic value to our data in Sesam by identifying reference objects in the data and link them to their associated target, such as the link between a Primary Key (PK) and a Foreign Key (FK). In Sesam we use namespaced identifiers (NI's) and rdf:types to create these links. In this tutorial we will only add some enrichment in order for you to understand the concept. To semantically enrich data you need to know what the data means, which is why semantic enrichment should always be done with someone with more intimate knowledge about the data, such as a system owner. 
+In this tutorial we will look closer into how to semantically enrich your data. We add semantic value to our data in Sesam by identifying reference objects in the data and link them to their associated target, such as the link between a Primary Key (PK) and a Foreign Key (FK). In Sesam we use namespaced identifiers (NI's) and rdf:types to create these links. We also use the semantic enrichment step to add namespaces to our data. 
+
+In this tutorial we will only add some enrichment, in order for you to understand the concept. To semantically enrich data you need to know what the data means, which is why semantic enrichment should always be done with someone with more intimate knowledge about the data, such as a system owner. 
 
 .. admonition::  Objectives:
 
@@ -15,9 +17,9 @@ In this tutorial we will look closer into how to semantically enrich your data. 
 .. admonition:: Prerequisites
 
   Before starting on this tutorial we suggest you:
-    - Complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will now use that data.
+    - Complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
 
-  In order to simplify matters, we would like you to assign a contact to one of the companies you now have populated your HubSpot account with. To do this, go to your "Companies" overwiew in HubSpot. Select ``THEMOON AS``. On the right hand side you should see the option to add a contact. Press ``+ Add`` and select "Brian Halligan" (a pre-existing test contact) and finish the contact selection. Brian Halligan should now be vivible as a contact for ``THEMOON AS``. 
+  In order to simplify matters, we would like you to assign a contact to one of the companies you now have populated your HubSpot account with. To do this, go to your "Companies" overwiew in HubSpot. Select ``THEMOON AS``. On the right hand side you should see the option to add a contact. Press ``+ Add`` and select **Brian Halligan** (a pre-existing test contact) and finish the contact selection. **Brian Halligan** should now be visible as a contact for ``THEMOON AS``. 
 
 
 |
@@ -36,6 +38,7 @@ In order to add the link between associated contacts for a company and contacts,
 #. Click on **New pipe**
 #. Paste and save the DTL configuration below
 #. Press **Start** to ensure your pipe runs 
+#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
 
 .. code-block:: json
   :linenos:
@@ -54,6 +57,9 @@ In order to add the link between associated contacts for a company and contacts,
             ["copy", "*"],
             ["merge",
               ["apply", "contacts-ni", "_S.associations.contacts.results"]
+            ],
+            ["add", "rdf:type",
+              ["ni", "hubspot:company"]
             ]
           ],
           "contacts-ni": [
@@ -68,26 +74,51 @@ In order to add the link between associated contacts for a company and contacts,
       },
       "add_namespaces": true,
       "namespaces": {
-        "identity": "hubspot-contact",
-        "property": "hubspot-contact"
+        "identity": "hubspot-company",
+        "property": "hubspot-company"
       }
     }
 
 
+On the output entity ``hubspot-company:5584839113`` you should now see a new property called ``contact-ni`` which contains the link to contacts, as well as namespaces on every property and the new ``rdf:type`` property.
+
+The Enhetsregisteret Data
+*************************
+For the Enhetsregisteret data we will only add namespaces and the ``rdf:type`` property. Follow the steps below to create the Enrich pipe for the Enhetsregisteret data.
+
+#. Navigate to **Pipes**
+#. Click on **New pipe**
+#. Paste and save the DTL configuration below
+#. Press **Start** to ensure your pipe runs 
+#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+
+.. code-block:: json
+  :linenos:
+  
+    {
+      "_id": "enhetsregisteret-company-enrich",
+      "type": "pipe",
+      "source": {
+        "type": "dataset",
+        "dataset": "enhetsregisteret-company-collect"
+      },
+      "transform": {
+        "type": "dtl",
+        "rules": {
+          "default": [
+            ["copy", "*"],
+            ["add", "rdf:type",
+              ["ni", "enhetsregisteret:company"]
+            ]
+          ]
+        }
+      },
+      "add_namespaces": true,
+      "namespaces": {
+        "identity": "enhetsregisteret-company",
+        "property": "enhetsregisteret-company"
+      }
+    }
 
 
-
-
-
-
-
-    - 
-    - 
-    - 
-    
-  You should also acquire:
-    - 
-    - 
-    - 
-    - 
-
+On the output entities you should now see namespaces on every property and the new ``rdf:type`` property.
