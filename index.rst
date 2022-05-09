@@ -43,8 +43,8 @@ New to Sesam? These topics will get you started on the right foot.
 
     Have a look at some features that make Sesam flexible, agile and effective.
 
-    .. link-button:: features.html
-            :type: url
+    .. link-button:: key-benefits
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
 

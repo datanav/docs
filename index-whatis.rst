@@ -16,6 +16,6 @@ As a data platform component, Sesam improves data-consistency by collecting data
 
    Data architecture <data-architecture>
    Core principles <core-principles>
-   Key benefits <features>
+   Key benefits <key-benefits>
    Concepts <concepts>
    Demo <demo>
