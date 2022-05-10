@@ -3,7 +3,7 @@
 Enrich data
 ===========
 
-In this tutorial we will look closer into the Enrich phase of a Sesam synchronization, where we add value to our data through semantically enrichment. We will not go through the full extent of semantic enrichment, only enough for you to understand the concept. To semantically enrich data you need to know what the data means, which is why this phase should always be done with someone with more intimate knowledge about the data, such as a system owner. 
+In this phase we will add value to the data we have `previously collected <tutorial-getting-started-collect>`_ by semantically enriching it.
 
 .. admonition::  Objectives:
 
@@ -16,20 +16,30 @@ In this tutorial we will look closer into the Enrich phase of a Sesam synchroniz
 
   Before starting on this tutorial we suggest you complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
 
-  In order to simplify matters, we would like you to assign a contact to one of the companies you now have populated your HubSpot account with. To do this, go to your "Companies" overwiew in HubSpot. Select ``THEMOON AS``. On the right hand side you should see the option to add a contact. Press ``+ Add`` and select **Brian Halligan** (a pre-existing test contact) and finish the contact selection. **Brian Halligan** should now be visible as a contact for ``THEMOON AS``. 
-
-
 |
 |
+
+Assign an association on HubSpot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In HubSpot you can assign a contact to a specific company. 
+
+We would like you now to assign **Brian Halligan** (a pre-existing test contact) to one of the companies you now have populated your HubSpot account with. 
+
+#. Log in to your HubSpot account
+#. Navigate to "Companies"
+#. Select ``THEMOON AS``
+#. Press ``+ Add`` on Contacts (on the right hand side)
+#. Select **Brian Halligan** and finish the contact selection. **Brian Halligan** should now be visible as a contact for ``THEMOON AS``
 
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
-When adding semantic value to our data we create a more scalable solution. We also create a more efficient solution as the enrich data both allows us to visualize the relationships in the source data as well as increases functionality throughout the whole data flow. 
+We will now add semantic value to our data.
 
 The Hubspot Data
 ****************
-In order to add the link between associated contacts for a company and contacts, as well as adding the rdf:type tag to the entities, please follow the steps below:
+In order to add the link between company and contacts, as well as adding the rdf:type tag and namespaces to the entities, please follow the steps below:
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
