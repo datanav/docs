@@ -3,9 +3,7 @@
 Enrich data
 ===========
 
-In this tutorial we will look closer into how to semantically enrich your data. We add semantic value to our data in Sesam by identifying reference objects in the data and link them to their associated target, such as the link between a Primary Key (PK) and a Foreign Key (FK). In Sesam we use namespaced identifiers (NI's) and rdf:types to create these links. We also use the semantic enrichment step to add namespaces to our data. 
-
-In this tutorial we will not go through the full extent of semantic enrichment, only enough for you to understand the concept. To semantically enrich data you need to know what the data means, which is why semantic enrichment should always be done with someone with more intimate knowledge about the data, such as a system owner. 
+In this tutorial we will look closer into the Enrich phase of a Sesam synchronization, where we add value to our data through semantically enrichment. We will not go through the full extent of semantic enrichment, only enough for you to understand the concept. To semantically enrich data you need to know what the data means, which is why this phase should always be done with someone with more intimate knowledge about the data, such as a system owner. 
 
 .. admonition::  Objectives:
 
