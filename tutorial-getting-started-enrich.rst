@@ -5,19 +5,18 @@ Enrich data
 
 In this tutorial we will look closer into how to semantically enrich your data. We add semantic value to our data in Sesam by identifying reference objects in the data and link them to their associated target, such as the link between a Primary Key (PK) and a Foreign Key (FK). In Sesam we use namespaced identifiers (NI's) and rdf:types to create these links. We also use the semantic enrichment step to add namespaces to our data. 
 
-In this tutorial we will only add some enrichment, in order for you to understand the concept. To semantically enrich data you need to know what the data means, which is why semantic enrichment should always be done with someone with more intimate knowledge about the data, such as a system owner. 
+In this tutorial we will not go through the full extent of semantic enrichment, only enough for you to understand the concept. To semantically enrich data you need to know what the data means, which is why semantic enrichment should always be done with someone with more intimate knowledge about the data, such as a system owner. 
 
 .. admonition::  Objectives:
 
     After you complete this tutorial you will have learned the following:
 
-    #. How add NI's to your entity metadata
-    #. How add rdf:types to your entities
+    #. How to add NI's to your entity metadata
+    #. How to add rdf:types to your entities
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest you:
-    - Complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
+  Before starting on this tutorial we suggest you complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
 
   In order to simplify matters, we would like you to assign a contact to one of the companies you now have populated your HubSpot account with. To do this, go to your "Companies" overwiew in HubSpot. Select ``THEMOON AS``. On the right hand side you should see the option to add a contact. Press ``+ Add`` and select **Brian Halligan** (a pre-existing test contact) and finish the contact selection. **Brian Halligan** should now be visible as a contact for ``THEMOON AS``. 
 
