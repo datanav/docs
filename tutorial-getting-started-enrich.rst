@@ -1,6 +1,6 @@
 .. _tutorial_getting_started_enrich:
 
-Enrich data
+Enrich Data
 ===========
 
 In this phase we will add value to the data we have `previously collected <tutorial-getting-started-collect>`_ by semantically enriching it.
@@ -20,7 +20,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 |
 
 
-Add semantic value
+Add Semantic Value
 ^^^^^^^^^^^^^^^^^^
 We will now add semantic value to our data by adding namespaces, Namespaced Identifiers and ``rdf:types``.
 

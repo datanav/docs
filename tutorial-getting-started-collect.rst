@@ -25,7 +25,7 @@ After having succesfully connected to these providers you will create inbound pi
 |
 |
 
-Import data to HubSpot
+Import Data to HubSpot
 ^^^^^^^^^^^^^^^^^^^^^^
 In order to be able to import data to Sesam we first need to make sure that HubSpot contains data we can later import import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
 
