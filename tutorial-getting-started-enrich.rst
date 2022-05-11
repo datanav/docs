@@ -20,11 +20,11 @@ In this phase we will add value to the data we have `previously collected <tutor
 |
 
 
-Add Semantic Value
+Add semantic value
 ^^^^^^^^^^^^^^^^^^
 We will now add semantic value to our data by adding namespaces, Namespaced Identifiers and ``rdf:types``.
 
-The Hubspot Data
+The Hubspot data
 ****************
 In order to semantically enrich your HubSpot company data, follow the steps below. 
 
@@ -76,7 +76,7 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
 
 On the output entity ``hubspot-company:5597148921`` you should now see a new property called ``contact-ni`` which contains the link to contacts, as well as namespaces on every property and the new ``rdf:type`` property.
 
-The Enhetsregisteret Data
+The Enhetsregisteret data
 *************************
 For the Enhetsregisteret data we will only add namespaces and the ``rdf:type`` property. Follow the steps below to create the Enrich pipe for the Enhetsregisteret data.
 

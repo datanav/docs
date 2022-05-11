@@ -25,7 +25,7 @@ After having succesfully connected to these providers you will create inbound pi
 |
 |
 
-Import Data to HubSpot
+Import data to HubSpot
 ^^^^^^^^^^^^^^^^^^^^^^
 In order to be able to import data to Sesam we first need to make sure that HubSpot contains data we can later import import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
 
@@ -44,12 +44,12 @@ In order to be able to import data to Sesam we first need to make sure that HubS
 You should be able to see the new companies imported in your HubSpot **Companies** tab.
 
 
-Create Systems
+Create systems
 ^^^^^^^^^^^^^^
 
 In Sesam, a system is a representation of the connection between Sesam and the outside world.
 
-The Hubspot System
+The Hubspot system
 ******************
 
 First, we will start by adding a new system for the HubSpot connection. 
@@ -86,7 +86,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
     }
 
 
-The Enhetsregistret System
+The Enhetsregistret system
 **************************
 
 Now we can add our second system, the "Enhetsregisteret" system.
@@ -118,12 +118,12 @@ After having successfully created both systems, you are now ready to move onto t
 |
 |
 
-Create Inbound Pipes
+Create inbound pipes
 ^^^^^^^^^^^^^^^^^^^^
 
 "Inbound pipes" is the naming convention used for pipes that receive their data from a source system.
 
-The Hubspot Inbound Pipe
+The Hubspot inbound pipe
 ************************
 
 The first inbound pipe we want to work on is the pipe that connects to our ``HubSpot`` system. We want to pull in the ``company`` datatype that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``hubspot-company-collect``:
@@ -156,7 +156,7 @@ The first inbound pipe we want to work on is the pipe that connects to our ``Hub
 
 
 
-The Enhetsregisteret Inbound Pipe
+The Enhetsregisteret inbound pipe
 *********************************
 
 The last thing to do in this tutorial is to create the inbound pipe for Enhetsregisteret. We want to pull in the ``enhetsregisteret`` datatype from the provider. Again, follow the below steps to create your inbound pipe ``enhetsregisteret-company-collect``:
