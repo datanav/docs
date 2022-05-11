@@ -22,7 +22,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
-We will now add semantic value to our data.
+We will now add semantic value to our data by adding namespaces, Namespaced Identifiers and ``rdf:types``.
 
 The Hubspot Data
 ****************
