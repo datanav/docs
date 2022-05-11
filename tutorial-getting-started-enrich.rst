@@ -19,19 +19,6 @@ In this phase we will add value to the data we have `previously collected <tutor
 |
 |
 
-Assign an association on HubSpot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In HubSpot you can assign a contact to a specific company. 
-
-We would like you now to assign **Brian Halligan** (a pre-existing test contact) to one of the companies you now have populated your HubSpot account with. 
-
-#. Log in to your HubSpot account
-#. Navigate to "Companies"
-#. Select ``THEMOON AS``
-#. Press ``+ Add`` on Contacts (on the right hand side)
-#. Select **Brian Halligan** and finish the contact selection. **Brian Halligan** should now be visible as a contact for ``THEMOON AS``
-
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
@@ -39,7 +26,7 @@ We will now add semantic value to our data.
 
 The Hubspot Data
 ****************
-In order to add the link between company and contacts, as well as adding the rdf:type tag and namespaces to the entities, please follow the steps below:
+In order to semantically enrich your HubSpot company data, follow the steps below. 
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
@@ -87,7 +74,7 @@ In order to add the link between company and contacts, as well as adding the rdf
     }
 
 
-On the output entity ``hubspot-company:5584839113`` you should now see a new property called ``contact-ni`` which contains the link to contacts, as well as namespaces on every property and the new ``rdf:type`` property.
+On the output entity ``hubspot-company:5597148921`` you should now see a new property called ``contact-ni`` which contains the link to contacts, as well as namespaces on every property and the new ``rdf:type`` property.
 
 The Enhetsregisteret Data
 *************************
@@ -129,3 +116,6 @@ For the Enhetsregisteret data we will only add namespaces and the ``rdf:type`` p
 
 
 On the output entities you should now see namespaces on every property and the new ``rdf:type`` property.
+
+..
+    To learn more about semantic enrichment in Sesam, see the Learn section Enrich

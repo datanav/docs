@@ -21,10 +21,28 @@ After having succesfully connected to these providers you will create inbound pi
     #. To `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_
     #. To set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_
     #. To aquire an `API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
-    #. To import the following :download:`csv file <files/learn-hubspot-embedded-company.csv>` to your HubSpot company data
+    
+|
+|
 
-|
-|
+Import data to HubSpot
+^^^^^^^^^^^^^^^^^^^^^^
+In order to be able to import data to Sesam we first need to make sure that HubSpot contains data we can later import import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
+
+#. Download the :download:`company data <files/learn-hubspot-company.csv>` and :download:`contact data <files/learn-hubspot-contacts.csv>` and save the csv files locally
+#. Log into HubSpot and navigate to your **Companies** section
+#. Press **Import** on the right hand side of the page
+#. Press **Start an import** and select **File from computer** and click on **Next**
+#. Select **Multiple files with associations** and click on **Next**
+#. Select **Companies** and **Contacts** and click on **Next** 
+#. Upload your downloaded files from step 1 (don't click on the "This file includes a ...." boxes) and click on **Next**
+#. Select **Company ID** as common column header and select **Company** as the object it is unique for and click on **Next**
+#. Select **Don't import data in unmapped column** and click on **Next**
+#. Select **Don't import data in unmapped column** again and click on **Next**
+#. Finish the import.
+
+You should be able to see the new companies imported in your HubSpot **Companies** tab.
+
 
 Create Systems
 ^^^^^^^^^^^^^^
