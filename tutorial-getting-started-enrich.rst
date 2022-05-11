@@ -22,7 +22,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
-We will now add semantic value to our data.
+In this step we will add semantic value to our data.
 
 The Hubspot Data
 ****************
@@ -74,11 +74,22 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
     }
 
 
-On the output entity ``hubspot-company:5597148921`` you should now see a new property called ``contact-ni`` which contains the link to contacts, as well as namespaces on every property and the new ``rdf:type`` property.
+The company in the pipe´s output with ``about_us`` value "981967070" should now have the new ``contact-ni`` property, like shown bellow.
+
+.. code-block:: json
+  :linenos:
+  :emphasize-lines: 2
+  
+    {
+    "hubspot-company:contact-ni": "~:hubspot-contact:<some ID>"
+    }
+
 
 The Enhetsregisteret Data
 *************************
-For the Enhetsregisteret data we will only add namespaces and the ``rdf:type`` property. Follow the steps below to create the Enrich pipe for the Enhetsregisteret data.
+For the Enhetsregisteret data we will only add namespaces and the ``rdf:type`` property. 
+
+Follow the steps below to create the Enrich pipe for the Enhetsregisteret data.
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**

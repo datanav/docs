@@ -24,13 +24,16 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
    #. Seen the data synchronized into HubSpot
 
 .. admonition:: Prerequisites
-    
-    - Completed `Sign up tutorial <tutorial-signup>`_
 
-    In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.
+    You need to complete the `Sign up tutorial <tutorial-signup>`_
+
+    In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. 
+
+    If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.
 
     
     You should also familiarize youself with:
+
     - :doc:`What is Sesam <index-whatis>`
     - :doc:`Building Blocks in Sesam <developer-guide>`
 
@@ -46,29 +49,26 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
     .. dropdown:: **1. Collect data**
         :open:
 
-        :badge:`Estimated time: 5 min,badge-light`
+        :badge:`Estimated time: 10 min,badge-light`
 
-        This tutorial will show you how to collect data from the systems HubSpot and Twelvedata.
+        This tutorial will show you how to collect data from HubSpot and Enhetsregistret.
 
         .. link-button:: tutorial-getting-started-collect
             :type: ref
             :text: Start this tutorial
             :classes: tutorial-start
         
-    .. dropdown:: **2. Enrich data** (coming soon)
+    .. dropdown:: **2. Enrich data**
+        :open:
 
-        ..
-            :badge:`Estimated time: 5 min,badge-light`
+        :badge:`Estimated time: 10 min,badge-light`
 
-        Coming soon
+        This tutorial will show you how to enrich data you collected from source systems.
 
-        ..
-            This tutorial will show you how to enrich data you collected from your source system(s).
-
-            .. link-button:: tutorial-getting-started-enrich
-                :type: ref
-                :text: Start this tutorial
-                :classes: tutorial-start
+        .. link-button:: tutorial-getting-started-enrich
+            :type: ref
+            :text: Start this tutorial
+            :classes: tutorial-start
 
     .. dropdown:: **Connect data** (coming soon)
         
