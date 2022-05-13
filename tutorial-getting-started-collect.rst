@@ -18,7 +18,7 @@ After having succesfully connected to these providers you will create inbound pi
 
 .. admonition::  Remember:
 
-    #. To `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_
+    #. To `create a HubSpot app developer account here <https://developers.hubspot.com/get-started>`_
     #. To set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_
     #. To aquire an `API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
     

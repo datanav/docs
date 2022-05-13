@@ -29,7 +29,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
 
     In this guide, as in the main set of tutorials outside "Getting Started", we will use HubSpot as our baseline. 
 
-    If you do not have a HubSpot account already you can, `create a HubSpot developer account here <https://developers.hubspot.com/get-started>`_. Once you have a developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.
+    If you do not have a HubSpot account already you can, `create an app developer account here <https://developers.hubspot.com/get-started>`_. Once you have an app developer account you need to set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_ in order to `aquire an API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_. You will need this key to access HubSpot's APIs which we need to do in these "Getting Started" Tutorials.
 
     
     You should also familiarize youself with:
