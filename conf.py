@@ -31,7 +31,8 @@ print ("sys.path:%s" % pprint.pformat(sys.path))
 extensions = ['sphinxarg.ext',
               'sphinxcontrib.openapi',
               'sphinx_panels',
-              'notfound.extension'
+              'notfound.extension',
+              'sphinx_copybutton'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -304,3 +305,8 @@ html_show_sphinx = False
 
 # https://sphinx-notfound-page.readthedocs.io/en/latest/configuration.html
 notfound_no_urls_prefix = True
+
+# Note that we do not include `_static`
+# because the path should be *relative* to the static folder.
+# Note that we do not include `_static`
+# because the path should be *relative* to the static folder.

@@ -389,3 +389,8 @@ body {
 	font-family: 'Barlow', sans-serif;
 }
 /*---------END----------*/
+
+/* Copy button Visibility on*/
+button.copybtn {
+   opacity: 1;
+}
