@@ -57,6 +57,8 @@ Note that the sink may have its own ``batch_size`` property. This is
 useful if the pipe has transforms that produce more entities than the
 number of entities taken as input.
 
+.. _pipe_properties:
+
 Properties
 ----------
 

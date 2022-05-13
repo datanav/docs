@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2022_05_12:
+
+2022-05-12
+----------
+
+* A pipe with :ref:`automatic reprocessing  <automatic_reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
 
 .. _changelog_2022_05_03:
 
