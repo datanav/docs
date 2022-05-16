@@ -3,10 +3,9 @@
 Connect data
 ============
 
-.. In this phase we will find sameness from our two sources and merge them into one.
-
-In this phase we will see how the same companies from different sources can be merged for a more complete perspective of the prespective companies.
-We will also get a small taste of master data management (MDM) mechanisms in Sesam.
+In this phase we will demonstrate how to connect data across different sources.
+More specifically how the same companies from different sources can be merged to give us a more complete perspective of the respective companies.
+We will also get a small taste of master data management (MDM) mechanisms in Sesam by adding global properties.
 
 .. admonition::  Objectives:
 
@@ -33,7 +32,7 @@ To create a global pipe, follow the steps below.
   :linenos:
   
   {
-    "_id": "global-company",
+    "_id": "global-organization",
     "type": "pipe",
     "source": {
       "type": "merge",
@@ -49,14 +48,29 @@ To create a global pipe, follow the steps below.
       "rules": {
         "default": [
           ["copy", "*"],
+          ["add", "organization-number",
+            ["coalesce",
+              ["list", "_S.enhetsregisteret-company:orgnr", "_S.hubspot-company:properties.hubspot-company:about_us"]
+            ]
+          ],
           ["add", "name",
             ["coalesce",
               ["list", "_S.enhetsregisteret-company:navn", "_S.hubspot-company:properties.hubspot-company:name"]
             ]
           ],
+          ["add", "address",
+            ["coalesce",
+              ["list", "_S.enhetsregisteret-company:forretningsadr", "_S.hubspot-company:properties.hubspot-company:address"]
+            ]
+          ],
           ["add", "zipcode",
             ["coalesce",
               ["list", "_S.enhetsregisteret-company:forradrpostnr", "_S.hubspot-company:properties.hubspot-company:zip"]
+            ]
+          ],
+          ["add", "city",
+            ["coalesce",
+              ["list", "_S.enhetsregisteret-company:forradrpoststed", "_S.hubspot-company:properties.hubspot-company:city"]
             ]
           ]
         ]
@@ -67,16 +81,20 @@ To create a global pipe, follow the steps below.
     }
   }
 
-``"identity": "first"`` tells Sesam to pick the ``_id`` from the first dataset source as ``_id`` for the merged entity.
+Important to note here is that we fetch companies from *different sources* (Enhentsregisteret and HubSpot),
+and merge the company entities when ``orgnr`` from Enhetsregisteret matches ``about_us`` from HubSpot.
 
-We use ``orgnr`` from Enhetsregisteret and ``about_us`` from HubSpot to find matching companies from the two systems.
+Also notice how ``$ids`` and ``rdf:type`` have data from both sources, meaning we don't lose data.
+We aggregate and preserve from all sources.
 
-Notice how the matching companies from the two sources have been merged together.
+The properties we added are listed in the ``global-organization`` namespace.
+Properties in a global namespace are what we call *global properties*.
 
-Also notice how ``$ids`` and ``rdf:type`` have data from both sources.
+We use ``coalesce`` to determine the trust we have in each source, the first source being the one we trust most.
+This is one of the mechanisms Sesam provides for MDM.
 
-The properties we added in the global pipe are listed in the ``global-company`` namespace.
-We use ``coalesce`` to determine the trust we have in each source, the first source begin the one we trust the most.
+By adding the global properties we no longer need to worry about which source system has the most accurate data.
+From here on we can simply use the global properties instead when needed.
 
 These global properties will be used later in the transform phase.
 
