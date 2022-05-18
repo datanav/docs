@@ -81,15 +81,18 @@ When all source properties and global properties are available as a single compo
 
 **Benefits of semantic data storage with dynamic multi-schema:**
 
-- Increased flexibility and cost savings related to changes and sunsetting of LOB systems
+* Improved data quality and governance:
 
-- Improved data quality and governance:
-	- Data never loses its origin and context.
-	- Data never gets corrupted or lost in translation.
-	- Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
+	#. Data never loses its origin and context.
+	#. Data never gets corrupted or lost in translation.
+	#. Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
 	
-- Improved operational efficiency:
-	- Reduces cost and processing time as a source system only needs to share its data once, and in its native schema. 
-	- Reduces the number of integrations by up to 90%
-	- Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
-	- Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object
+
+* Improved operational efficiency:
+
+	#. Reduces cost and processing time as a source system only needs to share its data once, and in its native schema. 
+	#. Reduces the number of integrations by up to 90%
+	#. Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
+	#. Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object
+
+* Increased flexibility and cost savings related to changes and sunsetting of LOB systems
