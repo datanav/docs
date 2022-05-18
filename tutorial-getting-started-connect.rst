@@ -5,6 +5,7 @@ Connect data
 
 In this phase we will demonstrate how to connect data across different sources.
 More specifically how the same companies from different sources can be merged to give us a more complete perspective of the respective companies.
+
 We will also get a small taste of master data management (MDM) mechanisms in Sesam by adding global properties.
 
 .. admonition::  Objectives:
@@ -18,8 +19,8 @@ We will also get a small taste of master data management (MDM) mechanisms in Ses
 
   Before starting on this tutorial we suggest you complete the `Enrich data tutorial <tutorial-getting-started-enrich>`_ as we will use that data in this tutorial.
 
-Create global pipe
-******************
+Create a global pipe
+********************
 To create a global pipe, follow the steps below. 
 
 #. Navigate to **Pipes**

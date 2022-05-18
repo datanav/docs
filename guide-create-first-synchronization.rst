@@ -71,15 +71,12 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
             :text: Start this tutorial
             :classes: tutorial-start
 
-    .. dropdown:: **Connect data** (coming soon)
+    .. dropdown:: **Connect data**
+        :open:
         
-        ..
-            :badge:`Estimated time: 5 min,badge-light`
+        :badge:`Estimated time: 15 min,badge-light`
 
-        Coming soon
-
-        ..
-            This tutorial will show you how to connect the data your enriched.
+        This tutorial will show you how to connect the data your enriched.
 
             .. link-button:: tutorial-getting-started-connect
                 :type: ref
