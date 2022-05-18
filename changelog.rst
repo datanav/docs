@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_05_19:
+
+2022-05-19
+----------
+
+* Added the :ref:`literal <literal_dtl_function>` DTL function.
+
 .. _changelog_2022_05_12:
 
 2022-05-12
