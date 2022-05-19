@@ -39,6 +39,12 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
     - :doc:`What is Sesam <index-whatis>`
     - :doc:`Building Blocks in Sesam <developer-guide>`
 
+.. admonition:: Use-case
+
+    Many customers store their *company contact data* in HubSpot's CRM solution. Instead of each customer manually keeping this data up-to-date, HubSpot wish to automate the process which in turn will let their customers focus more on realizing their business goals.
+
+    Each customer should be able to have their HubSpot company data synchronized with the company data available in the Norwegian Central Coordinating Register for Legal Entities, "Enhetsregisteret". This way, the customers knows that the data available in HubSpot is always up-to-date and of high quality.
+
 |
 |
 

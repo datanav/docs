@@ -1,3 +1,5 @@
+:orphan:
+
 .. _getting-started-upload-baseline-configuration:
 
 Upload baseline configuration
