@@ -25,7 +25,7 @@ In order to create the transform pipe, please follow the steps below.
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
-#. Paste and save the DTL configuration below
+#. Paste and save the configuration below
 #. Click **Start** to ensure your pipe runs
 #. Click the **Output** tab to see the result
 
