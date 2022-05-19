@@ -10,6 +10,7 @@ Create your first synchronization
    Collect <tutorial-getting-started-collect>
    Enrich <tutorial-getting-started-enrich>
    Connect <tutorial-getting-started-connect>
+   Transform <tutorial-getting-started-transform>
 
 In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
