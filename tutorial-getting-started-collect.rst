@@ -151,7 +151,7 @@ The first inbound pipe we want to work on is the pipe that connects to our ``Hub
           "url": "companies?properties=about_us,address,city,country,description,domain,founded_year,is_public,linkedin_company_page,name,numberofemployees,state,timezone,website,zip&"
         }
       },
-      "add_namespaces": false
+      "namespaced_identifiers": false
     }
 
 
@@ -188,7 +188,7 @@ The last thing to do in this tutorial is to create the inbound pipe for Enhetsre
           ]
         }
       },
-      "add_namespaces": false
+      "namespaced_identifiers": false
     }
 
 When done you should have 10 entities in the output of each of the two inbound pipes.
