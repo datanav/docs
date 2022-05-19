@@ -11,6 +11,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 
     #. How to add NI's to your entity metadata
     #. How to add rdf:types to your entities
+    #. How to add namespaces to your entities
 
 .. admonition:: Prerequisites
 
