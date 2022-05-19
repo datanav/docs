@@ -20,7 +20,6 @@ This step-by-step guide will help you getting started.
 
    #. Signed up for Sesam
    #. Connected to a subscription
-   #. Uploaded a baseline configuration
    #. Created your first synchronization
 
 |
