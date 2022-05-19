@@ -41,7 +41,9 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
 
 .. admonition:: Use-case
 
-    An enterprice is storing their company contact data in HubSpot's CRM solution. Instead of manually keeping this data up-to-date the enterprice wish to automate the process, which in turn will let them focus more on realizing their business goals. The enterprice wish to synchronize their HubSpot company data with the company data available in the Norwegian Central Coordinating Register for Legal Entities, "Enhetsregisteret". This way, the enterprice knows that the data available in HubSpot is always up-to-date and of high quality.
+    An enterprice is storing their company contact data in HubSpot's CRM solution. Instead of manually keeping this data up-to-date the enterprice wish to automate the process, which in turn will let them focus more on realizing their business goals.
+
+    The enterprice wish to synchronize their HubSpot company data with the company data available in the Norwegian Central Coordinating Register for Legal Entities, "Enhetsregisteret". This way, the enterprice knows that the data available in HubSpot is always up-to-date and of high quality.
 
 |
 |
