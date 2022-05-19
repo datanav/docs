@@ -314,10 +314,10 @@ to hold variables defined by URL parameters.
        .. _b_variable:
 
    * - ``_B``
-     - A dict that contains properties bound to URL parameters. 
+     - A dict that contains properties bound to URL parameters.
        It is useful for parameterizing the transform on an endpoint sink.
-       
-     - | A URL parameter ``foo`` given to the endpoint API on the form  
+
+     - | A URL parameter ``foo`` given to the endpoint API on the form
        | ``http://my_host:port/api/publishers/my_endpoint?foo=bar``
        | will be reflected in ``_B`` as a key ``foo`` with the value "`bar`".
 
@@ -3951,6 +3951,16 @@ Misc
    * - Function
      - Description
      - Examples
+
+       .. _literal_dtl_function:
+   * - ``literal``
+     - | *Arguments:*
+       |   MESSAGE(value{1})
+       |
+       | A function that returns its argument. The argument is not evaluated and is returned as-is. This function is used to avoid side-effects from value expression evaluation.
+     - | ``["literal", "_S.foo"]``
+       |
+       | Returns the string ``_S.foo``, and not the value of the source entity's foo property.
 
        .. _fail_dtl_function:
    * - ``fail!``
