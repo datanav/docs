@@ -85,14 +85,12 @@ To create a global pipe, follow the steps below.
 Important to note here is that we fetch companies from *different sources* (Enhentsregisteret and HubSpot),
 and merge the company entities when ``orgnr`` from Enhetsregisteret matches ``about_us`` from HubSpot.
 
-Also notice how ``$ids`` and ``rdf:type`` have data from both sources, meaning we don't lose data.
-We aggregate and preserve from all sources.
+Also notice that data from all sources are preserved and aggregated in the result.
 
 The properties we added are listed in the ``global-organization`` namespace.
 Properties in a global namespace are what we call *global properties*.
 
-We use ``coalesce`` to determine the trust we have in each source, the first source being the one we trust most.
-This is one of the mechanisms Sesam provides for MDM.
+We use ``coalesce`` to determine the source trust order and is one of the mechanisms provided by Sesam for MDM.
 
 By adding the global properties we no longer need to worry about which source system has the most accurate data.
 From here on we can simply use the global properties instead when needed.
