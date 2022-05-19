@@ -7,7 +7,7 @@ In this tutorial we will look closer into the transformation phase of a Sesam sy
 
 .. admonition::  Objectives:
    
-    After you complete this tutorial you would have learned the following:
+    After you complete this tutorial you will have learned the following:
 
     #. How to use DTL to create system specific payloads
     #. How to use global properties to increase payload data quality
