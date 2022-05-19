@@ -85,19 +85,16 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
                 :classes: tutorial-start
 
     .. dropdown:: **Transform data** (coming soon)
+        :open:
 
-        ..
-            :badge:`Estimated time: 5 min,badge-light`
+        :badge:`Estimated time: 5 min,badge-light`
 
-        Coming soon
+        This tutorial will show you how to transform the data and make it ready for sharing with your target system.
 
-        ..
-            This tutorial will show you how to transform the data and make it ready for sharing with your target system.
-
-            .. link-button:: tutorial-getting-started-transform
-                :type: ref
-                :text: Start this tutorial
-                :classes: tutorial-start
+        .. link-button:: tutorial-getting-started-transform
+            :type: ref
+            :text: Start this tutorial
+            :classes: tutorial-start
 
 
     .. dropdown:: **Share data** (coming soon)
