@@ -104,7 +104,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
             :classes: tutorial-start
 
 
-    .. dropdown:: **Share data** (coming soon)       
+    .. dropdown:: **Share data**    
         :open:
 
         :badge:`Estimated time: 10 min,badge-light`
