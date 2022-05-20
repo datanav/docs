@@ -91,7 +91,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
                 :text: Start this tutorial
                 :classes: tutorial-start
 
-    .. dropdown:: **Transform data** (coming soon)
+    .. dropdown:: **Transform data**
         :open:
 
         :badge:`Estimated time: 5 min,badge-light`
