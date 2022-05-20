@@ -166,4 +166,4 @@ Congratulations! You have now created your first Sesam synchronization!
 
 .. admonition:: Want to learn more?
 
-  Subscribe to your courses and learn new awesome things about Sesam blablabla. 
+  Sign up on any of our Sesam courses or workshops, or have a look at the more in-depth tutorials with detailed descriptions of all five phases of a Sesam data-flow.
