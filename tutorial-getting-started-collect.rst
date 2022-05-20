@@ -148,7 +148,7 @@ The first inbound pipe we want to work on is the pipe that connects to our ``hub
 The Enhetsregisteret inbound pipe
 *********************************
 
-The last thing to do in this tutorial is to create a pipe that connects to our ``enhetsregisteret`` system. We want to pull in the company data from Enhetsregisteret.
+The final thing to do is to pull in the company data from Enhetsregisteret by creating a pipe that connects to our ``enhetsregisteret`` system.
 Again, follow the below steps to create your inbound pipe ``enhetsregisteret-company-collect``:
 
 #. Navigate to **Pipes**
