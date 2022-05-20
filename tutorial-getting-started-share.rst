@@ -4,9 +4,7 @@ Share data
 ==========
 
 In this phase we will demonstrate how to share your data to a target system.
-More specifically, we will apply the necessary logic to send the data from the :doc:`transform tutorial <tutorial-getting-started-transform>` back to HubSpot. 
-
-This tutorial contains the configuration to two pipes: the first pipe performs *optimistic locking* and the second sends the data to HubSpot.
+More specifically, we will apply the necessary logic to send the data from the :doc:`transform phase <tutorial-getting-started-transform>` back to HubSpot. 
 
 .. admonition::  Objectives:
 
@@ -19,16 +17,26 @@ This tutorial contains the configuration to two pipes: the first pipe performs *
 
   Before starting on this tutorial we suggest you complete the :doc:`Transform data tutorial <tutorial-getting-started-transform>` as we will use that data in this tutorial.
 
+In this last phase, we will create two pipes:
+
+#. The first pipe performs *optimistic locking* 
+#. The second sends the data to HubSpot.
+
+
 Perform optimistic locking in Sesam
 ***********************************
 
-To create the first pipe in this tutorial, follow the steps below.
+The main purpose of this pipe is to perform *optimistic locking*, i.e. to make sure that there has not been any updates to an entity in HubSpot since our last import of HubSpot data to Sesam. 
+
+This is a great feature that will ensure that we do not overwrite any HubSpot data we are not not supposed to.
+
+Follow the steps bellow to create the pipe with optimistic locking:
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
 #. Paste and save the configuration below
 #. Click **Start** to ensure your pipe runs 
-#. Click the **Output** tab to see the result
+#. Click the **Output** tab to see the results
 
 .. code-block:: json
   :linenos:
@@ -113,17 +121,20 @@ To create the first pipe in this tutorial, follow the steps below.
   }]
   }
 
-The main purpose of this pipe is to perform *optimistic locking*, i.e. to make sure that there has not been any updates to an entity in HubSpot since our last import of HubSpot data to Sesam. This is a necessity in order to make that Sesam does not overwrite any HubSpot data we should not overwrite. 
+
 
 Send data to HubSpot
 *********************
 
-In this pipe we will connect to the HubSpot system in Sesam in order to send our updated data back to HubSpot.
+In this pipe we will connect to the HubSpot system in Sesam in order to send our updated and enriched data back to HubSpot.
 
-Before creating the pipe which will send updated data to HubSpot, please enter your HubSpot company contacts and click on the company **SOFTARCH TECHNOLOGIES AS**. On the left hand top corner, click on **Actions** and select **View all properties**.
-If you scroll down you will notice that this company has no street address associated with it. This is one of the fiels we will update with out last pipe.    
+But before we start, please navigate to your HubSpot company contacts and click on the company **SOFTARCH TECHNOLOGIES AS**. 
 
-To create the final pipe, follow the steps below.
+On the left hand top corner, click on **Actions** and select **View all properties**.
+
+If you scroll down you will notice that this company has no street address associated with it. This is one of the fields we will update with our last pipe.    
+
+Now, let´s get to it! Follow the steps below to create the last pipe:
 
 #. Navigate to **Pipes**
 #. Click on **New pipe**
@@ -153,3 +164,6 @@ Now, go back to **SOFTARCH TECHNOLOGIES AS** in your HubSpot account and look at
 
 Congratulations! You have now created your first Sesam synchronization!
 
+.. admonition:: Want to learn more?
+
+  Subscribe to your courses and learn new awesome things about Sesam blablabla. 
