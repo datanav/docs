@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_05_20:
+
+2022-05-20
+----------
+
+* It is now possible to automatically migrate a :ref:`single <pricing-production>` subscription to a :ref:`multi <pricing-production>` subscription. A multi subscription is a scale-out architecture that lets you run pipes and microservices on horizontally scalable hardware. Contact `support <https://support.sesam.io/>`_ if you would like to migrate your single subscription.
+
 .. _changelog_2022_05_19:
 
 2022-05-19
