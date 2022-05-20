@@ -228,6 +228,10 @@ a.btn {
     min-height: 12em;
 }
 
+td.linenos .normal {
+	font-size:  12px;
+}
+
 body {
 	position: relative;
 }
