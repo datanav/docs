@@ -229,7 +229,11 @@ a.btn {
 }
 
 td.linenos .normal {
-	font-size:  12px;
+	font-size:  13px;
+}
+
+table.highlighttable {
+	background-color: white;
 }
 
 body {
