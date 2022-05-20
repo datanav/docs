@@ -35,6 +35,9 @@ extensions = ['sphinxarg.ext',
               'sphinx_copybutton'
               ]
 
+html_codeblock_linenos_style = 'table'
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
