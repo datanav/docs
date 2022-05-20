@@ -61,7 +61,6 @@ In order to create the transform pipe, please follow the steps below.
       }
     }
 
-Notice that in this case we only use properties with a global namespace (*global-organization*) in our payload for HubSpot. 
-We could use any attributes we want, but for simplicity we have only chosen to use the attributes created in the connect phase for this tutorial.
+Notice that in this case we only use the properties we created in the connect phase. We could however have used any properties available to us in Sesam, as long as they are accepted by the HubSpot API.
 
-We add the data inside a ``payload`` and ``properties`` structure because of the data structure requirements from the HubSpot API. 
+HubSpot has specific requirements for the incoming data structure to their API, which is why we have added the ``payload`` and ``properties`` structures to the data.

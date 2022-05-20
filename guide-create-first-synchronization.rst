@@ -11,6 +11,7 @@ Create your first synchronization
    Enrich <tutorial-getting-started-enrich>
    Connect <tutorial-getting-started-connect>
    Transform <tutorial-getting-started-transform>
+   Share <tutorial-getting-started-share>
 
 In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
@@ -103,17 +104,14 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
             :classes: tutorial-start
 
 
-    .. dropdown:: **Share data** (coming soon)
-        
-        ..
-            :badge:`Estimated time: 5 min,badge-light`
+    .. dropdown:: **Share data**    
+        :open:
 
-        Coming soon
+        :badge:`Estimated time: 10 min,badge-light`
 
-        ..
-            This tutorial will show you how to share the data with your target system.
+        This tutorial will show you how to share the data with your target system.
 
-            .. link-button:: tutorial-getting-started-share
-                :type: ref
-                :text: Start this tutorial
-                :classes: tutorial-start
+        .. link-button:: tutorial-getting-started-share
+            :type: ref
+            :text: Start this tutorial
+            :classes: tutorial-start
