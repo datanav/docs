@@ -151,3 +151,5 @@ Note that this pipe uses the operation ``update``. In *getting started* we do no
 
 Now, go back to **SOFTARCH TECHNOLOGIES AS** in your HubSpot account and look at the street address again. It should now be updated with the address from Enhetsregisteret: *H0507 c/o Reidar Andersen Dronningens gate 50B*.
 
+Congratulations! You have now created your first Sesam synchronization!
+
