@@ -1,12 +1,12 @@
 .. _tutorial_getting_started_collect:
 
-Collect Data
+Collect data
 ============
 
 In this tutorial we will connect Sesam to two different data sources: your newly created Hubspot account and the Norwegian Central Coordinating Register for Legal Entities, "Enhetsregisteret".
 Later in Getting Started we will use the data imported from Enhetsregisteret to improve on the data quality from HubSpot before sending the data to back to HubSpot. 
 
-After having succesfully connected to these providers you will create inbound pipes for each relevant datatype we want to work with.
+After having succesfully connected to these providers you will create inbound pipes for each relevant entity type we want to work with.
 
 .. admonition::  Objectives:
 
@@ -22,27 +22,23 @@ After having succesfully connected to these providers you will create inbound pi
     #. To set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_
     #. To aquire an `API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
     
-|
-|
-
 Import data to HubSpot
 ^^^^^^^^^^^^^^^^^^^^^^
-In order to be able to import data to Sesam we first need to make sure that HubSpot contains data we can later import import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
+In order to import data into Sesam we first need to make sure that HubSpot contains the data we want to import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
 
 #. Download the :download:`company data <files/learn-hubspot-company.csv>` and :download:`contact data <files/learn-hubspot-contacts.csv>` and save the csv files locally
-#. Log into HubSpot and navigate to your **Companies** section
-#. Press **Import** on the right hand side of the page
-#. Press **Start an import** and select **File from computer** and click on **Next**
-#. Select **Multiple files with associations** and click on **Next**
-#. Select **Companies** and **Contacts** and click on **Next** 
-#. Upload your downloaded files from step 1 (don't click on the "This file includes a ...." boxes) and click on **Next**
-#. Select **Company ID** as common column header and select **Company** as the object it is unique for and click on **Next**
-#. Select **Don't import data in unmapped column** and click on **Next**
-#. Select **Don't import data in unmapped column** again and click on **Next**
-#. Finish the import.
+#. Log into HubSpot and navigate to your **Contacts** > **Companies** section
+#. Click **Import** on the right hand side of the page
+#. Click **Start an import** and select **File from computer** and click **Next**
+#. Select **Multiple files with associations** and click **Next**
+#. Select **Companies** and **Contacts** and click **Next** 
+#. Upload ``learn-hubspot-company.csv`` under **Company** and ``learn-hubspot-contacts.csv`` under **Contacts** (don't click on the "This file includes a ... column" boxes) and click **Next**
+#. Select **Company ID** as common column header and select **Company** as the object it is unique for and click **Next**
+#. Select **Don't import data in unmapped column** and click **Next**
+#. Select **Don't import data in unmapped column** again and click **Next**
+#. Agree to the terms and click **Finish import**
 
-You should be able to see the new companies imported in your HubSpot **Companies** tab.
-
+The imported contacts and companies can be found under the **Contacts** tab.
 
 Create systems
 ^^^^^^^^^^^^^^
@@ -54,15 +50,14 @@ The Hubspot system
 
 First, we will start by adding a new system for the HubSpot connection. 
 
-Follow the below steps in order to add Hubspot as a system in Sesam:
+Follow the below steps in order to add HubSpot as a system in Sesam:
 
 In the `Sesam portal <https://portal.sesam.io/>`_:
 
+#. Navigate to **Datahub** > **Variables** and add your HubSpot API key as a **Secret** named "hubspot-api-key"
 #. Navigate to **Systems**
-#. Click on **New system**
-#. Paste and save the DTL configuration below
-#. Add your hubspot API key in your Sesam subscription as a ``Secret`` by going into ``Datahub`` -> ``Variables``. 
-#. Use the ``Secret`` name "hubspot-api-key". 
+#. Click **New system**
+#. Paste and save the configuration below
 
 .. code-block:: json
   :linenos:
@@ -94,8 +89,8 @@ Now we can add our second system, the "Enhetsregisteret" system.
 In the `Sesam portal <https://portal.sesam.io/>`_:
 
 #. Navigate to **Systems**
-#. Click on **New system**
-#. Paste and save the DTL configuration below
+#. Click **New system**
+#. Paste and save the configuration below
 
 .. code-block:: json
   :linenos:
@@ -115,25 +110,21 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 
 After having successfully created both systems, you are now ready to move onto the next step of this tutorial, the creation of inbound pipes. 
 
-|
-|
-
 Create inbound pipes
 ^^^^^^^^^^^^^^^^^^^^
 
 "Inbound pipes" is the naming convention used for pipes that receive their data from a source system.
 
-The Hubspot inbound pipe
+The HubSpot inbound pipe
 ************************
 
-The first inbound pipe we want to work on is the pipe that connects to our ``HubSpot`` system. We want to pull in the ``company`` datatype that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``hubspot-company-collect``:
+The first inbound pipe we want to work on is the pipe that connects to our ``hubspot`` system. We want to pull in the company data that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``hubspot-company-collect``:
 
 #. Navigate to **Pipes**
-#. Click on **New pipe**
-#. Paste and save the DTL configuration below
-#. Press **Start** to ensure your pipe runs 
-#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
-
+#. Click **New pipe**
+#. Paste and save the configuration below
+#. Click **Start** to ensure your pipe runs 
+#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
 
 .. code-block:: json
   :linenos:
@@ -154,18 +145,17 @@ The first inbound pipe we want to work on is the pipe that connects to our ``Hub
       "namespaced_identifiers": false
     }
 
-
-
 The Enhetsregisteret inbound pipe
 *********************************
 
-The last thing to do in this tutorial is to create the inbound pipe for Enhetsregisteret. We want to pull in the ``enhetsregisteret`` datatype from the provider. Again, follow the below steps to create your inbound pipe ``enhetsregisteret-company-collect``:
+The final thing to do is to pull in the company data from Enhetsregisteret by creating a pipe that connects to our ``enhetsregisteret`` system.
+Again, follow the below steps to create your inbound pipe ``enhetsregisteret-company-collect``:
 
 #. Navigate to **Pipes**
-#. Click on **New pipe**
-#. Paste and save the DTL configuration below
-#. Press **Start** to ensure your pipe runs 
-#. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+#. Click **New pipe**
+#. Paste and save the configuration below
+#. Click **Start** to ensure your pipe runs 
+#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
 
 
 .. code-block:: json
