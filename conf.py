@@ -32,10 +32,16 @@ extensions = ['sphinxarg.ext',
               'sphinxcontrib.openapi',
               'sphinx_panels',
               'notfound.extension',
-              'sphinx_copybutton'
+              'sphinx_copybutton',
+              'sphinx_reredirects'
               ]
 
 html_codeblock_linenos_style = 'table'
+
+# Redirects
+redirects = {
+     "features.html": "key-benefits.html"
+}
 
 
 # Add any paths that contain templates here, relative to this directory.
