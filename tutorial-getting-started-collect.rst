@@ -189,6 +189,7 @@ Again, follow the below steps to create your inbound pipe ``enhetsregisteret-com
           ]
         }
       },
+      "add_namespaces": false,
       "namespaced_identifiers": false
     }
 
