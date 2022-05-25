@@ -83,7 +83,7 @@ Finally, follow the below steps again to add enhetsregisteret as a system:
 
 .. hint::
 
-  You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` and :ref:`URL <url_system> sections of the docs.
+  You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` and :ref:`URL <url_system>` sections of the docs.
 
 .. panels::
     :column: col-lg-12 p-2 
