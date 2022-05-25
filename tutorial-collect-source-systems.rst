@@ -16,11 +16,9 @@ In this tutorial we will look closer at source systems in Sesam. A source system
 
 .. admonition:: Prerequisites
 
-  #. You should have completed the :ref:`getting started guide <getting-started>` before starting on this tutorial.
-  #. You will need to create a `HubSpot App Developer Account <https://developers.hubspot.com/get-started>`_ in order to connect to the HubSpot API.
-  #. After creating your App Developer account, create an App Test Account. You will need this to interact with the HubSpot API. 
-  #. Navigate to your settings section and pick the "Integrations" -> "API Key" tab.
-  #. Create and save your API Key. 
+  #. Create a `HubSpot app developer account here <https://developers.hubspot.com/get-started>`_
+  #. Set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_
+  #. Aquire an `API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
 
 When a system is used as a source it is especially important to recognize that providing streams of entities, as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently. This holds true even if the amount of data residing in the source system increases exponentially. As such, avoiding bulk readings of data, as the amount of data residing in your source system increases, should be avoided.
 
@@ -34,30 +32,50 @@ With the above in mind, let us create a source system in Sesam.
   - Can provide entities with **any** shape
   - Must provide Sesam with a unique identifier called ``_id``
 
-The system you will be working with in this tutorial is `HubSpot <https://www.hubspot.com/>`_. You will connect to the HubSpot API in Sesam with the use of the system type :ref:`REST <rest_source>` and you will create operations that support only GET. The datatype you will be requesting is the ``contact`` datatype.
+The systems you will be working with in this tutorial are `HubSpot <https://www.hubspot.com/>`_ and the Norwegian Central Coordinating Register for Legal Entities, “Enhetsregisteret”. You will connect to the HubSpot API with the use of the system type :ref:`REST <rest_source>` whilst connecting to “Enhetsregisteret” will be done with the use of the system type :ref:`URL <url_system>`. For now you will only create operations that support GET for both systems.
 
 We created a template to get you started in Sesam. Follow these steps to add HubSpot as a system:
 
-#. Navigate to **Systems**
-#. Click on **New system**
+#. Navigate to Systems
+#. Click on New system
 #. Paste and save the DTL configuration below
-#. Add your system secret ``hubspot-jwt`` in the Secrets tab, as highlighted in the code below
+#. Add your hubspot API key in your Sesam subscription as a Secret by going into Datahub -> Variables.
+#. Use the Secret name “hubspot-api-key”.
 
 .. code-block:: json
   :linenos:
-  :emphasize-lines: 7
 
   {
     "_id": "hubspot",
     "type": "system:rest",
+    "headers": {
+      "Content-Type": "application/json"
+    },
     "operations": {
-      "get-contacts": {
+      "get": {
         "method": "GET",
-        "url": "contacts/v1/lists/all/contacts/all?hapikey=$SECRET(hubspot-jwt)"
+        "url": "{{ properties.url }}&"
       }
     },
-    "url_pattern": "https://api.hubapi.com/%s",
+    "rate_limiting_delay": 60,
+    "rate_limiting_retries": 3,
+    "url_pattern": "https://api.hubapi.com/crm/v3/objects/%shapikey=$SECRET(hubspot-api-key)",
     "verify_ssl": true
+  }
+
+Finally, follow the below steps again to add enhetsregisteret as a system:
+
+#. Navigate to Systems
+#. Click on New system
+#. Paste and save the DTL configuration below
+
+.. code-block:: json
+  :linenos:
+
+  {
+    "_id": "enhetsregisteret",
+    "type": "system:url",
+    "url_pattern": "http://hotell.difi.no/download/%s"
   }
 
 ..
@@ -65,7 +83,7 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
 
 .. hint::
 
-  You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` section of the docs.
+  You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` and :ref:`URL <url_system> sections of the docs.
 
 .. panels::
     :column: col-lg-12 p-2 
@@ -79,7 +97,7 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
 
     .. dropdown:: Can systems as a pipe source provide entities with any shape?
           
-          Yes they can.
+          Yes they can, as long as the stream exposes a json array.
 
 
 
