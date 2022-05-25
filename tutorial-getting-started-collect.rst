@@ -27,7 +27,7 @@ Import data to HubSpot
 In order to import data into Sesam we first need to make sure that HubSpot contains the data we want to import. Therefore, the first step is to populate HubSpot with some data by following the steps below:
 
 #. Download the :download:`company data <files/learn-hubspot-company.csv>` and :download:`contact data <files/learn-hubspot-contacts.csv>` and save the csv files locally
-#. Log into HubSpot and navigate to your **Contacts** > **Companies** section
+#. Log into HubSpot and navigate to your **Companies** section, found under **Contacts** in the top menu.
 #. Click **Import** on the right hand side of the page
 #. Click **Start an import** and select **File from computer** and click **Next**
 #. Select **Multiple files with associations** and click **Next**
@@ -69,9 +69,18 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
         "Content-Type": "application/json"
       },
       "operations": {
-        "get_companies": {
+        "get": {
           "method": "GET",
-          "url": "{{ properties.url }}associations=contacts,companies,deals,tickets,products,quotes&"
+          "url": "{{ properties.url }}&"
+        },
+        "get_company": {
+          "method": "GET",
+          "url": "companies/{{ id }}?properties=about_us,address,city,country,description,domain,founded_year,is_public,linkedin_company_page,name,numberofemployees,state,timezone,website,zip&associations=contacts,companies,deals,tickets,products,quotes&"
+        },
+        "update": {
+          "method": "PATCH",
+          "payload-type": "json",
+          "url": "{{ properties.url }}/{{ properties.id }}?"
         }
       },
       "rate_limiting_delay": 60,
@@ -79,6 +88,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
       "url_pattern": "https://api.hubapi.com/crm/v3/objects/%shapikey=$SECRET(hubspot-api-key)",
       "verify_ssl": true
     }
+
 
 
 The Enhetsregistret system
@@ -136,12 +146,13 @@ The first inbound pipe we want to work on is the pipe that connects to our ``hub
         "type": "rest",
         "system": "hubspot",
         "id_expression": "{{ id }}",
-        "operation": "get_companies",
+        "operation": "get",
         "payload_property": "results",
         "properties": {
-          "url": "companies?properties=about_us,address,city,country,description,domain,founded_year,is_public,linkedin_company_page,name,numberofemployees,state,timezone,website,zip&"
+          "url": "companies?properties=about_us,address,city,country,description,domain,founded_year,is_public,linkedin_company_page,name,numberofemployees,state,timezone,website,zip&associations=contacts,companies,deals,tickets,products,quotes"
         }
       },
+      "add_namespaces": false,
       "namespaced_identifiers": false
     }
 
@@ -178,6 +189,7 @@ Again, follow the below steps to create your inbound pipe ``enhetsregisteret-com
           ]
         }
       },
+      "add_namespaces": false,
       "namespaced_identifiers": false
     }
 

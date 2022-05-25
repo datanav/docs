@@ -75,7 +75,7 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
     }
 
 
-The company in the pipe´s output with ``about_us`` value "981967070" should now have the new ``contact-ni`` property, like shown bellow.
+The company in the pipe´s output with ``about_us`` value "991721355" should now have the new ``contact-ni`` property, like shown bellow.
 
 .. code-block:: json
   :linenos:
