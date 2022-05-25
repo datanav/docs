@@ -37,9 +37,9 @@ To create a global pipe, follow the steps below.
     "type": "pipe",
     "source": {
       "type": "merge",
-      "datasets": ["enhetsregisteret-company-enrich ec", "hubspot-company-enrich hc"],
+      "datasets": ["hubspot-company-enrich hc", "enhetsregisteret-company-enrich ec"],
       "equality_sets": [
-        ["ec.orgnr", "hc.properties.about_us"]
+        ["hc.properties.about_us", "ec.orgnr"]
       ],
       "identity": "first",
       "version": 2
@@ -81,6 +81,7 @@ To create a global pipe, follow the steps below.
       "global": true
     }
   }
+
 
 Important to note here is that we fetch companies from *different sources* (Enhentsregisteret and HubSpot),
 and merge the company entities when ``orgnr`` from Enhetsregisteret matches ``about_us`` from HubSpot.
