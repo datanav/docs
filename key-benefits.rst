@@ -8,6 +8,8 @@ the core features needed to build a data-fabric based platform.
 
 |
 
+.. _delta-stream-processing:
+
 Delta stream processing
 =======================
 
