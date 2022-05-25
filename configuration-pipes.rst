@@ -57,6 +57,8 @@ Note that the sink may have its own ``batch_size`` property. This is
 useful if the pipe has transforms that produce more entities than the
 number of entities taken as input.
 
+.. _pipe_properties:
+
 Properties
 ----------
 
@@ -77,6 +79,12 @@ Properties
      -
      - Yes
 
+   * - ``type``
+     - String
+     - The type of the component, for pipes the only allowed value is "pipe"
+     -
+     - Yes
+
    * - ``name``
      - String
      - A human readable name of the component.
@@ -85,21 +93,15 @@ Properties
 
    * - ``description``
      - String or list of strings
-     - A human readable description of the component (optional).
+     - A human readable description of the component.
      -
-     - Yes
+     -
 
    * - ``comment``
      - String or list of strings
-     - A human readable comment on the component (optional).
+     - A human readable comment on the component.
      -
      -
-
-   * - ``type``
-     - String
-     - The type of the component, for pipes the only allowed value is "pipe"
-     -
-     - Yes
 
    * - ``batch_size``
      - Integer(>=1)
@@ -165,6 +167,14 @@ Properties
      - Object
      - A configuration object for the :ref:`pump <pump_section>` component of the pipe.
      -
+     -
+
+   * - ``infer_pipe_entity_types``
+     - Boolean
+     - :ref:`Schema inferencing <schema-inferencing>` is enabled for
+       all pipes by default. Setting this property to false will
+       disable schema inferencing for this pipe.
+     - ``true``
      -
 
    * - ``dependency_tracking.dependency_warning_threshold``

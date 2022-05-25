@@ -1,12 +1,57 @@
 Changelog
 =========
 
+.. _changelog_2022_05_20:
+
+2022-05-20
+----------
+
+* It is now possible to automatically migrate a :ref:`single <pricing-production>` subscription to a :ref:`multi <pricing-production>` subscription. A multi subscription is a scale-out architecture that lets you run pipes and microservices on horizontally scalable hardware. Contact `support <https://support.sesam.io/>`_ if you would like to migrate your single subscription.
+
+.. _changelog_2022_05_19:
+
+2022-05-19
+----------
+
+* Added the :ref:`literal <literal_dtl_function>` DTL function.
+
+.. _changelog_2022_05_12:
+
+2022-05-12
+----------
+
+* A pipe with :ref:`automatic reprocessing  <automatic_reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
+
+.. _changelog_2022_05_03:
+
+2022-05-03
+----------
+
+* Transforms now have a :ref:`side_effects <transform_properties>` property that specifies if the transform has side-effects or not. A side-effect means that it causes changes to the system that it talks to. If the transform alters the system in any way, then this property must be set to true to prevent inadvertent changes to the system by features like pipe preview.
+* Corrected a bug that for multi subscriptions would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
+
+.. _changelog_2022_04_25:
+
+2022-04-25
+----------
+
+* Documented the :ref:`resource quotas <microservice_system_resource_quotas>` for microservices.
+* The default value of ``max_merged`` in the :ref:`merge source <merge_source>` is now set as a global default in the
+  :ref:`service metadata <service_metadata_global_defaults_max_merged>`, and
+  the default value has been increased to 50000 entities. This is a very high number of entities for the merge source
+  to handle at once, and merge sources will start using up large amounts of RAM before hitting this default limit. It
+  is recommended to reduce this limit to prevent such high memory usage and then reconfigure any pipes that attempt to
+  merge too many entities.
+
 .. _changelog_2022_04_19:
 
 2022-04-19
 ----------
 
-* Added a new property ``max_merged`` to the :ref:`merge source <merge_source>`.
+* Added a new property ``max_merged`` with a default value of 100 entities to the :ref:`merge source <merge_source>`.
+  Pipes that attempt to merge more entities than ``max_merged`` will fail with this change. The motivation for adding this
+  new property is that merge sources generally should not be merging that many entities in the first place, and the merge
+  process can end up using excessive amounts of RAM.
 
 .. _changelog_2022_04_07:
 
@@ -62,13 +107,6 @@ Changelog
 ----------
 
 * Pipes with ``manual`` or ``off`` pump mode can now be disabled and enabled.
-
-.. _changelog_2022_02_23:
-
-2022-02-23
-----------
-
-* Corrected a bug that for multi subscriptions would cause the default maximum concurrent pipes for a SQL system to be 20 instead of the 10 and essentially unlimited for non-SQL systems. Note that the default number of concurrent pipe for all systems is controlled by the ``worker_threads`` property available on all :ref:`systems <system_section>` and is 10 by default.
 
 .. _changelog_2022_02_11:
 

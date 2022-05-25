@@ -126,7 +126,7 @@ a.reference.external.nav-link.button.button-support {
 }
 
 .tutorial-start {
-	background-color: #007bff;
+	background-color: #009fdc;
 	border-radius: 17;
 	color: #ffffff;
 	padding: 8px 8px;
@@ -226,6 +226,14 @@ a.btn {
 
 .summary-content.card-body.docutils {
     min-height: 12em;
+}
+
+td.linenos .normal {
+	font-size:  13px;
+}
+
+table.highlighttable {
+	background-color: white;
 }
 
 body {
@@ -389,3 +397,8 @@ body {
 	font-family: 'Barlow', sans-serif;
 }
 /*---------END----------*/
+
+/* Copy button Visibility on*/
+button.copybtn {
+   opacity: 1;
+}

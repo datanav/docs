@@ -47,7 +47,7 @@ Properties
 
    * - ``comment``
      - String or list of strings
-     - A human readable comment on the source (optional).
+     - A human readable comment on the source.
      -
      -
 
@@ -66,7 +66,7 @@ the source*. Within an entity the marker is carried in the
 
     .. important::
 
-        When using continuation support, Sesam will not be able to do automatic deletion tracking. If you wish to include deleted entities in your import, make sure you regularly set a full sync on the imported data. 
+        When using continuation support, Sesam will not be able to do automatic deletion tracking. If you wish to include deleted entities in your import, make sure you regularly set a full sync on the imported data.
 
 
 

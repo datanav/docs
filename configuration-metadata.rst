@@ -164,10 +164,19 @@ Properties
      - ``104857600`` (100MB)
      -
 
+   * - ``global_defaults.infer_pipe_entity_types``
+     - Boolean
+     - :ref:`Schema inferencing <schema-inferencing>` is enabled for
+       all pipes by default. Setting the property to false will
+       disable schema inferencing by default. Notice that one can
+       also configure schema inferencing at the pipe level.
+     - ``true``
+     -
+
    * - ``global_defaults.use_config_circuit_breaker``
      - Boolean
      - When set to true, activates the circuit breaker for uploading configuration to the node. When activated, any changes to the node configuration that would result in the deletion of more than 10% of the existing components will not go through (this is the case only when the number of deleted components is also more than 10).
-     - False
+     - ``false``
      -
 
        .. _service_metadata_global_defaults_enable_background_rescan:
@@ -175,7 +184,7 @@ Properties
    * - ``global_defaults.enable_background_rescan``
      - Boolean
      - When set to true, enables running :ref:`pipe rescans <pipe_rescans>` in the background for all applicable pipes.
-     - False
+     - ``false``
      -
 
        .. _service_metadata_global_defaults_eager_load_microservices:
@@ -183,7 +192,7 @@ Properties
    * - ``global_defaults.eager_load_microservices``
      - Boolean
      - When set to false, Sesam can hold off starting up microservices which aren't connected to any pipes. Set to true to force all microservices to start up regardless.
-     - True
+     - ``true``
      -
 
        .. _service_metadata_global_defaults_symmetric_namespace_collapse:
@@ -193,8 +202,20 @@ Properties
      - When set to true, the expand and collapse features will be symmetrical, i.e. data containing namespaced identifiers read into Sesam will map to the same thing
        on the way out of Sesam. Note that setting this option to ``true`` as assumed by the DTL ``ni-collapse`` and ``ni-expand`` DTL functions
        will also alter the URI/NI collapse and expand behaviour of the RDF and SPARQL source and sink.
-     - False
+     - ``false``
      -
+
+       .. _service_metadata_global_defaults_max_merged:
+
+   * - ``global_defaults.max_merged``
+     - Integer
+     - Sets the maximum number of entities that can be merged at a time with pipes using the :ref:`merge source <merge_source>`.
+       The pipes will fail if more than ``max_merged`` entities are attempted merged into a single entity.
+       It is recommended to reduce this value to limit potential memory usage, as the merge pipe will use an excessive
+       amount of RAM if the number of merged entities is too high.
+     - ``50000``
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``

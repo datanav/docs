@@ -13,6 +13,38 @@ A microservice must communicate with the outside world using either the ``HTTP``
 
 The system provides session handling, connection pooling and authentication services to sources, transforms and sinks which need to communicate with the microservice.
 
+.. _microservice_system_resource_quotas:
+
+Resource quotas
+^^^^^^^^^^^^^^^
+
+The table below shows the total resource quotas available for the microservices per subscription type. These quotas are currently not enforced, but might they be in the future.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40, 30
+
+   * - Subscription type
+     - Memory quota
+     - CPU quota
+
+   * - ``developer``
+     - 1GB RAM
+     - 0.25 CPU
+
+   * - ``developer-pro``
+     - 4GB RAM
+     - 0.75 CPU
+
+   * - ``single``
+     - 8GB RAM
+     - 1 CPU
+
+   * - ``multi``
+     - 16GB RAM per compute
+     - 2 CPUs per compute
+
+
 Prototype
 ^^^^^^^^^
 
@@ -127,22 +159,6 @@ Properties
      - ``25``
      -
 
-   * - ``docker.cpu_period``
-     - Integer
-     - The percentage of CPU time the OS scheduler is allowed use (see `the Docker documentation <https://docs.docker.com/engine/reference/run/#cpu-period-constraint>`_ for details).
-       Note that the value is divided by 1000 with respects to the range in the Docker documentation. You should not
-       normally change the default value.
-     - ``100``
-     -
-
-   * - ``docker.cpuset_cpus``
-     - String
-     - A string expression representing the CPU cores the container is allowed to use, see ``docker.cpu_quota``.
-       The default (``null`` value) means the container can use all cores. A value of ``"0,4"`` means use core 0 and
-       4. A value of ``"0-4"`` means use cores 0 through 4. A value of ``"0,6-8"`` means use core 0 and 6 through 8.
-     - ``null``
-     -
-
        .. _microservices_system_docker_hosts:
    * - ``docker.hosts``
      - Dict<String,String>
@@ -217,6 +233,9 @@ Properties
      - ``true``
      -
 
+Documentation for deprecated properties can be found :ref:`here <microservice_system_deprecations>`.
+
+
 Microservice APIs
 ^^^^^^^^^^^^^^^^^
 
@@ -245,4 +264,3 @@ Example configuration
             }
         }
     }
-

@@ -241,7 +241,8 @@ DTL Expression Functions
        :ref:`tan <tan_dtl_function>`
 
    * - Misc
-     - :ref:`fail! <fail_dtl_function>`
+     - :ref:`literal <literal_dtl_function>` .
+       :ref:`fail! <fail_dtl_function>`
 
    * - Namespaced identifiers
      - :ref:`ni <ni_dtl_function>` ·
