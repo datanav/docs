@@ -154,9 +154,13 @@ Now, let´s get to it! Follow the steps below to create the last pipe:
       "sink": {
         "type": "rest",
         "system": "hubspot",
-        "operation": "update"
+        "operation": "update",
+        "properties": {
+          "url": "companies"
+        }
       }
     }
+
 
 Note that this pipe uses the operation ``update``. In *getting started* we do not cover inserting new entities into HubSpot, only updating already existing ones. 
 
