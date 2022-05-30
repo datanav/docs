@@ -18,8 +18,7 @@ This step-by-step guide will help you getting started.
    
    After you complete these tutorials you would have:
 
-   #. Signed up for Sesam
-   #. Connected to a subscription
+   #. Signed up for Sesam and connected to a subscription
    #. Created your first synchronization
 
 |
