@@ -41,8 +41,8 @@ You will now be guided through these in chronological stepwise tutorials provide
 .. panels::
     :column: col-lg-12 p-2 
 
-    **Collect:** This guide includes 7 tutorials
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    **Collect:** This guide includes 1 tutorial
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     .. dropdown:: **1. Source systems**
         :open:
