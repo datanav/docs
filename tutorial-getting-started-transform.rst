@@ -3,13 +3,15 @@
 Transform data
 ==============
 
-In this tutorial we will look closer into the transformation phase of a Sesam synchronization. The transformation phase is where we prepare the data to be sent out to a target. We will now use the data you worked with in the previous tutorial to improve the data quality in the HubSpot company data as well as build a payload structure.
+In this tutorial we will look closer into the transformation phase of a Sesam synchronization. 
+
+The transformation phase is where we prepare the data to be sent out to a target. We will now use the data you worked with in the previous tutorial to improve the data quality in the HubSpot company data as well as build a payload structure.
 
 .. admonition::  Objectives:
    
     After you complete this tutorial you will have learned the following:
 
-    #. How to use DTL to create system specific payloads
+    #. How to use :ref:`Data Transformation Language <DTLReferenceGuide>` to create system specific payloads 
     #. How to use global properties to increase payload data quality
 
 
@@ -30,7 +32,6 @@ In order to create the transform pipe, please follow the steps below.
 #. Click the **Output** tab to see the result
 
 .. code-block:: json
-  :linenos:
 
     {
       "_id": "company-hubspot-transform",

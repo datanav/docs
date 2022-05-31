@@ -20,15 +20,15 @@ More specifically, we will apply the necessary logic to send the data from the :
 In this last phase, we will create two pipes:
 
 #. The first pipe performs *optimistic locking* 
-#. The second sends the data to HubSpot.
+#. The second pipe sends the data to HubSpot
 
 
 Perform optimistic locking in Sesam
 ***********************************
 
-The main purpose of this pipe is to perform *optimistic locking*, i.e. to make sure that there has not been any updates to an entity in HubSpot since our last import of HubSpot data to Sesam. 
+The main purpose of this pipe is to perform *optimistic locking*, i.e. to make sure that there have not been any updates to an entity in HubSpot since our last import of HubSpot data to Sesam. 
 
-This is a great feature that will ensure that we do not overwrite any HubSpot data we are not not supposed to.
+This is a great feature that will ensure that we do not overwrite any HubSpot data we are not supposed to.
 
 Follow the steps bellow to create the pipe with optimistic locking:
 
@@ -39,7 +39,6 @@ Follow the steps bellow to create the pipe with optimistic locking:
 #. Click the **Output** tab to see the results
 
 .. code-block:: json
-  :linenos:
   
   {
   "_id": "company-hubspot-share-update",
@@ -142,7 +141,6 @@ Now, let´s get to it! Follow the steps below to create the last pipe:
 #. Click **Start** to ensure your pipe runs 
 
 .. code-block:: json
-  :linenos:
   
     {
       "_id": "company-hubspot-share-update-endpoint",

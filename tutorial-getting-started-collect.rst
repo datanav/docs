@@ -60,7 +60,6 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 #. Paste and save the configuration below
 
 .. code-block:: json
-  :linenos:
 
     {
       "_id": "hubspot",
@@ -103,7 +102,6 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 #. Paste and save the configuration below
 
 .. code-block:: json
-  :linenos:
 
     {
       "_id": "enhetsregisteret",
@@ -116,7 +114,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 
 .. note::
 
-  The connection to Enhetsregisteret is a mock connection in this tutorial. The data you will import to Sesam is actually test data generate for this specific tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario however and therefore well serves the purposes of Getting started.
+  The connection to Enhetsregisteret is a mock connection in this tutorial. The data you will import to Sesam is actually test data generated for the purpose of this tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario and therefore well serves the purposes of this tutorial.
 
 After having successfully created both systems, you are now ready to move onto the next step of this tutorial, the creation of inbound pipes. 
 
@@ -128,16 +126,15 @@ Create inbound pipes
 The HubSpot inbound pipe
 ************************
 
-The first inbound pipe we want to work on is the pipe that connects to our ``hubspot`` system. We want to pull in the company data that exists inside the CRM provider. Follow the below steps to create your inbound pipe ``hubspot-company-collect``:
+The first inbound pipe we want to work on is the pipe that connects to our ``hubspot`` system. We want to pull in the company data that exists inside the CRM provider. Follow the steps below to create your inbound pipe ``hubspot-company-collect``:
 
 #. Navigate to **Pipes**
 #. Click **New pipe**
 #. Paste and save the configuration below
 #. Click **Start** to ensure your pipe runs 
-#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's **Output** tab. 
 
 .. code-block:: json
-  :linenos:
   
     {
       "_id": "hubspot-company-collect",
@@ -166,11 +163,10 @@ Again, follow the below steps to create your inbound pipe ``enhetsregisteret-com
 #. Click **New pipe**
 #. Paste and save the configuration below
 #. Click **Start** to ensure your pipe runs 
-#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
+#. Click refresh to see number of entities processed (should be 10). You can also see them in the pipe's **Output** tab. 
 
 
 .. code-block:: json
-  :linenos:
   
     {
       "_id": "enhetsregisteret-company-collect",

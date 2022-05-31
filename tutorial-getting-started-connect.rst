@@ -30,7 +30,6 @@ To create a global pipe, follow the steps below.
 #. Click the **Output** tab to see the result
 
 .. code-block:: json
-  :linenos:
   
   {
     "_id": "global-organization",

@@ -36,7 +36,6 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
 #. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
 
 .. code-block:: json
-  :linenos:
   
     {
       "_id": "hubspot-company-enrich",
@@ -78,7 +77,6 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
 The company in the pipe´s output with ``about_us`` value "991721355" should now have the new ``contact-ni`` property, like shown bellow.
 
 .. code-block:: json
-  :linenos:
   :emphasize-lines: 2
   
     {
@@ -99,7 +97,6 @@ Follow the steps below to create the Enrich pipe for the Enhetsregisteret data.
 #. Press refresh to see number of entities processed (should be 10). You can also see them in the pipe's output page. 
 
 .. code-block:: json
-  :linenos:
   
     {
       "_id": "enhetsregisteret-company-enrich",

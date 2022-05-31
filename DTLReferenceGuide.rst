@@ -25,11 +25,15 @@ DTL uses a JSON syntax to describe the transforms to perform. This allows us to 
 
 An example using the ``add`` transform:
 
-  ``["add", "name", "_S.firstname"]``
+.. code-block:: json
+
+  ["add", "name", "_S.firstname"]
 
 And composing functions:
 
-  ``["add", "name", ["concat", ["upper", "_S.lastname"], ", ", "_S.firstname"]]``
+.. code-block:: json
+
+  ["add", "name", ["concat", ["upper", "_S.lastname"], ", ", "_S.firstname"]]
 
 
 Annotated Example
@@ -44,7 +48,8 @@ entities from them.
 
 Given the following *source entity* (from the ``person`` dataset):
 
-::
+.. code-block:: json
+
 
   {
     "_id": "1",
@@ -54,7 +59,7 @@ Given the following *source entity* (from the ``person`` dataset):
 
 We then want to transform it into the following *target entity*:
 
-::
+.. code-block:: json
 
   {
     "_id": "1",
@@ -70,7 +75,7 @@ We then want to transform it into the following *target entity*:
 A pipe with the ``dtl`` transform below lets us transform persons into
 persons with orders:
 
-::
+.. code-block:: json
 
   {
     "_id": "person-with-orders",
@@ -130,18 +135,18 @@ Explanation:
      property to the target entity, uppercasing the name in the source
      entity.
 
-   ::
+.. code-block:: json
 
-    ["add", "orders",
-      ["sorted", "_.amount",
-        ["apply-hops", "order", {
-          "datasets": ["orders o"],
-          "where": [
-            ["eq", "_S._id", "o.cust_id"]
-          ]
-        }]
-      ]
+  ["add", "orders",
+    ["sorted", "_.amount",
+      ["apply-hops", "order", {
+        "datasets": ["orders o"],
+        "where": [
+          ["eq", "_S._id", "o.cust_id"]
+        ]
+      }]
     ]
+  ]
 
 1. | The expression above adds the ``orders`` property to the target
      entity. It does this by joining the source entity's ``_id``
@@ -152,25 +157,27 @@ Explanation:
      you can use in expressions in the ``where`` clause. The result of
      the join is a list of orders:
 
-   ::
+.. code-block:: json
 
-    [{
+  [
+    {
       "_id": "100",
       "amount": 320,
-      "order_lines": [...],
+      "order_lines": ["..."],
       "cust_id": "1"
     },
     {
       "_id": "200",
-      "amount": 500
-      "order_lines": [...],
+      "amount": 500,
+      "order_lines": ["..."],
       "cust_id": "1"
-    }]
+    }
+  ]
 
-   | Next, the ``order`` transform is then applied. The result of this
-     is a list of orders with two properties: ``_id`` and ``amount``:
+Next, the ``order`` transform is then applied. The result of this is a list of orders with two properties: ``_id`` and ``amount``:
 
-   ::
+.. code-block:: json
+
 
     [{
       "_id": "100",
@@ -181,11 +188,10 @@ Explanation:
       "amount": 500
     }]
 
-   | The order entities are then ``sorted`` by their ``amount``
-     property before being assigned to the ``orders`` property on the
-     target entity:
+The order entities are then ``sorted`` by their ``amount`` property before being assigned to the ``orders`` property on the target entity:
 
-   ::
+.. code-block:: json
+
 
     [{
       "_id": "100",
@@ -206,24 +212,24 @@ Explanation:
      evaluates to true. If the filter is false the target entity is not
      emitted / created.
 
-Things to note:
+.. note::
 
-- Transform functions are applied in the order given. The order is
-  significant, and one transform can use target entity properties
-  created by earlier transform function.
+  - Transform functions are applied in the order given. The order is
+    significant, and one transform can use target entity properties
+    created by earlier transform function.
 
-- the hops function is deterministic but not sorted (it produces deterministic order
-  based on the ``_id`` property of the entities within each dataset it processes).
-  You must apply the ``sorted`` function to the result of a hops join to achieve a
-  particular order.
+  - The hops function is deterministic but not sorted (it produces deterministic order
+    based on the ``_id`` property of the entities within each dataset it processes).
+    You must apply the ``sorted`` function to the result of a hops join to achieve a
+    particular order.
 
-- The filter function can be used to stop transformation of individual
-  entities, effectively filtering them out of the output stream.
+  - The filter function can be used to stop transformation of individual
+    entities, effectively filtering them out of the output stream.
 
-- When the DTL of a pipe is modified, the pipe's "last-seen" value must be
-  cleared in order to reprocess already seen entities with the new DTL.
-  This can be done by setting the "last-seen" value to an empty string with the
-  `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
+  - When the DTL of a pipe is modified, the pipe's "last-seen" value must be
+    cleared in order to reprocess already seen entities with the new DTL.
+    This can be done by setting the "last-seen" value to an empty string with the
+    `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
 
 
 .. _variables:
@@ -233,19 +239,20 @@ Built-in Variables
 
 There are six built-in variables in the DTL.
 These are ``_S``, ``_T``, ``_P``, ``_R``, ``_B`` and ``_``.
-They refer to the source entity, the target entity, the parent context,
-the root context, the bound endpoint variables and the current value, respectively.
 
-``_S`` and ``_T`` appear in pairs inside each applied transform.
-``_P`` appears inside the ``apply`` function and refers to the parent context.
-``_R`` is used to refer to the root context containing both ``_S`` and ``_T``.
-``_B`` is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>`
-to hold variables defined by URL parameters.
-``_`` is used to refer to the current value in functional expressions.
+- ``_S`` refers to the source entity
+- ``_T`` refers to the target entity
+- ``_P`` appears inside the ``apply`` function and refers to the parent context
+- ``_R`` is used to refer to the root context containing both ``_S`` and ``_T``
+- ``_B`` is used by the :ref:`HTTP endpoint sinks <http_endpoint_sink>` to hold variables defined by URL parameters
+- ``_`` refers to the current value in functional expressions
+
+.. note::
+  ``_S`` and ``_T`` appear in pairs inside each applied transform
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 10, 50, 30
 
    * - Variable
      - Description
@@ -254,11 +261,7 @@ to hold variables defined by URL parameters.
        .. _s_variable:
 
    * - ``_S``
-     - Refers to the source entity. This is the entity on which the
-       DTL transform operate. Note that with the ``apply`` function
-       you can apply nested transform rules, where each of the values
-       given to ``apply`` is made a source entity for that nested
-       transform.
+     - Refers to the source entity. This is the entity on which the DTL transform operate. Note that with the ``apply`` function you can apply nested transform rules, where each of the values given to ``apply`` is made a source entity for that nested transform.
      - | ``["gt", "_S.age", 42]``
        |
        | The source entity's ``age`` field must have a value greater than 42.
@@ -343,54 +346,52 @@ Path Expressions and Hops
 
 There are three ways that one can access properties on entities:
 
-1. **Property path strings**: ``"_S.orders.amount"``, which will start
-   from the given variable, in this case the source entity ``_S``, and
-   then traverse to the ``orders`` property and then to the ``amount``
-   property. The end result is a list of amounts. Note that property
-   path strings function can only access property on the entity it
-   operates on, including nested entities.
+Property path strings
+---------------------
 
-   One can also refer to the content of the variables themselves,
-   e.g. ``"_S."`` would refer to the source entity itself (note the dot
-   after the variable name). ``"_T."`` refers to the target entity, and
-   ``"_."`` refers to the current value.
+``"_S.orders.amount"``, which will start from the given variable, in this case the source entity ``_S``, and then traverse to the ``orders`` property and then to the ``amount`` property. The end result is a list of amounts. 
 
-   You can have periods in path elements if you quote them. Example:
-   ``"_S.foo.'john.doe''s'.bar"`` is equivalent to
-   ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path
-   element must begin and end with a single quote. Single quotes can
-   be escaped with ``''``.
+.. note::
 
-2. **The "path" function**: ``["path", "placed_by", ["sorted",
-   "_.amount", "_S.orders"]]``, which will first evaluate the
-   rightmost expression. Then it will traverse the path given in the
-   first argument for each of them and return the end result. The
-   first argument is an expression that resolve to either a single
-   string or a list of strings. Note that the ``path`` function can
-   only access property on the dictionary/entity it operates on,
-   including nested ones.
+  The property path strings function can only access property on the entity it operates on, including nested entities.
 
-3. **The "hops" function**:
+One can also refer to the content of the variables themselves, e.g. ``"_S."`` would refer to the source entity itself (note the dot after the variable name). ``"_T."`` refers to the target entity, and ``"_."`` refers to the current value.
 
-   ::
+You can have periods in path elements if you quote them. Example:
+``"_S.foo.'john.doe''s'.bar"`` is equivalent to ``["path", ["list", "foo", "john.doe's", "bar"], , "_S."]``. A quoted path element must begin and end with a single quote. Single quotes can be escaped with ``''``.
 
-     ["hops", {
-       "datasets": ["orders o"],
-       "where": [
-         ["eq", "_S._id", "o.cust_id"],
-         ["eq", "o.type", "BILLING"]
-       ]
-     }]
+The "path" function
+-------------------
 
-   The ``hops`` function can be used to perform :ref:`joins <joins>` across two or
-   more datasets, so if you want to navigate beyond the current entity
-   use ``hops``. This particular example will join the source entity
-   with entities from the ``orders`` dataset using the ``["eq",
-   "_S._id", "o.cust_id"]`` join expression and then filter the orders
-   by ``["eq", "o.type", "BILLING"]``. Note that only ``eq`` functions
-   will be treated as join expressions. All other function are treated
-   as filter expressions. For an ``eq`` to be a join expression it
-   will have to refer to variables from two different datasets.
+``["path", "placed_by", ["sorted", "_.amount", "_S.orders"]]``, which will first evaluate the rightmost expression. Then it will traverse the path given in the first argument for each of them and return the end result. The first argument is an expression that resolve to either a single string or a list of strings. 
+
+.. note::
+  Note that the ``path`` function can only access property on the dictionary/entity it operates on, including nested ones.
+
+The "hops" function
+-------------------
+
+The ``hops`` function can be used to perform :ref:`joins <joins>` across two or more datasets, so if you want to navigate beyond the current entity use ``hops``. 
+
+This following example will join the source entity with entities from the ``orders`` dataset using the ``["eq","_S._id", "o.cust_id"]`` join expression and then filter the orders by ``["eq", "o.type", "BILLING"]``. 
+
+.. code-block:: json
+
+    ["hops", {
+    "datasets": ["orders o"],
+      "where": 
+      [
+        ["eq", "_S._id", "o.cust_id"],
+        ["eq", "o.type", "BILLING"]
+      ]
+    }
+   ]
+
+
+.. note:: 
+  It is important to mention that only ``eq`` functions will be treated as join expressions. 
+
+  All other function are treated as filter expressions. For an ``eq`` to be a join expression it will have to refer to variables from two different datasets.
 
 .. _joins:
 
@@ -400,7 +401,7 @@ How joins work
 Given two entities ``A`` and ``B`` bound to the dataset aliases ``a``
 and ``b`` in the expressions below:
 
-::
+.. code-block:: json
 
    {
      "_id": "A",
@@ -408,7 +409,7 @@ and ``b`` in the expressions below:
      "values": [1, 2, 4, 5]
    }
 
-::
+.. code-block:: json
 
    {
      "_id": "B",
@@ -426,8 +427,9 @@ There are four different kinds of joins:
 
 4. Many-to-many: ``["eq", "a.values", "b.values"]``
 
-The rule for joins is very simple: *if any of the values overlap,
-then the join succeeds*.
+.. important::
+
+  The rule for joins is very simple: *if any of the values overlap, then the join succeeds*.
 
 All of the four joins given above succeed for the two entities because
 they all have overlapping values, i.e. the values ``1`` and ``4``.
@@ -436,32 +438,24 @@ Join expressions that contain functional expressions work the same
 way, e.g. ``["eq", ["+", "a.value", 2], "b.values"]`` succeeds as ``3``
 is a value shared by both.
 
-If you need to do joins with composite keys then the :ref:`tuples
-<tuples_dtl_function>` DTL function is useful. Using composite keys is
-almost always a better choice than having multiple individual joins as
-the former will have better precision.
+If you need to do joins with composite keys then the :ref:`tuples <tuples_dtl_function>` DTL function is useful. Using composite keys is almost always a better choice than having multiple individual joins as the former will have better precision.
+
+.. admonition:: Good to know
+
+   ``null`` values and deleted entities are not indexed, so they are not traversed by joins.
 
 .. NOTE::
 
-   ``null`` values and deleted entities are not indexed, so they are
-   not traversed by joins.
+   It is only ``eq`` functions that reference a single dataset alias in both left and right arguments that are considered join functions.
 
-.. NOTE::
-
-   It is only ``eq`` functions that reference a single dataset alias
-   in both left and right arguments that are considered join
-   functions.
-
-   There must be exactly one unique dataset alias reference
-   in each ``eq`` argument.
+   There must be exactly one unique dataset alias reference in each ``eq`` argument.
 
 .. _namespace_aware_functions:
 
 Namespace aware functions
 =========================
 
-The following functions are namespace aware: :ref:`add
-<dtl_transform-add>`, :ref:`default <dtl_transform-default>`,
+The following functions are namespace aware: :ref:`add <dtl_transform-add>`, :ref:`default <dtl_transform-default>`,
 :ref:`make-ni <dtl_transform-make-ni>`, :ref:`remove
 <dtl_transform-remove>`, :ref:`copy <dtl_transform-copy>`,
 :ref:`rename <dtl_transform-rename>` and :ref:`path
@@ -522,7 +516,7 @@ of the argument. Here are some cardinalites that you'll come across:
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 10, 50, 30
 
    * - Argument type
      - Description
