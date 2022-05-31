@@ -8,9 +8,9 @@ Collect
       :hidden:
 
       Source systems in Sesam  <tutorial-collect-source-systems>
+      Inbound pipes  <tutorial-collect-inbound-pipes>
       
 ..
-      Inbound pipes  <tutorial-collect-inbound-pipes>
       Data transformation <tutorial-collect-data-transformation>
       A pipe's pump and sink <tutorial-collect-pump-sink>
       Data change tracking <tutorial-collect-change-tracking>
@@ -47,7 +47,7 @@ You will now be guided through these in chronological stepwise tutorials provide
     .. dropdown:: **1. Source systems**
         :open:
 
-        :badge:`Estimated time: 10 min,badge-light`
+        :badge:`Estimated time: 5 min,badge-light`
 
         Understand the most important aspects when working with a source system, and create your first REST system.
 
@@ -61,7 +61,7 @@ You will now be guided through these in chronological stepwise tutorials provide
     ..
         :open:
         
-        :badge:`Estimated time: 3 min,badge-light`
+        :badge:`Estimated time: 5 min,badge-light`
 
         Lorem ipsum
 

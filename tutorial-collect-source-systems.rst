@@ -4,7 +4,7 @@
 Source systems in Sesam
 ------------------------
 
-In this tutorial we will look closer at source systems in Sesam. A source system is any system that is used in Sesam as a source to a connected :ref:`pipe <concepts-pipes>`. Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its DTL configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
+In this tutorial we will look closer at source systems in Sesam. A source system is any system that is used in Sesam as a source to a connected :ref:`pipe <concepts-pipes>`. Sesam supports implementing multiple types of :ref:`systems <system_section>`, i.e: JSON, SQL, microservice etc. Each system, regardless of type, will have a defined set of implementation functionalities which can be set in its configuration. As such, the intended usage in Sesam should be taken into consideration when implementing a system.
 
 .. admonition:: Objectives
 
@@ -20,7 +20,7 @@ In this tutorial we will look closer at source systems in Sesam. A source system
   #. Set up a `test account <https://legacydocs.hubspot.com/docs/faq/how-do-i-create-a-test-account>`_
   #. Aquire an `API key <https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key>`_
 
-When a system is used as a source it is especially important to recognize that providing streams of entities, as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently. This holds true even if the amount of data residing in the source system increases exponentially. As such, avoiding bulk readings of data, as the amount of data residing in your source system increases, should be avoided.
+When a system is used as a source it is especially important to recognize that providing streams of entities, as these are updated in the source system as a :ref:`delta stream <delta-stream-processing>`, ensures that Sesam can propagate data changes through a :ref:`Sesam dataflow <creating-a-sesam-dataflow>` quickly and efficiently. This holds true even if the amount of data residing in the source system increases exponentially. As such, bulk readings of data as the amount of data residing in your source system increases, should be avoided.
 
 With the above in mind, let us create a source system in Sesam.
 
@@ -30,15 +30,15 @@ With the above in mind, let us create a source system in Sesam.
 
   - Should provide streams of entities as input to the pipes they are connected to
   - Can provide entities with **any** shape
-  - Must provide Sesam with a unique identifier called ``_id``
+  - Each entity must have a unique identifier, or some combination of properties that can be used as one 
 
-The systems you will be working with in this tutorial are `HubSpot <https://www.hubspot.com/>`_ and the Norwegian Central Coordinating Register for Legal Entities, “Enhetsregisteret”. You will connect to the HubSpot API with the use of the system type :ref:`REST <rest_source>` whilst connecting to “Enhetsregisteret” will be done with the use of the system type :ref:`URL <url_system>`. For now you will only create operations that support GET for both systems.
+The systems you will be working with in this tutorial are `HubSpot <https://www.hubspot.com/>`_ and the Norwegian Central Coordinating Register for Legal Entities, “Enhetsregisteret”. You will connect to the HubSpot API with the use of the system type :ref:`REST <rest_source>`, and connect to “Enhetsregisteret” with the use of the system type :ref:`URL <url_system>`. For now you will only create operations that support GET for both systems.
 
 We created a template to get you started in Sesam. Follow these steps to add HubSpot as a system:
 
 #. Navigate to Systems
 #. Click on New system
-#. Paste and save the DTL configuration below
+#. Paste and save the configuration below
 #. Add your hubspot API key in your Sesam subscription as a Secret by going into Datahub -> Variables.
 #. Use the Secret name “hubspot-api-key”.
 
@@ -71,7 +71,7 @@ Finally, follow the below steps again to add enhetsregisteret as a system:
 
 #. Navigate to Systems
 #. Click on New system
-#. Paste and save the DTL configuration below
+#. Paste and save the configuration below
 
 .. code-block:: json
   :linenos:
@@ -86,7 +86,7 @@ After having successfully created your REST system, you are now ready to move on
 
 .. hint::
 
-  You should get acquainted with all properties provided in the above DTL configuration. To read about them, you should explore the :ref:`REST <rest_source>` and :ref:`URL <url_system>` sections of the docs.
+  You should get acquainted with all properties provided in the above configuration. To read about them, you should explore the :ref:`REST <rest_source>` and :ref:`URL <url_system>` sections of the docs.
 
 .. panels::
     :column: col-lg-12 p-2 
