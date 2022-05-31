@@ -114,7 +114,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
 
 .. note::
 
-  The connection to Enhetsregisteret is a mock connection in this tutorial. The data you will import to Sesam is actually test data generated for the purpos of this tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario and therefore well serves the purposes of this tutorial.
+  The connection to Enhetsregisteret is a mock connection in this tutorial. The data you will import to Sesam is actually test data generated for the purpose of this tutorial. The connections, as well as the data itself, are very much like how it might look in a real world scenario and therefore well serves the purposes of this tutorial.
 
 After having successfully created both systems, you are now ready to move onto the next step of this tutorial, the creation of inbound pipes. 
 
