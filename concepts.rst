@@ -40,7 +40,7 @@ See examples below.
 Global
 ------
 
-A global is a collection of merged datatypes within the same data domain. I.e. customer data, lead data and partner data could all be gathered into a ``global-organization`` dataset which would contain all the data from the organization domain within the enterprise. Similarily ``global-person`` would contain all person domain data and ``global-asset`` all the asset domain data. A global also allows us to map datatypes into global properties, as defined in the global namespace, through *Master Data Management (MDM)*. These global properties are Sesam's equivilent to *golden records*. 
+A global is a collection of merged datatypes within the same data domain. I.e. customer data, lead data and partner data could all be gathered into a ``global-organization`` dataset which would contain all the data from the organization domain within the enterprise. Similarily ``global-person`` would contain all person domain data and ``global-asset`` all the asset domain data. A global also allows us to map datatypes into global properties, as defined in the global namespace, through *Master Data Management (MDM)*. These global properties are Sesam's equivalent to *golden records*. 
 
 In addition to creating a context in which MDM may be performed, globals comes with several other advantages such as: 
 
