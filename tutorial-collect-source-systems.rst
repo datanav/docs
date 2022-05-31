@@ -63,6 +63,10 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
     "verify_ssl": true
   }
 
+.. note::
+
+  Best practice in Sesam is to always use :ref:`continuation support <continuation_support>` when the system you are working on supports it.
+
 Finally, follow the below steps again to add enhetsregisteret as a system:
 
 #. Navigate to Systems
@@ -78,8 +82,7 @@ Finally, follow the below steps again to add enhetsregisteret as a system:
     "url_pattern": "http://hotell.difi.no/download/%s"
   }
 
-..
-  After having successfully created your REST system, you are now ready to move onto the next tutorial on :ref:`inbound pipes <tutorial-collect-inbound-pipes>` to start using your recently created REST system and import the datatype ``contact``. 
+After having successfully created your REST system, you are now ready to move onto the next tutorial on :ref:`inbound pipes <tutorial-collect-inbound-pipes>` to start using your recently created REST system and import the datatype ``contact``. 
 
 .. hint::
 
