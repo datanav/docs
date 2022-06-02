@@ -36,7 +36,6 @@ Continuation support with a Microservice
 With the Python code and Sesam configurations supplied in the tutorial :ref:`Custom Data Source - The Microservice System <tutorial_custom_data_source_microservice>` as a basis, we will now add logic to both the Microservice and the collect pipe to make sure that only updated contacts are imported to Sesam. The example below shows one way of applying this logic.
 
 .. code-block:: python
-    :linenos:
 
     import requests
     import json 
@@ -97,13 +96,12 @@ Adapting the Microservice
 In their documentation, HubSpot states that the `search API <https://developers.hubspot.com/docs/api/crm/search>`_ can be used to filter objects based on the property ``lastmodifieddate``. The first step is make the Microservice passes this value to Sesam in a way that Sesam can store this as an internal ``since`` value. This is done by adding the value of the ``lastmodifieddate`` property in a new entity attribute: ``_updated``.
 
 .. code-block:: python
-    :linenos:
     :emphasize-lines: 4
   
     ...
-    entities = res.json()["results"]
+    entities = res.json () ["results"]
     for entity in entities:
-    entity["_updated"] = entity["properties"][since_field]
+    entity ["_updated"] = entity ["properties"] [since_field]
     ...
 
 The code snippet above ensures that Sesam will register each entity's ``lastmodifieddate`` property and pick the one with highest value and set that value as the pipe's new ``pipe_offset``. This offset can be viewed in the pipe's ``Execution log``.
@@ -112,7 +110,6 @@ The code snippet above ensures that Sesam will register each entity's ``lastmodi
 We also need to make sure that the pipe's ``pipe_offset`` is sent back to the Microservice such that we may use that the next time we call the API for updated entities. 
 
 .. code-block:: python
-    :linenos:
     :emphasize-lines: 2,5,8
   
     ...
@@ -139,8 +136,7 @@ In addition to the environmental parameters used for the Microservice system in 
 
 **Describe why we need to add these variables?**
 
-.. code-block:: json
-    :linenos:
+.. code-block:: python
     :emphasize-lines: 8,9
 
     {
@@ -165,7 +161,6 @@ Adapting the Pipe
 Finally we need to adapt the pipe to handle the ``_updated`` property which the entities coming in are now populated with. This is done by setting the pipe's source parameter ``supports_since`` to true.
 
 .. code-block:: json
-    :linenos:
     :emphasize-lines: 8
   
     {
@@ -198,7 +193,6 @@ It is also a best practice to every now and then do a full rescan of the source,
 We do this by using a :ref:`cron expression <cron_expressions>`, like highlighted bellow.
 
 .. code-block:: json
-    :linenos:
     :emphasize-lines: 21
 
     {

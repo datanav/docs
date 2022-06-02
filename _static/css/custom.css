@@ -384,7 +384,7 @@ footer .container {
 :root {
     --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
-    --pst-font-family-monospace: Courier, var(--pst-font-family-monospace-system);
+    --pst-font-family-monospace: 'Ubuntu', var(--pst-font-family-monospace-system);
 }
 
 
