@@ -1,7 +1,6 @@
 /* add any theme overrides here */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Ubuntu+Mono&display=swap');
 .breadcrumb {
 background-color: #fafafa;
 margin-bottom: 3em;
@@ -384,7 +383,7 @@ footer .container {
 :root {
     --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
-    --pst-font-family-monospace: 'Ubuntu', var(--pst-font-family-monospace-system);
+    --pst-font-family-monospace: 'Ubuntu Mono', var(--pst-font-family-monospace-system);
 }
 
 
