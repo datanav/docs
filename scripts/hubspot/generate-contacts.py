@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#2022 by Geir Atle Hegsvold <geir.hegsvold@sesam.io>
 
 """Generate synthetic HubSpot Contacts"""
 
 import random
+import sys
+import getopt
 
 # Initialize data sources
 with open("etternavn.txt", "r") as surname_file:
@@ -27,8 +30,29 @@ with open("company-ids.txt", "r") as company_ids_file:
 # Generate synthetic data
 contacts = []
 
-def gen_data(filename, num_of_contacts=100):
+def gen_data(argv):
 
+    # set defaults
+    num_of_contacts = 100
+    output_file = "learn-hubspot-contacts.csv"
+
+    # check for valid options
+    try:
+        opts, args = getopt.getopt(argv, "hn:o:")
+    except getopt.GetoptError:
+        usage()
+        sys.exit(2)
+
+    for opt, arg in opts:
+        if opt == "-h":
+            usage()
+            sys.exit()
+        elif opt == "-n":
+            num_of_contacts = int(arg)
+        elif opt == "-o":
+            output_file = arg
+
+    # generate synthetic data for each contact
     for x in range(0, num_of_contacts):
 
         first_name = firstnames[random.randint(0, len(firstnames)-1)].strip()
@@ -48,11 +72,18 @@ def gen_data(filename, num_of_contacts=100):
     # dump generated data to file
     file_header = "First Name,Last Name,City,State/Region,Website URL,Job Title,Twitter Username,Email,Company Name,Company ID\n"
 
-    with open(filename, 'w') as outfile:
+    print(f"Exporting {num_of_contacts} contacts to '{output_file}' ...")
+    with open(output_file, 'w') as outfile:
         outfile.write(file_header)
         for o in contacts:
             outfile.write(o)
+        print(f"Done! Have a nice day!")
+
+
+def usage():
+    print("Usage: ./generate-contacts.py -n <num of contacts> -o <output file>")
+    print("Defaults:\n  n: 100\n  o: learn-hubspot-contacts.csv")
 
 
 if __name__ == "__main__":
-    gen_data("contacts.csv")
+    gen_data(sys.argv[1:])
