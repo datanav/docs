@@ -19,6 +19,16 @@ If an entity is deleted in its source dataset then the entity will not
 be merged, but instead output as a standalone entity with ``_deleted``
 set to ``true``.
 
+Merging follows the same :ref:`rules <joins>` as joins in ``hops``.
+
+
+.. admonition:: Good to know
+
+   Equality expressions that return ``null`` or empty lists will not
+   cause merging. This fact can be used to your advantage to prevent
+   merging from happening in certain situations. An example is to
+   filter out the values that you do not want to be merged on.
+
 .. WARNING::
 
    The merge source version 2 with ``identity`` set to ``first`` does
