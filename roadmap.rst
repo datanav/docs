@@ -32,6 +32,8 @@ are composed using introspectable DTL in combination with :ref:`schema inferenci
 
 We are working on making this lineage data available, as well as looking at ways to visualize it.
 
+This feature will be offered as part of "Integrated search".
+
 Extensions
 ==========
 
