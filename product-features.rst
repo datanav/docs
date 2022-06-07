@@ -243,7 +243,11 @@ Finally under "Add or modify VPN details" fill in the required fields to setup t
 
  - Address Spaces: Sesam will route the address range that you specify to the on-premises VPN device IP address.
 
- - PSK: a string of characters that is used as an authentication key between sesam and on-premises VPN device.
+ - Pre-shared Key: a string of characters that is used as an authentication key between Sesam and on-premises VPN device.
+
+.. NOTE::
+
+   :ref:`Multi <pricing-production>` subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to. Contact support to set up such VPN connections.
 
 Status Page
 ===========

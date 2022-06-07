@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_06_08:
+
+2022-06-08
+----------
+
+* The :ref:`VPN <concepts-vpn>` feature now supports high availability for connections. This means that you can set up redundant connections that can be failed over to. This is a :ref:`multi <pricing-production>` subscription only feature.
+
 .. _changelog_2022_05_20:
 
 2022-05-20
