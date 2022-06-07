@@ -49,7 +49,7 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
         "rules": {
           "default": [
             ["copy", "*"],
-            ["merge",
+            ["add", "contacts",
               ["apply", "contacts-ni", "_S.associations.contacts.results"]
             ],
             ["add", "rdf:type",
@@ -72,16 +72,24 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
         "property": "hubspot-company"
       }
     }
+   
 
-
-The company in the pipe´s output with ``about_us`` value "991721355" should now have the new ``contact-ni`` property, like shown bellow.
+The companies in the pipe's output should now have a new property ``contacts`` consisting of NIs to the respective company's contacts,
+like the example for ``hubspot-company:5633255395`` shown below.
 
 .. code-block:: json
-  :emphasize-lines: 2
   
-    {
-    "hubspot-company:contact-ni": "~:hubspot-contact:<some ID>"
-    }
+    "hubspot-company:contacts": [
+      {
+        "hubspot-company:contact-ni": "~:hubspot-contact:5751"
+      },
+      {
+        "hubspot-company:contact-ni": "~:hubspot-contact:5803"
+      },
+      {
+        "hubspot-company:contact-ni": "~:hubspot-contact:6151"
+      }
+    ]
 
 
 The Enhetsregisteret Data
