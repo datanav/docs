@@ -1,5 +1,0 @@
-CEO
-Salesperson
-Key Account Manager
-Sales Director
-Marketting Director
