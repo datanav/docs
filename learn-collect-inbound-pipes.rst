@@ -26,4 +26,4 @@ In addition, there are some best practices related to inbound pipes that we will
 
     - :doc:`What is Sesam <index-whatis>`
     - :doc:`Building Blocks in Sesam <developer-guide>`    
-    - :doc:`Inbound pipes <concepts-pipes>`
+    - :ref:`Inbound pipes <concepts-pipes>`
