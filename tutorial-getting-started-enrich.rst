@@ -49,18 +49,16 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
         "rules": {
           "default": [
             ["copy", "*"],
-            ["add", "contacts",
-              ["apply", "contacts-ni", "_S.associations.contacts.results"]
+            ["merge-union",
+              ["apply", "contact-ni", "_S.associations.contacts.results"]
             ],
             ["add", "rdf:type",
               ["ni", "hubspot:company"]
             ]
           ],
-          "contacts-ni": [
-            ["filter",
-              ["eq", "_S.type", "company_to_contact"]
-            ],
-            ["add", "contact-ni",
+          "contact-ni": [
+            ["add",
+              ["concat", "_S.type", "-ni"],
               ["ni", "hubspot-contact", "_S.id"]
             ]
           ]
@@ -72,25 +70,22 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
         "property": "hubspot-company"
       }
     }
-   
 
-The companies in the pipe's output should now have a new property ``contacts`` consisting of NIs to the respective company's contacts,
-like the example for ``hubspot-company:5633255395`` shown below.
+The companies in the pipe's output should now have two new properties consisting of NIs to the respective company's contacts,
+one property for each type of contact association, like the following example for ``hubspot-company:5633255395``.
 
 .. code-block:: json
-  
-    "hubspot-company:contacts": [
-      {
-        "hubspot-company:contact-ni": "~:hubspot-contact:5751"
-      },
-      {
-        "hubspot-company:contact-ni": "~:hubspot-contact:5803"
-      },
-      {
-        "hubspot-company:contact-ni": "~:hubspot-contact:6151"
-      }
-    ]
 
+    "hubspot-company:company_to_contact-ni": [
+      "~:hubspot-contact:5751",
+      "~:hubspot-contact:5803",
+      "~:hubspot-contact:6151"
+    ],
+    "hubspot-company:company_to_contact_unlabeled-ni": [
+      "~:hubspot-contact:5751",
+      "~:hubspot-contact:5803",
+      "~:hubspot-contact:6151"
+    ]
 
 The Enhetsregisteret Data
 *************************
