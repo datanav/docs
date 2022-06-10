@@ -30,3 +30,57 @@ Whenever possible we should always try to import only data from the external sys
 
     - :doc:`What is Sesam <index-whatis>`
     - :doc:`Building Blocks in Sesam <developer-guide>`
+
+.. toctree::
+   :maxdepth: 1
+
+   REST source system <tutorial-rest-source-system>
+   SQL source system
+   Conditional DTL sink
+
+.. panels::
+    :column: col-lg-12 p-2 
+
+    **Collect:** This guide includes 3 tutorials
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    .. dropdown:: **1. REST source system**
+        :open:
+
+        :badge:`Estimated time: 5 min,badge-light`
+
+        Understand the most important aspects when working with a REST source system, and create your first REST system.
+
+        .. link-button:: tutorial-source-systems-rest.html
+            :type: url
+            :text: Start this tutorial
+            :classes: tutorial-start
+        
+    2. SQL source system (coming soon)
+        
+    ..
+        :open:
+        
+        :badge:`Estimated time: 5 min,badge-light`
+
+        Lorem ipsum
+
+        .. link-button:: tutorial-upload-baseline-config.html
+            :type: url
+            :text: Start this tutorial
+            :classes: tutorial-start
+
+
+    3. Conditional DTL sink (coming soon)
+        
+    ..
+        :open:
+
+        :badge:`Estimated time: 10 min,badge-light`
+
+        Lorem ipsum
+
+        .. link-button:: xx.html
+            :type: url
+            :text: Start this tutorial
+            :classes: tutorial-start
