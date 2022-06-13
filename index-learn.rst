@@ -12,6 +12,7 @@ Learning areas
 
    Getting started <guide-getting-started>
    Collect <learn-index-collect>
+   Operations <learn-index-operations>
 ..
 	.. toctree::
 	   :maxdepth: 1
