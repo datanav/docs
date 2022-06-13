@@ -35,8 +35,6 @@ Whenever possible we should always try to import only data from the external sys
    :maxdepth: 1
 
    REST source system <tutorial-source-systems-rest>
-   SQL source system
-   Conditional DTL sink
 
 .. panels::
     :column: col-lg-12 p-2 
