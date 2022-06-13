@@ -2,7 +2,11 @@
 REST - Inbound Pipes
 --------------------
 
-In this tutorial you will add an inbound pipe, without :ref:`continuation support <continuation_support>`, connected to your REST source system: ``hubspot``.
+In this tutorial you will add an inbound pipe, without :ref:`continuation support <continuation_support>` because the HubSpot API does not immediately support it, connected to your REST source system: ``hubspot``.
+
+.. note::
+
+  Best practice in Sesam is to always use :ref:`continuation support <continuation_support>` in your inbound pipe when the system you are working on supports it.
 
 .. admonition:: Objectives
 
@@ -47,10 +51,6 @@ We created a template to get you started in Sesam. Follow these steps to add and
 When done you should have 2 entities in the output of your inbound pipe. As you can see in the **Output** tab, these is no namespace added to any of your properties. This is due to the above property ``namespaced_identifiers: false``. This ensures that Sesam's semantic enrichment is not applied to data at this stage of your synchronization. 
 
 Extending on some of the other properties used in the above configuration the ``id_expression`` is used to tell Sesam which payload property should be used as ``_id`` for each entity produced when running the pipe whilst ``payload_property`` states which property in the HubSpot payload data should be parsed from. Finally, the ``properties`` property allows for you to state which datatype should be fetched from HubSpot in addition to properties and associations that should be retained in the payload for this specific datatype. This is done via the use of `query parameters <https://branch.io/glossary/query-parameters/>`_ in this particular use-case. 
-
-.. note::
-
-  Best practice in Sesam is to always use :ref:`continuation support <continuation_support>` in your inbound pipe when the system you are working on supports it.
 
 After having successfully created your inbound pipe, you are now ready to move onto the next tutorial in this guide, or look at the enrich guide, where you will learn to apply Sesam's :ref:`semantic enrichment <enrich>`.
 
