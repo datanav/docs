@@ -52,5 +52,5 @@ Extending on some of the other properties used in the above configuration the ``
 
   Best practice in Sesam is to always use :ref:`continuation support <continuation_support>` in your inbound pipe when the system you are working on supports it.
 
-After having successfully created your inbound pipe, you are now ready to move onto the next tutorial in this guide, or look at the enrich guide, where you will learn to apply Sesam's :ref:`semantic enrichment <enrich>.
+After having successfully created your inbound pipe, you are now ready to move onto the next tutorial in this guide, or look at the enrich guide, where you will learn to apply Sesam's :ref:`semantic enrichment <enrich>`.
 
