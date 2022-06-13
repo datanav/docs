@@ -5,12 +5,6 @@
 The Conditional DTL
 ===================
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   Conditional source
-
 In this guide we will show you how to use Conditional DTL configurations. 
 
 Conditional DTL configurations allows you to create different behaviour in your Sesam instance depending on which environment runs the configuration. For example, you might wish your Sesam production environment to collect data from, or share data to, a production database, but your Sesam test environment should only communicate with a test database. Or, you might wish for a certain transformation in your Sesam develop environment, but a different one in your Sesam production environment.
