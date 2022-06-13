@@ -9,7 +9,7 @@ The Conditional DTL
    :maxdepth: 1
    :hidden:
 
-   Conditional source <tutorial-operations-conditional-source>
+   Conditional source
 
 In this guide we will show you how to use Conditional DTL configurations. 
 
