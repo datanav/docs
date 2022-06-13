@@ -34,7 +34,7 @@ Whenever possible we should always try to import only data from the external sys
 .. toctree::
    :maxdepth: 1
 
-   REST source system <tutorial-rest-source-system>
+   REST source system <tutorial-source-systems-rest>
    SQL source system
    Conditional DTL sink
 

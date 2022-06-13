@@ -31,7 +31,7 @@ In addition, there are some best practices related to inbound pipes that we will
 .. toctree::
    :maxdepth: 1
 
-   REST inbound pipes <tutorial-rest-inbound-pipes>
+   REST inbound pipes <tutorial-inbound-pipes-rest>
 
 .. panels::
     :column: col-lg-12 p-2 
