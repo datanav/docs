@@ -36,7 +36,8 @@ In this guide we will demonstrate how define environment dependent DTL operation
     **The conditional DTL:** This guide includes 1 tutorial
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. dropdown:: **1. The conditional source**
+    .. 
+      .. dropdown:: **1. The conditional source**
         :open:
 
         :badge:`Estimated time: 15 min,badge-light`
