@@ -50,7 +50,7 @@ We created a template to get you started in Sesam. Follow these steps to add Hub
 
   Best practice in Sesam is to always use :ref:`continuation support <continuation_support>` when the system you are working on supports it.
 
-After having successfully created your REST system, you are now ready to move onto the next tutorial in this guide, or look at the :ref:`REST - Inbound Pipes <tutorial-inbound-pipes-rest>` where you will import the datatype ``contact`` from your recently created HubSpot REST system. 
+After having successfully created your REST system, you are now ready to move onto the next tutorial in this guide, or look at the :doc:`REST - Inbound Pipes <tutorial-inbound-pipes-rest>` where you will import the datatype ``contact`` from your recently created HubSpot REST system. 
 
 .. hint::
 

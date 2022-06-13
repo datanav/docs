@@ -18,7 +18,7 @@ In this tutorial you will add an inbound pipe, without :ref:`continuation suppor
 
 .. admonition:: Prerequisites
 
-  #. A :ref:`HubSpot REST source system <tutorial-source-systems-rest>`.
+  #. A :doc:`HubSpot REST source system <tutorial-source-systems-rest>`.
 
 By following Sesam best practices, data residing in your external systems are retained in its raw state, or near to, in inbound pipes. As such, inbound pipes should retain data integrity. This provides a set of :ref:`advantages <collect-advantages>` in Sesam that will i.e. allow for you to repurpose a flow of data from an inbound pipe easily as data moves through Sesam towards egress. In addition, by retaining raw state of data in inbound pipes Sesam can focus on integrating data from external systems, as opposed to the external systems themselves. This is primarily because you will have replicated the shape of data in your external system.
 
