@@ -2,7 +2,7 @@
 REST - Inbound Pipes
 --------------------
 
-In this tutorial you will add an inbound pipe, without :ref:`continuation support <continuation_support>` because the HubSpot API does not immediately support it, connected to your :doc:`REST source system <tutorial-source-systems-rest>`: ``hubspot``.
+In this tutorial we will look closer into the creation of an inbound pipe connected to to your :doc:`REST source system <tutorial-source-systems-rest>`: ``hubspot``. Sesam best practices recommend to always use :ref:`continuation support <continuation_support>` when ingressing data from external systems. In this case however, because the HubSpot API does not immediately support this, we will not implement continuation support. Rather, in this tutorial we will focus on some of the other aspects used when connecting a pipe to a REST source system.
 
 .. note::
 

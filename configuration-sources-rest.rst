@@ -46,6 +46,8 @@ Prototype
         "since_property_location": "where-to-put-since-param"
     }
 
+.. _rest-source-properties:
+
 Properties
 ^^^^^^^^^^
 

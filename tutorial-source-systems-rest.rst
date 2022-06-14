@@ -54,4 +54,4 @@ After having successfully created your REST system, you are now ready to move on
 
 .. hint::
 
-  You should get acquainted with all properties provided in the above configuration. To read about them, you should explore the :ref:`REST <rest_source>` section of the docs.
+  You should get acquainted with all properties provided in the above configuration. To read about them, you should explore the :ref:`REST properties <rest-source-properties>` section of the docs.
