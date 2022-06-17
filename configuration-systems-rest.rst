@@ -77,6 +77,8 @@ Prototype
         }
     }
 
+.. _rest_system_properties:
+
 Properties
 ^^^^^^^^^^
 
