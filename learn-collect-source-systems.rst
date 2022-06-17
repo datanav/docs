@@ -34,10 +34,11 @@ Whenever possible we should always try to import only data from the external sys
 .. panels::
     :column: col-lg-12 p-2 
 
-    **Customize Data Source:** This guide includes 1 tutorial 
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    **Source systems:** This guide includes one tutorial 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    1. Source System - REST
+    .. dropdown:: 1. Source System - REST
+      :open:
 
       :badge:`Estimated time: 5 min,badge-light`
 
