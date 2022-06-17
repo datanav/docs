@@ -11,4 +11,11 @@ Learning areas
    :maxdepth: 1
 
    Getting started <guide-getting-started>
-   Data synchronization <index-learn-synchronization>
+   Collect <learn-index-collect>
+   Operations <learn-index-operations>
+..
+	.. toctree::
+	   :maxdepth: 1
+
+	   Getting started <guide-getting-started>
+	   Data synchronization <index-learn-synchronization>
