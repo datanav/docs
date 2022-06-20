@@ -23,7 +23,7 @@ Creating the full url
 
 When creating REST systems in Sesam there are several ways to define the request URL. In general we recommend putting the base URL in the system config, and the API endpoint specific path in pipe configs. This makes it easier to reuse systems when adding new pipes.
 
-In Sesam we can do this by putting the base URL in the ``url_pattern`` attribute in the system config and let each pipe contain endpoint specific paths in the.
+In Sesam we can do this by putting the base URL in the ``url_pattern`` attribute in the system config, and let each pipe contain endpoint specific paths.
 
 As you can see in the tutorial :doc:`Inbound Pipe - REST <tutorial-inbound-pipe-rest>` we can define a ``properties`` attribute in our pipe source configuration that may pass endpoint specific information to an operation in a REST system. We can connect this to the ``url_pattern`` by adding the pipe ``properties`` information to the operation URL and connecting it to the ``url_pattern`` through the ``%s`` placeholder. 
 
