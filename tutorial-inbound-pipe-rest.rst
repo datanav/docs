@@ -2,7 +2,7 @@
 Inbound Pipe - REST
 -------------------
 
-In this tutorial we will look closer into the creation of an :ref:`inbound pipe <best-practice-workflow>` connected to a :doc:`Sesam system <configuration-systems>`. Sesam best practices recommend to always use :ref:`continuation support <continuation_support>` when collecting data from external systems. In this specific case, continuation support can not be implemented with the Sesam REST system because of the structure of the API we attempt to connect to. However, this not very uncommon. Many API's do not support delta requests, so in this tutorial we will focus on some of the other aspects used when connecting a pipe to a REST source system.
+In this tutorial we will look closer into the creation of an :ref:`inbound pipe <best-practice-workflow>` connected to a :doc:`Sesam system <configuration-systems>`. Sesam best practices recommend to always use :ref:`continuation support <continuation_support>` when collecting data from external systems. In this specific case, continuation support can not be implemented with the Sesam REST system because of the structure of the API we attempt to connect to. However, this is not very uncommon. Many API's do not support delta requests, so in this tutorial we will focus on some of the other aspects used when connecting a pipe to a REST source system.
 
 .. admonition:: Objectives
 
@@ -21,12 +21,12 @@ In this tutorial we will look closer into the creation of an :ref:`inbound pipe 
 Use-case
 --------
 
-In this tutorial we use the ``hubspot`` system created in the :doc:`Source System - REST <tutorial-source-system-rest>` tutorial to import `contacts from HubSpot <https://developers.hubspot.com/docs/api/crm/contacts>`_ into Sesam. These contacts till later be used further in the remaining four phases of any Sesam flow.
+In this tutorial we use the ``hubspot`` system created in the :doc:`Source System - REST <tutorial-source-system-rest>` tutorial to import `contacts from HubSpot <https://developers.hubspot.com/docs/api/crm/contacts>`_ into Sesam. These contacts will later be used further in the remaining four phases of any Sesam flow.
 
 Populate HubSpot with contact data
 ----------------------------------
 
-Before we analyze the data supplied byt the HubSpot API, we need some more contact data in HubSpot. This will make it a lot more interesting for you as you work with related tutorials down the road. Therefore, follow the steps below to import new contacts into HubSpot **before** moving on: 
+Before we analyze the data supplied by the HubSpot API, we need some more contact data in HubSpot. This will make it a lot more interesting for you as you work with related tutorials down the road. Therefore, follow the steps below to import new contacts into HubSpot **before** moving on: 
 
 #. Download the :download:`company data <files/learn-hubspot-company.csv>` and :download:`contact data <files/learn-hubspot-contacts.csv>` and save the csv files locally
 #. Log into HubSpot and navigate to your **Companies** section, found under **Contacts** in the top menu.
@@ -90,7 +90,7 @@ We can also tell Sesam to use the ``id`` attribute inside each dictionary as the
 
 ``"id_expression": {{ id }}`` 
 
-Unless otherwise stated, the HubSpot API only provides some data in each dictionary per default unless otherwise stated. However, the API allows you to query which ever contact data you want. In our case, we would like to add our own query parameter to the API where we decide what kind of data we wish to request. In Sesam we can do this by using the REST source attribute ``properties``. The ``properties`` attribute allows us to supply the Sesam system we connect to with pipe specific instructions which in turn allows our source system configurations to be as generic as possible.
+Unless otherwise stated, the HubSpot API only provides some data in each dictionary per default. However, the API allows you to query which ever contact data you want. In our case, we would like to add our own query parameter to the API where we decide what kind of data we wish to request. In Sesam we can do this by using the REST source attribute ``properties``. The ``properties`` attribute allows us to supply the Sesam system we connect to with pipe specific instructions which in turn allows our source system configurations to be as generic as possible.
 
 Creating our inbound pipe
 -------------------------
