@@ -21,7 +21,7 @@ In this tutorial we will add a REST source system to your Sesam subscription. Th
 Creating the full url
 ---------------------
 
-When creating a REST system in Sesam there are several ways one can define the url to which we wish to send a request. In general you want to system to contain a base url to which you can connect endpoint specific urls depending on which API a specific pipe with to send a request to. In Sesam we can do this by establishing a ``url_pattern`` and let each pipe connect endpoint specific urls to this pattern. 
+When creating a REST system in Sesam there are several ways one can define the url to which we wish to send a request. In general you want to system to contain a base url to which you can connect endpoint specific urls depending on which API a specific pipe wishes to send a request to. In Sesam we can do this by establishing a ``url_pattern`` and let each pipe connect endpoint specific urls to this pattern. 
 
 As you can see in the tutorial :doc:`Inbound Pipe - REST <tutorial-inbound-pipe-rest>` we can define a ``properties`` attribute in our pipe source configuration that may pass endpoint specific information to an operation in a REST system. We can connect this to the ``url_pattern`` by adding the pipe ``properties`` information to the operation url and connecting it to the ``url_pattern`` through the ``%s`` placeholder. 
 
@@ -61,7 +61,7 @@ We created a template to get you started in Sesam. Follow these steps to add ``h
 Results
 -------
 
-Since we still haven't access any specific API, the only result we can check at this time is whether or not we are allowed to access the domain. This can be checked by looking at the system's status page and check that the connectivity is marked with *success*. Should the connectivity status be marked with *FAILURE* you either have the wrong domain name or you are restricted to access the domain for some reason.
+Since we still haven't accessed any specific API, the only result we can check at this time is whether or not we are allowed to access the domain. This can be checked by looking at the system's status page and check that the connectivity is marked with *success*. Should the connectivity status be marked with *FAILURE* you either have the wrong domain name or you are restricted to access the domain for some reason.
 
 .. image:: images/tutorials/tutorial-source-system-rest-connectivity.png
     :width: 1400px
