@@ -9,7 +9,7 @@ Inbound pipes
 
    Inbound Pipe - REST <tutorial-inbound-pipe-rest>
 
-In this guide we will look closer at :ref:`inbound pipes <concepts-pipes>` in Sesam and how they connect to :doc:`Sesam systems <configuration-systems>`. 
+In this guide we will look closer at inbound pipes in Sesam and how they connect to :doc:`Sesam systems <configuration-systems>`. 
 
 The main difference between inbound pipes and other Sesam pipes is that inbound pipes use Sesam systems as source of data, compared to other pipes that use datasets as data sources. Depending on the external system connected to, the inbound pipes can have different source settings in order to catch all the functionality of each system. This will be explained in detail in the corresponding tutorial. 
 
@@ -23,9 +23,9 @@ The main difference between inbound pipes and other Sesam pipes is that inbound 
     
     Before you start this guide you should familiarize youself with:
 
-    - :doc:`What is Sesam <index-whatis>`
-    - :doc:`Building Blocks in Sesam <developer-guide>`    
-    - :ref:`Inbound pipes <concepts-pipes>`
+    - :doc:`index-whatis`
+    - :doc:`developer-guide`    
+    - :ref:`concepts-pipes`
 
 
 .. panels::

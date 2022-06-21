@@ -26,24 +26,13 @@ In this tutorial we use the ``hubspot`` system created in the :doc:`Source Syste
 Populate HubSpot with contact data
 ----------------------------------
 
-Before we analyze the data supplied by the HubSpot API, we need some more contact data in HubSpot. This will make it a lot more interesting for you as you work with related tutorials down the road. Therefore, follow the steps below to import new contacts into HubSpot **before** moving on: 
-
-#. Download the :download:`company data <files/learn-hubspot-company.csv>` and :download:`contact data <files/learn-hubspot-contacts.csv>` and save the csv files locally
-#. Log into HubSpot and navigate to your **Companies** section, found under **Contacts** in the top menu.
-#. Click **Import** on the right hand side of the page
-#. Click **Start an import** and select **File from computer** and click **Next**
-#. Select **Multiple files with associations** and click **Next**
-#. Select **Companies** and **Contacts** and click **Next** 
-#. Upload ``learn-hubspot-company.csv`` under **Company** and ``learn-hubspot-contacts.csv`` under **Contacts** (don't click on the "This file includes a ... column" boxes) and click **Next**
-#. Select **Company ID** as common column header and select **Company** as the object it is unique for and click **Next**
-#. Select **Don't import data in unmapped column** and click **Next**
-#. Select **Don't import data in unmapped column** again and click **Next**
-#. Agree to the terms and click **Finish import**
+Before we analyze the data supplied by the HubSpot API, we need some more contact data in HubSpot. This will make it a lot more interesting for you as you work with related tutorials down the road. If not done already you can import the HubSpot contacts :doc:`here <tutorial-getting-started-collect>`.
 
 Understanding the HubSpot data
 ------------------------------
+A payload from a REST API is not necessarily structured the way :doc:Sesam prefers <entitymodel>. It is therefore important to analyze the payload and adapt the inbound pipe accordingly.
 
-A REST API does not necessarily provide data on the :doc:`structure Sesam prefers <entitymodel>`. It's therefore important to analyze the incoming API payload before creating the inbound pipe. By doing this, should we need to we can adapt the inbound pipe configuration to the incoming payload. Often example payloads can be provided through the API documentation. In HubSpot's case, data is returned as dictionaries inside a ``results`` array as shown in the example below.
+Payload examples are often provided in the API documentation for the REST service in question. In HubSpot's case, entities are returned as dictionaries inside a results array as shown in the example below.
 
 .. code-block:: json
   
@@ -90,7 +79,7 @@ We can also tell Sesam to use the ``id`` attribute inside each dictionary as the
 
 ``"id_expression": {{ id }}`` 
 
-Unless otherwise stated, the HubSpot API only provides some data in each dictionary per default. However, the API allows you to query which ever contact data you want. In our case, we would like to add our own query parameter to the API where we decide what kind of data we wish to request. In Sesam we can do this by using the REST source attribute ``properties``. The ``properties`` attribute allows us to supply the Sesam system we connect to with pipe specific instructions which in turn allows our source system configurations to be as generic as possible.
+By default, HubSpot returns only a small subset of available properties on each entity. However, the API allows you to query which ever contact data you want. In our case, we would like to add our own query parameter to the API where we decide what kind of data we wish to request. In Sesam we can do this by using the REST source attribute ``properties``. The ``properties`` attribute allows us to supply the Sesam system we connect to with pipe specific instructions which in turn allows our source system configurations to be as generic as possible.
 
 Creating our inbound pipe
 -------------------------
