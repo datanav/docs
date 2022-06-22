@@ -66,10 +66,10 @@ Most global models contains some or all of the following globals:
 
 .. _whatis-datatype:
 
-Datatype
---------
+Data type
+---------
 
-Datatypes typically represents one concept within a system, e.g. customers in a CRM system. A global consists of datatypes from the same data domain.
+Data types typically represents one concept within a system, e.g. customers in a CRM system. A global consists of data types from the same data domain.
 
 Typical datatypes for the global ``global-person`` are:
 
