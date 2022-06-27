@@ -22,7 +22,10 @@ will be billed with 5 quantities of Multi computes.
 
 .. note::
 
-  :ref:`Integrated search <concepts-integrated-search>` will increase the data consumption by 2x, :ref:`Durable data <concepts-durable-data>` will increase the data consumption by 3x. These features are additative, if both are enabled the data consumption will only increase by 5x.
+  :ref:`Integrated search <concepts-integrated-search>` will increase the data consumption of global pipes by 2x.
+  :ref:`Durable data <concepts-durable-data>` will increase the data consumption of durable pipes by 3x. 
+  
+  In cases where integrated search is enabled and global pipes are durable, the data consumption of those global pipes will only increase by 5x.
 
 The fees for the Services are set out below in Euro exclusive of VAT:
 
