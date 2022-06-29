@@ -34,6 +34,45 @@ We are working on making this lineage data available, as well as looking at ways
 
 This feature will be offered as part of "Integrated search".
 
+Age based deletion marker compaction
+====================================
+
+If Sesam has seen an entity it will remember the 'id' for this entity forever. This also applies to entities that was
+seen but no longer exists in the source.
+
+These deletion markers are required for incremental synchronizing of data, but once all the consumers have read the
+deletion marker it only has historic value.
+
+We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
+cleaned up.
+
+High level configuration
+========================
+
+The current user interface is built around configuring pipes, which is a low level building block in Sesam. We have now estabilished best practices that describes the patterns you should use to build a robust and extensible Sesam solution using pipes. We also have schemas for all the built-in systems, and will have schemas for all systems once Extensions are in place.
+
+We are looking into how we can design a high level configuration and corresponding user interface that builds upon these features.
+
+The goal is to make it much easier to configure Sesam, using visual tools and human friendly forms.
+
+Multiple configurations
+=======================
+
+Today one subscription can have multiple configuration groups, but they are all part of one big configuration that share one namespace, metadata, environment variables, system roles and access rights.
+
+We are looking into how one subscription can contain multiple standalone configurations in one shared instance.
+
+Note that VPN will be tied to the shared instance so there will be some limitations to the VPN. There will also be limits on how many standalone configurations (tenants) you can have per single and multi compute. This feature will only be available on the 'Clustered architecture'.
+
+The goal is for our partners to be able to serve their customers with standalone configurations from a shared instance.
+
+Expose invoices and contracts in the portal
+===========================================
+
+Invoices and contracts can be requested through support.
+
+We are looking into how to expose invoices and contracts in the portal to make them more accessible.
+
 Extensions
 ==========
 
@@ -48,34 +87,6 @@ talk to providers that support this to make the authorization process more user 
 
 This will also open up the possibility for us to turn the builtin systems into separate extensions.
 
-Age based deletion marker compaction
-====================================
-
-If Sesam has seen an entity it will remember the 'id' for this entity forever. This also applies to entities that was
-seen but no longer exists in the source.
-
-These deletion markers are required for incremental synchronizing of data, but once all the consumers have read the
-deletion marker it only has historic value.
-
-We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
-cleaned up.
-
-Expose invoices and contracts in the portal
-===========================================
-
-Invoices and contracts can be requested through support.
-
-We are looking into how to expose invoices and contracts in the portal to make them more accessible.
-
-High level configuration
-========================
-
-The current user interface is built around configuring pipes, which is a low level building block in Sesam. We have now estabilished best practices that describes the patterns you should use to build a robust and extensible Sesam solution using pipes. We also have schemas for all the built-in systems, and will have schemas for all systems once Extensions are in place.
-
-We are looking into how we can design a high level configuration and corresponding user interface that builds upon these features.
-
-The goal is to make it much easier to configure Sesam, using visual tools and human friendly forms.
-
 Composite Pipes
 ===============
 
@@ -85,17 +96,6 @@ source type is merge you need to create two pipes in order to merge and hop with
 You also need to create two pipes in order to use "create-child" and "emit_children".
 
 We are looking into how to support this without requiring the user to create two pipes.
-
-Multiple configurations
-=======================
-
-Today one subscription can have multiple configuration groups, but they are all part of one big configuration that share one namespace, metadata, environment variables, system roles and access rights.
-
-We are looking into how one subscription can contain multiple standalone configurations in one shared instance.
-
-Note that VPN will be tied to the shared instance so there will be some limitations to the VPN. There will also be limits on how many standalone configurations (tenants) you can have per single and multi compute. This feature will only be available on the 'Clustered architecture'.
-
-The goal is for our partners to be able to serve their customers with standalone configurations from a shared instance.
 
 Public Preview
 --------------
