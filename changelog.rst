@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2022_06_30:
+
+2022-06-30
+----------
+
+* Added a new property :ref:`include_completeness <include_completeness>` to pipes. This property specifies a list of
+  dataset ids that should contribute to the completeness timestamp value of the sink dataset. By default, this property
+  is equal to the pipe's input datasets, minus any datasets listed in :ref:`exclude_completeness <exclude_completeness>`.
+
 .. _changelog_2022_06_08:
 
 2022-06-08
