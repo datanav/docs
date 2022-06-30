@@ -463,7 +463,7 @@ When a pipe completes a successful run the sink dataset will inherit the smalles
 
 .. WARNING::
 
-   Completeness is implictly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
+   Completeness is implicitly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
 
 Properties
 ^^^^^^^^^^
@@ -478,6 +478,7 @@ Properties
      - Default
      - Req
 
+       .. _exclude_completeness:
    * - ``exclude_completeness``
      - List<String>
      - A list of dataset ids that should not contribute to the completeness timestamp value. Any
@@ -488,7 +489,23 @@ Properties
 
          If all datasets are excluded a new completeness timestamp value will be generated in this pipe.
      - ``[]``
+     - No
+
+        .. _include_completeness:
+   * - ``include_completeness``
+     - List<String>
+     - A list of dataset ids that *should* contribute to the completeness timestamp value. All
+       datasets listed in this property will be used when calculating the dataset sink
+       completeness timestamp value. If this property is not specified, it defaults to a list of all the datasets in the
+       pipe's source and transforms, with the exception of datasets that are also specified in ``exclude_completeness``.
+
+       .. NOTE::
+
+         If both ``exclude_completeness`` and ``include_completeness`` specify the same dataset id,
+         ``exclude_completeness`` will take priority so that the dataset does not contribute to the sink
+         completeness value.
      -
+     - No
 
 .. _pipe_metadata:
 .. _pipe_metadata_durable:
