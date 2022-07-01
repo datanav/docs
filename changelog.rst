@@ -10,8 +10,8 @@ Changelog
   dataset ids that should contribute to the completeness timestamp value of the sink dataset. By default, this property
   is equal to the pipe's input datasets, minus any datasets listed in :ref:`exclude_completeness <exclude_completeness>`.
 * Pipes that fail to infer their schemas due to limitations on the resulting schema size will no longer fail. The
-  inferred schema will instead be truncated and marked as such and the pipe will not attempt to do schema inference
-  the next time it runs.
+  :ref:`inferred schema <schema-inferencing>` will instead be truncated and marked as such and the pipe will not
+  attempt to do schema inference the next time it runs.
 
 .. _changelog_2022_06_08:
 
