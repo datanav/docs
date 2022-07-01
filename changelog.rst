@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_07_01:
+
+2022-07-01
+----------
+* Added a "discard-inferred-schema" pump operation to the :ref:`service API <api-top>`. This operation will discard any :ref:`inferred schema <schema-inferencing>` entries for the pipe and writes a special "pump-discard-inferred-schema" entity to the pipe execution log for reference. This operation can only be done on non-running pipes.
+* Behavioural change: all pipes that have ``infer_pipe_entity_types`` set to ``true``, and have a source with :ref:`continuation support <continuation_support>`, will now discard their inferred schemas upon being reset.
+
 .. _changelog_2022_06_30:
 
 2022-06-30
