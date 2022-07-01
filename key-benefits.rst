@@ -82,7 +82,10 @@ When all source properties and global properties are available as a single compo
 **Benefits of semantic data storage with dynamic multi-schema:**
 
 
-* Increased flexibility and cost savings related to changes and sunsetting of LOB systems
+* Increased flexibility and cost savings related to changes and sunsetting of LOB systems:
+	#. 
+	#. 
+	#. 
 
 * Improved data quality and governance:
 
