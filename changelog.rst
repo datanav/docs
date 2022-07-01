@@ -1,8 +1,9 @@
 Changelog
 =========
-.. _changelog_2021_11_09:
 
-2021-07-01
+.. _changelog_2022_07_01:
+
+2022-07-01
 ----------
 * Added a "discard-inferred-schema" pump operation to the service API. This operation will make discard any inferred schema entries for the pipe and writes a special "pump-discard-inferred-schema" entity to the pipes execution log for reference. This operation can only be done on non-running pipes.
 * Behavioural change: all pipes that have ``infer_pipe_entity_types`` set to ``true`` either explicitly or via the corresponding global setting, and have a source with continuation support, will now discard their inferred schemas upon being reset.
