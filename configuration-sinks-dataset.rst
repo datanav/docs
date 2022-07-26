@@ -64,7 +64,9 @@ Properties
      - String or Array
      - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
        maintained. This index will then be used by the dataset browser to look up
-       entities both by ``_id`` and ``$ids``.
+       entities both by ``_id`` and ``$ids``. The property ``global_defaults.always_index_ids`` can be enabled in
+       the :ref:`service metadata <service_metadata_section>` if all dataset sinks should by default maintain an index
+       on ``$ids``.
 
        If the value is an array then it can contain index expressions that should be
        maintained on the sink dataset. This is typically used for declaring subset indexes.
