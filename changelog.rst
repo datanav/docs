@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_07_27:
+
+2022-07-27
+----------
+* Added a new property ``global_defaults.always_index_ids`` to the :ref:`service metadata <service_metadata_section>`.
+  Enabling this will make all :ref:`dataset sinks <dataset_sink>` maintain an index on the ``$ids`` property, without
+  the need for specifying the ``indexes`` property on each individual sink.
+
 .. _changelog_2022_07_01:
 
 2022-07-01

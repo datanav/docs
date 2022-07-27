@@ -216,6 +216,15 @@ Properties
      - ``50000``
      -
 
+       .. _service_metadata_global_defaults_always_index_ids:
+
+   * - ``global_defaults.always_index_ids``
+     - Boolean
+     - If enabled, :ref:`dataset sinks <dataset_sink>` will by default maintain an index for the ``$ids`` property.
+       This is equivalent to setting ``"indexes": "$ids"`` on all dataset sinks in the node.
+     - ``false``
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
