@@ -6,9 +6,9 @@ Creating a Custom Transform
 
 :ref:`DTL <dtl_transform>` and the other :ref:`transform types <transform_section>` provide support for the majority
 of data transformation use-cases. However, there are times when a special kind of transform needs to be performed. In these
-cases it is possible add a customized transform. Typically, this is a transform where some external service should be contacted in order to convert a value or to import data based on entity specific information. :ref: `Optimistic locking <optimistic_locking>` is an example of a Sesam pattern based on a custom transform. 
+cases it is possible add a customized transform. Typically, this is a transform where some external service should be contacted in order to convert a value or to import data based on entity specific information. :ref:`Optimistic locking <optimistic_locking>` is an example of a Sesam pattern based on a custom transform. 
 
-Much like the :ref: `Custom Data Source <custom_data_source>` a custom transform can be connected to either an existing endpoint supporting Sesam protocols, or to a microservice.  
+Much like the :ref:`Custom Data Source <custom_data_source>` a custom transform can be connected to either an existing endpoint supporting Sesam protocols, or to a microservice.  
 
 The custom transform is generally configured as an :ref:`HTTP transform <http_transform>` connected to either a :ref:`URL system <url_system>` or a :ref:`Microservice system <microservice_system>`. This is defined as part of the transformation pipeline of a :ref:`pipe <pipe_section>`.
 
