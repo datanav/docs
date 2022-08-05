@@ -192,6 +192,3 @@ Example with ntlm configuration:
         "password": "$SECRET(password-variable)",
         "base_url": "http://our.domain.com/files"
     }
-
-
-

@@ -22,7 +22,10 @@ Prototype
         "use_ssl": false,
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
-        "charset": "latin-1"
+        "charset": "latin-1",
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
+        "connect_timeout": 60,
+        "read_timeout": 1800
     }
 
 Properties
@@ -56,6 +59,13 @@ Properties
      - false
      -
 
+   * - ``custom_ca_pem_chain``
+     - String
+     - If ``use_ssl`` is set to ``true`` this property can hold a chain of certificates (in PEM format) that
+       should be used to verify the SSL connection.
+     -
+     -
+
    * - ``username``
      - String
      - The user to authenticate as against the LDAP service. If not set, no authentication will be attempted.
@@ -75,6 +85,18 @@ Properties
      - "latin-1"
      -
 
+   * - ``connect_timeout``
+     - Integer
+     - Number of seconds to wait for connecting to the LDAP server before timing out.
+     - ``60``
+     -
+
+   * - ``read_timeout``
+     - Integer
+     - Number of seconds to wait for the LDAP server to respond to a request before timing out.
+     - ``1800``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -89,5 +111,3 @@ Example configuration
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)"
     }
-
-

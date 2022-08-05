@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2022_08_05:
+
+2022-08-05
+----------
+
+* Added ``custom_ca_pem_chain``  property to the :ref:`LDAP system <ldap_system>`.
+  This property can hold a custom chain of certificates (in PEM format) that will be used to validate the SSL
+  connection if ``use_ssl`` is set to ``true``.
+
 .. _changelog_2022_07_27:
 
 2022-07-27
