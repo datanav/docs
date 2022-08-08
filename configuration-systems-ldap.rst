@@ -20,6 +20,7 @@ Prototype
         "host": "FQDN of LDAP host",
         "port": 389,
         "use_ssl": false,
+        "verify_ssl": true,
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
         "charset": "latin-1",
@@ -43,7 +44,8 @@ Properties
 
    * - ``host``
      - String
-     - The fully qualified domain name (``FQDN``) of the LDAP host server
+     - The fully qualified domain name (``FQDN``) of the LDAP host server. Note: do not use a URL on the form
+       "ldap(s)://<host>:<port>" but use the ``host``, ``port`` and ``use_ssl`` properties separately instead.
      - "localhost"
      -
 
@@ -57,6 +59,12 @@ Properties
      - Boolean
      - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
      - false
+     -
+
+   * - ``use_ssl``
+     - Boolean
+     - If ``use_ssl`` is set to ``true`` then this property controls if the certificate used for the connection should be verified.
+     - true
      -
 
    * - ``custom_ca_pem_chain``
