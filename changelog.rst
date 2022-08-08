@@ -3,6 +3,13 @@ Changelog
 
 .. _changelog_2022_08_05:
 
+2022-08-08
+----------
+
+* Added ``verify_ssl``  property to the :ref:`LDAP system <ldap_system>`.
+  If ``use_ssl`` is set to ``true`` then this property controls if the certificate used for the connection should be
+  verified. It is ``true`` by default.
+
 2022-08-05
 ----------
 
