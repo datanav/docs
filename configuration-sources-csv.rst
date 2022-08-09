@@ -29,7 +29,8 @@ Prototype
        "whitelist": ["list","of","column","names","to","include"],
        "blacklist": ["list","of","column","names","to","exclude"],
        "preserve_empty_strings": false,
-       "delimiter": ","
+       "delimiter": ",",
+       "escape_null_bytes": false
     }
 
 Properties
@@ -136,6 +137,14 @@ Properties
      - String
      - The character or string to use as the ``CSV`` field separator (delimiter)
      - ","
+     -
+
+   * - ``escape_null_bytes``
+     - Boolean
+     - If set to ``true``, null characters in the CSV will be escaped before the data is parsed. Null characters in a
+       CSV file can fail the pipe if they are not escaped. By default, this is set to ``false`` due to performance
+       reasons.
+     - ``false``
      -
 
 Continuation support

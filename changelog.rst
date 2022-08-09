@@ -1,6 +1,16 @@
 Changelog
 =========
 
+.. _changelog_2022_08_09:
+
+2022-08-09
+----------
+
+* Added ``escape_null_bytes`` property to the :ref:`CSV source <csv_source>`. If set to ``true``, any null characters
+  in the input CSV file will be escaped before parsing the data. This prevents the source pipe from failing due to
+  attempted reads of lines containing null characters. The property is set to ``false`` by default due to performance
+  reasons.
+
 .. _changelog_2022_08_05:
 
 2022-08-08
