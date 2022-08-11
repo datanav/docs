@@ -149,6 +149,32 @@ a.tutorial-start:visited {
 	color: white;
 }
 
+/* Filled blue button */
+.read-more {
+	background-color: #009fdc;
+	border-radius: 17;
+	color: #ffffff;
+	padding: 8px 8px;
+	text-align: left;
+	transition-duration: 0.4s;
+	display: inline-block;
+	font-size: 1em;
+	margin: 4px 2px;
+	cursor: pointer;
+
+
+}
+
+.read-more:hover {
+	  background-color: #023258;
+	  color: white;
+	  text-decoration: underline;
+	}
+
+a.read-more:visited {
+	color: white;
+}
+
 /*Buttons to see all sections*/
 .btn-all-sections {
 	background-color: #007bff;
