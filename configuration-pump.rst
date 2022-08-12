@@ -10,6 +10,10 @@ dataset for manual inspection. Pumps log their :doc:`execution history <pump-exe
 the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.
 
+Note that if a pipe is scheduled to run on a cron-defined schedule or on a long scheduled interval (i.e. using an
+interval more than an hour long) then the scheduled run start time will be persisted. This means that that if the
+service is unable to run the pipe at the pre-scheduled time, it will try to run it as soon as possible when it's able.
+
 Prototype
 ---------
 
