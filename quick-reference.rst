@@ -107,6 +107,8 @@ DTL Transform Functions
        :ref:`remove <dtl_transform-remove>` ·
        :ref:`rename <dtl_transform-rename>`
 
+.. _quickref_dtl_expression_functions:
+
 DTL Expression Functions
 ========================
 
