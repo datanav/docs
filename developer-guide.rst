@@ -7,7 +7,7 @@ Building blocks
 .. _concepts-streaming:
 
 Streams of entities
--------------------
+===================
 
 Sesam consumes and produces streams of :doc:`entities <entitymodel>`. An entity is very much like a JSON object and consists of a number of key-value pairs along with some special reserved property names. See the :doc:`entity data model <entitymodel>` document for more details about entities.
 
@@ -30,7 +30,7 @@ The following are two simple examples showing the shape of entities that can be 
         }
     ]
 
-Streams of entities flow through :ref:`pipes<concepts-pipes>`. A pipe has an associated :ref:`pump<concepts-pumps>` that is scheduled to regularly pull data entities from the :ref:`source<concepts-sources>` , push them through  :ref:`transforms<concepts-transforms>` then send the results to the :ref:`sink<concepts-sinks>` . 
+Streams of entities flow through :ref:`pipes<concepts-pipes>`. A pipe has an associated :ref:`pump<concepts-pumps>` that is scheduled to regularly pull data entities from the :ref:`source<concepts-sources>` , push them through  :ref:`transforms<concepts-transforms>` then send the results to the :ref:`sink<concepts-sinks>` .
 
 
 .. NOTE::
@@ -40,33 +40,54 @@ Streams of entities flow through :ref:`pipes<concepts-pipes>`. A pipe has an ass
 .. _concepts-datasets:
 
 Datasets
---------
+========
 
-A dataset is the basic mean of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. 
+A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. Entities are written to datasets by pipes that use the :ref:`dataset sink <dataset_sink>`.
 
-A :ref:`dataset sink <dataset_sink>` can write entities to the dataset. An entity is appended to the log if it is new (as in, an entity with a never-before-seen ``_id`` property) or if it is different from the previous version of the same entity.
+Datasets support :ref:`change tracking <concepts-change-tracking>` by using content hashing, which means that an entity is appended to the log only if it is new or it is different from the previous version of the same entity.
 
-A content hash is generated from the content of each entity. This hash value is used to determine if an entity has changed over time. The content hashing is what enables :ref:`change tracking <concepts-change-tracking>`.
-
-The :ref:`dataset source <dataset_source>` exposes the entities from the dataset so that they can be streamed through :ref:`pipes <concepts-pipes>`. As the main data structure is a log the source can read from a specific location in the log. Datasets have full :ref:`continuation support <concepts-continuation-support>`.
+The :ref:`dataset source <dataset_source>` exposes the entities from datasets so that they can be streamed through :ref:`pipes <concepts-pipes>`. Datasets provide full :ref:`continuation support <concepts-continuation-support>` as the main data structure is a log the source can read from. Datasets also support a feature called :ref:`deletion tracking <concepts-deletion-tracking>`, which means that entities are automatically deleted when they are no longer returned by the pipe's source.
 
 .. image:: images/dataset-structure.png
     :width: 800px
     :align: center
     :alt: Dataset structure
 
+.. _concepts-indexes:
+
+Secondary Indexes
+-----------------
+
+Maintenance of secondary indexes is fully automated by Sesam. Indexes are implicitly declared when you reference a join expression on two dataset in :ref:`hops <hops>`, in :ref:`subset <concepts-subsets>` definitions or when you explicitly define them on the :ref:`dataset sink <dataset_sink>`. For :ref:`hops <hops>` the indexes are used to perform :ref:`joins <joins>` between datasets. For subsets the index is used to expose a subset of entities on the dataset as if it was a dataset inside a dataset.
+
+:: NOTE
+
+   Orphaned indexes must be deleted in the user interface or via the API currently.
+
+.. _concepts-subsets:
+
+Subsets
+-------
+
+A dataset can divided and exposed as a number of subsets. The subset behaves just like another dataset and can thus be used as one in dataset sources and hops.
+
+It is worth noting that subsets are a lot more than just indexes on individual properties. They can be described as any valid index expression, so in practice they are functional indexes. Almost all :ref:`DTL expression functions <quickref_dtl_expression_functions>` are supported except those that are non-deterministic or references other datasets. You can use them to slice a dataset into any subset that you need as long as there is data in the entities to define it.
+
+Subsets are currently implemented via secondary indexes on datasets, and in practice that means that you can use an indexed value (a property value, a boolean, a partition id etc.) as if it was a dataset. In practice one secondary index can provide one subset per indexed value, i.e. index key. For example if the index expression returned a boolean value there would be two subsets: ``true`` and ``false``, and if it returned a `Norwegian postal number <https://en.wikipedia.org/wiki/Postal_codes_in_Norway>`_ (``0000``-``9999``) there would be 10.000 subsets.
+
+
 .. _concepts-config:
 
 .. _concepts-systems:
 
 Systems
--------
+=======
 
 A :ref:`system <system_section>` is any database or API that could be used as a source of data for Sesam or as the target of entities coming out of Sesam. The system components provide a way to represent the actual systems being connected or integrated.
 
 The system component has a couple of uses. Firstly it can be used to introspect the underlying system and provide back lists of possible source or sink targets. Often this information can be used on the command line or in the *Sesam Management Studio* to quickly and efficiently configure how Sesam consumes or delivers data.
 
-The other use of the *system* is that it allows configuration that may apply to many *source* definitions, e.g. connection strings, to be located and managed in just one place. 
+The other use of the *system* is that it allows configuration that may apply to many *source* definitions, e.g. connection strings, to be located and managed in just one place.
 
 Systems also provide services like connection pooling and rate limiting.
 
@@ -75,7 +96,7 @@ You can also run your own :ref:`extension systems <concepts-extensions>`.
 .. _concepts-pipes:
 
 Pipes
------
+=====
 
 A :ref:`pipe <pipe_section>` is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`transforms <concepts-transforms>`, a :ref:`sink <concepts-sinks>`, and a :ref:`pump <concepts-pumps>`. It is an atomic unit that makes sure that data flows from the source to the sink. It is a simple way to talk about the :ref:`flow <concepts-flows>` of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
 
@@ -87,7 +108,7 @@ A :ref:`pipe <pipe_section>` is composed of a :ref:`source <concepts-sources>`, 
 .. _concepts-sources:
 
 Sources
-=======
+-------
 
 A :ref:`source <source_section>` exposes a stream of entities. Typically, this stream of entities will be the entities in a dataset, rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
@@ -109,9 +130,9 @@ To help with this there are a number of template projects hosted on ` Sesam comm
 .. _concepts-transforms:
 
 Transforms
-==========
+----------
 
-Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink. 
+Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink.
 
 A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <DTLReferenceGuide>` (DTL) to join and transform data into new shapes.
 
@@ -129,7 +150,7 @@ In general, DTL is applied to entities in a dataset and the resulting entities a
 .. _concepts-sinks:
 
 Sinks
-=====
+-----
 
 A :ref:`sink <sink_section>` is a component that can consume entities fed to it by a pump. The sink has the responsibility to write these entities to the target, handle transactional boundaries and potentially batching of multiple entities if supported by the target system.
 
@@ -147,7 +168,7 @@ Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. U
 .. _concepts-pumps:
 
 Pumps
-=====
+-----
 
 A :ref:`scheduler <concepts-scheduling-and-signalling>` handles the mechanics of :ref:`pumping <pump_section>` data from a source to a sink. It runs periodically or on a :doc:`cron <cron-expressions>` schedule and reads entities from a source and writes them to a sink.
 
@@ -158,16 +179,16 @@ The retry strategy is configurable in several ways and if an end state is reache
 .. _concepts-flows:
 
 Flows
------
+=====
 
 :ref:`Pipes <concepts-pipes>` read from sources and writes to sinks. The output of one pipe can be read by many downstream pipes. In this way pipes can be chained together into a directed graph – also called a flow. In some special situations you may also have cycles in this graph. The Sesam Management Studio has features for :ref:`visualising and inspecting flows <management-studio-flows>`.
 
 .. _concepts-environment-variables:
 
 Environment Variables
----------------------
+=====================
 
-An :ref:`environment variable <environment_variables>` is a named value that you can reference in your configuration. Environment variables are used to parameterize your configuration so that you can easily enable/disable or change certain aspects of your configuration. If you have an environment variable called ``myvariable`` then you can reference it in configuration like this: ``"$ENV(myvariable)"``. 
+An :ref:`environment variable <environment_variables>` is a named value that you can reference in your configuration. Environment variables are used to parameterize your configuration so that you can easily enable/disable or change certain aspects of your configuration. If you have an environment variable called ``myvariable`` then you can reference it in configuration like this: ``"$ENV(myvariable)"``.
 
 .. NOTE::
 
@@ -176,11 +197,11 @@ An :ref:`environment variable <environment_variables>` is a named value that you
 .. _concepts-secrets:
 
 Secrets
--------
+=======
 
-:ref:`Secrets <secrets_manager>` are like environment variables except that they are write-only. Once written to the API you cannot read them back out, but you can reference them in your configuration. They should be used for sensitive values like passwords and other credentials. 
+:ref:`Secrets <secrets_manager>` are like environment variables except that they are write-only. Once written to the API you cannot read them back out, but you can reference them in your configuration. They should be used for sensitive values like passwords and other credentials.
 
-A secret can only be used in certain locations of the configuration. If you have a secret called ``mysecret`` then you can reference it in configuration like this: ``"$SECRET(mysecret)"``. 
+A secret can only be used in certain locations of the configuration. If you have a secret called ``mysecret`` then you can reference it in configuration like this: ``"$SECRET(mysecret)"``.
 
 It is recommended that secrets are local. They can also be global but it is not recommended.
 
@@ -188,6 +209,6 @@ It is recommended that secrets are local. They can also be global but it is not 
 .. _concepts-service-metadata:
 
 Service Metadata
-----------------
+================
 
 The :ref:`service metadata <service_metadata_section>` is a singleton configuration entity that is used for service-wide settings.
