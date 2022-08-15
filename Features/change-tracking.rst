@@ -1,7 +1,7 @@
 .. _change-tracking:
 
 Change Tracking
----------------
+===============
 
 When reading data from a source, Change Tracking makes it possible to just ask for the entities that have changed since the last time, that if the source supports it. 
 This feature uses the knowledge of the source, such as a last updated time stamp, to ensure that only entities that have been created, deleted or modified are exposed. 

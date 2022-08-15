@@ -41,107 +41,10 @@ To read about the main concepts and how to get started in Sesam, please click :r
 
 Global datasets
 ---------------
-The recommended way of organizing the data in Sesam is to model and store the data in global datasets.
-
-Definition
-==========
 
 A global dataset is a collection of data pertaining to a same concept from different sources. In other words, a global dataset combines data from sources semantically linked to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
 
-Global datasets can be populated by: 
-
-- simply add datasets to a global dataset without merging, 
-- merging data from various sources without modifications,  
-- selectively merge data, by selecting which properties to merge through transformations.
-
-It is important to remember that a global dataset requires either business knowledge or a sound understanding of the data from the different sources. Global datasets will work to their fullest potential if they include all of the semantically linked data elements relating to the subject matter. 
-
-Example:
-
-There are three sources containing person data as shown below. If any target system wants data about this person, it would have to go through each root datasets every time. However, through the creation a **global-person** dataset, information can be easily fetched from one single location.
-
-::
-
-  HR system
-  {
-    "_id": "hr-person:02023688018",
-    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hr-person:Gender": "male",
-    "hr-person:SSN": "02023688018"
-  }
-
-  CRM
-  {
-    "_id": "crm-person:100",
-    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "crm-person:ID:”100”,
-    "crm-person:SSN": "02023688018",
-    "crm-person:SSN-ni": "~:hr-person:02023688018"
-  }
-
-  ERP
-  {
-    "_id": "erp-person:0202",
-    "erp-person:SSN": "02023688018",
-    "erp-person:SSN-ni": "~:hr-person:02023688018",
-    "erp-person:ID:”0202”,
-    "erp-person:country":"NO"
-  }
-
-The dataset below is what a global dataset of the above three datasets looks like in Sesam when merging on equality of social security number (SSN).
-
-::
-
-  {
-    "$ids": [
-      "~:crm-person:100",
-      "~:hr-person:02023688018",
-      "~:erp-person:0202"
-    ],
-    "_id": "crm-person:100",
-    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hr-person:Gender": "male",
-    "hr-person:SSN": "02023688018",
-    "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "crm-person:ID:”100”,
-    "crm-person:SSN": "02023688018",
-    "crm-person:SSN-ni": "~:hrsystem-person:02023688018",
-    "erp-person:SSN": "02023688018",
-    "erp-person:SSN-ni": "~:hrsystem-person:02023688018",
-    "erp-person:ID”:”0202”,
-    "erp-person:country":"NO" 
-  }
-
-Positive effects of global datasets
-===================================
-
-• By decoupling data from original sources, point-to-point integrations within Sesam can be avoided, thus fewer connections results in lower maintenance costs. In addition, data is available without concern for the original source
-• All logic related to connecting and enriching data is only done once 
-• Data in Global datasets are re-used, which saves work and makes adding new integrations easier
-• Only one look-up, instead of having to “look for data” in various datasets
-• Input datasets can be kept raw and as similar to the real source as possible, independent of how the data will be used, thus avoiding “early binding”
-• Adding additional integrations further refines the global datasets, and therefore continuously improves the data quality
-
-A data model without global datasets might look like the figure below. This example consists of four sources and three target systems only. Generally, it will be a lot more complicated.
-
-.. image:: images/best-practice/no-global.png
-    :width: 400px
-    :align: center
-    :alt: Datamodel without global datasets
-
-As shown in the figure below, a Sesam node containing global datasets results in fewer connections, making it both tidier and easier to manage.
-
-.. image:: images/best-practice/global.png
-    :width: 400px
-    :align: center
-    :alt: Generic pipe concept
-
-What do you have to take into account, and what are the challenges of global datasets?
-======================================================================================
-
-Global datasets will most likely grow and become large. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
-
-As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, the company is required to store as well, the total data objects sum up to 30 000 000. One way of managing this large data amount is to divide the data into different global datasets. In this case, the energy company chose to store their historic data in one global dataset, and the current data in a different global dataset.
+The use of global datasets is described in depth in this :ref:`global dataset <concepts-global-datasets>` document.
 
 .. _best-practice-namespace:
 
@@ -156,7 +59,7 @@ In the example below, **"crm-person"** and **"hr-person"** are namespaces and **
 
 E.g.
 
-::
+.. code-block:: json
    
   "crm-person:ssn"
 
@@ -171,7 +74,7 @@ Namespaces are used to create namespaced identifiers, which makes it possible to
 
 A namespaced identifier takes the following form:
 
-::
+.. code-block:: json
 
   "hr-person:SSN": "~:hr-person:18057653453"
 
@@ -185,7 +88,7 @@ If you have two different person datasets, and you want to merge on a common pro
 
 The main reason for generating NI's is to match the **$ids** they point to so you can actually use them to merge, in hops etc.
 
-::
+.. code-block:: json
 
   "transform": {
     "type": "dtl",
@@ -199,14 +102,14 @@ The main reason for generating NI's is to match the **$ids** they point to so yo
 
 This will produce the following output. We see the ["ni"] we added in code above; 
 
-::
+.. code-block:: json
 
   "erp-person:SSN-ni": "~:hr-person:02023688018"
  
 
 You now have unique namespace identifiers based on **SSN**, which you can use to merge the person data from two different sources.
 
-::
+.. code-block:: json
 
   {
     "_id": "global-person",
@@ -340,7 +243,7 @@ The data from the source system is fed into Sesam through **inbound pipes** whic
 
 **Global pipes** merge data belonging together to generate **global datasets**. To be able to easily spot a global pipe, the following code can be added:
 
-::
+.. code-block:: json
 
   "metadata": {
     "global": true
@@ -373,7 +276,7 @@ Embedded data as extra information
 
 Embedded data can be used when we need extra information about data that is not available from the source providing the data. The source data could contain codes or abbreviations which need to be translated to a more readable format. Using embedded data we can create a dataset which interprets these codes and abbreviations in order to extract more information than provided by the source data, see example below.
 
-:: 
+.. code-block:: json
 
   {
     "_id": "embedded-data-pipe",
@@ -406,7 +309,7 @@ Which condition is used, should be determined by an environment variable and not
 
 In this example, we should create an environment variable specifying which environment the node is running, let us call the variable "node-env" and set it to either "prod" or "dev" depending on which we use:
 
-:: 
+.. code-block:: json
  
   "node-env": "prod" or "node-env": "dev".
 
@@ -510,7 +413,8 @@ The namespace identifier is added to keep track of origin and to keep exsisting 
 Global pipes
 ============
 
-Before going into **global pipes** please read on what a global dataset is and why we generate them :ref:`here <best-practice-global>`.
+..note::
+  Before going into **global pipes** please read on what a global dataset is and why we generate them :ref:`here <concepts-global-datasets>`.
 
 The global pipe creates a new dataset. This dataset will be updated with entities from all sources added to the global pipe.
 
@@ -520,7 +424,7 @@ A resulting dataset can be a new dataset, but also an existing dataset where one
 
 In the global pipe we want to add a metadata tag to show this is a pipe going into a global dataset, so we set the following code into the pipe:
 
-::
+.. code-block:: json
 
   "metadata": {
     "global": true
