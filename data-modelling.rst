@@ -44,7 +44,7 @@ Global datasets
 
 A global dataset is a collection of data pertaining to a same concept from different sources. In other words, a global dataset combines data from sources semantically linked to provide one single authoritative fresh data location to access when needed. This will reduce the total number of pipes needed compared to a system where you get data from the original sources each time. 
 
-The use of global datasets is described in depth in this :ref:`global dataset <concepts-global-datasets>` document.
+The use of global datasets is described in depth in this :ref:`global dataset <global-datasets>` document.
 
 .. _best-practice-namespace:
 
@@ -309,7 +309,7 @@ Which condition is used, should be determined by an environment variable and not
 
 In this example, we should create an environment variable specifying which environment the node is running, let us call the variable "node-env" and set it to either "prod" or "dev" depending on which we use:
 
-.. code-block:: json
+.. code-block:: python
  
   "node-env": "prod" or "node-env": "dev".
 
@@ -414,7 +414,7 @@ Global pipes
 ============
 
 ..note::
-  Before going into **global pipes** please read on what a global dataset is and why we generate them :ref:`here <concepts-global-datasets>`.
+  Before going into **global pipes** please read on what a global dataset is and why we generate them :ref:`here <global-datasets>`.
 
 The global pipe creates a new dataset. This dataset will be updated with entities from all sources added to the global pipe.
 
@@ -683,7 +683,7 @@ Below is an example of a preparation pipe, based on the global pipe above, where
     }
   }
 
-In this case we need to make sure that we do not overwrite existing "StreetAddress" values with potential null-values (altough we should be able to trust the master data from the CRM system, mistakes do occur). We do not have to perform the same check for the properties from our golden records since in this case the hr-person data is part of the coalesce in the global-person pipe. Note that even though several of these properties is already the same in both the HR system and the CRM system, they do not have to be. The first time this integration runs there might be some unnecessary updates, but Sesam's built-in :ref:`change tracking <concepts-change-tracking>` will make sure only future changes will be passed through to the target system. 
+In this case we need to make sure that we do not overwrite existing "StreetAddress" values with potential null-values (altough we should be able to trust the master data from the CRM system, mistakes do occur). We do not have to perform the same check for the properties from our golden records since in this case the hr-person data is part of the coalesce in the global-person pipe. Note that even though several of these properties is already the same in both the HR system and the CRM system, they do not have to be. The first time this integration runs there might be some unnecessary updates, but Sesam's built-in :ref:`change tracking <change-tracking>` will make sure only future changes will be passed through to the target system. 
 
 The result from the address-hr pipe with the input from the global-person example with crm-person:100 look like:
 

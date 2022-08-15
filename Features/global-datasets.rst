@@ -1,4 +1,4 @@
-.. _concepts-global-datasets:
+.. _global-datasets:
 
 Global datasets
 ===============

@@ -27,20 +27,47 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    **XXX**
+    **Extensions**
 
-    Compare incoming entities with the existing version and only apply updates if the version are different.
+    Build and run your own microservice extension systems.
 
-    .. link-button:: /features/change-tracking
+    .. link-button:: /features/extensions-feature
             :type: ref
             :text: Read more
             :classes: read-more
     ---
-    **XXX**
+    **Continuation Support**
 
-    Perform automatic reset of pipes when they have fallen out of sync.
+    Allows a pipe to process changes incrementally. The next time the pipe runs it will continue where the previous run finished.
 
-    .. link-button:: /features/automatic-reprocessing
+    .. link-button:: /features/continuation-support
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Deletion Tracking**
+
+    Allows dataset sink to effectively detext if entities have disappeared from the source.
+
+    .. link-button:: /features/deletion-tracking
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Circuit Breakers**
+
+    A circuit breaker will trip if a larger than expected number of entities are written to a dataset in a pipe run.
+
+    .. link-button:: /features/circuit-breakers
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Transit Encoding**
+
+    Transit Encoding is a technique for encoding a larger set of data types in JSON.
+
+    .. link-button:: /features/transit-encoding
             :type: ref
             :text: Read more
             :classes: read-more
@@ -52,3 +79,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
    :hidden:
 
    Scheduling and Signalling <scheduling-and-signalling>
+   Extensions <extensions-feature>
+   Continuation Support <continuation-support>
+   Deletion Tracking <deletion-tracking>
+   Circuit breakers <circuit-breakers>
+   Transit Encoding <transit-encoding>

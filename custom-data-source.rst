@@ -182,7 +182,7 @@ Change tracking
 
 Whenever possible, we advise you to always setup a microservice to only import changes instead of full imports. By doing so you will drastically reduce the time it takes for a microservice to import data, and therefore make data available to target systems much faster. 
 
-You can achieve this by using what we refer to in Sesam as :ref:`Change Tracking <concepts-change-tracking>`.Read more about change tracking in this article :ref:`Continuation support for Microservices <continuation_support_microservices>`.
+You can achieve this by using what we refer to in Sesam as :ref:`Change Tracking <change-tracking>`.Read more about change tracking in this article :ref:`Continuation support for Microservices <continuation_support_microservices>`.
 
 |
 

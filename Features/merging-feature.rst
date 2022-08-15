@@ -1,9 +1,9 @@
-.. _concepts-merging:
+.. _merging-feature:
 
 Merging
 =======
 
-An essential feature that enables :ref:`global datasets <concepts-global-datasets>` is the ability to merge different entities into one entity representing the same thing. 
+An essential feature that enables :ref:`global datasets <global-datasets>` is the ability to merge different entities into one entity representing the same thing. 
 
 Use case
 --------

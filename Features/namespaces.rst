@@ -1,11 +1,11 @@
-.. _concepts-namespaces:
+.. _namespaces-feature:
 
 Namespaces
 ==========
 
 :ref:`Namespaces <best-practice-namespace>` are inspired by The Resource Description Framework `(RDF) <https://www.w3.org/RDF/>`_. You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <../entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:global-person:john-doe"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``global-person`` in this case is the namespace and ``john-doe`` is the identifier.
 
-Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <concepts-merging>` to avoid naming collisions and to maintain provenance of the properties.
+Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <merging-feature>` to avoid naming collisions and to maintain provenance of the properties.
 
 A namespaced identifier (NI) is a unique reference to an abstract thing. In Sesam, a NI is not a globally unique identifier, but it is a unique identifier inside one specific Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
 

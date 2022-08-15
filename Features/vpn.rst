@@ -3,7 +3,7 @@
 VPN
 ===
 
-You can extend Sesam into your own network using a IPSec-based Virtual Private Network. You can configure VPN under Subscriptions Settings in the Management Studio. Note that there is a additional surcharge for VPN, see :doc:`pricing` for more information.
+You can extend Sesam into your own network using a IPSec-based Virtual Private Network. You can configure VPN under Subscriptions Settings in the Management Studio. Note that there is a additional surcharge for VPN, see :doc:`../pricing` for more information.
 
 How to enable VPN
 -----------------

@@ -27,20 +27,65 @@ Sesam offer a set of features that will give you the edge when it comes to opera
             :text: Read more
             :classes: read-more
     ---
-    **XXX**
+    **Durable Data**
 
-    Compare incoming entities with the existing version and only apply updates if the version are different.
+    When running a cloud subscriptions you now have the possibility to request that a pipes data is stored in three replicas.
 
-    .. link-button:: /features/change-tracking
+    .. link-button:: /features/durable-data
             :type: ref
             :text: Read more
             :classes: read-more
     ---
-    **XXX**
+    **Notifications**
 
-    Perform automatic reset of pipes when they have fallen out of sync.
+    Notification enables you to monitor your pipes and get notification alerts in the user interface, or by email.
 
-    .. link-button:: /features/automatic-reprocessing
+    .. link-button:: /features/notifications-feature
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Metrics API**
+
+    Access subscription and pipe metrics in the Prometheus-compatible metrics API endpoint from your external monitoring tools, such as Grafana.
+
+    .. link-button:: /features/metrics-api
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Bring Your Own Key**
+
+    Let Sesam then manages the encryption key for you.
+
+    .. link-button:: /features/bring-your-own-key
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Network Policy**
+
+    Block all public access or deny all except for a whitelist of ip addresses and ranges.
+
+    .. link-button:: /features/network-policy
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Status Page**
+
+    Find the real-time operational status of the Sesam services. Any incidents will be reported there.
+
+    .. link-button:: /features/status-page
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
+    **Software Channels**
+
+    There are four different release channels – commonly called canaries. Choose which one is best suited for your subscription.
+
+    .. link-button:: /features/software-channels
             :type: ref
             :text: Read more
             :classes: read-more
@@ -52,4 +97,11 @@ Sesam offer a set of features that will give you the edge when it comes to opera
    :hidden:
 
    VPN <vpn>
+   Durable Data <durable-data>
+   Notifications <notifications-feature>
+   Metrics API <metrics-api>
+   Bring your own key <bring-your-own-key>
+   Network Policy <network-policy>
+   Status Page <status-page>
+   Software Channels <software-channels>
   

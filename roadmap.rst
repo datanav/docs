@@ -113,7 +113,7 @@ We are looking into exposing subscription and pipe metrics in a Prometheus-compa
 This feature will most likely be offered as part of a new data option called "Metrics and monitoring" that bundles metrics and an unlimited number of pipe notifications.
 
 .. note::
-   :ref:`Metrics <concepts-metrics-api>` is now available for subscriptions running on the Clustered Architecture.
+   :ref:`Metrics <metrics-api>` is now available for subscriptions running on the Clustered Architecture.
 
 Durable data
 ============
@@ -125,7 +125,7 @@ For http_endpoint sources and non-idempotent sinks, this can be a problem.
 We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
 
 .. note::
-   :ref:`Durable data <concepts-durable-data>` is now available on all cloud subscriptions.
+   :ref:`Durable data <durable-data>` is now available on all cloud subscriptions.
 
 Integrated data browsing
 ========================
@@ -140,7 +140,7 @@ This feature will most likely only be available on the 'Clustered architecture',
 so it depends on the 'Clustered architecture everywhere' item on the roadmap.
 
 .. note::
-   :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
+   :ref:`Integrated search <integrated-search>` is now available for subscriptions running on the
    Clustered Architecture.
 
 General Available
@@ -168,4 +168,4 @@ VPN setup can be requested through support.
 We are looking into how to automate this process so that the end user can do this process faster.
 
 .. note::
-   :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
+   :ref:`VPN <vpn-feature>` is now configurable for subscriptions running on the Clustered Architecture.

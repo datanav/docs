@@ -8,7 +8,7 @@ Sesam groups data into global datasets that can be managed in accordance with th
 Data Ownership by Domain
 ------------------------
 
-Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. One Sesam subscription can use the :doc:`permissions system <security>` and :ref:`config groups <concepts-configgroup>` to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
+Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. One Sesam subscription can use the :doc:`permissions system <security>` and :ref:`config groups <api-config-groups>` to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
 
 Data Products
 -------------
@@ -23,13 +23,13 @@ Can achieve consistency (security, data format, protocols) with datasets and pub
 Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/>`_ and how they relate to features in Sesam:
 
 - Data access (:ref:`outgoing published endpoints <http_endpoint_sink>`, :ref:`incoming sources <source_section>`)
-- Discovery (:ref:`integrated search <concepts-integrated-search>`, :ref:`schemas <schema-inferencing>`)
-- Transformation (:ref:`data transformation language <DTLReferenceGuide>`)
-- Integration (:doc:`entity model <entitymodel>`, :ref:`merge <merge_source>`, :ref:`namespaces <concepts-namespaces>`)
+- Discovery (:ref:`integrated search <integrated-search>`, :ref:`schemas <schema-inferencing>`)
+- Transformation (:ref:`data transformation language <DTL>`)
+- Integration (:doc:`entity model <entitymodel>`, :ref:`merge <merge_source>`, :ref:`namespaces <namespaces-feature>`)
 - Security (:doc:`permissions <security>`)
 - Governance
 - Lineage (:ref:`property lineage <property-lineage>`)
-- Orchestration (:doc:`data flows <sesam-dataflow>`, :ref:`schedules <concepts-scheduling-and-signalling>`, :ref:`completeness <concepts-completeness>`)
+- Orchestration (:doc:`data flows <sesam-dataflow>`, :ref:`schedules <scheduling-and-signalling>`, :ref:`completeness <completeness-feature>`)
 
 Sample architecture
 -------------------

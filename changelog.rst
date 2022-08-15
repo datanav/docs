@@ -59,7 +59,7 @@ Changelog
 2022-06-08
 ----------
 
-* The :ref:`VPN <concepts-vpn>` feature now supports high availability for connections. This means that you can set up redundant connections that can be failed over to. This is a :ref:`multi <pricing-production>` subscription only feature.
+* The :ref:`VPN feature <vpn-feature>` now supports high availability for connections. This means that you can set up redundant connections that can be failed over to. This is a :ref:`multi <pricing-production>` subscription only feature.
 
 .. _changelog_2022_05_20:
 
@@ -125,7 +125,7 @@ Changelog
 2022-03-31
 ----------
 
-* Added support for :ref:`Metrics <concepts-metrics-api>`.
+* Added support for :ref:`Metrics <metrics-api>`.
 * New data option `Metrics and monitoring` in :ref:`test and production pricing <pricing-production>` replaces the pr. pipe monitoring option. Pipe monitoring will still be available for existing subscription that is already using this.
 
 .. _changelog_2022_03_25:
@@ -134,7 +134,7 @@ Changelog
 ----------
 
 * New developer subscription size :ref:`Developer Pro <pricing-developer>` is now available.
-* Added support for :ref:`Durable Data <concepts-durable-data>`.
+* Added support for :ref:`Durable Data <durable-data>`.
 
 .. _changelog_2022_03_24:
 
@@ -149,7 +149,7 @@ Changelog
 ----------
 
 * The :doc:`Databrowser <databrowser>` tool will reach end-of-life December 31st 2023. It is superseded by the
-  :ref:`Integrated Search <concepts-integrated-search>` feature. We will notify the current subscribers soon.
+  :ref:`Integrated Search <integrated-search>` feature. We will notify the current subscribers soon.
 * Added a property ``ignore_non_existent_datasets`` to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources. By default, listing one or or more datasets in ``initial_datasets`` that do not exist does not prevent the source from being populated. Setting ``ignore_non_existent_datasets`` to ``false`` will make the pipe fail if any non-existent datasets are listed in ``datasets``.
 * Fixed a bug where the ``initial_datasets`` property was initialized as an empty list in the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``initial_datasets`` was not explicitly set. The property now defaults correctly to the same list of datasets listed in ``datasets``. This is a breaking change.
 * The :ref:`dataset <dataset_source>` and :ref:`diff_datasets <diff_datasets_source>` now warn the user if any input datasets do not exist. This also applies to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``ignore_non_existent_datasets`` is ``false``.
@@ -277,9 +277,9 @@ Changes to the user experience:
 
 2021-11-26
 ----------
-* :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
+* :ref:`Integrated search <integrated-search>` is now available for subscriptions running on the
   Clustered Architecture.
-* :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
+* :ref:`VPN <vpn-feature>` is now configurable for subscriptions running on the Clustered Architecture.
 
 .. _changelog_2021_11_19:
 
