@@ -1,8 +1,8 @@
 .. _best-practice:
 
-=======================
-Data modelling in Sesam
-=======================
+========================
+Data management in Sesam
+========================
 
 Summary
 -------
