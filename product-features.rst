@@ -1,4 +1,3 @@
-
 .. rst-class:: center-title
 
 ========

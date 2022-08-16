@@ -34,7 +34,7 @@ disable deletion tracking.
 
 Source with parameterized input
 -------------------------------
-Fetch more data based on some input source, requires rescan all the time. Perhaps partial rescan could work?
+Fetch more data based on some input source, requires rescan all the time.
 
 Recreate best effort history from a source
 ------------------------------------------
@@ -163,7 +163,7 @@ Use transform instead of a sink to capture results back into a dataset. This tra
 
 External reference
 ------------------
-If datatype has a property where you can store external references, you can merge on this when collecting the shared data back. Conflict resolution?
+If datatype has a property where you can store external references, you can merge on this when collecting the shared data back.
 
 Update or insert
 ----------------
