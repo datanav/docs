@@ -8,7 +8,7 @@ Documentation
    Project kickstart <best-practices>
    Building blocks <developer-guide>
    Features <product-features>
-   Data Transformation Language (DTL) <DTLReferenceGuide>
+   Data Transformation Language (DTL) <data-transformation-language>
    Design patterns <patterns>
    Data management <index-data-management>
    Data synchronization <index-synchronization>
