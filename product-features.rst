@@ -49,6 +49,6 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
    :maxdepth: 2
    :hidden:
 
-   Data Management<features/data-management-features>
-   Data Synchronization<features/data-synchronization-features>
-   Operations<features/operations-features>
+   Data Management <features/data-management-features>
+   Data Synchronization <features/data-synchronization-features>
+   Operations <features/operations-features>
