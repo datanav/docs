@@ -1,6 +1,10 @@
+.. _notifications-feature:
+
 =============
 Notifications
 =============
+
+Monitoring of pipes can be enabled. Once a pipe is being monitored, you can add notification rules to pipes and be alerted when those rules are triggered. You can get notification alerts in the user-interface or by email.
 
 
 Introduction
@@ -440,7 +444,7 @@ The subscription summary entries can have notifications for the following notifi
    This ruletype checks if the subscription's license is getting close to its expiration date.
 
 
-This endpoint implements the :doc:`JSON Pull Protocol <json-pull>`, but the following quirk is useful to
+This endpoint implements the :doc:`JSON Pull Protocol <../json-pull>`, but the following quirk is useful to
 know about: The ordering of the returned entities are not directly determined by when the notification each entity
 describes triggered. Example: if the endpoint returns two entities with ``"_updated":1`` and  ``"_updated":2``,
 the entity with  ``"_updated":1`` might describe a notification that triggered *after* the notification in the entity

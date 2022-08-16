@@ -11,4 +11,4 @@ The other use of the *system* is that it allows configuration that may apply to 
 
 Systems also provide services like connection pooling and rate limiting.
 
-You can also run your own :ref:`extension systems <concepts-extensions>`.
+You can also run your own :ref:`extension systems <extensions-feature>`.

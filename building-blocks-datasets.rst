@@ -5,9 +5,9 @@ Datasets
 
 A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. Entities are written to datasets by pipes that use the :ref:`dataset sink <dataset_sink>`.
 
-Datasets support :ref:`change tracking <concepts-change-tracking>` by using content hashing, which means that an entity is appended to the log only if it is new or it is different from the previous version of the same entity.
+Datasets support :ref:`change tracking <change-tracking>` by using content hashing, which means that an entity is appended to the log only if it is new or it is different from the previous version of the same entity.
 
-The :ref:`dataset source <dataset_source>` exposes the entities from datasets so that they can be streamed through :ref:`pipes <concepts-pipes>`. Datasets provide full :ref:`continuation support <concepts-continuation-support>` as the main data structure is a log the source can read from. Datasets also support a feature called :ref:`deletion tracking <concepts-deletion-tracking>`, which means that entities are automatically deleted when they are no longer returned by the pipe's source.
+The :ref:`dataset source <dataset_source>` exposes the entities from datasets so that they can be streamed through :ref:`pipes <concepts-pipes>`. Datasets provide full :ref:`continuation support <continuation-support>` as the main data structure is a log the source can read from. Datasets also support a feature called :ref:`deletion tracking <deletion-tracking>`, which means that entities are automatically deleted when they are no longer returned by the pipe's source.
 
 .. image:: images/dataset-structure.png
     :width: 800px

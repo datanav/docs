@@ -531,7 +531,7 @@ Properties
    * - ``metadata.durable``
      - Boolean
      - When set to true, this pipe will store its state and data on a high-durability disk. This makes the pipe more
-       resilient to data-loss, but will also incur an additional cost, see :ref:`Durable Data <concepts-durable-data>`
+       resilient to data-loss, but will also incur an additional cost, see :ref:`Durable Data <durable-data>`
        for more details.
      - ``false``
 
