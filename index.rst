@@ -122,11 +122,11 @@ Read about the different topics in documentation to ensure proper use of Sesam a
             :classes: btn-outline-primary btn-block
     ---
 
-    **Data modelling**
+    **Data management**
 
     Read about the core of any platform aimed to integrate data. 
     
-    .. link-button:: index-datamodelling.html
+    .. link-button:: index-data-management.html
         :type: url
         :text: Read more
         :classes: btn-outline-primary btn-block

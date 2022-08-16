@@ -11,7 +11,7 @@ Documentation
    Data Transformation Language (DTL) <DTLReferenceGuide>
    Design patterns <patterns>
    Data synchronization <index-synchronization>
-   Data modelling <index-datamodelling>
+   Data management <index-data-management>
    Data platforms <index-dataplatforms>
    Operations <index-operations>
    Roadmap <roadmap>
