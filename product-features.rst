@@ -46,7 +46,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
 |
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
 
    Data Management<features/data-management-features>
