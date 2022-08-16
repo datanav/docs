@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2022_08_xx:
+
+2022-08-xx
+----------
+
+* Added the ``if_source_empty`` property to sources and the global default ``global_defaults.if_source_empty`` to the
+  :ref:`service metadata <service_metadata_section>`. This property determines the behaviour of pipes when their source
+  returns no entities. Previously synced entities will normally be deleted from the pipe dataset when it finishes
+  running, even if no entities are received. Setting this new property to ``fail`` will prevent this by making the pipe
+  fail before it can perform a new sync.
+
 .. _changelog_2022_08_09:
 
 2022-08-09
