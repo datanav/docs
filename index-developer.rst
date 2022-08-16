@@ -10,10 +10,10 @@ Documentation
    Features <product-features>
    Data Transformation Language (DTL) <DTLReferenceGuide>
    Design patterns <patterns>
-   Data synchronization <index-synchronization>
    Data management <index-data-management>
-   Data platforms <index-dataplatforms>
+   Data synchronization <index-synchronization>
    Operations <index-operations>
+   Data platforms <index-dataplatforms>
    Roadmap <roadmap>
    Tools <tools>
    Service Configuration <configuration>
