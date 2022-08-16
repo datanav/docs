@@ -10,7 +10,6 @@ In every situation where you manage large quantities of data maintaining control
 
    Security <security>
    Metrics <metrics>
-   Notifications <features/notifications-feature>
    Pump Execution Dataset <pump-execution>
    Configuration Management <configuration-management>
    Self-hosted service <self-hosted>
