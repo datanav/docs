@@ -41,7 +41,9 @@ html_codeblock_linenos_style = 'table'
 
 # Redirects
 redirects = {
-     "features.html": "key-benefits.html"
+     "features.html": "key-benefits.html",
+     "DTLReferenceGuide.html": "data-transformation-language.html"
+
 }
 
 
