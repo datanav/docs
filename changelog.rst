@@ -1,9 +1,9 @@
 Changelog
 =========
 
-.. _changelog_2022_08_xx:
+.. _changelog_2022_08_17:
 
-2022-08-xx
+2022-08-17
 ----------
 
 * Added the ``if_source_empty`` property to sources and the global default ``global_defaults.if_source_empty`` to the
@@ -11,6 +11,14 @@ Changelog
   returns no entities. Previously synced entities will normally be deleted from the pipe dataset when it finishes
   running, even if no entities are received. Setting this new property to ``fail`` will prevent this by making the pipe
   fail before it can perform a new sync.
+
+.. _changelog_2022_08_12:
+
+2022-08-12
+----------
+
+* Pipe runs triggered by pumps using cron expressions or scheduled intervals larger than one hour (3600 seconds) are
+  persisted, so if the service is down when they should have run they will be run as soon as the service starts up again.
 
 .. _changelog_2022_08_09:
 

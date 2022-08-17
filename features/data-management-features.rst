@@ -22,7 +22,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
 
     DTL allows developers to model data and clearly describe transformations that should be performed on streams of data in order to create new datasets.
 
-    .. link-button:: ../DTLReferenceGuide
+    .. link-button:: ../data-transformation-language
             :type: ref
             :text: Read more
             :classes: read-more
