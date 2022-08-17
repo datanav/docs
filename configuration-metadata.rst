@@ -225,6 +225,22 @@ Properties
      - ``false``
      -
 
+       .. _service_metadata_global_defaults_if_source_empty:
+
+   * - ``global_defaults.if_source_empty``
+     - Enum<String>
+     - Determines the default behaviour of pipes when a source returns no entities. Normally, any previously synced
+       entities will be deleted even if the pipe does not receive any entities from its source.
+       If set to ``"fail"``,
+       pipes will automatically fail if the source returns no entities. This means that any previous entities in the
+       pipe's dataset are not deleted.
+       If set to ``"accept"``, the pipe will *not* fail and any previously synced entities will be deleted.
+
+       This property can be set on individual sources as well, in which case the source configuration will override the
+       global default value.
+     -
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``
