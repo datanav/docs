@@ -39,7 +39,7 @@ Transforms
 
 Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink.
 
-A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <DTLReferenceGuide>` (DTL) to join and transform data into new shapes.
+A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <data-transformation-language>` (DTL) to join and transform data into new shapes.
 
 .. _concepts-dtl:
 

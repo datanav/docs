@@ -1,8 +1,8 @@
 .. _DTL:
 
-=====================
- DTL Reference Guide
-=====================
+=============================
+ Data Transformation Language
+=============================
 
 Introduction
 ============
