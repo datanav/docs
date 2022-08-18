@@ -2,8 +2,7 @@
 Design patterns
 ===============
 
-We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful
-to name these patterns as it makes it easier to refer to them when discussing problems.
+We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
 
 Here we present a list of them, grouped by the step in the dataflow that the problem manifests itself at.
 
@@ -22,15 +21,13 @@ Collect patterns
 
 Source with since support but no deletions
 ------------------------------------------
-Provides data with changes but no information about deletions. Requires periodic rescans. Called *update-in-place
-systems*.
+Provides data with changes but no information about deletions. Requires periodic rescans. Called *update-in-place systems*.
 
 .. _pattern_source_only_deltas:
 
 Source that only provides delta streams
 ---------------------------------------
-If you restart the pipe you lose a lot of data. Make two pipes, disable, reset and use durable pipe,
-disable deletion tracking.
+If you restart the pipe you lose a lot of data. Make two pipes, disable, reset and use durable pipe, disable :ref:`deletion tracking <deletion-tracking>`.
 
 Source with parameterized input
 -------------------------------
@@ -83,7 +80,7 @@ To extract entities you will have to use the :ref:`create <dtl-transforms>` tran
 
 .. warning::
 
-  If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
+  If you do a full scan for :ref:`deletion tracking <deletion-tracking>`, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
 
 Connect patterns
 ================
