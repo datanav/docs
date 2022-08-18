@@ -57,10 +57,7 @@ Enrich patterns
 
 Extract foreign references as separate datatypes
 ------------------------------------------------
-Don't make NIs to stuff that is outside your control, keep the namespace local to the system. Extract the
-properties to new separate datatypes. If you don't have them as objects you can't merge them with the same concept from
-other sources. Time is not a good candidate for NI. Postal codes are a good example. If you make a NI make it reference your
-own namespace. Use :ref:`create <dtl_transform-create>`.
+Don't make NIs to stuff that is outside your control, keep the namespace local to the system. Extract the properties to new separate datatypes. If you don't have them as objects you can't merge them with the same concept from other sources. Time is not a good candidate for NI. Postal codes are a good example. If you make a NI make it reference your own namespace. Use :ref:`create <dtl_transform-create>`.
 
 Adding type information
 -----------------------
@@ -88,7 +85,6 @@ To extract entities you will have to use the :ref:`create <dtl-transforms>` tran
 
   If you do a full scan for deletion tracking, then subset in the source will still create entities that are not in the latest versions of that subset, therefore :ref:`subset <dataset_source>` **should** not be used in conjunction with create.
 
-
 Connect patterns
 ================
 
@@ -106,8 +102,7 @@ Use :ref:`coalesce <coalesce_dtl_function>`.
 
 Golden property based on last updated
 -------------------------------------
-Make sure you have a reliable timestamp from the source that you propagate. Think about feedback loops if data is
-synced back. Can be good to standardise on e.g. ``$last_updated``.
+Make sure you have a reliable timestamp from the source that you propagate. Think about feedback loops if data is synced back. Can be good to standardise on e.g. ``$last_updated``.
 
 Golden property based on quality
 --------------------------------
@@ -122,15 +117,14 @@ Expensive hops or external transforms is best to do in a separate dataflow. This
 
 Hungarian notation references
 -----------------------------
-When referencing from one global to another global, one can  encode which global the reference points to in order to make it easier to understand what the reference is. E.g. a parent reference from global-person to global-person could be `parent-person-ni`. The reference name in this case is `parent` and the reference points to `global-person` and is of type `namespaced identifier`.
+When referencing from one global to another global, one can encode which global the reference points to in order to make it easier to understand what the reference is. E.g. a parent reference from global-person to global-person could be `parent-person-ni`. The reference name in this case is `parent` and the reference points to `global-person` and is of type `namespaced identifier`.
 
 Transform patterns
 ==================
 
 Late schema binding
 -------------------
-Ensure transformations are done in accordance to target schema. Only map using the datatypes namespace (bidirectional sync might not support patching, and you need the entire original object when sharing), and the global namespace. If you reference other namespaces you can no longer do all refactoring in the connect phase. 
-
+Ensure that transformations are done in accordance to the target schema. Bidirectional sync might not support patching, and you need the original object when sharing. When mapping, only use the namespace of the target system or the global namespace. Hops should be done on global properties. Use identifiers from the target system. If you reference other namespaces, you can no longer do all refactoring in the connect phase.
 
 Defining hierarchies for recursion
 ----------------------------------
@@ -138,7 +132,7 @@ Defining hierarchies for recursion
 
 An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data. 
 
-When doing recursive hops you should define the property ``max_depth`` to safeguard against never ending recursions.
+When doing recursive hops, you should define the property ``max_depth`` to safeguard against never ending recursions.
 
 Re-mapping references to target identifiers
 -------------------------------------------
@@ -155,7 +149,7 @@ Should be added via an external transform and then two hash values should be com
 
 Exposing data
 -------------
-Focus should be on exposing data.
+Focus for the share phase is exposing the data. Data should be transformed into the format of the target schema before it reaches the share phase.
 
 Capture response with transform
 -------------------------------
