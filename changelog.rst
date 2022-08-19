@@ -12,14 +12,6 @@ Changelog
   running, even if no entities are received. Setting this new property to ``fail`` will prevent this by making the pipe
   fail before it can perform a new sync.
 
-.. _changelog_2022_08_12:
-
-2022-08-12
-----------
-
-* Pipe runs triggered by pumps using cron expressions or scheduled intervals larger than one hour (3600 seconds) are
-  persisted, so if the service is down when they should have run they will be run as soon as the service starts up again.
-
 .. _changelog_2022_08_09:
 
 2022-08-09
