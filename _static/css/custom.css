@@ -55,7 +55,7 @@ h3 {
 /* Top menu customization */
 /*START*/
 a.nav-link {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: white !important;
 }
 
@@ -85,7 +85,11 @@ a.nav-link:hover {
 a.reference.external.nav-link.button.button-support {
 	bottom: 2px;
 	position: relative;
+	font-size: 1em !important;
 }
+
+
+
 
 /* START **Buttons used in index pages*/
 .btn-block {
