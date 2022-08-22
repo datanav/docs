@@ -3,9 +3,10 @@
    :hidden:
 
    What is Sesam<index-whatis>
+   Features<product-features>
    Documentation<index-developer>
    Learn<index-learn>
-   Features<product-features>
+   
 
 .. rst-class:: center-title
    
