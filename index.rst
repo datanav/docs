@@ -2,9 +2,11 @@
 .. toctree::
    :hidden:
 
-   What is Sesam <index-whatis>
-   Documentation <index-developer>
-   Learn <index-learn>
+   What is Sesam<index-whatis>
+   Features<product-features>
+   Documentation<index-developer>
+   Learn<index-learn>
+   
 
 .. rst-class:: center-title
    
