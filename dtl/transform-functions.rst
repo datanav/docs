@@ -6,18 +6,20 @@ Transform Functions
 A transform function is a function that has side-effects, typically
 modifying the target entity, and has no return value.
 
+
+.. _`dtl_transform-if`:
+
+``if``
+------
+
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 40, 60
 
-   * - Function
-     - Description
+   * - Description
      - Examples
 
-       .. _`dtl_transform-if`:
-
-   * - ``if``
-     - | *Arguments:*
+   * - | *Arguments:*
        |   CONDITION(boolean-expression{1}),
        |   THEN(transforms{1}),
        |   ELSE(transforms{0|1})
@@ -52,7 +54,19 @@ modifying the target entity, and has no return value.
        | If the source entity's ``age`` is greater than 18 then add ``type``
          field with value ``adult``, if not add ``child``.
 
-       .. _dtl_transform-case-eq:
+.. _dtl_transform-case-eq:
+
+``case-eq``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
    * - ``case-eq``
      - | *Arguments:*
        |   VALUE(value-expression{1}),
@@ -84,7 +98,20 @@ modifying the target entity, and has no return value.
          ``45`` and ``{"country": "SE"}`` if the value  is ``46`` and ``{"country": "NO"}`` if the value is ``47``,
          otherwise it is a no-op.
 
-       .. _dtl_transform-case:
+.. _dtl_transform-case:
+
+``case``
+--------
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
    * - ``case``
      - | *Arguments:*
        |   (VALUE(value-expression{1},

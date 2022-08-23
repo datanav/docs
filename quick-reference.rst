@@ -73,6 +73,7 @@ Configuration
        :ref:`rest <rest_transform>` ·
        :ref:`xml <xml_transform>`
 
+.. _quickref_dtl_transform_functions:
 
 DTL Transform Functions
 =======================

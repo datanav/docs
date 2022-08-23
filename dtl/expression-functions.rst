@@ -7,17 +7,20 @@ and returns a single value or a list of values.
 Boolean logic
 -------------
 
+
+.. _and_dtl_function:
+
+``and``
+-------
+
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 40, 60
 
-   * - Function
-     - Description
+   * - Description
      - Examples
 
-       .. _and_dtl_function:
-   * - ``and``
-     - | *Arguments:* boolean-expression{>0}
+   * - | *Arguments:* boolean-expression{>0}
        |
        | Takes at least one boolean expression argument.
          Returns true only if all arguments evaluate to true.
@@ -27,7 +30,19 @@ Boolean logic
        |
        | Age must be greater than 26 and the gender must be male.
 
-       .. _or_dtl_function:
+.. _or_dtl_function:
+
+``or``
+------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
+   * - Function
+     - Description
+     - Examples
+
    * - ``or``
      - | *Arguments:* boolean-expression{>0}
        |
@@ -39,7 +54,15 @@ Boolean logic
        |
        | The category field must contain "A" or "B".
 
-       .. _not_dtl_function:
+.. _not_dtl_function:
+
+``not``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 30, 50
+
    * - ``not``
      - | *Arguments:* boolean-expression{>0}
        |
