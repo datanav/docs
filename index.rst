@@ -59,11 +59,11 @@ New to Sesam? These topics will get you started on the right foot.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    **Learn Sesam**
+    **Getting started**
 
     Get started with Sesam by following these tutorials.
 
-    .. link-button:: index-learn
+    .. link-button:: guide-getting-started
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
