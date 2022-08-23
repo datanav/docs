@@ -17,12 +17,13 @@ Sesam can `utilize RDF <https://docs.sesam.io/rdf-support.html?highlight=rdf#>`_
 How to use
 ----------
 
-Namespaces can be used by :ref:`entity identifiers <id_field>`, entity property names and the :ref:`namespaced identifier datatype <ni_data_type>`. A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
+Namespaces can be used by :ref:`entity identifiers <id_field>`, entity property names and the :ref:`namespaced identifier datatype <ni_data_type>`. 
+
+A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
 
 Example of an entity with namespaces:
 
 .. code-block:: json
-
 
   {
     "_id": "user:123",
@@ -31,11 +32,18 @@ Example of an entity with namespaces:
     "user:manager": "~:user:101"
   }
 
-Namespaced identifiers can be enabled by setting the ``namespaced_identifiers`` property to ``true`` in the pipe configuration (see below) or the service metadata. The former enables it for just the one pipe. The latter enables it for all pipes - except for those pipes that have explicitly disabled it.
+How to enable
+-------------
+
+**Enable on specific pipes:**
+Namespaced identifiers can be enabled on specific pipes by setting the ``namespaced_identifiers`` property to ``true`` in the pipe configuration (see properties below). 
+
+**Enable globally in a subscription:**
+You can enable namespaced identifiers in the service metadata for all the pipes in your subscription, except for those pipes that have explicitly disabled it. You can disable NIs in specific pipes in the pipe configuration by setting the ``namespaced_identifiers`` property to ``false``.
 
 .. NOTE::
 
-   Some of the DTL functions are namespace aware and they will behave slightly differently when namespaces are enabled. See the section on :ref:`namespaces <namespace_aware_functions>` in the DTL reference guide for more details.
+   Some of the DTL functions are namespace aware and they will behave slightly differently when namespaces are enabled. See the section on :ref:`namespaces <namespace_aware_functions>` for more details.
 
 Properties
 ^^^^^^^^^^
