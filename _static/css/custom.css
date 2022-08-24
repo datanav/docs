@@ -437,7 +437,6 @@ button.copybtn {
 }
 
 @media (max-width: 1024px) {
-	
 	.card-text {
 	white-space: nowrap; 
 	overflow: hidden;
