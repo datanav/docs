@@ -32,6 +32,24 @@ New to Sesam? These topics will get you started on the right foot.
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
+    **Features**
+
+    Check some of the product features that make Sesam flexible, agile and effective.
+
+    .. link-button:: product-features.html
+            :type: url
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    **Getting started**
+
+    Get started with Sesam by following these tutorials.
+
+    .. link-button:: guide-getting-started
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
     **Core principles**
 
     Read about the fundamental principles to ensure effective Master data management.
@@ -49,6 +67,7 @@ New to Sesam? These topics will get you started on the right foot.
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
+
 
 |
 |
@@ -83,15 +102,6 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     These are the building blocks in Sesam, get to know them in this section.
 
     .. link-button:: developer-guide.html
-            :type: url
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Features**
-
-    Check some of the product features that make Sesam flexible, agile and effective.
-
-    .. link-button:: product-features.html
             :type: url
             :text: Read more
             :classes: btn-outline-primary btn-block
