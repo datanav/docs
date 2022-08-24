@@ -424,6 +424,10 @@ body {
 
 .p {
 	font-family: 'Barlow', sans-serif;
+	white-space: nowrap; 
+  	width: 50px; 
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 /*---------END----------*/
 
@@ -432,3 +436,17 @@ button.copybtn {
    opacity: 1;
 }
 
+@media (max-width: 1024px) {
+	
+	.card-text {
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    }
+  }
+}
+}
