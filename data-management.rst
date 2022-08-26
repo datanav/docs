@@ -189,7 +189,7 @@ Output from the example code above as seen below with a join to hr-system:
 Naming conventions
 ------------------
 
-It is essential to have an agreed naming convention across integrations within Sesam. The motivation is to have a better visibility and understanding of where your data comes from and where it is heading, as well as to how it is internally transformed. It also makes it easier to switch between projects.
+It is essential to have an agreed upon naming convention across integrations within Sesam. The motivation is to have better visibility and understanding of where your data comes from and where it is heading, as well as to how it is transformed at each step. It also makes it easier to switch between projects.
 
 General rules
 =============
@@ -206,17 +206,30 @@ Systems
 Pipes
 =====
 
-• name inbound pipes with system they read from and postfix with the type of content (e.g. salesforce-sale)
-• do not use plural names (e.g. salesforce-sale not salesforce-sales)
-• prefix merge pipes with merged- (e.g. merged-sale)
-• prefix global pipes with global- (e.g. global-sale)
-• name intermediate outbound pipe with the type of the content and the name of the system to send to (e.g. sale-bigquery)
-• name outgoing pipe by postfixing the intermediate output with -endpoint (e.g. sale-bigquery-endpoint)
+• Generally: Do not use plural names (sale **not** sales) and always name your pipes with its data provider followed by the datatype you are working with i.e. ``salesforce-sale``. 
+• Collect: Postfix these inbound pipes with "collect" i.e. ``salesforce-sale-collect``. 
 
-Datasets
-========
+.. hint::
+  
+  Remember to add ``namespaced_identifiers: false`` to the pipe configuration in the Collect step.
 
-• name them the same as the pipe that produced it (the default and does not need to be specified)
+• Enrich: Postfix these inbound pipes with "enrich" i.e. ``salesforce-sale-enrich``.
+
+.. hint::
+  
+  Remember to add namespaces to the pipe configuration in the Enrich step.
+  
+  .. code-block:: json
+
+    "add_namespaces": true,
+      "namespaces": {
+        "identity": "salesforce-sale",
+        "property": "salesforce-sale"
+      }
+
+• Connect: Prefix global pipes with "global" i.e. ``global-sale``.
+• Transform: Postfix these outbound pipes with "transform" i.e. ``salesforce-sale-transform``.
+• Share: Postfix these outbound pipes with "share". If you perform a specific operation you should add that i.e. "share-update" in the postfix part of the pipe name. This looks like the following, respectively: ``salesforce-sale-share`` and ``salesforce-sale-share-update``.
 
 .. _best-practice-workflow:
 
