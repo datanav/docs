@@ -18,7 +18,8 @@ Prototype
 ---------
 The following *JSON* snippet shows the general form of a pipe definition.
 
-::
+.. code-block:: python
+
 
     {
         "_id": "pipe-id",
@@ -216,7 +217,7 @@ Namespaces can be used by :ref:`entity identifiers <id_field>`, entity property 
 
 Example of an entity with namespaces:
 
-::
+.. code-block:: json
 
   {
     "_id": "user:123",
@@ -233,12 +234,11 @@ Example of an entity with namespaces:
    enables it for just the one pipe. The latter enables it for all
    pipes - except for those pipes that have explicitly disabled it.
 
-.. NOTE::
+.. important::
 
    Some of the DTL functions are namespace aware and they will behave
    slightly differently when namespaces are enabled. See the section
-   on :ref:`namespaces <namespace_aware_functions>` in the DTL
-   reference guide for more details.
+   on :ref:`namespaces <namespace_aware_functions>` for more details.
 
 Properties
 ^^^^^^^^^^
@@ -541,7 +541,8 @@ Example configuration
 
 The following example shows a pipe definition that exposes data from a SQL database table called ``customers``, and feeds it into a sink that writes the data into a dataset called ``Northwind:Customers``.
 
-::
+.. code-block:: json
+
 
    {
        "_id": "northwind-customers",
