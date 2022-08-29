@@ -179,14 +179,12 @@ DTL Expression Functions
        :ref:`decrypt-pki <decrypt_pki_dtl_function>` ·
        :ref:`decrypt-pgp <decrypt_pgp_dtl_function>`
 
-   * - Entity lookups
-     - :ref:`lookup-entity <lookup_entity_dtl_function>`
-
    * - Hashing
      - :ref:`hash128 <hash128_dtl_function>`
 
    * - Hops
-     - :ref:`hops <hops_dtl_function>`
+     - :ref:`hops <hops_dtl_function>` ·
+       :ref:`lookup-entity <lookup_entity_dtl_function>`
 
    * - JSON
      - :ref:`json <json_dtl_function>` ·

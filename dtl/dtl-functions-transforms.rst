@@ -61,14 +61,12 @@ modifying the target entity, and has no return value.
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 40, 60
 
-   * - Function
-     - Description
+   * - Description
      - Examples
 
-   * - ``case-eq``
-     - | *Arguments:*
+   * - | *Arguments:*
        |   VALUE(value-expression{1}),
        |   (VALUE_N(value-expression{1},
        |    THEN(transforms{1}))+,
@@ -103,17 +101,14 @@ modifying the target entity, and has no return value.
 ``case``
 --------
 
-
 .. list-table::
    :header-rows: 1
-   :widths: 10, 30, 50
+   :widths: 40, 60
 
-   * - Function
-     - Description
+   * - Description
      - Examples
 
-   * - ``case``
-     - | *Arguments:*
+   * - | *Arguments:*
        |   (VALUE(value-expression{1},
        |    THEN(transforms{1}))+,
        |   ELSE(transforms{0\|1})
@@ -137,10 +132,19 @@ modifying the target entity, and has no return value.
        | or ``{"group": "toddler"}`` if the value of ``_S.age`` is less than ``2``,
        | otherwise ``{"group": "unknown"}``.
 
-       .. _`dtl_transform-comment`:
+.. _`dtl_transform-comment`:
 
-   * - ``comment``
-     - | *Arguments:*
+``comment``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   COMMENTS(value-expression{>=0})
        |
        | A transform that does nothing except hold comments. Useful for
@@ -157,10 +161,19 @@ modifying the target entity, and has no return value.
        |
        | A comment that spans multiple lines.
 
-       .. _`dtl_transform-filter`:
+.. _`dtl_transform-filter`:
 
-   * - ``filter``
-     - | *Arguments:*
+``filter``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   UNLESS_CONDITION(boolean-expression{0|1})
        |
        | If the evaluation of the UNLESS_CONDITION expression returns false, then stop
@@ -209,10 +222,19 @@ modifying the target entity, and has no return value.
        | Stop processing.
        |
 
-       .. _`dtl_transform-discard`:
+.. _`dtl_transform-discard`:
 
-   * - ``discard``
-     - | *Arguments:*
+``discard``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   UNLESS_CONDITION(boolean-expression{0|1})
        |
        | This transform is almost identical to ``filter``, but will drop the target
@@ -247,10 +269,19 @@ modifying the target entity, and has no return value.
        | Discard the target entity unconditionally.
        |
 
-       .. _`dtl_transform-add`:
+.. _`dtl_transform-add`:
 
-   * - ``add``
-     - | *Arguments:*
+``add``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   PROPERTY(string{1})
        |   VALUES(value-expression{1})
        |
@@ -320,10 +351,19 @@ modifying the target entity, and has no return value.
          Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
          to reference the current namespace.
 
-       .. _`dtl_transform-default`:
+.. _`dtl_transform-default`:
 
-   * - ``default``
-     - | *Arguments:*
+``default``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   PROPERTY(string{1})
        |   VALUES(value-expression{1})
        |
@@ -401,10 +441,19 @@ modifying the target entity, and has no return value.
          Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
          to reference the current namespace.
 
-       .. _`dtl_transform-make-ni`:
+.. _`dtl_transform-make-ni`:
 
-   * - ``make-ni``
-     - | *Arguments:*
+``make-ni``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   NAMESPACE(string{1})
        |   FROM_PROPERTY(string{1})
        |   TO_PROPERTY(string{0|1})
@@ -493,10 +542,19 @@ modifying the target entity, and has no return value.
          to the target entity. The values are converted into
          NIs by adding the ``soccer`` namespace. Any non-string values are ignored.
 
-       .. _`dtl_transform-remove`:
+.. _`dtl_transform-remove`:
 
-   * - ``remove``
-     - | *Arguments:*
+``remove``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   PROPERTY(wildcard-string{1})
        |
        | Removes the PROPERTY field from the target entity. The PROPERTY can
@@ -549,10 +607,19 @@ modifying the target entity, and has no return value.
        | Result: ``{"age": 36, "y:age": 36}``.
        | Removes the ``x:age`` property from the target entity.
 
-       .. _`dtl_transform-copy`:
+.. _`dtl_transform-copy`:
 
-   * - ``copy``
-     - | *Arguments:*
+``copy``
+--------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   INCLUDE_PROPERTIES(wildcard-string-list{1})
        |   EXCLUDE_PROPERTIES(wildcard-string-list{1})
        |
@@ -614,10 +681,19 @@ modifying the target entity, and has no return value.
          except those in a namespace that contains the character ``y``,
          to the target entity.
 
-       .. _`dtl_transform-rename`:
+.. _`dtl_transform-rename`:
 
-   * - ``rename``
-     - | *Arguments:*
+``rename``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   PROPERTY1(string{1})
        |   PROPERTY2(string{1})
        |
@@ -686,10 +762,19 @@ modifying the target entity, and has no return value.
        | ``{"x:b": 2}``.
        | Renames the ``x:a`` property to ``x:b``.
 
-       .. _`dtl_transform-merge`:
+.. _`dtl_transform-merge`:
 
-   * - ``merge``
-     - | *Arguments:*
+``merge``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES copy all the properties of the value onto the
@@ -704,10 +789,19 @@ modifying the target entity, and has no return value.
        | Add the properties ``a=2`` and ``b=3`` to the target entity. Note that
          ``a=1`` is not added because it gets overwritten with ``a=2`` later.
 
-       .. _`dtl_transform-merge-union`:
+.. _`dtl_transform-merge-union`:
 
-   * - ``merge-union``
-     - | *Arguments:*
+``merge-union``
+---------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES copy all the properties of the value onto the
@@ -723,9 +817,19 @@ modifying the target entity, and has no return value.
        |
        | Add the properties ``a=[1, 2]`` and ``b=3`` to the target entity.
 
-       .. _dtl_transform-create:
-   * - ``create``
-     - | *Arguments:*
+.. _dtl_transform-create:
+
+``create``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES emit them as new entities to the DTLs output
@@ -743,10 +847,19 @@ modifying the target entity, and has no return value.
        | Emit the orders in the source entity's ``orders`` field as new entities,
          but apply the ``order`` transform to them first.
 
-       .. _dtl_transform-create-child:
+.. _dtl_transform-create-child:
 
-   * - ``create-child``
-     - | *Arguments:*
+``create-child``
+----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
        | For each entity in VALUES add it to the ``$children`` property on the
