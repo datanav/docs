@@ -179,9 +179,6 @@ DTL Expression Functions
        :ref:`decrypt-pki <decrypt_pki_dtl_function>` ·
        :ref:`decrypt-pgp <decrypt_pgp_dtl_function>`
 
-   * - Hashing
-     - :ref:`hash128 <hash128_dtl_function>`
-
    * - Hops
      - :ref:`hops <hops_dtl_function>` ·
        :ref:`lookup-entity <lookup_entity_dtl_function>`
@@ -243,6 +240,8 @@ DTL Expression Functions
 
    * - Misc
      - :ref:`literal <literal_dtl_function>` .
+       :ref:`hash128 <hash128_dtl_function>` .
+       :ref:`tuples <tuples_dtl_function>` .
        :ref:`fail! <fail_dtl_function>`
 
    * - Namespaced identifiers
@@ -292,9 +291,6 @@ DTL Expression Functions
        :ref:`replace <replace_dtl_function>` ·
        :ref:`substring <substring_dtl_function>` ·
        :ref:`matches <matches_dtl_function>`
-
-   * - Tuples
-     - :ref:`tuples <tuples_dtl_function>`
 
    * - URIs
      - :ref:`uri <uri_dtl_function>` ·
