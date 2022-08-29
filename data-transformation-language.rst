@@ -63,7 +63,6 @@
    DTL: Date and time <dtl/dtl-functions-date-and-time.rst>
    DTL: Dictionaries <dtl/dtl-functions-dictionaries.rst>
    DTL: Encryption <dtl/dtl-functions-encryption.rst>
-   DTL: Hashing <dtl/dtl-functions-hashing.rst>
    DTL: Hops <dtl/dtl-functions-hops.rst>
    DTL: JSON <dtl/dtl-functions-json.rst>
    DTL: Lists <dtl/dtl-functions-lists.rst>
@@ -76,7 +75,6 @@
    DTL: Paths <dtl/dtl-functions-paths.rst>
    DTL: Sets <dtl/dtl-functions-sets.rst>
    DTL: Strings <dtl/dtl-functions-strings.rst>
-   DTL: Tuples <dtl/dtl-functions-tuples.rst>
    DTL: URIs <dtl/dtl-functions-uris.rst>
    DTL: UUIDs <dtl/dtl-functions-uuids.rst>
    Argument types <dtl/argument-types.rst>
