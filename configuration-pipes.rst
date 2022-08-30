@@ -14,6 +14,35 @@ The pipe configuration consists of a :ref:`source <source_section>`, :ref:`trans
 
 Note that the forward slash character ("``/``") is not allowed in the pipe ``_id`` property.
 
+Pipe Features
+-------------
+
+The following are available features that can be activate and/or changed on any pipe in Sesam. 
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10, 60
+
+   * - Feature
+     - Description
+
+   * - ``Compaction``
+     - :ref:`Compaction <compaction-feature>` decides how and when old entities should re removed from datasets.
+
+   * - ``Circuit breakers``
+     - :ref:`Circuit breakers <circuit-breakers>` prevent pipes from running if the number of changed entities is too large.
+
+   * - ``Automatic reprocessing``
+     - :ref:`Automatic reprocessing <automatic-reprocessing>` automatically resets a pipe when it is out of sync with its input data.
+
+   * - ``Completeness``
+     - :ref:`Completeness <automatic-reprocessing>` lets pipes hold of processing of data until upstream dependencies are processed.
+
+
+
+
+
 Prototype
 ---------
 The following *JSON* snippet shows the general form of a pipe definition.
@@ -287,226 +316,6 @@ Properties
      - Sink default
      -
 
-.. _pipe_compaction:
-
-Compaction
-----------
-
-Compaction deletes the oldest entities in a dataset and reclaims space for those
-entities in the dataset's indexes.
-
-Datasets that are written to by pipes using the :ref:`dataset sink <dataset_sink>` are compacted incrementally as
-the pipe writes new entities to the dataset by default (compaction type "sink" enabled). If sink compaction is disabled,
-the dataset is automatically compacted once every 24 hours (compaction type "background" in the global settings or
-compaction.sink set to ``false``). The default is to keep the last two versions of every
-entity up until the current time.
-
-.. NOTE::
-
-   Compaction will only be performed up to the lowest offset for which there exists a pipe doing dependency tracking on the dataset. Each pipe doing dependency tracking keeps a tracking offset on the dataset so that it knows which entities to perform dependency tracking for. It is this tracking offset that compaction cannot go beyond. This is done so that those pipes should not fall out of sync. If the compaction did not hold off then we could not guarantee that the output of those pipes are correct.
-
-   Be aware that disabled pipes also hold off compaction. If the pipes are to be disabled for a long time then it is better to remove the pipe, or alternatively comment out the hops.
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``compaction.automatic``
-     - Boolean
-     - If ``true`` then the dataset is a candidate for automatic compaction.
-     - ``true``
-     - No
-
-   * - ``compaction.sink``
-     - Boolean
-     - If ``true`` then the dataset sink will perform dataset compaction. This will make compaction happen incrementally as new entities are written to the dataset. If this is enabled, then automatic compaction won't run for the dataset itself, but dataset index compaction will be scheduled. Note that dataset index compaction does not require a lock on the dataset.
-     - ``true``
-     - No
-
-   * - ``compaction.keep_versions``
-     - Integer
-     - The number of unique versions of an entity to keep around. The default is ``2``.
-       The value must be greater than or equal to ``0``. If set to ``0`` then a time
-       threshold must be set explicitly.
-
-       .. WARNING::
-
-          A value less than ``2`` means that dependency tracking is best effort only,
-          and it will not be able to find all reprocessable entities. Do full or partial
-          rescans as a counter measure.
-
-     - ``2``
-     - No
-
-   * - ``compaction.time_threshold_hours``
-     - Integer
-     - Specifies the threshold for how old entities must be before they are considered
-       for compaction. This property is usually used when you want to keep entities
-       around for a certain time.
-     - ``null``
-     - No
-
-   * - ``compaction.time_threshold_hours_pump``
-     - Integer
-     - Same as ``compaction.time_threshold_hours``, but applies to the pipe's pump
-       execution dataset. Pump execution datasets are always trimmed by time.  The
-       default is 30 days, which is the minimum value allowed.
-     - ``720``
-     - No
-
-   * - ``compaction.growth_threshold``
-     - Float
-     - The growth factor required for the automatically scheduled compaction to kick
-       in. Uses the minimum value of ``1.0`` by default, meaning that compaction will always
-       run when new entities are written to the dataset.
-     - ``1.0``
-     - No
-
-   * - ``compaction.compaction_interval``
-     - Float
-     - Specifies the sink compaction interval. If this value is zero, sink compaction will run every time
-       the pipe runs. If it is larger than zero, sink compaction will only run if at least
-       ``compaction_interval`` seconds has passed since the last sink compaction. The use-case for this setting is
-       to prevent a pipe that run often from constantly trying to compact the sink-dataset.
-     - ``0``
-     - No
-
-
-
-.. _circuit_breakers_section:
-
-Circuit breakers
-----------------
-
-A circuit breaker is a safety mechanism that one can enable on the
-:ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if
-the number of entities written to a dataset in a pipe run exceeds a
-certain configurable limit.
-
-Note that a circuit breaker is only activated if the sink dataset is
-populated. In practice this means that the pipe must have ran to
-completion at least once. This is to avoid tripping it on the initial
-sync.
-
-A tripped circuit breaker will prevent the pipe from running.
-It can either be rolled back or committed. Rolling it back
-will delete any entities that were written in the pipe run before the
-circuit breaker was tripped. Committing it will expose the uncommitted
-entities. Both operations resets the circuit breaker so that pipe can
-run again.
-
-Compaction will not be performed on datasets with a tripped circuit
-breaker. It is also not possible to repost entities to these datasets.
-
-You can rollback or commit the circuit breaker on the dataset page in
-the :doc:`Management Studio <management-studio>`, or use the
-`service API <api.html#post--datasets-dataset_id>`_.
-
-Resetting
----------
-
-When the configuration of a pipe is modified in such a way that the entities the pipe
-produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
-value must be cleared in order to reprocess already seen entities with the new pipe
-configuration.
-
-This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
-
-.. _automatic_reprocessing:
-
-Automatic reprocessing
-----------------------
-
-Datasets that are input to a pipe or datasets that are hop-ed to by a pipe may be deleted. When this happens the data output by a pipe is no longer in sync with the input data. By default a pipe will not reset automatically if this happens, but it will maintain a list of datasets that are out of sync. Alternatively one can set the reprocessing policy to ``automatic`` so that such resets happen automatically.
-
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``reprocessing_policy``
-     - Enum<String>
-     - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
-
-       - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
-
-       - ``automatic`` means that the pipe will automatically reset the pipe when it finds that there are factors that indicate that the pipe should be reset. The rationale for resetting the pipe is so that input entities can the reprocessed so that the output is correct.
-     - ``continue``
-     - No
-
-
-.. _completeness:
-
-Completeness
-------------
-
-When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe.  One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
-
-.. WARNING::
-
-   Completeness is implicitly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-       .. _exclude_completeness:
-   * - ``exclude_completeness``
-     - List<String>
-     - A list of dataset ids that should not contribute to the completeness timestamp value. Any
-       dataset listed in this property will be ignored when calculating the dataset sink
-       completeness timestamp value.
-
-       .. NOTE::
-
-         If all datasets are excluded a new completeness timestamp value will be generated in this pipe.
-     - ``[]``
-     - No
-
-        .. _include_completeness:
-   * - ``include_completeness``
-     - List<String>
-     - A list of dataset ids that *should* contribute to the completeness timestamp value. All
-       datasets listed in this property will be used when calculating the dataset sink
-       completeness timestamp value. If this property is not specified, it defaults to a list of all the datasets in the
-       pipe's source and transforms, with the exception of datasets that are also specified in ``exclude_completeness``.
-
-       .. NOTE::
-
-         If both ``exclude_completeness`` and ``include_completeness`` specify the same dataset id,
-         ``exclude_completeness`` will take priority so that the dataset does not contribute to the sink
-         completeness value.
-     -
-     - No
-
 .. _pipe_metadata:
 .. _pipe_metadata_durable:
 
@@ -565,3 +374,4 @@ The following example shows a pipe definition that exposes data from a SQL datab
            "time_threshold_hours": 48
        }
    }
+

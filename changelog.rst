@@ -91,7 +91,7 @@ Changelog
 2022-05-12
 ----------
 
-* A pipe with :ref:`automatic reprocessing  <automatic_reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
+* A pipe with :ref:`automatic reprocessing  <automatic-reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
 
 .. _changelog_2022_05_03:
 
@@ -333,7 +333,7 @@ Changes to the user experience:
 
 2021-10-11
 ----------
-* The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness>` value
+* The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness-feature>` value
   from the "X-Dataset-Completeness" http request header, if it is present.
   If the header is not present, the current time will be used instead, just as before.
 
@@ -609,7 +609,7 @@ Changes to the user experience:
 2020-11-06
 ----------
 
-* Added :ref:`note <pipe_compaction>` about compaction not being performed beyond depencency tracking offsets.
+* Added :ref:`note <compaction-feature>` about compaction not being performed beyond depencency tracking offsets.
 
 .. _changelog_2020_10_23:
 
@@ -726,7 +726,7 @@ Changes to the user experience:
 
 2019-10-07
 ----------
-* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+* :ref:`Sink compaction <compaction-feature>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
 * The :ref:`reference <reference_dtl_function>` DTL function has been deprecated.
 * The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
 
@@ -747,11 +747,11 @@ Changes to the user experience:
 
 2019-08-26
 ----------
-* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+* We've added support for a feature called :ref:`completeness <completeness-feature>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 2019-08-19
 ----------
-* :ref:`Pipes <automatic_reprocessing>` now have a property called ``reprocessing_policy`` that can be set to cause automatic resets when external factors indicate that the pipe should be reset.
+* :ref:`Pipes <automatic-reprocessing>` now have a property called ``reprocessing_policy`` that can be set to cause automatic resets when external factors indicate that the pipe should be reset.
 
 2019-08-12
 ----------
@@ -818,7 +818,7 @@ Changes to the user experience:
 
 2019-01-28
 ----------
-* :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
+* :ref:`Compaction <compaction-feature>` is now incremental, so it will continue from where it got to the last time.
 * Compaction will be performed by the dataset sink if ``compaction.sink`` is set to ``true`` in the pipe configuration. This is only available for pipes using the :ref:`dataset <dataset_sink>` sink. If sink compaction is enabled no scheduled compaction will be done on the dataset as this is no longer neccessary. Index compaction will still require scheduled compaction, but this does not require a lock on the dataset. Note that sink compaction is currently experimental.
 * Automatic compaction will now kick if there are 10% or 10000 new dataset offsets since the last compaction. The 10000 cap is fixed for now.
 
@@ -849,7 +849,7 @@ Changes to the user experience:
 
 2018-10-16
 ----------
-* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
+* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <compaction-feature>`. This lets you specify when dataset compaction kicks in.
 * The ``compaction.keep_versions`` property can now also be set to ``0`` and ``1``. The default value is ``2``; which is needed for dependency tracking to be fully able to find reprocessable entities. Setting it to a lower value means that dependency tracking is best effort only.
 
 2018-09-24
@@ -936,7 +936,7 @@ Changes to the user experience:
 
 2018-04-19
 ----------
-* Added support for :ref:`circuit breakers <circuit_breakers_section>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
+* Added support for :ref:`circuit breakers <circuit-breakers>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
 
 2018-04-09
 ----------
@@ -1209,7 +1209,7 @@ Changes to the user experience:
 
 2017-02-01
 ----------
-* Datasets are now scheduled for automatic compaction once every 24 hours. The default is to keep the last 2 versions up until the current time. It is possible to customize the automatic compaction. See documentation on :ref:`compaction <pipe_compaction>` for more information.
+* Datasets are now scheduled for automatic compaction once every 24 hours. The default is to keep the last 2 versions up until the current time. It is possible to customize the automatic compaction. See documentation on :ref:`compaction <compaction-feature>` for more information.
 
 2017-01-26
 ----------
