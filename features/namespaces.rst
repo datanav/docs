@@ -41,7 +41,7 @@ Namespaced identifiers can be enabled on specific pipes by setting the ``namespa
 **Enable globally in a subscription:**
 You can enable namespaced identifiers in the service metadata for all the pipes in your subscription, except for those pipes that have explicitly disabled it. You can disable NIs in specific pipes in the pipe configuration by setting the ``namespaced_identifiers`` property to ``false``.
 
-.. NOTE::
+.. important::
 
    Some of the DTL functions are namespace aware and they will behave slightly differently when namespaces are enabled. See the section on :ref:`namespaces <namespace_aware_functions>` for more details.
 
