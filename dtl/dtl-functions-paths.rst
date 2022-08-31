@@ -28,7 +28,7 @@ Paths
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          If namespaced identifiers are enabled and the path element is not
          a fully qualified namespaced identifier then all properties with

@@ -91,7 +91,7 @@ Properties
 Completeness
 ^^^^^^^^^^^^
 
-When entities are posted to the HTTP endpoint source, the :ref:`completeness <completeness>` value of the sink dataset will by default be set to the current time. But it is also possible to explicitly specify the completeness value by adding a 'X-Dataset-Completeness' header in the POST-request. This value must be a positive integer. It is recommended to use microseconds since the epoch, since this is what Sesam does by default.  Example::
+When entities are posted to the HTTP endpoint source, the :ref:`completeness <completeness-feature>` value of the sink dataset will by default be set to the current time. But it is also possible to explicitly specify the completeness value by adding a 'X-Dataset-Completeness' header in the POST-request. This value must be a positive integer. It is recommended to use microseconds since the epoch, since this is what Sesam does by default.  Example::
 
     curl -H "X-Dataset-Completeness: 1633934725921188" ...
 

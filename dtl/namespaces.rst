@@ -8,7 +8,7 @@ The following functions are namespace aware: :ref:`add <dtl_transform-add>`, :re
 <dtl_transform-remove>`, :ref:`copy <dtl_transform-copy>`,
 :ref:`rename <dtl_transform-rename>` and :ref:`path
 <path_dtl_function>`. This means they behave slightly differently when
-:ref:`namespaced identifiers <namespaces>` is enabled.
+:ref:`namespaced identifiers <namespaces-feature>` is enabled.
 
 - Function arguments that are of type ``wildcard-string`` will make
   pattern matching aware of the boundary between the namespace and the

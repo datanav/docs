@@ -290,7 +290,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
@@ -375,7 +375,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
@@ -465,7 +465,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          If namespaced identifiers are enabled,
          then the property will be prefixed by the current
@@ -563,7 +563,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          The pattern in PROPERTY is namespace aware, so the last colon in the pattern
          is considered to be the separator between the namespace and the identifier.
@@ -631,7 +631,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          The pattern in PROPERTY is namespace aware, so the last colon in the pattern
          is considered to be the separator between the namespace and the identifier.
@@ -704,7 +704,7 @@ modifying the target entity, and has no return value.
 
        .. NOTE::
 
-         This transform function is :ref:`namespaced identifiers <namespaces>` aware.
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
 
          If namespaced identifiers are enabled,
          then the renaming makes sure that any namespaces on the target entity either

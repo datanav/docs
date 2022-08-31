@@ -109,7 +109,7 @@ Properties
 
    * - ``circuit_breaker_threshold_factor``
      - Decimal
-     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+     - Specifying this property will enable a :ref:`circuit breaker <circuit-breakers>` on
        the pipe. It specifies a factor that is used to calculate the circuit breaker limit. Note
        that this is a factor and not a percentage, e.g. ``0.32`` means 32% and ``1.5`` means 150%.
        If the factor is ``0.5`` and the dataset already contains 100 entities, then the circuit
@@ -119,7 +119,7 @@ Properties
 
    * - ``circuit_breaker_threshold_count``
      - Integer
-     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+     - Specifying this property will enable a :ref:`circuit breaker <circuit-breakers>` on
        the pipe. The count specifies the circuit breaker limit directly. The limit defines how many
        new entities can be written to the dataset before the circuit breaker trips. If this property
        is set to ``100``, then 100 entities can be written before it trips.
