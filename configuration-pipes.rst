@@ -24,21 +24,21 @@ The following *JSON* snippet shows the general form of a pipe definition.
 
 
     {
-        "_id": "pipe-id",
-        "name": "Name of pipe",
-        "description": "This is a description of the pipe",
-        "comment": "This is a comment",
-        "type": "pipe",
-        "source": {
-        },
-        "transform": {
-        },
-        "sink": {
-        },
-        "pump": {
-        },
-        "metadata": {
-        }
+      "_id": "pipe-id",
+      "name": "Name of pipe",
+      "description": "This is a description of the pipe",
+      "comment": "This is a comment",
+      "type": "pipe",
+      "source": {
+      },
+      "transform": {
+      },
+      "sink": {
+      },
+      "pump": {
+      },
+      "metadata": {
+      }
     }
 
 Note that if no ``name`` property is explicitly set for the source, sink or pump configurations one will be generated based on the ``name`` of the pipe (i.e. the contents of this property postfixed with "source", "sink" or "pump" respectively).
@@ -242,32 +242,26 @@ Properties
 Example configuration
 ---------------------
 
-The following example shows a pipe definition that exposes data from a SQL database table called ``customers``, and feeds it into a sink that writes the data into a dataset called ``Northwind:Customers``.
+The following example shows a pipe definition that exposes data from HubSpot's REST API through the endpoint **companies**, and feeds it into a sink that writes the data into a dataset with the same ``_id`` as the pipe.
 
 .. code-block:: json
-
-
-   {
-       "_id": "northwind-customers",
-       "name": "Northwind customers",
-       "type": "pipe",
-       "source": {
-           "type": "sql",
-           "system": "Northwind",
-           "table": "Customers"
-       },
-       "sink": {
-           "type": "dataset",
-           "dataset": "Northwind:Customers"
-       },
-       "pump": {
-           "schedule_interval": 3600
-       },
-       "compaction": {
-           "keep_versions": 2,
-           "time_threshold_hours": 48
-       }
-   }
+  
+    {
+      "_id": "hubspot-company-collect",
+      "type": "pipe",
+      "source": {
+        "type": "rest",
+        "system": "hubspot",
+        "id_expression": "{{ id }}",
+        "operation": "get",
+        "payload_property": "results",
+        "properties": {
+          "url": "companies"
+        }
+      },
+      "add_namespaces": false,
+      "namespaced_identifiers": false
+    }
 
 Pipe Features
 -------------
