@@ -129,7 +129,7 @@ Changelog
 2022-04-07
 ----------
 
-* :ref:`Schema inferencing <schema-inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces>`.
+* :ref:`Schema inferencing <schema-inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces-feature>`.
 
 .. _changelog_2022_03_31:
 
@@ -1048,7 +1048,7 @@ Changes to the user experience:
 
 2017-09-06
 ----------
-* Improved and expanded documentation on :ref:`namespaced identifiers <namespaces>` and the features related to it.
+* Improved and expanded documentation on :ref:`namespaced identifiers <namespaces-feature>` and the features related to it.
 * Moved the deprecations to a :ref:`separate document <deprecations>`.
 
 2017-09-05

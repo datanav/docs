@@ -25,7 +25,7 @@ Namespaced identifiers
        |
        | URIs can be passed as values in VALUES only when NAMESPACE is not specified.
          The URIs will be collapsed, i.e. the prefix part of URIs will be collapsed into
-         a namespace. If the prefix has been declared as a :ref:`namespace <namespaces>`
+         a namespace. If the prefix has been declared as a :ref:`namespace <namespaces-feature>`
          then that namespace will be used, otherwise a generated namespace will be added.
      - | Constructs a new namespaced identifier.
        |
