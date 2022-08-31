@@ -9,7 +9,7 @@ The Subscription Fee for the Services are set
 depending on the computing power, data volume, selected monitoring
 functionality and SLA-level.
 
-Fees for standard services are set out in Dollar, and are calculated into
+Fees for standard services are set out in USD, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
@@ -27,7 +27,7 @@ will be billed with 5 quantities of Multi computes.
   
   In cases where integrated search is enabled and global pipes are durable, the data consumption of those global pipes will only increase by 5x.
 
-The fees for the Services are set out below in Dollar exclusive of VAT:
+The fees for the Services are set out below in USD exclusive of VAT:
 
 .. _pricing-developer:
 
