@@ -45,9 +45,9 @@ by using the :doc:`Sesam Client <sesam-client>`.
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - €50.00
+     - €55.00
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - €250.00
+     - €275.00
 
 .. _pricing-production:
 
@@ -61,9 +61,9 @@ Production and test environment
    * - Compute
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - €900.00
+     - €1000.00
    * - Multi compute - 16 Engines < 1 TB Data
-     - €3,300.00
+     - €3,500.00
 
 .. list-table:: Data prices [#]_
    :widths: 70 30
@@ -72,7 +72,7 @@ Production and test environment
    * - Data
      - Pr GB
    * - Storage
-     - €14.00
+     - €15.00
    * - VPN
      - €2.00
    * - Metrics and monitoring
