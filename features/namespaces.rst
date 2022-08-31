@@ -3,47 +3,44 @@
 Namespaces
 ==========
 
-:ref:`Namespaces <best-practice-namespace>` are inspired by The Resource Description Framework `(RDF) <https://www.w3.org/RDF/>`_. You'll see them in terms of namespaced identifiers - also called NIs. A NI is a special datatype defined in the :doc:`entity data model <../entitymodel>`. In essence they are a string consisting of two parts, the namespace and the identifier. ``"~:global-person:john-doe"`` is an example. The ``~:`` is the type part that tells you that it is a namespaced identifier. ``global-person`` in this case is the namespace and ``john-doe`` is the identifier.
+Namespaces in Sesam are inspired by The Resource Description Framework `(RDF) <https://www.w3.org/RDF/>` where namespaces are URL references that allows us to reuse names from different sources without loosing context. In Sesam namespaces are used to determine the origin of attributes, something that is essential to accommodate master data management in :ref:`global <whatis-global>`. Inside our global pipes we often wish to merge entities with other similar entities, such as person data from a CRM system and the equivalent person data from an HR system. Sesam prefixes namespaces to each attribute name in order to merge data from multiple sources without losing contex. Namespaces in Sesam are also essential for :ref:`late schema binding <transform-late-schema-binding>` where we map global models to target models.
 
-Properties can also have namespaces, but here the ``~:`` part is not used. ``global-person:fullname`` is an example of such a namespaced property. Namespaced properties are essential when :ref:`merging <merging-feature>` to avoid naming collisions and to maintain provenance of the properties.
+With some exceptions, attributes will always inherit the pipe name where the attribute was first created as its namespace, i.e. an attribute ``x`` created in pipe ``y`` will appropriate the namespace ``y:``, becoming ``y:x``. 
 
-A namespaced identifier (NI) is a unique reference to an abstract thing. In Sesam, a NI is not a globally unique identifier, but it is a unique identifier inside one specific Sesam datahub. There are mechanisms in place for collapsing and expanding namespaced identifiers to globally unique identifiers on import and export.
+See examples below.
 
-Namespaced identifiers and properties with namespaces will automatically expand to fully qualified Uniform Resource Identifiers (URIs) when exporting to RDF. URIs in RDF are similarly collapsed into namespaced identifiers and properties with namespaces on import. They can also be expanded and collapsed using DTL.
+.. list-table::
+   :widths: 25 25 50
+   :header-rows: 1
 
-Sesam can `utilize RDF <https://docs.sesam.io/rdf-support.html?highlight=rdf#>`_ for input, transformation or producing data for external consumption.
-
-
-How to use
-----------
-
-Namespaces can be used by :ref:`entity identifiers <id_field>`, entity property names and the :ref:`namespaced identifier datatype <ni_data_type>`. 
-
-A namespaced identifier consists of two parts; a namespace and an identifier. The namespace part can consist of any character, including colons. The identifier part can consist of any character except colons (``:``).
-
-Example of an entity with namespaces:
-
-.. code-block:: json
-
-  {
-    "_id": "user:123",
-    "user:username": "erica",
-    "user:first_name": "Erica",
-    "user:manager": "~:user:101"
-  }
+   * - Pipe name
+     - Attribute from source
+     - Attribute with namespace
+   * - hubspot-person
+     - name
+     - hubspot-person:name
+   * - visma-person
+     - name
+     - visma-person:name
+   * - hubspot-company
+     - company_name
+     - hubspot-company:company_name  
+   * - visma-company
+     - company_name
+     - visma-company:company_name
 
 How to enable
 -------------
 
 **Enable on specific pipes:**
-Namespaced identifiers can be enabled on specific pipes by setting the ``namespaced_identifiers`` property to ``true`` in the pipe configuration (see properties below). 
+Namespaces can be enabled on specific pipes by setting the required property/properties in the pipe configuration (see properties below). 
 
 **Enable globally in a subscription:**
-You can enable namespaced identifiers in the service metadata for all the pipes in your subscription, except for those pipes that have explicitly disabled it. You can disable NIs in specific pipes in the pipe configuration by setting the ``namespaced_identifiers`` property to ``false``.
+You can enable namespaces in the service metadata for all the pipes in your subscription, except for those pipes that have other explicit configurations. 
 
 .. important::
 
-   Some of the DTL functions are namespace aware and they will behave slightly differently when namespaces are enabled. See the section on :ref:`namespaces <namespace_aware_functions>` for more details.
+   Some of the DTL functions are namespace aware and they will behave slightly differently when namespaces are enabled. See the section on :ref:`Namespace aware functions <namespace_aware_functions>` for more details.
 
 Properties
 ^^^^^^^^^^
@@ -60,7 +57,7 @@ Properties
 
    * - ``namespaced_identifiers``
      - Boolean
-     - Flag used to enable namespaced identifers support on the pipe. The default value is read from the service metadata. If not specified in the service metadata then the default value is ``false``.
+     - Flag used to enable sink default values for ``add_namespaces`` and ``remove_namespaces``. If not specified in the service metadata then the default value is ``false``.
      - Service metadata default
      -
 

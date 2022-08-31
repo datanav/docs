@@ -35,6 +35,23 @@ See examples below.
      - company_name
      - visma-company:company_name
 
+Example of a Sesam entity with namespaces:
+
+.. code-block:: json
+
+  {
+    "_id": "user:123",
+    "user:username": "erica",
+    "user:first_name": "Erica",
+    "user:manager": "~:user:101"
+  }
+
+Not that in the entity example above, the ``_id`` property do not retain a namespace, but the value does. This is an exception as the ``_id`` is the property Sesam uses as a unique identifier. 
+
+  .. important::
+
+   Namespaces are not to be confused with :ref:`namespaced identifiers <ni_dtl_function>`. A namespaced identifier, as seen as the value for ``"user:manager"`` in the example above, is the result of an internal Sesam transformation needed for the :ref:` integrated search <integrated-search>`concept.  
+
 .. _whatis-global:
 
 Global

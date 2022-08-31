@@ -211,33 +211,6 @@ Properties
      -
 
 .. _pipe_metadata:
-.. _pipe_metadata_durable:
-
-Metadata
---------
-
-Pipe metadata can be used to annotate a pipe in various user-defined ways. Some keys (documented below) are
-reserved for internal use, but otherwise the users are free to add their own metadata settings.
-
-Properties
-^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10
-
-   * - Property
-     - Type
-     - Description
-     - Default
-
-   * - ``metadata.durable``
-     - Boolean
-     - When set to true, this pipe will store its state and data on a high-durability disk. This makes the pipe more
-       resilient to data-loss, but will also incur an additional cost, see :ref:`Durable Data <durable-data>`
-       for more details.
-     - ``false``
-
 
 Example configuration
 ---------------------
@@ -286,7 +259,10 @@ The following are available features that can be activate and/or changed on any 
      - :ref:`Automatic reprocessing <automatic-reprocessing>` automatically resets a pipe when it is out of sync with its input data.
 
    * - ``Completeness``
-     - :ref:`Completeness <automatic-reprocessing>` lets pipes hold of processing of data until upstream dependencies are processed.
+     - :ref:`Completeness <completeness-feature>` lets pipes hold of processing of data until upstream dependencies are processed.
 
    * - ``Namespaces``
      - :ref:`Namespaces <namespaces-feature>` allows tracking of property origins in Sesam.
+
+   * - ``Durable data``
+     - :ref:`Durable data <durable-data>` allows additional data storage to minimize likelihood of dataloss.
