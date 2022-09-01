@@ -1,27 +1,6 @@
 Bytes
 =====
 
-.. _bytes_dtl_function:
-
-``bytes``
----------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
-       |
-     - | ``["bytes", "abc"]``
-       |
-       | Returns one bytes object: ``~bYWJj``.
-
 .. _is_bytes_dtl_function:
 
 ``is-bytes``
@@ -60,6 +39,27 @@ Bytes
        |
        | Returns false.
        |
+
+.. _bytes_dtl_function:
+
+``bytes``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input string values to bytes using ``utf-8`` encoding.
+       |
+     - | ``["bytes", "abc"]``
+       |
+       | Returns one bytes object: ``~bYWJj``.
 
 .. _base64_encode_dtl_function:
 
