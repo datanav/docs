@@ -9,7 +9,7 @@ The Subscription Fee for the Services are set
 depending on the computing power, data volume, selected monitoring
 functionality and SLA-level.
 
-Fees for standard services are set out in Euro, and are calculated into
+Fees for standard services are set out in U.S. Dollar, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
@@ -20,7 +20,7 @@ If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
 will be billed with 5 quantities of Multi computes.
 
-The fees for the Services are set out below in Euro exclusive of VAT:
+The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
 
 .. _pricing-developer:
 
@@ -38,9 +38,9 @@ by using the :doc:`Sesam Client <sesam-client>`.
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - €50.00
+     - $55.00
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - €250.00
+     - $275.00
 
 .. _pricing-production:
 
@@ -54,9 +54,9 @@ Production and test environment
    * - Compute
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - €900.00
+     - $1000.00
    * - Multi compute - 16 Engines < 1 TB Data
-     - €3,300.00
+     - $3,500.00
 
 .. list-table:: Data prices [#]_
    :widths: 70 30
@@ -65,11 +65,11 @@ Production and test environment
    * - Data
      - Pr GB
    * - Storage
-     - €14.00
+     - $15.00
    * - VPN
-     - €2.00
+     - $2.00
    * - Metrics and monitoring
-     - €4.00
+     - $4.00
 
 .. list-table:: SLA [#]_
    :widths: 70 30
@@ -78,11 +78,11 @@ Production and test environment
    * - Support - Response time
      - Pr GB
    * - Standard - 8h
-     - €15.00
+     - $15.00
    * - Enterprise - 1h
-     - €30.00
+     - $30.00
    * - Premium 0,5h x 24/7 [#]_
-     - €100.00
+     - $100.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
