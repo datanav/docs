@@ -84,6 +84,19 @@ Production and test environment
    * - Premium 0,5h x 24/7 [#]_
      - $100.00
 
+.. list-table:: Data Access Portal
+   :widths: 70 30
+   :header-rows: 1
+
+   * - :doc:`Data Access Portal <gdpr-platform>`
+     - Pr GB
+   * - Basic < 1 request per second
+     - $50.00
+   * - Standard < 5 requests per second
+     - $100.00
+   * - Enterprise < 10 requests per second
+     - $200.00
+
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
 .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
@@ -138,4 +151,17 @@ The following items are no longer available for new subscriptions:
    * - Monitoring
      - Pr pipe
    * - Enterprise - Notifications
-     - $25
+     - $25.00
+
+.. list-table:: GDPR Data Access Portal
+   :widths: 70 30
+   :header-rows: 1
+
+   * - :doc:`GDPR Data Access Portal <gdpr-platform>`
+     - Pr GB
+   * - Basic < 1 request per second
+     - $50.00
+   * - Standard < 5 requests per second
+     - $100.00
+   * - Enterprise < 10 requests per second
+     - $200.00
