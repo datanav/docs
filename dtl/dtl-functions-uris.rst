@@ -1,33 +1,6 @@
 URIs
 ====
 
-.. _uri_dtl_function:
-
-``uri``
--------
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates input values to URIs. Only strings in VALUES will be
-         cast to URIs. Note that *no* URI escaping is done on the strings.
-     - | ``["uri", "http://www.example.org/"]``
-       |
-       | Returns one URI.
-       |
-       | ``["uri",``
-       |    ``["list", "http://www.example.org/",``
-       |       ``"http://www.sesam.io/", 12345]]``
-       |
-       | Returns a list of two URIs. The number is silently ignored because
-         it is not a string.
-
 .. _is_uri_dtl_function:
 
 ``is-uri``
@@ -60,6 +33,33 @@ URIs
        | ``["is-uri", ["list", 1, ["uri", "foo:bar"]]]``
        |
        | Returns ``false``.
+
+.. _uri_dtl_function:
+
+``uri``
+-------
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates input values to URIs. Only strings in VALUES will be
+         cast to URIs. Note that *no* URI escaping is done on the strings.
+     - | ``["uri", "http://www.example.org/"]``
+       |
+       | Returns one URI.
+       |
+       | ``["uri",``
+       |    ``["list", "http://www.example.org/",``
+       |       ``"http://www.sesam.io/", 12345]]``
+       |
+       | Returns a list of two URIs. The number is silently ignored because
+         it is not a string.
 
 .. _url_quote_dtl_function:
 

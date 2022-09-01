@@ -1,6 +1,40 @@
 Namespaced identifiers
 ======================
 
+.. _is_ni_dtl_function:
+
+``is-ni``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a namespaced
+         identifier literal, or if it is a list, that the first element
+         in the list is a namespaced identifier.
+     - | ``["is-ni", ["ni", "foo:bar"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", "foo:bar"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-ni", ["list", ["ni", "foo:bar"], 12345]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-ni", ["list", 1, ["ni", "foo:bar"]]]``
+       |
+       | Returns ``false``.
+
 .. _ni_dtl_function:
 
 ``ni``
@@ -59,40 +93,6 @@ Namespaced identifiers
          namespaces in your pipe they'll be assigned unique namespace ids. If the URI prefix
          had already been mapped to the ``unknown`` namespace then the expression would have
          returned ``"~:unknown:baz"``.
-
-.. _is_ni_dtl_function:
-
-``is-ni``
----------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a namespaced
-         identifier literal, or if it is a list, that the first element
-         in the list is a namespaced identifier.
-     - | ``["is-ni", ["ni", "foo:bar"]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-ni", "foo:bar"]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-ni", ["list", ["ni", "foo:bar"], 12345]]``
-       |
-       | Returns ``true``.
-       |
-       | ``["is-ni", ["list", 1, ["ni", "foo:bar"]]]``
-       |
-       | Returns ``false``.
 
 .. _ni_ns_dtl_function:
 

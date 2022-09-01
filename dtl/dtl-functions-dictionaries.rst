@@ -1,10 +1,10 @@
 Dictionaries
 ============
 
-.. _items_dtl_function:
+.. _is_dict_dtl_function:
 
-``items``
----------
+``is-dict``
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -14,20 +14,26 @@ Dictionaries
      - Examples
 
    * - | *Arguments:*
-       |   DICTS(value-expression{1})
+       |   VALUES(value-expression{1})
        |
-       | Takes a list of dictionaries in and outputs a list of key+value tuples.
-         For each key+value pair in the dictionaries one pair is added to the output
-         list. Non-dictionary values are ignored. Note that entities are dictionaries,
-         so you can use this function with them.
-     - | ``["items",``
-       |     ``["list", {"A": 1, "B": 2}, {"C": 3}]]``
+       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
+       | in the list is a dictionary
        |
-       | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
+     - | ``["is-dict", "_S."]``
        |
-       | ``["items", ["list", "X", 123, {"A": 1}]]``
+       | Returns true.
        |
-       | Returns ``[["A", 1]]``.
+       | ``["is-dict", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", 123, {"a": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["is-dict", "abc"]``
+       |
+       | Returns false
 
 .. _dict_dtl_function:
 
@@ -74,10 +80,10 @@ Dictionaries
        |
        | Returns ``{"a": "A", "b": "B"}``.
 
-.. _is_dict_dtl_function:
+.. _items_dtl_function:
 
-``is-dict``
------------
+``items``
+---------
 
 .. list-table::
    :header-rows: 1
@@ -87,26 +93,20 @@ Dictionaries
      - Examples
 
    * - | *Arguments:*
-       |   VALUES(value-expression{1})
+       |   DICTS(value-expression{1})
        |
-       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
-       | in the list is a dictionary
+       | Takes a list of dictionaries in and outputs a list of key+value tuples.
+         For each key+value pair in the dictionaries one pair is added to the output
+         list. Non-dictionary values are ignored. Note that entities are dictionaries,
+         so you can use this function with them.
+     - | ``["items",``
+       |     ``["list", {"A": 1, "B": 2}, {"C": 3}]]``
        |
-     - | ``["is-dict", "_S."]``
+       | Returns ``[["A", 1], ["B", 2], ["C", 3]]``.
        |
-       | Returns true.
+       | ``["items", ["list", "X", 123, {"A": 1}]]``
        |
-       | ``["is-dict", ["list", {"a": 1}, 123]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", 123, {"a": 1}]``
-       |
-       | Returns false.
-       |
-       | ``["is-dict", "abc"]``
-       |
-       | Returns false
+       | Returns ``[["A", 1]]``.
 
 .. _keys_dtl_function:
 

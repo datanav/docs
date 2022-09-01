@@ -1,6 +1,45 @@
 UUIDs
 =====
 
+.. _is_uuid_dtl_function:
+
+``is-uuid``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a UUID literal or value or if
+         it is a list, that the first element in the list is a UUID type value or literal
+       |
+     - | ``["is-uuid", ["uuid"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", "some-string"]``
+       |
+       | Returns false.
+       |
+       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
+       |
+       | Returns false.
+       |
+
 .. _uuid_dtl_function:
 
 ``uuid``
@@ -44,42 +83,3 @@ UUIDs
           *Use this function with care and make sure
           that you are aware of the consequences of reprocessing
           entities.*
-
-.. _is_uuid_dtl_function:
-
-``is-uuid``
------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a UUID literal or value or if
-         it is a list, that the first element in the list is a UUID type value or literal
-       |
-     - | ``["is-uuid", ["uuid"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", "~u9f598f65-eea5-4906-a8f5-82f6d8e69726"]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", "some-string"]``
-       |
-       | Returns false.
-       |
-       | ``["is-uuid", ["list", ["uuid"], "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-uuid", ["list", "12345", ["uuid"]]]]``
-       |
-       | Returns false.
-       |

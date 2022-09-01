@@ -94,6 +94,42 @@ Misc
        | Returns ``[[79267961763742113019008347020647561319,``
        |           ``114697464648834432121201791580882983835]]``.
 
+.. _is_changed_dtl_function:
+
+``is-changed``
+--------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   FUNCTION(function-expression{1}),
+       |
+       | Returns true if the results of evaluating the FUNCTION expression on the current
+         version and the previous version of the source entity are different.
+       |
+       | If the previous version does not exist then the ``is-changed``
+       | function returns ``null``. This means that we don't know if it has changed.
+       |
+       | If either the current or the previous version of the entity
+       | has ``_deleted`` set to ``true`` then the ``is-changed``
+       | function returns ``true``.
+     - | ``["is-changed", "_.name"]``
+       |
+       | Returns true if the source entity's ``name`` property changed.
+       |
+       | ``["is-changed", ["list", "_.height", "_.width"]]``
+       |
+       | Returns true if the source entity's ``height`` or ``width`` properties changed.
+       |
+       | ``["is-changed", ["-", "_.end", "_.start"]]``
+       |
+       | Returns true if the source entity's distance between ``start`` and ``end`` changed.
+
 .. _fail_dtl_function:
 
 ``fail!``

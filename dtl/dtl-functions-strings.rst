@@ -1,6 +1,41 @@
 Strings
 =======
 
+.. _is_string_dtl_function:
+
+``is-string``
+-------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a string literal or if
+         it is a list, that the first element
+       | in the list is a string
+       |
+     - | ``["is-string", "foo:bar"]``
+       |
+       | Returns true.
+       |
+       | ``["is-string", 1]``
+       |
+       | Returns false.
+       |
+       | ``["is-string", ["list", "foo:bar", 12345]]``
+       |
+       | Returns true
+       |
+       | ``["is-string", ["list", 1, "foo:bar"]]``
+       |
+       | Returns false
+
 .. _string_dtl_function:
 
 ``string``
@@ -43,41 +78,6 @@ Strings
        |
        | ``["abc", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.example.org/", "124.4", "12345"]``.
-
-.. _is_string_dtl_function:
-
-``is-string``
--------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a string literal or if
-         it is a list, that the first element
-       | in the list is a string
-       |
-     - | ``["is-string", "foo:bar"]``
-       |
-       | Returns true.
-       |
-       | ``["is-string", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-string", ["list", "foo:bar", 12345]]``
-       |
-       | Returns true
-       |
-       | ``["is-string", ["list", 1, "foo:bar"]]``
-       |
-       | Returns false
 
 .. _upper_dtl_function:
 
