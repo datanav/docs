@@ -54,7 +54,7 @@ Production and test environment
    * - Compute
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - $1000.00
+     - $1,000.00
    * - Multi compute - 16 Engines < 1 TB Data
      - $3,500.00
 
@@ -116,3 +116,39 @@ If, after the signature of the Agreement, changes in public taxes,
 charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
+
+5. Legacy prices
+================
+
+The following items are no longer available for new subscriptions:
+
+.. list-table:: Legacy runtime environments
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Compute
+     - Pr environment
+   * - Large compute - 8 Engines < 750 GB Data
+     - $2,000.00
+
+.. list-table:: Legacy Pipe monitoring
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Monitoring
+     - Pr pipe
+   * - Enterprise - Notifications
+     - $25.00
+
+.. list-table:: GDPR Data Access Portal
+   :widths: 70 30
+   :header-rows: 1
+
+   * - :doc:`GDPR Data Access Portal <gdpr-platform>`
+     - Pr GB
+   * - Basic < 1 request per second
+     - $50.00
+   * - Standard < 5 requests per second
+     - $100.00
+   * - Enterprise < 10 requests per second
+     - $200.00
