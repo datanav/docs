@@ -20,13 +20,6 @@ If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
 will be billed with 5 quantities of Multi computes.
 
-.. note::
-
-  :ref:`Integrated search <integrated-search>` will increase the data consumption of global pipes by 2x.
-  :ref:`Durable data <durable-data>` will increase the data consumption of durable pipes by 3x. 
-  
-  In cases where integrated search is enabled and global pipes are durable, the data consumption of those global pipes will only increase by 5x.
-
 The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
 
 .. _pricing-developer:
