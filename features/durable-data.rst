@@ -23,3 +23,8 @@ Properties
        resilient to data-loss, but will also incur an additional cost, see :ref:`Durable Data <durable-data>`
        for more details.
      - ``false``
+
+Pricing
+-------
+
+Durable data is a paid feature. Activating it will increase the data consumption of durable pipes by 3x.
