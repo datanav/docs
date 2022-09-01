@@ -129,7 +129,7 @@ The following items are no longer available for new subscriptions:
    * - Compute
      - Pr environment
    * - Large compute - 8 Engines < 750 GB Data
-     - $3,000.00
+     - $2,000.00
 
 .. list-table:: Legacy Pipe monitoring
    :widths: 70 30
