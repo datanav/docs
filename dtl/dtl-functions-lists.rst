@@ -66,6 +66,50 @@ Lists
        |
        | Returns true.
 
+.. _is_empty_dtl_function:
+
+``is-empty``
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* value-expression{1}
+       |
+       | Coerces the values returned from the value expressions into
+         list. Returns *true* if the number of elements in the first
+         argument is 0.
+     - | ``["is-empty", "_S.hobbies"]``
+       |
+       | Returns true if the source entity's ``hobbies`` field is
+         empty (has no values).
+
+.. _is_not_empty_dtl_function:
+
+``is-not-empty``
+----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* value-expression{1}
+       |
+       | Coerces the values returned from the value expressions into
+         list. Returns *true* if the number of elements in the first
+         argument is greater than 0.
+     - | ``["is-not-empty", "_S.hobbies"]``
+       |
+       | Returns true if the source entity's ``hobbies`` field is not
+         empty (has one or more values).
+
 .. _first_dtl_function:
 
 ``first``

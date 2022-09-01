@@ -139,10 +139,7 @@ DTL Expression Functions
        :ref:`gt <gt_dtl_function>` ·
        :ref:`gte <gte_dtl_function>` ·
        :ref:`lt <lt_dtl_function>` ·
-       :ref:`lte <lte_dtl_function>` ·
-       :ref:`is-empty <is_empty_dtl_function>` ·
-       :ref:`is-not-empty <is_not_empty_dtl_function>` ·
-       :ref:`is-changed <is_changed_dtl_function>`
+       :ref:`lte <lte_dtl_function>`
 
    * - Conditionals
      - :ref:`if <if_dtl_function>` ·
@@ -192,6 +189,8 @@ DTL Expression Functions
    * - Lists
      - :ref:`list <list_dtl_function>` ·
        :ref:`is-list <is_list_dtl_function>` ·
+       :ref:`is-empty <is_empty_dtl_function>` ·
+       :ref:`is-not-empty <is_not_empty_dtl_function>` ·
        :ref:`first <first_dtl_function>` ·
        :ref:`last <last_dtl_function>` ·
        :ref:`in <in_dtl_function>` ·
@@ -240,8 +239,9 @@ DTL Expression Functions
 
    * - Misc
      - :ref:`literal <literal_dtl_function>` .
-       :ref:`hash128 <hash128_dtl_function>` .
        :ref:`tuples <tuples_dtl_function>` .
+       :ref:`hash128 <hash128_dtl_function>` ·
+       :ref:`is-changed <is_changed_dtl_function>` .
        :ref:`fail! <fail_dtl_function>`
 
    * - Namespaced identifiers
