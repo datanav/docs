@@ -1,6 +1,44 @@
 Numbers
 =======
 
+.. _is_integer_dtl_function:
+
+``is-integer``
+--------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is an integer literal or
+         if it is a list, that the first element in the list is an integer
+       |
+     - | ``["is-integer", 1]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", "1"]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", 1, "12345"]]``
+       |
+       | Returns ``true``.
+       |
+       | ``["is-integer", ["list", "1", 2]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", ["integer", "1"], 2]]``
+       |
+       | Returns ``true``.
+
 .. _integer_dtl_function:
 
 ``integer``
@@ -62,9 +100,9 @@ Numbers
        | Returns one integer: -1.
        |
 
-.. _is_integer_dtl_function:
+.. _is_decimal_dtl_function:
 
-``is-integer``
+``is-decimal``
 --------------
 
 .. list-table::
@@ -77,28 +115,32 @@ Numbers
    * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is an integer literal or
-         if it is a list, that the first element in the list is an integer
+       | Boolean function that returns true if value is a decimal literal or
+         if it is a list, that the first element in the list is a decimal
        |
-     - | ``["is-integer", 1]``
+     - | ``["is-decimal", 1.0]``
        |
-       | Returns ``true``.
+       | Returns false (it is a float literal).
        |
-       | ``["is-integer", "1"]``
+       | ``["is-decimal", ["decimal", "1.23"]]``
        |
-       | Returns ``false``.
+       | Returns true.
        |
-       | ``["is-integer", ["list", 1, "12345"]]``
+       | ``["is-decimal", 1]``
        |
-       | Returns ``true``.
+       | Returns false.
        |
-       | ``["is-integer", ["list", "1", 2]]``
+       | ``["is-decimal", ["list", 1.0, "12345"]]``
        |
-       | Returns ``false``.
+       | Returns false.
        |
-       | ``["is-integer", ["list", ["integer", "1"], 2]]``
+       | ``["is-decimal", ["list", "1.0", 2.0]]``
        |
-       | Returns ``true``.
+       | Returns false.
+       |
+       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
+       |
+       | Returns true.
 
 .. _decimal_dtl_function:
 
@@ -151,10 +193,10 @@ Numbers
        | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
          is replaced with its string cast.
 
-.. _is_decimal_dtl_function:
+.. _is_float_dtl_function:
 
-``is-decimal``
---------------
+``is-float``
+------------
 
 .. list-table::
    :header-rows: 1
@@ -166,32 +208,32 @@ Numbers
    * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is a decimal literal or
-         if it is a list, that the first element in the list is a decimal
+       | Boolean function that returns true if value is a float literal or
+         if it is a list, that the first element in the list is a float value
        |
-     - | ``["is-decimal", 1.0]``
-       |
-       | Returns false (it is a float literal).
-       |
-       | ``["is-decimal", ["decimal", "1.23"]]``
+     - | ``["is-float", 1.0]``
        |
        | Returns true.
        |
-       | ``["is-decimal", 1]``
+       | ``["is-float", ["decimal", "1.23"]]``
+       |
+       | Returns false (it is a decimal literal).
+       |
+       | ``["is-float", 1]``
        |
        | Returns false.
        |
-       | ``["is-decimal", ["list", 1.0, "12345"]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", "1.0", 2.0]]``
-       |
-       | Returns false.
-       |
-       | ``["is-decimal", ["list", ["decimal", "-1.0"], 1234]]``
+       | ``["is-float", ["list", 1.0, "12345"]]``
        |
        | Returns true.
+       |
+       | ``["is-float", ["list", "1.0", 2.0]]``
+       |
+       | Returns false.
+       |
+       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
+       |
+       | Returns false.
 
 .. _float_dtl_function:
 
@@ -244,48 +286,6 @@ Numbers
        |
        | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
          is replaced with its string cast.
-
-.. _is_float_dtl_function:
-
-``is-float``
-------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a float literal or
-         if it is a list, that the first element in the list is a float value
-       |
-     - | ``["is-float", 1.0]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", ["decimal", "1.23"]]``
-       |
-       | Returns false (it is a decimal literal).
-       |
-       | ``["is-float", 1]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", 1.0, "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-float", ["list", "1.0", 2.0]]``
-       |
-       | Returns false.
-       |
-       | ``["is-float", ["list", ["decimal", "-1.0"], 123.4]]``
-       |
-       | Returns false.
 
 .. _hex_dtl_function:
 

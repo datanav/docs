@@ -124,12 +124,12 @@ DTL Expression Functions
        :ref:`any <any_dtl_function>`
 
    * - Booleans
-     - :ref:`boolean <boolean_dtl_function>` ·
-       :ref:`is-boolean <is_boolean_dtl_function>`
+     - :ref:`is-boolean <is_boolean_dtl_function>`  ·
+       :ref:`boolean <boolean_dtl_function>`
 
    * - Bytes
-     - :ref:`bytes <bytes_dtl_function>` ·
-       :ref:`is-bytes <is_bytes_dtl_function>` ·
+     - :ref:`is-bytes <is_bytes_dtl_function>` ·
+       :ref:`bytes <bytes_dtl_function>` ·
        :ref:`base64-encode <base64_encode_dtl_function>` ·
        :ref:`base64-decode <base64_decode_dtl_function>`
 
@@ -144,21 +144,17 @@ DTL Expression Functions
    * - Conditionals
      - :ref:`if <if_dtl_function>` ·
        :ref:`case-eq <case_eq_dtl_function>` ·
-       :ref:`case <case_dtl_function>` ·
-       :ref:`is-null <is_null_dtl_function>` ·
-       :ref:`is-not-null <is_not_null_dtl_function>` ·
-       :ref:`if-null <if_null_dtl_function>` ·
-       :ref:`coalesce <coalesce_dtl_function>`
+       :ref:`case <case_dtl_function>`
 
    * - Date and time
-     - :ref:`now <now_dtl_function>` ·
+     - :ref:`is-datetime <is_datetime_dtl_function>` ·
        :ref:`datetime <datetime_dtl_function>` ·
+       :ref:`now <now_dtl_function>` ·
        :ref:`datetime-parse <datetime_parse_dtl_function>` ·
        :ref:`datetime-format <datetime_format_dtl_function>` ·
        :ref:`datetime-plus <datetime_plus_dtl_function>` ·
        :ref:`datetime-diff <datetime_diff_dtl_function>` ·
-       :ref:`datetime-shift <datetime_shift_dtl_function>` ·
-       :ref:`is-datetime <is_datetime_dtl_function>`
+       :ref:`datetime-shift <datetime_shift_dtl_function>`
 
    * - Dictionaries
      - :ref:`items <items_dtl_function>` ·
@@ -187,8 +183,8 @@ DTL Expression Functions
        :ref:`json-transit-parse <json_transit_parse_dtl_function>`
 
    * - Lists
-     - :ref:`list <list_dtl_function>` ·
-       :ref:`is-list <is_list_dtl_function>` ·
+     - :ref:`is-list <is_list_dtl_function>` ·
+       :ref:`list <list_dtl_function>` ·
        :ref:`is-empty <is_empty_dtl_function>` ·
        :ref:`is-not-empty <is_not_empty_dtl_function>` ·
        :ref:`first <first_dtl_function>` ·
@@ -245,8 +241,8 @@ DTL Expression Functions
        :ref:`fail! <fail_dtl_function>`
 
    * - Namespaced identifiers
-     - :ref:`ni <ni_dtl_function>` ·
-       :ref:`is-ni <is_ni_dtl_function>` ·
+     - :ref:`is-ni <is_ni_dtl_function>` ·
+       :ref:`ni <ni_dtl_function>` ·
        :ref:`ni-ns <ni_ns_dtl_function>` ·
        :ref:`ni-id <ni_id_dtl_function>` ·
        :ref:`ni-collapse <ni_collapse_dtl_function>` ·
@@ -256,13 +252,19 @@ DTL Expression Functions
      - :ref:`apply <apply_dtl_function>` ·
        :ref:`apply-hops <apply_hops_dtl_function>`
 
+   * - Nulls
+     - :ref:`is-null <is_null_dtl_function>` ·
+       :ref:`is-not-null <is_not_null_dtl_function>` ·
+       :ref:`if-null <if_null_dtl_function>` ·
+       :ref:`coalesce <coalesce_dtl_function>`
+
    * - Numbers
-     - :ref:`integer <integer_dtl_function>` ·
-       :ref:`is-integer <is_integer_dtl_function>` ·
-       :ref:`decimal <decimal_dtl_function>` ·
+     - :ref:`is-integer <is_integer_dtl_function>` ·
+       :ref:`integer <integer_dtl_function>` ·
        :ref:`is-decimal <is_decimal_dtl_function>` ·
-       :ref:`float <float_dtl_function>` ·
+       :ref:`decimal <decimal_dtl_function>` ·
        :ref:`is-float <is_float_dtl_function>` ·
+       :ref:`float <float_dtl_function>` ·
        :ref:`hex <hex_dtl_function>`
 
    * - Paths
@@ -275,8 +277,8 @@ DTL Expression Functions
        :ref:`difference <difference_dtl_function>`
 
    * - Strings
-     - :ref:`string <string_dtl_function>` ·
-       :ref:`is-string <is_string_dtl_function>` ·
+     - :ref:`is-string <is_string_dtl_function>` ·
+       :ref:`string <string_dtl_function>` ·
        :ref:`upper <upper_dtl_function>` ·
        :ref:`lower <lower_dtl_function>` ·
        :ref:`length <length_dtl_function>` ·
@@ -293,14 +295,14 @@ DTL Expression Functions
        :ref:`matches <matches_dtl_function>`
 
    * - URIs
-     - :ref:`uri <uri_dtl_function>` ·
-       :ref:`is-uri <is_uri_dtl_function>` ·
+     - :ref:`is-uri <is_uri_dtl_function>` ·
+       :ref:`uri <uri_dtl_function>` ·
        :ref:`url-quote <url_quote_dtl_function>` ·
        :ref:`url-unquote <url_unquote_dtl_function>`
 
    * - UUIDs
-     - :ref:`uuid <uuid_dtl_function>` ·
-       :ref:`is-uuid <is_uuid_dtl_function>`
+     - :ref:`is-uuid <is_uuid_dtl_function>` ·
+       :ref:`uuid <uuid_dtl_function>`
 
 Entity model
 ============

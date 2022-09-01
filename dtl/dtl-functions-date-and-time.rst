@@ -5,10 +5,10 @@ A general note on timezone conversion functions: Sesam relies on tabulated histo
 saving information for the various timezones. This data gets corrected or supplemented from time to time which means
 that the result of an explicit or implicit timezone conversion operation can change over time.
 
-.. _now_dtl_function:
+.. _is_datetime_dtl_function:
 
-``now``
--------
+``is-datetime``
+---------------
 
 .. list-table::
    :header-rows: 1
@@ -18,27 +18,27 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - Examples
 
    * - | *Arguments:*
-       |   NONE(value-expression{0})
+       |   VALUES(value-expression{1})
        |
-       | Returns the current time as a datetime value.
+       | Boolean function that returns true if value is a datetime value or
+         if it is a list, that the first element in the list is a datetime value.
        |
-     - | ``["now"]``
+     - | ``["is-datetime", ["now"]]``
        |
-       | Returns the current time as a datetime value, e.g.
-         "~t2016-05-13T14:32:00.431Z".
-
-       .. WARNING::
-
-          This function is non-deterministic and will return a
-          different value every time it is evaluated. Be aware that if
-          the pipe is rewound or reset then it will produce a
-          different output. Dependency tracking will also have a
-          similar effect as to produce a different value when entities
-          are reprocessed.
-
-          *Use this function with care and make sure
-          that you are aware of the consequences of reprocessing
-          entities.*
+       | Returns true.
+       |
+       | ``["is-datetime",``
+       |   ``["datetime", "2015-07-28T09:46:00.12345Z"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
+       |
+       | Returns false.
+       |
+       | ``["is-datetime", ["list", "1", 2]]``
+       |
+       | Returns false.
 
 .. _datetime_dtl_function:
 
@@ -81,6 +81,41 @@ that the result of an explicit or implicit timezone conversion operation can cha
        | Returns the current time as a datetime value, e.g.
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
+
+.. _now_dtl_function:
+
+``now``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   NONE(value-expression{0})
+       |
+       | Returns the current time as a datetime value.
+       |
+     - | ``["now"]``
+       |
+       | Returns the current time as a datetime value, e.g.
+         "~t2016-05-13T14:32:00.431Z".
+
+       .. WARNING::
+
+          This function is non-deterministic and will return a
+          different value every time it is evaluated. Be aware that if
+          the pipe is rewound or reset then it will produce a
+          different output. Dependency tracking will also have a
+          similar effect as to produce a different value when entities
+          are reprocessed.
+
+          *Use this function with care and make sure
+          that you are aware of the consequences of reprocessing
+          entities.*
 
 .. _datetime_parse_dtl_function:
 
@@ -374,38 +409,3 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
        |                               ``"~t2015-07-28T02:46:00Z"]``.
-
-.. _is_datetime_dtl_function:
-
-``is-datetime``
----------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a datetime value or
-         if it is a list, that the first element in the list is a datetime value.
-       |
-     - | ``["is-datetime", ["now"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-datetime",``
-       |   ``["datetime", "2015-07-28T09:46:00.12345Z"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
-       |
-       | Returns false.
-       |
-       | ``["is-datetime", ["list", "1", 2]]``
-       |
-       | Returns false.

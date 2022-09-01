@@ -1,34 +1,6 @@
 Lists
 =====
 
-.. _list_dtl_function:
-
-``list``
---------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{>=0})
-       |
-       | Constructs a list of the values in VALUES.
-     - | ``["list"]``
-       |
-       | Returns ``[]``.
-       |
-       | ``["list", "a", "b", "c"]``
-       |
-       | Returns ``["a", "b", "c"]``.
-       |
-       | ``["list", "a", ["list", "b"], "c"]``
-       |
-       | Returns ``["a", ["b"], "c"]``.
-
 .. _is_list_dtl_function:
 
 ``is-list``
@@ -65,6 +37,34 @@ Lists
        | ``["is-list", ["items", ["dict", "1", 2]]]``
        |
        | Returns true.
+
+.. _list_dtl_function:
+
+``list``
+--------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{>=0})
+       |
+       | Constructs a list of the values in VALUES.
+     - | ``["list"]``
+       |
+       | Returns ``[]``.
+       |
+       | ``["list", "a", "b", "c"]``
+       |
+       | Returns ``["a", "b", "c"]``.
+       |
+       | ``["list", "a", ["list", "b"], "c"]``
+       |
+       | Returns ``["a", ["b"], "c"]``.
 
 .. _is_empty_dtl_function:
 
