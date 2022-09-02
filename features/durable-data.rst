@@ -31,7 +31,7 @@ After a disaster recovery Sesam will go back to the last backup and rebuild it�
 
 How to enable
 -------------
-Durable data can be enabled on a pipe by setting the pipe’s metadata.durable property to true.
+Durable data can be enabled on a pipe by setting the pipe’s metadata.durable property to true. See the example bellow:
 
 .. code-block:: json
   :emphasize-lines: 18,19
