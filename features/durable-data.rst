@@ -21,9 +21,9 @@ After a disaster recovery Sesam will go back to the last backup and rebuild itâ€
 
 .. important::
 
-  We suggest you enable durable pipes if:
+  We suggest you enable durable data in the following cases:
 
-  #. You are pushing data to sesam. 
+  #. If you are pushing data to sesam
   #. All inbound pipes that are pushed too should have durable data turned on to mitigate the risk of data loss
   #. Non-idompotent endpoint
   #. Endpoint pipes and share pipes writing data to the endpoints must both have durable data enabled
