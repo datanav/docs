@@ -53,7 +53,7 @@ Durable data can be enabled on a pipe by setting the pipe’s metadata.durable p
           ]
         }
       },
-    "metadata": {
+      "metadata": {
         "durable": true
       },
       "add_namespaces": false,
