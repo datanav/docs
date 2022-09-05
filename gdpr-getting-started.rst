@@ -3,25 +3,17 @@ Getting started with Sesam's GDPR Platform
 ==========================================
 
 Introduction
-============
+------------
 
 With Sesam's GDPR Platform you can handle your company's GDPR responsibilities. This guide will show you how to set up processing of incoming data requests from the company's data subjects.
 
 Setup
-============
+-----
 
 1. Go to `http://portal.sesam.io <http://portal.sesam.io/>`_ and click on sign up.
-2. Once you have signed up click on ``New GDPR portal``.
-3. Fill in your contact and payment information.
-4. You will then see your GDPR portal on the dashboard. From here you can add members to your site and administrate your subscription as shown in the picture below. 
+2. Once you have signed up, `contact support <mailto:support@sesam.io>`_ to create your GDPR subscription.
 
-.. image:: images/gdpr-getting-started/gdpr-node.png
-    :width: 800px
-    :align: center
-    :alt: GDPR node in portal dasboard
-
-
-5. When inside settings, set ``name`` of your GDPR portal and add a ``description`` that will be seen by the data subject. 
+3. Once you have acces to the GDPR portal, navigate to settings to set ``name`` of your GDPR portal and add a ``description`` that will be seen by the data subject. 
 
 .. image:: images/gdpr-getting-started/name-and-description.png
     :width: 800px
@@ -29,7 +21,7 @@ Setup
     :alt: Name and description of node settings
 
 
-6. Select ``GDPR`` in the left column navigator and in the ``Setup`` pane fill in your ``domain name``.
+4. Select ``GDPR`` in the left column navigator and in the ``Setup`` pane fill in your ``domain name``.
 
 .. image:: images/gdpr-getting-started/setup.png
     :width: 800px
@@ -38,7 +30,7 @@ Setup
 
 The domain name is the internet address (DNS) where your GDPR data access portal should be available to the data subjects. You can choose any name you want, as long as it's not already in use by someone else. Your GDPR data access portal will then be available on the web (e.g. ``https://your-selected-name.sesamdata.com``).
 
-7. You can customize you portal by uploading your own logo and selecting colors further down the page.
+5. You can customize you portal by uploading your own logo and selecting colors further down the page.
 
 Purposes
 ^^^^^^^^
@@ -77,23 +69,6 @@ The data related to the data subject can then be displayed like this when a data
 
 Your GDPR portal is now ready for use.
 
-Excel-template alternative
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Alternatively you can choose to upload the purposes and data types from an Excel-sheet. The sheet will have to contain the same info as you would input through the Sesam portal user interface.
-
-1. Download the :download:`GDPR Excel setup template file <files/GDPR setup data.xlsx>`. 
-
-2. Fill in the Excel template. There are examples in it for you to follow. Please note that there are three sheets in the file. Remember to fill in the contact information for the person responsible for the data in each system.
-
-.. image:: images/gdpr-getting-started/excel-data-type-example.png
-    :width: 800px
-    :align: center
-    :alt: Excel template with examples
-
-3. Navigate to ``GDPR`` in the left column and then to ``Setup``. 
-
-4. Upload the GDPR setup data Excel file in the ``Upload data type template`` section after you have filled in the necessary information. 
 
 Data access request
 ===================
