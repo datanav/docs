@@ -25,7 +25,7 @@ After a disaster recovery Sesam will go back to the last backup and rebuild itâ€
 
   #. If you are pushing data to sesam
   #. All inbound pipes that are pushed too should have durable data turned on to mitigate the risk of data loss
-  #. Non-idompotent endpoint
+  #. Non-idempotent endpoint
   #. Endpoint pipes and share pipes writing data to the endpoints must both have durable data enabled
   #. Endpoint pipes were duplicated data transfers could be problematic. (we recommend that all sources to be idempotent, if possible)
 
