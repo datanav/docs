@@ -86,8 +86,7 @@ a.reference.external.nav-link.button.button-support {
 	bottom: 2px;
 	position: relative;
 	font-size: 1em !important;
-	margin-top: 10px;
-}
+	}
 
 
 
@@ -446,6 +445,10 @@ button.copybtn {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    }
+    a.reference.external.nav-link.button.button-support {
+	margin-top: 10px;
+
     }
   }
 }
