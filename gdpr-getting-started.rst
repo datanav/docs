@@ -175,7 +175,7 @@ The ``TypeID`` field needs to have a value matching the ``rdf:type`` of the data
 These identifiers are what connects the data in the datasets to the data subject that is requesting their data. As you can see we have chosen ``EmailAddress`` in this example, but other attributes may be as-well or better suited for identifying data subjects. It could also be multiple identifiers separated by comma (no spaces).
 
 Excel file data type definition alternative
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If we wish to use an Excel file instead of the portal user interface to upload data types we then have to use the :download:`GDPR automated Excel setup template file <files/GDPR setup data automated.xlsx>`. In this template we need to populate the same two fields as described above.
 
@@ -184,7 +184,7 @@ Update pre-built pipe
 
 1. Open pre-built pipe ``custom-subject-data`` and update this pipe with all our input datasets. Here we add four datasets ``salesforce-contact``, ``salesforce-eventrelation``, ``salesforce-lead`` and ``salesforce-task`` as our sources. After updating the pipe it should look like this:
 
-::
+.. code-block:: json
 
 	{
 	  "_id": "custom-subject-data",
@@ -214,7 +214,7 @@ Until now we have been fetching "Personal" level data types, but now let's look 
 
 3. Add your dataset sources like shown below in pre-built pipe ``custom-subject-data``.
 
-::
+.. code-block:: json
 
 	{
 	  "_id": "custom-subject-data",
