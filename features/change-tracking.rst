@@ -9,11 +9,18 @@ Before a pipe writes an entity to a dataset, it will compare the new version of 
 
 The comparison is done by comparing the new and the old entitie's ``_hash`` values. 
 
-
 **Criteria for posting entities to sink dataset**
 
 - New ``_id`` value - The entity did not exist before 
 - Change in entity metadata - all non :ref:`reserved fields <reserved_fields>`
 - Change in entity delete status - the entity's ``_deleted`` status changes
 
-Change tracking is a built-in feature in Sesam and will always act in the background. You could however easily make a pipe reprocess all entitites in the source dataset by manually resetting the pipe, or by utilizing any of the rescan options in the pipe's :ref:`pump properties <pump_properties>`
+Each entity version written to a dataset will receive an ``_updated`` value. An entity's ``_updated`` value, unique to each dataset, is an incremental counter assigned to each entity version when they are stored in the target dataset. When a pipe's pump has sucessfully finished, the pipe will store the last (newest) entity's ``_updated`` value as the pipe's ``since`` value, thereby keeping track of the entities that have already been processed.     
+
+.. admonition::  Info:
+    
+    Change tracking is a built-in feature in Sesam and will always act in the background. You could however easily make a pipe reprocess all or some entitites in the source dataset by changing the pipe's ``since`` value in the following ways:
+
+    #. Resets can be done automatically by defining a :ref:`rescan <pump_properties>` property for the pump.
+    #. Resets can be done manually through the :ref:`reset <management-studio-pipe-menu>` function in the management studio pipe menu.
+    #. Since changes can be done manually through the :ref:`Update last seen <management-studio-pipe-menu>` function in the mamagement studio pipe meny.
