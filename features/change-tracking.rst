@@ -3,9 +3,9 @@
 Change Tracking
 ===============
 
-Inside Sesam, :doc:`entities <../entitymodel>` flows between datasets before sent to their corresponding target system. This flow of entities is controlled by :ref:`pipes <pipe_section>`, and one of the tasks of pipes in Sesam is to make sure that no unnecessary entities are processed.   
+Inside Sesam, :doc:`entities <../entitymodel>` flow between datasets before being sent to their corresponding target system. This flow of entities is controlled by :ref:`pipes <pipe_section>`, and one of the tasks of pipes in Sesam is to make sure that no unnecessary entities are processed.   
 
-Before a pipe writes an entity to a dataset, it will compare the new version of the entity the last version of that entity the pipe produced. If the two version are different, i.e. the entity has been updated, the dataset will be updated and the new entity will be placed at the front of the processing queue. This way the next pipe in line knows this entity has been updated and needs reprocessing. If the two version are identical, the sink will drop the new entity and the dataset will not be updated. This way we ensure that only data that needs reprocessing will be reprocessed.  
+Before a pipe writes an entity to a dataset, it will compare the new version of the entity to the last version of that entity the pipe produced. If the two versions are different, i.e. the entity has been updated, the dataset will be updated and the new entity will be placed at the front of the processing queue. This way the next pipe in line knows this entity has been updated and needs reprocessing. If the two versions are identical, the sink will drop the new entity and the dataset will not be updated. This way we ensure that only data that needs reprocessing will be reprocessed.  
 
 The comparison is done by comparing the new and the old entitie's ``_hash`` values. 
 
