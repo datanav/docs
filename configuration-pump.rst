@@ -39,6 +39,8 @@ Prototype
         "notification_granularity": 99999999999
     }
 
+.. _pump_properties:
+
 Properties
 ----------
 
