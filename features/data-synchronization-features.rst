@@ -27,6 +27,15 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    **Change tracking**
+
+    Compare incoming entities with the existing version and only apply updates if the version are different.
+
+    .. link-button:: /features/change-tracking
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
     **Extensions**
 
     Build and run your own microservice extension systems.
@@ -79,6 +88,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
    :hidden:
 
    Scheduling and Signalling <scheduling-and-signalling>
+   Change Tracking <change-tracking>
    Extensions <extensions-feature>
    Continuation Support <continuation-support>
    Deletion Tracking <deletion-tracking>

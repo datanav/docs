@@ -40,7 +40,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
 
     .. link-button:: features/operations-features
             :type: ref
-            :text: Ream more
+            :text: Read more
             :classes: read-more
 
 |
