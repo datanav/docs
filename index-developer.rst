@@ -13,7 +13,6 @@ Documentation
    Data synchronization <index-synchronization>
    Operations <index-operations>
    Data platforms <index-dataplatforms>
-   Roadmap <roadmap>
    Tools <tools>
    Service Configuration <configuration>
    Service API <api>
