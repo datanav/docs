@@ -27,15 +27,6 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    **Change tracking**
-
-    Compare incoming entities with the existing version and only apply updates if the version are different.
-
-    .. link-button:: /features/change-tracking
-            :type: ref
-            :text: Read more
-            :classes: read-more
-    ---
     **Automatic Reprocessing**
 
     Perform automatic reset of pipes when they have fallen out of sync.
@@ -141,7 +132,6 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
    :maxdepth: 1
    :hidden:
 
-    Change Tracking <change-tracking>
     Automatic Reprocessing <automatic-reprocessing>
     Namespaces <namespaces>
     Merging <merging-feature>
