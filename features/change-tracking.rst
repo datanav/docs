@@ -23,4 +23,4 @@ Each entity version written to a dataset will receive an ``_updated`` value. An 
 
     #. Resets can be done automatically by defining a :ref:`rescan <pump_properties>` property for the pump.
     #. Resets can be done manually through the :ref:`reset <management-studio-pipe-menu>` function in the management studio pipe menu.
-    #. Since changes can be done manually through the :ref:`Update last seen <management-studio-pipe-menu>` function in the mamagement studio pipe meny.
+    #. Since changes can be done manually through the :ref:`Update last seen <management-studio-pipe-menu>` function in the management studio pipe menu.
