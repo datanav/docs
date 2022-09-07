@@ -6,7 +6,7 @@
 Data Management
 ================
 
-Sesam offer a set of features that will give you the edge when it comes to Master Data Management and data integration. Bellow is a list of core features Sesam offers.
+Sesam offer a set of features that will give you the edge when it comes to Master Data Management and data integration. Below is a list of core features Sesam offers.
 
 |
 |
@@ -47,7 +47,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     ---
     **Merging**
 
-    Enables global datasets the ability to merge different entities into one entity representing the same thing.
+    Gives global datasets the ability to merge different entities into one entity representing the same thing.
 
     .. link-button:: /features/merging-feature
             :type: ref
