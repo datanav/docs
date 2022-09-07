@@ -6,7 +6,7 @@
 Data synchronization
 ====================
 
-Sesam offer a set of features that will give you the edge when it comes to Master Data synchronization. Bellow is a list of core features Sesam offers.
+Sesam offer a set of features that will give you the edge when it comes to Master Data synchronization. Below is a list of core features Sesam offers.
 
 |
 |
@@ -56,7 +56,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     ---
     **Deletion Tracking**
 
-    Allows dataset sink to effectively detext if entities have disappeared from the source.
+    Allows a dataset sink to effectively detect if entities have disappeared from the source.
 
     .. link-button:: /features/deletion-tracking
             :type: ref

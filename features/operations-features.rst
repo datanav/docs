@@ -6,7 +6,7 @@
 Operation features
 ===================
 
-Sesam offer a set of features that will give you the edge when it comes to operations. Bellow is a list of core features Sesam offers.
+Sesam offer a set of features that will give you the edge when it comes to operations. Below is a list of core features Sesam offers.
 
 |
 |
@@ -29,7 +29,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
     ---
     **Durable Data**
 
-    When running a cloud subscriptions you now have the possibility to request that a pipes data is stored in three replicas.
+    When running a cloud subscription you now have the possibility to request that a pipe's data is stored in three replicas.
 
     .. link-button:: /features/durable-data
             :type: ref
@@ -38,7 +38,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
     ---
     **Notifications**
 
-    Notification enables you to monitor your pipes and get notification alerts in the user interface, or by email.
+    Notifications enable you to monitor your pipes and get notification alerts in the user interface, or by email.
 
     .. link-button:: /features/notifications-feature
             :type: ref
@@ -56,7 +56,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
     ---
     **Bring Your Own Key**
 
-    Let Sesam then manages the encryption key for you.
+    Sesam can now manage your encryption key for you.
 
     .. link-button:: /features/bring-your-own-key
             :type: ref
