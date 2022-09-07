@@ -27,7 +27,8 @@ Imagine three sources being ingressed in Sesam that each contain person data. Al
     "hubspot-person:Gender": "male",
     "hubspot-person:Address": "Himmelberg Vei 11",
     "hubspot-person:PostCode": "0166",
-    "hubspot-person:SSN": "02023688018"
+    "hubspot-person:SSN": "02023688018",
+    "rdf:type": "~:hubspot:Person"
   }
 
   CRM
@@ -36,7 +37,8 @@ Imagine three sources being ingressed in Sesam that each contain person data. Al
     "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
     "crm-person:ID:”100”,
     "crm-person:SSN": "02023688018",
-    "crm-person:SSN-ni": "~:hr-person:02023688018"
+    "crm-person:SSN-ni": "~:hr-person:02023688018",
+    "rdf:type": "~:crm:Person"
   }
 
   ERP
@@ -47,7 +49,8 @@ Imagine three sources being ingressed in Sesam that each contain person data. Al
     "erp-person:Age": "43",
     "erp-person:Position": "Sales Manager",
     "erp-person:ID:”0202”,
-    "erp-person:country":"NO"
+    "erp-person:country":"NO",
+    "rdf:type": "~:erp:Person"
   }
 
 The dataset below is what a global dataset of the above three datasets would look after being merging on social security number (SSN).
@@ -75,7 +78,12 @@ The dataset below is what a global dataset of the above three datasets would loo
     "erp-person:Age": "43",
     "erp-person:Position": "Sales Manager",
     "erp-person:ID:”0202”,
-    "erp-person:country":"NO"
+    "erp-person:country":"NO",
+    "rdf:type": [
+      "~:crm:Person",
+      "~:hubspot:Person",
+      "~:erp:Person"
+    ]
   }
 
 Key benefits
