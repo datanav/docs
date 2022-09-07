@@ -3,7 +3,7 @@
 Automatic Reprocessing
 ======================
 
- When enabled, Automatic Reprocessing will detect when the pipe has fallen out of sync and needs to be reset. When enabled in the pipe, or in service metadata, the pipe will automatically reset itself and perform a full rescan – making sure that it is no longer out of sync. In some situations it may need to rewind a bit, instead of doing a full rescan - in any case you can then be sure that the pipe is no longer out of sync.
+When enabled, Automatic Reprocessing will detect when the pipe has fallen out of sync and needs to be reset. When enabled in the pipe, or in service metadata, the pipe will automatically reset itself and perform a full rescan – making sure that it is no longer out of sync. In some situations it may need to rewind a bit, instead of doing a full rescan - in any case you can then be sure that the pipe is no longer out of sync.
 
 Usecase
 --------
