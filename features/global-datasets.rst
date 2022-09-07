@@ -22,12 +22,12 @@ Imagine three sources being ingressed in Sesam that each contain person data. Al
 
   HR system
   {
-    "_id": "hr-person:02023688018",
-    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hr-person:Gender": "male",
-    "hr-person:Address": "Himmelberg Vei 11",
-    "hr-person:PostCode": "0166",
-    "hr-person:SSN": "02023688018"
+    "_id": "hubspot-person:02023688018",
+    "hubspot-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hubspot-person:Gender": "male",
+    "hubspot-person:Address": "Himmelberg Vei 11",
+    "hubspot-person:PostCode": "0166",
+    "hubspot-person:SSN": "02023688018"
   }
 
   CRM
@@ -57,15 +57,15 @@ The dataset below is what a global dataset of the above three datasets would loo
   {
     "$ids": [
       "~:crm-person:100",
-      "~:hr-person:02023688018",
+      "~:hubspot-person:02023688018",
       "~:erp-person:0202"
     ],
     "_id": "crm-person:100",
-    "hr-person:EmailAddress": "IsakEikeland@teleworm.us",
-    "hr-person:Gender": "male",
-    "hr-person:Address": "Himmelberg Vei 11",
-    "hr-person:PostCode": "0166",
-    "hr-person:SSN": "02023688018",
+    "hubspot-person:EmailAddress": "IsakEikeland@teleworm.us",
+    "hubspot-person:Gender": "male",
+    "hubspot-person:Address": "Himmelberg Vei 11",
+    "hubspot-person:PostCode": "0166",
+    "hubspot-person:SSN": "02023688018",
     "crm-person:EmailAddress": "IsakEikeland@teleworm.us",
     "crm-person:ID:”100”,
     "crm-person:SSN": "02023688018",
