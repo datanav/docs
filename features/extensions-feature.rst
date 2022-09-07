@@ -12,4 +12,4 @@ Typically, writing a microservice extension is necessary when connecting to an A
 
 .. tip::
 
-    If you haven't already worked with microservice extensions and hosting via Docker, you should look at our guide on :ref:` Customize Extension Points <guide_customize_extension_points>` to try it out.
+    If you haven't already worked with microservice extensions and hosting via Docker, you should look at our guide on :ref:`Customize Extension Points <guide_customize_extension_points>` to try it out.
