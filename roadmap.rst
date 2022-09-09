@@ -143,8 +143,8 @@ so it depends on the 'Clustered architecture everywhere' item on the roadmap.
    :ref:`Integrated search <integrated-search>` is now available for subscriptions running on the
    Clustered Architecture.
 
-General Available
------------------
+Generally Available
+-------------------
 
 The following items are now available for general use.
 
