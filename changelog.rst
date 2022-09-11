@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_09_06:
+
+2022-09-06
+----------
+
+* Deletion tracking done by background rescan is now done in batches and is interleaved with incremental synchronization. This means that deletion tracking will no longer stop-the-world.
+
 .. _changelog_2022_09_01:
 
 2022-09-01
