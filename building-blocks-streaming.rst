@@ -3,7 +3,7 @@
 Streams of entities
 ===================
 
-Sesam consumes and produces streams of :doc:`entities <entitymodel>`. An entity is very much like a JSON object and consists of a number of key-value pairs along with some special reserved property names. See the :doc:`entity data model <entitymodel>` document for more details about entities.
+Sesam consumes and produces streams of :ref:`entities <entity-data-model>`. An entity is very much like a JSON object and consists of a number of key-value pairs along with some special reserved property names. See the :ref:`entity data model <entity-data-model>` document for more details about entities.
 
 The following are two simple examples showing the shape of entities that can be consumed and exposed by Sesam.
 

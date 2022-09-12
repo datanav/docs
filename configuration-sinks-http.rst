@@ -34,7 +34,7 @@ It exposes these URLs:
      - SDShare fragments feed
 
 The serialisation of entities as JSON is described in more detail
-:doc:`here <entitymodel>`. This endpoint is compatible with :ref:`The
+:ref:`here <entity-data-model>`. This endpoint is compatible with :ref:`The
 JSON source <json_source>`.
 
 Note that any URL parameters given to these endpoints are bound to a DTL variable named ``_B``
@@ -92,8 +92,9 @@ Example configuration
 
 The pipe configuration given below will expose the ``my-entities``
 publisher endpoint and read the entities from the ``my-entities``
-dataset::
+dataset
 
+::
 
     {
         "_id": "my-entities",

@@ -8,7 +8,7 @@ These configuration files can be imported through the service API. They can also
 
 Conceptually, the configuration files contains definitions for *Systems* and *Pipes*.
 
-The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :doc:`entities <entitymodel>` are
+The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`pipe configurations <pipe_section>`. The configuration :ref:`entities <entity-data-model>` are
 *JSON objects* of the form:
 
 ::
@@ -20,6 +20,7 @@ The configuration is a *JSON array* of :ref:`system <system_section>` and :ref:`
             "type": "component-type",
             "some-property": "some value"
         },
+
         {
             "_id": "some-other-solution-wide-unique-id",
             "name": "Name of other component",

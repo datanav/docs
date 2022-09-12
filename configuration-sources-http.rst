@@ -31,8 +31,8 @@ JSON Push protocol
 
 The JSON Push protocol is described in additional detail in the
 :doc:`JSON Push Protocol <json-push>` document. The serialisation of
-entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :doc:`here
-<entitymodel>`. Both individual entities and lists of entities can be
+entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :ref:`here
+<entity-data-model>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
 <json_sink>`.
 

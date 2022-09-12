@@ -21,8 +21,7 @@ The following *JSON* snippet shows the general form of a sink definition.
 
     {
         "type": "a-sink-type",
-        "comment": "This is a comment",
-        ..
+        "comment": "This is a comment"
     }
 
 The only universally required property is ``type``.

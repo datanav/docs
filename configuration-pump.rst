@@ -3,7 +3,7 @@
 Pumps
 =====
 
-Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :doc:`entities <entitymodel>`
+Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :ref:`entities <entity-data-model>`
 from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The pump is also responsible
 for retrying failed writes of entities and logging its activity. It can also write ultimately failed entities to a "dead letter"
 dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
@@ -13,7 +13,7 @@ details about the contents of this dataset.
 Prototype
 ---------
 
-::
+.. code-block:: json
 
     {
         "comment": "This is a comment",

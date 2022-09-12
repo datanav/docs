@@ -6,7 +6,7 @@ JSON Pull Protocol
 
 
 The JSON Pull protocol is an HTTP-based protocol that uses GET
-requests to retrieve streams of :doc:`entities <entitymodel>`. It
+requests to retrieve streams of :ref:`entities <entity-data-model>`. It
 supports splitting up the data across multiple requests.
 
 The protocol is supported by the :ref:`http_endpoint
@@ -59,7 +59,7 @@ The following HTTP request parameters are supported:
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
-:doc:`here <entitymodel>`.
+:ref:`here <entity-data-model>`.
 
 
 Response headers

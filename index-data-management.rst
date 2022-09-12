@@ -8,8 +8,9 @@ In this section we will show you both how single data entities are modelled in S
 .. rubric:: In this section:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   Data management <data-management>
-   Entity Data Model <entitymodel>
+   Patterns <documentation/data-management/data-management-patterns>
+   Data management <documentation/data-management/data-management>
+   Entity Data Model <documentation/data-management/entity-data-model>
    
