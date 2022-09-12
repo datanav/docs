@@ -4,12 +4,10 @@
 Data Synchronization Patterns
 =============================
 
-We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
-
-Here we present a list of them, grouped by the step in the dataflow that the problem manifests itself at.
+We've identified a set of patterns when working with problems related to data synchronizaion in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
 
 .. note::
-  This document is work in progress, but we publish it as it might contain useful tips.
+  This document is subject to improvements as we continuesly are identifying new patters to enforce effective data synchronization in Sesam.
 
 Collect patterns
 ================
