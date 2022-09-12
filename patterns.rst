@@ -8,9 +8,11 @@ Here we present a list of them, grouped by the step in the dataflow that the pro
 
 .. note::
   This document is work in progress, but we publish it as it might contain useful tips.
-  
+
 Generic patterns
 ================
+
+.. _pattern-rewriting-identity:
 
 Rewriting identity
 ------------------
@@ -27,23 +29,19 @@ Provides data with changes but no information about deletions. Requires periodic
 
 Source that only provides delta streams
 ---------------------------------------
-If you restart the pipe you lose a lot of data. Make two pipes, disable, reset and use durable pipe, disable :ref:`deletion tracking <deletion-tracking>`.
+If you restart the pipe you lose a lot of data. Disable :ref:`deletion tracking <deletion-tracking>` and use :doc:`durable </features/durable-data>` pipe. Sesam is now the master of this dataset, so do not delete it.
 
 Source with parameterized input
 -------------------------------
-Fetch more data based on some input source, requires rescan all the time. Quick summary is to have one pipe fetch the ids, then have another pipe that reads those ids and typically does a rest-transform for each id.
+Fetch more data based on some input source, requires rescan all the time. Quick summary is to have one pipe fetch the ids, then have another pipe that reads those ids and typically does a :ref:`REST transform <rest_transform>` for each id. If the source provides incremental changes to the parameters and you do not want to keep the parameters as a datatype then you can use the parameter source as the pipe source.
 
 Recreate best effort history from a source
 ------------------------------------------
-We become master, pipe should be durable (coming feature). Add a last modified timestamp to the entities. If you do not make a unique ``_id`` (e.g. append the last modified timestamp to it) you need to turn off compaction to keep all data.
+We become master, pipe should be :doc:`durable </features/durable-data>`. Add a last modified timestamp to the entities. If you do not make a unique ``_id`` (e.g. append the last modified timestamp to it) you need to turn off compaction to keep all data. Related to the :ref:`Rewriting identity <pattern-rewriting-identity>` pattern.
 
 Make periodic entities from a versioned history
 -----------------------------------------------
 If a source provides a list of older versions of an entity, one way to materialize this is to convert them into periodic entities instead. This might make it easier to work with if your domain uses fixed periods for other purposes. One way to do this is to use the fixed periods as source and then for each period hop to the versioned dataset and join in the relevant version for this period.
-
-Sporadic empty response
------------------------
-Source sometimes produces an empty array for some reason (during restarts, authentication problems, etc). Use :ref:`circuit breakers <circuit-breakers>`.
 
 Avoid unnecessary load on source systems
 ----------------------------------------
@@ -76,7 +74,7 @@ Extract reference properties as reference/classification entities
 -----------------------------------------------------------------
 Having references as separate entities makes it possible to merge them with other reference entities from other systems and make it possible to map data from one system to another in the connect phase.
 
-To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`. 
+To extract entities you will have to use the :ref:`create <dtl-transforms>` transform function. To pick a subset of your extracted entities, you should use :ref:`filtering <dtl-transforms>`.
 
 .. warning::
 
@@ -127,7 +125,7 @@ Defining hierarchies for recursion
 ----------------------------------
 :ref:`Recursive hops <hops>` should be used when your data exhibits inverse relationships. Typically used when filtering on reference/classification properties.
 
-An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data. 
+An inverse relationship allows for you to `broaden or narrow <https://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20051102/#sechierarchy>`_ the scope of your data.
 
 When doing recursive hops, you should define the property ``max_depth`` to safeguard against never ending recursions.
 
@@ -150,7 +148,7 @@ Focus for the share phase is exposing the data. Data should be transformed into 
 
 Capture response with transform
 -------------------------------
-Use transform instead of a sink to capture results back into a dataset. This transform will have side effects and this pipe needs to be durable to avoid reprocessing in case of data loss. Batch size needs to be set to 1 to avoid duplicates as this is not transactional. Do not mix dependency tracking in this pipe as it can also cause duplicates. Avoid the preview API as this will trigger the transform.
+Use transform instead of a sink to capture results back into a dataset. This transform will have side effects and this pipe needs to be :doc:`durable </features/durable-data>` to avoid reprocessing in case of data loss. Batch size needs to be set to 1 to avoid duplicates as this is not transactional. Do not mix dependency tracking in this pipe as it can also cause duplicates. Avoid the preview API as this will trigger the transform.
 
 External reference
 ------------------
