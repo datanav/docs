@@ -1,14 +1,14 @@
-===============
-Design patterns
-===============
+.. _data-management-patterns:
 
-We've identified a set of patterns when working with problems related to dataflows in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing problems.
+========================
+Data Management patterns
+========================
 
-Here we present a list of them, grouped by the step in the dataflow that the problem manifests itself at.
+We've identified a set of patterns when working with problems related to Master Data Management in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing challenges.
 
 .. note::
-  This document is work in progress, but we publish it as it might contain useful tips.
-
+  This document is subject to improvements as we continuesly are identifying new patters to enforce better master data management in Sesam.
+  
 Generic patterns
 ================
 
@@ -17,35 +17,6 @@ Generic patterns
 Rewriting identity
 ------------------
 When rewriting ``_id`` you should always add a ``["add", "$original_id", "_S._id"]`` in order to be able to trace and debug. Multiple upstream entities could map to the same identity, and this can be very hard to figure out without this information. Also make sure you rewrite the identifier before you do any filtering.
-
-Collect patterns
-================
-
-Source with since support but no deletions
-------------------------------------------
-Provides data with changes but no information about deletions. Requires periodic rescans. Called *update-in-place systems*.
-
-.. _pattern_source_only_deltas:
-
-Source that only provides delta streams
----------------------------------------
-If you restart the pipe you lose a lot of data. Disable :ref:`deletion tracking <deletion-tracking>` and use :doc:`durable </features/durable-data>` pipe. Sesam is now the master of this dataset, so do not delete it.
-
-Source with parameterized input
--------------------------------
-Fetch more data based on some input source, requires rescan all the time. Quick summary is to have one pipe fetch the ids, then have another pipe that reads those ids and typically does a :ref:`REST transform <rest_transform>` for each id. If the source provides incremental changes to the parameters and you do not want to keep the parameters as a datatype then you can use the parameter source as the pipe source.
-
-Recreate best effort history from a source
-------------------------------------------
-We become master, pipe should be :doc:`durable </features/durable-data>`. Add a last modified timestamp to the entities. If you do not make a unique ``_id`` (e.g. append the last modified timestamp to it) you need to turn off compaction to keep all data. Related to the :ref:`Rewriting identity <pattern-rewriting-identity>` pattern.
-
-Make periodic entities from a versioned history
------------------------------------------------
-If a source provides a list of older versions of an entity, one way to materialize this is to convert them into periodic entities instead. This might make it easier to work with if your domain uses fixed periods for other purposes. One way to do this is to use the fixed periods as source and then for each period hop to the versioned dataset and join in the relevant version for this period.
-
-Avoid unnecessary load on source systems
-----------------------------------------
-For sources that support incremental sync and where pulling all the data might incur additional cost, system instability or other problems, your first pipe in Sesam should just make a clean copy of the data. You should add namespaces and do any other transformations in a secondary pipe, so that you are able to modify these transformations later without causing unnecessary load on the source system.
 
 Enrich patterns
 ===============
@@ -103,11 +74,8 @@ Golden property based on quality
 --------------------------------
 Make a normalised quality score across the sources you want to pick from, and pick the property from the source that has the most relevant score.
 
-..
-  _This: (perhaps move below pattern to new "Enhanced patterns" phase)
-
 Feedback loop
--------------------------------------------------------------
+-------------
 Expensive hops or external transforms is best to do in a separate dataflow. This allows you to optimise what you process using subsets, the primary dataflow does not have to wait for this data, it will be processed later if it applied to the entity. Entities might be processed twice if the feedback affected the entity. Use the ``_id`` of the merge source as the identifier. Make sure the feedback is marked as deleted when the data that produced it no longer exists (otherwise entities will never be deleted due to the feedback entity itself).
 
 Hungarian notation references
@@ -131,29 +99,7 @@ When doing recursive hops, you should define the property ``max_depth`` to safeg
 
 Re-mapping references to target identifiers
 -------------------------------------------
+<<<<<<< HEAD:documentation/data-management/data-management-patterns.rst
 You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.
-
-Share patterns
-==============
-
-.. _optimistic_locking:
-
-Optimistic locking
-------------------
-Should be added via an external transform and then two hash values should be compared. In case of difference, discard entity.
-
-Exposing data
--------------
-Focus for the share phase is exposing the data. Data should be transformed into the format of the target schema before it reaches the share phase.
-
-Capture response with transform
--------------------------------
-Use transform instead of a sink to capture results back into a dataset. This transform will have side effects and this pipe needs to be :doc:`durable </features/durable-data>` to avoid reprocessing in case of data loss. Batch size needs to be set to 1 to avoid duplicates as this is not transactional. Do not mix dependency tracking in this pipe as it can also cause duplicates. Avoid the preview API as this will trigger the transform.
-
-External reference
-------------------
-If datatype has a property where you can store external references, you can merge on this when collecting the shared data back.
-
-Update or insert
-----------------
-Split into two separate pipelines. Update typically uses the "optimistic locking" pattern, inserts use the "capture response with transform" pattern.
+=======
+You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.

@@ -3,7 +3,7 @@
 Datasets
 ========
 
-A dataset is the basic means of storage inside Sesam. A dataset is a log of :doc:`entities <entitymodel>` supported by primary and secondary indexes. Entities are written to datasets by pipes that use the :ref:`dataset sink <dataset_sink>`.
+A dataset is the basic means of storage inside Sesam. A dataset is a log of :ref:`entities <entity-data-model>` supported by primary and secondary indexes. Entities are written to datasets by pipes that use the :ref:`dataset sink <dataset_sink>`.
 
 Datasets support :ref:`change tracking <change-tracking>` by using content hashing, which means that an entity is appended to the log only if it is new or it is different from the previous version of the same entity.
 

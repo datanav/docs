@@ -30,7 +30,7 @@ We also recommend considering the following principles when creating the global 
 
 Following the above mentioned principles when importing data and creating global datasets will establish good foundations for Sesam’s bold objective: "All the data from all the systems, connected and available as a single shared resource».
 
-.. image:: images/best-practice/Sesam-datamodel.png
+.. image:: ../../images/best-practice/Sesam-datamodel.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept    
@@ -242,7 +242,7 @@ The best-practice workflow follows a simple flow structure created for an optima
 
 |
 
-.. image:: images/best-practice/sesam-flow.png
+.. image:: ../../images/best-practice/sesam-flow.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
@@ -268,7 +268,7 @@ The data from the source system is fed into Sesam through **inbound pipes** whic
 
 The main reason for why **outbound pipes** shouldn't contain any logic or transformations is that we want to see the end result that is being sent to the target system, for debugging purposes. If logic is added in the pipe, the result will be sent straight to the target system when the pump is running. By adding the transformations in the upstream **preparation pipe** we will be able to look at the processed entities in the upstream dataset for the **outbound pipe**. Any logic added to an **outbound pipe** cannot either be used by other pipes.
 
-.. image:: images/best-practice/Sesam-pattern.png
+.. image:: ../../images/best-practice/Sesam-pattern.png
     :width: 800px
     :align: center
     :alt: Generic pipe concept  
@@ -445,7 +445,7 @@ In the global pipe we want to add a metadata tag to show this is a pipe going in
 
 In addition, it gives the dataset a “global symbol” in the graph tab as seen below. This makes it easy to see this is a global pipe straight away. 
 
-.. image:: images/global_true.png
+.. image:: ../../images/global_true.png
     :width: 600px
     :align: center
     :alt: Generic pipe concept  
@@ -745,7 +745,7 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
     }
   }
 
-In this particular pipe we have set our own :doc:`cron expression <cron-expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
+In this particular pipe we have set our own :ref:`cron expression <cron_expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
 
 Tips for global datasets
 ------------------------
@@ -813,7 +813,7 @@ Looking at the names of the datasets, it would be logical to create two global d
 
 **global-person**
 
-.. image:: images/best-practice/global-person1.png
+.. image:: ../../images/best-practice/global-person1.png
     :width: 700px
     :align: center
     :alt: Generic pipe concep
@@ -822,7 +822,7 @@ The second could contain data concerning the organization. This might include na
 
 **global-organisation**
 
-.. image:: images/best-practice/global-organisation.png
+.. image:: ../../images/best-practice/global-organisation.png
     :width: 700px
     :align: center
     :alt: Generic pipe concep
@@ -855,7 +855,7 @@ The datasets might be organized like this, please see below. As seen no changes 
 
 **global-person**
 
-.. image:: images/best-practice/global-person2.png
+.. image:: ../../images/best-practice/global-person2.png
     :width: 600px
     :align: center
     :alt: Generic pipe concep
@@ -865,7 +865,7 @@ The second could contain data concerning projects. This might be orders, project
 
 **global-project**
 
-.. image:: images/best-practice/global-project.png
+.. image:: ../../images/best-practice/global-project.png
     :width: 600px
     :align: center
     :alt: Generic pipe concep

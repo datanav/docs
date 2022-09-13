@@ -25,7 +25,7 @@ Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-
 - Data access (:ref:`outgoing published endpoints <http_endpoint_sink>`, :ref:`incoming sources <source_section>`)
 - Discovery (:ref:`integrated search <integrated-search>`, :ref:`schemas <schema-inferencing>`)
 - Transformation (:ref:`data transformation language <DTL>`)
-- Integration (:doc:`entity model <entitymodel>`, :ref:`merge <merge_source>`, :ref:`namespaces <namespaces-feature>`)
+- Integration (:ref:`entity model <entity-data-model>`, :ref:`merge <merge_source>`, :ref:`namespaces <namespaces-feature>`)
 - Security (:doc:`permissions <security>`)
 - Governance
 - Lineage (:ref:`property lineage <property-lineage>`)
