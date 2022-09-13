@@ -99,7 +99,4 @@ When doing recursive hops, you should define the property ``max_depth`` to safeg
 
 Re-mapping references to target identifiers
 -------------------------------------------
-<<<<<<< HEAD:documentation/data-management/data-management-patterns.rst
-You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.
-=======
 You use the "Extract reference properties as reference/classification entities" pattern so that you can remap references to target identifiers by hopping to the classification/reference dataset and use the property from the correct target namespace.
