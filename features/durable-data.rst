@@ -9,29 +9,29 @@ In our cloud subscriptions you now have the possibility to request that a pipes 
 Use case
 --------
 
-For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This might not a critical problem when Sesam is pulling data from sources, as the data that was lost can be pulled again. For pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, this will most likely be a problem.
+For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This might not be a critical problem when Sesam is pulling data from sources, as the data that was lost can be pulled again. For pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, this will most likely be a problem.
 
 Example
 ^^^^^^^
-Data is pushed to Sesam by an external system when the cloud service where the Sesam node runs have an health issue and goes down. When Sesam is backed up some data could be lost and Sesam will not have any automated way to ask for the data since last backup to be sent again.
+Data is pushed to Sesam by an external system when the cloud service where the Sesam subscription runs have a health issue and goes down. When Sesam is backed up some data could be lost and Sesam will not have any automated way to ask for the data since last backup to be sent again.
 
 Sesam writes data to an invoice system that is non-idempotent.
 
-After a disaster recovery Sesam will go back to the last backup and rebuild it’s datasets from that point. In this use-case the last backup is from 10:00, Sesam sends data on an invoice at 12:00, then a disaster recovery event happens at 12:30. Sesam will then rewind to the latest backup at 10:00 and reprocess all data from after that point. In effect sending the same invoice data twice.
+After a disaster recovery Sesam will go back to the last backup and rebuild its datasets from that point. In this use case the last backup is from 10:00, Sesam sends data on an invoice at 12:00, then a disaster recovery event happens at 12:30. Sesam will then rewind to the latest backup at 10:00 and reprocess all data from after that point. In effect sending the same invoice data twice.
 
 .. important::
 
   We suggest you enable durable data in the following cases:
 
   #. If you are pushing data to Sesam
-  #. All inbound pipes that are pushed too should have durable data turned on to mitigate the risk of data loss
+  #. All inbound pipes that are pushed to should have durable data turned on to mitigate the risk of data loss
   #. Non-idempotent endpoint
   #. Endpoint pipes and share pipes writing data to the endpoints must both have durable data enabled
-  #. Endpoint pipes were duplicated data transfers could be problematic (we recommend that all sources to be idempotent, if possible)
+  #. Endpoint pipes where duplicated data transfers could be problematic (we recommend that all sources be idempotent, if possible)
 
 How to enable
 -------------
-Durable data can be enabled on a pipe by setting the pipe’s ``metadata.durable`` property to true. See the example bellow:
+Durable data can be enabled on a pipe by setting the pipe’s ``metadata.durable`` property to true. See the example below:
 
 .. code-block:: json
   :emphasize-lines: 18,19
