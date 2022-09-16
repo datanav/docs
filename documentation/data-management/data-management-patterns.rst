@@ -8,7 +8,7 @@ We've identified a set of patterns when working with problems related to Master 
 
 .. note::
   This document is subject to improvements as we continuesly are identifying new patters to enforce better master data management in Sesam.
-  
+
 Generic patterns
 ================
 
@@ -21,8 +21,8 @@ When rewriting ``_id`` you should always add a ``["add", "$original_id", "_S._id
 Enrich patterns
 ===============
 
-Extract foreign references as separate datatypes
-------------------------------------------------
+Extract foreign references as extracted datatypes
+-------------------------------------------------
 Don't make NIs to stuff that is outside your control, keep the namespace local to the system. Extract the properties to new separate datatypes. If you don't have them as objects you can't merge them with the same concept from other sources. Time is not a good candidate for NI. Postal codes are a good example. If you make a NI make it reference your own namespace. Use :ref:`create <dtl_transform-create>`.
 
 Adding type information
@@ -31,11 +31,7 @@ Useful to pick out relevant subsets from the globals later. Add data type proper
 
 Splitting out lists of sub-objects
 ----------------------------------
-Aggregate objects --- are the sub-objects part of the parent or can they live on their own? Use :ref:`create-child <dtl_transform-create-child>` and :ref:`emit_children <emit_children_transform>`.
-
-Keep the data in its original structure
----------------------------------------
-Data modeller expects data in the same structure as the system that produced it, and often need to send back the original structure.
+Aggregate objects --- are the sub-objects part of the parent or can they live on their own? Use :ref:`create-child <dtl_transform-create-child>` and :ref:`emit_children <emit_children_transform>`. The parent id should be included as part of the child id. We prefer splitting out objects over combining object if you need to choose.
 
 Normalising data
 ----------------

@@ -43,6 +43,10 @@ Sporadic empty response
 
 Source sometimes produces an empty array for some reason (during restarts, authentication problems, etc). Use :ref:`circuit breakers <circuit-breakers>`.
 
+Keep the data in its original structure
+---------------------------------------
+Data modeller expects data in the same structure as the system that produced it, and often need to send back the original structure.
+
 Avoid unnecessary load on source systems
 ----------------------------------------
 
