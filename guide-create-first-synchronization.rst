@@ -7,11 +7,8 @@ Create your first synchronization
    :maxdepth: 1
    :hidden:
 
-   Collect <tutorial-getting-started-collect>
-   Enrich <tutorial-getting-started-enrich>
-   Connect <tutorial-getting-started-connect>
-   Transform <tutorial-getting-started-transform>
-   Share <tutorial-getting-started-share>
+   Data Synchronization <guide-create-first-synchronization-data-synchronization>
+   Data Management <guide-create-first-synchronization-data-management>
 
 In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
@@ -54,66 +51,29 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
 .. panels::
     :column: col-lg-12 p-2 
 
-    **Create your first synchronization:** This guide includes 5 tutorials
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    **Create your first synchronization:** This guide includes 2 sections
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    .. dropdown:: **1. Collect data**
+    .. dropdown:: **1. Data Synchronization**
         :open:
 
-        :badge:`Estimated time: 10 min,badge-light`
+        :badge:`Estimated time: 20 min,badge-light`
 
-        This tutorial will show you how to collect data from HubSpot and Enhetsregistret.
+        This section will show you how to synchronize HubSpot data with your Sesam instance.
 
-        .. link-button:: tutorial-getting-started-collect
+        .. link-button:: guide-create-first-synchronization-data-management
             :type: ref
-            :text: Start this tutorial
+            :text: Enter this section
             :classes: tutorial-start
         
-    .. dropdown:: **2. Enrich data**
+    .. dropdown:: **2. Data Manegement**
         :open:
 
-        :badge:`Estimated time: 10 min,badge-light`
+        :badge:`Estimated time: 30 min,badge-light`
 
-        This tutorial will show you how to enrich data you collected from source systems.
+        This section connect, manage and map The HubSpot data to and from the global model.
 
-        .. link-button:: tutorial-getting-started-enrich
+        .. link-button:: guide-create-first-synchronization-data-management
             :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
-
-    .. dropdown:: **Connect data**
-        :open:
-        
-        :badge:`Estimated time: 15 min,badge-light`
-
-        This tutorial will show you how to connect the data your enriched.
-
-            .. link-button:: tutorial-getting-started-connect
-                :type: ref
-                :text: Start this tutorial
-                :classes: tutorial-start
-
-    .. dropdown:: **Transform data**
-        :open:
-
-        :badge:`Estimated time: 5 min,badge-light`
-
-        This tutorial will show you how to transform the data and make it ready for sharing with your target system.
-
-        .. link-button:: tutorial-getting-started-transform
-            :type: ref
-            :text: Start this tutorial
-            :classes: tutorial-start
-
-
-    .. dropdown:: **Share data**    
-        :open:
-
-        :badge:`Estimated time: 10 min,badge-light`
-
-        This tutorial will show you how to share the data with your target system.
-
-        .. link-button:: tutorial-getting-started-share
-            :type: ref
-            :text: Start this tutorial
+            :text: Enter this section
             :classes: tutorial-start
