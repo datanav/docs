@@ -3,7 +3,7 @@
 Enrich data
 ===========
 
-In this phase we will add value to the data we have `previously collected <tutorial-getting-started-collect>`_ by semantically enriching it.
+In this phase we will add value to the data we have :doc:`previously collected <tutorial-getting-started-collect>` by semantically enriching it.
 
 .. admonition::  Objectives:
 
@@ -15,11 +15,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest you complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
-
-|
-|
-
+  Before starting on this tutorial we suggest you complete the :doc:`Collect data tutorial <tutorial-getting-started-collect>` as we will use that data in this tutorial.
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
