@@ -7,8 +7,8 @@ Sesam software is released through a phased rollout scheme. There are four diffe
 
 The available channels are:
 
-- ``weekly-prod`` is release bi-weekly and is the most stable release. *Use this in production!*
-- ``weekly`` is release once a week. Use this in staging environments.
+- ``weekly-prod`` is released once a week, and it is two weeks behind ``nightly``. It is the most stable release. *Use this in production!*
+- ``weekly`` is released once a week, and it is one week behind ``nightly``. Use this in staging environments.
 - ``nightly`` is released every night. Use this in development environments.
 - ``latest`` is released every time a pull request is merged. Use this only for developent environments, and only when you know what you're doing.
 
