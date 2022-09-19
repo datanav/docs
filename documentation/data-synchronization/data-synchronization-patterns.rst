@@ -145,8 +145,7 @@ The following example illustrates duplicate entry precautions:
 	    "type": "dtl",
 	    "rules": {
 	      "default": [
-	        ["comment", "create your payload in this transform"],
-			["removing deleted entities and entities which have already been processed and stored in the sink dataset"],
+	        ["comment", "removing deleted entities and entities which have already been processed and stored in the sink dataset"],
 	        ["discard",
 	          ["or",
 	            ["eq", "_S._deleted", true],
@@ -160,6 +159,7 @@ The following example illustrates duplicate entry precautions:
 	            ]
 	          ]
 	        ],
+	        ["comment", "create your payload in this transform"],
 	        ["copy", "*"]
 	      ]
 	    }
