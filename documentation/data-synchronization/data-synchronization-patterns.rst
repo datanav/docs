@@ -95,7 +95,7 @@ There are several scenarios where Sesam could potentially send insert messages m
 **Change tracking or dependency tracking**
 """"""""""""""""""""""""""""""""""""""""""
 
-Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`change tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. 
+Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. 
 In order to avoid these situations we need check if the data has already been sent. This information may be accessed in the pipe's sink dataset through a :ref:`hops <hops>`. If a source entity can be mapped to a sink entity, we can safely discard the source entity and avoid ducplicate entrys in the target system. In order for the hops to work, we need to make sure that the dataset is populated, even is there's no data in it. We do this by adding the sink property ``"set_initial_offset": "onload"``.
 
 
