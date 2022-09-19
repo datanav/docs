@@ -107,7 +107,7 @@ A pipe will by default process 100 entities before writing to the sink, although
 **Durable data**
 """"""""""""""""
 
-An other situation to be aware of is duplicates due to loss of data. Although uncommon, data in Sesam could be lost due to several different factors. For this reason Sesam does a backup of all the data inside the subscription every 24 hours. However, should inserts be performed in the gap between backups, this data could be lost. Sesam will in that case have no knowledge of which entities is has processed since the last backup, leading to potential duplicate entries to the target system. The solution is to activate the :ref:`durable data <durable-data>` feature. This will store all sink dataset data in a third durable version, which in turn ensures that no data is lost.
+As explained in the :ref:`durable data <durable-data>` feature, Sesam does a backup of all the data inside the subscription every 24 hours. However, should inserts be performed in the gap between backups, this data could be lost. Sesam will in that case have no knowledge of which entities is has processed since the last backup, leading to potential duplicate entries to the target system. The solution is to activate durable data on the pipe's sink. This will store all sink dataset data in a third durable version, which in turn ensures that no data is lost.
 
 **Preview**
 """""""""""
