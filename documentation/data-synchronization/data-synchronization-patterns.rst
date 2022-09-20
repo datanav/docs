@@ -92,24 +92,24 @@ Avoid duplicates
 
 There are several measure we need to implement to avoid duplicate insert entries in customer systems:
 
-**Counteract change and dependency tracking**
+**Counteract change and dependency tracking:**
 
 Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. To counteract this we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
 
 
-**Batching**
+**Batching:**
 
 A pipe will by default process 100 entities before writing to the sink, although this number may vary due to different pipe settings. Should one entity in a batch fail, then the whole batch fails before anything is written to the sink. Sesam will therefore attempt to process these entities again, since the last batch failed, which could lead to multiple successful insert messages for the same entity. This situation is easily avoided by setting the :ref:`pipe batch size <pipe_properties>` to 1. 
 
-**Data loss**
+**Data loss:**
 
 As explained in the :ref:`durable data <durable-data>` feature, a data loss result in duplicate insert messages from the same entity. Enabling durable data avoid these situations.
 
-**Preview**
+**Preview:**
 
 When using the preview function in the :ref:`Sesam management studio <sesam-management-studio>`, the preview entity is actually passed through the transform. Normally this is not an issue since the preview function does not pass the data to the sink. However, when performing non-idempotent actions inside a transform this will have side effects. In the case of an insert messages inside a transform the preview will actually attempt to send an insert every time it's used, which could lead to duplicate entries in the target system which are untraceable in Sesam. To avoid this, use the :ref:`transform property side_effects <transform_properties>`. If set to ``true`` the pipe will end the transform, avoiding potential duplicate entries.  
 
-**Deleted entities**
+**Deleted entities:**
 
 Per default Sesam will pass entities with ``"_deleted": true`` through all transforms. By discarding these entities in the insert flow we avoid inserts from deleted entities.
 
