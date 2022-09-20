@@ -90,34 +90,28 @@ When using Sesam to perform inserts in a system, we need to both make sure that 
 Avoid duplicates
 ^^^^^^^^^^^^^^^^
 
-There are several scenarios where Sesam could potentially send insert messages multiple times:
+There are several measure we need to implement to avoid duplicate insert entries in customer systems:
 
-**Change tracking or dependency tracking**
-""""""""""""""""""""""""""""""""""""""""""
+**Counteract change and dependency tracking**
 
-Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. 
-In order to avoid these situations we need check if the data has already been sent. This information may be accessed in the pipe's sink dataset through a :ref:`hops <hops>`. If a source entity can be mapped to a sink entity, we can safely discard the source entity and avoid ducplicate entrys in the target system. In order for the hops to work, we need to make sure that the dataset is populated, even is there's no data in it. We do this by adding the sink property ``"set_initial_offset": "onload"``.
+Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. To counteract this we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
 
 
 **Batching**
-""""""""""""
 
 A pipe will by default process 100 entities before writing to the sink, although this number may vary due to different pipe settings. Should one entity in a batch fail, then the whole batch fails before anything is written to the sink. Sesam will therefore attempt to process these entities again, since the last batch failed, which could lead to multiple successful insert messages for the same entity. This situation is easily avoided by setting the :ref:`pipe batch size <pipe_properties>` to 1. 
 
 **Data loss**
-"""""""""""""
 
-As explained in the :ref:`durable data <durable-data>` feature, Sesam does a backup of all the data inside the subscription every 24 hours. However, should inserts be performed in the gap between backups, this data could be lost. Sesam will in that case have no knowledge of which entities is has processed since the last backup, leading to potential duplicate entries to the target system. The solution is to activate durable data on the pipe's sink. This will store all sink dataset data in a third durable version, which in turn ensures that no data is lost.
+As explained in the :ref:`durable data <durable-data>` feature, a data loss result in duplicate insert messages from the same entity. Enabling durable data avoid these situations.
 
 **Preview**
-"""""""""""
 
 When using the preview function in the :ref:`Sesam management studio <sesam-management-studio>`, the preview entity is actually passed through the transform. Normally this is not an issue since the preview function does not pass the data to the sink. However, when performing non-idempotent actions inside a transform this will have side effects. In the case of an insert messages inside a transform the preview will actually attempt to send an insert every time it's used, which could lead to duplicate entries in the target system which are untraceable in Sesam. To avoid this, use the :ref:`transform property side_effects <transform_properties>`. If set to ``true`` the pipe will end the transform, avoiding potential duplicate entries.  
 
 **Deleted entities**
-""""""""""""""""""""
 
-Per default Sesam will pass entities with ``"_deleted": true`` through all transforms
+Per default Sesam will pass entities with ``"_deleted": true`` through all transforms. By discarding these entities in the insert flow we avoid inserts from deleted entities.
 
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
@@ -170,7 +164,7 @@ The following example illustrates duplicate entry precautions:
 	    "properties": {
 	      "url": "my-url"
 	    },
-	    "side_effects": false
+	    "side_effects": true
 	  }, {
 	    "type": "dtl",
 	    "rules": {
@@ -187,7 +181,7 @@ The following example illustrates duplicate entry precautions:
 	    }
 	  }],
 	  "metadata": {
-	  	"comment": "activating durable data to avoid data loss",
+	    "comment": "activating durable data to avoid data loss",
 	    "durable": true
 	  },
 	  "batch_size": 1,
