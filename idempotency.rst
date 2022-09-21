@@ -18,7 +18,7 @@ The Challenge
 -------------
 The challenge with non-idempotent systems is that you can get different results every time you use an operation against them. As an example, imagine trying to update a record in a RESTful system using the POST method. The POST method will add a new record which can be challenging in that the new record might look different in terms of payload with regards to the already existing payload of the record in question. As such, the POST method is non-idempotent and the record that was to be updated remains unchanged. However, using the PUT method will ensure that the record you want to update will be overwritten by the data provided in the payload. Every time PUT is used this will happen. Therefore, PUT is an idempotent method.
 
-To cope with the non-idempotency within a POST method, it is imoortant to build functionality that brings idempotency into the equation in order to avoid unexpected results. This, however, adds complexity. As an example, imagine solving this for a RESTful API:
+To cope with the non-idempotency within a POST method, it is important to build functionality that brings idempotency into the equation in order to avoid unexpected results. This, however, adds complexity. As an example, imagine solving this for a RESTful API:
 
 - Initially check if there is similar data residing in the API. This can be done using the GET method.
 - If the result from the GET shows that no such data exists, use a POST method and create a new record.
