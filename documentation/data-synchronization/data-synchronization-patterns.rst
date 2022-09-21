@@ -94,7 +94,7 @@ There are several measure we need to implement to avoid duplicate insert entries
 
 **Counteract change and dependency tracking:**
 
-Sesam will per default only process data that requires processing, as explained in the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features. In the case of inserting data from Sesam however, these functionalities may cause entities to be reprocessed, which could generate multiple insert messages. To counteract this we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
+In order to counteract the reprocessing functionalities of :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
 
 
 **Batching:**
@@ -112,6 +112,10 @@ When using the preview function in the :ref:`Sesam management studio <sesam-mana
 **Deleted entities:**
 
 Per default Sesam will pass entities with ``"_deleted": true`` through all transforms. By discarding these entities in the insert flow we avoid inserts from deleted entities.
+
+**Reset or Restart**
+
+An insert pipe should never be reset or restarted as this would process old entities again.
 
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
