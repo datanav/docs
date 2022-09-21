@@ -90,7 +90,7 @@ When using Sesam to perform inserts in a system, we need to both make sure that 
 Avoid duplicates
 ^^^^^^^^^^^^^^^^
 
-There are several measure we need to implement to avoid duplicate insert entries in customer systems:
+There are several measures we need to implement to avoid duplicate insert entries in customer systems:
 
 **Counteract change and dependency tracking:**
 
@@ -117,10 +117,13 @@ Per default Sesam will pass entities with ``"_deleted": true`` through all trans
 
 An insert pipe should never be reset or restarted as this would process old entities again.
 
+Treat output as a new input
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
 
-Once an insert if performed, we need to store both the insert ```_id`` and the original source entity's ``_id`` to the sink dataset. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entrys from other source systems.
+Once an insert if performed, the output is considered a new entity in Sesam. This new entity should get a new ``_id`` based on the returt id from the insert. The old ``_id`` from the original source entity should be saved by using the :ref: `Rewriting identity pattern <pattern-rewriting-identity>`. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entrys from other source systems.
 
 Insert pipe configuration example 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -176,7 +179,7 @@ The following example illustrates duplicate entry precautions:
 	        ["comment", "store the id from the insert as new _id"],
 	        ["add", "_id", "_S.response.id"],
 	        ["comment", "kepp original _id for mapping purposes"],
-	        ["add", "ref-id", "_S._id"],
+	        ["add", "$original_id", "_S._id"],
 	        ["merge-union", "_S.response"],
 	        ["add", "rdf:type",
 	          ["ni", "<my-rdf:type>"]
