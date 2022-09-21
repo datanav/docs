@@ -123,12 +123,12 @@ Treat output as a new input
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
 
-Once an insert is performed, the output is considered a new entity in Sesam. This new entity should get a new ``_id`` based on the returt id from the insert. The old ``_id`` from the original source entity should be saved by using the :ref: `Rewriting identity pattern <pattern-rewriting-identity>`. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entries from other source systems.
+Once an insert is performed, the output is considered a new entity in Sesam. This new entity should get a new ``_id`` based on the returned id from the insert. The old ``_id`` from the original source entity should be saved by using the :ref: `Rewriting identity pattern <pattern-rewriting-identity>`. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entries from other source systems.
 
 Insert pipe configuration example 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The configuration below takes into account all the duplicate entry precautions mentions above:
+The configuration below takes into account all the duplicate entry precautions mentioned above:
 
 .. code-block:: json
 
