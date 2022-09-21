@@ -94,7 +94,7 @@ There are several measures we need to implement to avoid duplicate insert entrie
 
 **Counteract change and dependency tracking:**
 
-In order to counteract the reprocessing functionalities of the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
+In order to counteract the reprocessing functionalities of the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exist in the sink. 
 
 
 **Batching:**
@@ -103,11 +103,11 @@ A pipe will by default process 100 entities before writing to the sink, although
 
 **Data loss:**
 
-As explained in the :ref:`durable data <durable-data>` feature, a data loss result in duplicate insert messages from the same entity. Enabling durable data avoid these situations.
+As explained in the :ref:`durable data <durable-data>` feature, a data loss results in duplicate insert messages from the same entity. Enabling durable data avoid these situations.
 
 **Preview:**
 
-When using the preview function in the :ref:`Sesam management studio <sesam-management-studio>`, the preview entity is actually passed through the transform. Normally this is not an issue since the preview function does not pass the data to the sink. However, when performing non-idempotent actions inside a transform this will have side effects. In the case of an insert messages inside a transform the preview will actually attempt to send an insert every time it's used, which could lead to duplicate entries in the target system which are untraceable in Sesam. To avoid this, use the :ref:`transform property side_effects <transform_properties>`. If set to ``true`` the pipe will end the transform, avoiding potential duplicate entries.  
+When using the preview function in the :ref:`Sesam management studio <sesam-management-studio>`, the preview entity is actually passed through the transform. Normally this is not an issue since the preview function does not pass the data to the sink. However, when performing non-idempotent actions inside a transform this will have side effects. In the case of an insert message inside a transform the preview will actually attempt to send an insert every time it's used, which could lead to duplicate entries in the target system which are untraceable in Sesam. To avoid this, use the :ref:`transform property side_effects <transform_properties>`. If set to ``true`` the pipe will end the transform, avoiding potential duplicate entries.  
 
 **Deleted entities:**
 
@@ -123,12 +123,12 @@ Treat output as a new input
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
 
-Once an insert if performed, the output is considered a new entity in Sesam. This new entity should get a new ``_id`` based on the returt id from the insert. The old ``_id`` from the original source entity should be saved by using the :ref: `Rewriting identity pattern <pattern-rewriting-identity>`. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entrys from other source systems.
+Once an insert is performed, the output is considered a new entity in Sesam. This new entity should get a new ``_id`` based on the returt id from the insert. The old ``_id`` from the original source entity should be saved by using the :ref: `Rewriting identity pattern <pattern-rewriting-identity>`. This will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entries from other source systems.
 
 Insert pipe configuration example 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example illustrates duplicate entry precautions:
+The configuration below takes into account all the duplicate entry precautions mentions above:
 
 .. code-block:: json
 
