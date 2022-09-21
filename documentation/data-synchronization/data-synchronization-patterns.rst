@@ -94,7 +94,7 @@ There are several measure we need to implement to avoid duplicate insert entries
 
 **Counteract change and dependency tracking:**
 
-In order to counteract the reprocessing functionalities of :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
+In order to counteract the reprocessing functionalities of the :ref:`change tracking <change-tracking>` and :ref:`dependency tracking <dependency-tracking>` features we need to perform a :ref:`hops <hops>` to the pipe's own sink dataset and discard all source entities that already exists in the sink. 
 
 
 **Batching:**
