@@ -17,54 +17,191 @@ We've identified a set of patterns when working with problems related to Master 
 .. note::
   This document is subject to improvements as we continuesly are identifying new patters to enforce better master data management in Sesam.
 
-|
-|
-|
-
 .. rst-class:: center-title
+
+Enrich Patterns
+================
+
+Looking for some enrich patterns? These topics will get you started on the right foot.
+
+
+|
+|
 
 .. panels::
     :body: text-left
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Enrich pattern**
+    **Source with since support but no deletions pattern**
 
-    Patterns for enriching data in Sesam
-
-    .. link-button:: enrich-patterns
+    .. link-button:: extract-foreign-references-as-extracted-datatypes-pattern
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
 
-    **Connect patterns**
+    **Source that only provides delta streams pattern**
 
-    Patterns for connecting data in Sesam
-
-    .. link-button:: connect-patterns
+    .. link-button:: adding-type-information-pattern
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block    
     ---
 
-    **Transform patterns**
+    **Source with parameterized input pattern**
 
-    Patterns for transforming data in Sesam
-
-    .. link-button:: transform-patterns
+    .. link-button:: splitting-out-lists-of-sub-objects-pattern
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block    
+     ---
 
-    ---
+    **Recreate best effort history from a source pattern**
 
-    **Generic patterns**
+    .. link-button:: normalising-data-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block     
+     ---
 
-    Generic patterns for Sesam
+    **Make periodic entities from a versioned history pattern**
 
-    .. link-button:: generic-patterns
+    .. link-button:: extract-reference-properties-pattern
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block  
 
+.. rst-class:: center-title
+
+Connect Patterns
+================
+
+Looking for some connect patterns? These topics will get you started on the right foot.
+
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Cleaning data pattern**
+
+    .. link-button:: cleaning-data-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+
+    **External merge pattern**
+
+    .. link-button:: external-merge-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block    
+    ---
+
+    **Golden property based on priority pattern**
+
+    .. link-button:: golden-property-priority-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block    
+     ---
+
+    **Golden property based on last updated pattern**
+
+    .. link-button:: golden-property-last-updated-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block     
+     ---
+
+    **Golden property based on quality**
+
+    .. link-button:: golden-property-quality-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block  
+     ---
+
+    **Feedback loop pattern**
+
+    .. link-button:: feedback-loop-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block  
+     ---
+
+    **Hungarian notation references pattern**
+
+    .. link-button:: hungarian-notation-references-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block  
+
+.. rst-class:: center-title
+
+Transform Patterns
+==================
+
+Looking for some transform patterns? These topics will get you started on the right foot.
+
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Late schema binding**
+
+    .. link-button:: late-schema-binding-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+
+    **Defining hierarchies for recursion**
+
+    .. link-button:: recursion-hierarchy-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block    
+    ---
+
+    **Re-mapping references to target identifiers**
+
+    .. link-button:: re-mapping-references-to-target-identifiers-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block    
+
+.. rst-class:: center-title
+
+Generic Patterns
+================
+
+Looking for some generic patterns? These topics will get you started on the right foot.
+
+
+|
+|
+
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Rewriting identity pattern**
+
+    .. link-button:: rewriting-identity-pattern
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
