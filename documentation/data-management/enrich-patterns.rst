@@ -22,7 +22,7 @@ Looking for some enrich patterns? These topics will get you started on the right
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Source with since support but no deletions pattern**
+    **Extract foreign references as extracted datatypes pattern**
 
     .. link-button:: extract-foreign-references-as-extracted-datatypes-pattern
         :type: ref
@@ -30,7 +30,7 @@ Looking for some enrich patterns? These topics will get you started on the right
         :classes: btn-outline-primary btn-block
     ---
 
-    **Source that only provides delta streams pattern**
+    **Adding type information pattern**
 
     .. link-button:: adding-type-information-pattern
         :type: ref
@@ -38,7 +38,7 @@ Looking for some enrich patterns? These topics will get you started on the right
         :classes: btn-outline-primary btn-block    
     ---
 
-    **Source with parameterized input pattern**
+    **Splitting out lists of sub-objects pattern**
 
     .. link-button:: splitting-out-lists-of-sub-objects-pattern
         :type: ref
@@ -46,7 +46,7 @@ Looking for some enrich patterns? These topics will get you started on the right
         :classes: btn-outline-primary btn-block    
      ---
 
-    **Recreate best effort history from a source pattern**
+    **Normalising data pattern**
 
     .. link-button:: normalising-data-pattern
         :type: ref
@@ -54,7 +54,7 @@ Looking for some enrich patterns? These topics will get you started on the right
         :classes: btn-outline-primary btn-block     
      ---
 
-    **Make periodic entities from a versioned history pattern**
+    **Extract reference properties as reference/classification entities**
 
     .. link-button:: extract-reference-properties-pattern
         :type: ref
