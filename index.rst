@@ -115,15 +115,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
-    **Design patterns**
-
-    Here you will find a list of identified patterns related to dataflows in Sesam.
-
-    .. link-button:: patterns.html
-            :type: url
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
+    
     **Data synchronization**
 
     Read everything you need to know about data synchronization in Sesam.
