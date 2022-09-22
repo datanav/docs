@@ -61,7 +61,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
 
         This section will show you how to synchronize HubSpot data with your Sesam instance.
 
-        .. link-button:: guide-create-first-synchronization-data-management
+        .. link-button:: guide-create-first-synchronization-data-synchronization
             :type: ref
             :text: Enter this section
             :classes: tutorial-start
