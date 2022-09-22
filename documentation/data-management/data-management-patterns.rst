@@ -15,7 +15,7 @@ Data Management patterns
 We've identified a set of patterns when working with problems related to Master Data Management in Sesam. We find it very useful to name these patterns as it makes it easier to refer to them when discussing challenges.
 
 .. note::
-  This document is subject to improvements as we continuesly are identifying new patters to enforce better master data management in Sesam.
+  This document is subject to improvements as we continuously are identifying new patters to enforce better master data management in Sesam.
 
 .. rst-class:: center-title
 
