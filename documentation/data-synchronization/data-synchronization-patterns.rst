@@ -53,6 +53,8 @@ Looking for some share patterns? These topics will get you started on the right 
 
     **Insert Pattern**
 
+    A pattern for sending insert messages from Sesam to an external system. 
+
     Insert Pattern
 
     .. link-button:: insert-pattern
