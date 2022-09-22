@@ -1,0 +1,3 @@
+Splitting out lists of sub-objects
+----------------------------------
+Aggregate objects --- are the sub-objects part of the parent or can they live on their own? Use :ref:`create-child <dtl_transform-create-child>` and :ref:`emit_children <emit_children_transform>`. The parent id should be included as part of the child id. We prefer splitting out objects over combining object if you need to choose.
