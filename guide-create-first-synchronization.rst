@@ -66,7 +66,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
             :text: Enter this section
             :classes: tutorial-start
         
-    .. dropdown:: **2. Data Manegement**
+    .. dropdown:: **2. Data Management**
         :open:
 
         :badge:`Estimated time: 30 min,badge-light`
