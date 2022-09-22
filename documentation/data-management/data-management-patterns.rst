@@ -61,7 +61,7 @@ We've identified a set of patterns when working with problems related to Master 
 
     **Generic patterns**
 
-    Patterns for transforming data in Sesam
+    Generic patterns for Sesam
 
     .. link-button:: generic-patterns
         :type: ref
