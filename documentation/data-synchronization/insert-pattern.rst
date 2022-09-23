@@ -39,7 +39,17 @@ Per default Sesam will pass entities with ``"_deleted": true`` through all trans
 Connect mapping data
 ^^^^^^^^^^^^^^^^^^^^
 
-Once an insert if performed, we need to store both the insert ```_id`` and the original source entity's ``_id`` to the sink dataset. This, together with the :ref:`capture response with transform pattern<capture_response_with_transform>`, will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entrys from other source systems.
+Once an entity is inserted into the external system, we generally want to collect this entity back to Sesam in order to :ref: `merge <merging-feature>` it with it's cooresponding counterparts in a global dataset. In many cases the mapping between object within the same global flow is straight foreward: customer entities from different systems might share the same organization number, or person entities might share the same SSN. However, in some cases this mapping is not available. 
+
+In the case where the external system returns a unique identifyer for the inserted entity, such as an ``id``, we can use this to ensure mapping between the inserted entity ans the original source entity. In those cases, once an insert if performed, we need to store both the insert ```id`` and the original source entity's ``_id`` to the sink dataset. This, together with the :ref:`capture response with transform pattern <capture_response_with_transform>`, will allow us to connect these two entities in the corresponding global pipe, which ensures a fully connected data flow. In the case where no other metadata can act as merge critera, this mapping is the only way to connect inserted entites with other corresponding entrys from other source systems.
+
+
+Insert feedback to activate update flow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Although the hops described above ensures no entities that are located in the sink dataset are processed a second time, we still wish to avoid entities that already exist to be sent to our insert pipe. We can add an other discard criteria for entities that have been either been insert by Sesam or simply already exist in the external system.   
+
+
 
 Insert pipe configuration example 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,9 +72,10 @@ The following example illustrates duplicate entry precautions:
 	    "type": "dtl",
 	    "rules": {
 	      "default": [
-	        ["comment", "removing deleted entities and entities which have already been processed and stored in the sink dataset"],
+	        ["comment", "removing existing entities, deleted entities and entities which have already been processed and stored in the sink dataset"],
 	        ["discard",
 	          ["or",
+	            ["in", "<rdf:type>", "_S.rdf:type"],
 	            ["eq", "_S._deleted", true],
 	            ["is-empty",
 	              ["hops", {
