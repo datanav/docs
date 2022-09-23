@@ -1,0 +1,3 @@
+Extract foreign references as extracted datatypes
+-------------------------------------------------
+Don't make NIs to stuff that is outside your control, keep the namespace local to the system. Extract the properties to new separate datatypes. If you don't have them as objects you can't merge them with the same concept from other sources. Time is not a good candidate for NI. Postal codes are a good example. If you make a NI make it reference your own namespace. Use :ref:`create <dtl_transform-create>`.

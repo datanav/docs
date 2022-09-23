@@ -1,3 +1,5 @@
+.. _insert_pattern:
+
 Insert Pattern
 --------------
 
