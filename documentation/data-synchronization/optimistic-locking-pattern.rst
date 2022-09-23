@@ -48,7 +48,7 @@ Optimistic locking configuration example
 	            ["hops", {
 	              "datasets": ["<company>-<datatype>-collect a"],
 	              "where": [
-	                ["eq", "_S.id", "a.id"]
+	                ["eq", "_S.<key>", "a.<key>"]
 	              ]
 	            }]
 	          ]
