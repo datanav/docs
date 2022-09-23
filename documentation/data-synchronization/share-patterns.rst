@@ -25,6 +25,8 @@ Looking for some share patterns? These topics will get you started on the right 
 
     **Optimistic locking pattern** 
 
+    A pattern for performing optimistic locking in a Sesam update flow.
+
     .. link-button:: optimistic-locking-pattern
         :type: ref
         :text: Read more
