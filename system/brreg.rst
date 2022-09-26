@@ -22,7 +22,7 @@ Data types
      - true
      - false
 
-Other :ref:`Open data <systemtype>` Systems
+Other :ref:`Open data <systemtypeod>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
