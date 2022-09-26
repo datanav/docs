@@ -22,17 +22,13 @@ We are looking into how we can get the clustered architecture everywhere.
 This architecture is based on Kubernetes
 and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
 
-.. _property-lineage:
-
-Property lineage (Q2 2022)
+Property lineage
 ==========================
 
 Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
 are composed using introspectable DTL in combination with :ref:`schema inferencing <schema-inferencing>` allows us to continously track property lineage.
 
-We are working on making this lineage data available, as well as looking at ways to visualize it.
-
-This feature will be offered as part of "Integrated search".
+This feature is now offered as part of :ref:`Integrated search <integrated-search>`.
 
 Age based deletion marker compaction
 ====================================
