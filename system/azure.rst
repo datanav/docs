@@ -62,7 +62,7 @@ Data types
      - true
      - true
 
-Other :ref:`Platform as a service (PaaS) <systemtype>` Systems
+Other :ref:`Platform as a service (PaaS) <systemtypepaas>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
