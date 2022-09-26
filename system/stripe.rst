@@ -38,7 +38,7 @@ Data types
      - true
      - false
 
-Other :ref:`Financial technology <systemtype>` Systems
+Other :ref:`Financial technology <systemtypefintech>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
