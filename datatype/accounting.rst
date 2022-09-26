@@ -50,6 +50,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Customer Relationship Management (CRM) <systemtype_crm>`
 ======================================
 
@@ -130,6 +131,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise application integration (EAI) <systemtype_eai>`
 ========================================
 
@@ -162,6 +164,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise Resource Planning (ERP) <systemtype_erp>`
 ==================================
 
@@ -258,6 +261,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Financial technology <systemtype_fintech>`
 ====================
 
@@ -282,6 +286,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Platform as a service (PaaS) <systemtype_paas>`
 ============================
 
@@ -306,6 +311,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise search <systemtype_search>`
 =================
 
