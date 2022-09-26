@@ -26,7 +26,7 @@ Data types
      - false
      - true
 
-Other :ref:`Customer Relationship Management (CRM) <systemtype>` Systems
+Other :ref:`Customer Relationship Management (CRM) <systemtypecrm>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
