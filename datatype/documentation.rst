@@ -50,6 +50,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Customer Relationship Management (CRM) <systemtype_crm>`
 ======================================
 
@@ -130,6 +131,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise application integration (EAI) <systemtype_eai>`
 ========================================
 
@@ -162,6 +164,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise content management (ECM) <systemtype_ecm>`
 ===================================
 
@@ -194,6 +197,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise Resource Planning (ERP) <systemtype_erp>`
 ==================================
 
@@ -290,6 +294,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Geographic information system (GIS) <systemtype_gis>`
 ===================================
 
@@ -322,6 +327,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Platform as a service (PaaS) <systemtype_paas>`
 ============================
 
@@ -346,6 +352,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise search <systemtype_search>`
 =================
 
