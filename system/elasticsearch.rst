@@ -62,7 +62,7 @@ Data types
      - false
      - true
 
-Other :ref:`Enterprise search <systemtype>` Systems
+Other :ref:`Enterprise search <systemtypesearch>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
