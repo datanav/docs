@@ -22,7 +22,7 @@ Data types
      - true
      - true
 
-Other :ref:`Human Resource Management (HRM) <systemtype>` Systems
+Other :ref:`Human Resource Management (HRM) <systemtypehrm>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
