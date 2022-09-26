@@ -106,6 +106,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Platform as a service (PaaS) <systemtype_paas>`
 ============================
 
@@ -130,6 +131,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise search <systemtype_search>`
 =================
 
