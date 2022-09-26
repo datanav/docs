@@ -22,7 +22,7 @@ Data types
      - true
      - true
 
-Other :ref:`Identity and access management (IAM) <systemtype>` Systems
+Other :ref:`Identity and access management (IAM) <systemtypeiam>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
