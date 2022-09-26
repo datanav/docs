@@ -3,7 +3,7 @@
 Durable Data
 ============
 
-In our cloud subscriptions you now have the possibility to request that a pipes data is stored in three replicas on a high-durability disk. This greatly reduces the likelihood of data loss.
+By enabling durable data, Sesam will store the pipe data in three replicas on a high-durability disk. This greatly reduces the likelihood of data loss.
 
 
 Use case
