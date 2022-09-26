@@ -46,7 +46,7 @@ Data types
      - false
      - true
 
-Other :ref:`Geographic information system (GIS) <systemtype>` Systems
+Other :ref:`Geographic information system (GIS) <systemtypegis>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
