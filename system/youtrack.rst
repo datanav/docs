@@ -30,7 +30,7 @@ Data types
      - true
      - false
 
-Other :ref:`Project management software <systemtype>` Systems
+Other :ref:`Project management software <systemtypepms>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
