@@ -30,7 +30,7 @@ Data types
      - false
      - true
 
-Other :ref:`Enterprise Resource Planning (ERP) <systemtype>` Systems
+Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
