@@ -26,7 +26,7 @@ Data types
      - true
      - false
 
-Other :ref:`Operational technology (OT) <systemtype>` Systems
+Other :ref:`Operational technology (OT) <systemtypeot>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
