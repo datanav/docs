@@ -30,7 +30,7 @@ Data types
      - false
      - true
 
-Other :ref:`Business Intelligence (BI) <systemtype>` Systems
+Other :ref:`Business Intelligence (BI) <systemtypebi>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
