@@ -50,6 +50,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Customer Relationship Management (CRM) <systemtype_crm>`
 ======================================
 
@@ -130,6 +131,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise Resource Planning (ERP) <systemtype_erp>`
 ==================================
 
@@ -226,6 +228,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Financial technology <systemtype_fintech>`
 ====================
 
@@ -250,6 +253,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Geographic information system (GIS) <systemtype_gis>`
 ===================================
 
@@ -282,6 +286,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Operational technology (OT) <systemtype_ot>`
 ===========================
 
@@ -314,6 +319,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Platform as a service (PaaS) <systemtype_paas>`
 ============================
 
@@ -338,6 +344,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Project management software <systemtype_pms>`
 ===========================
 
@@ -362,6 +369,7 @@ System by system type
         :text: Read more
         :classes: read-more
     ---
+
 :ref:`Enterprise search <systemtype_search>`
 =================
 
