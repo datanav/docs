@@ -26,7 +26,7 @@ Data types
      - false
      - true
 
-Other :ref:`Enterprise application integration (EAI) <systemtype>` Systems
+Other :ref:`Enterprise application integration (EAI) <systemtypeeai>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
