@@ -3,13 +3,13 @@
 Durable Data
 ============
 
-By enabling durable data, Sesam will store the pipe data in three replicas on a high-durability disk. This greatly reduces the likelihood of data loss.
+By enabling durable data, Sesam will store the pipe data on a high-durability disk. This greatly reduces the likelihood of data loss.
 
 
 Use case
 --------
 
-For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. By using replicas and a high-durability disk for storage, the risk of data loss is greatly reduces. The risk of data loss might not be a critical problem when Sesam is pulling data from sources, as the data that was lost can be pulled again. However for pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, this will most likely be a problem.
+For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. By using replicas and a high-durability disk for storage, the risk of data loss is greatly reduced. The risk of data loss should be acceptable when Sesam is pulling data from sources, as the data that was lost will be pulled again by Sesam. However for pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, this will most likely be a problem.
 
 
 .. admonition:: When to enable
