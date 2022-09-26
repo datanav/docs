@@ -22,7 +22,7 @@ Data types
      - false
      - true
 
-Other :ref:`Enterprise content management (ECM) <systemtype>` Systems
+Other :ref:`Enterprise content management (ECM) <systemtypeecm>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. panels::
