@@ -3,11 +3,11 @@
 Property lineage
 =================
 
-Property lineage is a new feature which allows Sesam to track the dependencies between the various properties present in the data as it flows through the system. With this feature enabled, any namespaced property found in your subscription has its own page which shows the graph of properties that it depends on in the upstream pipes, as well as the properties depending on it in the downstream pipes.
+Property lineage is a new feature which allows Sesam to track the dependencies between the various properties present in the data as it flows through the system. With this feature enabled, any property with a :ref:`namespace <namespaces-feature>` found in your subscription has its own page which shows the graph of properties that it depends on in the upstream pipes, as well as the properties depending on it in the downstream pipes.
 
-.. image:: ../images/features/property-lineage/property-lineage-in-sesam.jpg
+.. image:: ../images/features/property-lineage/property-lineage-in-sesam.png
   :width: 80%
-  :alt: Alternative text
+  :alt: Property lineage page for a property with a namespace in the Sesam Demo subscription
 
 How it works
 ------------
@@ -38,9 +38,9 @@ How to find a lineage for a property
 
 You can get to this page in three different ways:
 
-1. ``Ctrl/Cmd+Click`` on a namespaced property in a particular entity in the Integrated Search entity view.
+1. ``Ctrl/Cmd+Click`` on any property with a namespace in a particular entity in the Integrated Search entity view.
 
-2. ``Ctrl/Cmd+Click`` on a namespaced property in a particular entity in the Input/Output tab of a pipe.
+2. ``Ctrl/Cmd+Click`` on any property with a namespaced in a particular entity in the Input/Output tab of a pipe.
 
 3. By clicking on the name of a particular pipe in the list of pipe entity types in the Browse/Entity Types view, or going to the Inferred Schema tab of a particular pipe. This presents a list of all the properties found within the data that flows through this pipe. Clicking on one of these will get you to the Property Lineage page for this property.
 
