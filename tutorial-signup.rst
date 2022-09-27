@@ -5,9 +5,14 @@ Sign up
 
 In order to use sesam you will need to sign up and request access to a trial subscription, or existing subscription.
 
-#. Sign up to Sesam here `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__ .
+* Sign up to Sesam at the `Sesam Portal <https://portal.sesam.io/auth/login?redirect=dashboard>`__.
 
-|
+
+.. admonition:: User accounts in Sesam
+
+    *  You can create a new Sesam account either by signing up using your email and a password, or instantly log in using one of the third party authentication providers on the right side of the Login page. This automatically creates a new account in Sesam.
+    *  If you create a new account with an email and a password, you can also later use the third party authentication provider to login to this account, provided the emails match. 
+    *  If you are using multiple authentication providers to login to your account, you can restrict access for some of them on the User Profile page.    
 
 .. _getting-started-private-subscription:
 
