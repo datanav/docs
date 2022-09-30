@@ -26,12 +26,12 @@ The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
 
 Developer environment
 ---------------------
-A developer environment has a fixed price and serves a single developer, or a CI test environment. 
+A developer environment has a fixed price and serves a single developer, or a CI test environment.
 These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted.
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
 by using the :doc:`Sesam Client <sesam-client>`.
 
-.. list-table:: Developer environments
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
@@ -47,22 +47,22 @@ by using the :doc:`Sesam Client <sesam-client>`.
 Production and test environment
 -------------------------------
 
-.. list-table:: Runtime environments [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Compute
+   * - Compute [#]_
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
      - $1,000.00
    * - Multi compute - 16 Engines < 1 TB Data
      - $3,500.00
 
-.. list-table:: Data prices [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Data
+   * - Data [#]_
      - Pr GB
    * - Storage
      - $15.00
@@ -71,11 +71,11 @@ Production and test environment
    * - Metrics and monitoring
      - $4.00
 
-.. list-table:: SLA [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Support - Response time
+   * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
      - $15.00
@@ -122,7 +122,7 @@ subscription fee shall be adjusted correspondingly without prior notice.
 
 The following items are no longer available for new subscriptions:
 
-.. list-table:: Legacy runtime environments
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
@@ -131,16 +131,16 @@ The following items are no longer available for new subscriptions:
    * - Large compute - 8 Engines < 750 GB Data
      - $2,000.00
 
-.. list-table:: Legacy Pipe monitoring
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Monitoring
+   * - Pipe monitoring
      - Pr pipe
    * - Enterprise - Notifications
      - $25.00
 
-.. list-table:: GDPR Data Access Portal
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
