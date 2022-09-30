@@ -440,7 +440,7 @@ button.copybtn {
    opacity: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1536px) {
 	.card-text {
 	white-space: nowrap; 
 	overflow: hidden;
