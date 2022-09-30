@@ -179,6 +179,18 @@ Properties
      - ``false``
      -
 
+       .. _service_metadata_global_defaults_reprocessing_policy:
+
+   * - ``global_defaults.reprocessing_policy``
+     - Enum<String>
+     - Specifies the default policy that pipes use to decide if the pipe needs to be reset or not. The policy can also be set on :ref:`individual pipes <automatic-reprocessing>`.
+
+       - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
+
+       - ``automatic`` means that the pipe will automatically reset the pipe when it finds that there are factors that indicate that the pipe should be reset. The rationale for resetting the pipe is so that input entities can the reprocessed so that the output is correct.
+     - ``continue``
+     -
+
        .. _service_metadata_global_defaults_enable_background_rescan:
 
    * - ``global_defaults.enable_background_rescan``
