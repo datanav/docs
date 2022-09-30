@@ -15,9 +15,9 @@ Automatic Reprocessing is useful when pipes fall out of sync. There are many pos
 - Sources may be truncated
 - Data may be restored from backup
 - Joins to new datasets can be introduced or datasets that are input to a pipe
-- Datasets that are hop-ed to by a pipe may be deleted. 
+- Datasets that are hop-ed to by a pipe may be deleted.
 
-In the cases sabove the pipe should be reset and it should perform a full rescan to get a new view of the data. 
+In the cases sabove the pipe should be reset and it should perform a full rescan to get a new view of the data.
 
 When enabled Automatic Reprocessing will automatically detect that the pipe is out of sync and reset it.
 
@@ -41,7 +41,7 @@ Properties
 
    * - ``reprocessing_policy``
      - Enum<String>
-     - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not.
+     - Specifies the policy that the pipe uses to decide if a pipe needs to be reset or not. The default policy for pipes can be set in :ref:`service metadata <service_metadata_global_defaults_reprocessing_policy>`.
 
        - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
 
