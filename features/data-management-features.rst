@@ -99,6 +99,15 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    **Property Lineage**
+
+    Property lineage lets you inspect the dependencies between properties in your data.
+
+    .. link-button:: /features/property-lineage
+            :type: ref
+            :text: Read more
+            :classes: read-more
+    ---
     **Completeness**
 
     Makes sure that all pipes that a specific pipe is dependent on have run before it processes the source entities of this pipe.
@@ -140,6 +149,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     Schema Inferencing <schema-inferencing>
     Schema Models <schema-models>
     Integrated Search <integrated-search>
+    Property Lineage <property-lineage>
     Completeness <completeness-feature>
     Compaction <compaction-feature>
     Config Groups <api-config-groups>
