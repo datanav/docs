@@ -10,6 +10,73 @@
 
 .. rst-class:: center-title
    
+What´s new?
+===========
+
+Here are the latest features we have implemented.
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Property Lineage**
+
+    See where properties originate from and inspect their lineage.
+
+    .. link-button:: property-lineage
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    **Integrated Search**
+
+    Search, filter and get more insight into your data and relationships within.
+
+    .. link-button:: integrated-search
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    **Durable Data**
+
+    You can now chose to store your vital data in high-durability disk.
+
+    .. link-button:: durable-data
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    **Another feature**
+
+    Read about the fundamental principles to ensure effective Master data management.
+
+    .. link-button:: core-principles.html
+            :type: url
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    :body: bg-info text-left text-white
+
+    **See all feature**
+
+    Visit the features section to see all the features
+
+    .. link-button:: index-product-features
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+
+
+|
+|
+|
+
+.. rst-class:: center-title
+   
 Get to know Sesam
 =================
 
