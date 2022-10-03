@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2022_10_03:
+
+2022-10-03
+----------
+
+* Pipe runs triggered by pumps using cron expressions or scheduled intervals larger than one hour (3600 seconds) are
+  persisted, so if the service is down when they should have run they will be run as soon as the service starts up again.
+
+
 .. _changelog_2022_09_06:
 
 2022-09-06
