@@ -183,23 +183,14 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Quick reference**
-
-    In a hurry? Check this references to rapidly find what you are looking for.
-
-    .. link-button:: quick-reference
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
     **Building blocks**
 
     These are the building blocks in Sesam, get to know them in this section.
 
     .. link-button:: developer-guide
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
     ---
     **Data Transformation Language**
 
