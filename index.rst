@@ -10,6 +10,101 @@
 
 .. rst-class:: center-title
    
+What´s new?
+===========
+
+Here are the latest features we have implemented.
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    .. rst-class:: align-right
+
+    :badge:`Free for developers,badge-success badge-pill`
+
+    **Property Lineage**
+
+    See where properties originate from and inspect their lineage.
+
+    .. link-button:: property-lineage
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    .. rst-class:: align-right
+
+    :badge:`Free for developers,badge-success badge-pill`
+
+    **Integrated Search**
+
+    Search, filter and get more insight into your data and relationships within.
+
+    .. link-button:: integrated-search
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    .. rst-class:: align-right
+
+    :badge:`Paid feature,badge-primary badge-pill`
+
+    **Durable Data**
+
+    You can now chose to store your vital data in high-durability disk.
+
+    .. link-button:: durable-data
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    .. rst-class:: align-right
+
+    :badge:`Paid feature,badge-primary badge-pill`
+
+    **Metrics & Monitoring**
+
+    The Metrics API allows you to setup your own dashboards for monitoring your subscription.
+
+    .. link-button:: metrics-api
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    .. rst-class:: align-right
+
+    :badge:`Free feature,badge-success badge-pill`
+
+    **Completeness**
+
+    A pipe specific feature that ensures that all dependent pipes have run before it processes entities.
+
+    .. link-button:: completeness-feature
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    :body: bg-info text-left text-white
+
+    **See all feature**
+
+    Visit the features section to see all the features Sesam offers.
+
+    .. link-button:: index-product-features
+            :type: ref
+            :text: See all features
+            :classes: read-more
+
+|
+|
+|
+
+.. rst-class:: center-title
+   
 Get to know Sesam
 =================
 
@@ -27,8 +122,8 @@ New to Sesam? These topics will get you started on the right foot.
 
     Learn more about Sesam and what benefits it can give your platform.
 
-    .. link-button:: index-whatis.html
-        :type: url
+    .. link-button:: index-whatis
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -36,8 +131,8 @@ New to Sesam? These topics will get you started on the right foot.
 
     Check some of the product features that make Sesam flexible, agile and effective.
 
-    .. link-button:: product-features.html
-            :type: url
+    .. link-button:: product-features
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -54,8 +149,8 @@ New to Sesam? These topics will get you started on the right foot.
 
     Read about the fundamental principles to ensure effective Master data management.
 
-    .. link-button:: core-principles.html
-            :type: url
+    .. link-button:: core-principles
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -88,30 +183,21 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Quick reference**
-
-    In a hurry? Check this references to rapidly find what you are looking for.
-
-    .. link-button:: quick-reference.html
-        :type: url
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
     **Building blocks**
 
     These are the building blocks in Sesam, get to know them in this section.
 
-    .. link-button:: developer-guide.html
-            :type: url
-            :text: Read more
-            :classes: btn-outline-primary btn-block
+    .. link-button:: developer-guide
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
     ---
     **Data Transformation Language**
 
     Read about DTL and how it can empower data transformations.
     
-    .. link-button:: DTLReferenceGuide.html
-        :type: url
+    .. link-button:: DTL
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -120,8 +206,8 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read everything you need to know about data synchronization in Sesam.
 
-    .. link-button:: index-synchronization.html
-            :type: url
+    .. link-button:: index-synchronization
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -130,8 +216,8 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about the core of any platform aimed to integrate data. 
     
-    .. link-button:: index-data-management.html
-        :type: url
+    .. link-button:: index-data-management
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -139,8 +225,8 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     See how Sesam works within cloud providers like Azure, Amazon and Google.
 
-    .. link-button:: index-dataplatforms.html
-            :type: url
+    .. link-button:: index-dataplatforms
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
@@ -148,20 +234,19 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about some of the tailored functionalities Sesam provides for a secure solution.
 
-    .. link-button:: index-dataplatforms.html
-            :type: url
+    .. link-button:: index-dataplatforms
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    :column: col-lg-12 p-2 constrained-card
     **Want to read more?** 
     
     See all the topics in documentation here.
 
-    .. link-button:: index-developer.html
-        :type: url
+    .. link-button:: index-developer
+        :type: ref
         :text: See all documentation
-        :classes: btn-all-sections btn-all
+        :classes: read-more
 
 |
 |
@@ -187,8 +272,8 @@ Learn how to use Sesam effectively by following these tutorials.
     This easy step-by-step guide will set you up so you are ready to start using Sesam.
 
 
-    .. link-button:: guide-getting-started.html
-        :type: url
+    .. link-button:: guide-getting-started
+        :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
@@ -196,8 +281,8 @@ Learn how to use Sesam effectively by following these tutorials.
 
     Want to try Sesam? This easy step-by-step guide will set you up!
 
-    .. link-button:: index-learn-synchronization.html
-            :type: url
+    .. link-button:: index-learn-synchronization
+            :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
