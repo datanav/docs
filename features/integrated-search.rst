@@ -1,5 +1,7 @@
 .. _integrated-search:
 
+:badge:`Free for developers,badge-success badge-pill`
+
 Integrated Search
 =================
 

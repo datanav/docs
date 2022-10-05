@@ -1,5 +1,7 @@
 .. _durable-data:
 
+:badge:`Paid feature,badge-info badge-pill`
+
 Durable Data
 ============
 

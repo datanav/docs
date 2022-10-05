@@ -1,5 +1,7 @@
 .. _schema-models:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Schema models
 =============
 

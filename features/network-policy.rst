@@ -1,5 +1,7 @@
 .. _network-policy:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Network Policy
 ==============
 

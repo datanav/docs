@@ -1,5 +1,7 @@
 .. _schema-inferencing:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Schema inferencing
 ==================
 

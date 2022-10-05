@@ -1,5 +1,7 @@
 .. _dependency-tracking:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Dependency Tracking
 ===================
 

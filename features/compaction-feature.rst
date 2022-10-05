@@ -1,5 +1,7 @@
 .. _compaction-feature:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Compaction
 ==========
 

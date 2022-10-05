@@ -1,5 +1,7 @@
 .. _status-page:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Status Page
 ===========
 

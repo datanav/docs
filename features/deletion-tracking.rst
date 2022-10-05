@@ -1,5 +1,7 @@
 .. _deletion-tracking:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Deletion Tracking
 =================
 

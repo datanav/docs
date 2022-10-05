@@ -1,7 +1,11 @@
 .. _change-tracking:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Change Tracking
 ===============
+
+:badge:`Free feature,badge-success badge-pill`
 
 Inside Sesam, :ref:`entities <entity-data-model>` flow between datasets before being sent to their corresponding target system. This flow of entities is controlled by :ref:`pipes <pipe_section>`, and one of the tasks of pipes in Sesam is to make sure that no unnecessary entities are processed.   
 
@@ -17,7 +21,7 @@ The comparison is done by comparing the new and the old entitie's ``_hash`` valu
 
 Each entity version written to a dataset will receive an ``_updated`` value. An entity's ``_updated`` value, unique to each dataset, is an incremental counter assigned to each entity version when they are stored in the target dataset. When a pipe's pump has sucessfully finished, the pipe will store the last (newest) entity's ``_updated`` value as the pipe's ``since`` value, thereby keeping track of the entities that have already been processed.     
 
-.. admonition::  Info:
+.. admonition::  Good to know:
     
     Change tracking is a built-in feature in Sesam and will always act in the background. You could however easily make a pipe reprocess all or some entitites in the source dataset by changing the pipe's ``since`` value in the following ways:
 

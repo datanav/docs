@@ -1,5 +1,7 @@
 .. _transit-encoding:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Transit Encoding
 ================
 

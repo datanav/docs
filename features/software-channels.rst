@@ -1,5 +1,7 @@
 .. _software-channels:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Software channels
 =================
 

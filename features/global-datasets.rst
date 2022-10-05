@@ -1,5 +1,7 @@
 .. _global-datasets:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Global datasets
 ===============
 

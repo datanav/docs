@@ -1,5 +1,7 @@
 .. _property-lineage:
 
+:badge:`Free for developers,badge-success badge-pill`
+
 Property lineage
 =================
 
