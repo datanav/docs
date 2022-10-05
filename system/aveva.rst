@@ -19,12 +19,24 @@ Data types
      - Output
 
    * - :ref:`Asset <datatype_asset>`
-     - false
+     - true
      - true
 
-   * - :ref:`Location <datatype_location>`
-     - false
+   * - :ref:`Documentation <datatype_documentation>`
      - true
+     - false
+
+   * - :ref:`Location <datatype_location>`
+     - true
+     - true
+
+   * - :ref:`Organisation <datatype_organisation>`
+     - true
+     - false
+
+   * - :ref:`Person <datatype_person>`
+     - true
+     - false
 
 Other :ref:`Operational technology (OT) <systemtypeot>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
