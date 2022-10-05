@@ -23,7 +23,7 @@ Data types
      - false
 
    * - :ref:`Asset <datatype_asset>`
-     - false
+     - true
      - true
 
    * - :ref:`Contract <datatype_contract>`
