@@ -22,13 +22,21 @@ Data types
      - true
      - true
 
+   * - :ref:`Documentation <datatype_documentation>`
+     - true
+     - false
+
    * - :ref:`Event <datatype_event>`
      - true
      - false
 
    * - :ref:`Location <datatype_location>`
-     - false
      - true
+     - true
+
+   * - :ref:`Organisation <datatype_organisation>`
+     - true
+     - false
 
    * - :ref:`Person <datatype_person>`
      - true
