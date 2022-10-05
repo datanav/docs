@@ -19,12 +19,20 @@ Data types
      - Output
 
    * - :ref:`Asset <datatype_asset>`
-     - false
+     - true
      - true
 
    * - :ref:`Location <datatype_location>`
      - false
      - true
+
+   * - :ref:`Organisation <datatype_organisation>`
+     - true
+     - false
+
+   * - :ref:`Person <datatype_person>`
+     - true
+     - false
 
    * - :ref:`Task <datatype_task>`
      - false
