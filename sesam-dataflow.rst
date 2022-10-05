@@ -105,7 +105,7 @@ As an example, imagine two business entities from two different sources both hav
 By adding namespaces, these two entities could safely be merged by preserving their properties in separate namespaces:
 ``<source a>:first-name`` and ``<source b>:first-name``.
 
-See :ref:`namespaces-feature` for more details.
+See :ref:`namespaces <namespaces-feature>` for more details.
 
 .. _semantic-enrichment-namespaced-identifiers:
 
