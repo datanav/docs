@@ -1,5 +1,7 @@
 .. _scheduling-and-signalling:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Scheduling and signalling
 =========================
 

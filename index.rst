@@ -23,10 +23,6 @@ Here are the latest features we have implemented.
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    .. rst-class:: align-right
-
-    :badge:`Free for developers,badge-success badge-pill`
-
     **Property Lineage**
 
     See where properties originate from and inspect their lineage.
@@ -36,10 +32,6 @@ Here are the latest features we have implemented.
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
-    .. rst-class:: align-right
-
-    :badge:`Free for developers,badge-success badge-pill`
-
     **Integrated Search**
 
     Search, filter and get more insight into your data and relationships within.
@@ -49,10 +41,6 @@ Here are the latest features we have implemented.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    .. rst-class:: align-right
-
-    :badge:`Paid feature,badge-primary badge-pill`
-
     **Durable Data**
 
     You can now chose to store your vital data in high-durability disk.
@@ -62,10 +50,6 @@ Here are the latest features we have implemented.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    .. rst-class:: align-right
-
-    :badge:`Paid feature,badge-primary badge-pill`
-
     **Metrics & Monitoring**
 
     The Metrics API allows you to setup your own dashboards for monitoring your subscription.
@@ -75,10 +59,6 @@ Here are the latest features we have implemented.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    .. rst-class:: align-right
-
-    :badge:`Free feature,badge-success badge-pill`
-
     **Completeness**
 
     A pipe specific feature that ensures that all dependent pipes have run before it processes entities.

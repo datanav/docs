@@ -1,5 +1,7 @@
 .. _namespaces-feature:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Namespaces
 ==========
 

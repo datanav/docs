@@ -1,5 +1,7 @@
 .. _continuation-support:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Continuation Support
 ====================
 

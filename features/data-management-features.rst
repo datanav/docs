@@ -18,6 +18,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    :badge:`Free feature,badge-success badge-pill`
+
     **Data Transformation Language**
 
     DTL allows to describe transformations performed on streams of data in order to create and shape datasets.
@@ -27,6 +29,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Automatic Reprocessing**
 
     Perform automatic reset of pipes when they have fallen out of sync.
@@ -36,6 +40,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Namespaces**
 
     A namespaced identifier (NI) is a unique reference to an abstract thing.
@@ -45,6 +51,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Merging**
 
     Gives global datasets the ability to merge different entities into one entity representing the same thing.
@@ -54,6 +62,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Global datasets**
 
     The recommended way of organizing the data in Sesam is to model and store the data in global datasets.
@@ -63,6 +73,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Dependency Tracking**
 
     Understand complex data dependecies in Data Transformation Language.
@@ -72,6 +84,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Schema Inferencing**
 
     See the structure of the data that went into the pipe and the data that came out of it.
@@ -81,6 +95,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Schema Models**
 
     Schema inferencing generates entity types for the pipe source and pipe sink.
@@ -90,6 +106,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free for developers,badge-info badge-pill`
+
     **Integrated Search**
 
     Integrated data browsing gives you more insight into your data and relationships within.
@@ -99,6 +117,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free for developers,badge-info badge-pill`
+
     **Property Lineage**
 
     Property lineage lets you inspect the dependencies between properties in your data.
@@ -108,6 +128,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Completeness**
 
     Makes sure that all pipes that a specific pipe is dependent on have run before it processes the source entities of this pipe.
@@ -117,6 +139,10 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    .. rst-class:: align-right
+
+    :badge:`Free feature,badge-success badge-pill`
+
     **Compaction**
 
     A retention policy that ensures that a dataset does not consume all available disk space.
@@ -126,6 +152,8 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
+    :badge:`Free feature,badge-success badge-pill`
+
     **Config Groups**
 
     Configure your sesam subscription by adding and modifying single systems and pipes via specific endpoints.

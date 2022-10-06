@@ -1,5 +1,7 @@
 .. _circuit-breakers:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Circuit Breakers
 ================
 

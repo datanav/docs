@@ -1,5 +1,7 @@
 .. _merging-feature:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Merging
 =======
 

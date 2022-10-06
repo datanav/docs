@@ -1,5 +1,7 @@
 .. _bring-your-own-key:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Bring Your Own Key
 ==================
 

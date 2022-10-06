@@ -1,5 +1,7 @@
 .. _api-config-groups:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Config groups
 =============
 

@@ -1,5 +1,7 @@
 .. _automatic-reprocessing:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Automatic Reprocessing
 ======================
 

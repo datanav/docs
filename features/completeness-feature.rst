@@ -1,5 +1,7 @@
 .. _completeness-feature:
 
+:badge:`Free feature,badge-success badge-pill`
+
 Completeness
 ============
 

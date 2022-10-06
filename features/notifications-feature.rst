@@ -1,5 +1,7 @@
 .. _notifications-feature:
 
+:badge:`Paid feature,badge-info badge-pill`
+
 =============
 Notifications
 =============

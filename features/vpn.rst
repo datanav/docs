@@ -1,5 +1,7 @@
 .. _vpn-feature:
 
+:badge:`Paid feature,badge-info badge-pill`
+
 VPN
 ===
 
