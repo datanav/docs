@@ -12,3 +12,7 @@ This is in essence a problem of cache invalidation of complex queries. With Sesa
 .. NOTE::
 
    Only pipes that use the :ref:`dataset source <dataset_source>` supports dependency tracking. The primary reason for that is a technical one; the tracked entities need to be looked up by id before a specific point in time and fed through the pipe. This is currently only implemented for the ``dataset`` source type. It is unlikely that it can be implemented for other source types as those have latency and ambiguity issues.
+
+.. NOTE::
+
+   If you have multiple (chained) DTL transforms on a pipe, dependency tracking will only be enabled for hops located in the first transform of the chain. If you need to have multiple DTL transforms in a pipe, for instance if you have interleaved HTTP or REST transforms, then a work-around is to split the pipe into multiple pipes so the hops that require dependency tracking are located in the first DTL transform in one of them.
