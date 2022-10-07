@@ -70,7 +70,7 @@ Here are the latest features we have implemented.
     ---
     :body: bg-info text-left text-white
 
-    **See all feature**
+    **See all features**
 
     Visit the features section to see all the features Sesam offers.
 
