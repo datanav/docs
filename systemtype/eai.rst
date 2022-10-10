@@ -34,6 +34,10 @@ Data types
      - false
      - true
 
+   * - :ref:`Location <datatype_location>`
+     - false
+     - true
+
    * - :ref:`Organisation <datatype_organisation>`
      - true
      - true
