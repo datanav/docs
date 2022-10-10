@@ -18,6 +18,10 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Location <datatype_location>`
+     - true
+     - false
+
    * - :ref:`Organisation <datatype_organisation>`
      - true
      - false
