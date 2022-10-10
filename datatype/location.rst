@@ -132,6 +132,39 @@ System by system type
         :classes: read-more
     ---
 
+:ref:`Enterprise application integration (EAI) <systemtype_eai>`
+========================================
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Azure-service-bus**
+
+    Azure Service Bus is a reliable cloud messaging as a service (MaaS) and simple hybrid integration
+    .. link-button:: system/azure-service-bus
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Microsoft Dataverse**
+
+    Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications. 
+    .. link-button:: system/dataverse
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Apache Kafka**
+
+    
+    .. link-button:: system/kafka
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+
 :ref:`Enterprise Resource Planning (ERP) <systemtype_erp>`
 ==================================
 
