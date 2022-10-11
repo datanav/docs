@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2022_10_11:
+
+2022-10-11
+----------
+
+* Added configuration warning to pipes with chained DTL transforms where other than the first transform use hops with dependency tracking enabled.
+* Added configuration warning to pipes that have hops with dependency tracking enabled, but do not use the "dataset" source.
+
+
 .. _changelog_2022_10_03:
 
 2022-10-03
