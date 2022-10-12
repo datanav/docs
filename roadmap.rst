@@ -10,25 +10,37 @@ Planned
 
 .. _roadmap_clustered_architecture:
 
-Clustered architecture everywhere (Q1 2022)
-===========================================
+Clustered architecture on all cloud subscriptions (Q4 2022)
+===========================================================
 
 Today we have two variants of Sesam (single machine and clustered). The two variants share most of their code, but
 some parts are implemented in different ways. This makes some features harder for us to implement, and can cause
 slight differences in behaviour between the two variants.
 
-We are looking into how we can get the clustered architecture everywhere.
+We are looking into how we can get the clustered architecture everywhere, and how to migrate all our cloud subscriptions to the new architecture.
 
-This architecture is based on Kubernetes
-and might open up the possibility of running Sesam in a self-hosted Kubernetes cluster.
+Self hosted clustered architecture (Q1 2023)
+============================================
 
-Property lineage
-==========================
+Today self hosted Sesam only supports the single machine variant. A lot of new features are only offered on the clustered architecture (e.g. Metrics API, Integrated Search), and is therefore not available on self hosted subscriptions.
 
-Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
-are composed using introspectable DTL in combination with :ref:`schema inferencing <schema-inferencing>` allows us to continously track property lineage.
+We are looking into self hosting of the clustered architecture. This architecture is based on Kubernetes, and will require a running Kubernetes cluster. We will start testing on the most common Kubernetes services (Google GKE, Amazon EKS and Azure AKS).
 
-This feature is now offered as part of :ref:`Integrated search <integrated-search>`.
+Reusable connectors (Q2 2023)
+=============================
+
+Today one can quickly build connectors by configuring our generic systems (e.g. SQL, REST), but there is not a simple way to reuse those configurations.
+
+We are looking into how to package up a set of configurations in such a way that they can be reused across subscriptions.
+
+Onboarding portal (Q2 2023)
+===========================
+
+Today one has to get the credentials to the systems one would like to connect from an external source and inject them into a running subscription as secrets. For subscriptions that are built around multiple tenants building such an onboarding solution can be time consuming.
+
+We are looking into building a configurable onboarding application that allows a solution provider to get their tenant to onboard themselves using a simple end user web interface.
+
+This will be built on top of reusable connectors, and support connectors that require OAuth2 flows as well as services with simpler API key credentials.
 
 Age based deletion marker compaction
 ====================================
@@ -98,6 +110,16 @@ Public Preview
 
 The following items are now available for experimental use.
 
+.. _roadmap_property_lineage:
+
+Property lineage
+================
+
+Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
+are composed using introspectable DTL in combination with :ref:`schema inferencing <schema-inferencing>` allows us to continously track property lineage.
+
+.. note::
+  :ref:`Property lineage <property-lineage>` is now offered as part of :ref:`Integrated search <integrated-search>`.
 
 .. _roadmap_metrics_api:
 
@@ -110,18 +132,6 @@ This feature will most likely be offered as part of a new data option called "Me
 
 .. note::
    :ref:`Metrics <metrics-api>` is now available for subscriptions running on the Clustered Architecture.
-
-Durable data
-============
-
-Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
-
-For http_endpoint sources and non-idempotent sinks, this can be a problem.
-
-We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
-
-.. note::
-   :ref:`Durable data <durable-data>` is now available on all cloud subscriptions.
 
 Integrated data browsing
 ========================
@@ -143,6 +153,18 @@ Generally Available
 -------------------
 
 The following items are now available for general use.
+
+Durable data
+============
+
+Data is backed up once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. This is typically not a problem when Sesam is pulling data from sources, as the data that was lost can be pulled again.
+
+For http_endpoint sources and non-idempotent sinks, this can be a problem.
+
+We are looking into how to support durable data as an opt-in payed feature. This feature can then be enabled on relevant pipes.
+
+.. note::
+   :ref:`Durable data <durable-data>` is now available on all cloud subscriptions.
 
 .. _roadmap_dev_pro:
 
