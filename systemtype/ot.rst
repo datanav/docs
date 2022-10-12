@@ -22,6 +22,10 @@ Data types
      - true
      - true
 
+   * - :ref:`Contract <datatype_contract>`
+     - true
+     - false
+
    * - :ref:`Documentation <datatype_documentation>`
      - true
      - false
