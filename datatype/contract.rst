@@ -287,39 +287,6 @@ System by system type
         :classes: read-more
     ---
 
-:ref:`Operational technology (OT) <systemtype_ot>`
-===========================
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **AVEVA**
-
-    AVEVA solutions (former Wonderware) is a engineering technology provider and leader in industrial software. AVEVA connects the power of information and artificial intelligence (AI) with human insight, to enable faster and more precise decision making, helping industries to boost operational delivery and sustainability.
-    .. link-button:: system/aveva
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
-    **Bazefield**
-
-    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power. 
-    .. link-button:: system/bazefield
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
-    **Rotorsoft**
-
-    ROTORsoft is a computer programme that fully automatically reads time and event controlled measurements and operating data from wind turbines, solar collectors, biogas plants as well as hydroelectric power stations.
-    .. link-button:: system/rotorsoft
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
-
 :ref:`Platform as a service (PaaS) <systemtype_paas>`
 ============================
 
