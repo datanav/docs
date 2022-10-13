@@ -19,12 +19,12 @@ slight differences in behaviour between the two variants.
 
 We are looking into how we can get the clustered architecture everywhere, and how to migrate all our cloud subscriptions to the new architecture.
 
-Self hosted clustered architecture (Q1 2023)
+Self-hosted clustered architecture (Q1 2023)
 ============================================
 
-Today self hosted Sesam only supports the single machine variant. A lot of new features are only offered on the clustered architecture (e.g. Metrics API, Integrated Search), and is therefore not available on self hosted subscriptions.
+Today self-hosted Sesam only supports the single machine variant. A lot of new features are only offered on the clustered architecture (e.g. Metrics API, Integrated Search), and is therefore not available on self-hosted subscriptions.
 
-We are looking into self hosting of the clustered architecture. This architecture is based on Kubernetes, and will require a running Kubernetes cluster. We will start testing on the most common Kubernetes services (Google GKE, Amazon EKS and Azure AKS).
+We are looking into self-hosting of the clustered architecture. This architecture is based on Kubernetes, and will require a running Kubernetes cluster. We will start testing on the most common Kubernetes services (Google GKE, Amazon EKS and Azure AKS).
 
 Reusable connectors (Q2 2023)
 =============================
@@ -38,15 +38,15 @@ Onboarding portal (Q2 2023)
 
 Today one has to get the credentials to the systems one would like to connect from an external source and inject them into a running subscription as secrets. For subscriptions that are built around multiple tenants building such an onboarding solution can be time consuming.
 
-We are looking into building a configurable onboarding application that allows a solution provider to get their tenant to onboard themselves using a simple end user web interface.
+We are looking into building a configurable onboarding application that allows a solution provider to get their tenants to onboard themselves using a simple end user web interface.
 
 This will be built on top of reusable connectors, and support connectors that require OAuth2 flows as well as services with simpler API key credentials.
 
-Age based deletion marker compaction
+Age-based deletion marker compaction
 ====================================
 
 If Sesam has seen an entity it will remember the 'id' for this entity forever. This also applies to entities that was
-seen but no longer exists in the source.
+seen, but no longer exist in the source.
 
 These deletion markers are required for incremental synchronizing of data, but once all the consumers have read the
 deletion marker it only has historic value.
@@ -54,12 +54,12 @@ deletion marker it only has historic value.
 We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
 cleaned up.
 
-High level configuration
+High-level configuration
 ========================
 
-The current user interface is built around configuring pipes, which is a low level building block in Sesam. We have now estabilished best practices that describes the patterns you should use to build a robust and extensible Sesam solution using pipes. We also have schemas for all the built-in systems, and will have schemas for all systems once Extensions are in place.
+The current user interface is built around configuring pipes, which is a low level building block in Sesam. We have now estabilished best practices that describe the patterns you should use to build a robust and extensible Sesam solution using pipes. We also have schemas for all the built-in systems, and will have schemas for all systems once Extensions are in place.
 
-We are looking into how we can design a high level configuration and corresponding user interface that builds upon these features.
+We are looking into how we can design a high-level configuration, and corresponding user interface, that builds upon these features.
 
 The goal is to make it much easier to configure Sesam, using visual tools and human friendly forms.
 
