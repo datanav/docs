@@ -214,7 +214,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about some of the tailored functionalities Sesam provides for a secure solution.
 
-    .. link-button:: index-dataplatforms
+    .. link-button:: index-operations
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
