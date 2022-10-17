@@ -61,7 +61,7 @@ Properties
 
 .. note::
 
-  You can use a DTL transform with the following snippet ``["filter", ["neq", "_S._deleted", true]]`` to prevent further transforms to be performed on entities marked as deleted.
+  You can use a DTL transform with the following snippet ``["filter", ["neq", "_S._deleted", true]]`` to prevent further transforms to be performed on entities marked as deleted. Should only be used on dataset sinks and where ``_id`` is not rewritten.
 
 
 .. toctree::
