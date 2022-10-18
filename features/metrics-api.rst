@@ -27,7 +27,7 @@ Metrics and monitoring is now available for all subscriptions with clustered arc
 Pricing
 =======
 
-Enabling Metrics and monitoring on your subscription could incur an increase in data size needed to monitor pipes. Follow the steps above to check how this feature affect your monthly price. 
+Follow the steps above to check how this feature affect your monthly price. 
 
 Metrics API
 ===========
