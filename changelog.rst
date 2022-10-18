@@ -1059,11 +1059,6 @@ Changes to the user experience:
      an exact match.
 
 
-2017-11-13
-----------
-* The default value of the ``keep_existing_solr_ids`` configuration property in the :ref:`The Sesam Databrowser sink <databrowser_sink>`
-  has been changed from ``true`` to ``false``.
-
 2017-11-08
 ----------
 * The :ref:`JSON push sink  <json_sink>` now supports customizable HTTP headers via a ``headers`` property.
@@ -1350,9 +1345,8 @@ Changes to the user experience:
 ----------
 * Added Elasticsearch support, which includes a :ref:`system <elasticsearch_system>` and a :ref:`sink <elasticsearch_sink>`.
 * The :ref:`Solr sink <solr_sink>` now supports :ref:`batching <pipe_batching>`.
-* Added the ``commit_at_end`` property to the :ref:`Solr sink <solr_sink>` and the :ref:`Sesam databrowser sink <databrowser_sink>`.
-* Moved the ``commit_within`` property from the :ref:`Solr system <solr_system>` to the :ref:`Solr sink <solr_sink>` and the :ref:`Sesam databrowser sink <databrowser_sink>`. The reason is that the commit rate is really specific to how and where it is used. This change is backward compatible, as the default value is taken from the system. It is recommended to update the configuration files accordingly.
-* Moved the ``prefix_includes`` and ``keep_existing_solr_ids`` properties from the :ref:`Solr system <solr_system>` to the :ref:`Sesam databrowser sink <databrowser_sink>`. The reason is that they are only relevant there. This change is backward compatible, as the default value is taken from the system.  It is recommended to update the configuration files accordingly.
+* Added the ``commit_at_end`` property to the :ref:`Solr sink <solr_sink>`.
+* Moved the ``commit_within`` property from the :ref:`Solr system <solr_system>` to the :ref:`Solr sink <solr_sink>`. The reason is that the commit rate is really specific to how and where it is used. This change is backward compatible, as the default value is taken from the system. It is recommended to update the configuration files accordingly.
 
 2016-09-28
 ----------

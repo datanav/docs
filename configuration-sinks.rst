@@ -58,7 +58,6 @@ Properties
 
    Conditional sink <configuration-sinks-conditional>
    Dataset sink <configuration-sinks-dataset>
-   Sesam Databrowser sink <configuration-sinks-databrowser>
    JSON push sink <configuration-sinks-json>
    SDShare push sink <configuration-sinks-sdshare>
    SMS message sink <configuration-sinks-sms>

@@ -32,7 +32,6 @@ Configuration
    * - Sinks
      - :ref:`conditional <conditional_sink>` ·
        :ref:`csv_endpoint <csv_endpoint_sink>` ·
-       :ref:`databrowser <databrowser_sink>` ·
        :ref:`dataset <dataset_sink>` ·
        :ref:`elasticsearch <elasticsearch_sink>` ·
        :ref:`http_endpoint <http_endpoint_sink>` ·
