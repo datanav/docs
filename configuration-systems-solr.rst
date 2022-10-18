@@ -4,8 +4,7 @@ Solr system
 -----------
 
 The Solr system represents the information needed to connect to a `Apache Solr <https://en.wikipedia.org/wiki/Apache_Solr>`_
-server for indexing JSON documents. It is used in conjunction with the :ref:`Solr sink <solr_sink>` or the :ref:`Sesam Databrowser sink
-<databrowser_sink>` sinks.
+server for indexing JSON documents. It is used in conjunction with the :ref:`Solr sink <solr_sink>` sink.
 
 Prototype
 ^^^^^^^^^
@@ -56,4 +55,3 @@ Example configuration
         "type": "system:solr",
         "url": "http://localhost:8983/solr/"
     }
-
