@@ -85,7 +85,7 @@ Properties
        ``table`` property with ``table`` taking precedence. If a list of strings is given, they will be
        converted to a single string by concatenation with the newline character.
      -
-     - Yes
+     - 
 
    * - ``updated_column``
      - String
@@ -222,7 +222,7 @@ Example with a single table:
     }
 
 Example with a single table, where the primary key is in a column named ``table_id`` and the updated datestamp is
-in a column called ``updated``. This enables us to switch on ``since`` support:
+in a column called ``updated``. This enables us to switch on ``since`` support and as such run the SQL query ``"SELECT * FROM my_table WHERE updated >= :since"``:
 
 ::
 
