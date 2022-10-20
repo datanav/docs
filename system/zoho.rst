@@ -20,7 +20,7 @@ Data types
 
    * - :ref:`Person <datatype_person>`
      - true
-     - true
+     - false
 
    * - :ref:`Product <datatype_product>`
      - false
