@@ -115,7 +115,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
    VPN <vpn>
    Durable Data <durable-data>
    Notifications <notifications-feature>
-   Metrics API <metrics-api>
+   Metrics and monitoring <metrics-api>
    Bring your own key <bring-your-own-key>
    Network Policy <network-policy>
    Status Page <status-page>
