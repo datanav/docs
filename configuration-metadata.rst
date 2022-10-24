@@ -85,19 +85,36 @@ Properties
      -
      -
 
+       .. _service_metadata_global_defaults_use_signalling_internally:
+
    * - ``global_defaults.use_signalling_internally``
      - Boolean
-     - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
-       The default setting of this property is ``true`` which means signalling is turned on for all :ref:`dataset-type sources <dataset_source>` in the
-       installation. You can turn this feature on or off individually by setting the ``supports_signalling`` flag on the
-       :ref:`dataset source <dataset_source>` (including variants like
-       :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
-       :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
-       delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
-       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based or the schedule interval
-       is equal or greater than an hour (3600 seconds), signalling will be disabled for the pipe source (if it's only set globally).
-       However, if you set ``supports_signalling`` explicitly on the pipe source it will be turned on regardless of the pump schedule.
+     - Flag used to globally enable signalling support between internal pipes (i.e. pipes that read from datasets and writes to datasets). If enabled, a pipe
+       run is scheduled as soon as any of the input dataset changes (it does not interrupt any already running pipes).
+
+       The default setting of this property is ``true`` which means
+       signalling is enabled for all internal pipes in the
+       installation. You can turn enable or disable this feature on individual pipes by setting the
+       ``supports_signalling`` flag on the :ref:`dataset source
+       <dataset_source_property_supports_signalling>`, :ref:`merge
+       <merge_source_property_supports_signalling>`, :ref:`union datasets <union_source_property_supports_signalling>`
+       and :ref:`merge datasets <merge_datasets_source_property_supports_signalling>` sources). This way you can also enable signalling on non-internal pipes.
+
+       .. NOTE::
+
+          Note that signalling support is "best-effort" only; signals
+          are not persisted so delivery is not guaranteed. For this
+          reason, pipes in such flows should always have
+          :ref:`scheduled interval <pump_section>` as a "backup".
+
+          Also note that if the scheduled interval on a pipe is less
+          than 2 minutes or if the scheduling is cron based or the
+          schedule interval is equal or greater than an hour (3600
+          seconds), signalling will be disabled for the pipe source
+          (if it's only set globally).  However, if you set
+          ``supports_signalling`` explicitly on the pipe source it
+          will be enabled regardless of the pump schedule.
+
      - ``true``
      -
 
