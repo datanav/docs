@@ -18,10 +18,10 @@ For cloud subscriptions, data is backed up to an external service once every 24 
 
   We suggest you enable durable data in the following cases:
 
-  #. All inbound pipes that are pushed to should have durable data turned on to mitigate the risk of data loss
+  #. All inbound pipes that are pushed to should have durable data enabled to mitigate the risk of data loss
   #. Non-idempotent endpoint pipes. Especially where duplicated data transfers could be problematic (we recommend that all sources be idempotent, if possible)
   #. Endpoint pipes and share pipes writing data to the endpoints must both have durable data enabled
-  
+
 
 Example
 ^^^^^^^

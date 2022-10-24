@@ -1,4 +1,3 @@
-
 .. _dataset_source:
 
 Dataset source
@@ -70,14 +69,16 @@ Properties
      - ``true``
      -
 
+       .. _dataset_source_property_supports_signalling:
+
    * - ``supports_signalling``
      - Boolean
      - Flag used to enable or disable signalling support between internal pipes (dataset to dataset pipes). If enabled, a pipe
        run is scheduled as soon as the input dataset(s) changes. It does not interrupt any already running pipes.
 
-       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_section>` section for more details.
+       See ``global_defaults.use_signalling_internally`` in the :ref:`service metadata <service_metadata_global_defaults_use_signalling_internally>` section for more details.
 
-       If signalling is turned on globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
+       If signalling is enabled globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
        disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
        automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
        expression has been used.

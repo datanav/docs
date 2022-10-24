@@ -10,9 +10,24 @@ dataset for manual inspection. Pumps log their :doc:`execution history <pump-exe
 the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <pump-execution>` for more
 details about the contents of this dataset.
 
-Note that if a pipe is scheduled to run on a cron-defined schedule or on a long scheduled interval (i.e. using an
-interval more than an hour long) then the scheduled run start time will be persisted. This means that that if the
-service is unable to run the pipe at the pre-scheduled time, it will try to run it as soon as possible when it's able.
+See also the feature description of :ref:`scheduling and signalling <scheduling-and-signalling>`.
+
+Pipes can be scheduled to run at a specific interval or at specific
+times. See the :ref:`schedule_interval <pump_param_schedule_interval>`
+and :ref:`cron_expression <pump_param_cron_expression>` properties
+below. :ref:`Signalling
+<service_metadata_global_defaults_use_signalling_internally>` can also
+schedule the pipe to run immediately.
+
+.. NOTE::
+
+   Note that signalling is not enabled for all pipes and that setting ``schedule_interval`` or ``cron_expression`` can effectively :ref:`disable <service_metadata_global_defaults_use_signalling_internally>` signalling.
+
+.. NOTE::
+
+   If a pipe is :ref:`scheduled <scheduling-and-signalling>` to run on a cron-defined schedule or on a long scheduled interval (i.e. using an
+   interval more than an hour long) then the scheduled run start time will be *persisted*. This means that that if the
+   service is unable to run the pipe at the pre-scheduled time, it will try to run it as soon as possible when it's able.
 
 Prototype
 ---------
@@ -69,13 +84,15 @@ they are formatted in the :doc:`Cron Expressions <cron-expressions>` document.
      - Description
      - Default
      -
-      .. _pump_param_schedule_interval:
+      .. _pump_param_comment:
 
    * - ``comment``
      - String or list of strings
      - A human readable comment on the pump (optional).
      -
      -
+
+      .. _pump_param_schedule_interval:
 
    * - ``schedule_interval``
      - Number
