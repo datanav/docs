@@ -4,7 +4,6 @@
 Service metadata
 ----------------
 
-
 There is an optional special configuration entity used to represent
 the service instance's metadata. The metadata is used to
 specify properties that apply to the service instance itself. This
@@ -13,7 +12,7 @@ the UI or updated with the Service API.
 
 Example:
 
-::
+.. code-block:: json
 
    {
       "_id": "node",
@@ -68,7 +67,8 @@ Properties
        A few expansion mappings come built-into the system. These
        are always available unless explicity overridden:
 
-       ::
+       .. code-block:: json
+
 
           "_": "http://example.org/",
           "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -107,13 +107,7 @@ Properties
           reason, pipes in such flows should always have
           :ref:`scheduled interval <pump_section>` as a "backup".
 
-          Also note that if the scheduled interval on a pipe is less
-          than 2 minutes or if the scheduling is cron based or the
-          schedule interval is equal or greater than an hour (3600
-          seconds), signalling will be disabled for the pipe source
-          (if it's only set globally).  However, if you set
-          ``supports_signalling`` explicitly on the pipe source it
-          will be enabled regardless of the pump schedule.
+          If you set ``supports_signalling`` explicitly on the pipe source it will be enabled regardless of the pump schedule.
 
      - ``true``
      -
