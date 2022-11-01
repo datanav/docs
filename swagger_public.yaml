@@ -23,6 +23,11 @@ paths:
           default: true
           required: false
           description: If false then only the id and name of the models and entity types will be returned
+        - in: query
+          name: with_property
+          type: string
+          required: false
+          description: If specified with a property name, returns all models that the property use.
       responses:
         200:
           description: An array of models
@@ -152,6 +157,16 @@ paths:
           required: false
           description:
             When set to true the pipe information will be more verbose.
+        - in: query
+          name: fields
+          type: array
+          required: false
+          uniqueItems: true
+          items:
+            type: string
+            enum: [config, runtime, storage, graph]
+          description:
+            Specify which top-level keys in the pipe objects to return/omit.
       responses:
         200:
           description: An array of pipes
@@ -202,6 +217,16 @@ paths:
           description: The id of the pipe
           required: true
           type: string
+        - in: query
+          name: fields
+          type: array
+          required: false
+          uniqueItems: true
+          items:
+            type: string
+            enum: [config, runtime, storage, graph]
+          description:
+            Specify which top-level keys in the pipe object to return/omit.
       responses:
         200:
           description: The pipe
@@ -568,6 +593,7 @@ paths:
           "reset-tracking" (EXPERIMENTAL):
 
               Resets the dependency tracking so that it will continue starting from the end of dependent datasets.
+              NOTE: It is not safe to use this operation while the pipe is running.
 
               Note that tracking will continue from what is the end of the datasets at the point in time when the pump
               runs, not the time at which this call is made.
@@ -588,6 +614,11 @@ paths:
               pending retries due to write-errors on the next run, in effect discarding any retries of these previously
               failed entities. Note that such discarded retryable entities are not written to the dead-letter dataset.
 
+          "discard-inferred-schema":
+
+              Deletes any accumulated inferred schema information for the pipe. Note: you would normally reset the pipe
+              after doing this. This operation is useful for pipes that doesn't support continuation as these pipes
+              don't automatically delete the inferred schema on reset.
 
       produces:
         - application/json
@@ -845,7 +876,7 @@ paths:
             that populates the dataset has not yet had a complete full run. Normally 404 is only returned when
             the dataset does not exist.
 
-        - name: uncommited
+        - name: uncommitted
           in: query
           required: false
           type: boolean
@@ -1043,6 +1074,15 @@ paths:
           description:
             "Look up the entity id at this specific offset in the dataset. If it is not there, or there is
             another entity at that offset, then 404 is returned."
+
+        - name: uncommitted
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            "If true then the response may include uncommitted entities. This is only relevant if the pipe that
+            writes to the dataset have a circuit breaker enabled."
       responses:
         200:
           description: The entity
@@ -2586,7 +2626,6 @@ definitions:
     type: object
     required:
       - _id
-      - config
     properties:
       _id:
         type: string
