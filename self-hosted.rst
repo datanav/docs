@@ -106,7 +106,7 @@ Outbound firewall rules
 
    * - 443/HTTPS
      - Sesam IP
-     - ``files.pythonhosted.org``, ``pypi.org``
+     - ``files.pythonhosted.org``, ``pypi.org``, ``pypi.python.org``
      - The sesam-agent is a python program that has some dependencies on software that is hosted on `The Python Package Index (PyPI) <https://pypi.org/>`_.
 
        .. WARNING::
