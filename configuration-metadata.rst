@@ -90,7 +90,7 @@ Properties
    * - ``global_defaults.use_signalling_internally``
      - Boolean
      - Flag used to globally enable signalling support between internal pipes (i.e. pipes that read from datasets and writes to datasets). If enabled, a pipe
-       run is scheduled as soon as any of the input dataset changes (it does not interrupt any already running pipes).
+       run is scheduled as soon as any of the input datasets changes (it does not interrupt any already running pipes).
 
        The default setting of this property is ``true`` which means
        signalling is enabled for all internal pipes in the
