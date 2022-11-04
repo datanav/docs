@@ -17,14 +17,14 @@ Nested transformations
        |   RULE_ID(string{1}),
        |   VALUES(value-expression{1})
        |
-       | Applies the RULE_ID transform rule on the entities in VALUES.
+       | Applies the RULE_ID transform rule on the values in VALUES.
          RULE_ID must be the id of a transform rule in the current DTL
          specification.
      - | ``["apply", "order", "_S.orders"]``
        |
-       | This will transform the order entities in the source entity's
+       | This will transform the order values in the source entity's
          ``orders`` field using the ``order`` transform rules. The output is
-         the transformed order entities.
+         the transformed order values.
 
 .. _apply_hops_dtl_function:
 
@@ -65,4 +65,4 @@ Nested transformations
        |
        | This will retrieve orders from the hops expression and then
          transform them using the ``order`` transformation rule. The output
-         is the transformed order entities.
+         is the transformed order values.
