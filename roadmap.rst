@@ -42,6 +42,13 @@ We are looking into building a configurable onboarding application that allows a
 
 This will be built on top of reusable connectors, and support connectors that require OAuth2 flows as well as services with simpler API key credentials.
 
+Webhooks
+========
+
+Today Sesam needs to pull frequently in order to detect changes in sources. For systems that supports signalling through webhooks, this is inefficient and can be annoying for the system that is being pulled. This is particulary bad for services that offer webhooks, and no other incremental support.
+
+We are looking into how we can support webhooks to receive incremental changes, so that we can eliminate or reduce the polling frequency.
+
 Age-based deletion marker compaction
 ====================================
 
