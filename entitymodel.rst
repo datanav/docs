@@ -10,6 +10,24 @@ dictionary.
 A Sesam entity has a few special keys that should not be messed
 with. The following data prototype explains these special properties.
 
+Here is an example of how entity could look like:
+
+.. code-block:: json
+
+    [
+        {
+            "_id": "1",
+            "name": "Bill",
+            "Date_of_Birth": "01-01-1980"
+        },
+        {
+            "_id": "2",
+            "name": "Jane",
+            "Date_of_Birth": "04-10-1992"
+        }
+    ]
+
+
 ::
 
   {
@@ -237,8 +255,10 @@ values are represented as strings in JSON. The value is prefixed by
 extension types below are currently the only ones supported. Transit
 types that are not recognized will be treated as string values.
 
-Note that there's currently no support for escaping string literals
-that start with a "~" character.
+.. note::
+  
+  There's currently no support for escaping string literals
+  that start with a "~" character.
 
 .. list-table::
    :header-rows: 1
@@ -321,5 +341,6 @@ because the strings and integers are not compatible types. The
 integers are ordered before the strings. Decimals and integers are compatible,
 so they are sorted together.
 
-Note that values of the Dict type are ordered by sorting their keys
-and then comparing each key+value pair.
+.. note::
+
+  Values of the Dict type are ordered by sorting their keys and then comparing each key+value pair.

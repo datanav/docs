@@ -16,7 +16,7 @@ All systems share a number of common properties:
 Prototype
 ---------
 
-::
+.. code-block:: json
 
     {
         "_id": "a_system_id",
@@ -52,7 +52,7 @@ Properties
 
    * - ``name``
      - String
-     - A human readable name for this system
+     - A human readable name for this system.
      -
      -
 
