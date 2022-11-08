@@ -7,14 +7,11 @@ Documentation
    Quick Reference <quick-reference>
    Project kickstart <best-practices>
    Building blocks <developer-guide>
-   Features <product-features>
-   Data Transformation Language (DTL) <DTLReferenceGuide>
-   Design patterns <patterns>
+   Data Transformation Language (DTL) <data-transformation-language>
+   Data management <index-data-management>
    Data synchronization <index-synchronization>
-   Data modelling <index-datamodelling>
-   Data platforms <index-dataplatforms>
    Operations <index-operations>
-   Roadmap <roadmap>
+   Data platforms <index-dataplatforms>
    Tools <tools>
    Service Configuration <configuration>
    Service API <api>

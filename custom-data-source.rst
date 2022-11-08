@@ -12,7 +12,7 @@ the data from the underlying system as a stream of JSON objects.
 
 Optionally, and it is recommended that this is implemented, the resource can accept a single query parameter called ‘’since’’. This is a token that can be used by the service to only return entities that have changed on or later than indicated in the since token. The ’’since’’ parameter is further explained in the :ref:`JSON pull protocol <json_pull>`. For endpoints that does not support a since query parameter, but does support other query parameters to locate changes in the resource a :ref:`Microservice system <microservice_system>` provides more agile ways of importing only changes from the resource. 
 
-The JSON objects (in Sesam called an :doc:`entity <entitymodel>`) produced by the source must also adhere to a few
+The JSON objects (in Sesam called an :ref:`entity <entity-data-model>`) produced by the source must also adhere to a few
 simple rules related to the :ref:`reserved fields <reserved_fields>` and the stucture of the batch:
 
     - Entities MUST have an '_id' property.
@@ -24,7 +24,6 @@ simple rules related to the :ref:`reserved fields <reserved_fields>` and the stu
 Here is an example entity:
 
 .. code-block:: json
-  :linenos:
 
     {
         "_id" : "1",
@@ -35,7 +34,6 @@ Here is an example entity:
 and another one:
 
 .. code-block:: json
-  :linenos:
 
     {
         "_id" : "e-8786763",
@@ -46,7 +44,6 @@ and another one:
 The following is a simple example of a response of entities exposed as a JSON array:
 
 .. code-block:: json
-  :linenos:
 
     [
         {
@@ -79,7 +76,6 @@ The pipe's source is defined as a :ref:`JSON source <json_source>`. It expects a
 Note that in the example below we have set ``supports_since`` to ``true``, which means we expect the resource endpoint to support the since parameter for requesting deltas, i.e. only updated data. We have also specified a pipe specific ``url``. This URL will be attached to the system's ``url_pattern`` to form the complete URL for that request.
 
 .. code-block:: json
-  :linenos:
 
     {
         "_id": "custom-source-pipe",
@@ -153,7 +149,6 @@ The templates that are relevant to building new data sources are:
 In the following configurations we will see how the :ref:`JSON source <json_source>` in combination with the :ref:`Microservice system <microservice_system>` can be used to create a Custom Data Source.
 
 .. code-block:: json
-  :linenos:
 
     {
       "_id": "custom-source-pipe",
@@ -182,7 +177,7 @@ Change tracking
 
 Whenever possible, we advise you to always setup a microservice to only import changes instead of full imports. By doing so you will drastically reduce the time it takes for a microservice to import data, and therefore make data available to target systems much faster. 
 
-You can achieve this by using what we refer to in Sesam as :ref:`Change Tracking <concepts-change-tracking>`.Read more about change tracking in this article :ref:`Continuation support for Microservices <continuation_support_microservices>`.
+You can achieve this by using what we refer to in Sesam as :ref:`Change Tracking <change-tracking>`.Read more about change tracking in this article :ref:`Continuation support for Microservices <continuation_support_microservices>`.
 
 |
 
@@ -220,7 +215,6 @@ should be configured to allow the custom service to push JSON data to Sesam. Thi
 An example would be:
 
 .. code-block:: json
-  :linenos:
 
     {
         "_id": "my-endpoint",

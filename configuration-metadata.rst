@@ -4,7 +4,6 @@
 Service metadata
 ----------------
 
-
 There is an optional special configuration entity used to represent
 the service instance's metadata. The metadata is used to
 specify properties that apply to the service instance itself. This
@@ -13,7 +12,7 @@ the UI or updated with the Service API.
 
 Example:
 
-::
+.. code-block:: json
 
    {
       "_id": "node",
@@ -68,7 +67,8 @@ Properties
        A few expansion mappings come built-into the system. These
        are always available unless explicity overridden:
 
-       ::
+       .. code-block:: json
+
 
           "_": "http://example.org/",
           "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -85,19 +85,30 @@ Properties
      -
      -
 
+       .. _service_metadata_global_defaults_use_signalling_internally:
+
    * - ``global_defaults.use_signalling_internally``
      - Boolean
-     - Flag used to globally enable signalling support between internal pipes (i.e. dataset to dataset pipes). If enabled, a pipe
-       run is scheduled as soon as the input dataset changes (it does not interrupt any already running pipes).
-       The default setting of this property is ``true`` which means signalling is turned on for all :ref:`dataset-type sources <dataset_source>` in the
-       installation. You can turn this feature on or off individually by setting the ``supports_signalling`` flag on the
-       :ref:`dataset source <dataset_source>` (including variants like
-       :ref:`merge <merge_source>`, :ref:`union datasets <union_datasets_source>` and
-       :ref:`merge datasets <merge_datasets_source>` sources). Note that signalling support is "best-effort" only; signals are not persisted so
-       delivery is not guaranteed. For this reason, pipes in such flows should always have scheduled interval as a "backup".
-       Also note that if the scheduled interval on a pipe is less than 2 minutes or if the scheduling is cron based or the schedule interval
-       is equal or greater than an hour (3600 seconds), signalling will be disabled for the pipe source (if it's only set globally).
-       However, if you set ``supports_signalling`` explicitly on the pipe source it will be turned on regardless of the pump schedule.
+     - Flag used to globally enable signalling support between internal pipes (i.e. pipes that read from datasets and writes to datasets). If enabled, a pipe
+       run is scheduled as soon as any of the input datasets changes (it does not interrupt any already running pipes).
+
+       The default setting of this property is ``true`` which means
+       signalling is enabled for all internal pipes in the
+       installation. You can turn enable or disable this feature on individual pipes by setting the
+       ``supports_signalling`` flag on the :ref:`dataset source
+       <dataset_source_property_supports_signalling>`, :ref:`merge
+       <merge_source_property_supports_signalling>`, :ref:`union datasets <union_source_property_supports_signalling>`
+       and :ref:`merge datasets <merge_datasets_source_property_supports_signalling>` sources). This way you can also enable signalling on non-internal pipes.
+
+       .. NOTE::
+
+          Note that signalling support is "best-effort" only; signals
+          are not persisted so delivery is not guaranteed. For this
+          reason, pipes in such flows should always have
+          :ref:`scheduled interval <pump_section>` as a "backup".
+
+          If you set ``supports_signalling`` explicitly on the pipe source it will be enabled regardless of the pump schedule.
+
      - ``true``
      -
 
@@ -179,6 +190,18 @@ Properties
      - ``false``
      -
 
+       .. _service_metadata_global_defaults_reprocessing_policy:
+
+   * - ``global_defaults.reprocessing_policy``
+     - Enum<String>
+     - Specifies the default policy that pipes use to decide if the pipe needs to be reset or not. The policy can also be set on :ref:`individual pipes <automatic-reprocessing>`.
+
+       - ``continue`` (the default) means that the pipe will continue processing input entities, and not reset the pipe, even though there might be factors indicating the the pipe should be reset.
+
+       - ``automatic`` means that the pipe will automatically reset the pipe when it finds that there are factors that indicate that the pipe should be reset. The rationale for resetting the pipe is so that input entities can the reprocessed so that the output is correct.
+     - ``continue``
+     -
+
        .. _service_metadata_global_defaults_enable_background_rescan:
 
    * - ``global_defaults.enable_background_rescan``
@@ -214,6 +237,31 @@ Properties
        It is recommended to reduce this value to limit potential memory usage, as the merge pipe will use an excessive
        amount of RAM if the number of merged entities is too high.
      - ``50000``
+     -
+
+       .. _service_metadata_global_defaults_always_index_ids:
+
+   * - ``global_defaults.always_index_ids``
+     - Boolean
+     - If enabled, :ref:`dataset sinks <dataset_sink>` will by default maintain an index for the ``$ids`` property.
+       This is equivalent to setting ``"indexes": "$ids"`` on all dataset sinks in the node.
+     - ``false``
+     -
+
+       .. _service_metadata_global_defaults_if_source_empty:
+
+   * - ``global_defaults.if_source_empty``
+     - Enum<String>
+     - Determines the default behaviour of pipes when a source returns no entities. Normally, any previously synced
+       entities will be deleted even if the pipe does not receive any entities from its source.
+       If set to ``"fail"``,
+       pipes will automatically fail if the source returns no entities. This means that any previous entities in the
+       pipe's dataset are not deleted.
+       If set to ``"accept"``, the pipe will *not* fail and any previously synced entities will be deleted.
+
+       This property can be set on individual sources as well, in which case the source configuration will override the
+       global default value.
+     -
      -
 
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:

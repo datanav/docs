@@ -3,7 +3,7 @@
 Sources
 =======
 
-Sources provide *streams* of :doc:`entities <entitymodel>` as input to
+Sources provide *streams* of :ref:`entities <entity-data-model>` as input to
 the :ref:`pipes <pipe_section>` which is the building blocks for the
 data flows in Sesam. These entities can take *any* shape (i.e. they
 can also be nested), and have a single required property:
@@ -16,12 +16,12 @@ Prototype
 
 The following *JSON* snippet shows the general form of a source definition.
 
-::
+..code-block::json
 
     {
         "type": "a-source-type",
-        "comment": "This is a comment",
-        ..
+        "comment": "This is a comment"
+        
     }
 
 The only universally required property is ``type``.

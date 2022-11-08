@@ -85,7 +85,7 @@ Properties
        ``table`` property with ``table`` taking precedence. If a list of strings is given, they will be
        converted to a single string by concatenation with the newline character.
      -
-     - Yes
+     - 
 
    * - ``updated_column``
      - String
@@ -151,6 +151,19 @@ Properties
      - 1000
      -
 
+   * - ``if_source_empty``
+     - Enum<String>
+     - Determines the behaviour of the pipe when the SQL source does not return any entities. Normally, any previously synced
+       entities will be deleted even if the pipe does not receive any entities from its source.
+       If set to ``"fail"``, the pipe will automatically fail if the source returns no entities. This means that any
+       previous entities in the pipe's dataset are not deleted.
+       If set to ``"accept"``, the pipe will *not* fail and any previously synced entities will be deleted.
+
+       The global default ``global_defaults.if_source_empty`` can be set for all pipes in the
+       :ref:`service metadata <service_metadata_section>`.
+     - ``"accept"``
+     -
+
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -209,7 +222,7 @@ Example with a single table:
     }
 
 Example with a single table, where the primary key is in a column named ``table_id`` and the updated datestamp is
-in a column called ``updated``. This enables us to switch on ``since`` support:
+in a column called ``updated``. This enables us to switch on ``since`` support and as such run the SQL query ``"SELECT * FROM my_table WHERE updated >= :since"``:
 
 ::
 

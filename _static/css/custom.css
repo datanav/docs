@@ -1,7 +1,6 @@
 /* add any theme overrides here */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap');
 .breadcrumb {
 background-color: #fafafa;
 margin-bottom: 3em;
@@ -13,6 +12,10 @@ margin-top: -1.3em;
   .breadcrumb {
     display: none;
   }
+}
+
+.navbar-light .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cpath stroke='rgba(255,255,255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light{
@@ -56,7 +59,7 @@ h3 {
 /* Top menu customization */
 /*START*/
 a.nav-link {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: white !important;
 }
 
@@ -86,7 +89,11 @@ a.nav-link:hover {
 a.reference.external.nav-link.button.button-support {
 	bottom: 2px;
 	position: relative;
-}
+	font-size: 1em !important;
+	}
+
+
+
 
 /* START **Buttons used in index pages*/
 .btn-block {
@@ -147,6 +154,32 @@ a.reference.external.nav-link.button.button-support {
 	}
 
 a.tutorial-start:visited {
+	color: white;
+}
+
+/* Filled blue button */
+.read-more {
+	background-color: #009fdc;
+	border-radius: 17;
+	color: #ffffff;
+	padding: 8px 8px;
+	text-align: left;
+	transition-duration: 0.4s;
+	display: inline-block;
+	font-size: 1em;
+	margin: 4px 2px;
+	cursor: pointer;
+
+
+}
+
+.read-more:hover {
+	  background-color: #023258;
+	  color: white;
+	  text-decoration: underline;
+	}
+
+a.read-more:visited {
 	color: white;
 }
 
@@ -384,7 +417,7 @@ footer .container {
 :root {
     --pst-font-family-base: 'Barlow', var(--pst-font-family-base-system);
     --pst-font-family-heading: 'Barlow', var(--pst-font-family-base-system);
-    --pst-font-family-monospace: Courier, var(--pst-font-family-monospace-system);
+    --pst-font-family-monospace: 'Ubuntu Mono', var(--pst-font-family-monospace-system);
 }
 
 
@@ -395,11 +428,33 @@ body {
 
 .p {
 	font-family: 'Barlow', sans-serif;
+	white-space: nowrap; 
+  	width: 50px; 
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 /*---------END----------*/
 
 /* Copy button Visibility on*/
 button.copybtn {
    opacity: 1;
+}
+
+@media (max-width: 1536px) {
+	.card-text {
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    }
+    a.reference.external.nav-link.button.button-support {
+	margin-top: 10px;
+
+    }
+  }
+}
 }
 

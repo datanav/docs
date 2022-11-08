@@ -64,7 +64,9 @@ Properties
      - String or Array
      - If set to ``"$ids"`` then an index on the ``$ids`` property will be automatically
        maintained. This index will then be used by the dataset browser to look up
-       entities both by ``_id`` and ``$ids``.
+       entities both by ``_id`` and ``$ids``. The property ``global_defaults.always_index_ids`` can be enabled in
+       the :ref:`service metadata <service_metadata_section>` if all dataset sinks should by default maintain an index
+       on ``$ids``.
 
        If the value is an array then it can contain index expressions that should be
        maintained on the sink dataset. This is typically used for declaring subset indexes.
@@ -107,7 +109,7 @@ Properties
 
    * - ``circuit_breaker_threshold_factor``
      - Decimal
-     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+     - Specifying this property will enable a :ref:`circuit breaker <circuit-breakers>` on
        the pipe. It specifies a factor that is used to calculate the circuit breaker limit. Note
        that this is a factor and not a percentage, e.g. ``0.32`` means 32% and ``1.5`` means 150%.
        If the factor is ``0.5`` and the dataset already contains 100 entities, then the circuit
@@ -117,7 +119,7 @@ Properties
 
    * - ``circuit_breaker_threshold_count``
      - Integer
-     - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers_section>` on
+     - Specifying this property will enable a :ref:`circuit breaker <circuit-breakers>` on
        the pipe. The count specifies the circuit breaker limit directly. The limit defines how many
        new entities can be written to the dataset before the circuit breaker trips. If this property
        is set to ``100``, then 100 entities can be written before it trips.

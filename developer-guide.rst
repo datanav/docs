@@ -1,9 +1,12 @@
 .. _building_blocks:
 
+.. _concepts-config:
+
 ===============
 Building blocks
 ===============
 
+<<<<<<< HEAD
 .. _concepts-streaming:
 
 Streams of entities
@@ -189,3 +192,16 @@ Service Metadata
 ----------------
 
 The :ref:`service metadata <service_metadata_section>` is a singleton configuration entity that is used for service-wide settings.
+=======
+.. toctree::
+   :maxdepth: 2
+
+   Streams of entities <building-blocks-streaming>
+   Datasets <building-blocks-datasets>
+   Systems <building-blocks-systems>
+   Pipes <building-blocks-pipes>
+   Flows <building-blocks-flows>
+   Environment Variables <building-blocks-environment-variables>
+   Secrets <building-blocks-secrets>
+   Service Metadata <building-blocks-service-metadata>
+>>>>>>> master

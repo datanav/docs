@@ -1,6 +1,109 @@
 Changelog
 =========
 
+.. _changelog_2022_10_11:
+
+2022-10-11
+----------
+
+* Added configuration warning to pipes with chained DTL transforms where other than the first transform use hops with dependency tracking enabled.
+* Added configuration warning to pipes that have hops with dependency tracking enabled, but do not use the "dataset" source.
+
+
+.. _changelog_2022_10_03:
+
+2022-10-03
+----------
+
+* Pipe runs triggered by pumps using cron expressions or scheduled intervals larger than one hour (3600 seconds) are
+  persisted, so if the service is down when they should have run they will be run as soon as the service starts up again.
+
+
+.. _changelog_2022_09_06:
+
+2022-09-06
+----------
+
+* Deletion tracking done by background rescan is now done in batches and is interleaved with incremental synchronization. This means that deletion tracking will no longer stop-the-world.
+
+.. _changelog_2022_09_01:
+
+2022-09-01
+----------
+
+* We've updated our :doc:`pricing`. Note that prices are now listed in U.S. Dollar. For existing customers, the changes will take effect from December 1st 2022.
+
+.. _changelog_2022_08_17:
+
+2022-08-17
+----------
+
+* Added the ``if_source_empty`` property to sources and the global default ``global_defaults.if_source_empty`` to the
+  :ref:`service metadata <service_metadata_section>`. This property determines the behaviour of pipes when their source
+  returns no entities. Previously synced entities will normally be deleted from the pipe dataset when it finishes
+  running, even if no entities are received. Setting this new property to ``fail`` will prevent this by making the pipe
+  fail before it can perform a new sync.
+
+.. _changelog_2022_08_09:
+
+2022-08-09
+----------
+
+* Added ``escape_null_bytes`` property to the :ref:`CSV source <csv_source>`. If set to ``true``, any null characters
+  in the input CSV file will be escaped before parsing the data. This prevents the source pipe from failing due to
+  attempted reads of lines containing null characters. The property is set to ``false`` by default due to performance
+  reasons.
+
+.. _changelog_2022_08_05:
+
+2022-08-08
+----------
+
+* Added ``verify_ssl``  property to the :ref:`LDAP system <ldap_system>`.
+  If ``use_ssl`` is set to ``true`` then this property controls if the certificate used for the connection should be
+  verified. It is ``true`` by default.
+
+2022-08-05
+----------
+
+* Added ``custom_ca_pem_chain``  property to the :ref:`LDAP system <ldap_system>`.
+  This property can hold a custom chain of certificates (in PEM format) that will be used to validate the SSL
+  connection if ``use_ssl`` is set to ``true``.
+
+.. _changelog_2022_07_27:
+
+2022-07-27
+----------
+* Added a new property ``global_defaults.always_index_ids`` to the :ref:`service metadata <service_metadata_section>`.
+  Enabling this will make all :ref:`dataset sinks <dataset_sink>` maintain an index on the ``$ids`` property, without
+  the need for specifying the ``indexes`` property on each individual sink.
+
+.. _changelog_2022_07_01:
+
+2022-07-01
+----------
+* Added a "discard-inferred-schema" pump operation to the :ref:`service API <api-top>`. This operation will discard any :ref:`inferred schema <schema-inferencing>` entries for the pipe and writes a special "pump-discard-inferred-schema" entity to the pipe execution log for reference. This operation can only be done on non-running pipes.
+* Behavioural change: all pipes that have ``infer_pipe_entity_types`` set to ``true``, and have a source with :ref:`continuation support <continuation_support>`, will now discard their inferred schemas upon being reset.
+
+.. _changelog_2022_06_30:
+
+2022-06-30
+----------
+
+* Added a new property :ref:`include_completeness <include_completeness>` to pipes. This property specifies a list of
+  dataset ids that should contribute to the completeness timestamp value of the sink dataset. By default, this property
+  is equal to the pipe's input datasets, minus any datasets listed in :ref:`exclude_completeness <exclude_completeness>`.
+* Pipes that fail to infer their schemas due to limitations on the resulting schema size will no longer fail. The
+  :ref:`inferred schema <schema-inferencing>` will instead be truncated and marked as such and the pipe will not
+  attempt to do schema inference the next time it runs.
+
+.. _changelog_2022_06_08:
+
+2022-06-08
+----------
+
+* The :ref:`VPN feature <vpn-feature>` now supports high availability for connections. This means that you can set up redundant connections that can be failed over to. This is a :ref:`multi <pricing-production>` subscription only feature.
+
 .. _changelog_2022_05_20:
 
 2022-05-20
@@ -20,7 +123,7 @@ Changelog
 2022-05-12
 ----------
 
-* A pipe with :ref:`automatic reprocessing  <automatic_reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
+* A pipe with :ref:`automatic reprocessing  <automatic-reprocessing>` enabled will now automatically reset if the :ref:`dependency tracking threshold <pipe_properties>` is reached.
 
 .. _changelog_2022_05_03:
 
@@ -58,14 +161,14 @@ Changelog
 2022-04-07
 ----------
 
-* :ref:`Schema inferencing <schema-inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces>`.
+* :ref:`Schema inferencing <schema-inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces-feature>`.
 
 .. _changelog_2022_03_31:
 
 2022-03-31
 ----------
 
-* Added support for :ref:`Metrics <concepts-metrics-api>`.
+* Added support for :ref:`Metrics <metrics-api>`.
 * New data option `Metrics and monitoring` in :ref:`test and production pricing <pricing-production>` replaces the pr. pipe monitoring option. Pipe monitoring will still be available for existing subscription that is already using this.
 
 .. _changelog_2022_03_25:
@@ -74,7 +177,7 @@ Changelog
 ----------
 
 * New developer subscription size :ref:`Developer Pro <pricing-developer>` is now available.
-* Added support for :ref:`Durable Data <concepts-durable-data>`.
+* Added support for :ref:`Durable Data <durable-data>`.
 
 .. _changelog_2022_03_24:
 
@@ -89,7 +192,7 @@ Changelog
 ----------
 
 * The :doc:`Databrowser <databrowser>` tool will reach end-of-life December 31st 2023. It is superseded by the
-  :ref:`Integrated Search <concepts-integrated-search>` feature. We will notify the current subscribers soon.
+  :ref:`Integrated Search <integrated-search>` feature. We will notify the current subscribers soon.
 * Added a property ``ignore_non_existent_datasets`` to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources. By default, listing one or or more datasets in ``initial_datasets`` that do not exist does not prevent the source from being populated. Setting ``ignore_non_existent_datasets`` to ``false`` will make the pipe fail if any non-existent datasets are listed in ``datasets``.
 * Fixed a bug where the ``initial_datasets`` property was initialized as an empty list in the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``initial_datasets`` was not explicitly set. The property now defaults correctly to the same list of datasets listed in ``datasets``. This is a breaking change.
 * The :ref:`dataset <dataset_source>` and :ref:`diff_datasets <diff_datasets_source>` now warn the user if any input datasets do not exist. This also applies to the :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources if ``ignore_non_existent_datasets`` is ``false``.
@@ -99,7 +202,7 @@ Changelog
 2022-03-10
 ----------
 
-* Restructured this documentation site. :doc:`What's Sesam <index-whatis>` is targeted at architects and decision makers. :doc:`User guide <index-developer>` is targeted at users of Sesam, with new subsections for :doc:`Data synchronization <index-synchronization>`, :doc:`Data modelling <index-datamodelling>`, :doc:`Data platforms <index-dataplatforms>` and :doc:`Operations <index-operations>`.
+* Restructured this documentation site. :doc:`What's Sesam <index-whatis>` is targeted at architects and decision makers. :doc:`User guide <index-developer>` is targeted at users of Sesam, with new subsections for :doc:`Data synchronization <index-synchronization>`, :doc:`Data modelling <index-data-management>`, :doc:`Data platforms <index-dataplatforms>` and :doc:`Operations <index-operations>`.
 
 .. _changelog_2022_03_03:
 
@@ -217,9 +320,9 @@ Changes to the user experience:
 
 2021-11-26
 ----------
-* :ref:`Integrated search <concepts-integrated-search>` is now available for subscriptions running on the
+* :ref:`Integrated search <integrated-search>` is now available for subscriptions running on the
   Clustered Architecture.
-* :ref:`VPN <concepts-vpn>` is now configurable for subscriptions running on the Clustered Architecture.
+* :ref:`VPN <vpn-feature>` is now configurable for subscriptions running on the Clustered Architecture.
 
 .. _changelog_2021_11_19:
 
@@ -262,7 +365,7 @@ Changes to the user experience:
 
 2021-10-11
 ----------
-* The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness>` value
+* The :ref:`http_endpoint <http_endpoint_source>` source will now get its :ref:`completeness <completeness-feature>` value
   from the "X-Dataset-Completeness" http request header, if it is present.
   If the header is not present, the current time will be used instead, just as before.
 
@@ -538,7 +641,7 @@ Changes to the user experience:
 2020-11-06
 ----------
 
-* Added :ref:`note <pipe_compaction>` about compaction not being performed beyond depencency tracking offsets.
+* Added :ref:`note <compaction-feature>` about compaction not being performed beyond depencency tracking offsets.
 
 .. _changelog_2020_10_23:
 
@@ -655,7 +758,7 @@ Changes to the user experience:
 
 2019-10-07
 ----------
-* :ref:`Sink compaction <pipe_compaction>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
+* :ref:`Sink compaction <compaction-feature>`, :ref:`merge source <merge_source>`, :ref:`LDAP source <ldap_source>`, :ref:`Email message sink <mail_sink>`, :ref:`SMTP system <smtp_system>`, :ref:`SMS message sink <sms_sink>`, :ref:`Twilio system <twilio_system>`, :ref:`REST system <rest_system>`, and :ref:`REST sink <rest_sink>` are no longer experimental.
 * The :ref:`reference <reference_dtl_function>` DTL function has been deprecated.
 * The :ref:`Kafka system <kafka_system>`, :ref:`Kafka source <kafka_source>` and :ref:`Kafka sink <kafka_sink>` have been deprecated.
 
@@ -676,11 +779,11 @@ Changes to the user experience:
 
 2019-08-26
 ----------
-* We've added support for a feature called :ref:`completeness <completeness>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+* We've added support for a feature called :ref:`completeness <completeness-feature>`. When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value. This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe. One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
 
 2019-08-19
 ----------
-* :ref:`Pipes <automatic_reprocessing>` now have a property called ``reprocessing_policy`` that can be set to cause automatic resets when external factors indicate that the pipe should be reset.
+* :ref:`Pipes <automatic-reprocessing>` now have a property called ``reprocessing_policy`` that can be set to cause automatic resets when external factors indicate that the pipe should be reset.
 
 2019-08-12
 ----------
@@ -747,7 +850,7 @@ Changes to the user experience:
 
 2019-01-28
 ----------
-* :ref:`Compaction <pipe_compaction>` is now incremental, so it will continue from where it got to the last time.
+* :ref:`Compaction <compaction-feature>` is now incremental, so it will continue from where it got to the last time.
 * Compaction will be performed by the dataset sink if ``compaction.sink`` is set to ``true`` in the pipe configuration. This is only available for pipes using the :ref:`dataset <dataset_sink>` sink. If sink compaction is enabled no scheduled compaction will be done on the dataset as this is no longer neccessary. Index compaction will still require scheduled compaction, but this does not require a lock on the dataset. Note that sink compaction is currently experimental.
 * Automatic compaction will now kick if there are 10% or 10000 new dataset offsets since the last compaction. The 10000 cap is fixed for now.
 
@@ -778,7 +881,7 @@ Changes to the user experience:
 
 2018-10-16
 ----------
-* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <pipe_compaction>`. This lets you specify when dataset compaction kicks in.
+* Added ``compaction.growth_threshold`` property to the :ref:`pipe configuration <compaction-feature>`. This lets you specify when dataset compaction kicks in.
 * The ``compaction.keep_versions`` property can now also be set to ``0`` and ``1``. The default value is ``2``; which is needed for dependency tracking to be fully able to find reprocessable entities. Setting it to a lower value means that dependency tracking is best effort only.
 
 2018-09-24
@@ -865,7 +968,7 @@ Changes to the user experience:
 
 2018-04-19
 ----------
-* Added support for :ref:`circuit breakers <circuit_breakers_section>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
+* Added support for :ref:`circuit breakers <circuit-breakers>`, a safety mechanism that one can enable on the :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if the number of entities written to a dataset in a pipe run exceeds a certain configurable limit.
 
 2018-04-09
 ----------
@@ -956,11 +1059,6 @@ Changes to the user experience:
      an exact match.
 
 
-2017-11-13
-----------
-* The default value of the ``keep_existing_solr_ids`` configuration property in the :ref:`The Sesam Databrowser sink <databrowser_sink>`
-  has been changed from ``true`` to ``false``.
-
 2017-11-08
 ----------
 * The :ref:`JSON push sink  <json_sink>` now supports customizable HTTP headers via a ``headers`` property.
@@ -977,7 +1075,7 @@ Changes to the user experience:
 
 2017-09-06
 ----------
-* Improved and expanded documentation on :ref:`namespaced identifiers <namespaces>` and the features related to it.
+* Improved and expanded documentation on :ref:`namespaced identifiers <namespaces-feature>` and the features related to it.
 * Moved the deprecations to a :ref:`separate document <deprecations>`.
 
 2017-09-05
@@ -1138,7 +1236,7 @@ Changes to the user experience:
 
 2017-02-01
 ----------
-* Datasets are now scheduled for automatic compaction once every 24 hours. The default is to keep the last 2 versions up until the current time. It is possible to customize the automatic compaction. See documentation on :ref:`compaction <pipe_compaction>` for more information.
+* Datasets are now scheduled for automatic compaction once every 24 hours. The default is to keep the last 2 versions up until the current time. It is possible to customize the automatic compaction. See documentation on :ref:`compaction <compaction-feature>` for more information.
 
 2017-01-26
 ----------
@@ -1247,9 +1345,8 @@ Changes to the user experience:
 ----------
 * Added Elasticsearch support, which includes a :ref:`system <elasticsearch_system>` and a :ref:`sink <elasticsearch_sink>`.
 * The :ref:`Solr sink <solr_sink>` now supports :ref:`batching <pipe_batching>`.
-* Added the ``commit_at_end`` property to the :ref:`Solr sink <solr_sink>` and the :ref:`Sesam databrowser sink <databrowser_sink>`.
-* Moved the ``commit_within`` property from the :ref:`Solr system <solr_system>` to the :ref:`Solr sink <solr_sink>` and the :ref:`Sesam databrowser sink <databrowser_sink>`. The reason is that the commit rate is really specific to how and where it is used. This change is backward compatible, as the default value is taken from the system. It is recommended to update the configuration files accordingly.
-* Moved the ``prefix_includes`` and ``keep_existing_solr_ids`` properties from the :ref:`Solr system <solr_system>` to the :ref:`Sesam databrowser sink <databrowser_sink>`. The reason is that they are only relevant there. This change is backward compatible, as the default value is taken from the system.  It is recommended to update the configuration files accordingly.
+* Added the ``commit_at_end`` property to the :ref:`Solr sink <solr_sink>`.
+* Moved the ``commit_within`` property from the :ref:`Solr system <solr_system>` to the :ref:`Solr sink <solr_sink>`. The reason is that the commit rate is really specific to how and where it is used. This change is backward compatible, as the default value is taken from the system. It is recommended to update the configuration files accordingly.
 
 2016-09-28
 ----------

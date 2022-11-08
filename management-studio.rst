@@ -1,3 +1,5 @@
+.. _sesam-management-studio:
+
 =======================
 Sesam Management Studio
 =======================
@@ -62,7 +64,7 @@ Pipe Menu
      - | Starts running the pipe
 
    * - ``Restart``
-     - | Consist of two functions; reset and start. he relationship between starting and restarting pipe, requires some explanation. When clicking ``Start``, the pipe continues to read from its last seen sequence number. So, if the pipe has previously read 100 entities  (sequence 0 to 99), clicking ``Start`` will have it read from sequence 100. When clicking ``Restart``, the pipe will start from the beginning., i.e. at entiry number 0. To see examples and to get more context on this, please click :ref:`Dependency-tracking <concepts-dependency_tracking>`
+     - | Consist of two functions; reset and start. he relationship between starting and restarting pipe, requires some explanation. When clicking ``Start``, the pipe continues to read from its last seen sequence number. So, if the pipe has previously read 100 entities  (sequence 0 to 99), clicking ``Start`` will have it read from sequence 100. When clicking ``Restart``, the pipe will start from the beginning., i.e. at entiry number 0. To see examples and to get more context on this, please click :ref:`Dependency-tracking <dependency-tracking>`
 
    * - ``Disable``
      - | Stops the pipe from running according to schedule. If a pipe is running, it will finish running but not run again even if schedule tells it to. You can manually start a pipe that’s disabled by pressing ``Start``
@@ -118,7 +120,7 @@ Next step is template for **transforms**. Press **Add DTL transform** and templa
     :align: center
     :alt: Generic pipe concept
 
-Please visit :ref:`DTL reference guide <DTLReferenceGuide>` for most common transforms and functions and how they are used.
+Please visit :ref:`DTL reference guide <DTL>` for most common transforms and functions and how they are used.
 
 All pipes have a default sink that points to / creates a dataset with the same name as the pipe. You can specify your own sink with a template if required. This is done at the bottom of template under **"Target"**. This is where we specify where want to send the data to; which :ref:`Sinks <concepts-sinks>`. This is specified in **"System"** and **"Sink"**. Press **Replace** and once again template pops into your config.
 

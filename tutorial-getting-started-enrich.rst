@@ -3,7 +3,7 @@
 Enrich data
 ===========
 
-In this phase we will add value to the data we have `previously collected <tutorial-getting-started-collect>`_ by semantically enriching it.
+In this phase we will add value to the data we have :doc:`previously collected <tutorial-getting-started-collect>` by semantically enriching it.
 
 .. admonition::  Objectives:
 
@@ -15,11 +15,7 @@ In this phase we will add value to the data we have `previously collected <tutor
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest you complete the `Collect data tutorial <tutorial-getting-started-collect>`_ as we will use that data in this tutorial.
-
-|
-|
-
+  Before starting on this tutorial we suggest you complete the :doc:`Collect data tutorial <tutorial-getting-started-collect>` as we will use that data in this tutorial.
 
 Add semantic value
 ^^^^^^^^^^^^^^^^^^
@@ -49,18 +45,16 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
         "rules": {
           "default": [
             ["copy", "*"],
-            ["merge",
-              ["apply", "contacts-ni", "_S.associations.contacts.results"]
+            ["merge-union",
+              ["apply", "contact-ni", "_S.associations.contacts.results"]
             ],
             ["add", "rdf:type",
               ["ni", "hubspot:company"]
             ]
           ],
-          "contacts-ni": [
-            ["filter",
-              ["eq", "_S.type", "company_to_contact"]
-            ],
-            ["add", "contact-ni",
+          "contact-ni": [
+            ["add",
+              ["concat", "_S.type", "-ni"],
               ["ni", "hubspot-contact", "_S.id"]
             ]
           ]
@@ -73,16 +67,21 @@ In order to semantically enrich your HubSpot company data, follow the steps belo
       }
     }
 
-
-The company in the pipe´s output with ``about_us`` value "991721355" should now have the new ``contact-ni`` property, like shown bellow.
+The companies in the pipe's output should now have two new properties consisting of NIs to the respective company's contacts,
+one property for each type of contact association, like the following example for ``hubspot-company:5633255395``.
 
 .. code-block:: json
-  :emphasize-lines: 2
-  
-    {
-    "hubspot-company:contact-ni": "~:hubspot-contact:<some ID>"
-    }
 
+    "hubspot-company:company_to_contact-ni": [
+      "~:hubspot-contact:5751",
+      "~:hubspot-contact:5803",
+      "~:hubspot-contact:6151"
+    ],
+    "hubspot-company:company_to_contact_unlabeled-ni": [
+      "~:hubspot-contact:5751",
+      "~:hubspot-contact:5803",
+      "~:hubspot-contact:6151"
+    ]
 
 The Enhetsregisteret Data
 *************************

@@ -11,7 +11,7 @@ The transformation phase is where we prepare the data to be sent out to a target
    
     After you complete this tutorial you will have learned the following:
 
-    #. How to use :ref:`Data Transformation Language <DTLReferenceGuide>` to create system specific payloads 
+    #. How to use :ref:`Data Transformation Language <DTL>` to create system specific payloads 
     #. How to use global properties to increase payload data quality
 
 

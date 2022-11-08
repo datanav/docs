@@ -1,7 +1,7 @@
 What is Sesam
 =============
 
-Sesam is a Master Data Hub  that simplifies the process of making up-to-date master data available in a data platform architecture. 
+Sesam is a Master Data Hub that simplifies the process of making up-to-date master data available in a data platform architecture. 
 
 The updated data within Sesam Data Hub is not only consumable by analytical components in the data platform, but it can also be synchronized back to relevant source systems to ensure data consistency across the whole platform.
 
@@ -14,8 +14,9 @@ As a data platform component, Sesam improves data-consistency by collecting data
 .. toctree::
    :maxdepth: 1
 
-   Data architecture <data-architecture>
-   Core principles <core-principles>
    Key benefits <key-benefits>
+   Core principles <core-principles>
    Concepts <concepts>
+   Data architecture <data-architecture>
    Demo <demo>
+   Roadmap <roadmap>

@@ -54,7 +54,7 @@ The following HTTP request parameters are supported:
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
-:doc:`here <entitymodel>`.
+:ref:`here <entity-data-model>`.
 
 If the sequence_id is not the same as the one that is currently
 active, then it will replace the active one (full sync only). Only a

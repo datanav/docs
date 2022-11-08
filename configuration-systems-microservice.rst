@@ -230,6 +230,10 @@ Properties
    * - ``eager_load``
      - Boolean
      - When set to false, Sesam can hold off starting up the microservice if it isn't connected to any pipes. Set to true to force the microservice to start up regardless. Overrides setting in :ref:`service metadata <service_metadata_global_defaults_eager_load_microservices>`.
+
+       .. NOTE::
+
+          The default value is ``false`` for developer subscriptions.
      - ``true``
      -
 

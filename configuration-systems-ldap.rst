@@ -20,9 +20,13 @@ Prototype
         "host": "FQDN of LDAP host",
         "port": 389,
         "use_ssl": false,
+        "verify_ssl": true,
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)",
-        "charset": "latin-1"
+        "charset": "latin-1",
+        "custom_ca_pem_chain": "-----BEGIN CERTIFICATE-----\nMIIGYTCCB[...]\n-----END CERTIFICATE-----\n",
+        "connect_timeout": 60,
+        "read_timeout": 1800
     }
 
 Properties
@@ -40,7 +44,8 @@ Properties
 
    * - ``host``
      - String
-     - The fully qualified domain name (``FQDN``) of the LDAP host server
+     - The fully qualified domain name (``FQDN``) of the LDAP host server. Note: do not use a URL on the form
+       "ldap(s)://<host>:<port>" but use the ``host``, ``port`` and ``use_ssl`` properties separately instead.
      - "localhost"
      -
 
@@ -54,6 +59,19 @@ Properties
      - Boolean
      - Indicates to the client whether to use a secure socket layer (``SSL``) or not when communicating with the LDAP service
      - false
+     -
+
+   * - ``use_ssl``
+     - Boolean
+     - If ``use_ssl`` is set to ``true`` then this property controls if the certificate used for the connection should be verified.
+     - true
+     -
+
+   * - ``custom_ca_pem_chain``
+     - String
+     - If ``use_ssl`` is set to ``true`` this property can hold a chain of certificates (in PEM format) that
+       should be used to verify the SSL connection.
+     -
      -
 
    * - ``username``
@@ -75,6 +93,18 @@ Properties
      - "latin-1"
      -
 
+   * - ``connect_timeout``
+     - Integer
+     - Number of seconds to wait for connecting to the LDAP server before timing out.
+     - ``60``
+     -
+
+   * - ``read_timeout``
+     - Integer
+     - Number of seconds to wait for the LDAP server to respond to a request before timing out.
+     - ``1800``
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -89,5 +119,3 @@ Example configuration
         "username": "$ENV(username-variable)",
         "password": "$SECRET(password-variable)"
     }
-
-

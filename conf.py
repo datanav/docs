@@ -8,6 +8,7 @@ import sys
 
 import cornice
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute.
@@ -40,7 +41,9 @@ html_codeblock_linenos_style = 'table'
 
 # Redirects
 redirects = {
-     "features.html": "key-benefits.html"
+     "features.html": "key-benefits.html",
+     "DTLReferenceGuide.html": "data-transformation-language.html"
+
 }
 
 

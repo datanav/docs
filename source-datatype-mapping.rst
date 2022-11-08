@@ -5,7 +5,7 @@ Source datatype mappings
 Introduction
 ============
 
-The Sesam :doc:`entity model <entitymodel>` defines a set of :ref:`supported data types <entity_data_types>` that any
+The Sesam :ref:`entity model <entity-data-model>` defines a set of :ref:`supported data types <entity_data_types>` that any
 external types need to be mapped to. The various data sources have different schemas, and which types are supported and
 their current mappings to the Sesam types is listed in this document.
 

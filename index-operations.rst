@@ -9,8 +9,7 @@ In every situation where you manage large quantities of data maintaining control
    :maxdepth: 1
 
    Security <security>
-   Metrics <metrics>
-   Notifications <notifications>
+   Metrics and monitoring <metrics>
    Pump Execution Dataset <pump-execution>
    Configuration Management <configuration-management>
    Self-hosted service <self-hosted>

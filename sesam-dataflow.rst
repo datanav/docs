@@ -69,7 +69,7 @@ Enrich
 The enrichment step is concerned with providing semantics in three main areas:
 
 #. adding :ref:`rdf:type <best-practice-rdf-type>` to define the entity's business type,
-#. adding :ref:`namespaces <concepts-namespaces>` to preserve property lineage and avoid property name conflicts across sources,
+#. adding :ref:`namespaces <namespaces-feature>` to preserve property lineage and avoid property name conflicts across sources,
 #. adding :ref:`namespaced identifiers <best-practice-namespace>` to define how the business entity type relates to other business entity types from the same source.
 
 Other types of semantics can be utilized if needed.
@@ -105,7 +105,7 @@ As an example, imagine two business entities from two different sources both hav
 By adding namespaces, these two entities could safely be merged by preserving their properties in separate namespaces:
 ``<source a>:first-name`` and ``<source b>:first-name``.
 
-See :ref:`concepts-namespaces` for more details.
+See :ref:`namespaces <namespaces-feature>` for more details.
 
 .. _semantic-enrichment-namespaced-identifiers:
 

@@ -81,18 +81,22 @@ When all source properties and global properties are available as a single compo
 
 **Benefits of semantic data storage with dynamic multi-schema:**
 
-* Improved data quality and governance:
+Improved data quality and governance:
 
-	#. Data never loses its origin and context.
-	#. Data never gets corrupted or lost in translation.
-	#. Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
+#. Data never loses its origin and context.
+#. Data never gets corrupted or lost in translation.
+#. Every representation of an object, regardless of source, is stored as a single entity, without conflict or consistency corruption.
 	
 
-* Improved operational efficiency:
+Improved operational efficiency:
 
-	#. Reduces cost and processing time as a source system only needs to share its data once, and in its native schema. 
-	#. Reduces the number of integrations by up to 90%
-	#. Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
-	#. Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object
+#. Reduces cost and processing time as a source system only needs to share its data once, and in its native schema. 
+#. Reduces the number of integrations by up to 90%
+#. Simplifies each integration by never having to modify any source systems or do any data modeling before adding source data.
+#. Supports continuously evolving global properties in the multi-schema datastore, so that canonical models can emerge over time, and any standardized data model can be implemented independently and be stored in a single object
 
-* Increased flexibility and cost savings related to changes and sunsetting of LOB systems
+Increased flexibility and cost savings related to changes and sunsetting of LOB systems:
+
+#. Easily implement your new business systems without setting up integrations to other systems in your environement. Sesam Master Data Hub handles the integration of data.
+#. Run multiple business systems supporting the same processes in parallel with full data consistency across every system.
+#. Reduce cost by retiring legacy systems who’s primary purpose is to feed your processes with historical data. Sesam Master Data Hub will store your legacy systems data and make them available for new systems and analytics.

@@ -29,7 +29,8 @@ Prototype
        "whitelist": ["list","of","column","names","to","include"],
        "blacklist": ["list","of","column","names","to","exclude"],
        "preserve_empty_strings": false,
-       "delimiter": ","
+       "delimiter": ",",
+       "escape_null_bytes": false
     }
 
 Properties
@@ -136,6 +137,27 @@ Properties
      - String
      - The character or string to use as the ``CSV`` field separator (delimiter)
      - ","
+     -
+
+   * - ``escape_null_bytes``
+     - Boolean
+     - If set to ``true``, null characters in the CSV will be escaped before the data is parsed. Null characters in a
+       CSV file can fail the pipe if they are not escaped. By default, this is set to ``false`` due to performance
+       reasons.
+     - ``false``
+     -
+
+   * - ``if_source_empty``
+     - Enum<String>
+     - Determines the behaviour of the pipe when the CSV source returns no entities. Normally, any previously synced
+       entities will be deleted even if the pipe does not receive any entities from its source.
+       If set to ``"fail"``, the pipe will automatically fail if the source returns no entities. This means that any
+       previous entities in the pipe's dataset are not deleted.
+       If set to ``"accept"``, the pipe will *not* fail and any previously synced entities will be deleted.
+
+       The global default ``global_defaults.if_source_empty`` can be set for all pipes in the
+       :ref:`service metadata <service_metadata_section>`.
+     - ``"accept"``
      -
 
 Continuation support

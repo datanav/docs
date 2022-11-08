@@ -9,7 +9,7 @@ The Subscription Fee for the Services are set
 depending on the computing power, data volume, selected monitoring
 functionality and SLA-level.
 
-Fees for standard services are set out in Euro, and are calculated into
+Fees for standard services are set out in U.S. Dollar, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
@@ -20,73 +20,69 @@ If data storage is more than 1TB you will be billed with an additional Multi
 compute for every TB above 1TB. As an example, if you have 4,5TB of data you
 will be billed with 5 quantities of Multi computes.
 
-.. note::
-
-  :ref:`Integrated search <concepts-integrated-search>` will increase the data consumption by 2x, :ref:`Durable data <concepts-durable-data>` will increase the data consumption by 3x. These features are additative, if both are enabled the data consumption will only increase by 5x.
-
-The fees for the Services are set out below in Euro exclusive of VAT:
+The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
 
 .. _pricing-developer:
 
 Developer environment
 ---------------------
-A developer environment has a fixed price and serves a single developer, or a CI test environment. 
+A developer environment has a fixed price and serves a single developer, or a CI test environment.
 These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted.
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
 by using the :doc:`Sesam Client <sesam-client>`.
 
-.. list-table:: Developer environments
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
    * - Compute
      - Pr environment
    * - Fixed price Developer - 1 Engine < 20 GB Data
-     - €50.00
+     - $55.00
    * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - €250.00
+     - $275.00
 
 .. _pricing-production:
 
 Production and test environment
 -------------------------------
 
-.. list-table:: Runtime environments [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Compute
+   * - Compute [#]_
      - Pr environment
    * - Single compute - 4 Engines < 350 GB Data
-     - €900.00
+     - $1,000.00
    * - Multi compute - 16 Engines < 1 TB Data
-     - €3,300.00
+     - $3,500.00
 
-.. list-table:: Data prices [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Data
+   * - Data [#]_
      - Pr GB
    * - Storage
-     - €14.00
+     - $15.00
    * - VPN
-     - €2.00
+     - $2.00
    * - Metrics and monitoring
-     - €4.00
+     - $4.00
 
-.. list-table:: SLA [#]_
+.. list-table::
    :widths: 70 30
    :header-rows: 1
 
-   * - Support - Response time
+   * - SLA - Response time [#]_
      - Pr GB
    * - Standard - 8h
-     - €15.00
+     - $15.00
    * - Enterprise - 1h
-     - €30.00
+     - $30.00
    * - Premium 0,5h x 24/7 [#]_
-     - €100.00
+     - $100.00
 
 .. [#] Geo-replicated backup is included in cloud environments.
 .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
@@ -120,3 +116,39 @@ If, after the signature of the Agreement, changes in public taxes,
 charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
+
+5. Legacy prices
+================
+
+The following items are no longer available for new subscriptions:
+
+.. list-table::
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Compute
+     - Pr environment
+   * - Large compute - 8 Engines < 750 GB Data
+     - $2,000.00
+
+.. list-table::
+   :widths: 70 30
+   :header-rows: 1
+
+   * - Pipe monitoring
+     - Pr pipe
+   * - Enterprise - Notifications
+     - $25.00
+
+.. list-table::
+   :widths: 70 30
+   :header-rows: 1
+
+   * - :doc:`GDPR Data Access Portal <gdpr-platform>`
+     - Pr GB
+   * - Basic < 1 request per second
+     - $50.00
+   * - Standard < 5 requests per second
+     - $100.00
+   * - Enterprise < 10 requests per second
+     - $200.00

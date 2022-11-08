@@ -12,6 +12,7 @@ In this section you will learn how to synchronize your data streams into and out
 .. toctree::
    :maxdepth: 1
 
+   Patterns <documentation/data-synchronization/data-synchronization-patterns>
    Non-idempotency <idempotency>
    Cron Expressions <cron-expressions>
    RDF support <rdf-support>

@@ -6,7 +6,7 @@ JSON Pull Protocol
 
 
 The JSON Pull protocol is an HTTP-based protocol that uses GET
-requests to retrieve streams of :doc:`entities <entitymodel>`. It
+requests to retrieve streams of :ref:`entities <entity-data-model>`. It
 supports splitting up the data across multiple requests.
 
 The protocol is supported by the :ref:`http_endpoint
@@ -59,7 +59,7 @@ The following HTTP request parameters are supported:
 The HTTP body is JSON data which will always be in the form of a
 JSON array even if it is a single entity. The
 serialisation of entities as JSON is described in more detail
-:doc:`here <entitymodel>`.
+:ref:`here <entity-data-model>`.
 
 
 Response headers
@@ -85,7 +85,7 @@ Response headers
      - When a dataset is created it is assigned a UUID. If the dataset is deleted and then recreated it will get a new generation UUID.
 
    * - ``X-Dataset-Completeness``
-     - If the dataset has a :ref:`completeness <completeness>` set then this header will contain the completeness value. The value is an integer representing the number of microseconds since epoch (January 1st 1970 UTC).
+     - If the dataset has a :ref:`completeness <completeness-feature>` set then this header will contain the completeness value. The value is an integer representing the number of microseconds since epoch (January 1st 1970 UTC).
 
    * - ``X-Dataset-Restore-Uuid``
      - When a dataset is restored [from a backup] then it is assigned a UUID.
@@ -93,7 +93,7 @@ Response headers
    * - ``X-Dataset-Restore-Offset``
      - This the highest committed offset in the dataset at the point when it was last restored. The value is JSON encoded.
 
-The :ref:`automatic reprocessing <automatic_reprocessing>` feature makes use of several of these headers to know when to rewind or reset a pipe.
+The :doc:`automatic reprocessing <features/automatic-reprocessing>` feature makes use of several of these headers to know when to rewind or reset a pipe.
 
 
 .. _json_pull_examples:

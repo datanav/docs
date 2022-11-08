@@ -31,8 +31,8 @@ JSON Push protocol
 
 The JSON Push protocol is described in additional detail in the
 :doc:`JSON Push Protocol <json-push>` document. The serialisation of
-entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :doc:`here
-<entitymodel>`. Both individual entities and lists of entities can be
+entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :ref:`here
+<entity-data-model>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
 <json_sink>`.
 
@@ -91,7 +91,7 @@ Properties
 Completeness
 ^^^^^^^^^^^^
 
-When entities are posted to the HTTP endpoint source, the :ref:`completeness <completeness>` value of the sink dataset will by default be set to the current time. But it is also possible to explicitly specify the completeness value by adding a 'X-Dataset-Completeness' header in the POST-request. This value must be a positive integer. It is recommended to use microseconds since the epoch, since this is what Sesam does by default.  Example::
+When entities are posted to the HTTP endpoint source, the :ref:`completeness <completeness-feature>` value of the sink dataset will by default be set to the current time. But it is also possible to explicitly specify the completeness value by adding a 'X-Dataset-Completeness' header in the POST-request. This value must be a positive integer. It is recommended to use microseconds since the epoch, since this is what Sesam does by default.  Example::
 
     curl -H "X-Dataset-Completeness: 1633934725921188" ...
 

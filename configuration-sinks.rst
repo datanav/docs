@@ -21,8 +21,7 @@ The following *JSON* snippet shows the general form of a sink definition.
 
     {
         "type": "a-sink-type",
-        "comment": "This is a comment",
-        ..
+        "comment": "This is a comment"
     }
 
 The only universally required property is ``type``.
@@ -59,7 +58,6 @@ Properties
 
    Conditional sink <configuration-sinks-conditional>
    Dataset sink <configuration-sinks-dataset>
-   Sesam Databrowser sink <configuration-sinks-databrowser>
    JSON push sink <configuration-sinks-json>
    SDShare push sink <configuration-sinks-sdshare>
    SMS message sink <configuration-sinks-sms>

@@ -79,7 +79,7 @@ single resource. This makes it easy to continuously develop the platform-wide,
 domain-wide, or functionality-wide data models needed in the data
 platform. The composite object representation linking all the different
 representations across systems is stored as a single object in :ref:`global
-datasets <concepts-global-datasets>`.
+datasets <global-datasets>`.
 
 The representation is stored in a standard
 `JSON <https://en.wikipedia.org/wiki/JSON>`_ based format, and
@@ -117,7 +117,7 @@ is irrelevant. If there is structured data, Sesam will be able to talk to
 every system in their own language.
 
 Internally in Sesam all data is transformed into a
-:ref:`extended <concepts-transit-encoding>` JSON based
+:ref:`extended <transit-encoding>` JSON based
 data format, but retains its original data model. This is essential to
 not degrade the quality of the data. Any conversion from one data model
 to another will mean a reduction in data quality.

@@ -854,7 +854,7 @@ Sinks
 Deprecated Properties
 ---------------------
 
-The ``prefix_includes`` property has been deprecated for the :ref:`sparql <sparql_sink>`, :ref:`sdshare <sdshare_sink>`, :ref:`databrowser <databrowser_sink>`, and :ref:`http_endpoint <http_endpoint_sink>` sinks.
+The ``prefix_includes`` property has been deprecated for the :ref:`sparql <sparql_sink>`, :ref:`sdshare <sdshare_sink>`, and :ref:`http_endpoint <http_endpoint_sink>` sinks.
 
 .. list-table::
    :header-rows: 1

@@ -17,7 +17,7 @@ We will also get a small taste of master data management (MDM) mechanisms in Ses
 
 .. admonition:: Prerequisites
 
-  Before starting on this tutorial we suggest you complete the `Enrich data tutorial <tutorial-getting-started-enrich>`_ as we will use that data in this tutorial.
+  Before starting on this tutorial we suggest you complete the :doc:`Enrich data tutorial <tutorial-getting-started-enrich>` as we will use that data in this tutorial.
 
 Create a global pipe
 ********************
