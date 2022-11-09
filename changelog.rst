@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_11_09:
+
+* The :ref:`Diff datasets source <diff_datasets_source>` has been deprecated
+* The :ref:`REST source <rest_source>` is no longer considered experimental.
+
+2022-10-11
+----------
+
 .. _changelog_2022_10_11:
 
 2022-10-11
