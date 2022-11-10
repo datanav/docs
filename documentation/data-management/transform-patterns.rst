@@ -8,6 +8,7 @@ Transform Patterns
    Late schema binding <late-schema-binding-pattern>
    Defining hierarchies for recursion <recursion-hierarchy-pattern>
    Re-mapping references to target identifiers <re-mapping-references-to-target-identifiers-pattern>
+   Remove namespaces <remove-namespaces-pattern>
 
 Looking for some transform patterns? These topics will get you started on the right foot.
 
