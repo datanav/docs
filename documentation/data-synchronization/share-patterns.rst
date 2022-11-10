@@ -8,7 +8,7 @@ Share Patterns
    Optimistic locking pattern <optimistic-locking-pattern>
    Insert pattern <insert-pattern>
    Update pattern <update-pattern>
-   Exposing data patern <exposing-data-pattern>
+   Exposing data pattern <exposing-data-pattern>
    Capture response with transform pattern <capture-response-with-transform-pattern>
    External reference pattern <external-reference-pattern>
 
