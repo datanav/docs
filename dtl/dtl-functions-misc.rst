@@ -1,30 +1,10 @@
 Misc
 ====
 
-.. _literal_dtl_function:
+.. _fail_dtl_function:
 
-``literal``
------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   MESSAGE(value{1})
-       |
-       | A function that returns its argument. The argument is not evaluated and is returned as-is. This function is used to avoid side-effects from value expression evaluation.
-     - | ``["literal", "_S.foo"]``
-       |
-       | Returns the string ``_S.foo``, and not the value of the source entity's foo property.
-
-.. _tuples_dtl_function:
-
-``tuples``
-----------
+``fail!``
+---------
 
 .. list-table::
    :header-rows: 1
@@ -34,31 +14,12 @@ Misc
      - Examples
 
    * - | *Arguments:*
-       |   VALUES(value-expression{>0})
+       |   MESSAGE(string{1})
        |
-       | Constructs a list of tuples, the product of the values given in the
-         arguments. The tuple length is equal to the number
-         of function arguments. ``null`` values are ignored.
+       | A function that makes the pump fail. It can be used to conditionally fail the pump. A string error message can be specified in the first argument.
+     - | ``["fail!", "Processing stopped because of invalid input. Please review."]``
        |
-       | This function is a good choice when you need to do joins on
-         composite keys.
-     - | ``["tuples"]``
-       |
-       | Returns ``[]``.
-       |
-       | ``["tuples", "a", "b", "c"]``
-       |
-       | Returns ``[["a", "b", "c"]]``.
-       |
-       | ``["tuples", ["list", 1, 2], 3]``
-       |
-       | Returns ``[[1, 3], [2, 3]]``.
-       |
-       | ``["tuples",``
-       |   ``["list", 1, 2], ["list", 3, null, 4, 5]]``
-       |
-       | Returns ``[[1, 3], [1, 4], [1, 5],``
-       |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.
+       | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
 
 .. _hash128_dtl_function:
 
@@ -130,10 +91,10 @@ Misc
        |
        | Returns true if the source entity's distance between ``start`` and ``end`` changed.
 
-.. _fail_dtl_function:
+.. _literal_dtl_function:
 
-``fail!``
----------
+``literal``
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -143,9 +104,48 @@ Misc
      - Examples
 
    * - | *Arguments:*
-       |   MESSAGE(string{1})
+       |   MESSAGE(value{1})
        |
-       | A function that makes the pump fail. It can be used to conditionally fail the pump. A string error message can be specified in the first argument.
-     - | ``["fail!", "Processing stopped because of invalid input. Please review."]``
+       | A function that returns its argument. The argument is not evaluated and is returned as-is. This function is used to avoid side-effects from value expression evaluation.
+     - | ``["literal", "_S.foo"]``
        |
-       | Causes the pump to fail. The error message is reported in the `pump-failed` event in the pump execution dataset.
+       | Returns the string ``_S.foo``, and not the value of the source entity's foo property.
+
+.. _tuples_dtl_function:
+
+``tuples``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{>0})
+       |
+       | Constructs a list of tuples, the product of the values given in the
+         arguments. The tuple length is equal to the number
+         of function arguments. ``null`` values are ignored.
+       |
+       | This function is a good choice when you need to do joins on
+         composite keys.
+     - | ``["tuples"]``
+       |
+       | Returns ``[]``.
+       |
+       | ``["tuples", "a", "b", "c"]``
+       |
+       | Returns ``[["a", "b", "c"]]``.
+       |
+       | ``["tuples", ["list", 1, 2], 3]``
+       |
+       | Returns ``[[1, 3], [2, 3]]``.
+       |
+       | ``["tuples",``
+       |   ``["list", 1, 2], ["list", 3, null, 4, 5]]``
+       |
+       | Returns ``[[1, 3], [1, 4], [1, 5],``
+       |         ``[2, 3], [2, 4], [2, 5]]``. The ``null`` value was ignored.

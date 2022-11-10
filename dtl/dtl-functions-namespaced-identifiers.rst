@@ -94,58 +94,6 @@ Namespaced identifiers
          had already been mapped to the ``unknown`` namespace then the expression would have
          returned ``"~:unknown:baz"``.
 
-.. _ni_ns_dtl_function:
-
-``ni-ns``
----------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-     - | Extracts the namespace part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
-       |
-       | ``["ni-ns", "~:foo:bar"]``
-       |
-       | Returns ``"foo"``.
-       |
-       | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
-       |
-       | Returns ``["foo", "bar"]``.
-
-.. _ni_id_dtl_function:
-
-``ni-id``
----------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-     - | Extracts the namespace id part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
-       |
-       | ``["ni-id", "~:foo:bar"]``
-       |
-       | Returns ``"bar"``.
-       |
-       | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
-       |
-       | Returns ``["bar", "baz"]``.
-
 .. _ni_collapse_dtl_function:
 
 ``ni-collapse``
@@ -267,3 +215,55 @@ Namespaced identifiers
        | ``["ni-expand", "~:unknown:path"]``
        |
        | Returns ``"unknown:path"``.
+
+.. _ni_id_dtl_function:
+
+``ni-id``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace id part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-id", "~:foo:bar"]``
+       |
+       | Returns ``"bar"``.
+       |
+       | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["bar", "baz"]``.
+
+.. _ni_ns_dtl_function:
+
+``ni-ns``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+     - | Extracts the namespace part of namespaced identifiers. VALUES that
+         are not namespaced identifiers are ignored.
+       |
+       | ``["ni-ns", "~:foo:bar"]``
+       |
+       | Returns ``"foo"``.
+       |
+       | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["foo", "bar"]``.

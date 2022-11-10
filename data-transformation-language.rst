@@ -54,7 +54,6 @@
    Path Expressions and Hops <dtl/paths.rst>
    How joins work <dtl/joins.rst>
    Namespace aware functions <dtl/namespaces.rst>
-   DTL: Transforms <dtl/dtl-functions-transforms.rst>
    DTL: Boolean logic <dtl/dtl-functions-boolean-logic.rst>
    DTL: Booleans <dtl/dtl-functions-booleans.rst>
    DTL: Bytes <dtl/dtl-functions-bytes.rst>
@@ -75,6 +74,7 @@
    DTL: Paths <dtl/dtl-functions-paths.rst>
    DTL: Sets <dtl/dtl-functions-sets.rst>
    DTL: Strings <dtl/dtl-functions-strings.rst>
+   DTL: Transforms <dtl/dtl-functions-transforms.rst>
    DTL: URIs <dtl/dtl-functions-uris.rst>
    DTL: UUIDs <dtl/dtl-functions-uuids.rst>
    Argument types <dtl/argument-types.rst>
