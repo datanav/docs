@@ -317,7 +317,6 @@ In this case the data from the source is not ordered chronologically, which mean
    Merge source <configuration-sources-merge>
    Union datasets source <configuration-sources-union-datasets>
    Merge datasets source <configuration-sources-merge-datasets>
-   Diff datasets source (experimental) <configuration-sources-diff-datasets>
    Embedded source <configuration-sources-embedded>
    SQL source <configuration-sources-sql>
    Conditional source <configuration-sources-conditional>
@@ -329,4 +328,4 @@ In this case the data from the source is not ordered chronologically, which mean
    Empty source <configuration-sources-empty>
    HTTP endpoint source <configuration-sources-http>
    SPARQL source <configuration-sources-sparql>
-   REST source (experimental) <configuration-sources-rest>
+   REST source <configuration-sources-rest>

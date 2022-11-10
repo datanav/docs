@@ -1,8 +1,8 @@
 
 .. _rest_source:
 
-REST source (experimental)
---------------------------
+REST source
+-----------
 
 This is a data source that can communicate with a REST service that produce JSON output using HTTP requests.
 The REST source supports both pagination as part of the response body or pagination in the form of header properties
@@ -16,9 +16,6 @@ the associated :ref:`REST system <rest_system>`.
 Responses which aren't recognised as JSON will make the REST source emit "empty" entities with a property containing
 the raw response body and - optionally - the content-type of the response for further processing with DTL and/or
 HTTP or REST transform(s).
-
-Note that the REST source is still under development and might change configuration format while it's marked
-as "experimental".
 
 Prototype
 ^^^^^^^^^
