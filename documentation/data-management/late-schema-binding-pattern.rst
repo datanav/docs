@@ -4,7 +4,7 @@ Ensure that transformations are done in accordance to the target schema. Bidirec
 
 .. warning::
 
-    We advice against referencing other namespaces, as this is practice is a system to system integration.
+    We advice against referencing other namespaces, as this practice is a system to system integration.
 
 When removing namespaces you need to rewrite the _id as it includes colons that will be removed.
 
