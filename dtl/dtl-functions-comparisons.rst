@@ -38,27 +38,6 @@ Comparisons
           want to check for intersection/overlap instead of an exact
           match.
 
-.. _neq_dtl_function:
-
-``neq``
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:* value-expression{2}
-       |
-       | Coerces the values returned from the value expressions into
-         list and compares those lists. Returns ``false`` if the two
-         arguments given are equal.
-     - | ``["neq", "_S.age", 42]``
-       |
-       | The source entity's age field must *not* have the value 42.
-
 .. _gt_dtl_function:
 
 ``gt``
@@ -146,3 +125,24 @@ Comparisons
        |
        | The source entity's ``age`` field must have a value less
          than or equal 42.
+
+.. _neq_dtl_function:
+
+``neq``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* value-expression{2}
+       |
+       | Coerces the values returned from the value expressions into
+         list and compares those lists. Returns ``false`` if the two
+         arguments given are equal.
+     - | ``["neq", "_S.age", 42]``
+       |
+       | The source entity's age field must *not* have the value 42.

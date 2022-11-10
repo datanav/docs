@@ -36,42 +36,6 @@ JSON
        | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
        |   ``"http://www.example.org/", "124.4", "12345"]``.
 
-.. _json_transit_dtl_function:
-
-``json-transit``
-----------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Translates all input values to transit encoded JSON strings.
-         The keys of dicts are sorted lexically. This function behaves like
-         the ``json`` function, except that it transit encodes values.
-     - | ``["json-transit", 1]``
-       |
-       | Returns one string: ``"1"``.
-       |
-       | ``["json-transit", "hello"]``
-       |
-       | Returns one string: ``"\"hello\""``.
-       |
-       | ``["json-transit",``
-       |   ``["list", "abc", ["list", 1, 2, 3],``
-       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
-       |       ``124.4, 12345]]``
-       |
-       | Returns a list of strings:
-       |
-       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
-       |   ``"~rhttp://www.example.org/", "124.4", "12345"]``.
-
 .. _json_parse_dtl_function:
 
 ``json-parse``
@@ -131,6 +95,42 @@ JSON
        | ``["json-parse", "no-value", "null"]``
        |
        | Returns ``null`` because ``"null"`` is a valid JSON string.
+
+.. _json_transit_dtl_function:
+
+``json-transit``
+----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Translates all input values to transit encoded JSON strings.
+         The keys of dicts are sorted lexically. This function behaves like
+         the ``json`` function, except that it transit encodes values.
+     - | ``["json-transit", 1]``
+       |
+       | Returns one string: ``"1"``.
+       |
+       | ``["json-transit", "hello"]``
+       |
+       | Returns one string: ``"\"hello\""``.
+       |
+       | ``["json-transit",``
+       |   ``["list", "abc", ["list", 1, 2, 3],``
+       |     ``{"b": 2, "a": 1}, ["uri", "http://www.example.org/"],``
+       |       ``124.4, 12345]]``
+       |
+       | Returns a list of strings:
+       |
+       | ``["\"abc\"", "[1, 2, 3]", "{\"a\": 1, \"b\": 2}",``
+       |   ``"~rhttp://www.example.org/", "124.4", "12345"]``.
 
 .. _json_transit_parse_dtl_function:
 

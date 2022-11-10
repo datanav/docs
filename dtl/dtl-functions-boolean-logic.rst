@@ -1,75 +1,6 @@
 Boolean logic
 =============
 
-
-.. _and_dtl_function:
-
-``and``
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:* boolean-expression{>0}
-       |
-       | Takes at least one boolean expression argument.
-         Returns true only if all arguments evaluate to true.
-     - | ``["and",``
-       |    ``["gt", "_S.age", 26],``
-       |    ``["eq", "_S.gender", "male"]]``
-       |
-       | Age must be greater than 26 and the gender must be male.
-
-.. _or_dtl_function:
-
-``or``
-------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:* boolean-expression{>0}
-       |
-       | Takes at least one boolean expression argument.
-         Returns true if any of the arguments evaluate to true.
-     - | ``["or",``
-       |   ``["eq", "_S.category", "A"],``
-       |   ``["eq", "_S.category", "B"]]``
-       |
-       | The category field must contain "A" or "B".
-
-.. _not_dtl_function:
-
-``not``
--------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:* boolean-expression{>0}
-       |
-       | Takes at least one boolean expression argument.
-         Returns the inverse boolean value. It behaves like ``and``,
-         but returns the inverse.
-     - | ``["not",``
-       |   ``["or",``
-       |      ``["eq", "_S.category", "A"],``
-       |      ``["eq", "_S.category", "B"]]]``
-       |
-       | The category must contain neither "A" nor "B".
-
 .. _all_dtl_function:
 
 ``all``
@@ -105,6 +36,28 @@ Boolean logic
        |
        | Returns false because not all arguments are less than 2.
 
+.. _and_dtl_function:
+
+``and``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* boolean-expression{>0}
+       |
+       | Takes at least one boolean expression argument.
+         Returns true only if all arguments evaluate to true.
+     - | ``["and",``
+       |    ``["gt", "_S.age", 26],``
+       |    ``["eq", "_S.gender", "male"]]``
+       |
+       | Age must be greater than 26 and the gender must be male.
+
 .. _any_dtl_function:
 
 ``any``
@@ -138,4 +91,50 @@ Boolean logic
        |    ``["lt", "_.", 2],``
        |    ``["list", 6, 7, 8]]``
        |
-       | Returns false because none of the arguments are less than 2.
+       | Returns false because none of the arguments are less than 2.       
+
+.. _not_dtl_function:
+
+``not``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* boolean-expression{>0}
+       |
+       | Takes at least one boolean expression argument.
+         Returns the inverse boolean value. It behaves like ``and``,
+         but returns the inverse.
+     - | ``["not",``
+       |   ``["or",``
+       |      ``["eq", "_S.category", "A"],``
+       |      ``["eq", "_S.category", "B"]]]``
+       |
+       | The category must contain neither "A" nor "B".
+
+.. _or_dtl_function:
+
+``or``
+------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:* boolean-expression{>0}
+       |
+       | Takes at least one boolean expression argument.
+         Returns true if any of the arguments evaluate to true.
+     - | ``["or",``
+       |   ``["eq", "_S.category", "A"],``
+       |   ``["eq", "_S.category", "B"]]``
+       |
+       | The category field must contain "A" or "B".
