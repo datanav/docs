@@ -94,12 +94,10 @@ The following example illustrates duplicate entry precautions:
 	      "default": [
 	        ["comment", "store the id from the insert as new _id"],
 	        ["add", "_id", "_S.response.<id>"],
-	        ["comment", "kepp original _id for mapping purposes"],
-	        ["add", "$original_id", "_S._id"],
-	        ["merge-union", "_S.response"],
-	        ["add", "rdf:type",
-	          ["ni", "<rdf:type>"]
-	        ]
+	        ["comment", "you need store the original $ids for mapping, make sure $ids is passed from the transform pipe!"],
+	        ["add", "original_ids", "_S.$ids"],
+	        ["comment", "log the response in case you want to inspect it later"],
+	        ["add", "audit_log", "_S.response"]
 	      ]
 	    }
 	  }],
@@ -113,3 +111,28 @@ The following example illustrates duplicate entry precautions:
 	    "property": "<my-namespace>"
 	  }
 	}
+
+Add this to the enrich pipe:
+
+.. code-block:: json
+
+        ["add", "sesam-id",
+          ["flatten",
+            ["hops", {
+              "datasets": ["<system>-<datatype>-share-insert i"],
+              "where": [
+                ["eq", "_S.<id>", "i._id"]
+              ],
+              "return": "i.original_ids"
+            }]
+          ]
+        ],
+	
+And this to the connect pipe equality rule:
+
+.. code-block:: json
+
+    "datasets": ["<other-enrich-pipe> o", "<system>-<datatype>-enrich e"],
+    "equality_sets": [
+      ["o.$ids", "e.$ids", ["ni", "e.sesam-id"]]
+    ],
