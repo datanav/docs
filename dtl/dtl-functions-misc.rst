@@ -118,6 +118,32 @@ Misc
        | If either the current or the previous version of the entity
        | has ``_deleted`` set to ``true`` then the ``is-changed``
        | function returns ``true``.
+
+       .. NOTE::
+
+          If the source is not a ``dataset`` source then the
+          ``is-changed`` function will always return ``null``.
+
+       .. NOTE::
+
+          Do not use the ``is-changed`` function to track state
+          changes in the sink. This does not work as the pipe may not
+          actually have seen the previous version of the source
+          entity. This is particularly likely if the dataset source
+          reads the latest versions only. Compaction in the source
+          dataset may also prevent the pipe from actually seeing all
+          versions.
+
+          If you need to do track state changes in the dataset sink
+          then do ``hops`` to the sink dataset. In that case you have
+          to set ``"batch_size": 1`` on the pipe and
+          ``"set_initial_offset": "onload"`` on the dataset sink. The
+          former so that the pipe can see its own writes and the
+          latter so that the pipe don't have to wait for the sink
+          dataset to be populated (something that will never happen as
+          the pipe won't be allowed to run).
+
+
      - | ``["is-changed", "_.name"]``
        |
        | Returns true if the source entity's ``name`` property changed.
