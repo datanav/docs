@@ -176,21 +176,20 @@ Object as payload (set operation ``payload-type`` to "json", "json-transit" or "
     }
   }
 
-Multi-part form request if ``payload-type`` is "form", otherwise use "json" or "json-transit" for this type of entity:
+If the ``payload-type`` is "form" or "multipart-form" the request will encode the contents as a HTML form subission
+with either a ``application/x-www-form-urlencoded`` or ``multipart/form`` Content-Type, respectively.
+The form variables and corresponding values should be given as a dictionary of variable-name/variable-value pairs as
+the contents of ``payload``:
 
 ::
 
   {
     "_id": "3",
-    "operation": "some-third-operation",
-    "payload": [
-      {
-        "foo": "bar"
-      },
-      {
-        "zoo": "foo"
+    "operation": "form-or-multi-part-form-operation",
+    "payload": {
+        "form-variable": "form-value",
+        "other-form-variable": "other-form-value"
       }
-    ]
   }
 
 Example configuration
