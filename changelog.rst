@@ -281,7 +281,7 @@ Changes to the user experience:
 2022-01-03
 ----------
 
-* Added a new :ref:`resolved_entity <execution_log_resolved_entity>` property to write-error entities in the :doc:`execution log <pump-execution>`.
+* Added a new :ref:`resolved_entity <execution_log_resolved_entity>` property to write-error entities in the :doc:`execution log <documentation/operations/pump-execution>`.
   It contains the entity that was used to resolve the write-error if it is different from the original entity that
   caused the write-error. This property is also set for any tracked dead letters that has been resolved
   (on the deleted dead letter). Fixed a bug where the :ref:`resolved <execution_log_resolved_property>` property was not set (to ``true``) if a
@@ -627,7 +627,7 @@ Changes to the user experience:
 2020-12-01
 ----------
 
-* Changed the receive endpoint for log shipping. See :doc:`Self-hosted service <self-hosted>`.
+* Changed the receive endpoint for log shipping. See :doc:`Self-hosted service <documentation/operations/self-hosted>`.
 
 .. _changelog_2020_11_20:
 
@@ -1145,7 +1145,7 @@ Changes to the user experience:
 
 2017-06-08
 ----------
-* The :doc:`Security <security>` document now contains a description of
+* The :doc:`Security <documentation/operations/security>` document now contains a description of
   :ref:`users, roles and permissions in Sesam.<security_subscriptions_users_roles_and_permissions>`
 
 2017-05-31

@@ -6,8 +6,8 @@ Pumps
 Pumps are responsible for "pumping" data through the :ref:`pipe <pipe_section>` by reading :ref:`entities <entity-data-model>`
 from a :ref:`source <source_section>` and writing them into a :ref:`sink <sink_section>`. The pump is also responsible
 for retrying failed writes of entities and logging its activity. It can also write ultimately failed entities to a "dead letter"
-dataset for manual inspection. Pumps log their :doc:`execution history <pump-execution>` in a internal dataset with
-the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <pump-execution>` for more
+dataset for manual inspection. Pumps log their :doc:`execution history <documentation/operations/pump-execution>` in a internal dataset with
+the id "system:pump_execution:<pipe_id>". See the chapter on :doc:`the pump execution dataset <documentation/operations/pump-execution>` for more
 details about the contents of this dataset.
 
 See also the feature description of :ref:`scheduling and signalling <scheduling-and-signalling>`.
