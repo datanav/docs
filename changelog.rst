@@ -1,10 +1,10 @@
 Changelog
 =========
 
+.. _changelog_2022_11_11:
+
 2022-11-11
 ----------
-
-.. _changelog_2022_11_11:
 
 * A new payload type ``multipart-form`` applicable to the :ref:`REST sink <rest_sink>` and :ref:`REST transform <REST_transform>` has been added.
 * Fixed the example for using the ``form`` or ``multipart-form`` payload types - it should use a single dictionary of key value pairs, not a list.
