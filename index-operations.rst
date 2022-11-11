@@ -8,11 +8,12 @@ In every situation where you manage large quantities of data maintaining control
 .. toctree::
    :maxdepth: 1
 
-   Security <security>
-   Metrics and monitoring <metrics>
-   Pump Execution Dataset <pump-execution>
-   Configuration Management <configuration-management>
-   Self-hosted service <self-hosted>
-   Self-hosted on Kubernetes <self-hosted-k8s>
-   Debugging <low-level-debugging>
-   Behind the scenes <behind-the-scenes>
+   Security <documentation/operations/security>
+   Metrics and monitoring <documentation/operations/metrics>
+   Pump Execution Dataset <documentation/operations/pump-execution>
+   Configuration Management <documentation/operations/configuration-management>
+   Self-hosted service <documentation/operations/self-hosted>
+   Self-hosted on Kubernetes <documentation/operations/self-hosted-k8s>
+   Debugging <documentation/operations/low-level-debugging>
+   Behind the scenes <documentation/operations/behind-the-scenes>
+   Troubleshooting <documentation/operations/troubleshooting>

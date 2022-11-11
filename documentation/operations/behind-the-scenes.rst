@@ -113,7 +113,7 @@ Subscriptions are segregated and run on separate isolated hardware. Subscription
 Firewall
 ========
 
-All cloud services have an Azure Network Security Group in front. Only port 443 can be opened as this is the port used by the :doc:`service API <api>`. 
+All cloud services have an Azure Network Security Group in front. Only port 443 can be opened as this is the port used by the :doc:`service API <../../api>`. 
 
 Termination
 ===========

@@ -8,7 +8,7 @@ Sesam groups data into global datasets that can be managed in accordance with th
 Data Ownership by Domain
 ------------------------
 
-Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. One Sesam subscription can use the :doc:`permissions system <security>` and :ref:`config groups <api-config-groups>` to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
+Sesam can be used by one of more `domains in an organisation <https://martinfowler.com/articles/data-mesh-principles.html#DomainOwnership>`_. One Sesam subscription can use the :doc:`permissions system <documentation/operations/security>` and :ref:`config groups <api-config-groups>` to make sure these domains operate autonomous and are kept isolated. Within a domain data synchronization can be done without creating data products. Synchronising data across domain should be done using Data Products.
 
 Data Products
 -------------
@@ -26,7 +26,7 @@ Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-
 - Discovery (:ref:`integrated search <integrated-search>`, :ref:`schemas <schema-inferencing>`)
 - Transformation (:ref:`data transformation language <DTL>`)
 - Integration (:ref:`entity model <entity-data-model>`, :ref:`merge <merge_source>`, :ref:`namespaces <namespaces-feature>`)
-- Security (:doc:`permissions <security>`)
+- Security (:doc:`permissions <documentation/operations/security>`)
 - Governance
 - Lineage (:ref:`property lineage <property-lineage>`)
 - Orchestration (:doc:`data flows <sesam-dataflow>`, :ref:`schedules <scheduling-and-signalling>`, :ref:`completeness <completeness-feature>`)
