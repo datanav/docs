@@ -173,11 +173,13 @@ A operation configuration looks like:
 
    * - ``payload-type``
      - String
-     - A enumeration of "json", "json-transit" and "form", that denotes how to treat the ``payload`` property of the
+     - A enumeration of "json", "json-transit", "form" and "multipart-form", that denotes how to treat the ``payload`` property of the
        entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>` section of the :ref:`REST sink <rest_sink>` for details). If you
        specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
-       you will get a transit-encoded JSON document. If "form" is used, the contents will be used to construct a
-       HTML FORM for the request. In this case, if the property contains a list, the request will use a multi-part form.
+       you will get a transit-encoded JSON document. If "form" or "multipart-form" is used, the contents will be used to construct a
+       HTML FORM for the request. The Content-Type of the request will be ``application/x-www-form-urlencoded`` or ``multipart/form``
+       respectively. In this case, the form variables and corresponding values should be given as a single dictionary of
+       variable-name/variable-value pairs. The values in the form will be transit encoded before the request is issued.
        If ``payload-type`` is omitted, the contents of the ``payload`` property will be assumed to be a string.
      -
      -
@@ -330,6 +332,16 @@ Example configuration
                    "Content-type": "application/json"
                },
                "payload-type": "json"
+           },
+           "form-operation": {
+               "url" : "men/{{ properties.collection_name }}/submit-form",
+               "method": "POST",
+               "payload-type": "form"
+           },
+           "multipart-form-operation": {
+               "url" : "men/{{ properties.collection_name }}/submit-multipart-form",
+               "method": "POST",
+               "payload-type": "multipart-form"
            }
         }
     }
