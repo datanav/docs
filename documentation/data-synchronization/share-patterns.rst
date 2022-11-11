@@ -9,7 +9,7 @@ Share Patterns
    Insert pattern <insert-pattern>
    Update pattern <update-pattern>
    Delete pattern <delete-pattern>
-   Exposing data patern <exposing-data-pattern>
+   Exposing data pattern <exposing-data-pattern>
    Capture response with transform pattern <capture-response-with-transform-pattern>
    External reference pattern <external-reference-pattern>
 
