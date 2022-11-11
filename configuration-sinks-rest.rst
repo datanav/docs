@@ -176,7 +176,7 @@ Object as payload (set operation ``payload-type`` to "json", "json-transit" or "
     }
   }
 
-If the ``payload-type`` is "form" or "multipart-form" the request will encode the contents as a HTML form subission
+If the ``payload-type`` is "form" or "multipart-form" the request will encode the contents as a HTML form submission
 with either a ``application/x-www-form-urlencoded`` or ``multipart/form`` Content-Type, respectively.
 The form variables and corresponding values should be given as a dictionary of variable-name/variable-value pairs as
 the contents of ``payload``:
