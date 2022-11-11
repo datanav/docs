@@ -1,6 +1,9 @@
 Changelog
 =========
 
+2022-11-11
+----------
+
 .. _changelog_2022_11_11:
 
 * A new payload type ``multipart-form`` applicable to the :ref:`REST sink <rest_sink>` and :ref:`REST transform <REST_transform>` has been added.
@@ -8,11 +11,11 @@ Changelog
 
 .. _changelog_2022_11_09:
 
+2022-11-09
+----------
+
 * The :ref:`Diff datasets source <diff_datasets_source>` has been deprecated
 * The :ref:`REST source <rest_source>` is no longer considered experimental.
-
-2022-10-11
-----------
 
 .. _changelog_2022_10_11:
 
