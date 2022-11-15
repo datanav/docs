@@ -147,7 +147,10 @@ A operation configuration looks like:
      - String
      - A URL or URL part. The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities properties
        available to the templating context. The expanded string is then substituted into the system's ``url_pattern`` property in
-       place of its ``%s`` placeholder marker to get the final URL to use for the operation.
+       place of its ``%s`` placeholder marker to get the final URL to use for the operation. If used with the 
+       :ref:`REST source <rest_source>`, the variables ``since`` and ``properties`` are available to this template. 
+       Note that if you use the ``since`` variable in this template the ``since_property_location`` and 
+       ``since_property_name`` configuration properties will be ignored for the operation.
      -
      - Yes
 
@@ -187,18 +190,18 @@ A operation configuration looks like:
    * - ``properties``
      - Object
      - The properties mapping used as default values for the emitted entitites. Note that if both are present the
-       properties in the emitted entity takes precendence. Also note that this property can be defined in the
+       properties in the emitted entity takes precedence. Also note that this property can be defined in the
        :ref:`REST source <rest_source>`, :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`
-       configuration as well. The configuration in pipes will take precendence if both are defined.
+       configuration as well. The configuration in pipes will take precedence if both are defined.
      -
      -
 
    * - ``payload``
      - Object, string or array
      - The value to use as payload for the operation. Note that if both are present the
-       properties in the processed entity takes precendence. Also note that this property can be defined
+       properties in the processed entity takes precedence. Also note that this property can be defined
        in the :ref:`REST source <rest_source>`, :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`
-       configuration as well. The configuration in pipes will take precendence if both are defined.
+       configuration as well. The configuration in pipes will take precedence if both are defined.
      -
      -
 
@@ -206,7 +209,7 @@ A operation configuration looks like:
      - String
      - The name of the property to put the response in when emitting entities. Note that this property can be defined
        in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well.
-       The configuration in pipes will take precendence if both are defined.
+       The configuration in pipes will take precedence if both are defined.
      -
      -
 
@@ -214,7 +217,7 @@ A operation configuration looks like:
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as
-       well. It will be ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence
+       well. It will be ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence
        if both are defined.
      -
      -
@@ -234,7 +237,9 @@ A operation configuration looks like:
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted
        entities if missing from the source system. Note that this property can be defined in the
        :ref:`REST source <rest_source>` configuration and :ref:`REST transform <rest_transform>` as well. It will be
-       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
+       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
+       The bound parameters available to this template are ``body``, ``headers`` and ``properties``. All current entity
+       properties are also available as named variables.
      -
      -
 
@@ -246,7 +251,7 @@ A operation configuration looks like:
        ``since_support`` as been set to ``true`` in the source. See the ``since_property_name`` and ``since_property_location``
        configuration properties as well. Note that this property can be defined in the
        :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well. It will be
-       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
+       ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
      -
      -
 
@@ -256,7 +261,9 @@ A operation configuration looks like:
        set to ``true`` in the source. See ``since_property_location`` and ``updated_property`` as well. Note that this
        property can be defined in the :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
-       precendence if both are defined.
+       precedence if both are defined. Note that if you use the ``since`` variable in the ``url`` template property
+       the ``since_property_location`` and ``since_property_name`` configuration properties will be ignored for the
+       operation.
      - ``"since"``
      -
 
@@ -266,7 +273,10 @@ A operation configuration looks like:
        This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
        ``updated_property`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
        configuration as well. It will be ignored by the :ref:`REST transform <rest_transform>` and
-       :ref:`REST sink <rest_sink>`. The configuration in pipes will take precendence if both are defined.
+       :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
+       Note that if you use the ``since`` variable in the ``url`` template property
+       the ``since_property_location`` and ``since_property_name`` configuration properties will be ignored for the
+       operation.
      - ``"query"``
      -
 
@@ -299,7 +309,7 @@ Example configuration
         "type": "system:rest",
         "operations": {
             "get-men": {
-                "url" : "men/{{ properties.collection_name }}/men",
+                "url" : "men/{{ properties.collection_name }}/men/{{ since }}",
                 "method": "GET"
             },
             "get-man": {

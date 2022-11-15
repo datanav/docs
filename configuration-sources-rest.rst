@@ -72,9 +72,9 @@ Properties
    * - ``properties``
      - Object
      - The properties mapping used as default values for the emitted entitites. Note that if both are present the
-       properties in the emitted entity takes precendence. Also note that this property can be defined in the specified
+       properties in the emitted entity takes precedence. Also note that this property can be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-       precendence if defined.
+       precedence if defined.
      -
      -
 
@@ -82,7 +82,7 @@ Properties
      - Object, string or array
      - The value to use as payload for the operation. Note that this property can be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-       precendence if defined.
+       precedence if defined.
      -
      -
 
@@ -90,7 +90,7 @@ Properties
      - String
      - The name of the property to put the response in when emitting entities. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
-       will take precendence if defined.
+       will take precedence if defined.
      -
      -
 
@@ -106,7 +106,7 @@ Properties
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source
-       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       configuration will take precedence if defined. This property can express a "path" into the response using a dot
        as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
        response body it will take precedence over any property found by traversing the path using the dot notation.
      -
@@ -118,7 +118,8 @@ Properties
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
        if missing from the source system. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
-       will take precendence if defined.
+       will take precedence if defined. The bound parameters available to this template are ``body``, ``headers``
+       and ``properties``. All entity properties are also available as named variables.
      -
      -
 
@@ -191,17 +192,21 @@ See the section on :ref:`continuation support <continuation_support>` for more i
        entities if missing from the source system (for continuation support). This is only relevant if
        ``supports_since`` as been set to ``true``. See the ``since_property_name`` and ``since_property_location``
        configuration properties as well. Note that this property can alternatively be defined in the specified
-       ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precendence
-       if defined.
+       ``operation`` section of the :ref:`REST system <rest_system>`. The source configuration will take precedence
+       if defined. The bound parameters available to this template are ``body``, ``headers``
+       and ``properties``. All entity properties are also available as named variables.
      -
      -
 
    * - ``since_property_name``
      - String
      - The name of the property to relay continuation information. This is only relevant if ``supports_since`` as been
-       set to ``true``. See ``since_property_location`` and ``updated_property`` as well. Note that this
+       set to ``true``. See ``since_property_location`` and ``updated_expression`` as well. Note that this
        property can alternatively be defined in the specified ``operation`` section of the
-       :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
+       :ref:`REST system <rest_system>`. The source configuration will take precedence if defined. Note that if you
+       use the ``since`` variable in the ``url`` template property in the system operation configuration, the
+       ``since_property_location`` and ``since_property_name`` configuration properties will be ignored for this
+       operation.
      -
      -
 
@@ -209,10 +214,23 @@ See the section on :ref:`continuation support <continuation_support>` for more i
      - String
      - A enumeration of "query" and "header". The location property to relay continuation information.
        This is only relevant if ``supports_since`` as been set to ``true``. See ``since_property_name`` and
-       ``updated_property`` as well. Note that this property can alternatively be defined in the specified ``operation``
-       section of the :ref:`REST system <rest_system>`. The source configuration will take precendence if defined.
+       ``updated_expression`` as well. Note that this property can alternatively be defined in the specified ``operation``
+       section of the :ref:`REST system <rest_system>`. The source configuration will take precedence if defined.
+       Note that if you use the ``since`` variable in the ``url`` template property in the system operation
+       configuration, the ``since_property_location`` and ``since_property_name`` configuration properties will be
+       ignored for this operation.
      -
      -
+
+   * - ``initial_since_value``
+     - String or integer
+     - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
+       the pipe has been reset). It should be used when you don't want the source to fetch all available data when
+       the pipe is initially run or has been reset. Note that this value is only used if the source has been configured
+       with continuation support.
+     -
+     -
+
 
 .. _rest_source_examples:
 

@@ -104,7 +104,7 @@ Properties
    * - ``properties``
      - Object
      - The properties mapping to use if not present in the entity. Note that if both are present the properties in
-       the entity takes precendence.
+       the entity takes precedence.
      -
      -
 
@@ -118,7 +118,7 @@ Properties
      - String
      - The name of the property to put the response in when emitting entities. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
-       will take precendence if defined.
+       will take precedence if defined.
      -
      -
 
@@ -126,7 +126,7 @@ Properties
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
        defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform
-       configuration will take precendence if defined. This property can express a "path" into the response using a dot
+       configuration will take precedence if defined. This property can express a "path" into the response using a dot
        as path separator, i.e. ``foo.bar``. Note that a if a "non-path" version of the property can be found in the
        response body it will take precedence over any property found by traversing the path using the dot notation.
      -
@@ -138,7 +138,8 @@ Properties
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
        if missing from the transform response. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform configuration
-       will take precendence if defined.
+       will take precedence if defined. The bound parameters available to this template are ``body``, ``headers`` and
+       ``properties``. All current entity properties are also available as named variables.
      -
      -
 
@@ -148,7 +149,8 @@ Properties
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
        entities if missing from the transform response. Note that this property can alternatively be defined in the
        specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
-       precendence if defined.
+       precedence if defined. The bound parameters available to this template are ``body``, ``headers``
+       and ``properties``. All entity properties are also available as named variables.
      -
      -
 
