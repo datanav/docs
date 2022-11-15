@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_11_15:
+
+2022-11-15
+----------
+
+* Made the ``since`` variable available to the ``url`` property in the :ref:`REST system <rest_system>` operation configuration. Note it's only applicable to :ref:`REST sources <rest_source>` with continuation support.
+* Updated the documentation of the REST component Jinja templates with what variables are available to them.
+
 .. _changelog_2022_11_11:
 
 2022-11-11
