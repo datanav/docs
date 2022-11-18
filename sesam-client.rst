@@ -7,25 +7,30 @@ Sesam Client
 Introduction
 ============
 
-The *Sesam client* is a command line tool for interacting with a Sesam service instance, providing a simpler way to interact with the API.
+The Sesam client is a command line tool for interacting with a Sesam service instance (node).
+It is great for testing node configuration changes and for facilitating sync with source control systems.
 
-So what is it used for? When working with a Sesam project, the Sesam client is an invaluable tool for testing purposes, as well as for making the configuration available for interactions with a source control system, such as a Git repository. Note that the Sesam client itself does not contain any functionality to talk with a Git repository for instance.
+When working on projects it is important to test configuration changes before deploying to production environments.
+The Sesam client is designed specifically to ease this operation by having functionality to both upload and download complete configurations to and from a Sesam node,
+and also do pipe run simulations from start to finish and compare outputs with expected outputs.
 
-When applying a new solution to a project, there is a need to perform tests on the results of your solution. If applying the solution without testing the impact of new or modified integrations, we risk affecting the data quality of other integrations connected to the pipe/pipes in question.
+The Sesam client is primarily intended for testing in private Sesam nodes, but its functionality also lends itself well to running tests in Sesam nodes dedicated to CI/CD automation.
 
-The Sesam client allows us to, in a quick and easy manner, to run new DTL configurations and observing the changes in output throughout the whole node. This results in both a more qualitative monitoring of changes to be implemented, but also saves time, as the Sesam client compares new output data with the old output data automatically, giving us an efficient way of testing all the potential connections inside the node. The tests are performed inside your own private Sesam instance, instead of the project instance, which enables us to test new implementations without risking the integrity of the project data.
+The ease of uploading and downloading Sesam configurations and the fact that the configurations are serialized to JSON (no binary data) also enables smooth sync with source control systems.
 
-As the Sesam client stores the pipes and system configurations, as well as the dataset output, it also serves as a version control resource where you can upload old configurations when new ones fail. This data may be uploaded to software development platforms, such as GitHub, giving everyone involved in the project access to the current setup of the node, as well as previous setups.
+.. note::
 
-Sesam only supports the latest version of the client at any given time.
+  Only one instance of the sesam client can run commands on a sesam node at a time.
 
-Note that only one instance of the sesam client can run commands on a sesam node at a time. You also need to take care when doing changes via the GUI while the client is running, as this can lead to undefined behavior.
+.. warning::
+
+  Avoid manual changes to the Sesam node while the client is running as this will likely lead to undesired results.
 
 Pre-requisites
 ==============
 
-•   A personal Sesam node for testing
-•   A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (Json Web Token) made available on the personal Sesam node
+- A personal Sesam node for testing
+- A `JWT <https://docs.sesam.io/getting-started.html#json-web-tokens>`__  (JSON Web Token) made available on the personal Sesam node
 
 The "node-id" of your private Sesam node can be found between the node name and the "Overview" link inside your node.
 
@@ -34,6 +39,6 @@ The "node-id" of your private Sesam node can be found between the node name and 
     :align: center
     :alt: DataSet
 
-The JWT token can be generated inside your private node under *"Settings" ----> "Subsctiption" ---> "JWT"* (see above).
+The JWT token can be generated inside your private node under **Settings > Subscription > JWT** (see above).
 
-To use the tool, follow the instructions in the `Github README <https://github.com/sesam-community/sesam-py>`_.
+To use the tool, follow the instructions in the `Sesam client README <https://github.com/sesam-community/sesam-py>`_.
