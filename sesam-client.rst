@@ -26,6 +26,10 @@ The ease of uploading and downloading Sesam configurations and the fact that the
 
   Avoid manual changes to the Sesam node while the client is running as this will likely lead to undesired results.
 
+.. warning::
+
+  DO NOT run the Sesam client on production nodes! This is outside of its intended usage and may lead to very udesired results.
+
 Pre-requisites
 ==============
 
