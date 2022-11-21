@@ -10,7 +10,7 @@ Create your first synchronization
    Data Synchronization <guide-create-first-synchronization-data-synchronization>
    Data Management <guide-create-first-synchronization-data-management>
 
-In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductionary overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
+In this guide we will show you how a general simplistic Sesam synchronization may take form. The goal is to give you an introductory overview of the 5 standard phases (Collect, Enrich, Connect, Transform and Share) used in all Sesam synchronizations and to see their effects in `HubSpot <https://www.hubspot.com/>`_.
 
 .. admonition::  Objectives:
    
