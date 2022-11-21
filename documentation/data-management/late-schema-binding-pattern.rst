@@ -10,9 +10,9 @@ When removing namespaces you need to rewrite the _id as it includes colons that 
 
 Example snippet to fix _id when `remove_namespaces:true`:
 
-.. code-block::json
+.. code-block:: json
 
-        ["add", "_id",
-          ["replace", ":", "-", "_S._id"]
-        ]
+    ["add", "_id",
+      ["replace", ":", "-", "_S._id"]
+    ]
 
