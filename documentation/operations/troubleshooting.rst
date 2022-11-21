@@ -40,7 +40,7 @@ Common issues with data synchronization
 
 
 Solutions
----------
+^^^^^^^^^
 
 Common solutions to some of the operation issues above are:
 
@@ -50,3 +50,21 @@ Common solutions to some of the operation issues above are:
 #. Data being sent from Sesam should be validated.
 #. Error messages from deletes that fails due to the object already being deleted should be ignored.
 #. Insert pipes should have safeguards against sending duplicates to the target system.
+
+Common issues with data management
+----------------------------------
+
+#. Dependency tracking limit failure.
+#. Exceptions when using http transforms.
+#. Cascading issues, like a pipe waits for another pipe to be ready, which has failed.
+#. Unforeseen merges yield wrong data and unwanted load on both Sesam Talk and connected systems. Merge on null values for instance.
+#. Merged entities in globals has wrong status, entities should be unmerged, versions should be deleted, etc.
+
+Solutions
+^^^^^^^^^
+
+Common solutions to some of the operation issues above are:
+
+#. Include rescans on all pipes prone to dependency tracking limit failures.
+#. Monitor pipes that has been unresponsive or unable to process over a given period.
+#. Add circuit breakers to preparation pipes.
