@@ -258,7 +258,7 @@ A operation configuration looks like:
    * - ``since_property_name``
      - String
      - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
-       set to ``true`` in the source. See ``since_property_location`` and ``updated_property`` as well. Note that this
+       set to ``true`` in the source. See ``since_property_location`` and ``updated_expression`` as well. Note that this
        property can be defined in the :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
        precedence if both are defined. Note that if you use the ``since`` variable in the ``url`` template property
@@ -271,7 +271,7 @@ A operation configuration looks like:
      - String
      - A enumeration of "query" and "header". The location property to relay continuation information.
        This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
-       ``updated_property`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
+       ``updated_expression`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
        configuration as well. It will be ignored by the :ref:`REST transform <rest_transform>` and
        :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
        Note that if you use the ``since`` variable in the ``url`` template property
