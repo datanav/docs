@@ -224,7 +224,7 @@ See the section on :ref:`continuation support <continuation_support>` for more i
 
    * - ``initial_since_value``
      - String or integer
-     - If set, the source will use this value as the "since" value if the pipe offset haks not been set yet (or
+     - If set, the source will use this value as the "since" value if the pipe offset has not been set yet (or
        the pipe has been reset). It should be used when you don't want the source to fetch all available data when
        the pipe is initially run or has been reset. Note that this value is only used if the source has been configured
        with continuation support.
