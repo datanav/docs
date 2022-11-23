@@ -8,7 +8,6 @@ Sesam consumes and produces streams of :ref:`entities <entity-data-model>`. An e
 The following are two simple examples showing the shape of entities that can be consumed and exposed by Sesam.
 
 .. code-block:: json
-    :linenos:
 
 
     [
