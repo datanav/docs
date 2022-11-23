@@ -4,40 +4,49 @@
 Entity Data Model
 =================
 
-Sesam uses an entity data model as the core representation of
-data. Each entity is a dictionary of key-value pairs. Each key is a
-string and the value can be either a literal value, a list or another
-dictionary.
+Sesam uses an entity data model as the core representation of data. Each entity is a dictionary of key-value pairs. Each key is a string and the value can be either a literal value, a list or another dictionary.
 
-A Sesam entity has a few special keys that should not be messed
-with. The following data prototype explains these special properties.
+A Sesam entity has a few special keys that should not be tempered with. The following data prototype explains these special properties.
 
 ::
 
-  {
-        "_id": "the identity of the entity",
-        "_updated": "a token indicating when this was modified",
-        "_deleted": "indicating if the entity should be treated as deleted",
-        "_hash": "a hash string of the entity's content",
-        "_previous": "the _updated token of the previous version",
-        "_ts": "timestamp for when entity was registered in source",
-        "_filtered: "true if the pipe transforms filtered out the entity"
-  }
+    [
+      {
+            "_id": "the identity of the entity",
+            "_updated": "a token indicating when this was modified",
+            "_deleted": "indicating if the entity should be treated as deleted",
+            "_hash": "a hash string of the entity's content",
+            "_previous": "the _updated token of the previous version",
+            "_ts": "timestamp for when entity was registered in source",
+            "_filtered: "true when entity has been filtered out by pipe transforms"
+      }
+    [
 
-The entity data model supports a wide range of data types including,
-string, integer, decimal, boolean, namespaced identifier, URI, bytes
-and datetime. Over the wire both a binary and JSON representation is
-used.
+The entity data model supports a wide range of data types including, string, integer, decimal, boolean, namespaced identifier, URI, bytes and datetime. Over the wire both a binary and JSON representation is used.
+
+This is an example of how an entity could look like:
+
+.. code-block:: json
+
+    [
+        {
+            "_id": "1",
+            "name": "Bill",
+            "dob": "01-01-1980"
+        },
+        {
+            "_id": "2",
+            "name": "Jane",
+            "dob": "04-10-1992"
+        }
+    ]
 
 .. _reserved_fields :
 
 Reserved fields
----------------
+===============
 
-Entity fields starting with ``_`` are reserved. Any such fields,
-except ``_id`` and ``_deleted``, will be ignored when writing an entity
-to a dataset. Note that the fields are only reserved at the root
-level, so child entities can have them.
+Entity fields starting with ``_`` are reserved. Any such fields, except ``_id`` and ``_deleted``, will be ignored when writing an entity to a dataset. Note that the fields are only reserved at the root level, so child entities can have them.
 
 
 .. list-table::
@@ -126,12 +135,9 @@ level, so child entities can have them.
      -
 
 Special fields
----------------
+==============
 
-Entity fields starting with ``$`` are semi-reserved. They have special
-meaning and will sometimes be produced and consumed by built-in
-components. These fields are normal fields that will be hashed and
-stored as part of the entity.
+Entity fields starting with ``$`` are semi-reserved. They have special meaning and will sometimes be produced and consumed by built-in components. These fields are normal fields that will be hashed and stored as part of the entity.
 
 
 .. list-table::
@@ -170,7 +176,7 @@ stored as part of the entity.
 .. _entity_data_types:
 
 Standard types
---------------
+==============
 
 Entities are mapped to and from JSON objects, so they support the same
 data types as JSON does. Because JSON only supports a limited number of
@@ -231,7 +237,7 @@ data types there is also limited support for `Transit
 .. _extension-types:
 
 Extension types
----------------
+===============
 
 `Transit <https://github.com/cognitect/transit-format>`_ encoded
 values are represented as strings in JSON. The value is prefixed by
@@ -239,8 +245,8 @@ values are represented as strings in JSON. The value is prefixed by
 extension types below are currently the only ones supported. Transit
 types that are not recognized will be treated as string values.
 
-Note that there's currently no support for escaping string literals
-that start with a "~" character.
+..Note:: 
+  There's currently no support for escaping string literals that start with a "~" character.
 
 .. list-table::
    :header-rows: 1
@@ -287,7 +293,7 @@ that start with a "~" character.
 .. _mixed_type_ordering:
 
 Mixed type ordering
--------------------
+===================
 
 In situations where lists of values of multiple types have to be
 ordered then the following ordering is used:
@@ -323,5 +329,6 @@ because the strings and integers are not compatible types. The
 integers are ordered before the strings. Decimals and integers are compatible,
 so they are sorted together.
 
-Note that values of the Dict type are ordered by sorting their keys
-and then comparing each key+value pair.
+..Note:: 
+
+  Values of the Dict type are ordered by sorting their keys and then comparing each key+value pair.
