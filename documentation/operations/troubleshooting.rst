@@ -5,6 +5,9 @@ Troubleshooting
 
 Working with data management and synchronization can be challenging at times. We have listed a set of challenges and their potential solutions to help you troubleshoot some of the most challenging issues you can encounter.
 
+.. note::
+  This document is subject to improvements as we are continuously identifying new issues and trying to provide adequate solutions.
+
 Common issues with data synchronization
 ---------------------------------------
 
