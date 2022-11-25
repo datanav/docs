@@ -4,23 +4,24 @@
 Sesam Management Studio
 =======================
 
+.. This chapter is getting pretty lengthy. Consider splitting up in seperate files.
+
 Introduction
 ============
 
-Sesam Management Studio is used to configure, manage and administer Sesam nodes.
+The Sesam Management Studio is used to configure, manage and administer Sesam nodes.
 
-Management studio can be found here `https://portal.sesam.io <https://portal.sesam.io>`_.
+To access the Management Studio, go to the `Sesam Portal <https://portal.sesam.io>`_ and click on the desired Sesam node.
 
-There is also an `experimental version <https://beta.portal.sesam.io/>`_ of the Management Studio where new features are introduced at an earlier stage before they are publicly released in the main portal.
+There is also an `experimental version <https://beta.portal.sesam.io/>`_  where new features are introduced before they are publicly released in the main portal.
 
-If you are familiar with the Sesam concepts then the UI should be quite intuitive.
-
-When choosing the specific node you require, it takes you into the management studio for that node. The first thing that meets you, is the overview.
+When accessing the Management Studio, the first thing that meets you is the overview page.
 
 Overview
 ========
 
-When pressing **Overview**, it shows the Sesam integration for the particular node you are looking at. The figure illustrates which systems are connected, number of ingoing and outgoing pipes, deleted entities and history.
+The **Overview** shows a high-level view of the integrations for the current node.
+It shows all systems, the number of inbound and outbound pipes for each system, and an aggregated count of entities across all global datasets.
 
 .. image:: images/overview.png
     :width: 600px
@@ -29,19 +30,112 @@ When pressing **Overview**, it shows the Sesam integration for the particular no
 
 .. _management-studio-pipes:
 
+Browse
+======
+
+Only available if **Subscription > Products > Integrated search and property lineage** is enabled.
+
+Search
+------
+
+TODO
+
+Entity types
+------------
+
+TODO
+
+Models
+------
+
+TODO
+
 Pipes
 =====
 
-The pipes page contains a list of pipes generated for a particular node.
+The **Pipes** page shows a list of all pipes in the current node.
 
 .. image:: images/pipes.png
     :width: 600px
     :align: center
     :alt: Pipes
 
-Double clicking on a pipe takes you into this pipe's working area.
+From here you can create new pipes by clicking **New pipe** in the top right corner of the interface, and view details of existing pipes by clicking on them.
 
-By pressing **"..."** to the right of the pipe name, a menu with various options appear. We are going to go through the most commonly used.
+.. Would be nice to merge "New pipe" and "Pipe details" somehow and explain each part of the UI once and in proper sequence.
+
+Whether you create a new pipe or click on an existing pipe, you will be taken to the pipe details page.
+The only difference is that when creating a new pipe, you will be taken directly to the Config tab and most of the other tabs will not be available until the pipe is saved.
+
+.. _management-studio-new-pipe:
+
+New pipe
+--------
+
+Clicking **New pipe** takes you to the config tab of a new pipe with the Templates panel activated.
+
+First supply a unique value for ``_id`` or the pipe cannot be saved.
+
+ .. image:: images/new-pipe-1.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Source template
+^^^^^^^^^^^^^^^
+
+The Source template gives easy access to the available systems that this pipe can read data from.
+By selecting a system from the **System** dropdown menu, the **Provider** dropdown menu will be populated with specific options for the selected system.
+
+Let us select the ``crm`` system and the ``person`` provider.
+
+After selecting relevant **System** and **Provider**, click **Replace** to add the selections to the pipe config.
+
+ .. image:: images/new-pipe-2.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Transforms template
+^^^^^^^^^^^^^^^^^^^
+
+Next click **Add DTL transform** to add a DTL transform template to the pipe config. This is a great starting point for writing your own DTL.
+
+  .. image:: images/new-pipe-3.png
+    :width: 800px
+    :align: center
+    :alt: Generic pipe concept
+
+Please visit :ref:`DTL` for more information about DTL.
+
+Now click **Save**, and then **Start**.
+
+To see the pipe run progress and to make sure the pipe is finished, click **Refresh**.
+
+To see the result, click the **Output** tab.
+
+Target template
+^^^^^^^^^^^^^^^
+
+By default all pipes write data to a ``dataset`` sink, and the dataset will be given the same id as the pipe ``_id``.
+You can override this default behaviour by adding a ``sink`` config. Adding a ``sink`` config can be done with the Target template.
+
+Similar to the Source template, select the desired target system from the **System** dropdown menu and the **Sink** dropdown menu will be populated with specific options for the selected system.
+
+As an example, if we wanted to push data to the ``erp`` system we could select the ``erp`` system and the ``json`` sink.
+
+After selecting a relevant sink, click **Replace** to add the selections to your pipe config.
+
+Please visit :ref:`concepts-sinks` for more information about sinks.
+
+Pipe details
+------------
+
+Clicking a pipe on the **Pipes** page takes you to the details of that pipe.
+
+Clicking the **"..."** menu to the right of the pipe name will bring up various options for the pipe, explained below.
+
+TODO: Update screenshot.
 
 .. image:: images/pipesmenu.png
     :width: 600px
@@ -50,7 +144,7 @@ By pressing **"..."** to the right of the pipe name, a menu with various options
 
 .. _management-studio-pipe-menu:
 
-Pipe Menu
+Pipe menu
 ^^^^^^^^^
 
 .. list-table::
@@ -60,106 +154,171 @@ Pipe Menu
    * - Function
      - Description
 
-   * - ``Start``
-     - | Starts running the pipe
-
-   * - ``Restart``
-     - | Consist of two functions; reset and start. he relationship between starting and restarting pipe, requires some explanation. When clicking ``Start``, the pipe continues to read from its last seen sequence number. So, if the pipe has previously read 100 entities  (sequence 0 to 99), clicking ``Start`` will have it read from sequence 100. When clicking ``Restart``, the pipe will start from the beginning., i.e. at entiry number 0. To see examples and to get more context on this, please click :ref:`Dependency-tracking <dependency-tracking>`
+   * - ``Enable``
+     - | The pipe will run according to its schedule.
 
    * - ``Disable``
-     - | Stops the pipe from running according to schedule. If a pipe is running, it will finish running but not run again even if schedule tells it to. You can manually start a pipe that’s disabled by pressing ``Start``
+     - | The pipe will not run by itself. If the pipe is already running, it will finish running but not run again. You can still manually run a disabled pipe by clicking ``Start`` or ``Restart``.
 
-   * - ``Enable``
-     - | Pipe will start running again according to schedule.
+   * - ``Restart``
+     - | Effectively the same as ``Reset`` and ``Start``. The pipe will reprocess all entities from its source. For more info, see :ref:`change-tracking`.
 
-   * - ``Delete``
-     - | Deletes the pipe
+   * - ``Start``
+     - | Runs the pipe. The pipe continues to read from its ``since`` value. If the pipe has previously read 100 entities (sequence 0 to 99), its ``since`` value will be 99. Clicking ``Start`` will have it read sequence 100 onwards. For more info, see :ref:`change-tracking`.
+
+   * - ``Stop``
+     - | Stops the pipe. Only available if the pipe is currently running.
+
+   * - ``Reset...``
+     - | Sets the pipe's ``since`` value to 0, effectively telling the pipe to reprocess all entities from its source next time it runs.
+
+   * - ``Reset to end...``
+     - | Sets the pipe's ``since`` value to the ``_updated`` value of the most recent source entity. This can be used to avoid processing queued entities.
+
+   * - ``Update last seen...``
+     - | Manually set the pipe's ``since`` value. This is useful if you need to reprocess a certain number of entities back in time, but not necessarily all the entities. Depending on the pipe this value can be an integer, a string, or a comma separated list of integers and/or strings. The sequence number for an entity can be found in the ``_updated`` property on the entity.
+
+   * - ``Discard retry queue``
+     - | TODO
+
+   * - ``Discard inferred schema``
+     - | TODO
+
+   * - ``Start rescan``
+     - | TODO
+
+   * - ``Reset rescan``
+     - | TODO
 
    * - ``Duplicate``
-     - | It generates a copy of the pipe. Then edit the current config and press ``Save``. This means you do not have to create a pipe from scratch
+     - | Creates a copy of the pipe, postfixing the new pipe's ``_id`` with ``-copy``. A handy way of quickly creating a new pipe with similar config.
+
+   * - ``Delete...``
+     - | Deletes the pipe. Use with care.
+
+   * - ``Delete sink dataset...``
+     - | Deletes the pipe dataset sink and sets the ``since`` value to 0. Use with care.
 
    * - ``Create downstream pipe``
-     - | Automatically takes you to new pipe with current dataset as source
+     - | Creates a new pipe with the current pipe's dataset sink as ``source`` and takes you to the new pipe's Config tab.
 
-   * - ``Go to sink``
-     - | Takes you straight to sink dataset from current pipe
+   * - ``Create outgoning flow``
+     - | TODO
 
-   * - ``Update last seen``
-     - | enables you to update the last seen index of the pipe. This is useful if you need to reprocess a certain number of entities back in time, but not necessarily all the entities. Depending on the pipe this value could either be a sequence number, a date and time value given in epoch or a list of either separated by comma. The sequence number for an entity can be found in the "_updated" property on the entity.
+   * - ``Show flows``
+     - | Takes you to the **Flows** page for the current pipe. Only available if the pipe is between a system and a global pipe.
 
-.. _management-studio-new-pipe:
+TODO: Explain each tab and each panel under the Config tab.
 
-New Pipe
-^^^^^^^^
+Dashboard tab
+^^^^^^^^^^^^^
 
-When pressing the button **"New Pipe"**, it takes you into template for generating a pipe from scratch.
+TODO
 
-First we have to add value to "_id" or pipe cannot be saved.
+Config tab
+^^^^^^^^^^
 
-As seen below, we have several tabs called "Panels" in Sesam. Press **"Templates"** and the available templates for each part of the pipe is available.
+Templates panel
+~~~~~~~~~~~~~~~
 
- .. image:: images/new-pipe-1.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
+TODO: Should the template explanation from "New pipe" be moved here for consistent ordering?
 
-Starting at top; **"Source"** needs to be defined. Frist menu available is **"System"** and we get available options for sources.
-Choose correct *source* for this pipe; .i.e. what is the source of data for this particular pipe you are working on.
+Schema panel
+~~~~~~~~~~~~
 
-Next you will choose your own node then appropriate pipe as source and in **"Provider"** (this is which table you're collecting data from) you chose "**Person"** The press **Replace** and template DTL is pasted into your config as seen below.
-
- .. image:: images/new-pipe-2.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Next step is template for **transforms**. Press **Add DTL transform** and template for adding transforms to your pipe appears.
-
-  .. image:: images/new-pipe-3.png
-    :width: 800px
-    :align: center
-    :alt: Generic pipe concept
-
-Please visit :ref:`DTL reference guide <DTL>` for most common transforms and functions and how they are used.
-
-All pipes have a default sink that points to / creates a dataset with the same name as the pipe. You can specify your own sink with a template if required. This is done at the bottom of template under **"Target"**. This is where we specify where want to send the data to; which :ref:`Sinks <concepts-sinks>`. This is specified in **"System"** and **"Sink"**. Press **Replace** and once again template pops into your config.
-
-Now press **"Save"** then **"Start"**. To see progress and to make sure pipe is finished, press **"Refresh"**. To see result, go to **"Output"** tab.
-
-To see an example please visit LINK example
-
-Schema
-^^^^^^
-
-Next to **Templates** tab, we find **Schema**. When pressing it, the **Schema** for this pipe shows up on right hand side of interface. A **"schema"** generally tells something about the *structure of the data*, i.e. metadata. Examples of metadata that the schema shows are e.g. whether a value is a string, Boolean, or an integer (text, true / false, or number).
+Clicking the **Schema** panel shows the pipe schema on the right-hand side of the interface. The pipe schema defines valid structure for the pipe config.
 
 .. image:: images/new-pipe-schema.png
     :width: 800px
     :align: center
     :alt: Schema
 
-Editor Preferences
-^^^^^^^^^^^^^^^^^^
+Preview (Ctrl+Enter) panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The tab to the far right takes you to page where you can choose some preferences on **code style**.
+TODO
 
-As you can see below you have some choices (and short explanation on what they mean) like *"Automatic auto completion"*, *"Close nested array on new line"* amongst others. Please have a look and click on the ones you would like to implement.
+Analyse panel
+~~~~~~~~~~~~~
 
-To the right side of the interface there is a list of available **keyboard shortcuts** which makes working in Sesam easier.
+TODO
+
+Generate schema panel
+~~~~~~~~~~~~~~~~~~~~~
+
+TODO
+
+Effective config panel
+~~~~~~~~~~~~~~~~~~~~~~
+
+TODO
+
+Target schema panel
+~~~~~~~~~~~~~~~~~~~
+
+TODO
+
+Editor options
+~~~~~~~~~~~~~~
+
+The **Editor options...** allows you to customize various coding styles and shows a list of keyboard shortcuts.
+
+Feel free to experiment with these options to find what fits your preferences.
 
 .. image:: images/new-pipe-editorpref.png
     :width: 800px
     :align: center
     :alt: EditorPreferences
 
+Input tab
+^^^^^^^^^
+
+Shows information about the pipe's source.
+
+Output tab
+^^^^^^^^^^
+
+Shows information about the pipe's target.
+
+Inferred schema tab
+^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+Execution log tab
+^^^^^^^^^^^^^^^^^
+
+TODO
+
+Permissions tab
+^^^^^^^^^^^^^^^
+
+TODO
+
+Insights tab
+^^^^^^^^^^^^
+
+TODO
+
+Notifications tab
+^^^^^^^^^^^^^^^^^
+
+TODO
+
+Graph tab
+^^^^^^^^^
+
+TODO
+
+Indexes tab
+^^^^^^^^^^^
+
+TODO
+
 Systems
 =======
 
-When pressing Systems, it gives a list of various systems defined on this node. In the column called "Type" it states which type of system it is e.g. whether this is a microservice, a mssql, url or rest.
-
-By pressing one of the systems, it takes you into the config for a particular system. You find six tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
-
-As with pipes and datasets, you can press "..." next to the system name and from this menu you can *delete* or *duplicate* config for the system.
+The **Systems** page shows a list of all systems in the current node.
 
 .. image:: images/systems.png
     :width: 600px
@@ -168,11 +327,54 @@ As with pipes and datasets, you can press "..." next to the system name and from
 
 .. _management-studio-flows:
 
+Clicking on a system takes you to the details of that system.
+
+TODO: Screenshot of system details and an explanation of the various tabs and panels.
+
+You find seven tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
+
+As with pipes you can click **"..."** next to the system name and from this menu you can *duplicate* the current config or *delete* it.
+
+Dashboard tab
+-------------
+
+TODO
+
+Config tab
+----------
+
+TODO
+
+Secrets tab
+-----------
+
+TODO
+
+Permissions tab
+---------------
+
+TODO
+
+Status tab
+----------
+
+TODO
+
+Graph tab
+---------
+
+TODO
+
+Overview tab
+------------
+
+TODO
+
 Flows
 =====
 In Sesam, a *flow* can be defined as a collection of pipes on one path, either from a global to an endpoint or vice versa.
 
-On the Flows page you can get information about a flow as a whole, whether any pipe is disabled/errored out, as well as you get a total number of queues in a flow, for example.
+On the **Flows** page you can get information about a flow as a whole, whether any pipe is disabled/errored out, as well as you get a total number of queues in a flow, for example.
 
 .. image:: images/dataflow.png
     :width: 600px
@@ -182,16 +384,16 @@ On the Flows page you can get information about a flow as a whole, whether any p
 Settings
 ========
 
-Lastly, Sesam has “Settings” for both Datahub and your Subscription.
+Lastly, Sesam has Settings for both **Datahub** and your **Subscription**.
 
-Settings for datahub manages queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
+**Datahub** settings is for managing queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
 
 .. image:: images/settings_datahub.png
     :width: 600px
     :align: center
     :alt: SettingsDatahub
 
-For subscription Sesam has settings for e.g. license, JWT token and Network.
+**Subscription** settings is for managing for instance license, JWT token and Network configs.
 
 .. image:: images/settings_subscription.png
     :width: 600px

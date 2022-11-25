@@ -1,6 +1,6 @@
-.. _change-tracking:
-
 :badge:`Free feature,badge-success badge-pill`
+
+.. _change-tracking:
 
 Change Tracking
 ===============
