@@ -38,33 +38,63 @@ Common issues with data synchronization
 
 #. Expired certificates on the server.
 
-
 Solutions
 ^^^^^^^^^
 
 Common solutions to some of the operation issues above are:
 
 #. The result / status / feedback from the target system for both inserts, updates and deletes should be stored in a dataset in Sesam. Need to separate entity and system failures.
+
 #. Partial rescans on all connect pipes that reads data using incremental update.
+
 #. Data in dead letter datasets should be collected and sent to a monitoring system or other error handling systems.
+
 #. Data being sent from Sesam should be validated.
+
 #. Error messages from deletes that fails due to the object already being deleted should be ignored.
+
 #. Insert pipes should have safeguards against sending duplicates to the target system.
 
 Common issues with data management
 ----------------------------------
 
-#. Dependency tracking limit failure.
-#. Exceptions when using http transforms.
+#. Dependency tracking limit failure. Difficult to debug. Join on blank properties. Equality set has too high cardinality.
+
+#. Exceptions when using http transforms, might ignore some errors.
+
 #. Cascading issues, like a pipe waits for another pipe to be ready, which has failed.
-#. Unforeseen merges yield wrong data and unwanted load on both Sesam and connected systems. Merge on null values for instance.
+
+#. Unforeseen merges yield wrong data and unwanted load on both Sesam and connected systems.
+
 #. Merged entities in globals has wrong status, entities should be unmerged, versions should be deleted, etc.
+
+#. Systems that automatically changes data that is written to it, causing a loop if the data is part of a bidirectional sync.
+
+#. Using 'first' to return an unique entity from the result of a hops, might not be deterministic.
+
+#. Wrong result out of globals for entities used in a feedback loop.
+
+#. Wrong generation of unique identifiers for a target system, might cause unexpected updates and deletes.
+
+#. An object produces the same child as another object.
+
+#. Use of 'create' in pipes without rescan creates orphaned children.
 
 Solutions
 ^^^^^^^^^
 
 Common solutions to some of the operation issues above are:
 
-#. Include rescans on all pipes prone to dependency tracking limit failures.
+#. Construct the equality sets in hops by using tuples, not all the 'eq'-statements becomes indexes. 
+
+#. Decrease the chance of high cardinality in a hops by joining on more than on property, for example not only join on email, but on email and gender for instance.
+
+#. Include rescans on all pipes still prone to dependency tracking limit failures.
+
 #. Monitor pipes that has been unresponsive or unable to process over a given period.
+
 #. Add circuit breakers to preparation pipes.
+
+#. If the result of a feedback loop in a global is wrong, verify that the documented feedback pattern has been used.
+
+#. Be ware of the difference between 'in' and 'eq' in DTL.
