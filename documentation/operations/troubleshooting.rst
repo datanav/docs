@@ -98,3 +98,5 @@ Common solutions to some of the operation issues above are:
 #. If the result of a feedback loop in a global is wrong, verify that the documented feedback pattern has been used.
 
 #. Be ware of the difference between 'in' and 'eq' in DTL.
+
+#. Set 'set_initial_offset:onload' on pipes that contains hops to themselves.
