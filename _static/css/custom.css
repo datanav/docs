@@ -412,6 +412,19 @@ footer .container {
 	}
 }
 
+@media (min-width: 960px) and (max-width: 1540px) {
+	.navbar-collapse {
+		align-items: center !important;
+	}
+	.navbar-nav {
+		align-items: center;
+	}
+	.navbar-end-item .toctree-l1 nav-item:last-child {
+		position: relative;
+		bottom: 5px;
+	}
+}
+
 /*Font family*/
 /*---------START----------*/
 :root {
@@ -440,7 +453,7 @@ button.copybtn {
    opacity: 1;
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 960px) and (max-width: 1536px) {
 	.card-text {
 	white-space: nowrap; 
 	overflow: hidden;
@@ -451,10 +464,6 @@ button.copybtn {
     -webkit-box-orient: vertical;
     }
     a.reference.external.nav-link.button.button-support {
-	margin-top: 10px;
-
-    }
-  }
+		margin-top: 5px;
+	}
 }
-}
-
