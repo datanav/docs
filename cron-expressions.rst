@@ -1,4 +1,4 @@
-.. _cron_expressions:
+.. _cron-expressions:
 
 Cron expressions
 ================

@@ -2,11 +2,11 @@ Documentation
 =============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
    Quick Reference <quick-reference>
    Project kickstart <best-practices>
-   Building blocks <developer-guide>
+   Building blocks <documentation/building-blocks/index-building-blocks>
    Data Transformation Language (DTL) <data-transformation-language>
    Data management <index-data-management>
    Data synchronization <index-synchronization>

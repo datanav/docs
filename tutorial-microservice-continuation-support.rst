@@ -190,7 +190,7 @@ Finally we need to adapt the pipe to handle the ``_updated`` property which the 
  
 It is also a best practice to every now and then do a full rescan of the source, which in this specific case has been set to every day at midnight.
 
-We do this by using a :ref:`cron expression <cron_expressions>`, like highlighted bellow.
+We do this by using a :ref:`cron expression <cron-expressions>`, like highlighted bellow.
 
 .. code-block:: json
     :emphasize-lines: 21

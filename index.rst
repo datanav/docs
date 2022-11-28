@@ -167,7 +167,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     These are the building blocks in Sesam, get to know them in this section.
 
-    .. link-button:: developer-guide
+    .. link-button:: /documentation/building-blocks/index-building-blocks
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
