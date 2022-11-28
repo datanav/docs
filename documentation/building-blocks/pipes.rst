@@ -5,7 +5,7 @@ Pipes
 
 A :ref:`pipe <pipe_section>` is composed of a :ref:`source <concepts-sources>`, a chain of :ref:`transforms <concepts-transforms>`, a :ref:`sink <concepts-sinks>`, and a :ref:`pump <concepts-pumps>`. It is an atomic unit that makes sure that data flows from the source to the sink. It is a simple way to talk about the :ref:`flow <concepts-flows>` of data from a source system to a target system. The pipe is also the only way to specify how entities flow from dataset to dataset.
 
-.. image:: images/pipes-structure.png
+.. image:: ../../images/pipes-structure.png
     :width: 600px
     :align: center
     :alt: Pipe structure
@@ -17,7 +17,7 @@ Sources
 
 A :ref:`source <source_section>` exposes a stream of entities. Typically, this stream of entities will be the entities in a dataset, rows of data in a SQL database table, the rows in a CSV file, or JSON data from an API.
 
-.. image:: images/pipes-source.png
+.. image:: ../../images/pipes-source.png
     :width: 800px
     :align: center
     :alt: Source
@@ -39,13 +39,13 @@ Transforms
 
 Entities streaming through a pipe can be :ref:`transformed <transform_section>` on their way from the source to the sink.
 
-A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :doc:`Data Transformation Language <data-transformation-language>` (DTL) to join and transform data into new shapes.
+A transform chain takes a stream of entities, transforms them, and creates a new stream of entities. There are several different transform types supported; the primary one being the :ref:`DTL transform <dtl_transform>`, which uses the :ref:`Data Transformation Language <data-transformation-language>` (DTL) to join and transform data into new shapes.
 
 .. _concepts-dtl:
 
 DTL has a simple syntax and model where the user declares how to construct a new data entity. It has commands such as 'add', 'copy', and 'merge'. These may operate on properties, lists of values or complete entities.
 
-.. image:: images/pipes-transform.png
+.. image:: ../../images/pipes-transform.png
     :width: 800px
     :align: center
     :alt: Transform
@@ -61,7 +61,7 @@ A :ref:`sink <sink_section>` is a component that can consume entities fed to it 
 
 Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. Using the :ref:`JSON push sink <json_sink>` enables entities to be pushed to custom microservices or other Sesam service instances.
 
-.. image:: images/pipes-sink.png
+.. image:: ../../images/pipes-sink.png
     :width: 800px
     :align: center
     :alt: Sink
@@ -75,7 +75,7 @@ Several types of sinks, such as the :ref:`SQL sink <sql_sink>`, are available. U
 Pumps
 -----
 
-A :ref:`scheduler <scheduling-and-signalling>` handles the mechanics of :ref:`pumping <pump_section>` data from a source to a sink. It runs periodically or on a :doc:`cron <cron-expressions>` schedule and reads entities from a source and writes them to a sink.
+A :ref:`scheduler <scheduling-and-signalling>` handles the mechanics of :ref:`pumping <pump_section>` data from a source to a sink. It runs periodically or on a :ref:`cron <cron-expressions>` schedule and reads entities from a source and writes them to a sink.
 
 It's also capable of rescanning the source from scratch at configurable points in time. If errors occur during reading or writing of entities, it will keep a log of the failed entities, and in the case of writes it can retry writing an entity later.
 

@@ -9,7 +9,7 @@ Datasets support :ref:`change tracking <change-tracking>` by using content hashi
 
 The :ref:`dataset source <dataset_source>` exposes the entities from datasets so that they can be streamed through :ref:`pipes <concepts-pipes>`. Datasets provide full :ref:`continuation support <continuation-support>` as the main data structure is a log the source can read from. Datasets also support a feature called :ref:`deletion tracking <deletion-tracking>`, which means that entities are automatically deleted when they are no longer returned by the pipe's source.
 
-.. image:: images/dataset-structure.png
+.. image:: ../../images/dataset-structure.png
     :width: 800px
     :align: center
     :alt: Dataset structure

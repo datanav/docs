@@ -745,7 +745,7 @@ Below is an example of an outbound pipe. This pipe uses the dataset created by t
     }
   }
 
-In this particular pipe we have set our own :ref:`cron expression <cron_expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
+In this particular pipe we have set our own :ref:`cron expression <cron-expressions>`. Pipes between datasets runs automatically (unless disabled) every 30 seconds by default. Pipes connected to a system, such as this, runs automatically every 15 minutes by default. In this particular case we wanted a more rapid flow.   
 
 Tips for global datasets
 ------------------------

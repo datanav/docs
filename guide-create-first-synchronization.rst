@@ -37,7 +37,7 @@ In this guide we will show you how a general simplistic Sesam synchronization ma
     You should also familiarize youself with:
 
     - :doc:`What is Sesam <index-whatis>`
-    - :doc:`Building Blocks in Sesam <developer-guide>`
+    - :doc:`Building Blocks in Sesam <documentation/building-blocks/index-building-blocks>`
 
 .. admonition:: Use-case
 
