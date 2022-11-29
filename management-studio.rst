@@ -9,9 +9,9 @@ Sesam Management Studio
 Introduction
 ============
 
-The Sesam Management Studio is used to configure, manage and administer Sesam nodes.
+The Sesam Management Studio is used to configure, manage and administer Sesam subscriptions.
 
-To access the Management Studio, go to the `Sesam Portal <https://portal.sesam.io>`_ and click on the desired Sesam node.
+To access the Management Studio, go to the `Sesam Portal <https://portal.sesam.io>`_ and click on the desired Sesam subscription.
 
 There is also an `experimental version <https://beta.portal.sesam.io/>`_  where new features are introduced before they are publicly released in the main portal.
 
@@ -20,7 +20,7 @@ When accessing the Management Studio, the first thing that meets you is the over
 Overview
 ========
 
-The **Overview** shows a high-level view of the integrations for the current node.
+The **Overview** shows a high-level view of the integrations for the current subscription.
 It shows all systems, the number of inbound and outbound pipes for each system, and an aggregated count of entities across all global datasets.
 
 .. image:: images/overview.png
@@ -38,22 +38,22 @@ Only available if **Subscription > Products > Integrated search and property lin
 Search
 ------
 
-TODO
+.. TODO
 
 Entity types
 ------------
 
-TODO
+.. TODO
 
 Models
 ------
 
-TODO
+.. TODO
 
 Pipes
 =====
 
-The **Pipes** page shows a list of all pipes in the current node.
+The **Pipes** page shows a list of all pipes in the current subscription.
 
 .. image:: images/pipes.png
     :width: 600px
@@ -135,7 +135,7 @@ Clicking a pipe on the **Pipes** page takes you to the details of that pipe.
 
 Clicking the **"..."** menu to the right of the pipe name will bring up various options for the pipe, explained below.
 
-TODO: Update screenshot.
+.. TODO: Update screenshot.
 
 .. image:: images/pipesmenu.png
     :width: 600px
@@ -179,16 +179,16 @@ Pipe menu
      - | Manually set the pipe's ``since`` value. This is useful if you need to reprocess a certain number of entities back in time, but not necessarily all the entities. Depending on the pipe this value can be an integer, a string, or a comma separated list of integers and/or strings. The sequence number for an entity can be found in the ``_updated`` property on the entity.
 
    * - ``Discard retry queue``
-     - | TODO
+     - | 
 
    * - ``Discard inferred schema``
-     - | TODO
+     - | 
 
    * - ``Start rescan``
-     - | TODO
+     - | 
 
    * - ``Reset rescan``
-     - | TODO
+     - | 
 
    * - ``Duplicate``
      - | Creates a copy of the pipe, postfixing the new pipe's ``_id`` with ``-copy``. A handy way of quickly creating a new pipe with similar config.
@@ -203,17 +203,17 @@ Pipe menu
      - | Creates a new pipe with the current pipe's dataset sink as ``source`` and takes you to the new pipe's Config tab.
 
    * - ``Create outgoning flow``
-     - | TODO
+     - | 
 
    * - ``Show flows``
      - | Takes you to the **Flows** page for the current pipe. Only available if the pipe is between a system and a global pipe.
 
-TODO: Explain each tab and each panel under the Config tab.
+.. TODO: Explain each tab and each panel under the Config tab.
 
 Dashboard tab
 ^^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Config tab
 ^^^^^^^^^^
@@ -221,7 +221,7 @@ Config tab
 Templates panel
 ~~~~~~~~~~~~~~~
 
-TODO: Should the template explanation from "New pipe" be moved here for consistent ordering?
+.. TODO: Should the template explanation from "New pipe" be moved here for consistent ordering?
 
 Schema panel
 ~~~~~~~~~~~~
@@ -236,27 +236,27 @@ Clicking the **Schema** panel shows the pipe schema on the right-hand side of th
 Preview (Ctrl+Enter) panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. TODO
 
 Analyse panel
 ~~~~~~~~~~~~~
 
-TODO
+.. TODO
 
 Generate schema panel
 ~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. TODO
 
 Effective config panel
 ~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. TODO
 
 Target schema panel
 ~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. TODO
 
 Editor options
 ~~~~~~~~~~~~~~
@@ -283,42 +283,42 @@ Shows information about the pipe's target.
 Inferred schema tab
 ^^^^^^^^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Execution log tab
 ^^^^^^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Permissions tab
 ^^^^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Insights tab
 ^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Notifications tab
 ^^^^^^^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Graph tab
 ^^^^^^^^^
 
-TODO
+.. TODO
 
 Indexes tab
 ^^^^^^^^^^^
 
-TODO
+.. TODO
 
 Systems
 =======
 
-The **Systems** page shows a list of all systems in the current node.
+The **Systems** page shows a list of all systems in the current subscription.
 
 .. image:: images/systems.png
     :width: 600px
@@ -329,7 +329,7 @@ The **Systems** page shows a list of all systems in the current node.
 
 Clicking on a system takes you to the details of that system.
 
-TODO: Screenshot of system details and an explanation of the various tabs and panels.
+.. TODO: Screenshot of system details and an explanation of the various tabs and panels.
 
 You find seven tabs where you can manage permissions and secrets in addition to see status, see which pipes go in and out of system in graph tab and lastly get an overview.
 
@@ -338,37 +338,37 @@ As with pipes you can click **"..."** next to the system name and from this menu
 Dashboard tab
 -------------
 
-TODO
+.. TODO
 
 Config tab
 ----------
 
-TODO
+.. TODO
 
 Secrets tab
 -----------
 
-TODO
+.. TODO
 
 Permissions tab
 ---------------
 
-TODO
+.. TODO
 
 Status tab
 ----------
 
-TODO
+.. TODO
 
 Graph tab
 ---------
 
-TODO
+.. TODO
 
 Overview tab
 ------------
 
-TODO
+.. TODO
 
 Flows
 =====
@@ -386,7 +386,7 @@ Settings
 
 Lastly, Sesam has Settings for both **Datahub** and your **Subscription**.
 
-**Datahub** settings is for managing queues, logs and permissions for your node. It also manages variables for various systems and metadata settings.
+**Datahub** settings is for managing queues, logs and permissions for your subscription. It also manages variables for various systems and metadata settings.
 
 .. image:: images/settings_datahub.png
     :width: 600px
