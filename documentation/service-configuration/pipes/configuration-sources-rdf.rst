@@ -7,7 +7,7 @@ RDF source
 The RDF data source is able to read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ data
 in `N-Triples <https://www.w3.org/TR/2014/REC-n-triples-20140225/>`_, `Turtle <https://www.w3.org/TR/turtle/>`_, `N3 <https://www.w3.org/TeamSubmission/n3/>`_ or `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`_ format and turn this into entities.
 
-See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
+See the :doc:`../../../rdf-support` document for more detail on working with RDF in Sesam.
 
 It will transform triples on the form ``<subject-uri> <predicate-uri> "value" OR <object-uri>`` into
 entities on the form:

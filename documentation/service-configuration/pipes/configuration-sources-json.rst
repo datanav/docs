@@ -6,7 +6,7 @@ JSON source
 
 The JSON source can read entities from a `JSON <https://en.wikipedia.org/wiki/JSON>`_ resource available over
 `HTTP <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ (i.e. served by a web server).
-The service must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+The service must conform to the :doc:`JSON Pull Protocol <../../../json-pull>`.
 
 Consider using the more general :ref:`REST source <rest_source>` if you're interacting with a non-Sesam JSON capable
 REST api.
@@ -50,7 +50,7 @@ Properties
 
    * - ``url``
      - String
-     - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <json-pull>`.
+     - The URL of the ``JSON`` data to load. Note that the data must conform to the :doc:`JSON Pull Protocol <../../../json-pull>`.
      -
      - Yes
 

@@ -218,10 +218,10 @@ The table below shows which strategy is chosen depending on the value of the pro
 If continuation support is enabled for a pipe, the ``since``
 marker is stored in the ``pipe_offset`` property on the pump. Note that
 one can use the pump's `update-last-seen
-<api.html#post--pipes-pipe_id-pump>`_ operation in the :doc:`api` to
+<api.html#post--pipes-pipe_id-pump>`_ operation in Service API to
 update or reset the ``pipe_offset`` value manually. This is useful in
 cases where one wants to reprocess the data from scratch for some
-reason. The :doc:`api` can also tell you what the current
+reason. The :doc:`Service API <../../../../api>` can also tell you what the current
 ``pipe_offset`` value is.
 
 .. _continuation_support_microservices:

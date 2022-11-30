@@ -30,7 +30,7 @@ JSON Push protocol
 ^^^^^^^^^^^^^^^^^^
 
 The JSON Push protocol is described in additional detail in the
-:doc:`JSON Push Protocol <json-push>` document. The serialisation of
+:doc:`JSON Push Protocol <../../../json-push>` document. The serialisation of
 entities as `JSON <https://en.wikipedia.org/wiki/JSON>`_ is described in more detail :ref:`here
 <entity-data-model>`. Both individual entities and lists of entities can be
 posted. This endpoint is compatible with :ref:`The JSON push sink
@@ -54,7 +54,7 @@ are no statements about in the N-Triples body, an empty entity is generated with
 flag set to ``true``. Note that the ``graph`` parameter of the protocol is ignored - the destination
 of the entities generated from the N-Triples payload must be configured in the pipe's ``sink``
 section. This type of HTTP request expects the ``content-type`` to be ``application/n-triples`` or
-``text/plain``. See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
+``text/plain``. See the :doc:`../../../rdf-support` document for more detail on working with RDF in Sesam.
 
 
 Prototype

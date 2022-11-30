@@ -4,7 +4,7 @@
 DTL transform
 -------------
 
-This is a transform that lets you apply :doc:`Data Transformation Language <data-transformation-language>`
+This is a transform that lets you apply :doc:`Data Transformation Language <../../../data-transformation-language>`
 transformations on the entities stream produced by the data source.
 
 Properties

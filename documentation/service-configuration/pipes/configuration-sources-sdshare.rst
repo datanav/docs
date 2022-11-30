@@ -5,7 +5,7 @@ SDShare source
 --------------
 
 The SDShare data source can read `RDF <https://www.w3.org/TR/2004/REC-rdf-primer-20040210/>`_ from `ATOM feeds <https://tools.ietf.org/html/rfc4287>`_ after the
-`SDShare specification <http://www.sdshare.org>`_. See the :doc:`rdf-support` document for more information about working with RDF data
+`SDShare specification <http://www.sdshare.org>`_. See the :doc:`../../../rdf-support` document for more information about working with RDF data
 in Sesam.
 
 

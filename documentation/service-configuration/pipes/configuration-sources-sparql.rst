@@ -10,7 +10,7 @@ two SPARQL queries to construct entities; the fragment query is a SPARQL ``SELEC
 to get data for and their modification times and a fragment query, which is a SPARQL ``CONSTRUCT`` query that
 gathers all relevant statements about a particular subject. The latter is then used to generate the stream of entities.
 
-See the :doc:`rdf-support` document for more detail on working with RDF in Sesam.
+See the :doc:`../../../rdf-support` document for more detail on working with RDF in Sesam.
 
 Prototype
 ^^^^^^^^^
