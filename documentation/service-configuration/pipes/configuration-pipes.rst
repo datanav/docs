@@ -266,3 +266,12 @@ The following are available features that can be activate and/or changed on any 
 
    * - ``Durable data``
      - :ref:`Durable data <durable-data>` allows additional data storage to minimize likelihood of dataloss.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   Sources <configuration-sources>
+   Transforms <configuration-transforms>
+   Sinks <configuration-sinks>
+   Pumps <configuration-pump>

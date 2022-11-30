@@ -13,7 +13,7 @@ Documentation
    Operations <index-operations>
    Data platforms <index-dataplatforms>
    Tools <tools>
-   Service Configuration <configuration>
+   Service Configuration <index-service-configuration>
    Service API <api>
    Deprecated features <deprecations>
    Changelog <changelog>

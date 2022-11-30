@@ -8,7 +8,7 @@ individual entities or lists of entities are ``POSTed`` as JSON data
 to an :ref:`HTTP endpoint <url_system>`.
 
 The protocol is described in additional detail in the :doc:`JSON Push
-Protocol <json-push>` document. The serialisation of entities as JSON
+Protocol <../../../json-push>` document. The serialisation of entities as JSON
 is described in more detail :ref:`here <entity-data-model>`.
 
 Consider using the more general :ref:`REST sink <rest_sink>` if you're interacting with a non-Sesam JSON
