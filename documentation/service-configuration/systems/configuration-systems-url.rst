@@ -32,6 +32,8 @@ Prototype
             "client_id": "my-client-id",
             "client_secret": "$SECRET(client-secret)",
             "token_url": "https://oath2-enabled-server:port/path/to/service/for/access/token",
+            "access_token": "$SECRET(access-token)",
+            "refresh_token": "$SECRET(refresh-token)",
             "scope": ["scope1", "scope2"],
             "extra": {
                "some": "extra-params",
@@ -125,12 +127,14 @@ Properties
    * - ``oauth2``
      - Dict<String,String>
      - A optional set of properties that specifies support for automatic fetching of JWT access tokens from a oauth2
-       enabled provider. The profile supported is "client credentials", which means you will need a ``client_id`` and
-       ``client_secret`` from your oauth2 provider. Additionally, you must provide a ``token_url`` URL to a service which
-       generates JWT access tokens. Optionally you can define a list of scopes (in ``scope``) for your client. Note that
-       this option cannot be combined with ``JWT`` authentication or the ``jwt_token`` property. Also note that the
-       oauth2 specification mandates TLS secured transport for both the token endpoint and the target defined in
-       ``url_pattern``. You can add optional extra parameters to the token request in the ``extra`` subattribute.
+       enabled provider. The grant types supported are "client credentials" and "refresh token". For the "client credentials"
+       grant type you need to supply a ``client_id`` and ``client_secret`` from your oauth2 provider. You must also
+       specify a ``token_url`` URL to a service which generates JWT access tokens. For the "refresh token"
+       grant type you additionally need to provide ``access_token`` and ``refresh_token``. Optionally you can define a
+       list of scopes (in ``scope``) for your client. Note that this option cannot be combined with ``JWT`` authentication
+       or the ``jwt_token`` property. Also note that the oauth2 specification mandates TLS secured transport for both
+       the token endpoint and the target defined in ``url_pattern``. You can add any extra parameters required by the
+       service provider to the token request in the ``extra`` subattribute.
      -
      -
 
