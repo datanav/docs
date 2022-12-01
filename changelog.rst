@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_12_01:
+
+2022-12-01
+----------
+
+* Added support for OAuth 2 refresh token grants to the :ref:`URL system <url_system>`  and :ref:`REST system <rest_system>`.
+
 .. _changelog_2022_11_15:
 
 2022-11-15
