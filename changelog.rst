@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_12_02:
+
+2022-12-02
+----------
+
+* Added a new debug option to the :ref:`pump configuration section <pump_section>`: ``max_seconds_per_entity``. It can be used to pinpoint entities that are particularly slow to transform. It will make the pipe fail if the batch uses on average more than the limit number of seconds per entity. It should be used in conjunction with ``batch_size`` set to 1 on the pipe to be exact - the execution log will include the first entity in the batch that triggers this limit.
+
 .. _changelog_2022_12_01:
 
 2022-12-01
