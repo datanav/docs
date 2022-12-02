@@ -195,6 +195,15 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
      - 0
      -
 
+   * - ``max_seconds_per_entity``
+     - Number
+     - A debug option to help track down slow to transform entities. If set, it will make the pipe fail if a batch
+       of entities uses more than the limit number of seconds (on average) to pass through the transform stage. It
+       will include the first entity of the batch in the ``pump-failed`` entry in the execution log. Use ``batch_size``
+       set to 1 on the parent pipe to find the exact first entity that exceeded the transform time limit.
+     -
+     -
+
    * - ``read_retry_delay``
      - Number
      - How many seconds to wait before retrying after a read error (i.e. only if ``max_read_retries`` is non-zero).
