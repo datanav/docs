@@ -33,20 +33,67 @@ It shows all systems, the number of inbound and outbound pipes for each system, 
 Browse
 ======
 
-Only available if **Subscription > Products > Integrated search and property lineage** is enabled.
+Only available if :ref:`integrated-search` is enabled for the subscription.
 
 Search
 ------
 
-.. TODO
+The Search tab allows for free-text search across all global datasets in the current subscription.
+
+The Results will show all the entities that matches the search criteria.
+Clicking on an entity in the Results will show its details on the right-hand side of the page.
+
+You can drill down further by ``Ctrl/Cmd+clicking`` on *any* namespaced property or namespaced identifier in the selected entity.
+
+Below the Search field you will see three lists that enables more fine tuned filtering of the search result:
+Datasets, Namespaces, and Properties. The filters are inclusive so selecting multiple filters will include
+entities from all selected filters.
+
+- Filtering on Datasets will limit the result to entities from only the selected datasets.
+
+- Filtering on Namespaces will limit the result to entities containing only the selected namespaces.
+
+- Filtering on Properties will limit the result to entities containing only the selected properties.
+
+Clicking on an entity identifier link in the Results,
+takes you to an Identifier tab view for that specific identifier,
+showing which other entities references this entity, and which other entities this entity references.
+
+.. note::
+
+  Some special characters may give unexpected search results.
+  For instance the character "-" is interpreted by the Elasticsearch engine as a separator,
+  so searching for "foo-bar" will show all entities containing "foo-bar", but also entities containing only "foo" or only "bar".
 
 Entity types
 ------------
 
-.. TODO
+The Entity types tab shows all pipes and their inferred Model.
+
+All pipes that have ``infer_pipe_entity_types`` enabled (which is the default behaviour) will contribute to the contents of Entity types.
+
+.. note::
+
+  For Developer and Developer Pro subscriptions, ``infer_pipe_entity_types`` must be enabled manually under **Datahub** > **Metadata**:
+  ``"global_defaults": {
+  "infer_pipe_entity_types": true
+  }``.
+  Then, relevant pipes must be restarted for them to contribute to Entity types.
+
+Clicking on an Entity types takes you to a detailed view of that entity type.
+
+The Name column in the Properties list shows all observed property keys, with namespace prefix where applicable, across all instances of this particular Entity type.
+
+The Type column shows all inferred data types that the particular property is observed to have across all entities that contain the property.
+The data types are inferred based on observed property values. If the observered values are inferred to multiple data types,
+each data type is separated by a pipe character (|).
+
+Clicking on a property key takes you to the :ref:`property-lineage` of that property.
 
 Models
 ------
+
+Model is inferred from the first part of the pipe id (prior to the first "-") and from pipes with the metadata ``"global": true``.
 
 .. TODO
 
