@@ -111,7 +111,7 @@ Hops
 
        .. WARNING::
 
-          Hop-ing to the sink dataset is discouraged as there are some gotchas. In practice the pipe's ``batch_size`` must be set to ``1`` in order to guarantee that the hops is able to find the entities being written by the sink. Entities inside the current unflushed batch is not visible to the hops.
+          Hop-ing to the sink dataset is discouraged as there are some gotchas. The pipe's ``batch_size`` property must be set to ``1`` in order to guarantee that the hops is able to find the entities being written by the sink. Entities inside the current unflushed batch is not visible to the hops. ``set_initial_offset"`` must be set to ``"onload"`` on the dataset sink so that the pipe don’t have to wait for the sink dataset to be populated (something that will never happen as the pipe won’t be allowed to run).
 
      - ::
 
