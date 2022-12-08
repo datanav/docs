@@ -110,7 +110,13 @@ Properties
 
    * - ``payload``
      - Object, string or array
-     - The default value to use as payload if not present in the entity.
+     - The value to use as payload for the operation if not present in the entity. Note that this property can be
+       defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. Note that if
+       the payload is an object (dictionary) and the system operation also defines a ``payload`` of the same type,
+       then these will be merged before being used in the operation. In the merge operation, payload property values
+       from the transform take precedence over properties defined on the system. Also note that if the data type of
+       the transform ``payload`` and operation ``payload`` differ, then the transform payload will take precedence and
+       the operations payload will be ignored.
      -
      -
 

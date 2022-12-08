@@ -81,8 +81,12 @@ Properties
    * - ``payload``
      - Object, string or array
      - The value to use as payload for the operation. Note that this property can be defined in the specified
-       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-       precedence if defined.
+       ``operation`` section of the :ref:`REST system <rest_system>` as well. Note that if the payload is an
+       object (dictionary) and the system operation also defines a ``payload`` of the same type, then these will be
+       merged before being used in the operation. In the merge operation, payload property values from the source take
+       precedence over properties defined on the system. Also note that if the data type of the source
+       ``payload`` and operation ``payload`` differ, then the source payload will take precedence and the
+       operations payload will be ignored.
      -
      -
 

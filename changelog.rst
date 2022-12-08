@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2022_12_08:
+
+2022-12-08
+----------
+
+* The ``payload`` property of an operation in the :ref:`REST system <rest_system>` will now be merged with the payload from the pipe if both are dicts. The motivation for this change is to allow payload properties that contain static secrets to be defined in the system.
+
 .. _changelog_2022_12_02:
 
 2022-12-02
