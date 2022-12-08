@@ -198,10 +198,14 @@ A operation configuration looks like:
 
    * - ``payload``
      - Object, string or array
-     - The value to use as payload for the operation. Note that if both are present the
-       properties in the processed entity takes precedence. Also note that this property can be defined
-       in the :ref:`REST source <rest_source>`, :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`
-       configuration as well. The configuration in pipes will take precedence if both are defined.
+     - The value to use as payload for the operation. Note that if the payload is an object (dictionary) and the
+       pipe also defines a payload of the same type, then these will be merged before being used in the operation.
+       In the merge operation, payload property values from the pipe take precedence over properties defined on the
+       system. Note that this property can be defined in the :ref:`REST source <rest_source>`,
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>` configuration as well, but only the
+       ``payload`` property on operations can refer to secrets. Also note that if the data type of the pipe
+       ``payload`` and operation ``payload`` differ, then the pipe payload will take precedence and the
+       operations payload will be ignored.
      -
      -
 
