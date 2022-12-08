@@ -7,6 +7,9 @@ Changelog
 ----------
 
 * The ``payload`` property of an operation in the :ref:`REST system <rest_system>` will now be merged with the payload from the pipe if both are dicts. The motivation for this change is to allow payload properties that contain static secrets to be defined in the system.
+* Added a new ``allowed_status_codes`` to the :ref:`REST transform <rest_transform>`. It can be used to pass through non-ok responses for further processing.
+* Added a new ``response_status_property`` to both the :ref:`REST transform <rest_transform>` and :ref:`REST system <rest_system>` operation elements that, if specified, holds which property to use for the status code of the response.
+* Documented the ``response_headers_property`` configuration property for the :ref:`REST transform <rest_transform>` and :ref:`REST system <rest_system>` operation element.
 
 .. _changelog_2022_12_02:
 
