@@ -1,5 +1,7 @@
+.. api-best-practices:
+
 API Best practices
-------------------
+==================
 
 #. Continuation support:
 

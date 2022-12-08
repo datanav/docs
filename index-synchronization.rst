@@ -15,9 +15,10 @@ In this section you will learn how to synchronize your data streams into and out
    Patterns <documentation/data-synchronization/data-synchronization-patterns>
    Non-idempotency <idempotency>
    Cron Expressions <cron-expressions>
-   RDF support <rdf-support>
+   RDF Support <rdf-support>
    JSON Pull Protocol <json-pull>
    JSON Push Protocol <json-push>
    Developer Extension Points <extension-points>
-   Source datatype mapping <source-datatype-mapping>
+   Source Datatype Mapping <source-datatype-mapping>
+   API Best Practices <documentation/data-synchronization/api-best-practices>
 
