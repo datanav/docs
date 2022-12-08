@@ -217,6 +217,22 @@ A operation configuration looks like:
      -
      -
 
+   * - ``response_headers_property``
+     - String
+     - The name of the property to put the response headers in when emitting entities. Note that this property can be
+       defined in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well.
+       The configuration in pipes will take precedence if both are defined.
+     -
+     -
+
+   * - ``response_status_property``
+     - String
+     - The name of the property to put the response status code in when emitting entities. Note that this property can be
+       defined in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well.
+       The configuration in pipes will take precedence if both are defined.
+     -
+     -
+
    * - ``payload_property``
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be

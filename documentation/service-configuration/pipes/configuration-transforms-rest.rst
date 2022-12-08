@@ -70,11 +70,29 @@ Properties
      - The name of the property to store the result returned from the REST service. Note that if the ``replace_entity``
        property is set to ``true`` and the service returns JSON data, this JSON data will be returned as entities. If
        the data type is not JSON, the result will be an empty entity with the same ``_id`` as the original with
-       the ``response_property`` set to the contents of the request reponse body as a string. If ``replace-entity`` is
-       set to ``false``, the ``response-property`` will be added to the original entity and set to the contents of the
-       request reponse body as a string or a parsed JSON structure if that is the returned content type.
+       the ``response_property`` set to the contents of the request reponse body as a string. If ``replace_entity`` is
+       set to ``false``, the ``response_property`` will be added to the original entity and set to the contents of the
+       request response body as a string or a parsed JSON structure if that is the returned content type.
 
      - ``"response"``
+     -
+
+   * - ``response_headers_property``
+     - String
+     - The name of the property to put the response headers in when emitting entities. Note that this property can be
+       defined in the :ref:`REST system <rest_system>` operation configuration as well. The configuration in the
+       transform will take precedence if both are defined. Also note that this property will only be set if
+       ``replace_entity`` is set to ``false``.
+     -
+     -
+
+   * - ``response_status_property``
+     - String
+     - The name of the property to put the response status code in when emitting entities. Note that this property can be
+       defined in the :ref:`REST system <rest_system>` operation configuration as well. The configuration in the transform
+       will take precedence if both are defined. Also note that this property will only be set if
+       ``replace_entity`` is set to ``false``.
+     -
      -
 
    * - ``replace_entity``
@@ -120,14 +138,6 @@ Properties
      -
      -
 
-   * - ``response_property``
-     - String
-     - The name of the property to put the response in when emitting entities. Note that this property can be defined
-       in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
-       will take precedence if defined.
-     -
-     -
-
    * - ``payload_property``
      - String
      - The JSON response sub-property to use as the source of the emitted entities. Note that this property can be
@@ -160,14 +170,27 @@ Properties
      -
      -
 
+   * - ``allowed_status_codes``
+     - String
+     - An expression in the form of single values or value ranges of HTTP status codes that will be allowed to be passed
+       through by the transform. The values are either comma separated integer values or a range of values with a hyphen separator
+       (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 200-299 includes both 200 and
+       299. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 is the default
+       range and any response status codes outside of this range will make the transform fail. See the complimentary
+       ``ignored_status_codes`` if you want to omit non-ok responses instead of them making the transform fail or
+       passing them trough. Also note that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
+     - ``"200-299"``
+     -
+
    * - ``ignored_status_codes``
      - String
      - An expression in the form of single values or value ranges of HTTP status codes that will be ignored by the
        transform. HTTP responses with status codes matching this list will result in the response being omitted from
        the result. The values are either comma separated integer values or a range of values with a hyphen separator
        (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 400-403 includes both 400 and
-       403. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 are always
-       allowed and the default is to fail for any status code outside of this range.
+       403. Whitespaces are not allowed in the expression. See the complimentary ``allowed_status_codes`` if you
+       want to pass through any non-ok responses instead of skipping them. Also note that the ranges in
+       ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
      -
      -
 
