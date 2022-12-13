@@ -198,7 +198,7 @@ Properties
    * - ``if_transform_empty``
      - Enum<String>
      - Determines the behaviour of the pipe when the REST transform does not produce any entities. The default value is
-       ``"accept"` which means that any previously emitted entities might be deletion tracked if the pipe is doing a
+       ``"accept"`` which means that any previously emitted entities might be deletion tracked if the pipe is doing a
        full run, and the sink is a dataset sink. If set to ``"fail"`` the pipe will instead fail if the transform
        unexpectedly produce no entities thus preventing potential deletion tracking downstream.
      - ``"accept"``
