@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2022_12_13:
+
+2022-12-13
+----------
+* Added a new ``if_transform_empty`` property to the :ref:`REST transform <rest_transform>`. It can be used to make the transform fail if it returns an unexpected empty response. The default is to allow empty responses, which could lead to deletion tracking downstream. This property is analogous to the ``if_source_empty`` property for sources.
+
 .. _changelog_2022_12_08:
 
 2022-12-08

@@ -42,6 +42,7 @@ Prototype
         "id_expression": "{{ jinja_expression_for_the_id.property }}",
         "updated_expression": "{{ jinja_expression_for_the_updated_property }}",
         "ignored_status_codes": "404,444-450,501-599"
+        "if_transform_empty": "allow"
     }
 
 
@@ -192,6 +193,15 @@ Properties
        want to pass through any non-ok responses instead of skipping them. Also note that the ranges in
        ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
      -
+     -
+
+   * - ``if_transform_empty``
+     - Enum<String>
+     - Determines the behaviour of the pipe when the REST transform does not produce any entities. The default value is
+       ``"accept"`` which means that any previously emitted entities might be deletion tracked if the pipe is doing a
+       full run, and the sink is a dataset sink. If set to ``"fail"`` the pipe will instead fail if the transform
+       unexpectedly produce no entities thus preventing potential deletion tracking downstream.
+     - ``"accept"``
      -
 
    * - ``rate_limiting_retries``
