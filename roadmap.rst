@@ -78,7 +78,7 @@ Note that VPN will be tied to the shared instance so there will be some limitati
 The goal is for our partners to be able to serve their customers with standalone configurations from a shared instance.
 
 Expose invoices and contracts in the Management Studio
-===========================================
+======================================================
 
 Invoices and contracts can be requested through support.
 
