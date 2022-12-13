@@ -15,7 +15,7 @@ Today Sesam needs to pull frequently in order to detect changes in sources. For 
 
 We are looking into how we can support webhooks to receive incremental changes, so that we can eliminate or reduce the polling frequency.
 
-Self-hosted clustered architecture (Q1 2023)
+Self-hosted clustered architecture (Q2 2023)
 ============================================
 
 Today self-hosted Sesam only supports the single machine variant. A lot of new features are only offered on the clustered architecture (e.g. Metrics API, Integrated Search), and is therefore not available on self-hosted subscriptions.
@@ -29,7 +29,7 @@ Today one can quickly build connectors by configuring our generic systems (e.g. 
 
 We are looking into how to package up a set of configurations in such a way that they can be reused across subscriptions.
 
-Consumer portal (Q2 2023)
+Consumer portal (Q3 2023)
 =========================
 
 Today one has to get the credentials to the systems one would like to connect from an external source and inject them into a running subscription as secrets. For subscriptions that are built around multiple tenants building such a solution can be time consuming.
@@ -38,8 +38,8 @@ We are looking into building a configurable consumer portal application that all
 
 This will be built on top of reusable connectors, and support connectors that require OAuth2 flows as well as services with simpler API key credentials.
 
-Age-based deletion marker compaction
-====================================
+Age-based deletion marker compaction (Q2 2023)
+==============================================
 
 If Sesam has seen an entity it will remember the 'id' for this entity forever. This also applies to entities that was
 seen, but no longer exist in the source.
@@ -50,8 +50,8 @@ deletion marker it only has historic value.
 We are looking into how to be able to configure a time to live on these deletion markers so that old history can be
 cleaned up.
 
-High-level configuration
-========================
+High-level configuration (Q4 2023)
+==================================
 
 The current user interface is built around configuring pipes, which is a low level building block in Sesam. We have now estabilished best practices that describe the patterns you should use to build a robust and extensible Sesam solution using pipes. We also have schemas for all the built-in systems, and will have schemas for all systems once Extensions are in place.
 
@@ -59,8 +59,8 @@ We are looking into how we can design a high-level configuration, and correspond
 
 The goal is to make it much easier to configure Sesam, using visual tools and human friendly forms.
 
-Clustered architecture for GDPR platform
-========================================
+Clustered architecture for GDPR platform (Q4 2023)
+==================================================
 
 The GDPR platform is still running on the single machine architecture, and are not able to use the latest features.
 
