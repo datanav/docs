@@ -1,3 +1,5 @@
+.. _consumer-portal-authentication:
+
 Authentication
 ==============
 

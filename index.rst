@@ -5,6 +5,7 @@
    What is Sesam<index-whatis>
    Features<product-features>
    Documentation<index-developer>
+   Talk <talk/index>
    Learn<index-learn>
    
 
