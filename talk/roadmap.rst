@@ -17,3 +17,7 @@ We are looking at adding support for https://www.poweroffice.no/.
 CRMOffice (Q1 2023)
 =====================
 We are looking at adding support for https://www.crmoffice.no/.
+
+Expanded data model (Q2 2023)
+=============================
+We are looking into expanding the core model to support more types like product, asset, location, agreement, documentation, task and event.

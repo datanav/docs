@@ -1,5 +1,32 @@
+.. _wave:
+
 Wave
 ====
+Wave provides financial software and services for small businesses, with services include direct bank data imports, invoicing and expense tracking, customizable chart of accounts, and journal transactions.
+
+https://waveapps.com
+
+Supported types
+---------------
+The following types are currently supported.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave type
+     - Maps to
+     - Read
+     - Write
+
+   * - Customer
+     - Organisation
+     - Yes
+     - Yes
+
+   * - Customer (embedded primary contact)
+     - Person
+     - Yes
+     - Yes
 
 Known issues
 ------------

@@ -1,5 +1,27 @@
+.. _freshteam:
+
 Freshteam
 =========
+Freshteam is a smart HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
+
+https://freshteam.com
+
+Supported types
+---------------
+The following types are currently supported.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Type
+     - Maps to
+     - Read
+     - Write
+
+   * - Employee
+     - Person
+     - Yes
+     - Yes
 
 Find your account id
 --------------------
