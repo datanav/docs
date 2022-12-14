@@ -1,5 +1,10 @@
+.. _bigquery:
+
 Google Big Query
 ================
+BigQuery is a fully managed, serverless data warehouse that enables scalable analysis over petabytes of data.
+
+https://cloud.google.com/bigquery
 
 Find your Project ID
 --------------------

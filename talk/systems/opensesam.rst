@@ -1,3 +1,5 @@
+.. _opensesam:
+
 Open Sesam
 ==========
 Open Sesam is a collection of public data sources that can be used to enhance your organisation entities.
