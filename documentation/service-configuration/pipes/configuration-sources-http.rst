@@ -87,6 +87,12 @@ Properties
      - ``true``
      - No
 
+   * - ``trace``
+     - Boolean
+     - This property can be set to true to log all requests to the execution-log dataset.
+     - ``false``
+     - No
+
 
 Completeness
 ^^^^^^^^^^^^
