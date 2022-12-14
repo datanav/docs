@@ -1,6 +1,11 @@
 Sesam Talk
 ==========
 
+.. note::
+  Sesam talk is currently an experimental free service. Use it at your own risk!
+
+Go to your account at https://talk.sesam.io
+
 .. toctree::
    :hidden:
    :maxdepth: 3
