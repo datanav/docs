@@ -74,7 +74,7 @@ Sesam Talk can read and write data for several common cloud services.
    :header-rows: 1
 
    * - System
-     - Type
+     - Type of system
      - Organisation
      - Person
 
