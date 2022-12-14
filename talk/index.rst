@@ -1,6 +1,8 @@
 Sesam Talk
 ==========
 
+Go to your account at https://talk.sesam.cloud
+
 .. toctree::
    :hidden:
    :maxdepth: 3
