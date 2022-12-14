@@ -87,6 +87,21 @@ Properties
      - ``true``
      - No
 
+   * - ``do_float_as_decimal``
+     - Boolean
+     - If true (the default) numbers with a decimal point will be stored as the ``Decimal`` datatype. If false,
+       numbers a decimal point will be stored as the ``float`` datatype. See the :ref:`entity data model <entity_data_types>`
+       for more information about the difference between the two datatypes.
+     - ``true``
+     - No
+
+   * - ``do_float_as_int``
+     - Boolean
+     - If true (the default) numbers where all the digits after the decimal point is zero will be stored as the
+       ``Integer`` datatype.
+     - ``true``
+     - No
+
    * - ``trace``
      - Boolean
      - This property can be set to true to log all requests to the execution-log dataset.
