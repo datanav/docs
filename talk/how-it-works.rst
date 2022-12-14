@@ -20,7 +20,7 @@ Sesam Talk has the following model for a person.
      - First name
      - "John"
 
-   * - laatname
+   * - lastname
      - Last name
      - "Doe"
 
