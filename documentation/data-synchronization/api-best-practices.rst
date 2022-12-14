@@ -1,4 +1,4 @@
-.. api-best-practices:
+.. _api-best-practices:
 
 API Best practices
 ==================
