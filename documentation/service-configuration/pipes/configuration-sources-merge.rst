@@ -392,11 +392,21 @@ already merged entities downstream.
 
 .. WARNING::
 
-   Do not remove a dataset from the ``datasets`` property nor change
-   the order of the datasets in the ``datasets`` property. Doing so
-   may lead to inconsistent results. Adding or renaming datasets is OK
-   though as this won't affect the order of the datasets.
+   If configuration changes are required then be aware of the following:
 
-   If config changes are required be aware of the following:
-   Using merge source version ``1`` any reordering will require a reset of the pipe and maybe deletion of the downstream dataset.
-   For both merge source version ``1`` and ``2`` any removal of datasets will require a full run of the pipe. If you use rescan in the background, the incremental run will produce results based on the current state that includes the datasets marked for removal.
+   - Equality rules added after the merge source has processed
+     entities from the involved datasets will not cause merging of
+     those entities based on the added equality rules. Only equality
+     rules available at the time of processing will take effect. If
+     that is not what you want then the pipe must be reset/rescanned
+     in order to produce the desired result.
+
+   - Using merge source version ``1`` any reordering will require a
+     reset of the pipe and maybe deletion of the downstream dataset.
+
+   - For both merge source version ``1`` and ``2`` any removal of
+     datasets will require a full run of the pipe to clear the
+     entities from the removed datasets from the merge source. If you
+     use rescan in the background, the incremental run will produce
+     results based on the current state that includes the datasets
+     marked for removal.
