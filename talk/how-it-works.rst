@@ -27,6 +27,12 @@ Sesam Talk has the following model for a person.
    * - email
      - Email
      - "john.doe@sesam.io"
+     
+   * - gender (Planned)
+     - Gender [1]_
+     - "Male"
+     
+.. [1] Maps to a controlled vocabulary.
 
 Organisation model
 ------------------
@@ -65,6 +71,21 @@ Sesam Talk has the following model for an organisation.
 
 .. [1] Maps to a controlled vocabulary.
 
+Product model (Planned)
+-----------------------
+Sesam Talk has the following model for a product.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Property
+     - Description
+     - Example
+
+   * - name
+     - Name of the product
+     - "SesamTron 3000"
+
 Systems
 -------
 Sesam Talk can read and write data for several common cloud services.
@@ -77,21 +98,31 @@ Sesam Talk can read and write data for several common cloud services.
      - Type of system
      - Organisation
      - Person
+     - Product
 
    * - :ref:`wave`
      - Accounting
      - Yes
      - Yes (primary contact from companies)
+     - Planned
 
    * - :ref:`hubspot`
      - CRM
      - Yes
      - Yes
+     - Planned
 
    * - :ref:`freshteam`
      - CRM
      - Yes
      - Yes
+     - No
+     
+   * - CRMOffice (Planned)
+     - CRM
+     - Yes
+     - Yes
+     - Planned
 
 Enhancement systems
 -------------------
@@ -103,10 +134,12 @@ Sesam Talk has support for systems that enhances your data.
    * - System
      - Organisation
      - Person
+     - Product
 
    * - :ref:`opensesam`
      - Yes
      - N/A
+     - Planned
 
 Analytic systems
 ----------------
@@ -118,7 +151,10 @@ Sesam Talk can write and keep all your data up-to-date in your analytic solution
    * - System
      - Organisation
      - Person
+     - Product
 
    * - :ref:`bigquery`
      - Yes
      - Yes
+     - Planned
+
