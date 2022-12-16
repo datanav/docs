@@ -29,10 +29,10 @@ Sesam Talk has the following model for a person.
      - "john.doe@sesam.io"
      
    * - gender (Planned)
-     - Gender [1]_
+     - Gender [2]_
      - "Male"
      
-.. [1] Maps to a controlled vocabulary.
+.. [2] Maps to a controlled vocabulary.
 
 Organisation model
 ------------------
