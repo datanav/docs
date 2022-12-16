@@ -5,7 +5,7 @@ Changelog
 
 2022-12-22
 ----------
-* Added a new ``trace`` property to the :ref:`HTTP endpoint source <http_endpoint_source>`. It can be used to log incoming requests to the pipe's execution log, which can be useful during development or debugging.
+* Added a new ``trace`` property to the :ref:`HTTP endpoint source <http_endpoint_source_trace>`. It can be used to log incoming requests to the pipe's execution log, which can be useful during development or debugging.
 
 .. _changelog_2022_12_16:
 
