@@ -3,7 +3,7 @@ How Sesam Talk works
 
 Sesam Talk synchronizes a limited set of core types with a limited set of properties between the various :doc:`supported system <systems/index>`.
 
-Sesam Talk merges data from the different systems on certain criteria. People are merged if they have the same email, organisations are merged if they have the exact same name.
+Sesam Talk merges data from the different systems on certain criteria. People are merged if they have the same email, organisations are currently not merged.
 
 Person model
 ------------
