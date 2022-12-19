@@ -122,8 +122,20 @@ Properties
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
        if missing from the source system. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
-       will take precedence if defined. The bound parameters available to this template are ``body``, ``headers``
-       and ``properties``. All entity properties are also available as named variables.
+       will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
+       ``requests_params``, ``properties``, ``since`` and ``headers``. All entity properties are also available as named
+       variables.
+     -
+     -
+
+   * - ``updated_expression``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities
+       properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
+       entities if missing from the source system (for continuation support). This is only relevant if
+       ``since_support`` as been set to ``true`` in the source. Note that this property can be defined in the
+       :ref:`REST system <rest_system>` operations configuration as well. The configuration in the source will take
+       precedence if both are defined. The template supports the same named parameters as the ``id_expression``.
      -
      -
 
