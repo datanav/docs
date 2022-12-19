@@ -41,6 +41,7 @@ Prototype
                 "url" : "/a/service/that/supports/get/{{ _id }}",
                 "method": "GET",
                 "next_page_link": {{ body.pagination.next }},
+                "next_page_termination_strategy": "next-page-link-empty",
                 "id_expression": {{ id }},
                 "updated_expression": {{ updated }},
                 "payload_property": "result",
@@ -175,7 +176,7 @@ A operation configuration looks like:
      -
 
    * - ``payload-type``
-     - String
+     - Enum<String>
      - A enumeration of "json", "json-transit", "form" and "multipart-form", that denotes how to treat the ``payload`` property of the
        entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>` section of the :ref:`REST sink <rest_sink>` for details). If you
        specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
@@ -244,11 +245,24 @@ A operation configuration looks like:
 
    * - ``next_page_link``
      - String
-     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the source
-       or transform response properties and header values available to the templating context bound to the ``body``
-       and ``headers`` variables respectively. It is used to extract the next URL to perform the operation on for
-       pagination support. This property will be ignored by the :ref:`REST sink <rest_sink>`.
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named parameters
+       values available to the template: ``body``, ``url``, ``requests_params``, ``properties``, ``since``
+       (only for :ref:`REST sources <rest_source>`) and ``headers``. It is used to extract the next URL to perform the
+       operation on for pagination support. This property will be ignored by the :ref:`REST sink <rest_sink>`. See
+       ``next_page_termination_strategy`` for how to control the termination of a paginated response.
      -
+     -
+
+   * - ``next_page_termination_strategy``
+     - Enum<String> or array of Enum<String>
+     - Enumeration of ``"empty-result"``, ``"same-next-page-link"`` and ``"next-page-link-empty"``. The values
+       indicate how to determine when a paginated response is finished. ``"empty-result"`` will terminate pagination
+       when the result evaluates to missing or empty (or if the response body is empty). ``"same-next-page-link"``
+       terminates if the computed ``next_page_link`` value matches the current one and ``"next-page-link-empty"`` will
+       terminate if this template evaluates to null or an empty string. The ``"next-page-link-empty"`` is the default
+       strategy. Note that these strategies can be combined in an array if the source system pagination sequence can
+       terminate in multiple ways.
+     - ``"next-page-link-empty"``
      -
 
    * - ``id_expression``
@@ -258,7 +272,8 @@ A operation configuration looks like:
        entities if missing from the source system. Note that this property can be defined in the
        :ref:`REST source <rest_source>` configuration and :ref:`REST transform <rest_transform>` as well. It will be
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
-       The bound parameters available to this template are ``body``, ``headers`` and ``properties``. All current entity
+       The bound parameters available to this template are ``body``, ``url``, ``requests_params``, ``properties``, ``since``
+       (only for :ref:`REST sources <rest_source>`) and ``headers``. All current entity
        properties are also available as named variables.
      -
      -
@@ -272,6 +287,7 @@ A operation configuration looks like:
        configuration properties as well. Note that this property can be defined in the
        :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well. It will be
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
+       The template supports the same named parameters as the ``id_expression``.
      -
      -
 

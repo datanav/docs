@@ -155,8 +155,8 @@ Properties
        properties available to the templating context. It can be used to add ``_id`` properties to the emitted entities
        if missing from the transform response. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform configuration
-       will take precedence if defined. The bound parameters available to this template are ``body``, ``headers`` and
-       ``properties``. All current entity properties are also available as named variables.
+       will take precedence if defined.  The bound parameters available to this template are ``body``, ``url``,
+       ``requests_params``, ``properties`` and ``headers``. All current entity properties are also available as named variables.
      -
      -
 
@@ -166,8 +166,7 @@ Properties
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
        entities if missing from the transform response. Note that this property can alternatively be defined in the
        specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
-       precedence if defined. The bound parameters available to this template are ``body``, ``headers``
-       and ``properties``. All entity properties are also available as named variables.
+       precedence if defined. This template supports the same named parameters as ``id_expression``.
      -
      -
 

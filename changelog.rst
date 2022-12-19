@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2022_12_16:
+
+2022-12-16
+----------
+* Added a ``next_page_termination_strategy`` property to operations in the :ref:`REST system <rest_system>`. This can be used to define how the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` decide when to terminate when using pagination. The default value is ``next-page-link-empty`` which means that the paging is considered done if the ``next_page_link`` template evaluates to null (or an empty string). The other strategies are ``empty-result`` and ``same-next-page-link`` which terminates pagination on empty results returned or if the next page link is the same as the current page link, respectively. The strategies can be combined as an array.
+* Added ``url`` and ``request_params`` bound variables to the ``next_page_link`` template. The motivation for this is to support more services that need to construct their pagination links with parts of the current query parameters.
+* Fixed a bug in the :ref:`REST transform <rest_transform>` that would cause it to attempt to merge the ``properties`` property in the entity with the static version defined in the operation or transform configuration. The correct behavior is to use the entity version if it exists and then fall back to the transform and operation, in that order, if it does not.
+
 .. _changelog_2022_12_13:
 
 2022-12-13
