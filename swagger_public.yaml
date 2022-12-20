@@ -885,6 +885,14 @@ paths:
             If true then the response may include uncommitted entities. This is only relevant if the pipe that
             writes to the dataset have a circuit breaker enabled. Use this for debugging purposes only.
 
+        - name: compressed
+          in: query
+          required: false
+          type: boolean
+          default: false
+          description:
+            If true then the JSON response will be unformatted and presented in a single line.
+
         - name: subset
           in: query
           required: false
