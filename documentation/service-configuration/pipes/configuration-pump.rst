@@ -152,7 +152,7 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
        Example: If the since value is ``12637`` and the delta value is ``100``, then
        the since value will be shifted to ``12537``.
 
-       If the since value is a timestamp then the value in seconds is substracted.
+       If the since value is a timestamp then the value in seconds is subtracted.
 
        Example: If the since value is
        ``"~t2018-04-27T15:46:40Z"`` and the delta value is 3600, then the
