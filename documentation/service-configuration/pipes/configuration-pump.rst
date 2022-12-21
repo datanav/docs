@@ -111,8 +111,13 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
        .. _pump_rescan_run_count:
    * - ``rescan_run_count``
      - Integer(>=1)
-     - How many times the pump should run before scheduling a complete rescan of the source of the pipe that the pump
+     - The interval between each time the pump should do a complete rescan of the source of the pipe that the pump
        is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
+
+       | Examples:
+       | ``"rescan_run_count": 1`` => "rescan", "rescan", "rescan", "rescan"
+       | ``"rescan_run_count": 2`` => "incremental", "rescan", "incremental", "rescan"
+       | ``"rescan_run_count": 3`` => "incremental", "incremental", "rescan", "incremental", "incremental", "rescan"
      -
      -
 
@@ -126,10 +131,15 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
 
    * - ``partial_rescan_run_count``
      - Integer(>=1)
-     - How many times the pump should run before scheduling a partial rescan of the
-       source of the pipe that the pump is part of. Any complete rescans will take
-       precedence if they both apply. If this property is specified then the
+     - The interval between each time the pump should do a partial rescan of the source of the pipe that the pump
+       is part of. It is mutually exclusive with the ``rescan_cron_expression`` property.
+       Any complete rescans will take precedence if they both apply. If this property is specified then the
        ``partial_rescan_delta`` must also be specified.
+
+       | Examples:
+       | ``"partial_rescan_run_count": 1`` => "partial rescan", "partial rescan", "partial rescan", "partial rescan"
+       | ``"partial_rescan_run_count": 2`` => "incremental", "partial rescan", "incremental", "partial rescan"
+       | ``"partial_rescan_run_count": 3`` => "incremental", "incremental", "partial rescan", "incremental", "incremental", "partial rescan"
      -
      -
 
