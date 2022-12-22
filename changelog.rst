@@ -6,6 +6,7 @@ Changelog
 2022-12-22
 ----------
 * Added a new ``trace`` property to the :ref:`HTTP endpoint source <http_endpoint_source>`. It can be used to log incoming requests to the pipe's execution log, which can be useful during development or debugging.
+* Documented the ``do_float_as_int`` and ``do_float_as_decimal`` properties in the :ref:`HTTP endpoint source <http_endpoint_source>`. (These properties have existed for a very long time, they have just not been documented until now.)
 
 .. _changelog_2022_12_16:
 
