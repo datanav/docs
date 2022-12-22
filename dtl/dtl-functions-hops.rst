@@ -1,8 +1,12 @@
 .. _hops:
-.. _hops_dtl_function:
 
 Hops
-----
+====
+
+.. _hops_dtl_function:
+
+``hops``
+--------
 
 .. list-table::
    :header-rows: 1
@@ -168,8 +172,8 @@ Hops
 
 .. _lookup_entity_dtl_function:
 
-lookup-entity
--------------
+``lookup-entity``
+-----------------
 
 .. list-table::
    :header-rows: 1
