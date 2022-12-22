@@ -102,6 +102,30 @@ Properties
      - ``true``
      - No
 
+   * - ``trace``
+     - Boolean or Object
+     - This can be set to ``true`` to write ``pump-started`` and ``pump-completed`` (or ``pump-failed``) events to
+       the execution log dataset whenever the http_endpoint source receives a request. The "pump-completed"/"pump-failed"
+       events will contain the request-headers and the first few bytes of the request-body. If you need more fine-grained
+       control of the logging, you can set ``trace`` to be an object and set the ``trace.log_request_headers`` and/or
+       ``trace.log_request_body_maxsize`` sub-properties.
+     - ``false``
+     - No
+
+   * - ``trace.log_request_headers``
+     - Boolean
+     - If the ``trace`` property is an object this sub-property specifies if the request headers will
+       be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - ``true``
+     - No
+
+   * - ``trace.log_request_body_maxsize``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the request body should be
+       logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - 100
+     - No
+
 
 Completeness
 ^^^^^^^^^^^^
@@ -132,40 +156,6 @@ See the section on :ref:`continuation support <continuation_support>` for more i
    * - ``is_chronological``
      - ``false`` (Fixed)
 
-.. _http_endpoint_source_trace:
-
-Enabling writing to the execution log
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Normally, a pipe with an HTTP endpoint source will not write anything to its execution log dataset. But sometimes
-it can be useful to know more about which requests the pipe receives (for instance while debug some problem).
-
-To enable logging, add a ``"trace": {}`` to the source configuration. Then when a http request is posted to the pipe, a
-"pump-started" and "pump-completed" (or "pump-failed") event will be written to the execution log.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10, 10, 60, 10, 3
-
-   * - Property
-     - Type
-     - Description
-     - Default
-     - Req
-
-   * - ``trace.log_request_headers``
-     - Boolean
-     - If this property is true (the default) the request headers will be logged in the
-       ```pump-completed```/```pump-completed``` events in the execution-log.
-     - ``true``
-     - No
-
-   * - ``trace.log_request_body_maxsize``
-     - Integer
-     - This property specifies how many bytes of the request body should be logged in the
-       ```pump-completed```/```pump-completed``` events in the execution-log.
-     - 100
-     - No
 
 
 Example configuration
