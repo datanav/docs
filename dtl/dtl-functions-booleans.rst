@@ -1,44 +1,6 @@
 Booleans
 ========
 
-.. _is_boolean_dtl_function:
-
-``is-boolean``
---------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a boolean literal or if
-         it is a list, that the first element in the list is a boolean
-       |
-     - | ``["is-boolean", false]``
-       |
-       | Returns true.
-       |
-       | ``["is-boolean", "True"]``
-       |
-       | Returns false.
-       |
-       | ``["is-boolean", ["list", true, "12345"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-boolean", ["list", "12345", true]]``
-       |
-       | Returns false.
-       |
-       | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
-       |
-       | Returns true.
-
 .. _boolean_dtl_function:
 
 ``boolean``
@@ -94,3 +56,41 @@ Booleans
        |
        | Returns a list of booleans: [true, "http://www.example.org/", false].
          The URI value is replaced with its string cast.
+
+.. _is_boolean_dtl_function:
+
+``is-boolean``
+--------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a boolean literal or if
+         it is a list, that the first element in the list is a boolean
+       |
+     - | ``["is-boolean", false]``
+       |
+       | Returns true.
+       |
+       | ``["is-boolean", "True"]``
+       |
+       | Returns false.
+       |
+       | ``["is-boolean", ["list", true, "12345"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-boolean", ["list", "12345", true]]``
+       |
+       | Returns false.
+       |
+       | ``["is-boolean", ["list", ["boolean", "FALSE"], 1234]]``
+       |
+       | Returns true.

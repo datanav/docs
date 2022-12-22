@@ -1,10 +1,113 @@
 Numbers
 =======
 
-.. _is_integer_dtl_function:
+.. _decimal_dtl_function:
 
-``is-integer``
---------------
+``decimal``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to decimals (a fractional number with
+         unlimited precision). If no default value expression is given,
+         values that don't parse as decimal values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value.
+       |
+     - | ``["decimal", "1.0"]``
+       |
+       | Returns one decimal value: 1.0
+       |
+       | ``["decimal",``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
+       |
+       | Returns a list of decimal values: [1.0, 2.2]. The URI and
+         non-decimal string value are ignored.
+       |
+       | ``["decimal", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-decimal string value are replaced with the literal value: false
+       |
+       | ``["decimal", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["decimal", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
+         is replaced with its string cast.
+
+.. _float_dtl_function:
+
+``float``
+---------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   FUNCTION(default-value-expression(0|1}
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input values to floats (a  IEEE 754 binary 64 format).
+         if no default value expression is given,
+         values that don't parse as float values will be silently ignored.
+         If not, the evaluated value from the default expression will be
+         used as a replacement value. Note that if you cast decimals to floats
+         you can lose precision.
+       |
+     - | ``["float", "1.0"]``
+       |
+       | Returns one float value: 1.0
+       |
+       | ``["float",``
+       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
+       |
+       | Returns a list of float values: [1.0, 2.2]. The URI and
+         non-numeric string value are ignored.
+       |
+       | ``["float", ["boolean", false],``
+       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
+       |     ``"124.4", "FALSE"]]``
+       |
+       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
+         non-numeric string value are replaced with the literal value: false
+       |
+       | ``["float", ["string", "n/a"],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
+       |
+       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
+       | literal value "n/a".
+       |
+       | ``["float", ["string", "_."],``
+       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
+       |
+       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
+         is replaced with its string cast.
+
+.. _hex_dtl_function:
+
+``hex``
+-------
 
 .. list-table::
    :header-rows: 1
@@ -16,28 +119,25 @@ Numbers
    * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Boolean function that returns true if value is an integer literal or
-         if it is a list, that the first element in the list is an integer
+       | Translates all non-null input values to a string containing an hexadecimal representation of the value
+         in two's complement format.
+       | Values that don't parse as integers will be silently ignored.
+     - | ``["hex", 1]``
        |
-     - | ``["is-integer", 1]``
+       | Returns one string: ``"0x01"``.
        |
-       | Returns ``true``.
+       | ``["hex", 255]``
        |
-       | ``["is-integer", "1"]``
+       | Returns one string: ``"0x00ff"``.
        |
-       | Returns ``false``.
+       | ``["hex", -1]``
        |
-       | ``["is-integer", ["list", 1, "12345"]]``
+       | Returns one string: ``"0xff"``.
        |
-       | Returns ``true``.
+       | ``["hex",``
+       |   ``["list", 1, "~rhttp://www.example.org/", 124.4, 12345]]``
        |
-       | ``["is-integer", ["list", "1", 2]]``
-       |
-       | Returns ``false``.
-       |
-       | ``["is-integer", ["list", ["integer", "1"], 2]]``
-       |
-       | Returns ``true``.
+       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
 
 .. _integer_dtl_function:
 
@@ -142,57 +242,6 @@ Numbers
        |
        | Returns true.
 
-.. _decimal_dtl_function:
-
-``decimal``
------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to decimals (a fractional number with
-         unlimited precision). If no default value expression is given,
-         values that don't parse as decimal values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value.
-       |
-     - | ``["decimal", "1.0"]``
-       |
-       | Returns one decimal value: 1.0
-       |
-       | ``["decimal",``
-       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
-       |
-       | Returns a list of decimal values: [1.0, 2.2]. The URI and
-         non-decimal string value are ignored.
-       |
-       | ``["decimal", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-decimal string value are replaced with the literal value: false
-       |
-       | ``["decimal", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["decimal", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
-         is replaced with its string cast.
-
 .. _is_float_dtl_function:
 
 ``is-float``
@@ -235,62 +284,10 @@ Numbers
        |
        | Returns false.
 
-.. _float_dtl_function:
+.. _is_integer_dtl_function:
 
-``float``
----------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   FUNCTION(default-value-expression(0|1}
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input values to floats (a  IEEE 754 binary 64 format).
-         if no default value expression is given,
-         values that don't parse as float values will be silently ignored.
-         If not, the evaluated value from the default expression will be
-         used as a replacement value. Note that if you cast decimals to floats
-         you can lose precision.
-       |
-     - | ``["float", "1.0"]``
-       |
-       | Returns one float value: 1.0
-       |
-       | ``["float",``
-       |   ``["list", "1.0", "~rhttp://www.example.org/", 2.2, "one"]]``
-       |
-       | Returns a list of float values: [1.0, 2.2]. The URI and
-         non-numeric string value are ignored.
-       |
-       | ``["float", ["boolean", false],``
-       |   ``["list", "1.0", 2.1, "~rhttp://www.example.org/",``
-       |     ``"124.4", "FALSE"]]``
-       |
-       | Returns [1.0, 2.1, false, 124.4, false]. The URI value and the
-         non-numeric string value are replaced with the literal value: false
-       |
-       | ``["float", ["string", "n/a"],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "124.4"]]``
-       |
-       | Returns [1.0, 2.0, "n/a", 124.4]. The URI value is replaced with the
-       | literal value "n/a".
-       |
-       | ``["float", ["string", "_."],``
-       |   ``["list", "1.0", 2.0, "~rhttp://www.example.org/", "2.5"]]``
-       |
-       | Returns [1.0, 2.0, "http://www.example.org/", 2.5]. The URI value
-         is replaced with its string cast.
-
-.. _hex_dtl_function:
-
-``hex``
--------
+``is-integer``
+--------------
 
 .. list-table::
    :header-rows: 1
@@ -302,22 +299,25 @@ Numbers
    * - | *Arguments:*
        |   VALUES(value-expression{1})
        |
-       | Translates all non-null input values to a string containing an hexadecimal representation of the value
-         in two's complement format.
-       | Values that don't parse as integers will be silently ignored.
-     - | ``["hex", 1]``
+       | Boolean function that returns true if value is an integer literal or
+         if it is a list, that the first element in the list is an integer
        |
-       | Returns one string: ``"0x01"``.
+     - | ``["is-integer", 1]``
        |
-       | ``["hex", 255]``
+       | Returns ``true``.
        |
-       | Returns one string: ``"0x00ff"``.
+       | ``["is-integer", "1"]``
        |
-       | ``["hex", -1]``
+       | Returns ``false``.
        |
-       | Returns one string: ``"0xff"``.
+       | ``["is-integer", ["list", 1, "12345"]]``
        |
-       | ``["hex",``
-       |   ``["list", 1, "~rhttp://www.example.org/", 124.4, 12345]]``
+       | Returns ``true``.
        |
-       | Returns a list of strings: ["0x1", "0x3039"]. The URI value and the float value are ignored.
+       | ``["is-integer", ["list", "1", 2]]``
+       |
+       | Returns ``false``.
+       |
+       | ``["is-integer", ["list", ["integer", "1"], 2]]``
+       |
+       | Returns ``true``.

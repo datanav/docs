@@ -1,10 +1,10 @@
 Sets
 ====
 
-.. _union_dtl_function:
+.. _difference_dtl_function:
 
-``union``
----------
+``difference``
+--------------
 
 .. list-table::
    :header-rows: 1
@@ -17,18 +17,24 @@ Sets
        |   VALUES1(value-expression{1})
        |   VALUES2(value-expression{1})
        |
-       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the elements that
-         are either in VALUES1 or in VALUES2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the union operator. The
+       | Returns the difference of the two sets VALUES1 and VALUES2, i.e. the elements
+         that are in VALUES1, but not in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the difference operator. The
          return type is a list of distinct values.
-     - | ``["union",``
-       |     ``["list", "A", "B"], ["list", "B", "C"]]``
+     - | ``["difference",``
+       |    ``["list", "A", "B"], ["list", "B"]]``
        |
-       | Returns ``["A", "B", "C"]``.
+       | Returns ``["A"]``.
        |
-       | ``["union", "A", ["list", "B", "C"]]``
+       | ``["difference", "A", ["list", "B", "C"]]``
        |
-       | Returns ``["A", "B", "C"]``.
+       | Returns ``["A"]``.
+       |
+       | ``["difference",``
+       |   ``["list", "A", "B", "C", "D"],``
+       |   ``["list", "A", "B", "E"]]``
+       |
+       | Returns ``["C", "D"]``.
 
 .. _intersection_dtl_function:
 
@@ -94,10 +100,10 @@ Sets
        |
        | Returns ``false``.
 
-.. _difference_dtl_function:
+.. _union_dtl_function:
 
-``difference``
---------------
+``union``
+---------
 
 .. list-table::
    :header-rows: 1
@@ -110,21 +116,15 @@ Sets
        |   VALUES1(value-expression{1})
        |   VALUES2(value-expression{1})
        |
-       | Returns the difference of the two sets VALUES1 and VALUES2, i.e. the elements
-         that are in VALUES1, but not in VALUES2. The two arguments do not have to be real
-         sets, but will be coerced into sets before applying the difference operator. The
+       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the elements that
+         are either in VALUES1 or in VALUES2. The two arguments do not have to be real
+         sets, but will be coerced into sets before applying the union operator. The
          return type is a list of distinct values.
-     - | ``["difference",``
-       |    ``["list", "A", "B"], ["list", "B"]]``
+     - | ``["union",``
+       |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
-       | Returns ``["A"]``.
+       | Returns ``["A", "B", "C"]``.
        |
-       | ``["difference", "A", ["list", "B", "C"]]``
+       | ``["union", "A", ["list", "B", "C"]]``
        |
-       | Returns ``["A"]``.
-       |
-       | ``["difference",``
-       |   ``["list", "A", "B", "C", "D"],``
-       |   ``["list", "A", "B", "E"]]``
-       |
-       | Returns ``["C", "D"]``.
+       | Returns ``["A", "B", "C"]``.

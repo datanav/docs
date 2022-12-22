@@ -5,41 +5,6 @@ A general note on timezone conversion functions: Sesam relies on tabulated histo
 saving information for the various timezones. This data gets corrected or supplemented from time to time which means
 that the result of an explicit or implicit timezone conversion operation can change over time.
 
-.. _is_datetime_dtl_function:
-
-``is-datetime``
----------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a datetime value or
-         if it is a list, that the first element in the list is a datetime value.
-       |
-     - | ``["is-datetime", ["now"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-datetime",``
-       |   ``["datetime", "2015-07-28T09:46:00.12345Z"]]``
-       |
-       | Returns true.
-       |
-       | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
-       |
-       | Returns false.
-       |
-       | ``["is-datetime", ["list", "1", 2]]``
-       |
-       | Returns false.
-
 .. _datetime_dtl_function:
 
 ``datetime``
@@ -82,10 +47,10 @@ that the result of an explicit or implicit timezone conversion operation can cha
          "~t2016-05-13T14:32:00.431Z". Note that this was created by the
          function argument.
 
-.. _now_dtl_function:
+.. _datetime_diff_dtl_function:
 
-``now``
--------
+``datetime-diff``
+-----------------
 
 .. list-table::
    :header-rows: 1
@@ -95,27 +60,113 @@ that the result of an explicit or implicit timezone conversion operation can cha
      - Examples
 
    * - | *Arguments:*
-       |   NONE(value-expression{0})
+       |   DATEPART(string{1})
+       |   STARTDATE(value-expression{1})
+       |   ENDDATE(value-expression{1})
        |
-       | Returns the current time as a datetime value.
+       | Computes the positive or negative number of ``DATEPART`` values between the end and start date input values
+       | ``DATEPART`` can be one of the following values:
        |
-     - | ``["now"]``
+       |   ``year``
+       |   ``month``
+       |   ``week``
+       |   ``day``
+       |   ``hour``
+       |   ``minute``
+       |   ``second``
+       |   ``millisecond``
+       |   ``microsecond``
+       |   ``nanosecond``
        |
-       | Returns the current time as a datetime value, e.g.
-         "~t2016-05-13T14:32:00.431Z".
+       | Note that the return values are rounded downwards to the nearest (absolute) integer value, i.e. +-11 months is
+       | 0 years and +-8 days is +-1 week.
 
-       .. WARNING::
+       |
+     - | ``["datetime-diff", "day",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"]]``
+       |
+       | Returns one integer value: -1
+       |
+       | ``["datetime-diff", "day",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
+       |
+       | Returns one integer value: 1
+       |
+       | ``["datetime-diff", "year",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
+       |
+       | Returns: -1
+       |
+       | ``["datetime-diff", "month",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
+       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
+       |
+       | Returns: -16
 
-          This function is non-deterministic and will return a
-          different value every time it is evaluated. Be aware that if
-          the pipe is rewound or reset then it will produce a
-          different output. Dependency tracking will also have a
-          similar effect as to produce a different value when entities
-          are reprocessed.
+.. _datetime_format_dtl_function:
 
-          *Use this function with care and make sure
-          that you are aware of the consequences of reprocessing
-          entities.*
+``datetime-format``
+-------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   TIMEZONE_NAME(string{0|1})
+       |   FORMATSTRING(string{1})
+       |   VALUES(value-expression{1})
+       |
+       | Translates all non-null input datetime values to strings. The strings will be formattet according to the format string.
+         Any values that aren't datetime values will be silently ignored. Note that precision loss is possible since
+         ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
+         microseconds (using the seconds fraction token ``%f``).
+       |
+       | The timezone name defaults to "UTC". The datetime value will be translated to this timezone before it
+         is formatted. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
+
+       .. NOTE::
+
+          When using ``%y``, then the years are converted
+          according to the POSIX and ISO C standards; the years 2000-2068 are mapped to 00-68
+          and the years 1969-1999 are mapped to 69-99. For years outside of that range the
+          last two digits are used.
+     - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ",``
+       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
+       |
+       | Returns one string: "2015-07-28T00:00:00Z".
+       |
+       | ``["datetime-format",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]]``
+       |
+       | Returns one string: "2018-08-18 12:39:01".
+       |
+       | ``["datetime-format", "Europe/Oslo",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]]``
+       |
+       | Returns one string: "2018-08-18 14:39:01".
+       |
+       | ``["datetime-format", "Europe/Oslo",``
+       |   ``"%Y-%m-%d %H:%M:%S",``
+       |   ``["datetime-parse", "Europe/Oslo",``
+       |     ``"%Y-%m-%dT%H:%M:%S",``
+       |     ``"2018-08-18T12:39:01"]]``
+       |
+       | Returns one string: "2018-08-18 12:39:01".
+       |
+       | See ``datetime-parse`` for the supported tokens in the format string.
 
 .. _datetime_parse_dtl_function:
 
@@ -192,68 +243,6 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns one datetime value: "~t2018-08-08T10:39:01Z".
 
-.. _datetime_format_dtl_function:
-
-``datetime-format``
--------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   TIMEZONE_NAME(string{0|1})
-       |   FORMATSTRING(string{1})
-       |   VALUES(value-expression{1})
-       |
-       | Translates all non-null input datetime values to strings. The strings will be formattet according to the format string.
-         Any values that aren't datetime values will be silently ignored. Note that precision loss is possible since
-         ``datetime`` objects internally have nanoseconds precision while the formatted strings will only support
-         microseconds (using the seconds fraction token ``%f``).
-       |
-       | The timezone name defaults to "UTC". The datetime value will be translated to this timezone before it
-         is formatted. Click :ref:`here<supported_timezones>` to see the list of supported timezones.
-
-       .. NOTE::
-
-          When using ``%y``, then the years are converted
-          according to the POSIX and ISO C standards; the years 2000-2068 are mapped to 00-68
-          and the years 1969-1999 are mapped to 69-99. For years outside of that range the
-          last two digits are used.
-     - | ``["datetime-format", "%Y-%m-%dT%H:%M:%SZ",``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
-       |
-       | Returns one string: "2015-07-28T00:00:00Z".
-       |
-       | ``["datetime-format",``
-       |   ``"%Y-%m-%d %H:%M:%S",``
-       |   ``["datetime-parse",``
-       |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]]``
-       |
-       | Returns one string: "2018-08-18 12:39:01".
-       |
-       | ``["datetime-format", "Europe/Oslo",``
-       |   ``"%Y-%m-%d %H:%M:%S",``
-       |   ``["datetime-parse",``
-       |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]]``
-       |
-       | Returns one string: "2018-08-18 14:39:01".
-       |
-       | ``["datetime-format", "Europe/Oslo",``
-       |   ``"%Y-%m-%d %H:%M:%S",``
-       |   ``["datetime-parse", "Europe/Oslo",``
-       |     ``"%Y-%m-%dT%H:%M:%S",``
-       |     ``"2018-08-18T12:39:01"]]``
-       |
-       | Returns one string: "2018-08-18 12:39:01".
-       |
-       | See ``datetime-parse`` for the supported tokens in the format string.
-
 .. _datetime_plus_dtl_function:
 
 ``datetime-plus``
@@ -306,65 +295,6 @@ that the result of an explicit or implicit timezone conversion operation can cha
        | Returns two datetime values: ``["~t1972-01-01T00:00:00Z",``
        |                               ``"~t1951-06-01T00:00:00Z"]``.
 
-.. _datetime_diff_dtl_function:
-
-``datetime-diff``
------------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   DATEPART(string{1})
-       |   STARTDATE(value-expression{1})
-       |   ENDDATE(value-expression{1})
-       |
-       | Computes the positive or negative number of ``DATEPART`` values between the end and start date input values
-       | ``DATEPART`` can be one of the following values:
-       |
-       |   ``year``
-       |   ``month``
-       |   ``week``
-       |   ``day``
-       |   ``hour``
-       |   ``minute``
-       |   ``second``
-       |   ``millisecond``
-       |   ``microsecond``
-       |   ``nanosecond``
-       |
-       | Note that the return values are rounded downwards to the nearest (absolute) integer value, i.e. +-11 months is
-       | 0 years and +-8 days is +-1 week.
-
-       |
-     - | ``["datetime-diff", "day",``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"],``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"]]``
-       |
-       | Returns one integer value: -1
-       |
-       | ``["datetime-diff", "day",``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-29"],``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-07-28"]]``
-       |
-       | Returns one integer value: 1
-       |
-       | ``["datetime-diff", "year",``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
-       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
-       |
-       | Returns: -1
-       |
-       | ``["datetime-diff", "month",``
-       |   ``["datetime-parse", "%Y-%m-%d", "2015-03-02"],``
-       |   ``["datetime-parse", "%Y-%m-%d", "2016-07-29"]]``
-       |
-       | Returns: -16
-
 .. _datetime_shift_dtl_function:
 
 ``datetime-shift``
@@ -409,3 +339,73 @@ that the result of an explicit or implicit timezone conversion operation can cha
        |
        | Returns two datetime values: ``["~t2015-07-28T07:46:00Z",``
        |                               ``"~t2015-07-28T02:46:00Z"]``.
+
+.. _is_datetime_dtl_function:
+
+``is-datetime``
+---------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a datetime value or
+         if it is a list, that the first element in the list is a datetime value.
+       |
+     - | ``["is-datetime", ["now"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-datetime",``
+       |   ``["datetime", "2015-07-28T09:46:00.12345Z"]]``
+       |
+       | Returns true.
+       |
+       | ``["is-datetime", "2015-07-28T09:46:00.12345Z"]``
+       |
+       | Returns false.
+       |
+       | ``["is-datetime", ["list", "1", 2]]``
+       |
+       | Returns false.
+
+.. _now_dtl_function:
+
+``now``
+-------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   NONE(value-expression{0})
+       |
+       | Returns the current time as a datetime value.
+       |
+     - | ``["now"]``
+       |
+       | Returns the current time as a datetime value, e.g.
+         "~t2016-05-13T14:32:00.431Z".
+
+       .. WARNING::
+
+          This function is non-deterministic and will return a
+          different value every time it is evaluated. Be aware that if
+          the pipe is rewound or reset then it will produce a
+          different output. Dependency tracking will also have a
+          similar effect as to produce a different value when entities
+          are reprocessed.
+
+          *Use this function with care and make sure
+          that you are aware of the consequences of reprocessing
+          entities.*

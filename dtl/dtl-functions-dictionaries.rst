@@ -1,40 +1,6 @@
 Dictionaries
 ============
 
-.. _is_dict_dtl_function:
-
-``is-dict``
------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
-       | in the list is a dictionary
-       |
-     - | ``["is-dict", "_S."]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", {"a": 1}, 123]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", 123, {"a": 1}]``
-       |
-       | Returns false.
-       |
-       | ``["is-dict", "abc"]``
-       |
-       | Returns false
-
 .. _dict_dtl_function:
 
 ``dict``
@@ -80,6 +46,40 @@ Dictionaries
        |
        | Returns ``{"a": "A", "b": "B"}``.
 
+.. _is_dict_dtl_function:
+
+``is-dict``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
+       | in the list is a dictionary
+       |
+     - | ``["is-dict", "_S."]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", 123, {"a": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["is-dict", "abc"]``
+       |
+       | Returns false
+
 .. _items_dtl_function:
 
 ``items``
@@ -107,6 +107,37 @@ Dictionaries
        | ``["items", ["list", "X", 123, {"A": 1}]]``
        |
        | Returns ``[["A", 1]]``.
+
+.. _key_values_dtl_function:
+
+``key-values``
+--------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   DICTS(value-expression{1})
+       |
+       | Takes a list of dictionaries in and outputs a list of dictionaries with "key"
+         and "value" keys. For each key+value pair in the dictionaries one dict is added
+         to the output list. Non-dictionary values are ignored. Note that entities are
+         dictionaries, so you can use this function with them.
+     - | ``["key-values",``
+       |     ``["list", {"A": 1, "B": 2}, 123, {"C": 3, "A": 1}]]``
+       |
+       | Returns ``[{"key": "A", "value": 1},``
+       |            ``{"key": "B", "value": 2},``
+       |            ``{"key": "C", "value": 3},``
+       |            ``{"key": "A", "value": 1}]``.
+       |
+       | ``["key-values", {"hello": "world"}]``
+       |
+       | Returns ``{"key": "hello", "value": "world"}``.
 
 .. _keys_dtl_function:
 
@@ -161,34 +192,3 @@ Dictionaries
        | ``["values", ["list", "X", 123, {"A": 1}]]``
        |
        | Returns ``[1]``.
-
-.. _key_values_dtl_function:
-
-``key-values``
---------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   DICTS(value-expression{1})
-       |
-       | Takes a list of dictionaries in and outputs a list of dictionaries with "key"
-         and "value" keys. For each key+value pair in the dictionaries one dict is added
-         to the output list. Non-dictionary values are ignored. Note that entities are
-         dictionaries, so you can use this function with them.
-     - | ``["key-values",``
-       |     ``["list", {"A": 1, "B": 2}, 123, {"C": 3, "A": 1}]]``
-       |
-       | Returns ``[{"key": "A", "value": 1},``
-       |            ``{"key": "B", "value": 2},``
-       |            ``{"key": "C", "value": 3},``
-       |            ``{"key": "A", "value": 1}]``.
-       |
-       | ``["key-values", {"hello": "world"}]``
-       |
-       | Returns ``{"key": "hello", "value": "world"}``.
