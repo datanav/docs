@@ -12,6 +12,13 @@
 
     ```pip install -r requirements.txt```
 
+Ubuntu specific installation:
+
+  - ``sudo apt install pandoc``
+  - ``sudo apt install texlive-latex-base``
+  - ``sudo apt install texlive-latex-recommended``
+
+
 Note that pydata-sphinx-theme requires minimum python 3.7!
 
 * Run ```make html```

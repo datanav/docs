@@ -87,6 +87,45 @@ Properties
      - ``true``
      - No
 
+   * - ``do_float_as_decimal``
+     - Boolean
+     - If true (the default) numbers with a decimal point will be stored as the ``Decimal`` datatype. If false,
+       numbers a decimal point will be stored as the ``float`` datatype. See the :ref:`entity data model <entity_data_types>`
+       for more information about the difference between the two datatypes.
+     - ``true``
+     - No
+
+   * - ``do_float_as_int``
+     - Boolean
+     - If true (the default) numbers where all the digits after the decimal point is zero will be stored as the
+       ``Integer`` datatype.
+     - ``true``
+     - No
+
+   * - ``trace``
+     - Boolean or Object
+     - This can be set to ``true`` to write ``pump-started`` and ``pump-completed`` (or ``pump-failed``) events to
+       the execution log dataset whenever the http_endpoint source receives a request. The "pump-completed"/"pump-failed"
+       events will contain the request-headers and the first few bytes of the request-body. If you need more fine-grained
+       control of the logging, you can set ``trace`` to be an object and set the ``trace.log_request_headers`` and/or
+       ``trace.log_request_body_maxsize`` sub-properties.
+     - ``false``
+     - No
+
+   * - ``trace.log_request_headers``
+     - Boolean
+     - If the ``trace`` property is an object this sub-property specifies if the request headers will
+       be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - ``true``
+     - No
+
+   * - ``trace.log_request_body_maxsize``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the request body should be
+       logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - 100
+     - No
+
 
 Completeness
 ^^^^^^^^^^^^
@@ -116,6 +155,8 @@ See the section on :ref:`continuation support <continuation_support>` for more i
 
    * - ``is_chronological``
      - ``false`` (Fixed)
+
+
 
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
