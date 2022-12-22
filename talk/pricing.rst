@@ -1,4 +1,0 @@
-Sesam Talk pricing
-==================
-
-TBD.

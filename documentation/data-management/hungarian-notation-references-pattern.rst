@@ -1,3 +1,0 @@
-Hungarian notation references
------------------------------
-When referencing from one global to another global, one can encode which global the reference points to in order to make it easier to understand what the reference is. E.g. a parent reference from global-person to global-person could be `parent-person-ni`. The reference name in this case is `parent` and the reference points to `global-person` and is of type `namespaced identifier`.

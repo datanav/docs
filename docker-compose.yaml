@@ -1,0 +1,20 @@
+version: '3.8'
+name: sesam-docs
+
+services:
+  docs:
+    container_name: sesam-docs
+    image: sesam-docs
+    volumes:
+      - .:/docs
+    build:
+      dockerfile: Dockerfile
+    command: ["make", "html_no_saas"]
+
+  client:
+    container_name: nginx-server
+    image: nginx
+    ports:
+        - 80:80
+    volumes:
+        - ./_build/html:/usr/share/nginx/html
