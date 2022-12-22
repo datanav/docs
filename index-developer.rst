@@ -1,6 +1,10 @@
 Documentation
 =============
 
+.. note::
+
+  Features marked with "Experimental" can change or disappear without warning, do not use them in production.
+
 .. toctree::
    :maxdepth: 3
 
