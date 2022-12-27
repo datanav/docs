@@ -25,7 +25,7 @@ Sesam offers two products, choose which product you want to read about.
 
     **Sesam Hub**
 
-    Sesam Hub offers full flexibility and advanced tools to create data integrations and manage data that flows between your systems.
+    Sesam Hub offers the full flexibility and advanced tools to create data integrations and manage data flows between your systems.
 
     .. link-button:: index-developer
         :type: ref
