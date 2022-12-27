@@ -46,8 +46,8 @@ Sesam offers two products, choose which product you want to read about.
 
 .. rst-class:: center-title
    
-Sesam Hub: What´s new?
-======================
+Sesam Hub
+=========
 
 Here are the latest features we have implemented.
 
