@@ -296,7 +296,7 @@ A operation configuration looks like:
        The bound parameters available to this template are ``body``, ``url``, ``requests_params``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`) and ``headers``. All current entity
        properties are also available as named variables. If the operation supports
-       paging then ``previous_body`` and ``previous_headers`` is available for all page requests except the first.
+       paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
        Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
      -
      -
@@ -311,7 +311,7 @@ A operation configuration looks like:
        :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well. It will be
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
        The template supports the same named parameters as the ``id_expression``.  If the operation supports
-       paging then ``previous_body`` and ``previous_headers`` is available for all page requests except the first.
+       paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
        Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
      -
      -
