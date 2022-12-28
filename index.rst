@@ -8,11 +8,48 @@
    Talk <talk/index>
    Learn<index-learn>
    
+.. rst-class:: center-title
+   
+Products
+========
+
+Sesam offers two products, choose which product you want to read about.
+
+|
+|
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-2
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Sesam Talk**
+
+    Our new product, giving SaaS vendors the opportunity to offer customers a simple solution for synchronizing their business data with a user-friendly interface. No setup or developement needed.
+
+    .. link-button:: talk/index
+            :type: ref
+            :text: Read documentation
+            :classes: read-more
+
+    ---
+    **Sesam Hub**
+
+    Full flexibility and advanced tools to create data integrations and manage data flows between various types of systems using the our building blocks in a web-based development environment.
+
+    .. link-button:: index-developer
+        :type: ref
+        :text: Read documentation
+        :classes: read-more
+
+
+|
+|
 
 .. rst-class:: center-title
    
-What´s new?
-===========
+Sesam Hub
+=========
 
 Here are the latest features we have implemented.
 
@@ -86,8 +123,8 @@ Here are the latest features we have implemented.
 
 .. rst-class:: center-title
    
-Get to know Sesam
-=================
+Get to know Sesam Hub
+=====================
 
 New to Sesam? These topics will get you started on the right foot.
 
