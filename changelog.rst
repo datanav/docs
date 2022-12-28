@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2022_12_28:
+
+2022-12-28
+----------
+* The ``scope`` sub-property of the ``oauth2`` config element of the :ref:`URL system <url_system>`  and :ref:`REST system <rest_system>` now accept single strings as well as arrays of strings.
+
 .. _changelog_2022_12_22:
 
 2022-12-22

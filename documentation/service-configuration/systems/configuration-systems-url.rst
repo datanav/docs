@@ -131,10 +131,10 @@ Properties
        grant type you need to supply a ``client_id`` and ``client_secret`` from your oauth2 provider. You must also
        specify a ``token_url`` URL to a service which generates JWT access tokens. For the "refresh token"
        grant type you additionally need to provide ``access_token`` and ``refresh_token``. Optionally you can define a
-       list of scopes (in ``scope``) for your client. Note that this option cannot be combined with ``JWT`` authentication
-       or the ``jwt_token`` property. Also note that the oauth2 specification mandates TLS secured transport for both
-       the token endpoint and the target defined in ``url_pattern``. You can add any extra parameters required by the
-       service provider to the token request in the ``extra`` subattribute.
+       single scope or list of scopes (in ``scope``) for your client. Note that this option cannot be combined with
+       ``JWT`` authentication or the ``jwt_token`` property. Also note that the oauth2 specification mandates TLS secured
+       transport for both the token endpoint and the target defined in ``url_pattern``. You can add any extra parameters
+       required by the service provider to the token request in the ``extra`` subattribute.
      -
      -
 
