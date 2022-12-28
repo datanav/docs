@@ -6,7 +6,7 @@ Changelog
 2022-12-28
 ----------
 * The ``scope`` sub-property of the ``oauth2`` config element of the :ref:`URL system <url_system>`  and :ref:`REST system <rest_system>` now accept single strings as well as arrays of strings.
-* Added a new ``trigger_on`` property to the :ref:`REST transform <rest_transform>`. This property can be used to selectively pass through entities based on a property of the entity, for instance allowing a chain of REST transforms to use different transforms for different operations.
+* Added a new experimental ``trigger_on`` property to the :ref:`REST transform <rest_transform>`. This property can be used to selectively pass through entities based on a property of the entity, for instance allowing a chain of REST transforms to use different transforms for different operations.
 
 .. _changelog_2022_12_22:
 
