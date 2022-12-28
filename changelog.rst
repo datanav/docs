@@ -10,6 +10,7 @@ Changelog
 * :ref:`REST system <rest_system>`: added new ``payload_type`` enum ``"text"`` and changed the default to ``"json"`` if the ``payload_type`` is not set. Note that this is a change of behavior. Setting the ``payload_type`` to ``"text"`` sets the ``content-type`` of the request to ``"text/plain"`` if the ``payload`` is not of type ``bytes`` (and isn't set explicitly in the ``headers`` property of the operation). If the type of the payload is ``bytes`` the ``content-type`` will be set to ``"application/octet-stream"``. All other types will be serialized to a JSON encoded string.
 * The ``headers`` and ``params`` properties of the ``operations`` section of the :ref:`REST system <rest_system>` can now be templated using Jinja expressions.
 * The ``payload`` property of the ``operations`` section of the :ref:`REST system <rest_system>` and in the :ref:`REST source <rest_source>` , :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>` configurations can now be templated using Jinja expressions.
+* Added ``previous_body`` and ``previous_headers`` named parameters to relevant "templatable" properties of the :ref:`REST system <rest_system>` and in the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>`. Note that these are only set for systems that supports paging, and not for the first page - use Jinja "is defined" tests in templates that use these to set default values for the first page.
 
 .. _changelog_2022_12_22:
 

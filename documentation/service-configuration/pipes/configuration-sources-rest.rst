@@ -71,7 +71,7 @@ Properties
 
    * - ``properties``
      - Object
-     - The properties mapping used as default values for the emitted entitites. Note that if both are present the
+     - The properties mapping used as default values for the emitted entities. Note that if both are present the
        properties in the emitted entity takes precedence. Also note that this property can be defined in the specified
        ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
        precedence if defined.
@@ -88,7 +88,10 @@ Properties
        ``payload`` and operation ``payload`` differ, then the source payload will take precedence and the
        operations payload will be ignored. This property supports the
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
-       ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.
+       ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.  If the
+       operation supports paging then ``previous_body`` and ``previous_headers`` is available for all page requests
+       except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values for the
+       first page.
      -
      -
 
@@ -126,7 +129,9 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties``, ``since`` and ``headers``. All entity properties are also available as named
-       variables.
+       variables. If the operation supports paging then ``previous_body`` and ``previous_headers`` is available for all
+       page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
+       for the first page.
      -
      -
 
@@ -138,6 +143,9 @@ Properties
        ``since_support`` as been set to ``true`` in the source. Note that this property can be defined in the
        :ref:`REST system <rest_system>` operations configuration as well. The configuration in the source will take
        precedence if both are defined. The template supports the same named parameters as the ``id_expression``.
+       If the operation supports paging then ``previous_body`` and ``previous_headers`` is available for all
+       page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
+       for the first page.
      -
      -
 
