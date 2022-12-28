@@ -165,13 +165,17 @@ A operation configuration looks like:
    * - ``headers``
      - Dict<String,String>
      - An optional object that contain key-value mappings for the HTTP request header. Entries in this dictionary
-       will override any default ``headers`` property defined on the system (see previous section).
+       will override any default ``headers`` property defined on the system (see previous section). The property
+       supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``url``, ``params`` and ``properties`` available to the template.
      -
      -
 
    * - ``params``
      - Objects
-     - An optional object that contain key-value mappings for any HTTP parameters.
+     - An optional object that contain key-value mappings for any HTTP parameters. The property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``url`` and ``properties`` available to the template.
      -
      -
 
