@@ -7,6 +7,7 @@ Changelog
 ----------
 * The ``scope`` sub-property of the ``oauth2`` config element of the :ref:`URL system <url_system>`  and :ref:`REST system <rest_system>` now accept single strings as well as arrays of strings.
 * Added a new experimental ``trigger_on`` property to the :ref:`REST transform <rest_transform>`. This property can be used to selectively pass through entities based on a property of the entity, for instance allowing a chain of REST transforms to use different transforms for different operations.
+* :ref:`REST system <rest_system>`: added new ``payload_type`` enum ``"text"`` and changed the default to ``"json"`` if the ``payload_type`` is not set. Note that this is a change of behavior. Setting the ``payload_type`` to ``"text"`` sets the ``content-type`` of the request to ``"text/plain"`` if the ``payload`` is not of type ``bytes`` (and isn't set explicitly in the ``headers`` property of the operation). If the type of the payload is ``bytes`` the ``content-type`` will be set to ``"application/octet-stream"``. All other types will be serialized to a JSON encoded string.
 
 .. _changelog_2022_12_22:
 
