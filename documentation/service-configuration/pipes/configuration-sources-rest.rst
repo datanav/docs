@@ -86,7 +86,9 @@ Properties
        merged before being used in the operation. In the merge operation, payload property values from the source take
        precedence over properties defined on the system. Also note that if the data type of the source
        ``payload`` and operation ``payload`` differ, then the source payload will take precedence and the
-       operations payload will be ignored.
+       operations payload will be ignored. This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.
      -
      -
 

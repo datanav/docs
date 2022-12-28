@@ -165,13 +165,17 @@ A operation configuration looks like:
    * - ``headers``
      - Dict<String,String>
      - An optional object that contain key-value mappings for the HTTP request header. Entries in this dictionary
-       will override any default ``headers`` property defined on the system (see previous section).
+       will override any default ``headers`` property defined on the system (see previous section). The property
+       supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``url``, ``params`` and ``properties`` available to the template.
      -
      -
 
    * - ``params``
      - Objects
-     - An optional object that contain key-value mappings for any HTTP parameters.
+     - An optional object that contain key-value mappings for any HTTP parameters. The property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``url`` and ``properties`` available to the template.
      -
      -
 
@@ -212,7 +216,10 @@ A operation configuration looks like:
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>` configuration as well, but only the
        ``payload`` property on operations can refer to secrets. Also note that if the data type of the pipe
        ``payload`` and operation ``payload`` differ, then the pipe payload will take precedence and the
-       operations payload will be ignored.
+       operations payload will be ignored.  This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. For the
+       :ref:`REST source <rest_source>` the variable ``since`` is also available.
      -
      -
 

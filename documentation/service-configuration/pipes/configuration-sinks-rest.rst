@@ -72,7 +72,9 @@ Properties
        then these will be merged before being used in the operation. In the merge operation, payload property values
        from the sink take precedence over properties defined on the system. Also note that if the data type of the sink
        ``payload`` and operation ``payload`` differ, then the sink payload will take precedence and the
-       operations payload will be ignored.
+       operations payload will be ignored. This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``properties``, ``url``, ``request_params`` and ``headers`` available to the template.
      -
      -
 

@@ -150,7 +150,9 @@ Properties
        then these will be merged before being used in the operation. In the merge operation, payload property values
        from the transform take precedence over properties defined on the system. Also note that if the data type of
        the transform ``payload`` and operation ``payload`` differ, then the transform payload will take precedence and
-       the operations payload will be ignored.
+       the operations payload will be ignored. This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``properties``, ``url``, ``request_params`` and ``headers`` available to the template.
      -
      -
 
