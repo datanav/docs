@@ -34,6 +34,10 @@ Prototype
         "payload": {
            "the-default": "payload"
         },
+        "trigger_on": {
+            "key":"_trigger",
+            "value": "some-value*"
+        },
         "rate_limiting_retries": 3,
         "rate_limiting_delay": 60,
         "response_property": "the-property-name-to-put-the-response-in",
@@ -124,6 +128,17 @@ Properties
      - Object
      - The properties mapping to use if not present in the entity. Note that if both are present the properties in
        the entity takes precedence.
+     -
+     -
+
+   * - ``trigger_on`` (experimental)
+     - Object
+     - A dictionary with two properties: ``"key"`` (optional, defaults to ``"_trigger"``) and ``"value"``. The ``"key"``
+       should point to a property in the entity (it supports path notation) and ``"value"`` should contain a value that
+       this property should have to be passed into the transform. The ``"value"`` supports wildcards ("*") for substring
+       matching. If the ``"key"`` doesn't exist or the ``"value"`` does not match the corresponding value in the entity,
+       the entity will be passed through without being transformed. Note that this property is experimental and may
+       be changed or removed.
      -
      -
 
