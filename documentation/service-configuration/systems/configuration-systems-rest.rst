@@ -216,7 +216,10 @@ A operation configuration looks like:
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>` configuration as well, but only the
        ``payload`` property on operations can refer to secrets. Also note that if the data type of the pipe
        ``payload`` and operation ``payload`` differ, then the pipe payload will take precedence and the
-       operations payload will be ignored.
+       operations payload will be ignored.  This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. For the
+       :ref:`REST source <rest_source>` the variable ``since`` is also available.
      -
      -
 
