@@ -177,15 +177,21 @@ A operation configuration looks like:
 
    * - ``payload-type``
      - Enum<String>
-     - A enumeration of "json", "json-transit", "form" and "multipart-form", that denotes how to treat the ``payload`` property of the
-       entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>` section of the :ref:`REST sink <rest_sink>` for details). If you
-       specify "json", the payload contents will serialized to JSON (without transit encoding). If you specify "json-transit"
-       you will get a transit-encoded JSON document. If "form" or "multipart-form" is used, the contents will be used to construct a
-       HTML FORM for the request. The Content-Type of the request will be ``application/x-www-form-urlencoded`` or ``multipart/form``
-       respectively. In this case, the form variables and corresponding values should be given as a single dictionary of
+     - A enumeration of "text", "json", "json-transit", "form" and "multipart-form", that denotes how to treat the
+       ``payload`` property of the entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>`
+       section of the :ref:`REST sink <rest_sink>` for details). The various enumerations in combination with the
+       ``payload`` type will set the appropriate ``Content-Type`` in the request headers, if it isn't set explicitly in
+       the ``headers`` property of the operation. If you specify ``"json"``, the payload contents will serialized to JSON
+       (without transit encoding). If you specify ``"json-transit"`` you will get a transit-encoded JSON document.
+       Both of the JSON variants will result in the ``Content-Type`` ``"application/json"``. If ``"form"`` or
+       ``"multipart-form"`` is used, the contents will be used to construct a HTML FORM for the request. The
+       ``Content-Type`` will be ``"application/x-www-form-urlencoded"`` or ``"multipart/form"`` respectively. In this
+       case, the form variables and corresponding values should be given as a single dictionary of
        variable-name/variable-value pairs. The values in the form will be transit encoded before the request is issued.
-       If ``payload-type`` is omitted, the contents of the ``payload`` property will be assumed to be a string.
-     -
+       The ``"text"`` payload type will use ``"text/plain"`` if the ``payload`` is not of type ``bytes`` or
+       `"application/octet-stream"`` if it is. All ``payload`` types other than ``string`` or ``bytes`` will be
+       serialized to a JSON encoded string.
+     - ``"json"``
      -
 
    * - ``properties``
