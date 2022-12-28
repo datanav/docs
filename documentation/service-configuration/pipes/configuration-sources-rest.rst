@@ -90,8 +90,8 @@ Properties
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
        ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.  If the
        operation supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests
-       except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values for the
-       first page.
+       except the first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_
+       tests for these variables to set default values for the first page.
      -
      -
 
@@ -130,8 +130,9 @@ Properties
        will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties``, ``since`` and ``headers``. All entity properties are also available as named
        variables. If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
-       page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
-       for the first page.
+       page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
+       default values for the first page.
      -
      -
 
@@ -144,8 +145,9 @@ Properties
        :ref:`REST system <rest_system>` operations configuration as well. The configuration in the source will take
        precedence if both are defined. The template supports the same named parameters as the ``id_expression``.
        If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
-       page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
-       for the first page.
+       page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
+       default values for the first page.
      -
      -
 

@@ -154,7 +154,8 @@ Properties
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
        ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
-       Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
+       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       variables to set default values for the first page.
      -
      -
 
@@ -177,8 +178,9 @@ Properties
        will take precedence if defined.  The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties`` and ``headers``. All current entity properties are also available as named
        variables. If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
-       page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
-       for the first page.
+       page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
+       default values for the first page.
      -
      -
 
@@ -190,7 +192,8 @@ Properties
        specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
        precedence if defined. This template supports the same named parameters as ``id_expression``. If the operation
        supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the
-       first. Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
+       first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for
+       these variables to set default values for the first page.
      -
      -
 

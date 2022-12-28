@@ -267,7 +267,8 @@ A operation configuration looks like:
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named parameters
        values available to the template: ``body``, ``url``, ``requests_params``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`) and ``headers``. Additionally, ``previous_body`` and ``previous_headers``
-       is available for all page requests except the first. Tip: use the Jinja "is defined" syntax for these variables
+       is available for all page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables
        to set default values for the first page.  This property is used to extract the next URL to perform the
        operation on for pagination support. This property will be ignored by the :ref:`REST sink <rest_sink>`. See
        ``next_page_termination_strategy`` for how to control the termination of a paginated response.
@@ -297,7 +298,8 @@ A operation configuration looks like:
        (only for :ref:`REST sources <rest_source>`) and ``headers``. All current entity
        properties are also available as named variables. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
-       Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
+       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       variables to set default values for the first page.
      -
      -
 
@@ -312,7 +314,8 @@ A operation configuration looks like:
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
        The template supports the same named parameters as the ``id_expression``.  If the operation supports
        paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
-       Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
+       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       variables to set default values for the first page.
      -
      -
 
