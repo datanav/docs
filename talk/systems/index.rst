@@ -9,3 +9,4 @@ Available systems
    hubspot
    wave
    opensesam
+   tripletex
