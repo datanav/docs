@@ -306,11 +306,10 @@ The first time the inbound pipe runs (or if the pipe is reset), the "pipe_offset
 
 In this case the data from the source is not ordered chronologically, which means we can not use the "is_chronological" tag. The benefit of chronologically ordered data in the source system is that if the pipe's pump for some reason should fail in the middle of a request, Sesam can use the chronological order of the source data to continue requesting data from the last received entity. If the data is not ordered, Sesam has to re-run the whole last request.
 
-
-
+Type of sources
+---------------
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
    Dataset source <configuration-sources-dataset>
