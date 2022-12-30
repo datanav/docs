@@ -24,6 +24,7 @@ The following *JSON* snippet shows the general form of a sink definition.
         "comment": "This is a comment"
     }
 
+
 The only universally required property is ``type``.
 
 Properties
@@ -51,9 +52,9 @@ Properties
      -
      -
 
-
+Type of sinks
+-------------
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
    Conditional sink <configuration-sinks-conditional>

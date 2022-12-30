@@ -81,10 +81,10 @@ Properties
      - 10
      -
 
-
+Type of systems
+---------------
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
    SQL systems <configuration-systems-sql>
