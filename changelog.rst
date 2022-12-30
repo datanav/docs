@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2022_12_30:
+
+2022-12-30
+----------
+* Added a new property ``mark_deletion_tracked`` to the :ref:`dataset sinks <dataset_sink>`. If set to ``true`` (the default is ``false``), a ``"$deletion_tracked":true`` property will be added to entities deleted by deletion tracking during full runs or rescans.
+
 .. _changelog_2022_12_28:
 
 2022-12-28
