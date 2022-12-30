@@ -142,6 +142,13 @@ Properties
      - ``true``
      - No
 
+   * - ``mark_deletion_tracked``
+     - Boolean
+     - If ``true`` (the default is ``false``), a ``"$deletion_tracked":true`` property will be added to entities deleted
+       by deletion tracking after full runs or rescans. See also the ``deletion_tracking`` property.
+     - ``false``
+     - No
+
    * - ``bitset_commit_interval``
      - Integer
      - Specifies how often dataset bitsets and dataset compaction changes are written to disk. The higher the number the fewer writes, but at the cost of having to redo the work if the pipe fails before completion. The changes are always written to disk once the pipe completes.
