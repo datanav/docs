@@ -63,10 +63,11 @@ Properties
 
   You can use a DTL transform with the following snippet ``["filter", ["neq", "_S._deleted", true]]`` to prevent further transforms to be performed on entities marked as deleted. Should only be used on dataset sinks and where ``_id`` is not rewritten.
 
+Type of transforms
+------------------
 
 .. toctree::
-   :hidden:
-   :maxdepth: 1
+  :maxdepth: 1
 
    DTL transform <configuration-transforms-dtl>
    JSON Schema validation transform <configuration-transforms-json-schema-validation>
