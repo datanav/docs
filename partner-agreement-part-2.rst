@@ -1,3 +1,5 @@
+:orphan:
+
 5.2. and shall without undue delay:
 
 5.2.1. notify the other Party of matters which the Party understands or should understand

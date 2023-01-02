@@ -117,7 +117,7 @@ Changelog
 2022-09-01
 ----------
 
-* We've updated our :doc:`pricing`. Note that prices are now listed in U.S. Dollar. For existing customers, the changes will take effect from December 1st 2022.
+* We've updated our :ref:`pricing`. Note that prices are now listed in U.S. Dollar. For existing customers, the changes will take effect from December 1st 2022.
 
 .. _changelog_2022_08_17:
 
@@ -531,7 +531,7 @@ Changes to the user experience:
 2021-05-31
 ----------
 
-* We've updated our :doc:`pricing`. For existing customers, the changes will take effect from September 1st 2021.
+* We've updated our :ref:`pricing`. For existing customers, the changes will take effect from September 1st 2021.
 
 2021-05-20
 ----------
@@ -543,7 +543,7 @@ Changes to the user experience:
 2021-05-19
 ----------
 
-* Legal documents has been reformatted and are now available under :doc:`legal`.
+* Legal documents has been reformatted and are now available under :doc:`../legal`.
 
 .. _changelog_2021_05_06:
 
