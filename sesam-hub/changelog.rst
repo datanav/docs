@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_01_03:
+
+2023-01-03
+----------
+* All Jinja templates are now using a more strict "undefined variables" check, this means that any reference to a non-existing variable in the template will now throw an exception instead of in some cases rendering an empty string. Note that this is a change in behavior.
+* For security reasons, all Jinja templates are by default executed in a restricted sandbox environment. Note that this means some functions and objects may no longer be available.
+
 .. _changelog_2022_12_30:
 
 2022-12-30
