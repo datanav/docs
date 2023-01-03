@@ -3,7 +3,7 @@
    :hidden:
 
    Sesam Talk <talk/index>
-   Sesam Hub <sesam-hub/index-sesam-hub>
+   Sesam Hub <hub/index>
    
 .. rst-class:: center-title
    
@@ -34,7 +34,7 @@ Sesam offers two products, choose which product you want to read about.
 
     Full flexibility and advanced tools to create data integrations and manage data flows between various types of systems using the our building blocks in a web-based development environment.
 
-    .. link-button:: sesam-hub/index-developer
+    .. link-button:: hub/index-developer
         :type: ref
         :text: Read documentation
         :classes: read-more
@@ -109,7 +109,7 @@ Here are the latest features we have implemented.
 
     Visit the features section to see all the features Sesam offers.
 
-    .. link-button:: sesam-hub/index-product-features
+    .. link-button:: hub/index-product-features
             :type: ref
             :text: See all features
             :classes: read-more
@@ -137,7 +137,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Learn more about Sesam and what benefits it can give your platform.
 
-    .. link-button:: sesam-hub/index-whatis
+    .. link-button:: hub/index-whatis
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
@@ -146,7 +146,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Check some of the product features that make Sesam flexible, agile and effective.
 
-    .. link-button:: sesam-hub/index-product-features
+    .. link-button:: hub/index-product-features
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -155,7 +155,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Get started with Sesam by following these tutorials.
 
-    .. link-button:: sesam-hub/guide-getting-started
+    .. link-button:: hub/guide-getting-started
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -164,7 +164,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Read about the fundamental principles to ensure effective Master data management.
 
-    .. link-button:: sesam-hub/core-principles
+    .. link-button:: hub/core-principles
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -173,7 +173,7 @@ New to Sesam? These topics will get you started on the right foot.
 
     Have a look at some features that make Sesam flexible, agile and effective.
 
-    .. link-button:: sesam-hub/key-benefits
+    .. link-button:: hub/key-benefits
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -202,7 +202,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     These are the building blocks in Sesam, get to know them in this section.
 
-    .. link-button:: sesam-hub/documentation/building-blocks/index-building-blocks
+    .. link-button:: hub/documentation/building-blocks/index-building-blocks
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
@@ -211,7 +211,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about DTL and how it can empower data transformations.
     
-    .. link-button:: sesam-hub/data-transformation-language
+    .. link-button:: hub/data-transformation-language
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
@@ -221,7 +221,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read everything you need to know about data synchronization in Sesam.
 
-    .. link-button:: sesam-hub/index-synchronization
+    .. link-button:: hub/index-synchronization
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -231,7 +231,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about the core of any platform aimed to integrate data. 
     
-    .. link-button:: sesam-hub/index-data-management
+    .. link-button:: hub/index-data-management
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
@@ -240,7 +240,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     See how Sesam works within cloud providers like Azure, Amazon and Google.
 
-    .. link-button:: sesam-hub/index-dataplatforms
+    .. link-button:: hub/index-dataplatforms
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -249,7 +249,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
 
     Read about some of the tailored functionalities Sesam provides for a secure solution.
 
-    .. link-button:: sesam-hub/index-operations
+    .. link-button:: hub/index-operations
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -258,7 +258,7 @@ Read about the different topics in documentation to ensure proper use of Sesam a
     
     See all the topics in documentation here.
 
-    .. link-button:: sesam-hub/index-developer
+    .. link-button:: hub/index-developer
         :type: ref
         :text: See all documentation
         :classes: read-more
@@ -287,7 +287,7 @@ Learn how to use Sesam effectively by following these tutorials.
     This easy step-by-step guide will set you up so you are ready to start using Sesam.
 
 
-    .. link-button:: sesam-hub/guide-getting-started
+    .. link-button:: hub/guide-getting-started
         :type: ref
         :text: Read more
         :classes: btn-outline-primary btn-block
@@ -296,7 +296,7 @@ Learn how to use Sesam effectively by following these tutorials.
 
     Want to try Sesam? This easy step-by-step guide will set you up!
 
-    .. link-button:: sesam-hub/index-learn-synchronization
+    .. link-button:: hub/index-learn-synchronization
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
