@@ -22,7 +22,7 @@ Sesam offers two products, choose which product you want to read about.
 
     **Sesam Talk**
 
-    Our new product, giving SaaS vendors the opportunity to offer customers a simple solution for synchronizing their business data with a user-friendly interface. No setup or developement needed.
+    Our new product, giving SaaS vendors the opportunity to offer customers a simple solution for synchronizing their business data with a user-friendly interface. No setup or development needed.
 
     .. link-button:: talk/index
             :type: ref
@@ -32,7 +32,7 @@ Sesam offers two products, choose which product you want to read about.
     ---
     **Sesam Hub**
 
-    Full flexibility and advanced tools to create data integrations and manage data flows between various types of systems using the our building blocks in a web-based development environment.
+    Full flexibility and advanced tools to create data integrations and manage data flows between various types of systems using our building blocks in a web-based development environment.
 
     .. link-button:: sesam-hub/index-developer
         :type: ref
@@ -78,7 +78,7 @@ Here are the latest features we have implemented.
     ---
     **Durable Data**
 
-    You can now chose to store your vital data in high-durability disk.
+    You can now choose to store your vital data in high-durability disk.
 
     .. link-button:: durable-data
             :type: ref
