@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_01_04:
+
+2023-01-04
+----------
+* Added a new ``rescan_when_config_changes`` setting as a :ref:`pipe property <pipe_properties>` and as a global default in the
+  :ref:`service metadata <service_metadata_global_defaults_rescan_when_config_changes>`.
+
 .. _changelog_2023_01_03:
 
 2023-01-03

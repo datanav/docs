@@ -143,6 +143,16 @@ Properties
      - ``false``
      -
 
+   * - ``rescan_when_config_changes``
+     - Boolean
+     - If :ref:`automatic reprocessing <automatic_reprocessing>` is enabled, setting this property to ``true`` will make
+       this pipe automatically reset itself when the pipe config changes (the reset happens the next time the pipe is run).
+       If :ref:`automatic reprocessing <automatic_reprocessing>` is not enabled, setting this property to ``true`` will mark
+       this pipe as out-of-sync when the pipe config changes (the out-of-sync marking happens the next time the pipe is run).
+       The default value is inherited from the :ref:`service metadata <service_metadata_global_defaults_rescan_when_config_changes>`.
+     - ``false``
+     -
+
    * - ``source``
      - Object
      - A configuration object for the :ref:`source <source_section>` component of the pipe.

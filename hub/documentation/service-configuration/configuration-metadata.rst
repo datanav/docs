@@ -202,6 +202,14 @@ Properties
      - ``continue``
      -
 
+       .. _service_metadata_global_defaults_rescan_when_config_changes:
+
+   * - ``global_defaults.rescan_when_config_changes``
+     - Boolean
+     - Specifies the default value of the pipes' ``rescan_when_config_changes`` property.
+     - ``false``
+     -
+
        .. _service_metadata_global_defaults_enable_background_rescan:
 
    * - ``global_defaults.enable_background_rescan``
