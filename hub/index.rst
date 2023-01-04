@@ -190,6 +190,6 @@ Learn how to use Sesam effectively by following these tutorials.
   :maxdepth: 3
 
   What is Sesam<index-whatis>
-  Documentation<index-developer>
   Features<index-product-features>
+  Documentation<index-developer>
   Learn<index-learn>
