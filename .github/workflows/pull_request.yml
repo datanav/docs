@@ -12,6 +12,8 @@ jobs:
           python-version: 3.9
       - name: Update apt
         run: sudo apt-get update
+      - name: Add repository
+        run: sudo add-apt-repository universe && sudo apt-get update 
       - name: Install tools for generating contracts
         run: sudo apt-get -y install texlive-latex-base texlive-latex-extra texlive-generic-extra lmodern texlive-fonts-recommended ghostscript
       - name: Install pandoc
