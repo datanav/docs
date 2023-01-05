@@ -20,4 +20,3 @@ Documentation
    Service Configuration <index-service-configuration>
    Service API <api>
    Deprecated features <deprecations>
-   Changelog <changelog>

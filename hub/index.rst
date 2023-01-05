@@ -189,7 +189,8 @@ Learn how to use Sesam effectively by following these tutorials.
   :hidden:
   :maxdepth: 3
 
-  What is Sesam<index-whatis>
-  Features<index-product-features>
-  Documentation<index-developer>
-  Learn<index-learn>
+    What is Sesam<index-whatis>
+    Features<index-product-features>
+    Documentation<index-developer>
+    Learn<index-learn>
+    Changelog<changelog>
