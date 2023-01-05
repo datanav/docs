@@ -1,4 +1,3 @@
-:orphan:
 
 ================
 Terms of service
