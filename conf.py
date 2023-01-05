@@ -45,7 +45,9 @@ redirects = {
      "DTLReferenceGuide.html": "data-transformation-language.html",
      "changelog.html": "hub/changelog.html",
      "index-developer.html": "hub/index-developer.html",
-     "index-learn.html": "hub/index-learn.html"
+     "index-learn.html": "hub/index-learn.html",
+     "quick-reference.html": "hub/quick-reference.html",
+     "api.html": "hub/api.html"
 
 
 }
