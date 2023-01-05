@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build:  
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,8 +15,11 @@ jobs:
           python-version: 3.9
       - name: Update apt
         run: sudo apt-get update
+      - name: Add repository
+        run: sudo add-apt-repository universe && sudo apt-get update 
       - name: Install tools for generating contracts
-        run: sudo apt-get -y install texlive-latex-base texlive-latex-extra texlive-generic-extra lmodern texlive-fonts-recommended ghostscript
+        run: sudo apt-get -y install texlive-full lmodern ghostscript
+        #run: sudo apt-get -y install texlive-latex-base texlive-latex-extra texlive-generic-extra lmodern texlive-fonts-recommended ghostscript
       - name: Install pandoc
         run: wget https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb && sudo dpkg -i pandoc-2.13-1-amd64.deb
       - name: Install pip requirements
