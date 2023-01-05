@@ -16,8 +16,7 @@ jobs:
       - name: Update apt
         run: sudo apt-get update
       - name: Install tools for generating contracts
-        #run: sudo apt-get -y install texlive-full lmodern ghostscript
-        run: sudo apt-get -y install texlive-latex-base texlive-latex-extra  texlive-plain-generic lmodern texlive-fonts-recommended ghostscript
+        run: sudo apt-get -y install texlive-latex-base texlive-latex-extra texlive-plain-generic lmodern texlive-fonts-recommended ghostscript
       - name: Install pandoc
         run: wget https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb && sudo dpkg -i pandoc-2.13-1-amd64.deb
       - name: Install pip requirements
