@@ -1,7 +1,7 @@
 Changelog
 =========
 
-.. _changelog_2023_02_06:
+.. _changelog_2023_01_06:
 
 2023-01-06
 ----------
@@ -9,6 +9,7 @@ Changelog
 * Documented the ``response_headers_property`` configuration property for the :ref:`REST source <rest_source>`.
 * Documented the ``index_mapping_properties``, ``index_check_document`` and ``first_run_delete_query``
   configuration properties for the :ref:`Elasticsearch sink <elasticsearch_sink>`.
+* Changed the default ``allowed_status_codes`` in the :ref:`REST transform <rest_transform>` from 200-299 to 200.
 
 .. _changelog_2023_01_04:
 

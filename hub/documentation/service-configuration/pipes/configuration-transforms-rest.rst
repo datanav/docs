@@ -202,11 +202,16 @@ Properties
      - An expression in the form of single values or value ranges of HTTP status codes that will be allowed to be passed
        through by the transform. The values are either comma separated integer values or a range of values with a hyphen separator
        (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 200-299 includes both 200 and
-       299. Whitespaces are not allowed in the expression. Note that status codes in the range 200-299 is the default
-       range and any response status codes outside of this range will make the transform fail. See the complimentary
-       ``ignored_status_codes`` if you want to omit non-ok responses instead of them making the transform fail or
-       passing them trough. Also note that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
-     - ``"200-299"``
+       299. Whitespaces are not allowed in the expression. Note that 200 is the default status code and any response
+       status codes other than this will make the transform fail. See the complimentary ``ignored_status_codes``
+       if you want to omit non-ok responses instead of them making the transform fail or passing them trough. Also note
+       that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
+
+       .. WARNING::
+
+          If you allow other status codes than the default, *make sure* that these are dealt with downstream.
+
+     - ``"200"``
      -
 
    * - ``ignored_status_codes``
@@ -218,6 +223,12 @@ Properties
        403. Whitespaces are not allowed in the expression. See the complimentary ``allowed_status_codes`` if you
        want to pass through any non-ok responses instead of skipping them. Also note that the ranges in
        ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
+
+       .. WARNING::
+
+          Any responses with status codes listed here are discarded with no traces to be found, making it next to
+          impossible to audit the pipe.
+
      -
      -
 
