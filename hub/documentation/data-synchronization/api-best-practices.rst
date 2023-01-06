@@ -9,7 +9,7 @@ API Best practices
 
   - Expose last modified timestamp of the data, this timestamp needs to be reliable.
 
-- If API cannot provide continuation support, provide support for querying or searching, or support for webhooks or other means of signalling.
+- If your API cannot provide continuation support then either provide support for querying or searching. Alternatively provide support for webhooks or other means of signalling.
 
 - Support for deletion tracking:
 
