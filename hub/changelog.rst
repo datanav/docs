@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_02_06:
+
+2023-01-06
+----------
+
+* Documented the ``response_headers_property`` configuration property for the :ref:`REST source <rest_source>`.
+
 .. _changelog_2023_01_04:
 
 2023-01-04
