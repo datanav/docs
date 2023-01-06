@@ -142,6 +142,8 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     "footer_items": ["copyright.html", "left-sidebar-bottom.html"],
     "navbar_end": "right-menu.html",
+    'navigation_depth': 5
+
     #     "announcement": "This is a preview of the upcoming Sesam Documentation. For the official documentation go to <a href=\"https://docs.sesam.io\">docs.sesam.io</a>",
     # "sidebar_hide_name": True
 }
