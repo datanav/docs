@@ -69,7 +69,7 @@ Properties
    * - ``index_mapping_properties``
      - Object
      - If this is set the specified property mappings are added to the elasticsearch index.
-       See https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html
+       See `<https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html>`_
        for more information. Note that if this property is changed the pipe will be reset
        if :ref:`automatic reprocessing <automatic_reprocessing>` is enabled.
 
@@ -92,7 +92,7 @@ Properties
 
        If the '_source' field is enabled in the elasticsearch index (this is the
        default), the pipe will check if the document in the index is identical with the
-       index_check_document' value. If '_source' is disabled, the pipe will only check
+       ``index_check_document`` value. If '_source' is disabled, the pipe will only check
        that the document exists in the index.
      - null
      -
@@ -101,9 +101,9 @@ Properties
      - Object
      - If this is set, the value will be used in a 'delete_by_query' call each time
        this pipe is doing a full run.
-       See https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-delete-by-query.html
+       See `<https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-delete-by-query.html>`_
        for the details on how the 'delete_by_query' operation works. The value in
-       the 'first_run_delete_query' sink-property is used as the 'query'.'match' value
+       the ``first_run_delete_query`` sink-property is used as the 'query'.'match' value
        in the 'delete_by_query' call.
 
        | example:
