@@ -1,5 +1,8 @@
-What is Sesam
-=============
+.. _what_is:
+
+=================
+What is Sesam Hub
+=================
 
 Sesam is a Master Data Hub that simplifies the process of making up-to-date master data available in a data platform architecture. 
 

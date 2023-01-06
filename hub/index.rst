@@ -1,9 +1,12 @@
+.. rst-class:: center-title
+
+=========
 Sesam Hub
 =========
 
 Sesam Hub is a Master Data Hub that simplifies the process of making up-to-date master data available in a data platform architecture.
 
-The updated data within Sesam Data Hub is not only consumable by analytical components in the data platform, but it can also be synchronized back to relevant source systems to ensure data consistency across the whole platform.
+|
 
 .. panels::
     :body: text-left
@@ -19,6 +22,26 @@ The updated data within Sesam Data Hub is not only consumable by analytical comp
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
+    **Documentation**
+
+    Read documentation about Sesam Hub.
+
+    .. link-button:: index-developer
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+
+    **Quick references**
+
+    Quickly find what you are looking for using our quick reference section.
+
+    .. link-button:: quick_reference
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+
     **Features**
 
     Check some of the product features that make Sesam flexible, agile and effective.
@@ -45,16 +68,6 @@ The updated data within Sesam Data Hub is not only consumable by analytical comp
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
-    ---
-    **Key benefits**
-
-    Have a look at some features that make Sesam flexible, agile and effective.
-
-    .. link-button:: key-benefits
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-
 
 |
 |
@@ -67,7 +80,6 @@ Documentation
 
 Read about the different topics in documentation to ensure proper use of Sesam and empower your data platforms.
 
-|
 |
 
 .. panels::
@@ -141,8 +153,6 @@ Read about the different topics in documentation to ensure proper use of Sesam a
         :classes: read-more
 
 |
-|
-|
 
 .. rst-class:: center-title
 
@@ -150,7 +160,6 @@ Learn Sesam
 =================
 Learn how to use Sesam effectively by following these tutorials.
 
-|
 |
 
 
@@ -189,7 +198,7 @@ Learn how to use Sesam effectively by following these tutorials.
   :hidden:
   :maxdepth: 3
 
-    What is Sesam<index-whatis>
+    What is Sesam Hub<index-whatis>
     Features<index-product-features>
     Documentation<index-developer>
     Learn<index-learn>

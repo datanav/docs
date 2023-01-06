@@ -1,4 +1,4 @@
-.. _quick-reference:
+.. _quick_reference:
 
 ================
  Quick Reference
