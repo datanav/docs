@@ -7,6 +7,8 @@ Changelog
 ----------
 
 * Documented the ``response_headers_property`` configuration property for the :ref:`REST source <rest_source>`.
+* Documented the ``index_mapping_properties``, ``index_check_document`` and ``first_run_delete_query``
+  configuration properties for the :ref:`Elasticsearch sink <elasticsearch_sink>`.
 
 .. _changelog_2023_01_04:
 
