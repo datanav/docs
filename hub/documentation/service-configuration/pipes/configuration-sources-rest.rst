@@ -103,6 +103,14 @@ Properties
      -
      -
 
+   * - ``response_headers_property``
+     - String
+     - The name of the property to put the response headers in when emitting entities. Note that this property can be
+       defined in the :ref:`REST system <rest_system>` operation configuration as well. The configuration in the
+       source will take precedence if both are defined.
+     -
+     -
+
    * - ``response_include_content_type``
      - Boolean
      - This property controls if the output entity should include the Content-Type of the response in a
