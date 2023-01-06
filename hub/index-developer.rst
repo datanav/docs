@@ -1,7 +1,8 @@
+=============
 Documentation
 =============
 
-.. note::
+.. important::
 
   Features marked with "Experimental" can change or disappear without warning, do not use them in production.
 

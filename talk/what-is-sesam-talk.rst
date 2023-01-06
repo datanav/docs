@@ -1,5 +1,8 @@
-How Sesam Talk works
-====================
+.. _what_is_sesam_talk:
+
+==================
+What is Sesam Talk
+==================
 
 Sesam Talk synchronizes a limited set of core types with a limited set of properties between the various :doc:`supported system <systems/index>`.
 

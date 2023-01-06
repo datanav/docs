@@ -481,7 +481,7 @@ Changes to the user experience:
 2021-09-29
 ----------
 
-* Added a new :ref:`Quick Reference <quick-reference>` document for faster and easier navigation to configuration types and DTL transforms and functions.
+* Added a new :ref:`Quick Reference <quick_reference>` document for faster and easier navigation to configuration types and DTL transforms and functions.
 
 .. _changelog_2021_09_28:
 
@@ -557,7 +557,7 @@ Changes to the user experience:
 2021-05-20
 ----------
 
-* Added a :doc:`Sesam Community <community>` section.
+* Added a :ref:`Sesam Community <community>` section.
 
 .. _changelog_2021_05_19:
 
