@@ -155,7 +155,7 @@ Properties
        paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
        Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
        variables to set default values for the first page.
-     -The
+     -
      -
 
    * - ``payload_property``
