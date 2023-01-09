@@ -71,10 +71,8 @@ Properties
 
    * - ``properties``
      - Object
-     - The properties mapping used as default values for the emitted entities. Note that if both are present the
-       properties in the emitted entity takes precedence. Also note that this property can be defined in the specified
-       ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration will take
-       precedence if defined.
+     - Any non-payload properties you need can be specified in the ``properties`` property. You can then address
+       these properties in the Jinja templates for the operation or source using a "{{ properties.key_name }}" syntax.
      -
      -
 
