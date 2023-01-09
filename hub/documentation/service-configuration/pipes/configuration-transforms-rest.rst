@@ -204,7 +204,7 @@ Properties
        (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 200-299 includes both 200 and
        299. Whitespaces are not allowed in the expression. Note that 200 is the default status code and any response
        status codes other than this will make the transform fail. See the complimentary ``ignored_status_codes``
-       if you want to omit non-ok responses instead of them making the transform fail or passing them trough. Also note
+       if you want to omit non-ok responses instead of them making the transform fail or passing them through. Also note
        that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
 
        .. WARNING::
@@ -226,7 +226,7 @@ Properties
 
        .. WARNING::
 
-          Any responses with status codes listed here are discarded with no traces to be found, making it next to
+          Any response with status codes listed here will be discarded with no traces to be found, making it next to
           impossible to audit the pipe.
 
      -
