@@ -1,5 +1,9 @@
 .. _pricing_general:
 
+=======
+Pricing
+=======
+
 .. panels::
     :body: text-left
     :container: container-lg pb-2
