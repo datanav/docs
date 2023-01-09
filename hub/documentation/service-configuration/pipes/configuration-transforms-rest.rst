@@ -147,18 +147,15 @@ Properties
    * - ``payload``
      - Object, string or array
      - The value to use as payload for the operation if not present in the entity. Note that this property can be
-       defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. Note that if
-       the payload is an object (dictionary) and the system operation also defines a ``payload`` of the same type,
-       then these will be merged before being used in the operation. In the merge operation, payload property values
-       from the transform take precedence over properties defined on the system. Also note that if the data type of
-       the transform ``payload`` and operation ``payload`` differ, then the transform payload will take precedence and
-       the operations payload will be ignored. This property supports the
-       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       defined in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. If
+       the ``payload`` exists in the entity, then the one in the entity will take
+       precedence over any ``payload`` defined on transform or system operation (in that order). This property
+       supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
        Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
        variables to set default values for the first page.
-     -
+     -The
      -
 
    * - ``payload_property``
@@ -192,7 +189,7 @@ Properties
        properties available to the templating context. It can be used to add ``_updated`` properties to the emitted
        entities if missing from the transform response. Note that this property can alternatively be defined in the
        specified ``operation`` section of the :ref:`REST system <rest_system>`. The transform configuration will take
-       precedence if defined. This template supports the same named parameters as ``id_expression``. If the operation
+       precedence if defined. This template supports the same named variables as ``id_expression``. If the operation
        supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the
        first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for
        these variables to set default values for the first page.

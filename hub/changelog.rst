@@ -7,6 +7,7 @@ Changelog
 ----------
 
 * Changed the default ``allowed_status_codes`` in the :ref:`REST transform <rest_transform>` from 200-299 to 200.
+* :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>` and :ref:`REST sink <rest_sink>`: reverted the ``payload`` merge behavior from 2022-12-08. It will now work the way it did previously, i.e as a default fallback mechanism. If ``payload`` is defined multiple places, the order of precedence is 1) entity, 2) sink/source/transform and 3) operation. If you need to add a secret to the ``payload`` you should add it only to the ``operation`` section on the :ref:`REST system <rest_system>` and then use the ``properties`` property on the pipe side to dynamically add properties from the entities to the ``payload`` via Jinja templating.
 
 .. _changelog_2023_01_06:
 

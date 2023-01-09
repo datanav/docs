@@ -166,7 +166,7 @@ A operation configuration looks like:
      - Dict<String,String>
      - An optional object that contain key-value mappings for the HTTP request header. Entries in this dictionary
        will override any default ``headers`` property defined on the system (see previous section). The property
-       supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``url``, ``params`` and ``properties`` available to the template. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` is available for all page requests except the first.
        Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
@@ -176,7 +176,7 @@ A operation configuration looks like:
    * - ``params``
      - Objects
      - An optional object that contain key-value mappings for any HTTP parameters. The property supports the
-       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``url`` and ``properties`` available to the template. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` is available for all page requests except the first.
        Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
@@ -213,15 +213,12 @@ A operation configuration looks like:
 
    * - ``payload``
      - Object, string or array
-     - The value to use as payload for the operation. Note that if the payload is an object (dictionary) and the
-       pipe also defines a payload of the same type, then these will be merged before being used in the operation.
-       In the merge operation, payload property values from the pipe take precedence over properties defined on the
-       system. Note that this property can be defined in the :ref:`REST source <rest_source>`,
+     - The value to use as payload for the operation. Note that this property can be defined in the :ref:`REST source <rest_source>`,
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>` configuration as well, but only the
-       ``payload`` property on operations can refer to secrets. Also note that if the data type of the pipe
-       ``payload`` and operation ``payload`` differ, then the pipe payload will take precedence and the
-       operations payload will be ignored.  This property supports the
-       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``payload`` property on operations can refer to secrets. It can also be defined on the entities for the
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. If this property is defined multiple places
+       then the order of precedence is 1) entity, 2) sink/source/transform and 3) operation. This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. If the operation supports
        paging then ``previous_body`` and ``previous_headers`` is available for all page requests except the first.
        Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page. For the
@@ -264,7 +261,7 @@ A operation configuration looks like:
 
    * - ``next_page_link``
      - String
-     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named parameters
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named variables
        values available to the template: ``body``, ``url``, ``requests_params``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`) and ``headers``. Additionally, ``previous_body`` and ``previous_headers``
        is available for all page requests except the first. Tip: use Jinja's

@@ -79,13 +79,9 @@ Properties
    * - ``payload``
      - Object, string or array
      - The value to use as payload for the operation. Note that this property can be defined in the specified
-       ``operation`` section of the :ref:`REST system <rest_system>` as well. Note that if the payload is an
-       object (dictionary) and the system operation also defines a ``payload`` of the same type, then these will be
-       merged before being used in the operation. In the merge operation, payload property values from the source take
-       precedence over properties defined on the system. Also note that if the data type of the source
-       ``payload`` and operation ``payload`` differ, then the source payload will take precedence and the
-       operations payload will be ignored. This property supports the
-       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named parameters
+       ``operation`` section of the :ref:`REST system <rest_system>` as well, with the one on the source
+       configuration taking precedence if defined both places. This property supports the
+       ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.  If the
        operation supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests
        except the first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_
@@ -149,7 +145,7 @@ Properties
        entities if missing from the source system (for continuation support). This is only relevant if
        ``since_support`` as been set to ``true`` in the source. Note that this property can be defined in the
        :ref:`REST system <rest_system>` operations configuration as well. The configuration in the source will take
-       precedence if both are defined. The template supports the same named parameters as the ``id_expression``.
+       precedence if both are defined. The template supports the same named variables as the ``id_expression``.
        If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
        page requests except the first. Tip: use Jinja's
        `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
