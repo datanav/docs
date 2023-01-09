@@ -59,8 +59,9 @@ Properties
 
    * - ``properties``
      - Object
-     - The properties mapping to use if not present in the entity. Note that if both are present the properties in
-       the entity takes precendence.
+     - A mapping to use for properties not available in the entity. Note that if the ``properties`` object is also
+       present in the entity, it will take precedence and the ``properties`` object in the sink configuration will
+       be ignored. See the :ref:`"Expected entity shape" <rest_system>` section for more details.
      -
      -
 
@@ -113,7 +114,9 @@ expected is:
    * - ``properties``
      - Object
      - Any non-payload properties you need should go into the toplevel child entity ``properties``. You can then address
-       these properties in the Jinja templates for operation ``url`` properties using the "{{ properties.key_name }}" syntax.
+       these properties in the Jinja templates for the operation using a "{{ properties.key_name }}" syntax. Note that
+       if the ``properties`` object is not present in the entity, the ``properties`` property on the sink configuration
+       will be used instead (if it is set).
      -
      -
 

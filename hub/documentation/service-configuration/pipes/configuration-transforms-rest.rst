@@ -126,8 +126,10 @@ Properties
 
    * - ``properties``
      - Object
-     - The properties mapping to use if not present in the entity. Note that if both are present the properties in
-       the entity takes precedence.
+     - Any non-payload properties you need can be specified in the ``properties`` property. You can then address
+       these in the Jinja templates for the operation or source using a "{{ properties.key_name }}" syntax.
+       Note that if a ``properties`` object is present in the entity, the ``properties`` object in the transform
+       configuration will be ignored.
      -
      -
 
