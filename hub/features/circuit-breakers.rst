@@ -11,7 +11,7 @@ the number of entities written to a dataset in a pipe run exceeds a
 certain configurable limit.
 
 Note that a circuit breaker is only activated if the sink dataset is
-populated. In practice this means that the pipe must have ran to
+populated. In practice this means that the pipe must have run to
 completion at least once. This is to avoid tripping it on the initial
 sync.
 
