@@ -119,9 +119,33 @@ Properties
      - ``true``
      - No
 
+   * - ``trace.log_authorization_header_redacted_bytes``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the ``Authorization`` request
+       header that should be redacted in the ``pump-completed``/``pump-completed`` events in the execution-log. The
+       purpose of this setting is to redact enough of the ``Authorization`` header to render it safe to log, but to
+       potentially leave some of the header for debugging purposes.
+       A value of ``-1`` means to redact all bytes in the header.
+     - 600
+     - No
+
    * - ``trace.log_request_body_maxsize``
      - Integer
      - If the ``trace`` property is an object this property specifies how many bytes of the request body should be
+       logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - 100
+     - No
+
+   * - ``trace.log_response_headers``
+     - Boolean
+     - If the ``trace`` property is an object this sub-property specifies if the response headers will
+       be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - ``true``
+     - No
+
+   * - ``trace.log_response_body_maxsize``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the response body should be
        logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
      - 100
      - No

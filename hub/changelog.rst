@@ -6,6 +6,7 @@ Changelog
 2023-01-10
 ----------
 * Added support for http basic authentication to the :ref:`Elasticsearch system <elasticsearch_system>`.
+* Added new options to the ``trace`` property of the :ref:`HTTP endpoint source <http_endpoint_source>`: ``log_authorization_header_redacted_bytes``, ``log_response_body_maxsize`` and ``log_response_headers``.
 
 .. _changelog_2023_01_09:
 
