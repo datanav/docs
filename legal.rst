@@ -9,7 +9,7 @@ Legal
 
    Terms of Service <terms>
    Description of the Services <legal-service>
-   Subscription Fee, payment terms <pricing>
+   Subscription Fee, payment terms <hub/pricing>
    Data Process Agreement <legal-dap>
    Partner Agreement <partner-agreement>
    Privacy Policy <privacy-policy>

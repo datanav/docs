@@ -14,8 +14,8 @@ Go to your account at https://talk.sesam.io
 
    What is Sesam Talk <what-is-sesam-talk>
    Supported Systems <systems/index>
-   Pricing <pricing>
    Becoming a partner <partner/index>
+   Pricing <pricing>
    Roadmap <roadmap>
    Changelog <changelog>
 
