@@ -38,6 +38,27 @@ Properties
      - ``["localhost:9200"]``
      -
 
+   * - ``username``
+     - String
+     - The username to use when authenticating with the HTTP server. Note that you also have to specify
+       authentication protocol in ``authentication`` and ``password`` for this property to have any effect.
+     -
+     -
+
+   * - ``password``
+     - String
+     - The password to use if ``username`` and ``authentication`` is set. It is mandatory if ``username`` is provided.
+     -
+     -
+
+   * - ``authentication``
+     - String
+     - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
+       authentication. Allowed values is "basic" (other authentication methods may be added in the future).
+       Note that ``username`` and ``password`` are also required if ``authentication`` is set.
+     -
+     -
+
 Example configuration
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -50,3 +71,18 @@ Example configuration
         "hosts": ["localhost:9200"]
     }
 
+
+Example configuration with authentication
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    {
+        "_id": "our-elasticsearch-server",
+        "name": "Our Elasticsearch Server",
+        "type": "system:elasticsearch",
+        "hosts": ["localhost:9200"],
+        "username": "myusername",
+        "password": "$SECRET(password)",
+        "authentication": "basic"
+    }
