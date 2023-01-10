@@ -202,5 +202,5 @@ Learn how to use Sesam effectively by following these tutorials.
     Features<index-product-features>
     Documentation<index-developer>
     Learn<index-learn>
-    Pricing<pricing>
+    Pricing<../pricing>
     Changelog<changelog>

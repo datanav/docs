@@ -31,7 +31,7 @@ Developer environment
 A developer environment has a fixed price and serves a single developer, or a CI test environment.
 These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted.
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
-by using the :doc:`Sesam Client <sesam-client>`.
+by using the :doc:`Sesam Client <hub/sesam-client>`.
 
 .. list-table::
    :widths: 70 30
@@ -146,7 +146,7 @@ The following items are no longer available for new subscriptions:
    :widths: 70 30
    :header-rows: 1
 
-   * - :doc:`GDPR Data Access Portal <gdpr-platform>`
+   * - :doc:`GDPR Data Access Portal <hub/gdpr-platform>`
      - Pr GB
    * - Basic < 1 request per second
      - $50.00
