@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_10:
+
+2023-01-10
+----------
+* Added support for http basic authentication to the :ref:`Elasticsearch system <elasticsearch_system>`.
+
 .. _changelog_2023_01_09:
 
 2023-01-09
