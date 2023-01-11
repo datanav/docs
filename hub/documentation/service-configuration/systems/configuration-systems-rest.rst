@@ -99,10 +99,12 @@ Properties
 
    * - ``operations``
      - Object
-     - An object containing the registered operations allowed for the REST service. See the next section for details.
-       At least one operation need to be registered for the system.
+     - An object containing the registered operations allowed for the REST service. See the :ref:`Operation properties <rest_operations>` section for details.
+       Note that you can also define an ``operations`` property on the :ref:`REST source <rest_source>`, :ref:`REST sink <rest_sink>`
+       and :ref:`REST transform <rest_transform>` as well. The latter will take precedence if present both places.
+       You need to specify an ``operations`` section in at least one of them.
      -
-     - Yes
+     -
 
    * - ``rate_limiting_retries``
      - Integer
@@ -126,6 +128,9 @@ Properties
        included.
      - ["application/json"]
      -
+
+
+.. _rest_operations:
 
 Operation properties
 ^^^^^^^^^^^^^^^^^^^^
