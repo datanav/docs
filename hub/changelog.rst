@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_11:
+
+2023-01-11
+----------
+* It's now possible to specify a ``operations`` property directly on the :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>` and :ref:`REST sink <rest_sink>`. If present both in the pipe and the system, the pipe version will take precedence. Note that only the system version allows secrets. This is primarily intended as a convenience feature during development; in a production environment if multiple pipes use the same ``operations`` configuration, you should consider storing it on the :ref:`REST system <rest_system>` so it can be reused and maintained in one place.
+
 .. _changelog_2023_01_10:
 
 2023-01-10

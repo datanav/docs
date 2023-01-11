@@ -124,6 +124,18 @@ Properties
      -
      -
 
+   * - ``operations``
+     - Object
+     - An object containing the properties used for the ``operation`` specified in the transform configuration or
+       in the entity. See the :ref:`Operation properties <rest_operations>` section for details. Note that you can also
+       define an ``operations`` property on the :ref:`REST system <rest_system>`. If present in multiple places then the
+       transform version will take precedence. You need to specify an ``operations`` section in at least one of them.
+       If multiple pipes use the same operation configuration you should consider storing
+       it on the system so they can be reused. Note that secrets are only allowed in the ``operations`` property
+       defined on the :ref:`REST system <rest_system>`.
+     -
+     -
+
    * - ``properties``
      - Object
      - Any non-payload properties you need can be specified in the ``properties`` property. You can then address
