@@ -124,6 +124,18 @@ expected is:
      -
      -
 
+   * - ``operations``
+     - Object
+     - An object containing the registered operations allowed for the ``operation`` specified. See the
+       :ref:`Operation properties <rest_operations>`  section for details. Note that you can also define an
+       ``operations`` property on the :ref:`REST system <rest_system>`. If present both places then the sink
+       version will take precedence. You need to specify an ``operations`` section  in at least one of them.
+       If multiple pipes use the same operation configuration you should consider storing
+       it on the system so they can be reused. Note that secrets are only allowed in the ``operations`` property
+       defined on the system.
+     -
+     -
+
    * - ``payload``
      - String or Object
      - The payload for the operation specified. It can be a string or an object. You can also omit it, in which case
