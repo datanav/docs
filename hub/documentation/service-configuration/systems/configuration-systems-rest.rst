@@ -116,7 +116,7 @@ Properties
    * - ``rate_limiting_delay``
      - Integer
      - If ``rate_limiting_retries`` is set on either the transform or on the REST system, and a retry is triggered
-       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in the,
+       the time to wait before retrying can be set by this value. If specified on both the toplevel system and in
        the operation definition, the operation value takes precedence.
      - 1
      -
