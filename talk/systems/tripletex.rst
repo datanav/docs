@@ -6,6 +6,10 @@ Tripletex is a simple-to-use modular accounting system that helps businesses dea
 
 https://tripletex.no/
 
+.. note::
+
+  Warning! Only one test account in the Tripletex test environment is currently supported, so connecting to any other account will not work.
+
 Supported types
 ---------------
 The following types are currently supported.
