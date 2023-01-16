@@ -1,5 +1,5 @@
-Available systems
-=================
+Available connectors
+====================
 
 .. toctree::
    :maxdepth: 1

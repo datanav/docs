@@ -8,6 +8,13 @@ Sesam Talk synchronizes a limited set of core types with a limited set of proper
 
 Sesam Talk merges data from the different systems on certain criteria. People are merged if they have the same email, organisations are merged if they have the exact same name.
 
+.. Important::
+  Sesam talk is currently an experimental free service. Use it at your own risk.
+
+.. image:: images/dashboard-sesam-talk.jpg
+  :width: 100%
+  :alt: Alternative text
+
 Person model
 ------------
 Sesam Talk has the following model for a person.
