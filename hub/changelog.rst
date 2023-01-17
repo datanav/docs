@@ -6,7 +6,7 @@ Changelog
 2023-01-17
 ----------
 * Added a new ``next_page_termination_strategy`` option ``same-next-page-request`` to operations in the :ref:`REST system <rest_system>` (and any local variants). If included in the ``next_page_termination_strategy`` values, it will terminate the paging if it detects that the request to issue is identical to the previous request (i.e. the headers, url, parameters and payload are all the same values). Added this new strategy to the default ``next_page_termination_strategy``, which is now a list of ``next-page-link-empty`` and ``same-next-page-request``.
-* Added an "experimental" note to ``next_page_termination_strategy`` to indicate that this property is still under development and is stil subject to change/removal.
+* Added an "experimental" note to ``next_page_termination_strategy`` to indicate that this property is still under development and subject to change/removal.
 
 
 .. _changelog_2023_01_11:
