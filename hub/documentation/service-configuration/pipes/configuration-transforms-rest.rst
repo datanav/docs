@@ -163,10 +163,10 @@ Properties
        the ``payload`` exists in the entity, then the one in the entity will take
        precedence over any ``payload`` defined on transform or system operation (in that order). This property
        supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
-       ``properties``, ``url``, ``request_params`` and ``headers`` available to the template. If the operation supports
-       paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
-       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
-       variables to set default values for the first page.
+       ``properties``, ``url``, ``request_params``, ``entity``, ``source_entity`` and ``headers`` available to the template.
+       If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests
+       except the first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests
+       for these variables to set default values for the first page.
      -
      -
 
@@ -187,11 +187,10 @@ Properties
        if missing from the transform response. Note that this property can be defined
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The transform configuration
        will take precedence if defined.  The bound parameters available to this template are ``body``, ``url``,
-       ``requests_params``, ``properties`` and ``headers``. All current entity properties are also available as named
-       variables. If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
-       page requests except the first. Tip: use Jinja's
-       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
-       default values for the first page.
+       ``requests_params``, ``properties``, ``entity``, ``source_entity`` and ``headers``. If the operation supports
+       paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
+       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       variables to set default values for the first page.
      -
      -
 
