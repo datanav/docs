@@ -192,6 +192,57 @@ Properties
      - ``"accept"``
      -
 
+   * - ``trace``
+     - Boolean or Object
+     - This can be set to ``true`` to log the http requests and responses the REST source sends and receives. This
+       information will be added to a "trace" property in the ``pump-completed`` and  ``pump-failed`` events in
+       the pipe execution log.
+       By default the http headers and the first few bytes of the body is logged. If you need more fine-grained
+       control of the logging, you can set ``trace`` to be an object and set the various ``trace.log_*``
+       sub-properties (see below for a description of each sub-property).
+     - ``false``
+     - No
+
+   * - ``trace.log_request_headers``
+     - Boolean
+     - If the ``trace`` property is an object this sub-property specifies if the request headers will
+       be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - ``true``
+     - No
+
+   * - ``trace.log_request_body_maxsize``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the request body should be
+       logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - 100
+     - No
+
+   * - ``trace.log_response_headers``
+     - Boolean
+     - If the ``trace`` property is an object this sub-property specifies if the response headers will
+       be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - ``true``
+     - No
+
+   * - ``trace.log_response_body_maxsize``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of the response body should be
+       logged in the ``pump-completed``/``pump-completed`` events in the execution-log.
+     - 100
+     - No
+
+   * - ``trace.log_secret_redacted_bytes``
+     - Integer
+     - If the ``trace`` property is an object this property specifies how many bytes of each ``$SECRET`` will
+       be redacted in the ``pump-completed``/``pump-completed`` events in the execution-log. The
+       purpose of this setting is to redact enough of the secrets to render them safe to log, but to
+       potentially leave some of the sectret for debugging purposes.
+       A value of ``-1`` means to redact all bytes of the secrets. Note that the redaction is only a best-effort
+       attempt to prevent secrets from ending up in the logs, there may be cases where secrets leak through in any
+       case, so it is best to always check that what ends up being logged looks ok.
+     - 600
+     - No
+
 
 Continuation support
 ^^^^^^^^^^^^^^^^^^^^
