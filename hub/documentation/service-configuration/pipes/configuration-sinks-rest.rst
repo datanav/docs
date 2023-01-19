@@ -72,7 +72,7 @@ Properties
        the ``payload`` exists in the entity, then the one in the entity will take
        precedence over any ``payload`` defined on sink or system operation (in that order).
        This property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named
-       variables ``properties``, ``url``, ``request_params`` and ``headers`` available to the template.
+       variables ``properties``, ``url``, ``request_params``, ``entity`` and ``headers`` available to the template.
      -
      -
 
