@@ -6,7 +6,7 @@ Changelog
 
 2023-01-18
 ----------
-* Added "entity" and "source_entity" as bound parameters various Jinja templateable properties in the :ref:`REST system <rest_system>`, :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>` and :ref:`REST sink <rest_sink>`.
+* Added "entity" and "source_entity" as bound parameters in various Jinja templateable properties in the :ref:`REST system <rest_system>`, :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>` and :ref:`REST sink <rest_sink>`.
 
 
 .. _changelog_2023_01_17:

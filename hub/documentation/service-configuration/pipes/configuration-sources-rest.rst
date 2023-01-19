@@ -143,7 +143,7 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties``, ``since``, ``entity`` and ``headers``. If the operation supports paging
-       then ``previous_body`` and ``previous_headers`` are available for allvpage requests except the first. Tip: use
+       then ``previous_body`` and ``previous_headers`` are available for all page requests except the first. Tip: use
        Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables
        to set default values for the first page.
      -

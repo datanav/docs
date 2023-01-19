@@ -163,7 +163,7 @@ Properties
        the ``payload`` exists in the entity, then the one in the entity will take
        precedence over any ``payload`` defined on transform or system operation (in that order). This property
        supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
-       ``properties``, ``url``, ``request_params``, ``entity``, ``source_entity`` and ``headers`` available to the template.
+       ``properties``, ``url``, ``request_params``, ``entity`` and ``headers`` available to the template.
        If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests
        except the first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests
        for these variables to set default values for the first page.
