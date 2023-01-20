@@ -9,6 +9,7 @@ Changelog
 * Added a new ``trace`` property on the :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>` and :ref:`REST sink <rest_sink>`.
   It can be used to log the http requests and responses these components sends and receives, which can be useful during development or debugging.
 * Renamed the ``trace.log_authorization_header_redacted_bytes`` property of the :ref:`HTTP endpoint source <http_endpoint_source>` to ``trace.log_secret_redacted_bytes``.
+* Added docs on how to enable trace in the :ref:`Preview panel in Management studio <management-studio-pipes-preview>`.
 
 .. _changelog_2023_01_18:
 

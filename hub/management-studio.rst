@@ -280,10 +280,35 @@ Clicking the **Schema** panel shows the pipe schema on the right-hand side of th
     :align: center
     :alt: Schema
 
+.. _management-studio-pipes-preview:
+
 Preview (Ctrl+Enter) panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO
+Clicking the **Preview** panel shows a preview of how an entity will look after passing through the pipe.
+
+.. image:: images/new-pipe-preview.png
+    :width: 800px
+    :align: center
+    :alt: Preview
+
+The top right panel shows the source entity that is being used in the preview. The inital value for this entity is
+picked from the pipe's source if the source-type allows it, otherwise a small sample entity is generated. You can
+manually modify the source-entity and press Ctrl+Enter to preview the resulting output-entity.
+
+If your pipe has a :ref:`REST transform <rest_transform>` or a :ref:`REST sink <rest_sink>` you can get ``trace``
+information about which http requests and responses the REST components sends and receives. This is enabled by
+adding a ``"_trace": true`` property to the source entity and pressing Ctrl+Enter. The example below shows how this
+can look for a pipe with a rest-transform that gets a 404 "Not Found" response from the service it tries to talk to.
+
+
+.. image:: images/new-pipe-preview-with-trace.png
+    :width: 800px
+    :align: center
+    :alt: Preview
+
+
+
 
 Analyse panel
 ~~~~~~~~~~~~~
