@@ -331,6 +331,7 @@ Classification and grouping used as controlled vocabularies.
    * - has_sorting
      - `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - entries are sorted by this in the appendix, list or table
+
 Systems
 -------
 Sesam Talk can read and write data for several common cloud services.
