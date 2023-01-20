@@ -20,7 +20,6 @@ Asset model
 Items or resources, such as valubales, machinery, or real estate
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -131,7 +130,6 @@ Classification model
 Classification and grouping used as controlled vocabularies.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -202,7 +200,6 @@ Agreement model
 An agreement such as orders, invoices, that is intended to be enforceable by law
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -369,7 +366,6 @@ Documentation model
 A permanent record of information in written, photographic, or other form.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -448,7 +444,6 @@ Event model
 Something that occurs in a certain place during a particular interval of time.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -535,7 +530,6 @@ Location model
 A position, place or site that something is in or where something happens.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -618,7 +612,6 @@ Organisation model
 Any type of group or association of individuals who are joined together either formally or legally.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -749,7 +742,6 @@ Person model
 A human being, regardless of role.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -864,7 +856,6 @@ Product model
 A product is the item offered for sale. A product can be a service or an item.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -983,7 +974,6 @@ Task model
 A piece of work to be done.
 
 .. list-table::
-     :header-rows: 1
 
    * - Property
      - Wikidata identifier
@@ -1078,14 +1068,12 @@ A piece of work to be done.
      - `P8004 <https://www.wikidata.org/wiki/Property:P8004>`_
      - subject that ordered the act
 
->>>>>>> ca9da0c6f85853a844a06585adac1b935ee9159b
 Systems
 -------
 Sesam Talk can read and write data for several common cloud services.
 
 
 .. list-table::
-   :header-rows: 1
 
    * - System
      - Type of system
@@ -1112,8 +1100,7 @@ Enhancement systems
 Sesam Talk has support for systems that enhances your data.
 
 .. list-table::
-   :header-rows: 1
-
+  
    * - System
      - Organisation
      - Person
@@ -1127,7 +1114,6 @@ Analytic systems
 Sesam Talk can write and keep all your data up-to-date in your analytic solution.
 
 .. list-table::
-   :header-rows: 1
 
    * - System
      - Organisation
