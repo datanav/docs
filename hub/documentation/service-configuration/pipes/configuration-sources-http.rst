@@ -119,7 +119,7 @@ Properties
      - ``true``
      - No
 
-   * - ``trace.log_authorization_header_redacted_bytes``
+   * - ``trace.log_secret_redacted_bytes``
      - Integer
      - If the ``trace`` property is an object this property specifies how many bytes of the ``Authorization`` request
        header that should be redacted in the ``pump-completed``/``pump-completed`` events in the execution-log. The
