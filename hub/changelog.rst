@@ -1,6 +1,11 @@
 Changelog
 =========
 
+.. _changelog_2023_01_20:
+
+2023-01-20
+----------
+* Added a special Jinja template marker string ``"sesam:markskip"`` that can be used to conditionally drop properties from the ``payload``, ``params`` and ``headers`` operation objects in the :ref:`REST system <rest_system>` (and any local variants).
 
 .. _changelog_2023_01_18:
 

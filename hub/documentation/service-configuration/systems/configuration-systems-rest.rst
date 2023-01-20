@@ -368,6 +368,39 @@ A operation configuration looks like:
      - 1
      -
 
+Notes on Jinja templates
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``payload``,  ``headers`` and ``params`` operation configuration properties are objects where the properties can be
+templated using Jinja (both the key and the values) with various dynamically bound parameters. This makes it possible to construct
+these request parameters dynamically. You can also control whether a particular property is included in the final
+object by injecting a special marker constant ``"sesam:markskip"`` using conditional logic. If this marker is present in the
+rendered template, then the property is omitted from its parent object. Note that you can use this marker in both keys and values.
+
+An example:
+
+
+::
+
+    {
+        "_id": "our-rest-service",
+        "name": "Our REST service",
+        "url_pattern": "http://our.domain.com/api/%s",
+        "type": "system:rest",
+        "operations": {
+            "post-operation": {
+                "url" : "{{ properties.url }}/some-path",
+                "method": "POST",
+                "payload-type": "json",
+                "payload": {
+                   "key": "value",
+                   "conditional_key": "{% if entity.conditional_property is defined %}{{ entity.conditional_property }}{% else %}sesam:markskip{% endif %}",
+                   "some_other_key{% if entity.other_conditional_property is not defined %}sesam:markskip{% endif %}": "other_value"
+                }
+            }
+        ..
+
+
 .. _rest_system_example:
 
 Example configuration
