@@ -371,6 +371,7 @@ A operation configuration looks like:
 Notes on Jinja templates
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+(experimental)
 The ``payload``,  ``headers`` and ``params`` operation configuration properties are objects where the properties can be
 templated using Jinja (both the key and the values) with various dynamically bound parameters. This makes it possible to construct
 these request parameters dynamically. You can also control whether a particular property is included in the final
