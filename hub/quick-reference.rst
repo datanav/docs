@@ -161,7 +161,10 @@ DTL Expression Functions
        :ref:`items <items_dtl_function>` ·
        :ref:`key-values <key_values_dtl_function>` ·
        :ref:`keys <keys_dtl_function>` ·
-       :ref:`values <values_dtl_function>`
+       :ref:`values <values_dtl_function>` ·
+       :ref:`path <path_dtl_function>` ·
+       :ref:`apply <apply_dtl_function>` ·
+       :ref:`apply-hops <apply_hops_dtl_function>`
 
    * - Encryption
      - :ref:`decrypt <decrypt_dtl_function>` ·
@@ -247,10 +250,6 @@ DTL Expression Functions
        :ref:`ni-id <ni_id_dtl_function>` ·
        :ref:`ni-ns <ni_ns_dtl_function>`
 
-   * - Nested transformations
-     - :ref:`apply <apply_dtl_function>` ·
-       :ref:`apply-hops <apply_hops_dtl_function>`
-
    * - Nulls
      - :ref:`coalesce <coalesce_dtl_function>` ·
        :ref:`if-null <if_null_dtl_function>` ·
@@ -265,9 +264,6 @@ DTL Expression Functions
        :ref:`is-decimal <is_decimal_dtl_function>` ·
        :ref:`is-float <is_float_dtl_function>` ·
        :ref:`is-integer <is_integer_dtl_function>`
-
-   * - Paths
-     - :ref:`path <path_dtl_function>`
 
    * - Sets
      - :ref:`difference <difference_dtl_function>` ·
@@ -321,5 +317,5 @@ Entity model
 
    * - Special fields
      - :ref:`$children <dollar_children>` ·
-       :ref:`$ids <dollar_ids_field>` ·       
+       :ref:`$ids <dollar_ids_field>` ·
        :ref:`$replaced <dollar_replaced>`
