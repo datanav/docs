@@ -285,15 +285,15 @@ Classification and grouping used as controlled vocabularies.
      - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
 
    * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_.`P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
      - 
 
    * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_.`P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
      - category is related to this item
 
    * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_.`P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - entries are sorted by this in the appendix, list or table
 
    * - created
@@ -321,7 +321,7 @@ Classification and grouping used as controlled vocabularies.
      - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
 
    * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_.`P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
      - 
 
    * - updated
@@ -331,7 +331,6 @@ Classification and grouping used as controlled vocabularies.
    * - has_sorting
      - `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - entries are sorted by this in the appendix, list or table
-
 Systems
 -------
 Sesam Talk can read and write data for several common cloud services.
