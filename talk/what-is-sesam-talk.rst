@@ -125,6 +125,7 @@ Items or resources, such as valubales, machinery, or real estate
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Classification model
 --------------------
 Classification and grouping used as controlled vocabularies.
@@ -195,6 +196,7 @@ Classification and grouping used as controlled vocabularies.
    * - has_sorting
      - `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the classification
+
 Agreement model
 ---------------
 An agreement such as orders, invoices, that is intended to be enforceable by law
@@ -230,7 +232,7 @@ An agreement such as orders, invoices, that is intended to be enforceable by law
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_
      - Product lines
 
-   * - has_products. point_in_ time
+   * - has_products. point_in_time
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P585 <https://www.wikidata.org/wiki/Property:P585>`_
      - A point in time
 
@@ -357,6 +359,7 @@ An agreement such as orders, invoices, that is intended to be enforceable by law
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Documentation model
 -------------------
 A permanent record of information in written, photographic, or other form.
@@ -435,6 +438,7 @@ A permanent record of information in written, photographic, or other form.
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Event model
 -----------
 Something that occurs in a certain place during a particular interval of time.
@@ -521,6 +525,7 @@ Something that occurs in a certain place during a particular interval of time.
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Location model
 --------------
 A position, place or site that something is in or where something happens.
@@ -611,6 +616,7 @@ A position, place or site that something is in or where something happens.
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Organisation model
 ------------------
 Any type of group or association of individuals who are joined together either formally or legally.
@@ -741,6 +747,7 @@ Any type of group or association of individuals who are joined together either f
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Person model
 ------------
 A human being, regardless of role.
@@ -855,6 +862,7 @@ A human being, regardless of role.
    * - reports_to
      - `P10645 <https://www.wikidata.org/wiki/Property:P10645>`_
      - The subject position reports to this position
+
 Product model
 -------------
 A product is the item offered for sale. A product can be a service or an item.
@@ -973,6 +981,7 @@ A product is the item offered for sale. A product can be a service or an item.
    * - related_category. has_sorting
      - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
      - The index used to sort the category
+
 Task model
 ----------
 A piece of work to be done.
