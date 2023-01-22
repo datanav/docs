@@ -9,7 +9,7 @@ Sesam Talk synchronizes a limited set of core types with a limited set of proper
 Sesam Talk merges data from the different systems on certain criteria. People are merged if they have the same email, organisations are merged if they have the exact same name.
 
 .. Important::
-  Sesam talk is currently in Beta. Use it at your own risk.
+  Sesam talk is currently in Beta. Use with caution.
 
 .. image:: images/dashboard-sesam-talk.jpg
   :width: 100%
@@ -23,28 +23,28 @@ Items or resources, such as valubales, machinery, or real estate
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - arranged_by
      - `P88 <https://www.wikidata.org/wiki/Property:P88>`_
-     - person or organization that commissioned this work
+     - Person or organization that commissioned  the asset
 
    * - maintained_by
      - `P126 <https://www.wikidata.org/wiki/Property:P126>`_
-     - person or organization in charge of keeping the subject (for instance an infrastructure) in functioning order
+     - Person or organization in charge of keeping the asset in functioning order
 
    * - owned_by
      - `P127 <https://www.wikidata.org/wiki/Property:P127>`_
-     - owner of the subject
+     - Owner of the asset
 
    * - operator
      - `P137 <https://www.wikidata.org/wiki/Property:P137>`_
-     - person, profession, or organization that operates the equipment, facility, or service
+     - Person, profession, or organization that operates the asset
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -52,79 +52,79 @@ Items or resources, such as valubales, machinery, or real estate
 
    * - manufacturer
      - `P176 <https://www.wikidata.org/wiki/Property:P176>`_
-     - manufacturer or producer of this product
+     - Manufacturer or producer of this asset
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - location
      - `P276 <https://www.wikidata.org/wiki/Property:P276>`_
-     - location of the object, structure or event. In the case of an administrative entity as containing item use P131. For statistical entities use P8138. In the case of a geographic entity use P706. Use P7153 for locations associated with the object.
+     - Location of the asset
 
    * - part_of
      - `P361 <https://www.wikidata.org/wiki/Property:P361>`_
-     - object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670)).
-
-   * - part_of.instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - part_of.related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - part_of.has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - Parrent asset
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - service_entry
      - `P729 <https://www.wikidata.org/wiki/Property:P729>`_
-     - date or point in time on which a piece or class of equipment entered operational service
+     - Date or point in time on which the asset entered operational service
 
    * - end_of_service
      - `P730 <https://www.wikidata.org/wiki/Property:P730>`_
-     - date or point in time on which a piece or class of equipment was retired of pulled out from operational service
+     - Date or point in time on the asset was retired of pulled out from operational service
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the asset
 
    * - described_by_source
      - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_
-     - work where this item is described
+     - Document where this asset is described
 
-   * - described_by_source.instance_of
-     - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - described_by_source. reference_type
+     - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - Type of documentation
 
    * - replaced_by
      - `P1366 <https://www.wikidata.org/wiki/Property:P1366>`_
-     - other person or item which continues the item by replacing it in its role. Use P156 (\"followed by\") if the item is not replaced nor identical, but adds to the series (e.g. books in a series).
+     - The asset that has replaced this asset
 
    * - total_equity
      - `P2137 <https://www.wikidata.org/wiki/Property:P2137>`_
-     - amount of equity value for an entity
+     - Amount of equity value for this asset
 
    * - serial_number
      - `P2598 <https://www.wikidata.org/wiki/Property:P2598>`_
-     - an identifier for a specific object among the same product. Not a product code or model number
+     - An identifier for the asset
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Classification model
 --------------------
@@ -134,12 +134,12 @@ Classification and grouping used as controlled vocabularies.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -147,55 +147,55 @@ Classification and grouping used as controlled vocabularies.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
-
-   * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The source of the entity statement
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the classification
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work, such as a newspaper article, a literary work, piece of music, a website, or a performance work
+     - The name of the classification
 
    * - url
      - `P2699 <https://www.wikidata.org/wiki/Property:P2699>`_
-     - location of a resource
+     - URL for the classification
 
    * - code
      - `P3295 <https://www.wikidata.org/wiki/Property:P3295>`_
-     - code used to represent a specific concept in a given encoding
+     - Code used to represent the classification
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
    * - has_sorting
      - `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the classification
 
 Agreement model
 ---------------
@@ -205,28 +205,16 @@ An agreement such as orders, invoices, that is intended to be enforceable by law
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
-
-   * - invoice
-     - `Q190581 <https://www.wikidata.org/wiki/Property:Q190581>`_
-     - commercial document issued by a seller to a buyer, relating to a sale transaction and indicating the products, quantities, and agreed prices for products or services the seller has provided the buyer
-
-   * - email_address.instance_of
-     - `(P968) <https://www.wikidata.org/wiki/Property:(P968)>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - email_address
-     - `(P968) <https://www.wikidata.org/wiki/Property:(P968)>`_
-     - email address, prefixed with mailto:
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - currency
      - `P38 <https://www.wikidata.org/wiki/Property:P38>`_
-     - currency used by item
+     - Currency used by item
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -234,135 +222,143 @@ An agreement such as orders, invoices, that is intended to be enforceable by law
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - part_of
      - `P361 <https://www.wikidata.org/wiki/Property:P361>`_
-     - object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670)).
+     - Part of agreement
 
-   * - part_of.instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - part_of.related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - part_of.has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
-
-   * - details
+   * - has_products
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_
-     - part of this subject; inverse property of \"part of\" (P361). See also \"has parts of the class\" (P2670).
+     - Product lines
 
-   * - details.instance_of
-     - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - details.point_in_time
+   * - has_products. point_in_time
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P585 <https://www.wikidata.org/wiki/Property:P585>`_
-     - Done at this time
+     - A point in time
 
-   * - details.instance_of
+   * - has_products. reference_type
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P585 <https://www.wikidata.org/wiki/Property:P585>`_
-     - 
+     - The type of the point in time
 
-   * - details.quantity
+   * - has_products. quantity
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P1114 <https://www.wikidata.org/wiki/Property:P1114>`_
      - A specified number or amount
 
-   * - details.title
+   * - has_products. title
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
      - A heading
 
-   * - details.duration
+   * - has_products. duration
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P2047 <https://www.wikidata.org/wiki/Property:P2047>`_
-     - A specified period of time something lasts
+     - The period for the product line
 
-   * - details.price
+   * - has_products. price
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P2284 <https://www.wikidata.org/wiki/Property:P2284>`_
-     - The cost of an object or service
+     - The cost of the product
 
-   * - details.vat
+   * - has_products. vat
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P2855 <https://www.wikidata.org/wiki/Property:P2855>`_
      - Precentage of value added tax
 
-   * - details.unit_symbol
+   * - has_products. reference_type
+     - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the product line
+
+   * - has_products. unit_symbol
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P5061 <https://www.wikidata.org/wiki/Property:P5061>`_
-     - 
+     - Identifier of the unit
 
-   * - details.discount
+   * - has_products. discount
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P7079 <https://www.wikidata.org/wiki/Property:P7079>`_
-     - reduction in the size of something, or the process of becoming smaller, typically when a material return to room temperature after heating
+     - The discount for the product line
 
-   * - details.ordered_by
+   * - has_products. ordered_by
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P8004 <https://www.wikidata.org/wiki/Property:P8004>`_
-     - 
+     - The subject that ordered the product line
 
-   * - details.has_sorting
+   * - has_products. has_sorting
      - `P527 <https://www.wikidata.org/wiki/Property:P527>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the product line
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - point_in_time
      - `P585 <https://www.wikidata.org/wiki/Property:P585>`_
-     - time and date something took place, existed or a statement was true
+     - A point in time
 
-   * - point_in_time.instance_of
-     - `P585 <https://www.wikidata.org/wiki/Property:P585>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - point_in_time. reference_type
+     - `P585 <https://www.wikidata.org/wiki/Property:P585>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the point in time
 
    * - participant
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_
-     - person, group of people or organization (object) that actively takes/took part in an event or process (subject). Preferably qualify with \"object has role\" (P3831). Use P1923 for participants that are teams.
+     - Person that actively takes/took part
 
-   * - participant.object_has_role
+   * - participant. object_has_role
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - 
+     - The role of the participant
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the agreement
+
+   * - email_address
+     - `P968 <https://www.wikidata.org/wiki/Property:P968>`_
+     - Email address
+
+   * - email_address. reference_type
+     - `P968 <https://www.wikidata.org/wiki/Property:P968>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - Type of email address
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work, such as a newspaper article, a literary work, piece of music, a website, or a performance work
+     - The title of the agreement
 
    * - duration
      - `P2047 <https://www.wikidata.org/wiki/Property:P2047>`_
-     - length of time of an event or process
+     - Length of time of an event or process
 
    * - price
      - `P2284 <https://www.wikidata.org/wiki/Property:P2284>`_
-     - published price listed or paid for a product (use with unit of currency)
+     - The agreeed price
 
    * - url
      - `P2699 <https://www.wikidata.org/wiki/Property:P2699>`_
-     - location of a resource
+     - Location of a resource
 
    * - vat
      - `P2855 <https://www.wikidata.org/wiki/Property:P2855>`_
-     - percentage value-added tax in this country or region. Do not use for sales tax. For specialised rates, use qualifiers
+     - Percentage value-added tax
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
 
    * - discount
      - `P7079 <https://www.wikidata.org/wiki/Property:P7079>`_
-     - reduction in the size of something, or the process of becoming smaller, typically when a material return to room temperature after heating
+     - The discount for the agreement
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Documentation model
 -------------------
@@ -372,16 +368,16 @@ A permanent record of information in written, photographic, or other form.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - owned_by
      - `P127 <https://www.wikidata.org/wiki/Property:P127>`_
-     - owner of the subject
+     - Owner of the document
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -389,59 +385,59 @@ A permanent record of information in written, photographic, or other form.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - part_of
      - `P361 <https://www.wikidata.org/wiki/Property:P361>`_
-     - object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670)).
-
-   * - part_of.instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - part_of.related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - part_of.has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - Parrent document
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work, such as a newspaper article, a literary work, piece of music, a website, or a performance work
+     - Title of document
 
    * - subtitle
      - `P1680 <https://www.wikidata.org/wiki/Property:P1680>`_
-     - A secondary or subordinate title
+     - Subtitle of document
 
    * - url
      - `P2699 <https://www.wikidata.org/wiki/Property:P2699>`_
-     - A URL is the address of a given unique resource on the Web
+     - URL for the document
 
    * - file_format
      - `P2701 <https://www.wikidata.org/wiki/Property:P2701>`_
-     - file format, compression type, or ontology used in a file
+     - File format
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
 
    * - modified_version_of
      - `P5059 <https://www.wikidata.org/wiki/Property:P5059>`_
-     - indicates the work or one of its versions which served as a basis for the adaptation or arrangement resulting in the given version of the work
+     - The previous version of this document
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Event model
 -----------
@@ -451,12 +447,12 @@ Something that occurs in a certain place during a particular interval of time.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -464,71 +460,71 @@ Something that occurs in a certain place during a particular interval of time.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - location
      - `P276 <https://www.wikidata.org/wiki/Property:P276>`_
-     - Location of an object
-
-   * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - Location of the occurrence
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - start_time
      - `P580 <https://www.wikidata.org/wiki/Property:P580>`_
-     - time a time period starts
+     - Time the occurrence starts
 
    * - end_time
      - `P582 <https://www.wikidata.org/wiki/Property:P582>`_
-     - time a time period ends
+     - Time the occurrence ends
 
    * - point_in_time
      - `P585 <https://www.wikidata.org/wiki/Property:P585>`_
-     - time and date something took place, existed or a statement was true
+     - Time and date the occurrence took place
 
    * - participant
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_
-     - person, group of people or organization (object) that actively takes/took part in an event or process (subject). Preferably qualify with \"object has role\" (P3831). Use P1923 for participants that are teams.
+     - Person, group of people or organization takes/took part in the occurrence
 
-   * - participant.object_has_role
+   * - participant. object_has_role
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - 
+     - The role of the participant
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the occurrence 
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work
+     - Published name of a work
 
    * - duration
      - `P2047 <https://www.wikidata.org/wiki/Property:P2047>`_
-     - length of time of an event or process
+     - Length of time of the occurrence
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Location model
 --------------
@@ -538,20 +534,28 @@ A position, place or site that something is in or where something happens.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
+
+   * - territorial_entity. reference_type
+     - `P131 <https://www.wikidata.org/wiki/Property:P131>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - Type of teritorial entity
+
+   * - territorial_entity. territorial_type
+     - `P131 <https://www.wikidata.org/wiki/Property:P131>`_. `P132 <https://www.wikidata.org/wiki/Property:P132>`_
+     - Type of teritorial entity
 
    * - country
      - `P17 <https://www.wikidata.org/wiki/Property:P17>`_
-     - sovereign state of this item (not to be used for human beings)
+     - Country for this location
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
-   * - located_in_the_administrative_territorial_entity
+   * - territorial_entity
      - `P131 <https://www.wikidata.org/wiki/Property:P131>`_
-     - the item is located on the territory of the following administrative entity. Use P276 for specifying locations that are non-administrative places and for items about events. Use P1382 if the item falls only partially into the administrative entity.
+     - Located in the following teritorial entity
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -559,59 +563,59 @@ A position, place or site that something is in or where something happens.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - postal_code
      - `P281 <https://www.wikidata.org/wiki/Property:P281>`_
-     - identifier assigned by postal authorities 
-
-   * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - Identifier assigned by postal authorities 
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - coordinate_location
      - `P625 <https://www.wikidata.org/wiki/Property:P625>`_
-     - geocoordinates of the subject. For Earth, please note that only WGS84 coordinating system is supported at the moment
+     - Geocoordinates of the location in the WGS84 coordinating system
 
    * - addressee
      - `P1817 <https://www.wikidata.org/wiki/Property:P1817>`_
-     - person or organization to whom a letter or note is addressed
+     - Person or organization to whom a location is connected
 
    * - post_town
      - `P4595 <https://www.wikidata.org/wiki/Property:P4595>`_
-     - town/city part of the postal address, can be different from administrative location
+     - Town/city part of the postal address
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
 
    * - street_address
      - `P6375 <https://www.wikidata.org/wiki/Property:P6375>`_
-     - full street address where subject is located. Include building number, city/locality, post code, but not country; use also P669 if the street has its own separate item
+     - Street address line for the location. Include building number or PO box.
 
-   * - street_address.has_sorting
+   * - street_address. has_sorting
      - `P6375 <https://www.wikidata.org/wiki/Property:P6375>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the street address
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Organisation model
 ------------------
@@ -621,16 +625,16 @@ Any type of group or association of individuals who are joined together either f
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - chief_executive_officer
      - `P169 <https://www.wikidata.org/wiki/Property:P169>`_
-     - highest-ranking corporate officer appointed as the CEO within an organization
+     - Highest-ranking corporate officer appointed as the CEO within an organization
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -638,111 +642,111 @@ Any type of group or association of individuals who are joined together either f
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - ticker_symbol
      - `P249 <https://www.wikidata.org/wiki/Property:P249>`_
-     - identifier for a publicly traded share of a particular stock on a particular stock market or that of a cryptocurrency
+     - Identifier for a publicly traded share of a particular stock on a particular stock market or that of a cryptocurrency
 
    * - location
      - `P276 <https://www.wikidata.org/wiki/Property:P276>`_
-     - location of the object, structure or event. In the case of an administrative entity as containing item use P131. For statistical entities use P8138. In the case of a geographic entity use P706. Use P7153 for locations associated with the object.
+     - Location of the organization
 
    * - part_of
      - `P361 <https://www.wikidata.org/wiki/Property:P361>`_
-     - object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670)).
-
-   * - part_of.instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - part_of.related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - part_of.has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - Parrent organization
 
    * - industry
      - `P452 <https://www.wikidata.org/wiki/Property:P452>`_
-     - specific industry of company or organization
+     - Specific industry of company or organization
 
-   * - industry.instance_of
-     - `P452 <https://www.wikidata.org/wiki/Property:P452>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - industry. reference_type
+     - `P452 <https://www.wikidata.org/wiki/Property:P452>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of industry classification
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - official_website
      - `P856 <https://www.wikidata.org/wiki/Property:P856>`_
-     -  A group of World Wide Web pages usually containing links to each other and made available online by an individual, company, or organization
+     - Primary website og the organization
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the organization 
 
    * - email_address
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_
-     - An email address identifies an email box to which messages are delivered. 
+     - An email address
 
-   * - email_address.object_has_role
+   * - email_address. object_has_role
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - (qualifier) role or generic identity of the value of a statement (\"object\") in the context of that statement; for the role of the item the statement is on (\"subject\"), use P2868
+     - The role of the email address
 
-   * - email_address.has_sorting
+   * - email_address. has_sorting
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the email address
 
    * - employees
      - `P1128 <https://www.wikidata.org/wiki/Property:P1128>`_
-     - total number of employees of a company at a given \"point in time\" (P585). Most recent data would generally have preferred rank; data for previous years normal rank (not deprecated rank). Add data for recent years, don't overwrite
+     - Numer of employees in the organization 
 
    * - phone_number
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_
-     - telephone number in standard format (RFC3966), without 'tel:' prefix
+     - Telephone number
 
-   * - phone_number.object_has_role
+   * - phone_number. object_has_role
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - (qualifier) role or generic identity of the value of a statement (\"object\") in the context of that statement; for the role of the item the statement is on (\"subject\"), use P2868
+     - The role of the phone number
 
-   * - phone_number.has_sorting
+   * - phone_number. has_sorting
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the phone number
 
    * - official_name
      - `P1448 <https://www.wikidata.org/wiki/Property:P1448>`_
-     - official name of the subject in its official language(s)
+     - Official name of the organization 
 
    * - total_revenue
      - `P2139 <https://www.wikidata.org/wiki/Property:P2139>`_
-     - income gained by an organization during a given time frame. Not to be confused with fiscal revenue
+     - Income gained by an organization during a given time frame. Not to be confused with fiscal revenue
 
    * - fax_number
      - `P2900 <https://www.wikidata.org/wiki/Property:P2900>`_
-     - telephone number of a facsimile line
+     - Telephone number of a fax line
 
-   * - fax_number.object_has_role
+   * - fax_number. object_has_role
      - `P2900 <https://www.wikidata.org/wiki/Property:P2900>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - (qualifier) role or generic identity of the value of a statement (\"object\") in the context of that statement; for the role of the item the statement is on (\"subject\"), use P2868
+     - The role of the fax number
 
-   * - fax_number.has_sorting
+   * - fax_number. has_sorting
      - `P2900 <https://www.wikidata.org/wiki/Property:P2900>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the fax number
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Person model
 ------------
@@ -752,20 +756,20 @@ A human being, regardless of role.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - employer
      - `P108 <https://www.wikidata.org/wiki/Property:P108>`_
-     - person or organization for which the subject works or worked
+     - Organization for which the person works or worked
 
-   * - employer.job_title
+   * - employer. job_title
      - `P108 <https://www.wikidata.org/wiki/Property:P108>`_. `P39 <https://www.wikidata.org/wiki/Property:P39>`_
-     - A subjects role in an organisation
+     - A persons role at the employer
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -773,59 +777,47 @@ A human being, regardless of role.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
-
-   * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The source of the entity statement
 
    * - date_of_birth
      - `P569 <https://www.wikidata.org/wiki/Property:P569>`_
-     - date on which the subject was born
+     - Date on which the person was born
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - last_name
      - `P734 <https://www.wikidata.org/wiki/Property:P734>`_
-     - part of full name of person
+     - Lest name of person
 
    * - first_name
      - `P735 <https://www.wikidata.org/wiki/Property:P735>`_
-     - first name or another given name of this person; values used with the property should not link disambiguations nor family names
+     - First name or another given name of this person
 
    * - email_address
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_
-     - email address, prefixed with mailto:
+     - Email address
 
-   * - email_address.object_has_role
+   * - email_address. object_has_role
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - (qualifier) role or generic identity of the value of a statement (\"object\") in the context of that statement; for the role of the item the statement is on (\"subject\"), use P2868
+     - The role of the email address
 
-   * - email_address.has_sorting
+   * - email_address. has_sorting
      - `P968 <https://www.wikidata.org/wiki/Property:P968>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the email address
 
    * - phone_number
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_
-     - telephone number in standard format (RFC3966), without 'tel:' prefix
+     - Telephone number
 
-   * - phone_number.object_has_role
+   * - phone_number. object_has_role
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - (qualifier) role or generic identity of the value of a statement (\"object\") in the context of that statement; for the role of the item the statement is on (\"subject\"), use P2868
+     - The role of the phone number
 
-   * - phone_number.has_sorting
+   * - phone_number. has_sorting
      - `P1329 <https://www.wikidata.org/wiki/Property:P1329>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The index used to sort the phone number
 
    * - twitter_username
      - `P2002 <https://www.wikidata.org/wiki/Property:P2002>`_
@@ -833,31 +825,43 @@ A human being, regardless of role.
 
    * - faceboook_id
      - `P2013 <https://www.wikidata.org/wiki/Property:P2013>`_
-     - facebook username
+     - Facebook username
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
 
-   * - permanent_resident_of
+   * - resident_of
      - `P5389 <https://www.wikidata.org/wiki/Property:P5389>`_
-     - country or region where a person has the legal status of permanent resident
+     - Country  where a person is resident
 
-   * - linkedIn_personal_profile_id
+   * - linkedIn_id
      - `P6634 <https://www.wikidata.org/wiki/Property:P6634>`_
      - Linkedin username
 
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
+
    * - reports_to
      - `P10645 <https://www.wikidata.org/wiki/Property:P10645>`_
-     - the subject position reports to this position
+     - The subject position reports to this position
 
 Product model
 -------------
@@ -867,24 +871,24 @@ A product is the item offered for sale. A product can be a service or an item.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - image
      - `P18 <https://www.wikidata.org/wiki/Property:P18>`_
-     - image of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)
+     - Image of relevant illustration of the product
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - currency
      - `P38 <https://www.wikidata.org/wiki/Property:P38>`_
-     - currency used by item
+     - Currency used by the price of the product
 
    * - owned_by
      - `P127 <https://www.wikidata.org/wiki/Property:P127>`_
-     - owner of the subject
+     - Owner of the product
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -892,91 +896,91 @@ A product is the item offered for sale. A product can be a service or an item.
 
    * - manufacturer
      - `P176 <https://www.wikidata.org/wiki/Property:P176>`_
-     - manufacturer or producer of this product
+     - Manufacturer or producer of this product
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
-
-   * - instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
+     - The source of the entity statement
 
    * - country_of_origin
      - `P495 <https://www.wikidata.org/wiki/Property:P495>`_
-     - country of origin of this item (creative work, food, phrase, product, etc.)
+     - Country of origin of this product
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - description
      - `P921 <https://www.wikidata.org/wiki/Property:P921>`_
-     - Description of primary topic of a work (see also P180: depicts)
+     - Description of the product
 
    * - quantity
      - `P1114 <https://www.wikidata.org/wiki/Property:P1114>`_
-     - number of instances of this subject
+     - Number of products in stock
 
    * - described_by_source
      - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_
-     - work where this item is described
+     - Document where the product is described
 
-   * - described_by_source.instance_of
-     - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - described_by_source. reference_type
+     - `P1343 <https://www.wikidata.org/wiki/Property:P1343>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - Type of description
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work
+     - Title of the product
 
    * - price
      - `P2284 <https://www.wikidata.org/wiki/Property:P2284>`_
-     - published price listed or paid for a product (use with unit of currency)
+     - Published product price
 
    * - discontinued_date
      - `P2669 <https://www.wikidata.org/wiki/Property:P2669>`_
-     - date that the availability of a product was discontinued; see also \"dissolved, abolished or demolished\" (P576)
+     - Date that the availability of the product was discontinued
 
    * - url
      - `P2699 <https://www.wikidata.org/wiki/Property:P2699>`_
-     - A URL is the address of a given unique resource on the Web
+     - A URL to a product description
 
    * - vat
      - `P2855 <https://www.wikidata.org/wiki/Property:P2855>`_
-     - percentage value-added tax in this country or region. Do not use for sales tax. For specialised rates, use qualifiers
+     - Percentage value-added tax
 
    * - code
      - `P3295 <https://www.wikidata.org/wiki/Property:P3295>`_
-     - code used to represent a specific concept in a given encoding
+     - Code used to represent the product
 
-   * - global_trade_item_number
+   * - gtin
      - `P3962 <https://www.wikidata.org/wiki/Property:P3962>`_
      - GTIN (or EAN, UCC) is used to identify products via their barcodes
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
 
-   * - unit symbol
+   * - unit_symbol
      - `P5061 <https://www.wikidata.org/wiki/Property:P5061>`_
-     - abbreviation of a unit for each language; if not provided, then it should default to English
+     - Identifier of the unit
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
 Task model
 ----------
@@ -986,16 +990,16 @@ A piece of work to be done.
      :header-rows: 1
 
    * - Property
-     - Wikidata identifier
+     - Wikidata id
      - Description
 
    * - instance_of
      - `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - Data type - that class of which this subject is a particular example and member
+     - The type of the entity
 
    * - owned_by
      - `P127 <https://www.wikidata.org/wiki/Property:P127>`_
-     - owner of the subject
+     - Owner of the task
 
    * - creator
      - `P170 <https://www.wikidata.org/wiki/Property:P170>`_
@@ -1003,82 +1007,80 @@ A piece of work to be done.
 
    * - stated_in
      - `P248 <https://www.wikidata.org/wiki/Property:P248>`_
-     - to be used in the references field to refer to the information document or database in which a claim is made; for qualifiers use P805; for the type of document in which a claim is made use P3865
+     - The source of the entity statement
 
    * - location
      - `P276 <https://www.wikidata.org/wiki/Property:P276>`_
-     - location of the object, structure or event. In the case of an administrative entity as containing item use P131. For statistical entities use P8138. In the case of a geographic entity use P706. Use P7153 for locations associated with the object.
+     - Location of the task
 
    * - part_of
      - `P361 <https://www.wikidata.org/wiki/Property:P361>`_
-     - object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A). Inverse property of \"has part\" (P527, see also \"has parts of the class\" (P2670)).
-
-   * - part_of.instance_of
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
-
-   * - part_of.related_category
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
-     - category is related to this item
-
-   * - part_of.has_sorting
-     - `P361 <https://www.wikidata.org/wiki/Property:P361>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
-     - entries are sorted by this in the appendix, list or table
-
+     - Object of which the task is a part of
 
    * - created
      - `P571 <https://www.wikidata.org/wiki/Property:P571>`_
-     - time when an entity begins to exist; for date of official opening use P1619
+     - Time when an entity begins to exist
 
    * - participant
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_
-     - person, group of people or organization (object) that actively takes/took part in an event or process (subject). Preferably qualify with \"object has role\" (P3831). Use P1923 for participants that are teams.
+     - Person, or organization that actively takes/took part of the task
 
-   * - participant.instance_of
+   * - participant. instance_of
      - `P710 <https://www.wikidata.org/wiki/Property:P710>`_. `P3831 <https://www.wikidata.org/wiki/Property:P3831>`_
-     - object has role
+     - The type of the participant
 
    * - earliest_date
      - `P1319 <https://www.wikidata.org/wiki/Property:P1319>`_
-     - earliest date at which an event could have happened. Use as qualifier for other date properties
+     - Earliest date at which a task can happen
 
    * - latest_date
      - `P1326 <https://www.wikidata.org/wiki/Property:P1326>`_
-     - latest possible time that something could have occurred. Use as qualifier for other date properties
+     - Latest possible time that something can occurr
 
    * - title
      - `P1476 <https://www.wikidata.org/wiki/Property:P1476>`_
-     - published name of a work, such as a newspaper article, a literary work, piece of music, a website, or a performance work
+     - Task title
 
    * - duration
      - `P2047 <https://www.wikidata.org/wiki/Property:P2047>`_
-     - length of time of an event or process
+     - Length of time of the task
 
    * - intended_public
      - `P2360 <https://www.wikidata.org/wiki/Property:P2360>`_
-     - this work, product, object or event is intended for, or has been designed to that person or group of people, animals, plants, etc
+     - This task is tergeted for, or has been designed to that person or organization 
 
    * - budget
      - `P2769 <https://www.wikidata.org/wiki/Property:P2769>`_
-     - assigned monetary amount for a project (for the estimated cost of a film, also commonly referred to as budget, use P2130)
+     - Assigned monetary amount for the task
 
    * - unique_identifier
      - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_
-     - qualifier for subjects which may have different identities which are covered by different items, the identity to which the qualified statement applies
+     - Uniqe identifier used to merge entities with identical value and type
 
-   * - unique_identifier.instance_of
-     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
-     - 
+   * - unique_identifier. reference_type
+     - `P4649 <https://www.wikidata.org/wiki/Property:P4649>`_. `P3865 <https://www.wikidata.org/wiki/Property:P3865>`_
+     - The type of the identifier
 
    * - updated
      - `P5017 <https://www.wikidata.org/wiki/Property:P5017>`_
-     - date a reference was modified, revised, or updated
+     - Date a entity is modified
+
+   * - related_category
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_
+     - A related catagory for the entity
+
+   * - related_category. instance_of
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P31 <https://www.wikidata.org/wiki/Property:P31>`_
+     - The type of the category
+
+   * - related_category. has_sorting
+     - `P7084 <https://www.wikidata.org/wiki/Property:P7084>`_. `P8307 <https://www.wikidata.org/wiki/Property:P8307>`_
+     - The index used to sort the category
 
    * - orderd_by
      - `P8004 <https://www.wikidata.org/wiki/Property:P8004>`_
-     - subject that ordered the act
+     - Subject that ordered the task
 
->>>>>>> ca9da0c6f85853a844a06585adac1b935ee9159b
 Systems
 -------
 Sesam Talk can read and write data for several common cloud services.
