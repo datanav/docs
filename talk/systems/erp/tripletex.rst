@@ -1,4 +1,4 @@
-.. _tripletex:
+.. _talk_tripletex:
 
 Tripletex
 =========

@@ -1,4 +1,4 @@
-.. _opensesam:
+.. _talk_opensesam:
 
 Open Sesam
 ==========

@@ -1,4 +1,4 @@
-.. _bigquery:
+.. _talk_bigquery:
 
 Google Big Query
 ================

@@ -1,4 +1,4 @@
-.. _wave:
+.. _talk_wave:
 
 Wave
 ====

@@ -19,31 +19,31 @@ The following systems and types are currently mapped to the this datatype.
      - Read
      - Write
 
-   * - :ref:`Wave <wave>`
+   * - :ref:`Wave <talk_wave>`
      - :ref:`ERP <erp>`
      - Customer (embedded primary contact)
      - Yes
      - Yes
 
-   * - :ref:`Hubspot <hubspot>`
+   * - :ref:`Hubspot <talk_hubspot>`
      - :ref:`CRM <crm>`
      - Contact
      - Yes
      - Yes
 
-   * - :ref:`Hubspot <hubspot>`
+   * - :ref:`Hubspot <talk_hubspot>`
      - :ref:`CRM <crm>`
      - User
      - Yes
      - Yes
 
-   * - :ref:`Freshteam <freshteam>`
+   * - :ref:`Freshteam <talk_freshteam>`
      - :ref:`HRM <hrm>`
      - Employee
      - Yes
      - Yes
 
-   * - :ref:`Google Bigquery <bigquery>`
+   * - :ref:`Google Bigquery <talk_bigquery>`
      - :ref:`DBMS <dbms>`
      - Contact
      - No

@@ -1,4 +1,4 @@
-.. _freshteam:
+.. _talk_freshteam:
 
 Freshteam
 =========

@@ -19,31 +19,31 @@ The following systems and types are currently mapped to this datatype.
      - Read
      - Write
 
-   * - :ref:`Wave <wave>`
+   * - :ref:`Wave <talk_wave>`
      - :ref:`ERP <erp>`
      - Customer
      - Yes
      - Yes
 
-   * - :ref:`Hubspot <hubspot>`
+   * - :ref:`Hubspot <talk_hubspot>`
      - :ref:`CRM <crm>`
      - Company
      - Yes
      - Yes
 
-   * - :ref:`Tripletex <tripletex>`
+   * - :ref:`Tripletex <talk_tripletex>`
      - :ref:`ERP <erp>`
      - Customer
      - Yes
      - Yes
 
-   * - :ref:`Open Sesam <opensesam>`
+   * - :ref:`Open Sesam <talk_opensesam>`
      - :ref:`Open Data <opendata>`
      - Organisation
      - Yes
      - No
 
-   * - :ref:`Google Bigquery <bigquery>`
+   * - :ref:`Google Bigquery <talk_bigquery>`
      - :ref:`DBMS <dbms>`
      - Company
      - No
