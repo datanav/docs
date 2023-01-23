@@ -14,38 +14,38 @@ The following systems and types are currently mapped to the this datatype.
    :header-rows: 1
 
    * - System
-     - Type of system
      - System datatype
+     - Type of system
      - Read
      - Write
 
    * - :ref:`Wave <talk_wave>`
-     - :ref:`ERP <erp>`
      - Customer (embedded primary contact)
+     - :ref:`ERP <erp>`
      - Yes
      - Yes
 
    * - :ref:`Hubspot <talk_hubspot>`
-     - :ref:`CRM <crm>`
      - Contact
+     - :ref:`CRM <crm>`
      - Yes
      - Yes
 
    * - :ref:`Hubspot <talk_hubspot>`
-     - :ref:`CRM <crm>`
      - User
+     - :ref:`CRM <crm>`
      - Yes
      - Yes
 
    * - :ref:`Freshteam <talk_freshteam>`
-     - :ref:`HRM <hrm>`
      - Employee
+     - :ref:`HRM <hrm>`
      - Yes
      - Yes
 
    * - :ref:`Google Bigquery <talk_bigquery>`
-     - :ref:`DBMS <dbms>`
      - Contact
+     - :ref:`DBMS <dbms>`
      - No
      - Yes
 

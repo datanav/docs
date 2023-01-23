@@ -14,38 +14,38 @@ The following systems and types are currently mapped to this datatype.
    :header-rows: 1
 
    * - System
-     - Type of system
      - System datatype
+     - Type of system
      - Read
      - Write
 
    * - :ref:`Wave <talk_wave>`
-     - :ref:`ERP <erp>`
      - Customer
+     - :ref:`ERP <erp>`
      - Yes
      - Yes
 
    * - :ref:`Hubspot <talk_hubspot>`
-     - :ref:`CRM <crm>`
      - Company
+     - :ref:`CRM <crm>`
      - Yes
      - Yes
 
    * - :ref:`Tripletex <talk_tripletex>`
-     - :ref:`ERP <erp>`
      - Customer
+     - :ref:`ERP <erp>`
      - Yes
      - Yes
 
    * - :ref:`Open Sesam <talk_opensesam>`
-     - :ref:`Open Data <opendata>`
      - Organisation
+     - :ref:`Open Data <opendata>`
      - Yes
      - No
 
    * - :ref:`Google Bigquery <talk_bigquery>`
-     - :ref:`DBMS <dbms>`
      - Company
+     - :ref:`DBMS <dbms>`
      - No
      - Yes
 
