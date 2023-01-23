@@ -5,7 +5,7 @@ Changelog
 
 2023-01-23
 ----------
-* Added a special Jinja template marker string ``"sesam:markjson"`` that can be used to generate json objects (both objects, lists and single values)from strings in the ``payload``, ``params`` and ``headers`` operation objects in the :ref:`REST system <rest_system>` (and any local variants). This feature is considered experimental and may change or be removed.
+* Added a special Jinja template marker string ``"sesam:markjson"`` that can be used to generate json objects (both objects, lists and single values) from strings in the ``payload``, ``params`` and ``headers`` operation objects in the :ref:`REST system <rest_system>` (and any local variants). This feature is considered experimental and may change or be removed.
 
 .. _changelog_2023_01_20:
 
