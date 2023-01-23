@@ -20,7 +20,7 @@ Asset model
 Items or resources, such as valubales, machinery, or real estate
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -131,7 +131,7 @@ Classification model
 Classification and grouping used as controlled vocabularies.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -202,7 +202,7 @@ Agreement model
 An agreement such as orders, invoices, that is intended to be enforceable by law
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -365,7 +365,7 @@ Documentation model
 A permanent record of information in written, photographic, or other form.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -444,7 +444,7 @@ Event model
 Something that occurs in a certain place during a particular interval of time.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -531,7 +531,7 @@ Location model
 A position, place or site that something is in or where something happens.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -622,7 +622,7 @@ Organisation model
 Any type of group or association of individuals who are joined together either formally or legally.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -753,7 +753,7 @@ Person model
 A human being, regardless of role.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -868,7 +868,7 @@ Product model
 A product is the item offered for sale. A product can be a service or an item.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
@@ -987,7 +987,7 @@ Task model
 A piece of work to be done.
 
 .. list-table::
-     :header-rows: 1
+   :header-rows: 1
 
    * - Property
      - Wikidata id
