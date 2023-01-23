@@ -402,6 +402,46 @@ An example:
         ..
 
 
+(experimental)
+You can use the special marker ``"sesam:markskip"`` to construct JSON objects, lists or single values from a templated string in the ``payload``,  ``headers`` and ``params`` operation configuration properties. It can be used to cast Jinja templated strings to JSON data types or construct objects or lists with conditional Jinja logic.
+
+An example:
+
+::
+
+    {
+        "_id": "our-rest-service",
+        "name": "Our REST service",
+        "url_pattern": "http://our.domain.com/api/%s",
+        "type": "system:rest",
+        "operations": {
+            "post-operation": {
+                "url" : "{{ properties.url }}/some-path",
+                "method": "POST",
+                "payload-type": "json",
+                "payload": {
+                   "key": "{{ properties.integer_property }}system:markjson",
+                   "some_other_key": "[{{ properties.arg1, \"literal value \"}}]sesam:markjson"
+                }
+            }
+        ..
+
+
+
+Result payload object:
+
+
+::
+
+    ..
+    "payload": {
+        "key": 10,
+        "some_other_key": [1.2, \"literal value \"]
+    }
+    ..
+
+
+
 .. _rest_system_example:
 
 Example configuration
