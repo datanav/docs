@@ -427,7 +427,9 @@ An example:
         ..
 
 
+
 Result payload object:
+
 
 ::
     ..
@@ -436,6 +438,7 @@ Result payload object:
         "some_other_key": [1.2, \"literal value \"]
     }
     ..
+
 
 
 .. _rest_system_example:
