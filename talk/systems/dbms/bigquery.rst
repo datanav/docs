@@ -16,6 +16,28 @@ https://cloud.google.com/bigquery/docs/datasets-intro
 
 Sesam Talk will create the dataset if it doesn't exist.
 
+Supported types
+---------------
+The following types are currently supported.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Bigquery table
+     - Maps to
+     - Read
+     - Write
+
+   * - Contact
+     - :ref:`Person <person>`
+     - No
+     - Yes
+
+   * - Company
+     - :ref:`Organisation <organisation>`
+     - No
+     - Yes
+
 Known issues
 ------------
 [IS-13507] You need to contact support@sesam.io for this to work as we need to add your email to our application registration.

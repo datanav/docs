@@ -19,17 +19,17 @@ The following types are currently supported.
      - Write
 
    * - Company
-     - Organisation
+     - :ref:`Organisation <organisation>`
      - Yes
      - Yes
 
    * - Contact
-     - Person
+     - :ref:`Person <person>`
      - Yes
      - Yes
 
    * - User
-     - Person
+     - :ref:`Person <person>`
      - Yes
      - Yes
 

@@ -6,6 +6,16 @@ Freshteam is a smart HR software that helps you handle recruiting, onboarding, t
 
 https://freshteam.com
 
+Find your account id
+--------------------
+
+Account id is the first part of your Freshteam URL ``https://<account-id>.freshteam.com``, e.g. if the url is ``https://sesam.freshteam.com/`` the account id is ``sesam``.
+
+Find your API key
+-----------------
+
+https://support.freshteam.com/support/solutions/articles/19000107073-where-to-find-your-api-key-how-to-reset-it-and-scope-of-an-api-key-
+
 Supported types
 ---------------
 The following types are currently supported.
@@ -19,19 +29,9 @@ The following types are currently supported.
      - Write
 
    * - Employee
-     - Person
+     - :ref:`Person <person>`
      - Yes
      - Yes
-
-Find your account id
---------------------
-
-Account id is the first part of your Freshteam URL ``https://<account-id>.freshteam.com``, e.g. if the url is ``https://sesam.freshteam.com/`` the account id is ``sesam``.
-
-Find your API key
------------------
-
-https://support.freshteam.com/support/solutions/articles/19000107073-where-to-find-your-api-key-how-to-reset-it-and-scope-of-an-api-key-
 
 Known issues
 ------------
