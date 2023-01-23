@@ -1,7 +1,7 @@
-Supported systems
-=================
+Systems
+=======
 
-Sesam Talk support systems across a range of system types. You can read more about the supported system types below.
+Sesam Talk support systems across a range of system types. You can read more about the various system types and systems of that type below.
 
 .. toctree::
    :maxdepth: 1
