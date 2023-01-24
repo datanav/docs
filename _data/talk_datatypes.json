@@ -34,8 +34,8 @@
                 "datatype_label": "Customer",
                 "system_type": "erp",
                 "system_type_label": "ERP",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "tripletex",
@@ -44,8 +44,8 @@
                 "datatype_label": "Customer",
                 "system_type": "erp",
                 "system_type_label": "ERP",
-                "read": true,
-                "write": false
+                "read": "available",
+                "write": "limited"
             },
             {
                 "system": "hubspot",
@@ -54,8 +54,8 @@
                 "datatype_label": "Company",
                 "system_type": "crm",
                 "system_type_label": "CRM",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "opensesam",
@@ -64,8 +64,8 @@
                 "datatype_label": "Organisation",
                 "system_type": "od",
                 "system_type_label": "Open Data",
-                "read": true,
-                "write": false
+                "read": "beta",
+                "write": "not_applicable"
             },
             {
                 "system": "bigquery",
@@ -74,8 +74,8 @@
                 "datatype_label": "Company",
                 "system_type": "dbms",
                 "system_type_label": "DBMS",
-                "read": false,
-                "write": true
+                "read": "not_applicable",
+                "write": "beta"
             }
         ]
     },
@@ -90,8 +90,8 @@
                 "datatype_label": "Customer (embedded primary contact)",
                 "system_type": "erp",
                 "system_type_label": "ERP",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "hubspot",
@@ -100,8 +100,8 @@
                 "datatype_label": "Contact",
                 "system_type": "crm",
                 "system_type_label": "CRM",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "hubspot",
@@ -110,8 +110,8 @@
                 "datatype_label": "User",
                 "system_type": "crm",
                 "system_type_label": "CRM",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "freshteam",
@@ -120,8 +120,8 @@
                 "datatype_label": "Employee",
                 "system_type": "hrm",
                 "system_type_label": "HRM",
-                "read": true,
-                "write": true
+                "read": "available",
+                "write": "beta"
             },
             {
                 "system": "bigquery",
@@ -130,8 +130,8 @@
                 "datatype_label": "Contact",
                 "system_type": "dbms",
                 "system_type_label": "DBMS",
-                "read": false,
-                "write": true
+                "read": "not_applicable",
+                "write": "beta"
             }
         ]
     },
