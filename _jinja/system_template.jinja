@@ -1,0 +1,37 @@
+.. _talk_{{_id}}:
+
+{{label}}
+========================================================================================================================
+{{description}}
+
+{{url}}
+
+Supported types
+---------------
+The following types are currently supported.
+
+.. list-table::
+   :header-rows: 1
+
+   * - {{label}} type
+     - Maps to
+     - Read
+     - Write
+
+{% for k, v in datatypes.items() %}
+   * - {{v.label}}
+     - :ref:`{{v.maps_to_label}} <{{v.maps_to}}>`
+     - {{ 'Yes' if v.read else 'No' }}
+     - {{ 'Yes' if v.write else 'No' }}
+{% endfor %}
+
+Known issues
+------------
+{% if (issues is defined) and issues %}
+{% for k, v in issues.items() %}
+[{{k}}] {{v.description}}
+{% endfor %}
+{% else %}
+No known issues.
+{% endif %}
+

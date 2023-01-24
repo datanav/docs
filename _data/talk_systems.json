@@ -1,0 +1,115 @@
+[
+    {
+        "_id": "hubspot",
+        "url": "https://hubspot.com",
+        "description": "HubSpot's integrated CRM platform contains the marketing, sales, service, operations, and website-building software you need to grow your business.",
+        "label": "Hubspot",
+        "system_type": "crm",
+        "datatypes": {
+            "company": {
+                "label": "Company",
+                "maps_to": "organisation",
+                "maps_to_label": "Organisation",
+                "read": true,
+                "write": true
+            },
+            "contact": {
+                "label": "Contact",
+                "maps_to": "person",
+                "maps_to_label": "Person",
+                "read": true,
+                "write": true
+            },
+            "user": {
+                "label": "User",
+                "maps_to": "person",
+                "maps_to_label": "Person",
+                "read": true,
+                "write": true
+            }
+        }
+    },
+    {
+        "_id": "wave",
+        "label": "Wave",
+        "system_type": "erp",
+        "datatypes": {
+            "customer": {
+                "label": "Customer",
+                "maps_to": "organisation",
+                "maps_to_label": "Organisation",
+                "read": true,
+                "write": true
+            },
+            "customer_primarycontact": {
+                "label": "Customer (embedded primary contact)",
+                "maps_to": "person",
+                "maps_to_label": "Person",
+                "read": true,
+                "write": true
+            }
+        }
+    },
+    {
+        "_id": "tripletex",
+        "label": "Tripletex",
+        "system_type": "erp",
+        "datatypes": {
+            "customer": {
+                "label": "Customer",
+                "maps_to": "organisation",
+                "maps_to_label": "Organisation",
+                "read": true,
+                "write": false
+            }
+        }
+    },
+    {
+        "_id": "freshteam",
+        "label": "Freshteam",
+        "system_type": "crm",
+        "datatypes": {
+            "employee": {
+                "label": "Employee",
+                "maps_to": "person",
+                "maps_to_label": "Person",
+                "read": true,
+                "write": true
+            }
+        }
+    },
+    {
+        "_id": "bigquery",
+        "label": "Google Bigquery",
+        "system_type": "dbms",
+        "datatypes": {
+            "contact": {
+                "label": "Contact",
+                "maps_to": "person",
+                "read": false,
+                "write": true,
+                "maps_to_label": "Person"
+            },
+            "company": {
+                "label": "Company",
+                "maps_to": "organisation",
+                "read": false,
+                "write": true,
+                "maps_to_label": "Organisation"
+            }}
+    },
+    {
+        "_id": "opensesam",
+        "label": "Open Sesam",
+        "system_type": "opendata",
+        "datatypes": {
+            "organisation": {
+                "label": "Organisation",
+                "maps_to": "organisation",
+                "read": true,
+                "write": false,
+                "maps_to_label": "Organisation"
+            }
+        }
+    }
+]

@@ -5,49 +5,8 @@ Person
 ======
 A human being, regardless of role.
 
-Systems mapped to this datatype
--------------------------------
-
-The following systems and types are currently mapped to the this datatype.
-
-.. list-table::
-   :header-rows: 1
-
-   * - System
-     - System datatype
-     - Type of system
-     - Read
-     - Write
-
-   * - :ref:`Wave <talk_wave>`
-     - Customer (embedded primary contact)
-     - :ref:`ERP <erp>`
-     - Yes
-     - Yes
-
-   * - :ref:`Hubspot <talk_hubspot>`
-     - Contact
-     - :ref:`CRM <crm>`
-     - Yes
-     - Yes
-
-   * - :ref:`Hubspot <talk_hubspot>`
-     - User
-     - :ref:`CRM <crm>`
-     - Yes
-     - Yes
-
-   * - :ref:`Freshteam <talk_freshteam>`
-     - Employee
-     - :ref:`HRM <hrm>`
-     - Yes
-     - Yes
-
-   * - :ref:`Google Bigquery <talk_bigquery>`
-     - Contact
-     - :ref:`DBMS <dbms>`
-     - No
-     - Yes
+.. jinja:: talk_datatype_person
+  :file: _jinja/datatype_template.jinja
 
 Model properties
 ----------------

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (C) Bouvet ASA - All Rights Reserved.
 # Unauthorized copying of this file, via any medium is strictly prohibited.
-
+import json
 import os
 import sys
 
@@ -34,7 +34,8 @@ extensions = ['sphinxarg.ext',
               'sphinx_panels',
               'notfound.extension',
               'sphinx_copybutton',
-              'sphinx_reredirects'
+              'sphinx_reredirects',
+              'sphinx_jinja',
               ]
 
 html_codeblock_linenos_style = 'table'
@@ -52,6 +53,16 @@ redirects = {
 
 }
 
+
+def load_json(filename):
+    with open(filename) as f:
+        return json.load(f)
+
+
+jinja_contexts = {
+    **{'talk_system_%s' % e['_id']: e for e in load_json('_data/talk_systems.json')},
+    **{'talk_datatype_%s' % e['_id']: e for e in load_json('_data/talk_datatypes.json')}
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -1,0 +1,63 @@
+[
+    {
+        "_id": "organisation",
+        "label": "Organisation"
+    },
+    {
+        "_id": "person",
+        "label": "Person",
+        "description": "A human being, regardless of role.",
+        "mapped_datatypes": [
+            {
+                "system": "wave",
+                "system_label": "Wave",
+                "datatype": "customer_primarycontact",
+                "datatype_label": "Customer (embedded primary contact)",
+                "system_type": "erp",
+                "system_type_label": "ERP",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "hubspot",
+                "system_label": "Hubspot",
+                "datatype": "contact",
+                "datatype_label": "Contact",
+                "system_type": "crm",
+                "system_type_label": "CRM",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "hubspot",
+                "system_label": "Hubspot",
+                "datatype": "user",
+                "datatype_label": "User",
+                "system_type": "crm",
+                "system_type_label": "CRM",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "freshteam",
+                "system_label": "Freshteam",
+                "datatype": "employee",
+                "datatype_label": "Employee",
+                "system_type": "hrm",
+                "system_type_label": "HRM",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "bigquery",
+                "system_label": "Google Bigquery",
+                "datatype": "contact",
+                "datatype_label": "Contact",
+                "system_type": "dbms",
+                "system_type_label": "DBMS",
+                "read": false,
+                "write": true
+            }
+        ]
+    }
+]
