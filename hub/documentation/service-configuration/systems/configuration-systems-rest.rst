@@ -5,7 +5,7 @@ REST system
 
 The REST system represents a REST service (i.e. a web server) serving
 `HTTP requests <https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_ from a base url using the REST
-vocabulary of GET, PUT, POST and PATCH.
+vocabulary of GET, PUT, POST, PATCH, OPTIONS and HEAD.
 
 It is used by the :ref:`REST sink <rest_sink>`.
 
@@ -163,8 +163,8 @@ A operation configuration looks like:
 
    * - ``method``
      - String
-     - A enumeration of "GET", "POST", "PUT", "DELETE" and "PATCH" (note: case sensitive) that represents the HTTP operation
-       that the operation should execute on the ``url`` specified.
+     - A enumeration of ``"GET"``, ``"POST"``, ``"PUT"``, ``"DELETE"``, ``"PATCH"``, ``"OPTIONS"`` and ``"HEAD"``
+       (note: case sensitive) that represents the HTTP operation that the operation should execute on the ``url`` specified.
      -
      - Yes
 
