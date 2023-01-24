@@ -12,4 +12,4 @@ Within the space of connector tools Sesam currently has a tool called the connec
 Pre-requisites
 ==============
 
-To use the tool, follow the instructions in the `Connector CLI README <https://github.com/sesam-community/connector-cli>`_. Additionally, remember to add a ``.syncconfig`` file when `configuring the connector cli to work with the Sesam client <https://github.com/sesam-community/sesam-py#configuring>`_.
+To use the tool, follow the instructions in the `Connector CLI README <https://github.com/sesam-community/connector-cli>`_. Additionally, remember to add a ``.syncconfig`` file when `configuring the connector cli to work with the Sesam Client <https://github.com/sesam-community/sesam-py#configuring>`_.
