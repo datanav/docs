@@ -23,8 +23,15 @@ API Best practices
 
 - A stable API:
 
-  - Backward compatible API, don’t remove old methods.
+  - Backward compatible API, don't remove old methods.
 
   - Notify consumers of changes to the API.
 
-- Standardized authentication mechanism, preferably Oauth 2.0. 
+- Standardized authentication mechanism
+
+  - for ease of use and security, the OAuth 2.0 protocol using `Authorization Code flow <https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow>`_ is most preferred
+  - to serve as an authentication provider for the consumer portal (enable "Login via" your system), supporting OAuth 2.0 Authorization Code flow is a requirement
+  - a simpler api key/token can also be used for systems that don't need to serve as an authentication provider
+
+.. note:: 
+  because our application needs to securely talk to the system on behalf of the user in the background, the `OAuth 2.0 Implicit flow <https://oauth.net/2/grant-types/implicit/>`_ is not supported
