@@ -1,0 +1,91 @@
+[
+    {
+        "_id": "crm",
+        "supported_systems": [
+            {
+                "label": "Hubspot",
+                "id": "hubspot"
+            }
+        ]
+    },
+    {
+        "_id": "erp",
+        "supported_systems": [
+            {
+                "label": "Tripletex",
+                "id": "tripletex"
+            },
+            {
+                "label": "Wave",
+                "id": "wave"
+            }
+        ]
+    },
+    {
+        "_id": "hrm",
+        "supported_systems": [
+            {
+                "label": "Freshteam",
+                "id": "freshteam"
+            }
+        ]
+    },
+    {
+        "_id": "dbms",
+        "supported_systems": [
+            {
+                "label": "Google Bigquery",
+                "id": "bigquery"
+            }
+        ]
+    },
+    {
+        "_id": "od",
+        "supported_systems": [
+            {
+                "label": "Open Sesam",
+                "id": "opensesam"
+            }
+        ]
+    },
+    {
+        "_id": "bi",
+        "supported_systems": []
+    },
+    {
+        "_id": "eai",
+        "supported_systems": []
+    },
+    {
+        "_id": "ecm",
+        "supported_systems": []
+    },
+    {
+        "_id": "fintech",
+        "supported_systems": []
+    },
+    {
+        "_id": "gis",
+        "supported_systems": []
+    },
+    {
+        "_id": "iam",
+        "supported_systems": []
+    },
+    {
+        "_id": "ot",
+        "supported_systems": []
+    },
+    {
+        "_id": "paas",
+        "supported_systems": []
+    },
+    {
+        "_id": "pms",
+        "supported_systems": []
+    },
+    {
+        "_id": "es",
+        "supported_systems": []
+    }
+]

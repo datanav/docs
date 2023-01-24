@@ -99,7 +99,23 @@
     {
         "_id": "opensesam",
         "label": "Open Sesam",
-        "system_type": "opendata",
+        "system_type": "od",
+        "datatypes": {
+            "organisation": {
+                "label": "Organisation",
+                "maps_to": "organisation",
+                "read": true,
+                "write": false,
+                "maps_to_label": "Organisation"
+            }
+        }
+    },
+        {
+        "_id": "crmoffice",
+        "label": "CRMOffice",
+        "description": "CRMOffice foo bar",
+        "url": "https://crmoffice.no",
+        "system_type": "crm",
         "datatypes": {
             "organisation": {
                 "label": "Organisation",

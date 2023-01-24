@@ -1,4 +1,4 @@
-.. _opendata:
+.. _od:
 
 =========
 Open Data
@@ -8,7 +8,6 @@ Open data is data that is openly accessible, exploitable, editable and shared by
 Supported Open Data systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
-   :maxdepth: 1
+.. jinja:: talk_categories_od
+  :file: _jinja/category_systems.jinja
 
-   ../opensesam

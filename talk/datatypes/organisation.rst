@@ -8,50 +8,6 @@ Any type of group or association of individuals who are joined together either f
 .. jinja:: talk_datatype_organisation
   :file: _jinja/datatype_mapping.jinja
 
-Systems mapped to this datatype
--------------------------------
-
-The following systems and types are currently mapped to this datatype.
-
-.. list-table::
-   :header-rows: 1
-
-   * - System
-     - System datatype
-     - Type of system
-     - Read
-     - Write
-
-   * - :ref:`Wave <talk_wave>`
-     - Customer
-     - :ref:`ERP <erp>`
-     - Yes
-     - Yes
-
-   * - :ref:`Hubspot <talk_hubspot>`
-     - Company
-     - :ref:`CRM <crm>`
-     - Yes
-     - Yes
-
-   * - :ref:`Tripletex <talk_tripletex>`
-     - Customer
-     - :ref:`ERP <erp>`
-     - Yes
-     - Yes
-
-   * - :ref:`Open Sesam <talk_opensesam>`
-     - Organisation
-     - :ref:`Open Data <opendata>`
-     - Yes
-     - No
-
-   * - :ref:`Google Bigquery <talk_bigquery>`
-     - Company
-     - :ref:`DBMS <dbms>`
-     - No
-     - Yes
-
 Model properties
 ----------------
 

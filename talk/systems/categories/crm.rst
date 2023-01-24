@@ -12,4 +12,5 @@ Supported CRM systems
 .. toctree::
    :maxdepth: 1
 
-   ../hubspot
+.. jinja:: talk_categories_crm
+  :file: _jinja/category_systems.jinja

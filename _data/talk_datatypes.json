@@ -62,7 +62,7 @@
                 "system_label": "Open Sesam",
                 "datatype": "organisation",
                 "datatype_label": "Organisation",
-                "system_type": "opendata",
+                "system_type": "od",
                 "system_type_label": "Open Data",
                 "read": true,
                 "write": false

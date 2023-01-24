@@ -1,0 +1,12 @@
+{% if (supported_systems is defined) and supported_systems %}
+The following systems are currently supported.
+
+.. toctree::
+   :maxdepth: 1
+
+{% for v in supported_systems %}
+   ../{{v.id}}
+{% endfor %}
+{% else %}
+No systems are supported yet.
+{% endif %}

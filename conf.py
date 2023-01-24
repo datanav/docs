@@ -61,7 +61,8 @@ def load_json(filename):
 
 jinja_contexts = {
     **{'talk_system_%s' % e['_id']: e for e in load_json('_data/talk_systems.json')},
-    **{'talk_datatype_%s' % e['_id']: e for e in load_json('_data/talk_datatypes.json')}
+    **{'talk_datatype_%s' % e['_id']: e for e in load_json('_data/talk_datatypes.json')},
+    **{'talk_categories_%s' % e['_id']: e for e in load_json('_data/talk_systemtypes.json')}
 }
 
 # Add any paths that contain templates here, relative to this directory.
