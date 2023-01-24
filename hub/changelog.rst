@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_24:
+
+2023-01-24
+----------
+* Added support for the missing ``"HEAD"`` and ``"OPTIONS"`` HTTP methods for operation objects in the :ref:`REST system <rest_system>` (and any local variants). Note that ``"HEAD"`` requests will always result in an empty response body, so will not work with ``replace_entity`` set to ``true`` in the :ref:`REST transform <rest_transform>` and requires a ``response_property`` to be set for the :ref:`REST source <rest_source>`.
+
 .. _changelog_2023_01_23:
 
 2023-01-23
