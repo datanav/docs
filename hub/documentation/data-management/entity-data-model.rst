@@ -245,7 +245,7 @@ values are represented as strings in JSON. The value is prefixed by
 extension types below are currently the only ones supported. Transit
 types that are not recognized will be treated as string values.
 
-..Note:: 
+.. note:: 
   There's currently no support for escaping string literals that start with a "~" character.
 
 .. list-table::
@@ -329,6 +329,5 @@ because the strings and integers are not compatible types. The
 integers are ordered before the strings. Decimals and integers are compatible,
 so they are sorted together.
 
-..Note:: 
-
+.. note:: 
   Values of the Dict type are ordered by sorting their keys and then comparing each key+value pair.
