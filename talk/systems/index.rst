@@ -1,12 +1,13 @@
-Available connectors
-====================
+Systems
+=======
+
+Sesam Talk support systems across a range of categories. You can read more about the various categories below.
 
 .. toctree::
    :maxdepth: 1
 
-   bigquery
-   freshteam
-   hubspot
-   wave
-   opensesam
-   tripletex
+   categories/crm
+   categories/dbms
+   categories/erp
+   categories/hrm
+   categories/opendata

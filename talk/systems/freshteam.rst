@@ -1,27 +1,10 @@
-.. _freshteam:
+.. _talk_freshteam:
 
 Freshteam
 =========
 Freshteam is a smart HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
 
 https://freshteam.com
-
-Supported types
----------------
-The following types are currently supported.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Type
-     - Maps to
-     - Read
-     - Write
-
-   * - Employee
-     - Person
-     - Yes
-     - Yes
 
 Find your account id
 --------------------
@@ -32,6 +15,9 @@ Find your API key
 -----------------
 
 https://support.freshteam.com/support/solutions/articles/19000107073-where-to-find-your-api-key-how-to-reset-it-and-scope-of-an-api-key-
+
+.. jinja:: talk_system_freshteam
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

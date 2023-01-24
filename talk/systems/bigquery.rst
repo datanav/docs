@@ -1,4 +1,4 @@
-.. _bigquery:
+.. _talk_bigquery:
 
 Google Big Query
 ================
@@ -15,6 +15,9 @@ Find your dataset name
 https://cloud.google.com/bigquery/docs/datasets-intro
 
 Sesam Talk will create the dataset if it doesn't exist.
+
+.. jinja:: talk_system_bigquery
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

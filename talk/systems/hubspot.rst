@@ -1,4 +1,4 @@
-.. _hubspot:
+.. _talk_hubspot:
 
 Hubspot
 =======
@@ -6,32 +6,9 @@ HubSpot's integrated CRM platform contains the marketing, sales, service, operat
 
 https://hubspot.com
 
-Supported types
----------------
-The following types are currently supported.
 
-.. list-table::
-   :header-rows: 1
-
-   * - Hubspot type
-     - Maps to
-     - Read
-     - Write
-
-   * - Company
-     - Organisation
-     - Yes
-     - Yes
-
-   * - Contact
-     - Person
-     - Yes
-     - Yes
-
-   * - User
-     - Person
-     - Yes
-     - Yes
+.. jinja:: talk_system_hubspot
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

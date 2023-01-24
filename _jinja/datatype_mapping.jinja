@@ -1,0 +1,24 @@
+Systems mapped to this datatype
+-------------------------------
+{% if (mapped_datatypes is defined) and mapped_datatypes %}
+The following systems and types are currently mapped to this datatype.
+
+.. list-table::
+   :header-rows: 1
+
+   * - System
+     - System datatype
+     - System category
+     - Read
+     - Write
+
+{% for v in mapped_datatypes %}
+   * - :ref:`{{v.system_label}} <talk_{{v.system}}>`
+     - {{v.datatype_label}}
+     - :ref:`{{v.system_type_label}} <{{v.system_type}}>`
+     - {{ 'Yes' if v.read else 'No' }}
+     - {{ 'Yes' if v.write else 'No' }}
+{% endfor %}
+{% else %}
+No systems are mapped to this datatype yet.
+{% endif %}

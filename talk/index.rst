@@ -31,9 +31,9 @@ Sesam Talk synchronizes core business data across your different system types. Y
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
-    **Supported connectors**
+    **Supported systems**
 
-    See what services and connectors are supported currently
+    See what systems are supported currently
 
     .. link-button:: systems/index
         :type: ref
@@ -72,7 +72,7 @@ Sesam Talk synchronizes core business data across your different system types. Y
    :maxdepth: 3
 
    What is Sesam Talk <what-is-sesam-talk>
-   Supported Connectors <systems/index>
+   Supported systems <systems/index>
    Becoming a partner <partner/index>
    Pricing <pricing>
    Roadmap <roadmap>
