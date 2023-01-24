@@ -1,6 +1,6 @@
 Systems mapped to this datatype
 -------------------------------
-
+{% if (mapped_datatypes is defined) and mapped_datatypes %}
 The following systems and types are currently mapped to this datatype.
 
 .. list-table::
@@ -8,7 +8,7 @@ The following systems and types are currently mapped to this datatype.
 
    * - System
      - System datatype
-     - Type of system
+     - System category
      - Read
      - Write
 
@@ -19,3 +19,6 @@ The following systems and types are currently mapped to this datatype.
      - {{ 'Yes' if v.read else 'No' }}
      - {{ 'Yes' if v.write else 'No' }}
 {% endfor %}
+{% else %}
+No systems are mapped to this datatype yet.
+{% endif %}

@@ -5,6 +5,9 @@ Asset
 =====
 Items or resources, such as valuables, machinery, or real estate.
 
+.. jinja:: talk_datatype_asset
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

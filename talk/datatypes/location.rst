@@ -5,6 +5,9 @@ Location
 ========
 A position, place or site that something is in or where something happens.
 
+.. jinja:: talk_datatype_location
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

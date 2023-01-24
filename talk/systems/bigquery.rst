@@ -16,27 +16,8 @@ https://cloud.google.com/bigquery/docs/datasets-intro
 
 Sesam Talk will create the dataset if it doesn't exist.
 
-Supported types
----------------
-The following types are currently supported.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Bigquery table
-     - Maps to
-     - Read
-     - Write
-
-   * - Contact
-     - :ref:`Person <person>`
-     - No
-     - Yes
-
-   * - Company
-     - :ref:`Organisation <organisation>`
-     - No
-     - Yes
+.. jinja:: talk_system_bigquery
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

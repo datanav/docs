@@ -5,6 +5,9 @@ Task
 ====
 A piece of work to be done.
 
+.. jinja:: talk_datatype_task
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

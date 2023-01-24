@@ -5,6 +5,9 @@ Product
 =======
 A product is the item offered for sale. A product can be a service or an item.
 
+.. jinja:: talk_datatype_product
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

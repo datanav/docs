@@ -5,6 +5,9 @@ Documentation
 =============
 A permanent record of information in written, photographic, or other form.
 
+.. jinja:: talk_datatype_documentation
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

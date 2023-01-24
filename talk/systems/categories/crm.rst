@@ -12,4 +12,4 @@ Supported CRM systems
 .. toctree::
    :maxdepth: 1
 
-   hubspot
+   ../hubspot

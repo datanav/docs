@@ -6,7 +6,7 @@ Person
 A human being, regardless of role.
 
 .. jinja:: talk_datatype_person
-  :file: _jinja/datatype_template.jinja
+  :file: _jinja/datatype_mapping.jinja
 
 Model properties
 ----------------

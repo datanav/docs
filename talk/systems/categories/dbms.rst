@@ -10,4 +10,4 @@ Supported DBMS
 .. toctree::
    :maxdepth: 1
 
-   bigquery
+   ../bigquery

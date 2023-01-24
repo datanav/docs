@@ -16,22 +16,8 @@ Find your API key
 
 https://support.freshteam.com/support/solutions/articles/19000107073-where-to-find-your-api-key-how-to-reset-it-and-scope-of-an-api-key-
 
-Supported types
----------------
-The following types are currently supported.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Type
-     - Maps to
-     - Read
-     - Write
-
-   * - Employee
-     - :ref:`Person <person>`
-     - Yes
-     - Yes
+.. jinja:: talk_system_freshteam
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

@@ -14,22 +14,8 @@ Find your employee token
 ------------------------
 The employee token can be created in the User Settings page under the tab "API access". This must be done by the account administrator, and each employee token must be given a set of entitlements.
 
-Supported types
----------------
-The following types are currently supported.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex type
-     - Maps to
-     - Read
-     - Write
-
-   * - Customer
-     - :ref:`Organisation <organisation>`
-     - Yes
-     - No
+.. jinja:: talk_system_tripletex
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

@@ -5,6 +5,9 @@ Event
 =====
 Something that occurs in a certain place during a particular interval of time.
 
+.. jinja:: talk_datatype_event
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

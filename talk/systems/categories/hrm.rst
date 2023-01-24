@@ -11,4 +11,4 @@ Supported HRM systems
 .. toctree::
    :maxdepth: 1
 
-   freshteam
+   ../freshteam

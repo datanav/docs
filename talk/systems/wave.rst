@@ -6,27 +6,8 @@ Wave provides financial software and services for small businesses, with service
 
 https://waveapps.com
 
-Supported types
----------------
-The following types are currently supported.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave type
-     - Maps to
-     - Read
-     - Write
-
-   * - Customer
-     - :ref:`Organisation <organisation>`
-     - Yes
-     - Yes
-
-   * - Customer (embedded primary contact)
-     - :ref:`Person <person>`
-     - Yes
-     - Yes
+.. jinja:: talk_system_wave
+  :file: _jinja/system_mapping.jinja
 
 Known issues
 ------------

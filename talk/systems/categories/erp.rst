@@ -13,5 +13,5 @@ Supported ERP systems
 .. toctree::
    :maxdepth: 1
 
-   wave
-   tripletex
+   ../wave
+   ../tripletex

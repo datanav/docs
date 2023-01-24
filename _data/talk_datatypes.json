@@ -1,12 +1,87 @@
 [
     {
+        "_id": "agreement",
+        "label": "Agreement"
+    },
+    {
+        "_id": "asset",
+        "label": "Asset"
+    },
+    {
+        "_id": "classification",
+        "label": "Classification"
+    },
+    {
+        "_id": "documentation",
+        "label": "Documentation"
+    },
+    {
+        "_id": "event",
+        "label": "Event"
+    },
+    {
+        "_id": "location",
+        "label": "Location"
+    },
+    {
         "_id": "organisation",
-        "label": "Organisation"
+        "label": "Organisation",
+        "mapped_datatypes": [
+            {
+                "system": "wave",
+                "system_label": "Wave",
+                "datatype": "customer",
+                "datatype_label": "Customer",
+                "system_type": "erp",
+                "system_type_label": "ERP",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "tripletex",
+                "system_label": "Tripletex",
+                "datatype": "customer",
+                "datatype_label": "Customer",
+                "system_type": "erp",
+                "system_type_label": "ERP",
+                "read": true,
+                "write": false
+            },
+            {
+                "system": "hubspot",
+                "system_label": "Hubspot",
+                "datatype": "company",
+                "datatype_label": "Company",
+                "system_type": "crm",
+                "system_type_label": "CRM",
+                "read": true,
+                "write": true
+            },
+            {
+                "system": "opensesam",
+                "system_label": "Open Sesam",
+                "datatype": "organisation",
+                "datatype_label": "Organisation",
+                "system_type": "opendata",
+                "system_type_label": "Open Data",
+                "read": true,
+                "write": false
+            },
+            {
+                "system": "bigquery",
+                "system_label": "Google Bigquery",
+                "datatype": "company",
+                "datatype_label": "Company",
+                "system_type": "dbms",
+                "system_type_label": "DBMS",
+                "read": false,
+                "write": true
+            }
+        ]
     },
     {
         "_id": "person",
         "label": "Person",
-        "description": "A human being, regardless of role.",
         "mapped_datatypes": [
             {
                 "system": "wave",
@@ -59,5 +134,13 @@
                 "write": true
             }
         ]
+    },
+    {
+        "_id": "product",
+        "label": "Product"
+    },
+    {
+        "_id": "task",
+        "label": "Task"
     }
 ]

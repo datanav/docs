@@ -1,13 +1,6 @@
-.. _talk_{{_id}}:
-
-{{label}}
-========================================================================================================================
-{{description}}
-
-{{url}}
-
 Supported types
 ---------------
+{% if (datatypes is defined) and datatypes %}
 The following types are currently supported.
 
 .. list-table::
@@ -24,14 +17,6 @@ The following types are currently supported.
      - {{ 'Yes' if v.read else 'No' }}
      - {{ 'Yes' if v.write else 'No' }}
 {% endfor %}
-
-Known issues
-------------
-{% if (issues is defined) and issues %}
-{% for k, v in issues.items() %}
-[{{k}}] {{v.description}}
-{% endfor %}
 {% else %}
-No known issues.
+No types are supported yet.
 {% endif %}
-

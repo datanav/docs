@@ -5,6 +5,9 @@ Classification
 ==============
 Classification and grouping used as controlled vocabularies.
 
+.. jinja:: talk_datatype_classification
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 

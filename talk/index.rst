@@ -33,7 +33,7 @@ Sesam Talk synchronizes core business data across your different system types. Y
     ---
     **Supported systems**
 
-    See what services and systems are supported currently
+    See what systems are supported currently
 
     .. link-button:: systems/index
         :type: ref

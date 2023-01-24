@@ -11,4 +11,4 @@ Supported Open Data systems
 .. toctree::
    :maxdepth: 1
 
-   opensesam
+   ../opensesam

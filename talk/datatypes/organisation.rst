@@ -5,6 +5,9 @@ Organisation
 ============
 Any type of group or association of individuals who are joined together either formally or legally.
 
+.. jinja:: talk_datatype_organisation
+  :file: _jinja/datatype_mapping.jinja
+
 Systems mapped to this datatype
 -------------------------------
 

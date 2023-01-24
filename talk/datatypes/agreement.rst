@@ -5,6 +5,9 @@ Agreement
 =========
 An agreement such as orders, invoices, that is intended to be enforceable by law.
 
+.. jinja:: talk_datatype_agreement
+  :file: _jinja/datatype_mapping.jinja
+
 Model properties
 ----------------
 
