@@ -94,9 +94,10 @@ Properties
        ``operation`` section of the :ref:`REST system <rest_system>` as well, with the one on the source
        configuration taking precedence if defined both places. This property supports the
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
-       ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template.  If the
-       operation supports paging then ``previous_body`` and ``previous_headers`` are available for all page requests
-       except the first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_
+       ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template. If the
+       operation supports paging then ``previous_body``, ``previous_request_headers``,
+       ``previous_params`` and ``previous_headers`` (response headers) are available for all page requests except the
+       first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_
        tests for these variables to set default values for the first page.
      -
      -
@@ -143,7 +144,8 @@ Properties
        in the specified ``operation`` section of the :ref:`REST system <rest_system>` as well. The source configuration
        will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties``, ``since``, ``entity`` and ``headers``. If the operation supports paging
-       then ``previous_body`` and ``previous_headers`` are available for all page requests except the first. Tip: use
+       then ``previous_body``, ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response
+       headers) are available for all page requests except the first. Tip: use
        Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables
        to set default values for the first page.
      -
@@ -157,10 +159,6 @@ Properties
        ``since_support`` as been set to ``true`` in the source. Note that this property can be defined in the
        :ref:`REST system <rest_system>` operations configuration as well. The configuration in the source will take
        precedence if both are defined. The template supports the same named variables as the ``id_expression``.
-       If the operation supports paging then ``previous_body`` and ``previous_headers`` are available for all
-       page requests except the first. Tip: use Jinja's
-       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
-       default values for the first page.
      -
      -
 
