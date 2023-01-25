@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_25:
+
+2023-01-25
+----------
+* Added the ``since`` bound parameter to the ``payload``, ``headers`` and ``params`` operation object properties in the :ref:`REST system <rest_system>` (and any local variants) for the :ref:`REST source <rest_source>`.
+
 .. _changelog_2023_01_24:
 
 2023-01-24
