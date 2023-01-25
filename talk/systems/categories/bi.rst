@@ -4,7 +4,7 @@
 BI
 ==
 
-Business intelligence software is a type of application software designed to retrieve, analyze, transform and report data for business intelligence. The applications generally read data that has been previously stored, often - though not necessarily - in a data warehouse or data mart.
+Business intelligence (BI) software is a type of application software designed to retrieve, analyze, transform and report data for business intelligence. The applications generally read data that has been previously stored, often - though not necessarily - in a data warehouse or data mart.
 
 Supported BI systems
 ^^^^^^^^^^^^^^^^^^^^

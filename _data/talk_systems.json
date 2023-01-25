@@ -1,113 +1,5211 @@
-[
-    {
-        "_id": "hubspot",
-        "label": "Hubspot",
-        "system_type": "crm",
-        "datatypes": {
-            "company": {
-                "label": "Company",
-                "maps_to": "organisation",
-                "maps_to_label": "Organisation",
-                "read": "available",
-                "write": "beta"
-            },
-            "contact": {
-                "label": "Contact",
-                "maps_to": "person",
-                "maps_to_label": "Person",
-                "read": "available",
-                "write": "beta"
-            },
-            "user": {
-                "label": "User",
-                "maps_to": "person",
-                "maps_to_label": "Person",
-                "read": "available",
-                "write": "beta"
-            }
+[{
+    "_id": "visma",
+    "_updated": 554,
+    "_previous": 492,
+    "_deleted": false,
+    "_ts": 1674604598495505,
+    "_hash": "78a17bf2561dacc8ed7a7ffffb83898e",
+    "datatypes": {
+        "businessunits": {
+            "label": "businessunits",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "cost": {
+            "label": "cost",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "limited"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "finance": {
+            "label": "finance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "invoices": {
+            "label": "invoices",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "konsulent": {
+            "label": "konsulent",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ledger": {
+            "label": "ledger",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "orgenhet": {
+            "label": "orgenhet",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "users": {
+            "label": "users",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "vwdocument": {
+            "label": "vwdocument",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
         }
     },
-    {
-        "_id": "wave",
-        "label": "Wave",
-        "system_type": "erp",
-        "datatypes": {
-            "customer": {
-                "label": "Customer",
-                "maps_to": "organisation",
-                "maps_to_label": "Organisation",
-                "read": "available",
-                "write": "beta"
-            },
-            "customer_primarycontact": {
-                "label": "Customer (embedded primary contact)",
-                "maps_to": "person",
-                "maps_to_label": "Person",
-                "read": "available",
-                "write": "beta"
-            }
+    "description": "Visma is a accounting software that provides software and services that simplify and digitize business processes in the private and public sector.",
+    "label": "VISMA",
+    "system_type": "erp",
+    "url": "https://www.visma.com/"
+},{
+    "_id": "sap",
+    "_updated": 553,
+    "_previous": 485,
+    "_deleted": false,
+    "_ts": 1674604598272647,
+    "_hash": "cfc8d7982d050e4512b80f922a5b480b",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "address": {
+            "label": "address",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "country": {
+            "label": "country",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "document": {
+            "label": "document",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employment": {
+            "label": "employment",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "facility": {
+            "label": "facility",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "hours": {
+            "label": "hours",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "organization": {
+            "label": "organization",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "purchaseorder": {
+            "label": "purchaseorder",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "purchaseorderline": {
+            "label": "purchaseorderline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "suppliers": {
+            "label": "suppliers",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "timecapture": {
+            "label": "timecapture",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "vendor": {
+            "label": "vendor",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
         }
     },
-    {
-        "_id": "tripletex",
-        "label": "Tripletex",
-        "system_type": "erp",
-        "datatypes": {
-            "customer": {
-                "label": "Customer",
-                "maps_to": "organisation",
-                "maps_to_label": "Organisation",
-                "read": "available",
-                "write": "limited"
-            }
+    "description": "Software for the management of business processes, developing solutions that facilitate effective data processing and information flow across organisations.",
+    "label": "SAP",
+    "system_type": "erp",
+    "url": "https://www.sap.com/"
+},{
+    "_id": "salesforce",
+    "_updated": 552,
+    "_previous": 484,
+    "_deleted": false,
+    "_ts": 1674604598019843,
+    "_hash": "7462ef86e8e0d64e0e06c301b58aa2e9",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "limited"
+        },
+        "accounts": {
+            "label": "accounts",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "case": {
+            "label": "case",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contacts": {
+            "label": "contacts",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "contract": {
+            "label": "contract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contractinvoicerelation": {
+            "label": "contractinvoicerelation",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "delete": {
+            "label": "delete",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "document": {
+            "label": "document",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "eventrelation": {
+            "label": "eventrelation",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "finance": {
+            "label": "finance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "limited"
+        },
+        "installation": {
+            "label": "installation",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "limited"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meter": {
+            "label": "meter",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meterpoint": {
+            "label": "meterpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "limited"
+        },
+        "netstation": {
+            "label": "netstation",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "limited"
+        },
+        "nettstasjon": {
+            "label": "nettstasjon",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "powersupplier": {
+            "label": "powersupplier",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "powersupplierhistory": {
+            "label": "powersupplierhistory",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "trafo": {
+            "label": "trafo",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
         }
     },
-    {
-        "_id": "freshteam",
-        "label": "Freshteam",
-        "system_type": "crm",
-        "datatypes": {
-            "employee": {
-                "label": "Employee",
-                "maps_to": "person",
-                "maps_to_label": "Person",
-                "read": "available",
-                "write": "beta"
-            }
+    "description": "Salesforce is the world´s #1 CRM platform, providing services such as marketing, sales, commerce, service and IT teams work by using the latest technology.",
+    "label": "Salesforce",
+    "system_type": "crm",
+    "url": "https://www.salesforce.com/"
+},{
+    "_id": "qlik",
+    "_updated": 551,
+    "_previous": 482,
+    "_deleted": false,
+    "_ts": 1674604597156858,
+    "_hash": "41d6c4e2d4c2c802258649eff3929350",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "accountgroup": {
+            "label": "accountgroup",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "accountingproject": {
+            "label": "accountingproject",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "activeseparatecfv": {
+            "label": "activeseparatecfv",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "area": {
+            "label": "area",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "avdelingskoder": {
+            "label": "avdelingskoder",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "avskrivninger": {
+            "label": "avskrivninger",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "avviksbeskrivelseavstemming": {
+            "label": "avviksbeskrivelseavstemming",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "balance": {
+            "label": "balance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "balanse": {
+            "label": "balanse",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "budget": {
+            "label": "budget",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "businesssector": {
+            "label": "businesssector",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "casecurrentransfinfo": {
+            "label": "casecurrentransfinfo",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "caseinfo": {
+            "label": "caseinfo",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "casestatus": {
+            "label": "casestatus",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "casetimestamp": {
+            "label": "casetimestamp",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "casetype": {
+            "label": "casetype",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "churnproduct": {
+            "label": "churnproduct",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "clerk": {
+            "label": "clerk",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "clerkgroup": {
+            "label": "clerkgroup",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "code": {
+            "label": "code",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "companymunici": {
+            "label": "companymunici",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "contract": {
+            "label": "contract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "cost": {
+            "label": "cost",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "datavarehus": {
+            "label": "datavarehus",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "deliverysite": {
+            "label": "deliverysite",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "direktebeloprapportering": {
+            "label": "direktebeloprapportering",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "driftskostnader": {
+            "label": "driftskostnader",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "element": {
+            "label": "element",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "emp": {
+            "label": "emp",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "entrepreneur": {
+            "label": "entrepreneur",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "eventtype": {
+            "label": "eventtype",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "facility": {
+            "label": "facility",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "facilitytype": {
+            "label": "facilitytype",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "fact": {
+            "label": "fact",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "faktiskinvestering": {
+            "label": "faktiskinvestering",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "faktiskresultatrapport": {
+            "label": "faktiskresultatrapport",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "fasavbrforlop": {
+            "label": "fasavbrforlop",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "feilliste": {
+            "label": "feilliste",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "geographycountry": {
+            "label": "geographycountry",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "geographycounty": {
+            "label": "geographycounty",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "geographymunicipality": {
+            "label": "geographymunicipality",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridmessage": {
+            "label": "gridmessage",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridmessageinbox": {
+            "label": "gridmessageinbox",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridmessagestatus": {
+            "label": "gridmessagestatus",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridprocurement": {
+            "label": "gridprocurement",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridprocurementframeagreementarea": {
+            "label": "gridprocurementframeagreementarea",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridprocurementpurpose": {
+            "label": "gridprocurementpurpose",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "gridprocurementstatus": {
+            "label": "gridprocurementstatus",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "hours": {
+            "label": "hours",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "hr": {
+            "label": "hr",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "inntekt": {
+            "label": "inntekt",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "inquiry": {
+            "label": "inquiry",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "inquirycode": {
+            "label": "inquirycode",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "installation": {
+            "label": "installation",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "installationammstatus": {
+            "label": "installationammstatus",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "inventorypartinstock": {
+            "label": "inventorypartinstock",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "inventorytransactionhist": {
+            "label": "inventorytransactionhist",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "investeringer": {
+            "label": "investeringer",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoiceauthorizer": {
+            "label": "invoiceauthorizer",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoiceconfiguration": {
+            "label": "invoiceconfiguration",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoiceline": {
+            "label": "invoiceline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoicelineperiod": {
+            "label": "invoicelineperiod",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoicestate": {
+            "label": "invoicestate",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "justeringinnkommende": {
+            "label": "justeringinnkommende",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kapital": {
+            "label": "kapital",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "konsern": {
+            "label": "konsern",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kontantstrom": {
+            "label": "kontantstrom",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kontoplan": {
+            "label": "kontoplan",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kundemasse": {
+            "label": "kundemasse",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kunder": {
+            "label": "kunder",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ledger": {
+            "label": "ledger",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "maalepunkter": {
+            "label": "maalepunkter",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "maintenanceperfaction": {
+            "label": "maintenanceperfaction",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "maintenancepriority": {
+            "label": "maintenancepriority",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "manual": {
+            "label": "manual",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meteringpoint": {
+            "label": "meteringpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meterpoint": {
+            "label": "meterpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "municipality": {
+            "label": "municipality",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "omsetningsrapportering": {
+            "label": "omsetningsrapportering",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "openingbalance": {
+            "label": "openingbalance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "orders": {
+            "label": "orders",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organization": {
+            "label": "organization",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "outage": {
+            "label": "outage",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "overtime": {
+            "label": "overtime",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "partcatalog": {
+            "label": "partcatalog",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "partserialcatalog": {
+            "label": "partserialcatalog",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "partserialhistory": {
+            "label": "partserialhistory",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "period": {
+            "label": "period",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "periodisering": {
+            "label": "periodisering",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "prodat": {
+            "label": "prodat",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "productpart": {
+            "label": "productpart",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "prognoseperioder": {
+            "label": "prognoseperioder",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "prognoserinvestering": {
+            "label": "prognoserinvestering",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "prognoserresultatrapport": {
+            "label": "prognoserresultatrapport",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "proj": {
+            "label": "proj",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purapprovaltemplline": {
+            "label": "purapprovaltemplline",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purchaseauthorizer": {
+            "label": "purchaseauthorizer",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purchaseorderapproval": {
+            "label": "purchaseorderapproval",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purchaseorderline": {
+            "label": "purchaseorderline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purchasepartsupplier": {
+            "label": "purchasepartsupplier",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "purchauthorizegroupline": {
+            "label": "purchauthorizegroupline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "reading": {
+            "label": "reading",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "readinghourvalue": {
+            "label": "readinghourvalue",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "reporttype": {
+            "label": "reporttype",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "resultat": {
+            "label": "resultat",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "selskap": {
+            "label": "selskap",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "settlementtype": {
+            "label": "settlementtype",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplier": {
+            "label": "supplier",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplycontract": {
+            "label": "supplycontract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplycontractdetail": {
+            "label": "supplycontractdetail",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplycontracttype": {
+            "label": "supplycontracttype",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplyproductgroup": {
+            "label": "supplyproductgroup",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplyproductgroupincontract": {
+            "label": "supplyproductgroupincontract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissue": {
+            "label": "supportissue",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissuecfv": {
+            "label": "supportissuecfv",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissueclass": {
+            "label": "supportissueclass",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissueitemjoin": {
+            "label": "supportissueitemjoin",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissuepriority": {
+            "label": "supportissuepriority",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissuesolution": {
+            "label": "supportissuesolution",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissuestatus": {
+            "label": "supportissuestatus",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supportissuetype": {
+            "label": "supportissuetype",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "technicalattribute": {
+            "label": "technicalattribute",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "technicalobjectreference": {
+            "label": "technicalobjectreference",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "technicalspesification": {
+            "label": "technicalspesification",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "tender": {
+            "label": "tender",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "tenderbidder": {
+            "label": "tenderbidder",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ticketdetail": {
+            "label": "ticketdetail",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "tool": {
+            "label": "tool",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "transactionlines": {
+            "label": "transactionlines",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "vendor": {
+            "label": "vendor",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "wo": {
+            "label": "wo",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorder": {
+            "label": "workorder",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderbudget": {
+            "label": "workorderbudget",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workordererrorsymptom": {
+            "label": "workordererrorsymptom",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workordergeoareas": {
+            "label": "workordergeoareas",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderjob": {
+            "label": "workorderjob",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderjournal": {
+            "label": "workorderjournal",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderobject": {
+            "label": "workorderobject",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderorganization": {
+            "label": "workorderorganization",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderreportpage": {
+            "label": "workorderreportpage",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderrole": {
+            "label": "workorderrole",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorderworktype": {
+            "label": "workorderworktype",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
         }
     },
-    {
-        "_id": "bigquery",
-        "label": "Google Bigquery",
-        "system_type": "dbms",
-        "datatypes": {
-            "contact": {
-                "label": "Contact",
-                "maps_to": "person",
-                "read": "not_applicable",
-                "write": "beta",
-                "maps_to_label": "Person"
-            },
-            "company": {
-                "label": "Company",
-                "maps_to": "organisation",
-                "read": "not_applicable",
-                "write": "beta",
-                "maps_to_label": "Organisation"
-            }}
-    },
-    {
-        "_id": "opensesam",
-        "label": "Open Sesam",
-        "system_type": "od",
-        "datatypes": {
-            "organisation": {
-                "label": "Organisation",
-                "maps_to": "organisation",
-                "read": "beta",
-                "write": "not_applicable",
-                "maps_to_label": "Organisation"
-            }
+    "description": "SaaS platform with cloud-agnostic and hybrid deployment.",
+    "label": "Qlik",
+    "system_type": "bi",
+    "url": "https://www.qlik.com/"
+},{
+    "_id": "power-bi",
+    "_updated": 550,
+    "_previous": 503,
+    "_deleted": false,
+    "_ts": 1674604590891669,
+    "_hash": "c35406e84acb8540a74e0b1a4a2ef32a",
+    "datatypes": {
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "finance": {
+            "label": "finance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "hr": {
+            "label": "hr",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "time": {
+            "label": "time",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
         }
-    }
-]
+    },
+    "description": "Data visualization software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.",
+    "label": "Microsoft Power BI",
+    "system_type": "bi",
+    "url": "https://powerbi.microsoft.com/"
+},{
+    "_id": "synapse",
+    "_updated": 549,
+    "_previous": 489,
+    "_deleted": false,
+    "_ts": 1674604587270455,
+    "_hash": "e9f97873cc031abd91555a98165aa979",
+    "datatypes": {
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "cost": {
+            "label": "cost",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "paymentmethod": {
+            "label": "paymentmethod",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "period": {
+            "label": "period",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "subscription": {
+            "label": "subscription",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "time": {
+            "label": "time",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing and big data analytics.",
+    "label": "Microsoft Synapse",
+    "system_type": "dbms",
+    "url": "https://azure.microsoft.com/nb-no/services/synapse-analytics/"
+},{
+    "_id": "omega365",
+    "_updated": 548,
+    "_previous": 479,
+    "_deleted": false,
+    "_ts": 1674604587074384,
+    "_hash": "5a6dd4cfb73e21fab23919307047b510",
+    "datatypes": {
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "contract": {
+            "label": "contract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "limited"
+        },
+        "cost": {
+            "label": "cost",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "persons": {
+            "label": "persons",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "subproject": {
+            "label": "subproject",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Asset management solution that drives critical processes in organizations and projects. One single solution that covers all disciplines throughout the project life cycle.",
+    "label": "Omega 365",
+    "system_type": "erp",
+    "url": "https://omega365.com/"
+},{
+    "_id": "poweroffice",
+    "_updated": 547,
+    "_previous": 546,
+    "_deleted": false,
+    "_ts": 1674604411129022,
+    "_hash": "0f1314dbc040e3dec26ddedbfcdc54b9",
+    "datatypes": {
+        "address": {
+            "label": "address",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "beta",
+            "write": "beta"
+        },
+        "contactperson": {
+            "label": "contactperson",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        },
+        "outgoinginvoice": {
+            "label": "outgoinginvoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "beta",
+            "write": "beta"
+        },
+        "productgroup": {
+            "label": "productgroup",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "salesorder": {
+            "label": "salesorder",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "salesorderline": {
+            "label": "salesorderline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "supplier": {
+            "label": "supplier",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        }
+    },
+    "description": "PowerOffice is an all-in-one business solution developed by Business System Solutions AS. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. ",
+    "label": "Poweroffice",
+    "system_type": "erp",
+    "url": "https://poweroffice.no"
+},{
+    "_id": "zoho",
+    "_updated": 545,
+    "_previous": 497,
+    "_deleted": false,
+    "_ts": 1674604094612410,
+    "_hash": "705d1f05f53c85ef2c437fa04b1e7024",
+    "datatypes": {
+        "employees": {
+            "label": "employees",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "sla": {
+            "label": "sla",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Zoho is a unique and powerful suite of software to run your entire business, brought to you by a company with the long term vision to transform the way you work.",
+    "label": "Zoho",
+    "system_type": "erp",
+    "url": " https://www.zoho.com"
+},{
+    "_id": "zendesk",
+    "_updated": 544,
+    "_previous": 496,
+    "_deleted": false,
+    "_ts": 1674604094603453,
+    "_hash": "d27e3a9126bf84e3c0311af266b66373",
+    "datatypes": {
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticketaudit": {
+            "label": "ticketaudit",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticketfield": {
+            "label": "ticketfield",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Zendesk is a customer service software that provides software-as-a-service products related to customer support, sales, and other customer communications,such as  complete customer service solution that is easy to use. ",
+    "label": "Zendesk",
+    "system_type": "crm",
+    "url": "https://www.zendesk.com/"
+},{
+    "_id": "yr",
+    "_updated": 543,
+    "_previous": 506,
+    "_deleted": false,
+    "_ts": 1674604094574627,
+    "_hash": "17c56194ec62859330d2ed910670f56b",
+    "datatypes": {},
+    "description": "yr.no is a Norwegian website and an app for weather forecasts and other meteorological information.",
+    "label": "Yr.no",
+    "system_type": "od",
+    "url": "https://www.yr.no/"
+},{
+    "_id": "youtrack",
+    "_updated": 542,
+    "_previous": 495,
+    "_deleted": false,
+    "_ts": 1674604094571069,
+    "_hash": "1febce78174f0ced334216a0d2e7cf57",
+    "datatypes": {
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "issue": {
+            "label": "issue",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "workitem": {
+            "label": "workitem",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with the way you work. ",
+    "label": "YouTrack",
+    "system_type": "pms",
+    "url": "https://www.jetbrains.com/youtrack/"
+},{
+    "_id": "winorg",
+    "_updated": 541,
+    "_previous": 494,
+    "_deleted": false,
+    "_ts": 1674604094541920,
+    "_hash": "2c10747688d09aef5699d23c7759bbe7",
+    "datatypes": {
+        "auth0": {
+            "label": "auth0",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "brukerinfo": {
+            "label": "brukerinfo",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "forening": {
+            "label": "forening",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "fylke": {
+            "label": "fylke",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "h_foreningsstruktur": {
+            "label": "h_foreningsstruktur",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kommune": {
+            "label": "kommune",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kontingent_faktura": {
+            "label": "kontingent_faktura",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kuavdeling": {
+            "label": "kuavdeling",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kurs": {
+            "label": "kurs",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kurs_forening": {
+            "label": "kurs_forening",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kurssted": {
+            "label": "kurssted",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kurstype": {
+            "label": "kurstype",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "medlem": {
+            "label": "medlem",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "medlem_rolle": {
+            "label": "medlem_rolle",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "postnr": {
+            "label": "postnr",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "reskontro": {
+            "label": "reskontro",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "rolle": {
+            "label": "rolle",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "rolletype": {
+            "label": "rolletype",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "utvalg": {
+            "label": "utvalg",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "utvalg_verv": {
+            "label": "utvalg_verv",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "utvalgtype": {
+            "label": "utvalgtype",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "verv": {
+            "label": "verv",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "vervtype": {
+            "label": "vervtype",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. Winorg offers good payment solutions, effective communication with members and donors, and creating engagement throughout the organization.",
+    "label": "Winorg",
+    "system_type": "crm",
+    "url": "https://www.winorg.no/"
+},{
+    "_id": "wave",
+    "_updated": 540,
+    "_previous": 493,
+    "_deleted": false,
+    "_ts": 1674604094498657,
+    "_hash": "b6926eb43cba323999339c4f961e498d",
+    "datatypes": {
+        "business": {
+            "label": "business",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "country": {
+            "label": "country",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "currency": {
+            "label": "currency",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        },
+        "department": {
+            "label": "department",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "Wave provides financial software and services for small businesses, with services include direct bank data imports, invoicing and expense tracking, customizable chart of accounts, and journal transactions.",
+    "label": "Wave Financial",
+    "system_type": "erp",
+    "url": "https://www.waveapps.com/"
+},{
+    "_id": "twitter",
+    "_updated": 539,
+    "_previous": 491,
+    "_deleted": false,
+    "_ts": 1674604094431769,
+    "_hash": "ac6926f6a06a76aa94e142e505f312ac",
+    "datatypes": {
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Microblogging and social networking service on which users post and interact with messages known as \"tweets\".",
+    "label": "Twitter",
+    "system_type": "crm",
+    "url": "https://twitter.com/"
+},{
+    "_id": "tripletex",
+    "_updated": 538,
+    "_previous": 490,
+    "_deleted": false,
+    "_ts": 1674604094416646,
+    "_hash": "e3be060395aaee7b8e9b284a86ea728c",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "address": {
+            "label": "address",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "beta",
+            "write": "beta"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        },
+        "country": {
+            "label": "country",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "currency": {
+            "label": "currency",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        },
+        "department": {
+            "label": "department",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "ledger": {
+            "label": "ledger",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "order": {
+            "label": "order",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "orderline": {
+            "label": "orderline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "beta",
+            "write": "beta"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "beta",
+            "write": "beta"
+        },
+        "productgroup": {
+            "label": "productgroup",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "productgrouprelation": {
+            "label": "productgrouprelation",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "beta",
+            "write": "beta"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "timesheet": {
+            "label": "timesheet",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "vattype": {
+            "label": "vattype",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Tripletex is an online financial system that is uesd for invoicing, accounting, payroll, travel expenses, project management and timekeeping as well as customized solutions for the electrical and plumbing industry and has its own solution for accountants.",
+    "label": "Tripletex",
+    "system_type": "erp",
+    "url": "https://www.tripletex.no/"
+},{
+    "_id": "synergi-life",
+    "_updated": 537,
+    "_previous": 505,
+    "_deleted": false,
+    "_ts": 1674604094217772,
+    "_hash": "a89966047ffa359078a40ac043c3ea23",
+    "datatypes": {
+        "organization": {
+            "label": "organization",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "vendor": {
+            "label": "vendor",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Synergi Life is a comprehensive business solution for QHSE (quality, health, safety and environment) and risk management. It is a cloud-based solution consisting of individual modules for incident management, activity management, risk management, audit management, environment management and improvement management.",
+    "label": "Synergi-life",
+    "system_type": "crm",
+    "url": "https://www.dnv.com/services/qhse-and-enterprise-risk-management-software-synergi-life-1240?&utm_campaign=qhse_synergi_life&utm_source=google&utm_medium=cpc&gclid=CjwKCAiAgvKQBhBbEiwAaPQw3DJq8WL54uN8B9SY5WE6q1AurWDkbnsUagG4R76nJ-BFfA1ZyQ-85hoCD94QAvD_BwE&gclsrc=aw.ds"
+},{
+    "_id": "surveymonkey",
+    "_updated": 536,
+    "_previous": 488,
+    "_deleted": false,
+    "_ts": 1674604094189655,
+    "_hash": "6d367b96b1ec363e7bd00b1586e85c90",
+    "datatypes": {
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "reportingdata": {
+            "label": "reportingdata",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "surveymonkey": {
+            "label": "surveymonkey",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Cloud-based SaaS company providing an online survey tool providing brand-and marketing insight, as well as prouct and costumer experience.",
+    "label": "Survey Monkey",
+    "system_type": "crm",
+    "url": "https://www.surveymonkey.com/"
+},{
+    "_id": "superoffice",
+    "_updated": 535,
+    "_previous": 487,
+    "_deleted": false,
+    "_ts": 1674604094152281,
+    "_hash": "b3cec0a952d5bf93ac0a2aeb8b7ef8f2",
+    "datatypes": {
+        "candidate": {
+            "label": "candidate",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kunde": {
+            "label": "kunde",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "personinterest": {
+            "label": "personinterest",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "prosjekt": {
+            "label": "prosjekt",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "request": {
+            "label": "request",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "sale": {
+            "label": "sale",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticketcategory": {
+            "label": "ticketcategory",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticketstatus": {
+            "label": "ticketstatus",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.",
+    "label": "SuperOffice",
+    "system_type": "crm",
+    "url": "https://www.superoffice.com/"
+},{
+    "_id": "stripe",
+    "_updated": 534,
+    "_previous": 504,
+    "_deleted": false,
+    "_ts": 1674604094091068,
+    "_hash": "59268570a8ff9926689ac77a330363a5",
+    "datatypes": {
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "subscription": {
+            "label": "subscription",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Financial services and SaaS company that provides a payment processing software and application programming interface for e-commerce websites and mobile applications.",
+    "label": "Stripe",
+    "system_type": "fintech",
+    "url": "https://stripe.com/"
+},{
+    "_id": "smallworld",
+    "_updated": 533,
+    "_previous": 486,
+    "_deleted": false,
+    "_ts": 1674604094064759,
+    "_hash": "f98304dc2d36c5ccd0a2c769e1e40e32",
+    "datatypes": {
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "preventivemaintenance": {
+            "label": "preventivemaintenance",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "substation": {
+            "label": "substation",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "workorder": {
+            "label": "workorder",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Small World Financial Services is a  provider of payment services making it easy to send and receive money internationally. ",
+    "label": "Smallworld",
+    "system_type": "fintech",
+    "url": "https://www.smallworldfs.com/"
+},{
+    "_id": "rotorsoft",
+    "_updated": 532,
+    "_previous": 483,
+    "_deleted": false,
+    "_ts": 1674604094016386,
+    "_hash": "0dfab183ba0e09dd1fe08d291f59489b",
+    "datatypes": {
+        "authenticate": {
+            "label": "authenticate",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "scadameasurement": {
+            "label": "scadameasurement",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "winddirection": {
+            "label": "winddirection",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "ROTORsoft is a computer programme that fully automatically reads time and event controlled measurements and operating data from wind turbines, solar collectors, biogas plants as well as hydroelectric power stations.",
+    "label": "Rotorsoft",
+    "system_type": "ot",
+    "url": "https://www.rotorsoft.de/en/"
+},{
+    "_id": "proview",
+    "_updated": 531,
+    "_previous": 481,
+    "_deleted": false,
+    "_ts": 1674604093981547,
+    "_hash": "b3b7da28edd4b4364e8e436aadea71ed",
+    "datatypes": {},
+    "description": "Engineering document management system (EDMS) that enables controlled collaboration, drives compliance to your document control processes, and ensures every team member always has access to accurate information.",
+    "label": "ProArc",
+    "system_type": "ecm",
+    "url": "https://proarcedms.com"
+},{
+    "_id": "p360",
+    "_updated": 530,
+    "_previous": 480,
+    "_deleted": false,
+    "_ts": 1674604093911143,
+    "_hash": "0bc7535d7d0088612e5f3891da7c09fa",
+    "datatypes": {
+        "accessgroup": {
+            "label": "accessgroup",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "case": {
+            "label": "case",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "caseclass": {
+            "label": "caseclass",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "contactdomain": {
+            "label": "contactdomain",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "doc": {
+            "label": "doc",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "docarchive": {
+            "label": "docarchive",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "doccategory": {
+            "label": "doccategory",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "docrevision": {
+            "label": "docrevision",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "document": {
+            "label": "document",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "file": {
+            "label": "file",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "filedocumenttype": {
+            "label": "filedocumenttype",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "journalstatus": {
+            "label": "journalstatus",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "role": {
+            "label": "role",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "userprofile": {
+            "label": "userprofile",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "360° build on decades of experience as the preferred provider of digital services to the public sector. We are the only supplier that offers the entire portfolio of case processing, archive and document management, and planning & construction case processing.",
+    "label": "360°",
+    "system_type": "ecm",
+    "url": "https://www.tietoevry.com/en/industries/public-sector/case-and-document-management/360-case-document-and-records-management/"
+},{
+    "_id": "motimate",
+    "_updated": 529,
+    "_previous": 478,
+    "_deleted": false,
+    "_ts": 1674604093760023,
+    "_hash": "29916b20642a131ab6258d24b8225e40",
+    "datatypes": {
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "Motimate is a mobile learning app that ensures effective internal communication, strong culture building, simplification of work tasks and engaging training such as supporting new campaigns and share information with your employees.",
+    "label": "Motimate",
+    "system_type": "hrm",
+    "url": "https://www.motimateapp.com"
+},{
+    "_id": "maximo",
+    "_updated": 528,
+    "_previous": 477,
+    "_deleted": false,
+    "_ts": 1674604093736405,
+    "_hash": "1025c6b75fedf979d62756f62af31ca7",
+    "datatypes": {},
+    "description": "Maximo, now branded as IBM Maximo Asset Management is a EAM software used to assist an organisation in managing its assets such as buildings, vehicles, fire extinguishers, equipment recording details such as details, maintenance schedules and participating in workflows to manage the assets.",
+    "label": "Maximo",
+    "system_type": "erp",
+    "url": "https://www.ibm.com/products/maximo"
+},{
+    "_id": "m3",
+    "_updated": 527,
+    "_previous": 476,
+    "_deleted": false,
+    "_ts": 1674604093727896,
+    "_hash": "0aef2b5d98fbbc463a429d269c42e038",
+    "datatypes": {
+        "address": {
+            "label": "address",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "orderline": {
+            "label": "orderline",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "supplier": {
+            "label": "supplier",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Infor® M3 is a cloud-based, manufacturing and distribution ERP system that leverages the latest technologies to provide an exceptional user experience and powerful analytics in a multicompany, multicountry, and multisite platform.",
+    "label": "Infor M3",
+    "system_type": "erp",
+    "url": "https://www.infor.com/solutions/erp/m3"
+},{
+    "_id": "jira",
+    "_updated": 526,
+    "_previous": 475,
+    "_deleted": false,
+    "_ts": 1674604093675183,
+    "_hash": "1f5f547ff960e082a854f6307c6c1870",
+    "datatypes": {
+        "auth": {
+            "label": "auth",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "component": {
+            "label": "component",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "issuestatus": {
+            "label": "issuestatus",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "issuetype": {
+            "label": "issuetype",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "projectrole": {
+            "label": "projectrole",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "projectroleactor": {
+            "label": "projectroleactor",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "sla": {
+            "label": "sla",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Bug-tracking and project management software application.",
+    "label": "Jira",
+    "system_type": "pms",
+    "url": "https://www.atlassian.com/software/jira"
+},{
+    "_id": "ifs",
+    "_updated": 525,
+    "_previous": 474,
+    "_deleted": false,
+    "_ts": 1674604093614856,
+    "_hash": "f7b6a025d0d49dcd81db7aebbc7bf8b2",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "auth": {
+            "label": "auth",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "balance": {
+            "label": "balance",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "budget": {
+            "label": "budget",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "code": {
+            "label": "code",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "communicationpoint": {
+            "label": "communicationpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "cost": {
+            "label": "cost",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "customeraccept": {
+            "label": "customeraccept",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "delprosjekt": {
+            "label": "delprosjekt",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "distributioncabinet": {
+            "label": "distributioncabinet",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "distributiontransformerstand": {
+            "label": "distributiontransformerstand",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "doc": {
+            "label": "doc",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "document": {
+            "label": "document",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "dropsworkorder": {
+            "label": "dropsworkorder",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "element": {
+            "label": "element",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "emp": {
+            "label": "emp",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "equipment": {
+            "label": "equipment",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "facility": {
+            "label": "facility",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "fact": {
+            "label": "fact",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "faktura": {
+            "label": "faktura",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "groundfaultcase": {
+            "label": "groundfaultcase",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "groundfaultticket": {
+            "label": "groundfaultticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "history": {
+            "label": "history",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "hours": {
+            "label": "hours",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "info": {
+            "label": "info",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "innforingsstasjon": {
+            "label": "innforingsstasjon",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "inquiry": {
+            "label": "inquiry",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "issue": {
+            "label": "issue",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "item": {
+            "label": "item",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "jordslutningsspoler": {
+            "label": "jordslutningsspoler",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "koblingspunkt": {
+            "label": "koblingspunkt",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "koblingsstasjon": {
+            "label": "koblingsstasjon",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kommune": {
+            "label": "kommune",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kondensatorbatteri": {
+            "label": "kondensatorbatteri",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "krafttrafoplass": {
+            "label": "krafttrafoplass",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "krysskobling": {
+            "label": "krysskobling",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "lavspent": {
+            "label": "lavspent",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "ledger": {
+            "label": "ledger",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "maintenance": {
+            "label": "maintenance",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "manual": {
+            "label": "manual",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "member": {
+            "label": "member",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "members": {
+            "label": "members",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "message": {
+            "label": "message",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meterpoint": {
+            "label": "meterpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "nettstasjon": {
+            "label": "nettstasjon",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "newinstallation": {
+            "label": "newinstallation",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "offermail": {
+            "label": "offermail",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "operation": {
+            "label": "operation",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "order": {
+            "label": "order",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "organization": {
+            "label": "organization",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "payment": {
+            "label": "payment",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "period": {
+            "label": "period",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "pole": {
+            "label": "pole",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "powerstation": {
+            "label": "powerstation",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "proj": {
+            "label": "proj",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "prosj": {
+            "label": "prosj",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "prosjekt": {
+            "label": "prosjekt",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "regionalnet": {
+            "label": "regionalnet",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "report": {
+            "label": "report",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "request": {
+            "label": "request",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "role": {
+            "label": "role",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "servicepoint": {
+            "label": "servicepoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "stock": {
+            "label": "stock",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "substation": {
+            "label": "substation",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "supplier": {
+            "label": "supplier",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "support": {
+            "label": "support",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "limited"
+        },
+        "switch": {
+            "label": "switch",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "switchmeasurement": {
+            "label": "switchmeasurement",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "tankanlegg": {
+            "label": "tankanlegg",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "tilknytning": {
+            "label": "tilknytning",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "time": {
+            "label": "time",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "tool": {
+            "label": "tool",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "transformatorstasjon": {
+            "label": "transformatorstasjon",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "wo": {
+            "label": "wo",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "workorder": {
+            "label": "workorder",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "A multinational enterprise software for companies who manufacture and distribute goods, offers IFS cloud which promises class-leading FSM, ERP and EAM in one product.",
+    "label": "IFS",
+    "system_type": "erp",
+    "url": "https://www.ifs.com/"
+},{
+    "_id": "hubspot",
+    "_updated": 524,
+    "_previous": 473,
+    "_deleted": false,
+    "_ts": 1674604090800496,
+    "_hash": "92c675563acd66ae0eaa2d001b6b8a73",
+    "datatypes": {
+        "account": {
+            "label": "account",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "business": {
+            "label": "business",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "companies": {
+            "label": "companies",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "beta",
+            "write": "beta"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        },
+        "country": {
+            "label": "country",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "currency": {
+            "label": "currency",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "department": {
+            "label": "department",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "item": {
+            "label": "item",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "subscription": {
+            "label": "subscription",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "limited"
+        },
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        }
+    },
+    "description": "CRM and marketing platform.",
+    "label": "HubSpot",
+    "system_type": "crm",
+    "url": "https://www.hubspot.com/"
+},{
+    "_id": "geonis",
+    "_updated": 523,
+    "_previous": 472,
+    "_deleted": false,
+    "_ts": 1674604090349279,
+    "_hash": "4c11ba3e6c9dcd54caa577c858b4dbd4",
+    "datatypes": {
+        "address": {
+            "label": "address",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "anlegg": {
+            "label": "anlegg",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "annualload": {
+            "label": "annualload",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "communicationpoint": {
+            "label": "communicationpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "limited"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "installation": {
+            "label": "installation",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "jordslutningsspoler": {
+            "label": "jordslutningsspoler",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "koblingspunkt": {
+            "label": "koblingspunkt",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kondensatorbatteri": {
+            "label": "kondensatorbatteri",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "krafttrafoplass": {
+            "label": "krafttrafoplass",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "krysskobling": {
+            "label": "krysskobling",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "maalepunkt": {
+            "label": "maalepunkt",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meter": {
+            "label": "meter",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "meterpoint": {
+            "label": "meterpoint",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "limited"
+        },
+        "newinstallation": {
+            "label": "newinstallation",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "pole": {
+            "label": "pole",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "powerstation": {
+            "label": "powerstation",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "limited"
+        },
+        "switch": {
+            "label": "switch",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "tankanlegg": {
+            "label": "tankanlegg",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "workorderupdates": {
+            "label": "workorderupdates",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Enterprise-wide management of utility networks with GIS. VertiGIS Utilities is designed for comprehensive and enterprise-wide management of utility networks and is made ready for the challenges of the future.",
+    "label": "Geonis",
+    "system_type": "gis",
+    "url": "https://geocom.ch/en/solutions/utilitynetwork/"
+},{
+    "_id": "geodata",
+    "_updated": 522,
+    "_previous": 502,
+    "_deleted": false,
+    "_ts": 1674604089043457,
+    "_hash": "04e54ab25b27f794a721c61f22512f50",
+    "datatypes": {},
+    "description": "Geodata is the market leader in Norway in geographic information systems and associated technology. and is the norwegian distributor of software from Esri - one of the world's largest suppliers and developers of geographic information systems (GIS).",
+    "label": "Geodata",
+    "system_type": "gis",
+    "url": "https://geodata.no"
+},{
+    "_id": "freshteam",
+    "_updated": 521,
+    "_previous": 471,
+    "_deleted": false,
+    "_ts": 1674604089036689,
+    "_hash": "b436de23cd06a667a57c80bdc0443b00",
+    "datatypes": {
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "beta",
+            "write": "beta"
+        }
+    },
+    "description": "Freshteam is a smart HR software that helps you handle recruiting, onboarding, time off and employee information in one place.",
+    "label": "Freshteam",
+    "system_type": "hrm",
+    "url": "https://freshteam.com"
+},{
+    "_id": "freshdesk",
+    "_updated": 520,
+    "_previous": 470,
+    "_deleted": false,
+    "_ts": 1674604089022828,
+    "_hash": "54cd844f4b6b5c38a328443f4cbc19a7",
+    "datatypes": {
+        "activity": {
+            "label": "activity",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "agent": {
+            "label": "agent",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "manual": {
+            "label": "manual",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "nextincontact": {
+            "label": "nextincontact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "nextinticket": {
+            "label": "nextinticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "role": {
+            "label": "role",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "survey": {
+            "label": "survey",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "ticket": {
+            "label": "ticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "Developer and marketer of software products used for inbound marketing and sales.",
+    "label": "Freshdesk",
+    "system_type": "crm",
+    "url": "https://freshdesk.com"
+},{
+    "_id": "firebase",
+    "_updated": 519,
+    "_previous": 469,
+    "_deleted": false,
+    "_ts": 1674604088771091,
+    "_hash": "41c147c52b2d5817505e6ff5cb970a17",
+    "datatypes": {
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "invoice": {
+            "label": "invoice",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "invoicemain": {
+            "label": "invoicemain",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "poweroutage": {
+            "label": "poweroutage",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "reading": {
+            "label": "reading",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Firebase is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.",
+    "label": "Firebase",
+    "system_type": "dbms",
+    "url": "https://firebase.google.com"
+},{
+    "_id": "excel",
+    "_updated": 518,
+    "_previous": 468,
+    "_deleted": false,
+    "_ts": 1674604088705086,
+    "_hash": "7f56d2a7f4feffd0e496950ecb31d7d7",
+    "datatypes": {
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        }
+    },
+    "description": "Excel is a spreadsheet program from Microsoft and a component of its Office product group for business applications. Microsoft Excel enables users to format, organize and calculate data in a spreadsheet.",
+    "label": "Microsoft Excel",
+    "system_type": "bi",
+    "url": "https://www.microsoft.com/excel"
+},{
+    "_id": "dbpedia",
+    "_updated": 517,
+    "_previous": 467,
+    "_deleted": false,
+    "_ts": 1674604088318808,
+    "_hash": "ccf81d4493e2f597e52ae2aee4a8e0f7",
+    "datatypes": {
+        "agent": {
+            "label": "agent",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "country": {
+            "label": "country",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "industry": {
+            "label": "industry",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "place": {
+            "label": "place",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "A wikipedia project that is aiming to extract structured content from the information created in the project.",
+    "label": "DBpedia",
+    "system_type": "od",
+    "url": "https://www.dbpedia.org"
+},{
+    "_id": "dataverse",
+    "_updated": 516,
+    "_previous": 501,
+    "_deleted": false,
+    "_ts": 1674604088216600,
+    "_hash": "8f58f875b3c346399182bf41c7baee41",
+    "datatypes": {
+        "bruker": {
+            "label": "bruker",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "customer": {
+            "label": "customer",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kontakt": {
+            "label": "kontakt",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "kunder": {
+            "label": "kunder",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "organisasjonsenhet": {
+            "label": "organisasjonsenhet",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications.",
+    "label": "Microsoft Dataverse",
+    "system_type": "eai",
+    "url": "https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro"
+},{
+    "_id": "d365",
+    "_updated": 515,
+    "_previous": 500,
+    "_deleted": false,
+    "_ts": 1674604088157896,
+    "_hash": "7a856f9761392aa9b91c154903ba7cdc",
+    "datatypes": {
+        "ansatt": {
+            "label": "ansatt",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "avdeling": {
+            "label": "avdeling",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "bygg": {
+            "label": "bygg",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "contract": {
+            "label": "contract",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "faktura": {
+            "label": "faktura",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "firma": {
+            "label": "firma",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "kunde": {
+            "label": "kunde",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.",
+    "label": "Microsoft Dynamics 365",
+    "system_type": "erp",
+    "url": "https://dynamics.microsoft.com/en-us/"
+},{
+    "_id": "catalyst-one",
+    "_updated": 514,
+    "_previous": 499,
+    "_deleted": false,
+    "_ts": 1674604088128020,
+    "_hash": "109e0c6869c5002bb5118118f6985543",
+    "datatypes": {
+        "ad": {
+            "label": "ad",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "department": {
+            "label": "department",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "supplier": {
+            "label": "supplier",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Comprehensive HCM software suite, supporting all HR functions. Module-based design and configured, making all solutions combinable and able to meet all unique requirements. ",
+    "label": "CatalystOne",
+    "system_type": "hrm",
+    "url": "https://www.catalystone.com"
+},{
+    "_id": "brreg",
+    "_updated": 513,
+    "_previous": 466,
+    "_deleted": false,
+    "_ts": 1674604088082141,
+    "_hash": "758c8d33ad60149ad52af361bf4ec7df",
+    "datatypes": {
+        "enheter": {
+            "label": "enheter",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "underenheter": {
+            "label": "underenheter",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies.",
+    "label": "Brreg",
+    "system_type": "od",
+    "url": "https://www.brreg.no/"
+},{
+    "_id": "bigquery",
+    "_updated": 512,
+    "_previous": 465,
+    "_deleted": false,
+    "_ts": 1674604088056501,
+    "_hash": "aa89449dd7c5e3f22957ffa3d6dc844c",
+    "datatypes": {
+        "accounting": {
+            "label": "accounting",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "agreement": {
+            "label": "agreement",
+            "maps_to": "agreement",
+            "maps_to_label": "agreement",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "asset": {
+            "label": "asset",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "classification": {
+            "label": "classification",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "documentation": {
+            "label": "documentation",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "event": {
+            "label": "event",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "human": {
+            "label": "human",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "location": {
+            "label": "location",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "organisation": {
+            "label": "organisation",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "product": {
+            "label": "product",
+            "maps_to": "product",
+            "maps_to_label": "product",
+            "read": "not_applicable",
+            "write": "beta"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "beta"
+        }
+    },
+    "description": "BigQuery is a fully managed, serverless data warehouse that enables scalable analysis over petabytes of data.",
+    "label": "Bigquery",
+    "system_type": "dbms",
+    "url": "https://cloud.google.com/bigquery"
+},{
+    "_id": "bazefield",
+    "_updated": 511,
+    "_previous": 464,
+    "_deleted": false,
+    "_ts": 1674604088050824,
+    "_hash": "0a9fe593e43ef24afac9bebb3f9c40ab",
+    "datatypes": {
+        "scadameasurement": {
+            "label": "scadameasurement",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "winddirection": {
+            "label": "winddirection",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        }
+    },
+    "description": "Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power.",
+    "label": "Bazefield",
+    "system_type": "ot",
+    "url": "https://bazefield.com/"
+},{
+    "_id": "azure-ad",
+    "_updated": 510,
+    "_previous": 498,
+    "_deleted": false,
+    "_ts": 1674604088011533,
+    "_hash": "0a5741074487ac001615504e490fdd97",
+    "datatypes": {
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "Cloud-based identity and access management service.",
+    "label": "Active Directory",
+    "system_type": "iam",
+    "url": "https://azure.microsoft.com/nb-no/services/active-directory/"
+},{
+    "_id": "auth0",
+    "_updated": 509,
+    "_previous": 463,
+    "_deleted": false,
+    "_ts": 1674604087978615,
+    "_hash": "c5d00f29a1563b6e8325387ade722c3c",
+    "datatypes": {
+        "auth0": {
+            "label": "auth0",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "brukere": {
+            "label": "brukere",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "brukerinfo": {
+            "label": "brukerinfo",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        }
+    },
+    "description": "Auth0 is an easy to implement, adaptable authentication and authorization platform.",
+    "label": "Auth0",
+    "system_type": "iam",
+    "url": "https://auth0.com"
+},{
+    "_id": "ardoq",
+    "_updated": 508,
+    "_previous": 462,
+    "_deleted": false,
+    "_ts": 1674604087962129,
+    "_hash": "2c9399aae9cc6f2d2bd5f307bcfd2b0d",
+    "datatypes": {
+        "ardoq": {
+            "label": "ardoq",
+            "maps_to": "documentation",
+            "maps_to_label": "documentation",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Ardoq is a dynamic, data-driven tool for Enterprise Architecture. Ardoq´s softwase helps organizations and businesses plan, execute and predict the impact of change across their people, projects, strategies, processes, applications, infrastructure, and capabilities.",
+    "label": "Ardoq",
+    "system_type": "ecm",
+    "url": "https://www.ardoq.com/"
+},{
+    "_id": "arcgis",
+    "_updated": 507,
+    "_previous": 461,
+    "_deleted": false,
+    "_ts": 1674604087862224,
+    "_hash": "1338433db375fbc7d0eef284af4ed79f",
+    "datatypes": {
+        "FYLKER": {
+            "label": "FYLKER",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "GEO": {
+            "label": "GEO",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "KOMMUNER": {
+            "label": "KOMMUNER",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "amidevice": {
+            "label": "amidevice",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "amisite": {
+            "label": "amisite",
+            "maps_to": "asset",
+            "maps_to_label": "asset",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "avbrudd": {
+            "label": "avbrudd",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "companymunici": {
+            "label": "companymunici",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "dropsticket": {
+            "label": "dropsticket",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "enkeltminner": {
+            "label": "enkeltminner",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "fylke": {
+            "label": "fylke",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "inquiry": {
+            "label": "inquiry",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "lok": {
+            "label": "lok",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "poweroutage": {
+            "label": "poweroutage",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "status": {
+            "label": "status",
+            "maps_to": "classification",
+            "maps_to_label": "classification",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "tasklist": {
+            "label": "tasklist",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workorder": {
+            "label": "workorder",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.",
+    "label": "ArcGIS",
+    "system_type": "gis",
+    "url": "https://www.arcgis.com/index.html"
+},{
+    "_id": "unit4",
+    "_updated": 147,
+    "_previous": 39,
+    "_deleted": false,
+    "_ts": 1674603202037533,
+    "_hash": "ce8c1bf6bb7725bad6d82f9f56dd089c",
+    "datatypes": {
+        "avdeling": {
+            "label": "avdeling",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "company": {
+            "label": "company",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "contact": {
+            "label": "contact",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "currentDepartmentID": {
+            "label": "currentDepartmentID",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "cvpartnerupdate": {
+            "label": "cvpartnerupdate",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "department": {
+            "label": "department",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "limited"
+        },
+        "departmentavdeling": {
+            "label": "departmentavdeling",
+            "maps_to": "organisation",
+            "maps_to_label": "organisation",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "employee": {
+            "label": "employee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "limited",
+            "write": "limited"
+        },
+        "employeeDepChange": {
+            "label": "employeeDepChange",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employeeTermination": {
+            "label": "employeeTermination",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employeeaddress": {
+            "label": "employeeaddress",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employeedetail": {
+            "label": "employeedetail",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employeetime": {
+            "label": "employeetime",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "employmentTypeChange": {
+            "label": "employmentTypeChange",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "history": {
+            "label": "history",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "newEmployee": {
+            "label": "newEmployee",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "omrade": {
+            "label": "omrade",
+            "maps_to": "location",
+            "maps_to_label": "location",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "person": {
+            "label": "person",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "personnel": {
+            "label": "personnel",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "personneladdress": {
+            "label": "personneladdress",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "personnelemployment": {
+            "label": "personnelemployment",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "personnelemprelation": {
+            "label": "personnelemprelation",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "personnelrelation": {
+            "label": "personnelrelation",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "project": {
+            "label": "project",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "limited"
+        },
+        "projecttype": {
+            "label": "projecttype",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "salary": {
+            "label": "salary",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "salaryChange": {
+            "label": "salaryChange",
+            "maps_to": "accounting",
+            "maps_to_label": "accounting",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "subtask": {
+            "label": "subtask",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "task": {
+            "label": "task",
+            "maps_to": "task",
+            "maps_to_label": "task",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "timetransaction": {
+            "label": "timetransaction",
+            "maps_to": "event",
+            "maps_to_label": "event",
+            "read": "limited",
+            "write": "not_applicable"
+        },
+        "user": {
+            "label": "user",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        },
+        "workforce": {
+            "label": "workforce",
+            "maps_to": "human",
+            "maps_to_label": "human",
+            "read": "not_applicable",
+            "write": "limited"
+        }
+    },
+    "description": "Unit4 develops and sells program modules within accounting, financial management, project control, logistics and payroll and personnel administration for Norwegian companies.",
+    "label": "Unit4",
+    "system_type": "erp",
+    "url": "https://www.unit4.no"
+},{
+    "_id": "opensesam",
+    "_updated": 48,
+    "_previous": null,
+    "_deleted": false,
+    "_ts": 1674602448077148,
+    "_hash": "8a36fa4d982088711aa8854c22a9986d",
+    "datatypes": {},
+    "description": null,
+    "label": "Opensesam",
+    "system_type": "od",
+    "url": "https://sesam.io"
+}]

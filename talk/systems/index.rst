@@ -12,12 +12,10 @@ Sesam Talk support systems across a range of categories. You can read more about
    categories/eai
    categories/ecm
    categories/erp
-   categories/es
    categories/fintech
    categories/gis
    categories/hrm
    categories/iam
    categories/od
    categories/ot
-   categories/paas
    categories/pms

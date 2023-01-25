@@ -4,7 +4,7 @@ The following systems are currently supported.
 .. toctree::
    :maxdepth: 1
 
-{% for v in supported_systems %}
+{% for v in supported_systems | sort(attribute='label') %}
    ../{{v.id}}
 {% endfor %}
 {% else %}

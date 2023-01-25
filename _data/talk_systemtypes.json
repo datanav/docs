@@ -1,91 +1,379 @@
-[
-    {
-        "_id": "crm",
-        "supported_systems": [
-            {
-                "label": "Hubspot",
-                "id": "hubspot"
-            }
-        ]
-    },
-    {
-        "_id": "erp",
-        "supported_systems": [
-            {
-                "label": "Tripletex",
-                "id": "tripletex"
-            },
-            {
-                "label": "Wave",
-                "id": "wave"
-            }
-        ]
-    },
-    {
-        "_id": "hrm",
-        "supported_systems": [
-            {
-                "label": "Freshteam",
-                "id": "freshteam"
-            }
-        ]
-    },
-    {
-        "_id": "dbms",
-        "supported_systems": [
-            {
-                "label": "Google Bigquery",
-                "id": "bigquery"
-            }
-        ]
-    },
-    {
-        "_id": "od",
-        "supported_systems": [
-            {
-                "label": "Open Sesam",
-                "id": "opensesam"
-            }
-        ]
-    },
-    {
-        "_id": "bi",
-        "supported_systems": []
-    },
-    {
-        "_id": "eai",
-        "supported_systems": []
-    },
-    {
-        "_id": "ecm",
-        "supported_systems": []
-    },
-    {
-        "_id": "fintech",
-        "supported_systems": []
-    },
-    {
-        "_id": "gis",
-        "supported_systems": []
-    },
-    {
-        "_id": "iam",
-        "supported_systems": []
-    },
-    {
-        "_id": "ot",
-        "supported_systems": []
-    },
-    {
-        "_id": "paas",
-        "supported_systems": []
-    },
-    {
-        "_id": "pms",
-        "supported_systems": []
-    },
-    {
-        "_id": "es",
-        "supported_systems": []
-    }
-]
+[{
+    "_id": "od",
+    "_updated": 31,
+    "_previous": 11,
+    "_deleted": false,
+    "_ts": 1674602349771540,
+    "_hash": "e233644d68ccad979d2d08b7ce464e60",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/od.png",
+    "description": "Open data is data that is openly accessible, exploitable, editable and shared by anyone for any purpose, even commercially. Open data is licensed under an open license.",
+    "label": "Open data",
+    "short": "Open data source",
+    "supported_systems": [
+        {
+            "id": "brreg",
+            "label": "Brreg"
+        },
+        {
+            "id": "dbpedia",
+            "label": "DBpedia"
+        },
+        {
+            "id": "opensesam",
+            "label": "Opensesam"
+        },
+        {
+            "id": "yr",
+            "label": "Yr.no"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Open_data"
+},{
+    "_id": "dbms",
+    "_updated": 30,
+    "_previous": null,
+    "_deleted": false,
+    "_ts": 1674601948049562,
+    "_hash": "21671cc2585ff485c3fad8ade5d76999",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/dbms.png",
+    "description": "A database is an organized collection of data stored and accessed electronically. Small databases can be stored on a file system, while large databases are hosted on computer clusters or cloud storage. A database management system (DBMS) is the software that interacts with end users, applications, and the database itself to capture and analyze the data.",
+    "label": "DataBase Management System (DBMS)",
+    "short": "Database",
+    "supported_systems": [
+        {
+            "id": "bigquery",
+            "label": "Bigquery"
+        },
+        {
+            "id": "firebase",
+            "label": "Firebase"
+        },
+        {
+            "id": "synapse",
+            "label": "Microsoft Synapse"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Database"
+},{
+    "_id": "ot",
+    "_updated": 29,
+    "_previous": 15,
+    "_deleted": false,
+    "_ts": 1674600555638732,
+    "_hash": "deb839e80a8711a7179065ec6fb896d8",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/ot.png",
+    "description": "Operational technology (OT) is hardware and software that detects or causes a change, through the direct monitoring and/or control of industrial equipment, assets, processes and events.",
+    "label": "Operational technology (OT)",
+    "short": "OT system",
+    "supported_systems": [
+        {
+            "id": "bazefield",
+            "label": "Bazefield"
+        },
+        {
+            "id": "rotorsoft",
+            "label": "Rotorsoft"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Operational_technology"
+},{
+    "_id": "eai",
+    "_updated": 27,
+    "_previous": 13,
+    "_deleted": false,
+    "_ts": 1674600555618899,
+    "_hash": "254ea3b2e1bcfd60f0a2cb4138d08d89",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/eai.png",
+    "description": "Enterprise application integration (EAI) is the use of software and computer systems' architectural principles to integrate a set of enterprise computer applications.",
+    "label": "Enterprise application integration (EAI)",
+    "short": "Application Integration system",
+    "supported_systems": [
+        {
+            "id": "dataverse",
+            "label": "Microsoft Dataverse"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Enterprise_application_integration"
+},{
+    "_id": "hrm",
+    "_updated": 26,
+    "_previous": 19,
+    "_deleted": false,
+    "_ts": 1674600555600539,
+    "_hash": "74f7f5be2faddbe08a08fe3cdebd439e",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/hrm.png",
+    "description": "A human resources management system (HRMS) is a form of Human Resources (HR) software that combines a number of systems and processes to ensure the easy management of human resources, business processes and data. Human resources software is used by businesses to combine a number of necessary HR functions, such as storing employee data, managing payroll, recruitment, benefits administration (total rewards), time and attendance, employee performance management, and tracking competency and training records.",
+    "label": "Human Resource Management (HRM)",
+    "short": "HR system",
+    "supported_systems": [
+        {
+            "id": "catalyst-one",
+            "label": "CatalystOne"
+        },
+        {
+            "id": "freshteam",
+            "label": "Freshteam"
+        },
+        {
+            "id": "motimate",
+            "label": "Motimate"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Human_resource_management_system"
+},{
+    "_id": "erp",
+    "_updated": 25,
+    "_previous": 18,
+    "_deleted": false,
+    "_ts": 1674600555597754,
+    "_hash": "fec8d581adbbebf93f766f4dd9108a79",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/erp.png",
+    "description": "Enterprise resource planning (ERP) is the integrated management of main business processes, often in real time and mediated by software and technology. ERP is usually referred to as a category of business management software—typically a suite of integrated applications—that an organization can use to collect, store, manage and interpret data from many business activities.",
+    "label": "Enterprise Resource Planning (ERP)",
+    "short": "ERP system",
+    "supported_systems": [
+        {
+            "id": "d365",
+            "label": "Microsoft Dynamics 365"
+        },
+        {
+            "id": "ifs",
+            "label": "IFS"
+        },
+        {
+            "id": "m3",
+            "label": "Infor M3"
+        },
+        {
+            "id": "maximo",
+            "label": "Maximo"
+        },
+        {
+            "id": "omega365",
+            "label": "Omega 365"
+        },
+        {
+            "id": "poweroffice",
+            "label": "Poweroffice"
+        },
+        {
+            "id": "sap",
+            "label": "SAP"
+        },
+        {
+            "id": "tripletex",
+            "label": "Tripletex"
+        },
+        {
+            "id": "unit4",
+            "label": "Unit4"
+        },
+        {
+            "id": "visma",
+            "label": "VISMA"
+        },
+        {
+            "id": "wave",
+            "label": "Wave Financial"
+        },
+        {
+            "id": "zoho",
+            "label": "Zoho"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Enterprise_resource_planning"
+},{
+    "_id": "crm",
+    "_updated": 24,
+    "_previous": 16,
+    "_deleted": false,
+    "_ts": 1674600555594760,
+    "_hash": "fa1f7a4aabc79f4074dba690df547477",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/crm.png",
+    "description": "Customer relationship management (CRM) is a process in which a business or other organization administers its interactions with customers, typically using data analysis to study large amounts of information.",
+    "label": "Customer Relationship Management (CRM)",
+    "short": "CRM system",
+    "supported_systems": [
+        {
+            "id": "freshdesk",
+            "label": "Freshdesk"
+        },
+        {
+            "id": "hubspot",
+            "label": "HubSpot"
+        },
+        {
+            "id": "salesforce",
+            "label": "Salesforce"
+        },
+        {
+            "id": "superoffice",
+            "label": "SuperOffice"
+        },
+        {
+            "id": "surveymonkey",
+            "label": "Survey Monkey"
+        },
+        {
+            "id": "synergi-life",
+            "label": "Synergi-life"
+        },
+        {
+            "id": "twitter",
+            "label": "Twitter"
+        },
+        {
+            "id": "winorg",
+            "label": "Winorg"
+        },
+        {
+            "id": "zendesk",
+            "label": "Zendesk"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Customer_relationship_management"
+},{
+    "_id": "ecm",
+    "_updated": 23,
+    "_previous": 14,
+    "_deleted": false,
+    "_ts": 1674600555592406,
+    "_hash": "d97aa2d5372ef65f787bd36da57b42a9",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/ecm.png",
+    "description": "Enterprise content management (ECM) extends the concept of content management by adding a timeline for each content item and, possibly, enforcing processes for its creation, approval and distribution. Systems using ECM generally provide a secure repository for managed items, analog or digital.",
+    "label": "Enterprise content management (ECM)",
+    "short": "Content Management system",
+    "supported_systems": [
+        {
+            "id": "ardoq",
+            "label": "Ardoq"
+        },
+        {
+            "id": "p360",
+            "label": "360°"
+        },
+        {
+            "id": "proview",
+            "label": "ProArc"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Enterprise_content_management"
+},{
+    "_id": "bi",
+    "_updated": 22,
+    "_previous": 6,
+    "_deleted": false,
+    "_ts": 1674600555589546,
+    "_hash": "012370db97e819ef22cca6a0afb3ce40",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/bi.png",
+    "description": "Business intelligence software is a type of application software designed to retrieve, analyze, transform and report data for business intelligence. The applications generally read data that has been previously stored, often - though not necessarily - in a data warehouse or data mart.",
+    "label": "Business Intelligence (BI)",
+    "short": "Business Intelligence  system",
+    "supported_systems": [
+        {
+            "id": "excel",
+            "label": "Microsoft Excel"
+        },
+        {
+            "id": "power-bi",
+            "label": "Microsoft Power BI"
+        },
+        {
+            "id": "qlik",
+            "label": "Qlik"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Business_intelligence_software"
+},{
+    "_id": "gis",
+    "_updated": 20,
+    "_previous": 17,
+    "_deleted": false,
+    "_ts": 1674600555579962,
+    "_hash": "87683251b118dc434eb5aedbf3bdff51",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/gis.png",
+    "description": "A geographic information system (GIS) is a type of database containing geographic data (that is, descriptions of phenomena for which location is relevant), combined with software tools for managing, analyzing, and visualizing those data.[1] In a broader sense, one may consider such a system to also include human users and support staff, procedures and workflows, body of knowledge of relevant concepts and methods, and institutional organizations.",
+    "label": "Geographic information system (GIS)",
+    "short": "GIS",
+    "supported_systems": [
+        {
+            "id": "arcgis",
+            "label": "ArcGIS"
+        },
+        {
+            "id": "geodata",
+            "label": "Geodata"
+        },
+        {
+            "id": "geonis",
+            "label": "Geonis"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Geographic_information_system"
+},{
+    "_id": "fintech",
+    "_updated": 10,
+    "_previous": null,
+    "_deleted": false,
+    "_ts": 1674597019550737,
+    "_hash": "b4410defbc4cd701dc0d051ada881bcf",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/fintech.png",
+    "description": "Financial technology (abbreviated fintech or FinTech) is the technology that aims to compete with traditional financial methods in the delivery of financial services.[1][2][3] Artificial intelligence, Blockchain, Cloud computing, and big data are regarded as the \"ABCD\" (four key areas) of FinTech.",
+    "label": "Financial technology",
+    "short": "Fintech system",
+    "supported_systems": [
+        {
+            "id": "smallworld",
+            "label": "Smallworld"
+        },
+        {
+            "id": "stripe",
+            "label": "Stripe"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Financial_technology"
+},{
+    "_id": "pms",
+    "_updated": 9,
+    "_previous": null,
+    "_deleted": false,
+    "_ts": 1674597019549606,
+    "_hash": "0e51d929f808b6a4dd1447471f38da09",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/pms.png",
+    "description": "Project management software (PMS) has the capacity to help plan, organize, and manage resource tools and develop resource estimates. Depending on the sophistication of the software, it can manage estimation and planning, scheduling, cost control and budget management, resource allocation, collaboration software, communication, decision-making, quality management, time management and documentation or administration systems.",
+    "label": "Project management software",
+    "short": "Project management system",
+    "supported_systems": [
+        {
+            "id": "jira",
+            "label": "Jira"
+        },
+        {
+            "id": "youtrack",
+            "label": "YouTrack"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Project_management_software"
+},{
+    "_id": "iam",
+    "_updated": 8,
+    "_previous": null,
+    "_deleted": false,
+    "_ts": 1674597019548654,
+    "_hash": "55e94dc73550e80868af77a21b4d3fba",
+    "depiction": "https://github.com/datanav/docs/raw/master/icons/iam.png",
+    "description": "Identity and access management (IAM), is a framework of policies and technologies to ensure that the right users (that are part of the ecosystem connected to or within an enterprise) have the appropriate access to technology resources.",
+    "label": "Identity and access management (IAM)",
+    "short": "IAM system",
+    "supported_systems": [
+        {
+            "id": "auth0",
+            "label": "Auth0"
+        },
+        {
+            "id": "azure-ad",
+            "label": "Active Directory"
+        }
+    ],
+    "wikipedia-url": "https://en.wikipedia.org/wiki/Identity_management"
+}]
