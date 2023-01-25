@@ -1,0 +1,14 @@
+.. _gis:
+
+===
+GIS
+===
+
+A geographic information system (GIS) is a type of database containing geographic data (that is, descriptions of phenomena for which location is relevant), combined with software tools for managing, analyzing, and visualizing those data.[1] In a broader sense, one may consider such a system to also include human users and support staff, procedures and workflows, body of knowledge of relevant concepts and methods, and institutional organizations.
+
+Supported GIS
+^^^^^^^^^^^^^
+
+.. jinja:: talk_categories_gis
+  :file: _jinja/category_systems.jinja
+

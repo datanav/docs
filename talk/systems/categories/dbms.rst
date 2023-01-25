@@ -10,4 +10,5 @@ Supported DBMS
 .. toctree::
    :maxdepth: 1
 
-   ../bigquery
+.. jinja:: talk_categories_dbms
+  :file: _jinja/category_systems.jinja

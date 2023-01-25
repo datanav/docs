@@ -1,0 +1,16 @@
+.. _talk_d365:
+
+Microsoft Dynamics 365
+======================
+
+Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
+
+https://dynamics.microsoft.com/en-us/
+
+
+.. jinja:: talk_system_d365
+   :file: _jinja/system_mapping.jinja
+
+Known issues
+------------
+No known issues.

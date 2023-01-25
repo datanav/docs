@@ -10,8 +10,6 @@ Enterprise resource planning (ERP) is the integrated management of main business
 Supported ERP systems
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
-   :maxdepth: 1
+.. jinja:: talk_categories_erp
+  :file: _jinja/category_systems.jinja
 
-   ../wave
-   ../tripletex

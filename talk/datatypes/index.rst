@@ -14,13 +14,14 @@ In the list bellow you will find the data types Sesam Talk currently supports:
 .. toctree::
    :maxdepth: 1
 
+   accounting
    agreement
    asset
    classification
    documentation
    event
+   human
    location
    organisation
-   person
    product
    task

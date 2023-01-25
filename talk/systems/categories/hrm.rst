@@ -8,7 +8,6 @@ A human resources management system (HRMS) is a form of Human Resources (HR) sof
 Supported HRM systems
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
-   :maxdepth: 1
+.. jinja:: talk_categories_hrm
+  :file: _jinja/category_systems.jinja
 
-   ../freshteam

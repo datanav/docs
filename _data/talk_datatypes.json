@@ -1,146 +1,2384 @@
-[
-    {
-        "_id": "agreement",
-        "label": "Agreement"
-    },
-    {
-        "_id": "asset",
-        "label": "Asset"
-    },
-    {
-        "_id": "classification",
-        "label": "Classification"
-    },
-    {
-        "_id": "documentation",
-        "label": "Documentation"
-    },
-    {
-        "_id": "event",
-        "label": "Event"
-    },
-    {
-        "_id": "location",
-        "label": "Location"
-    },
-    {
-        "_id": "organisation",
-        "label": "Organisation",
-        "mapped_datatypes": [
-            {
-                "system": "wave",
-                "system_label": "Wave",
-                "datatype": "customer",
-                "datatype_label": "Customer",
-                "system_type": "erp",
-                "system_type_label": "ERP",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "tripletex",
-                "system_label": "Tripletex",
-                "datatype": "customer",
-                "datatype_label": "Customer",
-                "system_type": "erp",
-                "system_type_label": "ERP",
-                "read": true,
-                "write": false
-            },
-            {
-                "system": "hubspot",
-                "system_label": "Hubspot",
-                "datatype": "company",
-                "datatype_label": "Company",
-                "system_type": "crm",
-                "system_type_label": "CRM",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "opensesam",
-                "system_label": "Open Sesam",
-                "datatype": "organisation",
-                "datatype_label": "Organisation",
-                "system_type": "opendata",
-                "system_type_label": "Open Data",
-                "read": true,
-                "write": false
-            },
-            {
-                "system": "bigquery",
-                "system_label": "Google Bigquery",
-                "datatype": "company",
-                "datatype_label": "Company",
-                "system_type": "dbms",
-                "system_type_label": "DBMS",
-                "read": false,
-                "write": true
-            }
-        ]
-    },
-    {
-        "_id": "person",
-        "label": "Person",
-        "mapped_datatypes": [
-            {
-                "system": "wave",
-                "system_label": "Wave",
-                "datatype": "customer_primarycontact",
-                "datatype_label": "Customer (embedded primary contact)",
-                "system_type": "erp",
-                "system_type_label": "ERP",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "hubspot",
-                "system_label": "Hubspot",
-                "datatype": "contact",
-                "datatype_label": "Contact",
-                "system_type": "crm",
-                "system_type_label": "CRM",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "hubspot",
-                "system_label": "Hubspot",
-                "datatype": "user",
-                "datatype_label": "User",
-                "system_type": "crm",
-                "system_type_label": "CRM",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "freshteam",
-                "system_label": "Freshteam",
-                "datatype": "employee",
-                "datatype_label": "Employee",
-                "system_type": "hrm",
-                "system_type_label": "HRM",
-                "read": true,
-                "write": true
-            },
-            {
-                "system": "bigquery",
-                "system_label": "Google Bigquery",
-                "datatype": "contact",
-                "datatype_label": "Contact",
-                "system_type": "dbms",
-                "system_type_label": "DBMS",
-                "read": false,
-                "write": true
-            }
-        ]
-    },
-    {
-        "_id": "product",
-        "label": "Product"
-    },
-    {
-        "_id": "task",
-        "label": "Task"
-    }
-]
+[{
+    "_id": "location",
+    "_updated": 2698,
+    "_previous": 2696,
+    "_deleted": false,
+    "_ts": 1674606655345274,
+    "_hash": "e72ed1cd8964061cc0ce805a8b69fbe6",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/location.png",
+    "description": "A position, place or site that something is in or where something happens.",
+    "label": "Location",
+    "mapped_datatypes": [
+        {
+            "datatype": "lok",
+            "datatype_label": "lok",
+            "read": "limited",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "place",
+            "datatype_label": "place",
+            "read": "limited",
+            "system": "dbpedia",
+            "system_label": "DBpedia",
+            "system_type": "od",
+            "system_type_label": "Open data source",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "address",
+            "datatype_label": "address",
+            "read": "not_applicable",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "country",
+            "datatype_label": "country",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "kommune",
+            "datatype_label": "kommune",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "address",
+            "datatype_label": "address",
+            "read": "limited",
+            "system": "m3",
+            "system_label": "Infor M3",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "address",
+            "datatype_label": "address",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "smallworld",
+            "system_label": "Smallworld",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "limited"
+        },
+        {
+            "datatype": "location",
+            "datatype_label": "location",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "address",
+            "datatype_label": "address",
+            "read": "beta",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "omrade",
+            "datatype_label": "omrade",
+            "read": "limited",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "postnr",
+            "datatype_label": "postnr",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q115095765"
+},{
+    "_id": "human",
+    "_updated": 2697,
+    "_previous": 2695,
+    "_deleted": false,
+    "_ts": 1674606655339959,
+    "_hash": "ba31b327e987afb16b1b8d2410da04a3",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/human.png",
+    "description": "A human being, regardless of role.",
+    "label": "Person",
+    "mapped_datatypes": [
+        {
+            "datatype": "brukerinfo",
+            "datatype_label": "brukerinfo",
+            "read": "limited",
+            "system": "auth0",
+            "system_label": "Auth0",
+            "system_type": "iam",
+            "system_type_label": "IAM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "azure-ad",
+            "system_label": "Active Directory",
+            "system_type": "iam",
+            "system_type_label": "IAM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "not_applicable",
+            "system": "catalyst-one",
+            "system_label": "CatalystOne",
+            "system_type": "hrm",
+            "system_type_label": "HR system",
+            "write": "limited"
+        },
+        {
+            "datatype": "kunde",
+            "datatype_label": "kunde",
+            "read": "limited",
+            "system": "d365",
+            "system_label": "Microsoft Dynamics 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "kunder",
+            "datatype_label": "kunder",
+            "read": "not_applicable",
+            "system": "dataverse",
+            "system_label": "Microsoft Dataverse",
+            "system_type": "eai",
+            "system_type_label": "Application Integration system",
+            "write": "limited"
+        },
+        {
+            "datatype": "person",
+            "datatype_label": "person",
+            "read": "limited",
+            "system": "dbpedia",
+            "system_label": "DBpedia",
+            "system_type": "od",
+            "system_type_label": "Open data source",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "nextincontact",
+            "datatype_label": "nextincontact",
+            "read": "not_applicable",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "employee",
+            "datatype_label": "employee",
+            "read": "beta",
+            "system": "freshteam",
+            "system_label": "Freshteam",
+            "system_type": "hrm",
+            "system_type_label": "HR system",
+            "write": "beta"
+        },
+        {
+            "datatype": "customer",
+            "datatype_label": "customer",
+            "read": "not_applicable",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "beta",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "beta"
+        },
+        {
+            "datatype": "members",
+            "datatype_label": "members",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "jira",
+            "system_label": "Jira",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "m3",
+            "system_label": "Infor M3",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "motimate",
+            "system_label": "Motimate",
+            "system_type": "hrm",
+            "system_type_label": "HR system",
+            "write": "limited"
+        },
+        {
+            "datatype": "persons",
+            "datatype_label": "persons",
+            "read": "limited",
+            "system": "omega365",
+            "system_label": "Omega 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "userprofile",
+            "datatype_label": "userprofile",
+            "read": "limited",
+            "system": "p360",
+            "system_label": "360°",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "contactperson",
+            "datatype_label": "contactperson",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "authenticate",
+            "datatype_label": "authenticate",
+            "read": "limited",
+            "system": "rotorsoft",
+            "system_label": "Rotorsoft",
+            "system_type": "ot",
+            "system_type_label": "OT system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "person",
+            "datatype_label": "person",
+            "read": "limited",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "customer",
+            "datatype_label": "customer",
+            "read": "limited",
+            "system": "smallworld",
+            "system_label": "Smallworld",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "customer",
+            "datatype_label": "customer",
+            "read": "limited",
+            "system": "stripe",
+            "system_label": "Stripe",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "superoffice",
+            "system_label": "SuperOffice",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "contact",
+            "datatype_label": "contact",
+            "read": "limited",
+            "system": "surveymonkey",
+            "system_label": "Survey Monkey",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "human",
+            "datatype_label": "human",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "person",
+            "datatype_label": "person",
+            "read": "not_applicable",
+            "system": "synergi-life",
+            "system_label": "Synergi-life",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "employee",
+            "datatype_label": "employee",
+            "read": "beta",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "workforce",
+            "datatype_label": "workforce",
+            "read": "not_applicable",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "users",
+            "datatype_label": "users",
+            "read": "limited",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "wave",
+            "system_label": "Wave Financial",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "medlem",
+            "datatype_label": "medlem",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "youtrack",
+            "system_label": "YouTrack",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "user",
+            "datatype_label": "user",
+            "read": "limited",
+            "system": "zendesk",
+            "system_label": "Zendesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "employees",
+            "datatype_label": "employees",
+            "read": "limited",
+            "system": "zoho",
+            "system_label": "Zoho",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q5"
+},{
+    "_id": "organisation",
+    "_updated": 2694,
+    "_previous": 2693,
+    "_deleted": false,
+    "_ts": 1674606655327928,
+    "_hash": "9872dca6c114f2d6ccdfc98ac38b21cf",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/organisation.png",
+    "description": "Any type of group or association of individuals who are joined together either formally or legally.",
+    "label": "Organisation",
+    "mapped_datatypes": [
+        {
+            "datatype": "companymunici",
+            "datatype_label": "companymunici",
+            "read": "limited",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "underenheter",
+            "datatype_label": "underenheter",
+            "read": "limited",
+            "system": "brreg",
+            "system_label": "Brreg",
+            "system_type": "od",
+            "system_type_label": "Open data source",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "supplier",
+            "datatype_label": "supplier",
+            "read": "not_applicable",
+            "system": "catalyst-one",
+            "system_label": "CatalystOne",
+            "system_type": "hrm",
+            "system_type_label": "HR system",
+            "write": "limited"
+        },
+        {
+            "datatype": "firma",
+            "datatype_label": "firma",
+            "read": "limited",
+            "system": "d365",
+            "system_label": "Microsoft Dynamics 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "organisasjonsenhet",
+            "datatype_label": "organisasjonsenhet",
+            "read": "not_applicable",
+            "system": "dataverse",
+            "system_label": "Microsoft Dataverse",
+            "system_type": "eai",
+            "system_type_label": "Application Integration system",
+            "write": "limited"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "limited",
+            "system": "dbpedia",
+            "system_label": "DBpedia",
+            "system_type": "od",
+            "system_type_label": "Open data source",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "company",
+            "datatype_label": "company",
+            "read": "limited",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "department",
+            "datatype_label": "department",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "supplier",
+            "datatype_label": "supplier",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "supplier",
+            "datatype_label": "supplier",
+            "read": "limited",
+            "system": "m3",
+            "system_label": "Infor M3",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "supplier",
+            "datatype_label": "supplier",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "vendor",
+            "datatype_label": "vendor",
+            "read": "limited",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "organisation",
+            "datatype_label": "organisation",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "vendor",
+            "datatype_label": "vendor",
+            "read": "not_applicable",
+            "system": "synergi-life",
+            "system_label": "Synergi-life",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "department",
+            "datatype_label": "department",
+            "read": "limited",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "departmentavdeling",
+            "datatype_label": "departmentavdeling",
+            "read": "limited",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "orgenhet",
+            "datatype_label": "orgenhet",
+            "read": "not_applicable",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "department",
+            "datatype_label": "department",
+            "read": "limited",
+            "system": "wave",
+            "system_label": "Wave Financial",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "kuavdeling",
+            "datatype_label": "kuavdeling",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q43229"
+},{
+    "_id": "product",
+    "_updated": 2692,
+    "_previous": 2691,
+    "_deleted": false,
+    "_ts": 1674606654418211,
+    "_hash": "f04bf68576950fe00e4f8440c1d773c6",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/product.png",
+    "description": "A product is the item offered for sale. A product can be a service or an item.",
+    "label": "Product",
+    "mapped_datatypes": [
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "sla",
+            "datatype_label": "sla",
+            "read": "not_applicable",
+            "system": "jira",
+            "system_label": "Jira",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "limited"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "limited",
+            "system": "m3",
+            "system_label": "Infor M3",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "limited",
+            "system": "stripe",
+            "system_label": "Stripe",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "product",
+            "datatype_label": "product",
+            "read": "beta",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "kurstype",
+            "datatype_label": "kurstype",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "sla",
+            "datatype_label": "sla",
+            "read": "not_applicable",
+            "system": "zoho",
+            "system_label": "Zoho",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q2424752"
+},{
+    "_id": "task",
+    "_updated": 2690,
+    "_previous": 2685,
+    "_deleted": false,
+    "_ts": 1674606654414946,
+    "_hash": "98e742eeca681e024d2fe782018162ae",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/task.png",
+    "description": "A piece of work to be done.",
+    "label": "Task",
+    "mapped_datatypes": [
+        {
+            "datatype": "workorder",
+            "datatype_label": "workorder",
+            "read": "not_applicable",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "project",
+            "datatype_label": "project",
+            "read": "not_applicable",
+            "system": "dataverse",
+            "system_label": "Microsoft Dataverse",
+            "system_type": "eai",
+            "system_type_label": "Application Integration system",
+            "write": "limited"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "ticket",
+            "datatype_label": "ticket",
+            "read": "limited",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "workorderupdates",
+            "datatype_label": "workorderupdates",
+            "read": "not_applicable",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "ticket",
+            "datatype_label": "ticket",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "workorder",
+            "datatype_label": "workorder",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "projectroleactor",
+            "datatype_label": "projectroleactor",
+            "read": "limited",
+            "system": "jira",
+            "system_label": "Jira",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "subproject",
+            "datatype_label": "subproject",
+            "read": "not_applicable",
+            "system": "omega365",
+            "system_label": "Omega 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "project",
+            "datatype_label": "project",
+            "read": "limited",
+            "system": "p360",
+            "system_label": "360°",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "limited",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "workorder",
+            "datatype_label": "workorder",
+            "read": "not_applicable",
+            "system": "smallworld",
+            "system_label": "Smallworld",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "limited"
+        },
+        {
+            "datatype": "ticketstatus",
+            "datatype_label": "ticketstatus",
+            "read": "limited",
+            "system": "superoffice",
+            "system_label": "SuperOffice",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "project",
+            "datatype_label": "project",
+            "read": "limited",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "task",
+            "datatype_label": "task",
+            "read": "limited",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "project",
+            "datatype_label": "project",
+            "read": "limited",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "workitem",
+            "datatype_label": "workitem",
+            "read": "limited",
+            "system": "youtrack",
+            "system_label": "YouTrack",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "ticketfield",
+            "datatype_label": "ticketfield",
+            "read": "limited",
+            "system": "zendesk",
+            "system_label": "Zendesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "ticket",
+            "datatype_label": "ticket",
+            "read": "not_applicable",
+            "system": "zoho",
+            "system_label": "Zoho",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q759676"
+},{
+    "_id": "event",
+    "_updated": 2688,
+    "_previous": 2683,
+    "_deleted": false,
+    "_ts": 1674606654404812,
+    "_hash": "21712848b7509915ec7172ab2cc09a91",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/event.png",
+    "description": "Something that occurs in a certain place during a particular interval of time.",
+    "label": "Event",
+    "mapped_datatypes": [
+        {
+            "datatype": "poweroutage",
+            "datatype_label": "poweroutage",
+            "read": "not_applicable",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "winddirection",
+            "datatype_label": "winddirection",
+            "read": "limited",
+            "system": "bazefield",
+            "system_label": "Bazefield",
+            "system_type": "ot",
+            "system_type_label": "OT system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "activity",
+            "datatype_label": "activity",
+            "read": "limited",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "installation",
+            "datatype_label": "installation",
+            "read": "not_applicable",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "time",
+            "datatype_label": "time",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "activity",
+            "datatype_label": "activity",
+            "read": "not_applicable",
+            "system": "omega365",
+            "system_label": "Omega 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "activity",
+            "datatype_label": "activity",
+            "read": "limited",
+            "system": "p360",
+            "system_label": "360°",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "winddirection",
+            "datatype_label": "winddirection",
+            "read": "limited",
+            "system": "rotorsoft",
+            "system_label": "Rotorsoft",
+            "system_type": "ot",
+            "system_type_label": "OT system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "powersupplierhistory",
+            "datatype_label": "powersupplierhistory",
+            "read": "not_applicable",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "timecapture",
+            "datatype_label": "timecapture",
+            "read": "not_applicable",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "request",
+            "datatype_label": "request",
+            "read": "limited",
+            "system": "superoffice",
+            "system_label": "SuperOffice",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "event",
+            "datatype_label": "event",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "timesheet",
+            "datatype_label": "timesheet",
+            "read": "not_applicable",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "timetransaction",
+            "datatype_label": "timetransaction",
+            "read": "limited",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "activity",
+            "datatype_label": "activity",
+            "read": "limited",
+            "system": "youtrack",
+            "system_label": "YouTrack",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q1190554"
+},{
+    "_id": "classification",
+    "_updated": 2687,
+    "_previous": 2682,
+    "_deleted": false,
+    "_ts": 1674606654395722,
+    "_hash": "5bfee177883f3f5e1cc27a6e97567867",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/classification.png",
+    "description": "Classification and grouping used as controlled vocabularies.",
+    "label": "Classification",
+    "mapped_datatypes": [
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "limited",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "role",
+            "datatype_label": "role",
+            "read": "limited",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "limited",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "role",
+            "datatype_label": "role",
+            "read": "limited",
+            "system": "p360",
+            "system_label": "360°",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "productgroup",
+            "datatype_label": "productgroup",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "not_applicable",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "limited",
+            "system": "superoffice",
+            "system_label": "SuperOffice",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "classification",
+            "datatype_label": "classification",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "vattype",
+            "datatype_label": "vattype",
+            "read": "limited",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "status",
+            "datatype_label": "status",
+            "read": "not_applicable",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "country",
+            "datatype_label": "country",
+            "read": "beta",
+            "system": "wave",
+            "system_label": "Wave Financial",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "vervtype",
+            "datatype_label": "vervtype",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q13582682"
+},{
+    "_id": "accounting",
+    "_updated": 2686,
+    "_previous": 2681,
+    "_deleted": false,
+    "_ts": 1674606654391215,
+    "_hash": "24c303ecd767d361e61032043bfc0171",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/accounting.png",
+    "description": "A general ledger recording the financial transactions that occur within an organization",
+    "label": "Accounting",
+    "mapped_datatypes": [
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "account",
+            "datatype_label": "account",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "payment",
+            "datatype_label": "payment",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "cost",
+            "datatype_label": "cost",
+            "read": "not_applicable",
+            "system": "omega365",
+            "system_label": "Omega 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "finance",
+            "datatype_label": "finance",
+            "read": "limited",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "account",
+            "datatype_label": "account",
+            "read": "not_applicable",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "accounting",
+            "datatype_label": "accounting",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "ledger",
+            "datatype_label": "ledger",
+            "read": "limited",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "salaryChange",
+            "datatype_label": "salaryChange",
+            "read": "not_applicable",
+            "system": "unit4",
+            "system_label": "Unit4",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "ledger",
+            "datatype_label": "ledger",
+            "read": "limited",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "reskontro",
+            "datatype_label": "reskontro",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q1977520"
+},{
+    "_id": "asset",
+    "_updated": 2678,
+    "_previous": 2674,
+    "_deleted": false,
+    "_ts": 1674606654372345,
+    "_hash": "242691e9d6cc6d81093531066dedc7e1",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/asset.png",
+    "description": "Items or resources, such as valubales, machinery, or real estate",
+    "label": "Asset",
+    "mapped_datatypes": [
+        {
+            "datatype": "amisite",
+            "datatype_label": "amisite",
+            "read": "not_applicable",
+            "system": "arcgis",
+            "system_label": "ArcGIS",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "scadameasurement",
+            "datatype_label": "scadameasurement",
+            "read": "limited",
+            "system": "bazefield",
+            "system_label": "Bazefield",
+            "system_type": "ot",
+            "system_type_label": "OT system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "bygg",
+            "datatype_label": "bygg",
+            "read": "limited",
+            "system": "d365",
+            "system_label": "Microsoft Dynamics 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "tankanlegg",
+            "datatype_label": "tankanlegg",
+            "read": "limited",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "item",
+            "datatype_label": "item",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "transformatorstasjon",
+            "datatype_label": "transformatorstasjon",
+            "read": "not_applicable",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "component",
+            "datatype_label": "component",
+            "read": "limited",
+            "system": "jira",
+            "system_label": "Jira",
+            "system_type": "pms",
+            "system_type_label": "Project management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "scadameasurement",
+            "datatype_label": "scadameasurement",
+            "read": "limited",
+            "system": "rotorsoft",
+            "system_label": "Rotorsoft",
+            "system_type": "ot",
+            "system_type_label": "OT system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "trafo",
+            "datatype_label": "trafo",
+            "read": "not_applicable",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "substation",
+            "datatype_label": "substation",
+            "read": "limited",
+            "system": "smallworld",
+            "system_label": "Smallworld",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "asset",
+            "datatype_label": "asset",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q46737"
+},{
+    "_id": "agreement",
+    "_updated": 2677,
+    "_previous": 2673,
+    "_deleted": false,
+    "_ts": 1674606654368209,
+    "_hash": "666535a0558314eb8135f11ed4ae5b9e",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/agreement.png",
+    "description": "An agreement such as orders, invoices, that is intended to be enforceable by law",
+    "label": "Agreement",
+    "mapped_datatypes": [
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "faktura",
+            "datatype_label": "faktura",
+            "read": "limited",
+            "system": "d365",
+            "system_label": "Microsoft Dynamics 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "subscription",
+            "datatype_label": "subscription",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "stock",
+            "datatype_label": "stock",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "orderline",
+            "datatype_label": "orderline",
+            "read": "limited",
+            "system": "m3",
+            "system_label": "Infor M3",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "contract",
+            "datatype_label": "contract",
+            "read": "limited",
+            "system": "omega365",
+            "system_label": "Omega 365",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "limited"
+        },
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "salesorderline",
+            "datatype_label": "salesorderline",
+            "read": "beta",
+            "system": "poweroffice",
+            "system_label": "Poweroffice",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "invoice",
+            "datatype_label": "invoice",
+            "read": "not_applicable",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "limited"
+        },
+        {
+            "datatype": "purchaseorderline",
+            "datatype_label": "purchaseorderline",
+            "read": "limited",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "subscription",
+            "datatype_label": "subscription",
+            "read": "limited",
+            "system": "stripe",
+            "system_label": "Stripe",
+            "system_type": "fintech",
+            "system_type_label": "Fintech system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "sale",
+            "datatype_label": "sale",
+            "read": "limited",
+            "system": "superoffice",
+            "system_label": "SuperOffice",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "agreement",
+            "datatype_label": "agreement",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "orderline",
+            "datatype_label": "orderline",
+            "read": "beta",
+            "system": "tripletex",
+            "system_label": "Tripletex",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "beta"
+        },
+        {
+            "datatype": "invoices",
+            "datatype_label": "invoices",
+            "read": "limited",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "kontingent_faktura",
+            "datatype_label": "kontingent_faktura",
+            "read": "limited",
+            "system": "winorg",
+            "system_label": "Winorg",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q321839"
+},{
+    "_id": "documentation",
+    "_updated": 2621,
+    "_previous": 2610,
+    "_deleted": false,
+    "_ts": 1674606293555883,
+    "_hash": "5e994103932156f330095361e2b7ae9b",
+    "depiction": "https://raw.githubusercontent.com/datanav/docs/49e5c6d4fd6d1b9b5585a7ed55bc31bec283a33d/icons/documentation.png",
+    "description": "A permanent record of information in written, photographic, or other form.",
+    "label": "Documentation",
+    "mapped_datatypes": [
+        {
+            "datatype": "ardoq",
+            "datatype_label": "ardoq",
+            "read": "not_applicable",
+            "system": "ardoq",
+            "system_label": "Ardoq",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "limited"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "bigquery",
+            "system_label": "Bigquery",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "excel",
+            "system_label": "Microsoft Excel",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "firebase",
+            "system_label": "Firebase",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "survey",
+            "datatype_label": "survey",
+            "read": "limited",
+            "system": "freshdesk",
+            "system_label": "Freshdesk",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "pole",
+            "datatype_label": "pole",
+            "read": "limited",
+            "system": "geonis",
+            "system_label": "Geonis",
+            "system_type": "gis",
+            "system_type_label": "GIS",
+            "write": "limited"
+        },
+        {
+            "datatype": "currency",
+            "datatype_label": "currency",
+            "read": "limited",
+            "system": "hubspot",
+            "system_label": "HubSpot",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "report",
+            "datatype_label": "report",
+            "read": "limited",
+            "system": "ifs",
+            "system_label": "IFS",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "journalstatus",
+            "datatype_label": "journalstatus",
+            "read": "limited",
+            "system": "p360",
+            "system_label": "360°",
+            "system_type": "ecm",
+            "system_type_label": "Content Management system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "power-bi",
+            "system_label": "Microsoft Power BI",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "qlik",
+            "system_label": "Qlik",
+            "system_type": "bi",
+            "system_type_label": "Business Intelligence system",
+            "write": "beta"
+        },
+        {
+            "datatype": "document",
+            "datatype_label": "document",
+            "read": "limited",
+            "system": "salesforce",
+            "system_label": "Salesforce",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "document",
+            "datatype_label": "document",
+            "read": "limited",
+            "system": "sap",
+            "system_label": "SAP",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "surveymonkey",
+            "datatype_label": "surveymonkey",
+            "read": "limited",
+            "system": "surveymonkey",
+            "system_label": "Survey Monkey",
+            "system_type": "crm",
+            "system_type_label": "CRM system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "documentation",
+            "datatype_label": "documentation",
+            "read": "not_applicable",
+            "system": "synapse",
+            "system_label": "Microsoft Synapse",
+            "system_type": "dbms",
+            "system_type_label": "Database",
+            "write": "beta"
+        },
+        {
+            "datatype": "vwdocument",
+            "datatype_label": "vwdocument",
+            "read": "limited",
+            "system": "visma",
+            "system_label": "VISMA",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        },
+        {
+            "datatype": "currency",
+            "datatype_label": "currency",
+            "read": "limited",
+            "system": "wave",
+            "system_label": "Wave Financial",
+            "system_type": "erp",
+            "system_type_label": "ERP system",
+            "write": "not_applicable"
+        }
+    ],
+    "wikidata-link": "https://www.wikidata.org/wiki/Q788790"
+}]

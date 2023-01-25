@@ -1,11 +1,11 @@
-.. _person:
+.. _human:
 
-======
-Person
-======
+=====
+Human
+=====
 A human being, regardless of role.
 
-.. jinja:: talk_datatype_person
+.. jinja:: talk_datatype_human
   :file: _jinja/datatype_mapping.jinja
 
 Model properties

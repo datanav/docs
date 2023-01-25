@@ -14,8 +14,8 @@ The following types are currently supported.
 {% for k, v in datatypes.items() %}
    * - {{v.label}}
      - :ref:`{{v.maps_to_label}} <{{v.maps_to}}>`
-     - {{ 'Yes' if v.read else 'No' }}
-     - {{ 'Yes' if v.write else 'No' }}
+     - {% if "available" == v.read %}Yes{% elif "limited" == v.read %}Limited{% elif "beta" == v.read %}Beta{% elif "not_applicable" %}N/A{% endif %}
+     - {% if "available" == v.write %}Yes{% elif "limited" == v.write %}Limited{% elif "beta" == v.write %}Beta{% elif "not_applicable" %}N/A{% endif %}
 {% endfor %}
 {% else %}
 No types are supported yet.

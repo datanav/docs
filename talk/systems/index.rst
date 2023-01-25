@@ -6,8 +6,16 @@ Sesam Talk support systems across a range of categories. You can read more about
 .. toctree::
    :maxdepth: 1
 
+   categories/bi
    categories/crm
    categories/dbms
+   categories/eai
+   categories/ecm
    categories/erp
+   categories/fintech
+   categories/gis
    categories/hrm
-   categories/opendata
+   categories/iam
+   categories/od
+   categories/ot
+   categories/pms
