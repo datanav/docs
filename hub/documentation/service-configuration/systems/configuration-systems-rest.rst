@@ -186,7 +186,7 @@ A operation configuration looks like:
      - An optional object that contain key-value mappings for any HTTP parameters. The property supports the
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``url``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and :ref:`REST sinks <rest_sink>`),
-       ``since`` (only for :ref:`REST sources <rest_source>`)and ``properties`` available to the template. If
+       ``since`` (only for :ref:`REST sources <rest_source>`) and ``properties`` available to the template. If
        the operation supports paging then ``previous_body`` and ``previous_headers`` is available for all page
        requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
        for the first page.
@@ -197,7 +197,7 @@ A operation configuration looks like:
      - Enum<String>
      - A enumeration of "text", "json", "json-transit", "form" and "multipart-form", that denotes how to treat the
        ``payload`` property of the entity (see the :ref:`expected entity shape <rest_expected_rest_entity_shape>`
-       section of the c for details). The various enumerations in combination with the
+       section of the :ref:`REST sink <rest_sink>` for details). The various enumerations in combination with the
        ``payload`` type will set the appropriate ``Content-Type`` in the request headers, if it isn't set explicitly in
        the ``headers`` property of the operation. If you specify ``"json"``, the payload contents will serialized to JSON
        (without transit encoding). If you specify ``"json-transit"`` you will get a transit-encoded JSON document.
