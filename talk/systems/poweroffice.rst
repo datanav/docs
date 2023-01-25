@@ -3,7 +3,7 @@
 Poweroffice
 ===========
 
-PowerOffice is an all-in-one business solution developed by Business System Solutions AS. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. It also provides users with a range of tools to streamline their operations and improve their business processes.
+PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources.
 
 https://poweroffice.no
 
