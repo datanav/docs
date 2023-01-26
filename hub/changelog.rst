@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_26:
+
+2023-01-26
+----------
+* Changed the default value of ``side_effects`` from ``false`` to ``true`` for the :ref:`REST transform <rest_transform>` and :ref:`HTTP transforms <http_transform>`. Note that this is a change of behavior and will prevent previews from including these types of transforms by default. The motivation for this change is to prevent unintentional changes in the external systems accessed by the transforms when previewing a pipe. You can manually change ``side_effects`` to ``true`` if you're sure your transforms are free from such side-effects or if you don't mind changes happening when previewing a pipe.
+
 .. _changelog_2023_01_25:
 
 2023-01-25
