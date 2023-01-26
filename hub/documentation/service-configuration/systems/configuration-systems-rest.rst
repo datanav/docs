@@ -155,7 +155,9 @@ A operation configuration looks like:
        available to the templating context. The expanded string is then substituted into the system's ``url_pattern`` property in
        place of its ``%s`` placeholder marker to get the final URL to use for the operation. If used with the 
        :ref:`REST source <rest_source>`, the variables ``since``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and
-       :ref:`REST sinks <rest_sink>`) and ``properties`` are available to this template.
+       :ref:`REST sinks <rest_sink>`), ``properties`` are available to this template. For the :ref:`REST transforms <rest_transform>` and
+       :ref:`REST sources <rest_sink>` that support pagination some additional parameters are also available: ``previous_body``,
+       ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers).
        Note that if you use the ``since`` variable in this template the ``since_property_location`` and 
        ``since_property_name`` configuration properties will be ignored for the operation.
      -
@@ -175,9 +177,10 @@ A operation configuration looks like:
        supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``url``, ``params``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and
        :ref:`REST sinks <rest_sink>`), ``since`` (only for :ref:`REST sources <rest_source>`) and ``properties``
-       available to the template. If the operation supports paging then ``previous_body`` and ``previous_headers``
-       is available for all page requests except the first. Tip: use the Jinja "is defined" syntax for these
-       variables to set default values for the first page.
+       available to the template. If the operation supports paging then ``previous_body``,
+       ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers) are available
+       for all page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set
+       default values for the first page.
      -
      -
 
@@ -187,9 +190,9 @@ A operation configuration looks like:
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``url``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and :ref:`REST sinks <rest_sink>`),
        ``since`` (only for :ref:`REST sources <rest_source>`) and ``properties`` available to the template. If
-       the operation supports paging then ``previous_body`` and ``previous_headers`` is available for all page
-       requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default values
-       for the first page.
+       the operation supports paging then ``previous_body``, ``previous_request_headers``, ``previous_params``
+       and ``previous_headers`` (response headers) are available for all page requests except the first.
+       Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
      -
      -
 
@@ -231,9 +234,10 @@ A operation configuration looks like:
        ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the named variables
        ``properties``, ``url``, ``request_params``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and
        :ref:`REST sinks <rest_sink>`), ``since`` (only for :ref:`REST sources <rest_source>`) and ``headers`` available
-       to the template. If the operation supports paging then ``previous_body`` and ``previous_headers`` is available
-       for all page requests except the first. Tip: use the Jinja "is defined" syntax for these variables to set default
-       values for the first page. For the :ref:`REST source <rest_source>` the variable ``since`` is also available.
+       to the template. If the operation supports paging then ``previous_body``, ``previous_request_headers``,
+       ``previous_params`` and ``previous_headers`` (response headers) are available for all page requests except the
+       first. Tip: use the Jinja "is defined" syntax for these variables to set default values for the first page.
+       For the :ref:`REST source <rest_source>` the variable ``since`` is also available.
      -
      -
 
@@ -273,9 +277,10 @@ A operation configuration looks like:
    * - ``next_page_link``
      - String
      - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with several named variables
-       values available to the template: ``body``, ``url``, ``requests_params``, ``properties``, ``since``
+       values available to the template: ``body``, ``url``, ``requests_params``, ``request_headers`, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`), ``entity``, ``source_entity`` (only for
-       :ref:`REST transforms <rest_transform>`)  and ``headers``. Additionally, ``previous_body`` and ``previous_headers``
+       :ref:`REST transforms <rest_transform>`)  and ``response_headers``. Additionally, ``previous_body``,
+       ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers)
        is available for all page requests except the first. Tip: use Jinja's
        `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables
        to set default values for the first page.  This property is used to extract the next URL to perform the
@@ -307,9 +312,10 @@ A operation configuration looks like:
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
        The bound parameters available to this template are ``body``, ``url``, ``requests_params``, ``properties``, ``since``
        (only for :ref:`REST sources <rest_source>`), ``entity``, ``source_entity`` (only for
-       :ref:`REST transforms <rest_transform>`) and ``headers``. If the operation supports paging then ``previous_body``
-       and ``previous_headers`` are available for all page requests except the first.
-       Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       :ref:`REST transforms <rest_transform>`) and ``headers``. If the operation supports paging then ``previous_body``,
+       ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers) are available for
+       all page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
        variables to set default values for the first page.
      -
      -
@@ -323,8 +329,9 @@ A operation configuration looks like:
        configuration properties as well. Note that this property can be defined in the
        :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` configuration as well. It will be
        ignored by the :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
-       The template supports the same named parameters as the ``id_expression``.  If the operation supports
-       paging then ``previous_body`` and ``previous_headers`` are available for all page requests except the first.
+       The template supports the same named parameters as the ``id_expression``.  If the operation supports paging then
+       ``previous_body``, ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers)
+       are available for all page requests except the first.
        Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
        variables to set default values for the first page.
      -

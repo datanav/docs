@@ -6,6 +6,7 @@ Changelog
 2023-01-25
 ----------
 * Added the ``since`` bound parameter to the ``payload``, ``headers`` and ``params`` operation object properties in the :ref:`REST system <rest_system>` (and any local variants) for the :ref:`REST source <rest_source>`.
+* Documented some additional bound parameters available for paged responses in the templated properties for the :ref:`REST system <rest_system>` (and any local variants) and :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>`.
 
 .. _changelog_2023_01_24:
 
