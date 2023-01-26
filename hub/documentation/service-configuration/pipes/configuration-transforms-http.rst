@@ -18,6 +18,8 @@ the transform will raise an exception.
 The endpoint is free to decide how the entities are transformed. It'll just have to produce a list of zero or more
 entities from the entities it was posted. This means that entities can be transformed, filtered out or new ones created.
 
+Note that for most use cases you can and should use the more general and flexible :ref:`REST transform <rest_transform>` instead.
+
 Properties
 ^^^^^^^^^^
 
@@ -56,6 +58,12 @@ Properties
      - An optional set of header values to set in the HTTP request. Both keys and values must
        evaluate to strings.
      -
+     -
+
+   * - ``side_effects``
+     - Boolean
+     - Set to ``false`` if the transform does not have side-effects. A side-effect means that it causes changes to the system that it talks to. The intention of this property is to prevent inadvertent changes to the system by features like pipe preview. You can set this to ``true`` if you're sure your transform is free from side-effects or if you don't mind changes happening when previewing a pipe.
+     - ``true``
      -
 
 Example configuration
