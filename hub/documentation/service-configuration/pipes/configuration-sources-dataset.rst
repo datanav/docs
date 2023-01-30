@@ -51,8 +51,8 @@ Properties
      - No
 
    * - ``completeness``
-     - Boolean
-     - If set to ``true``, the dataset source completeness filtering feature is enabled. This will instruct the source to only return source entities that have a ``_ts`` value that is older than or equal to the completeness timestamp value of the source dataset.
+     - Boolean or Array of strings
+     - If set to ``true``, the dataset source completeness filtering feature is enabled. This will instruct the source to only return source entities that have a ``_ts`` value that is older than or equal to the completeness timestamp value of the source dataset. It is also possible to use the completeness timestamp value of one or more upstream datasets instead of the value from the source dataset; this is done by setting ``completeness`` to an array of the upstream dataset ids. If the array contains more than one dataset-id, the smallest completeness timestamp value is used.
      - ``false``
      -
 
