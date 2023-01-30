@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_01_30:
+
+2023-01-30
+----------
+* Extended the :ref:`completeness feature<completeness_feature>` to propagating the completeness value of all upstream datasets.
+
 .. _changelog_2023_01_26:
 
 2023-01-26
