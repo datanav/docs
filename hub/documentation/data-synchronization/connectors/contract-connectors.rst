@@ -8,7 +8,7 @@ This document describes the output of connectors and the input to connectors. Th
 Output of the connector
 =======================
 
-The dataset must use the following naming convention: SYSTEM-DATATYPE-collect, e.g. `foo-person-collect`.
+The dataset must use the following naming convention: SYSTEM-DATATYPE-collect, e.g. ``foo-person-collect``.
 
 
 Properties
@@ -65,7 +65,7 @@ The input to the connector
 
 The dataset must use the following naming convention: SYSTEM-DATATYPE-transform, e.g. `foo-person-transform`.
 
-The transform sink dataset represents the desired state of the target system. The connector will make sure that the system reflects the desired state. Entities in the dataset should have the same structure as the output of the connector. Namespaces have been removed from the properties, but not from the `_id` property value. The properties have the same names, data types and structure as in the collect dataset.
+The dataset represents the desired state of the target system. The connector will make sure that the system reflects the desired state. Entities in the dataset should have the same structure as the output of the connector. Namespaces have been removed from the properties, but not from the `_id` property value. The properties have the same names, data types and structure as in the collect dataset.
 
 
 If the source entity consists of one or more entities from the system, then it must be split into an entity for each of the entities. The ``_id`` property must use the system specific enriched ``_id``, e.g. if `foo-person:123` (it must be namespaced) and `foo:person:124` has been merged then one entity must be output for each of them.
@@ -99,6 +99,8 @@ Properties
 Example: insert
 ---------------
 
+This entity does not have a system primary key, i.e. the ``id`` property, and will result in an insert into the system.
+
 ::
 
     {
@@ -114,6 +116,8 @@ Example: insert
 Example: $replaced=true
 -----------------------
 
+This entity id has been merged into another entity. The ``$replaced`` property was created by an upstream merge source and this must be communicated downstream to the dataset.
+
 ::
 
     {
@@ -125,21 +129,27 @@ Example: $replaced=true
 Example: update
 ---------------
 
+The properties in ``$based_on`` is different from the properties on the entity, so the entity will be updated in the system accordingly.
+
 ::
 
     {
       "_id": "foo-person:0",
       "_deleted": false,
       "$based_on": [
+        "id": 0,
         "key": "a",
         "value": 10
       ],
+      "id": 0,
       "key": "a",
       "value": 20
     }
 
 Example: delete
 ---------------
+
+The entity has been marked as deleted and will therefore be deleted in the system.
 
 ::
 
