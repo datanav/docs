@@ -5,19 +5,19 @@
 Completeness
 ============
 
-Completeness is a feature that you typically enable on outgoing pipes. It makes sure that all pipes that this pipe is dependent on have run before it processes the source entities of this pipe. 
+Completeness is a feature that you typically enable on an outgoing pipe or the pipe producing its source dataset. It makes sure that all pipes that this pipe is dependent on have run to completion before it processes the source entities of this pipe.
 
 How it works
 ------------
 
-The timestamp of the source entity is compared with the completeness timestamp that was inherited from its upstream and dependent pipes. 
+The timestamp of the source entity is compared with the completeness timestamp that was inherited from its upstream and dependent pipes.
 
 
 Use cases
 ---------
-Completeness effectively holds back the processing of source entities until it can be sure that dependent pipes have completed. 
+Completeness effectively holds back the processing of source entities until it can be sure that dependent pipes have completed.
 
-This is useful when you want to have a final entity version before you send it to the target system. 
+This is useful when you want to have a final entity version before you send it to the target system.
 
 Using completeness also reduces the number of times you have to send the entity to the target system as there might be several state transitions until the entity can be considered complete.
 
@@ -25,9 +25,11 @@ Using completeness also reduces the number of times you have to send the entity 
 Completeness
 ------------
 
-When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source dataset's completeness timestamp value. The propagation of these timestamp values is done automatically. Individual datasets can be excluded from completeness timestamp calculation via the ``exclude_completeness`` property on the pipe.  One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``.
+When a pipe completes a successful run the sink dataset will inherit the smallest completeness timestamp value of the source datasets and the related datasets. Inbound pipes will use the current time as the completeness timestamp value (the :ref:`http_endpoint <http_endpoint_source>` can optionally get the completeness value from a request header). This mechanism has been introduced so that a pipe can hold off processing source entities that are more recent than the source's completeness timestamp value. The propagation of these timestamp values is done automatically.
 
-It is also possible to use the completeness timestamp value of one or more upstream datasets instead of the value from the source dataset; this is done by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to an array of the upstream dataset ids. If the array contains more than one dataset-id, the smallest completeness timestamp value is used.
+Individual datasets can be excluded or included from completeness timestamp calculation via the ``exclude_completeness`` and ``include_completeness`` properties on the pipe.
+
+One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``. In that case the source dataset's completeness value will be used. It is also possible to use the completeness timestamp value of one or more specific upstream datasets instead; this is done by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to an array of the upstream dataset ids. If the array contains more than one dataset id, the smallest completeness timestamp value is used.
 
 .. WARNING::
 
