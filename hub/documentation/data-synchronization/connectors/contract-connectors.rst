@@ -116,7 +116,7 @@ This entity does not have a system primary key, i.e. the ``id`` property, and wi
 Example: $replaced=true
 -----------------------
 
-This entity id has been merged into another entity. The ``$replaced`` property was created by an upstream merge source and this must be communicated downstream to the dataset.
+The entity with this ``_id`` has been merged into another entity. The ``$replaced`` property and the ``_delete`` property was created by an upstream merge source and this must be communicated downstream to the dataset.
 
 ::
 
