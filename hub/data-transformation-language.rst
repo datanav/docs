@@ -70,10 +70,8 @@
    DTL: Math <dtl/dtl-functions-math.rst>
    DTL: Misc <dtl/dtl-functions-misc.rst>
    DTL: Namespaced identifiers <dtl/dtl-functions-namespaced-identifiers.rst>
-   DTL: Nested transformations <dtl/dtl-functions-nested-transformations.rst>
    DTL: Nulls <dtl/dtl-functions-nulls.rst>
    DTL: Numbers <dtl/dtl-functions-numbers.rst>
-   DTL: Paths <dtl/dtl-functions-paths.rst>
    DTL: Sets <dtl/dtl-functions-sets.rst>
    DTL: Strings <dtl/dtl-functions-strings.rst>
    DTL: URIs <dtl/dtl-functions-uris.rst>
