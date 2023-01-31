@@ -17,6 +17,8 @@ API Best practices
 
 - Supported entity types should be as similar as possible to the entity types in the underlying data model.
 
+- Avoid parametrizing sources - make it possible to fetch all the possible objects from a particular endpoint without needing to supply a parameter (parameters can be optional)
+
 - Idempotent endpoints:
 
   - A call to the API should yield the same result, no matter how many times the same call is applied.
