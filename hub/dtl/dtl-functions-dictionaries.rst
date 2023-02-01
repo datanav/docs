@@ -193,6 +193,53 @@ Dictionaries
        |
        | Returns ``[1]``.
 
+.. _apply_ns_dtl_function:
+
+``apply-ns``
+------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   NAMESPACE_OR_CONFIGDICT(string|dict)
+       |   VALUES(value-expression{1})
+       |
+       | The apply-ns function can be used to add a namespace to the properties of a dict (recursively by default ), like the :ref:`add_namespaces <namespaces_feature_add_namespaces>` pipe feature does.
+         The NAMESPACE_OR_CONFIGDICT is either a static string value or a static dict value.
+         The static dict value is technically a set of keyword arguments. The default value is
+       |    ``{``
+       |        ``"property_namespace": <pipe's property_namespace (defaults to the pipe id)>,``
+       |        ``"identity_namespace": <pipe's identity_namespace (defaults to the pipe id)>,``
+       |        ``"skip_underscore": true,``
+       |        ``"skip_dollar": true,``
+       |        ``"recursive": true``
+       |    ``}``
+       | and reflects the behaviour of the :ref:`add_namespaces=true <namespaces_feature_add_namespaces>` pipe property.
+       |
+       | By default properties starting with an ``"_"`` (underscore) character is left as-is, except for the ``_id`` property, where the property-value is prefixed with ``<identity_namespace>:``.  The ``skip_underscore`` configdict setting can be set to ``false`` to treat properties starting with ``"_"`` as "normal" properties.
+       |
+       | By default properties starting with an ``"$"`` (dollar) character is left as-is. The ``skip_dollar`` configdict setting can be set to ``false`` to treat properties starting with ``"$"`` as "normal" properties.
+
+     - | Example: with static string argument (and using defaults):
+       | ``["apply-ns", "myns", {"_id": "123", "foo": 1, "$bar": {"baz": 2}}```
+       | Returns ``{"_id": "myns:123", "myns:foo": 1, "$bar": {"baz": 2}}``
+       |
+       | Example: add namespace to everything recursively:
+       | ``["apply-ns", {"property_namespace": "myns", "identity_namespace": "myns", "skip_underscore": false, "skip_dollar": false, "recursive": true},``
+       |   ``{"_id": "123", "foo": 1, "$bar": {"baz": 2}}``
+       | Returns ``{"myns:_id": "myns:123", "myns:foo": 1, "myns:$bar": {"myns:baz": 2}}``
+       |
+       | Example: setting property_namespace or identity_namespace to null explicitly means that we won't add a namespace:
+       | ``["apply-ns", {"property_namespace": "myns", "identity_namespace": null, "skip_underscore": false, "skip_dollar": false, "recursive": false},``
+       |              ``{"_id": "123", "myns:foo": 1, "$bar": {"baz": 2}}``
+       | Returns ``{"myns:_id": "123", "myns:foo": 1, "myns:$bar": {"baz": 2}}``
+
+
 .. _path_dtl_function:
 
 ``path``

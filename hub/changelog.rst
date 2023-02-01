@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_02_01:
+
+2023-02-01
+----------
+* Added a :ref:`apply-ns <apply_ns_dtl_function>` DTL function.
+
 .. _changelog_2023_01_30:
 
 2023-01-30

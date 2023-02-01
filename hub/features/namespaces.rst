@@ -75,6 +75,8 @@ Properties
      - ``pipe.id``
      -
 
+.. _namespaces_feature_add_namespaces:
+
    * - ``add_namespaces``
      - Boolean
      - If ``true`` then the current identity namespace will be added to ``_id`` and the current property namespace will be added to all properties. The namespaces are added before the first transform. This property is normally only specified on inbound pipes.
