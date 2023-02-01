@@ -164,7 +164,8 @@ DTL Expression Functions
        :ref:`values <values_dtl_function>` ·
        :ref:`path <path_dtl_function>` ·
        :ref:`apply <apply_dtl_function>` ·
-       :ref:`apply-hops <apply_hops_dtl_function>`
+       :ref:`apply-hops <apply_hops_dtl_function>` ·
+       :ref:`apply-ns <apply_ns_dtl_function>`
 
    * - Encryption
      - :ref:`decrypt <decrypt_dtl_function>` ·
