@@ -5,7 +5,7 @@ Changelog
 
 2023-01-30
 ----------
-* Extended the :ref:`completeness feature<completeness_feature>` to propagating the completeness value of all upstream datasets.
+* Extended the :ref:`completeness feature<completeness_feature>` to propagate the completeness value of all upstream datasets. You can now also specify the specific upstream datasets that you want a dataset source to have completeness for.
 
 .. _changelog_2023_01_26:
 
