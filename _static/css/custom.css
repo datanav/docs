@@ -307,7 +307,7 @@ footer .container {
 
   .left-navbar-end-item {
     left: 10px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -455,3 +455,5 @@ body {
 button.copybtn {
   opacity: 1;
 }
+
+
