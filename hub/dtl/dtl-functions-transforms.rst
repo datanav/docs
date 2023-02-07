@@ -88,6 +88,87 @@ modifying the target entity, and has no return value.
          Note that this example uses the :ref:`NI escape syntax <ni_escape_syntax>`
          to reference the current namespace.
 
+.. _`dtl_transform-add-if`:
+
+``add-if``
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   PROPERTY(string{1})
+       |   CONDITION(boolean-expression{0|1})
+       |   VALUES(value-expression{1})
+       |
+       | Adds the PROPERTY field(s) to the target entity with the values returned
+         by evaluating the VALUES expression, if the CONDITION expression evaluates to True. The CONDITION expression
+         is evaluated with the ``_`` variable bound to the result of the VALUES expression.
+         The CONDITION parameter is optional and defaults to ``["neq", "_.", null]``.
+
+       .. NOTE::
+
+         This transform function is :ref:`namespaced identifiers <namespaces-feature>` aware.
+
+         If namespaced identifiers are enabled,
+         then the property will be prefixed by the current
+         namespace. If the property is ``_id`` then the string values
+         will be prefixed by the identity namespace. All other
+         properties will have their name prefixed by the property
+         namespace.
+
+     - | ``["add-if", "foo", null]``
+       |
+       | No changes will be made to the target entity.
+       |
+       | ``["add-if", "foo", ["list"]]``
+       |
+       | Adds ``"foo": []`` to the target entity.
+       |
+       | ``["add-if", "foo", ["list", null]]``
+       |
+       | Adds ``"foo": [null]`` to the target entity.
+       |
+       | ``["add-if", "foo", 123]``
+       |
+       | Adds ``"foo": 123`` to the target entity.
+       |
+       | ``["add-if", "foo", ["list", 123]]``
+       |
+       | Adds ``"foo": [123]`` to the target entity.
+       |
+       | ``["add-if", "foo", ["list", 123, 456]]``
+       |
+       | Adds ``"foo": [123, 456]`` to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], null]``
+       |
+       | No changes will be made to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], ["list"]]``
+       |
+       | No changes will be made to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], ["list", null]]``
+       |
+       | No changes will be made to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], 12]``
+       |
+       | No changes will be made to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], 123]``
+       |
+       | Adds ``"foo": 123`` to the target entity.
+       |
+       | ``["add-if", "foo", ["gte", "_.", 18], ["list", 123]]``
+       |
+       | Adds ``"foo": [123]`` to the target entity.
+
 .. _dtl_transform-case:
 
 ``case``

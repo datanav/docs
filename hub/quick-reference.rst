@@ -99,6 +99,7 @@ DTL Transform Functions
    * - Side-effects
      -
        :ref:`add <dtl_transform-add>` ·
+       :ref:`rename <dtl_transform-add-if>` ·
        :ref:`copy <dtl_transform-copy>` ·
        :ref:`default <dtl_transform-default>` ·
        :ref:`make-ni <dtl_transform-make-ni>` ·

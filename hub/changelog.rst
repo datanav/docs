@@ -1,6 +1,14 @@
 Changelog
 =========
 
+
+.. _changelog_2023_02_07:
+
+2023-02-07
+----------
+* Added a :ref:`add-if <dtl_transform-add-if>` DTL transform.
+
+
 .. _changelog_2023_02_01:
 
 2023-02-01

@@ -3,7 +3,7 @@
 Namespace aware functions
 =========================
 
-The following functions are namespace aware: :ref:`add <dtl_transform-add>`, :ref:`default <dtl_transform-default>`,
+The following functions are namespace aware: :ref:`add <dtl_transform-add>`,  :ref:`add-if <dtl_transform-add-if>`, :ref:`default <dtl_transform-default>`,
 :ref:`make-ni <dtl_transform-make-ni>`, :ref:`remove
 <dtl_transform-remove>`, :ref:`copy <dtl_transform-copy>`,
 :ref:`rename <dtl_transform-rename>` and :ref:`path
