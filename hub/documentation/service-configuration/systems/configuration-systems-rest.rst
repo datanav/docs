@@ -412,7 +412,7 @@ An example:
 
 
 (experimental)
-You can use the special marker ``"sesam:markskip"`` to construct JSON objects, lists or single values from a templated string in the ``payload``,  ``headers`` and ``params`` operation configuration properties. It can be used to cast Jinja templated strings to JSON data types or construct objects or lists with conditional Jinja logic.
+You can use the special marker ``"sesam:markjson"`` to construct JSON objects, lists or single values from a templated string in the ``payload``,  ``headers`` and ``params`` operation configuration properties. It can be used to cast Jinja templated strings to JSON data types or construct objects or lists with conditional Jinja logic.
 
 An example:
 
