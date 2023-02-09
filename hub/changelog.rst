@@ -15,6 +15,12 @@ Changelog
 ----------
 * Added an :ref:`apply-ns <apply_ns_dtl_function>` DTL function.
 
+.. _changelog_2023_01_31:
+
+2023-01-31
+----------
+* Restricted access to pipe runner API for subscriptions not having developer_mode enabled. The motivation is to avoid running tests in production systems as that is disruptive/destructive. 
+
 .. _changelog_2023_01_30:
 
 2023-01-30
