@@ -5,6 +5,8 @@ The Connector Contract
 This document describes the output of connectors and the input to connectors. The output is the dataset that the collector writes to when synchronizing entities from the system. The input is the desired state of the system and the input to the connector to make it so.
 
 
+.. _connector_contract_output:
+
 Output of the connector
 =======================
 
@@ -23,8 +25,8 @@ Properties
      - Description
      - Required
    * - ``$origin``
-     - NI
-     - This is the ``_id`` of the entity that caused this entity to be created in this system. The $origin property must be added to the entity if the entity in the system was created by Sesam.
+     - Opaque
+     - The value of the ``$origin`` property is opaque and is managed by the model mapping, but in general it encapsulates what entities from other systems caused the entity to be created in this system. The ``$origin`` property is retrieved from the ``$origin`` property in the share sink dataset by joining the entity's system primary key with the ``$generated_id`` property.
      - No
    * - ``$last-updated``
      - Datetime
@@ -93,8 +95,12 @@ Properties
      - Required during insert. Optional for updated and deletes.
    * - ``$replaced``
      - Boolean
-     - If set to true then it is not a real delete, but rather the entity got a new `_id`. This property is produced by the merge source.
+     - If set to true then it is not a real delete, but rather the entity got a new ``_id``. This property is produced by the merge source.
      - Optional for deletes. Disallowed for update and insert.
+   * - ``$origin``
+     - Opaque
+     - The share pipe will just pass through the ``$origin`` property to its sink entity. It is an error if the operation is an insert and the property is missing. See the description of ``$origin`` in the section :ref:`Output of the connector <connector_contract_output>` above for more information on how it is used.
+     - Optional if the entity originated in this particular system.
 
 Example: insert
 ---------------
