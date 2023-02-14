@@ -152,7 +152,7 @@ html_theme = 'pydata_sphinx_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "footer_items": ["copyright.html", "left-sidebar-bottom.html"],
+    "footer_items": ["left-sidebar-bottom.html", "copyright.html", "iso.html" ],
     "navbar_end": "right-menu.html",
     'navigation_depth': 5
 
