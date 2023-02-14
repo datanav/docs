@@ -95,6 +95,10 @@ Properties
      - Boolean
      - If set to true then it is not a real delete, but rather the entity got a new `_id`. This property is produced by the merge source.
      - Optional for deletes. Disallowed for update and insert.
+   * - ``$origin``
+     - NI
+     - The share pipe will just pass through the ``$origin`` property to its sink entity. It is an error if the operation is an insert and the property is missing. The property will later be used in the collect phase. The collect phase will perform a lookup in the share dataset where the primary key is matched with the generated id and then the ``$origin`` property is copied onto the collected entity.
+     - Optional if the entity originated in this particular system.
 
 Example: insert
 ---------------
