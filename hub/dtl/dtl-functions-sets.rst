@@ -127,8 +127,10 @@ Sets
        |   VALUES1(value-expression{1})
        |   VALUES2(value-expression{1})
        |
-       | Returns the union of the two sets VALUES1 and VALUES2, i.e. the values that
-         are either in VALUES1 or in VALUES2.
+       | Returns the union of the values in VALUES1 and VALUES2, i.e. the values that
+         are either in VALUES1 or in VALUES2. The values in VALUES1 are returned first and kept
+         in their original relative positions and after that the values in VALUES2 are kept in
+         their original relative positions. Only the first occurrence of a value is returned.
      - | ``["union",``
        |     ``["list", "A", "B"], ["list", "B", "C"]]``
        |
