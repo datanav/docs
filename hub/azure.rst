@@ -2,13 +2,6 @@
 Sesam in Microsoft Azure
 ========================
 
-Introduction
-============
-
-Sesam is a `preferred solution <https://docs.microsoft.com/en-us/azure/marketplace/preferred-solutions>`_
-and listed in the
-`Azure Marketplace <https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sesam.sesam?tab=Overview>`_.
-
 .. azure_reference:
 
 Reference Architecture
