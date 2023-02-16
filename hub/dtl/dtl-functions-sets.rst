@@ -18,7 +18,7 @@ Sets
        |   VALUES2(value-expression{1})
        |
        | Returns the difference of the values in VALUES1 and VALUES2, i.e. the values
-         that are in VALUES1, but not in VALUES2. The values in VALUES1 in that does not exist in
+         that are in VALUES1, but not in VALUES2. The values in VALUES1 that does not exist in
          VALUES2 are kept in their original relative positions.
      - | ``["difference",``
        |    ``["list", "A", "B"], ["list", "B"]]``
@@ -58,7 +58,7 @@ Sets
        |   VALUES2(value-expression{1})
        |
        | Returns the intersection of the values in VALUES1 and VALUES2, i.e. the values
-         that are in both VALUES1 and VALUES2. The values in VALUES1 in that exist in
+         that are in both VALUES1 and VALUES2. The values in VALUES1 that exist in
          VALUES2 are kept in their original relative positions.
      - | ``["intersection",``
        |     ``["list", "A", "B"], ["list", "B", "C"]]``
