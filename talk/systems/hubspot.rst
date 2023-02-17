@@ -2,7 +2,7 @@
 
 Hubspot
 =======
-HubSpot's integrated CRM platform contains the marketing, sales, service, operations, and website-building software.
+HubSpot's integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
 
 https://hubspot.com
 
