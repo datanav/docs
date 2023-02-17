@@ -2,7 +2,8 @@
 
 Freshteam
 =========
-Freshteam is a smart HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
+
+Freshteam is a HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
 
 https://freshteam.com
 

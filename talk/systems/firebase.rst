@@ -3,7 +3,7 @@
 Firebase
 ========
 
-Firebase is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.
+Firebase is a set of hosting services for any type of application. It offers NoSQL and real-time hosting of databases, content, social authentication, and notifications, or services, such as a real-time communication server.
 
 https://firebase.google.com
 

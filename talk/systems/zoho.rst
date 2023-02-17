@@ -3,9 +3,9 @@
 Zoho
 ====
 
-Zoho is a unique and powerful suite of software to run your entire business, brought to you by a company with the long term vision to transform the way you work.
+Zoho is a suite of software and web-based business tools.
 
- https://www.zoho.com
+https://www.zoho.com
 
 
 .. jinja:: talk_system_zoho

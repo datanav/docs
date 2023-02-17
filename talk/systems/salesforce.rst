@@ -3,7 +3,7 @@
 Salesforce
 ==========
 
-Salesforce is the world´s #1 CRM platform, providing services such as marketing, sales, commerce, service and IT teams work by using the latest technology.
+Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
 
 https://www.salesforce.com/
 
