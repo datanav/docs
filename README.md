@@ -33,3 +33,5 @@ Tip: If the ```make html``` command fails, it may be that you need to install so
     which applications are required.
 
 Use ```SPHINXOPTS= make html_no_saas``` instead of ```make html``` to build the html for the docs without the saas content (requires installation of pandoc locally).
+
+Try
