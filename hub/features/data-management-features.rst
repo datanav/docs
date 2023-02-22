@@ -86,11 +86,11 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     ---
     :badge:`Free feature,badge-success badge-pill`
 
-    **Schema Inferencing**
+    **Schema Inference**
 
     See the structure of the data that went into the pipe and the data that came out of it.
 
-    .. link-button:: schema-inferencing
+    .. link-button:: schema-inference
             :type: ref
             :text: Read more
             :classes: read-more
@@ -99,7 +99,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
 
     **Schema Models**
 
-    Schema inferencing generates entity types for the pipe source and pipe sink.
+    Schema inference generates entity types for the pipe source and pipe sink.
 
     .. link-button:: schema-models
             :type: ref
@@ -174,7 +174,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
     Merging <merging-feature>
     Global datasets <global-datasets>
     Dependency Tracking <dependency-tracking>
-    Schema Inferencing <schema-inferencing>
+    Schema Inference <schema-inference>
     Schema Models <schema-models>
     Integrated Search <integrated-search>
     Property Lineage <property-lineage>

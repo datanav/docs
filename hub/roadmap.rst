@@ -119,7 +119,7 @@ Property lineage
 ================
 
 Properties in Sesam originate from external systems or are composed from other properties using DTL. The fact properties
-are composed using introspectable DTL in combination with :ref:`schema inferencing <schema_inferencing>` allows us to continously track property lineage.
+are composed using introspectable DTL in combination with :ref:`schema inference <schema_inference>` allows us to continuously track property lineage.
 
 .. note::
   :ref:`Property lineage <property_lineage>` is now offered as part of :ref:`Integrated search <integrated_search>`.
