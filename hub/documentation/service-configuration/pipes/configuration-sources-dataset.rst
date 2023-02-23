@@ -58,9 +58,9 @@ Properties
      - ``false``
      -
 
-       .. _dataset_source_property_partial_completeness:
+       .. _dataset_source_property_initial_completeness:
 
-   * - ``partial_completeness``
+   * - ``initial_completeness``
      - Array of strings (dataset ids)
      - If set to a non-empty list, the source will only return source entities if the specified dataset(s) have a completeness value. It doesn't matter what the completeness value is, it only needs to be present.
      -

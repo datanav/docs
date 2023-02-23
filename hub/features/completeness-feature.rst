@@ -31,7 +31,7 @@ Individual datasets can be excluded or included from completeness timestamp calc
 
 One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``. In that case the source dataset's completeness value will be used. It is also possible to use the completeness timestamp value of one or more specific upstream datasets instead; this is done by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to an array of the upstream dataset ids. If the array contains more than one dataset id, the smallest completeness timestamp value is used.
 
-If one only care about the completeness being set, but not the actual completeness value, one can instead set the ``partial_completeness`` property on the :ref:`dataset source <dataset_source>` to a list of dataset ids. The source will then only return source entities if the specified dataset(s) have a completeness value. It doesn't matter what the completeness value is, it only needs to be present.
+If one only care about the completeness being set, but not the actual completeness value, one can instead set the ``initial_completeness`` property on the :ref:`dataset source <dataset_source>` to a list of dataset ids. The source will then only return source entities if the specified dataset(s) have a completeness value. It doesn't matter what the completeness value is, it only needs to be present.
 
 
 .. WARNING::
