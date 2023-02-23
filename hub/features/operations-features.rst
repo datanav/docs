@@ -6,7 +6,7 @@
 Operation features
 ===================
 
-Sesam offer a set of features that will give you the edge when it comes to operations. Below is a list of core features Sesam offers.
+Sesam offers a set of features that will give you the edge when it comes to operations. Below is a list of the core features Sesam offers.
 
 |
 |
@@ -44,7 +44,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
 
     **Notifications**
 
-    Notifications enable you to monitor your pipes and get notification alerts in the user interface, or by email.
+    Notifications enable monitoring of your pipes and the ability to get notification alerts in the user interface, or by email.
 
     .. link-button:: notifications_feature
             :type: ref
@@ -55,7 +55,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
 
     **Metrics and monitoring**
 
-    Access subscription and pipe metrics in the Prometheus-compatible metrics API endpoint from your external monitoring tools, such as Grafana.
+    Access subscription and pipe metrics in a Prometheus-compatible metrics API endpoint from your external monitoring tools, such as Grafana.
 
     .. link-button:: metrics_api
             :type: ref
@@ -66,7 +66,7 @@ Sesam offer a set of features that will give you the edge when it comes to opera
 
     **Bring Your Own Key**
 
-    Sesam can now manage your encryption key for you.
+    Sesam can now manage your encryption keys for you.
 
     .. link-button:: bring_your_own_key
             :type: ref
