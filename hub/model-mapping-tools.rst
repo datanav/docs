@@ -27,7 +27,8 @@ The actual data mapping is done in a table where we map the various types and so
 
 .. list-table::
    :header-rows: 1
-   :widths: 10, 10, 60
+   :widths: 20, 60
+
    * - Column name
      - Description
    * - ``System``
@@ -38,7 +39,7 @@ The actual data mapping is done in a table where we map the various types and so
      - property name in source system, including full path when nested
    * - ``SubName``
      - property subname in source system
-   * - ``Data type`
+   * - ``Data type``
      - property name in source system
    * - ``Description``
      - description of property from source system
