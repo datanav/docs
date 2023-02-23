@@ -1,6 +1,11 @@
 Changelog
 =========
 
+.. _changelog_2023_02_23:
+
+2023-02-23
+----------
+* Added a new ``partial_completeness`` property to the :ref:`dataset source<dataset_source_property_partial_completeness>`.
 
 .. _changelog_2023_02_07:
 

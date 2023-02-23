@@ -31,6 +31,9 @@ Individual datasets can be excluded or included from completeness timestamp calc
 
 One can enable the completeness filtering feature on a pipe by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to ``true``. In that case the source dataset's completeness value will be used. It is also possible to use the completeness timestamp value of one or more specific upstream datasets instead; this is done by setting the ``completeness`` property on the :ref:`dataset source <dataset_source>` to an array of the upstream dataset ids. If the array contains more than one dataset id, the smallest completeness timestamp value is used.
 
+If one only care about the completeness being set, but not the actual completeness value, one can instead set the ``partial_completeness`` property on the :ref:`dataset source <dataset_source>` to a list of dataset ids. The source will then only return source entities if the specified dataset(s) have a completeness value. It doesn't matter what the completeness value is, it only needs to be present.
+
+
 .. WARNING::
 
    Completeness is implicitly incompatible with full rescans as they do not necessarily expose all the latest entities. This means that if deletion tracking is performed by the pipe that has completeness set to ``true`` then the non-covered entity ids will get deleted from the sink dataset. This may or may not be a problem depending on the use-case. Deletion tracking is only performed by pipes with ``dataset`` sinks currently. Set ``deletion_tracking`` to ``false`` on the ``dataset`` sink if you do not want deletion tracking to be performed.
