@@ -58,6 +58,14 @@ Properties
      - ``false``
      -
 
+       .. _dataset_source_property_initial_completeness:
+
+   * - ``initial_completeness``
+     - Array of strings (dataset ids)
+     - If set to a non-empty list, the source will only return source entities if the specified dataset(s) have a completeness value. It doesn't matter what the completeness value is, it only needs to be present.
+     -
+     -
+
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the dataset source will only return the latest
