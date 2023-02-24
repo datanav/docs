@@ -28,7 +28,7 @@ Properties
      - Opaque
      - The value of the ``$origin`` property is opaque and is managed by the model mapping, but in general it encapsulates what entities from other systems caused the entity to be created in this system. The ``$origin`` property is retrieved from the ``$origin`` property in the share sink dataset by joining the entity's system primary key with the ``$generated_id`` property.
      - No
-   * - ``$last-updated``
+   * - ``$last-modified``
      - Datetime
      - This is a timestamp that tells when the entity was last modified in the system. The property is optional, but it is best to collect this information from the system or as close to the system as possible.
      - No

@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2023_02_24:
+
+2023-02-24
+----------
+* Added a new ``error_expression`` property to the ``operation`` object properties in the :ref:`REST system <rest_system>` (and any local variants). It is available to the :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>` and is intended to be used to test for error conditions in responses from systems that don't use HTTP error codes properly. If it renders to a non-empty string the source or transform will fail. The contents of the rendered error is included in the exception raised to the pipe.
+
+.. _changelog_2023_02_23:
+
+2023-02-23
+----------
+* Added a new ``initial_completeness`` property to the :ref:`dataset source<dataset_source_property_initial_completeness>`.
 
 .. _changelog_2023_02_07:
 
