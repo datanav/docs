@@ -5,4 +5,4 @@
 Deletion Tracking
 =================
 
-The :ref:`dataset sink <dataset_sink>` is capable of detecting that entities have disappeared from the source. It can do this when the pipe does a full rescan. At the end of a pipe's run the sink will write a deleted version of those entities (where the ``"_deleted"`` property is set to ``true``). This is a useful feature particularly when the source itself is not able to omit deletes. It is also useful in the case where filters or other configuration changes causes previously sent entities to no longer be produced by the pipe.
+The :ref:`dataset sink <dataset_sink>` is capable of detecting that entities have disappeared from the source. It can do this when the pipe does a full rescan. At the end of a pipe's run the sink will write a deleted version of those entities (where the ``"_deleted"`` property is set to ``true``). This is a useful feature particularly when the source system doesn't send deleted entities (instead of using a deleted flag). It is also useful in the case where filters or other configuration changes causes previously sent entities to no longer be produced by the pipe.
