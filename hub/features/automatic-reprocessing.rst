@@ -16,7 +16,7 @@ Automatic Reprocessing is useful when pipes fall out of sync. There are many rea
 - Datasets may be deleted and then recreated
 - Sources may be truncated
 - Data may be restored from a backup
-- Joins to new datasets can be introduced or datasets that are input to a pipe
+- Joins to new datasets can be added, or new datasets may be added as pipe inputs
 - Datasets that are hop-ed to by a pipe may be deleted.
 
 When a pipe falls out of sync the pipe should be reset, and it should perform a full rescan to get a new view of the data.

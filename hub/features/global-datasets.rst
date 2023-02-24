@@ -13,7 +13,7 @@ Global datasets can be populated by:
 - Merging data from various source datasets without modifications  
 - Selectively merging datasets, by choosing which properties to merge through transformations
 
-It is important to remember that creating a global dataset requires either business knowledge or a sound understanding of the data entering Sesam from the different sources. 
+It is important to remember that creating a global dataset requires either business knowledge or a sound understanding of the data entering Sesam from the different sources. Each global dataset should contain a specific type of data, for example a person, a location, or a contract. Business knowledge is required to make sure that the right data ends up in the right global. It is also important to avoid accidentally overwriting data by ingesting data many-to-one. Consider a location global that takes in cities from one source and zip codes from another. A city contains many zip codes, so if you try to add zip codes to a city, the city entity will contain only the most recent zip code. On the other hand, adding cities to zip codes works, because each zip code belongs to only one city.
 
 Use case
 ========

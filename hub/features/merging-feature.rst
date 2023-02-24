@@ -6,7 +6,7 @@
 Merging
 =======
 
-An essential feature that enables :ref:`global datasets <global_datasets>` is the ability to merge different entities into one. The resulting entity contains data from multiple upstream entities that had all represented the same thing.
+An essential feature that enables :ref:`global datasets <global_datasets>` is the ability to merge different entities into one. The resulting entity contains data from multiple upstream entities that all represent the same thing.
 
 Use case
 --------
