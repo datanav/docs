@@ -9,7 +9,7 @@ Inside Sesam, :ref:`entities <entity-data-model>` flow between datasets before b
 
 Before a pipe writes an entity to a dataset, it will compare the new version of the entity to the last version of that entity the pipe produced. If the two versions are different, i.e. the entity has been updated, the dataset will be updated and the new entity will be placed at the front of the processing queue. This way the next pipe in line knows this entity has been updated and needs reprocessing. If the two versions are identical, the sink will drop the new entity and the dataset will not be updated. This way we ensure that only data that needs reprocessing will be reprocessed.
 
-The comparison is done by comparing the new and the old entitie's ``_hash`` values.
+The comparison is done by comparing the new and the old entity's ``_hash`` values.
 
 **Criteria for posting entities to sink dataset**
 
@@ -17,7 +17,7 @@ The comparison is done by comparing the new and the old entitie's ``_hash`` valu
 - Change in entity metadata - all non :ref:`reserved fields <reserved_fields>`
 - Change in entity delete status - the entity's ``_deleted`` status changes
 
-Each entity version written to a dataset will receive an ``_updated`` value. An entity's ``_updated`` value, unique to each dataset, is an incremental counter assigned to each entity version when they are stored in the target dataset. When a pipe's pump has sucessfully finished, the pipe will store the last (newest) entity's ``_updated`` value as the pipe's ``since`` value, thereby keeping track of the entities that have already been processed.
+Each entity version written to a dataset will receive an ``_updated`` value. An entity's ``_updated`` value, unique to each dataset, is an incremental counter assigned to each entity version when they are stored in the target dataset. When a pipe's pump has successfully finished, the pipe will store the last (newest) entity's ``_updated`` value as the pipe's ``since`` value, thereby keeping track of the entities that have already been processed.
 
 .. admonition::  Good to know:
 
