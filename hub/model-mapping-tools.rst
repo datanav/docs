@@ -8,7 +8,7 @@ In this section we will describe how the Sesam Talk data model has been defined 
 
 Background
 ^^^^^^^^^^
-In order to achieve a well-defined and unambiguous model, the Sesam Talk data model uses the Wikidata model as a base for the definition of items and properties. Items and properties that may provide valuable data across data providers are mapped to the Sesam Talk model, where each item and property in Sesam Talk will inherit the corresponding Q- or P-value identifier from WikiData to ensure a self-documented and standardized model. 
+In order to achieve a well-defined and unambiguous model, the Sesam Talk data model uses the Wikidata model as a base for the definition of items and properties. Items and properties that may provide valuable data across data providers are mapped to the Sesam Talk model. Here the items and properties in Sesam Talk that will be mapped, will inherit the corresponding Q- or P-value identifier from WikiData. This is to ensure a self-documented and standardized model. 
 Please see Sesam Hub section for more on which systems are available in the model so far as well as which items and properties have been mapped.
 
 Sesam Talk Definitions
