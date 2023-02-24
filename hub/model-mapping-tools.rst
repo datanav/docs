@@ -8,8 +8,8 @@ In this section we will describe how the Sesam Talk data model has been defined 
 
 Background
 ^^^^^^^^^^
-In order to achieve a well-defined and unambiguous model, the Sesam Talk data model uses the Wikidata model as a base for the definition of items and properties. Items and properties that may provide valuable data across data providers are mapped to the Sesam Talk model, where each item and property in Sesam Talk will inherit the corresponding Q- or P-value identifier from WikiData to ensure a self-documented and standardized model. Each property from each data provider also comes with a claim, allowing Sesam Talk to evaluate each property value from an MDM perspective.
-Please see here for more on which systems are available in the model so far as well as which items and properties have been mapped.
+In order to achieve a well-defined and unambiguous model, the Sesam Talk data model uses the Wikidata model as a base for the definition of items and properties. Items and properties that may provide valuable data across data providers are mapped to the Sesam Talk model, where each item and property in Sesam Talk will inherit the corresponding Q- or P-value identifier from WikiData to ensure a self-documented and standardized model. 
+Please see Sesam Hub section for more on which systems are available in the model so far as well as which items and properties have been mapped.
 
 Sesam Talk Definitions
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -68,7 +68,7 @@ The actual data mapping is done in a table where we map the various types and so
    * - ``Group``
      - used to group which properties belong together if several of the same type are to be separated as separate entities
    * - ``ReadOnly``
-     - angir om en property er read-only og bare skal leses inn til Sesam Talk, men ikke skal skrives tilbake til
+     - indicates whether a property is read-only and should only be read into Sesam Talk, and not written
    * - ``RefrenceTo``
      - used to specify the namespace where we create references to other entities
 
