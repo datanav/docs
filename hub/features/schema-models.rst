@@ -8,7 +8,7 @@ Schema models
 A model is a set of entity types. An entity type is a JSON schema, so a model is an array of JSON schemas.
 
 The purpose of a model is to serve as a mechanism for grouping entity types, but also to allow the user to add descriptions of properties to the JSON schema. The descriptions are then aggregated up to the property landing page in the Management Studio.
-Schema inferences generate entity types for the pipe source and pipe sink. The sink entity types are automatically mapped to implicit models. You can find these in ``Browse`` > ``Models`` in the Management Studio. You can also filter entity types by model in ``Browse`` > ``Entity types``.
+Schema inference generates entity types for the pipe source and pipe sink. The sink entity types are automatically mapped to implicit models. You can find these in ``Browse`` > ``Models`` in the Management Studio. You can also filter entity types by model in ``Browse`` > ``Entity types``.
 
 There are three built-in implicit models:
 
