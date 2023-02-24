@@ -110,8 +110,11 @@ Properties
      - Boolean
      - This property controls if the entity should be replaced with the JSON contents of the response or if the
        original entity should be kept. See the ``response_property`` for more detail on how this works. The default
-       is to keep the original entity and add a ``reponse`` property holding the result of the REST operation.
-
+       is to keep the original entity and add a ``response`` property holding the result of the REST operation.
+       Note that this property should normally not be altered, it's primarily intended for backwards compatibility with
+       ported :ref:`HTTP transforms <http_transform>`. When set to ``true`` the ``id_expression``,
+       ``updated_expression`` and ``error_expression`` expressions are not evaluated and the response is passed through
+       directly in the form returned by the system operation (assumed to be a JSON object or list of objects).
      - ``false``
      -
 

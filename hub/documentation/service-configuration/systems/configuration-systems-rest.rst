@@ -337,6 +337,27 @@ A operation configuration looks like:
      -
      -
 
+   * - ``error_expression``
+     - String
+     - The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with various
+       bound parameters available to the templating context. It can be used to detect error conditions in responses
+       from systems that doesn't properly use HTTP status codes to reflect failed operations. If the expression
+       evaluates to a non-empty string, the source or transform will throw an exception and the pipe will fail.
+       The rendered result is included in the error message. Note that this property is only relevant for the
+       :ref:`REST source <rest_source>` and :ref:`REST transform <rest_transform>`. It will be
+       ignored by the :ref:`REST sink <rest_sink>`. It is only evaluated when ``payload_property`` is set and the
+       response content-type is recognized as JSON. For the :ref:`REST transforms <rest_transform>` the
+       ``replace_entity`` property must be ``false`` (which is the default). The bound parameters available to this
+       template are ``body``, ``url``, ``requests_params``, ``properties``, ``since`` (only for :ref:`REST sources <rest_source>`),
+        ``entity``, ``source_entity`` (these two only for
+       :ref:`REST transforms <rest_transform>`) and ``headers``. If the operation supports paging then ``previous_body``,
+       ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers) are available for
+       all page requests except the first. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these
+       variables to set default values for the first page.
+     -
+     -
+
    * - ``since_property_name``
      - String
      - The name of the property to relay continuation information. This is only relevant if ``since_support`` as been
