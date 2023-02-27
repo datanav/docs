@@ -14,7 +14,7 @@ Property lineage is a new feature which allows Sesam to track the dependencies b
 How it works
 ------------
 
-Property lineage works by statically analyzing the configuration of your pipes and combines its findings with the data collected by the :ref:`schema inferencing <schema_inferencing>` feature to produce a best-effort dependency graph of your properties. The graph shown on Property lineage page allows you to navigate the upstream and downstream properties and pipes by clicking on their names in the graph nodes.
+Property lineage works by statically analyzing the configuration of your pipes, and combines its findings with the data collected by the :ref:`schema inference <schema_inference>` feature to produce a best-effort dependency graph of your properties. The graph shown on Property lineage page allows you to navigate the upstream and downstream properties and pipes by clicking on their names in the graph nodes.
 
 
 
@@ -32,7 +32,7 @@ Property lineage is available for all subscriptions with the clustered architect
 
 #. Find Integrated search and property lineage and click on “Enable”
 
-If your subscription is not yet on a clustered architecture please take contact with support to start the migration.
+If your subscription is not yet on clustered architecture please contact support to start the migration.
 
 
 How to find a lineage for a property
@@ -42,7 +42,7 @@ You can get to this page in three different ways:
 
 1. ``Ctrl/Cmd+Click`` on any property with a namespace in a particular entity in the Integrated Search entity view.
 
-2. ``Ctrl/Cmd+Click`` on any property with a namespaced in a particular entity in the Input/Output tab of a pipe.
+2. ``Ctrl/Cmd+Click`` on any property with a namespace in a particular entity in the Input/Output tab of a pipe.
 
 3. By clicking on the name of a particular pipe in the list of pipe entity types in the Browse/Entity Types view, or going to the Inferred Schema tab of a particular pipe. This presents a list of all the properties found within the data that flows through this pipe. Clicking on one of these will get you to the Property Lineage page for this property.
 

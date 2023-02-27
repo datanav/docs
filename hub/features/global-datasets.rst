@@ -9,16 +9,16 @@ A global dataset is a collection of data pertaining to the same concept from dif
 
 Global datasets can be populated by:
 
-- Simply adding datasets to a global dataset without merging 
-- Merging data from various sources without modifications  
-- Selectively merge data, by selecting which properties to merge through transformations
+- Adding datasets to a global dataset without merging 
+- Merging data from various source datasets without modifications  
+- Selectively merging datasets, by choosing which properties to merge through transformations
 
 It is important to remember that creating a global dataset requires either business knowledge or a sound understanding of the data entering Sesam from the different sources. 
 
 Use case
 ========
 
-Imagine three sources being ingressed in Sesam that each contain person data. Albeit, it is not immediately straight forward getting an overview of all the person metadata each of these sources contain. However, through the creation of a **global-person** dataset, information can be easily fetched from one single location instead of each of the three sources. Look at the below example to get an idea of how this could be done.
+Imagine there are three sources being ingested into Sesam, each containing person data. It is not immediately obvious which person metadata comes from which source. However, through the creation of a **global-person** dataset, information can be easily merged into, and fetched from, one location. Otherwise, each time person data is required it would be necessary to check all three sources individually. Take a look at the example below to get an idea of how this could be done.
 
 .. code-block:: python
 
@@ -91,13 +91,13 @@ The dataset below is what a global dataset of the above three datasets would loo
 Key benefits
 ============
 
-• By decoupling data from original sources, point-to-point integrations within Sesam can be avoided, thus fewer connections results in lower maintenance costs as integrated systems grow. In addition, data is available without concern of the original source
-• Data in global datasets are re-used, which saves work and makes adding new integrations easier
+• By decoupling data from original sources, point-to-point integrations within Sesam can be avoided. Fewer overall connections results in lower maintenance costs as the number of integrated systems grows
+• Data in global datasets is re-used, which saves work and makes adding new integrations easier
 • Only one look-up, instead of having to “look for data” in various datasets
 • Inbound datasets can be kept raw and as identical to the real source as possible, independent of how the data will be used, thus avoiding “early binding”
-• Adding additional integrations can further refine the global datasets and as such improve data quality
+• Adding additional integrations can further refine the global datasets and improve data quality
 
-A model without global datasets might look like the figure below. This example consists of four sources and three target systems only. Generally, it will be a lot more complicated.
+A model without global datasets might look like the figure below. This example consists of only four sources and three target systems. Generally, it will be a lot more complicated.
 
 .. image:: ../images/best-practice/no-global.png
     :width: 80%
@@ -113,6 +113,6 @@ As shown in the figure below, a Sesam node containing global datasets results in
 
 .. admonition::  Good to remember:
 
-  Global datasets will most likely grow and become large. If the configuration or logic is changed, this can in some cases mean that the whole dataset needs to be updated. This can potentially be a big job and will take time.
+  Global datasets will likely grow and become large. If the configuration or logic is changed it is possible that the whole dataset will need to be updated. This can be a big job and will take time.
 
-  As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When adding the historic data, which the company is required to store as well, the total data sums up to about 30 000 000 customers. One way of managing this large amount of data is to divide the data into different global datasets. In this case, the energy company might choose to store their historic data in one global dataset, and the current data in a different global dataset.
+  As an example, an energy company has 700 000 customers, and each customer has a power meter connected to their home. When taking into account historic data, which the company is required to store as well, the company is storing data of about 30 000 000 customers. One way of managing this large amount of data is to divide the data into different global datasets. In this case, the energy company might choose to store their historic data in one global dataset, and the current data in a different global dataset.

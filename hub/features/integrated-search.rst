@@ -5,7 +5,7 @@
 Integrated Search
 =================
 
-Integrated data browsing gives you more insight into your data and relationships within. Once enabled, globals are
+Integrated data browsing gives you more insight into your data and the relationships within. Once enabled, globals are
 indexed and available for free text search and navigation. Note that this incurs a 2x increase in data size needed for
 global pipes.
 
@@ -21,5 +21,5 @@ Integrated Search is now available for all subscriptions with clustered architec
 
 - Click on “Enable Integrated Search”
 
-If your subscription is not yet on a clustered architecture please take contact with support to start the migration.
+If your subscription is not yet on clustered architecture please contact support to start the migration.
 

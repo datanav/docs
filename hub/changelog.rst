@@ -291,7 +291,7 @@ Changelog
 
 2022-07-01
 ----------
-* Added a "discard-inferred-schema" pump operation to the :ref:`service API <api-top>`. This operation will discard any :ref:`inferred schema <schema_inferencing>` entries for the pipe and writes a special "pump-discard-inferred-schema" entity to the pipe execution log for reference. This operation can only be done on non-running pipes.
+* Added a "discard-inferred-schema" pump operation to the :ref:`service API <api-top>`. This operation will discard any :ref:`inferred schema <schema_inference>` entries for the pipe and writes a special "pump-discard-inferred-schema" entity to the pipe execution log for reference. This operation can only be done on non-running pipes.
 * Behavioural change: all pipes that have ``infer_pipe_entity_types`` set to ``true``, and have a source with :ref:`continuation support <continuation_support>`, will now discard their inferred schemas upon being reset.
 
 .. _changelog_2022_06_30:
@@ -303,7 +303,7 @@ Changelog
   dataset ids that should contribute to the completeness timestamp value of the sink dataset. By default, this property
   is equal to the pipe's input datasets, minus any datasets listed in :ref:`exclude_completeness <exclude_completeness>`.
 * Pipes that fail to infer their schemas due to limitations on the resulting schema size will no longer fail. The
-  :ref:`inferred schema <schema_inferencing>` will instead be truncated and marked as such and the pipe will not
+  :ref:`inferred schema <schema_inference>` will instead be truncated and marked as such and the pipe will not
   attempt to do schema inference the next time it runs.
 
 .. _changelog_2022_06_08:
@@ -370,7 +370,7 @@ Changelog
 2022-04-07
 ----------
 
-* :ref:`Schema inferencing <schema_inferencing>` has been extended to collect namespaces used in :ref:`NI values <namespaces-feature>`.
+* :ref:`Schema inference <schema_inference>` has been extended to collect namespaces used in :ref:`NI values <namespaces-feature>`.
 
 .. _changelog_2022_03_31:
 
@@ -893,7 +893,7 @@ Changes to the user experience:
 
 2020-06-19
 ----------
-* Experimental pipe entity type inferencing now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
+* Experimental pipe entity type inference now enabled by default. Change default value by setting service metadata property ``global_defaults.infer_pipe_entity_types`` to ``false``.
 
 2020-05-28
 ----------

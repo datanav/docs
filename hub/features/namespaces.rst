@@ -5,9 +5,9 @@
 Namespaces
 ==========
 
-Namespaces in Sesam are inspired by The Resource Description Framework `(RDF) <https://www.w3.org/RDF/>`_ where namespaces are URL references that allows us to reuse names from different sources without loosing context. In Sesam namespaces are used to determine the origin of attributes, something that is essential to accommodate master data management in :ref:`global pipes <whatis-global>`. Inside our global pipes we often wish to merge entities with other similar entities, such as person data from a CRM system and the equivalent person data from an HR system. Sesam prefixes namespaces to each attribute name in order to merge data from multiple sources without losing contex. Namespaces in Sesam are also essential for :ref:`late schema binding <transform-late-schema-binding>` where we map global models to target models.
+Namespaces in Sesam are inspired by the Resource Description Framework `(RDF) <https://www.w3.org/RDF/>`_ where namespaces are URL references that allows us to reuse names from different sources without loosing context. In Sesam namespaces are used to determine the origin of attributes, which is essential for master data management in :ref:`global pipes <whatis-global>`. Inside global pipes we often wish to merge entities with other similar entities, such as person data from a CRM system and the equivalent person data from an HR system. Sesam prefixes namespaces to each attribute name in order to merge data from multiple sources without losing context. Namespaces in Sesam are also essential for :ref:`late schema binding <transform-late-schema-binding>` where we map global models to target models.
 
-With some exceptions, attributes will always inherit the pipe name where the attribute was first created as its namespace, i.e. an attribute ``x`` created in pipe ``y`` will appropriate the namespace ``y:``, becoming ``y:x``. 
+With some exceptions, attributes will always inherit the pipe name where the attribute was first created as its namespace, i.e. an attribute ``x`` created in pipe ``y`` will use the namespace ``y:``, becoming ``y:x``. 
 
 See examples below.
 
@@ -38,7 +38,7 @@ How to enable
 Namespaces can be enabled on specific pipes by setting the required property/properties in the pipe configuration (see properties below). 
 
 **Enable globally in a subscription:**
-You can enable namespaces in the service metadata for all the pipes in your subscription, except for those pipes that have other explicit configurations. 
+You can enable namespaces in the service metadata for all the pipes in your subscription. This can be overridden at the pipe level. 
 
 .. important::
 
@@ -46,6 +46,7 @@ You can enable namespaces in the service metadata for all the pipes in your subs
 
 Properties
 ^^^^^^^^^^
+.. _namespaces_feature_add_namespaces:
 
 .. list-table::
    :header-rows: 1
@@ -74,8 +75,6 @@ Properties
      - The namespace used for properties. The default value is the pipe's id.
      - ``pipe.id``
      -
-
-.. _namespaces_feature_add_namespaces:
 
    * - ``add_namespaces``
      - Boolean

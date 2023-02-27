@@ -23,7 +23,7 @@ Can achieve consistency (security, data format, protocols) with datasets and pub
 Concepts in `data fabric <https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/>`_ and how they relate to features in Sesam:
 
 - Data access (:ref:`outgoing published endpoints <http_endpoint_sink>`, :ref:`incoming sources <source_section>`)
-- Discovery (:ref:`integrated search <integrated_search>`, :ref:`schemas <schema_inferencing>`)
+- Discovery (:ref:`integrated search <integrated_search>`, :ref:`schemas <schema_inference>`)
 - Transformation (:ref:`data transformation language <DTL>`)
 - Integration (:ref:`entity model <entity-data-model>`, :ref:`merge <merge_source>`, :ref:`namespaces <namespaces-feature>`)
 - Security (:doc:`permissions <documentation/operations/security>`)
