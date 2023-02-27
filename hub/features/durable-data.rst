@@ -12,7 +12,7 @@ By enabling durable data, Sesam will store the pipe data on a high-durability di
 Use case
 --------
 
-For cloud subscriptions, data is backed up to an external service once every 24 hours. During a disaster recovery data written the last 24 hours can be lost. By using replicas and a high-durability disk for storage, the risk of data loss is greatly reduced. The risk of data loss should be acceptable when Sesam is pulling data from sources, as the data that was lost will be pulled again by Sesam. However for pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, this will most likely be a problem.
+For cloud subscriptions, data is backed up to an external service once every 24 hours. During disaster recovery, data written in the last 24 hours can be lost. By using replicas and a high-durability disk for storage, the risk of data loss is greatly reduced. The risk of data loss should be acceptable when Sesam is pulling data from sources, as the data that was lost will be pulled again by Sesam. However for pipes with :ref:`HTTP endpoint source <http_endpoint_source>` and :doc:`non-idempotent <../idempotency>` sinks, data loss will most likely be a problem.
 
 
 .. admonition:: When to enable
@@ -20,13 +20,13 @@ For cloud subscriptions, data is backed up to an external service once every 24 
   We suggest you enable durable data in the following cases:
 
   #. All inbound pipes that are pushed to should have durable data enabled to mitigate the risk of data loss
-  #. Non-idempotent endpoint pipes. Especially where duplicated data transfers could be problematic (we recommend that all sources be idempotent, if possible)
+  #. Non-idempotent endpoint pipes. Especially where duplicated data transfers could be an issue (we recommend that all sources be idempotent, if possible)
   #. Endpoint pipes and share pipes writing data to the endpoints must both have durable data enabled
 
 
 Example
 ^^^^^^^
-Data is pushed to Sesam by an external system when the cloud service where the Sesam subscription runs have a health issue and goes down. When Sesam is backed up some data could be lost and Sesam will not have any automated way to ask for the data since last backup to be sent again.
+Data is being pushed to Sesam by an external system when the cloud service where the Sesam subscription runs has a health issue and goes down. When Sesam is backed up, some data could be lost and Sesam will not have an automated way to ask for the data since the last backup.
 
 Sesam writes data to an invoice system that is non-idempotent.
 

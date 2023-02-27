@@ -26,7 +26,7 @@ Pump completed / Pump failed notification rules
 
 What can be monitored?
 ----------------------
-When a pipe has finished running (either because it has finished normally, or if some error has occured),
+When a pipe has finished running (either because it has finished normally, or if some error has occurred),
 it will log some key numbers about the pipe-run.
 
 A notification rule can be added for each of these values, so that the user is alerted if a value
@@ -37,14 +37,14 @@ is too high or too low.
 
 Entities processed
 ~~~~~~~~~~~~~~~~~~
-This is the total number of entities that was read from the pipe's source.
+This is the total number of entities that were read from the pipe's source.
 
 
 .. _pipe_completed_metric__changes_last_run:
 
 Changed entities
 ~~~~~~~~~~~~~~~~
-This is the number or entities that was actually changed. When writing an entity to a dataset, the
+This is the number or entities that were actually changed. When writing an entity to a dataset, the
 pipe will compare the new entity to the version of entity that is already in the dataset (if any). If
 the entity is already in the dataset and is identical to the new entity, the new entity is skipped.
 
@@ -53,7 +53,7 @@ the entity is already in the dataset and is identical to the new entity, the new
 
 Failed retries
 ~~~~~~~~~~~~~~
-This is the number of entities that was unsuccessfully retried. The pipe will retry these entities again the next
+This is the number of entities that were unsuccessfully retried. The pipe will retry these entities again the next
 time the pipe runs..
 
 
@@ -62,7 +62,7 @@ time the pipe runs..
 Dead entities
 ~~~~~~~~~~~~~
 This is the number of entities that the pipe unsuccessfully retried writing to the sink, and where the pipe
-has retried so many times that the pipe has permanently given up on the entities.
+has retried so many times that the pipe has permanently given up on the entity.
 
 .. _pipe_completed_metric__retry_errors_last_run:
 
@@ -77,7 +77,7 @@ and :ref:`Dead entities <pipe_completed_metric__number_of_dead_entities_last_run
 
 Successfully retried entities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This is the number of entities that was retried, and where the retry attempt succeeded.
+This is the number of entities that were retried, and where the retry attempt succeeded.
 
 .. _pipe_completed_metric__read_errors_last_run:
 
@@ -184,27 +184,27 @@ Each of the metric described above can be monitored in a number of different way
 
 Value too low
 ~~~~~~~~~~~~~
-This rule type triggers a notification if a metric was below a specified value.
+This rule type triggers a notification if a metric is below a specified value.
 
 .. _pump_completed_value_too_high_notification_rule:
 
 Value too high
 ~~~~~~~~~~~~~~
-This rule type triggers a notification if a metric was above a specified value.
+This rule type triggers a notification if a metric is above a specified value.
 
 
 .. _pump_completed_value_too_low_over_time_notification_rule:
 
 Value too low over time
 ~~~~~~~~~~~~~~~~~~~~~~~
-This rule type triggers a notification if a metric has been below a specified value for a
+This rule type triggers a notification if a metric is below a specified value for a
 specified period of time.
 
 .. _pump_completed_value_too_high_over_time_notification_rule:
 
 Value too high over time
 ~~~~~~~~~~~~~~~~~~~~~~~~
-This rule type triggers a notification if a metric has been above a specified value for a
+This rule type triggers a notification if a metric is above a specified value for a
 specified period of time.
 
 
@@ -258,7 +258,7 @@ Restore completed
 
 This ruletype triggers when the pipe and its associated state and data has been restored from backup. This can happen
 if the machine the pipe is running on has failed for some reason; in this case the pipe's state and data might
-be restored from a remote backup. After a restore the pipe will be in the state it was when the backup was made,
+be restored from a remote backup. After a restore, the pipe will be in the state it was when the backup was made,
 which means data might be reprocessed.
 
 See also the :ref:`Pump offset set <pump_offset_set_notification_rule>` notification rule.
@@ -273,7 +273,7 @@ user (for instance by resetting the pipe), or automatically if the pipe detects 
 the upstream pipes that requires the pipe's offset to be modified.
 
 A typical usecase is that an upstream pipe has been restored from backup; in this case the pipe's offset may be
-rewound to match the max offset of the restored upstread pipe.
+rewound to match the max offset of the restored upstream pipe.
 
 See also the :ref:`Restore completed <restore_completed_notification_rule>` notification rule.
 
@@ -308,7 +308,7 @@ or::
 
    Failed to establish a new connection*name resolution
 
-, depending on which part(s) of the errormessage the user is interested in.
+, depending on which part(s) of the error message the user is interested in.
 
 Tip: there is no need for wildcards at the start and/or end of the pattern; if the pattern matches
 *anywhere* in the value the notification-rule will trigger.
@@ -339,7 +339,7 @@ a long time, a "Node heartbeat overdue" notification is triggered.
 Alert rate limiting
 ===================
 
-To avoid flooding users with alert, each notification rule will only generate at most one alert
+To avoid flooding users with alerts, each notification rule will only generate at most one alert
 per hour. If the notification rule triggered more than once during that hour, the alert-message
 will say something like this::
 
@@ -451,7 +451,7 @@ This endpoint implements the :doc:`JSON Pull Protocol <../json-pull>`, but the f
 know about: The ordering of the returned entities are not directly determined by when the notification each entity
 describes triggered. Example: if the endpoint returns two entities with ``"_updated":1`` and  ``"_updated":2``,
 the entity with  ``"_updated":1`` might describe a notification that triggered *after* the notification in the entity
-with ``"_updated":2``. This is not a problem, but can be a source of confusion if one is not aware of this behaviour.
+with ``"_updated":2``. This is not a problem, but can be a source of confusion if one is not aware of this behavior.
 
 
 Example timeline

@@ -7,7 +7,7 @@
 Metrics and monitoring
 ======================
 
-By enabling metrics and monitoring feature you will have access to a set of features that help you monitor your subscription. This bundle include features like custom notifications, insights and the metrics API.
+Enabling metrics and monitoring feature will give you access to a set of tools that help you monitor your subscription. This bundle include features like custom notifications, insights, and the metrics API.
 
 How to enable
 =============
@@ -127,7 +127,7 @@ Pipe metrics
 
    * - ``sesam_pipe_circuit_breaker_tripped``
      - Gauge
-     - Is the circuit-breaker tripped? 1.0 if tripped otherwise 0.0.
+     - Is the circuit-breaker tripped? 1.0 if tripped, otherwise 0.0.
 
 
 Pump metrics
@@ -178,7 +178,7 @@ Monitoring allows you to see pipe insights and set up custom pipe notifications.
 Insights
 --------
 
-After enabling Metrics and monitoring, you can enable insights in the pipe you want to monitor. You will then have access to charts that show how many entities, errors and latencies there have been for the current pipe during the last 30 days.
+After enabling metrics and monitoring, you can enable insights in the pipe you want to monitor. You will then have access to charts that show how many entities, errors and latencies there have been for the current pipe during the last 30 days.
 
 To enable insights on a specific pipe:
 
