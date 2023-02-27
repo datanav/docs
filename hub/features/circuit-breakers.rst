@@ -5,7 +5,7 @@
 Circuit Breakers
 ================
 
-A circuit breaker is a safety mechanism can be enabled on the
+A circuit breaker is a safety mechanism that can be enabled on the
 :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if
 the number of entities written to a dataset in a pipe's run exceeds a
 certain configurable limit.
