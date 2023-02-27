@@ -177,10 +177,10 @@ Properties
 
    * - ``global_defaults.infer_pipe_entity_types``
      - Boolean
-     - :ref:`Schema inferencing <schema_inferencing>` is enabled for
+     - :ref:`Schema inference <schema_inference>` is enabled for
        all pipes by default. Setting the property to false will
-       disable schema inferencing by default. Notice that one can
-       also configure schema inferencing at the pipe level.
+       disable schema inference by default. Notice that one can
+       also configure schema inference at the pipe level.
      - ``true``
      -
 
