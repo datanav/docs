@@ -5,13 +5,13 @@
 Circuit Breakers
 ================
 
-A circuit breaker is a safety mechanism that one can enable on the
+A circuit breaker is a safety mechanism that can be enabled on the
 :ref:`dataset sink <dataset_sink>`. The circuit breaker will trip if
-the number of entities written to a dataset in a pipe run exceeds a
+the number of entities written to a dataset in a pipe's run exceeds a
 certain configurable limit.
 
 Note that a circuit breaker is only activated if the sink dataset is
-populated. In practice this means that the pipe must have run to
+populated. This means that the pipe must have run to
 completion at least once. This is to avoid tripping it on the initial
 sync.
 
@@ -33,7 +33,7 @@ Resetting
 ---------
 
 When the configuration of a pipe is modified in such a way that the entities the pipe
-produces changes (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
+produce change (for instance by changing the DTL transform of the pipe), the pipe's "last-seen"
 value must be cleared in order to reprocess already seen entities with the new pipe
 configuration.
 

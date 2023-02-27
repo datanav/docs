@@ -6,7 +6,7 @@
 Data synchronization
 ====================
 
-Sesam offer a set of features that will give you the edge when it comes to Master Data synchronization. Below is a list of core features Sesam offers.
+Sesam offers a set of features that will give you the edge when it comes to master data synchronization. Below is a list of core features Sesam offers.
 
 |
 |
@@ -33,7 +33,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
 
     **Change tracking**
 
-    Compare incoming entities with the existing version and only apply updates if the version are different.
+    Compares incoming entities with the existing version and only apply updates if the version are different.
 
     .. link-button:: change_tracking
             :type: ref
