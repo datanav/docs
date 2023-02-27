@@ -451,7 +451,7 @@ This endpoint implements the :doc:`JSON Pull Protocol <../json-pull>`, but the f
 know about: The ordering of the returned entities are not directly determined by when the notification each entity
 describes triggered. Example: if the endpoint returns two entities with ``"_updated":1`` and  ``"_updated":2``,
 the entity with  ``"_updated":1`` might describe a notification that triggered *after* the notification in the entity
-with ``"_updated":2``. This is not a problem, but can be a source of confusion if one is not aware of this behavior.
+with ``"_updated":2``. This is not a problem, but can be a source of confusion if one is not aware of this behaviour.
 
 
 Example timeline

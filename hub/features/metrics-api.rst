@@ -7,7 +7,7 @@
 Metrics and monitoring
 ======================
 
-Enabling metrics and monitoring feature will give you access to a set of tools that help you monitor your subscription. This bundle include features like custom notifications, insights, and the metrics API.
+Enabling the metrics and monitoring feature will give you access to a set of tools that help you monitor your subscription. This bundle includes features like custom notifications, insights, and the metrics API.
 
 How to enable
 =============
