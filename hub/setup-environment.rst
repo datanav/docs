@@ -4,7 +4,7 @@ Setting up an environment
 Subscriptions
 -------------
 
-To decide on the size of production and test environments for a Sesam subscription,
+To decide the size of production and test environments for a Sesam subscription,
 one needs to consider the approximate number of datatypes and total entities.
 
 -  Single compute: Up to 20 datatypes and 10 million entities.
@@ -27,9 +27,9 @@ environment:
 Network connectivity
 --------------------
 
-To prepare connectivity the following ports between connected
-systems, and the test and production environments need to be opened
-in the affected firewalls. Alternatively, a VPN connection can be
+To prepare connectivity, the ports between connected
+systems and the test and production environments need to be opened
+in the effected firewalls. Alternatively, a VPN connection can be
 established between the Sesam service and the connected systems.
 
 Open the ports for each of your connected systems.
@@ -65,5 +65,5 @@ roles:
 1. Developer – Access all data and deploy changes to the main
    config-group.
 
-2. User – Access only data explicitly opened for them and add their own
+2. User – Access only data allowed them and add their own
    config-group to set up data flows.

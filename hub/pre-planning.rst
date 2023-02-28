@@ -5,8 +5,8 @@ The main planning task before starting a Sesam project is to create
 an overview of what master data types are needed, their sources, and how
 they should be organized inside Sesam.
 
-The :ref:`dataflow <best-practice-workflow>` can be documented by filling this
-:download:`template <files/Sesam data flow planning.xlsx>` by following these 4 steps:
+The :ref:`dataflow <best-practice-workflow>` can be documented by filling out this
+:download:`template <files/Sesam data flow planning.xlsx>` following these 4 steps:
 
 1. Identify what :doc:`master data <core-principles>` you need and where this data must be
    available
@@ -24,8 +24,8 @@ Identify master data
 Based on the functional needs of the project, identify the data types at
 a high level, and where this data must be available.
 
-For the master data giving context to the data platform, driving
-analytics, AI, web and Apps, select the appropriate data platform
+For the master data that gives context to the data platform (driving
+analytics, AI, web and apps) select the appropriate data platform
 components from your preferred vendors. E.g., Azure, Google etc.
 
 For master data needed to synchronize with new or existing
@@ -39,7 +39,7 @@ Identify the source systems that contain the necessary data to fill the
 master data requirements of the project.
 
 Identify their API, data protocol, and what connector can be
-used to communicate with them. Decide if the system has test and prod
+used to communicate with them. Determine if the system has test and production
 environments and find out what their endpoint URIs are.
 
 To be able to effectively implement the project, a system owner and

@@ -4,14 +4,14 @@
 Creating a Dataflow in Sesam
 ============================
 
-An ideal dataflow in Sesam consists of the following conceptual steps: *Collect*, *Enrich*, *Connect*, *Transform* and *Share*. These steps are explained below. Following these principles ensures data is modelled in a way that allows Sesam to operate optimally, so it's important to get acquainted with them and the reasoning behind them.
+An ideal dataflow in Sesam consists of the following conceptual steps: *Collect*, *Enrich*, *Connect*, *Transform* and *Share*. Following these principles ensures data is modelled in a way that allows Sesam to operate optimally, so it's important to get acquainted with them and the reasoning behind them.
 
 .. _collect:
 
 Collect
 -------
 
-Collecting data is primarily concerned with raw data and how Sesam operates when pulling data from a source.
+The collect step is concerned with raw data and how Sesam operates when pulling data from a source.
 
 .. _collect-push-or-pull:
 
@@ -20,28 +20,28 @@ Push or pull data?
 
 Sesam prefers to be the active party when scheduling the moving of data as it enters or exits Sesam. Therefore, Sesam prefers to pull data as this increases control and ensures Sesam can administer when data enters Sesam.
 
-With regards to pushing of data, the challenge is that Sesam receives the data but at the same time has no option to request the data again, should the need arise.
+When pushing data, the challenge is that Sesam receives the data, but has no option to request the data again if needed.
 
 .. _collect-raw-data:
 
 Raw data
 ^^^^^^^^
 
-Data is fed into Sesam through :ref:`an inbound pipe <best-practice-inbound-pipes>`. Firstly, you will do an analysis of the data. Then add a raw pipe to make sure Sesam has a copy of the original data. From the result of the analysis, you will then add properties, in the :ref:`enrich` step, that will enhance the data in terms of modelling, reusability and connectivity.
+Data is fed into Sesam through :ref:`an inbound pipe <best-practice-inbound-pipes>`. First, you will do an analysis of the data. Then add a raw pipe to make sure Sesam has a copy of the original data. From the result of the analysis, you will then add properties, in the :ref:`enrich` step, that will enhance the data in terms of modelling, reusability and connectivity.
 
 .. _collect-advantages:
 
 Advantages
 ^^^^^^^^^^
 
-Importing raw data can be interesting for multiple reasons. When an external system can only push data for example, having a record of the data received allows us to consult previously ingested data or re-run a dataflow without having to request a new data delivery, which can sometimes be impossible. Or if an external system is to be decommissioned, historical data can be preserved within Sesam and made available should the replacing system need it. There are also external systems that prune data which might be necessary for other external systems with a broader lifecycle scope. For example, an ERP system will keep data from procuration to decommission, while the lifespan of data will be shorter in a system focusing on operations.
+Importing raw data can be valuable for multiple reasons. When an external system can only push data for example, having a record of the data received allows us to consult previously ingested data or re-run a dataflow without having to request a new data delivery, which can sometimes be impossible. Or, if an external system is to be decommissioned, historic data can be preserved within Sesam and made available should the replacement system need it. There are also external systems that prune data which might be necessary for other external systems with a broader lifecycle scope. For example, an ERP system will keep data from creation to decommission, while the lifespan of data will be shorter in a system focusing on operations.
 
 .. _collect-two-step-approach:
 
 A two step approach
 ^^^^^^^^^^^^^^^^^^^
 
-To fullfil both goals of raw data retention and the ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the verbatim raw dataset. From the input pipe’s point of view, elaborated in the :ref:`enrich` step, the raw dataset is the data source as if it was from the external system itself.
+To meet the dual goals of raw data retention and the ability to leverage the semantic capabilities of Sesam, an intermediary dataset becomes necessary. A “raw” pipe will be inserted before the input pipe and act as a double-door entrance. Its duties are to interface with the external system and create the raw dataset. From the input pipe’s point of view, elaborated in the :ref:`enrich` step, the raw dataset is the data source as if it was from the external system itself.
 
 .. _collect-test-data:
 
@@ -50,7 +50,7 @@ Test data
 
 Test data is generated to be able to test that the data behaves as expected.
 
-It is a best practice to build a foundation of test data in the inbound pipe and then build on this as the need for testing arises. This is a smoother option than to try to generate perfect test data at the very beginning. This set of data can consist of ten or so objects, anonymized if required. Make sure it contains the fields required for testing, i.e. if you are testing merging, you need the fields you are merging on (e.g., merging person from HR and ERP system, you need social security number in both datasets).
+It is best practice to build a foundation of test data in the inbound pipe and then build on this as the need for testing arises. This is a smoother option than trying to generate perfect test data at the very beginning. This set of data can consist of ten or so objects, anonymized if required. Make sure it contains the fields required for testing, i.e. if you are testing merging, you need the fields you are merging on (e.g., merging person from HR and ERP system, you need social security number in both datasets).
 
 To read more about test data and how it is set up in Sesam, please click :ref:`here <best-practice-inbound-pipes>`
 
@@ -59,7 +59,7 @@ To read more about test data and how it is set up in Sesam, please click :ref:`h
 Monitoring
 ^^^^^^^^^^
 
-Sesam has a built-in monitoring function to help to ensure data flows as expected and there are no bottlenecks or any stops. A best practice in Sesam is to switch on monitoring in the inbound and the outbound pipes as it will make clear if data is not flowing as expected.
+Sesam has a built-in monitoring function to help to ensure data flows as expected and that there are no bottlenecks or stops. Best practice in Sesam is to turn on monitoring on the inbound and outbound pipes as those pipes give the best insight to the health of the data flow.
 
 .. _enrich:
 
@@ -84,9 +84,9 @@ Other types of semantics can be utilized if needed.
 Semantic enrichment with rdf:type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To classify business entities it is a best practice to add a property ``rdf:type``.
+To classify business entities it is best practice to add the property ``rdf:type``.
 The ``rdf:type`` should be added as a namespaced identifier to enable potential URI expansion.
-Use the source from which the business entity orginated as namespace and the business entity type as identifier.
+Use the source from which the business entity originated as the namespace and the business entity type as the identifier.
 
 For example, employees from SAP could be given ``rdf:type`` `"~:sap:Employee"`.
 
@@ -98,7 +98,7 @@ Semantic enrichment with namespaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Namespace support is a central feature of Sesam.
-Adding namespaces to entity properties ensures property lineage, and thus enables tracing of properties back to their origin.
+Adding namespaces to entity properties ensures property lineage, enabling backtracing of properties to their origin.
 Using namespaces also ensures that properties with identical names from different sources do not conflict with each other.
 
 As an example, imagine two business entities from two different sources both having a property ``first-name``.
@@ -139,18 +139,18 @@ See :ref:`best-practice-namespace` for more details.
 Connect
 -------
 
-The raw data, having now been enriched, are ready to be connected to other data from other sources. This can be done in various ways and the next few chapters will describe this in detail. 
+The raw data, having now been enriched, are ready to be connected to other data from other sources. This can be done in various ways. 
 
 .. _connect-global-pipes-datasets:
 
 Global pipes / datasets
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-When connecting data in Sesam, it is important to understand :ref:`global datasets <best-practice-global-pipes>` as these are collections of data that pertain to the same concept from different sources. 
+When connecting data in Sesam, it is important to understand :ref:`global datasets <best-practice-global-pipes>` as collections of data that pertain to the same concept from different sources. 
 
-The main purpose of a global dataset is to be the single authorative location to get fresh data about a specific concept. Generally when we want to start building globals, we start at a high level and work our way into the details. For example, if we work for a business which sells stationary, it will be natural to create globals based on various things we sell: global-paper, global-pens, global-postit, global-equipment etc. This is exactly how we would stock the shelves in a stationary shop. If, however we are a pen specialist, our perspective would be completely different and we would have a global-pencil, global-marker, global-ballpoint global-ink etc. Here we have so many kinds of pens that it does not make sense to have a shelf for printing paper or notebooks, but we would sort the pens after type of pen in the very same way we sort them into various global datasets.
+The main purpose of a global dataset is to be the single authoritative location to get fresh data about a specific concept. When building globals, start at a high level and work your way into the details. For example, if working for a business that sells stationary, it would be natural to create globals based on various things that are sold: global-paper, global-pens, global-postit, global-equipment etc. This is exactly how shelves would be stocked in a stationary shop. If, however, we are working for a pen specialist, the perspective would be completely different and there would be a global-pencil, global-marker, global-ballpoint, global-ink etc. Here there are so many kinds of pens that it does not make sense to have a shelf for printing paper or notebooks, but we would sort the pens by type of pen in the very same way we sort them into various global datasets.
 
-Neither of these two examples are wrong but make sense for each example as their data requirements and use of data are very different, even though a lot of their data is the same. So, when wanting to sort data in globals in order to retrieve it in the :ref:`transform` step, it is important to ensure logical grouping.
+Neither of these two global structures are wrong because they are specific to each use-case. Even though a lot of the data is the same, the data requirement and use is very different in the two scenarios. So, when wanting to sort data in globals in order to retrieve it in the :ref:`transform` step, it is important to ensure a logical grouping.
 
 A general rule is that every dataset that is written to Sesam from an external data source should be put into its appropriate global, however small it is.
 
@@ -158,7 +158,7 @@ When defining global datasets, there are a few guidelines for modelling:
 
 •   A global dataset should be defined by what the data it contains is.
 •   Try to keep the number of global datasets low.
-•   Every dataset written to Sesam through an inbound pipe should be put into a global dataset, do not put a dataset into multiple global datasets.
+•   Every dataset written to Sesam through an inbound pipe should be put into one global dataset, do not put a dataset into multiple global datasets.
 •   If unsure which global a dataset should belong to, choosing one of the candidates is usually good enough, try avoiding creating new global datasets just for one dataset.
 •   There is no definite right or wrong way in how you organize your global datasets.
 •   Avoid system specific global datasets.
@@ -176,40 +176,40 @@ Classification of data
 
 How do we decide which data pertains to the same concept? For example a person can potentially end up in global-customer, global-employee or global-person, which one is correct?
 
-In Sesam we recommend a *one dimensional structure*, i.e. data can only belong to one global. Let us use an example; a company has lots of data about persons: customers, clients, prospects, employees and applicants. It is tempting to be able to separate these to generate a global for each. The problem with this is a person with a unique ID can end up in two or more globals (e.g., global-customer and global-person). Then it is the *role* of the person deciding and not the *concept*, which is data about persons.
+In Sesam we recommend a *one dimensional structure*, i.e. data can only belong to one global. Let us use an example; a company has lots of data about people: customers, clients, prospects, employees and applicants. It is tempting to be able to separate these to generate a global for each. The problem with this is a person with a unique ID can end up in two or more globals (e.g., global-customer and global-person). Then it is the *role* of the person deciding and not the *concept*, which is data about persons.
 
-So how can we differentiate between all the various types of persons? In Sesam we add a category. This is multidimensional, which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
+So how can we differentiate between the various types of person data? In Sesam we add a category. This is multidimensional, which means you can add several categories to each data type. For a person, this could be "Customer" then we could further add subcategories of customers like "VIP customer", "Private customer" etc. So *top level of classification is one dimensional* and *lower categories and subcategories are multidimensional* as an object can have several categories.
 
-These principles coincide with `Carl Linnaeus <https://en.wikipedia.org/wiki/Linnaean_taxonomy>`__ principles of taxonomy; it is one dimensions that is each species can only belong to one category. He had 7 classifications:
+These principles coincide with `Carl Linnaeus' <https://en.wikipedia.org/wiki/Linnaean_taxonomy>`__ principles of taxonomy; it is one dimensional, that is each species can only belong to one category. He had 7 classifications:
 
 Kingdom
 Phylum
-Classes
-Orders
+Class
+Order
 Family
 Genera
 Species
 
-When classifying in Sesam, it is advisable to start high up in the hierarchy but not at top as that proves to be too general, but for most data modelling, starting at Phylum or Classes is a good starting point. To further classify deeper down in the hierarchy, we add categories and subcategories.
+When classifying in Sesam, it is advisable to start high up in the hierarchy, but not at the top as that proves to be too general. For most data modelling, starting at phylum or class is a good starting point. To further classify deeper down in the hierarchy, add categories and subcategories.
 
-To meet this requirement for classifying data, as stated previously, we recommend generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data that needs categorization. 
+To meet this requirement for classifying data, we recommend generating a *global-classification* dataset. This contains various metadata that can be picked up and enriched via hops to the data that needs categorization. 
 
 .. _connect_merge-data-or-not:
 
-Merge data in a global dataset or not
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Merge data in a global dataset, or not
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To emphasize: One of the main purposes of a global dataset is to present a single authoritative truth about a concept or data. Therefore, it is important to ask yourself whether data from different systems should be merged in a global or not. 
 
-It is logical to merge data from various systems in one global dataset if they define the same kind of object or type. For example, if some of the various sources contain person data, it would be logical to create a global dataset for person data and then merge each entity that refers to the same person. This is done so that when you ask for information about a specific entity, you also get information about that entity from the other systems. In terms of reusability this is a highly versatile way of getting all the data you need.
+It is logical to merge data from various systems in one global dataset if they define the same kind of object or type. For example, if some of the various sources contain person data, it would be logical to create a global dataset for person data and then merge each entity that refers to the same person. This is done so that when you ask for information about a specific entity, you also get information about that entity from the other systems. This is a highly versatile way of getting all the data you need.
 
 .. warning::
 
-    - However, merging data comes with a cost. In certain cases, changing the rules of how the data are merged requires the pipe to be reset and run again. For large datasets this might mean that it will take time before the downstream pipes will get updates.
+    - Merging data comes with a cost. In certain cases, changing the rules of how the data is merged requires the pipe to be reset and run again. For large datasets this might mean that it will take time before the downstream pipes get updates.
 
-In some cases, merging the data isn't logical. For instance, data like countries, counties, cities and streets might be put into a global location dataset, but it is not logical to merge these data. For example, if we think of Norway (a country) and Oslo (a city), they both could fit into a global location dataset, both being locations, but we can agree that Norway and Oslo are not the same thing.
+In some cases, merging the data isn't logical. For instance, data like countries, counties, cities and streets might be put into a global location dataset, but it is not logical to merge this data. For example, if we think of Norway (a country) and Oslo (a city), they both could fit into a global location dataset, both being locations, but we can agree that Norway and Oslo are not the same thing.
 
-Also note that if a global dataset contains merged data, it does not necessarily mean that every other dataset in the global must be merged. Some data might be telling something about an entity but it's not necessarily the same thing.
+Also note that if a global dataset contains merged data, it does not necessarily mean that every other dataset in the global must be merged. Some data might contain information about an entity, but it's not necessarily the same thing.
 
 .. _connect-defining-global-properties:
 
@@ -221,12 +221,12 @@ For background on global properties, please read :ref:`here <best-practice-golde
 There are 3 main reasons to introduce global properties:
 
 - These are established standards you want to use.
-- One will establish standard characteristics that make it easier for consumers of data to know which properties to use.
-- Properties that are conceptually about the same thing, albeit they originate from more than one system, logic must be defined to ensure the desired system is authoritative
+- The properties establish standard characteristics that make it easier for consumers of data to know which data to use.
+- Properties that conceptually are the same thing, but originate from more than one system. Logic must be defined to ensure the data pulled in the share step is the right data.
 
-Often when you merge datasets together in a global dataset, you will find that some of the merged datasets contain properties that are the same. In some cases, it is valuable to add one global property to the global dataset that will be the most reliable with regards to these properties.
+Often when you merge datasets together in a global dataset, you will find that some of the merged datasets contain properties that are the same. In some cases, it is valuable to add one global property to the global dataset that will be the best representation of those properties.
 
-For instance, let us say we have a person global dataset that merges three datasets from three different systems. All of these datasets contain a property for zipcode, but we know that one of the systems isn’t adequately updated. By adding a global zipcode property, determining which of the systems are the most reliable and using the zipcode from that source as the value, we provide a way for the downstream pipes to get the most reliable information.
+For instance, suppose there is a person global dataset that merges three datasets from three different systems. All of these datasets contain a property for zipcode, but we know that one of the systems isn’t adequate. By adding a global zipcode property, determining which of the systems are the most reliable, and using the zipcode from that source as the value, we provide a way for the downstream pipes to get the most reliable information.
 
 Instead of having to define global properties in advance, Sesam is built so that these can be continuously defined and changed over time and as needed. Some recommendations for when to establish global properties:
 
@@ -240,11 +240,11 @@ If you need to use a :ref:`hops <hops_dtl_function>` function to another global 
 Feedback loops
 ^^^^^^^^^^^^^^
 
-A feedback loop is a downstream pipe from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properies that need to be created recursively. It is also the recommended way to add properties that is dependent on hops to other datasets.
+A feedback loop is a pipe downstream from a global, that creates a dataset that is merged back in to the same global. This mechanism is needed to build properties that need to be created recursively. It is also the recommended way to add properties that are dependent on hops to other datasets.
 
 .. warning::
 
-    - Be aware that a feedback pipe will effectively block the completeness feature if it is not excluded from the completeness chain.
+    - Be aware that a feedback pipe will block the completeness feature if it is not excluded from the completeness chain.
 
 .. _transform:
 
@@ -267,7 +267,7 @@ Sesam does not offer automatic schema validation nor business rules validation. 
 Data format
 ^^^^^^^^^^^
 
-Sesam has native connectors to transform its internal JSON format into the most common data formats, like XML, JSON, SQL, CSV, Excel etc. Any format not supported can be delivered using the push mechanism through a microservice. Sesam has a library of `microservices <https://github.com/sesam-community>`_, but in some cases a new microservice has to be developed if Sesam needs to connect to an unfamiliar or special system. This can be necessary because of special data format or security requirements of the targets.
+Sesam has native connectors to transform its internal JSON format into the most common data formats, like XML, JSON, SQL, CSV, Excel etc. Any format not supported can be delivered using the push mechanism through a microservice. Sesam has a library of `microservices <https://github.com/sesam-community>`_, but in some cases a new microservice has to be developed if Sesam needs to connect to an unfamiliar or special system. This can be necessary because of special data formats or the security requirements of the targets.
 
 .. _share:
 
@@ -284,7 +284,7 @@ Transport
 ^^^^^^^^^
 
 Sesam supports both push and publish mechanisms. Push has the advantage of making it possible for Data Managers to control the flow and know the state of the target system. Publish has an advantage that gives the target system control over their dataflow, but supports a limited array of data formats, such as JSON, CSV, XML, RDF, SD-SHARE and only supports HTTPS.
-Sesam does not support ad hoc querying on published data. Sesam has a limited support for pre-defined query properties or data subsets.
+Sesam does not support ad hoc querying on published data. Sesam has limited support for pre-defined query properties or data subsets.
 
 .. _share-identifiers:
 
