@@ -150,6 +150,16 @@ Properties
      - 100
      - No
 
+   * - ``validation_expression``
+     - String
+     - This property allows custom request validation for receiver endpoints. This is particularly useful when clients cannot use JWT tokens for authentication. The string must be a `Jinja template <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_. The Jinja template is rendered for each incoming request. If it renders as an empty string then the request is accepted, otherwise the rendered string will be reported as an error in the response. The context allows using the ``secret`` function to access values of secrets. The named variables ``url``, ``request_params`` and ``request_headers`` are available to the template.  Example: ``"{{ '' if request_headers['X-Sesam-Authorization'] == secret('webhook_secret') else 'Invalid authorization header value' }}"``.
+
+       .. NOTE::
+
+          It is assumed that the receiver pipe has granted the ``write_data`` permission granted to the role ``group:Anonymous`` if JWT tokens are not to be used for authentication.
+     -
+     - No
+
 
 Completeness
 ^^^^^^^^^^^^
@@ -198,6 +208,3 @@ into the ``my-entities`` dataset:
             "type": "http_endpoint"
         }
     }
-
-
-
