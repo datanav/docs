@@ -7,32 +7,33 @@ Subscription Fee, payment terms
 1. Subscription fee
 ===================
 
-The Subscription Fee for the Services are set
-depending on the computing power, data volume, selected monitoring
-functionality and SLA-level.
-
-Fees for standard services are set out in U.S. Dollar, and are calculated into
-Norwegian Kroner based on the Central Bank of Norway's exchange rate on
-the invoicing day.
-
-Compute is automatically upgraded if data use exceeds specified limits. You
-can upgrade without additional data storage in case you want higher performance.
-
-If data storage is more than 1TB you will be billed with an additional Multi
-compute for every TB above 1TB. As an example, if you have 4,5TB of data you
-will be billed with 5 quantities of Multi computes.
-
 ..
-  The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
+  The Subscription Fee for the Services are set
+  depending on the computing power, data volume, selected monitoring
+  functionality and SLA-level.
 
-.. _pricing-developer:
+  Fees for standard services are set out in U.S. Dollar, and are calculated into
+  Norwegian Kroner based on the Central Bank of Norway's exchange rate on
+  the invoicing day.
 
-Developer environment
----------------------
-A developer environment has a fixed price and serves a single developer, or a CI test environment.
-These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted.
-We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
-by using the :doc:`Sesam Client <hub/sesam-client>`.
+  Compute is automatically upgraded if data use exceeds specified limits. You
+  can upgrade without additional data storage in case you want higher performance.
+
+  If data storage is more than 1TB you will be billed with an additional Multi
+  compute for every TB above 1TB. As an example, if you have 4,5TB of data you
+  will be billed with 5 quantities of Multi computes.
+
+  ..
+    The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
+
+  .. _pricing-developer:
+
+  Developer environment
+  ---------------------
+  A developer environment has a fixed price and serves a single developer, or a CI test environment.
+  These do not have support for backup, VPN, or SLA and can not host test, staging or production environments. The development environment is cloud-only and restricted.
+  We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
+  by using the :doc:`Sesam Client <hub/sesam-client>`.
 
 Pricing
 -------
