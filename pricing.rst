@@ -33,63 +33,64 @@ These do not have support for backup, VPN, or SLA and can not host test, staging
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
 by using the :doc:`Sesam Client <hub/sesam-client>`.
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+..
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - Compute
-     - Pr environment
-   * - Fixed price Developer - 1 Engine < 20 GB Data
-     - $55.00
-   * - Fixed price Developer Pro - 2 Engines < 20 GB Data
-     - $275.00
+     * - Compute
+       - Pr environment
+     * - Fixed price Developer - 1 Engine < 20 GB Data
+       - $55.00
+     * - Fixed price Developer Pro - 2 Engines < 20 GB Data
+       - $275.00
 
-.. _pricing-production:
+  .. _pricing-production:
 
-Production and test environment
--------------------------------
+  Production and test environment
+  -------------------------------
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - Compute [#]_
-     - Pr environment
-   * - Single compute - 4 Engines < 350 GB Data
-     - $1,000.00
-   * - Multi compute - 16 Engines < 1 TB Data
-     - $3,500.00
+     * - Compute [#]_
+       - Pr environment
+     * - Single compute - 4 Engines < 350 GB Data
+       - $1,000.00
+     * - Multi compute - 16 Engines < 1 TB Data
+       - $3,500.00
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - Data [#]_
-     - Pr GB
-   * - Storage
-     - $15.00
-   * - VPN
-     - $2.00
-   * - Metrics and monitoring
-     - $4.00
+     * - Data [#]_
+       - Pr GB
+     * - Storage
+       - $15.00
+     * - VPN
+       - $2.00
+     * - Metrics and monitoring
+       - $4.00
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - SLA - Response time [#]_
-     - Pr GB
-   * - Standard - 8h
-     - $15.00
-   * - Enterprise - 1h
-     - $30.00
-   * - Premium 0,5h x 24/7 [#]_
-     - $100.00
+     * - SLA - Response time [#]_
+       - Pr GB
+     * - Standard - 8h
+       - $15.00
+     * - Enterprise - 1h
+       - $30.00
+     * - Premium 0,5h x 24/7 [#]_
+       - $100.00
 
-.. [#] Geo-replicated backup is included in cloud environments.
-.. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
-.. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
-.. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
+  .. [#] Geo-replicated backup is included in cloud environments.
+  .. [#] 1-year fixed price option available. 50% data price reduction for the fixed data amount, with 100% price increase for data exceeding the fixed data amount. Number of computes is determined by the maximum of fixed data amount and actual data amount.
+  .. [#] SLA is billed for minimum 50GB data and a maximum of 300GB.
+  .. [#] Premium SLA requires 1 year fixed price commitment for minimum 50GB data.
 
 1. Invoicing
 ============
@@ -119,38 +120,39 @@ charges or other duties or other changes in public administrative
 practice affects the vendor's costs connected to the Service, the
 subscription fee shall be adjusted correspondingly without prior notice.
 
-5. Legacy prices
-================
+..
+  5. Legacy prices
+  ================
 
-The following items are no longer available for new subscriptions:
+  The following items are no longer available for new subscriptions:
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - Compute
-     - Pr environment
-   * - Large compute - 8 Engines < 750 GB Data
-     - $2,000.00
+     * - Compute
+       - Pr environment
+     * - Large compute - 8 Engines < 750 GB Data
+       - $2,000.00
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - Pipe monitoring
-     - Pr pipe
-   * - Enterprise - Notifications
-     - $25.00
+     * - Pipe monitoring
+       - Pr pipe
+     * - Enterprise - Notifications
+       - $25.00
 
-.. list-table::
-   :widths: 70 30
-   :header-rows: 1
+  .. list-table::
+     :widths: 70 30
+     :header-rows: 1
 
-   * - :doc:`GDPR Data Access Portal <hub/gdpr-platform>`
-     - Pr GB
-   * - Basic < 1 request per second
-     - $50.00
-   * - Standard < 5 requests per second
-     - $100.00
-   * - Enterprise < 10 requests per second
-     - $200.00
+     * - :doc:`GDPR Data Access Portal <hub/gdpr-platform>`
+       - Pr GB
+     * - Basic < 1 request per second
+       - $50.00
+     * - Standard < 5 requests per second
+       - $100.00
+     * - Enterprise < 10 requests per second
+       - $200.00
