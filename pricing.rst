@@ -33,6 +33,11 @@ These do not have support for backup, VPN, or SLA and can not host test, staging
 We strongly encourage following `test-driven development practices <https://en.wikipedia.org/wiki/Test-driven_development>`_
 by using the :doc:`Sesam Client <hub/sesam-client>`.
 
+Pricing
+-------
+
+Please contact our `sales department <mailto:sales@sesam.io>`_ for pricing.
+
 ..
   .. list-table::
      :widths: 70 30
