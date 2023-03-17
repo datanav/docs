@@ -34,4 +34,4 @@ Finally under "Add or modify VPN details" fill in the required fields to setup t
 
 .. NOTE::
 
-   :ref:`Multi compute <pricing-production>` subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to. Contact support to set up such VPN connections.
+   Multi compute subscriptions support highly available VPN configurations. This lets you set up redundant BGP (Border Gateway Protocol) enabled connections that can be failed over to. Contact support to set up such VPN connections.
