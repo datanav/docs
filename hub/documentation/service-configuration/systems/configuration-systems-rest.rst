@@ -153,12 +153,12 @@ A operation configuration looks like:
      - String
      - A URL or URL part. The property supports the ``Jinja`` template (https://palletsprojects.com/p/jinja/) syntax with the entities properties
        available to the templating context. The expanded string is then substituted into the system's ``url_pattern`` property in
-       place of its ``%s`` placeholder marker to get the final URL to use for the operation. If used with the 
+       place of its ``%s`` placeholder marker to get the final URL to use for the operation. If used with the
        :ref:`REST source <rest_source>`, the variables ``since``, ``entity`` (only for :ref:`REST transforms <rest_transform>` and
        :ref:`REST sinks <rest_sink>`), ``properties`` are available to this template. For the :ref:`REST transforms <rest_transform>` and
        :ref:`REST sources <rest_sink>` that support pagination some additional parameters are also available: ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers).
-       Note that if you use the ``since`` variable in this template the ``since_property_location`` and 
+       Note that if you use the ``since`` variable in this template the ``since_property_location`` and
        ``since_property_name`` configuration properties will be ignored for the operation.
      -
      - Yes
@@ -301,6 +301,49 @@ A operation configuration looks like:
        Note that these strategies can be combined in an array if the source system pagination sequence can
        terminate in multiple ways.
      - ``["next-page-link-empty", "same-next-page-request"]``
+     -
+
+   * - ``allowed_status_codes``
+     - String
+     - An expression in the form of single values or value ranges of HTTP status codes that will be allowed to be passed
+       through by the transform. The values are either comma separated integer values or a range of values with a hyphen separator
+       (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 200-299 includes both 200 and
+       299. Whitespaces are not allowed in the expression. Note that ``200-299`` are the default status codes and any response
+       status codes other than this will make the transform fail. See the complimentary ``ignored_status_codes``
+       if you want to omit non-ok responses instead of them making the transform fail or passing them through. Also note
+       that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
+
+       .. NOTE::
+
+          This operation property can only be used with the :ref:`REST transform <rest_transform>`.
+
+       .. WARNING::
+
+          If you allow other status codes than the default, *make sure* that these are dealt with downstream.
+
+     - ``"200-299"``
+     -
+
+   * - ``ignored_status_codes``
+     - String
+     - An expression in the form of single values or value ranges of HTTP status codes that will be ignored by the
+       transform. HTTP responses with status codes matching this list will result in the response being omitted from
+       the result. The values are either comma separated integer values or a range of values with a hyphen separator
+       (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 400-403 includes both 400 and
+       403. Whitespaces are not allowed in the expression. See the complimentary ``allowed_status_codes`` if you
+       want to pass through any non-ok responses instead of skipping them. Also note that the ranges in
+       ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
+
+       .. NOTE::
+
+          This operation property can only be used with the :ref:`REST transform <rest_transform>`.
+
+       .. WARNING::
+
+          Any response with status codes listed here will be discarded with no traces to be found, making it next to
+          impossible to audit the pipe.
+
+     -
      -
 
    * - ``id_expression``
@@ -532,4 +575,3 @@ Example configuration
            }
         }
     }
-
