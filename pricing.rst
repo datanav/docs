@@ -7,20 +7,22 @@ Subscription Fee, payment terms
 1. Subscription fee
 ===================
 
-The Subscription Fee for the Services are set
-depending on the computing power, data volume, selected monitoring
-functionality and SLA-level.
+..
+  The Subscription Fee for the Services are set
+  depending on the computing power, data volume, selected monitoring
+  functionality and SLA-level.
 
 Fees for standard services are set out in U.S. Dollar, and are calculated into
 Norwegian Kroner based on the Central Bank of Norway's exchange rate on
 the invoicing day.
 
-Compute is automatically upgraded if data use exceeds specified limits. You
-can upgrade without additional data storage in case you want higher performance.
+..
+  Compute is automatically upgraded if data use exceeds specified limits. You
+  can upgrade without additional data storage in case you want higher performance.
 
-If data storage is more than 1TB you will be billed with an additional Multi
-compute for every TB above 1TB. As an example, if you have 4,5TB of data you
-will be billed with 5 quantities of Multi computes.
+  If data storage is more than 1TB you will be billed with an additional Multi
+  compute for every TB above 1TB. As an example, if you have 4,5TB of data you
+  will be billed with 5 quantities of Multi computes.
 
 ..
   The fees for the Services are set out below in U.S. Dollar exclusive of VAT:
