@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_02_28:
+
+2023-02-28
+----------
+* Added ``validation_expression`` property to the :ref:`HTTP endpoint source <http_endpoint_source>`. This allows custom request validation for receiver endpoints. This is particularly useful when clients cannot use JWT tokens for authentication.
+
 .. _changelog_2023_02_24:
 
 2023-02-24
@@ -30,7 +36,7 @@ Changelog
 
 2023-01-31
 ----------
-* Restricted access to pipe runner API for subscriptions not having developer_mode enabled. The motivation is to avoid running tests in production systems as that is disruptive/destructive. 
+* Restricted access to pipe runner API for subscriptions not having developer_mode enabled. The motivation is to avoid running tests in production systems as that is disruptive/destructive.
 
 .. _changelog_2023_01_30:
 
