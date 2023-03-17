@@ -1,6 +1,20 @@
 Changelog
 =========
 
+.. _changelog_2023_03_17:
+
+2023-03-17
+----------
+
+* We decided to revert our :ref:`recent change <changelog_2023_01_09>` of the default value of ``allowed_status_codes`` in the :ref:`REST transform <rest_transform>` from 200-299 to 200. The change did cause some problems with non-idempotent sinks. The default value is now 200-299.
+
+.. _changelog_2023_03_14:
+
+2023-03-14
+----------
+
+* ``allowed_status_codes`` and ``ignored_status_codes`` can now be specified on :ref:`REST operations <rest_operations>`, but they can only be used with the :ref:`REST transform <rest_transform>`.
+
 .. _changelog_2023_02_28:
 
 2023-02-28

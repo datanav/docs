@@ -1,4 +1,3 @@
-
 .. _REST_transform:
 
 REST transform
@@ -220,7 +219,7 @@ Properties
      - An expression in the form of single values or value ranges of HTTP status codes that will be allowed to be passed
        through by the transform. The values are either comma separated integer values or a range of values with a hyphen separator
        (i.e. a single ``-`` character). The start and end of a range are inclusive, i.e. 200-299 includes both 200 and
-       299. Whitespaces are not allowed in the expression. Note that 200 is the default status code and any response
+       299. Whitespaces are not allowed in the expression. Note that ``200-299`` are the default status codes and any response
        status codes other than this will make the transform fail. See the complimentary ``ignored_status_codes``
        if you want to omit non-ok responses instead of them making the transform fail or passing them through. Also note
        that the ranges in ``ignored_status_codes`` cannot overlap with ``allowed_status_codes``.
@@ -229,7 +228,7 @@ Properties
 
           If you allow other status codes than the default, *make sure* that these are dealt with downstream.
 
-     - ``"200"``
+     - ``"200-299"``
      -
 
    * - ``ignored_status_codes``
@@ -493,4 +492,3 @@ Pagination support
 
 See the the :ref:`REST source examples <rest_source_examples>` for how to use pagination with the REST transform -
 the configuration set up is the same as with the REST source.
-
