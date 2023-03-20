@@ -163,3 +163,53 @@ The entity has been marked as deleted and will therefore be deleted in the syste
       "_id": "foo-person:0",
       "_deleted": true
     }
+
+Injected variables
+==================
+
+Any strings on the form ``{{@ foo @}}`` in the non-expanded connector configuration represent variables that are
+injected into the configuration during expansion, either by a developer tool such as `sesam-py <https://github.com/sesam-community/sesam-py>`_ or the `connector-deployer <https://github.com/datanav/connector-deployer>`_.
+With some exceptions, most of the variables that support this must be
+listed in a connector's manifest to be made available. Some of these variables are always available and do not need to
+be specified anywhere, such as ``datatype``.
+The table below lists the supported variables, which value they are replaced with and where they should be specified
+in a Sesam Talk configuration.
+
+.. list-table::
+   :widths: 20, 40, 20
+   :header-rows: 1
+
+   * - Variable
+     - Replaces with
+     - Location
+   * - ``account_id``
+     - Value of ``account_id`` property in tenant authentication
+     -
+   * - ``base_url``
+     - Value of ``api_base_url`` property from multi-tenant configuration
+     - Manifest
+   * - ``<connector>_webhook_dataset``
+     - ``$ENV(<connector>_webhook_dataset)``
+     - Manifest
+   * - ``datatype``
+     - The name of the datatype under ``datatypes`` that the configuration belongs to
+     -
+   * - ``is_fullsync``
+     - Either ``true`` or ``false`` for a given datatype, depending on tenant authentication
+     -
+   * - ``parent``
+     - Value of the ``parent`` property set for a datatype in ``datatypes``
+     - Manifest
+   * - ``service_url``
+     - The URL to the API of the Sesam subscription
+     - Manifest
+   * - ``system``
+     - Concatenation of vendor name, internal tenant ID and connector name
+     -
+   * - ``token_url``
+     - The value of ``oauth2.token_url`` in the manifest, or the value of ``auth.access_token_url`` if that property
+       exists in the multi-tenant configuration.
+     - Manifest/multi-tenant configuration
+
+
+
