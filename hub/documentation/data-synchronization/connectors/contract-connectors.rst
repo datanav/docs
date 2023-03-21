@@ -167,49 +167,99 @@ The entity has been marked as deleted and will therefore be deleted in the syste
 Injected variables
 ==================
 
-Any strings on the form ``{{@ foo @}}`` in the non-expanded connector configuration represent variables that are
-injected into the configuration during expansion, either by a developer tool such as `sesam-py <https://github.com/sesam-community/sesam-py>`_ or the `connector-deployer <https://github.com/datanav/connector-deployer>`_.
+Any strings on the form ``{{@ foo @}}`` in the non-expanded connector configuration represent Jinja variables that are
+injected into the configuration by a tool such as `sesam-py <https://github.com/sesam-community/sesam-py>`_.
 With some exceptions, most of the variables that support this must be
 listed in a connector's manifest to be made available. Some of these variables are always available and do not need to
 be specified anywhere, such as ``datatype``.
-The table below lists the supported variables, which value they are replaced with and where they should be specified
-in a Sesam Talk configuration.
+
+The table below lists the supported variables.
+
+Overview
+----
 
 .. list-table::
-   :widths: 20, 40, 20
+   :widths: 20, 10
    :header-rows: 1
 
    * - Variable
-     - Replaces with
-     - Location
-   * - ``account_id``
-     - Value of ``account_id`` property in tenant authentication
-     -
-   * - ``base_url``
-     - Value of ``api_base_url`` property from multi-tenant configuration
-     - Manifest
-   * - ``<connector>_webhook_dataset``
-     - ``$ENV(<connector>_webhook_dataset)``
-     - Manifest
-   * - ``datatype``
-     - The name of the datatype under ``datatypes`` that the configuration belongs to
-     -
-   * - ``is_fullsync``
-     - Either ``true`` or ``false`` for a given datatype, depending on tenant authentication
-     -
-   * - ``parent``
-     - Value of the ``parent`` property set for a datatype in ``datatypes``
-     - Manifest
-   * - ``service_url``
-     - The URL to the API of the Sesam subscription
-     - Manifest
-   * - ``system``
-     - Concatenation of vendor name, internal tenant ID and connector name
-     -
-   * - ``token_url``
-     - The value of ``oauth2.token_url`` in the manifest, or the value of ``auth.access_token_url`` if that property
-       exists in the multi-tenant configuration.
-     - Manifest/multi-tenant configuration
+     - Type
+   * - :ref:`account_id<authentication_variables>`
+     - String
+   * - :ref:`base_url<connector_config_variables>`
+     - String
+   * - :ref:`connected_ts<authentication_variables>`
+     - String
+   * - :ref:`<connector>_webhook_dataset<webhook_variables>`
+     - String
+   * - :ref:`datatype<datatype_variables>`
+     - String
+   * - :ref:`is_fullsync<authentication_variables>`
+     - Boolean
+   * - :ref:`parent<datatype_variables>`
+     - String
+   * - :ref:`service_url<service_api_variables>`
+     - String
+   * - :ref:`system<system_variables>`
+     - String
+   * - :ref:`token_url<connector_config_variables>`
+     - String
+
+.. _authentication_variables:
+Authentication-specific variables
+----
+The values for these variables are retrieved from the output of the :ref:`Consumer portal<consumer-portal-authentication>`
+for a given tenant.
+
+The ``account_id`` Jinja variable can be used to inject the ID of the account that a tenant has connected to a system
+with in the Consumer portal.
+
+The ``connected_ts`` Jinja variable injects the timestamp for when an entity type/datatype has been enabled in the
+Consumer portal.
+
+The ``is_fullsync`` Jinja variable (EXPERIMENTAL) injects a boolean depending on whether a datatype has set
+``fullsync`` to ``true`` or ``false`` by the user.
+
+.. _system_variables:
+System-specific variables
+----
+The ``system`` Jinja variable is always available and injects the name of the system (for example "hubspot", "wave" ...)
+
+.. _datatype_variables:
+Datatype-specific variables
+----
+The ``datatype`` Jinja variable is available for any configuration that belongs to a datatype and injects the name
+of the datatype. Datatypes in the manifest can also be set to use specific properties:
+
+The ``parent`` Jinja variable is replaced with the value of the ``parent`` property set for a datatype.
+
+.. _connector_config_variables:
+Properties from connector configuration
+----
+Properties from a provided connector configuration can also be injected.
+
+The ``token_url`` Jinja variable injects the URL of an endpoint that grants an OAuth2 access token.
+
+The ``base_url`` Jinja variable injects the base URL of the API for the system.
+
+.. _service_api_variables:
+Service API access
+----
+Setting ``requires_service_api_access`` to ``true`` in the manifest signals that any occurrences of the ``service_url``
+Jinja variable should be replaced with "$ENV(service_url)", and a JWT granting access to the service API is added as a
+secret to the connector's system. The secret can then be used in the config with ``$SECRET(service_jwt)``.
+
+.. _webhook_variables:
+Webhooks
+----
+
+Setting ``use_webhook_secret`` to ``true`` in the manifest signals that a secret intended for validating incoming
+requests to a receiver endpoint should be added to the system. The write permissions on all receiver endpoints that end
+with `-event` in this connector will also be set to ``group:Anonymous``. This is meant to be used with the ``validation_expression`` in the
+:ref:`HTTP endpoint source <http_endpoint_source>`.
+
+Setting ``<connector>_webhook_dataset`` under ``additional_parameters`` in the manifest signals that any occurrences of
+the ``<connector>_webhook_dataset`` Jinja variable should be replaced with "$ENV(<connector>_webhook_dataset)".
 
 
 
