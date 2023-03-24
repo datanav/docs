@@ -79,7 +79,7 @@ apply.
 Requirements for processing and reaction times
 ----------------------------------------------
 
-Upon errors in the Services, SESAM shall fulfil the following
+Upon errors in the Services, SESAM shall fulfill the following
 requirements for processing and reaction:
 
 .. list-table:: Reaction time target and correction time
