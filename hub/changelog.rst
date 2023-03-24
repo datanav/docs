@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2023_03_24:
+
+2023-03-24
+----------
+
+* Updated our :doc:`Terms of Service <../terms>`.
+
+
 .. _changelog_2023_03_17:
 
 2023-03-17
