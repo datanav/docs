@@ -527,7 +527,7 @@ considered as a force majeure circumstance. SESAM is not in any way
 responsible for any such or other force majeure circumstance.
 
 10.3. Circumstances for which SESAM is in any event is not responsible
--------------------------------------------------------------------
+----------------------------------------------------------------------
 
 Even though SESAM will use appropriate care to ensure secure
 transmission of information between the Customer and the Services, the
