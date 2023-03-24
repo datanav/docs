@@ -203,4 +203,5 @@ Learn how to use Sesam effectively by following these tutorials.
     Documentation<index-developer>
     Learn<index-learn>
     Pricing<../pricing>
+    Service Level Agreement<legal-sla>
     Changelog<changelog>
