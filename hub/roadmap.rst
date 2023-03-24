@@ -194,7 +194,7 @@ For bigger projects that has a very high pipe count or microservices that requir
 We are investigating if we should introduce a new subcription size "Developer Pro" that will run 2 engines and be closer to a "Single" subscription with regards to performance. The fixed price for this new development subscription is estimated to €250/month.
 
 .. note::
-   :ref:`Developer Pro <pricing-developer>` is now available for new subscriptions and as an upgrade to existing subscriptions.
+   Developer Pro is now available for new subscriptions and as an upgrade to existing subscriptions.
 
 Self service VPN setup
 ======================
