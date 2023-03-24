@@ -18,22 +18,23 @@ use of SESAM Software as a Service (“Services”) provided by SESAM.IO AS
 subscriptions and the term “Customer” is used regardless of whether a
 Subscription Fee applies to a particular Customer's account. Some
 sections of this document will only apply to Customers with an account
-with a defined Subscription Fee. Upon ordering access to the Services,
-and confirming acceptance of the terms of service in this document, a
+with a defined Subscription Fee. Upon ordering access to the Services
+and confirming acceptance of the terms of service in this document a
 legally binding agreement (“Agreement”) is entered into between SESAM
-and the Customer. All Services, as they are available at any time,
-through the portal https://portal.sesam.io, are subject to the terms of
-this Agreement.
+and the Customer, regardless of whether the Customer is ordering from
+SESAM directly or through a SESAM partner. All Services, as they are
+available at any time, through the portal https://portal.sesam.io or
+otherwise, are subject to the terms of this Agreement.
 
 Upon entering into this Agreement and the registration of the Customer
 in SESAM's systems, the Customer is given a right to use the Services on
 the terms in this Agreement. Once access to the Services has been
-granted, the Customer will receive an e-mail to its registered e-mail
-address with the necessary access and login details.
+granted, the Customer will receive an e-mail to the customers registered
+e-mail address with the necessary access and login details.
 
 The Services consist of various sub-services, and the right to use the
 Services only comprise the individual sub-services which the Customer
-has ordered, and received access to. Some of the Services are payable.
+has ordered and received access to. Some of the Services are payable.
 The Customer's account overview sets out active sub-services which the
 Customer has ordered, including which Services are payable.
 
@@ -50,7 +51,7 @@ that the functionality in the Services will change. The Customer is
 given the right to use the Services, with the functionality as provided
 from time to time. The right to use the Services is not connected to any
 specific version of the underlying software or any set functionality as
-provided at any time, but is rather connected to access to and use of
+provided at any time but is rather connected to access to and use of
 the Services as they are at any given time. Details of the functionality
 of each of the Services can be found at https://docs.sesam.io.
 
@@ -62,13 +63,13 @@ of each of the Services can be found at https://docs.sesam.io.
 
 The Customer may set up Users and give these Users access to the
 Services with different roles (each individual referred to herein as a
-“User” and collectively as the “Users”). Users consist of natural
-persons in the employment or service of the Customer.
+“User” and collectively as the “Users”). Users are individuals employed
+or engaged by the Customer.
 
 The Customer and the Customer's Users receive a worldwide, limited,
 terminable, non-exclusive and non-transferable right to use the Services
 in accordance with the terms of this Agreement, exclusively for the
-Customer's internal business purposes. This right is conditional on the
+Customer's internal business purposes. This right is conditional upon
 payment of the applicable subscription fee and other fees (“Subscription
 Fee”). Any applicable Subscription Fee is provided on the Customer's
 account overview.
@@ -76,25 +77,26 @@ account overview.
 The Payment of the Subscription Fee and the compliance with the terms of
 this Agreement is a precondition for the right to use the Services.
 
-SESAM may adjust the agreed Subscription Fee yearly, upon 3 months'
+SESAM may adjust the agreed Subscription Fee upon 3 months' prior
 written notice. In case of changes in public taxes, charges or other
-duties or other changes in public administrative practice affects the
+duties or other changes in public administrative practice affecting the
 vendor's costs connected to the Service, the Subscription Fee may be
 adjusted correspondingly without prior notice.
 
-The Customer may not allow a third party to use the Services in a
+The Customer may not allow a third party to use the Services or use the Service in a
 service bureau or similar, or offer services dependent on the Services
-to a third party. However, the Customer may allow in- hire consultants
+to a third party. However, the Customer may allow in-hire consultants
 or temporary employees to use the Services for Customers internal
 business purposes. The Customer may also use the Services to
 collect/deliver data from the applications and databases of the
-Customer's suppliers and/or customers.
+Customer's suppliers and/or customers or use other integrations available
+in the Services.
 
 The Services depend on standard software. When purchasing access to the
 Services, the Customer does not purchase a copy of, or license to, the
-software used to deliver the Services, but consecutively pay for a
+software used to deliver the Services, but consecutively pays for a
 subscription to access the Services. To the extent that separate
-license- or other terms apply for use of third party software and/or
+license- or other terms apply for use of third-party software and/or
 services included in the Services, these are set out together with the
 description of the Services in question. Any terms for third party
 software and/or services take precedence over the terms of this
@@ -104,16 +106,20 @@ Agreement.
 ------------------------------------------------------------
 
 The Customer commits to adhere to the terms of this Agreement, and to
-ensure that any of its Users do the same. The Customer accepts the full
-responsibility for all activities connected to its Users, and its User's
+ensure that any of its Users do the same. The Customer accepts full
+responsibility for all activities connected to its Users, and its user's
 compliance with the terms of the Agreement. When the individual User
 accepts any terms upon logging into a Service, or on a later change of
 such terms, no Agreement is made between such individual User and SESAM.
 It is at all times the Customer who is party to any agreement with
 SESAM, and who has all rights and obligations set out in such agreement.
+If the Customer has ordered Services through a SESAM partner, the SESAM
+partner may act on the behalf of the Customer and thus perform Customer's
+actions and receive notices to the Customer as described in the Agreement,
+and SESAM partner's acts and omissions will be considered the Customer's.
 
 The Customer accepts that SESAM may contact the Customer, and any
-Customer administrators, through registered e-mail addresses and through
+Customer administrators, through registered e-mail addresses and by
 telephone, and provide general marketing information or other
 information about the Services. Such information will not be sent to the
 Customer's other Users.
@@ -121,19 +127,19 @@ Customer's other Users.
 2.3. User administration
 ------------------------
 
-If the Customer is a physical person, the Customer will be assigned a
-single User.
+If the Customer is a physical person (i.e., an individual), the Customer
+will be assigned a single User.
 
-If the Customer is a legal person, Users are created and administrated
+If the Customer is a legal person (e.g., a company, organisation or a
+governmental entity), Users are created and administrated
 by the Customer. Customer's administrators for this Agreement should be
 communicated to SESAM.
 
 The logon information of an individual User shall not be shared or used
-by more than one physical person, but may freely be reassigned by the
+by more than one physical person but may freely be reassigned by the
 Customer's administrator. The Customer's administrator may also name
 further administrators and delete Users. The Customer shall ensure that
-all information about Users and administrators are up to date at all
-times.
+all information about Users and administrators is always up to date.
 
 Each User is responsible for keeping his/her username and password
 confidential. The Customer shall inform SESAM immediately in case of
@@ -147,42 +153,60 @@ User.
 
 The Customer and any of its Users shall not transfer viruses, malware or
 any other harmful code to the Services or use the Services in a manner
-which gives a risk for such transfer. The Services shall not be used for
+which puts a risk for such transfer. The Services shall not be used for
 any illegal or otherwise unauthorized purpose. When the Services are
 used outside of Norway, in cases where the Customer's Users temporarily
 are staying abroad, the Customer is responsible for complying with the
 Norwegian, EU and United States of America export restrictions and
--regulations, including assuring that the Services are not used in
+regulations, including assuring that the Services are not used in
 jurisdictions where such use would be contrary to such export
-restrictions and -regulations.
+restrictions and regulations.
 
 3. Technical information
 ========================
 
 The Services will be delivered through the operating environment
 selected by SESAM at any time, unless it is agreed with the Customer
-that the Customer will use another operating environment. The Customer
-will be given minimum three months' notice in case of significant
-changes to the operating environment. SESAM reserves the right to change
-the operating environment, but will in such event notify the Customer of
-the change and of technical and legal effects of such change.
+that the Customer will use another operating environment. SESAM reserves
+the right to change the operating environment but will in such event notify
+the Customer of the change and of technical and legal effects of such change.
+The Customer will be given a minimum of three months' notice in case of
+significant changes to the operating environment.
 
 At the present time the operating environment selected by SESAM is
-Microsoft Azure. For Azure, separate terms of service apply from
-Microsoft:
-`Online Subscription Agreement <https://azure.microsoft.com/en-us/support/legal/subscription-agreement/?country=no&language=en>`_ and `Online Services Terms <http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46>`_.
-These terms apply as amended and updated by Microsoft at any time. SESAM
-has no responsibility for error and defects in such services.
+Microsoft Azure. SESAM is a reseller (CSP) of Microsoft and is entitled to
+resell Microsoft Online Services as part of its Services. SESAM's role as
+reseller means that the Customer gets certain rights and obligations directly
+towards Microsoft. The following additional terms and conditions therefore
+apply for Microsoft Azure, as updated by Microsoft from time to time:
+https://www.microsoft.com/licensing/docs/customeragreement
+and https://www.microsoft.com/licensing/docs/view/Licensing-Use-Rights.
+
+A separate, direct agreement between Microsoft and the Customer based on
+the Microsoft Azure terms above is concluded when the Customer accepts this
+Agreement. Such a direct agreement means i.a. that the Customer obtains a
+Data Processor Agreement with Microsoft and that Microsoft is fully and solely
+responsible for errors and downtime in Azure services (Online Services) from
+Microsoft.
+
+If Microsoft requires documentation of, or other actions to confirm, that
+Customer has accepted Microsoft's terms and conditions or any updates thereto,
+the Customer shall provide SESAM with requested documentation thereof or take
+necessary actions to confirm this.
+
+The Customer agrees and accept that SESAM may share information about users, to
+the extent needed, in support cases towards Microsoft, such as telephone number,
+email and URL.
 
 SESAM and the Customer may agree on special requirements for the
 operating environment in a separate agreement.
 
 To the extent technical requirements apply to the Customer's IT systems
-for the use of the various Services, e.g. requirements for bandwidth
+for the use of the various Services, e.g., requirements for bandwidth
 and/or hardware, this shall be set out together with the description of
 the Services in question.
 
-4. Sesam's Responsibility for Quality of Service, Availability and Support
+4. SESAM's Responsibility for Quality of Service, Availability and Support
 ==========================================================================
 
 4.1. Quality of Service
@@ -248,12 +272,12 @@ SESAM will provide basic technical support to the Customer. This entails
 technical assistance, but SESAM does not warrant that any solution will
 be found for any problems or requests. The administration and
 configuration of the Services for the Customer is not included in the
-support, and may be provided according to separate agreements. This may
+support and may be provided according to separate agreements. This may
 include assistance connected to integrated applications/databases.
 
 The Customer may contact SESAM support on business days (Monday to
 Friday except Christmas Eve, New Year's Eve and other Norwegian public
-holidays) between 08:00 and 16: hours Central European Time, or on
+holidays) between 08:00 and 16:00 hours Central European Time, or on
 specified times determined by SESAM. Any contact with SESAM support
 shall take place via https://support.sesam.io.
 
@@ -308,7 +332,7 @@ including backup solutions according to corresponding standards:
   ISO 27001 and 27018.
 - A yearly third party audit shall be carried out in accordance with
   ISO 27001.
-- A confidential summary report of the audit shall be produced, and
+- A confidential summary report of the audit shall be produced and
   made available to the Customer upon request.
 - The summary report shall enable the Customer to assess whether the
   security level in SESAM's services are according to the Agreement and
@@ -364,42 +388,9 @@ Customer uses standard-level SLA or higher.
 6. Fees and Payment Terms
 =========================
 
-For Services included in this Agreement, the Customer may have payed a
-Subscription Fee to SESAM as set out together with the description of
+For Services included in this Agreement, the Customer may have paid a
+Subscription Fee as set out together with the description of
 the Services in question.
-
-Dynamic price model:
-
-The price model is a dynamic (running) price model that is renewed
-automatically until terminated by one of the parties as set out in
-section 11.
-
-Fixed price model:
-
-A fixed price model entails that Sesam gives a 50% discount of a set
-amount of data (GB), based on the dynamic price and provided that the
-Customer in the Agreement agrees to the fixed price model for a
-renewable term of 12 months.
-
-If the Parties agrees upon fixed price, the Agreement will be for a term
-of 12 months calculated from the date it is agreed between the parties
-that the model is fixed price (most often the Date the Agreement is
-signed by both parties). If the Customer uses more data than the agreed
-upon fixed price model allows for that term, the fee for the data amount
-(GB) surpassing the agreed upon fixed price, will be double of what
-follows from the dynamic price model.
-
-The Agreement will automatically be renewed with the same data amount
-(GB) for the following 12 months as that of the running term, unless the
-Customer gives at least one (1) month written notice prior to the
-expiration of the running term that they do not want to continue with
-the fixed price model at all, or if they want to make adjust to a higher
-or lower fixed price model for the following 12 months term. Renewals
-each 12 months will continue as long as the Agreement is running.
-
-The Parties can additionally agree upon a support level of 24/7 provided
-that the Customer has agreed to a fixed price model of 50 GB/month or
-higher.
 
 7. Right to Audit and Control
 =============================
@@ -413,12 +404,15 @@ internal or external auditors to observe SESAM's delivery of the
 Services with related Customer data and any documentation for the
 Services for the Customer. The Customer shall give reasonable notice
 before such audits, at least 20 calendar days, and the audit shall be
-carried out during normal business hours. The Customer acknowledges that
+carried out during normal business hours. The notice shall include information
+as to which external auditor is chosen by the Customer. The Customer acknowledges that
 scope of audit shall be limited to SESAM's own delivery of Service, as
 well as applicable documentation.
 
 The Customers may not utilize auditors who are in direct competition
-with SESAM. The auditor(s) shall sign a confidentiality statement. The
+with SESAM. SESAM shall have the right to approve or deny the Customer's
+choice of auditor, though approval shall not be unreasonably withheld.
+The auditor(s) shall sign a confidentiality statement. The
 Customer shall adhere to SESAM's applicable regulations when access is
 given to SESAM's facilities.
 
@@ -442,11 +436,9 @@ change section 5.1. to the detriment of the Customer.
 The provisions in this section apply only to the Customers who pay a
 Subscription Fee.
 
-SESAM shall defend the Customer against claims or law suits set forth by
+SESAM shall defend the Customer against claims or lawsuits set forth by
 third parties claiming that the Customer's use of the Services infringes
-that third party's registered Norwegian or EU intellectual property
-rights, including, without limitations, patents, copyright, trade
-secrets, trademark or any other intellectual property rights. In the
+that third party's Norwegian or EU copyright or database rights in Norway or EU. In the
 event of such claims the Customer shall immediately inform SESAM in
 writing.
 
@@ -459,7 +451,7 @@ control of the legal process and negotiations for a settlement. SESAM
 may at its own discretion (i) modify the Services so that there is no
 longer any infringement of third party rights, (ii) replace the Services
 with functionally equivalent services, (iii) provide a right for the
-Customer's continued use of the Services. If these options are not
+Customer's continued use of the Services. If these options are not commercially reasonable
 available, SESAM may terminate the Customer's access to the Products and
 Services with a refund of any fees paid for the subscription after the
 date of termination. The Customer may not set forth any other claims as
@@ -498,9 +490,9 @@ such damages will under no condition include compensation for indirect
 loss or damages of any kind that may arise as a result of, or in
 connection with, such breach. Indirect loss includes, but is not limited
 to, loss of profit of any kind, losses as a consequence of disrupted
-operations, loss of data, lost savings, losses due to deprivation and
+operations, loss due to loss of data, lost savings, losses due to deprivation and
 claims from third parties (except as set out in section 9 above).
-SESAM'S liability under this Agreement is therefore limited to direct
+SESAM's liability under this Agreement is therefore limited to direct
 loss, unless otherwise set out in mandatory applicable law, for example
 damages due to gross negligence or intent. Any refunds or compensation
 for direct loss and costs during any 12-month period shall not exceed an
@@ -534,8 +526,8 @@ Services for a limited or indefinite period of time, this shall be
 considered as a force majeure circumstance. SESAM is not in any way
 responsible for any such or other force majeure circumstance.
 
-10.3. Circumstances for which SESAM not in any event is responsible
--------------------------------------------------------------------
+10.3. Circumstances for which SESAM is in any event is not responsible
+----------------------------------------------------------------------
 
 Even though SESAM will use appropriate care to ensure secure
 transmission of information between the Customer and the Services, the
@@ -558,6 +550,10 @@ Customer's account tool with applicable notice period. The cancellation
 takes effect from the start of the first month after the end of the
 notice period.
 
+The Customer may also cancel the Services if the Customer does not accept
+SESAM's announced changes to the Agreement. In such case the cancellation
+takes effect from the date announced changes become effective.
+
 For non-paying Customers SESAM has the right to suspend or terminate
 access to all or any part of the Service at any time, with or without
 cause, with 14 days' prior notice. In case of abuse, access to Services
@@ -569,11 +565,10 @@ Customers who pay a Subscription Fee.
 If a minimum term applies for some of the Services, the termination by
 the Customer takes effect after the expiration of such minimum term.
 
-If payment is not made within 30 days after the due date, SESAM may,
-provided that the amount outstanding is not insignificant, suspend the
+If payment is not made within the due date, SESAM may suspend the
 Customer's access to the Services until payment is made. Suspension
 shall be notified in writing by SESAM, with a final and reasonable
-deadline for the Customer to settle the amount outstanding before
+deadline of 7 days for the Customer to settle the amount outstanding before
 suspension is made effective. SESAM may terminate the Customer's
 accounts for the Services if payment is not made to SESAM within 14 days
 after such suspension is made effective. The Customer shall pay delayed
@@ -582,10 +577,10 @@ that are not settled before their due date. SESAM may make renewal of
 the Customer's subscription conditional on a shorter payment due date or
 increased invoice frequency after one case of delayed payment.
 
-SESAM may terminate the Customer's subscription with 7 days' written
+SESAM may also terminate the Customer's subscription with 7 days' written
 notice if the Customer is in breach of any of his obligations under this
 Agreement, or if it becomes apparent that the Customer will materially
-breach this Agreement in the future. SESAM may with 6 days' written
+breach this Agreement in the future. SESAM may with 7 days' written
 notice to the Customer also suspend the Customer's subscription to the
 Services if the Agreement is breached by the Customer. Such suspension
 may be in effect until the matter has been resolved.
@@ -597,7 +592,7 @@ which is reasonable under the circumstances.
 
 When the Services, hereunder Users, are terminated, all data and copies
 of such data will be deleted from SESAMs servers upon the termination
-taking effect. The Customer will get access to his data as set out in
+taking effect. The Customer will get access to the data as set out in
 section 5.1.
 
 The limitation period for any claims arising in connection with this
@@ -678,7 +673,37 @@ its conflicts of law principles. Further, Customer and SESAM agree to
 submit to the jurisdiction of Oslo, Norway for any legal disputes
 regarding this Agreement or its subject matter herein.
 
-15. Disputes
+15. Miscellaneous
+=================
+
+15.1. Severability
+------------------
+
+If any part of this Agreement is held to be unenforceable, the rest of the
+Agreement will remain in full force and effect.
+
+15.2. Waiver
+------------
+
+Failure to enforce any provision of this Agreement will not constitute a
+waiver. Any waiver must be in writing and signed by the waiving party.
+
+15.3. Survival
+--------------
+
+All provisions survive termination of this Agreement except those requiring
+performance only during the term of the Agreement.
+
+15.4. Notices
+-------------
+
+SESAM will primarily publish notices on https://portal.sesam.io . In case of
+notices of high importance, SESAM may in addition notify the Customer's
+administrators by through registered e-mail address.
+
+The Customer will send notices to SESAM through https://support.sesam.io.
+
+16. Disputes
 ============
 
 Any dispute or disagreement arising between the parties will be resolved
