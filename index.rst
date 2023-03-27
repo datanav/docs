@@ -4,41 +4,52 @@
 
    Sesam Talk <talk/index>
    Sesam Hub <hub/index>
-   
-.. rst-class:: center-title
-   
-Products
-========
+      
+|
+|
 
-Sesam offers two products, choose which product you want to read about.
+.. rst-class:: center-title
+
+Sesam Talk
+==========
+
+Quickly and easily synchronise your core business data across your different cloud services with Sesam Talk.
 
 |
 |
 
 .. panels::
     :body: text-left
-    :container: container-lg pb-2
-    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 custom-card
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
-    **Sesam Talk**
+    **What is Sesam Talk**
 
-    Our new product, giving SaaS vendors the opportunity to offer customers a simple solution for synchronizing their business data with a user-friendly interface. No setup or development needed.
+    See how Sesam Talk can empower your business by easily synchrinising you core data across SaaS services.
 
     .. link-button:: talk/index
-            :type: ref
-            :text: Read documentation
-            :classes: read-more
-
-    ---
-    **Sesam Hub**
-
-    Full flexibility and advanced tools to create data integrations and manage data flows between various types of systems using our building blocks in a web-based development environment.
-
-    .. link-button:: hub/index-developer
         :type: ref
-        :text: Read documentation
-        :classes: read-more
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    **Supported systems**
 
+    See which cloud services Sesam Talk currently supports, aswell as systems we are planning to support in the near future.
+
+    .. link-button:: talk/systems/index
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
+    **Becoming a partner**
+
+    Read about how you can become a partner and how it can benefit both your business and your customers.
+
+    .. link-button:: talk/partner/index
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    
 
 |
 |
@@ -114,195 +125,3 @@ Here are the latest features we have implemented.
             :text: See all features
             :classes: read-more
 
-|
-|
-|
-
-.. rst-class:: center-title
-   
-Get to know Sesam Hub
-=====================
-
-New to Sesam? These topics will get you started on the right foot.
-
-|
-|
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **What is Sesam**
-
-    Learn more about Sesam and what benefits it can give your platform.
-
-    .. link-button:: hub/index-whatis
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    **Features**
-
-    Check some of the product features that make Sesam flexible, agile and effective.
-
-    .. link-button:: hub/index-product-features
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Getting started**
-
-    Get started with Sesam by following these tutorials.
-
-    .. link-button:: hub/guide-getting-started
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Core principles**
-
-    Read about the fundamental principles to ensure effective Master data management.
-
-    .. link-button:: hub/core-principles
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Key benefits**
-
-    Have a look at some features that make Sesam flexible, agile and effective.
-
-    .. link-button:: hub/key-benefits
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-
-
-|
-|
-|
-
-.. rst-class:: center-title
-
-Documentation
-=============
-
-Read about the different topics in documentation to ensure proper use of Sesam and empower your data platforms.
-
-|
-|
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **Building blocks**
-
-    These are the building blocks in Sesam, get to know them in this section.
-
-    .. link-button:: hub/documentation/building-blocks/index-building-blocks
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    **Data Transformation Language**
-
-    Read about DTL and how it can empower data transformations.
-    
-    .. link-button:: hub/data-transformation-language
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    
-    **Data synchronization**
-
-    Read everything you need to know about data synchronization in Sesam.
-
-    .. link-button:: hub/index-synchronization
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-
-    **Data management**
-
-    Read about the core of any platform aimed to integrate data. 
-    
-    .. link-button:: hub/index-data-management
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    **Data platforms**
-
-    See how Sesam works within cloud providers like Azure, Amazon and Google.
-
-    .. link-button:: hub/index-dataplatforms
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Operations**
-
-    Read about some of the tailored functionalities Sesam provides for a secure solution.
-
-    .. link-button:: hub/index-operations
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Want to read more?** 
-    
-    See all the topics in documentation here.
-
-    .. link-button:: hub/index-developer
-        :type: ref
-        :text: See all documentation
-        :classes: read-more
-
-|
-|
-|
-
-.. rst-class:: center-title
-
-Learn Sesam
-=================
-Learn how to use Sesam effectively by following these tutorials.
-
-|
-|
-
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **Getting started**
-
-    This easy step-by-step guide will set you up so you are ready to start using Sesam.
-
-
-    .. link-button:: hub/guide-getting-started
-        :type: ref
-        :text: Read more
-        :classes: btn-outline-primary btn-block
-    ---
-    **Data synchronization**
-
-    Want to try Sesam? This easy step-by-step guide will set you up!
-
-    .. link-button:: hub/index-learn-synchronization
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    :body: bg-info text-left text-white
-
-    **Much more to come**
-
-    We are constantly working on more guides and tutorials to help you learn and use Sesam.
