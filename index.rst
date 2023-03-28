@@ -25,7 +25,7 @@ Quickly and easily synchronise your core business data across your different clo
 
     **What is Sesam Talk**
 
-    See how Sesam Talk can empower your business by easily synchronising you core data across SaaS services.
+    See how Sesam Talk can empower your business by easily synchronising your core data across SaaS services.
 
     .. link-button:: talk/index
         :type: ref
@@ -34,7 +34,7 @@ Quickly and easily synchronise your core business data across your different clo
     ---
     **Supported systems**
 
-    See which cloud services Sesam Talk currently supports, aswell as systems we are planning to support in the near future.
+    See which cloud services Sesam Talk currently supports, as well as systems we are planning to support in the near future.
 
     .. link-button:: talk/systems/index
             :type: ref
