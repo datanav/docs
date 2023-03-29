@@ -1,5 +1,5 @@
-Systems
-=======
+Supported systems
+=================
 
 Sesam Talk support systems across a range of categories. You can read more about the various categories below.
 
