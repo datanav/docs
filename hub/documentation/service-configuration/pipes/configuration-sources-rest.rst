@@ -97,8 +97,10 @@ Properties
        ``properties``, ``url``, ``request_params``, ``since`` and ``headers`` available to the template. If the
        operation supports paging then ``previous_body``, ``previous_request_headers``,
        ``previous_params`` and ``previous_headers`` (response headers) are available for all page requests except the
-       first. Tip: use Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_
-       tests for these variables to set default values for the first page.
+       first. In addition ``page`` (integer, starting at 0) and ``is_first_page`` (a boolean flag) are available for all
+       requests in paged operations. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
+       default values for the first page.
      -
      -
 
@@ -145,9 +147,10 @@ Properties
        will take precedence if defined. The bound parameters available to this template are ``body``, ``url``,
        ``requests_params``, ``properties``, ``since``, ``entity`` and ``headers``. If the operation supports paging
        then ``previous_body``, ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response
-       headers) are available for all page requests except the first. Tip: use
-       Jinja's `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables
-       to set default values for the first page.
+       headers) are available for all page requests except the first. In addition ``page`` (integer, starting at 0) and
+       ``is_first_page`` (a boolean flag) are available for all requests in paged operations. Tip: use Jinja's
+       `"is defined" <https://jinja.palletsprojects.com/en/3.1.x/templates/#tests>`_ tests for these variables to set
+       default values for the first page.
      -
      -
 

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_03_29:
+
+2023-03-29
+----------
+
+* Added ``page`` and ``is_first_page`` bound parameters to the Jinja expressions for the :ref:`REST transform <rest_transform>`  and :ref:`REST source <rest_source>`. These are useful for including or excluding properties when doing paged operations.
+
 .. _changelog_2023_03_24:
 
 2023-03-24
