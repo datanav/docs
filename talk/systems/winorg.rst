@@ -3,7 +3,7 @@
 Winorg
 ======
 
-Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. Winorg offers good payment solutions, effective communication with members and donors, and creating engagement throughout the organization.
+Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. 
 
 https://www.winorg.no/
 

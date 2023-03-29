@@ -3,7 +3,7 @@
 Omega 365
 =========
 
-Asset management solution that drives critical processes in organizations and projects. One single solution that covers all disciplines throughout the project life cycle.
+Omega 365 is an asset management solution that drives critical processes in organizations and projects.
 
 https://omega365.com/
 

@@ -3,7 +3,7 @@
 SuperOffice
 ===========
 
-CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
+SuperOffice is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
 
 https://www.superoffice.com/
 
