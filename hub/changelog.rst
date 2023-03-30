@@ -7,6 +7,7 @@ Changelog
 ----------
 
 * Added ``page`` and ``is_first_page`` bound parameters to the Jinja expressions for the :ref:`REST transform <rest_transform>`  and :ref:`REST source <rest_source>`. These are useful for including or excluding properties when doing paged operations.
+* Added a ``"manual"`` enum to the ``since_property_location`` of the :ref:`REST source <rest_source>` - if set, the source will not attempt to add any continuation-related parameter automatically.
 
 .. _changelog_2023_03_24:
 

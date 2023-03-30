@@ -47,7 +47,7 @@ Prototype
                 "payload_property": "result",
                 "response_property": "response",
                 "since_property_name": "updated",
-                "since_property_location": "query|header"
+                "since_property_location": "query|header|manual"
             },
             "delete-operation": {
                 "url" : "/a/service/that/supports/delete/{{ _id }}",
@@ -158,8 +158,8 @@ A operation configuration looks like:
        :ref:`REST sinks <rest_sink>`), ``properties`` are available to this template. For the :ref:`REST transforms <rest_transform>` and
        :ref:`REST sources <rest_sink>` that support pagination some additional parameters are also available: ``previous_body``,
        ``previous_request_headers``, ``previous_params`` and ``previous_headers`` (response headers).
-       Note that if you use the ``since`` variable in this template the ``since_property_location`` and
-       ``since_property_name`` configuration properties will be ignored for the operation.
+       Note that if you use the ``since`` variable (or a variable matching the ``since_property_name``) in this template
+       the ``since_property_location`` property will be ignored for the operation (it implies a ``"query"`` value).
      -
      - Yes
 
@@ -417,20 +417,21 @@ A operation configuration looks like:
        :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
        precedence if both are defined. Note that if you use the ``since`` variable in the ``url`` template property
        the ``since_property_location`` and ``since_property_name`` configuration properties will be ignored for the
-       operation.
+       operation.  Also note that if ``since_property_location`` is set to ``"manual"`` this property will be ignored.
      - ``"since"``
      -
 
    * - ``since_property_location``
      - String
-     - A enumeration of "query" and "header". The location property to relay continuation information.
-       This is only relevant if ``since_support`` as been set to ``true``. See ``since_property_name`` and
-       ``updated_expression`` as well. Note that this property can be defined in the :ref:`REST source <rest_source>`
-       configuration as well. It will be ignored by the :ref:`REST transform <rest_transform>` and
-       :ref:`REST sink <rest_sink>`. The configuration in pipes will take precedence if both are defined.
-       Note that if you use the ``since`` variable in the ``url`` template property
-       the ``since_property_location`` and ``since_property_name`` configuration properties will be ignored for the
-       operation.
+     - A enumeration of ``"query"``, ``"header"`` and ``"manual``". This property is used to indicate where in the
+       request to relay continuation information. This is only relevant if ``since_support`` as been set to ``true``.
+       If you set it to `"manual"` the :ref:`REST source <rest_source>` will not attempt to provide any continuation
+       parameters automatically. See ``since_property_name`` and ``updated_expression`` as well. Note that this property
+       can be defined in the :ref:`REST source <rest_source>` configuration as well. It will be ignored by the
+       :ref:`REST transform <rest_transform>` and :ref:`REST sink <rest_sink>`. The configuration in pipes will take
+       precedence if both are defined.  Also note that if you use the ``since`` variable (or a variable matching the
+       ``since_property_name``) in the ``url`` template, this property will be ignored for the operation (it implies
+       a ``"query"`` value).
      - ``"query"``
      -
 
