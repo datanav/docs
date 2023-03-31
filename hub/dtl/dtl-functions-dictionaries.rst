@@ -97,13 +97,13 @@ Dictionaries
        |   VALUES(value-expression{1})
        |
        | Boolean function that returns true if the key exists in the dictionary or false if not. Any non-dictionary
-         argument will return null. If the VALUES argument is a list, only the first element will be used.
+       | argument will return null. If the VALUES argument is a list, only the first element will be used.
        |
      - | ``["has-key", "a", {"a": 1}]``
        |
        | Returns true.
        |
-     - | ``["has-key", "b", {"a": 1}]``
+       | ``["has-key", "b", {"a": 1}]``
        |
        | Returns false.
        |
