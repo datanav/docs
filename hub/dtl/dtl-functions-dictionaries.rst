@@ -115,7 +115,7 @@ Dictionaries
        |
        | Returns false.
        |
-       | ``["has-key", "a", ["list", 123, {"a": 1]``
+       | ``["has-key", "a", ["list", 123, {"a": 1}]``
        |
        | Returns null.
 
