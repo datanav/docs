@@ -80,6 +80,45 @@ Dictionaries
        |
        | Returns false
 
+.. _has_key_dtl_function:
+
+``has-key`
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   KEY(value-expression{1}),
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if the key exists in the dictionary or false if not. Any non-dictionary
+         argument will return null. If the VALUES argument is a list, only the first element will be used.
+       |
+     - | ``["has-key", "a", {"a": 1}]``
+       |
+       | Returns true.
+       |
+     - | ``["has-key", "b", {"a": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["has-key", "a", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["has-key", "b", ["list", {"a": 1}, {"b": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["has-key", "a", ["list", 123, {"a": 1]``
+       |
+       | Returns null.
+
 .. _items_dtl_function:
 
 ``items``
