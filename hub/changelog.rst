@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_03_31:
+
+2023-03-31
+----------
+
+* Added an :ref:`has-key <has_key_dtl_function>` DTL function.
+
 .. _changelog_2023_03_29:
 
 2023-03-29
