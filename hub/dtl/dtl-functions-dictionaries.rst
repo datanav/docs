@@ -82,7 +82,7 @@ Dictionaries
 
 .. _has_key_dtl_function:
 
-``has-key`
+``has-key``
 -----------
 
 .. list-table::
