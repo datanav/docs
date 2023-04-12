@@ -19,9 +19,9 @@ Nulls
        |   FUNCTION(function-expression{0|1}),
        |   VALUES(value-expression{1})
        |
-       | Returns the first value in VALUES that makes the FUNCTION expression
-         return a trueish value. The FUNCTION expression argument is optional,
-         so if it is not given the first non-null value in VALUES is returned.
+       | Returns the first value in VALUES that is not ``null``. If the
+         FUNCTION argument is specified then the first value that returns a
+         true value for the expression is returned.
      - | ``["coalesce", "_S.tags"]``
        |
        | Returns the first value in the source entity's ``tags``
