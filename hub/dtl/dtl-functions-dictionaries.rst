@@ -46,40 +46,6 @@ Dictionaries
        |
        | Returns ``{"a": "A", "b": "B"}``.
 
-.. _is_dict_dtl_function:
-
-``is-dict``
------------
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40, 60
-
-   * - Description
-     - Examples
-
-   * - | *Arguments:*
-       |   VALUES(value-expression{1})
-       |
-       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
-       | in the list is a dictionary
-       |
-     - | ``["is-dict", "_S."]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", {"a": 1}, 123]``
-       |
-       | Returns true.
-       |
-       | ``["is-dict", ["list", 123, {"a": 1}]``
-       |
-       | Returns false.
-       |
-       | ``["is-dict", "abc"]``
-       |
-       | Returns false
-
 .. _has_key_dtl_function:
 
 ``has-key``
@@ -118,6 +84,40 @@ Dictionaries
        | ``["has-key", "a", ["list", 123, {"a": 1}]``
        |
        | Returns null.
+
+.. _is_dict_dtl_function:
+
+``is-dict``
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Description
+     - Examples
+
+   * - | *Arguments:*
+       |   VALUES(value-expression{1})
+       |
+       | Boolean function that returns true if value is a dictionary or if it is a list, that the first element
+       | in the list is a dictionary
+       |
+     - | ``["is-dict", "_S."]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", {"a": 1}, 123]``
+       |
+       | Returns true.
+       |
+       | ``["is-dict", ["list", 123, {"a": 1}]``
+       |
+       | Returns false.
+       |
+       | ``["is-dict", "abc"]``
+       |
+       | Returns false
 
 .. _items_dtl_function:
 
