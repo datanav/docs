@@ -158,6 +158,7 @@ DTL Expression Functions
 
    * - Dictionaries
      - :ref:`dict <dict_dtl_function>` ·
+       :ref:`has-key <has_key_dtl_function>` ·
        :ref:`is-dict <is_dict_dtl_function>` ·
        :ref:`items <items_dtl_function>` ·
        :ref:`key-values <key_values_dtl_function>` ·
