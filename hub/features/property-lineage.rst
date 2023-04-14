@@ -1,4 +1,4 @@
-:badge:`Free for developers,badge-success badge-pill`
+:badge:`Free feature,badge-success badge-pill`
 
 .. _property_lineage:
 
@@ -21,6 +21,11 @@ Property lineage works by statically analyzing the configuration of your pipes, 
 How to enable
 -------------
 Property lineage is available for all subscriptions with the clustered architecture, and is a part of the :ref:`Integrated Search <integrated_search>` feature. This is how you can activate the feature:
+
+.. note::
+
+  You need to be the payment method owner in order to enable this feature.
+
 
 #. Login to `the Sesam portal <https://portal.sesam.io>`_
 

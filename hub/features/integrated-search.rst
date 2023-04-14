@@ -1,4 +1,4 @@
-:badge:`Free for developers,badge-success badge-pill`
+:badge:`Free feature,badge-success badge-pill`
 
 .. _integrated_search:
 
@@ -10,6 +10,10 @@ indexed and available for free text search and navigation. Note that this incurs
 global pipes.
 
 Integrated Search is now available for all subscriptions with clustered architecture. This is how you can activate the new feature:
+
+.. note::
+
+	You need to be the payment method owner in order to enable this feature.
 
 - Login to portal.sesam.io
 
