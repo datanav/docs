@@ -106,7 +106,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    :badge:`Free for developers,badge-info badge-pill`
+    :badge:`Free feature,badge-success badge-pill`
 
     **Integrated Search**
 
@@ -117,7 +117,7 @@ Sesam offer a set of features that will give you the edge when it comes to Maste
             :text: Read more
             :classes: read-more
     ---
-    :badge:`Free for developers,badge-info badge-pill`
+    :badge:`Free feature,badge-success badge-pill`
 
     **Property Lineage**
 
