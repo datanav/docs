@@ -77,12 +77,6 @@ account overview.
 The Payment of the Subscription Fee and the compliance with the terms of
 this Agreement is a precondition for the right to use the Services.
 
-SESAM may adjust the agreed Subscription Fee upon 3 months' prior
-written notice. In case of changes in public taxes, charges or other
-duties or other changes in public administrative practice affecting the
-vendor's costs connected to the Service, the Subscription Fee may be
-adjusted correspondingly without prior notice.
-
 The Customer may not allow a third party to use the Services or use the Service in a
 service bureau or similar, or offer services dependent on the Services
 to a third party. However, the Customer may allow in-hire consultants
