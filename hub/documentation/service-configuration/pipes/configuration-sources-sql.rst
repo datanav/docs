@@ -28,6 +28,10 @@ Prototype
         "schema": "default-schema-name-if-included"
     }
 
+.. note::
+
+  The SQL source system is purposefully read-only transactions, as to avoid side effects.
+
 
 Column types
 ^^^^^^^^^^^^
