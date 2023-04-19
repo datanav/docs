@@ -163,3 +163,123 @@ The entity has been marked as deleted and will therefore be deleted in the syste
       "_id": "foo-person:0",
       "_deleted": true
     }
+
+Injected variables
+==================
+
+Any strings on the form ``{{@ foo @}}`` in the non-expanded connector configuration represent Jinja variables that are
+injected into the configuration by a tool such as `sesam-py <https://github.com/sesam-community/sesam-py>`_.
+With some exceptions, most of the variables that support this must be
+listed in a connector's manifest to be made available. Some of these variables are always available and do not need to
+be specified anywhere, such as ``datatype``.
+
+The table below lists the supported variables.
+
+Overview
+--------
+
+.. list-table::
+   :widths: 20, 10
+   :header-rows: 1
+
+   * - Variable
+     - Type
+   * - :ref:`account_id<authentication_variables>`
+     - String
+   * - :ref:`base_url<connector_config_variables>`
+     - String
+   * - :ref:`connected_ts<authentication_variables>`
+     - String
+   * - :ref:`<connector>_webhook_dataset<webhook_variables>`
+     - String
+   * - :ref:`datatype<datatype_variables>`
+     - String
+   * - :ref:`is_fullsync<authentication_variables>`
+     - Boolean
+   * - :ref:`parent<datatype_variables>`
+     - String
+   * - :ref:`service_url<service_api_variables>`
+     - String
+   * - :ref:`system<system_variables>`
+     - String
+   * - :ref:`token_url<connector_config_variables>`
+     - String
+
+.. _authentication_variables:
+
+Authentication-specific variables
+---------------------------------
+
+The values for these variables are retrieved from the output of the :ref:`Consumer portal<consumer-portal-authentication>`
+for a given tenant.
+
+The ``account_id`` Jinja variable can be used to inject the ID of the account that a tenant has connected to a system
+with in the Consumer portal.
+
+The ``connected_ts`` Jinja variable injects the timestamp for when an entity type/datatype has been enabled in the
+Consumer portal.
+
+The ``is_fullsync`` Jinja variable (EXPERIMENTAL) injects a boolean depending on whether a datatype has set
+``fullsync`` to ``true`` or ``false`` by the user.
+
+.. _system_variables:
+
+System-specific variables
+-------------------------
+
+The ``system`` Jinja variable is always available and injects the name of the system (for example "hubspot", "wave" ...)
+
+.. _datatype_variables:
+
+Datatype-specific variables
+---------------------------
+
+The ``datatype`` Jinja variable is available for any configuration that belongs to a datatype and injects the name
+of the datatype. Datatypes in the manifest can also be set to use specific properties:
+
+The ``parent`` Jinja variable is replaced with the value of the ``parent`` property set for a datatype.
+
+.. _connector_config_variables:
+
+Properties from connector configuration
+---------------------------------------
+
+Properties from a provided connector configuration can also be injected.
+
+The ``token_url`` Jinja variable injects the URL of an endpoint that grants an OAuth2 access token.
+
+The ``base_url`` Jinja variable injects the base URL of the API for the system.
+
+.. _service_api_variables:
+
+Service API access
+------------------
+
+Setting ``requires_service_api_access`` to ``true`` in the manifest signals that any occurrences of the ``service_url``
+Jinja variable should be replaced with "$ENV(service_url)", and a JWT granting access to the service API is added as a
+secret to the connector's system. The secret can then be used in the config with ``$SECRET(service_jwt)``.
+
+.. _webhook_variables:
+
+Webhooks
+--------
+
+Setting ``use_webhook_secret`` to ``true`` in the manifest signals that a secret intended for validating incoming
+requests to a receiver endpoint should be added to the system. The write permissions on all receiver endpoints that end
+with `-event` in this connector will also be set to ``group:Anonymous``. This is meant to be used with the ``validation_expression`` in the
+:ref:`HTTP endpoint source <http_endpoint_source>`.
+
+Setting ``<connector>_webhook_dataset`` under ``additional_parameters`` in the manifest signals that any occurrences of
+the ``<connector>_webhook_dataset`` Jinja variable should be replaced with "$ENV(<connector>_webhook_dataset)".
+
+
+.. _metadata_variables:
+
+Setting properties using the pipe metadata
+==========================================
+
+Certain properties in the ``metadata`` of a pipe configuration have specific functions.
+
+Setting ``metadata.supports_since`` will modify the pump schedule interval of the pipe (if it is a collect pipe).
+By default, collect pipes run at a schedule of every 300 seconds. If ``metadata.supports_since`` is set to ``true``, the
+pump will be set to run every 10 seconds instead.
