@@ -176,7 +176,7 @@ be specified anywhere, such as ``datatype``.
 The table below lists the supported variables.
 
 Overview
-----
+--------
 
 .. list-table::
    :widths: 20, 10
@@ -207,7 +207,7 @@ Overview
 
 .. _authentication_variables:
 Authentication-specific variables
-----
+---------------------------------
 The values for these variables are retrieved from the output of the :ref:`Consumer portal<consumer-portal-authentication>`
 for a given tenant.
 
@@ -222,12 +222,12 @@ The ``is_fullsync`` Jinja variable (EXPERIMENTAL) injects a boolean depending on
 
 .. _system_variables:
 System-specific variables
-----
+-------------------------
 The ``system`` Jinja variable is always available and injects the name of the system (for example "hubspot", "wave" ...)
 
 .. _datatype_variables:
 Datatype-specific variables
-----
+---------------------------
 The ``datatype`` Jinja variable is available for any configuration that belongs to a datatype and injects the name
 of the datatype. Datatypes in the manifest can also be set to use specific properties:
 
@@ -235,7 +235,7 @@ The ``parent`` Jinja variable is replaced with the value of the ``parent`` prope
 
 .. _connector_config_variables:
 Properties from connector configuration
-----
+---------------------------------------
 Properties from a provided connector configuration can also be injected.
 
 The ``token_url`` Jinja variable injects the URL of an endpoint that grants an OAuth2 access token.
@@ -244,15 +244,14 @@ The ``base_url`` Jinja variable injects the base URL of the API for the system.
 
 .. _service_api_variables:
 Service API access
-----
+------------------
 Setting ``requires_service_api_access`` to ``true`` in the manifest signals that any occurrences of the ``service_url``
 Jinja variable should be replaced with "$ENV(service_url)", and a JWT granting access to the service API is added as a
 secret to the connector's system. The secret can then be used in the config with ``$SECRET(service_jwt)``.
 
 .. _webhook_variables:
 Webhooks
-----
-
+--------
 Setting ``use_webhook_secret`` to ``true`` in the manifest signals that a secret intended for validating incoming
 requests to a receiver endpoint should be added to the system. The write permissions on all receiver endpoints that end
 with `-event` in this connector will also be set to ``group:Anonymous``. This is meant to be used with the ``validation_expression`` in the
@@ -262,4 +261,11 @@ Setting ``<connector>_webhook_dataset`` under ``additional_parameters`` in the m
 the ``<connector>_webhook_dataset`` Jinja variable should be replaced with "$ENV(<connector>_webhook_dataset)".
 
 
+.. _metadata_variables:
+Setting properties using the pipe metadata
+==========================================
+Certain properties in the ``metadata`` of a pipe configuration have specific functions.
 
+Setting ``metadata.supports_since`` will modify the pump schedule interval of the pipe (if it is a collect pipe).
+By default, collect pipes run at a schedule of every 300 seconds. If ``metadata.supports_since`` is set to ``true``, the
+pump will be set to run every 10 seconds instead.
