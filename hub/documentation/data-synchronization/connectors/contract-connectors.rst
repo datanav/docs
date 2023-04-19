@@ -206,6 +206,7 @@ Overview
      - String
 
 .. _authentication_variables:
+
 Authentication-specific variables
 ---------------------------------
 
@@ -222,12 +223,14 @@ The ``is_fullsync`` Jinja variable (EXPERIMENTAL) injects a boolean depending on
 ``fullsync`` to ``true`` or ``false`` by the user.
 
 .. _system_variables:
+
 System-specific variables
 -------------------------
 
 The ``system`` Jinja variable is always available and injects the name of the system (for example "hubspot", "wave" ...)
 
 .. _datatype_variables:
+
 Datatype-specific variables
 ---------------------------
 
@@ -237,6 +240,7 @@ of the datatype. Datatypes in the manifest can also be set to use specific prope
 The ``parent`` Jinja variable is replaced with the value of the ``parent`` property set for a datatype.
 
 .. _connector_config_variables:
+
 Properties from connector configuration
 ---------------------------------------
 
@@ -247,6 +251,7 @@ The ``token_url`` Jinja variable injects the URL of an endpoint that grants an O
 The ``base_url`` Jinja variable injects the base URL of the API for the system.
 
 .. _service_api_variables:
+
 Service API access
 ------------------
 
@@ -255,6 +260,7 @@ Jinja variable should be replaced with "$ENV(service_url)", and a JWT granting a
 secret to the connector's system. The secret can then be used in the config with ``$SECRET(service_jwt)``.
 
 .. _webhook_variables:
+
 Webhooks
 --------
 
@@ -268,6 +274,7 @@ the ``<connector>_webhook_dataset`` Jinja variable should be replaced with "$ENV
 
 
 .. _metadata_variables:
+
 Setting properties using the pipe metadata
 ==========================================
 
