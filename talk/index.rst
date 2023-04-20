@@ -71,7 +71,6 @@ Sesam Talk synchronizes core business data across your different system types. Y
    What is Sesam Talk <what-is-sesam-talk>
    Supported systems <systems/index>
    Becoming a partner <partner/index>
-   Pricing <pricing>
    Roadmap <roadmap>
    Changelog <changelog>
 
