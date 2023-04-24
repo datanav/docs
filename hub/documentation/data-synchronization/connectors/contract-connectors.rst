@@ -316,13 +316,13 @@ Overview
 
    * - Property
      - Type
-   * - :ref:`supports_since<pump_properties>`
+   * - :ref:`supports_since<injected_pump_properties>`
      - String
-   * - :ref:`sync_frequency<pump_properties>`
+   * - :ref:`sync_frequency<injected_pump_properties>`
      - String
 
 
-.. _pump_properties:
+.. _injected_pump_properties:
 
 Pump properties
 ------------------------------------------
