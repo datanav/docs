@@ -273,13 +273,63 @@ Setting ``<connector>_webhook_dataset`` under ``additional_parameters`` in the m
 the ``<connector>_webhook_dataset`` Jinja variable should be replaced with "$ENV(<connector>_webhook_dataset)".
 
 
-.. _metadata_variables:
+.. _other_parameters
 
-Setting properties using the pipe metadata
-==========================================
+Other parameters
+----------------
 
-Certain properties in the ``metadata`` of a pipe configuration have specific functions.
+Any parameter and its value can be specified under the ``parameters`` section of a datatype in the manifest, replacing
+any occurrence of that parameter in the configuration with the given value. For example, we can have a datatype
+``contact`` that has this configuration in the manifest:
 
-Setting ``metadata.supports_since`` will modify the pump schedule interval of the pipe (if it is a collect pipe).
-By default, collect pipes run at a schedule of every 300 seconds. If ``metadata.supports_since`` is set to ``true``, the
-pump will be set to run every 10 seconds instead.
+::
+
+  {
+    "datatypes": {
+      "contact": {
+        ...
+        "parameters": {
+          "foo": "bar"
+        }
+      }
+    }
+  }
+
+This indicates that all occurrences of ``{{@ foo @}}`` in the ``contact`` template should be replaced with ``bar``.
+Boolean values are also supported.
+
+
+.. _injected_configuration:
+
+Injected configuration
+======================
+
+In addition to injecting Jinja-type variables directly into the configuration (see the above section), certain
+properties in the expanded pipe configurations can be set with the connector configuration and the pipe metadata.
+
+Overview
+--------
+
+.. list-table::
+   :widths: 20, 10
+   :header-rows: 1
+
+   * - Property
+     - Type
+   * - :ref:`supports_since<pump_properties>`
+     - String
+   * - :ref:`sync_frequency<pump_properties>`
+     - String
+
+
+.. _pump_properties:
+
+Pump properties
+------------------------------------------
+
+Setting ``metadata.supports_since`` on a pipe template will modify the pump's ``schedule_interval`` (if it is a collect
+pipe). By default, collect pipes run at a schedule of every 300 seconds. If ``metadata.supports_since`` is set to
+``true``, the pump will be set to run every 10 seconds instead.
+
+Setting ``datatypes.<datatype>.sync_frequency`` to ``"slow"`` on a given datatype in the manifest will set the pump of
+the collect pipe to run only once per day at midnight.
