@@ -66,6 +66,14 @@ Properties
      -
      -
 
+   * - ``require_populated_input``
+     - Boolean
+     - If set to ``true``, the pipe will not run unless the source dataset has been populated.
+       The global default ``global_defaults.require_populated_input`` can be set for all pipes in the
+       :ref:`service metadata <service_metadata_section>`.
+     - ``false``
+     -
+
    * - ``include_previous_versions``
      - Boolean
      - If set to ``false``, the dataset source will only return the latest
