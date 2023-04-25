@@ -135,6 +135,14 @@ Properties
      - true
      -
 
+   * - ``require_populated_input``
+     - Boolean
+     - If set to ``true``, the pipe will not run unless the datasets in ``datasets`` (or in ``initial_datasets``, if it has been specified) have been populated.
+       The global default ``global_defaults.require_populated_input`` can be set for all pipes in the
+       :ref:`service metadata <service_metadata_section>`.
+     - ``false``
+     -
+
    * - ``equality``
      - List<EqFunctions{>=0}>
      - A list of zero or more ``eq`` functions that are to be used to decide which entities are the same. The functions must follow the rules for :ref:`joins <joins>` in DTL.

@@ -272,6 +272,18 @@ Properties
      -
      -
 
+       .. _service_metadata_global_defaults_require_populated_input:
+
+   * - ``global_defaults.require_populated_input``
+     - Boolean
+     - Determines the default behaviour of sources that reads from datasets when one or more of the datasets hasn't
+       been populated. If set to ``true``, a pipe with such a source will only run if the dataset(s) the source
+       reads from has been populated.
+       This property can be set on individual sources as well, in which case the source configuration will override the
+       global default value.
+     - ``false``
+     -
+
        .. _service_metadata_dependency_tracking_dependency_warning_threshold:
 
    * - ``dependency_tracking.dependency_warning_threshold``

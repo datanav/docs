@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2023_04_25:
+
+2023-04-25
+----------
+* Added a new ``require_populated_input`` setting as a global default in the :ref:`service metadata <service_metadata_global_defaults_require_populated_input>` and
+  as a property on the :ref:`dataset <dataset_source>`, :ref:`merge <merge_source>`, :ref:`merge_datasets <merge_datasets_source>` and :ref:`union_datasets <union_datasets_source>` sources.
+  It can be used to prevent a pipe from running unless the pipe's source-datasets have been populated.
+
 .. _changelog_2023_03_31:
 
 2023-03-31
