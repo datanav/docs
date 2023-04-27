@@ -12,6 +12,7 @@ Output of the connector
 
 The dataset must use the following naming convention: SYSTEM-DATATYPE-collect, e.g. ``foo-person-collect``.
 
+Connector should expose the data as close to the original API as possible. If any properties are added by the connector that are not in the API, they should be prefixed with `sesam_`, e.g. `sesam_saleId` so that we know which data has been added by the connector.
 
 Properties
 ----------
