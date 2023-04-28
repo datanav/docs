@@ -28,13 +28,13 @@ Metrics and monitoring is now available for all subscriptions with clustered arc
 Pricing
 =======
 
-Follow the steps above to check how this feature affect your monthly price. 
+Follow the steps above to check how this feature affect your monthly price.
 
 Metrics API
 ===========
 
 This feature will make the ``/api/metrics`` endpoint available. This API endpoint exposes `Prometheus <https://prometheus.io/>`_ compatible
-metrics. 
+metrics.
 
 After enabling the feature, you will need to set up a prometheus database, then you can use tools, like Grafana, to create your own dashboards.
 
@@ -48,7 +48,7 @@ Example:
    curl -s -H "Authorization: bearer $JWT" "$SESAM_API_URL/metrics"
 
 
-
+Note that all the counter metrics consists of two metrics suffixed by _counter and _created.
 
 Service metrics
 ---------------
@@ -133,6 +133,8 @@ Pipe metrics
 Pump metrics
 ------------
 
+Note that metrics are not exposed for pipes that are disabled or have pump.mode="manual" or pump.mode="off".
+
 .. list-table::
    :header-rows: 1
    :widths: 30, 10, 60
@@ -151,7 +153,11 @@ Pump metrics
 
    * - ``sesam_pump_failed``
      - Counter
-     - The number of pump-failed events.
+     - The number of non-interrupted pump-failed events.
+
+   * - ``sesam_pump_interrupted``
+     - Counter
+     - The number of interrupted pump-failed events.
 
    * - ``sesam_pump_entities_changes``
      - Counter
