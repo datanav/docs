@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_05_02:
+
+2023-05-02
+----------
+* A :ref:`dataset <dataset_source>` source with ``subset`` now respects the ``include_previous_versions`` property (which is false by default). Before this change historical versions were included. The dataset entities API will also now respect the ``history`` request parameter for subsets.
+
 .. _changelog_2023_04_25:
 
 2023-04-25

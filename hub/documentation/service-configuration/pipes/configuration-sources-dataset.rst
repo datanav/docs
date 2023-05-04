@@ -45,7 +45,6 @@ Properties
        | Example: ``["eq", "_S.category", "tank"]``
 
        .. NOTE:: Make sure that you use indexes version 2 when you use subsets. The reason is that these support deletes. Indexes version 1 does not.
-       .. NOTE:: Subsets currently also return non-latest versions of entities within the subset.
        .. NOTE:: `eq` in subsets behaves the way it does in :ref:`joins <joins>`.
      -
      - No
