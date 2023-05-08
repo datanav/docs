@@ -40,6 +40,12 @@ Prototype
                "to": "include-in-token-request"
             }
         },
+        "tripletex": {
+            "consumer_token": "$SECRET(consumer-token)",
+            "employee_token": "$SECRET(employee-token)",
+            "token_url": "https://tripletex-api:port/path/to/service/for/token-refresh",
+            "ttl": 48
+        },
         "proxies": {
             "http": "socks5://mysocksproxy:1234",
             "https": "socks5://user:password@mysslsocksproxy:1234",
@@ -117,10 +123,12 @@ Properties
      -
 
    * - ``authentication``
-     - String
+     - Enum<String>
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
-       might be also required depending on the authentication scheme selected.
+       authentication. Allowed values is either ``"basic"``, ``"digest"``, ``"ntlm"``, ``"tripletex"`` or ``"jwt"``.
+       Note that ``username``, ``password`` or ``jwt_token`` might be also required depending on the authentication
+       scheme selected. Also note that if you select ``"tripletex"`` here you will also need to supply the necessary
+       details in the ``tripletex`` configuration subsection (see below).
      -
      -
 
@@ -135,6 +143,17 @@ Properties
        ``JWT`` authentication or the ``jwt_token`` property. Also note that the oauth2 specification mandates TLS secured
        transport for both the token endpoint and the target defined in ``url_pattern``. You can add any extra parameters
        required by the service provider to the token request in the ``extra`` subattribute.
+     -
+     -
+
+   * - ``tripletex``
+     - Dict<String,String>
+     - A optional set of properties that specifies support for automatic generation and refreshing of Tripletex access
+       tokens. See the `Tripletex API documentation <https://developer.tripletex.no/docs/documentation/authentication-and-tokens/>`_ for details.
+       You need to supply a ``consumer_token`` and ``employee_token`` from your Tripletex account. You must also
+       specify a ``token_url`` URL to the Tripletex API service which generates access tokens. Optionally you can define a
+       ``ttl`` (time to live) property (in hours) to determine how long the access token should remain valid without a refresh
+       (48 hours is the default). Sesam will automatically attempt to refresh an expired token.
      -
      -
 
