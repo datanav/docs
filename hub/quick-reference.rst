@@ -195,6 +195,7 @@ DTL Expression Functions
        :ref:`filter <filter_dtl_function>` ·
        :ref:`first <first_dtl_function>` ·
        :ref:`flatten <flatten_dtl_function>` ·
+       :ref:`group <group_dtl_function>` ·
        :ref:`group-by <group_by_dtl_function>` ·
        :ref:`in <in_dtl_function>` ·
        :ref:`insert <insert_dtl_function>` ·
