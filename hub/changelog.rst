@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_05_08:
+
+2023-05-08
+----------
+
+* Added support for Tripletex authentication to the :ref:`URL system <url_system>` and :ref:`REST systems <rest_system>`
+
 .. _changelog_2023_05_02:
 
 2023-05-02
