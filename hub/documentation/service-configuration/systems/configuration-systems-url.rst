@@ -123,10 +123,12 @@ Properties
      -
 
    * - ``authentication``
-     - String
+     - Enum<String>
      - What kind of authentication protocol to use. Note that authentication is opt-in only and the default is no
-       authentication. Allowed values is either "basic", "digest", "ntlm" or "jwt". Note that ``username``, ``password`` or ``jwt_token``
-       might be also required depending on the authentication scheme selected.
+       authentication. Allowed values is either ``"basic"``, ``"digest"``, ``"ntlm"``, ``"tripletex"`` or ``"jwt"``.
+       Note that ``username``, ``password`` or ``jwt_token`` might be also required depending on the authentication
+       scheme selected. Also note that if you select ``"tripletex"`` here you will also need to supply the necessary
+       details in the ``tripletex`` configuration subsection (see below).
      -
      -
 
