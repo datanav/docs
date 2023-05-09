@@ -18,13 +18,13 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Agreement <datatype_agreement>`
+     - true
+     - false
+
    * - :ref:`Asset <datatype_asset>`
      - true
      - true
-
-   * - :ref:`Contract <datatype_contract>`
-     - true
-     - false
 
    * - :ref:`Documentation <datatype_documentation>`
      - true
@@ -38,10 +38,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
-     - true
-     - false
-
 Other :ref:`Operational technology (OT) <systemtypeot>` Systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -52,7 +48,7 @@ Other :ref:`Operational technology (OT) <systemtypeot>` Systems
 
     **Bazefield**
 
-    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power. 
+    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power.
     .. link-button:: system/bazefield
         :type: ref
         :text: Read more
