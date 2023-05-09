@@ -19,19 +19,19 @@ Data types
      - Output
 
    * - :ref:`Accounting <datatype_accounting>`
+     - false
      - true
+
+   * - :ref:`Agreement <datatype_agreement>`
+     - false
      - true
 
    * - :ref:`Asset <datatype_asset>`
      - false
      - true
 
-   * - :ref:`Contract <datatype_contract>`
-     - false
+   * - :ref:`Classification <datatype_classification>`
      - true
-
-   * - :ref:`Department <datatype_department>`
-     - false
      - true
 
    * - :ref:`Documentation <datatype_documentation>`
@@ -42,24 +42,20 @@ Data types
      - true
      - true
 
+   * - :ref:`Person <datatype_human>`
+     - true
+     - true
+
    * - :ref:`Location <datatype_location>`
-     - false
+     - true
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
      - false
      - true
 
-   * - :ref:`Person <datatype_person>`
-     - true
-     - true
-
-   * - :ref:`Product <datatype_product>`
-     - false
-     - true
-
    * - :ref:`Task <datatype_task>`
-     - true
+     - false
      - true
 
 Systems
@@ -72,7 +68,7 @@ Systems
 
     **Microsoft Azure**
 
-    Azure is a  cloud computing service operated by Microsoft for application management via Microsoft-managed data centers. Azure provides SaaS, LaaS and IaaS, upports many different programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems. Azure is a highly secure, single storage platform for ingestion, processing, and visualization that supports the most common analytics frameworks. 
+    Azure is a  cloud computing service operated by Microsoft for application management via Microsoft-managed data centers. Azure provides SaaS, LaaS and IaaS, upports many different programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems. Azure is a highly secure, single storage platform for ingestion, processing, and visualization that supports the most common analytics frameworks.
     .. link-button:: system/azure
         :type: ref
         :text: Read more
@@ -80,7 +76,7 @@ Systems
     ---
     **Google Cloud Platform**
 
-    Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments
+    Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments.
     .. link-button:: system/gcp
         :type: ref
         :text: Read more
