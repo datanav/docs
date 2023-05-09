@@ -5,7 +5,7 @@
 ========
 Motimate
 ========
-Motimate is a mobile learning app that ensures effective internal communication, strong culture building, simplification of work tasks and engaging training such as supporting new campaigns and share information with your employees. 
+Motimate is a mobile learning app that ensures effective internal communication, strong culture building, simplification of work tasks and engaging training such as supporting new campaigns and share information with your employees.
 
 Data types
 ^^^^^^^^^^
@@ -18,7 +18,7 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - true
      - true
 
@@ -32,8 +32,16 @@ Other :ref:`Human Resource Management (HRM) <systemtypehrm>` Systems
 
     **CatalystOne**
 
-    Comprehensive HCM software suite, supporting all HR functions. Modul-based design and configured, making all soulutions combinable and able to meet all uniqe requierments. 
+    Comprehensive HCM software suite, supporting all HR functions. Module-based design and configured, making all solutions combinable and able to meet all unique requirements. 
     .. link-button:: system/catalyst-one
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Freshteam**
+
+    Freshteam is a HR software that helps you handle recruiting, onboarding, time off and employee information in one place.
+    .. link-button:: system/freshteam
         :type: ref
         :text: Read more
         :classes: read-more
