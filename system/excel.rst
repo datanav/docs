@@ -22,11 +22,35 @@ Data types
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Agreement <datatype_agreement>`
+     - true
+     - false
+
+   * - :ref:`Asset <datatype_asset>`
+     - true
+     - false
+
+   * - :ref:`Classification <datatype_classification>`
+     - true
+     - false
+
+   * - :ref:`Event <datatype_event>`
+     - true
+     - false
+
+   * - :ref:`Person <datatype_human>`
+     - true
+     - false
+
+   * - :ref:`Location <datatype_location>`
      - true
      - false
 
    * - :ref:`Product <datatype_product>`
+     - true
+     - false
+
+   * - :ref:`Task <datatype_task>`
      - true
      - false
 
@@ -40,7 +64,7 @@ Other :ref:`Business Intelligence (BI) <systemtypebi>` Systems
 
     **Apache Druid**
 
-    Durid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data. 
+    Druid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data.
     .. link-button:: system/druid
         :type: ref
         :text: Read more
@@ -48,7 +72,7 @@ Other :ref:`Business Intelligence (BI) <systemtypebi>` Systems
     ---
     **Microsoft Power BI**
 
-    Data visulazation software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
+    Data visualization software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
     .. link-button:: system/power-bi
         :type: ref
         :text: Read more
@@ -56,7 +80,7 @@ Other :ref:`Business Intelligence (BI) <systemtypebi>` Systems
     ---
     **Qlik**
 
-    SaaS platform with cloud-agnostic and hybrid deployment
+    SaaS platform with cloud-agnostic and hybrid deployment.
     .. link-button:: system/qlik
         :type: ref
         :text: Read more
