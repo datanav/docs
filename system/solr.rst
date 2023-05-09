@@ -5,7 +5,7 @@
 ===========
 Apache Solr
 ===========
-Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene
+Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene.
 
 Data types
 ^^^^^^^^^^
@@ -22,7 +22,7 @@ Data types
      - false
      - true
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - false
      - true
 
@@ -36,7 +36,7 @@ Other :ref:`Enterprise search <systemtypesearch>` Systems
 
     **Elasticsearch**
 
-    Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
+    Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
     .. link-button:: system/elasticsearch
         :type: ref
         :text: Read more
