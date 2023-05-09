@@ -5,7 +5,7 @@
 ========
 YouTrack
 ========
-Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with the way you work. 
+Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with your tasks and bugs. 
 
 Data types
 ^^^^^^^^^^
@@ -18,11 +18,7 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Event <datatype_event>`
-     - true
-     - false
-
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - true
      - false
 
