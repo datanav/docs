@@ -26,10 +26,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
-     - true
-     - false
-
 Systems
 ^^^^^^^^^^
 
@@ -40,7 +36,7 @@ Systems
 
     **Brreg**
 
-    Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies. 
+    Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies.
     .. link-button:: system/brreg
         :type: ref
         :text: Read more
@@ -50,6 +46,14 @@ Systems
 
     A wikipedia project that is aiming to extract structured content from the information created in the project.
     .. link-button:: system/dbpedia
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Opensesam**
+
+    
+    .. link-button:: system/opensesam
         :type: ref
         :text: Read more
         :classes: read-more
