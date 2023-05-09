@@ -22,7 +22,11 @@ Data types
      - false
      - true
 
-   * - :ref:`Contract <datatype_contract>`
+   * - :ref:`Agreement <datatype_agreement>`
+     - false
+     - true
+
+   * - :ref:`Classification <datatype_classification>`
      - false
      - true
 
@@ -34,15 +38,15 @@ Data types
      - false
      - true
 
+   * - :ref:`Person <datatype_human>`
+     - true
+     - true
+
    * - :ref:`Location <datatype_location>`
      - false
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
-     - true
-     - true
-
-   * - :ref:`Person <datatype_person>`
      - true
      - true
 
@@ -60,7 +64,7 @@ Other :ref:`Enterprise application integration (EAI) <systemtypeeai>` Systems
 
     **Microsoft Dataverse**
 
-    Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications. 
+    Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications.
     .. link-button:: system/dataverse
         :type: ref
         :text: Read more
