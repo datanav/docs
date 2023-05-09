@@ -22,11 +22,15 @@ Data types
      - true
      - true
 
+   * - :ref:`Agreement <datatype_agreement>`
+     - true
+     - true
+
    * - :ref:`Asset <datatype_asset>`
      - true
      - true
 
-   * - :ref:`Contract <datatype_contract>`
+   * - :ref:`Classification <datatype_classification>`
      - true
      - true
 
@@ -38,15 +42,15 @@ Data types
      - true
      - true
 
+   * - :ref:`Person <datatype_human>`
+     - true
+     - true
+
    * - :ref:`Location <datatype_location>`
      - true
      - false
 
    * - :ref:`Organisation <datatype_organisation>`
-     - true
-     - true
-
-   * - :ref:`Person <datatype_person>`
      - true
      - true
 
@@ -76,7 +80,7 @@ Systems
     ---
     **HubSpot**
 
-    CRM and marketing platform, 
+    HubSpot's integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
     .. link-button:: system/hubspot
         :type: ref
         :text: Read more
@@ -84,7 +88,7 @@ Systems
     ---
     **Salesforce**
 
-    Salesforce is the world´s #1 CRM platform, providing services such as marketing, sales, commerce, service and IT teams work by using the latest technology. 
+    Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
     .. link-button:: system/salesforce
         :type: ref
         :text: Read more
@@ -92,7 +96,7 @@ Systems
     ---
     **SuperOffice**
 
-    CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
+    SuperOffice is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
     .. link-button:: system/superoffice
         :type: ref
         :text: Read more
@@ -100,7 +104,7 @@ Systems
     ---
     **Survey Monkey**
 
-    Cloud-based SaaS company providing an online survey tool providing brand-and marketing insight, as well as prouct and costumer experience. 
+    Cloud-based SaaS company providing an online survey tool providing brand-and marketing insight, as well as prouct and costumer experience.
     .. link-button:: system/surveymonkey
         :type: ref
         :text: Read more
@@ -124,7 +128,7 @@ Systems
     ---
     **Winorg**
 
-    Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. Winorg offers good payment solutions, effective communication with members and donors, and creating engagement throughout the organization.
+    Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. 
     .. link-button:: system/winorg
         :type: ref
         :text: Read more
