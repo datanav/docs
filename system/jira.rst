@@ -18,17 +18,9 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Asset <datatype_asset>`
+   * - :ref:`Person <datatype_human>`
      - true
      - false
-
-   * - :ref:`Person <datatype_person>`
-     - true
-     - false
-
-   * - :ref:`Product <datatype_product>`
-     - false
-     - true
 
    * - :ref:`Task <datatype_task>`
      - true
@@ -44,7 +36,7 @@ Other :ref:`Project management software <systemtypepms>` Systems
 
     **YouTrack**
 
-    Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with the way you work. 
+    Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with your tasks and bugs. 
     .. link-button:: system/youtrack
         :type: ref
         :text: Read more
