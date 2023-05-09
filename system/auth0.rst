@@ -18,7 +18,7 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - true
      - true
 
