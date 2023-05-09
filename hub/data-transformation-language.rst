@@ -42,6 +42,20 @@
             :text: Read more
             :classes: read-more
 
+    |
+
+    ---
+    **Caveats**
+
+    Read about the potential issues or limitations that users may encounter when using DTL.
+
+    .. link-button:: caveats
+            :type: ref
+            :text: Read more
+            :classes: read-more
+
+
+
 |
 
 
