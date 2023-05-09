@@ -19,8 +19,12 @@ Data types
      - Output
 
    * - :ref:`Accounting <datatype_accounting>`
+     - false
      - true
+
+   * - :ref:`Agreement <datatype_agreement>`
      - true
+     - false
 
    * - :ref:`Documentation <datatype_documentation>`
      - true
@@ -30,15 +34,15 @@ Data types
      - true
      - true
 
+   * - :ref:`Person <datatype_human>`
+     - true
+     - true
+
    * - :ref:`Location <datatype_location>`
-     - false
+     - true
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
-     - true
-     - true
-
-   * - :ref:`Person <datatype_person>`
      - true
      - true
 
@@ -52,7 +56,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
 
     **Microsoft Dynamics 365**
 
-    Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications. 
+    Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
     .. link-button:: system/d365
         :type: ref
         :text: Read more
@@ -84,15 +88,23 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
     ---
     **Omega 365**
 
-    Asset management solution that drives critical processes in organizations and projects. One single solution that covers all disciplines throughout the project life cycle.
+    Omega 365 is an asset management solution that drives critical processes in organizations and projects.
     .. link-button:: system/omega365
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Poweroffice**
+
+    PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
+    .. link-button:: system/poweroffice
         :type: ref
         :text: Read more
         :classes: read-more
     ---
     **Tripletex**
 
-    Tripletex is an online financial system that is uesd for invoicing, accounting, payroll, travel expenses, project management and timekeeping as well as customized solutions for the electrical and plumbing industry and has its own solution for accountants. 
+    Tripletex is an online financial system that is uesd for invoicing, accounting, payroll, travel expenses, project management and timekeeping as well as customized solutions for the electrical and plumbing industry and has its own solution for accountants.
     .. link-button:: system/tripletex
         :type: ref
         :text: Read more
@@ -124,7 +136,7 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
     ---
     **Zoho**
 
-    Zoho is a unique and powerful suite of software to run your entire business, brought to you by a company with the long term vision to transform the way you work.
+    Zoho is a suite of software and web-based business tools.
     .. link-button:: system/zoho
         :type: ref
         :text: Read more
