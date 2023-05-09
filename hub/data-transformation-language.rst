@@ -55,6 +55,7 @@
    Path Expressions and Hops <dtl/paths.rst>
    How joins work <dtl/joins.rst>
    Namespace aware functions <dtl/namespaces.rst>
+   Caveats <dtl/caveats.rst>
    DTL: Transforms <dtl/dtl-functions-transforms.rst>
    DTL: Boolean logic <dtl/dtl-functions-boolean-logic.rst>
    DTL: Booleans <dtl/dtl-functions-booleans.rst>
