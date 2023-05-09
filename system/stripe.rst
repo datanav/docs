@@ -18,19 +18,11 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Accounting <datatype_accounting>`
-     - true
-     - false
-
-   * - :ref:`Contract <datatype_contract>`
+   * - :ref:`Agreement <datatype_agreement>`
      - true
      - false
 
    * - :ref:`Organisation <datatype_organisation>`
-     - true
-     - false
-
-   * - :ref:`Person <datatype_person>`
      - true
      - false
 
