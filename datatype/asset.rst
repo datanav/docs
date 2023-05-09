@@ -20,7 +20,7 @@ System by system type
 
     **Apache Druid**
 
-    Durid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data. 
+    Druid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data.
     .. link-button:: system/druid
         :type: ref
         :text: Read more
@@ -36,7 +36,7 @@ System by system type
     ---
     **Microsoft Power BI**
 
-    Data visulazation software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
+    Data visualization software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
     .. link-button:: system/power-bi
         :type: ref
         :text: Read more
@@ -44,7 +44,7 @@ System by system type
     ---
     **Qlik**
 
-    SaaS platform with cloud-agnostic and hybrid deployment
+    SaaS platform with cloud-agnostic and hybrid deployment.
     .. link-button:: system/qlik
         :type: ref
         :text: Read more
@@ -69,7 +69,7 @@ System by system type
     ---
     **HubSpot**
 
-    CRM and marketing platform, 
+    HubSpot's integrated CRM platform contains marketing, sales, service, operations, and website-building tools.
     .. link-button:: system/hubspot
         :type: ref
         :text: Read more
@@ -77,7 +77,7 @@ System by system type
     ---
     **Salesforce**
 
-    Salesforce is the world´s #1 CRM platform, providing services such as marketing, sales, commerce, service and IT teams work by using the latest technology. 
+    Salesforce is a CRM platform, providing services such as marketing, sales, commerce, service and IT.
     .. link-button:: system/salesforce
         :type: ref
         :text: Read more
@@ -85,7 +85,7 @@ System by system type
     ---
     **SuperOffice**
 
-    CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
+    SuperOffice is a CRM system, combining all customer-facing processes – sales, marketing and customer service – into one technology stack.
     .. link-button:: system/superoffice
         :type: ref
         :text: Read more
@@ -93,7 +93,7 @@ System by system type
     ---
     **Survey Monkey**
 
-    Cloud-based SaaS company providing an online survey tool providing brand-and marketing insight, as well as prouct and costumer experience. 
+    Cloud-based SaaS company providing an online survey tool providing brand-and marketing insight, as well as prouct and costumer experience.
     .. link-button:: system/surveymonkey
         :type: ref
         :text: Read more
@@ -117,7 +117,7 @@ System by system type
     ---
     **Winorg**
 
-    Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. Winorg offers good payment solutions, effective communication with members and donors, and creating engagement throughout the organization.
+    Winorg is Norway's leading provider of CRM systems, providing future-oriented CRM solutions for Nordic organizations. 
     .. link-button:: system/winorg
         :type: ref
         :text: Read more
@@ -142,7 +142,7 @@ System by system type
 
     **Microsoft Dynamics 365**
 
-    Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications. 
+    Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
     .. link-button:: system/d365
         :type: ref
         :text: Read more
@@ -174,8 +174,16 @@ System by system type
     ---
     **Omega 365**
 
-    Asset management solution that drives critical processes in organizations and projects. One single solution that covers all disciplines throughout the project life cycle.
+    Omega 365 is an asset management solution that drives critical processes in organizations and projects.
     .. link-button:: system/omega365
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Poweroffice**
+
+    PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
+    .. link-button:: system/poweroffice
         :type: ref
         :text: Read more
         :classes: read-more
@@ -190,7 +198,7 @@ System by system type
     ---
     **Tripletex**
 
-    Tripletex is an online financial system that is uesd for invoicing, accounting, payroll, travel expenses, project management and timekeeping as well as customized solutions for the electrical and plumbing industry and has its own solution for accountants. 
+    Tripletex is an online financial system that is uesd for invoicing, accounting, payroll, travel expenses, project management and timekeeping as well as customized solutions for the electrical and plumbing industry and has its own solution for accountants.
     .. link-button:: system/tripletex
         :type: ref
         :text: Read more
@@ -222,7 +230,7 @@ System by system type
     ---
     **Zoho**
 
-    Zoho is a unique and powerful suite of software to run your entire business, brought to you by a company with the long term vision to transform the way you work.
+    Zoho is a suite of software and web-based business tools.
     .. link-button:: system/zoho
         :type: ref
         :text: Read more
@@ -264,7 +272,7 @@ System by system type
 
     **ArcGIS**
 
-    ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
+    ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
     .. link-button:: system/arcgis
         :type: ref
         :text: Read more
@@ -305,7 +313,7 @@ System by system type
     ---
     **Bazefield**
 
-    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power. 
+    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power.
     .. link-button:: system/bazefield
         :type: ref
         :text: Read more
@@ -330,7 +338,7 @@ System by system type
 
     **Microsoft Azure**
 
-    Azure is a  cloud computing service operated by Microsoft for application management via Microsoft-managed data centers. Azure provides SaaS, LaaS and IaaS, upports many different programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems. Azure is a highly secure, single storage platform for ingestion, processing, and visualization that supports the most common analytics frameworks. 
+    Azure is a  cloud computing service operated by Microsoft for application management via Microsoft-managed data centers. Azure provides SaaS, LaaS and IaaS, upports many different programming languages, tools, and frameworks, including both Microsoft-specific and third-party software and systems. Azure is a highly secure, single storage platform for ingestion, processing, and visualization that supports the most common analytics frameworks.
     .. link-button:: system/azure
         :type: ref
         :text: Read more
@@ -338,33 +346,8 @@ System by system type
     ---
     **Google Cloud Platform**
 
-    Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments
+    Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments.
     .. link-button:: system/gcp
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
-
-:ref:`Project management software <systemtype_pms>`
-===========================
-
-.. panels::
-    :body: text-left
-    :container: container-lg pb-3
-    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
-
-    **Jira**
-
-    Bug-tracking and project management software application.
-    .. link-button:: system/jira
-        :type: ref
-        :text: Read more
-        :classes: read-more
-    ---
-    **YouTrack**
-
-    Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with the way you work. 
-    .. link-button:: system/youtrack
         :type: ref
         :text: Read more
         :classes: read-more
@@ -380,7 +363,7 @@ System by system type
 
     **Elasticsearch**
 
-    Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. 
+    Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
     .. link-button:: system/elasticsearch
         :type: ref
         :text: Read more
@@ -388,8 +371,65 @@ System by system type
     ---
     **Apache Solr**
 
-    Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene
+    Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene.
     .. link-button:: system/solr
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+
+:ref:`DataBase Management System (DBMS) <systemtype_dbms>`
+=================================
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Bigquery**
+
+    BigQuery is a fully managed, serverless data warehouse that enables scalable analysis over petabytes of data.
+    .. link-button:: system/bigquery
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Firebase**
+
+    Firebase is a set of hosting services for any type of application. It offers NoSQL and real-time hosting of databases, content, social authentication, and notifications, or services, such as a real-time communication server.
+    .. link-button:: system/firebase
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Google BigQuery**
+
+    A fully managed enterprise data warehouse that enables analysis over petabytes of data, includes features as geopatial analysis, machine learning and business intelligence/OLAP.
+    .. link-button:: system/gcp-bigquery
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **MySQL**
+
+    MySQL is the world’s most popular open source database. According to DB-Engines, MySQL ranks as the second-most-popular database, behind Oracle Database. MySQL powers many of the most accessed applications, including Facebook, Twitter, Netflix, Uber, Airbnb, Shopify, and Booking.com.
+    .. link-button:: system/mysql
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **PostgreSQL**
+
+    PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+    .. link-button:: system/postgres
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Microsoft Synapse**
+
+    Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing and big data analytics.
+    .. link-button:: system/synapse
         :type: ref
         :text: Read more
         :classes: read-more
