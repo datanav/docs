@@ -18,15 +18,19 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Classification <datatype_classification>`
+     - true
+     - false
+
    * - :ref:`Documentation <datatype_documentation>`
      - true
-     - true
+     - false
 
    * - :ref:`Event <datatype_event>`
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - true
      - false
 
@@ -44,7 +48,7 @@ Systems
 
     **Ardoq**
 
-    Ardoq is a dynamic, data-driven tool for Enterprise Architecture. Ardoq´s softwase helps organizations and businesses plan, execute and predict the impact of change across their people, projects, strategies, processes, applications, infrastructure, and capabilities. 
+    Ardoq is a dynamic, data-driven tool for Enterprise Architecture. Ardoq´s softwase helps organizations and businesses plan, execute and predict the impact of change across their people, projects, strategies, processes, applications, infrastructure, and capabilities.
     .. link-button:: system/ardoq
         :type: ref
         :text: Read more
@@ -52,7 +56,7 @@ Systems
     ---
     **360°**
 
-    360° build on decades of experience as the preferred provider of digital services to the public sector. We are the only supplier that offers the entire portfolio of case processing, archive and document management, and planning & construction case processing. 
+    360° is a provider of digital services to the public sector. It offers the entire portfolio of case processing, archive and document management, and planning & construction case processing.
     .. link-button:: system/p360
         :type: ref
         :text: Read more
@@ -60,7 +64,7 @@ Systems
     ---
     **ProArc**
 
-    Engineering document management system (EDMS) that enables controlled collaboration, drives compliance to your document control processes, and ensures every team member always has access to accurate information. 
+    Engineering document management system (EDMS) that enables controlled collaboration, drives compliance to your document control processes, and ensures every team member always has access to accurate information.
     .. link-button:: system/proview
         :type: ref
         :text: Read more
