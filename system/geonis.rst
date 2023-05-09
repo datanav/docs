@@ -22,12 +22,12 @@ Data types
      - true
      - true
 
-   * - :ref:`Documentation <datatype_documentation>`
-     - true
+   * - :ref:`Classification <datatype_classification>`
+     - false
      - true
 
-   * - :ref:`Event <datatype_event>`
-     - false
+   * - :ref:`Documentation <datatype_documentation>`
+     - true
      - true
 
    * - :ref:`Location <datatype_location>`
@@ -35,10 +35,6 @@ Data types
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
-     - false
-     - true
-
-   * - :ref:`Person <datatype_person>`
      - false
      - true
 
@@ -56,7 +52,7 @@ Other :ref:`Geographic information system (GIS) <systemtypegis>` Systems
 
     **ArcGIS**
 
-    ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
+    ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
     .. link-button:: system/arcgis
         :type: ref
         :text: Read more
