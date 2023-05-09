@@ -22,12 +22,16 @@ Data types
      - true
      - true
 
-   * - :ref:`Asset <datatype_asset>`
-     - false
+   * - :ref:`Agreement <datatype_agreement>`
+     - true
      - true
 
-   * - :ref:`Contract <datatype_contract>`
-     - false
+   * - :ref:`Asset <datatype_asset>`
+     - true
+     - true
+
+   * - :ref:`Classification <datatype_classification>`
+     - true
      - true
 
    * - :ref:`Documentation <datatype_documentation>`
@@ -35,19 +39,19 @@ Data types
      - true
 
    * - :ref:`Event <datatype_event>`
-     - false
+     - true
+     - true
+
+   * - :ref:`Person <datatype_human>`
+     - true
      - true
 
    * - :ref:`Location <datatype_location>`
-     - false
+     - true
      - true
 
    * - :ref:`Organisation <datatype_organisation>`
      - false
-     - true
-
-   * - :ref:`Person <datatype_person>`
-     - true
      - true
 
    * - :ref:`Product <datatype_product>`
@@ -55,7 +59,7 @@ Data types
      - true
 
    * - :ref:`Task <datatype_task>`
-     - false
+     - true
      - true
 
 Systems
@@ -68,7 +72,7 @@ Systems
 
     **Apache Druid**
 
-    Durid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data. 
+    Druid is a database for modern analycics applications that powers real-time analytic workloads for event-driven data.
     .. link-button:: system/druid
         :type: ref
         :text: Read more
@@ -84,7 +88,7 @@ Systems
     ---
     **Microsoft Power BI**
 
-    Data visulazation software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
+    Data visualization software developed by Microsoft with a main focus on business insights, visualizing data to reduce costs and gain valuable insight.
     .. link-button:: system/power-bi
         :type: ref
         :text: Read more
@@ -92,7 +96,7 @@ Systems
     ---
     **Qlik**
 
-    SaaS platform with cloud-agnostic and hybrid deployment
+    SaaS platform with cloud-agnostic and hybrid deployment.
     .. link-button:: system/qlik
         :type: ref
         :text: Read more
