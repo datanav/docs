@@ -30,10 +30,6 @@ Data types
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
-     - true
-     - false
-
    * - :ref:`Task <datatype_task>`
      - false
      - true
