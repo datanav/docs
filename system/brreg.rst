@@ -5,7 +5,7 @@
 =====
 Brreg
 =====
-Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies. 
+Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies.
 
 Data types
 ^^^^^^^^^^
@@ -34,6 +34,14 @@ Other :ref:`Open data <systemtypeod>` Systems
 
     A wikipedia project that is aiming to extract structured content from the information created in the project.
     .. link-button:: system/dbpedia
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
+    **Opensesam**
+
+    
+    .. link-button:: system/opensesam
         :type: ref
         :text: Read more
         :classes: read-more
