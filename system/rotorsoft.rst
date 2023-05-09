@@ -26,7 +26,7 @@ Data types
      - true
      - false
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Person <datatype_human>`
      - true
      - false
 
@@ -48,7 +48,7 @@ Other :ref:`Operational technology (OT) <systemtypeot>` Systems
     ---
     **Bazefield**
 
-    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power. 
+    Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power.
     .. link-button:: system/bazefield
         :type: ref
         :text: Read more
