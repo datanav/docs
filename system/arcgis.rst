@@ -5,7 +5,7 @@
 ======
 ArcGIS
 ======
-ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
+ArcGIS Online is a cloud-based mapping and analysis solution, used to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field.
 
 Data types
 ^^^^^^^^^^
@@ -22,8 +22,12 @@ Data types
      - false
      - true
 
-   * - :ref:`Event <datatype_event>`
+   * - :ref:`Classification <datatype_classification>`
      - true
+     - false
+
+   * - :ref:`Event <datatype_event>`
+     - false
      - true
 
    * - :ref:`Location <datatype_location>`
