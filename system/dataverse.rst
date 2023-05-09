@@ -5,7 +5,7 @@
 ===================
 Microsoft Dataverse
 ===================
-Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications. 
+Data Verse is  is a cloud based storage and data management engine under Microsoft, that lets you securely store and manage data that's used by business applications.
 
 Data types
 ^^^^^^^^^^
@@ -18,11 +18,19 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Organisation <datatype_organisation>`
-     - false
+   * - :ref:`Person <datatype_human>`
+     - true
      - true
 
-   * - :ref:`Person <datatype_person>`
+   * - :ref:`Location <datatype_location>`
+     - true
+     - false
+
+   * - :ref:`Organisation <datatype_organisation>`
+     - true
+     - true
+
+   * - :ref:`Task <datatype_task>`
      - false
      - true
 
