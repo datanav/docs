@@ -5,7 +5,7 @@
 =========
 Bazefield
 =========
-Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power. 
+Bazefield is a software product company with core competence in industrial IT solutions and communication. Bazefiled provides operations management software within renewable power.
 
 Data types
 ^^^^^^^^^^
