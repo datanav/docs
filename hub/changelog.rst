@@ -7,6 +7,7 @@ Changelog
 ----------
 
 * Added support for Tripletex authentication to the :ref:`URL system <url_system>` and :ref:`REST systems <rest_system>`
+* Added an :ref:`group <group_dtl_function>` DTL function.
 
 .. _changelog_2023_05_02:
 
