@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-01 16:25:05
+Generated: 2023-05-10 19:49:46
 
 Introduction.
 ------------
@@ -11,7 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Deal to Tripletex Order
 -------------------------------
-When a Tripletex Deal gets the has a 100% probability., it  will be synchronized with a Tripletex Order.
+When a HubSpot Deal gets the has a 100% probability, it  will be synchronized with a Tripletex Order.
 
 Once a link between a HubSpot Deal and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
