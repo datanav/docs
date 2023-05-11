@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-07 17:32:07
+Generated: 2023-05-11 12:17:02
 
 Introduction.
 ------------
@@ -148,6 +148,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - TotalPrice
+     - TotalPrice
+     - "string"
    * - VATInfo
      - VATInfo
      - "string"
