@@ -65,6 +65,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
       "_id": "hubspot",
       "type": "system:rest",
       "headers": {
+        "Authorization": "Bearer $SECRET(hubspot-api-key)",
         "Content-Type": "application/json"
       },
       "operations": {
@@ -84,7 +85,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
       },
       "rate_limiting_delay": 60,
       "rate_limiting_retries": 3,
-      "url_pattern": "https://api.hubapi.com/crm/v3/objects/%shapikey=$SECRET(hubspot-api-key)",
+      "url_pattern": "https://api.hubapi.com/crm/v3/objects/%s",
       "verify_ssl": true
     }
 
