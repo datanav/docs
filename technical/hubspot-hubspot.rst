@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-01 16:25:05
+Generated: 2023-05-10 19:39:49
 
 Introduction.
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a HubSpot Contact and a HubSpo
    * - HubSpot Contact Property
      - HubSpot Contactcompanyassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "integer"
 
 
 HubSpot Contactcompanyassociation to HubSpot Contact
@@ -64,6 +67,131 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - HubSpot Data Type
 
 
+HubSpot Deal to HubSpot Dealcompanyassociation
+----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Deal and a HubSpot Dealcompanyassociation must be established.
+
+A HubSpot Deal will merge with a HubSpot Dealcompanyassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Dealcompanyassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Deal and a HubSpot Dealcompanyassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a HubSpot Dealcompanyassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Dealcompanyassociation Property
+     - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - properties.hubspot_owner_id
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot Deal to HubSpot Dealcontactassociation
+----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Deal and a HubSpot Dealcontactassociation must be established.
+
+A HubSpot Deal will merge with a HubSpot Dealcontactassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Dealcontactassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Deal and a HubSpot Dealcontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a HubSpot Dealcontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Dealcontactassociation Property
+     - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - properties.hubspot_owner_id
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot Deal to HubSpot Lineitemdealassociation
+-----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Deal and a HubSpot Lineitemdealassociation must be established.
+
+A HubSpot Deal will merge with a HubSpot Lineitemdealassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Lineitemdealassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Deal and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - properties.hubspot_owner_id
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot Dealcompanyassociation to HubSpot Deal
+----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Dealcompanyassociation and a HubSpot Deal must be established.
+
+A HubSpot Dealcompanyassociation will merge with a HubSpot Deal if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - HubSpot Deal Property
+   * - id
+     - id
+
+Once a link between a HubSpot Dealcompanyassociation and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - properties.hubspot_owner_id
+     - "string"
+
+
 HubSpot Dealcompanyassociation to HubSpot Dealcontactassociation
 ----------------------------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Dealcompanyassociation and a HubSpot Dealcontactassociation must be established.
@@ -88,6 +216,9 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - HubSpot Dealcontactassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
@@ -117,8 +248,40 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot Dealcontactassociation to HubSpot Deal
+----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Dealcontactassociation and a HubSpot Deal must be established.
+
+A HubSpot Dealcontactassociation will merge with a HubSpot Deal if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - HubSpot Deal Property
+   * - id
+     - id
+
+Once a link between a HubSpot Dealcontactassociation and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - properties.hubspot_owner_id
      - "string"
 
 
@@ -146,6 +309,9 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - HubSpot Dealcompanyassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
@@ -175,8 +341,69 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot Lineitem to HubSpot Lineitemdealassociation
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitem and a HubSpot Lineitemdealassociation must be established.
+
+A HubSpot Lineitem will merge with a HubSpot Lineitemdealassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemdealassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitem and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+
+
+HubSpot Lineitemdealassociation to HubSpot Deal
+-----------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitemdealassociation and a HubSpot Deal must be established.
+
+A HubSpot Lineitemdealassociation will merge with a HubSpot Deal if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Deal Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitemdealassociation and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - properties.hubspot_owner_id
      - "string"
 
 
@@ -204,6 +431,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - HubSpot Dealcompanyassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
@@ -233,9 +463,38 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - HubSpot Dealcontactassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
+
+
+HubSpot Lineitemdealassociation to HubSpot Lineitem
+---------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitemdealassociation and a HubSpot Lineitem must be established.
+
+A HubSpot Lineitemdealassociation will merge with a HubSpot Lineitem if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Lineitem Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitemdealassociation and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
 
 
 HubSpot Owner to HubSpot User
