@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-04 06:37:33
+Generated: 2023-05-11 11:25:03
 
 Introduction.
 ------------
@@ -224,7 +224,7 @@ The following properties are synchronized between a SuperOffice Ticket and a Hub
      - "string"
    * - OwnedBy.AssociateId
      - properties.hubspot_owner_id
-     - "integer"
+     - "string"
    * - Title
      - properties.subject
      - "string"
