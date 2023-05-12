@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-12 13:01:04
+Generated: 2023-05-12 13:08:01
 
 Introduction.
 ------------
@@ -236,7 +236,7 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "datetime-format","%Y-%m-%d","_."]
    * - Contact.ContactId
      - department.id
-     - ""if", "eq"]]"
+     - "if", "is-null", "_.DefaultValue"], "integer"]
    * - Emails.Value
      - email
      - "string"
@@ -529,7 +529,7 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - Tripletex Data Type
    * - contactId
      - department.id
-     - ""if", "eq"]]"
+     - "if", "is-null", "_.DefaultValue"], "integer"]
    * - firstName
      - firstName
      - "string"
