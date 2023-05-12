@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-12 12:26:49
+Generated: 2023-05-12 12:28:07
 
 Introduction.
 ------------
@@ -64,6 +64,9 @@ The following properties are synchronized between a SuperOffice Ownercontactlist
      - SuperOffice Data Type
    * - ownercontactlink.contact_id
      - ContactId
+     - "string"
+   * - ownercontactlink.contact_id.name
+     - Name
      - "string"
 
 
