@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-08 07:30:57
+Generated: 2023-05-12 13:01:55
 
 Introduction.
 ------------
@@ -360,6 +360,25 @@ The following properties are synchronized between a Tripletex Department and a S
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - name
+     - Name
+     - "string"
+
+
+Tripletex Order to SuperOffice Quotealternative
+-----------------------------------------------
+Every Tripletex Order will be synchronized with a SuperOffice Quotealternative.
+
+Once a link between a Tripletex Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a SuperOffice Quotealternative:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - SuperOffice Quotealternative Property
+     - SuperOffice Data Type
+   * - invoiceComment
      - Name
      - "string"
 
