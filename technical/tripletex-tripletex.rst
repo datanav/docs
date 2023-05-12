@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-12 13:08:01
+Generated: 2023-05-12 13:23:03
 
 Introduction.
 ------------
@@ -35,7 +35,7 @@ The following properties are synchronized between a Tripletex Contact and a Trip
      - Tripletex Data Type
    * - customer.id
      - department.id
-     - "if", "is-null", "_.DefaultValue"], "integer"]
+     - "if", "is-null", "_.global-property:DefaultValue"], "integer"]
    * - email
      - email
      - "string"
