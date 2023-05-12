@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-12 13:01:55
+Generated: 2023-05-12 13:02:02
 
 Introduction.
 ------------
@@ -466,6 +466,9 @@ The following properties are synchronized between a Tripletex Orderline and a Su
    * - unitPriceExcludingVatCurrency
      - TotalPrice
      - "integer"
+   * - unitPriceExcludingVatCurrency
+     - UnitListPrice
+     - "string"
    * - vatType.id
      - VAT
      - "integer"
