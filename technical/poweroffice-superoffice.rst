@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-08 07:30:57
+Generated: 2023-05-12 09:07:05
 
 Introduction.
 ------------
@@ -133,7 +133,7 @@ The following properties are synchronized between a Poweroffice Outgoinginvoice 
      - SuperOffice Data Type
    * - NetAmount
      - TotalPrice
-     - "string"
+     - "integer"
 
 
 Poweroffice Salesorder to SuperOffice Quotealternative
