@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-05-12 10:39:02
+Generated: 2023-05-12 10:45:03
 
 Introduction.
 ------------
@@ -79,8 +79,14 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
    * - properties.hs_product_id
      - ProductCode
      - "string"
+   * - properties.name
+     - Description
+     - "string"
    * - properties.price
      - SalesOrderLineUnitPrice
+     - "string"
+   * - properties.quantity
+     - Quantity
      - "string"
 
 
