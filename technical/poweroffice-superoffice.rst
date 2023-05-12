@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-12 09:07:05
+Generated: 2023-05-12 13:02:02
 
 Introduction.
 ------------
@@ -287,6 +287,9 @@ The following properties are synchronized between a Poweroffice Salesorderline a
    * - SalesOrderLineUnitPrice
      - TotalPrice
      - "integer"
+   * - SalesOrderLineUnitPrice
+     - UnitListPrice
+     - "string"
    * - VatReturnSpecification
      - VAT
      - "integer"
