@@ -339,3 +339,6 @@ the collect pipe to run only once per day at midnight.
 
 Setting ``datatypes.<datatype>.webhook`` to ``true`` on a given datatype in the manifest signals that the datatype
 supports webhooks, and the collect pipe will be set to run on a slower schedule (default is once per hour).
+
+A custom value for the ``schedule_interval`` on the input pipe for a given datatype can be set under
+``datatypes.<datatype>.schedule_interval`` in the manifest. This takes precedence over all the above options.
