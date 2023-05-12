@@ -56,7 +56,7 @@ Data types
 
    * - :ref:`Product <datatype_product>`
      - true
-     - false
+     - true
 
    * - :ref:`Task <datatype_task>`
      - false
