@@ -30,6 +30,10 @@ Data types
      - false
      - true
 
+   * - :ref:`Classification <datatype_classification>`
+     - false
+     - true
+
    * - :ref:`Documentation <datatype_documentation>`
      - false
      - true
