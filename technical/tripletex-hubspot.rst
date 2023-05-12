@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-05-12 10:39:02
+Generated: 2023-05-12 10:45:03
 
 Introduction.
 ------------
@@ -226,6 +226,12 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - HubSpot Data Type
    * - changes.timestamp
      - properties.createdate
+     - "string"
+   * - count
+     - properties.quantity
+     - "string"
+   * - description
+     - properties.name
      - "string"
    * - unitCostCurrency
      - properties.hs_product_id
