@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-12 10:39:02
+Generated: 2023-05-12 10:45:03
 
 Introduction.
 ------------
@@ -48,8 +48,14 @@ The following properties are synchronized between a HubSpot Lineitem and a Tripl
    * - properties.hs_product_id
      - unitCostCurrency
      - "string"
+   * - properties.name
+     - description
+     - "string"
    * - properties.price
      - unitPriceExcludingVatCurrency
+     - "float"
+   * - properties.quantity
+     - count
      - "float"
 
 
