@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-05-12 10:45:03
+Generated: 2023-05-15 11:00:20
 
 Introduction.
 ------------
@@ -116,6 +116,38 @@ The following properties are synchronized between a HubSpot Product and a PowerO
    * - properties.price
      - SalesPrice
      - "string"
+
+
+HubSpot Quote to PowerOffice Contactperson
+------------------------------------------
+Every HubSpot Quote will be synchronized with a PowerOffice Contactperson.
+
+Once a link between a HubSpot Quote and a PowerOffice Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a PowerOffice Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - PowerOffice Contactperson Property
+     - PowerOffice Data Type
+
+
+HubSpot Quote to PowerOffice Customer
+-------------------------------------
+Every HubSpot Quote will be synchronized with a PowerOffice Customer.
+
+Once a link between a HubSpot Quote and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - PowerOffice Customer Property
+     - PowerOffice Data Type
 
 
 HubSpot User to PowerOffice Employee
