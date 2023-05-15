@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-10 19:39:49
+Generated: 2023-05-15 11:00:20
 
 Introduction.
 ------------
@@ -552,6 +552,61 @@ The following properties are synchronized between a HubSpot Quote and a HubSpot 
    * - HubSpot Quote Property
      - HubSpot Company Property
      - HubSpot Data Type
+
+
+HubSpot Quote to HubSpot Contact
+--------------------------------
+Before any synchronization can take place, a link between a HubSpot Quote and a HubSpot Contact must be established.
+
+A HubSpot Quote will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Contact Property
+   * - associations.contacts.results.id
+     - id
+
+Once a link between a HubSpot Quote and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+HubSpot Quote to HubSpot Contactcompanyassociation
+--------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Quote and a HubSpot Contactcompanyassociation must be established.
+
+A HubSpot Quote will merge with a HubSpot Contactcompanyassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Contactcompanyassociation Property
+   * - associations.contacts.results.id
+     - id
+
+Once a link between a HubSpot Quote and a HubSpot Contactcompanyassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a HubSpot Contactcompanyassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Contactcompanyassociation Property
+     - HubSpot Data Type
+   * - associations.contacts.results.id
+     - id
+     - "integer"
 
 
 HubSpot User to HubSpot Contact
