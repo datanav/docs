@@ -91,7 +91,7 @@ source, except ``datasets`` can be a list of datasets ids.
 
        If signalling is enabled globally, you will have to explicitly set ``supports_signalling`` to ``false`` to
        disable it on individual pipes where you don't want to automatically schedule runs on changes. Note that it is
-       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than 2 minutes or a cron
+       automatically disabled (if not explicitly enabled on the source) if the schedule interval is less than an hour or a cron
        expression has been used.
      - false
      -

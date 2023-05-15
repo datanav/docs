@@ -1,6 +1,15 @@
 Changelog
 =========
 
+.. _changelog_2023_05_15:
+
+2023-05-15
+----------
+* Corrected the documentation of sources that have the ``supports_signalling`` property to reflect that the threshold for turning off implicit signalling is an hour, not two minutes. Note that you should explicitly turn on or off signalling support using the ``support_signalling`` property if you need to have control over this on your pipe.
+
+2023-05-08
+----------
+
 .. _changelog_2023_05_08:
 
 2023-05-08
