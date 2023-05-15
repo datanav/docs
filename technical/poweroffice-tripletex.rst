@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-07 17:16:53
+Generated: 2023-05-15 06:44:14
 
 Introduction.
 ------------
@@ -153,7 +153,7 @@ The following properties are synchronized between a Poweroffice Product and a Tr
      - "integer"
    * - CostPrice
      - costExcludingVatCurrency
-     - "string"
+     - "integer"
    * - Description
      - description
      - "string"
