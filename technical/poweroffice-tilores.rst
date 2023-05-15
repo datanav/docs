@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-05-15 08:59:04
+Generated: 2023-05-15 09:11:55
 
 Introduction.
 ------------
@@ -37,6 +37,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "string"
    * - FirstName
      - firstName
+     - "string"
+   * - Id
+     - id
      - "string"
    * - LastName
      - lastName
