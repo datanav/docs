@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-12 13:46:07
+Generated: 2023-05-15 06:44:14
 
 Introduction.
 ------------
@@ -361,7 +361,7 @@ The following properties are synchronized between a SuperOffice Product and a Tr
      - "integer"
    * - UnitCost
      - costExcludingVatCurrency
-     - "string"
+     - "integer"
    * - UnitListPrice
      - priceExcludingVatCurrency
      - "float"
