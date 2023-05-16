@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-05-16 12:34:10
+Generated: 2023-05-16 12:37:10
 
 Introduction.
 ------------
@@ -47,6 +47,12 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - ZipCode
      - postalCode
      - "string"
+   * - address1
+     - street
+     - "string"
+   * - address2
+     - street
+     - "string"
    * - city
      - city
      - "string"
@@ -55,6 +61,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "string"
    * - firstName
      - firstName
+     - "string"
+   * - id
+     - id
      - "string"
    * - lastName
      - lastName
