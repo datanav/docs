@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-07 17:16:53
+Generated: 2023-05-16 12:31:08
 
 Introduction.
 ------------
@@ -59,6 +59,9 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
    * - customer.id
      - PartySupplierCode
+     - "string"
+   * - customer.id
+     - partyCustomerCode
      - "string"
    * - firstName
      - FirstName
