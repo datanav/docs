@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-16 12:31:08
+Generated: 2023-05-16 12:34:10
 
 Introduction.
 ------------
@@ -38,9 +38,21 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - PhoneNumber
      - phoneNumberWork
      - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
    * - partyCustomerCode
      - customer.id
      - "integer"
+   * - partySupplierCode
+     - customer.id
+     - "integer"
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
 
 
 Poweroffice Customer to Tripletex Contact
