@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-16 12:34:10
+Generated: 2023-05-16 12:37:10
 
 Introduction.
 ------------
@@ -155,6 +155,9 @@ The following properties are synchronized between a Poweroffice Customer and a P
      - "string"
    * - Id
      - Id
+     - "integer"
+   * - Id
+     - id
      - "integer"
    * - InternationalIdCountryCode
      - ResidenceCountryCode
