@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-12 13:02:02
+Generated: 2023-05-16 12:31:08
 
 Introduction.
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - PhoneNumber
      - OfficePhones.Value
      - "string"
+   * - partyCustomerCode
+     - Contact.ContactId
+     - "integer"
 
 
 Poweroffice Customer to SuperOffice Person
