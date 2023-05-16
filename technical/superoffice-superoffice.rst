@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-15 17:25:21
+Generated: 2023-05-16 08:45:10
 
 Introduction.
 ------------
@@ -49,6 +49,8 @@ A SuperOffice Ownercontactlink will merge with a SuperOffice Contact if one of t
 
    * - SuperOffice Ownercontactlink Property
      - SuperOffice Contact Property
+   * - contact_id
+     - ContactId
    * - ownercontactlink.contact_id
      - ContactId
 
@@ -62,6 +64,12 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - contact_id
+     - ContactId
+     - "string"
+   * - name
+     - Name
+     - "string"
    * - ownercontactlink.contact_id
      - ContactId
      - "string"
