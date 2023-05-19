@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 12:11:16
+Generated: 2023-05-19 12:55:10
 
 Introduction.
 ------------
@@ -72,6 +72,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - ResidenceCountryCode
      - InternationalIdCountryCode
      - "string"
+   * - city
+     - streetAddresses.city
+     - "string"
    * - dateOfBirth
      - DateOfBirth
      - "string"
@@ -93,6 +96,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - firstName
      - firstName
      - "string"
+   * - id
+     - id
+     - "string"
    * - lastChanged
      - LastChanged
      - "string"
@@ -101,6 +107,12 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "string"
    * - lastName
      - LastName
+     - "string"
+   * - residenceCountryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - zipCode
+     - streetAddresses.zipCode
      - "string"
 
 
@@ -200,6 +212,15 @@ The following properties are synchronized between a Poweroffice Customer and a P
    * - LastName
      - lastName
      - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.CountryCode
+     - residenceCountryCode
+     - "string"
+   * - MailAddress.ZipCode
+     - zipCode
+     - "string"
    * - Name
      - FirstName
      - "string"
@@ -220,5 +241,14 @@ The following properties are synchronized between a Poweroffice Customer and a P
      - "integer"
    * - lastChanged
      - lastChanged
+     - "string"
+   * - streetAddresses.city
+     - city
+     - "string"
+   * - streetAddresses.countryCode
+     - residenceCountryCode
+     - "string"
+   * - streetAddresses.zipCode
+     - zipCode
      - "string"
 
