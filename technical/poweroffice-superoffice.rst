@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 11:57:14
+Generated: 2023-05-19 11:57:58
 
 Introduction.
 ------------
@@ -75,6 +75,21 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - Poweroffice Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Domains
+     - "list"
+   * - WebsiteUrl
+     - Urls.Value
+     - "string"
 
 
 Poweroffice Customer to SuperOffice Person
