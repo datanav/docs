@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-12 10:45:03
+Generated: 2023-05-19 08:06:07
 
 Introduction.
 ------------
@@ -202,6 +202,9 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
      - "string"
    * - Currency.Id
      - properties.deal_currency_code
+     - "string"
+   * - SaleText
+     - properties.dealname
      - "string"
    * - SaleText
      - properties.description
