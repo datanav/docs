@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-19 08:06:07
+Generated: 2023-05-19 08:08:05
 
 Introduction.
 ------------
@@ -160,6 +160,9 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - HubSpot Deal Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - properties.amount
+     - TotalPrice
+     - "integer"
    * - properties.dealname
      - Description
      - "string"
@@ -322,6 +325,9 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - HubSpot Deal Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
+   * - properties.amount
+     - Amount
+     - "float"
    * - properties.closedate
      - Saledate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
