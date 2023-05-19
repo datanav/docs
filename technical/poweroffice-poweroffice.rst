@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 12:01:06
+Generated: 2023-05-19 12:11:16
 
 Introduction.
 ------------
@@ -124,11 +124,15 @@ A Poweroffice Customer will merge with a PowerOffice Address if one of the follo
      - id
    * - mailAddress.Id
      - id
+   * - mailAddress.id
+     - id
    * - StreetAddresses.Id
      - Id
    * - StreetAddresses.Id
      - id
    * - streetAddresses.Id
+     - id
+   * - streetAddresses.id
      - id
 
 Once a link between a Poweroffice Customer and a PowerOffice Address is established, it will keep in sync between the two systems, regardless of where it is edited.
