@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-16 12:34:10
+Generated: 2023-05-19 11:51:09
 
 Introduction.
 ------------
@@ -87,6 +87,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - Name
      - Firstname
      - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
 
 
 Poweroffice Employee to SuperOffice Person
