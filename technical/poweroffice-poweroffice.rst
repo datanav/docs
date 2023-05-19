@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 11:11:08
+Generated: 2023-05-19 11:51:09
 
 Introduction.
 ------------
@@ -75,8 +75,14 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - dateOfBirth
      - DateOfBirth
      - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
    * - emailAddress
      - EmailAddress
+     - "string"
+   * - emailAddress
+     - emailAddress
      - "string"
    * - firstName
      - FirstName
@@ -189,6 +195,12 @@ The following properties are synchronized between a Poweroffice Customer and a P
      - "string"
    * - Name
      - firstName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
      - "string"
    * - id
      - id
