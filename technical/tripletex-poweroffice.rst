@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-19 11:55:59
+Generated: 2023-05-19 12:55:10
 
 Introduction.
 ------------
@@ -143,8 +143,41 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - deliveryAddress.changes
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.changes
+     - streetAddresses.city
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.city
+     - streetAddresses.countryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
    * - email
      - EmailAddress
+     - "string"
+   * - id
+     - Id
      - "string"
    * - id
      - id
@@ -157,6 +190,51 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - phoneNumber
      - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - postalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - postalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.postalCode
+     - streetAddresses.zipCode
      - "string"
 
 
