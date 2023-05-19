@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 13:08:21
+Generated: 2023-05-19 13:11:09
 
 Introduction.
 ------------
@@ -123,6 +123,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - mailAddress.address3
      - Address.Postal.Address3
      - "string"
+   * - mailAddress.city
+     - Address.Postal.City
+     - "string"
    * - mailAddress.countryCode
      - Country.CountryId
      - "integer"
@@ -198,6 +201,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
      - "string"
    * - mailAddress.address3
      - Address.Postal.Address3
+     - "string"
+   * - mailAddress.city
+     - Address.Postal.City
      - "string"
    * - mailAddress.countryCode
      - Country.CountryId
