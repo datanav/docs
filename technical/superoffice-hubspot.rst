@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-19 08:06:07
+Generated: 2023-05-19 08:08:05
 
 Introduction.
 ------------
@@ -197,6 +197,9 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
    * - SuperOffice Sale Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - Amount
+     - properties.amount
+     - "string"
    * - CreatedDate
      - properties.createdate
      - "string"
