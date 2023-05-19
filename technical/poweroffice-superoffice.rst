@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 11:57:58
+Generated: 2023-05-19 12:55:10
 
 Introduction.
 ------------
@@ -78,8 +78,29 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - EmailAddress
      - Emails.Value
      - "string"
+   * - Id
+     - ContactId
+     - "integer"
    * - LegalName
      - Name
+     - "string"
+   * - MailAddress.Address1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.Address3
+     - Address.Postal.Address3
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
      - "string"
    * - PhoneNumber
      - Phones.Value
@@ -90,6 +111,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - WebsiteUrl
      - Urls.Value
      - "string"
+   * - id
+     - ContactId
+     - "integer"
 
 
 Poweroffice Customer to SuperOffice Person
@@ -112,8 +136,29 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - FirstName
      - Firstname
      - "string"
+   * - Id
+     - PersonId
+     - "integer"
    * - LastName
      - Lastname
+     - "string"
+   * - MailAddress.Address1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.Address3
+     - Address.Postal.Address3
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
      - "string"
    * - Name
      - Firstname
@@ -124,6 +169,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - firstName
      - Firstname
      - "string"
+   * - id
+     - PersonId
+     - "integer"
 
 
 Poweroffice Employee to SuperOffice Person
