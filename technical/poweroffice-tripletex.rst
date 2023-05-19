@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-19 11:11:08
+Generated: 2023-05-19 11:54:12
 
 Introduction.
 ------------
@@ -76,6 +76,9 @@ The following properties are synchronized between a Poweroffice Customer and a T
      - lastName
      - "string"
    * - Name
+     - firstName
+     - "string"
+   * - firstName
      - firstName
      - "string"
 
