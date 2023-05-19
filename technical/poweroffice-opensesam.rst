@@ -2,7 +2,7 @@
 Poweroffice to OpenSesam Dataflow
 =================================
 
-Generated: 2023-05-01 16:25:05
+Generated: 2023-05-19 11:56:08
 
 Introduction.
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Poweroffice Address and a Op
 
    * - Poweroffice Address Property
      - OpenSesam Location Property
+     - OpenSesam Data Type
+
+
+Poweroffice Customer to OpenSesam Organisation
+----------------------------------------------
+Every Poweroffice Customer will be synchronized with a OpenSesam Organisation.
+
+Once a link between a Poweroffice Customer and a OpenSesam Organisation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Customer and a OpenSesam Organisation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Customer Property
+     - OpenSesam Organisation Property
      - OpenSesam Data Type
 
 
