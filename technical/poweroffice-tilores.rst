@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-05-19 11:54:12
+Generated: 2023-05-19 12:53:09
 
 Introduction.
 ------------
@@ -150,5 +150,11 @@ The following properties are synchronized between a Poweroffice Employee and a T
      - "string"
    * - StreetAddresses.ZipCode
      - postalCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - streetAddresses.city
+     - city
      - "string"
 
