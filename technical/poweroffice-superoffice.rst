@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 12:55:10
+Generated: 2023-05-19 13:08:21
 
 Introduction.
 ------------
@@ -114,6 +114,24 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - id
      - ContactId
      - "integer"
+   * - mailAddress.address1
+     - Address.Postal.Address1
+     - "string"
+   * - mailAddress.address2
+     - Address.Postal.Address2
+     - "string"
+   * - mailAddress.address3
+     - Address.Postal.Address3
+     - "string"
+   * - mailAddress.countryCode
+     - Country.CountryId
+     - "integer"
+   * - mailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - mailaddress.city
+     - Address.Postal.City
+     - "string"
 
 
 Poweroffice Customer to SuperOffice Person
@@ -172,6 +190,24 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - id
      - PersonId
      - "integer"
+   * - mailAddress.address1
+     - Address.Postal.Address1
+     - "string"
+   * - mailAddress.address2
+     - Address.Postal.Address2
+     - "string"
+   * - mailAddress.address3
+     - Address.Postal.Address3
+     - "string"
+   * - mailAddress.countryCode
+     - Country.CountryId
+     - "integer"
+   * - mailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - mailaddress.city
+     - Address.Postal.City
+     - "string"
 
 
 Poweroffice Employee to SuperOffice Person
