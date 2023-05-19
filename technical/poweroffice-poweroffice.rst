@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 12:55:10
+Generated: 2023-05-19 13:08:21
 
 Introduction.
 ------------
@@ -241,6 +241,15 @@ The following properties are synchronized between a Poweroffice Customer and a P
      - "integer"
    * - lastChanged
      - lastChanged
+     - "string"
+   * - mailAddress.countryCode
+     - residenceCountryCode
+     - "string"
+   * - mailAddress.zipCode
+     - zipCode
+     - "string"
+   * - mailaddress.city
+     - city
      - "string"
    * - streetAddresses.city
      - city
