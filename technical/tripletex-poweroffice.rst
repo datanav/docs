@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-16 12:34:10
+Generated: 2023-05-19 10:59:11
 
 Introduction.
 ------------
@@ -26,17 +26,32 @@ The following properties are synchronized between a Tripletex Address and a Powe
    * - addressLine1
      - Address1
      - "string"
+   * - addressLine1
+     - address1
+     - "string"
    * - addressLine2
      - Address2
+     - "string"
+   * - addressLine2
+     - address2
      - "string"
    * - city
      - City
      - "string"
+   * - city
+     - city
+     - "string"
    * - country.id
      - CountryCode
      - "string"
+   * - country.id
+     - countryCode
+     - "string"
    * - postalCode
      - ZipCode
+     - "string"
+   * - postalCode
+     - zipCode
      - "string"
 
 
@@ -128,17 +143,32 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - address.addressLine1
      - Address1
      - "string"
+   * - address.addressLine1
+     - address1
+     - "string"
    * - address.addressLine2
      - Address2
+     - "string"
+   * - address.addressLine2
+     - address2
      - "string"
    * - address.changes
      - City
      - "string"
+   * - address.changes
+     - city
+     - "string"
    * - address.city
      - CountryCode
      - "string"
+   * - address.city
+     - countryCode
+     - "string"
    * - address.id
      - ZipCode
+     - "string"
+   * - address.id
+     - zipCode
      - "string"
 
 
