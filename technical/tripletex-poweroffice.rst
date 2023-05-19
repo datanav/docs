@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-19 11:54:12
+Generated: 2023-05-19 11:55:15
 
 Introduction.
 ------------
@@ -127,6 +127,22 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - lastName
      - LastName
      - "string"
+
+
+Tripletex Customer to PowerOffice Customer
+------------------------------------------
+Every Tripletex Customer will be synchronized with a PowerOffice Customer.
+
+Once a link between a Tripletex Customer and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOffice Customer Property
+     - PowerOffice Data Type
 
 
 Tripletex Employee to PowerOffice Address
