@@ -111,7 +111,7 @@ Properties
 
    * - ``docker.image``
      - String
-     - The fully qualified name of a Docker image, e.g. ``sesam/file-share-service:latest`` or ``quay.io/someuser/someimage:1.2.3``.
+     - The fully qualified name of a Docker image, e.g. ``sesam/file-share-service:latest`` or ``quay.io/someuser/someimage:1.2.3``. If the image name does not contain a fully qualified domain name it will default to assuming dockerhub.
      -
      - Yes
 
