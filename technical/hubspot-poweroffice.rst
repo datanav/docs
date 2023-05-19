@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-05-15 19:09:47
+Generated: 2023-05-19 10:59:11
 
 Introduction.
 ------------
@@ -26,14 +26,26 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.address
      - Address1
      - "string"
+   * - properties.address
+     - address1
+     - "string"
    * - properties.city
      - City
+     - "string"
+   * - properties.city
+     - city
      - "string"
    * - properties.country
      - CountryCode
      - "string"
+   * - properties.country
+     - countryCode
+     - "string"
    * - properties.zip
      - ZipCode
+     - "string"
+   * - properties.zip
+     - zipCode
      - "string"
 
 
