@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-12 13:02:02
+Generated: 2023-05-19 08:06:07
 
 Introduction.
 ------------
@@ -160,6 +160,9 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - HubSpot Deal Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - properties.dealname
+     - Description
+     - "string"
    * - properties.dealstage
      - sesam_Accepted
      - "boolean"
@@ -325,6 +328,9 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - properties.deal_currency_code
      - Currency.Id
      - "integer"
+   * - properties.dealname
+     - SaleText
+     - "string"
    * - properties.dealstage
      - Status
      - "string"
