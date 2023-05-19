@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-05-19 11:51:09
+Generated: 2023-05-19 11:54:12
 
 Introduction.
 ------------
@@ -104,6 +104,9 @@ The following properties are synchronized between a Poweroffice Customer and a T
      - "string"
    * - dateOfBirth
      - dateOfBirth
+     - "string"
+   * - firstName
+     - firstName
      - "string"
    * - id
      - id
