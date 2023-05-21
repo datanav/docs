@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-15 06:44:14
+Generated: 2023-05-21 09:22:03
 
 Introduction.
 ------------
@@ -312,6 +312,22 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - Name
      - name
      - "string"
+
+
+SuperOffice Ownercontactlink to Tripletex Department
+----------------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a Tripletex Department.
+
+Once a link between a SuperOffice Ownercontactlink and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - Tripletex Department Property
+     - Tripletex Data Type
 
 
 SuperOffice Product to Tripletex Product
