@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-22 22:07:22
+Generated: 2023-05-22 22:24:57
 
 Introduction.
 ------------
@@ -33,6 +33,85 @@ The following properties are synchronized between a Poweroffice Supplier and a P
    * - Poweroffice Supplier Property
      - PowerOffice Address Property
      - PowerOffice Data Type
+
+
+Poweroffice Contactperson to PowerOffice Customer
+-------------------------------------------------
+Every Poweroffice Contactperson will be synchronized with a PowerOffice Customer.
+
+Once a link between a Poweroffice Contactperson and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Contactperson and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Contactperson Property
+     - PowerOffice Customer Property
+     - PowerOffice Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - FirstName
+     - Name
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - ResidenceCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - city
+     - streetAddresses.city
+     - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - EmailAddress
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - Name
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastChanged
+     - LastChanged
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - residenceCountryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - zipCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Poweroffice Customer to PowerOffice Contactperson
