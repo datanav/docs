@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-22 22:53:47
+Generated: 2023-05-22 23:14:25
 
 Introduction.
 ------------
@@ -72,38 +72,6 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - ContactId
      - "string"
    * - ownercontactlink.contact_id.name
-     - Name
-     - "string"
-
-
-SuperOffice Pricelist to SuperOffice Listcurrencyitems
-------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Pricelist and a SuperOffice Listcurrencyitems must be established.
-
-A SuperOffice Pricelist will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - SuperOffice Listcurrencyitems Property
-   * - Currency
-     - Name
-
-Once a link between a SuperOffice Pricelist and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Pricelist and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Pricelist Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-   * - Description
-     - Tooltip
-     - "string"
-   * - ERPPriceListKey
      - Name
      - "string"
 
