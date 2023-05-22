@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-22 13:53:26
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -124,22 +124,6 @@ The following properties are synchronized between a SuperOffice Product and a Hu
    * - UnitListPrice
      - properties.price
      - "string"
-
-
-SuperOffice Quote to HubSpot Quote
-----------------------------------
-Every SuperOffice Quote will be synchronized with a HubSpot Quote.
-
-Once a link between a SuperOffice Quote and a HubSpot Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quote and a HubSpot Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quote Property
-     - HubSpot Quote Property
-     - HubSpot Data Type
 
 
 SuperOffice Quotealternative to HubSpot Quote
