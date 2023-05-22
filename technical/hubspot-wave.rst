@@ -2,25 +2,9 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-05-01 16:25:05
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Quote to Wave Customer
-------------------------------
-Every HubSpot Quote will be synchronized with a Wave Customer.
-
-Once a link between a HubSpot Quote and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Quote and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quote Property
-     - Wave Customer Property
-     - Wave Data Type
-
