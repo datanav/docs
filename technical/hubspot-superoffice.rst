@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-19 08:08:05
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -279,72 +279,6 @@ The following properties are synchronized between a HubSpot User and a SuperOffi
      - SuperOffice Data Type
 
 
-HubSpot Account to SuperOffice Listcurrencyitems
-------------------------------------------------
-Every HubSpot Account will be synchronized with a SuperOffice Listcurrencyitems.
-
-If a matching SuperOffice Listcurrencyitems already exists, the HubSpot Account will be merged with the existing one.
-If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
-
-A HubSpot Account will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - SuperOffice Listcurrencyitems Property
-   * - companyCurrency
-     - Name
-
-Once a link between a HubSpot Account and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-   * - companyCurrency
-     - Name
-     - "string"
-
-
-HubSpot Deal to SuperOffice Sale
---------------------------------
-Every HubSpot Deal will be synchronized with a SuperOffice Sale.
-
-Once a link between a HubSpot Deal and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a SuperOffice Sale:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - SuperOffice Sale Property
-     - SuperOffice Data Type
-   * - properties.amount
-     - Amount
-     - "float"
-   * - properties.closedate
-     - Saledate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - properties.deal_currency_code
-     - Currency.Id
-     - "integer"
-   * - properties.dealname
-     - SaleText
-     - "string"
-   * - properties.dealstage
-     - Status
-     - "string"
-   * - properties.description
-     - SaleText
-     - "string"
-
-
 HubSpot Lineitem to SuperOffice Quoteline
 -----------------------------------------
 Every HubSpot Lineitem will be synchronized with a SuperOffice Quoteline.
@@ -368,37 +302,6 @@ The following properties are synchronized between a HubSpot Lineitem and a Super
    * - properties.quantity
      - Quantity
      - "integer"
-
-
-HubSpot Product to SuperOffice Product
---------------------------------------
-Every HubSpot Product will be synchronized with a SuperOffice Product.
-
-Once a link between a HubSpot Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - UnitCost
-     - "string"
-   * - properties.hs_sku
-     - ERPProductKey
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - "decimal"
 
 
 HubSpot Ticket to SuperOffice Ticket
