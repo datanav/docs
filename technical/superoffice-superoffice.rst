@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-22 22:07:15
+Generated: 2023-05-22 22:07:22
 
 Introduction.
 ------------
@@ -51,8 +51,6 @@ A SuperOffice Ownercontactlink will merge with a SuperOffice Contact if one of t
      - SuperOffice Contact Property
    * - contact_id
      - ContactId
-   * - ownercontactlink.contact_id
-     - ContactId
 
 Once a link between a SuperOffice Ownercontactlink and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -70,38 +68,6 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - name
      - Name
      - "string"
-   * - ownercontactlink.contact_id
-     - ContactId
-     - "string"
-   * - ownercontactlink.contact_id.name
-     - Name
-     - "string"
-
-
-SuperOffice Ownercontactlist to SuperOffice Contact
----------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Ownercontactlist and a SuperOffice Contact must be established.
-
-A SuperOffice Ownercontactlist will merge with a SuperOffice Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ownercontactlist Property
-     - SuperOffice Contact Property
-   * - ownercontactlink.contact_id
-     - ContactId
-
-Once a link between a SuperOffice Ownercontactlist and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Ownercontactlist and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Ownercontactlist Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
    * - ownercontactlink.contact_id
      - ContactId
      - "string"
@@ -140,32 +106,6 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
    * - ERPPriceListKey
      - Name
      - "string"
-
-
-SuperOffice Project to SuperOffice Listprojectstatusitems
----------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Project and a SuperOffice Listprojectstatusitems must be established.
-
-A SuperOffice Project will merge with a SuperOffice Listprojectstatusitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - SuperOffice Listprojectstatusitems Property
-   * - ProjectStatus.Id
-     - Id
-
-Once a link between a SuperOffice Project and a SuperOffice Listprojectstatusitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Project and a SuperOffice Listprojectstatusitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - SuperOffice Listprojectstatusitems Property
-     - SuperOffice Data Type
 
 
 SuperOffice Quote to SuperOffice Sale
