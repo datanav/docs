@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-05-22 22:07:15
+Generated: 2023-05-22 22:13:19
 
 Introduction.
 ------------
@@ -69,67 +69,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - lastName
      - "string"
    * - zipCode
-     - postalCode
-     - "string"
-
-
-Poweroffice Customer to Tilores Human
--------------------------------------
-Every Poweroffice Customer will be synchronized with a Tilores Human.
-
-Once a link between a Poweroffice Customer and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Customer and a Tilores Human:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Customer Property
-     - Tilores Human Property
-     - Tilores Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - MailAddress.City
-     - city
-     - "string"
-   * - MailAddress.ZipCode
-     - postalCode
-     - "string"
-   * - Name
-     - firstName
-     - "string"
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - mailAddress.city
-     - city
-     - "string"
-   * - mailAddress.zipCode
-     - postalCode
-     - "string"
-   * - mailaddress.city
-     - city
-     - "string"
-   * - streetAddresses.city
-     - city
-     - "string"
-   * - streetAddresses.zipCode
      - postalCode
      - "string"
 
