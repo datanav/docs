@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-22 22:07:22
+Generated: 2023-05-22 22:13:19
 
 Introduction.
 ------------
@@ -170,59 +170,6 @@ The following properties are synchronized between a SuperOffice User and a Super
    * - personEmail
      - Emails.Value
      - "string"
-
-
-SuperOffice Quoteline to SuperOffice Quotealternative
------------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a SuperOffice Quoteline and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - TotalPrice
-     - TotalPrice
-     - "integer"
-   * - VATInfo
-     - VATInfo
-     - "string"
-
-
-SuperOffice Sale to SuperOffice Quotealternative
-------------------------------------------------
-Every SuperOffice Sale will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a SuperOffice Sale and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - Amount
-     - TotalPrice
-     - "integer"
-   * - Heading
-     - Name
-     - "string"
-   * - SaleId
-     - sesam_SaleId
-     - "integer"
-   * - SaleText
-     - Description
-     - "string"
-   * - Status
-     - sesam_Accepted
-     - "boolean"
 
 
 SuperOffice User to SuperOffice Listcategoryitems
