@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-19 08:08:05
+Generated: 2023-05-22 13:53:26
 
 Introduction.
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - SuperOffice Contact Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - Address.Postal.Address1
+     - properties.address
+     - "string"
+   * - Address.Postal.Address2
+     - properties.address2
+     - "string"
    * - Address.Street.Address1
      - properties.address
      - "string"
