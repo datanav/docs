@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-21 09:22:14
+Generated: 2023-05-22 10:22:20
 
 Introduction.
 ------------
@@ -440,6 +440,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - invoiceComment
      - "string"
+   * - sesam_Accepted
+     - isClosed
+     - "string"
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -517,6 +520,9 @@ The following properties are synchronized between a SuperOffice Sale and a Tripl
    * - Saledate
      - orderDate
      - "datetime-format","%Y-%m-%d","_."]
+   * - Status
+     - isClosed
+     - "string"
 
 
 SuperOffice User to Tripletex Employee
