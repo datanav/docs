@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-22 22:24:59
+Generated: 2023-05-22 22:25:14
 
 Introduction.
 ------------
@@ -235,6 +235,12 @@ The following properties are synchronized between a HubSpot Quote and a SuperOff
    * - HubSpot Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - properties.hs_quote_amount
+     - TotalPrice
+     - "integer"
+   * - properties.hs_title
+     - Name
+     - "string"
 
 
 HubSpot Ticket to SuperOffice Ticket
