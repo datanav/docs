@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-22 10:22:19
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -402,41 +402,6 @@ The following properties are synchronized between a Tripletex Orderline and a Su
      - SuperOffice Data Type
 
 
-Tripletex Currency to SuperOffice Listcurrencyitems
----------------------------------------------------
-Every Tripletex Currency will be synchronized with a SuperOffice Listcurrencyitems.
-
-If a matching SuperOffice Listcurrencyitems already exists, the Tripletex Currency will be merged with the existing one.
-If no matching SuperOffice Listcurrencyitems is found, a new SuperOffice Listcurrencyitems will be created.
-
-A Tripletex Currency will merge with a SuperOffice Listcurrencyitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Listcurrencyitems Property
-   * - code
-     - Name
-
-Once a link between a Tripletex Currency and a SuperOffice Listcurrencyitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a SuperOffice Listcurrencyitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - SuperOffice Listcurrencyitems Property
-     - SuperOffice Data Type
-   * - code
-     - Name
-     - "string"
-   * - description
-     - Tooltip
-     - "string"
-
-
 Tripletex Orderline to SuperOffice Quoteline
 --------------------------------------------
 Every Tripletex Orderline will be synchronized with a SuperOffice Quoteline.
@@ -472,65 +437,6 @@ The following properties are synchronized between a Tripletex Orderline and a Su
    * - unitPriceExcludingVatCurrency
      - UnitListPrice
      - "string"
-   * - vatType.id
-     - VAT
-     - "integer"
-
-
-Tripletex Product to SuperOffice Product
-----------------------------------------
-Every Tripletex Product will be synchronized with a SuperOffice Product.
-
-If a matching SuperOffice Product already exists, the Tripletex Product will be merged with the existing one.
-If no matching SuperOffice Product is found, a new SuperOffice Product will be created.
-
-A Tripletex Product will merge with a SuperOffice Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-   * - number
-     - ERPProductKey
-
-Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - costExcludingVatCurrency
-     - UnitCost
-     - "string"
-   * - currency.id
-     - ERPPriceListKey
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - number
-     - ERPProductKey
-     - "string"
-   * - priceExcludingVatCurrency
-     - UnitListPrice
-     - "decimal"
-   * - productUnit.id
-     - PriceUnit
-     - "string"
-   * - supplier.id
-     - Supplier
-     - "string"
-   * - vatType
-     - VAT
-     - "integer"
    * - vatType.id
      - VAT
      - "integer"
