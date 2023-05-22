@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-22 10:22:20
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -94,38 +94,6 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - properties.price
      - priceExcludingVatCurrency
      - "float"
-
-
-HubSpot Quote to Tripletex Contact
-----------------------------------
-Every HubSpot Quote will be synchronized with a Tripletex Contact.
-
-Once a link between a HubSpot Quote and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Quote and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quote Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-
-
-HubSpot Quote to Tripletex Customer
------------------------------------
-Every HubSpot Quote will be synchronized with a Tripletex Customer.
-
-Once a link between a HubSpot Quote and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Quote and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quote Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
 
 
 HubSpot User to Tripletex Employee
