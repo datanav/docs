@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-12 13:02:02
+Generated: 2023-05-22 10:22:19
 
 Introduction.
 ------------
@@ -381,6 +381,9 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - invoiceComment
      - Name
      - "string"
+   * - isClosed
+     - sesam_Accepted
+     - "boolean"
 
 
 Tripletex Orderline to SuperOffice Quotealternative
