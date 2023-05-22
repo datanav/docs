@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-22 22:07:15
+Generated: 2023-05-22 22:13:19
 
 Introduction.
 ------------
@@ -137,85 +137,6 @@ The following properties are synchronized between a Poweroffice Customer and a S
      - "string"
 
 
-Poweroffice Customer to SuperOffice Person
-------------------------------------------
-Every Poweroffice Customer will be synchronized with a SuperOffice Person.
-
-Once a link between a Poweroffice Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Customer and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Customer Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - DateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - FirstName
-     - Firstname
-     - "string"
-   * - Id
-     - PersonId
-     - "integer"
-   * - LastName
-     - Lastname
-     - "string"
-   * - MailAddress.Address1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.Address2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.Address3
-     - Address.Postal.Address3
-     - "string"
-   * - MailAddress.City
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.CountryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.ZipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - Name
-     - Firstname
-     - "string"
-   * - dateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - firstName
-     - Firstname
-     - "string"
-   * - id
-     - PersonId
-     - "integer"
-   * - mailAddress.address1
-     - Address.Postal.Address1
-     - "string"
-   * - mailAddress.address2
-     - Address.Postal.Address2
-     - "string"
-   * - mailAddress.address3
-     - Address.Postal.Address3
-     - "string"
-   * - mailAddress.city
-     - Address.Postal.City
-     - "string"
-   * - mailAddress.countryCode
-     - Country.CountryId
-     - "integer"
-   * - mailAddress.zipCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - mailaddress.city
-     - Address.Postal.City
-     - "string"
-
-
 Poweroffice Employee to SuperOffice Person
 ------------------------------------------
 Every Poweroffice Employee will be synchronized with a SuperOffice Person.
@@ -260,57 +181,6 @@ The following properties are synchronized between a Poweroffice Employee and a S
    * - MailAddress.ZipCode
      - Address.Postal.Zipcode
      - "string"
-
-
-Poweroffice Outgoinginvoice to SuperOffice Quotealternative
------------------------------------------------------------
-Every Poweroffice Outgoinginvoice will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a Poweroffice Outgoinginvoice and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Outgoinginvoice and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Outgoinginvoice Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - NetAmount
-     - TotalPrice
-     - "integer"
-
-
-Poweroffice Salesorder to SuperOffice Quotealternative
-------------------------------------------------------
-Every Poweroffice Salesorder will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a Poweroffice Salesorder and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Salesorder and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Salesorder Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-
-
-Poweroffice Salesorderline to SuperOffice Quotealternative
-----------------------------------------------------------
-Every Poweroffice Salesorderline will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a Poweroffice Salesorderline and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Salesorderline and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Salesorderline Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
 
 
 Poweroffice Supplier to SuperOffice Contact
