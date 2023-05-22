@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-05-12 10:45:03
+Generated: 2023-05-22 13:53:26
 
 Introduction.
 ------------
@@ -54,6 +54,12 @@ The following properties are synchronized between a Tripletex Customer and a Hub
    * - Tripletex Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.addressLine2
+     - properties.address2
+     - "string"
    * - id
      - id
      - "string"
@@ -77,6 +83,12 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.addressLine2
+     - properties.address2
      - "string"
 
 
@@ -168,6 +180,12 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
    * - Tripletex Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.addressLine2
+     - properties.address2
+     - "string"
    * - id
      - id
      - "string"
@@ -191,6 +209,12 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.addressLine2
+     - properties.address2
      - "string"
 
 
