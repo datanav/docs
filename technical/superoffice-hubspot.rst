@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-22 22:07:15
+Generated: 2023-05-22 22:30:21
 
 Introduction.
 ------------
@@ -175,7 +175,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
 
 SuperOffice Sale to HubSpot Deal
 --------------------------------
-Every SuperOffice Sale will be synchronized with a HubSpot Deal.
+When a Superoffice Sale gets the status "Sold", it  will be synchronized with a HubSpot Deal.
 
 Once a link between a SuperOffice Sale and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
