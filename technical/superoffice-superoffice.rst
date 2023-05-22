@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-16 08:45:10
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -142,6 +142,32 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
      - "string"
 
 
+SuperOffice Project to SuperOffice Listprojectstatusitems
+---------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Project and a SuperOffice Listprojectstatusitems must be established.
+
+A SuperOffice Project will merge with a SuperOffice Listprojectstatusitems if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - SuperOffice Listprojectstatusitems Property
+   * - ProjectStatus.Id
+     - Id
+
+Once a link between a SuperOffice Project and a SuperOffice Listprojectstatusitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a SuperOffice Listprojectstatusitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - SuperOffice Listprojectstatusitems Property
+     - SuperOffice Data Type
+
+
 SuperOffice Quote to SuperOffice Sale
 -------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quote and a SuperOffice Sale must be established.
@@ -257,35 +283,6 @@ The following properties are synchronized between a SuperOffice Sale and a Super
    * - Status
      - sesam_Accepted
      - "boolean"
-
-
-SuperOffice Project to SuperOffice Listprojectstatusitems
----------------------------------------------------------
-Every SuperOffice Project will be synchronized with a SuperOffice Listprojectstatusitems.
-
-If a matching SuperOffice Listprojectstatusitems already exists, the SuperOffice Project will be merged with the existing one.
-If no matching SuperOffice Listprojectstatusitems is found, a new SuperOffice Listprojectstatusitems will be created.
-
-A SuperOffice Project will merge with a SuperOffice Listprojectstatusitems if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - SuperOffice Listprojectstatusitems Property
-   * - ProjectStatus.Id
-     - Id
-
-Once a link between a SuperOffice Project and a SuperOffice Listprojectstatusitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Project and a SuperOffice Listprojectstatusitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - SuperOffice Listprojectstatusitems Property
-     - SuperOffice Data Type
 
 
 SuperOffice User to SuperOffice Listcategoryitems
