@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-08 12:43:05
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -66,22 +66,6 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - VAT
      - VatCode
      - "string"
-
-
-SuperOffice Quotealternative to PowerOffice Salesorder
-------------------------------------------------------
-When a Superoffice QuoteAlternative gets Accepted = "true", it  will be synchronized with a PowerOffice Salesorder.
-
-Once a link between a SuperOffice Quotealternative and a PowerOffice Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOffice Salesorder:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - PowerOffice Salesorder Property
-     - PowerOffice Data Type
 
 
 SuperOffice Quoteline to PowerOffice Salesorderline
