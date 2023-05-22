@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-19 13:11:09
+Generated: 2023-05-22 22:04:18
 
 Introduction.
 ------------
@@ -345,46 +345,6 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - WebsiteUrl
      - Urls.Value
      - "string"
-
-
-Poweroffice Product to SuperOffice Product
-------------------------------------------
-Every Poweroffice Product will be synchronized with a SuperOffice Product.
-
-Once a link between a Poweroffice Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - CostPrice
-     - UnitCost
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - ProductGroupId
-     - ProductCategoryKey
-     - "string"
-   * - SalesPrice
-     - UnitListPrice
-     - "decimal"
-   * - Type
-     - ProductTypeKey
-     - "string"
-   * - Unit
-     - PriceUnit
-     - "string"
-   * - VatCode
-     - VAT
-     - "integer"
 
 
 Poweroffice Productgroup to SuperOffice Listproductcategoryitems
