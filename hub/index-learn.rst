@@ -1,3 +1,6 @@
+.. rst-class:: center-title
+
+===========
 Learn Sesam
 ===========
 
@@ -51,7 +54,6 @@ you start by following the :doc:`Getting started guide <guide-getting-started>` 
             :classes: read-more
 
 |
-
 
 .. toctree::
    :maxdepth: 1
