@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-23 02:03:42
+Generated: 2023-05-23 02:04:35
 
 Introduction.
 ------------
@@ -359,9 +359,6 @@ The following properties are synchronized between a Tripletex Department and a S
    * - Tripletex Department Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Tripletex Orderline to SuperOffice Quoteline
