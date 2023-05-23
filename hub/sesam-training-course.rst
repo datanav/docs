@@ -14,7 +14,7 @@ You will learn about:
  
 Who should sign up:
 -------------------
-- Integration engineers and/or developers who would like to learn more about data driven architecture in addition to getting practice experience with it.
+- Integration engineers and developers who would like to learn more about, and get some hands-on experience with, data driven architecture.
 - Architects who would like to learn how Sesam places itself technically in comparison with other integration solutions.
  
 Requirements:
@@ -23,7 +23,7 @@ Requirements:
 
 Course structure:
 -----------------
-The course is divided into smaller theoretical sections followed by practical examples to engage the course taker. This is used to ensure a tight coupling between theory and practice. 
+The course is divided into smaller theoretical sections followed by practical examples to engage the course participant. This is used to ensure a tight coupling between theory and practice. 
 
 Agenda:
 -------
@@ -37,7 +37,7 @@ Agenda:
 - Joins and intersections
 - Playing the long game
 
-*Day two: DTl in continuation and more complex integrations*
+*Day two: DTL in continuation and more complex integrations*
 - Recap of day one
 - DTL continued
 - Shaping data
