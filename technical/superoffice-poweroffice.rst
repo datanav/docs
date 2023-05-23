@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-23 06:32:42
+Generated: 2023-05-23 13:30:41
 
 Introduction.
 ------------
@@ -99,34 +99,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - VAT
      - VatReturnSpecification
-     - "string"
-
-
-SuperOffice Sale to PowerOffice Salesorder
-------------------------------------------
-When a Superoffice Sale gets the status "Sold", it  will be synchronized with a PowerOffice Salesorder.
-
-Once a link between a SuperOffice Sale and a PowerOffice Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a PowerOffice Salesorder:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - PowerOffice Salesorder Property
-     - PowerOffice Data Type
-   * - Contact.ContactId
-     - DepartmentCode
-     - "string"
-   * - Currency.Id
-     - Currency
-     - "string"
-   * - Saledate
-     - DeliveryDate
-     - "string"
-   * - Saledate
-     - OrderDate
      - "string"
 
 
