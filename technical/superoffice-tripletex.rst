@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 09:27:38
+Generated: 2023-05-23 13:30:41
 
 Introduction.
 ------------
@@ -506,46 +506,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - vatType.id
      - "integer"
-
-
-SuperOffice Sale to Tripletex Order
------------------------------------
-When a Superoffice Sale gets the status "Sold", it  will be synchronized with a Tripletex Order.
-
-Once a link between a SuperOffice Sale and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - Associate.AssociateId
-     - ourContactEmployee.id
-     - "integer"
-   * - Contact.ContactId
-     - customer.id
-     - "integer"
-   * - Currency.Id
-     - currency.id
-     - "integer"
-   * - Heading
-     - invoiceComment
-     - "string"
-   * - Person.PersonId
-     - contact.id
-     - "integer"
-   * - Saledate
-     - deliveryDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - Saledate
-     - orderDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - Status
-     - isClosed
-     - "string"
 
 
 SuperOffice User to Tripletex Employee
