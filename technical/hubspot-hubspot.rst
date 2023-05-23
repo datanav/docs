@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-23 08:46:37
+Generated: 2023-05-23 08:47:30
 
 Introduction.
 ------------
@@ -306,6 +306,9 @@ The following properties are synchronized between a HubSpot Lineitem and a HubSp
    * - HubSpot Lineitem Property
      - HubSpot Lineitemquoteassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
 
 
 HubSpot Lineitemdealassociation to HubSpot Lineitem
@@ -358,6 +361,12 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - HubSpot Lineitemquoteassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
 
 
 HubSpot Lineitemquoteassociation to HubSpot Lineitem
@@ -520,4 +529,7 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociationtype Property
      - HubSpot Lineitemdealassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
