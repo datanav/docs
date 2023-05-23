@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-23 09:27:38
+Generated: 2023-05-23 19:14:42
 
 Introduction.
 ------------
@@ -49,6 +49,24 @@ The following properties are synchronized between a HubSpot Company and a Triple
    * - properties.zip
      - physicalAddress.postalCode
      - "string"
+
+
+HubSpot Contact to Tripletex Contact
+------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Contact must be established.
+
+A new Tripletex Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Tripletex.
+
+Once a link between a HubSpot Contact and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
 
 
 HubSpot Deal to Tripletex Order
