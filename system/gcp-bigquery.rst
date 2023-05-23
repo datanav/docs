@@ -18,11 +18,27 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Agreement <datatype_agreement>`
+     - false
+     - true
+
    * - :ref:`Asset <datatype_asset>`
      - true
      - true
 
    * - :ref:`Documentation <datatype_documentation>`
+     - false
+     - true
+
+   * - :ref:`Event <datatype_event>`
+     - false
+     - true
+
+   * - :ref:`Person <datatype_human>`
+     - false
+     - true
+
+   * - :ref:`Organisation <datatype_organisation>`
      - false
      - true
 
