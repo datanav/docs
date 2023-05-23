@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 06:34:39
+Generated: 2023-05-23 09:16:40
 
 Introduction.
 ------------
@@ -141,7 +141,7 @@ The following properties are synchronized between a Poweroffice Customer and a T
      - "string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
+     - "first"
    * - id
      - id
      - "integer"
