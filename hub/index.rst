@@ -13,6 +13,25 @@ Sesam Hub is a Master Data Hub that simplifies the process of making up-to-date 
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Getting started**
+
+    Get started with Sesam by following these tutorials.
+
+    .. link-button:: guide-getting-started
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+
+    ---
+    **Sesam course**
+
+    Get an introduction to Sesam by attending to one of our courses
+
+    .. link-button:: sesam-training-course
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
+    ---
     **What is Sesam Hub**
 
     Learn more about Sesam and what benefits it can give your platform.
@@ -47,24 +66,6 @@ Sesam Hub is a Master Data Hub that simplifies the process of making up-to-date 
     Check some of the product features that make Sesam flexible, agile and effective.
 
     .. link-button:: index_product_features
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Getting started**
-
-    Get started with Sesam by following these tutorials.
-
-    .. link-button:: guide-getting-started
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
-    **Core principles**
-
-    Read about the fundamental principles to ensure effective Master data management.
-
-    .. link-button:: core-principles
             :type: ref
             :text: Read more
             :classes: btn-outline-primary btn-block
@@ -125,15 +126,6 @@ Read about the different topics in documentation to ensure proper use of Sesam a
         :text: Read more
         :classes: btn-outline-primary btn-block
     ---
-    **Data platforms**
-
-    See how Sesam works within cloud providers like Azure, Amazon and Google.
-
-    .. link-button:: index-dataplatforms
-            :type: ref
-            :text: Read more
-            :classes: btn-outline-primary btn-block
-    ---
     **Operations**
 
     Read about some of the tailored functionalities Sesam provides for a secure solution.
@@ -187,11 +179,14 @@ Learn how to use Sesam effectively by following these tutorials.
             :text: Read more
             :classes: btn-outline-primary btn-block
     ---
-    :body: bg-info text-left text-white
+    **Sesam course**
 
-    **Much more to come**
+    Get an introduction to Sesam by attending to one of our courses
 
-    We are constantly working on more guides and tutorials to help you learn and use Sesam.
+    .. link-button:: sesam-training-course
+            :type: ref
+            :text: Read more
+            :classes: btn-outline-primary btn-block
 
 
 .. toctree::
