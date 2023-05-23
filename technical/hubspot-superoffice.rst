@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-23 06:33:36
+Generated: 2023-05-23 13:28:41
 
 Introduction.
 ------------
@@ -164,7 +164,7 @@ The following properties are synchronized between a HubSpot User and a SuperOffi
 
 HubSpot Deal to SuperOffice Sale
 --------------------------------
-When a HubSpot Deal gets the has a 100% probability, it  will be synchronized with a SuperOffice Sale.
+Every HubSpot Deal will be synchronized with a SuperOffice Sale.
 
 Once a link between a HubSpot Deal and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
 
