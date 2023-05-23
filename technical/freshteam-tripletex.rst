@@ -2,54 +2,12 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Contact to Tripletex Department
----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a HubSpot Contact if it is connected to a HubSpot User, Superoffice-user, Tripletex-contact, Freshteam-employee, Superoffice-person, Tripletex-employee, Poweroffice-employee, or Tripletex-department that is synchronized into Tripletex.
-
-Once a link between a HubSpot Contact and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-HubSpot Customer to Tripletex Department
-----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Customer and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a HubSpot Customer if it is connected to a HubSpot User, Superoffice-user, Tripletex-contact, Freshteam-employee, Superoffice-person, Tripletex-employee, Poweroffice-employee, or Tripletex-department that is synchronized into Tripletex.
-
-Once a link between a HubSpot Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Customer and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Customer Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
 
 Freshteam Employee to Tripletex Employee
 ----------------------------------------
