@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 06:26:42
 
 Introduction.
 ------------
@@ -336,6 +336,110 @@ The following properties are synchronized between a HubSpot Owner and a HubSpot 
      - HubSpot Data Type
    * - email
      - email
+     - "string"
+
+
+SuperOffice Contact to HubSpot Company
+--------------------------------------
+Every SuperOffice Contact will be synchronized with a HubSpot Company.
+
+Once a link between a SuperOffice Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - Address.Postal.Address1
+     - properties.address
+     - "string"
+   * - Address.Postal.Address2
+     - properties.address2
+     - "string"
+   * - Address.Street.Address1
+     - properties.address
+     - "string"
+   * - Address.Street.Address2
+     - properties.address2
+     - "string"
+   * - Address.Street.City
+     - properties.city
+     - "string"
+   * - Address.Street.Zipcode
+     - properties.zip
+     - "string"
+   * - ContactId
+     - id
+     - "string"
+   * - Country.CountryId
+     - properties.country
+     - "string"
+   * - Domains
+     - properties.website
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
+   * - Phones.Value
+     - properties.phone
+     - "string"
+   * - Urls.Value
+     - properties.website
+     - "string"
+
+
+SuperOffice Customer to HubSpot Company
+---------------------------------------
+Every SuperOffice Customer will be synchronized with a HubSpot Company.
+
+Once a link between a SuperOffice Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Customer and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Customer Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - physicalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - physicalAddress.city
+     - properties.city
+     - "string"
+   * - physicalAddress.country.id
+     - properties.country
+     - "string"
+   * - physicalAddress.postalCode
+     - properties.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.addressLine2
+     - properties.address2
      - "string"
 
 
