@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 05:46:43
 
 Introduction.
 ------------
@@ -392,5 +392,47 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "integer"
    * - postalAddress.postalCode
      - postalAddress.postalCode
+     - "string"
+
+
+Tripletex Customer to Tripletex Department
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Tripletex Department must be established.
+
+A new Tripletex Department will be created from a Tripletex Customer if it is connected to a Tripletex Contact, Employee, or Department that is synchronized into Tripletex.
+
+Once a link between a Tripletex Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+   * - name
+     - name
+     - "string"
+
+
+Tripletex Department to Tripletex Customer
+------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into Tripletex.
+
+Once a link between a Tripletex Department and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+   * - name
+     - name
      - "string"
 
