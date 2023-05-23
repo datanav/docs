@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
@@ -58,58 +58,6 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
      - "string"
    * - Urls.Value
      - properties.website
-     - "string"
-
-
-SuperOffice Customer to HubSpot Company
----------------------------------------
-Every SuperOffice Customer will be synchronized with a HubSpot Company.
-
-Once a link between a SuperOffice Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Customer and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Customer Property
-     - HubSpot Company Property
-     - HubSpot Data Type
-   * - deliveryAddress.addressLine1
-     - properties.address
-     - "string"
-   * - deliveryAddress.addressLine2
-     - properties.address2
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - phoneNumber
-     - properties.phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - physicalAddress.addressLine2
-     - properties.address2
-     - "string"
-   * - physicalAddress.city
-     - properties.city
-     - "string"
-   * - physicalAddress.country.id
-     - properties.country
-     - "string"
-   * - physicalAddress.postalCode
-     - properties.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - postalAddress.addressLine2
-     - properties.address2
      - "string"
 
 
