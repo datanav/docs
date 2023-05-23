@@ -11,7 +11,6 @@ you start by following the :doc:`Getting started guide <guide-getting-started>` 
 |
 |
 
-
 .. panels::
     :body: text-left
     :container: container-lg pb-3
@@ -22,36 +21,39 @@ you start by following the :doc:`Getting started guide <guide-getting-started>` 
     A two day course where you will learn to navigate and use the Sesam Management Studio.
 
     .. link-button:: sesam-training-course
-            :type: ref
-            :text: Read more
-            :classes: read-more
-    ---
-    **Working in Sesam Projects**
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
 
-    A two day course where you will learn to appreciate how Sesam should be used in projects.
-
-    .. link-button:: working-in-sesam-projects
-            :type: ref
-            :text: Read more
-            :classes: read-more
     ---
     **Getting started**
 
     A step-by-step guide that will help you getting started using Sesam.
 
     .. link-button:: guide-getting-started
-            :type: ref
-            :text: Read more
-            :classes: read-more
-   ---
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    **Working in Sesam Projects**
+
+    A two day course where you will learn to appreciate how Sesam should be used in projects.
+
+    .. link-button:: working-in-sesam-projects
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+    ---
+    
     **Data synchronization**
 
     A collection of guides related to data synchronization.
 
     .. link-button:: index-learn-synchronization
-            :type: ref
-            :text: Read more
-            :classes: read-more
+        :type: ref
+        :text: Read more
+        :classes: btn-outline-primary btn-block
+
 
 |
 
