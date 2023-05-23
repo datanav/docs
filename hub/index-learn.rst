@@ -57,6 +57,7 @@ you start by following the :doc:`Getting started guide <guide-getting-started>` 
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
 
    Sesam Training Course <sesam-training-course>
