@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-22 23:06:19
+Generated: 2023-05-23 05:41:35
 
 Introduction.
 ------------
@@ -12,8 +12,6 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 SuperOffice Contact to Tripletex Customer
 -----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, User, Person, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Contact will merge with a Tripletex Customer if one of the following property combinations match:
 
@@ -164,8 +162,6 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
 SuperOffice Person to Tripletex Contact
 ---------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
-
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
 
