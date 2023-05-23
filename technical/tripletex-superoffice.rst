@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
@@ -345,25 +345,6 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
      - "string"
 
 
-HubSpot Department to SuperOffice Contact
------------------------------------------
-Every HubSpot Department will be synchronized with a SuperOffice Contact.
-
-Once a link between a HubSpot Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Department and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Department Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
-
-
 Tripletex Department to SuperOffice Contact
 -------------------------------------------
 Every Tripletex Department will be synchronized with a SuperOffice Contact.
@@ -381,30 +362,6 @@ The following properties are synchronized between a Tripletex Department and a S
    * - name
      - Name
      - "string"
-
-
-HubSpot Order to SuperOffice Quotealternative
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Order and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a HubSpot Order if it is connected to a HubSpot Lineitem, Tripletex-orderline, Superoffice-quoteline, or Poweroffice-salesorderline that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Order and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Order Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - invoiceComment
-     - Name
-     - "string"
-   * - isClosed
-     - sesam_Accepted
-     - "boolean"
 
 
 Tripletex Order to SuperOffice Quotealternative
@@ -429,25 +386,6 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - isClosed
      - sesam_Accepted
      - "boolean"
-
-
-Poweroffice Productgroup to SuperOffice Listproductcategoryitems
-----------------------------------------------------------------
-Every Poweroffice Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - Name
-     - Name
-     - "string"
 
 
 Tripletex Orderline to SuperOffice Quoteline
