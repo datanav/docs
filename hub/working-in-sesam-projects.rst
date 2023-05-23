@@ -18,16 +18,16 @@ Who should sign up
 - Integration engineers and developers who would like to learn more about, and get some hands-on experience with, working in Sesam projects.
 - Architects who would like to learn how a Sesam project is set up and how the different pieces of tools and/or techniques fit together.
  
-Requirements:
--------------
+Requirements
+------------
 - A GitHub account.
 
 Course structure
 ----------------
 The course is divided into smaller theoretical sections followed by practical examples to engage the course participant. This is used to ensure a tight coupling between theory and practice. 
 
-Agenda:
--------
+Agenda
+------
 *Day one: Sesam under the hood and getting ready to work on a project*
 
 - Introduction
