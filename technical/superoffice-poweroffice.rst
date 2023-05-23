@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
@@ -149,24 +149,5 @@ The following properties are synchronized between a SuperOffice User and a Power
      - "string"
    * - lastName
      - LastName
-     - "string"
-
-
-Tripletex Productgroup to PowerOffice Productgroup
---------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a PowerOffice Productgroup.
-
-Once a link between a Tripletex Productgroup and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a PowerOffice Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - PowerOffice Productgroup Property
-     - PowerOffice Data Type
-   * - name
-     - Name
      - "string"
 
