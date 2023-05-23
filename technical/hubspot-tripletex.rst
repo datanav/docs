@@ -2,92 +2,12 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-23 06:33:36
+Generated: 2023-05-23 06:34:39
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-SuperOffice Contact to Tripletex Customer
------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, User, Person, or Quotealternative that is synchronized into Tripletex.
-
-A SuperOffice Contact will merge with a Tripletex Customer if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Customer Property
-   * - Emails.Value
-     - email
-   * - Emails.Value
-     - invoiceEmail
-   * - Emails.Value
-     - overdueNoticeEmail
-
-Once a link between a SuperOffice Contact and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - Address.Postal.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - Address.Postal.City
-     - postalAddress.city
-     - "string"
-   * - Address.Postal.Zipcode
-     - postalAddress.postalCode
-     - "string"
-   * - Address.Street.Address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - Address.Street.City
-     - physicalAddress.city
-     - "string"
-   * - Address.Street.Zipcode
-     - physicalAddress.postalCode
-     - "string"
-   * - Associate.AssociateId
-     - accountManager.id
-     - "integer"
-   * - ContactId
-     - id
-     - "integer"
-   * - Country.CountryId
-     - physicalAddress.country.id
-     - "integer"
-   * - Country.CountryId
-     - postalAddress.country.id
-     - "integer"
-   * - Emails.Value
-     - email
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
-     - organizationNumber
-     - "string"
-   * - Phones.Value
-     - phoneNumber
-     - "string"
-
 
 HubSpot Company to Tripletex Customer
 -------------------------------------
