@@ -30,6 +30,7 @@ The course is divided into smaller theoretical sections followed by practical ex
 Agenda
 ------
 *Day one: Introduction to integration architectures and DTL in Sesam*
+
 - Introduction
 - Integration architectures
 - Management Studio and Sesam concepts
@@ -40,6 +41,7 @@ Agenda
 - Playing the long game
 
 *Day two: DTL in continuation and more complex integrations*
+
 - Recap of day one
 - DTL continued
 - Shaping data
