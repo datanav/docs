@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-23 19:14:42
+Generated: 2023-05-23 19:15:31
 
 Introduction.
 ------------
@@ -67,6 +67,21 @@ The following properties are synchronized between a HubSpot Contact and a Triple
    * - HubSpot Contact Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - firstName
+     - "string"
+   * - properties.lastname
+     - lastName
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "string"
+   * - properties.phone
+     - phoneNumberWork
+     - "string"
 
 
 HubSpot Deal to Tripletex Order
