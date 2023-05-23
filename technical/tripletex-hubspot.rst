@@ -2,56 +2,25 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 06:26:42
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Contact to HubSpot Contact
-------------------------------------
-Every Tripletex Contact will be synchronized with a HubSpot Contact.
+SuperOffice Customer to HubSpot Company
+---------------------------------------
+Every SuperOffice Customer will be synchronized with a HubSpot Company.
 
-Once a link between a Tripletex Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Contact and a HubSpot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
-   * - email
-     - properties.email
-     - "string"
-   * - firstName
-     - properties.firstname
-     - "string"
-   * - lastName
-     - properties.lastname
-     - "string"
-   * - phoneNumberMobile
-     - properties.mobilephone
-     - "string"
-   * - phoneNumberWork
-     - properties.phone
-     - "string"
-
-
-Tripletex Customer to HubSpot Company
--------------------------------------
-Every Tripletex Customer will be synchronized with a HubSpot Company.
-
-Once a link between a Tripletex Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a HubSpot Company:
+The following properties are synchronized between a SuperOffice Customer and a HubSpot Company:
 
 .. list-table::
    :header-rows: 1
 
-   * - Tripletex Customer Property
+   * - SuperOffice Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - deliveryAddress.addressLine1
@@ -89,6 +58,37 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
    * - postalAddress.addressLine2
      - properties.address2
+     - "string"
+
+
+Tripletex Contact to HubSpot Contact
+------------------------------------
+Every Tripletex Contact will be synchronized with a HubSpot Contact.
+
+Once a link between a Tripletex Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - phoneNumberMobile
+     - properties.mobilephone
+     - "string"
+   * - phoneNumberWork
+     - properties.phone
      - "string"
 
 
