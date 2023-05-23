@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-23 08:46:33
+Generated: 2023-05-23 08:46:37
 
 Introduction.
 ------------
@@ -282,6 +282,32 @@ The following properties are synchronized between a HubSpot Lineitem and a HubSp
      - "string"
 
 
+HubSpot Lineitem to HubSpot Lineitemquoteassociation
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitem and a HubSpot Lineitemquoteassociation must be established.
+
+A HubSpot Lineitem will merge with a HubSpot Lineitemquoteassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemquoteassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitem and a HubSpot Lineitemquoteassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a HubSpot Lineitemquoteassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Lineitemquoteassociation Property
+     - HubSpot Data Type
+
+
 HubSpot Lineitemdealassociation to HubSpot Lineitem
 ---------------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Lineitemdealassociation and a HubSpot Lineitem must be established.
@@ -305,6 +331,32 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
 
    * - HubSpot Lineitemdealassociation Property
      - HubSpot Lineitem Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitemdealassociation to HubSpot Lineitemquoteassociation
+-------------------------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitemdealassociation and a HubSpot Lineitemquoteassociation must be established.
+
+A HubSpot Lineitemdealassociation will merge with a HubSpot Lineitemquoteassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Lineitemquoteassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitemdealassociation and a HubSpot Lineitemquoteassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a HubSpot Lineitemquoteassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - HubSpot Lineitemquoteassociation Property
      - HubSpot Data Type
 
 
@@ -452,4 +504,20 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - label
      - label
      - "string"
+
+
+HubSpot Lineitemquoteassociationtype to HubSpot Lineitemdealassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Data Type
 
