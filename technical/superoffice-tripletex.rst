@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 05:46:43
 
 Introduction.
 ------------
@@ -292,6 +292,51 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - "string"
    * - personEmail
      - email
+     - "string"
+
+
+SuperOffice Contact to Tripletex Department
+-------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Department must be established.
+
+A new Tripletex Department will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Contact and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
+
+
+SuperOffice Quotealternative to Tripletex Order
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Tripletex Order must be established.
+
+A new Tripletex Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Quotealternative and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - Name
+     - invoiceComment
+     - "string"
+   * - sesam_Accepted
+     - isClosed
      - "string"
 
 
