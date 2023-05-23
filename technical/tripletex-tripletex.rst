@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-23 06:34:39
+Generated: 2023-05-23 09:16:40
 
 Introduction.
 ------------
@@ -359,7 +359,7 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
    * - phoneNumber
      - phoneNumber
-     - "string"
+     - "first"
    * - phoneNumberMobile
      - phoneNumberMobile
      - "string"
