@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-23 06:32:42
+Generated: 2023-05-23 08:45:40
 
 Introduction.
 ------------
@@ -305,6 +305,58 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
 
    * - HubSpot Lineitemdealassociation Property
      - HubSpot Lineitem Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitemquoteassociation to HubSpot Lineitem
+----------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitemquoteassociation and a HubSpot Lineitem must be established.
+
+A HubSpot Lineitemquoteassociation will merge with a HubSpot Lineitem if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - HubSpot Lineitem Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitemquoteassociation and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitemquoteassociation to HubSpot Lineitemdealassociation
+-------------------------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Lineitemquoteassociation and a HubSpot Lineitemdealassociation must be established.
+
+A HubSpot Lineitemquoteassociation will merge with a HubSpot Lineitemdealassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - HubSpot Lineitemdealassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Lineitemquoteassociation and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
 
 
