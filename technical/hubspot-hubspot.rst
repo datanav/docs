@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-05-23 08:46:30
+Generated: 2023-05-23 08:46:33
 
 Introduction.
 ------------
@@ -360,6 +360,9 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - HubSpot Data Type
    * - id
      - id
+     - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
