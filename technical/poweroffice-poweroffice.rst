@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 06:26:42
 
 Introduction.
 ------------
@@ -138,5 +138,43 @@ The following properties are synchronized between a Poweroffice Customer and a P
      - "string"
    * - streetAddresses.zipCode
      - zipCode
+     - "string"
+
+
+SuperOffice Listproductcategoryitems to PowerOffice Productgroup
+----------------------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a PowerOffice Productgroup.
+
+Once a link between a SuperOffice Listproductcategoryitems and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a PowerOffice Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     - PowerOffice Productgroup Property
+     - PowerOffice Data Type
+   * - Name
+     - Name
+     - "string"
+
+
+Tripletex Productgroup to PowerOffice Productgroup
+--------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a PowerOffice Productgroup.
+
+Once a link between a Tripletex Productgroup and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a PowerOffice Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - PowerOffice Productgroup Property
+     - PowerOffice Data Type
+   * - name
+     - Name
      - "string"
 
