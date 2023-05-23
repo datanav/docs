@@ -2,12 +2,54 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-23 05:46:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Company to Tripletex Customer
+-------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Tripletex.
+
+Once a link between a HubSpot Company and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - physicalAddress.addressLine1
+     - "string"
+   * - properties.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - properties.city
+     - physicalAddress.city
+     - "string"
+   * - properties.country
+     - physicalAddress.country.id
+     - "integer"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.phone
+     - phoneNumber
+     - "string"
+   * - properties.zip
+     - physicalAddress.postalCode
+     - "string"
+
 
 HubSpot Deal to Tripletex Order
 -------------------------------
