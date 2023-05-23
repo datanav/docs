@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
@@ -140,53 +140,6 @@ The following properties are synchronized between a SuperOffice User and a Super
      - "string"
 
 
-Tripletex Contact to SuperOffice Person
----------------------------------------
-Every Tripletex Contact will be synchronized with a SuperOffice Person.
-
-If a matching SuperOffice Person already exists, the Tripletex Contact will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
-
-A Tripletex Contact will merge with a SuperOffice Person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice Person Property
-   * - email
-     - Emails.Value
-
-Once a link between a Tripletex Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - customer.id
-     - Contact.ContactId
-     - "integer"
-   * - email
-     - Emails.Value
-     - "string"
-   * - firstName
-     - Firstname
-     - "string"
-   * - lastName
-     - Lastname
-     - "string"
-   * - phoneNumberMobile
-     - MobilePhones.Value
-     - "string"
-   * - phoneNumberWork
-     - OfficePhones.Value
-     - "string"
-
-
 Tripletex Customer to SuperOffice Contact
 -----------------------------------------
 Every Tripletex Customer will be synchronized with a SuperOffice Contact.
@@ -292,122 +245,21 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - "string"
 
 
-HubSpot Company to SuperOffice Contact
---------------------------------------
-Every HubSpot Company will be synchronized with a SuperOffice Contact.
+Tripletex Department to SuperOffice Contact
+-------------------------------------------
+Every Tripletex Department will be synchronized with a SuperOffice Contact.
 
-Once a link between a HubSpot Company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Company and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - id
-     - ContactId
-     - "integer"
-   * - properties.address
-     - Address.Postal.Address1
-     - "string"
-   * - properties.address
-     - Address.Street.Address1
-     - "string"
-   * - properties.address2
-     - Address.Postal.Address2
-     - "string"
-   * - properties.address2
-     - Address.Street.Address2
-     - "string"
-   * - properties.city
-     - Address.Postal.City
-     - "string"
-   * - properties.city
-     - Address.Street.City
-     - "string"
-   * - properties.country
-     - Country.CountryId
-     - "integer"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.phone
-     - Phones.Value
-     - "string"
-   * - properties.website
-     - Domains
-     - "list"
-   * - properties.website
-     - Urls.Value
-     - "string"
-   * - properties.zip
-     - Address.Postal.Zipcode
-     - "string"
-   * - properties.zip
-     - Address.Street.Zipcode
-     - "string"
-
-
-HubSpot Department to SuperOffice Contact
------------------------------------------
-Every HubSpot Department will be synchronized with a SuperOffice Contact.
-
-Once a link between a HubSpot Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Department and a SuperOffice Contact:
+The following properties are synchronized between a Tripletex Department and a SuperOffice Contact:
 
 .. list-table::
    :header-rows: 1
 
-   * - HubSpot Department Property
+   * - Tripletex Department Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - name
-     - Name
-     - "string"
-
-
-HubSpot Order to SuperOffice Quotealternative
----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Order and a SuperOffice Quotealternative must be established.
-
-A new SuperOffice Quotealternative will be created from a HubSpot Order if it is connected to a HubSpot Lineitem, Tripletex-orderline, Superoffice-quoteline, or Poweroffice-salesorderline that is synchronized into SuperOffice.
-
-Once a link between a HubSpot Order and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Order and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Order Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - invoiceComment
-     - Name
-     - "string"
-   * - isClosed
-     - sesam_Accepted
-     - "boolean"
-
-
-Poweroffice Productgroup to SuperOffice Listproductcategoryitems
-----------------------------------------------------------------
-Every Poweroffice Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - Name
      - Name
      - "string"
 
@@ -427,25 +279,6 @@ The following properties are synchronized between a SuperOffice User and a Super
      - SuperOffice Listcategoryitems Property
      - SuperOffice Data Type
    * - contactCategory
-     - Name
-     - "string"
-
-
-Tripletex Productgroup to SuperOffice Listproductcategoryitems
---------------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - name
      - Name
      - "string"
 
