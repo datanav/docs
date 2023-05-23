@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 06:26:42
+Generated: 2023-05-23 06:32:42
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ SuperOffice Contact to Tripletex Customer
 -----------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Customer must be established.
 
-A new Tripletex Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Hubspot-deal, Hubspot-quote, Tripletex-order, Sale, User, Tripletex-contact, Person, Tripletex-employee, Poweroffice-customer, Poweroffice-salesorder, Poweroffice-contactperson, or Quotealternative that is synchronized into Tripletex.
+A new Tripletex Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, User, Person, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Contact will merge with a Tripletex Customer if one of the following property combinations match:
 
@@ -165,7 +165,7 @@ SuperOffice Person to Tripletex Contact
 ---------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
 
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Hubspot-deal, Tripletex-order, Sale, Poweroffice-salesorder, or Quotealternative that is synchronized into Tripletex.
+A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
 
@@ -295,69 +295,6 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - "string"
 
 
-HubSpot Company to Tripletex Customer
--------------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal, Tripletex-order, Superoffice-sale, Poweroffice-salesorder, or Superoffice-quotealternative that is synchronized into Tripletex.
-
-Once a link between a HubSpot Company and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Company and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Company Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - id
-     - id
-     - "integer"
-   * - properties.address
-     - physicalAddress.addressLine1
-     - "string"
-   * - properties.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - properties.city
-     - physicalAddress.city
-     - "string"
-   * - properties.country
-     - physicalAddress.country.id
-     - "integer"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.phone
-     - phoneNumber
-     - "string"
-   * - properties.zip
-     - physicalAddress.postalCode
-     - "string"
-
-
-HubSpot Contact to Tripletex Department
----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a HubSpot Contact if it is connected to a HubSpot User, Superoffice-user, Tripletex-contact, Freshteam-employee, Superoffice-person, Tripletex-employee, Poweroffice-employee, or Tripletex-department that is synchronized into Tripletex.
-
-Once a link between a HubSpot Contact and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
 SuperOffice Contact to Tripletex Department
 -------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Department must be established.
@@ -379,20 +316,20 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
 
 
-HubSpot Quotealternative to Tripletex Order
--------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Quotealternative and a Tripletex Order must be established.
+SuperOffice Quotealternative to Tripletex Order
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Tripletex Order must be established.
 
-A new Tripletex Order will be created from a HubSpot Quotealternative if it is connected to a HubSpot Lineitem, Tripletex-orderline, Superoffice-quoteline, or Poweroffice-salesorderline that is synchronized into Tripletex.
+A new Tripletex Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into Tripletex.
 
-Once a link between a HubSpot Quotealternative and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Quotealternative and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a HubSpot Quotealternative and a Tripletex Order:
+The following properties are synchronized between a SuperOffice Quotealternative and a Tripletex Order:
 
 .. list-table::
    :header-rows: 1
 
-   * - HubSpot Quotealternative Property
+   * - SuperOffice Quotealternative Property
      - Tripletex Order Property
      - Tripletex Data Type
    * - Name
@@ -400,48 +337,6 @@ The following properties are synchronized between a HubSpot Quotealternative and
      - "string"
    * - sesam_Accepted
      - isClosed
-     - "string"
-
-
-HubSpot Customer to Tripletex Department
-----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Customer and a Tripletex Department must be established.
-
-A new Tripletex Department will be created from a HubSpot Customer if it is connected to a HubSpot User, Superoffice-user, Tripletex-contact, Freshteam-employee, Superoffice-person, Tripletex-employee, Poweroffice-employee, or Tripletex-department that is synchronized into Tripletex.
-
-Once a link between a HubSpot Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Customer and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Customer Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
-
-HubSpot Department to Tripletex Customer
-----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Department and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a HubSpot Department if it is connected to a HubSpot Quote, Superoffice-user, Tripletex-contact, Superoffice-person, Tripletex-employee, Poweroffice-customer, or Poweroffice-contactperson that is synchronized into Tripletex.
-
-Once a link between a HubSpot Department and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Department and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Department Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - name
-     - name
      - "string"
 
 
