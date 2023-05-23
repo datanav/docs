@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 06:32:42
+Generated: 2023-05-23 06:33:36
 
 Introduction.
 ------------
@@ -86,52 +86,6 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - "string"
    * - Phones.Value
      - phoneNumber
-     - "string"
-
-
-SuperOffice Person to Tripletex Contact
----------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
-
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Tripletex.
-
-A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - Tripletex Contact Property
-   * - Emails.Value
-     - email
-
-Once a link between a SuperOffice Person and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - Contact.ContactId
-     - customer.id
-     - "integer"
-   * - Emails.Value
-     - email
-     - "string"
-   * - Firstname
-     - firstName
-     - "string"
-   * - Lastname
-     - lastName
-     - "string"
-   * - MobilePhones.Value
-     - phoneNumberMobile
-     - "string"
-   * - OfficePhones.Value
-     - phoneNumberWork
      - "string"
 
 
