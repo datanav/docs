@@ -17,3 +17,4 @@ Sesam Talk merges data from the different systems on certain criteria. People ar
    :maxdepth: 3
 
    Entity types <entity-types/index>
+   Selective data sync <selective-data-sync/index>
