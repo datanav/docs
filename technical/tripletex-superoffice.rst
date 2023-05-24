@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-23 06:33:36
+Generated: 2023-05-24 08:54:50
 
 Introduction.
 ------------
@@ -134,14 +134,23 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - email
      - Emails.Value
      - "string"
+   * - email
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
+     - "string"
    * - id
      - ContactId
      - "integer"
+   * - invoiceEmail
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
+     - "string"
    * - name
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.ThreeLetterISOCountry)
+     - "string"
+   * - overdueNoticeEmail
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
@@ -292,11 +301,23 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - email
      - Emails.Value
      - "string"
+   * - email
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
+     - "string"
    * - id
      - ContactId
      - "integer"
+   * - invoiceEmail
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
+     - "string"
    * - name
      - Name
+     - "string"
+   * - organizationNumber
+     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.ThreeLetterISOCountry)
+     - "string"
+   * - overdueNoticeEmail
+     - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
