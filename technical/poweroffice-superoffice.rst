@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-23 06:32:42
+Generated: 2023-05-24 08:54:50
 
 Introduction.
 ------------
@@ -81,6 +81,9 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - Id
      - ContactId
      - "integer"
+   * - InternationalIdNumber
+     - OrgNr (Dependant on having  in Country.ThreeLetterISOCountry)
+     - "string"
    * - LegalName
      - Name
      - "string"
@@ -203,6 +206,9 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - Id
      - ContactId
      - "integer"
+   * - InternationalIdNumber
+     - OrgNr (Dependant on having  in Country.ThreeLetterISOCountry)
+     - "string"
    * - LegalName
      - Name
      - "string"
