@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-24 11:39:58
+Generated: 2023-05-24 11:43:34
 
 Introduction.
 ------------
@@ -165,7 +165,7 @@ SuperOffice Person to Tripletex Contact
 ---------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
 
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Tripletex.
+A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Project, or Quotealternative that is synchronized into Tripletex.
 
 A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
 
