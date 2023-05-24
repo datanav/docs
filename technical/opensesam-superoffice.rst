@@ -2,7 +2,7 @@
 Opensesam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-24 08:54:50
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Opensesam Organisation and a
    * - Opensesam Organisation Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - p:P4649.ps:P4649
+     - OrgNr (Dependant on having p:P4649.ps:P3864 in Country.ThreeLetterISOCountry)
+     - "string"
 
