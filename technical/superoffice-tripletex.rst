@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 13:30:41
+Generated: 2023-05-24 11:39:58
 
 Introduction.
 ------------
@@ -231,6 +231,18 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - SuperOffice Person Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - Address.Postal.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - address.addressLine2
+     - "string"
+   * - Address.Street.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - address.addressLine2
+     - "string"
    * - BirthDate
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
