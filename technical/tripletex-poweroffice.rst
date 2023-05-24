@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-24 12:20:50
+Generated: 2023-05-24 12:22:51
 
 Introduction.
 ------------
@@ -135,6 +135,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - deliveryAddress.city
      - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.city
+     - streetAddresses.city
      - "string"
    * - deliveryAddress.city
      - streetAddresses.countryCode
