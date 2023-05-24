@@ -96,7 +96,7 @@ Properties
      - Required for updates and deletes. Disallowed for insert.
    * - ``$based_on_properties``
      - List<String>
-     - This is property enumerates the properties that are considered for ``$based_on`` comparison. The string values can be property names or a path of properties separated by a ``.`` character.
+     - This property enumerates the properties that are considered for ``$based_on`` comparison. The string values can be property names or a path of properties separated by a ``.`` character.
      - Required for updates and deletes. Disallowed for insert.
    * - ``$replaced``
      - Boolean
