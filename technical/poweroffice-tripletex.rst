@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-23 09:27:38
+Generated: 2023-05-24 11:39:58
 
 Introduction.
 ------------
@@ -200,6 +200,18 @@ The following properties are synchronized between a Poweroffice Employee and a T
      - "string"
    * - LastName
      - lastName
+     - "string"
+   * - MailAddress.Address1
+     - address.addressLine1
+     - "string"
+   * - MailAddress.Address2
+     - address.addressLine2
+     - "string"
+   * - streetAddresses.address1
+     - address.addressLine1
+     - "string"
+   * - streetAddresses.address2
+     - address.addressLine2
      - "string"
 
 
