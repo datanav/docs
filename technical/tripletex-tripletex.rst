@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-24 12:20:50
+Generated: 2023-05-24 12:22:53
 
 Introduction.
 ------------
@@ -102,6 +102,9 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - deliveryAddress.addressLine2
      - "string"
    * - deliveryAddress.changes
+     - deliveryAddress.changes
+     - "string"
+   * - deliveryAddress.city
      - deliveryAddress.changes
      - "string"
    * - deliveryAddress.city
@@ -338,6 +341,9 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
      - "string"
    * - deliveryAddress.changes
      - deliveryAddress.changes
+     - "string"
+   * - deliveryAddress.changes
+     - deliveryAddress.city
      - "string"
    * - deliveryAddress.city
      - deliveryAddress.city
