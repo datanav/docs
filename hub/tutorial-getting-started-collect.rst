@@ -80,7 +80,7 @@ In the `Sesam portal <https://portal.sesam.io/>`_:
         "update": {
           "method": "PATCH",
           "payload-type": "json",
-          "url": "{{ properties.url }}/{{ properties.id }}?"
+          "url": "companies/{{ properties.id }}"
         }
       },
       "rate_limiting_delay": 60,
@@ -196,5 +196,3 @@ When done you should have 10 entities in the output of each of the two inbound p
   .. note::
 
       If you want to look closer into the details of the collect phase, look into the tutorials for collect.
-
-
