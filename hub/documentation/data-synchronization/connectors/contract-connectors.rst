@@ -93,7 +93,11 @@ Properties
    * - ``$based_on``
      - Dict<String,Any>
      - The entity must contain the ``$based_on`` property, which should be a dict with property value pairs for all system raw properties that should be written back to the system. The ``$based_on`` property should be a subset of the properties from the connector output dataset as it should include the property values that was collected for this particular version of the entity. The property will be used to check if there has been modifications made to the entity in the target system after it was collected. The property can be used for preventing lost writes and avoiding unneccesary updates.
-     - Required during insert. Optional for updated and deletes.
+     - Required for updates and deletes. Disallowed for insert.
+   * - ``$based_on_properties``
+     - List<String>
+     - This property enumerates the properties that are considered for ``$based_on`` comparison. The string values can be property names or a path of properties separated by a ``.`` character.
+     - Required for updates and deletes. Disallowed for insert.
    * - ``$replaced``
      - Boolean
      - If set to true then it is not a real delete, but rather the entity got a new ``_id``. This property is produced by the merge source.
