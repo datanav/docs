@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-05-24 13:06:33
+Generated: 2023-05-25 07:28:29
 
 Introduction.
 ------------
@@ -145,20 +145,4 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - website
      - WebsiteUrl
      - "string"
-
-
-Wave Invoice to PowerOffice Customer
-------------------------------------
-Every Wave Invoice will be synchronized with a PowerOffice Customer.
-
-Once a link between a Wave Invoice and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a PowerOffice Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - PowerOffice Customer Property
-     - PowerOffice Data Type
 
