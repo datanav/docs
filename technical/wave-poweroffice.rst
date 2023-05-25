@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-05-25 08:02:26
+Generated: 2023-05-25 08:03:06
 
 Introduction.
 ------------
@@ -161,4 +161,7 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice Outgoinginvoice Property
      - PowerOffice Data Type
+   * - amountDue.value
+     - NetAmount
+     - "string"
 
