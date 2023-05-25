@@ -1,7 +1,7 @@
 .. _selective_data_synchronisation:
 
 ==============================
-Selective Data Synchronization
+Selective data synchronization
 ==============================
 
 
@@ -18,7 +18,7 @@ Faster sync times
 By synchronizing only the data that changes, organizations can significantly reduce the amount of data transmitted between systems. This approach optimizes bandwidth and API usage, especially when dealing with large datasets or when connecting systems over limited network resources. As a result, the sync times are noticeably faster, enabling near real-time updates and ensuring that the latest information is readily available across integrated systems.
 
 
-Minimized data conflicts and improved Data quality
+Minimized data conflicts and improved data quality
 --------------------------------------------------
 When synchronizing only the changed data, the potential for data conflicts is significantly reduced. Conflicts often arise when multiple systems independently modify the same dataset simultaneously. By selectively synchronizing modifications, the chances of conflicting changes are minimized, preserving data integrity and maintaining consistency across integrated systems. Consequently, data quality is improved, ensuring accurate and up-to-date information throughout the organization.
 
