@@ -8,7 +8,7 @@ Sesam Talk synchronizes a set of :doc:`entity types <entity-types/index>` with a
 
 Sesam Talk merges data from the different systems on certain criteria. People are merged if they have the same email, organisations are merged if they have the exact same name.
 
-.. image:: images/dashboard-sesam-talk.jpg
+.. image:: images/dashboard-sesam-talk.png
   :width: 100%
   :alt: Alternative text
 
