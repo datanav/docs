@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-05-23 19:15:31
+Generated: 2023-05-28 09:39:14
 
 Introduction.
 ------------
@@ -78,7 +78,7 @@ The following properties are synchronized between a HubSpot Contact and a Triple
      - "string"
    * - properties.mobilephone
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - properties.phone
      - phoneNumberWork
      - "string"
