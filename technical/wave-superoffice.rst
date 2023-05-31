@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-05-31 11:44:30
 
 Introduction.
 ------------
@@ -53,4 +53,20 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - website
      - Urls.Value
      - "string"
+
+
+Wave Product to SuperOffice Product
+-----------------------------------
+Every Wave Product will be synchronized with a SuperOffice Product.
+
+Once a link between a Wave Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
 
