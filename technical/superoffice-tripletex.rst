@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-31 06:24:29
+Generated: 2023-05-31 06:48:51
 
 Introduction.
 ------------
@@ -479,6 +479,9 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Productunit Property
      - Tripletex Data Type
+   * - QuantityUnit
+     - commonCode
+     - "string"
    * - QuantityUnit
      - name
      - "string"
