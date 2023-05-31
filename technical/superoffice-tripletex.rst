@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-31 06:21:54
+Generated: 2023-05-31 06:24:29
 
 Introduction.
 ------------
@@ -455,6 +455,19 @@ The following properties are synchronized between a SuperOffice Product and a Tr
 SuperOffice Product to Tripletex Productunit
 --------------------------------------------
 Every SuperOffice Product will be synchronized with a Tripletex Productunit.
+
+If a matching Tripletex Productunit already exists, the SuperOffice Product will be merged with the existing one.
+If no matching Tripletex Productunit is found, a new Tripletex Productunit will be created.
+
+A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+   * - QuantityUnit
+     - name
 
 Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
 
