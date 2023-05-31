@@ -70,6 +70,7 @@ Configuration
        :ref:`json_schema <json_schema_transform>` ·
        :ref:`rdf <rdf_transform>` ·
        :ref:`rest <rest_transform>` ·
+       :ref:`template <template_transform>` ·
        :ref:`xml <xml_transform>`
 
 .. _quickref_dtl_transform_functions:

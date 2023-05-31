@@ -69,11 +69,12 @@ Type of transforms
 .. toctree::
   :maxdepth: 1
 
-   DTL transform <configuration-transforms-dtl>
-   JSON Schema validation transform <configuration-transforms-json-schema-validation>
    Conditional transform <configuration-transforms-conditional>
-   HTTP transform <configuration-transforms-http>
+   DTL transform <configuration-transforms-dtl>
    Emit children transform <configuration-transforms-emit-children>
-   XML transform <configuration-transforms-xml>
+   HTTP transform <configuration-transforms-http>
+   JSON Schema validation transform <configuration-transforms-json-schema-validation>
    RDF transform <configuration-transforms-rdf>
    REST transform <configuration-transforms-rest>
+   Template transform <configuration-transforms-template>
+   XML transform <configuration-transforms-xml>
