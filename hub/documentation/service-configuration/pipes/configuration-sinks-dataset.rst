@@ -1,4 +1,3 @@
-
 .. _dataset_sink:
 
 Dataset sink
@@ -110,8 +109,11 @@ Properties
    * - ``circuit_breaker_threshold_factor``
      - Decimal
      - Specifying this property will enable a :ref:`circuit breaker <circuit_breakers>` on
-       the pipe. It specifies a factor that is used to calculate the circuit breaker limit. Note
-       that this is a factor and not a percentage, e.g. ``0.32`` means 32% and ``1.5`` means 150%.
+       the pipe. It specifies a factor that is used to calculate the circuit breaker limit. The limit is calculated
+       based on the number of unique entity ids in the dataset, i.e. the number of latest entities in the
+       dataset (including deleted entities).
+
+       Note that this is a factor and not a percentage, e.g. ``0.32`` means 32% and ``1.5`` means 150%.
        If the factor is ``0.5`` and the dataset already contains 100 entities, then the circuit
        breaker will trip if it sees more than 50 new entities.
      - ``null``
