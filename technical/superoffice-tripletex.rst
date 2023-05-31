@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-05-31 06:14:55
+Generated: 2023-05-31 06:16:30
 
 Introduction.
 ------------
@@ -450,6 +450,22 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - VAT
      - vatType.id
      - "integer"
+
+
+SuperOffice Product to Tripletex Productunit
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a Tripletex Productunit.
+
+Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+     - Tripletex Data Type
 
 
 SuperOffice Project to Tripletex Project
