@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-01 11:47:28
+Generated: 2023-06-01 11:48:24
 
 Introduction.
 ------------
@@ -458,6 +458,32 @@ The following properties are synchronized between a HubSpot Owner and a HubSpot 
      - "string"
 
 
+HubSpot Quote to HubSpot Quotecompanyassociation
+------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Quote and a HubSpot Quotecompanyassociation must be established.
+
+A HubSpot Quote will merge with a HubSpot Quotecompanyassociation if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Quotecompanyassociation Property
+   * - id
+     - id
+
+Once a link between a HubSpot Quote and a HubSpot Quotecompanyassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a HubSpot Quotecompanyassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - HubSpot Quotecompanyassociation Property
+     - HubSpot Data Type
+
+
 HubSpot Quotecompanyassociation to HubSpot Quote
 ------------------------------------------------
 Before any synchronization can take place, a link between a HubSpot Quotecompanyassociation and a HubSpot Quote must be established.
@@ -525,6 +551,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - "string"
 
 
+HubSpot Dealcompanyassociationtype to HubSpot Quotecompanyassociationtype
+-------------------------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a HubSpot Quotecompanyassociationtype.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a HubSpot Quotecompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a HubSpot Quotecompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     - HubSpot Quotecompanyassociationtype Property
+     - HubSpot Data Type
+
+
 HubSpot Dealcontactassociationtype to HubSpot Dealcompanyassociationtype
 ------------------------------------------------------------------------
 Every HubSpot Dealcontactassociationtype will be synchronized with a HubSpot Dealcompanyassociationtype.
@@ -542,6 +584,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - label
      - label
      - "string"
+
+
+HubSpot Dealcontactassociationtype to HubSpot Quotecompanyassociationtype
+-------------------------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a HubSpot Quotecompanyassociationtype.
+
+Once a link between a HubSpot Dealcontactassociationtype and a HubSpot Quotecompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a HubSpot Quotecompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     - HubSpot Quotecompanyassociationtype Property
+     - HubSpot Data Type
 
 
 HubSpot Lineitemdealassociationtype to HubSpot Lineitemquoteassociationtype
