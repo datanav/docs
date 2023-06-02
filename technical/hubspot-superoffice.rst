@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-05-23 19:14:42
+Generated: 2023-06-02 08:29:30
 
 Introduction.
 ------------
@@ -240,27 +240,5 @@ The following properties are synchronized between a HubSpot Quote and a SuperOff
      - "integer"
    * - properties.hs_title
      - Name
-     - "string"
-
-
-HubSpot Ticket to SuperOffice Ticket
-------------------------------------
-Every HubSpot Ticket will be synchronized with a SuperOffice Ticket.
-
-Once a link between a HubSpot Ticket and a SuperOffice Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Ticket and a SuperOffice Ticket:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Ticket Property
-     - SuperOffice Ticket Property
-     - SuperOffice Data Type
-   * - properties.hubspot_owner_id
-     - OwnedBy.AssociateId
-     - "integer"
-   * - properties.subject
-     - Title
      - "string"
 
