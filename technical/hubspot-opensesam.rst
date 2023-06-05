@@ -2,7 +2,7 @@
 HubSpot to OpenSesam Dataflow
 =============================
 
-Generated: 2023-06-02 08:26:30
+Generated: 2023-06-05 06:18:15
 
 Introduction.
 ------------
@@ -133,6 +133,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
+     - OpenSesam Classification Property
+     - OpenSesam Data Type
+
+
+HubSpot Quotedealassociationtype to OpenSesam Classification
+------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a OpenSesam Classification.
+
+Once a link between a HubSpot Quotedealassociationtype and a OpenSesam Classification is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a OpenSesam Classification:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
      - OpenSesam Classification Property
      - OpenSesam Data Type
 
