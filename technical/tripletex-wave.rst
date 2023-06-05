@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-05-31 11:44:30
+Generated: 2023-06-05 19:17:00
 
 Introduction.
 ------------
@@ -47,6 +47,9 @@ The following properties are synchronized between a Tripletex Invoice and a Wave
      - Wave Data Type
    * - amountExcludingVat
      - amountDue.value
+     - "string"
+   * - invoiceDueDate
+     - dueDate
      - "string"
 
 
