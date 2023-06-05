@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-02 08:29:30
+Generated: 2023-06-05 12:53:11
 
 Introduction.
 ------------
@@ -169,4 +169,20 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - properties.price
      - priceExcludingVatCurrency
      - "float"
+
+
+HubSpot User to Tripletex Employee
+----------------------------------
+Every HubSpot User will be synchronized with a Tripletex Employee.
+
+Once a link between a HubSpot User and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
 
