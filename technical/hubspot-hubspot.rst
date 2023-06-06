@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-06 07:03:38
+Generated: 2023-06-06 07:03:41
 
 Introduction.
 ------------
@@ -1292,6 +1292,9 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociationtype Property
      - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Dealcontactassociationtype to HubSpot Dealcompanyassociationtype
@@ -1365,6 +1368,9 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Lineitemdealassociationtype to HubSpot Lineitemquoteassociationtype
@@ -1514,6 +1520,9 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociationtype Property
      - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Quotecontactassociationtype to HubSpot Dealcompanyassociationtype
@@ -1587,6 +1596,9 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociationtype Property
      - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Quotedealassociationtype to HubSpot Lineitemdealassociationtype
@@ -1641,6 +1653,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Dealcompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Dealcontactassociationtype
@@ -1657,6 +1672,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Dealcontactassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotecompanyassociationtype
@@ -1673,6 +1691,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotecompanyassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
 
 HubSpot Ticketcompanyassociationtype to HubSpot Quotecontactassociationtype
@@ -1689,4 +1710,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociationtype Property
      - HubSpot Quotecontactassociationtype Property
      - HubSpot Data Type
+   * - label
+     - label
+     - "string"
 
