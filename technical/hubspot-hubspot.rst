@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-06 07:01:44
+Generated: 2023-06-06 07:03:02
 
 Introduction.
 ------------
@@ -190,6 +190,9 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot T
    * - id
      - id
      - "string"
+   * - properties.hubspot_owner_id
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 HubSpot Dealcompanyassociation to HubSpot Deal
@@ -312,6 +315,9 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - id
      - id
      - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
 
 
 HubSpot Dealcontactassociation to HubSpot Deal
@@ -433,6 +439,9 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - HubSpot Data Type
    * - id
      - id
+     - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1124,6 +1133,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - properties.hubspot_owner_id
+     - "string"
 
 
 HubSpot Ticketcompanyassociation to HubSpot Dealcompanyassociation
@@ -1153,6 +1165,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - id
      - id
      - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
 
 
 HubSpot Ticketcompanyassociation to HubSpot Dealcontactassociation
@@ -1181,6 +1196,9 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
      - HubSpot Data Type
    * - id
      - id
+     - "string"
+   * - toObjectId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
