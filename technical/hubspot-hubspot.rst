@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-06 07:03:02
+Generated: 2023-06-06 07:03:38
 
 Introduction.
 ------------
@@ -1278,6 +1278,22 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - "string"
 
 
+HubSpot Dealcompanyassociationtype to HubSpot Ticketcompanyassociationtype
+--------------------------------------------------------------------------
+Every HubSpot Dealcompanyassociationtype will be synchronized with a HubSpot Ticketcompanyassociationtype.
+
+Once a link between a HubSpot Dealcompanyassociationtype and a HubSpot Ticketcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociationtype and a HubSpot Ticketcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociationtype Property
+     - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Data Type
+
+
 HubSpot Dealcontactassociationtype to HubSpot Dealcompanyassociationtype
 ------------------------------------------------------------------------
 Every HubSpot Dealcontactassociationtype will be synchronized with a HubSpot Dealcompanyassociationtype.
@@ -1333,6 +1349,22 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - label
      - label
      - "string"
+
+
+HubSpot Dealcontactassociationtype to HubSpot Ticketcompanyassociationtype
+--------------------------------------------------------------------------
+Every HubSpot Dealcontactassociationtype will be synchronized with a HubSpot Ticketcompanyassociationtype.
+
+Once a link between a HubSpot Dealcontactassociationtype and a HubSpot Ticketcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociationtype and a HubSpot Ticketcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociationtype Property
+     - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Data Type
 
 
 HubSpot Lineitemdealassociationtype to HubSpot Lineitemquoteassociationtype
@@ -1468,6 +1500,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
      - "string"
 
 
+HubSpot Quotecompanyassociationtype to HubSpot Ticketcompanyassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Quotecompanyassociationtype will be synchronized with a HubSpot Ticketcompanyassociationtype.
+
+Once a link between a HubSpot Quotecompanyassociationtype and a HubSpot Ticketcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociationtype and a HubSpot Ticketcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociationtype Property
+     - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Data Type
+
+
 HubSpot Quotecontactassociationtype to HubSpot Dealcompanyassociationtype
 -------------------------------------------------------------------------
 Every HubSpot Quotecontactassociationtype will be synchronized with a HubSpot Dealcompanyassociationtype.
@@ -1525,6 +1573,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotecontactassociationtype to HubSpot Ticketcompanyassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Quotecontactassociationtype will be synchronized with a HubSpot Ticketcompanyassociationtype.
+
+Once a link between a HubSpot Quotecontactassociationtype and a HubSpot Ticketcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociationtype and a HubSpot Ticketcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociationtype Property
+     - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Data Type
+
+
 HubSpot Quotedealassociationtype to HubSpot Lineitemdealassociationtype
 -----------------------------------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a HubSpot Lineitemdealassociationtype.
@@ -1561,4 +1625,68 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - label
      - label
      - "string"
+
+
+HubSpot Ticketcompanyassociationtype to HubSpot Dealcompanyassociationtype
+--------------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a HubSpot Dealcompanyassociationtype.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a HubSpot Dealcompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a HubSpot Dealcompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Dealcompanyassociationtype Property
+     - HubSpot Data Type
+
+
+HubSpot Ticketcompanyassociationtype to HubSpot Dealcontactassociationtype
+--------------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a HubSpot Dealcontactassociationtype.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a HubSpot Dealcontactassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a HubSpot Dealcontactassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Dealcontactassociationtype Property
+     - HubSpot Data Type
+
+
+HubSpot Ticketcompanyassociationtype to HubSpot Quotecompanyassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a HubSpot Quotecompanyassociationtype.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a HubSpot Quotecompanyassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a HubSpot Quotecompanyassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Quotecompanyassociationtype Property
+     - HubSpot Data Type
+
+
+HubSpot Ticketcompanyassociationtype to HubSpot Quotecontactassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a HubSpot Quotecontactassociationtype.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a HubSpot Quotecontactassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a HubSpot Quotecontactassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Quotecontactassociationtype Property
+     - HubSpot Data Type
 
