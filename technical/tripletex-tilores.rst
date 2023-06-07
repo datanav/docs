@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-06-07 07:44:23
 
 Introduction.
 ------------
@@ -48,7 +48,13 @@ The following properties are synchronized between a Tripletex Employee and a Til
    * - address.changes
      - city
      - "string"
+   * - address.city
+     - city
+     - "string"
    * - address.id
+     - postalCode
+     - "string"
+   * - address.postalCode
      - postalCode
      - "string"
    * - dateOfBirth
