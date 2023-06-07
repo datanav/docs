@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-06-07 08:42:14
+Generated: 2023-06-07 13:16:16
 
 Introduction.
 ------------
@@ -71,37 +71,6 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
      - "string"
    * - properties.deal_currency_code
      - Currency
-     - "string"
-
-
-HubSpot Lineitem to PowerOffice Salesorderline
-----------------------------------------------
-Every HubSpot Lineitem will be synchronized with a PowerOffice Salesorderline.
-
-Once a link between a HubSpot Lineitem and a PowerOffice Salesorderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitem and a PowerOffice Salesorderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitem Property
-     - PowerOffice Salesorderline Property
-     - PowerOffice Data Type
-   * - properties.hs_product_id
-     - Discount
-     - "string"
-   * - properties.hs_product_id
-     - ProductCode
-     - "string"
-   * - properties.name
-     - Description
-     - "string"
-   * - properties.price
-     - SalesOrderLineUnitPrice
-     - "string"
-   * - properties.quantity
-     - Quantity
      - "string"
 
 
