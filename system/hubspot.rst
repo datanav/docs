@@ -30,21 +30,9 @@ Data types
      - true
      - false
 
-   * - :ref:`Classification <datatype_classification>`
-     - true
-     - false
-
-   * - :ref:`Documentation <datatype_documentation>`
-     - true
-     - false
-
    * - :ref:`Person <datatype_human>`
      - true
      - true
-
-   * - :ref:`Location <datatype_location>`
-     - true
-     - false
 
    * - :ref:`Organisation <datatype_organisation>`
      - true
