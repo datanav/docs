@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-05-31 11:44:30
+Generated: 2023-06-07 09:11:15
 
 Introduction.
 ------------
@@ -29,6 +29,22 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - phone
      - phoneNumber
      - "string"
+
+
+Wave Invoice to Tripletex Order
+-------------------------------
+Every Wave Invoice will be synchronized with a Tripletex Order.
+
+Once a link between a Wave Invoice and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Tripletex Order Property
+     - Tripletex Data Type
 
 
 Wave Product to Tripletex Product
