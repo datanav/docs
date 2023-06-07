@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-07 09:11:15
+Generated: 2023-06-07 09:11:45
 
 Introduction.
 ------------
@@ -183,6 +183,9 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice Salesorder Property
      - PowerOffice Data Type
+   * - currency.code
+     - Currency
+     - "string"
 
 
 Wave Product to PowerOffice Product
