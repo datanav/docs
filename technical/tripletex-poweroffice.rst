@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-05-24 12:22:51
+Generated: 2023-06-07 07:44:23
 
 Introduction.
 ------------
@@ -270,12 +270,21 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - CountryCode
      - "string"
    * - address.city
+     - city
+     - "string"
+   * - address.city
+     - countryCode
+     - "string"
+   * - address.country.id
      - countryCode
      - "string"
    * - address.id
      - ZipCode
      - "string"
    * - address.id
+     - zipCode
+     - "string"
+   * - address.postalCode
      - zipCode
      - "string"
 
