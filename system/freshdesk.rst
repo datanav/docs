@@ -18,35 +18,11 @@ Data types
      - Input
      - Output
 
-   * - :ref:`Agreement <datatype_agreement>`
-     - true
-     - false
-
-   * - :ref:`Classification <datatype_classification>`
-     - true
-     - false
-
-   * - :ref:`Documentation <datatype_documentation>`
-     - true
-     - false
-
    * - :ref:`Person <datatype_human>`
      - true
      - true
 
-   * - :ref:`Location <datatype_location>`
-     - true
-     - false
-
    * - :ref:`Organisation <datatype_organisation>`
-     - true
-     - false
-
-   * - :ref:`Product <datatype_product>`
-     - true
-     - false
-
-   * - :ref:`Task <datatype_task>`
      - true
      - false
 
