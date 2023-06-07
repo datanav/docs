@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-06 11:43:42
+Generated: 2023-06-07 13:16:16
 
 Introduction.
 ------------
@@ -194,31 +194,6 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - properties.description
      - SaleText
      - "string"
-
-
-HubSpot Lineitem to SuperOffice Quoteline
------------------------------------------
-Every HubSpot Lineitem will be synchronized with a SuperOffice Quoteline.
-
-Once a link between a HubSpot Lineitem and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitem and a SuperOffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitem Property
-     - SuperOffice Quoteline Property
-     - SuperOffice Data Type
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - "string"
-   * - properties.quantity
-     - Quantity
-     - "integer"
 
 
 HubSpot Quote to SuperOffice Quotealternative
