@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-06-05 12:53:11
+Generated: 2023-06-07 08:42:14
 
 Introduction.
 ------------
@@ -51,7 +51,7 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
 
 HubSpot Deal to PowerOffice Salesorder
 --------------------------------------
-When a HubSpot Deal gets the has a 100% probability, it  will be synchronized with a PowerOffice Salesorder.
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOffice Salesorder.
 
 Once a link between a HubSpot Deal and a PowerOffice Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
 
