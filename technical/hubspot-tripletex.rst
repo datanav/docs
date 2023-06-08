@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-08 10:19:39
+Generated: 2023-06-08 10:52:37
 
 Introduction.
 ------------
@@ -110,25 +110,6 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
    * - properties.dealstage
      - isClosed
      - "string"
-
-
-HubSpot Lineitemdealassociation to Tripletex Orderline
-------------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a Tripletex Orderline.
-
-Once a link between a HubSpot Lineitemdealassociation and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a Tripletex Orderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitemdealassociation Property
-     - Tripletex Orderline Property
-     - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - order.id
-     - "integer"
 
 
 HubSpot Product to Tripletex Product
