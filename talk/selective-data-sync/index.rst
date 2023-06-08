@@ -10,7 +10,18 @@ Introduction
 
 Selective data synchronization eliminates the need to process and transfer entire datasets, focusing solely on the modified or new data elements.
 
-Unlike traditional methods that synchronize all data indiscriminately, this innovative technique focuses on synchronizing only the data that undergoes changes. In this article, we explore the advantages of this approach and how it can enhance the integration of cloud-based systems.
+Unlike traditional methods that synchronize all data indiscriminately, this innovative technique focuses on synchronizing only the data that undergoes changes. 
+
+In this article, we explore the advantages of this approach and how it can enhance the integration of cloud-based systems. But first, let us see an example of selective data synchronisation in `Sesam Talk <https://info.sesam.io/talk>`_.
+
+Example of selective data synchronisation
+-----------------------------------------
+
+Within a CRM system, a deal moves through the sales pipeline, typically involving a customer, a contact person, line items, and often several quotes.
+
+`Sesam Talk <https://info.sesam.io/talk>`_ will not synchronise this deal until it is won, ensuring that only pertinent data regarding successful deals and orders reaches your ERP system. Unsuccessful or ongoing deals, along with their associated information, will not unnecessarily burden the ERP system.
+
+Conversely, all customers already present in your ERP system will automatically synchronise with your CRM system, as it holds relevance for the specific requirements of the CRM system.
 
 Faster sync times
 -----------------
