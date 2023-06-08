@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-08 10:52:37
+Generated: 2023-06-08 11:49:37
 
 Introduction.
 ------------
@@ -241,6 +241,25 @@ The following properties are synchronized between a Tripletex Employee and a Hub
    * - Tripletex Employee Property
      - HubSpot User Property
      - HubSpot Data Type
+
+
+Tripletex Orderline to HubSpot Lineitemdealassociation
+------------------------------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Lineitemdealassociation.
+
+Once a link between a Tripletex Orderline and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
+   * - order.id
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 Tripletex Product to HubSpot Product
