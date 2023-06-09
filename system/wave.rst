@@ -18,6 +18,10 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Accounting <datatype_accounting>`
+     - true
+     - false
+
    * - :ref:`Agreement <datatype_agreement>`
      - true
      - false
