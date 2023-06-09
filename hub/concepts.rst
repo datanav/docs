@@ -3,7 +3,7 @@ Concepts
 The overall data landscape is constantly evolving. With this evolution follows a vast collection of concepts and definitions that may deviate between frameworks or genres. 
 Unless we can define exactly what a concept means in specific situation misunderstandings are bound to happen.
 
-In this section we will explain the most central concepts used in Sesam. Many of these concepts exists outside Sesam too, but perhaps with slightly different functionalities. 
+In this section we will explain the most central concepts used in Sesam. Many of these concepts exist outside Sesam too, but perhaps with slightly different functionalities. 
 
 .. _whatis-namespaces:
 
@@ -11,7 +11,7 @@ Namespaces
 ----------
 In Semantic web technologies, namespaces are URL references that allows us to reuse names from different sources without loosing context. If you wish to point to different Wikipedia URI's you could define the Wikipedia base URL with the namespace ``wiki = https://en.wikipedia.org/wiki/`` and then refer to any Wikipedia URI as ``wiki:<element>``.
 
-In Sesam, namespaces are used to identify the origin of an attribute. Quite often we wish to merge entities with other similar entities, such as person data from a CRM system and the equivalent person data from an HR system. Sesam prefixes namespaces to each attribute name in order to merge data from multiple sources without losing contex. With some exceptions, attributes will always inherit the pipe name where the attribute was first created as its namespace, i.e. an attribute ``x`` created in pipe ``y`` will become ``x:y``. 
+In Sesam, namespaces are used to identify the origin of an attribute. Quite often we wish to merge entities with other similar entities, such as person data from a CRM system and the equivalent person data from an HR system. Sesam prefixes namespaces to each attribute name in order to merge data from multiple sources without losing context. With some exceptions, attributes will always inherit the pipe name where the attribute was first created as its namespace, i.e. an attribute ``x`` created in pipe ``y`` will become ``x:y``. 
 
 See examples below.
 
@@ -46,7 +46,7 @@ Example of a Sesam entity with namespaces:
     "user:manager": "~:user:101"
   }
 
-Not that in the entity example above, the ``_id`` property do not retain a namespace, but the value does. This is an exception as the ``_id`` is the property Sesam uses as a unique identifier. 
+Noet that in the entity example above, the ``_id`` property do not retain a namespace, but the value does. This is an exception as the ``_id`` is the property Sesam uses as a unique identifier. 
 
   .. important::
 
@@ -54,10 +54,10 @@ Not that in the entity example above, the ``_id`` property do not retain a names
 
 .. _whatis-global:
 
-Global
-------
+Globals
+-------
 
-A global is a collection of merged datatypes within the same data domain. I.e. customer data, lead data and partner data could all be gathered into a ``global-organization`` dataset which would contain all the data from the organization domain within the enterprise. Similarily ``global-person`` would contain all person domain data and ``global-asset`` all the asset domain data. A global also allows us to map datatypes into global properties, as defined in the global namespace, through *Master Data Management (MDM)*. These global properties are Sesam's equivalent to *golden records*. 
+A global is a collection of merged entity types within the same data domain. I.e. customer data, lead data and partner data could all be gathered into a ``global-organisation`` dataset which would contain all the data from the organisation domain within the enterprise. Similarily ``global-human`` would contain all person domain data and ``global-asset`` all the asset domain data. A global also allows us to map entity types into global properties, as defined in the global namespace, through *Master Data Management (MDM)*. These global properties are Sesam's equivalent to *golden records*. 
 
 In addition to creating a context in which MDM may be performed, globals comes with several other advantages such as: 
 
@@ -74,21 +74,23 @@ A global model is the collection of globals and their global properties as defin
 
 Most global models contains some or all of the following globals:
 
-- global-person
-- global-organization
-- global-asset
+- global-human
+- global-organisation
+- global-location
 - global-task
-- global-project
-- global-document
+- global-product
+- global-event
+- global-agreement
+- global-asset
 
 .. _whatis-datatype:
 
-Datatype
---------
+Entity types
+------------
 
-Datatypes typically represents one concept within a system, e.g. customers in a CRM system. A global consists of datatypes from the same data domain.
+Entity types typically represents one concept within a system, e.g. customers in a CRM system. A global consists of entity types from the same data domain.
 
-Typical datatypes for the global ``global-person`` are:
+Typical entity types for the global ``global-human`` are:
 
 - person
 - user
@@ -99,5 +101,5 @@ Typical datatypes for the global ``global-person`` are:
 Connector
 ---------
 
-A connector is the collection of components required to synchronize one or more datatypes to a system. This synchronization can either be from the outside into Sesam or from Sesam to the outside. Sesam provides a list of built-in connectors to some of the most :doc:`common sources <documentation/service-configuration/systems/configuration-systems>`, such as :doc:`SQL <documentation/service-configuration/systems/configuration-systems-sql>` or :doc:`rest API's <documentation/service-configuration/systems/configuration-systems-rest>`. Sesam also provides a set of :doc:`developer extension points <extension-points>` to which you can build your own connector inside a microservice for extra functionality. 
+A connector is the collection of components required to synchronize one or more entity types to a system. This synchronization can either be from the outside into Sesam or from Sesam to the outside. Sesam provides a list of built-in connectors to some of the most :doc:`common sources <documentation/service-configuration/systems/configuration-systems>`, such as :doc:`SQL <documentation/service-configuration/systems/configuration-systems-sql>` or :doc:`rest API's <documentation/service-configuration/systems/configuration-systems-rest>`. Sesam also provides a set of :doc:`developer extension points <extension-points>` to which you can build your own connector inside a microservice for extra functionality. 
 
