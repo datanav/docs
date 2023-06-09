@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-08 11:49:37
+Generated: 2023-06-09 08:11:52
 
 Introduction.
 ------------
@@ -141,7 +141,7 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - Contact.ContactId
      - "integer"
 
@@ -210,7 +210,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - QuoteAlternativeId
      - "integer"
 
