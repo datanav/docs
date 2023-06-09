@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-08 07:11:39
+Generated: 2023-06-09 08:11:52
 
 Introduction.
 ------------
@@ -95,7 +95,7 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot D
      - id
      - "string"
    * - properties.hubspot_owner_id
-     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -127,7 +127,7 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot D
      - id
      - "string"
    * - properties.hubspot_owner_id
-     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -159,7 +159,7 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot Q
      - id
      - "string"
    * - properties.hubspot_owner_id
-     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -191,7 +191,7 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot T
      - id
      - "string"
    * - properties.hubspot_owner_id
-     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -219,7 +219,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
@@ -252,7 +252,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -284,7 +284,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -316,7 +316,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -344,7 +344,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
@@ -377,7 +377,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -409,7 +409,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -441,7 +441,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -557,7 +557,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -615,7 +615,7 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -675,10 +675,10 @@ The following properties are synchronized between a HubSpot Quote and a HubSpot 
      - HubSpot Quotecompanyassociation Property
      - HubSpot Data Type
    * - associations.companies.results.id
-     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - "string"
    * - associations.contacts.results.id
-     - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - "string"
    * - id
      - id
@@ -710,10 +710,10 @@ The following properties are synchronized between a HubSpot Quote and a HubSpot 
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
    * - associations.companies.results.id
-     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - "string"
    * - associations.contacts.results.id
-     - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - "string"
    * - id
      - id
@@ -835,7 +835,7 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -921,7 +921,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
@@ -954,7 +954,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -986,7 +986,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1047,7 +1047,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1224,7 +1224,7 @@ The following properties are synchronized between a HubSpot Quotedealassociation
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1340,7 +1340,7 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1368,7 +1368,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
@@ -1401,7 +1401,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -1433,7 +1433,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
