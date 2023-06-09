@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-05-24 12:22:53
+Generated: 2023-06-09 08:11:52
 
 Introduction.
 ------------
@@ -233,7 +233,7 @@ The following properties are synchronized between a Tripletex Employee and a Tri
      - "string"
    * - phoneNumberMobile
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phoneNumberWork
      - phoneNumberWork
      - "string"
