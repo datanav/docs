@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-24 08:54:50
+Generated: 2023-06-09 08:11:52
 
 Introduction.
 ------------
@@ -147,7 +147,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having wd:Q11994066 in Country.ThreeLetterISOCountry)
      - "string"
    * - overdueNoticeEmail
      - OrgNr (Dependant on having wd:Q1273217 in Country.ThreeLetterISOCountry)
