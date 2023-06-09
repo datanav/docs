@@ -46,7 +46,7 @@ Example of a Sesam entity with namespaces:
     "user:manager": "~:user:101"
   }
 
-Noet that in the entity example above, the ``_id`` property do not retain a namespace, but the value does. This is an exception as the ``_id`` is the property Sesam uses as a unique identifier. 
+Note that in the entity example above, the ``_id`` property do not retain a namespace, but the value does. This is an exception as the ``_id`` is the property Sesam uses as a unique identifier. 
 
   .. important::
 
