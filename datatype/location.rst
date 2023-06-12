@@ -255,7 +255,7 @@ System by system type
     ---
     **Wave Financial**
 
-    Wave provides financial software and services for small businesses, with services include direct bank data imports, invoicing and expense tracking, customizable chart of accounts, and journal transactions.
+    Wave Financials stands out as a great billing tool due to its user-friendly interface, comprehensive invoicing features, seamless payment integration, expense tracking capabilities, financial reporting options, and cost-effectiveness
     .. link-button:: system/wave
         :type: ref
         :text: Read more
