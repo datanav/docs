@@ -2,7 +2,7 @@
 SuperOffice to UniEconomy Dataflow
 ==================================
 
-Generated: 2023-06-13 12:13:53
+Generated: 2023-06-13 12:18:37
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a SuperOffice Contact and a Un
    * - SuperOffice Contact Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - Name
+     - Name
+     - "string"
 
