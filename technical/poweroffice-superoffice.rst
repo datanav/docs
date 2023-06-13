@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-05-24 08:54:50
+Generated: 2023-06-13 11:48:37
 
 Introduction.
 ------------
@@ -46,6 +46,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - firstName
      - Firstname
+     - "string"
+   * - lastChanged
+     - UpdatedDate
      - "string"
    * - lastName
      - Lastname
@@ -163,6 +166,9 @@ The following properties are synchronized between a Poweroffice Employee and a S
    * - Id
      - PersonId
      - "integer"
+   * - LastChanged
+     - UpdatedDate
+     - "string"
    * - LastName
      - Lastname
      - "string"
