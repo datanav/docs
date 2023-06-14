@@ -2,58 +2,12 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-07 07:44:23
+Generated: 2023-06-14 12:19:40
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Address to PowerOffice Address
-----------------------------------------
-Every Tripletex Address will be synchronized with a PowerOffice Address.
-
-Once a link between a Tripletex Address and a PowerOffice Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Address and a PowerOffice Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Address Property
-     - PowerOffice Address Property
-     - PowerOffice Data Type
-   * - addressLine1
-     - Address1
-     - "string"
-   * - addressLine1
-     - address1
-     - "string"
-   * - addressLine2
-     - Address2
-     - "string"
-   * - addressLine2
-     - address2
-     - "string"
-   * - city
-     - City
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - country.id
-     - CountryCode
-     - "string"
-   * - country.id
-     - countryCode
-     - "string"
-   * - postalCode
-     - ZipCode
-     - "string"
-   * - postalCode
-     - zipCode
-     - "string"
-
 
 Tripletex Contact to PowerOffice Contactperson
 ----------------------------------------------
