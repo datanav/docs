@@ -2,7 +2,7 @@
 Tripletex to UniEconomy Dataflow
 ================================
 
-Generated: 2023-06-13 12:18:52
+Generated: 2023-06-14 13:11:39
 
 Introduction.
 ------------
@@ -36,4 +36,20 @@ The following properties are synchronized between a Tripletex Customer and a Uni
    * - name
      - Name
      - "string"
+
+
+Tripletex Department to UniEconomy Departments
+----------------------------------------------
+Every Tripletex Department will be synchronized with a UniEconomy Departments.
+
+Once a link between a Tripletex Department and a UniEconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a UniEconomy Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - UniEconomy Departments Property
+     - UniEconomy Data Type
 
