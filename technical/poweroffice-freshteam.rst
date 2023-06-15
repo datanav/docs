@@ -2,7 +2,7 @@
 Poweroffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-06-15 12:32:42
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Poweroffice Employee and a F
    * - Poweroffice Employee Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - DateOfBirth
+     - date_of_birth
+     - "string"
    * - EmailAddress
      - official_email
      - "string"
