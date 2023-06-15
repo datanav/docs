@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-05-23 06:32:42
+Generated: 2023-06-15 12:32:42
 
 Introduction.
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - communication_address.communication_zip_code
      - Address.Postal.Zipcode
      - "string"
+   * - date_of_birth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - first_name
      - Firstname
      - "string"
