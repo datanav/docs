@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-06-15 12:32:42
 
 Introduction.
 ------------
@@ -36,6 +36,9 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - Tripletex Employee Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - dateOfBirth
+     - date_of_birth
+     - "string"
    * - firstName
      - first_name
      - "string"
