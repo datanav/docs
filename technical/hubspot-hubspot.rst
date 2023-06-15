@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-09 08:11:52
+Generated: 2023-06-15 12:10:29
 
 Introduction.
 ------------
@@ -1161,35 +1161,6 @@ The following properties are synchronized between a HubSpot Quotedealassociation
 
    * - HubSpot Quotedealassociation Property
      - HubSpot Quotecompanyassociation Property
-     - HubSpot Data Type
-   * - id
-     - id
-     - "string"
-
-
-HubSpot Quotedealassociation to HubSpot Quotecontactassociation
----------------------------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Quotedealassociation and a HubSpot Quotecontactassociation must be established.
-
-A HubSpot Quotedealassociation will merge with a HubSpot Quotecontactassociation if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quotedealassociation Property
-     - HubSpot Quotecontactassociation Property
-   * - id
-     - id
-
-Once a link between a HubSpot Quotedealassociation and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Quotedealassociation and a HubSpot Quotecontactassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quotedealassociation Property
-     - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
    * - id
      - id
