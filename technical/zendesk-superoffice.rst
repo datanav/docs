@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-19 13:29:27
+Generated: 2023-06-19 13:55:32
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Tickets and a SuperO
    * - Zendesk Tickets Property
      - SuperOffice Ticket Property
      - SuperOffice Data Type
+   * - subject
+     - Title
+     - "string"
    * - title
      - Title
      - "string"
