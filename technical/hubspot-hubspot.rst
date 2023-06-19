@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-19 10:26:56
+Generated: 2023-06-19 10:27:16
 
 Introduction.
 ------------
@@ -1383,6 +1383,22 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
+
+
+HubSpot Lineitem to HubSpot Deal
+--------------------------------
+Every HubSpot Lineitem will be synchronized with a HubSpot Deal.
+
+Once a link between a HubSpot Lineitem and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
 
 
 HubSpot User to HubSpot Contact
