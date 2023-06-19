@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-19 10:31:54
+Generated: 2023-06-19 14:50:26
 
 Introduction.
 ------------
@@ -144,6 +144,56 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - Urls.Value
      - properties.website
      - "string"
+
+
+SuperOffice Sale classification status to HubSpot Pipelinedeal
+--------------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal must be established.
+
+A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, or Quote that is synchronized into HubSpot.
+
+Once a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale classification status and a HubSpot Pipelinedeal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale classification status Property
+     - HubSpot Pipelinedeal Property
+     - HubSpot Data Type
+
+
+SuperOffice Quote to HubSpot Deal
+---------------------------------
+Every SuperOffice Quote will be synchronized with a HubSpot Deal.
+
+Once a link between a SuperOffice Quote and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quote and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quote Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+SuperOffice Quotealternative to HubSpot Deal
+--------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a HubSpot Deal.
+
+Once a link between a SuperOffice Quotealternative and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
 
 
 SuperOffice Product to HubSpot Product
