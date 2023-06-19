@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-19 11:58:28
+Generated: 2023-06-19 11:58:35
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Freshteam Department and a S
    * - Freshteam Department Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Freshteam Employee to SuperOffice Person
