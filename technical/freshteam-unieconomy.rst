@@ -2,7 +2,7 @@
 Freshteam to UniEconomy Dataflow
 ================================
 
-Generated: 2023-06-19 11:54:50
+Generated: 2023-06-19 11:57:32
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Freshteam Department and a U
    * - Freshteam Department Property
      - UniEconomy Departments Property
      - UniEconomy Data Type
+   * - name
+     - Name
+     - "string"
 
