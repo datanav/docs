@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-19 10:31:13
+Generated: 2023-06-19 10:31:33
 
 Introduction.
 ------------
@@ -132,6 +132,53 @@ The following properties are synchronized between a Poweroffice Outgoinginvoice 
    :header-rows: 1
 
    * - Poweroffice Outgoinginvoice Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+   * - CurrencyCode
+     - properties.deal_currency_code
+     - "string"
+   * - NetAmount
+     - properties.amount
+     - "string"
+   * - OrderDate
+     - properties.closedate
+     - "string"
+
+
+Poweroffice Salesorder to HubSpot Deal
+--------------------------------------
+Every Poweroffice Salesorder will be synchronized with a HubSpot Deal.
+
+Once a link between a Poweroffice Salesorder and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorder and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorder Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+   * - Currency
+     - properties.deal_currency_code
+     - "string"
+   * - OrderDate
+     - properties.closedate
+     - "string"
+
+
+Poweroffice Salesorderline to HubSpot Deal
+------------------------------------------
+Every Poweroffice Salesorderline will be synchronized with a HubSpot Deal.
+
+Once a link between a Poweroffice Salesorderline and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorderline and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorderline Property
      - HubSpot Deal Property
      - HubSpot Data Type
 
