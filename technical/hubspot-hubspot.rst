@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-15 12:10:42
+Generated: 2023-06-19 10:26:40
 
 Introduction.
 ------------
@@ -197,7 +197,10 @@ The following properties are synchronized between a HubSpot Deal and a HubSpot T
 
 HubSpot Dealcompanyassociation to HubSpot Deal
 ----------------------------------------------
-Before any synchronization can take place, a link between a HubSpot Dealcompanyassociation and a HubSpot Deal must be established.
+Every HubSpot Dealcompanyassociation will be synchronized with a HubSpot Deal.
+
+If a matching HubSpot Deal already exists, the HubSpot Dealcompanyassociation will be merged with the existing one.
+If no matching HubSpot Deal is found, a new HubSpot Deal will be created.
 
 A HubSpot Dealcompanyassociation will merge with a HubSpot Deal if one of the following property combinations match:
 
