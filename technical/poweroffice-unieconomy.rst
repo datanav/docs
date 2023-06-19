@@ -2,7 +2,7 @@
 Poweroffice to UniEconomy Dataflow
 ==================================
 
-Generated: 2023-06-19 11:18:33
+Generated: 2023-06-19 11:19:27
 
 Introduction.
 ------------
@@ -23,7 +23,7 @@ The following properties are synchronized between a Poweroffice Customer and a U
    * - Poweroffice Customer Property
      - UniEconomy Customers Property
      - UniEconomy Data Type
-   * - InternationalIdNumber (Dependant on having  in poweroffice-customer:InternationalIdType)
+   * - InternationalIdNumber (Dependant on having wd:Q11994066 in poweroffice-customer:InternationalIdType)
      - OrgNumber
      - "string"
    * - WebsiteUrl
