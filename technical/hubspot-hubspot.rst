@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-19 10:29:27
+Generated: 2023-06-19 10:29:54
 
 Introduction.
 ------------
@@ -1472,6 +1472,22 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
+
+
+HubSpot Quotedealassociation to HubSpot Deal
+--------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a HubSpot Deal.
+
+Once a link between a HubSpot Quotedealassociation and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
 
 
 HubSpot User to HubSpot Contact
