@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-06-19 11:57:45
+Generated: 2023-06-19 11:57:48
 
 Introduction.
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Tripletex Department and a F
    * - Tripletex Department Property
      - Freshteam Department Property
      - Freshteam Data Type
+   * - changes.timestamp
+     - created_at
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to Freshteam Employee
