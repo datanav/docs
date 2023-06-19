@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-09 08:11:52
+Generated: 2023-06-19 07:58:49
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Tripletex Contact to HubSpot Contact
 ------------------------------------
 Every Tripletex Contact will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Tripletex Contact will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
+
+A Tripletex Contact will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
 
 Once a link between a Tripletex Contact and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -37,6 +50,80 @@ The following properties are synchronized between a Tripletex Contact and a HubS
      - "string"
    * - phoneNumberWork
      - properties.phone
+     - "string"
+
+
+Tripletex Employee to HubSpot Contact
+-------------------------------------
+Every Tripletex Employee will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Tripletex Employee will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
+
+A Tripletex Employee will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Tripletex Employee and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - address.addressLine1
+     - properties.address
+     - "string"
+   * - address.changes
+     - properties.city
+     - "string"
+   * - address.city
+     - properties.city
+     - "string"
+   * - address.city
+     - properties.country
+     - "string"
+   * - address.country.id
+     - properties.country
+     - "string"
+   * - address.id
+     - properties.zip
+     - "string"
+   * - address.postalCode
+     - properties.zip
+     - "string"
+   * - dateOfBirth
+     - properties.date_of_birth
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - phoneNumberMobile
+     - properties.mobilephone
+     - "string"
+   * - phoneNumberWork
+     - properties.phone
+     - "string"
+   * - userType
+     - properties.country
      - "string"
 
 
@@ -111,67 +198,6 @@ The following properties are synchronized between a Tripletex Department and a H
      - "string"
    * - name
      - properties.name
-     - "string"
-
-
-Tripletex Employee to HubSpot Contact
--------------------------------------
-Every Tripletex Employee will be synchronized with a HubSpot Contact.
-
-Once a link between a Tripletex Employee and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a HubSpot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
-   * - address.addressLine1
-     - properties.address
-     - "string"
-   * - address.changes
-     - properties.city
-     - "string"
-   * - address.city
-     - properties.city
-     - "string"
-   * - address.city
-     - properties.country
-     - "string"
-   * - address.country.id
-     - properties.country
-     - "string"
-   * - address.id
-     - properties.zip
-     - "string"
-   * - address.postalCode
-     - properties.zip
-     - "string"
-   * - dateOfBirth
-     - properties.date_of_birth
-     - "string"
-   * - email
-     - properties.email
-     - "string"
-   * - firstName
-     - properties.firstname
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - lastName
-     - properties.lastname
-     - "string"
-   * - phoneNumberMobile
-     - properties.mobilephone
-     - "string"
-   * - phoneNumberWork
-     - properties.phone
-     - "string"
-   * - userType
-     - properties.country
      - "string"
 
 
