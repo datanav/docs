@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-19 07:58:49
+Generated: 2023-06-19 13:35:37
 
 Introduction.
 ------------
@@ -226,6 +226,37 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - QuoteAlternativeId
      - "integer"
+
+
+HubSpot Product to SuperOffice Product
+--------------------------------------
+Every HubSpot Product will be synchronized with a SuperOffice Product.
+
+Once a link between a HubSpot Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - properties.description
+     - Description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - UnitCost
+     - "string"
+   * - properties.hs_sku
+     - ERPProductKey
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
+   * - properties.price
+     - UnitListPrice
+     - "decimal"
 
 
 HubSpot Quote to SuperOffice Quotealternative
