@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-19 14:50:26
+Generated: 2023-06-19 14:50:34
 
 Introduction.
 ------------
@@ -150,7 +150,7 @@ SuperOffice Sale classification status to HubSpot Pipelinedeal
 --------------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal must be established.
 
-A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, or Quote that is synchronized into HubSpot.
+A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, or Quotealternative that is synchronized into HubSpot.
 
 Once a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
