@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-19 10:27:16
+Generated: 2023-06-19 10:27:38
 
 Introduction.
 ------------
@@ -1397,6 +1397,22 @@ The following properties are synchronized between a HubSpot Lineitem and a HubSp
    :header-rows: 1
 
    * - HubSpot Lineitem Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+HubSpot Lineitemdealassociation to HubSpot Deal
+-----------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a HubSpot Deal.
+
+Once a link between a HubSpot Lineitemdealassociation and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
 
