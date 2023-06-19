@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-08 11:49:37
+Generated: 2023-06-19 10:31:13
 
 Introduction.
 ------------
@@ -118,6 +118,22 @@ The following properties are synchronized between a Poweroffice Employee and a H
    * - LastName
      - properties.lastname
      - "string"
+
+
+Poweroffice Outgoinginvoice to HubSpot Deal
+-------------------------------------------
+Every Poweroffice Outgoinginvoice will be synchronized with a HubSpot Deal.
+
+Once a link between a Poweroffice Outgoinginvoice and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Outgoinginvoice and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Outgoinginvoice Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
 
 
 Poweroffice Supplier to HubSpot Company
