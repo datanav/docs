@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-19 10:28:20
+Generated: 2023-06-19 10:28:38
 
 Introduction.
 ------------
@@ -1447,6 +1447,9 @@ The following properties are synchronized between a HubSpot Quote and a HubSpot 
    * - HubSpot Quote Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - properties.hs_quote_amount
+     - properties.amount
+     - "string"
 
 
 HubSpot User to HubSpot Contact
