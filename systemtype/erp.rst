@@ -72,7 +72,7 @@ Systems
 
     **Businesscentral**
 
-    
+    Microsoft Dynamics 365 Business Central (formerly Microsoft Dynamics NAV) – ERP and CRM software-as-a-service product meant for small and mid-sized businesses.
     .. link-button:: system/businesscentral
         :type: ref
         :text: Read more
