@@ -2,38 +2,12 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-19 13:35:37
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Account to SuperOffice Pricelist
-----------------------------------------
-Before any synchronization can take place, a link between a HubSpot Account and a SuperOffice Pricelist must be established.
-
-A HubSpot Account will merge with a SuperOffice Pricelist if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - SuperOffice Pricelist Property
-   * - companyCurrency
-     - Currency
-
-Once a link between a HubSpot Account and a SuperOffice Pricelist is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a SuperOffice Pricelist:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - SuperOffice Pricelist Property
-     - SuperOffice Data Type
-
 
 HubSpot Contact to SuperOffice Person
 -------------------------------------
@@ -300,5 +274,24 @@ The following properties are synchronized between a HubSpot Ticket and a SuperOf
      - "integer"
    * - properties.subject
      - Title
+     - "string"
+
+
+Tripletex Productgroup to SuperOffice Listproductcategoryitems
+--------------------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+
+Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - SuperOffice Listproductcategoryitems Property
+     - SuperOffice Data Type
+   * - name
+     - Name
      - "string"
 
