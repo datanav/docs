@@ -106,6 +106,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
         :text: Read more
         :classes: read-more
     ---
+    **Powerofficego**
+
+    PowerOffice is an all-in-one business solution. It is a cloud-based software that allows small and medium businesses to manage their accounting, invoicing, payroll, and human resources. 
+    .. link-button:: system/powerofficego
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **SAP**
 
     Software for the management of business processes, developing solutions that facilitate effective data processing and information flow across organisations.
