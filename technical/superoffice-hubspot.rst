@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -108,12 +108,6 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - SuperOffice Contact Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - Address.Postal.Address1
-     - properties.address
-     - "string"
-   * - Address.Postal.Address2
-     - properties.address2
-     - "string"
    * - Address.Street.Address1
      - properties.address
      - "string"
@@ -140,9 +134,6 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
      - "string"
    * - Phones.Value
      - properties.phone
-     - "string"
-   * - Urls.Value
-     - properties.website
      - "string"
 
 
@@ -178,6 +169,12 @@ The following properties are synchronized between a SuperOffice Project and a Hu
    * - SuperOffice Project Property
      - HubSpot Ticket Property
      - HubSpot Data Type
+   * - Associate.AssociateId
+     - properties.hubspot_owner_id
+     - "string"
+   * - Name
+     - properties.subject
+     - "string"
 
 
 SuperOffice Quote to HubSpot Deal
@@ -235,6 +232,9 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - TotalPrice
+     - properties.amount
+     - "string"
 
 
 SuperOffice Quoteline to HubSpot Quotecontactassociation
@@ -301,9 +301,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - properties.hs_title
      - "string"
-   * - TotalPrice
-     - properties.hs_quote_amount
-     - "string"
 
 
 SuperOffice Quoteline to HubSpot Lineitemdealassociation
@@ -321,7 +318,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
    * - QuoteAlternativeId
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -342,9 +339,6 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
    * - Amount
      - properties.amount
      - "string"
-   * - CreatedDate
-     - properties.createdate
-     - "string"
    * - Currency.Id
      - properties.deal_currency_code
      - "string"
@@ -356,9 +350,6 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
      - "string"
    * - Saledate
      - properties.closedate
-     - "string"
-   * - Status
-     - properties.dealstage
      - "string"
 
 
@@ -376,6 +367,9 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
    * - SuperOffice Sale Property
      - HubSpot Pipelinedeal Property
      - HubSpot Data Type
+   * - Status
+     - label
+     - "string"
 
 
 SuperOffice Ticket to HubSpot Ticket
@@ -392,9 +386,6 @@ The following properties are synchronized between a SuperOffice Ticket and a Hub
    * - SuperOffice Ticket Property
      - HubSpot Ticket Property
      - HubSpot Data Type
-   * - CreatedAt
-     - properties.createdate
-     - "string"
    * - OwnedBy.AssociateId
      - properties.hubspot_owner_id
      - "string"
