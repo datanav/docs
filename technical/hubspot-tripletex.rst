@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -176,9 +176,6 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
    * - properties.deal_currency_code
      - currency.id
      - "integer"
-   * - properties.dealstage
-     - isClosed
-     - "string"
 
 
 HubSpot Lineitemdealassociation to Tripletex Orderline
@@ -195,7 +192,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - order.id
      - "integer"
 
@@ -214,21 +211,6 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - HubSpot Product Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - costExcludingVatCurrency
-     - "integer"
-   * - properties.hs_sku
-     - number
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - priceExcludingVatCurrency
-     - "float"
 
 
 HubSpot User to Tripletex Employee
