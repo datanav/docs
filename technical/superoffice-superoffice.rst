@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-20 01:53:52
 
 Introduction.
 ------------
@@ -38,6 +38,64 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - "string"
    * - name
      - Name
+     - "string"
+
+
+SuperOffice Quote to SuperOffice Sale
+-------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quote and a SuperOffice Sale must be established.
+
+A SuperOffice Quote will merge with a SuperOffice Sale if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quote Property
+     - SuperOffice Sale Property
+   * - SaleId
+     - SaleId
+
+Once a link between a SuperOffice Quote and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quote and a SuperOffice Sale:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quote Property
+     - SuperOffice Sale Property
+     - SuperOffice Data Type
+   * - AcceptedQuoteAlternativeId
+     - Status
+     - "string"
+
+
+SuperOffice Sale to SuperOffice Quote
+-------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Sale and a SuperOffice Quote must be established.
+
+A SuperOffice Sale will merge with a SuperOffice Quote if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - SuperOffice Quote Property
+   * - SaleId
+     - SaleId
+
+Once a link between a SuperOffice Sale and a SuperOffice Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a SuperOffice Quote:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - SuperOffice Quote Property
+     - SuperOffice Data Type
+   * - Status
+     - AcceptedQuoteAlternativeId
      - "string"
 
 
