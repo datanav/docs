@@ -2,7 +2,7 @@
 Tripletex to UniEconomy Dataflow
 ================================
 
-Generated: 2023-06-19 11:19:45
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
