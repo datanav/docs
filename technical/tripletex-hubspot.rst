@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -83,20 +83,11 @@ The following properties are synchronized between a Tripletex Employee and a Hub
    * - address.addressLine1
      - properties.address
      - "string"
-   * - address.changes
-     - properties.city
-     - "string"
    * - address.city
      - properties.city
-     - "string"
-   * - address.city
-     - properties.country
      - "string"
    * - address.country.id
      - properties.country
-     - "string"
-   * - address.id
-     - properties.zip
      - "string"
    * - address.postalCode
      - properties.zip
@@ -141,12 +132,6 @@ The following properties are synchronized between a Tripletex Customer and a Hub
    * - Tripletex Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - deliveryAddress.addressLine1
-     - properties.address
-     - "string"
-   * - deliveryAddress.addressLine2
-     - properties.address2
-     - "string"
    * - id
      - id
      - "string"
@@ -170,12 +155,6 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - postalAddress.addressLine2
-     - properties.address2
      - "string"
 
 
@@ -215,6 +194,12 @@ The following properties are synchronized between a Tripletex Order and a HubSpo
    * - Tripletex Order Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - currency.id
+     - properties.deal_currency_code
+     - "string"
+   * - orderDate
+     - properties.closedate
+     - "string"
 
 
 Tripletex Order to HubSpot Quotecontactassociation
@@ -231,6 +216,12 @@ The following properties are synchronized between a Tripletex Order and a HubSpo
    * - Tripletex Order Property
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
+   * - contact.id
+     - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - "string"
+   * - customer.id
+     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 Tripletex Orderline to HubSpot Deal
@@ -247,6 +238,9 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
    * - Tripletex Orderline Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - currency.id
+     - properties.deal_currency_code
+     - "string"
 
 
 Tripletex Orderline to HubSpot Quotecontactassociation
@@ -279,6 +273,12 @@ The following properties are synchronized between a Tripletex Project and a HubS
    * - Tripletex Project Property
      - HubSpot Ticket Property
      - HubSpot Data Type
+   * - name
+     - properties.subject
+     - "string"
+   * - projectManager.id
+     - properties.hubspot_owner_id
+     - "string"
 
 
 Tripletex Supplier to HubSpot Company
@@ -295,12 +295,6 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
    * - Tripletex Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - deliveryAddress.addressLine1
-     - properties.address
-     - "string"
-   * - deliveryAddress.addressLine2
-     - properties.address2
-     - "string"
    * - id
      - id
      - "string"
@@ -324,12 +318,6 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
-     - "string"
-   * - postalAddress.addressLine1
-     - properties.address
-     - "string"
-   * - postalAddress.addressLine2
-     - properties.address2
      - "string"
 
 
@@ -364,7 +352,7 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
    * - order.id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
@@ -382,9 +370,6 @@ The following properties are synchronized between a Tripletex Product and a HubS
    * - Tripletex Product Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - changes.timestamp
-     - properties.createdate
-     - "string"
    * - costExcludingVatCurrency
      - properties.hs_cost_of_goods_sold
      - "string"
