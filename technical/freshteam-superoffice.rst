@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -45,9 +45,6 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - address.city
      - Address.Street.City
      - "string"
-   * - address.country_code
-     - Country.CountryId
-     - "integer"
    * - address.zip_code
      - Address.Street.Zipcode
      - "string"
@@ -72,31 +69,13 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - last_name
      - Lastname
      - "string"
-   * - phone_numbers (Dependant on having wd:Q17517 in phone_numbers.type)
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - MobilePhones.Value
      - "string"
-   * - phone_numbers (Dependant on having wd:Q214995 in phone_numbers.type)
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - OfficePhones.Value
      - "string"
-   * - phone_numbers (Dependant on having wd:Q67372736 in phone_numbers.type)
-     - PrivatePhones.Value
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.type)
-     - MobilePhones.Value
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.type)
-     - OfficePhones.Value
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.type)
-     - PrivatePhones.Value
-     - "string"
-   * - phone_numbers.value (Dependant on having wd:Q17517 in phone_numbers.type)
-     - MobilePhones.Value
-     - "string"
-   * - phone_numbers.value (Dependant on having wd:Q214995 in phone_numbers.type)
-     - OfficePhones.Value
-     - "string"
-   * - phone_numbers.value (Dependant on having wd:Q67372736 in phone_numbers.type)
+   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
      - PrivatePhones.Value
      - "string"
 
