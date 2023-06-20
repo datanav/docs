@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - Tripletex Contact Property
      - Tripletex Data Type
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - PartyCustomerCode
-     - customer.id
-     - "integer"
-   * - PartySupplierCode
-     - customer.id
-     - "integer"
-   * - PhoneNumber
-     - phoneNumberWork
-     - "string"
    * - firstName
      - firstName
      - "string"
@@ -69,14 +54,8 @@ The following properties are synchronized between a Poweroffice Customer and a T
    * - Poweroffice Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
-   * - FirstName
-     - firstName
-     - "string"
    * - LastName
      - lastName
-     - "string"
-   * - Name
-     - firstName
      - "string"
    * - firstName
      - firstName
@@ -100,44 +79,11 @@ The following properties are synchronized between a Poweroffice Customer and a T
    * - EmailAddress
      - email
      - "string"
-   * - Id
-     - id
-     - "integer"
    * - InvoiceEmailAddress
      - invoiceEmail
      - "string"
    * - LegalName
      - name
-     - "string"
-   * - MailAddress.Address1
-     - deliveryAddress.addressLine1
-     - "string"
-   * - MailAddress.Address1
-     - postalAddress.addressLine1
-     - "string"
-   * - MailAddress.Address2
-     - deliveryAddress.addressLine2
-     - "string"
-   * - MailAddress.Address2
-     - postalAddress.addressLine2
-     - "string"
-   * - MailAddress.City
-     - deliveryAddress.changes
-     - "string"
-   * - MailAddress.City
-     - postalAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - deliveryAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - postalAddress.country.id
-     - "integer"
-   * - MailAddress.ZipCode
-     - deliveryAddress.postalCode
-     - "string"
-   * - MailAddress.ZipCode
-     - postalAddress.postalCode
      - "string"
    * - PhoneNumber
      - phoneNumber
@@ -159,9 +105,6 @@ The following properties are synchronized between a Poweroffice Customer and a T
      - "integer"
    * - mailAddress.zipCode
      - postalAddress.postalCode
-     - "string"
-   * - mailaddress.city
-     - postalAddress.city
      - "string"
 
 
@@ -201,18 +144,6 @@ The following properties are synchronized between a Poweroffice Employee and a T
    * - LastName
      - lastName
      - "string"
-   * - MailAddress.Address1
-     - address.addressLine1
-     - "string"
-   * - MailAddress.Address2
-     - address.addressLine2
-     - "string"
-   * - streetAddresses.address1
-     - address.addressLine1
-     - "string"
-   * - streetAddresses.address2
-     - address.addressLine2
-     - "string"
 
 
 Poweroffice Product to Tripletex Product
@@ -249,9 +180,6 @@ The following properties are synchronized between a Poweroffice Product and a Tr
      - "float"
    * - Unit
      - productUnit.id
-     - "integer"
-   * - VatCode
-     - vatType
      - "integer"
    * - VatCode
      - vatType.id
@@ -325,12 +253,6 @@ The following properties are synchronized between a Poweroffice Salesorderline a
    * - Discount
      - discount
      - "float"
-   * - Discount
-     - unitCostCurrency
-     - "string"
-   * - ProductCode
-     - unitCostCurrency
-     - "string"
    * - Quantity
      - count
      - "float"
