@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-20 07:58:52
+Generated: 2023-06-20 08:37:52
 
 Introduction.
 ------------
@@ -46,6 +46,9 @@ The following properties are synchronized between a Zendesk Tickets and a SuperO
      - "integer"
    * - due_at
      - TimeToReply
+     - "integer"
+   * - requester_id
+     - OwnedBy.AssociateId
      - "integer"
    * - subject
      - Title
