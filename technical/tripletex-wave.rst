@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-09 09:07:36
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
@@ -29,31 +29,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - phoneNumber
      - phone
      - "string"
-
-
-Tripletex Invoice to Wave Invoice
----------------------------------
-Every Tripletex Invoice will be synchronized with a Wave Invoice.
-
-Once a link between a Tripletex Invoice and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Invoice and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Invoice Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - amountExcludingVat
-     - amountDue.value
-     - "string"
-   * - invoiceDate
-     - invoiceDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - invoiceDueDate
-     - dueDate
-     - "datetime-format","%Y-%m-%d","_."]
 
 
 Tripletex Product to Wave Product
