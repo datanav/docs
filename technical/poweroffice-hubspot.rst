@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - DateOfBirth
-     - properties.date_of_birth
-     - "string"
-   * - EmailAddress
-     - properties.work_email
-     - "string"
-   * - FirstName
-     - properties.firstname
-     - "string"
-   * - LastName
-     - properties.lastname
-     - "string"
-   * - PhoneNumber
-     - properties.phone
-     - "string"
    * - dateOfBirth
      - properties.date_of_birth
      - "string"
@@ -77,18 +62,6 @@ The following properties are synchronized between a Poweroffice Customer and a H
      - "string"
    * - WebsiteUrl
      - properties.website
-     - "string"
-   * - mailAddress.address1
-     - properties.address
-     - "string"
-   * - mailAddress.address2
-     - properties.address2
-     - "string"
-   * - streetAddresses.address1
-     - properties.address
-     - "string"
-   * - streetAddresses.address2
-     - properties.address2
      - "string"
 
 
@@ -159,6 +132,12 @@ The following properties are synchronized between a Poweroffice Outgoinginvoice 
    * - Poweroffice Outgoinginvoice Property
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
+   * - CustomerCode
+     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - "string"
+   * - OurReferenceEmployeeCode
+     - toObjectId (Dependant on having wd:Q685433 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 Poweroffice Salesorder to HubSpot Deal
@@ -197,6 +176,15 @@ The following properties are synchronized between a Poweroffice Salesorder and a
    * - Poweroffice Salesorder Property
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
+   * - ContactPersonId
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
+   * - DepartmentCode
+     - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - "string"
+   * - SalesPersonEmployeeNo
+     - toObjectId (Dependant on having wd:Q685433 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 Poweroffice Salesorderline to HubSpot Deal
