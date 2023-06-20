@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-19 10:31:33
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
@@ -145,6 +145,22 @@ The following properties are synchronized between a Poweroffice Outgoinginvoice 
      - "string"
 
 
+Poweroffice Outgoinginvoice to HubSpot Quotecontactassociation
+--------------------------------------------------------------
+Every Poweroffice Outgoinginvoice will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a Poweroffice Outgoinginvoice and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Outgoinginvoice and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Outgoinginvoice Property
+     - HubSpot Quotecontactassociation Property
+     - HubSpot Data Type
+
+
 Poweroffice Salesorder to HubSpot Deal
 --------------------------------------
 Every Poweroffice Salesorder will be synchronized with a HubSpot Deal.
@@ -167,6 +183,22 @@ The following properties are synchronized between a Poweroffice Salesorder and a
      - "string"
 
 
+Poweroffice Salesorder to HubSpot Quotecontactassociation
+---------------------------------------------------------
+Every Poweroffice Salesorder will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a Poweroffice Salesorder and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorder and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorder Property
+     - HubSpot Quotecontactassociation Property
+     - HubSpot Data Type
+
+
 Poweroffice Salesorderline to HubSpot Deal
 ------------------------------------------
 Every Poweroffice Salesorderline will be synchronized with a HubSpot Deal.
@@ -180,6 +212,22 @@ The following properties are synchronized between a Poweroffice Salesorderline a
 
    * - Poweroffice Salesorderline Property
      - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+Poweroffice Salesorderline to HubSpot Quotecontactassociation
+-------------------------------------------------------------
+Every Poweroffice Salesorderline will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a Poweroffice Salesorderline and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorderline and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorderline Property
+     - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
 
 
