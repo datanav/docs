@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-19 07:58:49
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
@@ -199,6 +199,86 @@ The following properties are synchronized between a Tripletex Department and a H
    * - name
      - properties.name
      - "string"
+
+
+Tripletex Order to HubSpot Deal
+-------------------------------
+Every Tripletex Order will be synchronized with a HubSpot Deal.
+
+Once a link between a Tripletex Order and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+Tripletex Order to HubSpot Quotecontactassociation
+--------------------------------------------------
+Every Tripletex Order will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a Tripletex Order and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - HubSpot Quotecontactassociation Property
+     - HubSpot Data Type
+
+
+Tripletex Orderline to HubSpot Deal
+-----------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Deal.
+
+Once a link between a Tripletex Orderline and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+Tripletex Orderline to HubSpot Quotecontactassociation
+------------------------------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a Tripletex Orderline and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Quotecontactassociation Property
+     - HubSpot Data Type
+
+
+Tripletex Project to HubSpot Ticket
+-----------------------------------
+Every Tripletex Project will be synchronized with a HubSpot Ticket.
+
+Once a link between a Tripletex Project and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a HubSpot Ticket:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - HubSpot Ticket Property
+     - HubSpot Data Type
 
 
 Tripletex Supplier to HubSpot Company
