@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -23,32 +23,11 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - DateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - FirstName
-     - Firstname
-     - "string"
-   * - LastName
-     - Lastname
-     - "string"
-   * - PartyCustomerCode
-     - Contact.ContactId
-     - "integer"
-   * - PartySupplierCode
-     - Contact.ContactId
-     - "integer"
-   * - PhoneNumber
-     - OfficePhones.Value
-     - "string"
    * - dateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - firstName
      - Firstname
-     - "string"
-   * - lastChanged
-     - UpdatedDate
      - "string"
    * - lastName
      - Lastname
@@ -81,32 +60,8 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - EmailAddress
      - Emails.Value
      - "string"
-   * - Id
-     - ContactId
-     - "integer"
-   * - InternationalIdNumber
-     - OrgNr (Dependant on having  in Country.ThreeLetterISOCountry)
-     - "string"
    * - LegalName
      - Name
-     - "string"
-   * - MailAddress.Address1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.Address2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.Address3
-     - Address.Postal.Address3
-     - "string"
-   * - MailAddress.City
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.CountryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.ZipCode
-     - Address.Postal.Zipcode
      - "string"
    * - PhoneNumber
      - Phones.Value
@@ -114,9 +69,6 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - WebsiteUrl
      - Domains
      - "list"
-   * - WebsiteUrl
-     - Urls.Value
-     - "string"
    * - id
      - ContactId
      - "integer"
@@ -137,9 +89,6 @@ The following properties are synchronized between a Poweroffice Customer and a S
      - "integer"
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
-     - "string"
-   * - mailaddress.city
-     - Address.Postal.City
      - "string"
 
 
@@ -166,9 +115,6 @@ The following properties are synchronized between a Poweroffice Employee and a S
    * - Id
      - PersonId
      - "integer"
-   * - LastChanged
-     - UpdatedDate
-     - "string"
    * - LastName
      - Lastname
      - "string"
@@ -209,12 +155,6 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - EmailAddress
      - Emails.Value
      - "string"
-   * - Id
-     - ContactId
-     - "integer"
-   * - InternationalIdNumber
-     - OrgNr (Dependant on having  in Country.ThreeLetterISOCountry)
-     - "string"
    * - LegalName
      - Name
      - "string"
@@ -224,9 +164,6 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - WebsiteUrl
      - Domains
      - "list"
-   * - WebsiteUrl
-     - Urls.Value
-     - "string"
 
 
 Poweroffice Product to SuperOffice Product
@@ -262,7 +199,7 @@ The following properties are synchronized between a Poweroffice Product and a Su
      - ProductTypeKey
      - "string"
    * - Unit
-     - PriceUnit
+     - QuantityUnit
      - "string"
    * - VatCode
      - VAT
@@ -310,9 +247,6 @@ The following properties are synchronized between a Poweroffice Salesorderline a
      - "integer"
    * - Quantity
      - Quantity
-     - "integer"
-   * - SalesOrderLineUnitPrice
-     - TotalPrice
      - "integer"
    * - SalesOrderLineUnitPrice
      - UnitListPrice
