@@ -2,12 +2,38 @@
 HubSpot to Zendesk Dataflow
 ===========================
 
-Generated: 2023-06-20 08:37:52
+Generated: 2023-06-20 09:20:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Contact to Zendesk Users
+--------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Zendesk Users must be established.
+
+A HubSpot Contact will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Zendesk Users Property
+   * - properties.email
+     - email
+
+Once a link between a HubSpot Contact and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+
 
 HubSpot Ticket to Zendesk Tickets
 ---------------------------------
@@ -29,4 +55,20 @@ The following properties are synchronized between a HubSpot Ticket and a Zendesk
    * - properties.subject
      - subject
      - "string"
+
+
+HubSpot User to Zendesk Users
+-----------------------------
+Every HubSpot User will be synchronized with a Zendesk Users.
+
+Once a link between a HubSpot User and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - Zendesk Users Property
+     - Zendesk Data Type
 
