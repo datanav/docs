@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-09 08:11:52
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
@@ -80,8 +80,6 @@ A Tripletex Customer will merge with a Tripletex Supplier if one of the followin
      - overdueNoticeEmail
    * - overdueNoticeEmail
      - invoiceEmail
-   * - organizationNumber
-     - organizationNumber
    * - overdueNoticeEmail
      - overdueNoticeEmail
 
@@ -318,8 +316,6 @@ A Tripletex Supplier will merge with a Tripletex Customer if one of the followin
      - overdueNoticeEmail
    * - overdueNoticeEmail
      - invoiceEmail
-   * - organizationNumber
-     - organizationNumber
    * - overdueNoticeEmail
      - overdueNoticeEmail
 
