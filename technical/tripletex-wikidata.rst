@@ -2,7 +2,7 @@
 Tripletex to Wikidata Dataflow
 ==============================
 
-Generated: 2023-05-23 05:43:52
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
