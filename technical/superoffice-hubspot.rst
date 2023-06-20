@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-19 14:50:39
+Generated: 2023-06-20 01:07:23
 
 Introduction.
 ------------
@@ -150,7 +150,7 @@ SuperOffice Sale classification status to HubSpot Pipelinedeal
 --------------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal must be established.
 
-A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, or Quotealternative that is synchronized into HubSpot.
+A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into HubSpot.
 
 Once a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -161,6 +161,22 @@ The following properties are synchronized between a SuperOffice Sale classificat
 
    * - SuperOffice Sale classification status Property
      - HubSpot Pipelinedeal Property
+     - HubSpot Data Type
+
+
+SuperOffice Project to HubSpot Ticket
+-------------------------------------
+Every SuperOffice Project will be synchronized with a HubSpot Ticket.
+
+Once a link between a SuperOffice Project and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a HubSpot Ticket:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - HubSpot Ticket Property
      - HubSpot Data Type
 
 
@@ -203,6 +219,38 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - TotalPrice
      - properties.amount
      - "string"
+
+
+SuperOffice Quoteline to HubSpot Deal
+-------------------------------------
+Every SuperOffice Quoteline will be synchronized with a HubSpot Deal.
+
+Once a link between a SuperOffice Quoteline and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Deal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - HubSpot Deal Property
+     - HubSpot Data Type
+
+
+SuperOffice Quoteline to HubSpot Quotecontactassociation
+--------------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a HubSpot Quotecontactassociation.
+
+Once a link between a SuperOffice Quoteline and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Quotecontactassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - HubSpot Quotecontactassociation Property
+     - HubSpot Data Type
 
 
 SuperOffice Product to HubSpot Product
@@ -311,6 +359,47 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
      - "string"
    * - Status
      - properties.dealstage
+     - "string"
+
+
+SuperOffice Sale to HubSpot Pipelinedeal
+----------------------------------------
+Every SuperOffice Sale will be synchronized with a HubSpot Pipelinedeal.
+
+Once a link between a SuperOffice Sale and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a HubSpot Pipelinedeal:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - HubSpot Pipelinedeal Property
+     - HubSpot Data Type
+
+
+SuperOffice Ticket to HubSpot Ticket
+------------------------------------
+Every SuperOffice Ticket will be synchronized with a HubSpot Ticket.
+
+Once a link between a SuperOffice Ticket and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ticket and a HubSpot Ticket:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ticket Property
+     - HubSpot Ticket Property
+     - HubSpot Data Type
+   * - CreatedAt
+     - properties.createdate
+     - "string"
+   * - OwnedBy.AssociateId
+     - properties.hubspot_owner_id
+     - "string"
+   * - Title
+     - properties.subject
      - "string"
 
 
