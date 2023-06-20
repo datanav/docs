@@ -42,6 +42,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Businesscentral**
+
+    
+    .. link-button:: system/businesscentral
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **IFS**
 
     A multinational enterprise software for companies who manufacture and distribute goods, offers IFS cloud which promises class-leading FSM, ERP and EAM in one product.
