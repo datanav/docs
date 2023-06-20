@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-20 01:13:13
 
 Introduction.
 ------------
@@ -152,104 +152,6 @@ The following properties are synchronized between a SuperOffice Sale classificat
 
    * - SuperOffice Sale classification status Property
      - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
-
-
-SuperOffice Project to HubSpot Ticket
--------------------------------------
-Every SuperOffice Project will be synchronized with a HubSpot Ticket.
-
-Once a link between a SuperOffice Project and a HubSpot Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Project and a HubSpot Ticket:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Project Property
-     - HubSpot Ticket Property
-     - HubSpot Data Type
-   * - Associate.AssociateId
-     - properties.hubspot_owner_id
-     - "string"
-   * - Name
-     - properties.subject
-     - "string"
-
-
-SuperOffice Quote to HubSpot Deal
----------------------------------
-Every SuperOffice Quote will be synchronized with a HubSpot Deal.
-
-Once a link between a SuperOffice Quote and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quote and a HubSpot Deal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quote Property
-     - HubSpot Deal Property
-     - HubSpot Data Type
-
-
-SuperOffice Quotealternative to HubSpot Deal
---------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a HubSpot Deal.
-
-Once a link between a SuperOffice Quotealternative and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a HubSpot Deal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - HubSpot Deal Property
-     - HubSpot Data Type
-   * - Description
-     - properties.dealname
-     - "string"
-   * - Description
-     - properties.description
-     - "string"
-   * - TotalPrice
-     - properties.amount
-     - "string"
-
-
-SuperOffice Quoteline to HubSpot Deal
--------------------------------------
-Every SuperOffice Quoteline will be synchronized with a HubSpot Deal.
-
-Once a link between a SuperOffice Quoteline and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Deal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - HubSpot Deal Property
-     - HubSpot Data Type
-   * - TotalPrice
-     - properties.amount
-     - "string"
-
-
-SuperOffice Quoteline to HubSpot Quotecontactassociation
---------------------------------------------------------
-Every SuperOffice Quoteline will be synchronized with a HubSpot Quotecontactassociation.
-
-Once a link between a SuperOffice Quoteline and a HubSpot Quotecontactassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a HubSpot Quotecontactassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
 
 
