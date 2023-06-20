@@ -34,6 +34,14 @@ Other :ref:`Enterprise Resource Planning (ERP) <systemtypeerp>` Systems
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Businesscentral**
+
+    
+    .. link-button:: system/businesscentral
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Microsoft Dynamics 365**
 
     Microsoft Dynamics 365 is a product line of enterprise resource planning (ERP) and customer relationship management (CRM) intelligent business applications.
