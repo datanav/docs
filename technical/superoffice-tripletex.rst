@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-20 01:08:28
 
 Introduction.
 ------------
@@ -81,9 +81,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountry)
      - organizationNumber
-     - "string"
+     - "replace"," ","", "string"]
    * - Phones.Value
      - phoneNumber
      - "string"
@@ -231,18 +231,6 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - SuperOffice Person Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - Address.Postal.Address1
-     - address.addressLine1
-     - "string"
-   * - Address.Postal.Address2
-     - address.addressLine2
-     - "string"
-   * - Address.Street.Address1
-     - address.addressLine1
-     - "string"
-   * - Address.Street.Address2
-     - address.addressLine2
-     - "string"
    * - BirthDate
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
@@ -347,9 +335,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - invoiceComment
      - "string"
-   * - sesam_Accepted
-     - isClosed
-     - "string"
 
 
 SuperOffice Listproductcategoryitems to Tripletex Productgroup
@@ -429,9 +414,6 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - Name
      - name
      - "string"
-   * - PriceUnit
-     - productUnit.id
-     - "integer"
    * - QuantityUnit
      - productUnit.id
      - "integer"
@@ -444,9 +426,6 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - UnitListPrice
      - priceExcludingVatCurrency
      - "float"
-   * - VAT
-     - vatType
-     - "integer"
    * - VAT
      - vatType.id
      - "integer"
@@ -501,9 +480,6 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - SuperOffice Project Property
      - Tripletex Project Property
      - Tripletex Data Type
-   * - Associate
-     - projectManager.id
-     - "integer"
    * - Associate.AssociateId
      - projectManager.id
      - "integer"
@@ -547,9 +523,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - QuoteAlternativeId
      - order.id
      - "integer"
-   * - TotalPrice
-     - unitPriceExcludingVatCurrency
-     - "float"
    * - UnitListPrice
      - unitPriceExcludingVatCurrency
      - "float"
