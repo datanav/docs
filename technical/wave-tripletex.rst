@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-06-22 11:02:52
+Generated: 2023-06-22 11:38:52
 
 Introduction.
 ------------
@@ -46,6 +46,12 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
      - Tripletex Order Property
      - Tripletex Data Type
    * - currency.code
+     - currency.id
+     - "integer"
+   * - dueDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - total.currency.symbol
      - currency.id
      - "integer"
 
