@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-06-22 14:16:51
+Generated: 2023-06-22 14:18:52
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 HubSpot Account to Wave Currency
 --------------------------------
 Every HubSpot Account will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the HubSpot Account will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A HubSpot Account will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wave Currency Property
+   * - companyCurrency
+     - code
 
 Once a link between a HubSpot Account and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -28,6 +41,19 @@ The following properties are synchronized between a HubSpot Account and a Wave C
 HubSpot Deal to Wave Currency
 -----------------------------
 Every HubSpot Deal will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the HubSpot Deal will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A HubSpot Deal will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wave Currency Property
+   * - properties.deal_currency_code
+     - code
 
 Once a link between a HubSpot Deal and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
