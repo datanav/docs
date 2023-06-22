@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-22 15:17:52
 
 Introduction.
 ------------
@@ -492,6 +492,9 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - NextMilestoneDate
      - startDate
      - "datetime-format","%Y-%m-%d","_."]
+   * - ProjectMembers.PersonId
+     - contact.id
+     - "integer"
 
 
 SuperOffice Quoteline to Tripletex Orderline
