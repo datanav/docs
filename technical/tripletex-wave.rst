@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-22 14:16:51
+Generated: 2023-06-22 14:18:52
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Tripletex Currency to Wave Currency
 -----------------------------------
 Every Tripletex Currency will be synchronized with a Wave Currency.
+
+If a matching Wave Currency already exists, the Tripletex Currency will be merged with the existing one.
+If no matching Wave Currency is found, a new Wave Currency will be created.
+
+A Tripletex Currency will merge with a Wave Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Wave Currency Property
+   * - code
+     - code
 
 Once a link between a Tripletex Currency and a Wave Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -23,6 +36,9 @@ The following properties are synchronized between a Tripletex Currency and a Wav
    * - Tripletex Currency Property
      - Wave Currency Property
      - Wave Data Type
+   * - displayName
+     - name
+     - "string"
 
 
 Tripletex Customer to Wave Customer
