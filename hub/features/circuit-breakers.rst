@@ -27,7 +27,7 @@ breaker. It is also not possible to repost entities to these datasets.
 
 You can rollback or commit the circuit breaker on the dataset page in
 the :doc:`Management Studio <../management-studio>`, or use the
-`service API <api.html#post--datasets-dataset_id>`_.
+`service API <../api.html#post--datasets-dataset_id>`_.
 
 Resetting
 ---------
@@ -38,4 +38,4 @@ value must be cleared in order to reprocess already seen entities with the new p
 configuration.
 
 This can be done by setting the "last-seen" value to an empty string with the
-`update-last-seen <./api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
+`update-last-seen <../api.html#api-reference-pump-update-last-seen>`__ operation in the Service API.
