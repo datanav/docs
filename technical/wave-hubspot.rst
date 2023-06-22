@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-22 11:00:52
 
 Introduction.
 ------------
@@ -35,6 +35,22 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - website
      - properties.website
      - "string"
+
+
+Wave Vendor to HubSpot Company
+------------------------------
+Every Wave Vendor will be synchronized with a HubSpot Company.
+
+Once a link between a Wave Vendor and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - HubSpot Company Property
+     - HubSpot Data Type
 
 
 Wave Product to HubSpot Product
