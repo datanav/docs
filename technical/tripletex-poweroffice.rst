@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-22 15:03:52
 
 Introduction.
 ------------
@@ -222,6 +222,9 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
      - "string"
    * - currency.id
      - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerCode
      - "string"
    * - deliveryDate
      - DeliveryDate
