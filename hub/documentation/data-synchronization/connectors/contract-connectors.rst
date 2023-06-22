@@ -341,6 +341,9 @@ pipe). By default, collect pipes run at a schedule of every 300 seconds. If ``me
 Setting ``datatypes.<datatype>.sync_frequency`` to ``"slow"`` on a given datatype in the manifest will set the pump of
 the collect pipe to run only once per day at midnight.
 
+Setting ``datatypes.<datatype>.sync_frequency`` to ``"weekly"`` on a given datatype in the manifest will set the pump of
+the collect pipe to run only at 00:00 on Mondays.
+
 Setting ``datatypes.<datatype>.webhook`` to ``true`` on a given datatype in the manifest signals that the datatype
 supports webhooks, and the collect pipe will be set to run on a slower schedule (default is once per hour).
 
