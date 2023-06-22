@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-22 10:59:52
+Generated: 2023-06-22 11:02:52
 
 Introduction.
 ------------
@@ -72,5 +72,8 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
      - Wave Data Type
    * - name
      - name
+     - "string"
+   * - phoneNumber
+     - phone
      - "string"
 
