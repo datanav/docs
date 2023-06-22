@@ -2,7 +2,7 @@
 Poweroffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-22 10:59:52
 
 Introduction.
 ------------
@@ -56,5 +56,27 @@ The following properties are synchronized between a Poweroffice Product and a Wa
      - "string"
    * - SalesPrice
      - unitPrice
+     - "string"
+
+
+Poweroffice Supplier to Wave Vendor
+-----------------------------------
+Every Poweroffice Supplier will be synchronized with a Wave Vendor.
+
+Once a link between a Poweroffice Supplier and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Supplier and a Wave Vendor:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Supplier Property
+     - Wave Vendor Property
+     - Wave Data Type
+   * - LegalName
+     - name
+     - "string"
+   * - WebsiteUrl
+     - website
      - "string"
 
