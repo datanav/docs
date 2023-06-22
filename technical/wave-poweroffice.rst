@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-22 10:59:52
+Generated: 2023-06-22 11:02:52
 
 Introduction.
 ------------
@@ -236,6 +236,9 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "string"
    * - name
      - LegalName
+     - "string"
+   * - phone
+     - PhoneNumber
      - "string"
    * - website
      - WebsiteUrl
