@@ -2,7 +2,7 @@
 Poweroffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-22 10:59:52
+Generated: 2023-06-22 11:02:52
 
 Introduction.
 ------------
@@ -75,6 +75,9 @@ The following properties are synchronized between a Poweroffice Supplier and a W
      - Wave Data Type
    * - LegalName
      - name
+     - "string"
+   * - PhoneNumber
+     - phone
      - "string"
    * - WebsiteUrl
      - website
