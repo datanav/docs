@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-22 11:38:52
+Generated: 2023-06-22 11:39:52
 
 Introduction.
 ------------
@@ -114,40 +114,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - "string"
    * - website
      - WebsiteUrl
-     - "string"
-
-
-Wave Invoice to PowerOffice Outgoinginvoice
--------------------------------------------
-Every Wave Invoice will be synchronized with a PowerOffice Outgoinginvoice.
-
-Once a link between a Wave Invoice and a PowerOffice Outgoinginvoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a PowerOffice Outgoinginvoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - PowerOffice Outgoinginvoice Property
-     - PowerOffice Data Type
-   * - createdAt
-     - CreatedDate
-     - "string"
-   * - currency.code
-     - CurrencyCode
-     - "string"
-   * - dueDate
-     - DeliveryDate
-     - "string"
-   * - dueDate
-     - SentDate
-     - "string"
-   * - total.currency.symbol
-     - CurrencyCode
-     - "string"
-   * - total.value
-     - NetAmount
      - "string"
 
 
