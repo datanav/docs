@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -42,6 +42,22 @@ The following properties are synchronized between a HubSpot Owner and a Freshtea
    * - lastName
      - last_name
      - "string"
+
+
+HubSpot Contact to Freshteam Employee
+-------------------------------------
+Every HubSpot Contact will be synchronized with a Freshteam Employee.
+
+Once a link between a HubSpot Contact and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
 
 
 HubSpot User to Freshteam Employee
