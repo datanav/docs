@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:45
 
 Introduction.
 ------------
@@ -37,7 +37,10 @@ The following properties are synchronized between a Tripletex Contact and a Zend
 
 Tripletex Employee to Zendesk Users
 -----------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Zendesk Users must be established.
+Every Tripletex Employee will be synchronized with a Zendesk Users.
+
+If a matching Zendesk Users already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Zendesk Users is found, a new Zendesk Users will be created.
 
 A Tripletex Employee will merge with a Zendesk Users if one of the following property combinations match:
 
