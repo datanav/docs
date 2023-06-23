@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-22 15:17:52
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -163,9 +163,10 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
 
 SuperOffice Person to Tripletex Contact
 ---------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Contact must be established.
+Every SuperOffice Person will be synchronized with a Tripletex Contact.
 
-A new Tripletex Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Sale, Project, or Quotealternative that is synchronized into Tripletex.
+If a matching Tripletex Contact already exists, the SuperOffice Person will be merged with the existing one.
+If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
 
 A SuperOffice Person will merge with a Tripletex Contact if one of the following property combinations match:
 
@@ -335,6 +336,22 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - invoiceComment
      - "string"
+
+
+SuperOffice Sale to Tripletex Order
+-----------------------------------
+Every SuperOffice Sale will be synchronized with a Tripletex Order.
+
+Once a link between a SuperOffice Sale and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - Tripletex Order Property
+     - Tripletex Data Type
 
 
 SuperOffice Listproductcategoryitems to Tripletex Productgroup
