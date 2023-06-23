@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -93,6 +93,18 @@ The following properties are synchronized between a Tripletex Order and a Wave I
    * - Tripletex Order Property
      - Wave Invoice Property
      - Wave Data Type
+   * - currency.id
+     - currency.code
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - invoiceComment
+     - title
+     - "string"
+   * - reference
+     - poNumber
+     - "string"
 
 
 Tripletex Product to Wave Product
