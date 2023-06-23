@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-23 07:27:52
+Generated: 2023-06-23 07:28:52
 
 Introduction.
 ------------
@@ -42,7 +42,7 @@ SuperOffice Contact to Wave Customer
 ------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Wave Customer must be established.
 
-A new Wave Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale that is synchronized into Wave.
+A new Wave Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Wave.
 
 Once a link between a SuperOffice Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -60,7 +60,7 @@ SuperOffice Quotealternative to Wave Invoice
 --------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
 
-A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale that is synchronized into Wave.
+A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Wave.
 
 Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
