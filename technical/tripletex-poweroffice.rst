@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -23,6 +23,72 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
+   * - deliveryAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - deliveryAddress.changes
+     - streetAddresses.city
+     - "string"
+   * - deliveryAddress.city
+     - streetAddresses.countryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
+   * - postalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Tripletex Contact to PowerOffice Contactperson
