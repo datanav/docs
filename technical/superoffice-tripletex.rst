@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -352,6 +352,18 @@ The following properties are synchronized between a SuperOffice Sale and a Tripl
    * - SuperOffice Sale Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Contact.ContactId
+     - customer.id
+     - "integer"
+   * - Person.PersonId
+     - contact.id
+     - "integer"
+   * - Saledate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Saledate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 SuperOffice Listproductcategoryitems to Tripletex Productgroup
