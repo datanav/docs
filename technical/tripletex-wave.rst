@@ -2,34 +2,12 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-23 10:01:45
+Generated: 2023-06-23 11:19:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Supplier to Wave Customer
------------------------------------
-Every Tripletex Supplier will be synchronized with a Wave Customer.
-
-Once a link between a Tripletex Supplier and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-
 
 Tripletex Customer to Wave Customer
 -----------------------------------
@@ -45,12 +23,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - Tripletex Customer Property
      - Wave Customer Property
      - Wave Data Type
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
 
 
 Tripletex Order to Wave Invoice
@@ -67,23 +39,13 @@ The following properties are synchronized between a Tripletex Order and a Wave I
    * - Tripletex Order Property
      - Wave Invoice Property
      - Wave Data Type
-   * - currency.id
-     - currency.code
-     - "string"
-   * - customer.id
-     - customer.id
-     - "string"
-   * - invoiceComment
-     - title
-     - "string"
-   * - reference
-     - poNumber
-     - "string"
 
 
 Tripletex Product to Wave Product
 ---------------------------------
-Every Tripletex Product will be synchronized with a Wave Product.
+Before any synchronization can take place, a link between a Tripletex Product and a Wave Product must be established.
+
+A new Wave Product will be created from a Tripletex Product if it is connected to a Tripletex Order that is synchronized into Wave.
 
 Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -95,30 +57,21 @@ The following properties are synchronized between a Tripletex Product and a Wave
    * - Tripletex Product Property
      - Wave Product Property
      - Wave Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - unitPrice
-     - "string"
 
 
-Tripletex Supplier to Wave Vendor
----------------------------------
-Every Tripletex Supplier will be synchronized with a Wave Vendor.
+Tripletex Supplier to Wave Customer
+-----------------------------------
+Every Tripletex Supplier will be synchronized with a Wave Customer.
 
-Once a link between a Tripletex Supplier and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a Wave Vendor:
+The following properties are synchronized between a Tripletex Supplier and a Wave Customer:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - Wave Vendor Property
+     - Wave Customer Property
      - Wave Data Type
    * - name
      - name
