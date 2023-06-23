@@ -2,7 +2,7 @@
 Tripletex to UniEconomy Dataflow
 ================================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:45
 
 Introduction.
 ------------
@@ -40,7 +40,10 @@ The following properties are synchronized between a Tripletex Customer and a Uni
 
 Tripletex Customer to UniEconomy Customers
 ------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a UniEconomy Customers must be established.
+Every Tripletex Customer will be synchronized with a UniEconomy Customers.
+
+If a matching UniEconomy Customers already exists, the Tripletex Customer will be merged with the existing one.
+If no matching UniEconomy Customers is found, a new UniEconomy Customers will be created.
 
 A Tripletex Customer will merge with a UniEconomy Customers if one of the following property combinations match:
 
@@ -64,5 +67,27 @@ The following properties are synchronized between a Tripletex Customer and a Uni
      - UniEconomy Data Type
    * - organizationNumber
      - OrgNumber
+     - "string"
+
+
+Tripletex Department to UniEconomy Departments
+----------------------------------------------
+Every Tripletex Department will be synchronized with a UniEconomy Departments.
+
+Once a link between a Tripletex Department and a UniEconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a UniEconomy Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - UniEconomy Departments Property
+     - UniEconomy Data Type
+   * - departmentNumber
+     - DepartmentNumber
+     - "string"
+   * - name
+     - Name
      - "string"
 
