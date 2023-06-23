@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-06-23 11:19:50
+Generated: 2023-06-23 11:20:27
 
 Introduction.
 ------------
@@ -68,6 +68,9 @@ The following properties are synchronized between a HubSpot User and a Freshteam
    * - HubSpot User Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - email
+     - official_email
+     - "string"
 
 
 HubSpot Contact to Freshteam Employee
