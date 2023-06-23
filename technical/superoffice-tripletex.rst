@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-23 11:19:50
+Generated: 2023-06-23 11:20:27
 
 Introduction.
 ------------
@@ -284,6 +284,33 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice Product to Tripletex Productunit
@@ -310,6 +337,12 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Productunit Property
      - Tripletex Data Type
+   * - QuantityUnit
+     - commonCode
+     - "string"
+   * - QuantityUnit
+     - name
+     - "string"
 
 
 SuperOffice User to Tripletex Contact
@@ -374,6 +407,18 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - SuperOffice User Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
+     - "string"
 
 
 SuperOffice Contact to Tripletex Department
