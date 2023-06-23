@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:04
 
 Introduction.
 ------------
@@ -54,6 +54,15 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
    * - SuperOffice Contact Property
      - Wave Customer Property
      - Wave Data Type
+   * - Domains
+     - website
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - Phones.Value
+     - phone
+     - "string"
 
 
 SuperOffice Product to Wave Product
@@ -97,6 +106,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Wave Invoice Property
      - Wave Data Type
+   * - Description
+     - memo
+     - "string"
+   * - Name
+     - title
+     - "string"
 
 
 SuperOffice Sale to Wave Invoice
@@ -115,5 +130,11 @@ The following properties are synchronized between a SuperOffice Sale and a Wave 
      - Wave Data Type
    * - Contact.ContactId
      - customer.id
+     - "string"
+   * - Currency.Id
+     - currency.code
+     - "string"
+   * - SaleText
+     - memo
      - "string"
 
