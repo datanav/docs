@@ -2,12 +2,28 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-06-20 01:08:14
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Freshteam Employee
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Freshteam Employee.
+
+Once a link between a Tripletex Contact and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+
 
 Tripletex Department to Freshteam Department
 --------------------------------------------
