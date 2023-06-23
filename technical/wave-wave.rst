@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-06-23 07:27:52
+Generated: 2023-06-23 10:01:04
 
 Introduction.
 ------------
@@ -44,8 +44,14 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
    * - email
      - email
      - "string"
+   * - fax
+     - fax
+     - "string"
    * - firstName
      - firstName
+     - "string"
+   * - internalNotes
+     - internalNotes
      - "string"
    * - lastName
      - lastName
@@ -53,7 +59,16 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
    * - mobile
      - mobile
      - "string"
+   * - name
+     - name
+     - "string"
+   * - phone
+     - phone
+     - "string"
    * - tollFree
      - tollFree
+     - "string"
+   * - website
+     - website
      - "string"
 
