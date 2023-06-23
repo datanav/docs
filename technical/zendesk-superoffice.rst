@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-20 09:25:52
+Generated: 2023-06-23 07:30:52
 
 Introduction.
 ------------
@@ -61,32 +61,4 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - url
      - Domains
      - "list"
-
-
-Zendesk Tickets to SuperOffice Ticket
--------------------------------------
-Every Zendesk Tickets will be synchronized with a SuperOffice Ticket.
-
-Once a link between a Zendesk Tickets and a SuperOffice Ticket is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Tickets and a SuperOffice Ticket:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Tickets Property
-     - SuperOffice Ticket Property
-     - SuperOffice Data Type
-   * - assignee_id
-     - Person.PersonId
-     - "integer"
-   * - due_at
-     - TimeToReply
-     - "integer"
-   * - requester_id
-     - OwnedBy.AssociateId
-     - "integer"
-   * - subject
-     - Title
-     - "string"
 
