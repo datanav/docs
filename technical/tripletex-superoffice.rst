@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:04
 
 Introduction.
 ------------
@@ -385,6 +385,9 @@ The following properties are synchronized between a Tripletex Order and a SuperO
      - SuperOffice Data Type
    * - contact.id
      - Person.PersonId
+     - "integer"
+   * - currency.id
+     - Currency.Id
      - "integer"
    * - customer.id
      - Contact.ContactId
