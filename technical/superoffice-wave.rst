@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -38,6 +38,42 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
      - "string"
 
 
+SuperOffice Contact to Wave Customer
+------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Wave Customer must be established.
+
+A new Wave Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale that is synchronized into Wave.
+
+Once a link between a SuperOffice Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Wave Customer Property
+     - Wave Data Type
+
+
+SuperOffice Quotealternative to Wave Invoice
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
+
+A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale that is synchronized into Wave.
+
+Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
 SuperOffice Sale to Wave Invoice
 --------------------------------
 Every SuperOffice Sale will be synchronized with a Wave Invoice.
@@ -52,6 +88,9 @@ The following properties are synchronized between a SuperOffice Sale and a Wave 
    * - SuperOffice Sale Property
      - Wave Invoice Property
      - Wave Data Type
+   * - Contact.ContactId
+     - customer.id
+     - "string"
 
 
 SuperOffice Listcurrencyitems to Wave Currency
