@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-23 07:30:52
+Generated: 2023-06-23 07:31:52
 
 Introduction.
 ------------
@@ -59,4 +59,7 @@ The following properties are synchronized between a Zendesk Users and a Triplete
    * - Zendesk Users Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - phone
+     - phoneNumberHome
+     - "string"
 
