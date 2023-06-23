@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-23 11:19:51
+Generated: 2023-06-23 11:20:27
 
 Introduction.
 ------------
@@ -23,6 +23,36 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
+   * - address.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - address.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - address.city
+     - streetAddresses.city
+     - "string"
+   * - address.country.code
+     - streetAddresses.countryCode
+     - "string"
+   * - address.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phone
+     - PhoneNumber
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Wave Vendor to PowerOffice Customer
