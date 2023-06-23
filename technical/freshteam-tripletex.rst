@@ -2,7 +2,7 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:04
 
 Introduction.
 ------------
@@ -67,6 +67,12 @@ The following properties are synchronized between a Freshteam Employee and a Tri
    * - Freshteam Employee Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - phoneNumberMobile
      - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
