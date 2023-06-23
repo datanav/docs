@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -189,7 +189,10 @@ The following properties are synchronized between a Tripletex Department and a T
 
 Tripletex Employee to Tripletex Contact
 ---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Tripletex Contact must be established.
+Every Tripletex Employee will be synchronized with a Tripletex Contact.
+
+If a matching Tripletex Contact already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
 
 A Tripletex Employee will merge with a Tripletex Contact if one of the following property combinations match:
 
@@ -285,7 +288,10 @@ The following properties are synchronized between a Tripletex Productgrouprelati
 
 Tripletex Supplier to Tripletex Customer
 ----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a Tripletex Customer must be established.
+Every Tripletex Supplier will be synchronized with a Tripletex Customer.
+
+If a matching Tripletex Customer already exists, the Tripletex Supplier will be merged with the existing one.
+If no matching Tripletex Customer is found, a new Tripletex Customer will be created.
 
 A Tripletex Supplier will merge with a Tripletex Customer if one of the following property combinations match:
 
