@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-23 07:25:52
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -294,6 +294,22 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - invoiceComment
      - Name
      - "string"
+
+
+Tripletex Order to SuperOffice Sale
+-----------------------------------
+Every Tripletex Order will be synchronized with a SuperOffice Sale.
+
+Once a link between a Tripletex Order and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a SuperOffice Sale:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - SuperOffice Sale Property
+     - SuperOffice Data Type
 
 
 Tripletex Orderline to SuperOffice Quoteline
