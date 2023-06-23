@@ -2,7 +2,7 @@
 SuperOffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-06-23 07:30:52
+Generated: 2023-06-23 07:31:52
 
 Introduction.
 ------------
@@ -25,4 +25,7 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - PowerOffice Productgroup Property
      - PowerOffice Data Type
+   * - Name
+     - Name
+     - "string"
 
