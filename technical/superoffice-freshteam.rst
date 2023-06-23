@@ -2,7 +2,7 @@
 SuperOffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -23,6 +23,33 @@ The following properties are synchronized between a SuperOffice Person and a Fre
    * - SuperOffice Person Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - Address.Postal.City
+     - communication_address.communication_city
+     - "string"
+   * - Address.Postal.Zipcode
+     - communication_address.communication_zip_code
+     - "string"
+   * - Address.Street.City
+     - address.city
+     - "string"
+   * - Address.Street.Zipcode
+     - address.zip_code
+     - "string"
+   * - Country.CountryId
+     - address.country_code
+     - "string"
+   * - Country.CountryId
+     - communication_address.communication_country_code
+     - "string"
+   * - MobilePhones.Value
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - OfficePhones.Value
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - "string"
+   * - PersonId
+     - id
+     - "string"
 
 
 SuperOffice Ownercontactlink to Freshteam Department
