@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -11,9 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Contact to Tripletex Contact
 ------------------------------------
-Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Contact must be established.
+Every HubSpot Contact will be synchronized with a Tripletex Contact.
 
-A new Tripletex Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Tripletex.
+If a matching Tripletex Contact already exists, the HubSpot Contact will be merged with the existing one.
+If no matching Tripletex Contact is found, a new Tripletex Contact will be created.
 
 A HubSpot Contact will merge with a Tripletex Contact if one of the following property combinations match:
 
@@ -211,6 +212,21 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - HubSpot Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "integer"
+   * - properties.hs_sku
+     - number
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
 
 
 HubSpot User to Tripletex Employee
