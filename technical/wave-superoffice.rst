@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -48,6 +48,9 @@ The following properties are synchronized between a Wave Invoice and a SuperOffi
    * - Wave Invoice Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
+   * - customer.id
+     - Contact.ContactId
+     - "integer"
 
 
 Wave Vendor to SuperOffice Contact
