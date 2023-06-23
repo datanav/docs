@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-23 11:19:51
+Generated: 2023-06-23 11:20:27
 
 Introduction.
 ------------
@@ -33,6 +33,15 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice Employee Property
      - PowerOffice Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
 
 
 Tripletex Productgroup to PowerOffice Productgroup
@@ -51,6 +60,9 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - PowerOffice Productgroup Property
      - PowerOffice Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Customer to PowerOffice Customer
@@ -67,6 +79,81 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
+   * - deliveryAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - deliveryAddress.city
+     - streetAddresses.city
+     - "string"
+   * - deliveryAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
+   * - postalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Tripletex Supplier to PowerOffice Customer
