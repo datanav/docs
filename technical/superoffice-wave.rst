@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-22 14:18:52
+Generated: 2023-06-23 07:26:51
 
 Introduction.
 ------------
@@ -36,6 +36,22 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
    * - Name
      - name
      - "string"
+
+
+SuperOffice Sale to Wave Invoice
+--------------------------------
+Every SuperOffice Sale will be synchronized with a Wave Invoice.
+
+Once a link between a SuperOffice Sale and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Sale and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Sale Property
+     - Wave Invoice Property
+     - Wave Data Type
 
 
 SuperOffice Listcurrencyitems to Wave Currency
