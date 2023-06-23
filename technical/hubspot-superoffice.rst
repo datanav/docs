@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-23 07:25:52
 
 Introduction.
 ------------
@@ -238,24 +238,5 @@ The following properties are synchronized between a HubSpot Ticket and a SuperOf
      - "integer"
    * - properties.subject
      - Title
-     - "string"
-
-
-Tripletex Productgroup to SuperOffice Listproductcategoryitems
---------------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - name
-     - Name
      - "string"
 
