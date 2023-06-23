@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-06-23 10:01:45
+Generated: 2023-06-23 10:02:27
 
 Introduction.
 ------------
@@ -53,6 +53,15 @@ The following properties are synchronized between a HubSpot Deal and a Wave Invo
    * - HubSpot Deal Property
      - Wave Invoice Property
      - Wave Data Type
+   * - properties.deal_currency_code
+     - currency.code
+     - "string"
+   * - properties.dealname
+     - memo
+     - "string"
+   * - properties.description
+     - memo
+     - "string"
 
 
 HubSpot Product to Wave Product
