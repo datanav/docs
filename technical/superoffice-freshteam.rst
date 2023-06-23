@@ -2,7 +2,7 @@
 SuperOffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-06-23 10:01:04
+Generated: 2023-06-23 10:01:45
 
 Introduction.
 ------------
@@ -61,5 +61,46 @@ The following properties are synchronized between a SuperOffice Person and a Fre
      - "string"
    * - PrivatePhones.Value
      - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - "string"
+
+
+SuperOffice Ownercontactlink to Freshteam Department
+----------------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a Freshteam Department.
+
+Once a link between a SuperOffice Ownercontactlink and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+   * - name
+     - name
+     - "string"
+
+
+SuperOffice User to Freshteam Employee
+--------------------------------------
+Every SuperOffice User will be synchronized with a Freshteam Employee.
+
+Once a link between a SuperOffice User and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
      - "string"
 
