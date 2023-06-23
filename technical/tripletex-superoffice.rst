@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-23 07:26:51
+Generated: 2023-06-23 07:27:52
 
 Introduction.
 ------------
@@ -310,6 +310,21 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - Tripletex Order Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
+   * - contact.id
+     - Person.PersonId
+     - "integer"
+   * - customer.id
+     - Contact.ContactId
+     - "integer"
+   * - deliveryDate
+     - Saledate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - id
+     - Heading
+     - "string"
+   * - orderDate
+     - Saledate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
 
 
 Tripletex Orderline to SuperOffice Quoteline
@@ -435,6 +450,9 @@ The following properties are synchronized between a Tripletex Project and a Supe
    * - Tripletex Project Property
      - SuperOffice Project Property
      - SuperOffice Data Type
+   * - contact.id
+     - ProjectMembers.PersonId
+     - "integer"
    * - endDate
      - EndDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
