@@ -2,60 +2,16 @@
 Freshteam to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-23 07:27:52
+Generated: 2023-06-23 07:30:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Freshteam Employee to Tripletex Contact
----------------------------------------
-Every Freshteam Employee will be synchronized with a Tripletex Contact.
-
-Once a link between a Freshteam Employee and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
-     - phoneNumberMobile
-     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
-     - phoneNumberWork
-     - "string"
-
-
-Freshteam Department to Tripletex Department
---------------------------------------------
-Every Freshteam Department will be synchronized with a Tripletex Department.
-
-Once a link between a Freshteam Department and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Department and a Tripletex Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Department Property
-     - Tripletex Department Property
-     - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-
-
 Freshteam Employee to Tripletex Employee
 ----------------------------------------
-Every Freshteam Employee will be synchronized with a Tripletex Employee.
-
-If a matching Tripletex Employee already exists, the Freshteam Employee will be merged with the existing one.
-If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
+Before any synchronization can take place, a link between a Freshteam Employee and a Tripletex Employee must be established.
 
 A Freshteam Employee will merge with a Tripletex Employee if one of the following property combinations match:
 
@@ -77,21 +33,25 @@ The following properties are synchronized between a Freshteam Employee and a Tri
    * - Freshteam Employee Property
      - Tripletex Employee Property
      - Tripletex Data Type
-   * - date_of_birth
-     - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - first_name
-     - firstName
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
-     - phoneNumberHome
-     - "string"
+
+
+Freshteam Employee to Tripletex Contact
+---------------------------------------
+Every Freshteam Employee will be synchronized with a Tripletex Contact.
+
+Once a link between a Freshteam Employee and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - phoneNumberMobile
-     - "string"
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - phoneNumberWork
      - "string"
