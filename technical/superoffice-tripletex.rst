@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-23 07:31:52
+Generated: 2023-06-23 10:01:04
 
 Introduction.
 ------------
@@ -477,8 +477,14 @@ The following properties are synchronized between a SuperOffice Sale and a Tripl
    * - SuperOffice Sale Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Associate.AssociateId
+     - ourContactEmployee.id
+     - "integer"
    * - Contact.ContactId
      - customer.id
+     - "integer"
+   * - Currency.Id
+     - currency.id
      - "integer"
    * - Person.PersonId
      - contact.id
