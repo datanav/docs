@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-25 06:03:01
+Generated: 2023-06-25 06:03:29
 
 Introduction.
 ------------
@@ -102,6 +102,22 @@ The following properties are synchronized between a SuperOffice Quote and a Wave
    * - PoNumber
      - poNumber
      - "string"
+
+
+SuperOffice Quoteline to Wave Invoice
+-------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Wave Invoice.
+
+Once a link between a SuperOffice Quoteline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Wave Invoice Property
+     - Wave Data Type
 
 
 SuperOffice Sale to Wave Invoice
