@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-23 11:19:51
+Generated: 2023-06-25 05:59:37
 
 Introduction.
 ------------
@@ -116,4 +116,67 @@ The following properties are synchronized between a Poweroffice Supplier and a H
    * - WebsiteUrl
      - properties.website
      - "string"
+
+
+Poweroffice Employee to HubSpot User
+------------------------------------
+Every Poweroffice Employee will be synchronized with a HubSpot User.
+
+Once a link between a Poweroffice Employee and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Employee and a HubSpot User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Employee Property
+     - HubSpot User Property
+     - HubSpot Data Type
+   * - EmailAddress
+     - email
+     - "string"
+
+
+Poweroffice Product to HubSpot Product
+--------------------------------------
+Every Poweroffice Product will be synchronized with a HubSpot Product.
+
+Once a link between a Poweroffice Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+   * - CostPrice
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - Description
+     - properties.description
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
+   * - SalesPrice
+     - properties.price
+     - "string"
+
+
+Poweroffice Salesorderline to HubSpot Lineitemdealassociation
+-------------------------------------------------------------
+Every Poweroffice Salesorderline will be synchronized with a HubSpot Lineitemdealassociation.
+
+Once a link between a Poweroffice Salesorderline and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorderline and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorderline Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
 
