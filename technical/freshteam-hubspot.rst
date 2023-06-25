@@ -2,41 +2,12 @@
 Freshteam to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-23 11:20:27
+Generated: 2023-06-25 05:59:37
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Freshteam to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Freshteam Employee to HubSpot User
-----------------------------------
-Before any synchronization can take place, a link between a Freshteam Employee and a HubSpot User must be established.
-
-A Freshteam Employee will merge with a HubSpot User if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - HubSpot User Property
-   * - official_email
-     - email
-
-Once a link between a Freshteam Employee and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Freshteam Employee and a HubSpot User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Freshteam Employee Property
-     - HubSpot User Property
-     - HubSpot Data Type
-   * - official_email
-     - email
-     - "string"
-
 
 Freshteam Department to HubSpot Company
 ---------------------------------------
@@ -88,5 +59,37 @@ The following properties are synchronized between a Freshteam Employee and a Hub
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
      - properties.phone
+     - "string"
+
+
+Freshteam Employee to HubSpot User
+----------------------------------
+Every Freshteam Employee will be synchronized with a HubSpot User.
+
+If a matching HubSpot User already exists, the Freshteam Employee will be merged with the existing one.
+If no matching HubSpot User is found, a new HubSpot User will be created.
+
+A Freshteam Employee will merge with a HubSpot User if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - HubSpot User Property
+   * - official_email
+     - email
+
+Once a link between a Freshteam Employee and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Freshteam Employee and a HubSpot User:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - HubSpot User Property
+     - HubSpot Data Type
+   * - official_email
+     - email
      - "string"
 
