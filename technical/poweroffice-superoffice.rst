@@ -2,33 +2,12 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-23 11:20:27
+Generated: 2023-06-25 06:00:31
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Poweroffice to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Poweroffice Productgroup to SuperOffice Listproductcategoryitems
-----------------------------------------------------------------
-Before any synchronization can take place, a link between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems must be established.
-
-A new SuperOffice Listproductcategoryitems will be created from a Poweroffice Productgroup if it is connected to a Poweroffice Product that is synchronized into SuperOffice.
-
-Once a link between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - Name
-     - Name
-     - "string"
-
 
 Poweroffice Contactperson to SuperOffice Person
 -----------------------------------------------
@@ -185,4 +164,94 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - WebsiteUrl
      - Domains
      - "list"
+
+
+Poweroffice Product to SuperOffice Product
+------------------------------------------
+Every Poweroffice Product will be synchronized with a SuperOffice Product.
+
+Once a link between a Poweroffice Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - CostPrice
+     - UnitCost
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - ProductGroupId
+     - ProductCategoryKey
+     - "string"
+   * - SalesPrice
+     - UnitListPrice
+     - "decimal"
+   * - Type
+     - ProductTypeKey
+     - "string"
+   * - Unit
+     - QuantityUnit
+     - "string"
+   * - VatCode
+     - VAT
+     - "integer"
+
+
+Poweroffice Productgroup to SuperOffice Listproductcategoryitems
+----------------------------------------------------------------
+Every Poweroffice Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+
+Once a link between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Productgroup and a SuperOffice Listproductcategoryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Productgroup Property
+     - SuperOffice Listproductcategoryitems Property
+     - SuperOffice Data Type
+   * - Name
+     - Name
+     - "string"
+
+
+Poweroffice Salesorderline to SuperOffice Quoteline
+---------------------------------------------------
+Every Poweroffice Salesorderline will be synchronized with a SuperOffice Quoteline.
+
+Once a link between a Poweroffice Salesorderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Salesorderline and a SuperOffice Quoteline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Salesorderline Property
+     - SuperOffice Quoteline Property
+     - SuperOffice Data Type
+   * - Description
+     - Name
+     - "string"
+   * - Discount
+     - DiscountPercent
+     - "integer"
+   * - Quantity
+     - Quantity
+     - "integer"
+   * - SalesOrderLineUnitPrice
+     - UnitListPrice
+     - "string"
+   * - VatReturnSpecification
+     - VAT
+     - "integer"
 
