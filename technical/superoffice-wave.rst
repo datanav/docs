@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-25 06:00:31
+Generated: 2023-06-25 06:02:32
 
 Introduction.
 ------------
@@ -40,9 +40,7 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
 
 SuperOffice Contact to Wave Customer
 ------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a Wave Customer must be established.
-
-A new Wave Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Wave.
+Every SuperOffice Contact will be synchronized with a Wave Customer.
 
 Once a link between a SuperOffice Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -67,9 +65,7 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
 
 SuperOffice Quotealternative to Wave Invoice
 --------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
-
-A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, or Quotealternative that is synchronized into Wave.
+Every SuperOffice Quotealternative will be synchronized with a Wave Invoice.
 
 Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -87,6 +83,22 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - title
      - "string"
+
+
+SuperOffice Quote to Wave Invoice
+---------------------------------
+Every SuperOffice Quote will be synchronized with a Wave Invoice.
+
+Once a link between a SuperOffice Quote and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quote and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quote Property
+     - Wave Invoice Property
+     - Wave Data Type
 
 
 SuperOffice Sale to Wave Invoice
