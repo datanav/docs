@@ -41,7 +41,7 @@ Prototype
                 "url" : "/a/service/that/supports/get/{{ _id }}",
                 "method": "GET",
                 "next_page_link": {{ body.pagination.next }},
-                "next_page_termination_strategy": ["next-page-link-empty", "same-next-page-request"]
+                "next_page_termination_strategy": ["next-page-link-empty", "same-next-page-request", "same-response"]
                 "id_expression": {{ id }},
                 "updated_expression": {{ updated }},
                 "payload_property": "result",
@@ -296,16 +296,18 @@ A operation configuration looks like:
 
    * - ``next_page_termination_strategy`` (experimental)
      - Enum<String> or array of Enum<String>
-     - Enumeration of ``"empty-result"``, ``"same-next-page-link"``, ``"next-page-link-empty"`` and ``"same-next-page-request"``.
+     - Enumeration of ``"empty-result"``, ``"same-next-page-link"``, ``"next-page-link-empty"``, ``"same-next-page-request"``
+       and ``"same-response"``.
        The values indicate how to determine when a paginated response is finished. ``"empty-result"`` will terminate pagination
        when the result evaluates to missing or empty (or if the response body is empty). ``"same-next-page-link"``
        terminates if the computed ``next_page_link`` value matches the previous one and ``"next-page-link-empty"`` will
        terminate if this template evaluates to null or an empty string. ``"same-next-page-request"`` terminates paging if
        the component detects that request to issue is identical to the previous request (i.e. the headers, url, parameters and
-       payload to use are all the same). The default is ``"next-page-link-empty"`` and ``"same-next-page-request"``.
+       payload to use are all the same). ``"same-response"`` terminates paging if the response is equal to the previous one.
+       The default is ``"next-page-link-empty"``, ``"same-next-page-request"`` and ``"same-response"``.
        Note that these strategies can be combined in an array if the source system pagination sequence can
        terminate in multiple ways.
-     - ``["next-page-link-empty", "same-next-page-request"]``
+     - ``["next-page-link-empty", "same-next-page-request", "same-response"]``
      -
 
    * - ``allowed_status_codes``

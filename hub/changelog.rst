@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_06_26:
+
+2023-06-26
+----------
+* Added a new ``next_page_termination_strategy`` option ``same-response`` to the :ref:`REST system <rest_system>` that
+  is enabled by default. When enabled, paging will terminate if the response is equal to the previous response.
+
 .. _changelog_2023_05_15:
 
 2023-05-15
