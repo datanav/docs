@@ -2,12 +2,124 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-27 05:05:52
+Generated: 2023-06-27 05:11:35
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customercategory to PowerOffice Productgroup
+------------------------------------------------------
+Every Tripletex Customercategory will be synchronized with a PowerOffice Productgroup.
+
+Once a link between a Tripletex Customercategory and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customercategory and a PowerOffice Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customercategory Property
+     - PowerOffice Productgroup Property
+     - PowerOffice Data Type
+
+
+Tripletex Department to PowerOffice Customer
+--------------------------------------------
+Every Tripletex Department will be synchronized with a PowerOffice Customer.
+
+Once a link between a Tripletex Department and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOffice Customer Property
+     - PowerOffice Data Type
+
+
+Tripletex Employee to PowerOffice Contactperson
+-----------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOffice Contactperson.
+
+Once a link between a Tripletex Employee and a PowerOffice Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOffice Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOffice Contactperson Property
+     - PowerOffice Data Type
+
+
+Tripletex Productgrouprelation to PowerOffice Product
+-----------------------------------------------------
+Every Tripletex Productgrouprelation will be synchronized with a PowerOffice Product.
+
+Once a link between a Tripletex Productgrouprelation and a PowerOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgrouprelation and a PowerOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgrouprelation Property
+     - PowerOffice Product Property
+     - PowerOffice Data Type
+
+
+Tripletex Productunit to PowerOffice Productgroup
+-------------------------------------------------
+Every Tripletex Productunit will be synchronized with a PowerOffice Productgroup.
+
+Once a link between a Tripletex Productunit and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productunit and a PowerOffice Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productunit Property
+     - PowerOffice Productgroup Property
+     - PowerOffice Data Type
+
+
+Tripletex Projectcategory to PowerOffice Productgroup
+-----------------------------------------------------
+Every Tripletex Projectcategory will be synchronized with a PowerOffice Productgroup.
+
+Once a link between a Tripletex Projectcategory and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Projectcategory and a PowerOffice Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Projectcategory Property
+     - PowerOffice Productgroup Property
+     - PowerOffice Data Type
+
+
+Tripletex Supplier to PowerOffice Customer
+------------------------------------------
+Every Tripletex Supplier will be synchronized with a PowerOffice Customer.
+
+Once a link between a Tripletex Supplier and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOffice Customer Property
+     - PowerOffice Data Type
+
 
 Tripletex Contact to PowerOffice Contactperson
 ----------------------------------------------
@@ -22,6 +134,22 @@ The following properties are synchronized between a Tripletex Contact and a Powe
 
    * - Tripletex Contact Property
      - PowerOffice Contactperson Property
+     - PowerOffice Data Type
+
+
+Tripletex Customer to PowerOffice Customer
+------------------------------------------
+Every Tripletex Customer will be synchronized with a PowerOffice Customer.
+
+Once a link between a Tripletex Customer and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOffice Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOffice Customer Property
      - PowerOffice Data Type
 
 
