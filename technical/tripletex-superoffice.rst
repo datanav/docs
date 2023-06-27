@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 11:31:03
 
 Introduction.
 ------------
@@ -85,18 +85,6 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - Tripletex Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - deliveryAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - deliveryAddress.city
-     - Address.Postal.City
-     - "string"
-   * - deliveryAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
    * - email
      - Emails.Value
      - "string"
@@ -107,31 +95,19 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
      - "string"
    * - physicalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - physicalAddress.addressLine1
      - Address.Street.Address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Postal.Address2
      - "string"
    * - physicalAddress.addressLine2
      - Address.Street.Address2
      - "string"
    * - physicalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - physicalAddress.city
      - Address.Street.City
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Postal.Zipcode
      - "string"
    * - physicalAddress.postalCode
      - Address.Street.Zipcode
