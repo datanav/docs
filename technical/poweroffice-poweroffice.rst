@@ -2,7 +2,7 @@
 Poweroffice to PowerOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 17:28:03
 
 Introduction.
 ------------
@@ -31,6 +31,22 @@ The following properties are synchronized between a Poweroffice Supplier and a P
    :header-rows: 1
 
    * - Poweroffice Supplier Property
+     - PowerOffice Address Property
+     - PowerOffice Data Type
+
+
+Poweroffice Customer to PowerOffice Address
+-------------------------------------------
+Every Poweroffice Customer will be synchronized with a PowerOffice Address.
+
+Once a link between a Poweroffice Customer and a PowerOffice Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Customer and a PowerOffice Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Customer Property
      - PowerOffice Address Property
      - PowerOffice Data Type
 
