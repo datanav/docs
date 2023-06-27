@@ -2,7 +2,7 @@
 SuperOffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-06-25 05:59:37
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,45 +23,6 @@ The following properties are synchronized between a SuperOffice Person and a Fre
    * - SuperOffice Person Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - Address.Postal.City
-     - communication_address.communication_city
-     - "string"
-   * - Address.Postal.Zipcode
-     - communication_address.communication_zip_code
-     - "string"
-   * - Address.Street.City
-     - address.city
-     - "string"
-   * - Address.Street.Zipcode
-     - address.zip_code
-     - "string"
-   * - BirthDate
-     - date_of_birth
-     - "string"
-   * - Country.CountryId
-     - address.country_code
-     - "string"
-   * - Country.CountryId
-     - communication_address.communication_country_code
-     - "string"
-   * - Firstname
-     - first_name
-     - "string"
-   * - Lastname
-     - last_name
-     - "string"
-   * - MobilePhones.Value
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
-     - "string"
-   * - OfficePhones.Value
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
-     - "string"
-   * - PersonId
-     - id
-     - "string"
-   * - PrivatePhones.Value
-     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
-     - "string"
 
 
 SuperOffice User to Freshteam Employee
@@ -78,10 +39,4 @@ The following properties are synchronized between a SuperOffice User and a Fresh
    * - SuperOffice User Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
-     - "string"
 
