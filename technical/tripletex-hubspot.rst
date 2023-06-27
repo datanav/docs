@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 11:35:40
+Generated: 2023-06-27 11:35:52
 
 Introduction.
 ------------
@@ -149,6 +149,28 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
+     - "string"
+
+
+Tripletex Department to HubSpot Company
+---------------------------------------
+Every Tripletex Department will be synchronized with a HubSpot Company.
+
+Once a link between a Tripletex Department and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - departmentNumber
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
      - "string"
 
 
