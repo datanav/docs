@@ -2,44 +2,12 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 05:11:35
+Generated: 2023-06-27 05:12:07
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to PowerOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Account to PowerOffice Productgroup
-----------------------------------------
-Every Wave Account will be synchronized with a PowerOffice Productgroup.
-
-Once a link between a Wave Account and a PowerOffice Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Account and a PowerOffice Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Account Property
-     - PowerOffice Productgroup Property
-     - PowerOffice Data Type
-
-
-Wave Vendor to PowerOffice Customer
------------------------------------
-Every Wave Vendor will be synchronized with a PowerOffice Customer.
-
-Once a link between a Wave Vendor and a PowerOffice Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a PowerOffice Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - PowerOffice Customer Property
-     - PowerOffice Data Type
-
 
 Wave Business to PowerOffice Address
 ------------------------------------
