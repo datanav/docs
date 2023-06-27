@@ -2,59 +2,12 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-25 06:00:32
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-HubSpot Contact to SuperOffice Person
--------------------------------------
-Every HubSpot Contact will be synchronized with a SuperOffice Person.
-
-If a matching SuperOffice Person already exists, the HubSpot Contact will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
-
-A HubSpot Contact will merge with a SuperOffice Person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - SuperOffice Person Property
-   * - properties.email
-     - Emails.Value
-
-Once a link between a HubSpot Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Contact and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Contact Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - properties.date_of_birth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - properties.email
-     - Emails.Value
-     - "string"
-   * - properties.firstname
-     - Firstname
-     - "string"
-   * - properties.lastname
-     - Lastname
-     - "string"
-   * - properties.mobilephone
-     - MobilePhones.Value
-     - "string"
-   * - properties.phone
-     - OfficePhones.Value
-     - "string"
-
 
 HubSpot Company to SuperOffice Contact
 --------------------------------------
@@ -70,30 +23,6 @@ The following properties are synchronized between a HubSpot Company and a SuperO
    * - HubSpot Company Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - id
-     - ContactId
-     - "integer"
-   * - properties.address
-     - Address.Street.Address1
-     - "string"
-   * - properties.address2
-     - Address.Street.Address2
-     - "string"
-   * - properties.city
-     - Address.Street.City
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.phone
-     - Phones.Value
-     - "string"
-   * - properties.website
-     - Domains
-     - "list"
-   * - properties.zip
-     - Address.Street.Zipcode
-     - "string"
 
 
 HubSpot Contactcompanyassociation to SuperOffice Person
@@ -110,9 +39,6 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
-     - Contact.ContactId
-     - "integer"
 
 
 HubSpot User to SuperOffice Person
@@ -145,21 +71,6 @@ The following properties are synchronized between a HubSpot Deal and a SuperOffi
    * - HubSpot Deal Property
      - SuperOffice Sale Property
      - SuperOffice Data Type
-   * - properties.amount
-     - Amount
-     - "float"
-   * - properties.closedate
-     - Saledate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - properties.deal_currency_code
-     - Currency.Id
-     - "integer"
-   * - properties.dealname
-     - SaleText
-     - "string"
-   * - properties.description
-     - SaleText
-     - "string"
 
 
 HubSpot Lineitemdealassociation to SuperOffice Quoteline
@@ -176,9 +87,6 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - QuoteAlternativeId
-     - "integer"
 
 
 HubSpot Product to SuperOffice Product
@@ -195,18 +103,6 @@ The following properties are synchronized between a HubSpot Product and a SuperO
    * - HubSpot Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - UnitCost
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - UnitListPrice
-     - "decimal"
 
 
 HubSpot Quote to SuperOffice Quotealternative
@@ -223,10 +119,4 @@ The following properties are synchronized between a HubSpot Quote and a SuperOff
    * - HubSpot Quote Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
-   * - properties.hs_quote_amount
-     - TotalPrice
-     - "integer"
-   * - properties.hs_title
-     - Name
-     - "string"
 
