@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 06:28:45
 
 Introduction.
 ------------
@@ -11,9 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Person to HubSpot Contact
 -------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a HubSpot Contact must be established.
+Every SuperOffice Person will be synchronized with a HubSpot Contact.
 
-A new HubSpot Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Quote, or Quotealternative that is synchronized into HubSpot.
+If a matching HubSpot Contact already exists, the SuperOffice Person will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A SuperOffice Person will merge with a HubSpot Contact if one of the following property combinations match:
 
@@ -57,9 +58,7 @@ The following properties are synchronized between a SuperOffice Person and a Hub
 
 SuperOffice Contact to HubSpot Company
 --------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a HubSpot Company must be established.
-
-A new HubSpot Company will be created from a SuperOffice Contact if it is connected to a SuperOffice Quote, or Quotealternative that is synchronized into HubSpot.
+Every SuperOffice Contact will be synchronized with a HubSpot Company.
 
 Once a link between a SuperOffice Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
