@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 11:40:10
+Generated: 2023-06-27 11:40:35
 
 Introduction.
 ------------
@@ -21,6 +21,31 @@ The following properties are synchronized between a Poweroffice Customer and a H
    :header-rows: 1
 
    * - Poweroffice Customer Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - LegalName
+     - properties.name
+     - "string"
+   * - PhoneNumber
+     - properties.phone
+     - "string"
+   * - WebsiteUrl
+     - properties.website
+     - "string"
+
+
+Poweroffice Supplier to HubSpot Company
+---------------------------------------
+Every Poweroffice Supplier will be synchronized with a HubSpot Company.
+
+Once a link between a Poweroffice Supplier and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Supplier and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - LegalName
