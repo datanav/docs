@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,6 +23,30 @@ The following properties are synchronized between a Poweroffice Product and a Su
    * - Poweroffice Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
+   * - CostPrice
+     - UnitCost
+     - "string"
+   * - Description
+     - Description
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - ProductGroupId
+     - ProductCategoryKey
+     - "string"
+   * - SalesPrice
+     - UnitListPrice
+     - "decimal"
+   * - Type
+     - ProductTypeKey
+     - "string"
+   * - Unit
+     - QuantityUnit
+     - "string"
+   * - VatCode
+     - VAT
+     - "integer"
 
 
 Poweroffice Productgroup to SuperOffice Listproductcategoryitems
@@ -39,6 +63,9 @@ The following properties are synchronized between a Poweroffice Productgroup and
    * - Poweroffice Productgroup Property
      - SuperOffice Listproductcategoryitems Property
      - SuperOffice Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Poweroffice Salesorderline to SuperOffice Quoteline
@@ -55,4 +82,19 @@ The following properties are synchronized between a Poweroffice Salesorderline a
    * - Poweroffice Salesorderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
+   * - Description
+     - Name
+     - "string"
+   * - Discount
+     - DiscountPercent
+     - "integer"
+   * - Quantity
+     - Quantity
+     - "integer"
+   * - SalesOrderLineUnitPrice
+     - UnitListPrice
+     - "string"
+   * - VatReturnSpecification
+     - VAT
+     - "integer"
 
