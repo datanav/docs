@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 11:46:16
+Generated: 2023-06-27 17:42:13
 
 Introduction.
 ------------
@@ -23,12 +23,18 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - city
+     - Address.Postal.City
+     - "string"
    * - dateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - firstName
      - Firstname
      - "string"
+   * - id
+     - PersonId
+     - "integer"
    * - lastName
      - Lastname
      - "string"
@@ -40,6 +46,12 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "integer"
    * - phoneNumber
      - OfficePhones.Value
+     - "string"
+   * - residenceCountryCode
+     - Country.CountryId
+     - "integer"
+   * - zipCode
+     - Address.Postal.Zipcode
      - "string"
 
 
