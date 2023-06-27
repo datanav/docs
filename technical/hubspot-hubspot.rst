@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 11:39:01
+Generated: 2023-06-27 11:39:46
 
 Introduction.
 ------------
@@ -1047,6 +1047,25 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
      - "string"
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - "string"
+
+
+HubSpot User to HubSpot Contact
+-------------------------------
+Every HubSpot User will be synchronized with a HubSpot Contact.
+
+Once a link between a HubSpot User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - email
+     - properties.work_email
      - "string"
 
 
