@@ -2,7 +2,7 @@
 HubSpot to Tilores Dataflow
 ===========================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,24 +23,6 @@ The following properties are synchronized between a HubSpot Contact and a Tilore
    * - HubSpot Contact Property
      - Tilores Human Property
      - Tilores Data Type
-   * - id
-     - id
-     - "string"
-   * - properties.city
-     - city
-     - "string"
-   * - properties.date_of_birth
-     - dateOfBirth
-     - "string"
-   * - properties.firstname
-     - firstName
-     - "string"
-   * - properties.lastname
-     - lastName
-     - "string"
-   * - properties.zip
-     - postalCode
-     - "string"
 
 
 HubSpot Contactcompanyassociation to Tilores Human
