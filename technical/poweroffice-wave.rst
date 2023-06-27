@@ -2,7 +2,7 @@
 Poweroffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-27 05:12:08
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Poweroffice Customer and a W
    * - Poweroffice Customer Property
      - Wave Customer Property
      - Wave Data Type
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phone
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
 
 Poweroffice Product to Wave Product
@@ -39,6 +48,15 @@ The following properties are synchronized between a Poweroffice Product and a Wa
    * - Poweroffice Product Property
      - Wave Product Property
      - Wave Data Type
+   * - Description
+     - description
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - SalesPrice
+     - unitPrice
+     - "string"
 
 
 Poweroffice Salesorder to Wave Invoice
@@ -55,6 +73,12 @@ The following properties are synchronized between a Poweroffice Salesorder and a
    * - Poweroffice Salesorder Property
      - Wave Invoice Property
      - Wave Data Type
+   * - Currency
+     - currency.code
+     - "string"
+   * - DepartmentCode
+     - customer.id
+     - "string"
 
 
 Poweroffice Supplier to Wave Vendor
@@ -71,4 +95,13 @@ The following properties are synchronized between a Poweroffice Supplier and a W
    * - Poweroffice Supplier Property
      - Wave Vendor Property
      - Wave Data Type
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phone
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
