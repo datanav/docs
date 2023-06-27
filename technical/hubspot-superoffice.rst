@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:44:31
+Generated: 2023-06-27 11:45:05
 
 Introduction.
 ------------
@@ -113,6 +113,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - Contact.ContactId
      - "integer"
+
+
+HubSpot User to SuperOffice Person
+----------------------------------
+Every HubSpot User will be synchronized with a SuperOffice Person.
+
+Once a link between a HubSpot User and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 HubSpot Deal to SuperOffice Sale
