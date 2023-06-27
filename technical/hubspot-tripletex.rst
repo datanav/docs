@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-27 05:05:49
+Generated: 2023-06-27 05:05:52
 
 Introduction.
 ------------
@@ -56,22 +56,6 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
 
    * - HubSpot Lineitemdealassociation Property
      - Tripletex Orderline Property
-     - Tripletex Data Type
-
-
-HubSpot Product to Tripletex Product
-------------------------------------
-Every HubSpot Product will be synchronized with a Tripletex Product.
-
-Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Tripletex Product Property
      - Tripletex Data Type
 
 
