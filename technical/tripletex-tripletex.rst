@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-27 06:42:23
+Generated: 2023-06-27 06:42:48
 
 Introduction.
 ------------
@@ -96,17 +96,32 @@ The following properties are synchronized between a Tripletex Customer and a Tri
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
      - "string"
+   * - deliveryAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
    * - deliveryAddress.addressLine2
      - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - physicalAddress.addressLine2
      - "string"
    * - deliveryAddress.city
      - deliveryAddress.changes
      - "string"
+   * - deliveryAddress.city
+     - physicalAddress.city
+     - "string"
    * - deliveryAddress.country.id
      - deliveryAddress.city
      - "string"
+   * - deliveryAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
    * - deliveryAddress.postalCode
      - deliveryAddress.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - physicalAddress.postalCode
      - "string"
    * - email
      - email
@@ -130,32 +145,77 @@ The following properties are synchronized between a Tripletex Customer and a Tri
      - phoneNumberMobile
      - "string"
    * - physicalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
      - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - deliveryAddress.addressLine2
      - "string"
    * - physicalAddress.addressLine2
      - physicalAddress.addressLine2
      - "string"
    * - physicalAddress.city
+     - deliveryAddress.changes
+     - "string"
+   * - physicalAddress.city
      - physicalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - deliveryAddress.city
      - "string"
    * - physicalAddress.country.id
      - physicalAddress.country.id
      - "integer"
    * - physicalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
      - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - physicalAddress.addressLine1
      - "string"
    * - postalAddress.addressLine1
      - postalAddress.addressLine1
      - "string"
    * - postalAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
      - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - deliveryAddress.changes
+     - "string"
+   * - postalAddress.city
+     - physicalAddress.city
      - "string"
    * - postalAddress.city
      - postalAddress.city
      - "string"
    * - postalAddress.country.id
+     - deliveryAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - postalAddress.country.id
      - postalAddress.country.id
      - "integer"
+   * - postalAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
    * - postalAddress.postalCode
      - postalAddress.postalCode
      - "string"
@@ -211,6 +271,24 @@ The following properties are synchronized between a Tripletex Employee and a Tri
    * - Tripletex Employee Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - department.id
+     - customer.id
+     - "integer"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - phoneNumberWork
+     - phoneNumberWork
+     - "string"
 
 
 Tripletex Product to Tripletex Productgrouprelation
