@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-06-25 06:00:31
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,18 +23,6 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOffice Address Property
      - PowerOffice Data Type
-   * - properties.address
-     - address1
-     - "string"
-   * - properties.city
-     - city
-     - "string"
-   * - properties.country
-     - countryCode
-     - "string"
-   * - properties.zip
-     - zipCode
-     - "string"
 
 
 HubSpot Deal to PowerOffice Salesorder
@@ -51,15 +39,6 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOffice Salesorder Property
      - PowerOffice Data Type
-   * - properties.closedate
-     - DeliveryDate
-     - "string"
-   * - properties.closedate
-     - OrderDate
-     - "string"
-   * - properties.deal_currency_code
-     - Currency
-     - "string"
 
 
 HubSpot Lineitemdealassociation to PowerOffice Salesorderline
@@ -92,18 +71,6 @@ The following properties are synchronized between a HubSpot Product and a PowerO
    * - HubSpot Product Property
      - PowerOffice Product Property
      - PowerOffice Data Type
-   * - properties.description
-     - Description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - CostPrice
-     - "string"
-   * - properties.name
-     - Name
-     - "string"
-   * - properties.price
-     - SalesPrice
-     - "string"
 
 
 HubSpot User to PowerOffice Employee
@@ -120,7 +87,4 @@ The following properties are synchronized between a HubSpot User and a PowerOffi
    * - HubSpot User Property
      - PowerOffice Employee Property
      - PowerOffice Data Type
-   * - email
-     - EmailAddress
-     - "string"
 
