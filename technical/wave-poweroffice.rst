@@ -2,7 +2,7 @@
 Wave Financial to PowerOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Wave Business and a PowerOff
    * - Wave Business Property
      - PowerOffice Address Property
      - PowerOffice Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Wave Customer to PowerOffice Address
@@ -39,6 +54,21 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice Address Property
      - PowerOffice Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Wave Customer to PowerOffice Customer
@@ -55,6 +85,36 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
+   * - address.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - address.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - address.city
+     - streetAddresses.city
+     - "string"
+   * - address.country.code
+     - streetAddresses.countryCode
+     - "string"
+   * - address.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phone
+     - PhoneNumber
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Wave Invoice to PowerOffice Salesorder
@@ -71,6 +131,12 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOffice Salesorder Property
      - PowerOffice Data Type
+   * - currency.code
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
 
 
 Wave Product to PowerOffice Product
@@ -87,6 +153,18 @@ The following properties are synchronized between a Wave Product and a PowerOffi
    * - Wave Product Property
      - PowerOffice Product Property
      - PowerOffice Data Type
+   * - description
+     - Description
+     - "string"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - unitPrice
+     - SalesPrice
+     - "string"
 
 
 Wave Vendor to PowerOffice Address
@@ -103,6 +181,21 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOffice Address Property
      - PowerOffice Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.code
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Wave Vendor to PowerOffice Supplier
@@ -119,4 +212,16 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOffice Supplier Property
      - PowerOffice Data Type
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phone
+     - PhoneNumber
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
