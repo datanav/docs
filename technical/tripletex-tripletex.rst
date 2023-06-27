@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -52,6 +52,72 @@ The following properties are synchronized between a Tripletex Supplier and a Tri
    * - Tripletex Supplier Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.changes
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.country.id
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Customer to Tripletex Department
