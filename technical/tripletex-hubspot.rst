@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -33,6 +33,21 @@ The following properties are synchronized between a Tripletex Contact and a HubS
    * - Tripletex Contact Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - phoneNumberMobile
+     - properties.mobilephone
+     - "string"
+   * - phoneNumberWork
+     - properties.phone
+     - "string"
 
 
 Tripletex Employee to HubSpot Contact
@@ -59,6 +74,42 @@ The following properties are synchronized between a Tripletex Employee and a Hub
    * - Tripletex Employee Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - address.addressLine1
+     - properties.address
+     - "string"
+   * - address.city
+     - properties.city
+     - "string"
+   * - address.country.id
+     - properties.country
+     - "string"
+   * - address.postalCode
+     - properties.zip
+     - "string"
+   * - dateOfBirth
+     - properties.date_of_birth
+     - "string"
+   * - email
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - phoneNumberMobile
+     - properties.mobilephone
+     - "string"
+   * - phoneNumberWork
+     - properties.phone
+     - "string"
+   * - userType
+     - properties.country
+     - "string"
 
 
 Tripletex Customer to HubSpot Company
@@ -75,6 +126,30 @@ The following properties are synchronized between a Tripletex Customer and a Hub
    * - Tripletex Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - physicalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - physicalAddress.city
+     - properties.city
+     - "string"
+   * - physicalAddress.country.id
+     - properties.country
+     - "string"
+   * - physicalAddress.postalCode
+     - properties.zip
+     - "string"
 
 
 Tripletex Supplier to HubSpot Company
@@ -91,6 +166,30 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
    * - Tripletex Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - physicalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - physicalAddress.city
+     - properties.city
+     - "string"
+   * - physicalAddress.country.id
+     - properties.country
+     - "string"
+   * - physicalAddress.postalCode
+     - properties.zip
+     - "string"
 
 
 Tripletex Employee to HubSpot User
@@ -123,6 +222,9 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
    * - Tripletex Orderline Property
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
+   * - order.id
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - "string"
 
 
 Tripletex Product to HubSpot Product
@@ -139,4 +241,19 @@ The following properties are synchronized between a Tripletex Product and a HubS
    * - Tripletex Product Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - costExcludingVatCurrency
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - number
+     - properties.hs_sku
+     - "string"
+   * - priceExcludingVatCurrency
+     - properties.price
+     - "string"
 
