@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-27 05:12:08
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -39,6 +39,54 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - SuperOffice Contact Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - Address.Postal.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Postal.City
+     - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Associate.AssociateId
+     - accountManager.id
+     - "integer"
+   * - ContactId
+     - id
+     - "integer"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountry)
+     - organizationNumber
+     - "replace"," ","", "string"]
+   * - Phones.Value
+     - phoneNumber
+     - "string"
 
 
 SuperOffice Contact to Tripletex Department
@@ -75,6 +123,24 @@ The following properties are synchronized between a SuperOffice Person and a Tri
    * - SuperOffice Person Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - Contact.ContactId
+     - customer.id
+     - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - MobilePhones.Value
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - OfficePhones.Value
+     - phoneNumberWork
+     - "string"
 
 
 SuperOffice Quotealternative to Tripletex Order
@@ -93,6 +159,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Name
+     - invoiceComment
+     - "string"
 
 
 SuperOffice Listproductcategoryitems to Tripletex Productgroup
@@ -109,6 +178,9 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - Tripletex Productgroup Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 SuperOffice Ownercontactlink to Tripletex Department
@@ -125,6 +197,9 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - Tripletex Department Property
      - Tripletex Data Type
+   * - name
+     - name
+     - "string"
 
 
 SuperOffice Product to Tripletex Product
@@ -141,6 +216,33 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice Product to Tripletex Productunit
@@ -157,6 +259,12 @@ The following properties are synchronized between a SuperOffice Product and a Tr
    * - SuperOffice Product Property
      - Tripletex Productunit Property
      - Tripletex Data Type
+   * - QuantityUnit
+     - commonCode
+     - "string"
+   * - QuantityUnit
+     - name
+     - "string"
 
 
 SuperOffice Project to Tripletex Project
@@ -173,6 +281,21 @@ The following properties are synchronized between a SuperOffice Project and a Tr
    * - SuperOffice Project Property
      - Tripletex Project Property
      - Tripletex Data Type
+   * - Associate.AssociateId
+     - projectManager.id
+     - "integer"
+   * - EndDate
+     - endDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Name
+     - name
+     - "string"
+   * - NextMilestoneDate
+     - startDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - ProjectMembers.PersonId
+     - contact.id
+     - "integer"
 
 
 SuperOffice Quoteline to Tripletex Orderline
@@ -189,6 +312,27 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - DiscountPercent
+     - discount
+     - "float"
+   * - ERPProductKey
+     - product.id
+     - "integer"
+   * - Name
+     - description
+     - "string"
+   * - Quantity
+     - count
+     - "float"
+   * - QuoteAlternativeId
+     - order.id
+     - "integer"
+   * - UnitListPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice User to Tripletex Employee
@@ -205,4 +349,16 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - SuperOffice User Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
+     - "string"
 
