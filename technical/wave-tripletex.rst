@@ -2,12 +2,44 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-06-27 05:05:52
+Generated: 2023-06-27 05:11:35
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Account to Tripletex Customercategory
+------------------------------------------
+Every Wave Account will be synchronized with a Tripletex Customercategory.
+
+Once a link between a Wave Account and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Account and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Account Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+
+
+Wave Invoice to Tripletex Order
+-------------------------------
+Every Wave Invoice will be synchronized with a Tripletex Order.
+
+Once a link between a Wave Invoice and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
 
 Wave Product to Tripletex Product
 ---------------------------------
