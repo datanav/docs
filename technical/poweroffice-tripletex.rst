@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-27 05:05:49
+Generated: 2023-06-27 05:05:52
 
 Introduction.
 ------------
@@ -38,22 +38,6 @@ The following properties are synchronized between a Poweroffice Customer and a T
 
    * - Poweroffice Customer Property
      - Tripletex Contact Property
-     - Tripletex Data Type
-
-
-Poweroffice Customer to Tripletex Customer
-------------------------------------------
-Every Poweroffice Customer will be synchronized with a Tripletex Customer.
-
-Once a link between a Poweroffice Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Poweroffice Customer and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Poweroffice Customer Property
-     - Tripletex Customer Property
      - Tripletex Data Type
 
 
