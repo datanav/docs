@@ -2,7 +2,7 @@
 HubSpot to Tilores Dataflow
 ===========================
 
-Generated: 2023-06-27 11:47:32
+Generated: 2023-06-27 11:48:10
 
 Introduction.
 ------------
@@ -55,6 +55,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
+     - Tilores Human Property
+     - Tilores Data Type
+
+
+HubSpot User to Tilores Human
+-----------------------------
+Every HubSpot User will be synchronized with a Tilores Human.
+
+Once a link between a HubSpot User and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
      - Tilores Human Property
      - Tilores Data Type
 
