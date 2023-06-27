@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 11:28:38
+Generated: 2023-06-27 11:28:54
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Contact to HubSpot Company
 --------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a HubSpot Company must be established.
-
-A new HubSpot Company will be created from a SuperOffice Contact if it is connected to a SuperOffice Quote, or Quotealternative that is synchronized into HubSpot.
+Every SuperOffice Contact will be synchronized with a HubSpot Company.
 
 Once a link between a SuperOffice Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
