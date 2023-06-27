@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 11:29:58
+Generated: 2023-06-27 11:30:12
 
 Introduction.
 ------------
@@ -52,6 +52,44 @@ The following properties are synchronized between a SuperOffice Person and a Hub
      - "string"
    * - OfficePhones.Value
      - properties.phone
+     - "string"
+
+
+SuperOffice User to HubSpot Contact
+-----------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a HubSpot Contact must be established.
+
+A SuperOffice User will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - HubSpot Contact Property
+   * - personEmail
+     - properties.email
+
+Once a link between a SuperOffice User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - contactCategory
+     - properties.country
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - lastName
+     - properties.lastname
+     - "string"
+   * - personEmail
+     - properties.email
      - "string"
 
 
