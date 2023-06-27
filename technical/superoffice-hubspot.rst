@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-25 05:59:37
+Generated: 2023-06-27 04:54:36
 
 Introduction.
 ------------
@@ -221,37 +221,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - HubSpot Data Type
    * - QuoteAlternativeId
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - "string"
-
-
-SuperOffice Sale to HubSpot Deal
---------------------------------
-Every SuperOffice Sale will be synchronized with a HubSpot Deal.
-
-Once a link between a SuperOffice Sale and a HubSpot Deal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a HubSpot Deal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
-     - HubSpot Deal Property
-     - HubSpot Data Type
-   * - Amount
-     - properties.amount
-     - "string"
-   * - Currency.Id
-     - properties.deal_currency_code
-     - "string"
-   * - SaleText
-     - properties.dealname
-     - "string"
-   * - SaleText
-     - properties.description
-     - "string"
-   * - Saledate
-     - properties.closedate
      - "string"
 
 
