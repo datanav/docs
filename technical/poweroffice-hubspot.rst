@@ -2,7 +2,7 @@
 Poweroffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-25 05:59:37
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,21 +23,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - dateOfBirth
-     - properties.date_of_birth
-     - "string"
-   * - emailAddress
-     - properties.work_email
-     - "string"
-   * - firstName
-     - properties.firstname
-     - "string"
-   * - lastName
-     - properties.lastname
-     - "string"
-   * - phoneNumber
-     - properties.phone
-     - "string"
 
 
 Poweroffice Customer to HubSpot Company
@@ -54,15 +39,6 @@ The following properties are synchronized between a Poweroffice Customer and a H
    * - Poweroffice Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - LegalName
-     - properties.name
-     - "string"
-   * - PhoneNumber
-     - properties.phone
-     - "string"
-   * - WebsiteUrl
-     - properties.website
-     - "string"
 
 
 Poweroffice Employee to HubSpot Contact
@@ -79,18 +55,6 @@ The following properties are synchronized between a Poweroffice Employee and a H
    * - Poweroffice Employee Property
      - HubSpot Contact Property
      - HubSpot Data Type
-   * - DateOfBirth
-     - properties.date_of_birth
-     - "string"
-   * - EmailAddress
-     - properties.work_email
-     - "string"
-   * - FirstName
-     - properties.firstname
-     - "string"
-   * - LastName
-     - properties.lastname
-     - "string"
 
 
 Poweroffice Supplier to HubSpot Company
@@ -107,15 +71,6 @@ The following properties are synchronized between a Poweroffice Supplier and a H
    * - Poweroffice Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - LegalName
-     - properties.name
-     - "string"
-   * - PhoneNumber
-     - properties.phone
-     - "string"
-   * - WebsiteUrl
-     - properties.website
-     - "string"
 
 
 Poweroffice Employee to HubSpot User
@@ -132,9 +87,6 @@ The following properties are synchronized between a Poweroffice Employee and a H
    * - Poweroffice Employee Property
      - HubSpot User Property
      - HubSpot Data Type
-   * - EmailAddress
-     - email
-     - "string"
 
 
 Poweroffice Product to HubSpot Product
@@ -151,18 +103,6 @@ The following properties are synchronized between a Poweroffice Product and a Hu
    * - Poweroffice Product Property
      - HubSpot Product Property
      - HubSpot Data Type
-   * - CostPrice
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - Description
-     - properties.description
-     - "string"
-   * - Name
-     - properties.name
-     - "string"
-   * - SalesPrice
-     - properties.price
-     - "string"
 
 
 Poweroffice Salesorderline to HubSpot Lineitemdealassociation
