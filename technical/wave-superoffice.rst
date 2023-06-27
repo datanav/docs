@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 06:42:23
+Generated: 2023-06-27 11:28:36
 
 Introduction.
 ------------
@@ -11,7 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wave Customer to SuperOffice Contact
 ------------------------------------
-Every Wave Customer will be synchronized with a SuperOffice Contact.
+Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into SuperOffice.
 
 Once a link between a Wave Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -21,43 +23,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    :header-rows: 1
 
    * - Wave Customer Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - address.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - address.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - address.city
-     - Address.Postal.City
-     - "string"
-   * - address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - phone
-     - Phones.Value
-     - "string"
-   * - website
-     - Domains
-     - "list"
-
-
-Wave Vendor to SuperOffice Contact
-----------------------------------
-Every Wave Vendor will be synchronized with a SuperOffice Contact.
-
-Once a link between a Wave Vendor and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address.addressLine1
