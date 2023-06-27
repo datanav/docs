@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2023-06-27 11:30:28
+Generated: 2023-06-27 11:31:03
 
 Introduction.
 ------------
@@ -25,6 +25,40 @@ The following properties are synchronized between a Tripletex Contact and a Tilo
      - Tilores Data Type
    * - firstName
      - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+
+
+Tripletex Employee to Tilores Human
+-----------------------------------
+Every Tripletex Employee will be synchronized with a Tilores Human.
+
+Once a link between a Tripletex Employee and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Tilores Human Property
+     - Tilores Data Type
+   * - address.city
+     - city
+     - "string"
+   * - address.postalCode
+     - postalCode
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
      - "string"
    * - lastName
      - lastName
