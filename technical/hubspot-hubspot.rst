@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 11:51:17
+Generated: 2023-06-27 17:43:06
 
 Introduction.
 ------------
@@ -1291,6 +1291,44 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
 
    * - HubSpot Dealcontactassociationtype Property
      - HubSpot Ticketcompanyassociationtype Property
+     - HubSpot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Lineitemdealassociationtype to HubSpot Lineitemquoteassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Lineitemdealassociationtype will be synchronized with a HubSpot Lineitemquoteassociationtype.
+
+Once a link between a HubSpot Lineitemdealassociationtype and a HubSpot Lineitemquoteassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociationtype and a HubSpot Lineitemquoteassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociationtype Property
+     - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Data Type
+   * - label
+     - label
+     - "string"
+
+
+HubSpot Lineitemquoteassociationtype to HubSpot Lineitemdealassociationtype
+---------------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociationtype will be synchronized with a HubSpot Lineitemdealassociationtype.
+
+Once a link between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitemdealassociationtype is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociationtype and a HubSpot Lineitemdealassociationtype:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociationtype Property
+     - HubSpot Lineitemdealassociationtype Property
      - HubSpot Data Type
    * - label
      - label
