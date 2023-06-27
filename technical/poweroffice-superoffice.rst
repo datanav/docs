@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 11:45:40
+Generated: 2023-06-27 11:46:16
 
 Introduction.
 ------------
@@ -88,6 +88,52 @@ The following properties are synchronized between a Poweroffice Customer and a S
      - Country.CountryId
      - "integer"
    * - mailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
+
+
+Poweroffice Employee to SuperOffice Person
+------------------------------------------
+Every Poweroffice Employee will be synchronized with a SuperOffice Person.
+
+Once a link between a Poweroffice Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Poweroffice Employee and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Poweroffice Employee Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - FirstName
+     - Firstname
+     - "string"
+   * - Id
+     - PersonId
+     - "integer"
+   * - LastName
+     - Lastname
+     - "string"
+   * - MailAddress.Address1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.Address3
+     - Address.Postal.Address3
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
      - Address.Postal.Zipcode
      - "string"
 
