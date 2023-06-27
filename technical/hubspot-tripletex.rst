@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-27 06:40:49
+Generated: 2023-06-27 06:42:23
 
 Introduction.
 ------------
@@ -131,13 +131,25 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - id
      - "integer"
    * - properties.address
+     - deliveryAddress.addressLine1
+     - "string"
+   * - properties.address
      - physicalAddress.addressLine1
+     - "string"
+   * - properties.address2
+     - deliveryAddress.addressLine2
      - "string"
    * - properties.address2
      - physicalAddress.addressLine2
      - "string"
    * - properties.city
+     - deliveryAddress.city
+     - "string"
+   * - properties.city
      - physicalAddress.city
+     - "string"
+   * - properties.country
+     - deliveryAddress.country.id
      - "string"
    * - properties.country
      - physicalAddress.country.id
@@ -147,6 +159,9 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - "string"
    * - properties.phone
      - phoneNumber
+     - "string"
+   * - properties.zip
+     - deliveryAddress.postalCode
      - "string"
    * - properties.zip
      - physicalAddress.postalCode
@@ -192,7 +207,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - order.id
      - "integer"
 
