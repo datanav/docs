@@ -2,7 +2,7 @@
 Tripletex to UniEconomy Dataflow
 ================================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 11:32:24
 
 Introduction.
 ------------
@@ -62,6 +62,9 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
    * - Tripletex Supplier Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Supplier to UniEconomy Customers
@@ -88,6 +91,9 @@ The following properties are synchronized between a Tripletex Supplier and a Uni
    * - Tripletex Supplier Property
      - UniEconomy Customers Property
      - UniEconomy Data Type
+   * - organizationNumber
+     - OrgNumber
+     - "string"
 
 
 Tripletex Customer to UniEconomy Customers
