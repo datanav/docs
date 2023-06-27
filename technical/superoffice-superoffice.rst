@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 05:57:52
+Generated: 2023-06-27 05:58:52
 
 Introduction.
 ------------
@@ -94,6 +94,9 @@ The following properties are synchronized between a SuperOffice Sale and a Super
    * - SuperOffice Sale Property
      - SuperOffice Quote Property
      - SuperOffice Data Type
+   * - Status
+     - AcceptedQuoteAlternativeId
+     - "string"
 
 
 SuperOffice User to SuperOffice Person
