@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-06-25 06:00:31
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,12 +23,6 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - Wave Vendor Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
 
 
 Wave Customer to Tripletex Customer
@@ -45,12 +39,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - Wave Customer Property
      - Tripletex Customer Property
      - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
 
 
 Wave Invoice to Tripletex Order
@@ -67,24 +55,6 @@ The following properties are synchronized between a Wave Invoice and a Tripletex
    * - Wave Invoice Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - currency.code
-     - currency.id
-     - "integer"
-   * - customer.id
-     - customer.id
-     - "integer"
-   * - dueDate
-     - deliveryDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - poNumber
-     - reference
-     - "string"
-   * - title
-     - invoiceComment
-     - "string"
-   * - total.currency.symbol
-     - currency.id
-     - "integer"
 
 
 Wave Product to Tripletex Product
@@ -101,15 +71,6 @@ The following properties are synchronized between a Wave Product and a Tripletex
    * - Wave Product Property
      - Tripletex Product Property
      - Tripletex Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - unitPrice
-     - priceExcludingVatCurrency
-     - "float"
 
 
 Wave Vendor to Tripletex Supplier
@@ -126,10 +87,4 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - Wave Vendor Property
      - Tripletex Supplier Property
      - Tripletex Data Type
-   * - name
-     - name
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
 
