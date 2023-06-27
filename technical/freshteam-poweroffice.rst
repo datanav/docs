@@ -2,7 +2,7 @@
 Freshteam to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-27 06:42:23
+Generated: 2023-06-27 11:31:21
 
 Introduction.
 ------------
@@ -23,41 +23,20 @@ The following properties are synchronized between a Freshteam Employee and a Pow
    * - Freshteam Employee Property
      - PowerOffice Employee Property
      - PowerOffice Data Type
-   * - address.city
-     - streetAddresses.city
-     - "string"
-   * - address.country_code
-     - streetAddresses.countryCode
-     - "string"
-   * - address.zip_code
-     - streetAddresses.zipCode
-     - "string"
    * - communication_address.communication_city
      - MailAddress.City
-     - "string"
-   * - communication_address.communication_city
-     - streetAddresses.city
      - "string"
    * - communication_address.communication_country_code
      - MailAddress.CountryCode
      - "string"
-   * - communication_address.communication_country_code
-     - streetAddresses.countryCode
-     - "string"
    * - communication_address.communication_zip_code
      - MailAddress.ZipCode
-     - "string"
-   * - communication_address.communication_zip_code
-     - streetAddresses.zipCode
      - "string"
    * - date_of_birth
      - DateOfBirth
      - "string"
    * - first_name
      - FirstName
-     - "string"
-   * - id
-     - id
      - "string"
    * - last_name
      - LastName
