@@ -2,41 +2,12 @@
 Zendesk to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-25 05:59:37
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Zendesk Users to HubSpot Contact
---------------------------------
-Every Zendesk Users will be synchronized with a HubSpot Contact.
-
-If a matching HubSpot Contact already exists, the Zendesk Users will be merged with the existing one.
-If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
-
-A Zendesk Users will merge with a HubSpot Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - HubSpot Contact Property
-   * - email
-     - properties.email
-
-Once a link between a Zendesk Users and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a HubSpot Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - HubSpot Contact Property
-     - HubSpot Data Type
-
 
 Zendesk Organisations to HubSpot Company
 ----------------------------------------
@@ -52,12 +23,6 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - Zendesk Organisations Property
      - HubSpot Company Property
      - HubSpot Data Type
-   * - name
-     - properties.name
-     - "string"
-   * - url
-     - properties.website
-     - "string"
 
 
 Zendesk Tickets to HubSpot Ticket
@@ -74,12 +39,6 @@ The following properties are synchronized between a Zendesk Tickets and a HubSpo
    * - Zendesk Tickets Property
      - HubSpot Ticket Property
      - HubSpot Data Type
-   * - requester_id
-     - properties.hubspot_owner_id
-     - "string"
-   * - subject
-     - properties.subject
-     - "string"
 
 
 Zendesk Users to HubSpot User
