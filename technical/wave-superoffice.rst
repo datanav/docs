@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 11:31:21
+Generated: 2023-06-27 11:46:16
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wave Customer to SuperOffice Contact
 ------------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into SuperOffice.
+Every Wave Customer will be synchronized with a SuperOffice Contact.
 
 Once a link between a Wave Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
