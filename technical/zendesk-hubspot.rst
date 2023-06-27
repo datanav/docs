@@ -2,12 +2,57 @@
 Zendesk to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 05:05:52
+Generated: 2023-06-27 05:11:35
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Zendesk to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Zendesk Users to HubSpot Contact
+--------------------------------
+Every Zendesk Users will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Zendesk Users will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
+
+A Zendesk Users will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Zendesk Users and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Users and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+Zendesk Organisations to HubSpot Company
+----------------------------------------
+Every Zendesk Organisations will be synchronized with a HubSpot Company.
+
+Once a link between a Zendesk Organisations and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organisations and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organisations Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+
 
 Zendesk Tickets to HubSpot Ticket
 ---------------------------------
