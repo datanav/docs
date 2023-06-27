@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-06-27 05:12:08
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -43,6 +43,21 @@ The following properties are synchronized between a HubSpot Contact and a Triple
    * - HubSpot Contact Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - firstName
+     - "string"
+   * - properties.lastname
+     - lastName
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - properties.phone
+     - phoneNumberWork
+     - "string"
 
 
 HubSpot Deal to Tripletex Order
@@ -59,6 +74,15 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
    * - HubSpot Deal Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - properties.closedate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.closedate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.deal_currency_code
+     - currency.id
+     - "integer"
 
 
 HubSpot Lineitemdealassociation to Tripletex Orderline
@@ -75,6 +99,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - order.id
+     - "integer"
 
 
 HubSpot Product to Tripletex Product
@@ -91,6 +118,21 @@ The following properties are synchronized between a HubSpot Product and a Triple
    * - HubSpot Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "integer"
+   * - properties.hs_sku
+     - number
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
 
 
 HubSpot User to Tripletex Employee
