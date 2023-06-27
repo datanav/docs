@@ -2,7 +2,7 @@
 Poweroffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-27 05:12:08
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - partyCustomerCode
+     - customer.id
+     - "integer"
+   * - partySupplierCode
+     - customer.id
+     - "integer"
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
 
 
 Poweroffice Customer to Tripletex Contact
@@ -39,6 +54,12 @@ The following properties are synchronized between a Poweroffice Customer and a T
    * - Poweroffice Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
 
 
 Poweroffice Employee to Tripletex Employee
@@ -55,6 +76,15 @@ The following properties are synchronized between a Poweroffice Employee and a T
    * - Poweroffice Employee Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - DateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
 
 
 Poweroffice Product to Tripletex Product
@@ -71,6 +101,30 @@ The following properties are synchronized between a Poweroffice Product and a Tr
    * - Poweroffice Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - AvailableStock
+     - stockOfGoods
+     - "integer"
+   * - CostPrice
+     - costExcludingVatCurrency
+     - "integer"
+   * - Description
+     - description
+     - "string"
+   * - Gtin
+     - ean
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - SalesPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - Unit
+     - productUnit.id
+     - "integer"
+   * - VatCode
+     - vatType.id
+     - "integer"
 
 
 Poweroffice Productgroup to Tripletex Productgroup
@@ -87,6 +141,9 @@ The following properties are synchronized between a Poweroffice Productgroup and
    * - Poweroffice Productgroup Property
      - Tripletex Productgroup Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Poweroffice Salesorder to Tripletex Order
@@ -103,6 +160,18 @@ The following properties are synchronized between a Poweroffice Salesorder and a
    * - Poweroffice Salesorder Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Currency
+     - currency.id
+     - "integer"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - DepartmentCode
+     - customer.id
+     - "integer"
+   * - OrderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Poweroffice Salesorderline to Tripletex Orderline
@@ -119,6 +188,21 @@ The following properties are synchronized between a Poweroffice Salesorderline a
    * - Poweroffice Salesorderline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - Discount
+     - discount
+     - "float"
+   * - Quantity
+     - count
+     - "float"
+   * - SalesOrderLineUnitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VatReturnSpecification
+     - vatType.id
+     - "integer"
 
 
 Poweroffice Supplier to Tripletex Supplier
@@ -135,4 +219,16 @@ The following properties are synchronized between a Poweroffice Supplier and a T
    * - Poweroffice Supplier Property
      - Tripletex Supplier Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
