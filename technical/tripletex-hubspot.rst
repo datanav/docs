@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 06:28:45
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to HubSpot Contact
 ------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a HubSpot Contact must be established.
+Every Tripletex Contact will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Tripletex Contact will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Tripletex Contact will merge with a HubSpot Contact if one of the following property combinations match:
 
@@ -52,7 +55,10 @@ The following properties are synchronized between a Tripletex Contact and a HubS
 
 Tripletex Employee to HubSpot Contact
 -------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a HubSpot Contact must be established.
+Every Tripletex Employee will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Tripletex Employee will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Tripletex Employee will merge with a HubSpot Contact if one of the following property combinations match:
 
@@ -149,6 +155,28 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - "string"
    * - physicalAddress.postalCode
      - properties.zip
+     - "string"
+
+
+Tripletex Department to HubSpot Company
+---------------------------------------
+Every Tripletex Department will be synchronized with a HubSpot Company.
+
+Once a link between a Tripletex Department and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - departmentNumber
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
      - "string"
 
 
