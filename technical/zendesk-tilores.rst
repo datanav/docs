@@ -2,7 +2,7 @@
 Zendesk to Tilores Dataflow
 ===========================
 
-Generated: 2023-06-20 09:22:52
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,10 +23,4 @@ The following properties are synchronized between a Zendesk Users and a Tilores 
    * - Zendesk Users Property
      - Tilores Human Property
      - Tilores Data Type
-   * - email
-     - email
-     - "string"
-   * - phone
-     - phoneNumber
-     - "string"
 
