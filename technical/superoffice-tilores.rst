@@ -2,7 +2,7 @@
 SuperOffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,28 +23,4 @@ The following properties are synchronized between a SuperOffice Person and a Til
    * - SuperOffice Person Property
      - Tilores Human Property
      - Tilores Data Type
-   * - Address.Postal.City
-     - city
-     - "string"
-   * - Address.Postal.Zipcode
-     - postalCode
-     - "string"
-   * - Address.Street.City
-     - city
-     - "string"
-   * - Address.Street.Zipcode
-     - postalCode
-     - "string"
-   * - BirthDate
-     - dateOfBirth
-     - "string"
-   * - Firstname
-     - firstName
-     - "string"
-   * - Lastname
-     - lastName
-     - "string"
-   * - PersonId
-     - id
-     - "string"
 
