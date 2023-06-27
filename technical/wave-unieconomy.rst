@@ -2,7 +2,7 @@
 Wave Financial to UniEconomy Dataflow
 =====================================
 
-Generated: 2023-06-27 05:12:08
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wave Business and a UniEcono
    * - Wave Business Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Wave Customer to UniEconomy Customers
@@ -39,4 +42,7 @@ The following properties are synchronized between a Wave Customer and a UniEcono
    * - Wave Customer Property
      - UniEconomy Customers Property
      - UniEconomy Data Type
+   * - website
+     - WebUrl
+     - "string"
 
