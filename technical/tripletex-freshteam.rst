@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 06:42:23
 
 Introduction.
 ------------
@@ -36,6 +36,15 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - Tripletex Employee Property
      - Freshteam Employee Property
      - Freshteam Data Type
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.id
+     - address.country_code
+     - "string"
+   * - address.postalCode
+     - address.zip_code
+     - "string"
    * - dateOfBirth
      - date_of_birth
      - "string"
@@ -49,12 +58,12 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - last_name
      - "string"
    * - phoneNumberHome
-     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
      - "string"
    * - phoneNumberMobile
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - "string"
    * - phoneNumberWork
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - "string"
 
