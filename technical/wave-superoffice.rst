@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 11:28:36
+Generated: 2023-06-27 11:31:21
 
 Introduction.
 ------------
@@ -25,18 +25,6 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - Wave Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - address.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - address.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - address.city
-     - Address.Postal.City
-     - "string"
-   * - address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
    * - name
      - Name
      - "string"
