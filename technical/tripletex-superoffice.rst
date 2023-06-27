@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 06:28:45
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to SuperOffice Person
 ---------------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a SuperOffice Person must be established.
-
-A new SuperOffice Person will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Project that is synchronized into SuperOffice.
+Every Tripletex Contact will be synchronized with a SuperOffice Person.
 
 Once a link between a Tripletex Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -47,9 +45,7 @@ The following properties are synchronized between a Tripletex Contact and a Supe
 
 Tripletex Customer to SuperOffice Contact
 -----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, or Employee that is synchronized into SuperOffice.
+Every Tripletex Customer will be synchronized with a SuperOffice Contact.
 
 Once a link between a Tripletex Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -107,9 +103,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
 
 Tripletex Department to SuperOffice Contact
 -------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a SuperOffice Contact must be established.
-
-A new SuperOffice Contact will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into SuperOffice.
+Every Tripletex Department will be synchronized with a SuperOffice Contact.
 
 Once a link between a Tripletex Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -142,6 +136,101 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - Tripletex Order Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+
+
+Tripletex Employee to SuperOffice Person
+----------------------------------------
+Every Tripletex Employee will be synchronized with a SuperOffice Person.
+
+Once a link between a Tripletex Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - department.id
+     - Contact.ContactId
+     - "integer"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
+   * - phoneNumberHome
+     - PrivatePhones.Value
+     - "string"
+   * - phoneNumberMobile
+     - MobilePhones.Value
+     - "string"
+   * - phoneNumberWork
+     - OfficePhones.Value
+     - "string"
+
+
+Tripletex Supplier to SuperOffice Contact
+-----------------------------------------
+Every Tripletex Supplier will be synchronized with a SuperOffice Contact.
+
+Once a link between a Tripletex Supplier and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - phoneNumber
+     - Phones.Value
+     - "string"
+   * - physicalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - physicalAddress.city
+     - Address.Street.City
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - postalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - postalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - postalAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
 
 
 Tripletex Orderline to SuperOffice Quoteline
