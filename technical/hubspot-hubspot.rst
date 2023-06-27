@@ -2,12 +2,47 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 06:27:47
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Contactcompanyassociation to HubSpot Contact
+----------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a HubSpot Contact.
+
+Once a link between a HubSpot Contactcompanyassociation and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+HubSpot User to HubSpot Contact
+-------------------------------
+Every HubSpot User will be synchronized with a HubSpot Contact.
+
+Once a link between a HubSpot User and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - email
+     - properties.work_email
+     - "string"
+
 
 HubSpot Dealcompanyassociationtype to HubSpot Dealcontactassociationtype
 ------------------------------------------------------------------------
