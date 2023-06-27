@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 11:36:34
+Generated: 2023-06-27 11:36:41
 
 Introduction.
 ------------
@@ -55,7 +55,10 @@ The following properties are synchronized between a Tripletex Contact and a HubS
 
 Tripletex Employee to HubSpot Contact
 -------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a HubSpot Contact must be established.
+Every Tripletex Employee will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Tripletex Employee will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Tripletex Employee will merge with a HubSpot Contact if one of the following property combinations match:
 
