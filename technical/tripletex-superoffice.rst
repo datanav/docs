@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 06:40:49
+Generated: 2023-06-27 06:42:23
 
 Introduction.
 ------------
@@ -291,6 +291,9 @@ The following properties are synchronized between a Tripletex Order and a SuperO
    * - Tripletex Order Property
      - SuperOffice Quotealternative Property
      - SuperOffice Data Type
+   * - invoiceComment
+     - Name
+     - "string"
 
 
 Tripletex Orderline to SuperOffice Quoteline
