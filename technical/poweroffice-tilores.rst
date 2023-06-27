@@ -2,7 +2,7 @@
 Poweroffice to Tilores Dataflow
 ===============================
 
-Generated: 2023-06-20 01:08:28
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,30 +23,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - Tilores Human Property
      - Tilores Data Type
-   * - address1
-     - street
-     - "string"
-   * - address2
-     - street
-     - "string"
-   * - city
-     - city
-     - "string"
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - zipCode
-     - postalCode
-     - "string"
 
 
 Poweroffice Employee to Tilores Human
@@ -63,31 +39,4 @@ The following properties are synchronized between a Poweroffice Employee and a T
    * - Poweroffice Employee Property
      - Tilores Human Property
      - Tilores Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - Id
-     - id
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - MailAddress.City
-     - city
-     - "string"
-   * - MailAddress.ZipCode
-     - postalCode
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - streetAddresses.city
-     - city
-     - "string"
-   * - streetAddresses.zipCode
-     - postalCode
-     - "string"
 
