@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 06:28:45
+Generated: 2023-06-27 06:42:23
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - city
+     - Address.Postal.City
+     - "string"
    * - dateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
@@ -40,6 +43,9 @@ The following properties are synchronized between a Poweroffice Contactperson an
      - "integer"
    * - phoneNumber
      - OfficePhones.Value
+     - "string"
+   * - zipCode
+     - Address.Postal.Zipcode
      - "string"
 
 
@@ -90,6 +96,21 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
      - "string"
+   * - streetAddresses.address1
+     - Address.Postal.Address1
+     - "string"
+   * - streetAddresses.address2
+     - Address.Postal.Address2
+     - "string"
+   * - streetAddresses.address3
+     - Address.Postal.Address3
+     - "string"
+   * - streetAddresses.city
+     - Address.Postal.City
+     - "string"
+   * - streetAddresses.zipCode
+     - Address.Postal.Zipcode
+     - "string"
 
 
 Poweroffice Employee to SuperOffice Person
@@ -134,6 +155,21 @@ The following properties are synchronized between a Poweroffice Employee and a S
      - Country.CountryId
      - "integer"
    * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - streetAddresses.address1
+     - Address.Postal.Address1
+     - "string"
+   * - streetAddresses.address2
+     - Address.Postal.Address2
+     - "string"
+   * - streetAddresses.address3
+     - Address.Postal.Address3
+     - "string"
+   * - streetAddresses.city
+     - Address.Postal.City
+     - "string"
+   * - streetAddresses.zipCode
      - Address.Postal.Zipcode
      - "string"
 
