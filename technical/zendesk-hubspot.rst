@@ -2,7 +2,7 @@
 Zendesk to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 11:41:57
+Generated: 2023-06-27 11:42:25
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to HubSpot Contact
 --------------------------------
-Before any synchronization can take place, a link between a Zendesk Users and a HubSpot Contact must be established.
+Every Zendesk Users will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Zendesk Users will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Zendesk Users will merge with a HubSpot Contact if one of the following property combinations match:
 
