@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:28:38
+Generated: 2023-06-27 11:30:12
 
 Introduction.
 ------------
@@ -15,6 +15,16 @@ Before any synchronization can take place, a link between a Zendesk Users and a 
 
 A new SuperOffice Person will be created from a Zendesk Users if it is connected to a Zendesk Tickets that is synchronized into SuperOffice.
 
+A Zendesk Users will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Users Property
+     - SuperOffice Person Property
+   * - email
+     - Emails.Value
+
 Once a link between a Zendesk Users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a Zendesk Users and a SuperOffice Person:
@@ -25,4 +35,7 @@ The following properties are synchronized between a Zendesk Users and a SuperOff
    * - Zendesk Users Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - phone
+     - PrivatePhones.Value
+     - "string"
 
