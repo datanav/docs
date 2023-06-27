@@ -2,7 +2,7 @@
 Freshteam to Tilores Dataflow
 =============================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,34 +23,4 @@ The following properties are synchronized between a Freshteam Employee and a Til
    * - Freshteam Employee Property
      - Tilores Human Property
      - Tilores Data Type
-   * - address.city
-     - city
-     - "string"
-   * - address.street
-     - street
-     - "string"
-   * - address.zip_code
-     - postalCode
-     - "string"
-   * - communication_address.communication_city
-     - city
-     - "string"
-   * - communication_address.communication_street
-     - street
-     - "string"
-   * - communication_address.communication_zip_code
-     - postalCode
-     - "string"
-   * - date_of_birth
-     - dateOfBirth
-     - "string"
-   * - first_name
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - last_name
-     - lastName
-     - "string"
 
