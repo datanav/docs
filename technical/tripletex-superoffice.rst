@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 11:38:20
+Generated: 2023-06-27 11:38:40
 
 Introduction.
 ------------
@@ -133,7 +133,10 @@ The following properties are synchronized between a Tripletex Customer and a Sup
 
 Tripletex Employee to SuperOffice Person
 ----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a SuperOffice Person must be established.
+Every Tripletex Employee will be synchronized with a SuperOffice Person.
+
+If a matching SuperOffice Person already exists, the Tripletex Employee will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
 A Tripletex Employee will merge with a SuperOffice Person if one of the following property combinations match:
 
