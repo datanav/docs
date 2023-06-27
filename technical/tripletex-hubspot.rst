@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 11:35:40
 
 Introduction.
 ------------
@@ -109,6 +109,46 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
    * - userType
      - properties.country
+     - "string"
+
+
+Tripletex Customer to HubSpot Company
+-------------------------------------
+Every Tripletex Customer will be synchronized with a HubSpot Company.
+
+Once a link between a Tripletex Customer and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - id
+     - id
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - phoneNumber
+     - properties.phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - physicalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - physicalAddress.city
+     - properties.city
+     - "string"
+   * - physicalAddress.country.id
+     - properties.country
+     - "string"
+   * - physicalAddress.postalCode
+     - properties.zip
      - "string"
 
 
