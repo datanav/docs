@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-27 11:28:38
+Generated: 2023-06-27 11:30:12
 
 Introduction.
 ------------
@@ -165,6 +165,19 @@ The following properties are synchronized between a Tripletex Employee and a Pow
 Tripletex Employee to PowerOffice Employee
 ------------------------------------------
 Every Tripletex Employee will be synchronized with a PowerOffice Employee.
+
+If a matching PowerOffice Employee already exists, the Tripletex Employee will be merged with the existing one.
+If no matching PowerOffice Employee is found, a new PowerOffice Employee will be created.
+
+A Tripletex Employee will merge with a PowerOffice Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOffice Employee Property
+   * - nationalIdentityNumber
+     - SocialSecurityNumber
 
 Once a link between a Tripletex Employee and a PowerOffice Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
