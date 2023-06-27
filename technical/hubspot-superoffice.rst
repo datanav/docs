@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 11:31:03
 
 Introduction.
 ------------
@@ -82,19 +82,10 @@ The following properties are synchronized between a HubSpot Company and a SuperO
      - ContactId
      - "integer"
    * - properties.address
-     - Address.Postal.Address1
-     - "string"
-   * - properties.address
      - Address.Street.Address1
      - "string"
    * - properties.address2
-     - Address.Postal.Address2
-     - "string"
-   * - properties.address2
      - Address.Street.Address2
-     - "string"
-   * - properties.city
-     - Address.Postal.City
      - "string"
    * - properties.city
      - Address.Street.City
@@ -108,9 +99,6 @@ The following properties are synchronized between a HubSpot Company and a SuperO
    * - properties.website
      - Domains
      - "list"
-   * - properties.zip
-     - Address.Postal.Zipcode
-     - "string"
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
