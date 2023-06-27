@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-27 05:05:49
+Generated: 2023-06-27 05:05:52
 
 Introduction.
 ------------
@@ -41,22 +41,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    :header-rows: 1
 
    * - SuperOffice Quotealternative Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-
-
-SuperOffice Sale to Tripletex Order
------------------------------------
-Every SuperOffice Sale will be synchronized with a Tripletex Order.
-
-Once a link between a SuperOffice Sale and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale Property
      - Tripletex Order Property
      - Tripletex Data Type
 
