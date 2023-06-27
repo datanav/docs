@@ -2,7 +2,7 @@
 Poweroffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-25 06:00:31
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,24 +23,6 @@ The following properties are synchronized between a Poweroffice Contactperson an
    * - Poweroffice Contactperson Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - dateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - firstName
-     - Firstname
-     - "string"
-   * - lastName
-     - Lastname
-     - "string"
-   * - partyCustomerCode
-     - Contact.ContactId
-     - "integer"
-   * - partySupplierCode
-     - Contact.ContactId
-     - "integer"
-   * - phoneNumber
-     - OfficePhones.Value
-     - "string"
 
 
 Poweroffice Customer to SuperOffice Contact
@@ -57,39 +39,6 @@ The following properties are synchronized between a Poweroffice Customer and a S
    * - Poweroffice Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - EmailAddress
-     - Emails.Value
-     - "string"
-   * - LegalName
-     - Name
-     - "string"
-   * - PhoneNumber
-     - Phones.Value
-     - "string"
-   * - WebsiteUrl
-     - Domains
-     - "list"
-   * - id
-     - ContactId
-     - "integer"
-   * - mailAddress.address1
-     - Address.Postal.Address1
-     - "string"
-   * - mailAddress.address2
-     - Address.Postal.Address2
-     - "string"
-   * - mailAddress.address3
-     - Address.Postal.Address3
-     - "string"
-   * - mailAddress.city
-     - Address.Postal.City
-     - "string"
-   * - mailAddress.countryCode
-     - Country.CountryId
-     - "integer"
-   * - mailAddress.zipCode
-     - Address.Postal.Zipcode
-     - "string"
 
 
 Poweroffice Employee to SuperOffice Person
@@ -106,36 +55,6 @@ The following properties are synchronized between a Poweroffice Employee and a S
    * - Poweroffice Employee Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - DateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - FirstName
-     - Firstname
-     - "string"
-   * - Id
-     - PersonId
-     - "integer"
-   * - LastName
-     - Lastname
-     - "string"
-   * - MailAddress.Address1
-     - Address.Postal.Address1
-     - "string"
-   * - MailAddress.Address2
-     - Address.Postal.Address2
-     - "string"
-   * - MailAddress.Address3
-     - Address.Postal.Address3
-     - "string"
-   * - MailAddress.City
-     - Address.Postal.City
-     - "string"
-   * - MailAddress.CountryCode
-     - Country.CountryId
-     - "integer"
-   * - MailAddress.ZipCode
-     - Address.Postal.Zipcode
-     - "string"
 
 
 Poweroffice Supplier to SuperOffice Contact
@@ -152,18 +71,6 @@ The following properties are synchronized between a Poweroffice Supplier and a S
    * - Poweroffice Supplier Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - EmailAddress
-     - Emails.Value
-     - "string"
-   * - LegalName
-     - Name
-     - "string"
-   * - PhoneNumber
-     - Phones.Value
-     - "string"
-   * - WebsiteUrl
-     - Domains
-     - "list"
 
 
 Poweroffice Product to SuperOffice Product
@@ -180,30 +87,6 @@ The following properties are synchronized between a Poweroffice Product and a Su
    * - Poweroffice Product Property
      - SuperOffice Product Property
      - SuperOffice Data Type
-   * - CostPrice
-     - UnitCost
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - ProductGroupId
-     - ProductCategoryKey
-     - "string"
-   * - SalesPrice
-     - UnitListPrice
-     - "decimal"
-   * - Type
-     - ProductTypeKey
-     - "string"
-   * - Unit
-     - QuantityUnit
-     - "string"
-   * - VatCode
-     - VAT
-     - "integer"
 
 
 Poweroffice Productgroup to SuperOffice Listproductcategoryitems
@@ -220,9 +103,6 @@ The following properties are synchronized between a Poweroffice Productgroup and
    * - Poweroffice Productgroup Property
      - SuperOffice Listproductcategoryitems Property
      - SuperOffice Data Type
-   * - Name
-     - Name
-     - "string"
 
 
 Poweroffice Salesorderline to SuperOffice Quoteline
@@ -239,19 +119,4 @@ The following properties are synchronized between a Poweroffice Salesorderline a
    * - Poweroffice Salesorderline Property
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
-   * - Description
-     - Name
-     - "string"
-   * - Discount
-     - DiscountPercent
-     - "integer"
-   * - Quantity
-     - Quantity
-     - "integer"
-   * - SalesOrderLineUnitPrice
-     - UnitListPrice
-     - "string"
-   * - VatReturnSpecification
-     - VAT
-     - "integer"
 
