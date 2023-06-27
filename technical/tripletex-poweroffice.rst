@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-27 11:28:38
 
 Introduction.
 ------------
@@ -159,6 +159,31 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - address.postalCode
      - zipCode
+     - "string"
+
+
+Tripletex Employee to PowerOffice Employee
+------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOffice Employee.
+
+Once a link between a Tripletex Employee and a PowerOffice Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOffice Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOffice Employee Property
+     - PowerOffice Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
      - "string"
 
 
