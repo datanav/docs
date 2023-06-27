@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:30:12
+Generated: 2023-06-27 11:46:54
 
 Introduction.
 ------------
@@ -38,4 +38,26 @@ The following properties are synchronized between a Zendesk Users and a SuperOff
    * - phone
      - PrivatePhones.Value
      - "string"
+
+
+Zendesk Organisations to SuperOffice Contact
+--------------------------------------------
+Every Zendesk Organisations will be synchronized with a SuperOffice Contact.
+
+Once a link between a Zendesk Organisations and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organisations and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organisations Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - name
+     - Name
+     - "string"
+   * - url
+     - Domains
+     - "list"
 
