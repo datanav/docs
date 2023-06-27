@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 06:28:45
+Generated: 2023-06-27 06:42:23
 
 Introduction.
 ------------
@@ -182,7 +182,7 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
    * - QuoteAlternativeId
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
