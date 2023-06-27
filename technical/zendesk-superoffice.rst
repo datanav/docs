@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 06:40:49
+Generated: 2023-06-27 11:28:38
 
 Introduction.
 ------------
@@ -11,20 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to SuperOffice Person
 -----------------------------------
-Every Zendesk Users will be synchronized with a SuperOffice Person.
+Before any synchronization can take place, a link between a Zendesk Users and a SuperOffice Person must be established.
 
-If a matching SuperOffice Person already exists, the Zendesk Users will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
-
-A Zendesk Users will merge with a SuperOffice Person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - SuperOffice Person Property
-   * - email
-     - Emails.Value
+A new SuperOffice Person will be created from a Zendesk Users if it is connected to a Zendesk Tickets that is synchronized into SuperOffice.
 
 Once a link between a Zendesk Users and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -36,29 +25,4 @@ The following properties are synchronized between a Zendesk Users and a SuperOff
    * - Zendesk Users Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - phone
-     - PrivatePhones.Value
-     - "string"
-
-
-Zendesk Organisations to SuperOffice Contact
---------------------------------------------
-Every Zendesk Organisations will be synchronized with a SuperOffice Contact.
-
-Once a link between a Zendesk Organisations and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Organisations and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Organisations Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
-   * - url
-     - Domains
-     - "list"
 
