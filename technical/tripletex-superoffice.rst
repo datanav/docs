@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 05:11:35
+Generated: 2023-06-27 05:12:07
 
 Introduction.
 ------------
@@ -11,7 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to SuperOffice Person
 ---------------------------------------
-Every Tripletex Contact will be synchronized with a SuperOffice Person.
+Before any synchronization can take place, a link between a Tripletex Contact and a SuperOffice Person must be established.
+
+A new SuperOffice Person will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Project that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -27,7 +29,9 @@ The following properties are synchronized between a Tripletex Contact and a Supe
 
 Tripletex Customer to SuperOffice Contact
 -----------------------------------------
-Every Tripletex Customer will be synchronized with a SuperOffice Contact.
+Before any synchronization can take place, a link between a Tripletex Customer and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, or Employee that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -43,7 +47,9 @@ The following properties are synchronized between a Tripletex Customer and a Sup
 
 Tripletex Department to SuperOffice Contact
 -------------------------------------------
-Every Tripletex Department will be synchronized with a SuperOffice Contact.
+Before any synchronization can take place, a link between a Tripletex Department and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -72,150 +78,6 @@ The following properties are synchronized between a Tripletex Order and a SuperO
 
    * - Tripletex Order Property
      - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-
-
-Tripletex Customercategory to SuperOffice Listbusinessitems
------------------------------------------------------------
-Every Tripletex Customercategory will be synchronized with a SuperOffice Listbusinessitems.
-
-Once a link between a Tripletex Customercategory and a SuperOffice Listbusinessitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customercategory and a SuperOffice Listbusinessitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customercategory Property
-     - SuperOffice Listbusinessitems Property
-     - SuperOffice Data Type
-
-
-Tripletex Employee to SuperOffice Person
-----------------------------------------
-Every Tripletex Employee will be synchronized with a SuperOffice Person.
-
-Once a link between a Tripletex Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-
-
-Tripletex Order to SuperOffice Quote
-------------------------------------
-Every Tripletex Order will be synchronized with a SuperOffice Quote.
-
-Once a link between a Tripletex Order and a SuperOffice Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a SuperOffice Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - SuperOffice Quote Property
-     - SuperOffice Data Type
-
-
-Tripletex Orderline to SuperOffice Quote
-----------------------------------------
-Every Tripletex Orderline will be synchronized with a SuperOffice Quote.
-
-Once a link between a Tripletex Orderline and a SuperOffice Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a SuperOffice Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - SuperOffice Quote Property
-     - SuperOffice Data Type
-
-
-Tripletex Productgroup to SuperOffice Listbusinessitems
--------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listbusinessitems.
-
-Once a link between a Tripletex Productgroup and a SuperOffice Listbusinessitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listbusinessitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgroup Property
-     - SuperOffice Listbusinessitems Property
-     - SuperOffice Data Type
-
-
-Tripletex Productgrouprelation to SuperOffice Product
------------------------------------------------------
-Every Tripletex Productgrouprelation will be synchronized with a SuperOffice Product.
-
-Once a link between a Tripletex Productgrouprelation and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productgrouprelation and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productgrouprelation Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-
-
-Tripletex Productunit to SuperOffice Listbusinessitems
-------------------------------------------------------
-Every Tripletex Productunit will be synchronized with a SuperOffice Listbusinessitems.
-
-Once a link between a Tripletex Productunit and a SuperOffice Listbusinessitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Productunit and a SuperOffice Listbusinessitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Productunit Property
-     - SuperOffice Listbusinessitems Property
-     - SuperOffice Data Type
-
-
-Tripletex Projectcategory to SuperOffice Listbusinessitems
-----------------------------------------------------------
-Every Tripletex Projectcategory will be synchronized with a SuperOffice Listbusinessitems.
-
-Once a link between a Tripletex Projectcategory and a SuperOffice Listbusinessitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Projectcategory and a SuperOffice Listbusinessitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Projectcategory Property
-     - SuperOffice Listbusinessitems Property
-     - SuperOffice Data Type
-
-
-Tripletex Supplier to SuperOffice Contact
------------------------------------------
-Every Tripletex Supplier will be synchronized with a SuperOffice Contact.
-
-Once a link between a Tripletex Supplier and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - SuperOffice Contact Property
      - SuperOffice Data Type
 
 
@@ -261,5 +123,21 @@ The following properties are synchronized between a Tripletex Product and a Supe
 
    * - Tripletex Product Property
      - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
+Tripletex Productgroup to SuperOffice Listproductcategoryitems
+--------------------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+
+Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - SuperOffice Listproductcategoryitems Property
      - SuperOffice Data Type
 
