@@ -2,28 +2,12 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 05:05:49
+Generated: 2023-06-27 05:05:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-SuperOffice Contact to HubSpot Company
---------------------------------------
-Every SuperOffice Contact will be synchronized with a HubSpot Company.
-
-Once a link between a SuperOffice Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Contact and a HubSpot Company:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Contact Property
-     - HubSpot Company Property
-     - HubSpot Data Type
-
 
 SuperOffice Sale classification status to HubSpot Pipelinedeal
 --------------------------------------------------------------
@@ -40,22 +24,6 @@ The following properties are synchronized between a SuperOffice Sale classificat
 
    * - SuperOffice Sale classification status Property
      - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
-
-
-SuperOffice Product to HubSpot Product
---------------------------------------
-Every SuperOffice Product will be synchronized with a HubSpot Product.
-
-Once a link between a SuperOffice Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a HubSpot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - HubSpot Product Property
      - HubSpot Data Type
 
 
