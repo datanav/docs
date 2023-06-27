@@ -2,7 +2,7 @@
 Freshteam to HubSpot Dataflow
 =============================
 
-Generated: 2023-06-27 11:28:38
+Generated: 2023-06-27 11:30:12
 
 Introduction.
 ------------
@@ -12,6 +12,19 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Freshteam Employee to HubSpot User
 ----------------------------------
 Every Freshteam Employee will be synchronized with a HubSpot User.
+
+If a matching HubSpot User already exists, the Freshteam Employee will be merged with the existing one.
+If no matching HubSpot User is found, a new HubSpot User will be created.
+
+A Freshteam Employee will merge with a HubSpot User if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Freshteam Employee Property
+     - HubSpot User Property
+   * - official_email
+     - email
 
 Once a link between a Freshteam Employee and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
 
