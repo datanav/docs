@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-06-27 06:42:48
+Generated: 2023-06-27 06:49:36
 
 Introduction.
 ------------
@@ -155,7 +155,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
@@ -216,7 +216,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - HubSpot Deal Property
      - HubSpot Data Type
-   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q16869121 in sesam_simpleAssociationTypesDependant on having wd:Q16869121 in sesam_simpleAssociationTypes)
      - properties.hubspot_owner_id
      - "string"
 
