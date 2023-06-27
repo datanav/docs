@@ -2,7 +2,7 @@
 Zendesk to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - Zendesk Users Property
      - PowerOffice Employee Property
      - PowerOffice Data Type
+   * - updated_at
+     - LastChanged
+     - "string"
 
