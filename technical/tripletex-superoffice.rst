@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-27 06:42:48
+Generated: 2023-06-27 11:28:38
 
 Introduction.
 ------------
@@ -11,20 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to SuperOffice Person
 ---------------------------------------
-Every Tripletex Contact will be synchronized with a SuperOffice Person.
+Before any synchronization can take place, a link between a Tripletex Contact and a SuperOffice Person must be established.
 
-If a matching SuperOffice Person already exists, the Tripletex Contact will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
-
-A Tripletex Contact will merge with a SuperOffice Person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - SuperOffice Person Property
-   * - email
-     - Emails.Value
+A new SuperOffice Person will be created from a Tripletex Contact if it is connected to a Tripletex Order, or Project that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Contact and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -36,46 +25,13 @@ The following properties are synchronized between a Tripletex Contact and a Supe
    * - Tripletex Contact Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - customer.id
-     - Contact.ContactId
-     - "integer"
-   * - email
-     - Emails.Value
-     - "string"
-   * - firstName
-     - Firstname
-     - "string"
-   * - lastName
-     - Lastname
-     - "string"
-   * - phoneNumberMobile
-     - MobilePhones.Value
-     - "string"
-   * - phoneNumberWork
-     - OfficePhones.Value
-     - "string"
 
 
 Tripletex Customer to SuperOffice Contact
 -----------------------------------------
-Every Tripletex Customer will be synchronized with a SuperOffice Contact.
+Before any synchronization can take place, a link between a Tripletex Customer and a SuperOffice Contact must be established.
 
-If a matching SuperOffice Contact already exists, the Tripletex Customer will be merged with the existing one.
-If no matching SuperOffice Contact is found, a new SuperOffice Contact will be created.
-
-A Tripletex Customer will merge with a SuperOffice Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - SuperOffice Contact Property
-   * - email
-     - Emails.Value
-   * - invoiceEmail
-     - Emails.Value
-   * - overdueNoticeEmail
-     - Emails.Value
+A new SuperOffice Contact will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, or Employee that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -87,238 +43,13 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - Tripletex Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - deliveryAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - deliveryAddress.city
-     - Address.Postal.City
-     - "string"
-   * - deliveryAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - email
-     - Emails.Value
-     - "string"
-   * - id
-     - ContactId
-     - "integer"
-   * - name
-     - Name
-     - "string"
-   * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountry)
-     - "string"
-   * - phoneNumber
-     - Phones.Value
-     - "string"
-   * - physicalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - physicalAddress.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - physicalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - physicalAddress.city
-     - Address.Street.City
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Street.Zipcode
-     - "string"
-   * - postalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - postalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - postalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - postalAddress.country.id
-     - Country.CountryId
-     - "integer"
-   * - postalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-
-
-Tripletex Employee to SuperOffice Person
-----------------------------------------
-Every Tripletex Employee will be synchronized with a SuperOffice Person.
-
-If a matching SuperOffice Person already exists, the Tripletex Employee will be merged with the existing one.
-If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
-
-A Tripletex Employee will merge with a SuperOffice Person if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - SuperOffice Person Property
-   * - email
-     - Emails.Value
-
-Once a link between a Tripletex Employee and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a SuperOffice Person:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - SuperOffice Person Property
-     - SuperOffice Data Type
-   * - address.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - address.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - address.city
-     - Address.Postal.City
-     - "string"
-   * - address.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - dateOfBirth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - department.id
-     - Contact.ContactId
-     - "integer"
-   * - email
-     - Emails.Value
-     - "string"
-   * - firstName
-     - Firstname
-     - "string"
-   * - lastName
-     - Lastname
-     - "string"
-   * - phoneNumberHome
-     - PrivatePhones.Value
-     - "string"
-   * - phoneNumberMobile
-     - MobilePhones.Value
-     - "string"
-   * - phoneNumberWork
-     - OfficePhones.Value
-     - "string"
-
-
-Tripletex Supplier to SuperOffice Contact
------------------------------------------
-Every Tripletex Supplier will be synchronized with a SuperOffice Contact.
-
-If a matching SuperOffice Contact already exists, the Tripletex Supplier will be merged with the existing one.
-If no matching SuperOffice Contact is found, a new SuperOffice Contact will be created.
-
-A Tripletex Supplier will merge with a SuperOffice Contact if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - SuperOffice Contact Property
-   * - email
-     - Emails.Value
-   * - invoiceEmail
-     - Emails.Value
-   * - overdueNoticeEmail
-     - Emails.Value
-
-Once a link between a Tripletex Supplier and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - deliveryAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - deliveryAddress.changes
-     - Address.Postal.City
-     - "string"
-   * - deliveryAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - email
-     - Emails.Value
-     - "string"
-   * - id
-     - ContactId
-     - "integer"
-   * - name
-     - Name
-     - "string"
-   * - phoneNumber
-     - Phones.Value
-     - "string"
-   * - physicalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - physicalAddress.addressLine1
-     - Address.Street.Address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - physicalAddress.addressLine2
-     - Address.Street.Address2
-     - "string"
-   * - physicalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - physicalAddress.city
-     - Address.Street.City
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
-   * - physicalAddress.postalCode
-     - Address.Street.Zipcode
-     - "string"
-   * - postalAddress.addressLine1
-     - Address.Postal.Address1
-     - "string"
-   * - postalAddress.addressLine2
-     - Address.Postal.Address2
-     - "string"
-   * - postalAddress.city
-     - Address.Postal.City
-     - "string"
-   * - postalAddress.country.id
-     - Country.CountryId
-     - "integer"
-   * - postalAddress.postalCode
-     - Address.Postal.Zipcode
-     - "string"
 
 
 Tripletex Department to SuperOffice Contact
 -------------------------------------------
-Every Tripletex Department will be synchronized with a SuperOffice Contact.
+Before any synchronization can take place, a link between a Tripletex Department and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Department and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -396,19 +127,6 @@ The following properties are synchronized between a Tripletex Orderline and a Su
 Tripletex Product to SuperOffice Product
 ----------------------------------------
 Every Tripletex Product will be synchronized with a SuperOffice Product.
-
-If a matching SuperOffice Product already exists, the Tripletex Product will be merged with the existing one.
-If no matching SuperOffice Product is found, a new SuperOffice Product will be created.
-
-A Tripletex Product will merge with a SuperOffice Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-   * - number
-     - ERPProductKey
 
 Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
