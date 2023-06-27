@@ -2,7 +2,7 @@
 Freshteam to SuperOffice Dataflow
 =================================
 
-Generated: 2023-06-23 11:49:28
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,9 +23,6 @@ The following properties are synchronized between a Freshteam Department and a S
    * - Freshteam Department Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Freshteam Employee to SuperOffice Person
@@ -42,40 +39,4 @@ The following properties are synchronized between a Freshteam Employee and a Sup
    * - Freshteam Employee Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - address.city
-     - Address.Street.City
-     - "string"
-   * - address.zip_code
-     - Address.Street.Zipcode
-     - "string"
-   * - communication_address.communication_city
-     - Address.Postal.City
-     - "string"
-   * - communication_address.communication_country_code
-     - Country.CountryId
-     - "integer"
-   * - communication_address.communication_zip_code
-     - Address.Postal.Zipcode
-     - "string"
-   * - date_of_birth
-     - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - first_name
-     - Firstname
-     - "string"
-   * - id
-     - PersonId
-     - "integer"
-   * - last_name
-     - Lastname
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
-     - MobilePhones.Value
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
-     - OfficePhones.Value
-     - "string"
-   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
-     - PrivatePhones.Value
-     - "string"
 
