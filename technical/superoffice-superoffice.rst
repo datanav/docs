@@ -2,7 +2,7 @@
 SuperOffice to SuperOffice Dataflow
 ===================================
 
-Generated: 2023-06-27 05:12:07
+Generated: 2023-06-27 05:12:36
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a SuperOffice User and a Super
    * - SuperOffice User Property
      - SuperOffice Listcategoryitems Property
      - SuperOffice Data Type
+   * - contactCategory
+     - Name
+     - "string"
 
