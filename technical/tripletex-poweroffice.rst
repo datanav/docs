@@ -2,7 +2,7 @@
 Tripletex to PowerOffice Dataflow
 =================================
 
-Generated: 2023-06-25 06:00:31
+Generated: 2023-06-27 05:05:49
 
 Introduction.
 ------------
@@ -23,81 +23,6 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
-   * - deliveryAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - deliveryAddress.changes
-     - streetAddresses.city
-     - "string"
-   * - deliveryAddress.city
-     - streetAddresses.countryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - physicalAddress.city
-     - streetAddresses.city
-     - "string"
-   * - physicalAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - mailAddress.address1
-     - "string"
-   * - postalAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - postalAddress.addressLine2
-     - mailAddress.address2
-     - "string"
-   * - postalAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - postalAddress.city
-     - mailAddress.city
-     - "string"
-   * - postalAddress.city
-     - streetAddresses.city
-     - "string"
-   * - postalAddress.country.id
-     - mailAddress.countryCode
-     - "string"
-   * - postalAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - postalAddress.postalCode
-     - mailAddress.zipCode
-     - "string"
-   * - postalAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
 
 
 Tripletex Contact to PowerOffice Contactperson
@@ -114,21 +39,6 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOffice Contactperson Property
      - PowerOffice Data Type
-   * - customer.id
-     - partyCustomerCode
-     - "string"
-   * - customer.id
-     - partySupplierCode
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - phoneNumberWork
-     - phoneNumber
-     - "string"
 
 
 Tripletex Customer to PowerOffice Customer
@@ -145,81 +55,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOffice Customer Property
      - PowerOffice Data Type
-   * - deliveryAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - deliveryAddress.city
-     - streetAddresses.city
-     - "string"
-   * - deliveryAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - physicalAddress.city
-     - streetAddresses.city
-     - "string"
-   * - physicalAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - mailAddress.address1
-     - "string"
-   * - postalAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - postalAddress.addressLine2
-     - mailAddress.address2
-     - "string"
-   * - postalAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - postalAddress.city
-     - mailAddress.city
-     - "string"
-   * - postalAddress.city
-     - streetAddresses.city
-     - "string"
-   * - postalAddress.country.id
-     - mailAddress.countryCode
-     - "string"
-   * - postalAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - postalAddress.postalCode
-     - mailAddress.zipCode
-     - "string"
-   * - postalAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
 
 
 Tripletex Employee to PowerOffice Address
@@ -236,59 +71,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOffice Address Property
      - PowerOffice Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.id
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
-     - "string"
-
-
-Tripletex Employee to PowerOffice Employee
-------------------------------------------
-Every Tripletex Employee will be synchronized with a PowerOffice Employee.
-
-If a matching PowerOffice Employee already exists, the Tripletex Employee will be merged with the existing one.
-If no matching PowerOffice Employee is found, a new PowerOffice Employee will be created.
-
-A Tripletex Employee will merge with a PowerOffice Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOffice Employee Property
-   * - nationalIdentityNumber
-     - SocialSecurityNumber
-
-Once a link between a Tripletex Employee and a PowerOffice Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a PowerOffice Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOffice Employee Property
-     - PowerOffice Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
 
 
 Tripletex Invoice to PowerOffice Outgoinginvoice
@@ -305,27 +87,6 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
    * - Tripletex Invoice Property
      - PowerOffice Outgoinginvoice Property
      - PowerOffice Data Type
-   * - amountExcludingVat
-     - NetAmount
-     - "string"
-   * - changes.timestamp
-     - CreatedDate
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - CustomerCode
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
-     - "string"
-   * - deliveryDate
-     - SentDate
-     - "string"
-   * - orders.id
-     - OrderNo
-     - "string"
 
 
 Tripletex Order to PowerOffice Salesorder
@@ -342,18 +103,6 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOffice Salesorder Property
      - PowerOffice Data Type
-   * - currency.id
-     - Currency
-     - "string"
-   * - customer.id
-     - DepartmentCode
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
-     - "string"
-   * - orderDate
-     - OrderDate
-     - "string"
 
 
 Tripletex Orderline to PowerOffice Salesorderline
@@ -370,21 +119,6 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOffice Salesorderline Property
      - PowerOffice Data Type
-   * - count
-     - Quantity
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - discount
-     - Discount
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - SalesOrderLineUnitPrice
-     - "string"
-   * - vatType.id
-     - VatReturnSpecification
-     - "string"
 
 
 Tripletex Product to PowerOffice Product
@@ -401,30 +135,6 @@ The following properties are synchronized between a Tripletex Product and a Powe
    * - Tripletex Product Property
      - PowerOffice Product Property
      - PowerOffice Data Type
-   * - costExcludingVatCurrency
-     - CostPrice
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - ean
-     - Gtin
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - priceExcludingVatCurrency
-     - SalesPrice
-     - "string"
-   * - productUnit.id
-     - Unit
-     - "string"
-   * - stockOfGoods
-     - AvailableStock
-     - "string"
-   * - vatType.id
-     - VatCode
-     - "string"
 
 
 Tripletex Productgroup to PowerOffice Productgroup
@@ -441,9 +151,6 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - PowerOffice Productgroup Property
      - PowerOffice Data Type
-   * - name
-     - Name
-     - "string"
 
 
 Tripletex Supplier to PowerOffice Supplier
@@ -460,16 +167,4 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOffice Supplier Property
      - PowerOffice Data Type
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
 
