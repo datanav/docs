@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-06-27 06:42:23
+Generated: 2023-06-27 11:28:38
 
 Introduction.
 ------------
@@ -12,19 +12,6 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Tripletex Employee to Freshteam Employee
 ----------------------------------------
 Every Tripletex Employee will be synchronized with a Freshteam Employee.
-
-If a matching Freshteam Employee already exists, the Tripletex Employee will be merged with the existing one.
-If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
-
-A Tripletex Employee will merge with a Freshteam Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - Freshteam Employee Property
-   * - employeeNumber
-     - employee_id
 
 Once a link between a Tripletex Employee and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
 
