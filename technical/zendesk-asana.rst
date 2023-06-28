@@ -2,7 +2,7 @@
 Zendesk to Asana Dataflow
 =========================
 
-Generated: 2023-06-28 16:46:02
+Generated: 2023-06-28 16:54:24
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Zendesk Tickets and a Asana 
    * - Zendesk Tickets Property
      - Asana Projects Property
      - Asana Data Type
+   * - requester_id
+     - owner.gid
+     - "string"
 
 
 Zendesk Users to Asana Users
