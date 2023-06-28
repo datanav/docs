@@ -2,7 +2,7 @@
 Poweroffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-28 08:12:37
+Generated: 2023-06-28 08:14:32
 
 Introduction.
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Poweroffice Customer and a W
      - "string"
    * - PhoneNumber
      - phone
+     - "string"
+   * - PhoneNumber
+     - shippingDetails.phone
      - "string"
    * - WebsiteUrl
      - website
