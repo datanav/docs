@@ -2,12 +2,64 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-06-27 11:41:57
+Generated: 2023-06-28 07:50:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to HubSpot Contact
+--------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a HubSpot Contact must be established.
+
+A Wave Customer will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Wave Customer and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+Wave Vendor to HubSpot Contact
+------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a HubSpot Contact must be established.
+
+A Wave Vendor will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Wave Vendor and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
 
 Wave Customer to HubSpot Company
 --------------------------------
