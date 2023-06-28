@@ -2,7 +2,7 @@
 Wave Financial to Asana Dataflow
 ================================
 
-Generated: 2023-06-28 16:46:02
+Generated: 2023-06-28 17:49:32
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wave Customer and a Asana Te
    * - Wave Customer Property
      - Asana Teams Property
      - Asana Data Type
+   * - name
+     - member_invite_management_access_level
+     - "string"
 
 
 Wave Vendor to Asana Teams
@@ -39,4 +42,7 @@ The following properties are synchronized between a Wave Vendor and a Asana Team
    * - Wave Vendor Property
      - Asana Teams Property
      - Asana Data Type
+   * - name
+     - member_invite_management_access_level
+     - "string"
 
