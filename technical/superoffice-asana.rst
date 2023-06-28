@@ -2,7 +2,7 @@
 SuperOffice to Asana Dataflow
 =============================
 
-Generated: 2023-06-28 16:44:12
+Generated: 2023-06-28 17:49:32
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a SuperOffice Contact and a As
    * - SuperOffice Contact Property
      - Asana Teams Property
      - Asana Data Type
+   * - Name
+     - member_invite_management_access_level
+     - "string"
 
 
 SuperOffice Person to Asana Users
