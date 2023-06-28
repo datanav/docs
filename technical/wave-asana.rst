@@ -2,7 +2,7 @@
 Wave Financial to Asana Dataflow
 ================================
 
-Generated: 2023-06-28 17:51:28
+Generated: 2023-06-28 19:59:47
 
 Introduction.
 ------------
@@ -63,4 +63,20 @@ The following properties are synchronized between a Wave Vendor and a Asana Team
    * - website
      - permalink_url
      - "string"
+
+
+Wave Business to Asana Teams
+----------------------------
+Every Wave Business will be synchronized with a Asana Teams.
+
+Once a link between a Wave Business and a Asana Teams is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Business and a Asana Teams:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - Asana Teams Property
+     - Asana Data Type
 
