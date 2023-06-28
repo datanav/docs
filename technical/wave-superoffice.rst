@@ -2,12 +2,64 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-27 11:46:54
+Generated: 2023-06-28 07:50:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to SuperOffice Person
+-----------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Person must be established.
+
+A Wave Customer will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - SuperOffice Person Property
+   * - email
+     - Emails.Value
+
+Once a link between a Wave Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
+
+Wave Vendor to SuperOffice Person
+---------------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a SuperOffice Person must be established.
+
+A Wave Vendor will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - SuperOffice Person Property
+   * - email
+     - Emails.Value
+
+Once a link between a Wave Vendor and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+
 
 Wave Customer to SuperOffice Contact
 ------------------------------------
