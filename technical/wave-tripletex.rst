@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-06-28 07:50:51
+Generated: 2023-06-28 07:51:23
 
 Introduction.
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - Wave Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - mobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
 
 
 Wave Customer to Tripletex Employee
@@ -59,6 +62,27 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - Wave Customer Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
 
 
 Wave Vendor to Tripletex Contact
@@ -85,6 +109,9 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - Wave Vendor Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - mobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
 
 
 Wave Vendor to Tripletex Employee
@@ -111,6 +138,27 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - Wave Vendor Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
 
 
 Wave Customer to Tripletex Customer
