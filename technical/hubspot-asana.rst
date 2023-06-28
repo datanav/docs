@@ -2,7 +2,7 @@
 HubSpot to Asana Dataflow
 =========================
 
-Generated: 2023-06-28 17:19:27
+Generated: 2023-06-28 17:49:32
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a HubSpot Company and a Asana 
    * - HubSpot Company Property
      - Asana Teams Property
      - Asana Data Type
+   * - properties.name
+     - member_invite_management_access_level
+     - "string"
 
 
 HubSpot Contact to Asana Users
