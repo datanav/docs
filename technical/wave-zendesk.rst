@@ -2,9 +2,61 @@
 Wave Financial to Zendesk Dataflow
 ==================================
 
-Generated: 2023-06-20 01:07:23
+Generated: 2023-06-28 07:50:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Zendesk. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to Zendesk Users
+------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Zendesk Users must be established.
+
+A Wave Customer will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Zendesk Users Property
+   * - email
+     - email
+
+Once a link between a Wave Customer and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+
+
+Wave Vendor to Zendesk Users
+----------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Zendesk Users must be established.
+
+A Wave Vendor will merge with a Zendesk Users if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Zendesk Users Property
+   * - email
+     - email
+
+Once a link between a Wave Vendor and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Zendesk Users Property
+     - Zendesk Data Type
+
