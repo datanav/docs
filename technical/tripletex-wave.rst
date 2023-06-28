@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-27 05:12:36
+Generated: 2023-06-28 08:12:37
 
 Introduction.
 ------------
@@ -23,11 +23,56 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - Tripletex Customer Property
      - Wave Customer Property
      - Wave Data Type
+   * - deliveryAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - deliveryAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - deliveryAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
    * - name
      - name
      - "string"
    * - phoneNumber
      - phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - physicalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - physicalAddress.postalCode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - shippingDetails.address.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - shippingDetails.address.addressLine2
+     - "string"
+   * - postalAddress.city
+     - shippingDetails.address.city
+     - "string"
+   * - postalAddress.country.id
+     - shippingDetails.address.country.code
+     - "string"
+   * - postalAddress.postalCode
+     - shippingDetails.address.postalCode
      - "string"
 
 
