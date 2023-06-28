@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-06-28 07:51:23
+Generated: 2023-06-28 08:09:29
 
 Introduction.
 ------------
@@ -59,6 +59,9 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
      - "string"
    * - mobile
      - properties.mobilephone
+     - "string"
+   * - phone
+     - properties.phone
      - "string"
 
 
