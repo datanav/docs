@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2023-06-28 17:11:27
+Generated: 2023-06-28 17:49:32
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Tripletex Customer and a Asa
    * - Tripletex Customer Property
      - Asana Teams Property
      - Asana Data Type
+   * - name
+     - member_invite_management_access_level
+     - "string"
 
 
 Tripletex Department to Asana Teams
@@ -55,6 +58,9 @@ The following properties are synchronized between a Tripletex Department and a A
    * - Tripletex Department Property
      - Asana Teams Property
      - Asana Data Type
+   * - name
+     - member_invite_management_access_level
+     - "string"
 
 
 Tripletex Employee to Asana Users
@@ -109,4 +115,7 @@ The following properties are synchronized between a Tripletex Supplier and a Asa
    * - Tripletex Supplier Property
      - Asana Teams Property
      - Asana Data Type
+   * - name
+     - member_invite_management_access_level
+     - "string"
 
