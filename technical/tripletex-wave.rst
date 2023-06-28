@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-06-28 08:12:37
+Generated: 2023-06-28 08:14:32
 
 Introduction.
 ------------
@@ -43,6 +43,9 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
    * - phoneNumber
      - phone
+     - "string"
+   * - phoneNumber
+     - shippingDetails.phone
      - "string"
    * - physicalAddress.addressLine1
      - shippingDetails.address.addressLine1
