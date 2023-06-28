@@ -2,7 +2,7 @@
 Zendesk to Asana Dataflow
 =========================
 
-Generated: 2023-06-28 17:52:19
+Generated: 2023-06-28 17:55:34
 
 Introduction.
 ------------
@@ -25,6 +25,12 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - Zendesk Organisations Property
      - Asana Workspaces Property
      - Asana Data Type
+   * - name
+     - name
+     - "string"
+   * - url
+     - email_domains
+     - "string"
 
 
 Zendesk Organisations to Asana Teams
