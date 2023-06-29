@@ -2,7 +2,7 @@
 Asana to HubSpot Dataflow
 =========================
 
-Generated: 2023-06-29 21:30:33
+Generated: 2023-06-29 21:30:38
 
 Introduction.
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Asana Teams and a HubSpot Co
    * - Asana Teams Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - html_description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - permalink_url
+     - properties.website
+     - "string"
 
 
 Asana Users to HubSpot Contact
@@ -39,6 +48,12 @@ The following properties are synchronized between a Asana Users and a HubSpot Co
    * - Asana Users Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - email
+     - properties.email
+     - "string"
+   * - name
+     - properties.firstname
+     - "string"
 
 
 Asana Workspaces to HubSpot Company
@@ -55,6 +70,12 @@ The following properties are synchronized between a Asana Workspaces and a HubSp
    * - Asana Workspaces Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - email_domains
+     - properties.website
+     - "string"
+   * - name
+     - properties.name
+     - "string"
 
 
 Asana Users to HubSpot User
