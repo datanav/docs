@@ -34,6 +34,14 @@ Other :ref:`Project management software <systemtypepms>` Systems
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Asana**
+
+    Bug-tracking and project management software application.
+    .. link-button:: system/asana
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **YouTrack**
 
     Youtrack is a commercial browser-based bug tracker, issue tracking system and project management software developed by JetBrains, letting you configure an Agile Board to work with your tasks and bugs. 
