@@ -2,7 +2,7 @@
 Asana to SuperOffice Dataflow
 =============================
 
-Generated: 2023-06-29 21:30:33
+Generated: 2023-06-29 21:30:38
 
 Introduction.
 ------------
@@ -23,6 +23,12 @@ The following properties are synchronized between a Asana Teams and a SuperOffic
    * - Asana Teams Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - name
+     - Name
+     - "string"
+   * - permalink_url
+     - Domains
+     - "list"
 
 
 Asana Users to SuperOffice Person
@@ -39,6 +45,12 @@ The following properties are synchronized between a Asana Users and a SuperOffic
    * - Asana Users Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - name
+     - Firstname
+     - "string"
 
 
 Asana Workspaces to SuperOffice Contact
@@ -55,4 +67,10 @@ The following properties are synchronized between a Asana Workspaces and a Super
    * - Asana Workspaces Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - email_domains
+     - Domains
+     - "list"
+   * - name
+     - Name
+     - "string"
 
