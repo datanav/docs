@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2023-06-28 17:55:34
+Generated: 2023-06-29 22:03:37
 
 Introduction.
 ------------
@@ -78,28 +78,6 @@ The following properties are synchronized between a Tripletex Department and a A
      - "string"
 
 
-Tripletex Project to Asana Projects
------------------------------------
-Every Tripletex Project will be synchronized with a Asana Projects.
-
-Once a link between a Tripletex Project and a Asana Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Project and a Asana Projects:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Project Property
-     - Asana Projects Property
-     - Asana Data Type
-   * - endDate
-     - due_date
-     - "string"
-   * - projectManager.id
-     - owner.gid
-     - "string"
-
-
 Tripletex Supplier to Asana Teams
 ---------------------------------
 Every Tripletex Supplier will be synchronized with a Asana Teams.
@@ -141,5 +119,27 @@ The following properties are synchronized between a Tripletex Employee and a Asa
      - "string"
    * - firstName
      - name
+     - "string"
+
+
+Tripletex Project to Asana Projects
+-----------------------------------
+Every Tripletex Project will be synchronized with a Asana Projects.
+
+Once a link between a Tripletex Project and a Asana Projects is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Project and a Asana Projects:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Project Property
+     - Asana Projects Property
+     - Asana Data Type
+   * - endDate
+     - due_date
+     - "string"
+   * - projectManager.id
+     - owner.gid
      - "string"
 
