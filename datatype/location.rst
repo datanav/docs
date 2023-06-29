@@ -344,6 +344,14 @@ System by system type
     :container: container-lg pb-3
     :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
 
+    **Asana**
+
+    Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies.
+    .. link-button:: system/asana
+        :type: ref
+        :text: Read more
+        :classes: read-more
+    ---
     **Brreg**
 
     Brønnøysund Register Centre develops and operates digital services that streamline, coordinate and simplify the dialogue with the public sector for individuals and companies.
