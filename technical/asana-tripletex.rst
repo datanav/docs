@@ -2,7 +2,7 @@
 Asana to Tripletex Dataflow
 ===========================
 
-Generated: 2023-06-29 21:29:40
+Generated: 2023-06-29 21:29:42
 
 Introduction.
 ------------
@@ -23,4 +23,10 @@ The following properties are synchronized between a Asana Users and a Tripletex 
    * - Asana Users Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
+   * - name
+     - firstName
+     - "string"
 
