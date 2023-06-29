@@ -2,7 +2,7 @@
 Asana to UniEconomy Dataflow
 ============================
 
-Generated: 2023-06-29 21:29:40
+Generated: 2023-06-29 21:29:42
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Asana Workspaces and a UniEc
    * - Asana Workspaces Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - name
+     - Name
+     - "string"
 
