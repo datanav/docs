@@ -36,7 +36,7 @@ Other :ref:`Project management software <systemtypepms>` Systems
 
     **Asana**
 
-    Bug-tracking and project management software application.
+    Asana connects company-wide goals to the work needed to achieve them—across teams and functions.
     .. link-button:: system/asana
         :type: ref
         :text: Read more
