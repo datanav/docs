@@ -34,6 +34,7 @@ Prototype
             "token_url": "https://oath2-enabled-server:port/path/to/service/for/access/token",
             "access_token": "$SECRET(access-token)",
             "refresh_token": "$SECRET(refresh-token)",
+            "refresh_window": 30,
             "scope": ["scope1", "scope2"],
             "extra": {
                "some": "extra-params",
@@ -140,7 +141,8 @@ Properties
        specify a ``token_url`` URL to a service which generates JWT access tokens. For the "refresh token"
        grant type you additionally need to provide ``access_token`` and ``refresh_token``. Optionally you can define a
        single scope or list of scopes (in ``scope``) for your client. Note that this option cannot be combined with
-       ``JWT`` authentication or the ``jwt_token`` property. Also note that the oauth2 specification mandates TLS secured
+       ``JWT`` authentication or the ``jwt_token`` property. The ``refresh_window`` option controls how much in advance
+       to refresh a token before it expires, it's 30 (seconds) by default. Also note that the oauth2 specification mandates TLS secured
        transport for both the token endpoint and the target defined in ``url_pattern``. You can add any extra parameters
        required by the service provider to the token request in the ``extra`` subattribute.
      -
