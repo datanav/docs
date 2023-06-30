@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_06_30:
+
+2023-06-30
+----------
+* Added a new ``refresh_window`` option to the ``oauth2`` section of the :ref:`URL system <url_system>` and :ref:`REST systems <rest_system>`. When using refresh tokens, this value (in seconds) is the window to pre-emptively refresh a token that is about to expire. It's 30 seconds by default. Set this property to 0 if the system doesn't allow tokens to be refreshed before they expire.
+
 .. _changelog_2023_06_26:
 
 2023-06-26
