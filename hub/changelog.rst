@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_07_04:
+
+2023-07-04
+----------
+* We will from now on spin down developer-subscriptions that no user have interacted with for 24 hours. "Interacted with" is defined as clicking around in the Management Studio. After it has been interacted with it will be spun up again, taking about 15minutes. Improvements to the UI to reflect this is being worked on.
+
 .. _changelog_2023_06_30:
 
 2023-06-30
