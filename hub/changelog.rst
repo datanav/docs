@@ -5,7 +5,7 @@ Changelog
 
 2023-07-04
 ----------
-* We will from now on spin down developer-subscriptions that have had no interaction recently. "Interacted with" is defined as clicking around in the Management Studio. After it has been interacted with it will be spun up again, taking about 15minutes. Improvements to the UI to reflect this is being worked on. 
+* We will from now on spin down developer-subscriptions that have had no interaction recently. "Interacted" is defined as clicking around in the Management Studio in the given subscription. After it has been interacted with it will be spun up again, taking about 15minutes. Improvements to the UI to reflect this is being worked on. 
 
 .. _changelog_2023_06_30:
 
