@@ -2,9 +2,23 @@
 
 Tripletex
 =========
-Tripletex is a simple-to-use modular accounting system that helps businesses deal with invoicing, salaries, timetracking, yearly reports and more.
+ 
+`Tripletex <https://tripletex.no>`_ is a simple-to-use modular accounting system that helps businesses deal with invoicing, salaries, timetracking, yearly reports and more.
 
-https://tripletex.no/
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+
+    **Making Tripletex Talk**
+
+    Easily synchronise valuable data between Tripletex and your other systems.
+    
+
+    .. link-button:: https://tripletex.talk.market
+        :type: url
+        :text: Try for free
+        :classes: btn-primary btn-block
 
 
 Find your employee token

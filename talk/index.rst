@@ -10,7 +10,35 @@ Sesam Talk synchronizes core business data across your different system types. Y
     :tooltip: Click here to try Sesam Talk
     :classes: read-more
 
+|
 
+.. rst-class:: center-title
+
+Products
+========
+
+.. panels::
+    :body: text-left
+    :container: container-lg pb-3
+    :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2 custom-card
+
+    **Making Tripletex Talk**
+
+    Easily synchronise valuable data between Tripletex and your other systems.
+    
+    .. link-button:: https://tripletex.talk.market
+        :type: url
+        :text: Try for free
+        :classes: btn-outline-primary btn-block
+    ---
+    **Making HubSpot talk**
+
+    Easily synchronise valuable data between HubSpot and your other systems.
+
+    .. link-button:: https://hubspot.talk.market
+        :type: url
+        :text: Try for free
+        :classes: btn-outline-primary btn-block
 
 |
 
