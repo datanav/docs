@@ -10,6 +10,8 @@ Sesam Talk synchronizes core business data across your different system types. Y
 Products
 ========
 
+|
+
 .. panels::
     :body: text-left
     :container: container-lg pb-3
@@ -24,7 +26,7 @@ Products
         :text: Try for free
         :classes: btn-outline-primary btn-block
     ---
-    **Making HubSpot talk**
+    **Making HubSpot Talk**
 
     Easily synchronise valuable data between HubSpot and your other systems.
 
@@ -32,6 +34,13 @@ Products
         :type: url
         :text: Try for free
         :classes: btn-outline-primary btn-block
+
+|
+
+.. rst-class:: center-title
+
+About Sesam Talk
+================
 
 |
 
