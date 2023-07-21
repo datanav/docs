@@ -3,13 +3,6 @@ Sesam Talk
 
 Sesam Talk synchronizes core business data across your different system types. You can read about :doc:`how it works <what-is-sesam-talk>` and which systems that are :doc:`currently supported <systems/index>`.
 
-  
-.. link-button:: https://talk.sesam.io
-    :type: url
-    :text: Try Sesam Talk now
-    :tooltip: Click here to try Sesam Talk
-    :classes: read-more
-
 |
 
 .. rst-class:: center-title
