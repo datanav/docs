@@ -2,7 +2,7 @@
 HubSpot to PowerOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:51:17
+Generated: 2023-07-31 10:54:09
 
 Introduction.
 ------------
@@ -103,24 +103,5 @@ The following properties are synchronized between a HubSpot Product and a PowerO
      - "string"
    * - properties.price
      - SalesPrice
-     - "string"
-
-
-HubSpot User to PowerOffice Employee
-------------------------------------
-Every HubSpot User will be synchronized with a PowerOffice Employee.
-
-Once a link between a HubSpot User and a PowerOffice Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a PowerOffice Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - PowerOffice Employee Property
-     - PowerOffice Data Type
-   * - email
-     - EmailAddress
      - "string"
 
