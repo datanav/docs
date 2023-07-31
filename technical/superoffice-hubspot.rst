@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-06-27 11:41:29
+Generated: 2023-07-31 10:54:09
 
 Introduction.
 ------------
@@ -275,20 +275,4 @@ The following properties are synchronized between a SuperOffice Ticket and a Hub
    * - Title
      - properties.subject
      - "string"
-
-
-SuperOffice User to HubSpot User
---------------------------------
-Every SuperOffice User will be synchronized with a HubSpot User.
-
-Once a link between a SuperOffice User and a HubSpot User is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a HubSpot User:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - HubSpot User Property
-     - HubSpot Data Type
 
