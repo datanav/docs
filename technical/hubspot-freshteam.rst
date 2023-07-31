@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-06-27 11:51:17
+Generated: 2023-07-31 10:54:09
 
 Introduction.
 ------------
@@ -46,10 +46,7 @@ The following properties are synchronized between a HubSpot Owner and a Freshtea
 
 HubSpot User to Freshteam Employee
 ----------------------------------
-Every HubSpot User will be synchronized with a Freshteam Employee.
-
-If a matching Freshteam Employee already exists, the HubSpot User will be merged with the existing one.
-If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
+Before any synchronization can take place, a link between a HubSpot User and a Freshteam Employee must be established.
 
 A HubSpot User will merge with a Freshteam Employee if one of the following property combinations match:
 
