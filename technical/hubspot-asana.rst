@@ -2,7 +2,7 @@
 HubSpot to Asana Dataflow
 =========================
 
-Generated: 2023-06-28 20:04:45
+Generated: 2023-07-31 10:54:09
 
 Introduction.
 ------------
@@ -110,21 +110,5 @@ The following properties are synchronized between a HubSpot Account and a Asana 
 
    * - HubSpot Account Property
      - Asana Teams Property
-     - Asana Data Type
-
-
-HubSpot User to Asana Users
----------------------------
-Every HubSpot User will be synchronized with a Asana Users.
-
-Once a link between a HubSpot User and a Asana Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot User and a Asana Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot User Property
-     - Asana Users Property
      - Asana Data Type
 
