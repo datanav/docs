@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-01 14:00:16
+Generated: 2023-08-01 14:00:20
 
 Introduction.
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - partyCustomerCode
+     - customer.id
+     - "integer"
+   * - partySupplierCode
+     - customer.id
+     - "integer"
+   * - phoneNumber
+     - phoneNumberWork
+     - "string"
 
 
 Powerofficego Customer to Tripletex Contact
@@ -39,6 +54,12 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
 
 
 Powerofficego Customer to Tripletex Customer
@@ -55,6 +76,36 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - InvoiceEmailAddress
+     - invoiceEmail
+     - "string"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mailAddress.address1
+     - postalAddress.addressLine1
+     - "string"
+   * - mailAddress.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - mailAddress.city
+     - postalAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - postalAddress.country.id
+     - "integer"
+   * - mailAddress.zipCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Powerofficego Employee to Tripletex Employee
@@ -84,6 +135,15 @@ The following properties are synchronized between a Powerofficego Employee and a
    * - Powerofficego Employee Property
      - Tripletex Employee Property
      - Tripletex Data Type
+   * - DateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
 
 
 Powerofficego Product to Tripletex Product
@@ -100,6 +160,30 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - Tripletex Product Property
      - Tripletex Data Type
+   * - AvailableStock
+     - stockOfGoods
+     - "integer"
+   * - CostPrice
+     - costExcludingVatCurrency
+     - "integer"
+   * - Description
+     - description
+     - "string"
+   * - Gtin
+     - ean
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - SalesPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - Unit
+     - productUnit.id
+     - "integer"
+   * - VatCode
+     - vatType.id
+     - "integer"
 
 
 Powerofficego Productgroup to Tripletex Productgroup
@@ -116,6 +200,9 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Powerofficego Productgroup Property
      - Tripletex Productgroup Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Salesorder to Tripletex Order
@@ -132,6 +219,18 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - Currency
+     - currency.id
+     - "integer"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - DepartmentCode
+     - customer.id
+     - "integer"
+   * - OrderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Powerofficego Salesorderline to Tripletex Orderline
@@ -148,6 +247,21 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderline Property
      - Tripletex Orderline Property
      - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - Discount
+     - discount
+     - "float"
+   * - Quantity
+     - count
+     - "float"
+   * - SalesOrderLineUnitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VatReturnSpecification
+     - vatType.id
+     - "integer"
 
 
 Powerofficego Supplier to Tripletex Supplier
@@ -164,4 +278,16 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - Tripletex Supplier Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
