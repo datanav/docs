@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-01 14:11:19
+Generated: 2023-08-01 14:11:35
 
 Introduction.
 ------------
@@ -72,6 +72,18 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Domains
+     - "list"
 
 
 Powerofficego Product to SuperOffice Product
