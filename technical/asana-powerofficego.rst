@@ -2,7 +2,7 @@
 Asana to PowerOfficeGo Dataflow
 ===============================
 
-Generated: 2023-08-01 14:00:16
+Generated: 2023-08-01 14:00:20
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Asana Users and a PowerOffic
    * - Asana Users Property
      - PowerOfficeGo Employee Property
      - PowerOfficeGo Data Type
+   * - name
+     - FirstName
+     - "string"
 
