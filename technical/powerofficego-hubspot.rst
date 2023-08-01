@@ -2,12 +2,28 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-08-01 14:09:39
+Generated: 2023-08-01 14:09:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to HubSpot. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Contactperson to HubSpot Contact
+----------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a HubSpot Contact.
+
+Once a link between a Powerofficego Contactperson and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
 
 Powerofficego Customer to HubSpot Company
 -----------------------------------------
