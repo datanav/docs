@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-01 14:01:16
+Generated: 2023-08-01 14:01:29
 
 Introduction.
 ------------
@@ -206,6 +206,18 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOfficeGo Salesorder Property
      - PowerOfficeGo Data Type
+   * - currency.id
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - orderDate
+     - OrderDate
+     - "string"
 
 
 Tripletex Orderline to PowerOfficeGo Salesorderline
@@ -222,6 +234,21 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOfficeGo Salesorderline Property
      - PowerOfficeGo Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - Discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - vatType.id
+     - VatReturnSpecification
+     - "string"
 
 
 Tripletex Product to PowerOfficeGo Product
@@ -238,6 +265,30 @@ The following properties are synchronized between a Tripletex Product and a Powe
    * - Tripletex Product Property
      - PowerOfficeGo Product Property
      - PowerOfficeGo Data Type
+   * - costExcludingVatCurrency
+     - CostPrice
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - ean
+     - Gtin
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - priceExcludingVatCurrency
+     - SalesPrice
+     - "string"
+   * - productUnit.id
+     - Unit
+     - "string"
+   * - stockOfGoods
+     - AvailableStock
+     - "string"
+   * - vatType.id
+     - VatCode
+     - "string"
 
 
 Tripletex Productgroup to PowerOfficeGo Productgroup
@@ -254,6 +305,9 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - PowerOfficeGo Productgroup Property
      - PowerOfficeGo Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGo Supplier
