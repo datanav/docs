@@ -2,12 +2,61 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-01 14:00:20
+Generated: 2023-08-01 14:10:45
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to SuperOffice. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customer to SuperOffice Contact
+---------------------------------------------
+Every Powerofficego Customer will be synchronized with a SuperOffice Contact.
+
+Once a link between a Powerofficego Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customer and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Domains
+     - "list"
+   * - id
+     - ContactId
+     - "integer"
+   * - mailAddress.address1
+     - Address.Postal.Address1
+     - "string"
+   * - mailAddress.address2
+     - Address.Postal.Address2
+     - "string"
+   * - mailAddress.address3
+     - Address.Postal.Address3
+     - "string"
+   * - mailAddress.city
+     - Address.Postal.City
+     - "string"
+   * - mailAddress.countryCode
+     - Country.CountryId
+     - "integer"
+   * - mailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
+
 
 Powerofficego Product to SuperOffice Product
 --------------------------------------------
