@@ -2,12 +2,60 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-01 14:00:16
+Generated: 2023-08-01 14:00:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to PowerOfficeGo Contactperson
+------------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGo Contactperson.
+
+Once a link between a Tripletex Contact and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGo Contactperson Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Customer to PowerOfficeGo Customer
+--------------------------------------------
+Every Tripletex Customer will be synchronized with a PowerOfficeGo Customer.
+
+Once a link between a Tripletex Customer and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Customer Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Employee to PowerOfficeGo Address
+-------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOfficeGo Address.
+
+Once a link between a Tripletex Employee and a PowerOfficeGo Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOfficeGo Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGo Address Property
+     - PowerOfficeGo Data Type
+
 
 Tripletex Employee to PowerOfficeGo Employee
 --------------------------------------------
@@ -36,6 +84,15 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGo Employee Property
      - PowerOfficeGo Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
 
 
 Tripletex Invoice to PowerOfficeGo Outgoinginvoice
@@ -51,6 +108,91 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
 
    * - Tripletex Invoice Property
      - PowerOfficeGo Outgoinginvoice Property
+     - PowerOfficeGo Data Type
+   * - amountExcludingVat
+     - NetAmount
+     - "string"
+   * - changes.timestamp
+     - CreatedDate
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - deliveryDate
+     - SentDate
+     - "string"
+   * - orders.id
+     - OrderNo
+     - "string"
+
+
+Tripletex Order to PowerOfficeGo Salesorder
+-------------------------------------------
+Every Tripletex Order will be synchronized with a PowerOfficeGo Salesorder.
+
+Once a link between a Tripletex Order and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a PowerOfficeGo Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - PowerOfficeGo Salesorder Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Orderline to PowerOfficeGo Salesorderline
+---------------------------------------------------
+Every Tripletex Orderline will be synchronized with a PowerOfficeGo Salesorderline.
+
+Once a link between a Tripletex Orderline and a PowerOfficeGo Salesorderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a PowerOfficeGo Salesorderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - PowerOfficeGo Salesorderline Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Product to PowerOfficeGo Product
+------------------------------------------
+Every Tripletex Product will be synchronized with a PowerOfficeGo Product.
+
+Once a link between a Tripletex Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Productgroup to PowerOfficeGo Productgroup
+----------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a PowerOfficeGo Productgroup.
+
+Once a link between a Tripletex Productgroup and a PowerOfficeGo Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a PowerOfficeGo Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - PowerOfficeGo Productgroup Property
      - PowerOfficeGo Data Type
 
 
@@ -68,4 +210,16 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGo Supplier Property
      - PowerOfficeGo Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
 
