@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-01 14:00:43
+Generated: 2023-08-01 14:01:16
 
 Introduction.
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - customer.id
+     - partyCustomerCode
+     - "string"
+   * - customer.id
+     - partySupplierCode
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGo Customer
@@ -39,6 +54,36 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGo Customer Property
      - PowerOfficeGo Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
 
 
 Tripletex Employee to PowerOfficeGo Address
@@ -55,6 +100,21 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGo Address Property
      - PowerOfficeGo Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.id
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Tripletex Employee to PowerOfficeGo Employee
