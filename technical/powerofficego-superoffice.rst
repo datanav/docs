@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-02 11:53:44
+Generated: 2023-08-02 11:55:41
 
 Introduction.
 ------------
@@ -108,6 +108,12 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
      - "string"
+   * - phoneNumberMobile
+     - Phones.Value
+     - "string"
+   * - websiteUrl
+     - Domains
+     - "list"
 
 
 Powerofficego Employee to SuperOffice Person
