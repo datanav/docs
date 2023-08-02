@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-08-02 12:49:11
+Generated: 2023-08-02 12:49:22
 
 Introduction.
 ------------
@@ -63,6 +63,30 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - Tilores Human Property
      - Tilores Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - mailAddress.city
+     - city
+     - "string"
+   * - mailAddress.zipCode
+     - postalCode
+     - "string"
+   * - streetAddresses.city
+     - city
+     - "string"
+   * - streetAddresses.zipCode
+     - postalCode
+     - "string"
 
 
 Powerofficego Employee to Tilores Human
