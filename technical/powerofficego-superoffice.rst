@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-02 12:48:52
+Generated: 2023-08-02 12:49:01
 
 Introduction.
 ------------
@@ -130,6 +130,36 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - LastName
+     - Lastname
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
+   * - mailAddress.address1
+     - Address.Postal.Address1
+     - "string"
+   * - mailAddress.address2
+     - Address.Postal.Address2
+     - "string"
+   * - mailAddress.address3
+     - Address.Postal.Address3
+     - "string"
+   * - mailAddress.city
+     - Address.Postal.City
+     - "string"
+   * - mailAddress.countryCode
+     - Country.CountryId
+     - "integer"
+   * - mailAddress.zipCode
+     - Address.Postal.Zipcode
+     - "string"
 
 
 Powerofficego Employee to SuperOffice Person
