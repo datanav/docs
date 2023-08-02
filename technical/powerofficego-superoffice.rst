@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-01 14:12:29
+Generated: 2023-08-02 11:53:44
 
 Introduction.
 ------------
@@ -81,9 +81,15 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - WebsiteUrl
      - Domains
      - "list"
+   * - emailAddress
+     - Emails.Value
+     - "string"
    * - id
      - ContactId
      - "integer"
+   * - legalName
+     - Name
+     - "string"
    * - mailAddress.address1
      - Address.Postal.Address1
      - "string"
