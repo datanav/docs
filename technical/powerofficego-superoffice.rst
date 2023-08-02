@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-02 11:55:41
+Generated: 2023-08-02 12:48:52
 
 Introduction.
 ------------
@@ -114,6 +114,22 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - Domains
      - "list"
+
+
+Powerofficego Customer to SuperOffice Person
+--------------------------------------------
+Every Powerofficego Customer will be synchronized with a SuperOffice Person.
+
+Once a link between a Powerofficego Customer and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customer and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 Powerofficego Employee to SuperOffice Person
