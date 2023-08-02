@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-02 09:22:09
+Generated: 2023-08-02 12:47:33
 
 Introduction.
 ------------
@@ -38,6 +38,22 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - phoneNumberWork
      - phoneNumber
      - "string"
+
+
+Tripletex Contact to PowerOfficeGo Customer
+-------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGo Customer.
+
+Once a link between a Tripletex Contact and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGo Customer Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Employee to PowerOfficeGo Address
