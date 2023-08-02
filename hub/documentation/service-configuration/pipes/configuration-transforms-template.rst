@@ -77,8 +77,8 @@ Prototype
        "template": "transform-collect-rest"
    }
 
-Properties
-~~~~~~~~~~
+Template properties
+~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -153,8 +153,8 @@ Prototype
        "template": "transform-defaults-rest"
    }
 
-Properties
-~~~~~~~~~~
+Template properties
+~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -219,8 +219,8 @@ Prototype
        "template": "transform-collect-rest"
    }
 
-Properties
-~~~~~~~~~~
+Template properties
+~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -334,14 +334,26 @@ Properties
      - ``100-599``
      - No
 
-   * - ``rules``
+   * - ``rules`` (Deprecated. Use ``rewrite_rules_lookup`` instead.)
      - Object
      - A dictionary of DTL named rules. This can be used to implement the ``lookup_rewrite`` named rule, which when defined will be used to rewrite the lookup response body.
      -
      - No
 
-Special properties
-~~~~~~~~~~~~~~~~~~
+   * - ``rewrite_rules_lookup``
+     - Object
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_lookup`` named rule, which when defined will be used to rewrite the lookup response body. It can also include other named rules references directly or indirectly by the base rule. The rule is passed the ``_S.`` entity returned from the lookup.
+     -
+     - No
+
+   * - ``rewrite_rules_mutation``
+     - Object
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update``, ``rewrite_insert`` and ``rewrite_delete`` named rules, which when defined will be used to rewrite the update, insert and delete responses. It can also include other named rules references directly or indirectly by the base rules. The rule is passed the ``_S.`` entity returned from the mutation (i.e. update, insert or delete).
+     -
+     - No
+
+Special entity properties
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
