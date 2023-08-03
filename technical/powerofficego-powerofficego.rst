@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-02 12:47:43
+Generated: 2023-08-03 06:00:01
 
 Introduction.
 ------------
@@ -75,43 +75,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - zipCode
      - mailAddress.zipCode
-     - "string"
-
-
-Powerofficego Customer to PowerOfficeGo Address
------------------------------------------------
-Every Powerofficego Customer will be synchronized with a PowerOfficeGo Address.
-
-Once a link between a Powerofficego Customer and a PowerOfficeGo Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a PowerOfficeGo Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - PowerOfficeGo Address Property
-     - PowerOfficeGo Data Type
-   * - streetAddresses.address1
-     - address1
-     - "string"
-   * - streetAddresses.address2
-     - address2
-     - "string"
-   * - streetAddresses.address3
-     - address3
-     - "string"
-   * - streetAddresses.city
-     - city
-     - "string"
-   * - streetAddresses.countryCode
-     - countryCode
-     - "string"
-   * - streetAddresses.lastChanged
-     - lastChanged
-     - "string"
-   * - streetAddresses.zipCode
-     - zipCode
      - "string"
 
 
