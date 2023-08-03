@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-06-28 08:17:28
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -138,6 +138,9 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - website
      - Domains
      - "list"
+   * - website
+     - Urls.Value
+     - "string"
 
 
 Wave Vendor to SuperOffice Contact
@@ -178,6 +181,9 @@ The following properties are synchronized between a Wave Vendor and a SuperOffic
    * - website
      - Domains
      - "list"
+   * - website
+     - Urls.Value
+     - "string"
 
 
 Wave Product to SuperOffice Product
