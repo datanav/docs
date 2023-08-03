@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-03 05:59:34
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -83,6 +83,9 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - Domains
      - "list"
+   * - websiteUrl
+     - Urls.Value
+     - "string"
 
 
 Powerofficego Contactperson to SuperOffice Person
@@ -252,6 +255,9 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - WebsiteUrl
      - Domains
      - "list"
+   * - WebsiteUrl
+     - Urls.Value
+     - "string"
 
 
 Powerofficego Product to SuperOffice Product
