@@ -2,7 +2,7 @@
 SuperOffice to Asana Dataflow
 =============================
 
-Generated: 2023-06-29 22:03:41
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -31,6 +31,9 @@ The following properties are synchronized between a SuperOffice Contact and a As
      - "string"
    * - Name
      - name
+     - "string"
+   * - Urls.Value
+     - permalink_url
      - "string"
 
 
