@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-08-03 05:59:34
+Generated: 2023-08-03 08:31:41
 
 Introduction.
 ------------
@@ -68,6 +68,9 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - legalName
      - properties.name
+     - "string"
+   * - phoneNumber
+     - properties.phone
      - "string"
    * - phoneNumberMobile
      - properties.phone
