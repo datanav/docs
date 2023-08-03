@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-02 11:55:41
+Generated: 2023-08-03 05:27:34
 
 Introduction.
 ------------
@@ -30,6 +30,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - lastName
      - "string"
    * - partyCustomerCode
+     - customer.id
+     - "integer"
+   * - partyId
      - customer.id
      - "integer"
    * - partySupplierCode
