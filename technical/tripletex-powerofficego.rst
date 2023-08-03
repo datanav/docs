@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-03 06:34:36
+Generated: 2023-08-03 08:31:41
 
 Introduction.
 ------------
@@ -51,6 +51,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - overdueNoticeEmail
      - vatNumber (Dependant on having wd:Q1273217 in streetAddresses.countryCode)
+     - "string"
+   * - phoneNumber
+     - phoneNumber
      - "string"
    * - phoneNumber
      - phoneNumberMobile
