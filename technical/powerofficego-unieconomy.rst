@@ -2,7 +2,7 @@
 Powerofficego to UniEconomy Dataflow
 ====================================
 
-Generated: 2023-08-03 06:28:35
+Generated: 2023-08-03 12:05:10
 
 Introduction.
 ------------
@@ -32,7 +32,7 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - internationalIdNumber (Dependant on having wd:Q11994066 in poweroffice-customer:InternationalIdType)
      - OrgNumber
      - "string"
-   * - vatNumber (Dependant on having wd:Q11994066 in streetAddresses.countryCode)
+   * - vatNumber (Dependant on having wd:Q11994066 in mailAddress.countryCodeDependant on having wd:Q11994066 in streetAddresses.countryCode)
      - OrgNumber
      - "string"
    * - websiteUrl
