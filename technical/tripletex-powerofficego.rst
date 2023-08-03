@@ -2,12 +2,48 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-03 05:27:34
+Generated: 2023-08-03 05:28:32
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to PowerOfficeGo Customer
+--------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customer must be established.
+
+A new PowerOfficeGo Customer will be created from a Tripletex Customer if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Customer and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Customer Property
+     - PowerOfficeGo Data Type
+
+
+Tripletex Department to PowerOfficeGo Customer
+----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customer must be established.
+
+A new PowerOfficeGo Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Department and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOfficeGo Customer Property
+     - PowerOfficeGo Data Type
+
 
 Tripletex Contact to PowerOfficeGo Contactperson
 ------------------------------------------------
