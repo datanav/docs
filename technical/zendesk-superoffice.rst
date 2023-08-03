@@ -2,7 +2,7 @@
 Zendesk to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:47:32
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -61,4 +61,7 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - url
      - Domains
      - "list"
+   * - url
+     - Urls.Value
+     - "string"
 
