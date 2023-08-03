@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-06-27 11:51:17
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -91,6 +91,9 @@ The following properties are synchronized between a HubSpot Company and a SuperO
    * - properties.website
      - Domains
      - "list"
+   * - properties.website
+     - Urls.Value
+     - "string"
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
