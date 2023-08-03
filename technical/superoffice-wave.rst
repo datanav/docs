@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-06-28 08:17:28
+Generated: 2023-08-03 06:25:38
 
 Introduction.
 ------------
@@ -78,6 +78,9 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
      - "string"
    * - Phones.Value
      - shippingDetails.phone
+     - "string"
+   * - Urls.Value
+     - website
      - "string"
 
 
