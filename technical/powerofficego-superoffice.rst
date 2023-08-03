@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-02 12:49:01
+Generated: 2023-08-03 05:27:34
 
 Introduction.
 ------------
@@ -39,6 +39,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Lastname
      - "string"
    * - partyCustomerCode
+     - Contact.ContactId
+     - "integer"
+   * - partyId
      - Contact.ContactId
      - "integer"
    * - partySupplierCode
