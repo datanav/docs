@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-06-27 11:31:21
+Generated: 2023-08-03 12:58:12
 
 Introduction.
 ------------
@@ -81,7 +81,7 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
      - organizationNumber
      - "replace"," ","", "string"]
    * - Phones.Value
