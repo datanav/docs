@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-03 12:05:10
+Generated: 2023-08-03 12:59:02
 
 Introduction.
 ------------
@@ -60,7 +60,7 @@ The following properties are synchronized between a Powerofficego Customer and a
      - Country.CountryId
      - "integer"
    * - mailAddress.countryCode
-     - OrgNr (Dependant on having wd:Q906278 in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having wd:Q906278 in Country.ThreeLetterISOCountryDependant on having wd:Q906278 in Country.TwoLetterISOCountry)
      - "string"
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
