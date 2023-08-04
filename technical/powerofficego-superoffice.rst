@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-04 06:26:15
+Generated: 2023-08-04 12:40:59
 
 Introduction.
 ------------
@@ -314,6 +314,30 @@ The following properties are synchronized between a Powerofficego Product and a 
      - QuantityUnit
      - "string"
    * - VatCode
+     - VAT
+     - "integer"
+   * - costPrice
+     - UnitCost
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - productGroupId
+     - ProductCategoryKey
+     - "string"
+   * - salesPrice
+     - UnitListPrice
+     - "decimal"
+   * - type
+     - ProductTypeKey
+     - "string"
+   * - unit
+     - QuantityUnit
+     - "string"
+   * - vatCode
      - VAT
      - "integer"
 
