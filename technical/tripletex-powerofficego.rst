@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-04 06:26:15
+Generated: 2023-08-04 12:40:07
 
 Introduction.
 ------------
@@ -355,26 +355,50 @@ The following properties are synchronized between a Tripletex Product and a Powe
    * - costExcludingVatCurrency
      - CostPrice
      - "string"
+   * - costExcludingVatCurrency
+     - costPrice
+     - "string"
    * - description
      - Description
+     - "string"
+   * - description
+     - description
      - "string"
    * - ean
      - Gtin
      - "string"
+   * - ean
+     - gtin
+     - "string"
    * - name
      - Name
+     - "string"
+   * - name
+     - name
      - "string"
    * - priceExcludingVatCurrency
      - SalesPrice
      - "string"
+   * - priceExcludingVatCurrency
+     - salesPrice
+     - "string"
    * - productUnit.id
      - Unit
+     - "string"
+   * - productUnit.id
+     - unit
      - "string"
    * - stockOfGoods
      - AvailableStock
      - "string"
+   * - stockOfGoods
+     - availableStock
+     - "string"
    * - vatType.id
      - VatCode
+     - "string"
+   * - vatType.id
+     - vatCode
      - "string"
 
 
