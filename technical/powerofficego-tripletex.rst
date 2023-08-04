@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-04 06:26:15
+Generated: 2023-08-04 12:40:59
 
 Introduction.
 ------------
@@ -245,6 +245,30 @@ The following properties are synchronized between a Powerofficego Product and a 
      - productUnit.id
      - "integer"
    * - VatCode
+     - vatType.id
+     - "integer"
+   * - availableStock
+     - stockOfGoods
+     - "integer"
+   * - costPrice
+     - costExcludingVatCurrency
+     - "integer"
+   * - description
+     - description
+     - "string"
+   * - gtin
+     - ean
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - salesPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - unit
+     - productUnit.id
+     - "integer"
+   * - vatCode
      - vatType.id
      - "integer"
 
