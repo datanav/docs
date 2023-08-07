@@ -296,18 +296,29 @@ A operation configuration looks like:
 
    * - ``next_page_termination_strategy`` (experimental)
      - Enum<String> or array of Enum<String>
-     - Enumeration of ``"empty-result"``, ``"same-next-page-link"``, ``"next-page-link-empty"``, ``"same-next-page-request"``
-       and ``"same-response"``.
+     - Enumeration of ``"empty-result"``, ``"same-next-page-link"``, ``"next-page-link-empty"``, ``"same-next-page-request"``,
+       ``"same-response"`` and ``"not-full-page"``.
        The values indicate how to determine when a paginated response is finished. ``"empty-result"`` will terminate pagination
        when the result evaluates to missing or empty (or if the response body is empty). ``"same-next-page-link"``
        terminates if the computed ``next_page_link`` value matches the previous one and ``"next-page-link-empty"`` will
        terminate if this template evaluates to null or an empty string. ``"same-next-page-request"`` terminates paging if
        the component detects that request to issue is identical to the previous request (i.e. the headers, url, parameters and
        payload to use are all the same). ``"same-response"`` terminates paging if the response is equal to the previous one.
+       ``"not-full-page"`` terminates paging if the last response contained less entities than the specified ``page_size``.
+       Note that ``page_size`` *must* be set if this strategy is used.
        The default is ``"next-page-link-empty"``, ``"same-next-page-request"`` and ``"same-response"``.
        Note that these strategies can be combined in an array if the source system pagination sequence can
        terminate in multiple ways.
      - ``["next-page-link-empty", "same-next-page-request", "same-response"]``
+     -
+
+   * - ``page_size``
+     - Integer
+     - An integer indicating the number of entities contained in a paged response. This property must be set if the
+       ``"not-full-page"`` next page termination strategy is used. Note that this property does *not* enable paging
+       on its own, and is intended to be used in other properties that support the ``Jinja`` template
+       (https://palletsprojects.com/p/jinja/) syntax. When the ``page_size`` is set, the value will substitute any
+       instances of ``{{ page_size }}`` in the operation configuration.
      -
 
    * - ``allowed_status_codes``
