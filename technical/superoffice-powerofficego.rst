@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-04 12:40:07
+Generated: 2023-08-07 13:05:49
 
 Introduction.
 ------------
@@ -71,6 +71,9 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - QuantityUnit
      - unit
+     - "string"
+   * - QuantityUnit
+     - unitOfMeasureCode
      - "string"
    * - UnitCost
      - CostPrice
