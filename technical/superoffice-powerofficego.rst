@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-07 13:34:55
+Generated: 2023-08-07 14:20:38
 
 Introduction.
 ------------
@@ -26,6 +26,22 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - Name
      - Name
      - "string"
+
+
+SuperOffice Person to PowerOfficeGo Address
+-------------------------------------------
+Every SuperOffice Person will be synchronized with a PowerOfficeGo Address.
+
+Once a link between a SuperOffice Person and a PowerOfficeGo Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGo Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGo Address Property
+     - PowerOfficeGo Data Type
 
 
 SuperOffice Product to PowerOfficeGo Product
