@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-07 13:05:49
+Generated: 2023-08-07 13:30:44
 
 Introduction.
 ------------
@@ -449,5 +449,27 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - "string"
    * - phoneNumber
      - PhoneNumber
+     - "string"
+
+
+Tripletex Vattype to PowerOfficeGo Vatcode
+------------------------------------------
+Every Tripletex Vattype will be synchronized with a PowerOfficeGo Vatcode.
+
+Once a link between a Tripletex Vattype and a PowerOfficeGo Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Vattype and a PowerOfficeGo Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Vattype Property
+     - PowerOfficeGo Vatcode Property
+     - PowerOfficeGo Data Type
+   * - name
+     - name
+     - "string"
+   * - number
+     - code
      - "string"
 
