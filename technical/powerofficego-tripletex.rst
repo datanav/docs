@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-07 13:07:56
+Generated: 2023-08-07 13:08:37
 
 Introduction.
 ------------
@@ -279,6 +279,19 @@ The following properties are synchronized between a Powerofficego Product and a 
 Powerofficego Product to Tripletex Productunit
 ----------------------------------------------
 Every Powerofficego Product will be synchronized with a Tripletex Productunit.
+
+If a matching Tripletex Productunit already exists, the Powerofficego Product will be merged with the existing one.
+If no matching Tripletex Productunit is found, a new Tripletex Productunit will be created.
+
+A Powerofficego Product will merge with a Tripletex Productunit if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Tripletex Productunit Property
+   * - unitOfMeasureCode
+     - name
 
 Once a link between a Powerofficego Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
 
