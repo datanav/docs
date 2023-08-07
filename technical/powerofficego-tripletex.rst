@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-07 13:05:49
+Generated: 2023-08-07 13:06:40
 
 Introduction.
 ------------
@@ -274,6 +274,22 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - vatCode
      - vatType.id
      - "integer"
+
+
+Powerofficego Product to Tripletex Productunit
+----------------------------------------------
+Every Powerofficego Product will be synchronized with a Tripletex Productunit.
+
+Once a link between a Powerofficego Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Tripletex Productunit Property
+     - Tripletex Data Type
 
 
 Powerofficego Productgroup to Tripletex Productgroup
