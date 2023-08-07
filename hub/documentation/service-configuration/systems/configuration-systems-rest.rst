@@ -320,6 +320,7 @@ A operation configuration looks like:
        (https://palletsprojects.com/p/jinja/) syntax. When the ``page_size`` is set, the value will substitute any
        instances of ``{{ page_size }}`` in the operation configuration.
      -
+     -
 
    * - ``allowed_status_codes``
      - String
