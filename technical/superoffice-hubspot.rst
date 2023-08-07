@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-08-07 14:19:54
+Generated: 2023-08-07 14:19:59
 
 Introduction.
 ------------
@@ -42,8 +42,14 @@ The following properties are synchronized between a SuperOffice Person and a Hub
    * - Address.Street.City
      - properties.city
      - "string"
+   * - Address.Street.Zipcode
+     - properties.zip
+     - "string"
    * - BirthDate
      - properties.date_of_birth
+     - "string"
+   * - Country.CountryId
+     - properties.country
      - "string"
    * - Emails.Value
      - properties.email
@@ -59,6 +65,9 @@ The following properties are synchronized between a SuperOffice Person and a Hub
      - "string"
    * - OfficePhones.Value
      - properties.phone
+     - "string"
+   * - PersonId
+     - id
      - "string"
 
 
