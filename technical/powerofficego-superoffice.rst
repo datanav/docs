@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-07 13:05:49
+Generated: 2023-08-07 14:21:53
 
 Introduction.
 ------------
@@ -117,11 +117,20 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - address1
      - Address.Postal.Address1
      - "string"
+   * - address1
+     - Address.Street.Address1
+     - "string"
    * - address2
      - Address.Postal.Address2
      - "string"
+   * - address2
+     - Address.Street.Address2
+     - "string"
    * - city
      - Address.Postal.City
+     - "string"
+   * - city
+     - Address.Street.City
      - "string"
    * - dateOfBirth
      - BirthDate
@@ -155,6 +164,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "integer"
    * - zipCode
      - Address.Postal.Zipcode
+     - "string"
+   * - zipCode
+     - Address.Street.Zipcode
      - "string"
 
 
