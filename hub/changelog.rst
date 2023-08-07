@@ -1,6 +1,14 @@
 Changelog
 =========
 
+.. _changelog_2023_08_07:
+
+2023-08-07
+----------
+* Added a new ``next_page_termination_strategy`` option ``not-full-page`` and a new property ``page_size`` to the
+  :ref:`REST system <rest_system>`. When this new strategy is enabled, paging will terminate if the number of entities
+  in the response is less than the specified ``page_size``. This new property can also be used in Jinja expressions.
+
 .. _changelog_2023_07_04:
 
 2023-07-04
