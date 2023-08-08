@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-08 10:14:33
+Generated: 2023-08-08 10:15:44
 
 Introduction.
 ------------
@@ -132,4 +132,7 @@ The following properties are synchronized between a HubSpot Quote and a PowerOff
    * - HubSpot Quote Property
      - PowerOfficeGo Quote Property
      - PowerOfficeGo Data Type
+   * - createdAt
+     - CreatedDate
+     - "string"
 
