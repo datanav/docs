@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-08 10:32:36
+Generated: 2023-08-09 10:24:56
 
 Introduction.
 ------------
@@ -126,25 +126,6 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - VAT
      - vatCode
-     - "string"
-
-
-SuperOffice Quotealternative to PowerOfficeGo Quote
----------------------------------------------------
-Every SuperOffice Quotealternative will be synchronized with a PowerOfficeGo Quote.
-
-Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Quote is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Quote:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quotealternative Property
-     - PowerOfficeGo Quote Property
-     - PowerOfficeGo Data Type
-   * - TotalPrice
-     - TotalAmount
      - "string"
 
 
