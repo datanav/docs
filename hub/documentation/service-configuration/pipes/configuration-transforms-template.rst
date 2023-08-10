@@ -340,15 +340,21 @@ Template properties
      -
      - No
 
+   * - ``rewrite_rules_payload``
+     - Object
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update_payload`` and ``rewrite_insert_payload`` named rules, which when defined will be used to rewrite the update and insert request payloads. These rules take precedence over the ``$payload`` property. It can also include other named rules referenced directly or indirectly by the base rules. The rule is passed the ``_S.`` entity and the original source entity can be found in ``_S.$source``. The rule should return a dict with the new payload inside the ``$payload`` property.
+     -
+     - No
+
    * - ``rewrite_rules_lookup``
      - Object
-     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_lookup`` named rule, which when defined will be used to rewrite the lookup response body. It can also include other named rules references directly or indirectly by the base rule. The rule is passed the ``_S.`` entity returned from the lookup.
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_lookup`` named rule, which when defined will be used to rewrite the lookup response body. It can also include other named rules referenced directly or indirectly by the base rule. The rule is passed the ``_S.`` entity returned from the lookup.
      -
      - No
 
    * - ``rewrite_rules_mutation``
      - Object
-     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update``, ``rewrite_insert`` and ``rewrite_delete`` named rules, which when defined will be used to rewrite the update, insert and delete responses. It can also include other named rules references directly or indirectly by the base rules. The rule is passed the ``_S.`` entity returned from the mutation (i.e. update, insert or delete).
+     - A dictionary of DTL named rules. This can be used to implement the ``rewrite_update``, ``rewrite_insert`` and ``rewrite_delete`` named rules, which when defined will be used to rewrite the update, insert and delete responses. It can also include other named rules referenced directly or indirectly by the base rules. The rule is passed the ``_S.`` entity returned from the mutation (i.e. update, insert or delete).
      -
      - No
 
