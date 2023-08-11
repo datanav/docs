@@ -2,7 +2,7 @@
 Asana to Asana Dataflow
 =======================
 
-Generated: 2023-08-11 11:35:50
+Generated: 2023-08-11 11:40:50
 
 Introduction.
 ------------
@@ -34,6 +34,9 @@ The following properties are synchronized between a Asana Tasks and a Asana Proj
      - "string"
    * - due_on
      - due_on
+     - "string"
+   * - name
+     - name
      - "string"
    * - workspace.gid
      - workspace.gid
