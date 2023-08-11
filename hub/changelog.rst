@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_08_10:
+
+2023-08-10
+----------
+* Reduced the minimum number of arguments required for the :ref:`case <dtl_transform-case>` DTL function from 4 to 2.
+* Reduced the minimum number of arguments required for the :ref:`case-eq <dtl_transform-case-eq>` DTL function from 5 to 3.
+
 .. _changelog_2023_08_07:
 
 2023-08-07
