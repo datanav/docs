@@ -2,7 +2,7 @@
 Tripletex to Asana Dataflow
 ===========================
 
-Generated: 2023-08-11 11:42:53
+Generated: 2023-08-11 11:55:53
 
 Introduction.
 ------------
@@ -67,6 +67,9 @@ The following properties are synchronized between a Tripletex Department and a A
    * - Tripletex Department Property
      - Asana Teams Property
      - Asana Data Type
+   * - departmentNumber
+     - description
+     - "string"
    * - departmentNumber
      - html_description
      - "string"
