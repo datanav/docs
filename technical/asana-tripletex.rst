@@ -2,7 +2,7 @@
 Asana to Tripletex Dataflow
 ===========================
 
-Generated: 2023-08-11 11:40:50
+Generated: 2023-08-11 11:42:53
 
 Introduction.
 ------------
@@ -35,6 +35,9 @@ The following properties are synchronized between a Asana Projects and a Triplet
    * - owner.gid
      - projectManager.id
      - "integer"
+   * - start_on
+     - startDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Asana Users to Tripletex Employee
