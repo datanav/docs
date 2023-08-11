@@ -1,6 +1,14 @@
 Changelog
 =========
 
+
+.. _changelog_2023_08_11:
+
+2023-08-11
+----------
+* Added a new global default ``run_at_startup_if_not_populated`` to the :ref:`service metadata <service_metadata_global_defaults_run_at_startup_if_not_populated>`.
+  This setting determines the default value of :ref:`run_at_startup_if_not_populated <pump_run_at_startup_if_not_populated>` for pumps.
+
 .. _changelog_2023_08_10:
 
 2023-08-10

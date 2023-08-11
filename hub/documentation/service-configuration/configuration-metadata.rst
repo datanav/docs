@@ -175,6 +175,14 @@ Properties
      - ``104857600`` (100MB)
      -
 
+        .. _service_metadata_global_defaults_run_at_startup_if_not_populated:
+
+   * - ``global_defaults.run_at_startup_if_not_populated``
+     - Boolean
+     - Specifies the default value of the property ``run_at_startup_if_not_populated`` for pumps.
+     - ``false``
+     -
+
    * - ``global_defaults.infer_pipe_entity_types``
      - Boolean
      - :ref:`Schema inference <schema_inference>` is enabled for

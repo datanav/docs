@@ -43,6 +43,7 @@ Prototype
         "partial_rescan_run_count": 5,
         "partial_rescan_delta": 3600,
         "run_at_startup": false,
+        "run_at_startup_if_not_populated": false,
         "max_read_retries": 0,
         "read_retry_delay": 0,
         "write_retry_delay": 0,
@@ -167,6 +168,13 @@ they are formatted in the :doc:`Cron Expressions <../../../cron-expressions>` do
      - false
      -
 
+        .. _pump_run_at_startup_if_not_populated:
+   * - ``run_at_startup_if_not_populated``
+     - Boolean
+     - A flag that indicates if the pump should run when Sesam starts up and the dataset is not populated. This is
+       in addition to the normal schedule specified by the ``schedule_interval`` or ``cron_expression`` properties.
+     - false
+     -
 
    * - ``use_dead_letter_dataset``
      - Boolean
