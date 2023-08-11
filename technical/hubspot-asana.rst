@@ -2,7 +2,7 @@
 HubSpot to Asana Dataflow
 =========================
 
-Generated: 2023-07-31 10:54:09
+Generated: 2023-08-11 11:40:50
 
 Introduction.
 ------------
@@ -94,6 +94,9 @@ The following properties are synchronized between a HubSpot Ticket and a Asana P
      - "string"
    * - properties.hubspot_owner_id
      - owner.gid
+     - "string"
+   * - properties.subject
+     - name
      - "string"
 
 
