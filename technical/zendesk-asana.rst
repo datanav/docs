@@ -2,7 +2,7 @@
 Zendesk to Asana Dataflow
 =========================
 
-Generated: 2023-06-28 17:55:34
+Generated: 2023-08-11 11:35:50
 
 Introduction.
 ------------
@@ -77,6 +77,9 @@ The following properties are synchronized between a Zendesk Tickets and a Asana 
      - "string"
    * - due_at
      - due_date
+     - "string"
+   * - due_at
+     - due_on
      - "string"
    * - organization_id
      - workspace.gid
