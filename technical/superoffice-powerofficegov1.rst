@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:59:49
+Generated: 2023-08-14 09:03:43
 
 Introduction.
 ------------
@@ -40,6 +40,9 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - PowerOfficeGov1 Data Type
    * - Address.Postal.Address1
      - Address.Postal.Address1
+     - "string"
+   * - Address.Postal.Address1
+     - Address.Street.Address1
      - "string"
    * - Address.Postal.Address2
      - Address.Postal.Address2
