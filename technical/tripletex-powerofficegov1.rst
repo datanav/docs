@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 09:12:07
+Generated: 2023-08-14 10:11:49
 
 Introduction.
 ------------
@@ -1083,5 +1083,114 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
    * - lastName
      - LastName
+     - "string"
+
+
+Tripletex Employee to PowerOfficeGov1 Employee
+----------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOfficeGov1 Employee.
+
+If a matching PowerOfficeGov1 Employee already exists, the Tripletex Employee will be merged with the existing one.
+If no matching PowerOfficeGov1 Employee is found, a new PowerOfficeGov1 Employee will be created.
+
+A Tripletex Employee will merge with a PowerOfficeGov1 Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGov1 Employee Property
+   * - id
+     - id
+   * - email
+     - email
+   * - employeeNumber
+     - employeeNumber
+   * - nationalIdentityNumber
+     - SocialSecurityNumber
+   * - nationalIdentityNumber
+     - nationalIdentityNumber
+
+Once a link between a Tripletex Employee and a PowerOfficeGov1 Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOfficeGov1 Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGov1 Employee Property
+     - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - address.country.id
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - department.id
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberHome
+     - phoneNumberHome
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumberWork
+     - phoneNumberWork
+     - "string"
+   * - userType
+     - userType
      - "string"
 
