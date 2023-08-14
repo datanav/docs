@@ -2,47 +2,12 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:12:01
+Generated: 2023-08-14 10:12:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Employee to PowerOfficeGo Employees
----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a PowerOfficeGo Employees must be established.
-
-A Tripletex Employee will merge with a PowerOfficeGo Employees if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGo Employees Property
-   * - nationalIdentityNumber
-     - SocialSecurityNumber
-
-Once a link between a Tripletex Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a PowerOfficeGo Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGo Employees Property
-     - PowerOfficeGo Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-
 
 Tripletex Customer to PowerOfficeGo Customer
 --------------------------------------------
@@ -265,6 +230,44 @@ The following properties are synchronized between a Tripletex Employee and a Pow
 
    * - Tripletex Employee Property
      - PowerOfficeGo Employee Property
+     - PowerOfficeGo Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+
+
+Tripletex Employee to PowerOfficeGo Employees
+---------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOfficeGo Employees.
+
+If a matching PowerOfficeGo Employees already exists, the Tripletex Employee will be merged with the existing one.
+If no matching PowerOfficeGo Employees is found, a new PowerOfficeGo Employees will be created.
+
+A Tripletex Employee will merge with a PowerOfficeGo Employees if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGo Employees Property
+   * - nationalIdentityNumber
+     - SocialSecurityNumber
+
+Once a link between a Tripletex Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOfficeGo Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
    * - dateOfBirth
      - DateOfBirth
