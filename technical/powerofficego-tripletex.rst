@@ -2,12 +2,38 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-14 10:19:28
+Generated: 2023-08-14 10:19:53
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Employee to Tripletex Employee
+--------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Employee and a Tripletex Employee must be established.
+
+A Powerofficego Employee will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employee Property
+     - Tripletex Employee Property
+   * - SocialSecurityNumber
+     - nationalIdentityNumber
+
+Once a link between a Powerofficego Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employee and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employee Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+
 
 Powerofficego Customer to Tripletex Customer
 --------------------------------------------
@@ -169,44 +195,6 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NO in mailAddress.countryCode)
      - organizationNumber
      - "replace"," ","", "string"]
-
-
-Powerofficego Employee to Tripletex Employee
---------------------------------------------
-Every Powerofficego Employee will be synchronized with a Tripletex Employee.
-
-If a matching Tripletex Employee already exists, the Powerofficego Employee will be merged with the existing one.
-If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
-
-A Powerofficego Employee will merge with a Tripletex Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - Tripletex Employee Property
-   * - SocialSecurityNumber
-     - nationalIdentityNumber
-
-Once a link between a Powerofficego Employee and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employee and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
-   * - DateOfBirth
-     - dateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
 
 
 Powerofficego Employees to Tripletex Employee
@@ -422,34 +410,6 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - VatReturnSpecification
      - vatType.id
      - "integer"
-
-
-Powerofficego Supplier to Tripletex Supplier
---------------------------------------------
-Every Powerofficego Supplier will be synchronized with a Tripletex Supplier.
-
-Once a link between a Powerofficego Supplier and a Tripletex Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Supplier and a Tripletex Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Supplier Property
-     - Tripletex Supplier Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - Id
-     - id
-     - "integer"
-   * - LegalName
-     - name
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
-     - "string"
 
 
 Powerofficego Suppliers to Tripletex Supplier
