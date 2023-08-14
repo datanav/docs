@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 08:59:49
+Generated: 2023-08-14 08:59:57
 
 Introduction.
 ------------
@@ -41,6 +41,24 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - InternationalIdNumber (Dependant on having superoffice-contactid in poweroffice-customer:InternationalIdType)
+     - ContactId
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Domains
+     - "list"
+   * - WebsiteUrl
+     - Urls.Value
+     - "string"
 
 
 Powerofficego Contactperson to PowerOfficeGov1 Contactperson
