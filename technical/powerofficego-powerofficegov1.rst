@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:16:50
+Generated: 2023-08-14 10:16:53
 
 Introduction.
 ------------
@@ -425,6 +425,147 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoices Property
      - PowerOfficeGov1 Outgoinginvoice Property
      - PowerOfficeGov1 Data Type
+   * - CreatedDate
+     - CreatedDate
+     - "string"
+   * - CurrencyCode
+     - CurrencyCode
+     - "string"
+   * - CustomerCode
+     - CustomerCode
+     - "string"
+   * - CustomerEmail
+     - CustomerEmail
+     - "string"
+   * - DeliveryAddress1
+     - DeliveryAddress1
+     - "string"
+   * - DeliveryAddress2
+     - DeliveryAddress2
+     - "string"
+   * - DeliveryAddressCity
+     - DeliveryAddressCity
+     - "string"
+   * - DeliveryAddressCountryCode
+     - DeliveryAddressCountryCode
+     - "string"
+   * - DeliveryAddressZipCode
+     - DeliveryAddressZipCode
+     - "string"
+   * - DeliveryDate
+     - DeliveryDate
+     - "string"
+   * - DeliveryDate
+     - SentDate
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - NetAmount
+     - NetAmount
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
+   * - OrderNo
+     - OrderNo
+     - "string"
+   * - OurReferenceEmployeeCode
+     - OurReferenceEmployeeCode
+     - "string"
+   * - OutgoingInvoiceLines
+     - OutgoingInvoiceLines
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - SentDate
+     - DeliveryDate
+     - "string"
+   * - SentDate
+     - SentDate
+     - "string"
+   * - outgoingInvoiceLines.Description
+     - outgoingInvoiceLines.Description
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.ExternalImportLineReference
+     - outgoingInvoiceLines.ExternalImportLineReference
+     - "string"
+   * - outgoingInvoiceLines.ExternalImportLineReference
+     - outgoingInvoiceLines.UnitPrice
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.IsDeleted
+     - outgoingInvoiceLines.IsDeleted
+     - "string"
+   * - outgoingInvoiceLines.IsDeleted
+     - outgoingInvoiceLines.VatCode
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.Quantity
+     - outgoingInvoiceLines.Quantity
+     - "string"
+   * - outgoingInvoiceLines.SalesPersonEmployeeCode
+     - outgoingInvoiceLines.SalesPersonEmployeeCode
+     - "string"
+   * - outgoingInvoiceLines.SortOrder
+     - outgoingInvoiceLines.SortOrder
+     - "string"
+   * - outgoingInvoiceLines.UnitPrice
+     - outgoingInvoiceLines.ExternalImportLineReference
+     - "string"
+   * - outgoingInvoiceLines.UnitPrice
+     - outgoingInvoiceLines.UnitPrice
+     - "string"
+   * - outgoingInvoiceLines.VatCode
+     - outgoingInvoiceLines.IsDeleted
+     - "string"
+   * - outgoingInvoiceLines.VatCode
+     - outgoingInvoiceLines.VatCode
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGov1 Supplier
