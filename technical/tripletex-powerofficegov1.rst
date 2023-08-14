@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 09:11:49
+Generated: 2023-08-14 09:11:57
 
 Introduction.
 ------------
@@ -1059,4 +1059,20 @@ The following properties are synchronized between a Tripletex Department and a P
    * - name
      - name
      - "string"
+
+
+Tripletex Contact to PowerOfficeGov1 Customer
+---------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGov1 Customer.
+
+Once a link between a Tripletex Contact and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
 
