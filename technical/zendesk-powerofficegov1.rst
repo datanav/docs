@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:51:46
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -36,6 +36,22 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - phone
      - PrivatePhones.Value
      - "string"
+
+
+Zendesk Organisations to PowerOfficeGov1 Contact
+------------------------------------------------
+Every Zendesk Organisations will be synchronized with a PowerOfficeGov1 Contact.
+
+Once a link between a Zendesk Organisations and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Organisations and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Organisations Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
 
 
 Zendesk Organisations to PowerOfficeGov1 Organisations
