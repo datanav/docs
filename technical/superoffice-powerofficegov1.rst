@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:50:56
 
 Introduction.
 ------------
@@ -220,6 +220,24 @@ The following properties are synchronized between a SuperOffice Contact and a Po
 
    * - SuperOffice Contact Property
      - PowerOfficeGov1 Department Property
+     - PowerOfficeGov1 Data Type
+
+
+SuperOffice Quotealternative to PowerOfficeGov1 Order
+-----------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGov1 Order must be established.
+
+A new PowerOfficeGov1 Order will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into PowerOfficeGov1.
+
+Once a link between a SuperOffice Quotealternative and a PowerOfficeGov1 Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGov1 Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
 
 
