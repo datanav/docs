@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-08-14 10:19:53
+Generated: 2023-08-14 10:39:58
 
 Introduction.
 ------------
@@ -55,62 +55,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - websiteUrl
      - website
-     - "string"
-
-
-Powerofficego Product to Wave Product
--------------------------------------
-Every Powerofficego Product will be synchronized with a Wave Product.
-
-Once a link between a Powerofficego Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - Description
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - SalesPrice
-     - unitPrice
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - salesPrice
-     - unitPrice
-     - "string"
-
-
-Powerofficego Salesorder to Wave Invoice
-----------------------------------------
-Every Powerofficego Salesorder will be synchronized with a Wave Invoice.
-
-Once a link between a Powerofficego Salesorder and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - Currency
-     - currency.code
-     - "string"
-   * - DepartmentCode
-     - customer.id
      - "string"
 
 
