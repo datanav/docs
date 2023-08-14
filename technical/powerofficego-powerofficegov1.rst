@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-14 10:12:01
 
 Introduction.
 ------------
@@ -340,4 +340,73 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - JobTitle
+     - JobTitle
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.Address1
+     - MailAddress.Address1
+     - "string"
+   * - MailAddress.Address2
+     - MailAddress.Address2
+     - "string"
+   * - MailAddress.Address3
+     - MailAddress.Address3
+     - "string"
+   * - MailAddress.City
+     - MailAddress.City
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.CountryCode
+     - "string"
+   * - MailAddress.LastChanged
+     - MailAddress.LastChanged
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.ZipCode
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
 
