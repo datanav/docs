@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-08-08 10:12:51
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -62,6 +62,22 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - website
      - "string"
+
+
+Powerofficego Customers to Wave Customer
+----------------------------------------
+Every Powerofficego Customers will be synchronized with a Wave Customer.
+
+Once a link between a Powerofficego Customers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wave Customer Property
+     - Wave Data Type
 
 
 Powerofficego Product to Wave Product
