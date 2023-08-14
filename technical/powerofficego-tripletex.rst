@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-14 10:19:53
+Generated: 2023-08-14 10:39:58
 
 Introduction.
 ------------
@@ -32,6 +32,32 @@ The following properties are synchronized between a Powerofficego Employee and a
 
    * - Powerofficego Employee Property
      - Tripletex Employee Property
+     - Tripletex Data Type
+
+
+Powerofficego Product to Tripletex Productunit
+----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Product and a Tripletex Productunit must be established.
+
+A Powerofficego Product will merge with a Tripletex Productunit if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Tripletex Productunit Property
+   * - unitOfMeasureCode
+     - name
+
+Once a link between a Powerofficego Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Tripletex Productunit Property
      - Tripletex Data Type
 
 
@@ -69,43 +95,6 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - Tripletex Department Property
      - Tripletex Data Type
-
-
-Powerofficego Contactperson to Tripletex Contact
-------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Tripletex Contact.
-
-Once a link between a Powerofficego Contactperson and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - emailAddress
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - partyCustomerCode
-     - customer.id
-     - "integer"
-   * - partyId
-     - customer.id
-     - "integer"
-   * - partySupplierCode
-     - customer.id
-     - "integer"
-   * - phoneNumber
-     - phoneNumberWork
-     - "string"
 
 
 Powerofficego Customers to Tripletex Contact
@@ -233,183 +222,6 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - LastName
      - lastName
      - "string"
-
-
-Powerofficego Product to Tripletex Product
-------------------------------------------
-Every Powerofficego Product will be synchronized with a Tripletex Product.
-
-Once a link between a Powerofficego Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-   * - AvailableStock
-     - stockOfGoods
-     - "integer"
-   * - CostPrice
-     - costExcludingVatCurrency
-     - "integer"
-   * - Description
-     - description
-     - "string"
-   * - Gtin
-     - ean
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - SalesPrice
-     - priceExcludingVatCurrency
-     - "float"
-   * - Unit
-     - productUnit.id
-     - "integer"
-   * - VatCode
-     - vatType.id
-     - "integer"
-   * - availableStock
-     - stockOfGoods
-     - "integer"
-   * - costPrice
-     - costExcludingVatCurrency
-     - "integer"
-   * - description
-     - description
-     - "string"
-   * - gtin
-     - ean
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - salesPrice
-     - priceExcludingVatCurrency
-     - "float"
-   * - unit
-     - productUnit.id
-     - "integer"
-   * - unitOfMeasureCode
-     - productUnit.id
-     - "integer"
-   * - vatCode
-     - vatType.id
-     - "integer"
-
-
-Powerofficego Product to Tripletex Productunit
-----------------------------------------------
-Every Powerofficego Product will be synchronized with a Tripletex Productunit.
-
-If a matching Tripletex Productunit already exists, the Powerofficego Product will be merged with the existing one.
-If no matching Tripletex Productunit is found, a new Tripletex Productunit will be created.
-
-A Powerofficego Product will merge with a Tripletex Productunit if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Tripletex Productunit Property
-   * - unitOfMeasureCode
-     - name
-
-Once a link between a Powerofficego Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Tripletex Productunit:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Tripletex Productunit Property
-     - Tripletex Data Type
-   * - unitOfMeasureCode
-     - commonCode
-     - "string"
-
-
-Powerofficego Productgroup to Tripletex Productgroup
-----------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a Tripletex Productgroup.
-
-Once a link between a Powerofficego Productgroup and a Tripletex Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Productgroup and a Tripletex Productgroup:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Productgroup Property
-     - Tripletex Productgroup Property
-     - Tripletex Data Type
-   * - Name
-     - name
-     - "string"
-
-
-Powerofficego Salesorder to Tripletex Order
--------------------------------------------
-Every Powerofficego Salesorder will be synchronized with a Tripletex Order.
-
-Once a link between a Powerofficego Salesorder and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a Tripletex Order:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - Tripletex Order Property
-     - Tripletex Data Type
-   * - Currency
-     - currency.id
-     - "integer"
-   * - DeliveryDate
-     - deliveryDate
-     - "datetime-format","%Y-%m-%d","_."]
-   * - DepartmentCode
-     - customer.id
-     - "integer"
-   * - OrderDate
-     - orderDate
-     - "datetime-format","%Y-%m-%d","_."]
-
-
-Powerofficego Salesorderline to Tripletex Orderline
----------------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a Tripletex Orderline.
-
-Once a link between a Powerofficego Salesorderline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a Tripletex Orderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - Tripletex Orderline Property
-     - Tripletex Data Type
-   * - Description
-     - description
-     - "string"
-   * - Discount
-     - discount
-     - "float"
-   * - Quantity
-     - count
-     - "float"
-   * - SalesOrderLineUnitPrice
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - VatReturnSpecification
-     - vatType.id
-     - "integer"
 
 
 Powerofficego Suppliers to Tripletex Supplier
