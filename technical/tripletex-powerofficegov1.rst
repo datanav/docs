@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 12:53:56
+Generated: 2023-08-14 12:54:49
 
 Introduction.
 ------------
@@ -101,34 +101,6 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - phoneNumberWork
      - OfficePhones.Value
      - "string"
-
-
-Tripletex Currency to PowerOfficeGov1 Currency
-----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Currency and a PowerOfficeGov1 Currency must be established.
-
-A Tripletex Currency will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - PowerOfficeGov1 Currency Property
-   * - code
-     - Code
-   * - code
-     - code
-
-Once a link between a Tripletex Currency and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a PowerOfficeGov1 Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - PowerOfficeGov1 Currency Property
-     - PowerOfficeGov1 Data Type
 
 
 Tripletex Customer to PowerOfficeGov1 Companies
@@ -1143,6 +1115,37 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - lastName
      - LastName
      - "string"
+
+
+Tripletex Currency to PowerOfficeGov1 Currency
+----------------------------------------------
+Every Tripletex Currency will be synchronized with a PowerOfficeGov1 Currency.
+
+If a matching PowerOfficeGov1 Currency already exists, the Tripletex Currency will be merged with the existing one.
+If no matching PowerOfficeGov1 Currency is found, a new PowerOfficeGov1 Currency will be created.
+
+A Tripletex Currency will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - PowerOfficeGov1 Currency Property
+   * - code
+     - Code
+   * - code
+     - code
+
+Once a link between a Tripletex Currency and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a PowerOfficeGov1 Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - PowerOfficeGov1 Currency Property
+     - PowerOfficeGov1 Data Type
 
 
 Tripletex Employee to PowerOfficeGov1 Address
