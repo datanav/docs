@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 08:50:56
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -33,6 +33,60 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - streetAddresses.city
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.country.code
+     - streetAddresses.countryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
 
 
 Wave Customer to PowerOfficeGov1 Person
@@ -59,6 +113,36 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - Contact.ContactId
+     - "integer"
+   * - id
+     - PersonId
+     - "integer"
+   * - lastName
+     - Lastname
+     - "string"
+   * - mobile
+     - MobilePhones.Value
+     - "string"
 
 
 Wave Vendor to PowerOfficeGov1 Employee
@@ -85,6 +169,63 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - streetAddresses.city
+     - "string"
+   * - address.country.code
+     - MailAddress.CountryCode
+     - "string"
+   * - address.country.code
+     - address.country.id
+     - "integer"
+   * - address.country.code
+     - streetAddresses.countryCode
+     - "string"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "string"
+   * - phone
+     - phoneNumberWork
+     - "string"
 
 
 Wave Vendor to PowerOfficeGov1 Person
@@ -111,6 +252,39 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - Contact.ContactId
+     - "integer"
+   * - id
+     - PersonId
+     - "integer"
+   * - lastName
+     - Lastname
+     - "string"
+   * - mobile
+     - MobilePhones.Value
+     - "string"
+   * - phone
+     - OfficePhones.Value
+     - "string"
 
 
 Wave Account to PowerOfficeGov1 Account
