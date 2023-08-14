@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:19:53
+Generated: 2023-08-14 10:20:52
 
 Introduction.
 ------------
@@ -34,6 +34,32 @@ The following properties are synchronized between a Powerofficego Customer and a
 
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
+
+
+Powerofficego Vatcodes to PowerOfficeGov1 Vatcode
+-------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Vatcodes and a PowerOfficeGov1 Vatcode must be established.
+
+A Powerofficego Vatcodes will merge with a PowerOfficeGov1 Vatcode if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcodes Property
+     - PowerOfficeGov1 Vatcode Property
+   * - id
+     - id
+
+Once a link between a Powerofficego Vatcodes and a PowerOfficeGov1 Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Vatcodes and a PowerOfficeGov1 Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcodes Property
+     - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
 
 
