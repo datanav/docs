@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-14 10:39:58
+Generated: 2023-08-14 11:42:59
 
 Introduction.
 ------------
@@ -311,6 +311,31 @@ The following properties are synchronized between a Powerofficego Employee and a
      - "string"
 
 
+Powerofficego Employees to SuperOffice Person
+---------------------------------------------
+Every Powerofficego Employees will be synchronized with a SuperOffice Person.
+
+Once a link between a Powerofficego Employees and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - FirstName
+     - Firstname
+     - "string"
+   * - LastName
+     - Lastname
+     - "string"
+
+
 Powerofficego Supplier to SuperOffice Contact
 ---------------------------------------------
 Every Powerofficego Supplier will be synchronized with a SuperOffice Contact.
@@ -323,6 +348,37 @@ The following properties are synchronized between a Powerofficego Supplier and a
    :header-rows: 1
 
    * - Powerofficego Supplier Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - EmailAddress
+     - Emails.Value
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
+     - "string"
+   * - WebsiteUrl
+     - Domains
+     - "list"
+   * - WebsiteUrl
+     - Urls.Value
+     - "string"
+
+
+Powerofficego Suppliers to SuperOffice Contact
+----------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a SuperOffice Contact.
+
+Once a link between a Powerofficego Suppliers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - EmailAddress
