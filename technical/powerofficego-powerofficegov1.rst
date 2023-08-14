@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:10:50
+Generated: 2023-08-14 09:11:29
 
 Introduction.
 ------------
@@ -37,6 +37,9 @@ The following properties are synchronized between a Powerofficego Customer and a
      - PowerOfficeGov1 Data Type
    * - InternationalIdCountryCode
      - InternationalIdCountryCode
+     - "string"
+   * - InvoiceEmailAddressCC
+     - InvoiceEmailAddressCC
      - "string"
    * - LastName
      - LastName
