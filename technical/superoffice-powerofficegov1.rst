@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 10:21:50
+Generated: 2023-08-14 10:32:51
 
 Introduction.
 ------------
@@ -740,6 +740,164 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
 
 
+SuperOffice Listproductcategoryitems to PowerOfficeGov1 Productgroup
+--------------------------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a PowerOfficeGov1 Productgroup.
+
+Once a link between a SuperOffice Listproductcategoryitems and a PowerOfficeGov1 Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a PowerOfficeGov1 Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     - PowerOfficeGov1 Productgroup Property
+     - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Name
+     - name
+     - "string"
+
+
+SuperOffice Person to PowerOfficeGov1 Address
+---------------------------------------------
+Every SuperOffice Person will be synchronized with a PowerOfficeGov1 Address.
+
+Once a link between a SuperOffice Person and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGov1 Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Data Type
+
+
+SuperOffice Product to PowerOfficeGov1 Product
+----------------------------------------------
+Every SuperOffice Product will be synchronized with a PowerOfficeGov1 Product.
+
+If a matching PowerOfficeGov1 Product already exists, the SuperOffice Product will be merged with the existing one.
+If no matching PowerOfficeGov1 Product is found, a new PowerOfficeGov1 Product will be created.
+
+A SuperOffice Product will merge with a PowerOfficeGov1 Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - PowerOfficeGov1 Product Property
+   * - ProductId
+     - ProductId
+   * - ERPProductKey
+     - number
+   * - ERPProductKey
+     - ERPProductKey
+
+Once a link between a SuperOffice Product and a PowerOfficeGov1 Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a PowerOfficeGov1 Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - PowerOfficeGov1 Product Property
+     - PowerOfficeGov1 Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - ERPPriceListKey
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - ProductCategoryKey
+     - ProductCategoryKey
+     - "string"
+   * - ProductCategoryKey
+     - productGroupId
+     - "string"
+   * - ProductFamilyKey
+     - ProductFamilyKey
+     - "string"
+   * - ProductId
+     - ProductId
+     - "integer"
+   * - ProductTypeKey
+     - ProductTypeKey
+     - "string"
+   * - ProductTypeKey
+     - type
+     - "string"
+   * - QuantityUnit
+     - QuantityUnit
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - QuantityUnit
+     - unitOfMeasureCode
+     - "string"
+   * - Supplier
+     - Supplier
+     - "string"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - UnitCost
+     - "string"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitCost
+     - costPrice
+     - "string"
+   * - UnitListPrice
+     - UnitListPrice
+     - "decimal"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - UnitListPrice
+     - salesPrice
+     - "string"
+   * - UnitListPrice
+     - unitPrice
+     - "string"
+   * - Url
+     - Url
+     - "string"
+   * - VAT
+     - VAT
+     - "integer"
+   * - VAT
+     - vatCode
+     - "string"
+   * - VAT
+     - vatType.id
+     - "integer"
+
+
 SuperOffice Product to PowerOfficeGov1 Vatcode
 ----------------------------------------------
 Every SuperOffice Product will be synchronized with a PowerOfficeGov1 Vatcode.
@@ -781,6 +939,37 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - VATInfo
      - name
+     - "string"
+
+
+SuperOffice Quoteline to PowerOfficeGov1 Salesorderline
+-------------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a PowerOfficeGov1 Salesorderline.
+
+Once a link between a SuperOffice Quoteline and a PowerOfficeGov1 Salesorderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGov1 Salesorderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - PowerOfficeGov1 Salesorderline Property
+     - PowerOfficeGov1 Data Type
+   * - DiscountPercent
+     - Discount
+     - "string"
+   * - Name
+     - Description
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - VAT
+     - VatReturnSpecification
      - "string"
 
 
