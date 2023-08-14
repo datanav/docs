@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 09:19:06
+Generated: 2023-08-14 10:11:49
 
 Introduction.
 ------------
@@ -734,5 +734,52 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - PowerOfficeGov1 Data Type
    * - Name
      - invoiceComment
+     - "string"
+
+
+SuperOffice User to PowerOfficeGov1 Employee
+--------------------------------------------
+Every SuperOffice User will be synchronized with a PowerOfficeGov1 Employee.
+
+If a matching PowerOfficeGov1 Employee already exists, the SuperOffice User will be merged with the existing one.
+If no matching PowerOfficeGov1 Employee is found, a new PowerOfficeGov1 Employee will be created.
+
+A SuperOffice User will merge with a PowerOfficeGov1 Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - PowerOfficeGov1 Employee Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a PowerOfficeGov1 Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a PowerOfficeGov1 Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - PowerOfficeGov1 Employee Property
+     - PowerOfficeGov1 Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
      - "string"
 
