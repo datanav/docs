@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 15:01:09
+Generated: 2023-08-14 15:01:51
 
 Introduction.
 ------------
@@ -218,4 +218,36 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - OrderNo
      - "string"
+
+
+HubSpot Quotequotetemplateassociation to PowerOfficeGo Outgoinginvoices
+-----------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Ticketcompanyassociation to PowerOfficeGo Outgoinginvoices
+------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Ticketcompanyassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
 
