@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 14:34:33
+Generated: 2023-08-14 14:40:31
 
 Introduction.
 ------------
@@ -223,6 +223,9 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
      - "string"
    * - deliveryDate
      - deliveryAddressCity
+     - "string"
+   * - deliveryDate
+     - sentDateTimeOffset
      - "string"
    * - orders.id
      - OrderNo
