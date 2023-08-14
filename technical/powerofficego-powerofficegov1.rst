@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:10:09
+Generated: 2023-08-14 09:10:50
 
 Introduction.
 ------------
@@ -14,6 +14,16 @@ Powerofficego Customer to PowerOfficeGov1 Customer
 Before any synchronization can take place, a link between a Powerofficego Customer and a PowerOfficeGov1 Customer must be established.
 
 A new PowerOfficeGov1 Customer will be created from a Powerofficego Customer if it is connected to a Powerofficego Customer, Supplier, Customers, or Contactperson that is synchronized into PowerOfficeGov1.
+
+A Powerofficego Customer will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - PowerOfficeGov1 Customer Property
+   * - id
+     - id
 
 Once a link between a Powerofficego Customer and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
