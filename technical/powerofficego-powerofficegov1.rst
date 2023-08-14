@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 08:59:57
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -345,6 +345,54 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - WebUrl
      - "string"
+
+
+Powerofficego Customers to PowerOfficeGov1 Contactperson
+--------------------------------------------------------
+Every Powerofficego Customers will be synchronized with a PowerOfficeGov1 Contactperson.
+
+Once a link between a Powerofficego Customers and a PowerOfficeGov1 Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGov1 Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGov1 Contactperson Property
+     - PowerOfficeGov1 Data Type
+
+
+Powerofficego Customers to PowerOfficeGov1 Customer
+---------------------------------------------------
+Every Powerofficego Customers will be synchronized with a PowerOfficeGov1 Customer.
+
+Once a link between a Powerofficego Customers and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
+
+
+Powerofficego Customers to PowerOfficeGov1 Customers
+----------------------------------------------------
+Every Powerofficego Customers will be synchronized with a PowerOfficeGov1 Customers.
+
+Once a link between a Powerofficego Customers and a PowerOfficeGov1 Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGov1 Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGov1 Customers Property
+     - PowerOfficeGov1 Data Type
 
 
 Powerofficego Employee to PowerOfficeGov1 Employee
