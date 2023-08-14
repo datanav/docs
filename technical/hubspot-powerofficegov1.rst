@@ -2,12 +2,40 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 10:32:58
+Generated: 2023-08-14 12:53:56
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to PowerOfficeGov1. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Account to PowerOfficeGov1 Currency
+-------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Account and a PowerOfficeGov1 Currency must be established.
+
+A HubSpot Account will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - PowerOfficeGov1 Currency Property
+   * - companyCurrency
+     - Code
+   * - companyCurrency
+     - code
+
+Once a link between a HubSpot Account and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a PowerOfficeGov1 Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - PowerOfficeGov1 Currency Property
+     - PowerOfficeGov1 Data Type
+
 
 HubSpot Contact to PowerOfficeGov1 Employee
 -------------------------------------------
@@ -149,6 +177,34 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
+
+
+HubSpot Deal to PowerOfficeGov1 Currency
+----------------------------------------
+Before any synchronization can take place, a link between a HubSpot Deal and a PowerOfficeGov1 Currency must be established.
+
+A HubSpot Deal will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - PowerOfficeGov1 Currency Property
+   * - properties.deal_currency_code
+     - Code
+   * - properties.deal_currency_code
+     - code
+
+Once a link between a HubSpot Deal and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a PowerOfficeGov1 Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - PowerOfficeGov1 Currency Property
+     - PowerOfficeGov1 Data Type
 
 
 HubSpot Company to PowerOfficeGov1 Customer
