@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:16:50
+Generated: 2023-08-14 10:16:53
 
 Introduction.
 ------------
@@ -331,6 +331,27 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
    * - Tripletex Invoice Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - amountExcludingVat
+     - NetAmount
+     - "string"
+   * - changes.timestamp
+     - CreatedDate
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - deliveryDate
+     - SentDate
+     - "string"
+   * - orders.id
+     - OrderNo
+     - "string"
 
 
 Tripletex Order to PowerOfficeGo Salesorder
