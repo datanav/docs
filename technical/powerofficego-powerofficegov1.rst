@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:12:07
+Generated: 2023-08-14 09:19:06
 
 Introduction.
 ------------
@@ -146,6 +146,9 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - id
      - id
      - "string"
+   * - internationalIdNumber (Dependant on having poweroffice-customer in poweroffice-customer:InternationalIdType)
+     - id
+     - "string"
    * - invoiceEmailAddress
      - invoiceEmailAddress
      - "string"
@@ -265,6 +268,9 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - streetAddresses.zipCode
      - streetAddresses.zipCode
+     - "string"
+   * - vatNumber (Dependant on having poweroffice-customer in mailAddress.countryCode)
+     - id
      - "string"
    * - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
      - mailAddress.countryCode
