@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:26:52
+Generated: 2023-08-14 09:27:00
 
 Introduction.
 ------------
@@ -33,6 +33,102 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - InvoiceEmailAddressCC
+     - InvoiceEmailAddressCC
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmailAddress
+     - invoiceEmailAddress
+     - "string"
+   * - invoiceEmailAddressCC
+     - invoiceEmailAddressCC
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - legalName
+     - legalName
+     - "string"
+   * - mailAddress.address1
+     - mailAddress.address1
+     - "string"
+   * - mailAddress.address2
+     - mailAddress.address2
+     - "string"
+   * - mailAddress.address3
+     - mailAddress.address3
+     - "string"
+   * - mailAddress.city
+     - mailAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - mailAddress.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - mailAddress.lastChanged
+     - mailAddress.lastChanged
+     - "string"
+   * - mailAddress.zipCode
+     - mailAddress.zipCode
+     - "string"
+   * - ourReferenceEmployeeCode
+     - ourReferenceEmployeeCode
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
+   * - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
+     - mailAddress.countryCode
+     - "string"
+   * - vatNumber
+     - vatNumber (Dependant on having  in mailAddress.countryCode)
+     - "string"
+   * - websiteUrl
+     - websiteUrl
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Department
