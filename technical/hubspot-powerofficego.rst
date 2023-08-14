@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 14:57:58
+Generated: 2023-08-14 14:58:49
 
 Introduction.
 ------------
@@ -41,4 +41,52 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - properties.deal_currency_code
      - CurrencyCode
      - "string"
+
+
+HubSpot Dealcompanyassociation to PowerOfficeGo Outgoinginvoices
+----------------------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Dealcompanyassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Dealcontactassociation to PowerOfficeGo Outgoinginvoices
+----------------------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Dealcontactassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Lineitem to PowerOfficeGo Outgoinginvoices
+--------------------------------------------------
+Every HubSpot Lineitem will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Lineitem and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
 
