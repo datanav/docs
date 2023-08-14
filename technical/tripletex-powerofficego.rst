@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 14:40:31
+Generated: 2023-08-14 14:49:57
 
 Introduction.
 ------------
@@ -171,67 +171,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - lastName
      - LastName
-     - "string"
-
-
-Tripletex Invoice to PowerOfficeGo Outgoinginvoices
----------------------------------------------------
-Every Tripletex Invoice will be synchronized with a PowerOfficeGo Outgoinginvoices.
-
-Once a link between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoices:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Invoice Property
-     - PowerOfficeGo Outgoinginvoices Property
-     - PowerOfficeGo Data Type
-   * - amountExcludingVat
-     - NetAmount
-     - "string"
-   * - amountExcludingVat
-     - isCreatedByCurrentIntegration
-     - "string"
-   * - changes.timestamp
-     - CreatedDate
-     - "string"
-   * - changes.timestamp
-     - createdDateTimeOffset
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - currency.id
-     - currencyCode
-     - "string"
-   * - customer.id
-     - CustomerCode
-     - "string"
-   * - customer.id
-     - customMatchingReference
-     - "string"
-   * - customer.id
-     - customerId
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
-     - "string"
-   * - deliveryDate
-     - SentDate
-     - "string"
-   * - deliveryDate
-     - deliveryAddressCity
-     - "string"
-   * - deliveryDate
-     - sentDateTimeOffset
-     - "string"
-   * - orders.id
-     - OrderNo
-     - "string"
-   * - orders.id
-     - lastChangedDateTimeOffset
      - "string"
 
 
