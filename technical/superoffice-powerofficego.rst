@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-14 10:21:50
+Generated: 2023-08-14 10:22:32
 
 Introduction.
 ------------
@@ -143,6 +143,12 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice Quotealternative to PowerOfficeGo Vatcodes
@@ -159,6 +165,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice Quoteline to PowerOfficeGo Salesorderline
@@ -206,6 +218,12 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice User to PowerOfficeGo Employees
