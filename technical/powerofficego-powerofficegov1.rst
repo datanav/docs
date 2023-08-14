@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:32:51
+Generated: 2023-08-14 10:39:58
 
 Introduction.
 ------------
@@ -112,34 +112,6 @@ The following properties are synchronized between a Powerofficego Supplier and a
      - "list"
    * - WebsiteUrl
      - Urls.Value
-     - "string"
-
-
-Powerofficego Contactperson to PowerOfficeGov1 Customer
--------------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a PowerOfficeGov1 Customer.
-
-Once a link between a Powerofficego Contactperson and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGov1 Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - PowerOfficeGov1 Customer Property
-     - PowerOfficeGov1 Data Type
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - emailAddress
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - LastName
      - "string"
 
 
