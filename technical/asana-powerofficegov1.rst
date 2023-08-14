@@ -2,7 +2,7 @@
 Asana to PowerOfficeGov1 Dataflow
 =================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:49:58
 
 Introduction.
 ------------
@@ -71,6 +71,9 @@ The following properties are synchronized between a Asana Users and a PowerOffic
    * - Asana Users Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - email
+     - email
+     - "string"
 
 
 Asana Workspaces to PowerOfficeGov1 Companies
