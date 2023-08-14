@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -41,6 +41,42 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - PowerOfficeGov1 Contactperson Property
      - PowerOfficeGov1 Data Type
+   * - address1
+     - address1
+     - "string"
+   * - address2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - lastName
+     - "string"
+   * - partyId
+     - partyId
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - residenceCountryCode
+     - residenceCountryCode
+     - "string"
+   * - zipCode
+     - zipCode
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Contactperson
@@ -57,6 +93,18 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Contactperson Property
      - PowerOfficeGov1 Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Customer
@@ -73,6 +121,171 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - InvoiceEmailAddressCC
+     - InvoiceEmailAddressCC
+     - "string"
+   * - InvoiceEmailAddressCC
+     - invoiceEmail
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmailAddress
+     - invoiceEmailAddress
+     - "string"
+   * - invoiceEmailAddressCC
+     - invoiceEmailAddressCC
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - legalName
+     - legalName
+     - "string"
+   * - legalName
+     - name
+     - "string"
+   * - mailAddress.address1
+     - mailAddress.address1
+     - "string"
+   * - mailAddress.address1
+     - postalAddress.addressLine1
+     - "string"
+   * - mailAddress.address2
+     - mailAddress.address2
+     - "string"
+   * - mailAddress.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - mailAddress.address3
+     - mailAddress.address3
+     - "string"
+   * - mailAddress.city
+     - mailAddress.city
+     - "string"
+   * - mailAddress.city
+     - postalAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - mailAddress.countryCode
+     - postalAddress.country.id
+     - "integer"
+   * - mailAddress.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - mailAddress.lastChanged
+     - mailAddress.lastChanged
+     - "string"
+   * - mailAddress.zipCode
+     - mailAddress.zipCode
+     - "string"
+   * - mailAddress.zipCode
+     - postalAddress.postalCode
+     - "string"
+   * - ourReferenceEmployeeCode
+     - accountManager.id
+     - "integer"
+   * - ourReferenceEmployeeCode
+     - ourReferenceEmployeeCode
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - streetAddresses.address1
+     - address.addressLine1
+     - "string"
+   * - streetAddresses.address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - address.addressLine2
+     - "string"
+   * - streetAddresses.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - address.city
+     - "string"
+   * - streetAddresses.city
+     - physicalAddress.city
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - address.country.code
+     - "string"
+   * - streetAddresses.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - streetAddresses.countryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - address.postalCode
+     - "string"
+   * - streetAddresses.zipCode
+     - physicalAddress.postalCode
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
+   * - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
+     - mailAddress.countryCode
+     - "string"
+   * - vatNumber (Dependant on having NO in mailAddress.countryCode)
+     - organizationNumber
+     - "replace"," ","", "string"]
+   * - vatNumber
+     - vatNumber (Dependant on having  in mailAddress.countryCode)
+     - "string"
+   * - websiteUrl
+     - website
+     - "string"
+   * - websiteUrl
+     - websiteUrl
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Customers
@@ -89,6 +302,15 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customers Property
      - PowerOfficeGov1 Data Type
+   * - internationalIdNumber (Dependant on having wd:Q11994066 in poweroffice-customer:InternationalIdType)
+     - OrgNumber
+     - "string"
+   * - vatNumber (Dependant on having wd:Q11994066 in mailAddress.countryCode)
+     - OrgNumber
+     - "string"
+   * - websiteUrl
+     - WebUrl
+     - "string"
 
 
 Powerofficego Employee to PowerOfficeGov1 Employee
@@ -232,6 +454,39 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoice Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - CurrencyCode
+     - currency.code
+     - "string"
+   * - CurrencyCode
+     - currency.id
+     - "integer"
+   * - CustomerCode
+     - customer.id
+     - "string"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - NetAmount
+     - amountExcludingVat
+     - "integer"
+   * - OrderNo
+     - orders.id
+     - "integer"
+   * - SentDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - outgoingInvoiceLines.Description
+     - items.description
+     - "string"
+   * - outgoingInvoiceLines.ExternalImportLineReference
+     - items.price
+     - "float"
+   * - outgoingInvoiceLines.Quantity
+     - items.quantity
+     - "float"
+   * - outgoingInvoiceLines.UnitPrice
+     - items.price
+     - "float"
 
 
 Powerofficego Outgoinginvoice to PowerOfficeGov1 Outgoinginvoice
@@ -248,6 +503,147 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoice Property
      - PowerOfficeGov1 Outgoinginvoice Property
      - PowerOfficeGov1 Data Type
+   * - CreatedDate
+     - CreatedDate
+     - "string"
+   * - CurrencyCode
+     - CurrencyCode
+     - "string"
+   * - CustomerCode
+     - CustomerCode
+     - "string"
+   * - CustomerEmail
+     - CustomerEmail
+     - "string"
+   * - DeliveryAddress1
+     - DeliveryAddress1
+     - "string"
+   * - DeliveryAddress2
+     - DeliveryAddress2
+     - "string"
+   * - DeliveryAddressCity
+     - DeliveryAddressCity
+     - "string"
+   * - DeliveryAddressCountryCode
+     - DeliveryAddressCountryCode
+     - "string"
+   * - DeliveryAddressZipCode
+     - DeliveryAddressZipCode
+     - "string"
+   * - DeliveryDate
+     - DeliveryDate
+     - "string"
+   * - DeliveryDate
+     - SentDate
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - NetAmount
+     - NetAmount
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
+   * - OrderNo
+     - OrderNo
+     - "string"
+   * - OurReferenceEmployeeCode
+     - OurReferenceEmployeeCode
+     - "string"
+   * - OutgoingInvoiceLines
+     - OutgoingInvoiceLines
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - OutgoingInvoiceLines
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - SentDate
+     - DeliveryDate
+     - "string"
+   * - SentDate
+     - SentDate
+     - "string"
+   * - outgoingInvoiceLines.Description
+     - outgoingInvoiceLines.Description
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.Dim3Code
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.ExternalImportLineReference
+     - outgoingInvoiceLines.ExternalImportLineReference
+     - "string"
+   * - outgoingInvoiceLines.ExternalImportLineReference
+     - outgoingInvoiceLines.UnitPrice
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.Id
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.IsDeleted
+     - outgoingInvoiceLines.IsDeleted
+     - "string"
+   * - outgoingInvoiceLines.IsDeleted
+     - outgoingInvoiceLines.VatCode
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - OutgoingInvoiceLines
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.Dim3Code
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.Id
+     - "string"
+   * - outgoingInvoiceLines.ProductCode
+     - outgoingInvoiceLines.ProductCode
+     - "string"
+   * - outgoingInvoiceLines.Quantity
+     - outgoingInvoiceLines.Quantity
+     - "string"
+   * - outgoingInvoiceLines.SalesPersonEmployeeCode
+     - outgoingInvoiceLines.SalesPersonEmployeeCode
+     - "string"
+   * - outgoingInvoiceLines.SortOrder
+     - outgoingInvoiceLines.SortOrder
+     - "string"
+   * - outgoingInvoiceLines.UnitPrice
+     - outgoingInvoiceLines.ExternalImportLineReference
+     - "string"
+   * - outgoingInvoiceLines.UnitPrice
+     - outgoingInvoiceLines.UnitPrice
+     - "string"
+   * - outgoingInvoiceLines.VatCode
+     - outgoingInvoiceLines.IsDeleted
+     - "string"
+   * - outgoingInvoiceLines.VatCode
+     - outgoingInvoiceLines.VatCode
+     - "string"
 
 
 Powerofficego Product to PowerOfficeGov1 Product
@@ -406,6 +802,9 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Powerofficego Productgroup Property
      - PowerOfficeGov1 Listproductcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Powerofficego Productgroup to PowerOfficeGov1 Productgroup
@@ -422,6 +821,18 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Powerofficego Productgroup Property
      - PowerOfficeGov1 Productgroup Property
      - PowerOfficeGov1 Data Type
+   * - Code
+     - Code
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - Type
+     - Type
+     - "string"
 
 
 Powerofficego Salesorder to PowerOfficeGov1 Invoice
@@ -438,6 +849,18 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - Currency
+     - currency.code
+     - "string"
+   * - Currency
+     - currency.id
+     - "integer"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - DepartmentCode
+     - customer.id
+     - "string"
 
 
 Powerofficego Salesorder to PowerOfficeGov1 Order
@@ -454,6 +877,18 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
+   * - Currency
+     - currency.id
+     - "integer"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - DepartmentCode
+     - customer.id
+     - "integer"
+   * - OrderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Powerofficego Salesorder to PowerOfficeGov1 Salesorder
@@ -470,6 +905,27 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - PowerOfficeGov1 Salesorder Property
      - PowerOfficeGov1 Data Type
+   * - ContactPersonId
+     - ContactPersonId
+     - "string"
+   * - Currency
+     - Currency
+     - "string"
+   * - DeliveryDate
+     - DeliveryDate
+     - "string"
+   * - DepartmentCode
+     - DepartmentCode
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
+   * - SalesOrderLines
+     - SalesOrderLines
+     - "string"
+   * - SalesPersonEmployeeNo
+     - SalesPersonEmployeeNo
+     - "string"
 
 
 Powerofficego Salesorderline to PowerOfficeGov1 Orderline
@@ -486,6 +942,21 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderline Property
      - PowerOfficeGov1 Orderline Property
      - PowerOfficeGov1 Data Type
+   * - Description
+     - description
+     - "string"
+   * - Discount
+     - discount
+     - "float"
+   * - Quantity
+     - count
+     - "float"
+   * - SalesOrderLineUnitPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VatReturnSpecification
+     - vatType.id
+     - "integer"
 
 
 Powerofficego Salesorderline to PowerOfficeGov1 Quoteline
@@ -502,6 +973,21 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderline Property
      - PowerOfficeGov1 Quoteline Property
      - PowerOfficeGov1 Data Type
+   * - Description
+     - Name
+     - "string"
+   * - Discount
+     - DiscountPercent
+     - "integer"
+   * - Quantity
+     - Quantity
+     - "integer"
+   * - SalesOrderLineUnitPrice
+     - UnitListPrice
+     - "string"
+   * - VatReturnSpecification
+     - VAT
+     - "integer"
 
 
 Powerofficego Salesorderline to PowerOfficeGov1 Salesorderline
@@ -518,6 +1004,27 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderline Property
      - PowerOfficeGov1 Salesorderline Property
      - PowerOfficeGov1 Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Discount
+     - Discount
+     - "string"
+   * - ProductCode
+     - ProductCode
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - SalesOrderLineUnitPrice
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - SortOrder
+     - SortOrder
+     - "string"
+   * - VatReturnSpecification
+     - VatReturnSpecification
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGov1 Supplier
@@ -534,6 +1041,39 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LegalName
+     - LegalName
+     - "string"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGov1 Vendor
@@ -550,6 +1090,12 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - PowerOfficeGov1 Vendor Property
      - PowerOfficeGov1 Data Type
+   * - LegalName
+     - name
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
 
 Powerofficego Vatcode to PowerOfficeGov1 Vatcode
