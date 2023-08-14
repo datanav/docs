@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 14:58:57
+Generated: 2023-08-14 14:59:52
 
 Introduction.
 ------------
@@ -98,4 +98,52 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
    * - properties.createdate
      - createdDateTimeOffset
      - "string"
+
+
+HubSpot Lineitemdealassociation to PowerOfficeGo Outgoinginvoices
+-----------------------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Lineitemdealassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Lineitemquoteassociation to PowerOfficeGo Outgoinginvoices
+------------------------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Lineitemquoteassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Quote to PowerOfficeGo Outgoinginvoices
+-----------------------------------------------
+Every HubSpot Quote will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Quote and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
 
