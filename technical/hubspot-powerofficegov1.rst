@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:50:56
 
 Introduction.
 ------------
@@ -58,6 +58,42 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
 
    * - HubSpot Contact Property
      - PowerOfficeGov1 Person Property
+     - PowerOfficeGov1 Data Type
+
+
+HubSpot Company to PowerOfficeGov1 Customer
+-------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGov1 Customer must be established.
+
+A new PowerOfficeGov1 Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGov1.
+
+Once a link between a HubSpot Company and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
+
+
+HubSpot Contact to PowerOfficeGov1 Contact
+------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a PowerOfficeGov1 Contact must be established.
+
+A new PowerOfficeGov1 Contact will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGov1.
+
+Once a link between a HubSpot Contact and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
 
 
