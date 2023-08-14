@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-07 13:08:37
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -169,6 +169,38 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - vatNumber (Dependant on having NO in mailAddress.countryCode)
      - organizationNumber
      - "replace"," ","", "string"]
+
+
+Powerofficego Customers to Tripletex Contact
+--------------------------------------------
+Every Powerofficego Customers will be synchronized with a Tripletex Contact.
+
+Once a link between a Powerofficego Customers and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
+
+
+Powerofficego Customers to Tripletex Customer
+---------------------------------------------
+Every Powerofficego Customers will be synchronized with a Tripletex Customer.
+
+Once a link between a Powerofficego Customers and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
 
 
 Powerofficego Employee to Tripletex Employee
