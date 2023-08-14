@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-08-08 10:07:35
+Generated: 2023-08-14 10:03:59
 
 Introduction.
 ------------
@@ -159,6 +159,40 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - streetAddresses.zipCode
      - properties.zip
+     - "string"
+
+
+Powerofficego Customers to HubSpot Contact
+------------------------------------------
+Every Powerofficego Customers will be synchronized with a HubSpot Contact.
+
+Once a link between a Powerofficego Customers and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - LastName
+     - properties.lastname
+     - "string"
+   * - dateOfBirth
+     - properties.date_of_birth
+     - "string"
+   * - emailAddress
+     - properties.email
+     - "string"
+   * - firstName
+     - properties.firstname
+     - "string"
+   * - mailAddress.countryCode
+     - properties.country
+     - "string"
+   * - streetAddresses.countryCode
+     - properties.country
      - "string"
 
 
