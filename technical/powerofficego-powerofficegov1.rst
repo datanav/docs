@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:01:50
+Generated: 2023-08-14 09:02:09
 
 Introduction.
 ------------
@@ -361,6 +361,18 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGov1 Contactperson Property
      - PowerOfficeGov1 Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
 
 
 Powerofficego Customers to PowerOfficeGov1 Customer
@@ -377,6 +389,171 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - InvoiceEmailAddressCC
+     - InvoiceEmailAddressCC
+     - "string"
+   * - InvoiceEmailAddressCC
+     - invoiceEmail
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmailAddress
+     - invoiceEmailAddress
+     - "string"
+   * - invoiceEmailAddressCC
+     - invoiceEmailAddressCC
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - legalName
+     - legalName
+     - "string"
+   * - legalName
+     - name
+     - "string"
+   * - mailAddress.address1
+     - mailAddress.address1
+     - "string"
+   * - mailAddress.address1
+     - postalAddress.addressLine1
+     - "string"
+   * - mailAddress.address2
+     - mailAddress.address2
+     - "string"
+   * - mailAddress.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - mailAddress.address3
+     - mailAddress.address3
+     - "string"
+   * - mailAddress.city
+     - mailAddress.city
+     - "string"
+   * - mailAddress.city
+     - postalAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - mailAddress.countryCode
+     - postalAddress.country.id
+     - "integer"
+   * - mailAddress.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - mailAddress.lastChanged
+     - mailAddress.lastChanged
+     - "string"
+   * - mailAddress.zipCode
+     - mailAddress.zipCode
+     - "string"
+   * - mailAddress.zipCode
+     - postalAddress.postalCode
+     - "string"
+   * - ourReferenceEmployeeCode
+     - accountManager.id
+     - "integer"
+   * - ourReferenceEmployeeCode
+     - ourReferenceEmployeeCode
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - streetAddresses.address1
+     - address.addressLine1
+     - "string"
+   * - streetAddresses.address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - address.addressLine2
+     - "string"
+   * - streetAddresses.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - address.city
+     - "string"
+   * - streetAddresses.city
+     - physicalAddress.city
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - address.country.code
+     - "string"
+   * - streetAddresses.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - streetAddresses.countryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - address.postalCode
+     - "string"
+   * - streetAddresses.zipCode
+     - physicalAddress.postalCode
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
+   * - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
+     - mailAddress.countryCode
+     - "string"
+   * - vatNumber (Dependant on having NO in mailAddress.countryCode)
+     - organizationNumber
+     - "replace"," ","", "string"]
+   * - vatNumber
+     - vatNumber (Dependant on having  in mailAddress.countryCode)
+     - "string"
+   * - websiteUrl
+     - website
+     - "string"
+   * - websiteUrl
+     - websiteUrl
+     - "string"
 
 
 Powerofficego Customers to PowerOfficeGov1 Customers
@@ -393,6 +570,15 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGov1 Customers Property
      - PowerOfficeGov1 Data Type
+   * - internationalIdNumber (Dependant on having wd:Q11994066 in poweroffice-customer:InternationalIdType)
+     - OrgNumber
+     - "string"
+   * - vatNumber (Dependant on having wd:Q11994066 in mailAddress.countryCode)
+     - OrgNumber
+     - "string"
+   * - websiteUrl
+     - WebUrl
+     - "string"
 
 
 Powerofficego Employee to PowerOfficeGov1 Employee
