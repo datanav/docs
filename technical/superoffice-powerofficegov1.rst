@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 09:03:43
+Generated: 2023-08-14 09:03:59
 
 Introduction.
 ------------
@@ -47,26 +47,53 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Address.Postal.Address2
      - Address.Postal.Address2
      - "string"
+   * - Address.Postal.Address2
+     - Address.Street.Address2
+     - "string"
    * - Address.Postal.Address3
      - Address.Postal.Address3
+     - "string"
+   * - Address.Postal.Address3
+     - Address.Street.Address3
      - "string"
    * - Address.Postal.City
      - Address.Postal.City
      - "string"
+   * - Address.Postal.City
+     - Address.Street.City
+     - "string"
    * - Address.Postal.Zipcode
      - Address.Postal.Zipcode
+     - "string"
+   * - Address.Postal.Zipcode
+     - Address.Street.Zipcode
+     - "string"
+   * - Address.Street.Address1
+     - Address.Postal.Address1
      - "string"
    * - Address.Street.Address1
      - Address.Street.Address1
      - "string"
    * - Address.Street.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - Address.Street.Address2
      - Address.Street.Address2
+     - "string"
+   * - Address.Street.Address3
+     - Address.Postal.Address3
      - "string"
    * - Address.Street.Address3
      - Address.Street.Address3
      - "string"
    * - Address.Street.City
+     - Address.Postal.City
+     - "string"
+   * - Address.Street.City
      - Address.Street.City
+     - "string"
+   * - Address.Street.Zipcode
+     - Address.Postal.Zipcode
      - "string"
    * - Address.Street.Zipcode
      - Address.Street.Zipcode
@@ -145,14 +172,23 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Address.Postal.Address1
      - postalAddress.addressLine1
      - "string"
+   * - Address.Postal.Address1
+     - streetAddresses.address1
+     - "string"
    * - Address.Postal.Address2
      - mailAddress.address2
      - "string"
    * - Address.Postal.Address2
      - postalAddress.addressLine2
      - "string"
+   * - Address.Postal.Address2
+     - streetAddresses.address2
+     - "string"
    * - Address.Postal.Address3
      - mailAddress.address3
+     - "string"
+   * - Address.Postal.Address3
+     - streetAddresses.address3
      - "string"
    * - Address.Postal.City
      - mailAddress.city
@@ -160,14 +196,23 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Address.Postal.City
      - postalAddress.city
      - "string"
+   * - Address.Postal.City
+     - streetAddresses.city
+     - "string"
    * - Address.Postal.Zipcode
      - mailAddress.zipCode
      - "string"
    * - Address.Postal.Zipcode
      - postalAddress.postalCode
      - "string"
+   * - Address.Postal.Zipcode
+     - streetAddresses.zipCode
+     - "string"
    * - Address.Street.Address1
      - address.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - mailAddress.address1
      - "string"
    * - Address.Street.Address1
      - physicalAddress.addressLine1
@@ -179,16 +224,25 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - address.addressLine2
      - "string"
    * - Address.Street.Address2
+     - mailAddress.address2
+     - "string"
+   * - Address.Street.Address2
      - physicalAddress.addressLine2
      - "string"
    * - Address.Street.Address2
      - streetAddresses.address2
      - "string"
    * - Address.Street.Address3
+     - mailAddress.address3
+     - "string"
+   * - Address.Street.Address3
      - streetAddresses.address3
      - "string"
    * - Address.Street.City
      - address.city
+     - "string"
+   * - Address.Street.City
+     - mailAddress.city
      - "string"
    * - Address.Street.City
      - physicalAddress.city
@@ -198,6 +252,9 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - Address.Street.Zipcode
      - address.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - mailAddress.zipCode
      - "string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
