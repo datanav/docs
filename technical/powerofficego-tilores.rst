@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-08-14 09:27:00
+Generated: 2023-08-14 11:42:59
 
 Introduction.
 ------------
@@ -141,6 +141,49 @@ The following properties are synchronized between a Powerofficego Employee and a
    :header-rows: 1
 
    * - Powerofficego Employee Property
+     - Tilores Human Property
+     - Tilores Data Type
+   * - DateOfBirth
+     - dateOfBirth
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - MailAddress.City
+     - city
+     - "string"
+   * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - streetAddresses.city
+     - city
+     - "string"
+   * - streetAddresses.zipCode
+     - postalCode
+     - "string"
+
+
+Powerofficego Employees to Tilores Human
+----------------------------------------
+Every Powerofficego Employees will be synchronized with a Tilores Human.
+
+Once a link between a Powerofficego Employees and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
      - Tilores Human Property
      - Tilores Data Type
    * - DateOfBirth
