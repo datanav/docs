@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-14 10:12:01
 
 Introduction.
 ------------
@@ -33,6 +33,15 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGo Customer
