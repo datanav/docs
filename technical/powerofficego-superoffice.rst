@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-14 10:04:58
+Generated: 2023-08-14 10:39:58
 
 Introduction.
 ------------
@@ -98,6 +98,24 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - Urls.Value
      - "string"
+
+
+Powerofficego Productgroup to SuperOffice Listproductcategoryitems
+------------------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems must be established.
+
+A new SuperOffice Listproductcategoryitems will be created from a Powerofficego Productgroup if it is connected to a Powerofficego Product that is synchronized into SuperOffice.
+
+Once a link between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Productgroup Property
+     - SuperOffice Listproductcategoryitems Property
+     - SuperOffice Data Type
 
 
 Powerofficego Contactperson to SuperOffice Person
@@ -322,121 +340,4 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - WebsiteUrl
      - Urls.Value
      - "string"
-
-
-Powerofficego Product to SuperOffice Product
---------------------------------------------
-Every Powerofficego Product will be synchronized with a SuperOffice Product.
-
-Once a link between a Powerofficego Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - CostPrice
-     - UnitCost
-     - "string"
-   * - Description
-     - Description
-     - "string"
-   * - Name
-     - Name
-     - "string"
-   * - ProductGroupId
-     - ProductCategoryKey
-     - "string"
-   * - SalesPrice
-     - UnitListPrice
-     - "decimal"
-   * - Type
-     - ProductTypeKey
-     - "string"
-   * - Unit
-     - QuantityUnit
-     - "string"
-   * - VatCode
-     - VAT
-     - "integer"
-   * - costPrice
-     - UnitCost
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - productGroupId
-     - ProductCategoryKey
-     - "string"
-   * - salesPrice
-     - UnitListPrice
-     - "decimal"
-   * - type
-     - ProductTypeKey
-     - "string"
-   * - unit
-     - QuantityUnit
-     - "string"
-   * - unitOfMeasureCode
-     - QuantityUnit
-     - "string"
-   * - vatCode
-     - VAT
-     - "integer"
-
-
-Powerofficego Productgroup to SuperOffice Listproductcategoryitems
-------------------------------------------------------------------
-Every Powerofficego Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
-
-Once a link between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Productgroup and a SuperOffice Listproductcategoryitems:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Productgroup Property
-     - SuperOffice Listproductcategoryitems Property
-     - SuperOffice Data Type
-   * - Name
-     - Name
-     - "string"
-
-
-Powerofficego Salesorderline to SuperOffice Quoteline
------------------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a SuperOffice Quoteline.
-
-Once a link between a Powerofficego Salesorderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a SuperOffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - SuperOffice Quoteline Property
-     - SuperOffice Data Type
-   * - Description
-     - Name
-     - "string"
-   * - Discount
-     - DiscountPercent
-     - "integer"
-   * - Quantity
-     - Quantity
-     - "integer"
-   * - SalesOrderLineUnitPrice
-     - UnitListPrice
-     - "string"
-   * - VatReturnSpecification
-     - VAT
-     - "integer"
 
