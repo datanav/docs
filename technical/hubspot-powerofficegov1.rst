@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -167,6 +167,93 @@ The following properties are synchronized between a HubSpot Company and a PowerO
    * - HubSpot Company Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - address.addressLine1
+     - "string"
+   * - properties.address
+     - physicalAddress.addressLine1
+     - "string"
+   * - properties.address
+     - streetAddresses.address1
+     - "string"
+   * - properties.address2
+     - address.addressLine2
+     - "string"
+   * - properties.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - properties.address2
+     - streetAddresses.address2
+     - "string"
+   * - properties.city
+     - address.city
+     - "string"
+   * - properties.city
+     - physicalAddress.city
+     - "string"
+   * - properties.city
+     - streetAddresses.city
+     - "string"
+   * - properties.country
+     - address.country.code
+     - "string"
+   * - properties.country
+     - mailAddress.countryCode
+     - "string"
+   * - properties.country
+     - physicalAddress.country.id
+     - "integer"
+   * - properties.country
+     - streetAddresses.countryCode
+     - "string"
+   * - properties.description
+     - internalNotes
+     - "string"
+   * - properties.industry
+     - mailAddress.countryCode
+     - "string"
+   * - properties.industry
+     - streetAddresses.countryCode
+     - "string"
+   * - properties.name
+     - legalName
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.phone
+     - phone
+     - "string"
+   * - properties.phone
+     - phoneNumber
+     - "string"
+   * - properties.type
+     - mailAddress.countryCode
+     - "string"
+   * - properties.type
+     - streetAddresses.countryCode
+     - "string"
+   * - properties.website
+     - website
+     - "string"
+   * - properties.website
+     - websiteUrl
+     - "string"
+   * - properties.zip
+     - address.postalCode
+     - "string"
+   * - properties.zip
+     - physicalAddress.postalCode
+     - "string"
+   * - properties.zip
+     - streetAddresses.zipCode
+     - "string"
+   * - updatedAt
+     - lastChanged
+     - "string"
 
 
 HubSpot Contact to PowerOfficeGov1 Contact
@@ -185,6 +272,21 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - firstName
+     - "string"
+   * - properties.lastname
+     - lastName
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - properties.phone
+     - phoneNumberWork
+     - "string"
 
 
 HubSpot Account to PowerOfficeGov1 Teams
@@ -217,6 +319,24 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - properties.amount
+     - amountExcludingVat
+     - "integer"
+   * - properties.closedate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.deal_currency_code
+     - currency.code
+     - "string"
+   * - properties.deal_currency_code
+     - currency.id
+     - "integer"
+   * - properties.dealname
+     - memo
+     - "string"
+   * - properties.description
+     - memo
+     - "string"
 
 
 HubSpot Deal to PowerOfficeGov1 Order
@@ -233,6 +353,15 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
+   * - properties.closedate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.closedate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.deal_currency_code
+     - currency.id
+     - "integer"
 
 
 HubSpot Deal to PowerOfficeGov1 Salesorder
@@ -249,6 +378,15 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOfficeGov1 Salesorder Property
      - PowerOfficeGov1 Data Type
+   * - properties.closedate
+     - DeliveryDate
+     - "string"
+   * - properties.closedate
+     - OrderDate
+     - "string"
+   * - properties.deal_currency_code
+     - Currency
+     - "string"
 
 
 HubSpot Lineitemdealassociation to PowerOfficeGov1 Orderline
@@ -265,6 +403,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - PowerOfficeGov1 Orderline Property
      - PowerOfficeGov1 Data Type
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - order.id
+     - "integer"
 
 
 HubSpot Lineitemdealassociation to PowerOfficeGov1 Quoteline
@@ -281,6 +422,9 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - PowerOfficeGov1 Quoteline Property
      - PowerOfficeGov1 Data Type
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - QuoteAlternativeId
+     - "integer"
 
 
 HubSpot Lineitemdealassociation to PowerOfficeGov1 Salesorderline
@@ -313,6 +457,39 @@ The following properties are synchronized between a HubSpot Product and a PowerO
    * - HubSpot Product Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - properties.description
+     - Description
+     - "string"
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - UnitCost
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "integer"
+   * - properties.hs_cost_of_goods_sold
+     - costPrice
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - UnitListPrice
+     - "decimal"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
+   * - properties.price
+     - salesPrice
+     - "string"
+   * - properties.price
+     - unitPrice
+     - "string"
 
 
 HubSpot Ticket to PowerOfficeGov1 Tickets
@@ -329,4 +506,10 @@ The following properties are synchronized between a HubSpot Ticket and a PowerOf
    * - HubSpot Ticket Property
      - PowerOfficeGov1 Tickets Property
      - PowerOfficeGov1 Data Type
+   * - properties.hubspot_owner_id
+     - requester_id
+     - "string"
+   * - properties.subject
+     - subject
+     - "string"
 
