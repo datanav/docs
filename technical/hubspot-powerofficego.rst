@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 14:58:49
+Generated: 2023-08-14 14:58:57
 
 Introduction.
 ------------
@@ -57,6 +57,9 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customerId
+     - "string"
 
 
 HubSpot Dealcontactassociation to PowerOfficeGo Outgoinginvoices
@@ -73,6 +76,9 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customerId
+     - "string"
 
 
 HubSpot Lineitem to PowerOfficeGo Outgoinginvoices
@@ -89,4 +95,7 @@ The following properties are synchronized between a HubSpot Lineitem and a Power
    * - HubSpot Lineitem Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - properties.createdate
+     - createdDateTimeOffset
+     - "string"
 
