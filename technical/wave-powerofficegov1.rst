@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -301,6 +301,18 @@ The following properties are synchronized between a Wave Account and a PowerOffi
    * - Wave Account Property
      - PowerOfficeGov1 Account Property
      - PowerOfficeGov1 Data Type
+   * - business.id
+     - business.id
+     - "string"
+   * - currency.code
+     - currency.code
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Wave Business to PowerOfficeGov1 Teams
@@ -317,6 +329,12 @@ The following properties are synchronized between a Wave Business and a PowerOff
    * - Wave Business Property
      - PowerOfficeGov1 Teams Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - website
+     - permalink_url
+     - "string"
 
 
 Wave Customer to PowerOfficeGov1 Customer
@@ -333,6 +351,126 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.city
+     - streetAddresses.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.country.code
+     - streetAddresses.countryCode
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - address.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - address.province
+     - address.province
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - fax
+     - fax
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - internalNotes
+     - internalNotes
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - mobile
+     - "string"
+   * - modifiedAt
+     - lastChanged
+     - "string"
+   * - name
+     - legalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - phone
+     - phone
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - deliveryAddress.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - deliveryAddress.country.id
+     - "string"
+   * - shippingDetails.address.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - shippingDetails.phone
+     - phone
+     - "string"
+   * - shippingDetails.phone
+     - phoneNumber
+     - "string"
+   * - tollFree
+     - tollFree
+     - "string"
+   * - website
+     - website
+     - "string"
+   * - website
+     - websiteUrl
+     - "string"
 
 
 Wave Customer to PowerOfficeGov1 Customers
@@ -349,6 +487,9 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOfficeGov1 Customers Property
      - PowerOfficeGov1 Data Type
+   * - website
+     - WebUrl
+     - "string"
 
 
 Wave Invoice to PowerOfficeGov1 Invoice
@@ -365,6 +506,48 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - currency.code
+     - currency.code
+     - "string"
+   * - currency.code
+     - currency.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - dueDate
+     - dueDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - dueDate
+     - invoiceDueDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceDate
+     - invoiceDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - items.description
+     - items.description
+     - "string"
+   * - items.price
+     - items.price
+     - "float"
+   * - items.product.id
+     - items.product.id
+     - "string"
+   * - items.quantity
+     - items.quantity
+     - "float"
+   * - memo
+     - memo
+     - "string"
+   * - poNumber
+     - poNumber
+     - "string"
+   * - title
+     - title
+     - "string"
+   * - total.value
+     - amountExcludingVat
+     - "integer"
 
 
 Wave Invoice to PowerOfficeGov1 Order
@@ -381,6 +564,18 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
+   * - currency.code
+     - currency.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "integer"
+   * - poNumber
+     - reference
+     - "string"
+   * - title
+     - invoiceComment
+     - "string"
 
 
 Wave Invoice to PowerOfficeGov1 Salesorder
@@ -397,6 +592,12 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOfficeGov1 Salesorder Property
      - PowerOfficeGov1 Data Type
+   * - currency.code
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
 
 
 Wave Product to PowerOfficeGov1 Product
@@ -413,6 +614,39 @@ The following properties are synchronized between a Wave Product and a PowerOffi
    * - Wave Product Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - expenseAccount.id
+     - expenseAccount.id
+     - "string"
+   * - incomeAccount.id
+     - incomeAccount.id
+     - "string"
+   * - modifiedAt
+     - lastChanged
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - UnitListPrice
+     - "decimal"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - unitPrice
+     - salesPrice
+     - "string"
+   * - unitPrice
+     - unitPrice
+     - "string"
 
 
 Wave Vendor to PowerOfficeGov1 Supplier
@@ -429,6 +663,36 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - website
+     - WebsiteUrl
+     - "string"
 
 
 Wave Vendor to PowerOfficeGov1 Vendor
@@ -445,4 +709,52 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOfficeGov1 Vendor Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - address.province.name
+     - address.province.name
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - fax
+     - fax
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - internalNotes
+     - internalNotes
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - mobile
+     - mobile
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - phone
+     - phone
+     - "string"
+   * - tollFree
+     - tollFree
+     - "string"
+   * - website
+     - website
+     - "string"
 
