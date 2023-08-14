@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:19:53
+Generated: 2023-08-14 10:20:21
 
 Introduction.
 ------------
@@ -438,6 +438,18 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
 
 
 Tripletex Vattype to PowerOfficeGo Vatcode
