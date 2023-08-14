@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:51:46
+Generated: 2023-08-14 08:52:23
 
 Introduction.
 ------------
@@ -109,7 +109,7 @@ SuperOffice Contact to PowerOfficeGov1 Customer
 -----------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGov1 Customer must be established.
 
-A new PowerOfficeGov1 Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Contact, or Ownercontactlink that is synchronized into PowerOfficeGov1.
+A new PowerOfficeGov1 Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Contact, Ownercontactlink, or Quotealternative that is synchronized into PowerOfficeGov1.
 
 A SuperOffice Contact will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
 
@@ -614,6 +614,27 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Name
      - name
      - "string"
+
+
+SuperOffice Person to PowerOfficeGov1 Contact
+---------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a PowerOfficeGov1 Contact must be established.
+
+A new PowerOfficeGov1 Contact will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGov1.
+
+Once a link between a SuperOffice Person and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
+   * - Contact.ContactId
+     - customer.id
+     - "integer"
 
 
 SuperOffice Quotealternative to PowerOfficeGov1 Order
