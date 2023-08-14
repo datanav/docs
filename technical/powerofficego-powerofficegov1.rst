@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:20:52
+Generated: 2023-08-14 10:21:11
 
 Introduction.
 ------------
@@ -61,6 +61,15 @@ The following properties are synchronized between a Powerofficego Vatcodes and a
    * - Powerofficego Vatcodes Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - rate
+     - rate
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Department
