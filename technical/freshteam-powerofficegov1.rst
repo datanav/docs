@@ -2,7 +2,7 @@
 Freshteam to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:51:19
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Freshteam Department and a P
    * - Freshteam Department Property
      - PowerOfficeGov1 Department Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
 
 
 Freshteam Department to PowerOfficeGov1 Departments
@@ -39,6 +42,9 @@ The following properties are synchronized between a Freshteam Department and a P
    * - Freshteam Department Property
      - PowerOfficeGov1 Departments Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Freshteam Employee to PowerOfficeGov1 Employee
