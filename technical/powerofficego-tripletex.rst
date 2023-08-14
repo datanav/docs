@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-14 09:01:50
+Generated: 2023-08-14 09:02:09
 
 Introduction.
 ------------
@@ -185,6 +185,15 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - LastName
+     - lastName
+     - "string"
+   * - emailAddress
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
 
 
 Powerofficego Customers to Tripletex Customer
@@ -201,6 +210,54 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - InvoiceEmailAddressCC
+     - invoiceEmail
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - legalName
+     - name
+     - "string"
+   * - mailAddress.address1
+     - postalAddress.addressLine1
+     - "string"
+   * - mailAddress.address2
+     - postalAddress.addressLine2
+     - "string"
+   * - mailAddress.city
+     - postalAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - postalAddress.country.id
+     - "integer"
+   * - mailAddress.zipCode
+     - postalAddress.postalCode
+     - "string"
+   * - ourReferenceEmployeeCode
+     - accountManager.id
+     - "integer"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - streetAddresses.address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - streetAddresses.address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - streetAddresses.city
+     - physicalAddress.city
+     - "string"
+   * - streetAddresses.countryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - streetAddresses.zipCode
+     - physicalAddress.postalCode
+     - "string"
+   * - vatNumber (Dependant on having NO in mailAddress.countryCode)
+     - organizationNumber
+     - "replace"," ","", "string"]
 
 
 Powerofficego Employee to Tripletex Employee
