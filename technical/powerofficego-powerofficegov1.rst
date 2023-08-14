@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 08:50:56
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -120,6 +120,102 @@ The following properties are synchronized between a Powerofficego Employee and a
    * - Powerofficego Employee Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - DateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - JobTitle
+     - JobTitle
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - MailAddress.Address1
+     - MailAddress.Address1
+     - "string"
+   * - MailAddress.Address1
+     - address.addressLine1
+     - "string"
+   * - MailAddress.Address2
+     - MailAddress.Address2
+     - "string"
+   * - MailAddress.Address2
+     - address.addressLine2
+     - "string"
+   * - MailAddress.Address3
+     - MailAddress.Address3
+     - "string"
+   * - MailAddress.City
+     - MailAddress.City
+     - "string"
+   * - MailAddress.City
+     - address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.CountryCode
+     - "string"
+   * - MailAddress.CountryCode
+     - address.country.id
+     - "integer"
+   * - MailAddress.LastChanged
+     - MailAddress.LastChanged
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.ZipCode
+     - "string"
+   * - MailAddress.ZipCode
+     - address.postalCode
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Powerofficego Outgoinginvoice to PowerOfficeGov1 Invoice
@@ -181,6 +277,87 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - availableStock
+     - availableStock
+     - "string"
+   * - availableStock
+     - stockOfGoods
+     - "integer"
+   * - costPrice
+     - UnitCost
+     - "string"
+   * - costPrice
+     - costExcludingVatCurrency
+     - "integer"
+   * - costPrice
+     - costPrice
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - gtin
+     - ean
+     - "string"
+   * - gtin
+     - gtin
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - productGroupId
+     - ProductCategoryKey
+     - "string"
+   * - productGroupId
+     - productGroupId
+     - "string"
+   * - salesPrice
+     - UnitListPrice
+     - "decimal"
+   * - salesPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - salesPrice
+     - salesPrice
+     - "string"
+   * - salesPrice
+     - unitPrice
+     - "string"
+   * - type
+     - ProductTypeKey
+     - "string"
+   * - type
+     - type
+     - "string"
+   * - unitOfMeasureCode
+     - QuantityUnit
+     - "string"
+   * - unitOfMeasureCode
+     - productUnit.id
+     - "integer"
+   * - unitOfMeasureCode
+     - unitOfMeasureCode
+     - "string"
+   * - vatCode
+     - VAT
+     - "integer"
+   * - vatCode
+     - vatCode
+     - "string"
+   * - vatCode
+     - vatType.id
+     - "integer"
 
 
 Powerofficego Product to PowerOfficeGov1 Productunit
@@ -210,6 +387,9 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - Powerofficego Product Property
      - PowerOfficeGov1 Productunit Property
      - PowerOfficeGov1 Data Type
+   * - unitOfMeasureCode
+     - commonCode
+     - "string"
 
 
 Powerofficego Productgroup to PowerOfficeGov1 Listproductcategoryitems
@@ -399,4 +579,13 @@ The following properties are synchronized between a Powerofficego Vatcode and a 
    * - Powerofficego Vatcode Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - rate
+     - rate
+     - "string"
 
