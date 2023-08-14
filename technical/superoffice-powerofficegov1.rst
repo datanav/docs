@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:52:23
+Generated: 2023-08-14 08:52:41
 
 Introduction.
 ------------
@@ -635,6 +635,21 @@ The following properties are synchronized between a SuperOffice Person and a Pow
    * - Contact.ContactId
      - customer.id
      - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - MobilePhones.Value
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - OfficePhones.Value
+     - phoneNumberWork
+     - "string"
 
 
 SuperOffice Quotealternative to PowerOfficeGov1 Order
