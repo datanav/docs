@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-14 10:17:38
 
 Introduction.
 ------------
@@ -411,6 +411,9 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - Name
      - name
+     - "string"
+   * - OrgNr (Dependant on having poweroffice-supplier in Country.ThreeLetterISOCountry)
+     - Id
      - "string"
    * - Phones.Value
      - PhoneNumber
