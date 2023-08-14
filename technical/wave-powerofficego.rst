@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-08-14 15:01:51
+Generated: 2023-08-14 15:02:15
 
 Introduction.
 ------------
@@ -23,6 +23,21 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - Wave Invoice Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - createdAt
+     - createdDateTimeOffset
+     - "string"
+   * - currency.code
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - customerId
+     - "string"
+   * - id
+     - OrderNo
+     - "string"
+   * - total.value
+     - NetAmount
+     - "string"
 
 
 Wave Vendor to PowerOfficeGo Suppliers
