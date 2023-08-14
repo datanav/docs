@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 09:11:49
+Generated: 2023-08-14 10:15:56
 
 Introduction.
 ------------
@@ -430,5 +430,51 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "list"
    * - website
      - Urls.Value
+     - "string"
+
+
+Wave Vendor to PowerOfficeGov1 Supplier
+---------------------------------------
+Every Wave Vendor will be synchronized with a PowerOfficeGov1 Supplier.
+
+Once a link between a Wave Vendor and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a PowerOfficeGov1 Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - PowerOfficeGov1 Supplier Property
+     - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - website
+     - WebsiteUrl
      - "string"
 
