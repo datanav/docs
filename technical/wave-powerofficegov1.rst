@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 10:15:56
+Generated: 2023-08-14 10:32:51
 
 Introduction.
 ------------
@@ -431,6 +431,109 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - website
      - Urls.Value
      - "string"
+
+
+Wave Customer to PowerOfficeGov1 Address
+----------------------------------------
+Every Wave Customer will be synchronized with a PowerOfficeGov1 Address.
+
+Once a link between a Wave Customer and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGov1 Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Data Type
+
+
+Wave Invoice to PowerOfficeGov1 Salesorder
+------------------------------------------
+Every Wave Invoice will be synchronized with a PowerOfficeGov1 Salesorder.
+
+Once a link between a Wave Invoice and a PowerOfficeGov1 Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a PowerOfficeGov1 Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - PowerOfficeGov1 Salesorder Property
+     - PowerOfficeGov1 Data Type
+   * - currency.code
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
+
+
+Wave Product to PowerOfficeGov1 Product
+---------------------------------------
+Every Wave Product will be synchronized with a PowerOfficeGov1 Product.
+
+Once a link between a Wave Product and a PowerOfficeGov1 Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a PowerOfficeGov1 Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - PowerOfficeGov1 Product Property
+     - PowerOfficeGov1 Data Type
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - expenseAccount.id
+     - expenseAccount.id
+     - "string"
+   * - incomeAccount.id
+     - incomeAccount.id
+     - "string"
+   * - modifiedAt
+     - lastChanged
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - UnitListPrice
+     - "decimal"
+   * - unitPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - unitPrice
+     - salesPrice
+     - "string"
+   * - unitPrice
+     - unitPrice
+     - "string"
+
+
+Wave Vendor to PowerOfficeGov1 Address
+--------------------------------------
+Every Wave Vendor will be synchronized with a PowerOfficeGov1 Address.
+
+Once a link between a Wave Vendor and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a PowerOfficeGov1 Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Data Type
 
 
 Wave Vendor to PowerOfficeGov1 Supplier
