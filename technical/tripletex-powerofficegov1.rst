@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-14 10:15:56
 
 Introduction.
 ------------
@@ -1192,5 +1192,130 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - userType
      - userType
+     - "string"
+
+
+Tripletex Supplier to PowerOfficeGov1 Supplier
+----------------------------------------------
+Every Tripletex Supplier will be synchronized with a PowerOfficeGov1 Supplier.
+
+If a matching PowerOfficeGov1 Supplier already exists, the Tripletex Supplier will be merged with the existing one.
+If no matching PowerOfficeGov1 Supplier is found, a new PowerOfficeGov1 Supplier will be created.
+
+A Tripletex Supplier will merge with a PowerOfficeGov1 Supplier if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOfficeGov1 Supplier Property
+   * - email
+     - email
+   * - email
+     - invoiceEmail
+   * - invoiceEmail
+     - email
+   * - email
+     - overdueNoticeEmail
+   * - overdueNoticeEmail
+     - email
+   * - invoiceEmail
+     - invoiceEmail
+   * - invoiceEmail
+     - overdueNoticeEmail
+   * - overdueNoticeEmail
+     - invoiceEmail
+   * - organizationNumber
+     - organizationNumber
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+
+Once a link between a Tripletex Supplier and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGov1 Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOfficeGov1 Supplier Property
+     - PowerOfficeGov1 Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.changes
+     - deliveryAddress.changes
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
      - "string"
 
