@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 09:09:56
+Generated: 2023-08-14 10:32:51
 
 Introduction.
 ------------
@@ -329,5 +329,111 @@ The following properties are synchronized between a HubSpot Company and a PowerO
      - "string"
    * - properties.zip
      - Address.Street.Zipcode
+     - "string"
+
+
+HubSpot Contact to PowerOfficeGov1 Address
+------------------------------------------
+Every HubSpot Contact will be synchronized with a PowerOfficeGov1 Address.
+
+Once a link between a HubSpot Contact and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a PowerOfficeGov1 Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Data Type
+
+
+HubSpot Deal to PowerOfficeGov1 Salesorder
+------------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOfficeGov1 Salesorder.
+
+Once a link between a HubSpot Deal and a PowerOfficeGov1 Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a PowerOfficeGov1 Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - PowerOfficeGov1 Salesorder Property
+     - PowerOfficeGov1 Data Type
+   * - properties.closedate
+     - DeliveryDate
+     - "string"
+   * - properties.closedate
+     - OrderDate
+     - "string"
+   * - properties.deal_currency_code
+     - Currency
+     - "string"
+
+
+HubSpot Lineitemdealassociation to PowerOfficeGov1 Salesorderline
+-----------------------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a PowerOfficeGov1 Salesorderline.
+
+Once a link between a HubSpot Lineitemdealassociation and a PowerOfficeGov1 Salesorderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a PowerOfficeGov1 Salesorderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - PowerOfficeGov1 Salesorderline Property
+     - PowerOfficeGov1 Data Type
+
+
+HubSpot Product to PowerOfficeGov1 Product
+------------------------------------------
+Every HubSpot Product will be synchronized with a PowerOfficeGov1 Product.
+
+Once a link between a HubSpot Product and a PowerOfficeGov1 Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a PowerOfficeGov1 Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - PowerOfficeGov1 Product Property
+     - PowerOfficeGov1 Data Type
+   * - properties.description
+     - Description
+     - "string"
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - UnitCost
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "integer"
+   * - properties.hs_cost_of_goods_sold
+     - costPrice
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - UnitListPrice
+     - "decimal"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
+   * - properties.price
+     - salesPrice
+     - "string"
+   * - properties.price
+     - unitPrice
      - "string"
 
