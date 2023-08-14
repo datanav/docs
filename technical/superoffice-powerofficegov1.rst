@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -611,6 +611,9 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - SuperOffice Contact Property
      - PowerOfficeGov1 Department Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - name
+     - "string"
 
 
 SuperOffice Quotealternative to PowerOfficeGov1 Order
@@ -629,6 +632,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - invoiceComment
+     - "string"
 
 
 SuperOffice Listbusinessitems to PowerOfficeGov1 Listbusinessitems
@@ -645,6 +651,12 @@ The following properties are synchronized between a SuperOffice Listbusinessitem
    * - SuperOffice Listbusinessitems Property
      - PowerOfficeGov1 Listbusinessitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listcategoryitems to PowerOfficeGov1 Listcategoryitems
@@ -661,6 +673,12 @@ The following properties are synchronized between a SuperOffice Listcategoryitem
    * - SuperOffice Listcategoryitems Property
      - PowerOfficeGov1 Listcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listproductcategoryitems to PowerOfficeGov1 Listproductcategoryitems
@@ -677,6 +695,12 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - PowerOfficeGov1 Listproductcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listproductcategoryitems to PowerOfficeGov1 Productgroup
@@ -693,6 +717,12 @@ The following properties are synchronized between a SuperOffice Listproductcateg
    * - SuperOffice Listproductcategoryitems Property
      - PowerOfficeGov1 Productgroup Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Name
+     - name
+     - "string"
 
 
 SuperOffice Listproductfamilyitems to PowerOfficeGov1 Listproductfamilyitems
@@ -709,6 +739,12 @@ The following properties are synchronized between a SuperOffice Listproductfamil
    * - SuperOffice Listproductfamilyitems Property
      - PowerOfficeGov1 Listproductfamilyitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listproducttypeitems to PowerOfficeGov1 Listproducttypeitems
@@ -725,6 +761,12 @@ The following properties are synchronized between a SuperOffice Listproducttypei
    * - SuperOffice Listproducttypeitems Property
      - PowerOfficeGov1 Listproducttypeitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listprojectstatusitems to PowerOfficeGov1 Listprojectstatusitems
@@ -741,6 +783,12 @@ The following properties are synchronized between a SuperOffice Listprojectstatu
    * - SuperOffice Listprojectstatusitems Property
      - PowerOfficeGov1 Listprojectstatusitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listprojecttypeitems to PowerOfficeGov1 Listprojecttypeitems
@@ -757,6 +805,12 @@ The following properties are synchronized between a SuperOffice Listprojecttypei
    * - SuperOffice Listprojecttypeitems Property
      - PowerOfficeGov1 Listprojecttypeitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listsaletypeitems to PowerOfficeGov1 Listsaletypeitems
@@ -773,6 +827,12 @@ The following properties are synchronized between a SuperOffice Listsaletypeitem
    * - SuperOffice Listsaletypeitems Property
      - PowerOfficeGov1 Listsaletypeitems Property
      - PowerOfficeGov1 Data Type
+   * - Name
+     - Name
+     - "string"
+   * - Tooltip
+     - Tooltip
+     - "string"
 
 
 SuperOffice Listticketcategoryitems to PowerOfficeGov1 Listticketcategoryitems
@@ -789,6 +849,15 @@ The following properties are synchronized between a SuperOffice Listticketcatego
    * - SuperOffice Listticketcategoryitems Property
      - PowerOfficeGov1 Listticketcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - CategoryMaster
+     - CategoryMaster
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - ParentId
+     - ParentId
+     - "integer"
 
 
 SuperOffice Ownercontactlink to PowerOfficeGov1 Department
@@ -805,6 +874,9 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - PowerOfficeGov1 Department Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
 
 
 SuperOffice Ownercontactlink to PowerOfficeGov1 Departments
@@ -821,6 +893,9 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - PowerOfficeGov1 Departments Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 SuperOffice Product to PowerOfficeGov1 Product
@@ -992,6 +1067,12 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice Project to PowerOfficeGov1 Projects
@@ -1008,6 +1089,21 @@ The following properties are synchronized between a SuperOffice Project and a Po
    * - SuperOffice Project Property
      - PowerOfficeGov1 Projects Property
      - PowerOfficeGov1 Data Type
+   * - Associate.AssociateId
+     - owner.gid
+     - "string"
+   * - CreatedDate
+     - created_at
+     - "string"
+   * - EndDate
+     - due_on
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - NextMilestoneDate
+     - start_on
+     - "string"
 
 
 SuperOffice Quotealternative to PowerOfficeGov1 Vatcode
@@ -1024,6 +1120,12 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice Quoteline to PowerOfficeGov1 Orderline
@@ -1040,6 +1142,27 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOfficeGov1 Orderline Property
      - PowerOfficeGov1 Data Type
+   * - DiscountPercent
+     - discount
+     - "float"
+   * - ERPProductKey
+     - product.id
+     - "integer"
+   * - Name
+     - description
+     - "string"
+   * - Quantity
+     - count
+     - "float"
+   * - QuoteAlternativeId
+     - order.id
+     - "integer"
+   * - UnitListPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice Quoteline to PowerOfficeGov1 Quoteline
@@ -1056,6 +1179,36 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOfficeGov1 Quoteline Property
      - PowerOfficeGov1 Data Type
+   * - DiscountPercent
+     - DiscountPercent
+     - "integer"
+   * - ERPProductKey
+     - ERPProductKey
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Quantity
+     - Quantity
+     - "integer"
+   * - QuantityUnit
+     - QuantityUnit
+     - "integer"
+   * - QuoteAlternativeId
+     - QuoteAlternativeId
+     - "integer"
+   * - Rank
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - TotalPrice
+     - TotalPrice
+     - "integer"
+   * - UnitListPrice
+     - UnitListPrice
+     - "string"
+   * - VAT
+     - VAT
+     - "integer"
 
 
 SuperOffice Quoteline to PowerOfficeGov1 Salesorderline
@@ -1072,6 +1225,21 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOfficeGov1 Salesorderline Property
      - PowerOfficeGov1 Data Type
+   * - DiscountPercent
+     - Discount
+     - "string"
+   * - Name
+     - Description
+     - "string"
+   * - Quantity
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - VAT
+     - VatReturnSpecification
+     - "string"
 
 
 SuperOffice Quoteline to PowerOfficeGov1 Vatcode
@@ -1088,6 +1256,12 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
 
 
 SuperOffice Ticket to PowerOfficeGov1 Tickets
@@ -1104,6 +1278,18 @@ The following properties are synchronized between a SuperOffice Ticket and a Pow
    * - SuperOffice Ticket Property
      - PowerOfficeGov1 Tickets Property
      - PowerOfficeGov1 Data Type
+   * - OwnedBy.AssociateId
+     - requester_id
+     - "string"
+   * - Person.PersonId
+     - assignee_id
+     - "string"
+   * - TimeToReply
+     - due_at
+     - "string"
+   * - Title
+     - subject
+     - "string"
 
 
 SuperOffice User to PowerOfficeGov1 Employee
@@ -1167,4 +1353,7 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - SuperOffice User Property
      - PowerOfficeGov1 Listcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - contactCategory
+     - Name
+     - "string"
 
