@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:29:50
+Generated: 2023-08-14 10:11:49
 
 Introduction.
 ------------
@@ -309,4 +309,35 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - websiteUrl
      - websiteUrl
      - "string"
+
+
+Powerofficego Employees to PowerOfficeGov1 Employee
+---------------------------------------------------
+Every Powerofficego Employees will be synchronized with a PowerOfficeGov1 Employee.
+
+If a matching PowerOfficeGov1 Employee already exists, the Powerofficego Employees will be merged with the existing one.
+If no matching PowerOfficeGov1 Employee is found, a new PowerOfficeGov1 Employee will be created.
+
+A Powerofficego Employees will merge with a PowerOfficeGov1 Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - PowerOfficeGov1 Employee Property
+   * - Id
+     - Id
+   * - SocialSecurityNumber
+     - SocialSecurityNumber
+
+Once a link between a Powerofficego Employees and a PowerOfficeGov1 Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a PowerOfficeGov1 Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - PowerOfficeGov1 Employee Property
+     - PowerOfficeGov1 Data Type
 
