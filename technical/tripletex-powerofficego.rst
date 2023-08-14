@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 15:01:51
+Generated: 2023-08-14 15:02:15
 
 Introduction.
 ------------
@@ -125,6 +125,24 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - changes.timestamp
+     - createdDateTimeOffset
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - customerId
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - deliveryDate
+     - sentDateTimeOffset
+     - "string"
+   * - orderDate
+     - OrderDate
+     - "string"
 
 
 Tripletex Orderline to PowerOfficeGo Outgoinginvoices
@@ -141,6 +159,15 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - changes.timestamp
+     - createdDateTimeOffset
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - order.id
+     - OrderNo
+     - "string"
 
 
 Tripletex Contact to PowerOfficeGo Customers
