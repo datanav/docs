@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 10:16:50
+Generated: 2023-08-14 10:21:50
 
 Introduction.
 ------------
@@ -1354,5 +1354,27 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - "integer"
    * - postalAddress.postalCode
      - postalAddress.postalCode
+     - "string"
+
+
+Tripletex Vattype to PowerOfficeGov1 Vatcode
+--------------------------------------------
+Every Tripletex Vattype will be synchronized with a PowerOfficeGov1 Vatcode.
+
+Once a link between a Tripletex Vattype and a PowerOfficeGov1 Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Vattype and a PowerOfficeGov1 Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Vattype Property
+     - PowerOfficeGov1 Vatcode Property
+     - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - percentage
+     - rate
      - "string"
 
