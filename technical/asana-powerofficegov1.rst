@@ -2,7 +2,7 @@
 Asana to PowerOfficeGov1 Dataflow
 =================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -23,6 +23,60 @@ The following properties are synchronized between a Asana Projects and a PowerOf
    * - Asana Projects Property
      - PowerOfficeGov1 Projects Property
      - PowerOfficeGov1 Data Type
+   * - completed
+     - completed
+     - "string"
+   * - completed
+     - current_status.gid
+     - "string"
+   * - completed
+     - current_status.title
+     - "string"
+   * - completed_at
+     - completed_at
+     - "string"
+   * - completed_by.gid
+     - completed_by.gid
+     - "string"
+   * - created_at
+     - created_at
+     - "string"
+   * - current_status.gid
+     - completed
+     - "string"
+   * - current_status.gid
+     - current_status.gid
+     - "string"
+   * - current_status.text
+     - current_status.text
+     - "string"
+   * - current_status.title
+     - completed
+     - "string"
+   * - current_status.title
+     - current_status.title
+     - "string"
+   * - due_on
+     - due_on
+     - "string"
+   * - members.gid
+     - members.gid
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - owner.gid
+     - owner.gid
+     - "string"
+   * - start_on
+     - start_on
+     - "string"
+   * - team.gid
+     - team.gid
+     - "string"
+   * - workspace.gid
+     - workspace.gid
+     - "string"
 
 
 Asana Tasks to PowerOfficeGov1 Tasks
@@ -39,6 +93,39 @@ The following properties are synchronized between a Asana Tasks and a PowerOffic
    * - Asana Tasks Property
      - PowerOfficeGov1 Tasks Property
      - PowerOfficeGov1 Data Type
+   * - assignee.gid
+     - assignee.gid
+     - "string"
+   * - completed
+     - completed
+     - "string"
+   * - completed_at
+     - completed_at
+     - "string"
+   * - created_at
+     - created_at
+     - "string"
+   * - due_on
+     - due_on
+     - "string"
+   * - modified_at
+     - modified_at
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - parent
+     - parent
+     - "string"
+   * - projects.gid
+     - projects.gid
+     - "string"
+   * - start_at
+     - start_at
+     - "string"
+   * - workspace.gid
+     - workspace.gid
+     - "string"
 
 
 Asana Teams to PowerOfficeGov1 Teams
@@ -55,6 +142,18 @@ The following properties are synchronized between a Asana Teams and a PowerOffic
    * - Asana Teams Property
      - PowerOfficeGov1 Teams Property
      - PowerOfficeGov1 Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - organization.gid
+     - organization.gid
+     - "string"
+   * - permalink_url
+     - permalink_url
+     - "string"
 
 
 Asana Users to PowerOfficeGov1 Employee
@@ -115,4 +214,10 @@ The following properties are synchronized between a Asana Workspaces and a Power
    * - Asana Workspaces Property
      - PowerOfficeGov1 Workspaces Property
      - PowerOfficeGov1 Data Type
+   * - email_domains
+     - email_domains
+     - "string"
+   * - name
+     - name
+     - "string"
 
