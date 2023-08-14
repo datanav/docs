@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:50:56
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -37,6 +37,72 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - SuperOffice Contact Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - Address.Postal.Address1
+     - Address.Postal.Address1
+     - "string"
+   * - Address.Postal.Address2
+     - Address.Postal.Address2
+     - "string"
+   * - Address.Postal.Address3
+     - Address.Postal.Address3
+     - "string"
+   * - Address.Postal.City
+     - Address.Postal.City
+     - "string"
+   * - Address.Postal.Zipcode
+     - Address.Postal.Zipcode
+     - "string"
+   * - Address.Street.Address1
+     - Address.Street.Address1
+     - "string"
+   * - Address.Street.Address2
+     - Address.Street.Address2
+     - "string"
+   * - Address.Street.Address3
+     - Address.Street.Address3
+     - "string"
+   * - Address.Street.City
+     - Address.Street.City
+     - "string"
+   * - Address.Street.Zipcode
+     - Address.Street.Zipcode
+     - "string"
+   * - ContactId
+     - ContactId
+     - "integer"
+   * - Country.CountryId
+     - Country.CountryId
+     - "integer"
+   * - Country.ThreeLetterISOCountry
+     - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountry)
+     - "string"
+   * - Domains
+     - Domains
+     - "list"
+   * - Domains
+     - Urls.Value
+     - "string"
+   * - Emails.Value
+     - Emails.Value
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - OrgNr (Dependant on having superoffice-contactid in Country.ThreeLetterISOCountryDependant on having superoffice-contactid in Country.TwoLetterISOCountry)
+     - ContactId
+     - "string"
+   * - OrgNr
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountry)
+     - "string"
+   * - Phones.Value
+     - Phones.Value
+     - "string"
+   * - Urls.Value
+     - Domains
+     - "list"
+   * - Urls.Value
+     - Urls.Value
+     - "string"
 
 
 SuperOffice Contact to PowerOfficeGov1 Customer
@@ -69,6 +135,141 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - SuperOffice Contact Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - Address.Postal.Address1
+     - mailAddress.address1
+     - "string"
+   * - Address.Postal.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - mailAddress.address2
+     - "string"
+   * - Address.Postal.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Postal.Address3
+     - mailAddress.address3
+     - "string"
+   * - Address.Postal.City
+     - mailAddress.city
+     - "string"
+   * - Address.Postal.City
+     - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - mailAddress.zipCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Address.Street.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - streetAddresses.address1
+     - "string"
+   * - Address.Street.Address2
+     - address.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - streetAddresses.address2
+     - "string"
+   * - Address.Street.Address3
+     - streetAddresses.address3
+     - "string"
+   * - Address.Street.City
+     - address.city
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.City
+     - streetAddresses.city
+     - "string"
+   * - Address.Street.Zipcode
+     - address.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - streetAddresses.zipCode
+     - "string"
+   * - Associate.AssociateId
+     - accountManager.id
+     - "integer"
+   * - Associate.AssociateId
+     - ourReferenceEmployeeCode
+     - "string"
+   * - ContactId
+     - id
+     - "string"
+   * - Country.CountryId
+     - address.country.code
+     - "string"
+   * - Country.CountryId
+     - mailAddress.countryCode
+     - "string"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - streetAddresses.countryCode
+     - "string"
+   * - Country.ThreeLetterISOCountry
+     - mailAddress.countryCode
+     - "string"
+   * - Country.ThreeLetterISOCountry
+     - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
+     - "string"
+   * - Domains
+     - website
+     - "string"
+   * - Domains
+     - websiteUrl
+     - "string"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Emails.Value
+     - emailAddress
+     - "string"
+   * - Name
+     - legalName
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - OrgNr (Dependant on having wd:Q906278 in Country.TwoLetterISOCountry)
+     - mailAddress.countryCode
+     - "string"
+   * - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
+     - organizationNumber
+     - "replace"," ","", "string"]
+   * - OrgNr
+     - vatNumber (Dependant on having  in mailAddress.countryCode)
+     - "string"
+   * - Phones.Value
+     - phone
+     - "string"
+   * - Phones.Value
+     - phoneNumber
+     - "string"
+   * - Urls.Value
+     - website
+     - "string"
+   * - Urls.Value
+     - websiteUrl
+     - "string"
 
 
 SuperOffice Contact to PowerOfficeGov1 Supplier
@@ -99,6 +300,63 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - SuperOffice Contact Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - Address.Postal.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Postal.City
+     - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - postalAddress.postalCode
+     - "string"
+   * - Address.Street.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - physicalAddress.postalCode
+     - "string"
+   * - ContactId
+     - id
+     - "integer"
+   * - Country.CountryId
+     - physicalAddress.country.id
+     - "integer"
+   * - Country.CountryId
+     - postalAddress.country.id
+     - "integer"
+   * - Domains
+     - WebsiteUrl
+     - "string"
+   * - Emails.Value
+     - EmailAddress
+     - "string"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Name
+     - LegalName
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - Phones.Value
+     - PhoneNumber
+     - "string"
+   * - Phones.Value
+     - phoneNumber
+     - "string"
+   * - Urls.Value
+     - WebsiteUrl
+     - "string"
 
 
 SuperOffice Ownercontactlink to PowerOfficeGov1 Contact
@@ -125,6 +383,12 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
    * - SuperOffice Ownercontactlink Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - contact_id
+     - ContactId
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 SuperOffice Person to PowerOfficeGov1 Employee
@@ -151,6 +415,78 @@ The following properties are synchronized between a SuperOffice Person and a Pow
    * - SuperOffice Person Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - Address.Street.Address1
+     - MailAddress.Address1
+     - "string"
+   * - Address.Street.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - MailAddress.Address2
+     - "string"
+   * - Address.Street.Address2
+     - address.addressLine2
+     - "string"
+   * - Address.Street.Address3
+     - MailAddress.Address3
+     - "string"
+   * - Address.Street.City
+     - MailAddress.City
+     - "string"
+   * - Address.Street.City
+     - address.city
+     - "string"
+   * - Address.Street.Zipcode
+     - MailAddress.ZipCode
+     - "string"
+   * - Address.Street.Zipcode
+     - address.postalCode
+     - "string"
+   * - BirthDate
+     - DateOfBirth
+     - "string"
+   * - BirthDate
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Contact.ContactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - Country.CountryId
+     - MailAddress.CountryCode
+     - "string"
+   * - Country.CountryId
+     - address.country.id
+     - "integer"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - FirstName
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - LastName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - MobilePhones.Value
+     - phoneNumberMobile
+     - "string"
+   * - OfficePhones.Value
+     - phoneNumberWork
+     - "string"
+   * - PersonId
+     - Id
+     - "string"
+   * - PersonId
+     - id
+     - "integer"
+   * - PrivatePhones.Value
+     - phoneNumberHome
+     - "string"
 
 
 SuperOffice Person to PowerOfficeGov1 Person
@@ -177,6 +513,48 @@ The following properties are synchronized between a SuperOffice Person and a Pow
    * - SuperOffice Person Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - Address.Street.Address1
+     - Address.Street.Address1
+     - "string"
+   * - Address.Street.Address2
+     - Address.Street.Address2
+     - "string"
+   * - Address.Street.Address3
+     - Address.Street.Address3
+     - "string"
+   * - Address.Street.City
+     - Address.Street.City
+     - "string"
+   * - Address.Street.Zipcode
+     - Address.Street.Zipcode
+     - "string"
+   * - BirthDate
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - Contact.ContactId
+     - Contact.ContactId
+     - "integer"
+   * - Emails.Value
+     - Emails.Value
+     - "string"
+   * - Firstname
+     - Firstname
+     - "string"
+   * - Lastname
+     - Lastname
+     - "string"
+   * - MobilePhones.Value
+     - MobilePhones.Value
+     - "string"
+   * - OfficePhones.Value
+     - OfficePhones.Value
+     - "string"
+   * - PersonId
+     - PersonId
+     - "integer"
+   * - PrivatePhones.Value
+     - PrivatePhones.Value
+     - "string"
 
 
 SuperOffice User to PowerOfficeGov1 Person
@@ -203,6 +581,18 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - SuperOffice User Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - contactId
+     - Contact.ContactId
+     - "integer"
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
+   * - personEmail
+     - Emails.Value
+     - "string"
 
 
 SuperOffice Contact to PowerOfficeGov1 Department
@@ -464,6 +854,93 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - Description
+     - Description
+     - "string"
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - ERPPriceListKey
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - Name
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - ProductCategoryKey
+     - ProductCategoryKey
+     - "string"
+   * - ProductCategoryKey
+     - productGroupId
+     - "string"
+   * - ProductFamilyKey
+     - ProductFamilyKey
+     - "string"
+   * - ProductId
+     - ProductId
+     - "integer"
+   * - ProductTypeKey
+     - ProductTypeKey
+     - "string"
+   * - ProductTypeKey
+     - type
+     - "string"
+   * - QuantityUnit
+     - QuantityUnit
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - QuantityUnit
+     - unitOfMeasureCode
+     - "string"
+   * - Supplier
+     - Supplier
+     - "string"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - UnitCost
+     - "string"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitCost
+     - costPrice
+     - "string"
+   * - UnitListPrice
+     - UnitListPrice
+     - "decimal"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - UnitListPrice
+     - salesPrice
+     - "string"
+   * - UnitListPrice
+     - unitPrice
+     - "string"
+   * - Url
+     - Url
+     - "string"
+   * - VAT
+     - VAT
+     - "integer"
+   * - VAT
+     - vatCode
+     - "string"
+   * - VAT
+     - vatType.id
+     - "integer"
 
 
 SuperOffice Product to PowerOfficeGov1 Productunit
@@ -493,6 +970,12 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOfficeGov1 Productunit Property
      - PowerOfficeGov1 Data Type
+   * - QuantityUnit
+     - commonCode
+     - "string"
+   * - QuantityUnit
+     - name
+     - "string"
 
 
 SuperOffice Product to PowerOfficeGov1 Vatcode
@@ -650,6 +1133,24 @@ The following properties are synchronized between a SuperOffice User and a Power
    * - SuperOffice User Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
+     - "string"
 
 
 SuperOffice User to PowerOfficeGov1 Listcategoryitems
