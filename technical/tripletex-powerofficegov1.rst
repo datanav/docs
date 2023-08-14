@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -816,6 +816,27 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - customer.id
+     - customer.id
+     - "integer"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - phoneNumberMobileCountry.id
+     - phoneNumberMobileCountry.id
+     - "string"
+   * - phoneNumberWork
+     - phoneNumberWork
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Department
@@ -834,6 +855,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Department Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Department to PowerOfficeGov1 Contact
@@ -852,6 +876,9 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Department to PowerOfficeGov1 Customer
@@ -870,6 +897,15 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - departmentNumber
+     - internalNotes
+     - "string"
+   * - name
+     - legalName
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Contact to PowerOfficeGov1 Contactperson
@@ -886,6 +922,21 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOfficeGov1 Contactperson Property
      - PowerOfficeGov1 Data Type
+   * - customer.id
+     - partyId
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Customer
@@ -1116,6 +1167,12 @@ The following properties are synchronized between a Tripletex Customercategory a
    * - Tripletex Customercategory Property
      - PowerOfficeGov1 Customercategory Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - number
+     - number
+     - "string"
 
 
 Tripletex Department to PowerOfficeGov1 Department
@@ -1132,6 +1189,12 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOfficeGov1 Department Property
      - PowerOfficeGov1 Data Type
+   * - departmentNumber
+     - departmentNumber
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Department to PowerOfficeGov1 Departments
@@ -1148,6 +1211,12 @@ The following properties are synchronized between a Tripletex Department and a P
    * - Tripletex Department Property
      - PowerOfficeGov1 Departments Property
      - PowerOfficeGov1 Data Type
+   * - departmentNumber
+     - DepartmentNumber
+     - "string"
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Employee to PowerOfficeGov1 Employee
@@ -1273,6 +1342,33 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
    * - Tripletex Invoice Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - amountExcludingVat
+     - amountExcludingVat
+     - "integer"
+   * - currency.id
+     - currency.code
+     - "string"
+   * - currency.id
+     - currency.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - deliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceDate
+     - invoiceDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceDueDate
+     - dueDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceDueDate
+     - invoiceDueDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - orders.id
+     - orders.id
+     - "integer"
 
 
 Tripletex Invoice to PowerOfficeGov1 Outgoinginvoice
@@ -1289,6 +1385,27 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
    * - Tripletex Invoice Property
      - PowerOfficeGov1 Outgoinginvoice Property
      - PowerOfficeGov1 Data Type
+   * - amountExcludingVat
+     - NetAmount
+     - "string"
+   * - changes.timestamp
+     - CreatedDate
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - deliveryDate
+     - SentDate
+     - "string"
+   * - orders.id
+     - OrderNo
+     - "string"
 
 
 Tripletex Order to PowerOfficeGov1 Invoice
@@ -1305,6 +1422,24 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOfficeGov1 Invoice Property
      - PowerOfficeGov1 Data Type
+   * - currency.id
+     - currency.code
+     - "string"
+   * - currency.id
+     - currency.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - deliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceComment
+     - title
+     - "string"
+   * - reference
+     - poNumber
+     - "string"
 
 
 Tripletex Order to PowerOfficeGov1 Order
@@ -1321,6 +1456,33 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOfficeGov1 Order Property
      - PowerOfficeGov1 Data Type
+   * - contact.id
+     - contact.id
+     - "integer"
+   * - currency.id
+     - currency.id
+     - "integer"
+   * - customer.id
+     - customer.id
+     - "integer"
+   * - deliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - invoiceComment
+     - invoiceComment
+     - "string"
+   * - orderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - ourContactEmployee.id
+     - ourContactEmployee.id
+     - "integer"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - reference
+     - reference
+     - "string"
 
 
 Tripletex Order to PowerOfficeGov1 Salesorder
@@ -1337,6 +1499,18 @@ The following properties are synchronized between a Tripletex Order and a PowerO
    * - Tripletex Order Property
      - PowerOfficeGov1 Salesorder Property
      - PowerOfficeGov1 Data Type
+   * - currency.id
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - orderDate
+     - OrderDate
+     - "string"
 
 
 Tripletex Orderline to PowerOfficeGov1 Orderline
@@ -1353,6 +1527,30 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOfficeGov1 Orderline Property
      - PowerOfficeGov1 Data Type
+   * - count
+     - count
+     - "float"
+   * - description
+     - description
+     - "string"
+   * - discount
+     - discount
+     - "float"
+   * - order.id
+     - order.id
+     - "integer"
+   * - product.id
+     - product.id
+     - "integer"
+   * - unitCostCurrency
+     - unitCostCurrency
+     - "float"
+   * - unitPriceExcludingVatCurrency
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - vatType.id
+     - vatType.id
+     - "integer"
 
 
 Tripletex Orderline to PowerOfficeGov1 Quoteline
@@ -1369,6 +1567,27 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOfficeGov1 Quoteline Property
      - PowerOfficeGov1 Data Type
+   * - count
+     - Quantity
+     - "integer"
+   * - description
+     - Name
+     - "string"
+   * - discount
+     - DiscountPercent
+     - "integer"
+   * - order.id
+     - QuoteAlternativeId
+     - "integer"
+   * - product.id
+     - ERPProductKey
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - UnitListPrice
+     - "string"
+   * - vatType.id
+     - VAT
+     - "integer"
 
 
 Tripletex Orderline to PowerOfficeGov1 Salesorderline
@@ -1385,6 +1604,21 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - Tripletex Orderline Property
      - PowerOfficeGov1 Salesorderline Property
      - PowerOfficeGov1 Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - Discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - vatType.id
+     - VatReturnSpecification
+     - "string"
 
 
 Tripletex Product to PowerOfficeGov1 Product
@@ -1512,6 +1746,9 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - PowerOfficeGov1 Listproductcategoryitems Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Productgroup to PowerOfficeGov1 Productgroup
@@ -1528,6 +1765,18 @@ The following properties are synchronized between a Tripletex Productgroup and a
    * - Tripletex Productgroup Property
      - PowerOfficeGov1 Productgroup Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - parentGroup.id
+     - parentGroup.id
+     - "integer"
+   * - url
+     - url
+     - "string"
 
 
 Tripletex Productunit to PowerOfficeGov1 Productunit
@@ -1582,6 +1831,18 @@ The following properties are synchronized between a Tripletex Project and a Powe
    * - Tripletex Project Property
      - PowerOfficeGov1 Projects Property
      - PowerOfficeGov1 Data Type
+   * - endDate
+     - due_on
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - projectManager.id
+     - owner.gid
+     - "string"
+   * - startDate
+     - start_on
+     - "string"
 
 
 Tripletex Projectcategory to PowerOfficeGov1 Projectcategory
@@ -1598,6 +1859,18 @@ The following properties are synchronized between a Tripletex Projectcategory an
    * - Tripletex Projectcategory Property
      - PowerOfficeGov1 Projectcategory Property
      - PowerOfficeGov1 Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - number
+     - number
+     - "string"
+   * - url
+     - url
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGov1 Supplier
@@ -1739,6 +2012,24 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Vendor Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
+     - "string"
 
 
 Tripletex Vattype to PowerOfficeGov1 Vatcode
@@ -1755,4 +2046,10 @@ The following properties are synchronized between a Tripletex Vattype and a Powe
    * - Tripletex Vattype Property
      - PowerOfficeGov1 Vatcode Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - percentage
+     - rate
+     - "string"
 
