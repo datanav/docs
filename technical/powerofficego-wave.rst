@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-08-14 10:18:49
+Generated: 2023-08-14 10:19:28
 
 Introduction.
 ------------
@@ -150,4 +150,10 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - Wave Vendor Property
      - Wave Data Type
+   * - LegalName
+     - name
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
 
