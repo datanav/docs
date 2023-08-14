@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:16:53
+Generated: 2023-08-14 10:17:57
 
 Introduction.
 ------------
@@ -34,6 +34,32 @@ The following properties are synchronized between a Powerofficego Customer and a
 
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
+
+
+Powerofficego Suppliers to PowerOfficeGov1 Supplier
+---------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier must be established.
+
+A Powerofficego Suppliers will merge with a PowerOfficeGov1 Supplier if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - PowerOfficeGov1 Supplier Property
+   * - Id
+     - Id
+
+Once a link between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
 
 
@@ -414,6 +440,19 @@ The following properties are synchronized between a Powerofficego Employees and 
 Powerofficego Outgoinginvoices to PowerOfficeGov1 Outgoinginvoice
 -----------------------------------------------------------------
 Every Powerofficego Outgoinginvoices will be synchronized with a PowerOfficeGov1 Outgoinginvoice.
+
+If a matching PowerOfficeGov1 Outgoinginvoice already exists, the Powerofficego Outgoinginvoices will be merged with the existing one.
+If no matching PowerOfficeGov1 Outgoinginvoice is found, a new PowerOfficeGov1 Outgoinginvoice will be created.
+
+A Powerofficego Outgoinginvoices will merge with a PowerOfficeGov1 Outgoinginvoice if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Outgoinginvoices Property
+     - PowerOfficeGov1 Outgoinginvoice Property
+   * - Id
+     - Id
 
 Once a link between a Powerofficego Outgoinginvoices and a PowerOfficeGov1 Outgoinginvoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
