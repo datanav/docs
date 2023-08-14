@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:52:41
+Generated: 2023-08-14 08:53:00
 
 Introduction.
 ------------
@@ -109,7 +109,7 @@ SuperOffice Contact to PowerOfficeGov1 Customer
 -----------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGov1 Customer must be established.
 
-A new PowerOfficeGov1 Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Contact, Ownercontactlink, or Quotealternative that is synchronized into PowerOfficeGov1.
+A new PowerOfficeGov1 Customer will be created from a SuperOffice Contact if it is connected to a SuperOffice Person, Contact, Ownercontactlink, or Quotealternative that is synchronized into PowerOfficeGov1.
 
 A SuperOffice Contact will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
 
