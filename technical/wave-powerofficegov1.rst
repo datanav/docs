@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 08:51:46
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -285,6 +285,38 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - phone
      - OfficePhones.Value
      - "string"
+
+
+Wave Customer to PowerOfficeGov1 Contact
+----------------------------------------
+Every Wave Customer will be synchronized with a PowerOfficeGov1 Contact.
+
+Once a link between a Wave Customer and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
+
+
+Wave Vendor to PowerOfficeGov1 Contact
+--------------------------------------
+Every Wave Vendor will be synchronized with a PowerOfficeGov1 Contact.
+
+Once a link between a Wave Vendor and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
 
 
 Wave Account to PowerOfficeGov1 Account
