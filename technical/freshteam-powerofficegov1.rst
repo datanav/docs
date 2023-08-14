@@ -2,7 +2,7 @@
 Freshteam to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:51:07
+Generated: 2023-08-14 08:51:19
 
 Introduction.
 ------------
@@ -70,5 +70,59 @@ The following properties are synchronized between a Freshteam Employee and a Pow
      - PowerOfficeGov1 Data Type
    * - communication_address.communication_city
      - MailAddress.City
+     - "string"
+   * - communication_address.communication_city
+     - address.city
+     - "string"
+   * - communication_address.communication_country_code
+     - MailAddress.CountryCode
+     - "string"
+   * - communication_address.communication_country_code
+     - address.country.id
+     - "integer"
+   * - communication_address.communication_zip_code
+     - MailAddress.ZipCode
+     - "string"
+   * - communication_address.communication_zip_code
+     - address.postalCode
+     - "string"
+   * - date_of_birth
+     - DateOfBirth
+     - "string"
+   * - date_of_birth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - first_name
+     - FirstName
+     - "string"
+   * - first_name
+     - firstName
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - last_name
+     - LastName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
+   * - official_email
+     - EmailAddress
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.name)
+     - phoneNumberHome
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - phoneNumberMobile
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - phoneNumberWork
+     - "string"
+   * - updated_at
+     - LastChanged
      - "string"
 
