@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 10:17:49
+Generated: 2023-08-14 10:21:50
 
 Introduction.
 ------------
@@ -737,6 +737,72 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - PowerOfficeGov1 Data Type
    * - Name
      - invoiceComment
+     - "string"
+
+
+SuperOffice Product to PowerOfficeGov1 Vatcode
+----------------------------------------------
+Every SuperOffice Product will be synchronized with a PowerOfficeGov1 Vatcode.
+
+Once a link between a SuperOffice Product and a PowerOfficeGov1 Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a PowerOfficeGov1 Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - PowerOfficeGov1 Vatcode Property
+     - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
+
+
+SuperOffice Quotealternative to PowerOfficeGov1 Vatcode
+-------------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a PowerOfficeGov1 Vatcode.
+
+Once a link between a SuperOffice Quotealternative and a PowerOfficeGov1 Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGov1 Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - PowerOfficeGov1 Vatcode Property
+     - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
+
+
+SuperOffice Quoteline to PowerOfficeGov1 Vatcode
+------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a PowerOfficeGov1 Vatcode.
+
+Once a link between a SuperOffice Quoteline and a PowerOfficeGov1 Vatcode is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGov1 Vatcode:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - PowerOfficeGov1 Vatcode Property
+     - PowerOfficeGov1 Data Type
+   * - VAT
+     - rate
+     - "string"
+   * - VATInfo
+     - name
      - "string"
 
 
