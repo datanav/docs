@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -33,6 +33,9 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - Zendesk Users Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - phone
+     - PrivatePhones.Value
+     - "string"
 
 
 Zendesk Organisations to PowerOfficeGov1 Organisations
@@ -110,4 +113,7 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - Zendesk Users Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - phone
+     - phoneNumberHome
+     - "string"
 
