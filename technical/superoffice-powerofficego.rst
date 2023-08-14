@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-14 10:19:53
+Generated: 2023-08-14 10:21:50
 
 Introduction.
 ------------
@@ -129,6 +129,38 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
 
 
+SuperOffice Product to PowerOfficeGo Vatcodes
+---------------------------------------------
+Every SuperOffice Product will be synchronized with a PowerOfficeGo Vatcodes.
+
+Once a link between a SuperOffice Product and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a PowerOfficeGo Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - PowerOfficeGo Vatcodes Property
+     - PowerOfficeGo Data Type
+
+
+SuperOffice Quotealternative to PowerOfficeGo Vatcodes
+------------------------------------------------------
+Every SuperOffice Quotealternative will be synchronized with a PowerOfficeGo Vatcodes.
+
+Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - PowerOfficeGo Vatcodes Property
+     - PowerOfficeGo Data Type
+
+
 SuperOffice Quoteline to PowerOfficeGo Salesorderline
 -----------------------------------------------------
 Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Salesorderline.
@@ -158,6 +190,22 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - VAT
      - VatReturnSpecification
      - "string"
+
+
+SuperOffice Quoteline to PowerOfficeGo Vatcodes
+-----------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Vatcodes.
+
+Once a link between a SuperOffice Quoteline and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGo Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - PowerOfficeGo Vatcodes Property
+     - PowerOfficeGo Data Type
 
 
 SuperOffice User to PowerOfficeGo Employees
