@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:18:06
+Generated: 2023-08-14 10:18:49
 
 Introduction.
 ------------
@@ -35,56 +35,6 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
-
-
-Powerofficego Suppliers to PowerOfficeGov1 Supplier
----------------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier must be established.
-
-A Powerofficego Suppliers will merge with a PowerOfficeGov1 Supplier if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - PowerOfficeGov1 Supplier Property
-   * - Id
-     - Id
-
-Once a link between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - PowerOfficeGov1 Supplier Property
-     - PowerOfficeGov1 Data Type
-   * - EmailAddress
-     - EmailAddress
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - InternationalIdCountryCode
-     - InternationalIdCountryCode
-     - "string"
-   * - InternationalIdNumber (Dependant on having poweroffice-supplier in poweroffice-customer:InternationalIdType)
-     - Id
-     - "string"
-   * - LastChanged
-     - LastChanged
-     - "string"
-   * - LegalName
-     - LegalName
-     - "string"
-   * - PhoneNumber
-     - PhoneNumber
-     - "string"
-   * - WebsiteUrl
-     - WebsiteUrl
-     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Department
@@ -674,6 +624,59 @@ The following properties are synchronized between a Powerofficego Supplier and a
      - "string"
    * - PhoneNumber
      - phoneNumber
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
+
+
+Powerofficego Suppliers to PowerOfficeGov1 Supplier
+---------------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a PowerOfficeGov1 Supplier.
+
+If a matching PowerOfficeGov1 Supplier already exists, the Powerofficego Suppliers will be merged with the existing one.
+If no matching PowerOfficeGov1 Supplier is found, a new PowerOfficeGov1 Supplier will be created.
+
+A Powerofficego Suppliers will merge with a PowerOfficeGov1 Supplier if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - PowerOfficeGov1 Supplier Property
+   * - Id
+     - Id
+
+Once a link between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a PowerOfficeGov1 Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - PowerOfficeGov1 Supplier Property
+     - PowerOfficeGov1 Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - InternationalIdNumber (Dependant on having poweroffice-supplier in poweroffice-customer:InternationalIdType)
+     - Id
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LegalName
+     - LegalName
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
      - "string"
    * - WebsiteUrl
      - WebsiteUrl
