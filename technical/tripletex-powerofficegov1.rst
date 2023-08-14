@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 10:21:50
+Generated: 2023-08-14 10:32:51
 
 Introduction.
 ------------
@@ -1061,6 +1061,37 @@ The following properties are synchronized between a Tripletex Department and a P
      - "string"
 
 
+Tripletex Contact to PowerOfficeGov1 Contactperson
+--------------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGov1 Contactperson.
+
+Once a link between a Tripletex Contact and a PowerOfficeGov1 Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGov1 Contactperson:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGov1 Contactperson Property
+     - PowerOfficeGov1 Data Type
+   * - customer.id
+     - partyId
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberWork
+     - phoneNumber
+     - "string"
+
+
 Tripletex Contact to PowerOfficeGov1 Customer
 ---------------------------------------------
 Every Tripletex Contact will be synchronized with a PowerOfficeGov1 Customer.
@@ -1084,6 +1115,35 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - lastName
      - LastName
      - "string"
+
+
+Tripletex Employee to PowerOfficeGov1 Address
+---------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOfficeGov1 Address.
+
+If a matching PowerOfficeGov1 Address already exists, the Tripletex Employee will be merged with the existing one.
+If no matching PowerOfficeGov1 Address is found, a new PowerOfficeGov1 Address will be created.
+
+A Tripletex Employee will merge with a PowerOfficeGov1 Address if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGov1 Address Property
+   * - address.id
+     - id
+
+Once a link between a Tripletex Employee and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOfficeGov1 Address:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Data Type
 
 
 Tripletex Employee to PowerOfficeGov1 Employee
@@ -1229,6 +1289,204 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
      - "string"
    * - orders.id
      - OrderNo
+     - "string"
+
+
+Tripletex Order to PowerOfficeGov1 Salesorder
+---------------------------------------------
+Every Tripletex Order will be synchronized with a PowerOfficeGov1 Salesorder.
+
+Once a link between a Tripletex Order and a PowerOfficeGov1 Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a PowerOfficeGov1 Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - PowerOfficeGov1 Salesorder Property
+     - PowerOfficeGov1 Data Type
+   * - currency.id
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - orderDate
+     - OrderDate
+     - "string"
+
+
+Tripletex Orderline to PowerOfficeGov1 Salesorderline
+-----------------------------------------------------
+Every Tripletex Orderline will be synchronized with a PowerOfficeGov1 Salesorderline.
+
+Once a link between a Tripletex Orderline and a PowerOfficeGov1 Salesorderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a PowerOfficeGov1 Salesorderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - PowerOfficeGov1 Salesorderline Property
+     - PowerOfficeGov1 Data Type
+   * - count
+     - Quantity
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - discount
+     - Discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - vatType.id
+     - VatReturnSpecification
+     - "string"
+
+
+Tripletex Product to PowerOfficeGov1 Product
+--------------------------------------------
+Every Tripletex Product will be synchronized with a PowerOfficeGov1 Product.
+
+If a matching PowerOfficeGov1 Product already exists, the Tripletex Product will be merged with the existing one.
+If no matching PowerOfficeGov1 Product is found, a new PowerOfficeGov1 Product will be created.
+
+A Tripletex Product will merge with a PowerOfficeGov1 Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - PowerOfficeGov1 Product Property
+   * - id
+     - id
+   * - number
+     - number
+   * - number
+     - ERPProductKey
+
+Once a link between a Tripletex Product and a PowerOfficeGov1 Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a PowerOfficeGov1 Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - PowerOfficeGov1 Product Property
+     - PowerOfficeGov1 Data Type
+   * - costExcludingVatCurrency
+     - UnitCost
+     - "string"
+   * - costExcludingVatCurrency
+     - costExcludingVatCurrency
+     - "integer"
+   * - costExcludingVatCurrency
+     - costPrice
+     - "string"
+   * - currency.id
+     - ERPPriceListKey
+     - "string"
+   * - currency.id
+     - currency.id
+     - "integer"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - ean
+     - ean
+     - "string"
+   * - ean
+     - gtin
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - number
+     - number
+     - "string"
+   * - priceExcludingVatCurrency
+     - UnitListPrice
+     - "decimal"
+   * - priceExcludingVatCurrency
+     - priceExcludingVatCurrency
+     - "float"
+   * - priceExcludingVatCurrency
+     - salesPrice
+     - "string"
+   * - priceExcludingVatCurrency
+     - unitPrice
+     - "string"
+   * - productUnit.id
+     - QuantityUnit
+     - "string"
+   * - productUnit.id
+     - productUnit.id
+     - "integer"
+   * - productUnit.id
+     - unitOfMeasureCode
+     - "string"
+   * - stockOfGoods
+     - availableStock
+     - "string"
+   * - stockOfGoods
+     - stockOfGoods
+     - "integer"
+   * - supplier.id
+     - Supplier
+     - "string"
+   * - supplier.id
+     - supplier.id
+     - "integer"
+   * - vatType.id
+     - VAT
+     - "integer"
+   * - vatType.id
+     - vatCode
+     - "string"
+   * - vatType.id
+     - vatType.id
+     - "integer"
+
+
+Tripletex Productgroup to PowerOfficeGov1 Productgroup
+------------------------------------------------------
+Every Tripletex Productgroup will be synchronized with a PowerOfficeGov1 Productgroup.
+
+Once a link between a Tripletex Productgroup and a PowerOfficeGov1 Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgroup and a PowerOfficeGov1 Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgroup Property
+     - PowerOfficeGov1 Productgroup Property
+     - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - parentGroup.id
+     - parentGroup.id
+     - "integer"
+   * - url
+     - url
      - "string"
 
 
