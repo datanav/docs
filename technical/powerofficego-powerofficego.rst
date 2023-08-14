@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-14 09:02:09
+Generated: 2023-08-14 09:09:56
 
 Introduction.
 ------------
@@ -115,34 +115,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Contactperson to PowerOfficeGo Customers
-------------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a PowerOfficeGo Customers.
-
-Once a link between a Powerofficego Contactperson and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - emailAddress
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-
-
 Powerofficego Customer to PowerOfficeGo Contactperson
 -----------------------------------------------------
 Every Powerofficego Customer will be synchronized with a PowerOfficeGo Contactperson.
@@ -189,33 +161,5 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - mailAddress.zipCode
      - zipCode
-     - "string"
-
-
-Powerofficego Customers to PowerOfficeGo Contactperson
-------------------------------------------------------
-Every Powerofficego Customers will be synchronized with a PowerOfficeGo Contactperson.
-
-Once a link between a Powerofficego Customers and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
-   * - LastName
-     - lastName
-     - "string"
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - emailAddress
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
      - "string"
 
