@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:16:53
+Generated: 2023-08-14 10:19:53
 
 Introduction.
 ------------
@@ -204,44 +204,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
 
 
-Tripletex Employee to PowerOfficeGo Employee
---------------------------------------------
-Every Tripletex Employee will be synchronized with a PowerOfficeGo Employee.
-
-If a matching PowerOfficeGo Employee already exists, the Tripletex Employee will be merged with the existing one.
-If no matching PowerOfficeGo Employee is found, a new PowerOfficeGo Employee will be created.
-
-A Tripletex Employee will merge with a PowerOfficeGo Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGo Employee Property
-   * - nationalIdentityNumber
-     - SocialSecurityNumber
-
-Once a link between a Tripletex Employee and a PowerOfficeGo Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a PowerOfficeGo Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGo Employee Property
-     - PowerOfficeGo Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-
-
 Tripletex Employee to PowerOfficeGo Employees
 ---------------------------------------------
 Every Tripletex Employee will be synchronized with a PowerOfficeGo Employees.
@@ -277,43 +239,6 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - lastName
      - LastName
-     - "string"
-
-
-Tripletex Invoice to PowerOfficeGo Outgoinginvoice
---------------------------------------------------
-Every Tripletex Invoice will be synchronized with a PowerOfficeGo Outgoinginvoice.
-
-Once a link between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Invoice Property
-     - PowerOfficeGo Outgoinginvoice Property
-     - PowerOfficeGo Data Type
-   * - amountExcludingVat
-     - NetAmount
-     - "string"
-   * - changes.timestamp
-     - CreatedDate
-     - "string"
-   * - currency.id
-     - CurrencyCode
-     - "string"
-   * - customer.id
-     - CustomerCode
-     - "string"
-   * - deliveryDate
-     - DeliveryDate
-     - "string"
-   * - deliveryDate
-     - SentDate
-     - "string"
-   * - orders.id
-     - OrderNo
      - "string"
 
 
@@ -499,32 +424,20 @@ The following properties are synchronized between a Tripletex Productgroup and a
      - "string"
 
 
-Tripletex Supplier to PowerOfficeGo Supplier
---------------------------------------------
-Every Tripletex Supplier will be synchronized with a PowerOfficeGo Supplier.
+Tripletex Supplier to PowerOfficeGo Suppliers
+---------------------------------------------
+Every Tripletex Supplier will be synchronized with a PowerOfficeGo Suppliers.
 
-Once a link between a Tripletex Supplier and a PowerOfficeGo Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Supplier and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGo Supplier:
+The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGo Suppliers:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Supplier Property
-     - PowerOfficeGo Supplier Property
+     - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
 
 
 Tripletex Vattype to PowerOfficeGo Vatcode
