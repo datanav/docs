@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:11:29
+Generated: 2023-08-14 09:11:49
 
 Introduction.
 ------------
@@ -65,6 +65,9 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - lastChanged
      - lastChanged
      - "string"
+   * - legalName
+     - legalName
+     - "string"
    * - mailAddress.address1
      - mailAddress.address1
      - "string"
@@ -88,6 +91,9 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - mailAddress.zipCode
      - mailAddress.zipCode
+     - "string"
+   * - ourReferenceEmployeeCode
+     - ourReferenceEmployeeCode
      - "string"
    * - phoneNumber
      - phoneNumber
@@ -115,6 +121,12 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "string"
    * - streetAddresses.zipCode
      - streetAddresses.zipCode
+     - "string"
+   * - vatNumber (Dependant on having wd:Q906278 in mailAddress.countryCode)
+     - mailAddress.countryCode
+     - "string"
+   * - vatNumber
+     - vatNumber (Dependant on having  in mailAddress.countryCode)
      - "string"
    * - websiteUrl
      - websiteUrl
