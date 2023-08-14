@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 09:01:50
+Generated: 2023-08-14 09:02:09
 
 Introduction.
 ------------
@@ -301,6 +301,39 @@ The following properties are synchronized between a Wave Customer and a PowerOff
    * - Wave Customer Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - Phones.Value
+     - "string"
+   * - shippingDetails.phone
+     - Phones.Value
+     - "string"
+   * - website
+     - Domains
+     - "list"
+   * - website
+     - Urls.Value
+     - "string"
 
 
 Wave Vendor to PowerOfficeGov1 Contact
@@ -317,6 +350,36 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
    * - Wave Vendor Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - mobile
+     - phoneNumberMobile
+     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - phoneNumberWork
+     - "string"
+   * - website
+     - Domains
+     - "list"
+   * - website
+     - Urls.Value
+     - "string"
 
 
 Wave Account to PowerOfficeGov1 Account
