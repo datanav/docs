@@ -2,12 +2,42 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 10:32:58
+Generated: 2023-08-14 12:53:56
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to PowerOfficeGov1. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Currency to PowerOfficeGov1 Currency
+-----------------------------------------
+Before any synchronization can take place, a link between a Wave Currency and a PowerOfficeGov1 Currency must be established.
+
+A new PowerOfficeGov1 Currency will be created from a Wave Currency if it is connected to a Wave Account that is synchronized into PowerOfficeGov1.
+
+A Wave Currency will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - PowerOfficeGov1 Currency Property
+   * - code
+     - Code
+   * - code
+     - code
+
+Once a link between a Wave Currency and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a PowerOfficeGov1 Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - PowerOfficeGov1 Currency Property
+     - PowerOfficeGov1 Data Type
+
 
 Wave Customer to PowerOfficeGov1 Employee
 -----------------------------------------
