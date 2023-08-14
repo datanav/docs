@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:50:56
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -33,6 +33,66 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - properties.address
+     - MailAddress.Address1
+     - "string"
+   * - properties.address
+     - address.addressLine1
+     - "string"
+   * - properties.city
+     - MailAddress.City
+     - "string"
+   * - properties.city
+     - address.city
+     - "string"
+   * - properties.country
+     - MailAddress.CountryCode
+     - "string"
+   * - properties.country
+     - address.country.id
+     - "integer"
+   * - properties.date_of_birth
+     - DateOfBirth
+     - "string"
+   * - properties.date_of_birth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.email
+     - email
+     - "string"
+   * - properties.firstname
+     - FirstName
+     - "string"
+   * - properties.firstname
+     - firstName
+     - "string"
+   * - properties.lastname
+     - LastName
+     - "string"
+   * - properties.lastname
+     - lastName
+     - "string"
+   * - properties.mobilephone
+     - phoneNumberMobile
+     - "string"
+   * - properties.phone
+     - phoneNumberWork
+     - "string"
+   * - properties.work_email
+     - EmailAddress
+     - "string"
+   * - properties.zip
+     - MailAddress.ZipCode
+     - "string"
+   * - properties.zip
+     - address.postalCode
+     - "string"
 
 
 HubSpot Contact to PowerOfficeGov1 Person
@@ -59,6 +119,36 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - id
+     - PersonId
+     - "integer"
+   * - properties.address
+     - Address.Street.Address1
+     - "string"
+   * - properties.city
+     - Address.Street.City
+     - "string"
+   * - properties.date_of_birth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - properties.email
+     - Emails.Value
+     - "string"
+   * - properties.firstname
+     - Firstname
+     - "string"
+   * - properties.lastname
+     - Lastname
+     - "string"
+   * - properties.mobilephone
+     - MobilePhones.Value
+     - "string"
+   * - properties.phone
+     - OfficePhones.Value
+     - "string"
+   * - properties.zip
+     - Address.Street.Zipcode
+     - "string"
 
 
 HubSpot Company to PowerOfficeGov1 Customer
