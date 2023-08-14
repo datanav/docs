@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:09:56
+Generated: 2023-08-14 09:10:09
 
 Introduction.
 ------------
@@ -25,6 +25,87 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - invoiceEmailAddress
+     - invoiceEmailAddress
+     - "string"
+   * - invoiceEmailAddressCC
+     - invoiceEmailAddressCC
+     - "string"
+   * - lastChanged
+     - lastChanged
+     - "string"
+   * - mailAddress.address1
+     - mailAddress.address1
+     - "string"
+   * - mailAddress.address2
+     - mailAddress.address2
+     - "string"
+   * - mailAddress.address3
+     - mailAddress.address3
+     - "string"
+   * - mailAddress.city
+     - mailAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - mailAddress.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - mailAddress.lastChanged
+     - mailAddress.lastChanged
+     - "string"
+   * - mailAddress.zipCode
+     - mailAddress.zipCode
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - mailAddress.countryCode
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
+   * - websiteUrl
+     - websiteUrl
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Department
