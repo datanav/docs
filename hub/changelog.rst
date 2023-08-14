@@ -1,6 +1,12 @@
 Changelog
 =========
 
+.. _changelog_2023_08_14:
+
+2023-08-14
+----------
+* The :ref:`ni-id <ni_id_dtl_function>` and :ref:`ni-ns <ni_ns_dtl_function>` DTL functions now accept string arguments.
+
 
 .. _changelog_2023_08_11:
 
