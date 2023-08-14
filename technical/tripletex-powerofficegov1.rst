@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 09:09:56
+Generated: 2023-08-14 09:10:09
 
 Introduction.
 ------------
@@ -305,6 +305,39 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - id
+     - id
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Supplier
