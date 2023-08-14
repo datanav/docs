@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-08-14 10:19:28
+Generated: 2023-08-14 10:19:53
 
 Introduction.
 ------------
@@ -111,28 +111,6 @@ The following properties are synchronized between a Powerofficego Salesorder and
      - "string"
    * - DepartmentCode
      - customer.id
-     - "string"
-
-
-Powerofficego Supplier to Wave Vendor
--------------------------------------
-Every Powerofficego Supplier will be synchronized with a Wave Vendor.
-
-Once a link between a Powerofficego Supplier and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Supplier and a Wave Vendor:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Supplier Property
-     - Wave Vendor Property
-     - Wave Data Type
-   * - LegalName
-     - name
-     - "string"
-   * - WebsiteUrl
-     - website
      - "string"
 
 
