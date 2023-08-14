@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:20:21
+Generated: 2023-08-14 10:21:50
 
 Introduction.
 ------------
@@ -475,4 +475,20 @@ The following properties are synchronized between a Tripletex Vattype and a Powe
    * - percentage
      - rate
      - "string"
+
+
+Tripletex Vattype to PowerOfficeGo Vatcodes
+-------------------------------------------
+Every Tripletex Vattype will be synchronized with a PowerOfficeGo Vatcodes.
+
+Once a link between a Tripletex Vattype and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Vattype and a PowerOfficeGo Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Vattype Property
+     - PowerOfficeGo Vatcodes Property
+     - PowerOfficeGo Data Type
 
