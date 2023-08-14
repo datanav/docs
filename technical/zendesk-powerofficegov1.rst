@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:51:32
+Generated: 2023-08-14 08:51:46
 
 Introduction.
 ------------
@@ -52,6 +52,12 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - Zendesk Organisations Property
      - PowerOfficeGov1 Organisations Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - name
+     - "string"
+   * - url
+     - url
+     - "string"
 
 
 Zendesk Ticketcomments to PowerOfficeGov1 Ticketcomments
@@ -84,6 +90,21 @@ The following properties are synchronized between a Zendesk Tickets and a PowerO
    * - Zendesk Tickets Property
      - PowerOfficeGov1 Tickets Property
      - PowerOfficeGov1 Data Type
+   * - assignee_id
+     - assignee_id
+     - "string"
+   * - due_at
+     - due_at
+     - "string"
+   * - organization_id
+     - organization_id
+     - "string"
+   * - requester_id
+     - requester_id
+     - "string"
+   * - subject
+     - subject
+     - "string"
 
 
 Zendesk Users to PowerOfficeGov1 Employee
