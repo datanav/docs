@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:19:06
+Generated: 2023-08-14 09:23:37
 
 Introduction.
 ------------
@@ -193,6 +193,9 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "integer"
    * - mailAddress.countryCode
      - streetAddresses.countryCode
+     - "string"
+   * - mailAddress.id
+     - mailAddress.id
      - "string"
    * - mailAddress.lastChanged
      - mailAddress.lastChanged
