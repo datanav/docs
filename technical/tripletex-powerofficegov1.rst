@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 09:00:54
+Generated: 2023-08-14 09:03:59
 
 Introduction.
 ------------
@@ -163,6 +163,33 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - deliveryAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - deliveryAddress.city
+     - Address.Postal.City
+     - "string"
+   * - deliveryAddress.city
+     - Address.Street.City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - deliveryAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - deliveryAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
    * - email
      - Emails.Value
      - "string"
@@ -179,13 +206,28 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - Phones.Value
      - "string"
    * - physicalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - physicalAddress.addressLine1
      - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Postal.Address2
      - "string"
    * - physicalAddress.addressLine2
      - Address.Street.Address2
      - "string"
    * - physicalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - physicalAddress.city
      - Address.Street.City
+     - "string"
+   * - physicalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - physicalAddress.postalCode
+     - Address.Postal.Zipcode
      - "string"
    * - physicalAddress.postalCode
      - Address.Street.Zipcode
@@ -193,17 +235,29 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - postalAddress.addressLine1
      - Address.Postal.Address1
      - "string"
+   * - postalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
    * - postalAddress.addressLine2
      - Address.Postal.Address2
      - "string"
+   * - postalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
    * - postalAddress.city
      - Address.Postal.City
+     - "string"
+   * - postalAddress.city
+     - Address.Street.City
      - "string"
    * - postalAddress.country.id
      - Country.CountryId
      - "integer"
    * - postalAddress.postalCode
      - Address.Postal.Zipcode
+     - "string"
+   * - postalAddress.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
@@ -995,17 +1049,47 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - deliveryAddress.addressLine1
      - deliveryAddress.addressLine1
      - "string"
+   * - deliveryAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
    * - deliveryAddress.addressLine2
      - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - streetAddresses.address2
      - "string"
    * - deliveryAddress.city
      - deliveryAddress.city
      - "string"
+   * - deliveryAddress.city
+     - mailAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - streetAddresses.city
+     - "string"
    * - deliveryAddress.country.id
      - deliveryAddress.country.id
      - "string"
+   * - deliveryAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - deliveryAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
    * - deliveryAddress.postalCode
      - deliveryAddress.postalCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - streetAddresses.zipCode
      - "string"
    * - email
      - email
@@ -1050,6 +1134,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - address.addressLine1
      - "string"
    * - physicalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - physicalAddress.addressLine1
      - physicalAddress.addressLine1
      - "string"
    * - physicalAddress.addressLine1
@@ -1057,6 +1144,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - physicalAddress.addressLine2
      - address.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - mailAddress.address2
      - "string"
    * - physicalAddress.addressLine2
      - physicalAddress.addressLine2
@@ -1068,6 +1158,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - address.city
      - "string"
    * - physicalAddress.city
+     - mailAddress.city
+     - "string"
+   * - physicalAddress.city
      - physicalAddress.city
      - "string"
    * - physicalAddress.city
@@ -1077,6 +1170,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - address.country.code
      - "string"
    * - physicalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - physicalAddress.country.id
      - physicalAddress.country.id
      - "integer"
    * - physicalAddress.country.id
@@ -1084,6 +1180,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - physicalAddress.postalCode
      - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - mailAddress.zipCode
      - "string"
    * - physicalAddress.postalCode
      - physicalAddress.postalCode
@@ -1097,11 +1196,17 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - postalAddress.addressLine1
      - postalAddress.addressLine1
      - "string"
+   * - postalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
    * - postalAddress.addressLine2
      - mailAddress.address2
      - "string"
    * - postalAddress.addressLine2
      - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - streetAddresses.address2
      - "string"
    * - postalAddress.city
      - mailAddress.city
@@ -1109,17 +1214,26 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - postalAddress.city
      - postalAddress.city
      - "string"
+   * - postalAddress.city
+     - streetAddresses.city
+     - "string"
    * - postalAddress.country.id
      - mailAddress.countryCode
      - "string"
    * - postalAddress.country.id
      - postalAddress.country.id
      - "integer"
+   * - postalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
    * - postalAddress.postalCode
      - mailAddress.zipCode
      - "string"
    * - postalAddress.postalCode
      - postalAddress.postalCode
+     - "string"
+   * - postalAddress.postalCode
+     - streetAddresses.zipCode
      - "string"
 
 
