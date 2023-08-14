@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:51:46
+Generated: 2023-08-14 08:59:49
 
 Introduction.
 ------------
@@ -287,6 +287,22 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - properties.phone
      - phoneNumberWork
      - "string"
+
+
+HubSpot Company to PowerOfficeGov1 Contact
+------------------------------------------
+Every HubSpot Company will be synchronized with a PowerOfficeGov1 Contact.
+
+Once a link between a HubSpot Company and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
 
 
 HubSpot Account to PowerOfficeGov1 Teams
