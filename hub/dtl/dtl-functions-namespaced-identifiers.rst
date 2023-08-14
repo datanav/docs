@@ -232,13 +232,21 @@ Namespaced identifiers
        |   VALUES(value-expression{1})
        |
      - | Extracts the namespace id part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
+         are not namespaced identifiers or strings on the form ``"namespace:id"`` are ignored.
        |
        | ``["ni-id", "~:foo:bar"]``
        |
        | Returns ``"bar"``.
        |
+       | ``["ni-id", "foo:bar"]``
+       |
+       | Returns ``"bar"``.
+       |
        | ``["ni-id", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["bar", "baz"]``.
+       |
+       | ``["ni-id", ["list", "foo:bar", "bar:baz"]]``
        |
        | Returns ``["bar", "baz"]``.
 
@@ -258,12 +266,20 @@ Namespaced identifiers
        |   VALUES(value-expression{1})
        |
      - | Extracts the namespace part of namespaced identifiers. VALUES that
-         are not namespaced identifiers are ignored.
+         are not namespaced identifiers or strings on the form ``"namespace:id"`` are ignored.
        |
        | ``["ni-ns", "~:foo:bar"]``
        |
        | Returns ``"foo"``.
        |
+       | ``["ni-ns", "foo:bar"]``
+       |
+       | Returns ``"foo"``.
+       |
        | ``["ni-ns", ["list", "~:foo:bar", "~:bar:baz"]]``
+       |
+       | Returns ``["foo", "bar"]``.
+       |
+       | ``["ni-ns", ["list", "foo:bar", "bar:baz"]]``
        |
        | Returns ``["foo", "bar"]``.
