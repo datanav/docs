@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 08:53:00
+Generated: 2023-08-14 08:59:49
 
 Introduction.
 ------------
@@ -11,9 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Contact to PowerOfficeGov1 Contact
 ----------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGov1 Contact must be established.
+Every SuperOffice Contact will be synchronized with a PowerOfficeGov1 Contact.
 
-A new PowerOfficeGov1 Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice User, or Person that is synchronized into PowerOfficeGov1.
+If a matching PowerOfficeGov1 Contact already exists, the SuperOffice Contact will be merged with the existing one.
+If no matching PowerOfficeGov1 Contact is found, a new PowerOfficeGov1 Contact will be created.
 
 A SuperOffice Contact will merge with a PowerOfficeGov1 Contact if one of the following property combinations match:
 
