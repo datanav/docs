@@ -2,12 +2,38 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:23:37
+Generated: 2023-08-14 09:26:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to PowerOfficeGov1. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to PowerOfficeGov1 Customer
+---------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGov1 Customer must be established.
+
+A Powerofficego Customers will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGov1 Customer Property
+   * - id
+     - id
+
+Once a link between a Powerofficego Customers and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGov1 Customer Property
+     - PowerOfficeGov1 Data Type
+
 
 Powerofficego Customer to PowerOfficeGov1 Department
 ----------------------------------------------------
