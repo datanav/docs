@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-14 10:12:52
+Generated: 2023-08-14 10:16:50
 
 Introduction.
 ------------
@@ -315,6 +315,22 @@ The following properties are synchronized between a Tripletex Invoice and a Powe
    * - orders.id
      - OrderNo
      - "string"
+
+
+Tripletex Invoice to PowerOfficeGo Outgoinginvoices
+---------------------------------------------------
+Every Tripletex Invoice will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Invoice and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Invoice Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Order to PowerOfficeGo Salesorder
