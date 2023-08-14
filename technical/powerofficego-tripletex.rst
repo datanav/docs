@@ -2,12 +2,30 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-14 09:27:57
+Generated: 2023-08-14 09:29:50
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Tripletex. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customer to Tripletex Customer
+--------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customer and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Powerofficego Customer if it is connected to a Powerofficego Customer, Customers, or Contactperson that is synchronized into Tripletex.
+
+Once a link between a Powerofficego Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customer and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
 
 Powerofficego Customer to Tripletex Department
 ----------------------------------------------
@@ -62,113 +80,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - phoneNumber
      - phoneNumberWork
      - "string"
-
-
-Powerofficego Customer to Tripletex Contact
--------------------------------------------
-Every Powerofficego Customer will be synchronized with a Tripletex Contact.
-
-Once a link between a Powerofficego Customer and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - LastName
-     - lastName
-     - "string"
-   * - emailAddress
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-
-
-Powerofficego Customer to Tripletex Customer
---------------------------------------------
-Every Powerofficego Customer will be synchronized with a Tripletex Customer.
-
-Once a link between a Powerofficego Customer and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - InvoiceEmailAddress
-     - invoiceEmail
-     - "string"
-   * - InvoiceEmailAddressCC
-     - invoiceEmail
-     - "string"
-   * - LegalName
-     - name
-     - "string"
-   * - PhoneNumber
-     - phoneNumber
-     - "string"
-   * - emailAddress
-     - email
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - legalName
-     - name
-     - "string"
-   * - mailAddress.address1
-     - postalAddress.addressLine1
-     - "string"
-   * - mailAddress.address2
-     - postalAddress.addressLine2
-     - "string"
-   * - mailAddress.city
-     - postalAddress.city
-     - "string"
-   * - mailAddress.countryCode
-     - postalAddress.country.id
-     - "integer"
-   * - mailAddress.zipCode
-     - postalAddress.postalCode
-     - "string"
-   * - ourReferenceEmployeeCode
-     - accountManager.id
-     - "integer"
-   * - phoneNumber
-     - phoneNumber
-     - "string"
-   * - phoneNumberMobile
-     - phoneNumber
-     - "string"
-   * - streetAddresses.address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - streetAddresses.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - streetAddresses.city
-     - physicalAddress.city
-     - "string"
-   * - streetAddresses.countryCode
-     - physicalAddress.country.id
-     - "integer"
-   * - streetAddresses.zipCode
-     - physicalAddress.postalCode
-     - "string"
-   * - vatNumber (Dependant on having NO in mailAddress.countryCode)
-     - organizationNumber
-     - "replace"," ","", "string"]
 
 
 Powerofficego Customers to Tripletex Contact
