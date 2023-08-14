@@ -2,7 +2,7 @@
 Asana to PowerOfficeGov1 Dataflow
 =================================
 
-Generated: 2023-08-14 08:50:38
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -96,6 +96,9 @@ The following properties are synchronized between a Asana Workspaces and a Power
    * - Asana Workspaces Property
      - PowerOfficeGov1 Companies Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Asana Workspaces to PowerOfficeGov1 Workspaces
