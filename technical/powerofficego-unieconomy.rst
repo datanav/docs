@@ -2,7 +2,7 @@
 Powerofficego to UniEconomy Dataflow
 ====================================
 
-Generated: 2023-08-03 12:05:10
+Generated: 2023-08-14 09:01:50
 
 Introduction.
 ------------
@@ -38,4 +38,20 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - WebUrl
      - "string"
+
+
+Powerofficego Customers to UniEconomy Customers
+-----------------------------------------------
+Every Powerofficego Customers will be synchronized with a UniEconomy Customers.
+
+Once a link between a Powerofficego Customers and a UniEconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a UniEconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - UniEconomy Customers Property
+     - UniEconomy Data Type
 
