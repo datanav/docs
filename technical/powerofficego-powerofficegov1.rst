@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 09:11:57
+Generated: 2023-08-14 09:12:07
 
 Introduction.
 ------------
@@ -75,6 +75,18 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - dateOfBirth
+     - dateOfBirth
+     - "string"
+   * - emailAddress
+     - emailAddress
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Customer
