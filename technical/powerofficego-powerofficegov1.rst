@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:17:57
+Generated: 2023-08-14 10:18:06
 
 Introduction.
 ------------
@@ -61,6 +61,30 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - InternationalIdNumber (Dependant on having poweroffice-supplier in poweroffice-customer:InternationalIdType)
+     - Id
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LegalName
+     - LegalName
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGov1 Department
