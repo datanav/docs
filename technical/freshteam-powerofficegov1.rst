@@ -2,7 +2,7 @@
 Freshteam to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:51:07
 
 Introduction.
 ------------
@@ -68,4 +68,7 @@ The following properties are synchronized between a Freshteam Employee and a Pow
    * - Freshteam Employee Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - communication_address.communication_city
+     - MailAddress.City
+     - "string"
 
