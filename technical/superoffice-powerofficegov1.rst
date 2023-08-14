@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 12:53:56
+Generated: 2023-08-14 12:54:49
 
 Introduction.
 ------------
@@ -426,34 +426,6 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
 
 
-SuperOffice Listcurrencyitems to PowerOfficeGov1 Currency
----------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Listcurrencyitems and a PowerOfficeGov1 Currency must be established.
-
-A SuperOffice Listcurrencyitems will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - PowerOfficeGov1 Currency Property
-   * - Name
-     - Code
-   * - Name
-     - code
-
-Once a link between a SuperOffice Listcurrencyitems and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Listcurrencyitems and a PowerOfficeGov1 Currency:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Listcurrencyitems Property
-     - PowerOfficeGov1 Currency Property
-     - PowerOfficeGov1 Data Type
-
-
 SuperOffice Ownercontactlink to PowerOfficeGov1 Contact
 -------------------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Ownercontactlink and a PowerOfficeGov1 Contact must be established.
@@ -794,6 +766,37 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - Name
      - invoiceComment
      - "string"
+
+
+SuperOffice Listcurrencyitems to PowerOfficeGov1 Currency
+---------------------------------------------------------
+Every SuperOffice Listcurrencyitems will be synchronized with a PowerOfficeGov1 Currency.
+
+If a matching PowerOfficeGov1 Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
+If no matching PowerOfficeGov1 Currency is found, a new PowerOfficeGov1 Currency will be created.
+
+A SuperOffice Listcurrencyitems will merge with a PowerOfficeGov1 Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - PowerOfficeGov1 Currency Property
+   * - Name
+     - Code
+   * - Name
+     - code
+
+Once a link between a SuperOffice Listcurrencyitems and a PowerOfficeGov1 Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listcurrencyitems and a PowerOfficeGov1 Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - PowerOfficeGov1 Currency Property
+     - PowerOfficeGov1 Data Type
 
 
 SuperOffice Listproductcategoryitems to PowerOfficeGov1 Productgroup
