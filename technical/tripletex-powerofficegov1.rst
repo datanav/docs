@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:50:56
+Generated: 2023-08-14 08:51:32
 
 Introduction.
 ------------
@@ -33,6 +33,30 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - customer.id
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumberWork
+     - phoneNumberWork
+     - "string"
 
 
 Tripletex Contact to PowerOfficeGov1 Person
@@ -59,6 +83,24 @@ The following properties are synchronized between a Tripletex Contact and a Powe
    * - Tripletex Contact Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - customer.id
+     - Contact.ContactId
+     - "integer"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
+   * - phoneNumberMobile
+     - MobilePhones.Value
+     - "string"
+   * - phoneNumberWork
+     - OfficePhones.Value
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Companies
@@ -85,6 +127,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Companies Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Contact
@@ -117,6 +162,48 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - organizationNumber
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountry)
+     - "string"
+   * - phoneNumber
+     - Phones.Value
+     - "string"
+   * - physicalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - physicalAddress.city
+     - Address.Street.City
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - postalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - postalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - postalAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Supplier
@@ -161,6 +248,84 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.changes
+     - "string"
+   * - deliveryAddress.country.id
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Department to PowerOfficeGov1 Employee
@@ -213,6 +378,45 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGov1 Person Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - dateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - department.id
+     - Contact.ContactId
+     - "integer"
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - id
+     - PersonId
+     - "integer"
+   * - lastName
+     - Lastname
+     - "string"
+   * - phoneNumberHome
+     - PrivatePhones.Value
+     - "string"
+   * - phoneNumberMobile
+     - MobilePhones.Value
+     - "string"
+   * - phoneNumberWork
+     - OfficePhones.Value
+     - "string"
 
 
 Tripletex Product to PowerOfficeGov1 Productgrouprelation
@@ -265,6 +469,12 @@ The following properties are synchronized between a Tripletex Productgrouprelati
    * - Tripletex Productgrouprelation Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - productGroup.id
+     - ProductCategoryKey
+     - "string"
+   * - productGroup.id
+     - productGroupId
+     - "string"
 
 
 Tripletex Productgrouprelation to PowerOfficeGov1 Productgrouprelation
@@ -291,6 +501,9 @@ The following properties are synchronized between a Tripletex Productgrouprelati
    * - Tripletex Productgrouprelation Property
      - PowerOfficeGov1 Productgrouprelation Property
      - PowerOfficeGov1 Data Type
+   * - productGroup.id
+     - productGroup.id
+     - "integer"
 
 
 Tripletex Supplier to PowerOfficeGov1 Companies
@@ -317,6 +530,9 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Companies Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGov1 Contact
@@ -347,6 +563,45 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - phoneNumber
+     - Phones.Value
+     - "string"
+   * - physicalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - physicalAddress.city
+     - Address.Street.City
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - postalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - postalAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - postalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - postalAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - postalAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGov1 Customer
@@ -391,6 +646,129 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.changes
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.country.id
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddressCC
+     - "string"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - legalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGov1 Customers
@@ -417,6 +795,9 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Customers Property
      - PowerOfficeGov1 Data Type
+   * - organizationNumber
+     - OrgNumber
+     - "string"
 
 
 Tripletex Contact to PowerOfficeGov1 Contact
@@ -552,6 +933,141 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
+   * - accountManager.id
+     - accountManager.id
+     - "integer"
+   * - accountManager.id
+     - ourReferenceEmployeeCode
+     - "string"
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.country.id
+     - deliveryAddress.country.id
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - InvoiceEmailAddressCC
+     - "string"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - legalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - organizationNumber
+     - organizationNumber
+     - "replace"," ","", "string"]
+   * - organizationNumber
+     - vatNumber (Dependant on having NO in mailAddress.countryCode)
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine1
+     - streetAddresses.address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.addressLine2
+     - streetAddresses.address2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.city
+     - streetAddresses.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.country.id
+     - streetAddresses.countryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - physicalAddress.postalCode
+     - streetAddresses.zipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - mailAddress.address1
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - mailAddress.address2
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - mailAddress.city
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - mailAddress.countryCode
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - mailAddress.zipCode
+     - "string"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Customer to PowerOfficeGov1 Customers
@@ -581,6 +1097,9 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - Tripletex Customer Property
      - PowerOfficeGov1 Customers Property
      - PowerOfficeGov1 Data Type
+   * - organizationNumber
+     - OrgNumber
+     - "string"
 
 
 Tripletex Customercategory to PowerOfficeGov1 Customercategory
@@ -666,6 +1185,78 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGov1 Employee Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - MailAddress.Address1
+     - "string"
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - MailAddress.Address2
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - MailAddress.City
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - address.country.id
+     - address.country.id
+     - "integer"
+   * - address.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - department.id
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - lastName
+     - LastName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberHome
+     - phoneNumberHome
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumberWork
+     - phoneNumberWork
+     - "string"
+   * - userType
+     - userType
+     - "string"
 
 
 Tripletex Invoice to PowerOfficeGov1 Invoice
@@ -827,6 +1418,84 @@ The following properties are synchronized between a Tripletex Product and a Powe
    * - Tripletex Product Property
      - PowerOfficeGov1 Product Property
      - PowerOfficeGov1 Data Type
+   * - costExcludingVatCurrency
+     - UnitCost
+     - "string"
+   * - costExcludingVatCurrency
+     - costExcludingVatCurrency
+     - "integer"
+   * - costExcludingVatCurrency
+     - costPrice
+     - "string"
+   * - currency.id
+     - ERPPriceListKey
+     - "string"
+   * - currency.id
+     - currency.id
+     - "integer"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - ean
+     - ean
+     - "string"
+   * - ean
+     - gtin
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - number
+     - number
+     - "string"
+   * - priceExcludingVatCurrency
+     - UnitListPrice
+     - "decimal"
+   * - priceExcludingVatCurrency
+     - priceExcludingVatCurrency
+     - "float"
+   * - priceExcludingVatCurrency
+     - salesPrice
+     - "string"
+   * - priceExcludingVatCurrency
+     - unitPrice
+     - "string"
+   * - productUnit.id
+     - QuantityUnit
+     - "string"
+   * - productUnit.id
+     - productUnit.id
+     - "integer"
+   * - productUnit.id
+     - unitOfMeasureCode
+     - "string"
+   * - stockOfGoods
+     - availableStock
+     - "string"
+   * - stockOfGoods
+     - stockOfGoods
+     - "integer"
+   * - supplier.id
+     - Supplier
+     - "string"
+   * - supplier.id
+     - supplier.id
+     - "integer"
+   * - vatType.id
+     - VAT
+     - "integer"
+   * - vatType.id
+     - vatCode
+     - "string"
+   * - vatType.id
+     - vatType.id
+     - "integer"
 
 
 Tripletex Productgroup to PowerOfficeGov1 Listproductcategoryitems
@@ -888,6 +1557,15 @@ The following properties are synchronized between a Tripletex Productunit and a 
    * - Tripletex Productunit Property
      - PowerOfficeGov1 Productunit Property
      - PowerOfficeGov1 Data Type
+   * - commonCode
+     - commonCode
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - url
+     - url
+     - "string"
 
 
 Tripletex Project to PowerOfficeGov1 Projects
@@ -967,6 +1645,84 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
    * - Tripletex Supplier Property
      - PowerOfficeGov1 Supplier Property
      - PowerOfficeGov1 Data Type
+   * - deliveryAddress.addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - deliveryAddress.changes
+     - deliveryAddress.changes
+     - "string"
+   * - deliveryAddress.city
+     - deliveryAddress.city
+     - "string"
+   * - deliveryAddress.postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - invoiceEmail
+     - invoiceEmail
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
+   * - phoneNumberMobile
+     - phoneNumberMobile
+     - "string"
+   * - physicalAddress.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - physicalAddress.city
+     - "string"
+   * - physicalAddress.country.id
+     - physicalAddress.country.id
+     - "integer"
+   * - physicalAddress.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - postalAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - postalAddress.country.id
+     - "integer"
+   * - postalAddress.postalCode
+     - postalAddress.postalCode
+     - "string"
 
 
 Tripletex Supplier to PowerOfficeGov1 Vendor
