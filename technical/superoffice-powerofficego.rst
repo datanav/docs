@@ -2,12 +2,28 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-14 10:39:58
+Generated: 2023-08-14 15:01:51
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Quoteline to PowerOfficeGo Outgoinginvoices
+-------------------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a SuperOffice Quoteline and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
 
 SuperOffice Product to PowerOfficeGo Vatcodes
 ---------------------------------------------
