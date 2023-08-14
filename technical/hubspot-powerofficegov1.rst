@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 08:59:49
+Generated: 2023-08-14 08:59:57
 
 Introduction.
 ------------
@@ -303,6 +303,33 @@ The following properties are synchronized between a HubSpot Company and a PowerO
    * - HubSpot Company Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - id
+     - ContactId
+     - "integer"
+   * - properties.address
+     - Address.Street.Address1
+     - "string"
+   * - properties.address2
+     - Address.Street.Address2
+     - "string"
+   * - properties.city
+     - Address.Street.City
+     - "string"
+   * - properties.name
+     - Name
+     - "string"
+   * - properties.phone
+     - Phones.Value
+     - "string"
+   * - properties.website
+     - Domains
+     - "list"
+   * - properties.website
+     - Urls.Value
+     - "string"
+   * - properties.zip
+     - Address.Street.Zipcode
+     - "string"
 
 
 HubSpot Account to PowerOfficeGov1 Teams
