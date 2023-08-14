@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-08-01 14:00:20
+Generated: 2023-08-14 10:11:49
 
 Introduction.
 ------------
@@ -53,4 +53,20 @@ The following properties are synchronized between a Powerofficego Employee and a
    * - id
      - id
      - "string"
+
+
+Powerofficego Employees to Freshteam Employee
+---------------------------------------------
+Every Powerofficego Employees will be synchronized with a Freshteam Employee.
+
+Once a link between a Powerofficego Employees and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
 
