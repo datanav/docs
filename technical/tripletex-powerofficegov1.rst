@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:51:46
+Generated: 2023-08-14 09:00:54
 
 Introduction.
 ------------
@@ -134,9 +134,10 @@ The following properties are synchronized between a Tripletex Customer and a Pow
 
 Tripletex Customer to PowerOfficeGov1 Contact
 ---------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGov1 Contact must be established.
+Every Tripletex Customer will be synchronized with a PowerOfficeGov1 Contact.
 
-A new PowerOfficeGov1 Contact will be created from a Tripletex Customer if it is connected to a Tripletex Contact, or Employee that is synchronized into PowerOfficeGov1.
+If a matching PowerOfficeGov1 Contact already exists, the Tripletex Customer will be merged with the existing one.
+If no matching PowerOfficeGov1 Contact is found, a new PowerOfficeGov1 Contact will be created.
 
 A Tripletex Customer will merge with a PowerOfficeGov1 Contact if one of the following property combinations match:
 
@@ -537,7 +538,10 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
 
 Tripletex Supplier to PowerOfficeGov1 Contact
 ---------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Supplier and a PowerOfficeGov1 Contact must be established.
+Every Tripletex Supplier will be synchronized with a PowerOfficeGov1 Contact.
+
+If a matching PowerOfficeGov1 Contact already exists, the Tripletex Supplier will be merged with the existing one.
+If no matching PowerOfficeGov1 Contact is found, a new PowerOfficeGov1 Contact will be created.
 
 A Tripletex Supplier will merge with a PowerOfficeGov1 Contact if one of the following property combinations match:
 
@@ -862,9 +866,7 @@ The following properties are synchronized between a Tripletex Customer and a Pow
 
 Tripletex Department to PowerOfficeGov1 Contact
 -----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGov1 Contact must be established.
-
-A new PowerOfficeGov1 Contact will be created from a Tripletex Department if it is connected to a Tripletex Contact, or Employee that is synchronized into PowerOfficeGov1.
+Every Tripletex Department will be synchronized with a PowerOfficeGov1 Contact.
 
 Once a link between a Tripletex Department and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
