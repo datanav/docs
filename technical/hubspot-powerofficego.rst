@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 14:59:59
+Generated: 2023-08-14 15:00:50
 
 Introduction.
 ------------
@@ -161,4 +161,52 @@ The following properties are synchronized between a HubSpot Quote and a PowerOff
    * - properties.hs_quote_amount
      - NetAmount
      - "string"
+
+
+HubSpot Quotecompanyassociation to PowerOfficeGo Outgoinginvoices
+-----------------------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Quotecompanyassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Quotecontactassociation to PowerOfficeGo Outgoinginvoices
+-----------------------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Quotecontactassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+HubSpot Quotedealassociation to PowerOfficeGo Outgoinginvoices
+--------------------------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a HubSpot Quotedealassociation and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
 
