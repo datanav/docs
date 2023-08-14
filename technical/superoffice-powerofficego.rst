@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-14 10:13:00
+Generated: 2023-08-14 10:19:53
 
 Introduction.
 ------------
@@ -157,28 +157,6 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - VAT
      - VatReturnSpecification
-     - "string"
-
-
-SuperOffice User to PowerOfficeGo Employee
-------------------------------------------
-Every SuperOffice User will be synchronized with a PowerOfficeGo Employee.
-
-Once a link between a SuperOffice User and a PowerOfficeGo Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a PowerOfficeGo Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - PowerOfficeGo Employee Property
-     - PowerOfficeGo Data Type
-   * - firstName
-     - FirstName
-     - "string"
-   * - lastName
-     - LastName
      - "string"
 
 
