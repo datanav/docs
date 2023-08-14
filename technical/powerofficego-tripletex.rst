@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-14 10:18:49
+Generated: 2023-08-14 10:19:28
 
 Introduction.
 ------------
@@ -466,4 +466,16 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - Tripletex Supplier Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
