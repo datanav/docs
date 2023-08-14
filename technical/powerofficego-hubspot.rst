@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-08-14 10:39:58
+Generated: 2023-08-14 11:40:58
 
 Introduction.
 ------------
@@ -224,6 +224,34 @@ The following properties are synchronized between a Powerofficego Employee and a
      - "string"
 
 
+Powerofficego Employees to HubSpot Contact
+------------------------------------------
+Every Powerofficego Employees will be synchronized with a HubSpot Contact.
+
+Once a link between a Powerofficego Employees and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+   * - DateOfBirth
+     - properties.date_of_birth
+     - "string"
+   * - EmailAddress
+     - properties.work_email
+     - "string"
+   * - FirstName
+     - properties.firstname
+     - "string"
+   * - LastName
+     - properties.lastname
+     - "string"
+
+
 Powerofficego Supplier to HubSpot Company
 -----------------------------------------
 Every Powerofficego Supplier will be synchronized with a HubSpot Company.
@@ -236,6 +264,31 @@ The following properties are synchronized between a Powerofficego Supplier and a
    :header-rows: 1
 
    * - Powerofficego Supplier Property
+     - HubSpot Company Property
+     - HubSpot Data Type
+   * - LegalName
+     - properties.name
+     - "string"
+   * - PhoneNumber
+     - properties.phone
+     - "string"
+   * - WebsiteUrl
+     - properties.website
+     - "string"
+
+
+Powerofficego Suppliers to HubSpot Company
+------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a HubSpot Company.
+
+Once a link between a Powerofficego Suppliers and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
      - HubSpot Company Property
      - HubSpot Data Type
    * - LegalName
