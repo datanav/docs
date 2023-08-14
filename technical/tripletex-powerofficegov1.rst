@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 10:15:56
+Generated: 2023-08-14 10:16:50
 
 Introduction.
 ------------
@@ -1192,6 +1192,43 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - userType
      - userType
+     - "string"
+
+
+Tripletex Invoice to PowerOfficeGov1 Outgoinginvoice
+----------------------------------------------------
+Every Tripletex Invoice will be synchronized with a PowerOfficeGov1 Outgoinginvoice.
+
+Once a link between a Tripletex Invoice and a PowerOfficeGov1 Outgoinginvoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Invoice and a PowerOfficeGov1 Outgoinginvoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Invoice Property
+     - PowerOfficeGov1 Outgoinginvoice Property
+     - PowerOfficeGov1 Data Type
+   * - amountExcludingVat
+     - NetAmount
+     - "string"
+   * - changes.timestamp
+     - CreatedDate
+     - "string"
+   * - currency.id
+     - CurrencyCode
+     - "string"
+   * - customer.id
+     - CustomerCode
+     - "string"
+   * - deliveryDate
+     - DeliveryDate
+     - "string"
+   * - deliveryDate
+     - SentDate
+     - "string"
+   * - orders.id
+     - OrderNo
      - "string"
 
 
