@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:50:56
 
 Introduction.
 ------------
@@ -142,6 +142,22 @@ The following properties are synchronized between a Wave Business and a PowerOff
 
    * - Wave Business Property
      - PowerOfficeGov1 Teams Property
+     - PowerOfficeGov1 Data Type
+
+
+Wave Customer to PowerOfficeGov1 Customer
+-----------------------------------------
+Every Wave Customer will be synchronized with a PowerOfficeGov1 Customer.
+
+Once a link between a Wave Customer and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
 
 
