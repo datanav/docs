@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 09:01:50
+Generated: 2023-08-14 09:02:09
 
 Introduction.
 ------------
@@ -52,6 +52,15 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - Zendesk Organisations Property
      - PowerOfficeGov1 Contact Property
      - PowerOfficeGov1 Data Type
+   * - name
+     - Name
+     - "string"
+   * - url
+     - Domains
+     - "list"
+   * - url
+     - Urls.Value
+     - "string"
 
 
 Zendesk Organisations to PowerOfficeGov1 Organisations
