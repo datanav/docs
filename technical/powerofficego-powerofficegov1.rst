@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-14 10:12:01
+Generated: 2023-08-14 10:15:56
 
 Introduction.
 ------------
@@ -408,5 +408,54 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - streetAddresses.zipCode
      - streetAddresses.zipCode
+     - "string"
+
+
+Powerofficego Supplier to PowerOfficeGov1 Supplier
+--------------------------------------------------
+Every Powerofficego Supplier will be synchronized with a PowerOfficeGov1 Supplier.
+
+Once a link between a Powerofficego Supplier and a PowerOfficeGov1 Supplier is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Supplier and a PowerOfficeGov1 Supplier:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Supplier Property
+     - PowerOfficeGov1 Supplier Property
+     - PowerOfficeGov1 Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - EmailAddress
+     - email
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - Id
+     - id
+     - "integer"
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LegalName
+     - LegalName
+     - "string"
+   * - LegalName
+     - name
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
      - "string"
 
