@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 08:49:52
+Generated: 2023-08-14 08:50:56
 
 Introduction.
 ------------
@@ -116,52 +116,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
 
    * - Tripletex Customer Property
      - PowerOfficeGov1 Contact Property
-     - PowerOfficeGov1 Data Type
-
-
-Tripletex Customer to PowerOfficeGov1 Customer
-----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGov1 Customer must be established.
-
-A new PowerOfficeGov1 Customer will be created from a Tripletex Customer if it is connected to a Tripletex Customer, or Supplier that is synchronized into PowerOfficeGov1.
-
-A Tripletex Customer will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - PowerOfficeGov1 Customer Property
-   * - email
-     - email
-   * - email
-     - invoiceEmail
-   * - invoiceEmail
-     - email
-   * - email
-     - overdueNoticeEmail
-   * - overdueNoticeEmail
-     - email
-   * - invoiceEmail
-     - invoiceEmail
-   * - invoiceEmail
-     - overdueNoticeEmail
-   * - overdueNoticeEmail
-     - invoiceEmail
-   * - organizationNumber
-     - organizationNumber
-   * - overdueNoticeEmail
-     - overdueNoticeEmail
-
-Once a link between a Tripletex Customer and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGov1 Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
 
 
@@ -465,6 +419,24 @@ The following properties are synchronized between a Tripletex Supplier and a Pow
      - PowerOfficeGov1 Data Type
 
 
+Tripletex Contact to PowerOfficeGov1 Contact
+--------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a PowerOfficeGov1 Contact must be established.
+
+A new PowerOfficeGov1 Contact will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into PowerOfficeGov1.
+
+Once a link between a Tripletex Contact and a PowerOfficeGov1 Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGov1 Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGov1 Contact Property
+     - PowerOfficeGov1 Data Type
+
+
 Tripletex Customer to PowerOfficeGov1 Department
 ------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGov1 Department must be established.
@@ -505,7 +477,7 @@ Tripletex Department to PowerOfficeGov1 Customer
 ------------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGov1 Customer must be established.
 
-A new PowerOfficeGov1 Customer will be created from a Tripletex Department if it is connected to a Tripletex Customer, or Supplier that is synchronized into PowerOfficeGov1.
+A new PowerOfficeGov1 Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Supplier, or Department that is synchronized into PowerOfficeGov1.
 
 Once a link between a Tripletex Department and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -532,6 +504,53 @@ The following properties are synchronized between a Tripletex Contact and a Powe
 
    * - Tripletex Contact Property
      - PowerOfficeGov1 Contactperson Property
+     - PowerOfficeGov1 Data Type
+
+
+Tripletex Customer to PowerOfficeGov1 Customer
+----------------------------------------------
+Every Tripletex Customer will be synchronized with a PowerOfficeGov1 Customer.
+
+If a matching PowerOfficeGov1 Customer already exists, the Tripletex Customer will be merged with the existing one.
+If no matching PowerOfficeGov1 Customer is found, a new PowerOfficeGov1 Customer will be created.
+
+A Tripletex Customer will merge with a PowerOfficeGov1 Customer if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGov1 Customer Property
+   * - email
+     - email
+   * - email
+     - invoiceEmail
+   * - invoiceEmail
+     - email
+   * - email
+     - overdueNoticeEmail
+   * - overdueNoticeEmail
+     - email
+   * - invoiceEmail
+     - invoiceEmail
+   * - invoiceEmail
+     - overdueNoticeEmail
+   * - overdueNoticeEmail
+     - invoiceEmail
+   * - organizationNumber
+     - organizationNumber
+   * - overdueNoticeEmail
+     - overdueNoticeEmail
+
+Once a link between a Tripletex Customer and a PowerOfficeGov1 Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGov1 Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGov1 Customer Property
      - PowerOfficeGov1 Data Type
 
 
