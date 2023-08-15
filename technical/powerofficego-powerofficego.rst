@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 11:08:42
+Generated: 2023-08-15 13:51:36
 
 Introduction.
 ------------
@@ -38,6 +38,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - FirstName
      - FirstName
+     - "string"
+   * - Id
+     - Id
      - "string"
    * - LastName
      - LastName
