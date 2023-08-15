@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-15 08:58:58
+Generated: 2023-08-15 08:59:31
 
 Introduction.
 ------------
@@ -272,6 +272,12 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOfficeGo Salesorders Property
      - PowerOfficeGo Data Type
+   * - properties.amount
+     - NetAmount
+     - "string"
+   * - properties.closedate
+     - OrderDate
+     - "string"
    * - properties.createdate
      - CreatedDateTimeOffset
      - "string"
