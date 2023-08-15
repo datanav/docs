@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-15 10:23:35
+Generated: 2023-08-15 10:25:45
 
 Introduction.
 ------------
@@ -368,6 +368,12 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - dateOfBirth
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
 
 
 Powerofficego Supplier to SuperOffice Contact
