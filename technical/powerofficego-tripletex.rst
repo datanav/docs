@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 10:25:45
+Generated: 2023-08-15 10:28:39
 
 Introduction.
 ------------
@@ -267,6 +267,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - lastName
      - lastName
+     - "string"
+   * - phoneNumber
+     - phoneNumberMobile
      - "string"
 
 
