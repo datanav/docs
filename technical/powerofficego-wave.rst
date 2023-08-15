@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-08-15 08:53:29
+Generated: 2023-08-15 09:01:33
 
 Introduction.
 ------------
@@ -80,6 +80,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - Wave Data Type
    * - CurrencyCode
      - currency.code
+     - "string"
+   * - PurchaseOrderReference
+     - poNumber
      - "string"
 
 
