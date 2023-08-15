@@ -2,7 +2,7 @@
 Powerofficego to UniEconomy Dataflow
 ====================================
 
-Generated: 2023-08-15 10:00:54
+Generated: 2023-08-15 10:02:36
 
 Introduction.
 ------------
@@ -48,4 +48,7 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - UniEconomy Departments Property
      - UniEconomy Data Type
+   * - Name
+     - Name
+     - "string"
 
