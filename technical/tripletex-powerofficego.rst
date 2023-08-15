@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-15 10:04:57
+Generated: 2023-08-15 10:23:35
 
 Introduction.
 ------------
@@ -252,6 +252,9 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - PowerOfficeGo Data Type
    * - dateOfBirth
      - DateOfBirth
+     - "string"
+   * - dateOfBirth
+     - dateOfBirth
      - "string"
    * - firstName
      - FirstName
