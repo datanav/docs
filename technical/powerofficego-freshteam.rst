@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-08-15 10:02:30
+Generated: 2023-08-15 10:02:36
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Powerofficego Departments an
      - Freshteam Data Type
    * - CreatedDateTimeOffset
      - created_at
+     - "string"
+   * - Name
+     - name
      - "string"
 
 
