@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-15 06:52:41
+Generated: 2023-08-15 08:58:58
 
 Introduction.
 ------------
@@ -236,6 +236,28 @@ The following properties are synchronized between a Tripletex Employee and a Pow
      - "string"
    * - lastName
      - LastName
+     - "string"
+
+
+Tripletex Order to PowerOfficeGo Salesorders
+--------------------------------------------
+Every Tripletex Order will be synchronized with a PowerOfficeGo Salesorders.
+
+Once a link between a Tripletex Order and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a PowerOfficeGo Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - PowerOfficeGo Salesorders Property
+     - PowerOfficeGo Data Type
+   * - changes.timestamp
+     - CreatedDateTimeOffset
+     - "string"
+   * - currency.id
+     - CurrencyCode
      - "string"
 
 
