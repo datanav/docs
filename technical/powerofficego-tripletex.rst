@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 10:02:36
+Generated: 2023-08-15 10:11:35
 
 Introduction.
 ------------
@@ -171,6 +171,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "integer"
    * - mailAddress.zipCode
      - postalAddress.postalCode
+     - "string"
+   * - name
+     - name
      - "string"
    * - ourReferenceEmployeeCode
      - accountManager.id
