@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-15 10:25:45
+Generated: 2023-08-15 10:35:48
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Zendesk Users and a PowerOff
    * - Zendesk Users Property
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
+   * - created_at
+     - EmployeeCreatedDateTimeOffset
+     - "string"
    * - created_at
      - employeeCreatedDateTimeOffset
      - "string"
