@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 09:59:35
+Generated: 2023-08-15 10:00:54
 
 Introduction.
 ------------
@@ -196,6 +196,22 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NO in mailAddress.countryCode)
      - organizationNumber
      - "replace"," ","", "string"]
+
+
+Powerofficego Departments to Tripletex Department
+-------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Tripletex Department.
+
+Once a link between a Powerofficego Departments and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Tripletex Department Property
+     - Tripletex Data Type
 
 
 Powerofficego Employees to Tripletex Employee
