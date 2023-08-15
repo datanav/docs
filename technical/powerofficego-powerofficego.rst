@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 10:40:43
+Generated: 2023-08-15 10:40:51
 
 Introduction.
 ------------
@@ -123,7 +123,13 @@ The following properties are synchronized between a Powerofficego Employees and 
      - MailAddress.countryCode
      - "string"
    * - MailAddress.LastChanged
+     - MailAddress.lastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.LastChanged
      - mailAddress.lastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.zipCode
      - "string"
    * - MailAddress.ZipCode
      - mailAddress.zipCode
