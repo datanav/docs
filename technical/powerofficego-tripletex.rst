@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 10:23:35
+Generated: 2023-08-15 10:25:45
 
 Introduction.
 ------------
@@ -262,6 +262,12 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - dateOfBirth
      - dateOfBirth
      - "datetime-format","%Y-%m-%d","_."]
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
 
 
 Powerofficego Salesorders to Tripletex Order
