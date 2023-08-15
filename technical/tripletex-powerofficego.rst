@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-15 08:58:58
+Generated: 2023-08-15 08:59:31
 
 Introduction.
 ------------
@@ -258,6 +258,9 @@ The following properties are synchronized between a Tripletex Order and a PowerO
      - "string"
    * - currency.id
      - CurrencyCode
+     - "string"
+   * - orderDate
+     - OrderDate
      - "string"
 
 
