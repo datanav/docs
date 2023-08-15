@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 11:08:33
+Generated: 2023-08-15 11:08:42
 
 Introduction.
 ------------
@@ -75,6 +75,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - streetAddresses.address1
      - streetAddresses.address1
      - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
+     - "string"
    * - streetAddresses.city
      - streetAddresses.city
      - "string"
@@ -122,8 +128,17 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Id
      - id
      - "string"
+   * - InternationalIdNumber (Dependant on having wd:Q56404156 in InternationalIdType)
+     - NationalIdNumber
+     - "string"
    * - LastName
      - LastName
+     - "string"
+   * - MailAddress.Address1
+     - MailAddress.addressLine1
+     - "string"
+   * - MailAddress.Address2
+     - MailAddress.addressLine2
      - "string"
    * - MailAddress.City
      - MailAddress.city
@@ -145,6 +160,15 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - NationalIdNumber
      - NationalIdNumber
+     - "string"
+   * - streetAddresses.address1
+     - streetAddresses.address1
+     - "string"
+   * - streetAddresses.address2
+     - streetAddresses.address2
+     - "string"
+   * - streetAddresses.address3
+     - streetAddresses.address3
      - "string"
    * - streetAddresses.city
      - streetAddresses.city
