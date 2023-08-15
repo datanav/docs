@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-08-07 14:19:59
+Generated: 2023-08-15 10:00:00
 
 Introduction.
 ------------
@@ -326,13 +326,67 @@ The following properties are synchronized between a Tripletex Orderline and a Su
      - SuperOffice Quoteline Property
      - SuperOffice Data Type
    * - count
+     - DiscountPercent
+     - "integer"
+   * - count
+     - Name
+     - "string"
+   * - count
      - Quantity
+     - "integer"
+   * - count
+     - QuantityUnit
+     - "integer"
+   * - count
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - count
+     - UnitListPrice
+     - "string"
+   * - count
+     - VAT
+     - "integer"
+   * - description
+     - DiscountPercent
      - "integer"
    * - description
      - Name
      - "string"
+   * - description
+     - Quantity
+     - "integer"
+   * - description
+     - QuantityUnit
+     - "integer"
+   * - description
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - description
+     - UnitListPrice
+     - "string"
+   * - description
+     - VAT
+     - "integer"
    * - discount
      - DiscountPercent
+     - "integer"
+   * - discount
+     - Name
+     - "string"
+   * - discount
+     - Quantity
+     - "integer"
+   * - discount
+     - QuantityUnit
+     - "integer"
+   * - discount
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - discount
+     - UnitListPrice
+     - "string"
+   * - discount
+     - VAT
      - "integer"
    * - order.id
      - QuoteAlternativeId
@@ -340,7 +394,64 @@ The following properties are synchronized between a Tripletex Orderline and a Su
    * - product.id
      - ERPProductKey
      - "string"
+   * - unitCostCurrency
+     - DiscountPercent
+     - "integer"
+   * - unitCostCurrency
+     - Name
+     - "string"
+   * - unitCostCurrency
+     - Quantity
+     - "integer"
+   * - unitCostCurrency
+     - QuantityUnit
+     - "integer"
+   * - unitCostCurrency
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - unitCostCurrency
+     - UnitListPrice
+     - "string"
+   * - unitCostCurrency
+     - VAT
+     - "integer"
    * - unitPriceExcludingVatCurrency
+     - DiscountPercent
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - Name
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - Quantity
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - QuantityUnit
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - unitPriceExcludingVatCurrency
+     - UnitListPrice
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - VAT
+     - "integer"
+   * - vatType.id
+     - DiscountPercent
+     - "integer"
+   * - vatType.id
+     - Name
+     - "string"
+   * - vatType.id
+     - Quantity
+     - "integer"
+   * - vatType.id
+     - QuantityUnit
+     - "integer"
+   * - vatType.id
+     - Rank (Dependant on having  in Rank)
+     - "integer"
+   * - vatType.id
      - UnitListPrice
      - "string"
    * - vatType.id
