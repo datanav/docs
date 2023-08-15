@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGov1 Dataflow
 =========================================
 
-Generated: 2023-08-15 06:52:52
+Generated: 2023-08-15 08:52:57
 
 Introduction.
 ------------
@@ -250,6 +250,22 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - streetAddresses.zipCode
      - streetAddresses.zipCode
      - "string"
+
+
+Powerofficego Salesorders to PowerOfficeGov1 Salesorder
+-------------------------------------------------------
+Every Powerofficego Salesorders will be synchronized with a PowerOfficeGov1 Salesorder.
+
+Once a link between a Powerofficego Salesorders and a PowerOfficeGov1 Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a PowerOfficeGov1 Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - PowerOfficeGov1 Salesorder Property
+     - PowerOfficeGov1 Data Type
 
 
 Powerofficego Suppliers to PowerOfficeGov1 Supplier
