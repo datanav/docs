@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-15 10:25:45
+Generated: 2023-08-15 10:28:37
 
 Introduction.
 ------------
@@ -373,6 +373,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - lastName
      - Lastname
+     - "string"
+   * - phoneNumber
+     - MobilePhones.Value
      - "string"
 
 
