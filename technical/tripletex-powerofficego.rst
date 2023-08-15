@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-15 09:59:39
+Generated: 2023-08-15 10:04:57
 
 Introduction.
 ------------
@@ -198,6 +198,28 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
    * - lastName
      - LastName
+     - "string"
+
+
+Tripletex Department to PowerOfficeGo Departments
+-------------------------------------------------
+Every Tripletex Department will be synchronized with a PowerOfficeGo Departments.
+
+Once a link between a Tripletex Department and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOfficeGo Departments Property
+     - PowerOfficeGo Data Type
+   * - changes.timestamp
+     - CreatedDateTimeOffset
+     - "string"
+   * - name
+     - Name
      - "string"
 
 
