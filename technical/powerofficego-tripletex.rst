@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 08:53:29
+Generated: 2023-08-15 08:59:31
 
 Introduction.
 ------------
@@ -253,6 +253,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - CurrencyCode
      - currency.id
      - "integer"
+   * - OrderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Powerofficego Suppliers to Tripletex Supplier
