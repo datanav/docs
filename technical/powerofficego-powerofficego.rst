@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 13:51:36
+Generated: 2023-08-15 13:51:42
 
 Introduction.
 ------------
@@ -127,6 +127,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - FirstName
      - FirstName
+     - "string"
+   * - Id
+     - Id
      - "string"
    * - Id
      - id
