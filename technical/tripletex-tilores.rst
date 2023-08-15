@@ -2,7 +2,7 @@
 Tripletex to Tilores Dataflow
 =============================
 
-Generated: 2023-06-27 11:31:03
+Generated: 2023-08-15 10:00:00
 
 Introduction.
 ------------
@@ -28,6 +28,9 @@ The following properties are synchronized between a Tripletex Contact and a Tilo
      - "string"
    * - lastName
      - lastName
+     - "string"
+   * - phoneNumberMobileCountry.id
+     - phoneNumber
      - "string"
 
 
