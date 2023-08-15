@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 10:40:51
+Generated: 2023-08-15 11:14:02
 
 Introduction.
 ------------
@@ -142,8 +142,20 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - InvoiceEmailAddress
+     - invoiceEmail
+     - "string"
    * - InvoiceEmailAddressCC
      - invoiceEmail
+     - "string"
+   * - MailAddress.addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - MailAddress.addressLine2
+     - postalAddress.addressLine2
      - "string"
    * - MailAddress.city
      - postalAddress.city
@@ -156,6 +168,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - Name
      - name
+     - "string"
+   * - Number
+     - phoneNumber
      - "string"
    * - PhoneNumber
      - phoneNumber
