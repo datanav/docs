@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-08-15 06:50:37
+Generated: 2023-08-15 06:52:41
 
 Introduction.
 ------------
@@ -178,6 +178,12 @@ The following properties are synchronized between a Powerofficego Customers and 
      - HubSpot Data Type
    * - DateOfBirth
      - properties.date_of_birth
+     - "string"
+   * - EmailAddress
+     - properties.email
+     - "string"
+   * - FirstName
+     - properties.firstname
      - "string"
    * - LastName
      - properties.lastname
