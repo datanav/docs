@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 10:39:00
+Generated: 2023-08-15 10:40:35
 
 Introduction.
 ------------
@@ -47,6 +47,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - MailAddress.countryCode
      - MailAddress.CountryCode
+     - "string"
+   * - MailAddress.lastChangedDateTimeOffset
+     - MailAddress.LastChanged
      - "string"
    * - NationalIdNumber
      - NationalIdNumber
