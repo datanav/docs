@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-08-14 15:02:15
+Generated: 2023-08-15 08:58:58
 
 Introduction.
 ------------
@@ -37,6 +37,28 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
      - "string"
    * - total.value
      - NetAmount
+     - "string"
+
+
+Wave Invoice to PowerOfficeGo Salesorders
+-----------------------------------------
+Every Wave Invoice will be synchronized with a PowerOfficeGo Salesorders.
+
+Once a link between a Wave Invoice and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a PowerOfficeGo Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - PowerOfficeGo Salesorders Property
+     - PowerOfficeGo Data Type
+   * - createdAt
+     - CreatedDateTimeOffset
+     - "string"
+   * - currency.code
+     - CurrencyCode
      - "string"
 
 
