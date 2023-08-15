@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-14 12:54:49
+Generated: 2023-08-15 10:00:00
 
 Introduction.
 ------------
@@ -1034,15 +1034,105 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - PowerOfficeGov1 Salesorderline Property
      - PowerOfficeGov1 Data Type
    * - DiscountPercent
+     - Description
+     - "string"
+   * - DiscountPercent
      - Discount
+     - "string"
+   * - DiscountPercent
+     - Quantity
+     - "string"
+   * - DiscountPercent
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - DiscountPercent
+     - VatReturnSpecification
      - "string"
    * - Name
      - Description
      - "string"
+   * - Name
+     - Discount
+     - "string"
+   * - Name
+     - Quantity
+     - "string"
+   * - Name
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - Name
+     - VatReturnSpecification
+     - "string"
+   * - Quantity
+     - Description
+     - "string"
+   * - Quantity
+     - Discount
+     - "string"
    * - Quantity
      - Quantity
      - "string"
+   * - Quantity
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - Quantity
+     - VatReturnSpecification
+     - "string"
+   * - QuantityUnit
+     - Description
+     - "string"
+   * - QuantityUnit
+     - Discount
+     - "string"
+   * - QuantityUnit
+     - Quantity
+     - "string"
+   * - QuantityUnit
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - QuantityUnit
+     - VatReturnSpecification
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - Description
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - Discount
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - Quantity
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - VatReturnSpecification
+     - "string"
    * - UnitListPrice
+     - Description
+     - "string"
+   * - UnitListPrice
+     - Discount
+     - "string"
+   * - UnitListPrice
+     - Quantity
+     - "string"
+   * - UnitListPrice
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - UnitListPrice
+     - VatReturnSpecification
+     - "string"
+   * - VAT
+     - Description
+     - "string"
+   * - VAT
+     - Discount
+     - "string"
+   * - VAT
+     - Quantity
+     - "string"
+   * - VAT
      - SalesOrderLineUnitPrice
      - "string"
    * - VAT
