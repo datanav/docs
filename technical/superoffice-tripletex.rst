@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-08-07 14:19:59
+Generated: 2023-08-15 10:00:00
 
 Introduction.
 ------------
@@ -530,21 +530,132 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - Tripletex Orderline Property
      - Tripletex Data Type
    * - DiscountPercent
+     - count
+     - "float"
+   * - DiscountPercent
+     - description
+     - "string"
+   * - DiscountPercent
      - discount
      - "float"
+   * - DiscountPercent
+     - unitCostCurrency
+     - "float"
+   * - DiscountPercent
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - DiscountPercent
+     - vatType.id
+     - "integer"
    * - ERPProductKey
      - product.id
      - "integer"
    * - Name
+     - count
+     - "float"
+   * - Name
      - description
      - "string"
+   * - Name
+     - discount
+     - "float"
+   * - Name
+     - unitCostCurrency
+     - "float"
+   * - Name
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Name
+     - vatType.id
+     - "integer"
    * - Quantity
      - count
      - "float"
+   * - Quantity
+     - description
+     - "string"
+   * - Quantity
+     - discount
+     - "float"
+   * - Quantity
+     - unitCostCurrency
+     - "float"
+   * - Quantity
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Quantity
+     - vatType.id
+     - "integer"
+   * - QuantityUnit
+     - count
+     - "float"
+   * - QuantityUnit
+     - description
+     - "string"
+   * - QuantityUnit
+     - discount
+     - "float"
+   * - QuantityUnit
+     - unitCostCurrency
+     - "float"
+   * - QuantityUnit
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - QuantityUnit
+     - vatType.id
+     - "integer"
    * - QuoteAlternativeId
      - order.id
      - "integer"
+   * - Rank (Dependant on having  in Rank)
+     - count
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - description
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - discount
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - unitCostCurrency
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - vatType.id
+     - "integer"
    * - UnitListPrice
+     - count
+     - "float"
+   * - UnitListPrice
+     - description
+     - "string"
+   * - UnitListPrice
+     - discount
+     - "float"
+   * - UnitListPrice
+     - unitCostCurrency
+     - "float"
+   * - UnitListPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - UnitListPrice
+     - vatType.id
+     - "integer"
+   * - VAT
+     - count
+     - "float"
+   * - VAT
+     - description
+     - "string"
+   * - VAT
+     - discount
+     - "float"
+   * - VAT
+     - unitCostCurrency
+     - "float"
+   * - VAT
      - unitPriceExcludingVatCurrency
      - "float"
    * - VAT
