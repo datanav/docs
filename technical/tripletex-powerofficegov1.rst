@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-14 12:54:49
+Generated: 2023-08-15 10:00:00
 
 Introduction.
 ------------
@@ -1381,15 +1381,90 @@ The following properties are synchronized between a Tripletex Orderline and a Po
      - PowerOfficeGov1 Salesorderline Property
      - PowerOfficeGov1 Data Type
    * - count
+     - Description
+     - "string"
+   * - count
+     - Discount
+     - "string"
+   * - count
+     - Quantity
+     - "string"
+   * - count
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - count
+     - VatReturnSpecification
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - description
+     - Discount
+     - "string"
+   * - description
      - Quantity
      - "string"
    * - description
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - description
+     - VatReturnSpecification
+     - "string"
+   * - discount
      - Description
      - "string"
    * - discount
      - Discount
      - "string"
+   * - discount
+     - Quantity
+     - "string"
+   * - discount
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - discount
+     - VatReturnSpecification
+     - "string"
+   * - unitCostCurrency
+     - Description
+     - "string"
+   * - unitCostCurrency
+     - Discount
+     - "string"
+   * - unitCostCurrency
+     - Quantity
+     - "string"
+   * - unitCostCurrency
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - unitCostCurrency
+     - VatReturnSpecification
+     - "string"
    * - unitPriceExcludingVatCurrency
+     - Description
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - Discount
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - Quantity
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - VatReturnSpecification
+     - "string"
+   * - vatType.id
+     - Description
+     - "string"
+   * - vatType.id
+     - Discount
+     - "string"
+   * - vatType.id
+     - Quantity
+     - "string"
+   * - vatType.id
      - SalesOrderLineUnitPrice
      - "string"
    * - vatType.id
