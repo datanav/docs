@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-14 15:02:15
+Generated: 2023-08-15 10:04:57
 
 Introduction.
 ------------
@@ -28,6 +28,25 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
      - "string"
    * - TotalPrice
      - NetAmount
+     - "string"
+
+
+SuperOffice Ownercontactlink to PowerOfficeGo Departments
+---------------------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a PowerOfficeGo Departments.
+
+Once a link between a SuperOffice Ownercontactlink and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a PowerOfficeGo Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - PowerOfficeGo Departments Property
+     - PowerOfficeGo Data Type
+   * - name
+     - Name
      - "string"
 
 
