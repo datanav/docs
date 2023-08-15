@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-14 15:02:15
+Generated: 2023-08-15 08:58:58
 
 Introduction.
 ------------
@@ -255,5 +255,27 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
      - PowerOfficeGo Data Type
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
+     - "string"
+
+
+HubSpot Deal to PowerOfficeGo Salesorders
+-----------------------------------------
+When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOfficeGo Salesorders.
+
+Once a link between a HubSpot Deal and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a PowerOfficeGo Salesorders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - PowerOfficeGo Salesorders Property
+     - PowerOfficeGo Data Type
+   * - properties.createdate
+     - CreatedDateTimeOffset
+     - "string"
+   * - properties.deal_currency_code
+     - CurrencyCode
      - "string"
 
