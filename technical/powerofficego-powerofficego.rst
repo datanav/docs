@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 10:38:52
+Generated: 2023-08-15 10:39:00
 
 Introduction.
 ------------
@@ -33,6 +33,45 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.city
+     - MailAddress.City
+     - "string"
+   * - MailAddress.countryCode
+     - MailAddress.CountryCode
+     - "string"
+   * - NationalIdNumber
+     - NationalIdNumber
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - mailAddress.lastChangedDateTimeOffset
+     - MailAddress.LastChanged
+     - "string"
+   * - mailAddress.zipCode
+     - MailAddress.ZipCode
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Powerofficego Employees to PowerOfficeGo Customers
@@ -59,6 +98,45 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - Id
+     - id
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.City
+     - MailAddress.city
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.countryCode
+     - "string"
+   * - MailAddress.LastChanged
+     - mailAddress.lastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.ZipCode
+     - mailAddress.zipCode
+     - "string"
+   * - NationalIdNumber
+     - NationalIdNumber
+     - "string"
+   * - streetAddresses.city
+     - streetAddresses.city
+     - "string"
+   * - streetAddresses.countryCode
+     - streetAddresses.countryCode
+     - "string"
+   * - streetAddresses.lastChanged
+     - streetAddresses.lastChanged
+     - "string"
+   * - streetAddresses.zipCode
+     - streetAddresses.zipCode
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGo Address
