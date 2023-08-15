@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 08:59:31
+Generated: 2023-08-15 09:01:33
 
 Introduction.
 ------------
@@ -256,6 +256,9 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - OrderDate
      - orderDate
      - "datetime-format","%Y-%m-%d","_."]
+   * - PurchaseOrderReference
+     - reference
+     - "string"
 
 
 Powerofficego Suppliers to Tripletex Supplier
