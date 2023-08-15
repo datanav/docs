@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 08:59:50
+Generated: 2023-08-15 08:59:58
 
 Introduction.
 ------------
@@ -75,4 +75,16 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - CreatedDateTimeOffset
+     - createdDateTimeOffset
+     - "string"
+   * - CurrencyCode
+     - CurrencyCode
+     - "string"
+   * - NetAmount
+     - NetAmount
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
 
