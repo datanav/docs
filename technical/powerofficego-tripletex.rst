@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-15 13:51:42
+Generated: 2023-08-16 10:08:32
 
 Introduction.
 ------------
@@ -175,6 +175,9 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Number
      - phoneNumber
      - "string"
+   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCode)
+     - organizationNumber
+     - "replace"," ","", "string"]
    * - PhoneNumber
      - phoneNumber
      - "string"
