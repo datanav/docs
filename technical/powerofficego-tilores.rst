@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-08-15 13:51:42
+Generated: 2023-08-16 07:43:42
 
 Introduction.
 ------------
@@ -217,6 +217,12 @@ The following properties are synchronized between a Powerofficego Employees and 
      - city
      - "string"
    * - MailAddress.ZipCode
+     - postalCode
+     - "string"
+   * - MailAddress.city
+     - city
+     - "string"
+   * - MailAddress.zipCode
      - postalCode
      - "string"
    * - dateOfBirth
