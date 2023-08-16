@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-15 13:51:42
+Generated: 2023-08-16 07:43:35
 
 Introduction.
 ------------
@@ -163,6 +163,12 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - MailAddress.ZipCode
      - mailAddress.zipCode
+     - "string"
+   * - MailAddress.address1
+     - MailAddress.addressLine1
+     - "string"
+   * - MailAddress.address2
+     - MailAddress.addressLine2
      - "string"
    * - NationalIdNumber
      - NationalIdNumber
