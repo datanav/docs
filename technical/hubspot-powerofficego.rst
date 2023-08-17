@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-17 08:31:12
+Generated: 2023-08-17 08:31:43
 
 Introduction.
 ------------
@@ -262,6 +262,19 @@ HubSpot Account to PowerOfficeGo Currency
 -----------------------------------------
 Every HubSpot Account will be synchronized with a PowerOfficeGo Currency.
 
+If a matching PowerOfficeGo Currency already exists, the HubSpot Account will be merged with the existing one.
+If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+
+A HubSpot Account will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - PowerOfficeGo Currency Property
+   * - companyCurrency
+     - Code
+
 Once a link between a HubSpot Account and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
 The following properties are synchronized between a HubSpot Account and a PowerOfficeGo Currency:
@@ -305,6 +318,19 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
 HubSpot Deal to PowerOfficeGo Currency
 --------------------------------------
 Every HubSpot Deal will be synchronized with a PowerOfficeGo Currency.
+
+If a matching PowerOfficeGo Currency already exists, the HubSpot Deal will be merged with the existing one.
+If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+
+A HubSpot Deal will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - PowerOfficeGo Currency Property
+   * - properties.deal_currency_code
+     - Code
 
 Once a link between a HubSpot Deal and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
