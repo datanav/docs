@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-08-15 10:00:00
+Generated: 2023-08-17 08:30:31
 
 Introduction.
 ------------
@@ -40,6 +40,60 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
      - "string"
 
 
+Wave Currency to PowerOfficeGo Currency
+---------------------------------------
+Every Wave Currency will be synchronized with a PowerOfficeGo Currency.
+
+Once a link between a Wave Currency and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a PowerOfficeGo Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
+
+Wave Customer to PowerOfficeGo Location
+---------------------------------------
+Every Wave Customer will be synchronized with a PowerOfficeGo Location.
+
+Once a link between a Wave Customer and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGo Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGo Location Property
+     - PowerOfficeGo Data Type
+
+
+Wave Invoice to PowerOfficeGo Salesorder
+----------------------------------------
+Every Wave Invoice will be synchronized with a PowerOfficeGo Salesorder.
+
+Once a link between a Wave Invoice and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a PowerOfficeGo Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - PowerOfficeGo Salesorder Property
+     - PowerOfficeGo Data Type
+   * - currency.code
+     - Currency
+     - "string"
+   * - customer.id
+     - DepartmentCode
+     - "string"
+
+
 Wave Invoice to PowerOfficeGo Salesorders
 -----------------------------------------
 Every Wave Invoice will be synchronized with a PowerOfficeGo Salesorders.
@@ -72,6 +126,62 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
    * - total.value
      - TotalAmount
      - "string"
+
+
+Wave Product to PowerOfficeGo Product
+-------------------------------------
+Every Wave Product will be synchronized with a PowerOfficeGo Product.
+
+Once a link between a Wave Product and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
+   * - description
+     - Description
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - modifiedAt
+     - lastChanged
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - unitPrice
+     - SalesPrice
+     - "string"
+   * - unitPrice
+     - salesPrice
+     - "string"
+
+
+Wave Vendor to PowerOfficeGo Location
+-------------------------------------
+Every Wave Vendor will be synchronized with a PowerOfficeGo Location.
+
+Once a link between a Wave Vendor and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a PowerOfficeGo Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - PowerOfficeGo Location Property
+     - PowerOfficeGo Data Type
 
 
 Wave Vendor to PowerOfficeGo Suppliers
