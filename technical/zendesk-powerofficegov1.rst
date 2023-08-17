@@ -2,7 +2,7 @@
 Zendesk to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-17 08:32:31
 
 Introduction.
 ------------
@@ -60,37 +60,5 @@ The following properties are synchronized between a Zendesk Organisations and a 
      - "list"
    * - url
      - Urls.Value
-     - "string"
-
-
-Zendesk Users to PowerOfficeGov1 Employee
------------------------------------------
-Every Zendesk Users will be synchronized with a PowerOfficeGov1 Employee.
-
-If a matching PowerOfficeGov1 Employee already exists, the Zendesk Users will be merged with the existing one.
-If no matching PowerOfficeGov1 Employee is found, a new PowerOfficeGov1 Employee will be created.
-
-A Zendesk Users will merge with a PowerOfficeGov1 Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - PowerOfficeGov1 Employee Property
-   * - email
-     - email
-
-Once a link between a Zendesk Users and a PowerOfficeGov1 Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Zendesk Users and a PowerOfficeGov1 Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Zendesk Users Property
-     - PowerOfficeGov1 Employee Property
-     - PowerOfficeGov1 Data Type
-   * - phone
-     - phoneNumberHome
      - "string"
 
