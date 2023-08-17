@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGov1 Dataflow
 ==========================================
 
-Generated: 2023-08-14 12:54:49
+Generated: 2023-08-17 08:01:35
 
 Introduction.
 ------------
@@ -491,6 +491,21 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - countryCode
      - "string"
    * - address.postalCode
+     - zipCode
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address2
+     - "string"
+   * - shippingDetails.address.city
+     - city
+     - "string"
+   * - shippingDetails.address.country.code
+     - countryCode
+     - "string"
+   * - shippingDetails.address.postalCode
      - zipCode
      - "string"
 
