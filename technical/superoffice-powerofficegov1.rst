@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-17 08:03:37
+Generated: 2023-08-17 08:03:44
 
 Introduction.
 ------------
@@ -835,6 +835,24 @@ The following properties are synchronized between a SuperOffice Person and a Pow
    * - SuperOffice Person Property
      - PowerOfficeGov1 Location Property
      - PowerOfficeGov1 Data Type
+   * - Address.Street.Address1
+     - address1
+     - "string"
+   * - Address.Street.Address2
+     - address2
+     - "string"
+   * - Address.Street.Address3
+     - address3
+     - "string"
+   * - Address.Street.City
+     - city
+     - "string"
+   * - Address.Street.Zipcode
+     - zipCode
+     - "string"
+   * - Country.CountryId
+     - countryCode
+     - "string"
 
 
 SuperOffice Product to PowerOfficeGov1 Product
