@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-17 08:39:11
+Generated: 2023-08-17 08:39:33
 
 Introduction.
 ------------
@@ -97,6 +97,25 @@ The following properties are synchronized between a Powerofficego Customer and a
      - "list"
    * - websiteUrl
      - Urls.Value
+     - "string"
+
+
+Powerofficego Departments to SuperOffice Contact
+------------------------------------------------
+Every Powerofficego Departments will be synchronized with a SuperOffice Contact.
+
+Once a link between a Powerofficego Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - Name
+     - Name
      - "string"
 
 
@@ -253,25 +272,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - firstName
      - Firstname
-     - "string"
-
-
-Powerofficego Departments to SuperOffice Contact
-------------------------------------------------
-Every Powerofficego Departments will be synchronized with a SuperOffice Contact.
-
-Once a link between a Powerofficego Departments and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a SuperOffice Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - SuperOffice Contact Property
-     - SuperOffice Data Type
-   * - Name
-     - Name
      - "string"
 
 
