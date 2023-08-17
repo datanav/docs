@@ -2,12 +2,38 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-17 08:31:12
+Generated: 2023-08-17 08:31:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from SuperOffice to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+SuperOffice Pricelist to PowerOfficeGo Currency
+-----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Pricelist and a PowerOfficeGo Currency must be established.
+
+A SuperOffice Pricelist will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Pricelist Property
+     - PowerOfficeGo Currency Property
+   * - Currency
+     - Code
+
+Once a link between a SuperOffice Pricelist and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Pricelist and a PowerOfficeGo Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Pricelist Property
+     - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
 
 SuperOffice Quoteline to PowerOfficeGo Outgoinginvoices
 -------------------------------------------------------
@@ -34,6 +60,19 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
 SuperOffice Listcurrencyitems to PowerOfficeGo Currency
 -------------------------------------------------------
 Every SuperOffice Listcurrencyitems will be synchronized with a PowerOfficeGo Currency.
+
+If a matching PowerOfficeGo Currency already exists, the SuperOffice Listcurrencyitems will be merged with the existing one.
+If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+
+A SuperOffice Listcurrencyitems will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listcurrencyitems Property
+     - PowerOfficeGo Currency Property
+   * - Name
+     - Code
 
 Once a link between a SuperOffice Listcurrencyitems and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
