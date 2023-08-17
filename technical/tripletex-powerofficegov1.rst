@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-15 10:00:00
+Generated: 2023-08-17 08:03:37
 
 Introduction.
 ------------
@@ -1148,50 +1148,6 @@ The following properties are synchronized between a Tripletex Currency and a Pow
      - PowerOfficeGov1 Data Type
 
 
-Tripletex Employee to PowerOfficeGov1 Address
----------------------------------------------
-Every Tripletex Employee will be synchronized with a PowerOfficeGov1 Address.
-
-If a matching PowerOfficeGov1 Address already exists, the Tripletex Employee will be merged with the existing one.
-If no matching PowerOfficeGov1 Address is found, a new PowerOfficeGov1 Address will be created.
-
-A Tripletex Employee will merge with a PowerOfficeGov1 Address if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGov1 Address Property
-   * - address.id
-     - id
-
-Once a link between a Tripletex Employee and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Employee and a PowerOfficeGov1 Address:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Employee Property
-     - PowerOfficeGov1 Address Property
-     - PowerOfficeGov1 Data Type
-   * - address.addressLine1
-     - address1
-     - "string"
-   * - address.addressLine2
-     - address2
-     - "string"
-   * - address.city
-     - city
-     - "string"
-   * - address.country.id
-     - countryCode
-     - "string"
-   * - address.postalCode
-     - zipCode
-     - "string"
-
-
 Tripletex Employee to PowerOfficeGov1 Employee
 ----------------------------------------------
 Every Tripletex Employee will be synchronized with a PowerOfficeGov1 Employee.
@@ -1299,6 +1255,22 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - userType
      - userType
      - "string"
+
+
+Tripletex Employee to PowerOfficeGov1 Location
+----------------------------------------------
+Every Tripletex Employee will be synchronized with a PowerOfficeGov1 Location.
+
+Once a link between a Tripletex Employee and a PowerOfficeGov1 Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a PowerOfficeGov1 Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - PowerOfficeGov1 Location Property
+     - PowerOfficeGov1 Data Type
 
 
 Tripletex Invoice to PowerOfficeGov1 Outgoinginvoice
