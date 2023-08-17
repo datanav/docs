@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-17 11:02:33
+Generated: 2023-08-17 11:02:47
 
 Introduction.
 ------------
@@ -776,6 +776,15 @@ The following properties are synchronized between a Powerofficego Employee and a
      - "string"
    * - createdDate
      - EmployeeCreatedDateTimeOffset
+     - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - emailAddress
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
      - "string"
 
 
