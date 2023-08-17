@@ -2,7 +2,7 @@
 Asana to PowerOfficeGov1 Dataflow
 =================================
 
-Generated: 2023-08-14 10:11:49
+Generated: 2023-08-17 08:32:31
 
 Introduction.
 ------------
@@ -56,30 +56,5 @@ The following properties are synchronized between a Asana Workspaces and a Power
      - "string"
    * - name
      - Name
-     - "string"
-
-
-Asana Users to PowerOfficeGov1 Employee
----------------------------------------
-Every Asana Users will be synchronized with a PowerOfficeGov1 Employee.
-
-Once a link between a Asana Users and a PowerOfficeGov1 Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Asana Users and a PowerOfficeGov1 Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Asana Users Property
-     - PowerOfficeGov1 Employee Property
-     - PowerOfficeGov1 Data Type
-   * - email
-     - email
-     - "string"
-   * - name
-     - FirstName
-     - "string"
-   * - name
-     - firstName
      - "string"
 
