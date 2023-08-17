@@ -2,93 +2,12 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-17 08:40:00
+Generated: 2023-08-17 08:57:39
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Customer to PowerOfficeGo Customer
---------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customer must be established.
-
-A new PowerOfficeGo Customer will be created from a Tripletex Customer if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
-
-Once a link between a Tripletex Customer and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - PowerOfficeGo Customer Property
-     - PowerOfficeGo Data Type
-   * - accountManager.id
-     - ourReferenceEmployeeCode
-     - "string"
-   * - email
-     - emailAddress
-     - "string"
-   * - email
-     - vatNumber (Dependant on having wd:Q1273217 in mailAddress.countryCodeDependant on having wd:Q1273217 in streetAddresses.countryCode)
-     - "string"
-   * - id
-     - id
-     - "string"
-   * - invoiceEmail
-     - InvoiceEmailAddressCC
-     - "string"
-   * - invoiceEmail
-     - vatNumber (Dependant on having wd:Q1273217 in mailAddress.countryCodeDependant on having wd:Q1273217 in streetAddresses.countryCode)
-     - "string"
-   * - name
-     - legalName
-     - "string"
-   * - organizationNumber
-     - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NOR in mailAddress.countryCodeDependant on having NOR in streetAddresses.countryCodeDependant on having wd:Q11994066 in mailAddress.countryCodeDependant on having wd:Q11994066 in streetAddresses.countryCode)
-     - "string"
-   * - overdueNoticeEmail
-     - vatNumber (Dependant on having wd:Q1273217 in mailAddress.countryCodeDependant on having wd:Q1273217 in streetAddresses.countryCode)
-     - "string"
-   * - phoneNumber
-     - phoneNumber
-     - "string"
-   * - phoneNumber
-     - phoneNumberMobile
-     - "string"
-   * - physicalAddress.addressLine1
-     - streetAddresses.address1
-     - "string"
-   * - physicalAddress.addressLine2
-     - streetAddresses.address2
-     - "string"
-   * - physicalAddress.city
-     - streetAddresses.city
-     - "string"
-   * - physicalAddress.country.id
-     - streetAddresses.countryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - streetAddresses.zipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - mailAddress.address1
-     - "string"
-   * - postalAddress.addressLine2
-     - mailAddress.address2
-     - "string"
-   * - postalAddress.city
-     - mailAddress.city
-     - "string"
-   * - postalAddress.country.id
-     - mailAddress.countryCode
-     - "string"
-   * - postalAddress.postalCode
-     - mailAddress.zipCode
-     - "string"
-
 
 Tripletex Customer to PowerOfficeGo Departments
 -----------------------------------------------
@@ -111,27 +30,6 @@ The following properties are synchronized between a Tripletex Customer and a Pow
      - "string"
    * - name
      - Name
-     - "string"
-
-
-Tripletex Department to PowerOfficeGo Customer
-----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customer must be established.
-
-A new PowerOfficeGo Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
-
-Once a link between a Tripletex Department and a PowerOfficeGo Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Department Property
-     - PowerOfficeGo Customer Property
-     - PowerOfficeGo Data Type
-   * - name
-     - legalName
      - "string"
 
 
