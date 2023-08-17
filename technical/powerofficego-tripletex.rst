@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-17 08:29:36
+Generated: 2023-08-17 08:30:21
 
 Introduction.
 ------------
@@ -520,6 +520,9 @@ The following properties are synchronized between a Powerofficego Product and a 
      - Tripletex Data Type
    * - unitOfMeasureCode
      - commonCode
+     - "string"
+   * - unitOfMeasureCode
+     - name
      - "string"
 
 
