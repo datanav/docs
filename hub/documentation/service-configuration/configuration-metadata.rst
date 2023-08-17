@@ -320,7 +320,7 @@ Properties
      - 100
      - No
 
-   * - `global_defaults.`trace.log_response_headers``
+   * - ``global_defaults.trace.log_response_headers``
      - Boolean
      - If the ``trace`` property is an object this sub-property specifies if the response headers will
        be logged in the ``pump-completed``/``pump-completed`` events in the execution-log.

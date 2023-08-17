@@ -321,7 +321,7 @@ Properties
      - If the ``trace`` property is an object this property specifies how many bytes of each ``$SECRET`` will
        be redacted in the ``pump-completed``/``pump-completed`` events in the execution-log. The
        purpose of this setting is to redact enough of the secrets to render them safe to log, but to
-       potentially leave some of the sectret for debugging purposes.
+       potentially leave some of the secret for debugging purposes.
        A value of ``-1`` means to redact all bytes of the secrets. Note that the redaction is only a best-effort
        attempt to prevent secrets from ending up in the logs, there may be cases where secrets leak through in any
        case, so it is best to always check that what ends up being logged looks ok.
