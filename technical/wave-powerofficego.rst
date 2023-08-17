@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-08-17 08:31:12
+Generated: 2023-08-17 08:31:43
 
 Introduction.
 ------------
@@ -43,6 +43,19 @@ The following properties are synchronized between a Wave Invoice and a PowerOffi
 Wave Currency to PowerOfficeGo Currency
 ---------------------------------------
 Every Wave Currency will be synchronized with a PowerOfficeGo Currency.
+
+If a matching PowerOfficeGo Currency already exists, the Wave Currency will be merged with the existing one.
+If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+
+A Wave Currency will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - PowerOfficeGo Currency Property
+   * - code
+     - Code
 
 Once a link between a Wave Currency and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
