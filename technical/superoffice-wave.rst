@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-08-17 08:57:39
+Generated: 2023-08-17 08:59:08
 
 Introduction.
 ------------
@@ -50,19 +50,10 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
      - shippingDetails.address.addressLine2
      - "string"
    * - Address.Street.City
-     - address.city
-     - "string"
-   * - Address.Street.City
      - shippingDetails.address.city
      - "string"
    * - Address.Street.Zipcode
-     - address.postalCode
-     - "string"
-   * - Address.Street.Zipcode
      - shippingDetails.address.postalCode
-     - "string"
-   * - Country.CountryId
-     - address.country.code
      - "string"
    * - Country.CountryId
      - shippingDetails.address.country.code
@@ -70,17 +61,11 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
    * - Domains
      - website
      - "string"
-   * - Name
-     - name
-     - "string"
    * - Phones.Value
      - phone
      - "string"
    * - Phones.Value
      - shippingDetails.phone
-     - "string"
-   * - Urls.Value
-     - website
      - "string"
 
 
@@ -100,12 +85,6 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Wave Invoice Property
      - Wave Data Type
-   * - Description
-     - memo
-     - "string"
-   * - Name
-     - title
-     - "string"
 
 
 SuperOffice Product to Wave Product
