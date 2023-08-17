@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-17 08:30:31
+Generated: 2023-08-17 08:31:12
 
 Introduction.
 ------------
@@ -352,6 +352,21 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.id
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Tripletex Order to PowerOfficeGo Salesorder
