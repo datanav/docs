@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-17 11:02:33
+Generated: 2023-08-17 12:53:12
 
 Introduction.
 ------------
@@ -342,6 +342,9 @@ The following properties are synchronized between a Powerofficego Employees and 
      - BirthDate
      - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
    * - DepartmendId
+     - Contact.ContactId
+     - "integer"
+   * - DepartmentId
      - Contact.ContactId
      - "integer"
    * - FirstName
