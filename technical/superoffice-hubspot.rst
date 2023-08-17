@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-08-07 14:19:59
+Generated: 2023-08-17 08:57:39
 
 Introduction.
 ------------
@@ -153,24 +153,6 @@ The following properties are synchronized between a SuperOffice Contact and a Hu
    * - Urls.Value
      - properties.website
      - "string"
-
-
-SuperOffice Sale classification status to HubSpot Pipelinedeal
---------------------------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal must be established.
-
-A new HubSpot Pipelinedeal will be created from a SuperOffice Sale classification status if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into HubSpot.
-
-Once a link between a SuperOffice Sale classification status and a HubSpot Pipelinedeal is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Sale classification status and a HubSpot Pipelinedeal:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Sale classification status Property
-     - HubSpot Pipelinedeal Property
-     - HubSpot Data Type
 
 
 SuperOffice Product to HubSpot Product
