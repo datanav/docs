@@ -1,6 +1,17 @@
 Changelog
 =========
 
+.. _changelog_2023_08_17:
+
+2023-08-17
+----------
+
+* Added the ``trace`` property available on the :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>`,
+  :ref:`REST sink <rest_sink>` and :ref:`HTTP endpoint source <http_endpoint_source>` to the  ``global_defaults`` section
+  of the :ref:`service metadata <service_metadata_section>`. This property, if set, represents the default value for
+  the ``trace`` property on these components when not set explicitly in their config. The intention is to be able
+  to turn this feature on globally when debugging or doing development without having to change the individual components.
+
 .. _changelog_2023_08_14:
 
 2023-08-14
