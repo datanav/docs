@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-17 08:31:12
+Generated: 2023-08-17 08:31:43
 
 Introduction.
 ------------
@@ -241,6 +241,19 @@ The following properties are synchronized between a Tripletex Contact and a Powe
 Tripletex Currency to PowerOfficeGo Currency
 --------------------------------------------
 Every Tripletex Currency will be synchronized with a PowerOfficeGo Currency.
+
+If a matching PowerOfficeGo Currency already exists, the Tripletex Currency will be merged with the existing one.
+If no matching PowerOfficeGo Currency is found, a new PowerOfficeGo Currency will be created.
+
+A Tripletex Currency will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - PowerOfficeGo Currency Property
+   * - code
+     - Code
 
 Once a link between a Tripletex Currency and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
 
