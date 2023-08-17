@@ -2,7 +2,7 @@
 SuperOffice to Asana Dataflow
 =============================
 
-Generated: 2023-08-11 11:42:53
+Generated: 2023-08-17 08:57:39
 
 Introduction.
 ------------
@@ -37,28 +37,6 @@ The following properties are synchronized between a SuperOffice Contact and a As
      - "string"
 
 
-SuperOffice Person to Asana Users
----------------------------------
-Every SuperOffice Person will be synchronized with a Asana Users.
-
-Once a link between a SuperOffice Person and a Asana Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Person and a Asana Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Person Property
-     - Asana Users Property
-     - Asana Data Type
-   * - Emails.Value
-     - email
-     - "string"
-   * - Firstname
-     - name
-     - "string"
-
-
 SuperOffice Project to Asana Projects
 -------------------------------------
 Every SuperOffice Project will be synchronized with a Asana Projects.
@@ -90,27 +68,5 @@ The following properties are synchronized between a SuperOffice Project and a As
      - "string"
    * - NextMilestoneDate
      - start_on
-     - "string"
-
-
-SuperOffice User to Asana Users
--------------------------------
-Every SuperOffice User will be synchronized with a Asana Users.
-
-Once a link between a SuperOffice User and a Asana Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a Asana Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Asana Users Property
-     - Asana Data Type
-   * - firstName
-     - name
-     - "string"
-   * - personEmail
-     - email
      - "string"
 
