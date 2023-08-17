@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGov1 Dataflow
 =======================================
 
-Generated: 2023-08-15 10:00:00
+Generated: 2023-08-17 08:03:37
 
 Introduction.
 ------------
@@ -821,38 +821,20 @@ The following properties are synchronized between a SuperOffice Listproductcateg
      - "string"
 
 
-SuperOffice Person to PowerOfficeGov1 Address
----------------------------------------------
-Every SuperOffice Person will be synchronized with a PowerOfficeGov1 Address.
+SuperOffice Person to PowerOfficeGov1 Location
+----------------------------------------------
+Every SuperOffice Person will be synchronized with a PowerOfficeGov1 Location.
 
-Once a link between a SuperOffice Person and a PowerOfficeGov1 Address is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a PowerOfficeGov1 Location is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Person and a PowerOfficeGov1 Address:
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGov1 Location:
 
 .. list-table::
    :header-rows: 1
 
    * - SuperOffice Person Property
-     - PowerOfficeGov1 Address Property
+     - PowerOfficeGov1 Location Property
      - PowerOfficeGov1 Data Type
-   * - Address.Street.Address1
-     - address1
-     - "string"
-   * - Address.Street.Address2
-     - address2
-     - "string"
-   * - Address.Street.Address3
-     - address3
-     - "string"
-   * - Address.Street.City
-     - city
-     - "string"
-   * - Address.Street.Zipcode
-     - zipCode
-     - "string"
-   * - Country.CountryId
-     - countryCode
-     - "string"
 
 
 SuperOffice Product to PowerOfficeGov1 Product
