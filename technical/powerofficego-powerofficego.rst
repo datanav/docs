@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-17 08:30:31
+Generated: 2023-08-17 08:31:12
 
 Introduction.
 ------------
@@ -256,6 +256,60 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoice Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - CreatedDate
+     - createdDateTimeOffset
+     - "string"
+   * - CurrencyCode
+     - CurrencyCode
+     - "string"
+   * - CustomerCode
+     - customerId
+     - "string"
+   * - CustomerEmail
+     - customerNo
+     - "string"
+   * - DeliveryAddress1
+     - DeliveryAddress1
+     - "string"
+   * - DeliveryAddress2
+     - DeliveryAddress2
+     - "string"
+   * - DeliveryAddressCity
+     - DeliveryAddressCity
+     - "string"
+   * - DeliveryAddressCountryCode
+     - DeliveryAddressCountryCode
+     - "string"
+   * - DeliveryAddressZipCode
+     - DeliveryAddressZipCode
+     - "string"
+   * - DeliveryDate
+     - DeliveryDate
+     - "string"
+   * - DeliveryDate
+     - sentDateTimeOffset
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - LastChanged
+     - lastChangedDateTimeOffset
+     - "string"
+   * - NetAmount
+     - NetAmount
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
+   * - OrderNo
+     - OrderNo
+     - "string"
+   * - SentDate
+     - DeliveryDate
+     - "string"
+   * - SentDate
+     - sentDateTimeOffset
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGo Address
@@ -356,10 +410,19 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
    * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - dateOfBirth
      - dateOfBirth
      - "string"
    * - emailAddress
+     - EmailAddress
+     - "string"
+   * - emailAddress
      - emailAddress
+     - "string"
+   * - firstName
+     - FirstName
      - "string"
    * - firstName
      - firstName
@@ -383,6 +446,21 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
+   * - address1
+     - address1
+     - "string"
+   * - address2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - residenceCountryCode
+     - countryCode
+     - "string"
+   * - zipCode
+     - zipCode
+     - "string"
 
 
 Powerofficego Customer to PowerOfficeGo Contactperson
@@ -461,6 +539,66 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - Powerofficego Customer Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - InvoiceEmailAddressCC
+     - InvoiceEmailAddress
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - dateOfBirth
+     - DateOfBirth
+     - "string"
+   * - emailAddress
+     - EmailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - invoiceEmailAddress
+     - InvoiceEmailAddress
+     - "string"
+   * - invoiceEmailAddressCC
+     - InvoiceEmailAddressCC
+     - "string"
+   * - legalName
+     - Name
+     - "string"
+   * - mailAddress.address1
+     - MailAddress.addressLine1
+     - "string"
+   * - mailAddress.address2
+     - MailAddress.addressLine2
+     - "string"
+   * - mailAddress.city
+     - MailAddress.city
+     - "string"
+   * - mailAddress.countryCode
+     - MailAddress.countryCode
+     - "string"
+   * - mailAddress.lastChanged
+     - MailAddress.lastChangedDateTimeOffset
+     - "string"
+   * - mailAddress.zipCode
+     - MailAddress.zipCode
+     - "string"
+   * - phoneNumber
+     - Number
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - streetAddresses.countryCode
+     - MailAddress.countryCode
+     - "string"
+   * - vatNumber
+     - OrganizationNumber (Dependant on having  in MailAddress.countryCode)
+     - "string"
+   * - websiteUrl
+     - WebsiteUrl
+     - "string"
 
 
 Powerofficego Customers to PowerOfficeGo Contactperson
@@ -477,6 +615,15 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - DateOfBirth
+     - dateOfBirth
+     - "string"
+   * - EmailAddress
+     - emailAddress
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
    * - LastName
      - lastName
      - "string"
@@ -518,6 +665,51 @@ The following properties are synchronized between a Powerofficego Employee and a
    * - Powerofficego Employee Property
      - PowerOfficeGo Employees Property
      - PowerOfficeGo Data Type
+   * - DateOfBirth
+     - DateOfBirth
+     - "string"
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - InternationalIdNumber (Dependant on having wd:Q56404156 in InternationalIdType)
+     - NationalIdNumber
+     - "string"
+   * - JobTitle
+     - JobTitle
+     - "string"
+   * - LastName
+     - LastName
+     - "string"
+   * - MailAddress.Address1
+     - MailAddress.address1
+     - "string"
+   * - MailAddress.Address2
+     - MailAddress.address2
+     - "string"
+   * - MailAddress.Address3
+     - MailAddress.address3
+     - "string"
+   * - MailAddress.City
+     - MailAddress.city
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.countryCode
+     - "string"
+   * - MailAddress.LastChanged
+     - MailAddress.lastChanged
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.zipCode
+     - "string"
+   * - createdDate
+     - EmployeeCreatedDateTimeOffset
+     - "string"
 
 
 Powerofficego Salesorder to PowerOfficeGo Salesorders
@@ -534,6 +726,12 @@ The following properties are synchronized between a Powerofficego Salesorder and
    * - Powerofficego Salesorder Property
      - PowerOfficeGo Salesorders Property
      - PowerOfficeGo Data Type
+   * - Currency
+     - CurrencyCode
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
 
 
 Powerofficego Salesorders to PowerOfficeGo Salesorder
@@ -550,6 +748,12 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - PowerOfficeGo Salesorder Property
      - PowerOfficeGo Data Type
+   * - CurrencyCode
+     - Currency
+     - "string"
+   * - OrderDate
+     - OrderDate
+     - "string"
 
 
 Powerofficego Supplier to PowerOfficeGo Suppliers
@@ -579,6 +783,27 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - Powerofficego Supplier Property
      - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - Id
+     - Id
+     - "string"
+   * - InternationalIdCountryCode
+     - InternationalIdCountryCode
+     - "string"
+   * - LastChanged
+     - LastChanged
+     - "string"
+   * - LegalName
+     - LegalName
+     - "string"
+   * - PhoneNumber
+     - PhoneNumber
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
 
 
 Powerofficego Vatcode to PowerOfficeGo Vatcodes
@@ -608,4 +833,13 @@ The following properties are synchronized between a Powerofficego Vatcode and a 
    * - Powerofficego Vatcode Property
      - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - rate
+     - Rate
+     - "string"
 
