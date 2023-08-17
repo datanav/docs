@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-17 08:39:33
+Generated: 2023-08-17 08:40:00
 
 Introduction.
 ------------
@@ -43,6 +43,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Contactperson to Tripletex Contact
