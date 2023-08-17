@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-17 08:57:39
+Generated: 2023-08-17 11:02:33
 
 Introduction.
 ------------
@@ -718,6 +718,8 @@ A Powerofficego Employee will merge with a PowerOfficeGo Employees if one of the
    * - Powerofficego Employee Property
      - PowerOfficeGo Employees Property
    * - Id
+     - Id
+   * - id
      - Id
 
 Once a link between a Powerofficego Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
