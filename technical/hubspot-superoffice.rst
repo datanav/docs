@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-08-07 14:19:59
+Generated: 2023-08-17 08:57:39
 
 Introduction.
 ------------
@@ -146,37 +146,6 @@ The following properties are synchronized between a HubSpot User and a SuperOffi
      - SuperOffice Data Type
 
 
-HubSpot Deal to SuperOffice Sale
---------------------------------
-Every HubSpot Deal will be synchronized with a SuperOffice Sale.
-
-Once a link between a HubSpot Deal and a SuperOffice Sale is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a SuperOffice Sale:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - SuperOffice Sale Property
-     - SuperOffice Data Type
-   * - properties.amount
-     - Amount
-     - "float"
-   * - properties.closedate
-     - Saledate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
-   * - properties.deal_currency_code
-     - Currency.Id
-     - "integer"
-   * - properties.dealname
-     - SaleText
-     - "string"
-   * - properties.description
-     - SaleText
-     - "string"
-
-
 HubSpot Lineitemdealassociation to SuperOffice Quoteline
 --------------------------------------------------------
 Every HubSpot Lineitemdealassociation will be synchronized with a SuperOffice Quoteline.
@@ -222,26 +191,4 @@ The following properties are synchronized between a HubSpot Product and a SuperO
    * - properties.price
      - UnitListPrice
      - "decimal"
-
-
-HubSpot Quote to SuperOffice Quotealternative
----------------------------------------------
-Every HubSpot Quote will be synchronized with a SuperOffice Quotealternative.
-
-Once a link between a HubSpot Quote and a SuperOffice Quotealternative is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Quote and a SuperOffice Quotealternative:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Quote Property
-     - SuperOffice Quotealternative Property
-     - SuperOffice Data Type
-   * - properties.hs_quote_amount
-     - TotalPrice
-     - "integer"
-   * - properties.hs_title
-     - Name
-     - "string"
 
