@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGov1 Dataflow
 =====================================
 
-Generated: 2023-08-17 08:03:37
+Generated: 2023-08-17 08:03:44
 
 Introduction.
 ------------
@@ -1271,6 +1271,21 @@ The following properties are synchronized between a Tripletex Employee and a Pow
    * - Tripletex Employee Property
      - PowerOfficeGov1 Location Property
      - PowerOfficeGov1 Data Type
+   * - address.addressLine1
+     - address1
+     - "string"
+   * - address.addressLine2
+     - address2
+     - "string"
+   * - address.city
+     - city
+     - "string"
+   * - address.country.id
+     - countryCode
+     - "string"
+   * - address.postalCode
+     - zipCode
+     - "string"
 
 
 Tripletex Invoice to PowerOfficeGov1 Outgoinginvoice
