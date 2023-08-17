@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGov1 Dataflow
 ===================================
 
-Generated: 2023-08-17 08:03:37
+Generated: 2023-08-17 08:03:44
 
 Introduction.
 ------------
@@ -377,6 +377,18 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGov1 Location Property
      - PowerOfficeGov1 Data Type
+   * - properties.address
+     - address1
+     - "string"
+   * - properties.city
+     - city
+     - "string"
+   * - properties.country
+     - countryCode
+     - "string"
+   * - properties.zip
+     - zipCode
+     - "string"
 
 
 HubSpot Deal to PowerOfficeGov1 Currency
