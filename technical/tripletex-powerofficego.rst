@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-17 08:39:13
+Generated: 2023-08-17 08:39:33
 
 Introduction.
 ------------
@@ -88,6 +88,24 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - postalAddress.postalCode
      - mailAddress.zipCode
      - "string"
+
+
+Tripletex Customer to PowerOfficeGo Departments
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Departments must be established.
+
+A new PowerOfficeGo Departments will be created from a Tripletex Customer if it is connected to a Tripletex Employee that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Customer and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Departments Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Department to PowerOfficeGo Customer
