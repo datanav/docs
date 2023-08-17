@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-17 08:39:33
+Generated: 2023-08-17 08:40:00
 
 Introduction.
 ------------
@@ -51,6 +51,12 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - SuperOffice Contact Property
      - PowerOfficeGo Departments Property
      - PowerOfficeGo Data Type
+   * - CreatedDate
+     - CreatedDateTimeOffset
+     - "string"
+   * - Name
+     - Name
+     - "string"
 
 
 SuperOffice Quoteline to PowerOfficeGo Outgoinginvoices
