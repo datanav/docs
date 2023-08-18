@@ -2,12 +2,30 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-18 12:52:07
+Generated: 2023-08-18 14:47:03
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to PowerOfficeGo Customers
+---------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Tripletex Customer if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
 
 Tripletex Customer to PowerOfficeGo Departments
 -----------------------------------------------
@@ -31,6 +49,24 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - name
      - Name
      - "string"
+
+
+Tripletex Department to PowerOfficeGo Customers
+-----------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Department and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Order to PowerOfficeGo Outgoinginvoices
