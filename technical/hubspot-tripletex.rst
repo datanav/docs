@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-08-17 11:02:47
+Generated: 2023-08-18 12:46:30
 
 Introduction.
 ------------
@@ -167,6 +167,15 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
    * - HubSpot Deal Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - properties.closedate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.closedate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.deal_currency_code
+     - currency.id
+     - "integer"
 
 
 HubSpot Lineitemdealassociation to Tripletex Orderline
