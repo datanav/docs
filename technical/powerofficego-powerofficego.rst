@@ -2,12 +2,38 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-18 12:52:07
+Generated: 2023-08-18 13:02:10
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customer to PowerOfficeGo Customers
+-------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customer and a PowerOfficeGo Customers must be established.
+
+A Powerofficego Customer will merge with a PowerOfficeGo Customers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - PowerOfficeGo Customers Property
+   * - id
+     - Id
+
+Once a link between a Powerofficego Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customer and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customer Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
 
 Powerofficego Customers to PowerOfficeGo Employees
 --------------------------------------------------
@@ -117,6 +143,34 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - streetAddresses.zipCode
      - streetAddresses.zipCode
      - "string"
+
+
+Powerofficego Employee to PowerOfficeGo Employees
+-------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Employee and a PowerOfficeGo Employees must be established.
+
+A Powerofficego Employee will merge with a PowerOfficeGo Employees if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employee Property
+     - PowerOfficeGo Employees Property
+   * - Id
+     - Id
+   * - id
+     - Id
+
+Once a link between a Powerofficego Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employee and a PowerOfficeGo Employees:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employee Property
+     - PowerOfficeGo Employees Property
+     - PowerOfficeGo Data Type
 
 
 Powerofficego Employees to PowerOfficeGo Customers
@@ -338,6 +392,32 @@ The following properties are synchronized between a Powerofficego Supplier and a
      - PowerOfficeGo Data Type
 
 
+Powerofficego Supplier to PowerOfficeGo Suppliers
+-------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Supplier and a PowerOfficeGo Suppliers must be established.
+
+A Powerofficego Supplier will merge with a PowerOfficeGo Suppliers if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Supplier Property
+     - PowerOfficeGo Suppliers Property
+   * - Id
+     - Id
+
+Once a link between a Powerofficego Supplier and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Supplier and a PowerOfficeGo Suppliers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Supplier Property
+     - PowerOfficeGo Suppliers Property
+     - PowerOfficeGo Data Type
+
+
 Powerofficego Suppliers to PowerOfficeGo Location
 -------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Suppliers and a PowerOfficeGo Location must be established.
@@ -361,6 +441,32 @@ The following properties are synchronized between a Powerofficego Suppliers and 
 
    * - Powerofficego Suppliers Property
      - PowerOfficeGo Location Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Vatcode to PowerOfficeGo Vatcodes
+-----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Vatcode and a PowerOfficeGo Vatcodes must be established.
+
+A Powerofficego Vatcode will merge with a PowerOfficeGo Vatcodes if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcode Property
+     - PowerOfficeGo Vatcodes Property
+   * - id
+     - Id
+
+Once a link between a Powerofficego Vatcode and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Vatcode and a PowerOfficeGo Vatcodes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcode Property
+     - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
 
 
@@ -528,144 +634,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
-Powerofficego Customer to PowerOfficeGo Contactperson
------------------------------------------------------
-Every Powerofficego Customer will be synchronized with a PowerOfficeGo Contactperson.
-
-Once a link between a Powerofficego Customer and a PowerOfficeGo Contactperson is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a PowerOfficeGo Contactperson:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - PowerOfficeGo Contactperson Property
-     - PowerOfficeGo Data Type
-   * - LastName
-     - lastName
-     - "string"
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - emailAddress
-     - emailAddress
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - lastChanged
-     - lastChanged
-     - "string"
-   * - mailAddress.address1
-     - address1
-     - "string"
-   * - mailAddress.address2
-     - address2
-     - "string"
-   * - mailAddress.city
-     - city
-     - "string"
-   * - mailAddress.countryCode
-     - residenceCountryCode
-     - "string"
-   * - mailAddress.zipCode
-     - zipCode
-     - "string"
-
-
-Powerofficego Customer to PowerOfficeGo Customers
--------------------------------------------------
-Every Powerofficego Customer will be synchronized with a PowerOfficeGo Customers.
-
-If a matching PowerOfficeGo Customers already exists, the Powerofficego Customer will be merged with the existing one.
-If no matching PowerOfficeGo Customers is found, a new PowerOfficeGo Customers will be created.
-
-A Powerofficego Customer will merge with a PowerOfficeGo Customers if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - PowerOfficeGo Customers Property
-   * - id
-     - Id
-
-Once a link between a Powerofficego Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customer and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customer Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - InvoiceEmailAddressCC
-     - InvoiceEmailAddress
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
-   * - dateOfBirth
-     - DateOfBirth
-     - "string"
-   * - emailAddress
-     - EmailAddress
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - invoiceEmailAddress
-     - InvoiceEmailAddress
-     - "string"
-   * - invoiceEmailAddressCC
-     - InvoiceEmailAddressCC
-     - "string"
-   * - legalName
-     - Name
-     - "string"
-   * - mailAddress.address1
-     - MailAddress.addressLine1
-     - "string"
-   * - mailAddress.address2
-     - MailAddress.addressLine2
-     - "string"
-   * - mailAddress.city
-     - MailAddress.city
-     - "string"
-   * - mailAddress.countryCode
-     - MailAddress.countryCode
-     - "string"
-   * - mailAddress.lastChanged
-     - MailAddress.lastChangedDateTimeOffset
-     - "string"
-   * - mailAddress.zipCode
-     - MailAddress.zipCode
-     - "string"
-   * - phoneNumber
-     - Number
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - streetAddresses.countryCode
-     - MailAddress.countryCode
-     - "string"
-   * - vatNumber
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
-     - "string"
-   * - websiteUrl
-     - WebsiteUrl
-     - "string"
-
-
 Powerofficego Customers to PowerOfficeGo Contactperson
 ------------------------------------------------------
 Every Powerofficego Customers will be synchronized with a PowerOfficeGo Contactperson.
@@ -700,200 +668,5 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - firstName
      - firstName
-     - "string"
-
-
-Powerofficego Employee to PowerOfficeGo Employees
--------------------------------------------------
-Every Powerofficego Employee will be synchronized with a PowerOfficeGo Employees.
-
-If a matching PowerOfficeGo Employees already exists, the Powerofficego Employee will be merged with the existing one.
-If no matching PowerOfficeGo Employees is found, a new PowerOfficeGo Employees will be created.
-
-A Powerofficego Employee will merge with a PowerOfficeGo Employees if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - PowerOfficeGo Employees Property
-   * - Id
-     - Id
-   * - id
-     - Id
-
-Once a link between a Powerofficego Employee and a PowerOfficeGo Employees is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employee and a PowerOfficeGo Employees:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employee Property
-     - PowerOfficeGo Employees Property
-     - PowerOfficeGo Data Type
-   * - DateOfBirth
-     - DateOfBirth
-     - "string"
-   * - EmailAddress
-     - EmailAddress
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - InternationalIdNumber (Dependant on having wd:Q56404156 in InternationalIdType)
-     - NationalIdNumber
-     - "string"
-   * - JobTitle
-     - JobTitle
-     - "string"
-   * - LastName
-     - LastName
-     - "string"
-   * - MailAddress.Address1
-     - MailAddress.address1
-     - "string"
-   * - MailAddress.Address2
-     - MailAddress.address2
-     - "string"
-   * - MailAddress.Address3
-     - MailAddress.address3
-     - "string"
-   * - MailAddress.City
-     - MailAddress.city
-     - "string"
-   * - MailAddress.CountryCode
-     - MailAddress.countryCode
-     - "string"
-   * - MailAddress.LastChanged
-     - MailAddress.lastChanged
-     - "string"
-   * - MailAddress.ZipCode
-     - MailAddress.zipCode
-     - "string"
-   * - createdDate
-     - EmployeeCreatedDateTimeOffset
-     - "string"
-   * - dateOfBirth
-     - DateOfBirth
-     - "string"
-   * - emailAddress
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-
-
-Powerofficego Salesorder to PowerOfficeGo Salesorders
------------------------------------------------------
-Every Powerofficego Salesorder will be synchronized with a PowerOfficeGo Salesorders.
-
-Once a link between a Powerofficego Salesorder and a PowerOfficeGo Salesorders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorder and a PowerOfficeGo Salesorders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorder Property
-     - PowerOfficeGo Salesorders Property
-     - PowerOfficeGo Data Type
-   * - Currency
-     - CurrencyCode
-     - "string"
-   * - OrderDate
-     - OrderDate
-     - "string"
-
-
-Powerofficego Supplier to PowerOfficeGo Suppliers
--------------------------------------------------
-Every Powerofficego Supplier will be synchronized with a PowerOfficeGo Suppliers.
-
-If a matching PowerOfficeGo Suppliers already exists, the Powerofficego Supplier will be merged with the existing one.
-If no matching PowerOfficeGo Suppliers is found, a new PowerOfficeGo Suppliers will be created.
-
-A Powerofficego Supplier will merge with a PowerOfficeGo Suppliers if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Supplier Property
-     - PowerOfficeGo Suppliers Property
-   * - Id
-     - Id
-
-Once a link between a Powerofficego Supplier and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Supplier and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Supplier Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - EmailAddress
-     - EmailAddress
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - InternationalIdCountryCode
-     - InternationalIdCountryCode
-     - "string"
-   * - LastChanged
-     - LastChanged
-     - "string"
-   * - LegalName
-     - LegalName
-     - "string"
-   * - PhoneNumber
-     - PhoneNumber
-     - "string"
-   * - WebsiteUrl
-     - WebsiteUrl
-     - "string"
-
-
-Powerofficego Vatcode to PowerOfficeGo Vatcodes
------------------------------------------------
-Every Powerofficego Vatcode will be synchronized with a PowerOfficeGo Vatcodes.
-
-If a matching PowerOfficeGo Vatcodes already exists, the Powerofficego Vatcode will be merged with the existing one.
-If no matching PowerOfficeGo Vatcodes is found, a new PowerOfficeGo Vatcodes will be created.
-
-A Powerofficego Vatcode will merge with a PowerOfficeGo Vatcodes if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Vatcode Property
-     - PowerOfficeGo Vatcodes Property
-   * - id
-     - Id
-
-Once a link between a Powerofficego Vatcode and a PowerOfficeGo Vatcodes is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Vatcode and a PowerOfficeGo Vatcodes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Vatcode Property
-     - PowerOfficeGo Vatcodes Property
-     - PowerOfficeGo Data Type
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - rate
-     - Rate
      - "string"
 
