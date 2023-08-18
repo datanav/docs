@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-18 14:47:03
+Generated: 2023-08-18 14:47:09
 
 Introduction.
 ------------
@@ -522,6 +522,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Powerofficego Salesorder to PowerOfficeGo Outgoinginvoices
