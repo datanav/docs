@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-17 11:02:47
+Generated: 2023-08-18 11:13:23
 
 Introduction.
 ------------
@@ -659,7 +659,7 @@ The following properties are synchronized between a Powerofficego Customer and a
      - MailAddress.countryCode
      - "string"
    * - vatNumber
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
      - "string"
    * - websiteUrl
      - WebsiteUrl
