@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-17 12:53:12
+Generated: 2023-08-18 14:47:03
 
 Introduction.
 ------------
@@ -98,6 +98,24 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - websiteUrl
      - Urls.Value
      - "string"
+
+
+Powerofficego Customers to SuperOffice Contact
+----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a SuperOffice Contact must be established.
+
+A new SuperOffice Contact will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Employee, Customers, Employees, or Contactperson that is synchronized into SuperOffice.
+
+Once a link between a Powerofficego Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 Powerofficego Departments to SuperOffice Contact
