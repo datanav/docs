@@ -14,6 +14,7 @@ Changelog
 2023-08-17
 ----------
 
+* Execution log entries ``circuit-breaker-commit`` and ``circuit-breaker-rollback`` are now written when a circuit breaker is committed or rolled back.
 * Added the ``trace`` property available on the :ref:`REST transform <rest_transform>`, :ref:`REST source <rest_source>`,
   :ref:`REST sink <rest_sink>` and :ref:`HTTP endpoint source <http_endpoint_source>` to the  ``global_defaults`` section
   of the :ref:`service metadata <service_metadata_global_defaults_trace>`. This property, if set, represents the default value for
