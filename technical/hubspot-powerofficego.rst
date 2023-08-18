@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-08-17 08:31:43
+Generated: 2023-08-18 12:52:07
 
 Introduction.
 ------------
@@ -342,31 +342,6 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - HubSpot Deal Property
      - PowerOfficeGo Currency Property
      - PowerOfficeGo Data Type
-
-
-HubSpot Deal to PowerOfficeGo Salesorder
-----------------------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a PowerOfficeGo Salesorder.
-
-Once a link between a HubSpot Deal and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a PowerOfficeGo Salesorder:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - PowerOfficeGo Salesorder Property
-     - PowerOfficeGo Data Type
-   * - properties.closedate
-     - DeliveryDate
-     - "string"
-   * - properties.closedate
-     - OrderDate
-     - "string"
-   * - properties.deal_currency_code
-     - Currency
-     - "string"
 
 
 HubSpot Deal to PowerOfficeGo Salesorders
