@@ -9,6 +9,8 @@ Changelog
 * Hibernation for developer subscriptions are extended to developer pro subscriptions as well. 
 * Any developer or developer pro subscription used for automated CI testing should be moved to a production/test subscription.
 
+.. _changelog_2023_08_17:
+
 2023-08-17
 ----------
 
