@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-18 13:02:10
+Generated: 2023-08-18 14:47:03
 
 Introduction.
 ------------
@@ -485,6 +485,42 @@ The following properties are synchronized between a Powerofficego Customer and a
 
    * - Powerofficego Customer Property
      - PowerOfficeGo Departments Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Customers to PowerOfficeGo Departments
+----------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a PowerOfficeGo Departments must be established.
+
+A new PowerOfficeGo Departments will be created from a Powerofficego Customers if it is connected to a Powerofficego Employee, or Customers that is synchronized into PowerOfficeGo.
+
+Once a link between a Powerofficego Customers and a PowerOfficeGo Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - PowerOfficeGo Departments Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Departments to PowerOfficeGo Customers
+----------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Departments and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers that is synchronized into PowerOfficeGo.
+
+Once a link between a Powerofficego Departments and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
 
 
