@@ -44,7 +44,7 @@ Data types
 
    * - :ref:`Person <datatype_human>`
      - true
-     - false
+     - true
 
    * - :ref:`Location <datatype_location>`
      - true
