@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-17 12:53:12
+Generated: 2023-08-18 12:08:07
 
 Introduction.
 ------------
@@ -57,6 +57,24 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Name
      - Name
      - "string"
+
+
+SuperOffice Quotealternative to PowerOfficeGo Salesorder
+--------------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder must be established.
+
+A new PowerOfficeGo Salesorder will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline that is synchronized into PowerOfficeGo.
+
+Once a link between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a PowerOfficeGo Salesorder:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - PowerOfficeGo Salesorder Property
+     - PowerOfficeGo Data Type
 
 
 SuperOffice Quoteline to PowerOfficeGo Outgoinginvoices
