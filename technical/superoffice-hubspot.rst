@@ -2,7 +2,7 @@
 SuperOffice to HubSpot Dataflow
 ===============================
 
-Generated: 2023-08-17 09:33:39
+Generated: 2023-08-18 12:46:30
 
 Introduction.
 ------------
@@ -169,8 +169,20 @@ The following properties are synchronized between a SuperOffice Product and a Hu
    * - SuperOffice Product Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - Description
+     - properties.description
+     - "string"
    * - ERPProductKey
      - properties.hs_sku
+     - "string"
+   * - Name
+     - properties.name
+     - "string"
+   * - UnitCost
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - UnitListPrice
+     - properties.price
      - "string"
 
 
@@ -226,6 +238,21 @@ The following properties are synchronized between a SuperOffice Sale and a HubSp
    * - SuperOffice Sale Property
      - HubSpot Deal Property
      - HubSpot Data Type
+   * - Amount
+     - properties.amount
+     - "string"
+   * - Currency.Id
+     - properties.deal_currency_code
+     - "string"
+   * - SaleText
+     - properties.dealname
+     - "string"
+   * - SaleText
+     - properties.description
+     - "string"
+   * - Saledate
+     - properties.closedate
+     - "string"
 
 
 SuperOffice Ticket to HubSpot Ticket
