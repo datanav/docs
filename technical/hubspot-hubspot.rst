@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-08-17 09:33:39
+Generated: 2023-08-18 12:07:56
 
 Introduction.
 ------------
@@ -891,6 +891,9 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociation Property
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
 
 
 HubSpot Quotedealassociation to HubSpot Quotequotetemplateassociation
@@ -1004,6 +1007,9 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociation Property
      - HubSpot Quotecontactassociation Property
      - HubSpot Data Type
+   * - id
+     - id
+     - "string"
 
 
 HubSpot Quotequotetemplateassociation to HubSpot Quotedealassociation
