@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-08-18 11:13:23
+Generated: 2023-08-18 12:52:07
 
 Introduction.
 ------------
@@ -804,28 +804,6 @@ The following properties are synchronized between a Powerofficego Salesorder and
      - PowerOfficeGo Data Type
    * - Currency
      - CurrencyCode
-     - "string"
-   * - OrderDate
-     - OrderDate
-     - "string"
-
-
-Powerofficego Salesorders to PowerOfficeGo Salesorder
------------------------------------------------------
-Every Powerofficego Salesorders will be synchronized with a PowerOfficeGo Salesorder.
-
-Once a link between a Powerofficego Salesorders and a PowerOfficeGo Salesorder is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a PowerOfficeGo Salesorder:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - PowerOfficeGo Salesorder Property
-     - PowerOfficeGo Data Type
-   * - CurrencyCode
-     - Currency
      - "string"
    * - OrderDate
      - OrderDate
