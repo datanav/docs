@@ -30,10 +30,6 @@ Data types
      - true
      - true
 
-   * - :ref:`Product <datatype_product>`
-     - false
-     - true
-
    * - :ref:`Task <datatype_task>`
      - false
      - true
