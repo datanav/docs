@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-08-17 11:02:47
+Generated: 2023-08-23 09:05:49
 
 Introduction.
 ------------
@@ -11,7 +11,9 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Customer to Wave Customer
 -----------------------------------
-Every Tripletex Customer will be synchronized with a Wave Customer.
+Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
 
 Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -23,74 +25,11 @@ The following properties are synchronized between a Tripletex Customer and a Wav
    * - Tripletex Customer Property
      - Wave Customer Property
      - Wave Data Type
-   * - deliveryAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
    * - name
      - name
      - "string"
    * - phoneNumber
      - phone
-     - "string"
-   * - phoneNumber
-     - shippingDetails.phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - physicalAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - postalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - shippingDetails.address.postalCode
      - "string"
 
 
