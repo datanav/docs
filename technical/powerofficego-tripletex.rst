@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-23 09:05:57
+Generated: 2023-08-23 09:09:53
 
 Introduction.
 ------------
@@ -142,9 +142,7 @@ The following properties are synchronized between a Powerofficego Customers and 
 
 Powerofficego Departments to Tripletex Customer
 -----------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Departments and a Tripletex Customer must be established.
-
-A new Tripletex Customer will be created from a Powerofficego Departments if it is connected to a Powerofficego Customer, Customers, or Contactperson that is synchronized into Tripletex.
+Every Powerofficego Departments will be synchronized with a Tripletex Customer.
 
 Once a link between a Powerofficego Departments and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
