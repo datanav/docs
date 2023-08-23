@@ -2,7 +2,7 @@
 Asana to Tripletex Dataflow
 ===========================
 
-Generated: 2023-08-23 09:03:51
+Generated: 2023-08-23 09:03:55
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Teams and a Tripletex 
    * - Asana Teams Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - name
+     - name
+     - "string"
 
 
 Asana Projects to Tripletex Project
