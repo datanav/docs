@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-08-18 14:47:03
+Generated: 2023-08-23 09:05:49
 
 Introduction.
 ------------
@@ -68,6 +68,24 @@ The following properties are synchronized between a Powerofficego Customer and a
 
    * - Powerofficego Customer Property
      - Tripletex Department Property
+     - Tripletex Data Type
+
+
+Powerofficego Customers to Tripletex Customer
+---------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, or Contactperson that is synchronized into Tripletex.
+
+Once a link between a Powerofficego Customers and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Tripletex Customer Property
      - Tripletex Data Type
 
 
@@ -194,118 +212,6 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - firstName
      - firstName
      - "string"
-
-
-Powerofficego Customers to Tripletex Customer
----------------------------------------------
-Every Powerofficego Customers will be synchronized with a Tripletex Customer.
-
-Once a link between a Powerofficego Customers and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - Id
-     - id
-     - "integer"
-   * - InvoiceEmailAddress
-     - invoiceEmail
-     - "string"
-   * - InvoiceEmailAddressCC
-     - invoiceEmail
-     - "string"
-   * - MailAddress
-     - email
-     - "string"
-   * - MailAddress.addressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - MailAddress.addressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - MailAddress.city
-     - postalAddress.city
-     - "string"
-   * - MailAddress.countryCode
-     - postalAddress.country.id
-     - "integer"
-   * - MailAddress.zipCode
-     - postalAddress.postalCode
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - Number
-     - phoneNumber
-     - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
-     - organizationNumber
-     - "replace"," ","", "string"]
-   * - PhoneNumber
-     - phoneNumber
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - legalName
-     - name
-     - "string"
-   * - mailAddress.address1
-     - postalAddress.addressLine1
-     - "string"
-   * - mailAddress.address2
-     - postalAddress.addressLine2
-     - "string"
-   * - mailAddress.addressLine1
-     - postalAddress.addressLine1
-     - "string"
-   * - mailAddress.addressLine2
-     - postalAddress.addressLine2
-     - "string"
-   * - mailAddress.city
-     - postalAddress.city
-     - "string"
-   * - mailAddress.countryCode
-     - postalAddress.country.id
-     - "integer"
-   * - mailAddress.zipCode
-     - postalAddress.postalCode
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - ourReferenceEmployeeCode
-     - accountManager.id
-     - "integer"
-   * - phoneNumber
-     - phoneNumber
-     - "string"
-   * - streetAddresses.address1
-     - physicalAddress.addressLine1
-     - "string"
-   * - streetAddresses.address2
-     - physicalAddress.addressLine2
-     - "string"
-   * - streetAddresses.city
-     - physicalAddress.city
-     - "string"
-   * - streetAddresses.countryCode
-     - physicalAddress.country.id
-     - "integer"
-   * - streetAddresses.zipCode
-     - physicalAddress.postalCode
-     - "string"
-   * - vatNumber (Dependant on having NO in mailAddress.countryCodeDependant on having NO in mailAddress.countryCode)
-     - organizationNumber
-     - "replace"," ","", "string"]
 
 
 Powerofficego Departments to Tripletex Department
