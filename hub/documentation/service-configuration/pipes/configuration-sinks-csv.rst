@@ -24,7 +24,7 @@ It exposes the URLs:
    * - ``http://localhost:9042/api/publishers/mypipe/csv/some_filename.csv``
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-csv>`__ for the full details.
+the `API reference <../../../api.html#get--publishers-pipe_id-csv>`__ for the full details.
 
 Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
 the last path element of the URL.
