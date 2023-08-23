@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-08-18 12:46:30
+Generated: 2023-08-23 08:47:51
 
 Introduction.
 ------------
@@ -142,11 +142,17 @@ The following properties are synchronized between a HubSpot Company and a Triple
    * - properties.country
      - physicalAddress.country.id
      - "integer"
+   * - properties.industry
+     - isPrivateIndividual
+     - "string"
    * - properties.name
      - name
      - "string"
    * - properties.phone
      - phoneNumber
+     - "string"
+   * - properties.type
+     - isPrivateIndividual
      - "string"
    * - properties.zip
      - physicalAddress.postalCode
