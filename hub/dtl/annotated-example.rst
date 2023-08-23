@@ -191,4 +191,4 @@ The order entities are then ``sorted`` by their ``amount`` property before being
   - When the DTL of a pipe is modified, the pipe's "last-seen" value must be
     cleared in order to reprocess already seen entities with the new DTL.
     This can be done by setting the "last-seen" value to an empty string with the
-    `update-last-seen <./api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.
+    `update-last-seen <../api.html#api-reference-pump-update-last-seen>`_ operation in the SESAM API.

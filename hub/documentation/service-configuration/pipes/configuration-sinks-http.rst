@@ -45,7 +45,7 @@ The SDShare protocol is described `here
 <http://www.sdshare.org/spec/sdshare-v1.0.html>`__.
 
 The exposed URLs may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-sdshare-collection>`__ for the full details.
+the `API reference <../../../api.html#get--publishers-pipe_id-sdshare-collection>`__ for the full details.
 
 Prototype
 ^^^^^^^^^

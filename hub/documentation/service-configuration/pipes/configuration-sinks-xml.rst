@@ -25,7 +25,7 @@ Note that the shape of the entities must conform to certain criteria, see the :r
 later in the section.
 
 The exposed URL may support additional parameters such as ``since`` and ``limit`` - see
-the `API reference <./api.html#get--publishers-pipe_id-xml>`_ for the full details.
+the `API reference <../../../api.html#get--publishers-pipe_id-xml>`_ for the full details.
 
 Note that you can optionally specify the filename to use in the ``Content-Disposition`` header of the HTTP response as
 the last path element of the URL.
