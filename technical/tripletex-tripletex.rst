@@ -2,7 +2,7 @@
 Tripletex to Tripletex Dataflow
 ===============================
 
-Generated: 2023-08-23 09:05:49
+Generated: 2023-08-25 08:54:04
 
 Introduction.
 ------------
@@ -261,7 +261,10 @@ The following properties are synchronized between a Tripletex Product and a Trip
 
 Tripletex Productgrouprelation to Tripletex Product
 ---------------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Productgrouprelation and a Tripletex Product must be established.
+Every Tripletex Productgrouprelation will be synchronized with a Tripletex Product.
+
+If a matching Tripletex Product already exists, the Tripletex Productgrouprelation will be merged with the existing one.
+If no matching Tripletex Product is found, a new Tripletex Product will be created.
 
 A Tripletex Productgrouprelation will merge with a Tripletex Product if one of the following property combinations match:
 
