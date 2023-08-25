@@ -18,6 +18,10 @@ Data types
      - Input
      - Output
 
+   * - :ref:`Documentation <datatype_documentation>`
+     - true
+     - false
+
    * - :ref:`Person <datatype_human>`
      - true
      - true
