@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-08-17 09:33:39
+Generated: 2023-08-25 08:59:07
 
 Introduction.
 ------------
@@ -115,6 +115,36 @@ The following properties are synchronized between a Tripletex Employee and a Hub
      - "string"
    * - userType
      - properties.country
+     - "string"
+
+
+Tripletex Product to HubSpot Product
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into HubSpot.
+
+Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+   * - costExcludingVatCurrency
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - priceExcludingVatCurrency
+     - properties.price
      - "string"
 
 
@@ -236,36 +266,5 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - HubSpot Data Type
    * - order.id
      - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - "string"
-
-
-Tripletex Product to HubSpot Product
-------------------------------------
-Every Tripletex Product will be synchronized with a HubSpot Product.
-
-Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a HubSpot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - HubSpot Product Property
-     - HubSpot Data Type
-   * - costExcludingVatCurrency
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - description
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - number
-     - properties.hs_sku
-     - "string"
-   * - priceExcludingVatCurrency
-     - properties.price
      - "string"
 
