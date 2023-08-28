@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-08-25 08:59:05
+Generated: 2023-08-28 15:10:48
 
 Introduction.
 ------------
@@ -157,37 +157,6 @@ The following properties are synchronized between a HubSpot Company and a Triple
      - "string"
 
 
-HubSpot Product to Tripletex Product
-------------------------------------
-Every HubSpot Product will be synchronized with a Tripletex Product.
-
-Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - costExcludingVatCurrency
-     - "integer"
-   * - properties.hs_sku
-     - number
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - priceExcludingVatCurrency
-     - "float"
-
-
 HubSpot Deal to Tripletex Order
 -------------------------------
 When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Tripletex Order.
@@ -230,4 +199,35 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - order.id
      - "integer"
+
+
+HubSpot Product to Tripletex Product
+------------------------------------
+Every HubSpot Product will be synchronized with a Tripletex Product.
+
+Once a link between a HubSpot Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Tripletex Product Property
+     - Tripletex Data Type
+   * - properties.description
+     - description
+     - "string"
+   * - properties.hs_cost_of_goods_sold
+     - costExcludingVatCurrency
+     - "integer"
+   * - properties.hs_sku
+     - number
+     - "string"
+   * - properties.name
+     - name
+     - "string"
+   * - properties.price
+     - priceExcludingVatCurrency
+     - "float"
 
