@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-08-25 08:59:05
+Generated: 2023-08-28 15:10:48
 
 Introduction.
 ------------
@@ -48,33 +48,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
 
 
-Tripletex Product to Wave Product
----------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a Wave Product must be established.
-
-A new Wave Product will be created from a Tripletex Product if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
-
-Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - unitPrice
-     - "string"
-
-
 Tripletex Order to Wave Invoice
 -------------------------------
 Every Tripletex Order will be synchronized with a Wave Invoice.
@@ -100,6 +73,31 @@ The following properties are synchronized between a Tripletex Order and a Wave I
      - "string"
    * - reference
      - poNumber
+     - "string"
+
+
+Tripletex Product to Wave Product
+---------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Wave Product.
+
+Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Wave Product Property
+     - Wave Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - unitPrice
      - "string"
 
 
