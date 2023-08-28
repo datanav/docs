@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-08-28 15:10:48
+Generated: 2023-08-28 15:12:46
 
 Introduction.
 ------------
@@ -173,6 +173,46 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
      - "string"
 
 
+Wave Vendor to Tripletex Customer
+---------------------------------
+Every Wave Vendor will be synchronized with a Tripletex Customer.
+
+Once a link between a Wave Vendor and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+   * - address.addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - address.addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - address.city
+     - physicalAddress.city
+     - "string"
+   * - address.country.code
+     - physicalAddress.country.id
+     - "integer"
+   * - address.postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - id
+     - id
+     - "integer"
+   * - name
+     - name
+     - "string"
+   * - phone
+     - phoneNumber
+     - "string"
+
+
 Wave Customer to Tripletex Customer
 -----------------------------------
 Every Wave Customer will be synchronized with a Tripletex Customer.
@@ -227,46 +267,6 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - deliveryAddress.postalCode
      - "string"
    * - shippingDetails.phone
-     - phoneNumber
-     - "string"
-
-
-Wave Vendor to Tripletex Customer
----------------------------------
-Every Wave Vendor will be synchronized with a Tripletex Customer.
-
-Once a link between a Wave Vendor and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Vendor and a Tripletex Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Vendor Property
-     - Tripletex Customer Property
-     - Tripletex Data Type
-   * - address.addressLine1
-     - physicalAddress.addressLine1
-     - "string"
-   * - address.addressLine2
-     - physicalAddress.addressLine2
-     - "string"
-   * - address.city
-     - physicalAddress.city
-     - "string"
-   * - address.country.code
-     - physicalAddress.country.id
-     - "integer"
-   * - address.postalCode
-     - physicalAddress.postalCode
-     - "string"
-   * - id
-     - id
-     - "integer"
-   * - name
-     - name
-     - "string"
-   * - phone
      - phoneNumber
      - "string"
 
