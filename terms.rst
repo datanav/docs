@@ -697,6 +697,16 @@ administrators by through registered e-mail address.
 
 The Customer will send notices to SESAM through https://support.sesam.io.
 
+15.5. Source Code Continuity Provision
+--------------------------------------
+
+In the event that SESAM ceases to actively maintain, update, or otherwise 
+discontinues the Services, any Customer in good standing at that time will be 
+granted access to a specific branch of the existing GitHub repositories 
+containing the source code for the Services ("Source Code Branch"). 
+Access to the Source Code Branch will be solely for the purpose of enabling 
+each Customer to continue using the Services for their internal operations.
+
 16. Disputes
 ============
 
