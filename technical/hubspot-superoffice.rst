@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-08-23 12:31:01
+Generated: 2023-08-30 05:56:13
 
 Introduction.
 ------------
@@ -59,10 +59,10 @@ The following properties are synchronized between a HubSpot Contact and a SuperO
      - "string"
    * - properties.mobilephone
      - MobilePhones.Value
-     - "first"
+     - "string"
    * - properties.phone
      - OfficePhones.Value
-     - "first"
+     - "string"
    * - properties.zip
      - Address.Street.Zipcode
      - "string"
