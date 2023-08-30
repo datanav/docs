@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-08-30 05:55:02
+Generated: 2023-08-30 05:56:13
 
 Introduction.
 ------------
@@ -228,7 +228,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "integer"
    * - phoneNumber
      - OfficePhones.Value
-     - "first"
+     - "string"
    * - residenceCountryCode
      - Country.CountryId
      - "integer"
