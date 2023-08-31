@@ -130,12 +130,20 @@ Misc
      - Examples
 
    * - | *Arguments:*
-       |   MESSAGE(value{1})
+       |   VALUE(value{1})
        |
-       | A function that returns its argument. The argument is not evaluated and is returned as-is. This function is used to avoid side-effects from value expression evaluation.
+       | A function that returns its argument. The argument is not evaluated and is returned as-is. This function is used to avoid literal values having side-effects from expression evaluation.
      - | ``["literal", "_S.foo"]``
        |
        | Returns the string ``_S.foo``, and not the value of the source entity's foo property.
+       |
+       | ``["literal", {"foo": 1, "bar": 2}]``
+       |
+       | Returns the dict ``{"foo": 1, "bar": 2}``.
+       |
+       | ``["literal", ["upper", "hello"]]``
+       |
+       | Returns the array ``["upper", "hello"]``, and not the result of evaluating the DTL expression.
 
 .. _tuples_dtl_function:
 
