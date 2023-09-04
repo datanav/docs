@@ -32,7 +32,7 @@ jobs:
           VIRTUAL_ENV: venv
         run: |
           make html && make docker
-          echo "IMAGE_NAME_ACR=$IMAGE_NAME_ACR:$TAG"" >> "$GITHUB_ENV"
+          echo "IMAGE_NAME_ACR=$IMAGE_NAME_ACR:$TAG" >> "$GITHUB_ENV"
       - name: ACR login
         uses: azure/docker-login@v1
         with:
