@@ -26,6 +26,12 @@ jobs:
         with:
           username: sesamci
           password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: ACR login
+        uses: azure/docker-login@v1
+        with:
+          login-server: sesam.azurecr.io
+          username: docs-push
+          password: ${{ secrets.ACR_PASSWORD }}
       - name: Build
         env:
           DOCKER_BUILD_PUSH: 1                  
