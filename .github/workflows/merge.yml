@@ -31,7 +31,11 @@ jobs:
           DOCKER_BUILD_PUSH: 1                  
           VIRTUAL_ENV: venv
         run: |
-          make html && make docker
+          export TAG=${TAG-latest}
+          export IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
+          make html
+          make docker
+          docker tag $IMAGE_NAME:$TAG $IMAGE_NAME_ACR:$TAG
           echo "IMAGE_NAME_ACR=$IMAGE_NAME_ACR:$TAG" >> "$GITHUB_ENV"
       - name: ACR login
         uses: azure/docker-login@v1
