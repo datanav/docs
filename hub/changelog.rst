@@ -1,6 +1,13 @@
 Changelog
 =========
 
+.. _changelog_2023_09_01:
+
+2023-09-01
+----------
+
+* Active use of the sesam-py client will now prevent developer and developer-pro subscriptions from being hibernated. This feature was introduced in version `2.8.0 <https://github.com/sesam-community/sesam-py/releases/tag/2.8.0>`_.
+
 .. _changelog_2023_08_18:
 
 2023-08-18
