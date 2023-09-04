@@ -30,6 +30,7 @@ jobs:
         env:
           DOCKER_BUILD_PUSH: 1                  
           VIRTUAL_ENV: venv
+          IMAGE_NAME: sesam/docs
         run: |
           export TAG=${TAG-latest}
           export IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
