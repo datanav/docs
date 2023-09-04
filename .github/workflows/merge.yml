@@ -30,7 +30,9 @@ jobs:
         env:
           DOCKER_BUILD_PUSH: 1                  
           VIRTUAL_ENV: venv
-        run: make html && make docker
+        run: |
+          make html && make docker
+          echo "IMAGE_NAME_ACR=$IMAGE_NAME_ACR:$TAG"" >> "$GITHUB_ENV"
       - name: ACR login
         uses: azure/docker-login@v1
         with:
@@ -39,5 +41,5 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
       - name: Push ACR image
         run: |
-            echo "Pushing $IMAGE_NAME_ACR:$TAG"
-            docker push $IMAGE_NAME_ACR:$TAG
+            echo "Pushing $IMAGE_NAME_ACR"
+            docker push $IMAGE_NAME_ACR
