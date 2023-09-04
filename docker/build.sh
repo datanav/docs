@@ -7,7 +7,7 @@ DOCKER_BUILD=${DOCKER_BUILD-1}
 DOCKER_BUILD_PUSH=${DOCKER_BUILD_PUSH-0}
 
 IMAGE_NAME=sesam/docs
-export IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
+expport IMAGE_NAME_ACR=sesam.azurecr.io/$IMAGE_NAME
 
 if [ $DOCKER_BUILD -eq 1 ]; then
   docker build $DOCKER_BUILD_OPTIONS -t $IMAGE_NAME:$TAG .
