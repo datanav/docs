@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-05 14:59:00
+Generated: 2023-09-05 22:01:30
 
 Introduction.
 ------------
@@ -113,6 +113,42 @@ The following properties are synchronized between a Wix.com Members and a Triple
      - "string"
 
 
+Wix.com Contacts to Tripletex Customer
+--------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+
+Once a link between a Wix.com Contacts and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
+Wix.com Members to Tripletex Customer
+-------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+
+Once a link between a Wix.com Members and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
+
+
 Wix.com Contacts to Tripletex Contact
 -------------------------------------
 Every Wix.com Contacts will be synchronized with a Tripletex Contact.
@@ -195,6 +231,12 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
    * - Wix.com Orders Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - buyerInfo.contactId
+     - customer.id
+     - "integer"
+   * - buyerInfo.id
+     - customer.id
+     - "integer"
    * - currency
      - currency.id
      - "integer"
