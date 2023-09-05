@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 13:56:55
+Generated: 2023-09-05 13:59:23
 
 Introduction.
 ------------
@@ -104,4 +104,7 @@ The following properties are synchronized between a Wix.com Products and a HubSp
    * - Wix.com Products Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - price.price
+     - properties.price
+     - "string"
 
