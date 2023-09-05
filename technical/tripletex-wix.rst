@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 13:37:57
+Generated: 2023-09-05 13:57:54
 
 Introduction.
 ------------
@@ -163,4 +163,20 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
    * - phoneNumberMobile
      - primaryInfo.phone
      - "string"
+
+
+Tripletex Product to Wix Products
+---------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Wix Products.
+
+Once a link between a Tripletex Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Wix Products Property
+     - Wix Data Type
 
