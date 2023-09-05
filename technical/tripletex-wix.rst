@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 08:44:31
+Generated: 2023-09-05 08:46:54
 
 Introduction.
 ------------
@@ -44,6 +44,32 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
 
 
+Tripletex Contact to Wix Members
+--------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Wix Members must be established.
+
+A Tripletex Contact will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Tripletex Contact and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Members Property
+     - Wix Data Type
+
+
 Tripletex Employee to Wix Contacts
 ----------------------------------
 Every Tripletex Employee will be synchronized with a Wix Contacts.
@@ -77,4 +103,30 @@ The following properties are synchronized between a Tripletex Employee and a Wix
    * - phoneNumberMobile
      - info.phones
      - "string"
+
+
+Tripletex Employee to Wix Members
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Employee and a Wix Members must be established.
+
+A Tripletex Employee will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Tripletex Employee and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Wix Members Property
+     - Wix Data Type
 
