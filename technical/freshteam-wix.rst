@@ -2,7 +2,7 @@
 Freshteam to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 09:11:34
+Generated: 2023-09-05 09:13:39
 
 Introduction.
 ------------
@@ -25,6 +25,9 @@ The following properties are synchronized between a Freshteam Employee and a Wix
      - Wix Data Type
    * - first_name
      - info.name.first
+     - "string"
+   * - last_name
+     - info.name.last
      - "string"
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - info.phones
