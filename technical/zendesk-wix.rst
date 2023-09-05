@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 08:46:54
+Generated: 2023-09-05 09:17:31
 
 Introduction.
 ------------
@@ -25,6 +25,8 @@ A Zendesk Users will merge with a Wix Contacts if one of the following property 
      - Wix Contacts Property
    * - email
      - info.emails
+   * - email
+     - primaryInfo.email
 
 Once a link between a Zendesk Users and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
