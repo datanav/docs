@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-08-21 06:49:51
+Generated: 2023-09-05 09:11:52
 
 Introduction.
 ------------
@@ -32,6 +32,24 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
 
    * - SuperOffice Pricelist Property
      - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
+
+SuperOffice Contact to PowerOfficeGo Customers
+----------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGo.
+
+Once a link between a SuperOffice Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
 
 
