@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 08:36:35
+Generated: 2023-09-05 08:44:12
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Contact to Wix Contacts
 ---------------------------------
-Before any synchronization can take place, a link between a Tripletex Contact and a Wix Contacts must be established.
+Every Tripletex Contact will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the Tripletex Contact will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
 A Tripletex Contact will merge with a Wix Contacts if one of the following property combinations match:
 
