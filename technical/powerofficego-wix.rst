@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 08:43:09
+Generated: 2023-09-05 08:43:39
 
 Introduction.
 ------------
@@ -61,4 +61,7 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Powerofficego Employees Property
      - Wix Contacts Property
      - Wix Data Type
+   * - PhoneNumber
+     - info.phones
+     - "string"
 
