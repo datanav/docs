@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 09:17:31
+Generated: 2023-09-05 09:17:36
 
 Introduction.
 ------------
@@ -52,6 +52,9 @@ The following properties are synchronized between a Wix.com Contacts and a HubSp
      - "string"
    * - primaryInfo.email
      - properties.email
+     - "string"
+   * - primaryInfo.phone
+     - properties.mobilephone
      - "string"
 
 
