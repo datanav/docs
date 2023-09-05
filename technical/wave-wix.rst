@@ -2,38 +2,12 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 14:13:32
+Generated: 2023-09-05 14:14:00
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Wave Currency to Wix Currencies
--------------------------------
-Before any synchronization can take place, a link between a Wave Currency and a Wix Currencies must be established.
-
-A Wave Currency will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Wix Currencies Property
-   * - code
-     - code
-
-Once a link between a Wave Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Wix Currencies Property
-     - Wix Data Type
-
 
 Wave Customer to Wix Contacts
 -----------------------------
@@ -183,6 +157,35 @@ The following properties are synchronized between a Wave Vendor and a Wix Member
    * - email
      - loginEmail
      - "string"
+
+
+Wave Currency to Wix Currencies
+-------------------------------
+Every Wave Currency will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the Wave Currency will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A Wave Currency will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Wix Currencies Property
+   * - code
+     - code
+
+Once a link between a Wave Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Currency and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Currency Property
+     - Wix Currencies Property
+     - Wix Data Type
 
 
 Wave Product to Wix Inventory
