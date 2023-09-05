@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 14:13:32
+Generated: 2023-09-05 14:14:00
 
 Introduction.
 ------------
@@ -36,32 +36,6 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
    * - email
      - loginEmail
      - "string"
-
-
-Tripletex Currency to Wix Currencies
-------------------------------------
-Before any synchronization can take place, a link between a Tripletex Currency and a Wix Currencies must be established.
-
-A Tripletex Currency will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Wix Currencies Property
-   * - code
-     - code
-
-Once a link between a Tripletex Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Currency and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Currency Property
-     - Wix Currencies Property
-     - Wix Data Type
 
 
 Tripletex Employee to Wix Contacts
@@ -205,6 +179,35 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
    * - phoneNumberMobile
      - primaryInfo.phone
      - "string"
+
+
+Tripletex Currency to Wix Currencies
+------------------------------------
+Every Tripletex Currency will be synchronized with a Wix Currencies.
+
+If a matching Wix Currencies already exists, the Tripletex Currency will be merged with the existing one.
+If no matching Wix Currencies is found, a new Wix Currencies will be created.
+
+A Tripletex Currency will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Wix Currencies Property
+   * - code
+     - code
+
+Once a link between a Tripletex Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Currency and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Currency Property
+     - Wix Currencies Property
+     - Wix Data Type
 
 
 Tripletex Product to Wix Inventory
