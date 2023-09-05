@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 14:02:55
+Generated: 2023-09-05 14:03:39
 
 Introduction.
 ------------
@@ -130,6 +130,9 @@ The following properties are synchronized between a Tripletex Product and a Wix 
    * - Tripletex Product Property
      - Wix Inventory Property
      - Wix Data Type
+   * - stockOfGoods
+     - lastUpdated
+     - "string"
 
 
 Tripletex Productgrouprelation to Wix Inventory
