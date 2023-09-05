@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-05 14:00:20
+Generated: 2023-09-05 14:08:58
 
 Introduction.
 ------------
@@ -56,6 +56,25 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - "string"
    * - primaryInfo.email
      - EmailAddress
+     - "string"
+
+
+Wix.com Inventory to PowerOfficeGo Product
+------------------------------------------
+Every Wix.com Inventory will be synchronized with a PowerOfficeGo Product.
+
+Once a link between a Wix.com Inventory and a PowerOfficeGo Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Inventory and a PowerOfficeGo Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Inventory Property
+     - PowerOfficeGo Product Property
+     - PowerOfficeGo Data Type
+   * - lastUpdated
+     - availableStock
      - "string"
 
 
