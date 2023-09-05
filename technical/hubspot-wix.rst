@@ -2,12 +2,38 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 14:08:56
+Generated: 2023-09-05 14:13:20
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from HubSpot to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+HubSpot Account to Wix Currencies
+---------------------------------
+Before any synchronization can take place, a link between a HubSpot Account and a Wix Currencies must be established.
+
+A HubSpot Account will merge with a Wix Currencies if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wix Currencies Property
+   * - companyCurrency
+     - code
+
+Once a link between a HubSpot Account and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Account and a Wix Currencies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Account Property
+     - Wix Currencies Property
+     - Wix Data Type
+
 
 HubSpot Contact to Wix Contacts
 -------------------------------
