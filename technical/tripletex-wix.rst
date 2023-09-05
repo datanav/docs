@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 13:59:23
+Generated: 2023-09-05 14:00:20
 
 Introduction.
 ------------
@@ -179,6 +179,15 @@ The following properties are synchronized between a Tripletex Product and a Wix 
    * - Tripletex Product Property
      - Wix Products Property
      - Wix Data Type
+   * - costExcludingVatCurrency
+     - costRange.maxValue
+     - "string"
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
    * - priceExcludingVatCurrency
      - price.price
      - "string"
