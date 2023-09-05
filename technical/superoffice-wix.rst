@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 08:36:35
+Generated: 2023-09-05 08:43:39
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Person to Wix Contacts
 ----------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Wix Contacts must be established.
+Every SuperOffice Person will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the SuperOffice Person will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
 A SuperOffice Person will merge with a Wix Contacts if one of the following property combinations match:
 
