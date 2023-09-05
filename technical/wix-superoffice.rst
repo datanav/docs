@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 14:08:56
+Generated: 2023-09-05 14:09:20
 
 Introduction.
 ------------
@@ -141,6 +141,9 @@ The following properties are synchronized between a Wix.com Products and a Super
      - "string"
    * - name
      - Name
+     - "string"
+   * - price.currency
+     - ERPPriceListKey
      - "string"
    * - price.price
      - UnitListPrice
