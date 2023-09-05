@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-05 14:08:56
+Generated: 2023-09-05 14:58:58
 
 Introduction.
 ------------
@@ -22,6 +22,22 @@ The following properties are synchronized between a Wix.com Inventory and a Wave
 
    * - Wix.com Inventory Property
      - Wave Product Property
+     - Wave Data Type
+
+
+Wix.com Orders to Wave Invoice
+------------------------------
+Every Wix.com Orders will be synchronized with a Wave Invoice.
+
+Once a link between a Wix.com Orders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Wave Invoice Property
      - Wave Data Type
 
 
