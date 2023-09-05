@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 09:13:38
+Generated: 2023-09-05 09:17:31
 
 Introduction.
 ------------
@@ -24,6 +24,8 @@ A Wix.com Contacts will merge with a SuperOffice Person if one of the following 
    * - Wix.com Contacts Property
      - SuperOffice Person Property
    * - info.emails
+     - Emails.Value
+   * - primaryInfo.email
      - Emails.Value
 
 Once a link between a Wix.com Contacts and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
