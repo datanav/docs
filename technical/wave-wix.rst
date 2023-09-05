@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-05 13:57:54
 
 Introduction.
 ------------
@@ -157,4 +157,20 @@ The following properties are synchronized between a Wave Vendor and a Wix Member
    * - email
      - loginEmail
      - "string"
+
+
+Wave Product to Wix Products
+----------------------------
+Every Wave Product will be synchronized with a Wix Products.
+
+Once a link between a Wave Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - Wix Products Property
+     - Wix Data Type
 
