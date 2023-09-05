@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 14:03:39
+Generated: 2023-09-05 14:08:56
 
 Introduction.
 ------------
@@ -34,25 +34,6 @@ The following properties are synchronized between a Powerofficego Employees and 
      - "string"
    * - PhoneNumber
      - primaryInfo.phone
-     - "string"
-
-
-Powerofficego Product to Wix Inventory
---------------------------------------
-Every Powerofficego Product will be synchronized with a Wix Inventory.
-
-Once a link between a Powerofficego Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Wix Inventory Property
-     - Wix Data Type
-   * - availableStock
-     - lastUpdated
      - "string"
 
 
@@ -109,6 +90,25 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - LastName
      - info.name.last
+     - "string"
+
+
+Powerofficego Product to Wix Inventory
+--------------------------------------
+Every Powerofficego Product will be synchronized with a Wix Inventory.
+
+Once a link between a Powerofficego Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Wix Inventory Property
+     - Wix Data Type
+   * - availableStock
+     - lastUpdated
      - "string"
 
 
