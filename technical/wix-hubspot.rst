@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-05 13:56:55
 
 Introduction.
 ------------
@@ -88,4 +88,20 @@ The following properties are synchronized between a Wix.com Members and a HubSpo
    * - loginEmail
      - properties.email
      - "string"
+
+
+Wix.com Products to HubSpot Product
+-----------------------------------
+Every Wix.com Products will be synchronized with a HubSpot Product.
+
+Once a link between a Wix.com Products and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - HubSpot Product Property
+     - HubSpot Data Type
 
