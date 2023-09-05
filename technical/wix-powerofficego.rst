@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-05 13:56:55
+Generated: 2023-09-05 13:59:23
 
 Introduction.
 ------------
@@ -73,4 +73,7 @@ The following properties are synchronized between a Wix.com Products and a Power
    * - Wix.com Products Property
      - PowerOfficeGo Product Property
      - PowerOfficeGo Data Type
+   * - price.price
+     - salesPrice
+     - "string"
 
