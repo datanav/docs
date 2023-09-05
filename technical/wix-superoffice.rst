@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 08:45:13
+Generated: 2023-09-05 08:50:22
 
 Introduction.
 ------------
@@ -46,7 +46,10 @@ The following properties are synchronized between a Wix.com Contacts and a Super
 
 Wix.com Members to SuperOffice Person
 -------------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a SuperOffice Person must be established.
+Every Wix.com Members will be synchronized with a SuperOffice Person.
+
+If a matching SuperOffice Person already exists, the Wix.com Members will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
 A Wix.com Members will merge with a SuperOffice Person if one of the following property combinations match:
 
