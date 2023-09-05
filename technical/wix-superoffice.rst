@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 08:36:29
+Generated: 2023-09-05 08:36:35
 
 Introduction.
 ------------
@@ -33,4 +33,10 @@ The following properties are synchronized between a Wix.com Contacts and a Super
    * - Wix.com Contacts Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - info.emails
+     - Emails.Value
+     - "string"
+   * - info.phones
+     - MobilePhones.Value
+     - "string"
 
