@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 13:59:45
+Generated: 2023-09-05 14:05:31
 
 Introduction.
 ------------
@@ -54,6 +54,8 @@ A Wix.com Inventory will merge with a Wix Products if one of the following prope
 
    * - Wix.com Inventory Property
      - Wix Products Property
+   * - productId
+     - id
    * - id
      - inventoryItemId
 
@@ -123,6 +125,8 @@ A Wix.com Products will merge with a Wix Inventory if one of the following prope
 
    * - Wix.com Products Property
      - Wix Inventory Property
+   * - id
+     - productId
    * - inventoryItemId
      - id
 
