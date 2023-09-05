@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 13:57:30
+Generated: 2023-09-05 13:57:54
 
 Introduction.
 ------------
@@ -183,4 +183,20 @@ The following properties are synchronized between a SuperOffice User and a Wix M
    * - personEmail
      - loginEmail
      - "string"
+
+
+SuperOffice Product to Wix Products
+-----------------------------------
+Every SuperOffice Product will be synchronized with a Wix Products.
+
+Once a link between a SuperOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Products Property
+     - Wix Data Type
 
