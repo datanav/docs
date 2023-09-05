@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 14:03:39
+Generated: 2023-09-05 14:08:56
 
 Introduction.
 ------------
@@ -116,25 +116,6 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - "string"
 
 
-Tripletex Product to Wix Inventory
-----------------------------------
-Every Tripletex Product will be synchronized with a Wix Inventory.
-
-Once a link between a Tripletex Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Wix Inventory Property
-     - Wix Data Type
-   * - stockOfGoods
-     - lastUpdated
-     - "string"
-
-
 Tripletex Productgrouprelation to Wix Inventory
 -----------------------------------------------
 Every Tripletex Productgrouprelation will be synchronized with a Wix Inventory.
@@ -197,6 +178,25 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
    * - phoneNumberMobile
      - primaryInfo.phone
+     - "string"
+
+
+Tripletex Product to Wix Inventory
+----------------------------------
+preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Wix Inventory.
+
+Once a link between a Tripletex Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Wix Inventory Property
+     - Wix Data Type
+   * - stockOfGoods
+     - lastUpdated
      - "string"
 
 
