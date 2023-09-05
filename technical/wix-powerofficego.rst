@@ -2,12 +2,30 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-05 15:27:30
+Generated: 2023-09-05 22:01:30
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Members to PowerOfficeGo Customers
+------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGo.
+
+Once a link between a Wix.com Members and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
 
 Wix.com Orders to PowerOfficeGo Outgoinginvoices
 ------------------------------------------------
@@ -23,6 +41,12 @@ The following properties are synchronized between a Wix.com Orders and a PowerOf
    * - Wix.com Orders Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - buyerInfo.contactId
+     - customerId
+     - "string"
+   * - buyerInfo.id
+     - customerId
+     - "string"
    * - currency
      - CurrencyCode
      - "string"
