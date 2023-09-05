@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 09:17:31
+Generated: 2023-09-05 09:17:36
 
 Introduction.
 ------------
@@ -38,6 +38,9 @@ The following properties are synchronized between a Wix.com Contacts and a Wix M
    * - info.emails
      - loginEmail
      - "string"
+   * - primaryInfo.email
+     - loginEmail
+     - "string"
 
 
 Wix.com Members to Wix Contacts
@@ -71,5 +74,8 @@ The following properties are synchronized between a Wix.com Members and a Wix Co
      - Wix Data Type
    * - loginEmail
      - info.emails
+     - "string"
+   * - loginEmail
+     - primaryInfo.email
      - "string"
 
