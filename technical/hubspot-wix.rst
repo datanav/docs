@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 08:41:14
+Generated: 2023-09-05 08:41:36
 
 Introduction.
 ------------
@@ -56,6 +56,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    :header-rows: 1
 
    * - HubSpot Contactcompanyassociation Property
+     - Wix Contacts Property
+     - Wix Data Type
+
+
+HubSpot User to Wix Contacts
+----------------------------
+Every HubSpot User will be synchronized with a Wix Contacts.
+
+Once a link between a HubSpot User and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
      - Wix Contacts Property
      - Wix Data Type
 
