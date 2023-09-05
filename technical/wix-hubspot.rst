@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 08:36:35
+Generated: 2023-09-05 08:42:46
 
 Introduction.
 ------------
@@ -39,4 +39,30 @@ The following properties are synchronized between a Wix.com Contacts and a HubSp
    * - info.phones
      - properties.mobilephone
      - "string"
+
+
+Wix.com Members to HubSpot Contact
+----------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a HubSpot Contact must be established.
+
+A Wix.com Members will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - HubSpot Contact Property
+   * - loginEmail
+     - properties.email
+
+Once a link between a Wix.com Members and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
