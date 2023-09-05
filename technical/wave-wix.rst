@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 15:21:57
+Generated: 2023-09-05 15:22:01
 
 Introduction.
 ------------
@@ -159,6 +159,24 @@ The following properties are synchronized between a Wave Vendor and a Wix Member
      - "string"
 
 
+Wave Business to Wix Contacts
+-----------------------------
+Before any synchronization can take place, a link between a Wave Business and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a Wave Business if it is connected to a Wave Invoice that is synchronized into Wix.
+
+Once a link between a Wave Business and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Business and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Business Property
+     - Wix Contacts Property
+     - Wix Data Type
+
+
 Wave Currency to Wix Currencies
 -------------------------------
 Every Wave Currency will be synchronized with a Wix Currencies.
@@ -202,6 +220,30 @@ The following properties are synchronized between a Wave Invoice and a Wix Order
    * - Wave Invoice Property
      - Wix Orders Property
      - Wix Data Type
+   * - business.id
+     - buyerInfo.contactId
+     - "string"
+   * - currency.code
+     - currency
+     - "string"
+   * - invoiceDate
+     - dateCreated
+     - "string"
+   * - items.description
+     - lineItems.name
+     - "string"
+   * - items.price
+     - lineItems.price
+     - "string"
+   * - items.product.id
+     - lineItems.productId
+     - "string"
+   * - items.quantity
+     - lineItems.quantity
+     - "string"
+   * - total.value
+     - totals.total
+     - "string"
 
 
 Wave Product to Wix Inventory
