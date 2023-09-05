@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 15:21:57
+Generated: 2023-09-05 15:21:58
 
 Introduction.
 ------------
@@ -224,6 +224,9 @@ The following properties are synchronized between a Tripletex Order and a Wix Or
    * - Tripletex Order Property
      - Wix Orders Property
      - Wix Data Type
+   * - currency.id
+     - currency
+     - "string"
 
 
 Tripletex Product to Wix Inventory
