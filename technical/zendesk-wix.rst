@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 08:36:29
+Generated: 2023-09-05 08:45:45
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Zendesk Users to Wix Contacts
 -----------------------------
-Before any synchronization can take place, a link between a Zendesk Users and a Wix Contacts must be established.
+Every Zendesk Users will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the Zendesk Users will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
 A Zendesk Users will merge with a Wix Contacts if one of the following property combinations match:
 
