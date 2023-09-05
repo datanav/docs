@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 14:00:20
+Generated: 2023-09-05 14:02:14
 
 Introduction.
 ------------
@@ -89,7 +89,10 @@ The following properties are synchronized between a SuperOffice Person and a Wix
 
 SuperOffice Product to Wix Inventory
 ------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a Wix Inventory must be established.
+Every SuperOffice Product will be synchronized with a Wix Inventory.
+
+If a matching Wix Inventory already exists, the SuperOffice Product will be merged with the existing one.
+If no matching Wix Inventory is found, a new Wix Inventory will be created.
 
 A SuperOffice Product will merge with a Wix Inventory if one of the following property combinations match:
 
