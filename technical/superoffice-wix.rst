@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 08:43:39
+Generated: 2023-09-05 08:46:54
 
 Introduction.
 ------------
@@ -44,6 +44,32 @@ The following properties are synchronized between a SuperOffice Person and a Wix
      - "string"
 
 
+SuperOffice Person to Wix Members
+---------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Wix Members must be established.
+
+A SuperOffice Person will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Wix Members Property
+   * - Emails.Value
+     - loginEmail
+
+Once a link between a SuperOffice Person and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Wix Members Property
+     - Wix Data Type
+
+
 SuperOffice User to Wix Contacts
 --------------------------------
 Before any synchronization can take place, a link between a SuperOffice User and a Wix Contacts must be established.
@@ -71,4 +97,30 @@ The following properties are synchronized between a SuperOffice User and a Wix C
    * - personEmail
      - info.emails
      - "string"
+
+
+SuperOffice User to Wix Members
+-------------------------------
+Before any synchronization can take place, a link between a SuperOffice User and a Wix Members must be established.
+
+A SuperOffice User will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Wix Members Property
+   * - personEmail
+     - loginEmail
+
+Once a link between a SuperOffice User and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Wix Members Property
+     - Wix Data Type
 
