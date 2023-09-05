@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-05 13:58:32
 
 Introduction.
 ------------
@@ -78,4 +78,20 @@ The following properties are synchronized between a Wix.com Members and a Wix Co
    * - loginEmail
      - primaryInfo.email
      - "string"
+
+
+Wix.com Products to Wix Inventory
+---------------------------------
+Every Wix.com Products will be synchronized with a Wix Inventory.
+
+Once a link between a Wix.com Products and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Wix Inventory Property
+     - Wix Data Type
 
