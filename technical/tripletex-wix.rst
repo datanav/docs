@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 14:02:34
+Generated: 2023-09-05 14:02:55
 
 Introduction.
 ------------
@@ -128,6 +128,22 @@ The following properties are synchronized between a Tripletex Product and a Wix 
    :header-rows: 1
 
    * - Tripletex Product Property
+     - Wix Inventory Property
+     - Wix Data Type
+
+
+Tripletex Productgrouprelation to Wix Inventory
+-----------------------------------------------
+Every Tripletex Productgrouprelation will be synchronized with a Wix Inventory.
+
+Once a link between a Tripletex Productgrouprelation and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgrouprelation and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgrouprelation Property
      - Wix Inventory Property
      - Wix Data Type
 
