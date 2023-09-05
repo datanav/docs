@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-05 14:09:20
+Generated: 2023-09-05 14:58:58
 
 Introduction.
 ------------
@@ -179,6 +179,22 @@ The following properties are synchronized between a Wix.com Inventory and a Trip
    * - lastUpdated
      - stockOfGoods
      - "integer"
+
+
+Wix.com Orders to Tripletex Order
+---------------------------------
+Every Wix.com Orders will be synchronized with a Tripletex Order.
+
+Once a link between a Wix.com Orders and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Tripletex Order Property
+     - Tripletex Data Type
 
 
 Wix.com Products to Tripletex Product
