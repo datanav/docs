@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 08:44:46
+Generated: 2023-09-05 08:48:47
 
 Introduction.
 ------------
@@ -46,7 +46,10 @@ The following properties are synchronized between a Wix.com Contacts and a HubSp
 
 Wix.com Members to HubSpot Contact
 ----------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a HubSpot Contact must be established.
+Every Wix.com Members will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Wix.com Members will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Wix.com Members will merge with a HubSpot Contact if one of the following property combinations match:
 
