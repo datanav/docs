@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 09:11:34
+Generated: 2023-09-05 09:13:39
 
 Introduction.
 ------------
@@ -41,6 +41,9 @@ The following properties are synchronized between a Tripletex Contact and a Wix 
      - "string"
    * - firstName
      - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
      - "string"
    * - phoneNumberMobile
      - info.phones
@@ -108,6 +111,9 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - "string"
    * - firstName
      - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
      - "string"
    * - phoneNumberMobile
      - info.phones
