@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 13:57:19
+Generated: 2023-09-05 13:57:30
 
 Introduction.
 ------------
@@ -111,6 +111,9 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - SuperOffice Product Property
      - Wix Inventory Property
      - Wix Data Type
+   * - ERPProductKey
+     - id
+     - "string"
 
 
 SuperOffice User to Wix Contacts
