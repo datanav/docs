@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-05 13:57:19
 
 Introduction.
 ------------
@@ -85,6 +85,32 @@ The following properties are synchronized between a SuperOffice Person and a Wix
    * - Emails.Value
      - loginEmail
      - "string"
+
+
+SuperOffice Product to Wix Inventory
+------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Wix Inventory must be established.
+
+A SuperOffice Product will merge with a Wix Inventory if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Inventory Property
+   * - ERPProductKey
+     - id
+
+Once a link between a SuperOffice Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Inventory Property
+     - Wix Data Type
 
 
 SuperOffice User to Wix Contacts
