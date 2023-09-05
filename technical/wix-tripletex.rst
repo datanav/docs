@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-05 13:37:57
+Generated: 2023-09-05 13:56:55
 
 Introduction.
 ------------
@@ -160,4 +160,20 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
    * - primaryInfo.phone
      - phoneNumberMobile
      - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+
+
+Wix.com Products to Tripletex Product
+-------------------------------------
+Every Wix.com Products will be synchronized with a Tripletex Product.
+
+Once a link between a Wix.com Products and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Tripletex Product Property
+     - Tripletex Data Type
 
