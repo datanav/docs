@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-05 14:08:58
+Generated: 2023-09-05 14:09:20
 
 Introduction.
 ------------
@@ -204,6 +204,9 @@ The following properties are synchronized between a Wix.com Products and a Tripl
    * - name
      - name
      - "string"
+   * - price.currency
+     - currency.id
+     - "integer"
    * - price.price
      - priceExcludingVatCurrency
      - "float"
