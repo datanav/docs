@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 13:59:23
+Generated: 2023-09-05 13:59:45
 
 Introduction.
 ------------
@@ -67,6 +67,9 @@ The following properties are synchronized between a Wix.com Inventory and a Wix 
    * - Wix.com Inventory Property
      - Wix Products Property
      - Wix Data Type
+   * - id
+     - inventoryItemId
+     - "string"
 
 
 Wix.com Members to Wix Contacts
