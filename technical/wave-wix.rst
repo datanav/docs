@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 21:59:27
+Generated: 2023-09-05 22:01:30
 
 Introduction.
 ------------
@@ -12,6 +12,8 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 Wave Customer to Wix Contacts
 -----------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
 
 A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
 
@@ -58,6 +60,8 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
 Wave Customer to Wix Members
 ----------------------------
 Before any synchronization can take place, a link between a Wave Customer and a Wix Members must be established.
+
+A new Wix Members will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
 
 A Wave Customer will merge with a Wix Members if one of the following property combinations match:
 
@@ -228,6 +232,12 @@ The following properties are synchronized between a Wave Invoice and a Wix Order
      - "string"
    * - currency.code
      - currency
+     - "string"
+   * - customer.id
+     - buyerInfo.contactId
+     - "string"
+   * - customer.id
+     - buyerInfo.id
      - "string"
    * - invoiceDate
      - dateCreated
