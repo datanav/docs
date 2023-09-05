@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 08:52:45
+Generated: 2023-09-05 09:17:31
 
 Introduction.
 ------------
@@ -21,6 +21,8 @@ A Wix.com Contacts will merge with a Wix Members if one of the following propert
    * - Wix.com Contacts Property
      - Wix Members Property
    * - info.emails
+     - loginEmail
+   * - primaryInfo.email
      - loginEmail
 
 Once a link between a Wix.com Contacts and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
@@ -54,6 +56,8 @@ A Wix.com Members will merge with a Wix Contacts if one of the following propert
      - Wix Contacts Property
    * - loginEmail
      - info.emails
+   * - loginEmail
+     - primaryInfo.email
 
 Once a link between a Wix.com Members and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
