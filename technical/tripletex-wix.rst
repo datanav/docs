@@ -2,61 +2,12 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-05 13:37:57
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
-
-Tripletex Contact to Wix Contacts
----------------------------------
-Every Tripletex Contact will be synchronized with a Wix Contacts.
-
-If a matching Wix Contacts already exists, the Tripletex Contact will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
-
-A Tripletex Contact will merge with a Wix Contacts if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Wix Contacts Property
-   * - email
-     - info.emails
-   * - email
-     - primaryInfo.email
-
-Once a link between a Tripletex Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - phoneNumberMobile
-     - info.phones
-     - "string"
-   * - phoneNumberMobile
-     - primaryInfo.phone
-     - "string"
-
 
 Tripletex Contact to Wix Members
 --------------------------------
@@ -162,5 +113,54 @@ The following properties are synchronized between a Tripletex Employee and a Wix
      - Wix Data Type
    * - email
      - loginEmail
+     - "string"
+
+
+Tripletex Contact to Wix Contacts
+---------------------------------
+Every Tripletex Contact will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the Tripletex Contact will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
+
+A Tripletex Contact will merge with a Wix Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Contacts Property
+   * - email
+     - info.emails
+   * - email
+     - primaryInfo.email
+
+Once a link between a Tripletex Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - email
+     - info.emails
+     - "string"
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - phoneNumberMobile
+     - info.phones
+     - "string"
+   * - phoneNumberMobile
+     - primaryInfo.phone
      - "string"
 
