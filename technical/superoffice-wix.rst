@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 13:57:54
+Generated: 2023-09-05 13:59:23
 
 Introduction.
 ------------
@@ -199,4 +199,7 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - SuperOffice Product Property
      - Wix Products Property
      - Wix Data Type
+   * - UnitListPrice
+     - price.price
+     - "string"
 
