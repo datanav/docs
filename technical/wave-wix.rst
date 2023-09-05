@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 08:36:35
+Generated: 2023-09-05 08:46:54
 
 Introduction.
 ------------
@@ -41,6 +41,32 @@ The following properties are synchronized between a Wave Customer and a Wix Cont
      - "string"
 
 
+Wave Customer to Wix Members
+----------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Wix Members must be established.
+
+A Wave Customer will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Wave Customer and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Members Property
+     - Wix Data Type
+
+
 Wave Vendor to Wix Contacts
 ---------------------------
 Before any synchronization can take place, a link between a Wave Vendor and a Wix Contacts must be established.
@@ -71,4 +97,30 @@ The following properties are synchronized between a Wave Vendor and a Wix Contac
    * - mobile
      - info.phones
      - "string"
+
+
+Wave Vendor to Wix Members
+--------------------------
+Before any synchronization can take place, a link between a Wave Vendor and a Wix Members must be established.
+
+A Wave Vendor will merge with a Wix Members if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Wix Members Property
+   * - email
+     - loginEmail
+
+Once a link between a Wave Vendor and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - Wix Members Property
+     - Wix Data Type
 
