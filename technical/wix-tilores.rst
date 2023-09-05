@@ -2,7 +2,7 @@
 Wix.com to Tilores Dataflow
 ===========================
 
-Generated: 2023-09-05 08:52:45
+Generated: 2023-09-05 09:11:34
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Wix.com Contacts and a Tilor
    * - Wix.com Contacts Property
      - Tilores Human Property
      - Tilores Data Type
+   * - info.name.first
+     - firstName
+     - "string"
 
 
 Wix.com Members to Tilores Human
