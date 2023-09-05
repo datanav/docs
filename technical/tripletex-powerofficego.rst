@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-08-28 15:10:48
+Generated: 2023-09-05 09:11:52
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Tripletex Customer to PowerOfficeGo Customers
 ---------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a Tripletex Customer if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Contact that is synchronized into PowerOfficeGo.
 
 Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
