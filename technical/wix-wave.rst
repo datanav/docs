@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-05 22:01:30
+Generated: 2023-09-05 22:01:38
 
 Introduction.
 ------------
@@ -25,6 +25,18 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - Wix.com Contacts Property
      - Wave Customer Property
      - Wave Data Type
+   * - info.name.first
+     - firstName
+     - "string"
+   * - info.name.last
+     - lastName
+     - "string"
+   * - primaryInfo.email
+     - email
+     - "string"
+   * - primaryInfo.phone
+     - mobile
+     - "string"
 
 
 Wix.com Members to Wave Customer
@@ -43,6 +55,9 @@ The following properties are synchronized between a Wix.com Members and a Wave C
    * - Wix.com Members Property
      - Wave Customer Property
      - Wave Data Type
+   * - loginEmail
+     - email
+     - "string"
 
 
 Wix.com Product to Wave Product
