@@ -2,7 +2,7 @@
 Zendesk to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 09:17:31
+Generated: 2023-09-05 09:17:36
 
 Introduction.
 ------------
@@ -38,6 +38,9 @@ The following properties are synchronized between a Zendesk Users and a Wix Cont
    * - Zendesk Users Property
      - Wix Contacts Property
      - Wix Data Type
+   * - email
+     - primaryInfo.email
+     - "string"
 
 
 Zendesk Users to Wix Members
