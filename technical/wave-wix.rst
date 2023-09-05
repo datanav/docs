@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 08:46:54
+Generated: 2023-09-05 08:47:45
 
 Introduction.
 ------------
@@ -65,6 +65,9 @@ The following properties are synchronized between a Wave Customer and a Wix Memb
    * - Wave Customer Property
      - Wix Members Property
      - Wix Data Type
+   * - email
+     - loginEmail
+     - "string"
 
 
 Wave Vendor to Wix Contacts
@@ -123,4 +126,7 @@ The following properties are synchronized between a Wave Vendor and a Wix Member
    * - Wave Vendor Property
      - Wix Members Property
      - Wix Data Type
+   * - email
+     - loginEmail
+     - "string"
 
