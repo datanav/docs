@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 08:42:27
+Generated: 2023-09-05 08:42:46
 
 Introduction.
 ------------
@@ -24,6 +24,25 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - Wix Contacts Property
      - Wix Data Type
    * - emailAddress
+     - info.emails
+     - "string"
+
+
+Powerofficego Customers to Wix Contacts
+---------------------------------------
+Every Powerofficego Customers will be synchronized with a Wix Contacts.
+
+Once a link between a Powerofficego Customers and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - EmailAddress
      - info.emails
      - "string"
 
