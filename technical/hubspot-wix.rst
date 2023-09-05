@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 09:13:38
+Generated: 2023-09-05 09:17:31
 
 Introduction.
 ------------
@@ -25,6 +25,8 @@ A HubSpot Contact will merge with a Wix Contacts if one of the following propert
      - Wix Contacts Property
    * - properties.email
      - info.emails
+   * - properties.email
+     - primaryInfo.email
 
 Once a link between a HubSpot Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
