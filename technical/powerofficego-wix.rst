@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 14:14:00
+Generated: 2023-09-05 15:21:57
 
 Introduction.
 ------------
@@ -167,4 +167,20 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - salesPrice
      - price.price
      - "string"
+
+
+Powerofficego Salesorders to Wix Orders
+---------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Wix Orders.
+
+Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Wix Orders Property
+     - Wix Data Type
 
