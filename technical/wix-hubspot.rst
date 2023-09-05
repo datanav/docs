@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-05 08:43:09
+Generated: 2023-09-05 08:44:46
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wix.com Contacts to HubSpot Contact
 -----------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a HubSpot Contact must be established.
+Every Wix.com Contacts will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Wix.com Contacts will merge with a HubSpot Contact if one of the following property combinations match:
 
