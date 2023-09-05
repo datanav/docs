@@ -2,12 +2,48 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-05 14:59:03
+Generated: 2023-09-05 22:01:30
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to Wave Customer
+---------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+
+Once a link between a Wix.com Contacts and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Wave Customer Property
+     - Wave Data Type
+
+
+Wix.com Members to Wave Customer
+--------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+
+Once a link between a Wix.com Members and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Wave Customer Property
+     - Wave Data Type
+
 
 Wix.com Product to Wave Product
 -------------------------------
@@ -57,6 +93,12 @@ The following properties are synchronized between a Wix.com Orders and a Wave In
    * - Wix.com Orders Property
      - Wave Invoice Property
      - Wave Data Type
+   * - buyerInfo.contactId
+     - customer.id
+     - "string"
+   * - buyerInfo.id
+     - customer.id
+     - "string"
    * - currency
      - currency.code
      - "string"
