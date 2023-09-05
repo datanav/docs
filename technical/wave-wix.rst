@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 14:14:00
+Generated: 2023-09-05 15:21:57
 
 Introduction.
 ------------
@@ -185,6 +185,22 @@ The following properties are synchronized between a Wave Currency and a Wix Curr
 
    * - Wave Currency Property
      - Wix Currencies Property
+     - Wix Data Type
+
+
+Wave Invoice to Wix Orders
+--------------------------
+Every Wave Invoice will be synchronized with a Wix Orders.
+
+Once a link between a Wave Invoice and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Wix Orders Property
      - Wix Data Type
 
 
