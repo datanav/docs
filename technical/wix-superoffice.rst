@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 08:42:46
+Generated: 2023-09-05 08:43:09
 
 Introduction.
 ------------
@@ -65,4 +65,7 @@ The following properties are synchronized between a Wix.com Members and a SuperO
    * - Wix.com Members Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - loginEmail
+     - Emails.Value
+     - "string"
 
