@@ -2,12 +2,33 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 15:21:58
+Generated: 2023-09-05 22:01:32
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wix. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to Wix Members
+--------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wix Members must be established.
+
+A new Wix Members will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Wix.
+
+Once a link between a Powerofficego Customers and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wix Members:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wix Members Property
+     - Wix Data Type
+   * - EmailAddress
+     - loginEmail
+     - "string"
+
 
 Powerofficego Employees to Wix Contacts
 ---------------------------------------
