@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-05 08:36:35
+Generated: 2023-09-05 08:42:46
 
 Introduction.
 ------------
@@ -39,4 +39,30 @@ The following properties are synchronized between a Wix.com Contacts and a Super
    * - info.phones
      - MobilePhones.Value
      - "string"
+
+
+Wix.com Members to SuperOffice Person
+-------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a SuperOffice Person must be established.
+
+A Wix.com Members will merge with a SuperOffice Person if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - SuperOffice Person Property
+   * - loginEmail
+     - Emails.Value
+
+Once a link between a Wix.com Members and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
