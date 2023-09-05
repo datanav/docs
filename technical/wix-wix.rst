@@ -2,7 +2,7 @@
 Wix.com to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 08:47:45
+Generated: 2023-09-05 08:52:45
 
 Introduction.
 ------------
@@ -40,7 +40,10 @@ The following properties are synchronized between a Wix.com Contacts and a Wix M
 
 Wix.com Members to Wix Contacts
 -------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wix Contacts must be established.
+Every Wix.com Members will be synchronized with a Wix Contacts.
+
+If a matching Wix Contacts already exists, the Wix.com Members will be merged with the existing one.
+If no matching Wix Contacts is found, a new Wix Contacts will be created.
 
 A Wix.com Members will merge with a Wix Contacts if one of the following property combinations match:
 
