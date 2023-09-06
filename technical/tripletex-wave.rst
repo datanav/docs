@@ -2,12 +2,36 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-06 12:01:41
+Generated: 2023-09-06 12:04:58
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Customer to Wave Customer
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
+
+Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - name
+     - name
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+
 
 Tripletex Contact to Wave Customer
 ----------------------------------
@@ -77,91 +101,6 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
    * - phoneNumberMobile
      - mobile
-     - "string"
-
-
-Tripletex Customer to Wave Customer
------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Wave Customer.
-
-Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - deliveryAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - phoneNumber
-     - shippingDetails.phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - physicalAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - postalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - shippingDetails.address.postalCode
      - "string"
 
 
