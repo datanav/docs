@@ -2,12 +2,83 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-08-28 15:12:46
+Generated: 2023-09-06 12:01:41
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Wave Customer
+----------------------------------
+Every Tripletex Contact will be synchronized with a Wave Customer.
+
+Once a link between a Tripletex Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - mobile
+     - "string"
+
+
+Tripletex Employee to Wave Customer
+-----------------------------------
+Every Tripletex Employee will be synchronized with a Wave Customer.
+
+Once a link between a Tripletex Employee and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Employee and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Employee Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - address.city
+     - address.city
+     - "string"
+   * - address.country.id
+     - address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - mobile
+     - "string"
+
 
 Tripletex Customer to Wave Customer
 -----------------------------------
