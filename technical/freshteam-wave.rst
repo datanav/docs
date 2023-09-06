@@ -2,7 +2,7 @@
 Freshteam to Wave Dataflow
 ==========================
 
-Generated: 2023-09-06 12:00:32
+Generated: 2023-09-06 12:00:38
 
 Introduction.
 ------------
@@ -23,4 +23,13 @@ The following properties are synchronized between a Freshteam Employee and a Wav
    * - Freshteam Employee Property
      - Wave Customer Property
      - Wave Data Type
+   * - first_name
+     - firstName
+     - "string"
+   * - last_name
+     - lastName
+     - "string"
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - mobile
+     - "string"
 
