@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-09-05 14:29:00
+Generated: 2023-09-06 12:04:01
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wave Customer to HubSpot Contact
 --------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a HubSpot Contact must be established.
+Every Wave Customer will be synchronized with a HubSpot Contact.
+
+If a matching HubSpot Contact already exists, the Wave Customer will be merged with the existing one.
+If no matching HubSpot Contact is found, a new HubSpot Contact will be created.
 
 A Wave Customer will merge with a HubSpot Contact if one of the following property combinations match:
 
