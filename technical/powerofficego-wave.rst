@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-09-06 12:02:58
+Generated: 2023-09-06 12:03:27
 
 Introduction.
 ------------
@@ -65,6 +65,22 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - zipCode
      - address.postalCode
      - "string"
+
+
+Powerofficego Employees to Wave Customer
+----------------------------------------
+Every Powerofficego Employees will be synchronized with a Wave Customer.
+
+Once a link between a Powerofficego Employees and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - Wave Customer Property
+     - Wave Data Type
 
 
 Powerofficego Customers to Wave Customer
