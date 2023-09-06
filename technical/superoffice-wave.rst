@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-08-18 12:46:30
+Generated: 2023-09-06 12:01:41
 
 Introduction.
 ------------
@@ -105,6 +105,49 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - Name
      - title
+     - "string"
+
+
+SuperOffice Person to Wave Customer
+-----------------------------------
+Every SuperOffice Person will be synchronized with a Wave Customer.
+
+Once a link between a SuperOffice Person and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - Address.Street.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - address.addressLine2
+     - "string"
+   * - Address.Street.City
+     - address.city
+     - "string"
+   * - Address.Street.Zipcode
+     - address.postalCode
+     - "string"
+   * - Country.CountryId
+     - address.country.code
+     - "string"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - MobilePhones.Value
+     - mobile
      - "string"
 
 
