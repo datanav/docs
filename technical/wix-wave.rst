@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-05 22:01:38
+Generated: 2023-09-06 12:01:41
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wix.com Contacts to Wave Customer
 ---------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+Every Wix.com Contacts will be synchronized with a Wave Customer.
 
 Once a link between a Wix.com Contacts and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -41,9 +39,7 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
 
 Wix.com Members to Wave Customer
 --------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+Every Wix.com Members will be synchronized with a Wave Customer.
 
 Once a link between a Wix.com Members and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
