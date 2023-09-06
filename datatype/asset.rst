@@ -5,7 +5,7 @@
 =====
 Asset
 =====
-Items or resources, such as valubales, machinery, or real estate
+Items or resources, such as valuables, machinery, or real estate
 
 System by system type
 ^^^^^^^^^^^^^^^^^^^^^
