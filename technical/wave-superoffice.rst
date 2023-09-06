@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-08-28 13:58:29
+Generated: 2023-09-06 11:59:13
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wave Customer to SuperOffice Person
 -----------------------------------
-Before any synchronization can take place, a link between a Wave Customer and a SuperOffice Person must be established.
+Every Wave Customer will be synchronized with a SuperOffice Person.
+
+If a matching SuperOffice Person already exists, the Wave Customer will be merged with the existing one.
+If no matching SuperOffice Person is found, a new SuperOffice Person will be created.
 
 A Wave Customer will merge with a SuperOffice Person if one of the following property combinations match:
 
