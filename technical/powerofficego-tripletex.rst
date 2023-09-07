@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-07 10:55:52
+Generated: 2023-09-07 10:55:59
 
 Introduction.
 ------------
@@ -603,6 +603,12 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - FirstName
+     - firstName
+     - "string"
+   * - PhoneNumber
+     - phoneNumberWork
+     - "string"
 
 
 Powerofficego Suppliers to Tripletex Supplier
