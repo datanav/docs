@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-07 10:57:04
+Generated: 2023-09-07 10:57:52
 
 Introduction.
 ------------
@@ -104,7 +104,7 @@ Powerofficego Customers to SuperOffice Contact
 ----------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a SuperOffice Contact must be established.
 
-A new SuperOffice Contact will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Employee, Customers, Employees, or Contactperson that is synchronized into SuperOffice.
+A new SuperOffice Contact will be created from a Powerofficego Customers if it is connected to a Powerofficego Customer, Employee, Customers, Employees, Suppliers, or Contactperson that is synchronized into SuperOffice.
 
 Once a link between a Powerofficego Customers and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
