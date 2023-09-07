@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-09-07 10:57:04
+Generated: 2023-09-07 10:58:45
 
 Introduction.
 ------------
@@ -267,5 +267,8 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - "string"
    * - Id
      - id
+     - "string"
+   * - LastName
+     - firstName
      - "string"
 
