@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-07 10:55:52
+Generated: 2023-09-07 10:55:59
 
 Introduction.
 ------------
@@ -687,6 +687,12 @@ The following properties are synchronized between a Powerofficego Contactperson 
    * - Powerofficego Contactperson Property
      - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
+   * - firstName
+     - FirstName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
 
 
 Powerofficego Customers to PowerOfficeGo Contactperson
@@ -740,6 +746,12 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
+   * - FirstName
+     - FirstName
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
 
 
 Powerofficego Suppliers to PowerOfficeGo Contactperson
@@ -756,6 +768,12 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - PowerOfficeGo Contactperson Property
      - PowerOfficeGo Data Type
+   * - FirstName
+     - firstName
+     - "string"
+   * - PhoneNumber
+     - phoneNumber
+     - "string"
 
 
 Powerofficego Suppliers to PowerOfficeGo Customers
@@ -772,4 +790,13 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - EmailAddress
+     - EmailAddress
+     - "string"
+   * - FirstName
+     - FirstName
+     - "string"
+   * - WebsiteUrl
+     - WebsiteUrl
+     - "string"
 
