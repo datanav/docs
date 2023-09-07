@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-07 10:55:52
+Generated: 2023-09-07 10:55:59
 
 Introduction.
 ------------
@@ -226,4 +226,7 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - Wix Contacts Property
      - Wix Data Type
+   * - FirstName
+     - info.name.first
+     - "string"
 
