@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-07 10:55:59
+Generated: 2023-09-07 10:56:55
 
 Introduction.
 ------------
@@ -510,7 +510,7 @@ Powerofficego Departments to PowerOfficeGo Customers
 ----------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Departments and a PowerOfficeGo Customers must be established.
 
-A new PowerOfficeGo Customers will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, or Suppliers that is synchronized into PowerOfficeGo.
 
 Once a link between a Powerofficego Departments and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
 
