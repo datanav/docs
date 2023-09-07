@@ -2,7 +2,7 @@
 Powerofficego to Tilores Dataflow
 =================================
 
-Generated: 2023-08-17 11:02:41
+Generated: 2023-09-07 10:56:55
 
 Introduction.
 ------------
@@ -246,4 +246,20 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - streetAddresses.zipCode
      - postalCode
      - "string"
+
+
+Powerofficego Suppliers to Tilores Human
+----------------------------------------
+Every Powerofficego Suppliers will be synchronized with a Tilores Human.
+
+Once a link between a Powerofficego Suppliers and a Tilores Human is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a Tilores Human:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - Tilores Human Property
+     - Tilores Data Type
 
