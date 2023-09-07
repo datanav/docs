@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-07 10:55:52
+Generated: 2023-09-07 10:55:59
 
 Introduction.
 ------------
@@ -125,6 +125,9 @@ The following properties are synchronized between a Wix.com Contacts and a Power
    * - Wix.com Contacts Property
      - PowerOfficeGo Suppliers Property
      - PowerOfficeGo Data Type
+   * - info.name.first
+     - FirstName
+     - "string"
 
 
 Wix.com Currencies to PowerOfficeGo Currency
