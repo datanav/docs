@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-09-05 09:12:02
+Generated: 2023-09-07 10:56:55
 
 Introduction.
 ------------
@@ -382,6 +382,22 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - WebsiteUrl
      - properties.website
      - "string"
+
+
+Powerofficego Suppliers to HubSpot Contact
+------------------------------------------
+Every Powerofficego Suppliers will be synchronized with a HubSpot Contact.
+
+Once a link between a Powerofficego Suppliers and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
 Powerofficego Product to HubSpot Product
