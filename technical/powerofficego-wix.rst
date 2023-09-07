@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-05 22:01:32
+Generated: 2023-09-07 10:55:52
 
 Introduction.
 ------------
@@ -210,4 +210,20 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - TotalAmount
      - totals.total
      - "string"
+
+
+Powerofficego Suppliers to Wix Contacts
+---------------------------------------
+Every Powerofficego Suppliers will be synchronized with a Wix Contacts.
+
+Once a link between a Powerofficego Suppliers and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - Wix Contacts Property
+     - Wix Data Type
 
