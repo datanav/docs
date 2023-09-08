@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-08 13:14:26
+Generated: 2023-09-08 13:26:21
 
 Introduction.
 ------------
@@ -803,6 +803,27 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - FirstName
      - LastName
      - "string"
+   * - Id
+     - Id
+     - "string"
+   * - MailAddress.AddressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - MailAddress.City
+     - MailAddress.City
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.CountryCode
+     - "string"
+   * - MailAddress.LastChangedDateTimeOffset
+     - MailAddress.LastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.ZipCode
+     - "string"
    * - PhoneNumber
      - PhoneNumber
      - "string"
@@ -862,8 +883,29 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - FirstName
      - FirstName
      - "string"
+   * - Id
+     - Id
+     - "string"
    * - LastName
      - FirstName
+     - "string"
+   * - MailAddress.AddressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - MailAddress.City
+     - MailAddress.City
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.CountryCode
+     - "string"
+   * - MailAddress.LastChangedDateTimeOffset
+     - MailAddress.LastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.ZipCode
      - "string"
    * - PhoneNumber
      - PhoneNumber
