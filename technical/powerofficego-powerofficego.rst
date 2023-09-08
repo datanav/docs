@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-08 08:35:11
+Generated: 2023-09-08 08:48:27
 
 Introduction.
 ------------
@@ -61,7 +61,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - FirstName
      - FirstName
      - "string"
@@ -199,7 +199,7 @@ The following properties are synchronized between a Powerofficego Employees and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - FirstName
      - FirstName
      - "string"
@@ -621,7 +621,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - PowerOfficeGo Data Type
    * - dateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - dateOfBirth
      - dateOfBirth
      - "string"
@@ -692,7 +692,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - PowerOfficeGo Data Type
    * - dateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - firstName
      - FirstName
      - "string"
@@ -720,7 +720,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - dateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - EmailAddress
      - emailAddress
      - "string"
@@ -760,7 +760,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - FirstName
      - FirstName
      - "string"
@@ -791,7 +791,7 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - dateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - FirstName
      - firstName
      - "string"
@@ -819,7 +819,7 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - PowerOfficeGo Data Type
    * - DateOfBirth
      - DateOfBirth
-     - "string"
+     - "datetime-format","%Y-%m-%d","_."]
    * - EmailAddress
      - EmailAddress
      - "string"
