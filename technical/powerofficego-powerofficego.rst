@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-08 13:14:12
+Generated: 2023-09-08 13:14:26
 
 Introduction.
 ------------
@@ -73,6 +73,21 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - MailAddress.AddressLine1
      - MailAddress.address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - MailAddress.address2
+     - "string"
+   * - MailAddress.City
+     - MailAddress.city
+     - "string"
+   * - MailAddress.CountryCode
+     - MailAddress.countryCode
+     - "string"
+   * - MailAddress.LastChangedDateTimeOffset
+     - MailAddress.lastChanged
+     - "string"
+   * - MailAddress.ZipCode
+     - MailAddress.zipCode
      - "string"
    * - MailAddress.addressLine1
      - MailAddress.Address1
@@ -243,13 +258,25 @@ The following properties are synchronized between a Powerofficego Employees and 
      - mailAddress.zipCode
      - "string"
    * - MailAddress.address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - MailAddress.address1
      - MailAddress.addressLine1
+     - "string"
+   * - MailAddress.address2
+     - MailAddress.AddressLine2
      - "string"
    * - MailAddress.address2
      - MailAddress.addressLine2
      - "string"
    * - MailAddress.city
+     - MailAddress.City
+     - "string"
+   * - MailAddress.city
      - MailAddress.city
+     - "string"
+   * - MailAddress.countryCode
+     - MailAddress.CountryCode
      - "string"
    * - MailAddress.countryCode
      - MailAddress.countryCode
@@ -258,7 +285,13 @@ The following properties are synchronized between a Powerofficego Employees and 
      - streetAddresses.countryCode
      - "string"
    * - MailAddress.lastChanged
+     - MailAddress.LastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.lastChanged
      - MailAddress.lastChangedDateTimeOffset
+     - "string"
+   * - MailAddress.zipCode
+     - MailAddress.ZipCode
      - "string"
    * - MailAddress.zipCode
      - MailAddress.zipCode
