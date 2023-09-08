@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-09-05 09:12:02
+Generated: 2023-09-08 13:14:26
 
 Introduction.
 ------------
@@ -52,19 +52,34 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
    * - Address.Postal.Address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - Address.Postal.Address1
      - MailAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - MailAddress.AddressLine2
      - "string"
    * - Address.Postal.Address2
      - MailAddress.addressLine2
      - "string"
    * - Address.Postal.City
+     - MailAddress.City
+     - "string"
+   * - Address.Postal.City
      - MailAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - MailAddress.ZipCode
      - "string"
    * - Address.Postal.Zipcode
      - MailAddress.zipCode
      - "string"
    * - ContactId
      - Id
+     - "string"
+   * - Country.CountryId
+     - MailAddress.CountryCode
      - "string"
    * - Country.CountryId
      - MailAddress.countryCode
