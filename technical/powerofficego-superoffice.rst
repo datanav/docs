@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-08 08:35:07
+Generated: 2023-09-08 13:14:26
 
 Introduction.
 ------------
@@ -122,6 +122,21 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Id
      - ContactId
      - "integer"
+   * - MailAddress.AddressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
+     - "string"
    * - MailAddress.addressLine1
      - Address.Postal.Address1
      - "string"
