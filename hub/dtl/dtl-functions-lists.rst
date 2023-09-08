@@ -194,6 +194,10 @@ Lists
        | ``["first", "_S.tags"]``
        |
        | Returns the first tag in the source entity's ``tags`` field.
+       |
+       | ``["first", 123]``
+       |
+       | Returns ``123``.
 
 .. _flatten_dtl_function:
 
@@ -372,7 +376,7 @@ Lists
        | ``["in", ["list", "a", "c", "d"],``
        |   ``["list", "a", "b", "c"]]``
        |
-       | Returns ``false``.         
+       | Returns ``false``.
 
 .. _insert_dtl_function:
 
