@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-08 13:26:11
+Generated: 2023-09-08 13:26:21
 
 Introduction.
 ------------
@@ -495,6 +495,18 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - "string"
    * - MailAddress.AddressLine1
      - Address.Postal.Address1
+     - "string"
+   * - MailAddress.AddressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - MailAddress.City
+     - Address.Postal.City
+     - "string"
+   * - MailAddress.CountryCode
+     - Country.CountryId
+     - "integer"
+   * - MailAddress.ZipCode
+     - Address.Postal.Zipcode
      - "string"
    * - PhoneNumber
      - Phones.Value
