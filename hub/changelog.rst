@@ -14,7 +14,7 @@ Changelog
 ----------
 
 * Hibernation for developer subscriptions are extended to developer pro subscriptions as well. 
-* Any developer or developer pro subscription used for automated CI testing should be moved to a production/test subscription.
+* Any automated CI system that requires 24/7 uptime should be moved to a single node. You can still do CI testing with a developer subscription, but hibernation wake-up time must be expected. 
 
 .. _changelog_2023_08_17:
 
