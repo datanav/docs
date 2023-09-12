@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-07 10:58:45
+Generated: 2023-09-12 07:30:09
 
 Introduction.
 ------------
@@ -177,6 +177,9 @@ The following properties are synchronized between a Wix.com Inventory and a Powe
      - PowerOfficeGo Product Property
      - PowerOfficeGo Data Type
    * - lastUpdated
+     - availableStock
+     - "string"
+   * - variants.quantity
      - availableStock
      - "string"
 
