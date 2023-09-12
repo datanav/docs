@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-05 22:01:30
+Generated: 2023-09-12 07:30:09
 
 Introduction.
 ------------
@@ -213,6 +213,9 @@ The following properties are synchronized between a Wix.com Inventory and a Trip
      - Tripletex Product Property
      - Tripletex Data Type
    * - lastUpdated
+     - stockOfGoods
+     - "integer"
+   * - variants.quantity
      - stockOfGoods
      - "integer"
 
