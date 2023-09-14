@@ -102,6 +102,6 @@ About Sesam Talk
    Supported systems <systems/index>
    Becoming a partner <partner/index>
    Roadmap <roadmap>
-   Service Level Objective <legal-slo.rst>
+   Service Level Objective <legal-slo>
    Changelog <changelog>
 
