@@ -45,41 +45,28 @@ requirements for processing and reaction:
      - Correction target
 
    * - A
-     - Critical error that is so serious
-       that the entirety or significant
-       parts of the Services are not
-       available or not functioning
+     - Critical error that is so serious that the entirety or significant parts of the Services are not available or not functioning
      - 8 hour
      - n/a
-     - A workaround of the error
-       shall be delivered without
-       undue delay, and at the
-       latest within
-       * 3 days for Standard
-       * n/a for Basic
-       If this is not possible, a fix
-       will be delivered within 10
-       days.
+     - A workaround of the error shall be delivered without undue delay, and at the latest within
+
+       * 3 days for Partners
+       * n/a for customers
+
+       If this is not possible, a fix will be delivered within 10 days.
 
    * - B
      - Errors that do not result in opration stoppages for the service.
      - 2 days
      - n/a
-     - A workaround of the error
-       shall be delivered within 10
-       business days.
+     - A workaround of the error shall be delivered within 10 business days.
 
-       If this is not possible, a fix
-       will be delivered in the next
-       release.
+       If this is not possible, a fix will be delivered in the next release.
    * - C
      - Problems or questions that do not cause negative side in the service.
      - None
      - None
-     - The error is evaluated with
-       the goal of a fix in the next
-       release in line with the
-       normal release schedule.
+     - The error is evaluated with the goal of a fix in the next release in line with the normal release schedule.
 
 All requirements in the table shall be calculated within SESAM's
 standard business hours, 0800 -  1600 hours Central European time, excluding public holidays and other
