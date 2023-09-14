@@ -6,7 +6,7 @@ Availability for the Services
 -----------------------------
 
 **Availability target** SESAM, as a SaaS, is provided with the target of
-99.5% uptime per tenant. 
+99.5% uptime. 
 
 **Planned downtime** SESAM, as a SaaS, is maintained and updated almost
 continually. Planned maintenance is therefore nightly from 00:00 to
@@ -99,9 +99,5 @@ Neither do the requirements apply for errors in the operating
 environment, but SESAM shall in such cases report relevant errors to
 supplier of the operating environment without undue delay.
 
-
-To ensure the compliance with these requirements, SESAM shall be able to
-demonstrate that continuous monitoring of the Services is implemented,
-and that measures are taken to optimize the performance.
 
 
