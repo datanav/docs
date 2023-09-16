@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-16 15:12:38
+Generated: 2023-09-16 15:13:33
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Powerofficego Customers to Wix Members
 --------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Wix Members must be established.
 
-A new Wix Members will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders that is synchronized into Wix.
+A new Wix Members will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorders, Salesorderline, or Outgoinginvoices that is synchronized into Wix.
 
 Once a link between a Powerofficego Customers and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -122,6 +122,15 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderline Property
      - Wix Orders Property
      - Wix Data Type
+   * - Description
+     - lineItems.name
+     - "string"
+   * - Quantity
+     - lineItems.quantity
+     - "string"
+   * - SalesOrderLineUnitPrice
+     - lineItems.price
+     - "string"
 
 
 Powerofficego Contactperson to Wix Contacts
