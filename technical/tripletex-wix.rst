@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 15:08:32
 
 Introduction.
 ------------
@@ -154,9 +154,7 @@ The following properties are synchronized between a Tripletex Customer and a Wix
 
 Tripletex Order to Wix Orders
 -----------------------------
-Before any synchronization can take place, a link between a Tripletex Order and a Wix Orders must be established.
-
-A new Wix Orders will be created from a Tripletex Order if it is connected to a Tripletex Order that is synchronized into Wix.
+Every Tripletex Order will be synchronized with a Wix Orders.
 
 Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
