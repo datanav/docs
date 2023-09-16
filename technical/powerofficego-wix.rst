@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 15:11:46
 
 Introduction.
 ------------
@@ -80,6 +80,22 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - PhoneNumber
      - primaryInfo.phone
      - "string"
+
+
+Powerofficego Outgoinginvoices to Wix Orders
+--------------------------------------------
+Every Powerofficego Outgoinginvoices will be synchronized with a Wix Orders.
+
+Once a link between a Powerofficego Outgoinginvoices and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Outgoinginvoices and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Outgoinginvoices Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 Powerofficego Contactperson to Wix Contacts
