@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 20:59:23
 
 Introduction.
 ------------
@@ -147,6 +147,65 @@ The following properties are synchronized between a Tripletex Contact and a Powe
      - "string"
    * - phoneNumberWork
      - phoneNumber
+     - "string"
+
+
+Tripletex Contact to PowerOfficeGo Customers
+--------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGo Customers.
+
+Once a link between a Tripletex Contact and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+   * - email
+     - EmailAddress
+     - "string"
+   * - email
+     - emailAddress
+     - "string"
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - LastName
+     - "string"
+   * - phoneNumberWork
+     - PhoneNumber
+     - "string"
+
+
+Tripletex Contact to PowerOfficeGo Suppliers
+--------------------------------------------
+Every Tripletex Contact will be synchronized with a PowerOfficeGo Suppliers.
+
+Once a link between a Tripletex Contact and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a PowerOfficeGo Suppliers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - PowerOfficeGo Suppliers Property
+     - PowerOfficeGo Data Type
+   * - firstName
+     - FirstName
+     - "string"
+   * - firstName
+     - LastName
+     - "string"
+   * - phoneNumberWork
+     - PhoneNumber
      - "string"
 
 
