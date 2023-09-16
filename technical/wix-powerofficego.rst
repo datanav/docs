@@ -2,12 +2,30 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-12 07:30:09
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to PowerOfficeGo Customers
+-------------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into PowerOfficeGo.
+
+Once a link between a Wix.com Contacts and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+
 
 Wix.com Members to PowerOfficeGo Customers
 ------------------------------------------
@@ -83,53 +101,6 @@ The following properties are synchronized between a Wix.com Contacts and a Power
      - "string"
    * - primaryInfo.email
      - emailAddress
-     - "string"
-
-
-Wix.com Contacts to PowerOfficeGo Customers
--------------------------------------------
-Every Wix.com Contacts will be synchronized with a PowerOfficeGo Customers.
-
-Once a link between a Wix.com Contacts and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - info.name.first
-     - FirstName
-     - "string"
-   * - info.name.last
-     - LastName
-     - "string"
-   * - primaryInfo.email
-     - EmailAddress
-     - "string"
-
-
-Wix.com Contacts to PowerOfficeGo Suppliers
--------------------------------------------
-Every Wix.com Contacts will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Wix.com Contacts and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Contacts and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Contacts Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - info.name.first
-     - FirstName
-     - "string"
-   * - info.name.first
-     - LastName
      - "string"
 
 
