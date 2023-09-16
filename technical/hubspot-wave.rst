@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-09-16 14:51:52
+Generated: 2023-09-16 14:52:56
 
 Introduction.
 ------------
@@ -183,6 +183,9 @@ The following properties are synchronized between a HubSpot Lineitem and a Wave 
    * - HubSpot Lineitem Property
      - Wave Invoice Property
      - Wave Data Type
+   * - properties.hs_product_id
+     - items.product.id
+     - "string"
 
 
 HubSpot Product to Wave Product
