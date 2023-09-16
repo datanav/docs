@@ -2,7 +2,7 @@
 SuperOffice to Freshteam Dataflow
 =================================
 
-Generated: 2023-08-17 08:57:39
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -25,27 +25,5 @@ The following properties are synchronized between a SuperOffice Ownercontactlink
      - Freshteam Data Type
    * - name
      - name
-     - "string"
-
-
-SuperOffice User to Freshteam Employee
---------------------------------------
-Every SuperOffice User will be synchronized with a Freshteam Employee.
-
-Once a link between a SuperOffice User and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
      - "string"
 
