@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-09-16 15:03:30
+Generated: 2023-09-16 15:05:05
 
 Introduction.
 ------------
@@ -103,10 +103,10 @@ The following properties are synchronized between a HubSpot Contact and a Fresht
      - last_name
      - "string"
    * - properties.mobilephone
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - "string"
    * - properties.phone
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - "string"
    * - properties.work_email
      - official_email
@@ -127,7 +127,7 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - Freshteam Employee Property
      - Freshteam Data Type
-   * - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - designation
      - "string"
 
