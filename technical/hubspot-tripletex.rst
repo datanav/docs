@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -226,7 +226,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - Tripletex Orderline Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - order.id
      - "integer"
 
