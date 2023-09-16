@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 15:07:46
+Generated: 2023-09-16 15:08:32
 
 Introduction.
 ------------
@@ -91,7 +91,7 @@ HubSpot Company to Wix Contacts
 -------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, or Lineitemquoteassociation that is synchronized into Wix.
+A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -109,7 +109,7 @@ HubSpot Company to Wix Members
 ------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Members must be established.
 
-A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, or Lineitemquoteassociation that is synchronized into Wix.
+A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -364,6 +364,28 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociation Property
      - Wix Orders Property
      - Wix Data Type
+
+
+HubSpot Ticketcompanyassociation to Wix Orders
+----------------------------------------------
+Every HubSpot Ticketcompanyassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Ticketcompanyassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociation Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.contactId
+     - "string"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.id
+     - "string"
 
 
 HubSpot User to Wix Contacts
