@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 15:06:18
+Generated: 2023-09-16 15:07:02
 
 Introduction.
 ------------
@@ -91,7 +91,7 @@ HubSpot Company to Wix Contacts
 -------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, or Lineitemquoteassociation that is synchronized into Wix.
+A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, or Lineitemquoteassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -109,7 +109,7 @@ HubSpot Company to Wix Members
 ------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Members must be established.
 
-A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, or Lineitemquoteassociation that is synchronized into Wix.
+A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, or Lineitemquoteassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -288,6 +288,44 @@ The following properties are synchronized between a HubSpot Quote and a Wix Orde
    * - properties.hs_quote_amount
      - totals.total
      - "string"
+
+
+HubSpot Quotecompanyassociation to Wix Orders
+---------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Quotecompanyassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.contactId
+     - "string"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.id
+     - "string"
+
+
+HubSpot Quotecontactassociation to Wix Orders
+---------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Quotecontactassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 HubSpot User to Wix Contacts
