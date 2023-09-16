@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-08-28 15:10:48
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -132,6 +132,21 @@ The following properties are synchronized between a Tripletex Customer and a Hub
    * - Tripletex Customer Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - deliveryAddress.city
+     - properties.city
+     - "string"
+   * - deliveryAddress.country.id
+     - properties.country
+     - "string"
+   * - deliveryAddress.postalCode
+     - properties.zip
+     - "string"
    * - id
      - id
      - "string"
@@ -154,6 +169,21 @@ The following properties are synchronized between a Tripletex Customer and a Hub
      - properties.country
      - "string"
    * - physicalAddress.postalCode
+     - properties.zip
+     - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - postalAddress.city
+     - properties.city
+     - "string"
+   * - postalAddress.country.id
+     - properties.country
+     - "string"
+   * - postalAddress.postalCode
      - properties.zip
      - "string"
 
@@ -194,6 +224,21 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
    * - Tripletex Supplier Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - deliveryAddress.addressLine1
+     - properties.address
+     - "string"
+   * - deliveryAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - deliveryAddress.changes
+     - properties.city
+     - "string"
+   * - deliveryAddress.city
+     - properties.country
+     - "string"
+   * - deliveryAddress.postalCode
+     - properties.zip
+     - "string"
    * - id
      - id
      - "string"
@@ -218,6 +263,21 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
    * - physicalAddress.postalCode
      - properties.zip
      - "string"
+   * - postalAddress.addressLine1
+     - properties.address
+     - "string"
+   * - postalAddress.addressLine2
+     - properties.address2
+     - "string"
+   * - postalAddress.city
+     - properties.city
+     - "string"
+   * - postalAddress.country.id
+     - properties.country
+     - "string"
+   * - postalAddress.postalCode
+     - properties.zip
+     - "string"
 
 
 Tripletex Orderline to HubSpot Lineitemdealassociation
@@ -235,7 +295,7 @@ The following properties are synchronized between a Tripletex Orderline and a Hu
      - HubSpot Lineitemdealassociation Property
      - HubSpot Data Type
    * - order.id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
