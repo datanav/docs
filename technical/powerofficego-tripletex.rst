@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -365,7 +365,7 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Number
      - phoneNumber
      - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
      - organizationNumber
      - "replace"," ","", "string"]
    * - PhoneNumber
@@ -734,10 +734,16 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - deliveryAddress.addressLine1
      - "string"
    * - MailAddress.AddressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
      - postalAddress.addressLine1
      - "string"
    * - MailAddress.AddressLine2
      - deliveryAddress.addressLine2
+     - "string"
+   * - MailAddress.AddressLine2
+     - physicalAddress.addressLine2
      - "string"
    * - MailAddress.AddressLine2
      - postalAddress.addressLine2
@@ -746,16 +752,25 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - deliveryAddress.changes
      - "string"
    * - MailAddress.City
+     - physicalAddress.city
+     - "string"
+   * - MailAddress.City
      - postalAddress.city
      - "string"
    * - MailAddress.CountryCode
      - deliveryAddress.city
      - "string"
    * - MailAddress.CountryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - MailAddress.CountryCode
      - postalAddress.country.id
      - "integer"
    * - MailAddress.ZipCode
      - deliveryAddress.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - physicalAddress.postalCode
      - "string"
    * - MailAddress.ZipCode
      - postalAddress.postalCode
