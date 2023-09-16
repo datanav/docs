@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-16 15:10:06
+Generated: 2023-09-16 21:00:15
 
 Introduction.
 ------------
@@ -152,31 +152,6 @@ The following properties are synchronized between a Tripletex Customer and a Wix
      - Wix Data Type
 
 
-Tripletex Order to Wix Orders
------------------------------
-Every Tripletex Order will be synchronized with a Wix Orders.
-
-Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - currency.id
-     - currency
-     - "string"
-   * - customer.id
-     - buyerInfo.contactId
-     - "string"
-   * - customer.id
-     - buyerInfo.id
-     - "string"
-
-
 Tripletex Orderline to Wix Orders
 ---------------------------------
 Every Tripletex Orderline will be synchronized with a Wix Orders.
@@ -300,6 +275,31 @@ The following properties are synchronized between a Tripletex Currency and a Wix
    * - Tripletex Currency Property
      - Wix Currencies Property
      - Wix Data Type
+
+
+Tripletex Order to Wix Orders
+-----------------------------
+Every Tripletex Order will be synchronized with a Wix Orders.
+
+Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - currency.id
+     - currency
+     - "string"
+   * - customer.id
+     - buyerInfo.contactId
+     - "string"
+   * - customer.id
+     - buyerInfo.id
+     - "string"
 
 
 Tripletex Product to Wix Inventory
