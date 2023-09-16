@@ -2,7 +2,7 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 15:08:32
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Tripletex Employee to Freshteam Employee
 ----------------------------------------
-Before any synchronization can take place, a link between a Tripletex Employee and a Freshteam Employee must be established.
+Every Tripletex Employee will be synchronized with a Freshteam Employee.
+
+If a matching Freshteam Employee already exists, the Tripletex Employee will be merged with the existing one.
+If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
 
 A Tripletex Employee will merge with a Freshteam Employee if one of the following property combinations match:
 
@@ -53,6 +56,34 @@ The following properties are synchronized between a Tripletex Employee and a Fre
      - "string"
    * - phoneNumberWork
      - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.name)
+     - "string"
+
+
+Tripletex Contact to Freshteam Employee
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Freshteam Employee.
+
+Once a link between a Tripletex Contact and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
+   * - phoneNumberMobile
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - phoneNumberWork
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - "string"
 
 
