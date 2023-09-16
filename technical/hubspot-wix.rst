@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 15:04:51
+Generated: 2023-09-16 15:05:05
 
 Introduction.
 ------------
@@ -109,7 +109,7 @@ HubSpot Company to Wix Members
 ------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Members must be established.
 
-A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Wix.
+A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, or Dealcompanyassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -153,6 +153,12 @@ The following properties are synchronized between a HubSpot Deal and a Wix Order
    * - HubSpot Deal Property
      - Wix Orders Property
      - Wix Data Type
+   * - properties.amount
+     - totals.total
+     - "string"
+   * - properties.deal_currency_code
+     - currency
+     - "string"
 
 
 HubSpot Dealcompanyassociation to Wix Orders
@@ -169,6 +175,34 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - Wix Orders Property
      - Wix Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.contactId
+     - "string"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.id
+     - "string"
+
+
+HubSpot Dealcontactassociation to Wix Orders
+--------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Dealcontactassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.contactId
+     - "string"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - buyerInfo.id
+     - "string"
 
 
 HubSpot User to Wix Contacts
