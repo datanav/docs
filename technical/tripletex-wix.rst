@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-12 07:30:09
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -152,6 +152,24 @@ The following properties are synchronized between a Tripletex Customer and a Wix
      - Wix Data Type
 
 
+Tripletex Order to Wix Orders
+-----------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a Wix Orders must be established.
+
+A new Wix Orders will be created from a Tripletex Order if it is connected to a Tripletex Order that is synchronized into Wix.
+
+Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Wix Orders Property
+     - Wix Data Type
+
+
 Tripletex Productgrouprelation to Wix Inventory
 -----------------------------------------------
 Every Tripletex Productgrouprelation will be synchronized with a Wix Inventory.
@@ -244,31 +262,6 @@ The following properties are synchronized between a Tripletex Currency and a Wix
    * - Tripletex Currency Property
      - Wix Currencies Property
      - Wix Data Type
-
-
-Tripletex Order to Wix Orders
------------------------------
-Every Tripletex Order will be synchronized with a Wix Orders.
-
-Once a link between a Tripletex Order and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - currency.id
-     - currency
-     - "string"
-   * - customer.id
-     - buyerInfo.contactId
-     - "string"
-   * - customer.id
-     - buyerInfo.id
-     - "string"
 
 
 Tripletex Product to Wix Inventory
