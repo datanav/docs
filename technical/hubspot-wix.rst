@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 15:04:12
+Generated: 2023-09-16 15:04:51
 
 Introduction.
 ------------
@@ -91,7 +91,7 @@ HubSpot Company to Wix Contacts
 -------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Wix.
+A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, or Dealcompanyassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
