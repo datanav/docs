@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 15:05:35
 
 Introduction.
 ------------
@@ -91,7 +91,7 @@ HubSpot Company to Wix Contacts
 -------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, or Dealcompanyassociation that is synchronized into Wix.
+A new Wix Contacts will be created from a HubSpot Company if it is connected to a HubSpot Deal, Lineitem, Dealcompanyassociation, or Dealcontactassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -109,7 +109,7 @@ HubSpot Company to Wix Members
 ------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wix Members must be established.
 
-A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, or Dealcompanyassociation that is synchronized into Wix.
+A new Wix Members will be created from a HubSpot Company if it is connected to a HubSpot Deal, Lineitem, Dealcompanyassociation, or Dealcontactassociation that is synchronized into Wix.
 
 Once a link between a HubSpot Company and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -203,6 +203,50 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
+
+
+HubSpot Lineitem to Wix Orders
+------------------------------
+Every HubSpot Lineitem will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Lineitem and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - properties.hs_product_id
+     - lineItems.productId
+     - "string"
+   * - properties.name
+     - lineItems.name
+     - "string"
+   * - properties.price
+     - lineItems.price
+     - "string"
+   * - properties.quantity
+     - lineItems.quantity
+     - "string"
+
+
+HubSpot Lineitemdealassociation to Wix Orders
+---------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Lineitemdealassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 HubSpot User to Wix Contacts
