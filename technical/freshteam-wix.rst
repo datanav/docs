@@ -2,7 +2,7 @@
 Freshteam to Wix Dataflow
 =========================
 
-Generated: 2023-09-05 09:17:36
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -32,7 +32,7 @@ The following properties are synchronized between a Freshteam Employee and a Wix
    * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
      - info.phones
      - "string"
-   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+   * - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - primaryInfo.phone
      - "string"
 
