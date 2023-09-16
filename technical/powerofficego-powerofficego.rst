@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-08 13:26:21
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -641,46 +641,6 @@ The following properties are synchronized between a Powerofficego Salesorders an
      - "string"
 
 
-Powerofficego Contactperson to PowerOfficeGo Customers
-------------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a PowerOfficeGo Customers.
-
-Once a link between a Powerofficego Contactperson and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - dateOfBirth
-     - dateOfBirth
-     - "string"
-   * - emailAddress
-     - EmailAddress
-     - "string"
-   * - emailAddress
-     - emailAddress
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - LastName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-
-
 Powerofficego Contactperson to PowerOfficeGo Location
 -----------------------------------------------------
 Every Powerofficego Contactperson will be synchronized with a PowerOfficeGo Location.
@@ -709,34 +669,6 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - zipCode
      - zipCode
-     - "string"
-
-
-Powerofficego Contactperson to PowerOfficeGo Suppliers
-------------------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Powerofficego Contactperson and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - dateOfBirth
-     - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - firstName
-     - FirstName
-     - "string"
-   * - firstName
-     - LastName
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
      - "string"
 
 
@@ -780,58 +712,6 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
 
 
-Powerofficego Customers to PowerOfficeGo Suppliers
---------------------------------------------------
-Every Powerofficego Customers will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Powerofficego Customers and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - DateOfBirth
-     - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - FirstName
-     - FirstName
-     - "string"
-   * - FirstName
-     - LastName
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - MailAddress.AddressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - MailAddress.City
-     - MailAddress.City
-     - "string"
-   * - MailAddress.CountryCode
-     - MailAddress.CountryCode
-     - "string"
-   * - MailAddress.LastChangedDateTimeOffset
-     - MailAddress.LastChangedDateTimeOffset
-     - "string"
-   * - MailAddress.ZipCode
-     - MailAddress.ZipCode
-     - "string"
-   * - PhoneNumber
-     - PhoneNumber
-     - "string"
-   * - WebsiteUrl
-     - WebsiteUrl
-     - "string"
-
-
 Powerofficego Suppliers to PowerOfficeGo Contactperson
 ------------------------------------------------------
 Every Powerofficego Suppliers will be synchronized with a PowerOfficeGo Contactperson.
@@ -857,60 +737,5 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - "string"
    * - PhoneNumber
      - phoneNumber
-     - "string"
-
-
-Powerofficego Suppliers to PowerOfficeGo Customers
---------------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a PowerOfficeGo Customers.
-
-Once a link between a Powerofficego Suppliers and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a PowerOfficeGo Customers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - PowerOfficeGo Customers Property
-     - PowerOfficeGo Data Type
-   * - DateOfBirth
-     - DateOfBirth
-     - "datetime-format","%Y-%m-%d","_."]
-   * - EmailAddress
-     - EmailAddress
-     - "string"
-   * - FirstName
-     - FirstName
-     - "string"
-   * - Id
-     - Id
-     - "string"
-   * - LastName
-     - FirstName
-     - "string"
-   * - MailAddress.AddressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - MailAddress.AddressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - MailAddress.City
-     - MailAddress.City
-     - "string"
-   * - MailAddress.CountryCode
-     - MailAddress.CountryCode
-     - "string"
-   * - MailAddress.LastChangedDateTimeOffset
-     - MailAddress.LastChangedDateTimeOffset
-     - "string"
-   * - MailAddress.ZipCode
-     - MailAddress.ZipCode
-     - "string"
-   * - PhoneNumber
-     - PhoneNumber
-     - "string"
-   * - WebsiteUrl
-     - WebsiteUrl
      - "string"
 
