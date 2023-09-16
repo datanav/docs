@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-12 07:30:09
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -28,6 +28,24 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - EmailAddress
      - loginEmail
      - "string"
+
+
+Powerofficego Salesorders to Wix Orders
+---------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Salesorders and a Wix Orders must be established.
+
+A new Wix Orders will be created from a Powerofficego Salesorders if it is connected to a Powerofficego Salesorders that is synchronized into Wix.
+
+Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 Powerofficego Employees to Wix Contacts
@@ -190,28 +208,6 @@ The following properties are synchronized between a Powerofficego Product and a 
      - "string"
    * - salesPrice
      - price.price
-     - "string"
-
-
-Powerofficego Salesorders to Wix Orders
----------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - CurrencyCode
-     - currency
-     - "string"
-   * - TotalAmount
-     - totals.total
      - "string"
 
 
