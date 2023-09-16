@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-09-08 13:14:26
+Generated: 2023-09-16 15:16:32
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Powerofficego Customers to HubSpot Company
 ------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Customers and a HubSpot Company must be established.
-
-A new HubSpot Company will be created from a Powerofficego Customers if it is connected to a Powerofficego Quote that is synchronized into HubSpot.
+Every Powerofficego Customers will be synchronized with a HubSpot Company.
 
 Once a link between a Powerofficego Customers and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
 
