@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-16 14:59:52
+Generated: 2023-09-16 15:04:12
 
 Introduction.
 ------------
@@ -136,6 +136,38 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociation Property
      - Wix Contacts Property
+     - Wix Data Type
+
+
+HubSpot Deal to Wix Orders
+--------------------------
+Every HubSpot Deal will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Deal and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wix Orders Property
+     - Wix Data Type
+
+
+HubSpot Dealcompanyassociation to Wix Orders
+--------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Dealcompanyassociation and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - Wix Orders Property
      - Wix Data Type
 
 
