@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-05 22:01:30
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -181,6 +181,24 @@ The following properties are synchronized between a Wave Business and a Wix Cont
      - Wix Data Type
 
 
+Wave Invoice to Wix Orders
+--------------------------
+Before any synchronization can take place, a link between a Wave Invoice and a Wix Orders must be established.
+
+A new Wix Orders will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Wix.
+
+Once a link between a Wave Invoice and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Invoice and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Invoice Property
+     - Wix Orders Property
+     - Wix Data Type
+
+
 Wave Currency to Wix Currencies
 -------------------------------
 Every Wave Currency will be synchronized with a Wix Currencies.
@@ -208,55 +226,6 @@ The following properties are synchronized between a Wave Currency and a Wix Curr
    * - Wave Currency Property
      - Wix Currencies Property
      - Wix Data Type
-
-
-Wave Invoice to Wix Orders
---------------------------
-Every Wave Invoice will be synchronized with a Wix Orders.
-
-Once a link between a Wave Invoice and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Invoice and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Invoice Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - business.id
-     - buyerInfo.contactId
-     - "string"
-   * - business.id
-     - buyerInfo.id
-     - "string"
-   * - currency.code
-     - currency
-     - "string"
-   * - customer.id
-     - buyerInfo.contactId
-     - "string"
-   * - customer.id
-     - buyerInfo.id
-     - "string"
-   * - invoiceDate
-     - dateCreated
-     - "string"
-   * - items.description
-     - lineItems.name
-     - "string"
-   * - items.price
-     - lineItems.price
-     - "string"
-   * - items.product.id
-     - lineItems.productId
-     - "string"
-   * - items.quantity
-     - lineItems.quantity
-     - "string"
-   * - total.value
-     - totals.total
-     - "string"
 
 
 Wave Product to Wix Inventory
