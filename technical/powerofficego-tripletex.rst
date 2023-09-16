@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-08 13:26:21
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -150,17 +150,47 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - name
      - "string"
    * - MailAddress.AddressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
      - postalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - MailAddress.AddressLine2
+     - physicalAddress.addressLine2
      - "string"
    * - MailAddress.AddressLine2
      - postalAddress.addressLine2
      - "string"
    * - MailAddress.City
+     - deliveryAddress.city
+     - "string"
+   * - MailAddress.City
+     - physicalAddress.city
+     - "string"
+   * - MailAddress.City
      - postalAddress.city
      - "string"
    * - MailAddress.CountryCode
+     - deliveryAddress.country.id
+     - "string"
+   * - MailAddress.CountryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - MailAddress.CountryCode
      - postalAddress.country.id
      - "integer"
+   * - MailAddress.ZipCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - physicalAddress.postalCode
+     - "string"
    * - MailAddress.ZipCode
      - postalAddress.postalCode
      - "string"
@@ -270,17 +300,47 @@ The following properties are synchronized between a Powerofficego Customers and 
      - email
      - "string"
    * - MailAddress.AddressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
      - postalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - MailAddress.AddressLine2
+     - physicalAddress.addressLine2
      - "string"
    * - MailAddress.AddressLine2
      - postalAddress.addressLine2
      - "string"
    * - MailAddress.City
+     - deliveryAddress.city
+     - "string"
+   * - MailAddress.City
+     - physicalAddress.city
+     - "string"
+   * - MailAddress.City
      - postalAddress.city
      - "string"
    * - MailAddress.CountryCode
+     - deliveryAddress.country.id
+     - "string"
+   * - MailAddress.CountryCode
+     - physicalAddress.country.id
+     - "integer"
+   * - MailAddress.CountryCode
      - postalAddress.country.id
      - "integer"
+   * - MailAddress.ZipCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - MailAddress.ZipCode
+     - physicalAddress.postalCode
+     - "string"
    * - MailAddress.ZipCode
      - postalAddress.postalCode
      - "string"
@@ -305,7 +365,7 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Number
      - phoneNumber
      - "string"
-   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+   * - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
      - organizationNumber
      - "replace"," ","", "string"]
    * - PhoneNumber
@@ -671,17 +731,32 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - name
      - "string"
    * - MailAddress.AddressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine1
      - postalAddress.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - deliveryAddress.addressLine2
      - "string"
    * - MailAddress.AddressLine2
      - postalAddress.addressLine2
      - "string"
    * - MailAddress.City
+     - deliveryAddress.changes
+     - "string"
+   * - MailAddress.City
      - postalAddress.city
+     - "string"
+   * - MailAddress.CountryCode
+     - deliveryAddress.city
      - "string"
    * - MailAddress.CountryCode
      - postalAddress.country.id
      - "integer"
+   * - MailAddress.ZipCode
+     - deliveryAddress.postalCode
+     - "string"
    * - MailAddress.ZipCode
      - postalAddress.postalCode
      - "string"
