@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -133,7 +133,7 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
+   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
      - "replace"," ","", "string"]
    * - Phones.Value
@@ -170,10 +170,16 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Supplier Property
      - Tripletex Data Type
    * - Address.Postal.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address1
      - physicalAddress.addressLine1
      - "string"
    * - Address.Postal.Address1
      - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - deliveryAddress.addressLine2
      - "string"
    * - Address.Postal.Address2
      - physicalAddress.addressLine2
@@ -182,10 +188,16 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - postalAddress.addressLine2
      - "string"
    * - Address.Postal.City
+     - deliveryAddress.changes
+     - "string"
+   * - Address.Postal.City
      - physicalAddress.city
      - "string"
    * - Address.Postal.City
      - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - deliveryAddress.postalCode
      - "string"
    * - Address.Postal.Zipcode
      - physicalAddress.postalCode
@@ -194,10 +206,16 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - postalAddress.postalCode
      - "string"
    * - Address.Street.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
      - physicalAddress.addressLine1
      - "string"
    * - Address.Street.Address1
      - postalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - deliveryAddress.addressLine2
      - "string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
@@ -206,10 +224,16 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - postalAddress.addressLine2
      - "string"
    * - Address.Street.City
+     - deliveryAddress.changes
+     - "string"
+   * - Address.Street.City
      - physicalAddress.city
      - "string"
    * - Address.Street.City
      - postalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - deliveryAddress.postalCode
      - "string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
@@ -220,6 +244,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - ContactId
      - id
      - "integer"
+   * - Country.CountryId
+     - deliveryAddress.city
+     - "string"
    * - Country.CountryId
      - physicalAddress.country.id
      - "integer"
@@ -556,6 +583,9 @@ The following properties are synchronized between a SuperOffice Product and a Tr
      - commonCode
      - "string"
    * - QuantityUnit
+     - name
+     - "string"
+   * - VATInfo
      - name
      - "string"
 
