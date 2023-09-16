@@ -2,7 +2,7 @@
 Wix.com to Freshteam Dataflow
 =============================
 
-Generated: 2023-09-16 15:10:58
+Generated: 2023-09-16 15:11:46
 
 Introduction.
 ------------
@@ -21,6 +21,31 @@ The following properties are synchronized between a Wix.com Contacts and a Fresh
    :header-rows: 1
 
    * - Wix.com Contacts Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+   * - info.name.first
+     - first_name
+     - "string"
+   * - info.name.last
+     - last_name
+     - "string"
+   * - primaryInfo.phone
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+
+
+Wix.com Members to Freshteam Employee
+-------------------------------------
+Every Wix.com Members will be synchronized with a Freshteam Employee.
+
+Once a link between a Wix.com Members and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
      - Freshteam Employee Property
      - Freshteam Data Type
 
