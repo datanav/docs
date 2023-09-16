@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-16 15:05:05
+Generated: 2023-09-16 15:13:33
 
 Introduction.
 ------------
@@ -183,9 +183,7 @@ The following properties are synchronized between a Wave Business and a Wix Cont
 
 Wave Invoice to Wix Orders
 --------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Wix Orders must be established.
-
-A new Wix Orders will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Wix.
+Every Wave Invoice will be synchronized with a Wix Orders.
 
 Once a link between a Wave Invoice and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
 
