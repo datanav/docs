@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-16 14:59:52
+Generated: 2023-09-16 15:05:05
 
 Introduction.
 ------------
@@ -46,6 +46,12 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - Powerofficego Salesorders Property
      - Wix Orders Property
      - Wix Data Type
+   * - CurrencyCode
+     - currency
+     - "string"
+   * - TotalAmount
+     - totals.total
+     - "string"
 
 
 Powerofficego Employees to Wix Contacts
