@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-08 13:14:26
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -102,7 +102,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
      - "string"
 
@@ -121,7 +121,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
      - "string"
 
@@ -159,7 +159,7 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - HubSpot Lineitemdealassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - OrderNo
      - "string"
 
@@ -178,7 +178,7 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
    * - HubSpot Lineitemquoteassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - OrderNo
      - "string"
 
@@ -222,7 +222,7 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
      - "string"
 
@@ -241,7 +241,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
      - "string"
 
@@ -260,7 +260,7 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    * - HubSpot Quotedealassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - OrderNo
      - "string"
 
@@ -279,7 +279,7 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - HubSpot Quotequotetemplateassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - OrderNo
      - "string"
 
@@ -298,7 +298,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociation Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customerId
      - "string"
 
