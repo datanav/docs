@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-05 22:01:30
+Generated: 2023-09-16 14:59:52
 
 Introduction.
 ------------
@@ -211,28 +211,6 @@ The following properties are synchronized between a HubSpot Deal and a Wix Curre
    * - HubSpot Deal Property
      - Wix Currencies Property
      - Wix Data Type
-
-
-HubSpot Deal to Wix Orders
---------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wix Orders.
-
-Once a link between a HubSpot Deal and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - properties.amount
-     - totals.total
-     - "string"
-   * - properties.deal_currency_code
-     - currency
-     - "string"
 
 
 HubSpot Product to Wix Inventory
