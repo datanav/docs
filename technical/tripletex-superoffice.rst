@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -87,6 +87,33 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - Tripletex Customer Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - deliveryAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - deliveryAddress.city
+     - Address.Postal.City
+     - "string"
+   * - deliveryAddress.city
+     - Address.Street.City
+     - "string"
+   * - deliveryAddress.country.id
+     - Country.CountryId
+     - "integer"
+   * - deliveryAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - deliveryAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
    * - email
      - Emails.Value
      - "string"
@@ -97,7 +124,7 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
@@ -120,6 +147,9 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - physicalAddress.city
      - Address.Street.City
      - "string"
+   * - physicalAddress.country.id
+     - Country.CountryId
+     - "integer"
    * - physicalAddress.postalCode
      - Address.Postal.Zipcode
      - "string"
@@ -254,6 +284,33 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - Tripletex Supplier Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - deliveryAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - deliveryAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - deliveryAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - deliveryAddress.changes
+     - Address.Postal.City
+     - "string"
+   * - deliveryAddress.changes
+     - Address.Street.City
+     - "string"
+   * - deliveryAddress.city
+     - Country.CountryId
+     - "integer"
+   * - deliveryAddress.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - deliveryAddress.postalCode
+     - Address.Street.Zipcode
+     - "string"
    * - email
      - Emails.Value
      - "string"
@@ -284,6 +341,9 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - physicalAddress.city
      - Address.Street.City
      - "string"
+   * - physicalAddress.country.id
+     - Country.CountryId
+     - "integer"
    * - physicalAddress.postalCode
      - Address.Postal.Zipcode
      - "string"
