@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -75,6 +75,18 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Address.Postal.Zipcode
      - MailAddress.zipCode
      - "string"
+   * - Address.Street.Address1
+     - MailAddress.AddressLine1
+     - "string"
+   * - Address.Street.Address2
+     - MailAddress.AddressLine2
+     - "string"
+   * - Address.Street.City
+     - MailAddress.City
+     - "string"
+   * - Address.Street.Zipcode
+     - MailAddress.ZipCode
+     - "string"
    * - ContactId
      - Id
      - "string"
@@ -85,7 +97,7 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - MailAddress.countryCode
      - "string"
    * - Country.ThreeLetterISOCountry
-     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCodeDependant on having wd:Q906278 in MailAddress.countryCode)
      - "string"
    * - Emails.Value
      - EmailAddress
@@ -94,7 +106,7 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - Name
      - "string"
    * - OrgNr
-     - OrganizationNumber (Dependant on having  in MailAddress.countryCode)
+     - OrganizationNumber (Dependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCodeDependant on having  in MailAddress.countryCode)
      - "string"
    * - Phones.Value
      - Number
@@ -358,6 +370,9 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - VAT
      - vatCode
      - "string"
+   * - VATInfo
+     - unitOfMeasureCode
+     - "string"
 
 
 SuperOffice Product to PowerOfficeGo Vatcodes
@@ -374,6 +389,9 @@ The following properties are synchronized between a SuperOffice Product and a Po
    * - SuperOffice Product Property
      - PowerOfficeGo Vatcodes Property
      - PowerOfficeGo Data Type
+   * - QuantityUnit
+     - Name
+     - "string"
    * - VAT
      - Rate
      - "string"
