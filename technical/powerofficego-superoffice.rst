@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-08 13:26:21
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -125,17 +125,29 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - MailAddress.AddressLine1
      - Address.Postal.Address1
      - "string"
+   * - MailAddress.AddressLine1
+     - Address.Street.Address1
+     - "string"
    * - MailAddress.AddressLine2
      - Address.Postal.Address2
      - "string"
+   * - MailAddress.AddressLine2
+     - Address.Street.Address2
+     - "string"
    * - MailAddress.City
      - Address.Postal.City
+     - "string"
+   * - MailAddress.City
+     - Address.Street.City
      - "string"
    * - MailAddress.CountryCode
      - Country.CountryId
      - "integer"
    * - MailAddress.ZipCode
      - Address.Postal.Zipcode
+     - "string"
+   * - MailAddress.ZipCode
+     - Address.Street.Zipcode
      - "string"
    * - MailAddress.addressLine1
      - Address.Postal.Address1
@@ -159,7 +171,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Phones.Value
      - "string"
    * - OrganizationNumber
-     - OrgNr (Dependant on having  in Country.TwoLetterISOCountry)
+     - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
      - "string"
    * - WebsiteUrl
      - Urls.Value
@@ -496,17 +508,29 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - MailAddress.AddressLine1
      - Address.Postal.Address1
      - "string"
+   * - MailAddress.AddressLine1
+     - Address.Street.Address1
+     - "string"
    * - MailAddress.AddressLine2
      - Address.Postal.Address2
      - "string"
+   * - MailAddress.AddressLine2
+     - Address.Street.Address2
+     - "string"
    * - MailAddress.City
      - Address.Postal.City
+     - "string"
+   * - MailAddress.City
+     - Address.Street.City
      - "string"
    * - MailAddress.CountryCode
      - Country.CountryId
      - "integer"
    * - MailAddress.ZipCode
      - Address.Postal.Zipcode
+     - "string"
+   * - MailAddress.ZipCode
+     - Address.Street.Zipcode
      - "string"
    * - PhoneNumber
      - Phones.Value
