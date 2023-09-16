@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-09-08 13:14:26
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -165,7 +165,7 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - TotalPrice
      - TotalAmount
      - "string"
-   * - sesam_SaleId (Dependant on having poweroffice-salesorder in sesam_Accepted)
+   * - sesam_SaleId (Dependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_AcceptedDependant on having poweroffice-salesorder in sesam_Accepted)
      - Id
      - "string"
 
