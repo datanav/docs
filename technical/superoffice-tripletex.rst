@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-08-28 15:10:48
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -41,28 +41,76 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Customer Property
      - Tripletex Data Type
    * - Address.Postal.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address1
      - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - Address.Postal.Address2
+     - physicalAddress.addressLine2
      - "string"
    * - Address.Postal.Address2
      - postalAddress.addressLine2
      - "string"
    * - Address.Postal.City
+     - deliveryAddress.city
+     - "string"
+   * - Address.Postal.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Postal.City
      - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - physicalAddress.postalCode
      - "string"
    * - Address.Postal.Zipcode
      - postalAddress.postalCode
      - "string"
    * - Address.Street.Address1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
      - physicalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address1
+     - postalAddress.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - deliveryAddress.addressLine2
      - "string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
      - "string"
+   * - Address.Street.Address2
+     - postalAddress.addressLine2
+     - "string"
+   * - Address.Street.City
+     - deliveryAddress.city
+     - "string"
    * - Address.Street.City
      - physicalAddress.city
      - "string"
+   * - Address.Street.City
+     - postalAddress.city
+     - "string"
+   * - Address.Street.Zipcode
+     - deliveryAddress.postalCode
+     - "string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - postalAddress.postalCode
      - "string"
    * - Associate.AssociateId
      - accountManager.id
@@ -70,6 +118,9 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - ContactId
      - id
      - "integer"
+   * - Country.CountryId
+     - deliveryAddress.country.id
+     - "string"
    * - Country.CountryId
      - physicalAddress.country.id
      - "integer"
@@ -82,7 +133,7 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
-   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+   * - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountry)
      - organizationNumber
      - "replace"," ","", "string"]
    * - Phones.Value
@@ -119,13 +170,25 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
      - Tripletex Supplier Property
      - Tripletex Data Type
    * - Address.Postal.Address1
+     - physicalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address1
      - postalAddress.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - physicalAddress.addressLine2
      - "string"
    * - Address.Postal.Address2
      - postalAddress.addressLine2
      - "string"
    * - Address.Postal.City
+     - physicalAddress.city
+     - "string"
+   * - Address.Postal.City
      - postalAddress.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - physicalAddress.postalCode
      - "string"
    * - Address.Postal.Zipcode
      - postalAddress.postalCode
@@ -133,14 +196,26 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Address.Street.Address1
      - physicalAddress.addressLine1
      - "string"
+   * - Address.Street.Address1
+     - postalAddress.addressLine1
+     - "string"
    * - Address.Street.Address2
      - physicalAddress.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - postalAddress.addressLine2
      - "string"
    * - Address.Street.City
      - physicalAddress.city
      - "string"
+   * - Address.Street.City
+     - postalAddress.city
+     - "string"
    * - Address.Street.Zipcode
      - physicalAddress.postalCode
+     - "string"
+   * - Address.Street.Zipcode
+     - postalAddress.postalCode
      - "string"
    * - ContactId
      - id
