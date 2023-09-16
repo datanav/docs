@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-08-28 15:10:48
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -97,19 +97,31 @@ The following properties are synchronized between a Tripletex Customer and a Sup
      - Name
      - "string"
    * - organizationNumber
-     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
+     - OrgNr (Dependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NO in Country.ThreeLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NO in Country.TwoLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountryDependant on having NOR in Country.ThreeLetterISOCountry)
      - "string"
    * - phoneNumber
      - Phones.Value
      - "string"
    * - physicalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - physicalAddress.addressLine1
      - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Postal.Address2
      - "string"
    * - physicalAddress.addressLine2
      - Address.Street.Address2
      - "string"
    * - physicalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - physicalAddress.city
      - Address.Street.City
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Postal.Zipcode
      - "string"
    * - physicalAddress.postalCode
      - Address.Street.Zipcode
@@ -117,17 +129,29 @@ The following properties are synchronized between a Tripletex Customer and a Sup
    * - postalAddress.addressLine1
      - Address.Postal.Address1
      - "string"
+   * - postalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
    * - postalAddress.addressLine2
      - Address.Postal.Address2
      - "string"
+   * - postalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
    * - postalAddress.city
      - Address.Postal.City
+     - "string"
+   * - postalAddress.city
+     - Address.Street.City
      - "string"
    * - postalAddress.country.id
      - Country.CountryId
      - "integer"
    * - postalAddress.postalCode
      - Address.Postal.Zipcode
+     - "string"
+   * - postalAddress.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
@@ -243,13 +267,25 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
      - Phones.Value
      - "string"
    * - physicalAddress.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - physicalAddress.addressLine1
      - Address.Street.Address1
+     - "string"
+   * - physicalAddress.addressLine2
+     - Address.Postal.Address2
      - "string"
    * - physicalAddress.addressLine2
      - Address.Street.Address2
      - "string"
    * - physicalAddress.city
+     - Address.Postal.City
+     - "string"
+   * - physicalAddress.city
      - Address.Street.City
+     - "string"
+   * - physicalAddress.postalCode
+     - Address.Postal.Zipcode
      - "string"
    * - physicalAddress.postalCode
      - Address.Street.Zipcode
@@ -257,17 +293,29 @@ The following properties are synchronized between a Tripletex Supplier and a Sup
    * - postalAddress.addressLine1
      - Address.Postal.Address1
      - "string"
+   * - postalAddress.addressLine1
+     - Address.Street.Address1
+     - "string"
    * - postalAddress.addressLine2
      - Address.Postal.Address2
      - "string"
+   * - postalAddress.addressLine2
+     - Address.Street.Address2
+     - "string"
    * - postalAddress.city
      - Address.Postal.City
+     - "string"
+   * - postalAddress.city
+     - Address.Street.City
      - "string"
    * - postalAddress.country.id
      - Country.CountryId
      - "integer"
    * - postalAddress.postalCode
      - Address.Postal.Zipcode
+     - "string"
+   * - postalAddress.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
