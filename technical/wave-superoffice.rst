@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-16 14:52:49
+Generated: 2023-09-16 14:57:51
 
 Introduction.
 ------------
@@ -188,6 +188,30 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - "string"
    * - phone
      - Phones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Postal.City
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
      - "string"
    * - shippingDetails.phone
      - Phones.Value
