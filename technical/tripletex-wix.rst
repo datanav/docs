@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-09-16 15:09:19
+Generated: 2023-09-16 15:10:06
 
 Introduction.
 ------------
@@ -120,7 +120,7 @@ Tripletex Customer to Wix Contacts
 ----------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a Wix Contacts must be established.
 
-A new Wix Contacts will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Wix.
+A new Wix Contacts will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
 
 Once a link between a Tripletex Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -138,7 +138,7 @@ Tripletex Customer to Wix Members
 ---------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a Wix Members must be established.
 
-A new Wix Members will be created from a Tripletex Customer if it is connected to a Tripletex Order that is synchronized into Wix.
+A new Wix Members will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Orderline that is synchronized into Wix.
 
 Once a link between a Tripletex Customer and a Wix Members is established, it will keep in sync between the two systems, regardless of where it is edited.
 
