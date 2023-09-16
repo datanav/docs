@@ -2,7 +2,7 @@
 Powerofficego to Freshteam Dataflow
 ===================================
 
-Generated: 2023-09-16 15:10:58
+Generated: 2023-09-16 20:59:23
 
 Introduction.
 ------------
@@ -37,6 +37,28 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
 
 
+Powerofficego Departments to Freshteam Department
+-------------------------------------------------
+Every Powerofficego Departments will be synchronized with a Freshteam Department.
+
+Once a link between a Powerofficego Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+   * - CreatedDateTimeOffset
+     - created_at
+     - "string"
+   * - Name
+     - name
+     - "string"
+
+
 Powerofficego Employees to Freshteam Employee
 ---------------------------------------------
 Every Powerofficego Employees will be synchronized with a Freshteam Employee.
@@ -63,8 +85,20 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - Id
      - id
      - "string"
+   * - LastChanged
+     - updated_at
+     - "string"
    * - LastName
      - last_name
+     - "string"
+   * - MailAddress.City
+     - communication_address.communication_city
+     - "string"
+   * - MailAddress.CountryCode
+     - communication_address.communication_country_code
+     - "string"
+   * - MailAddress.ZipCode
+     - communication_address.communication_zip_code
      - "string"
    * - MailAddress.city
      - address.city
@@ -85,28 +119,18 @@ The following properties are synchronized between a Powerofficego Employees and 
      - communication_address.communication_zip_code
      - "string"
    * - PhoneNumber
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - "string"
-
-
-Powerofficego Departments to Freshteam Department
--------------------------------------------------
-Every Powerofficego Departments will be synchronized with a Freshteam Department.
-
-Once a link between a Powerofficego Departments and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Departments and a Freshteam Department:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Departments Property
-     - Freshteam Department Property
-     - Freshteam Data Type
-   * - CreatedDateTimeOffset
-     - created_at
+   * - dateOfBirth
+     - date_of_birth
      - "string"
-   * - Name
-     - name
+   * - emailAddress
+     - official_email
+     - "string"
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
      - "string"
 
