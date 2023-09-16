@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-06 11:59:13
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -68,6 +68,18 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - "string"
    * - phone
      - OfficePhones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
@@ -145,13 +157,25 @@ The following properties are synchronized between a Wave Customer and a SuperOff
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - address.addressLine1
      - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Postal.Address2
      - "string"
    * - address.addressLine2
      - Address.Street.Address2
      - "string"
    * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
      - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Postal.Zipcode
      - "string"
    * - address.postalCode
      - Address.Street.Zipcode
@@ -191,13 +215,25 @@ The following properties are synchronized between a Wave Vendor and a SuperOffic
      - SuperOffice Contact Property
      - SuperOffice Data Type
    * - address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - address.addressLine1
      - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Postal.Address2
      - "string"
    * - address.addressLine2
      - Address.Street.Address2
      - "string"
    * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
      - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Postal.Zipcode
      - "string"
    * - address.postalCode
      - Address.Street.Zipcode
