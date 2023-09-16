@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-06 12:01:41
+Generated: 2023-09-16 14:52:43
 
 Introduction.
 ------------
@@ -26,13 +26,25 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
      - Wave Customer Property
      - Wave Data Type
    * - Address.Postal.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Postal.Address1
      - shippingDetails.address.addressLine1
+     - "string"
+   * - Address.Postal.Address2
+     - address.addressLine2
      - "string"
    * - Address.Postal.Address2
      - shippingDetails.address.addressLine2
      - "string"
    * - Address.Postal.City
+     - address.city
+     - "string"
+   * - Address.Postal.City
      - shippingDetails.address.city
+     - "string"
+   * - Address.Postal.Zipcode
+     - address.postalCode
      - "string"
    * - Address.Postal.Zipcode
      - shippingDetails.address.postalCode
