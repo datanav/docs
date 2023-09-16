@@ -2,7 +2,7 @@
 HubSpot to Freshteam Dataflow
 =============================
 
-Generated: 2023-09-16 15:02:55
+Generated: 2023-09-16 15:03:30
 
 Introduction.
 ------------
@@ -46,7 +46,10 @@ The following properties are synchronized between a HubSpot Owner and a Freshtea
 
 HubSpot User to Freshteam Employee
 ----------------------------------
-Before any synchronization can take place, a link between a HubSpot User and a Freshteam Employee must be established.
+Every HubSpot User will be synchronized with a Freshteam Employee.
+
+If a matching Freshteam Employee already exists, the HubSpot User will be merged with the existing one.
+If no matching Freshteam Employee is found, a new Freshteam Employee will be created.
 
 A HubSpot User will merge with a Freshteam Employee if one of the following property combinations match:
 
@@ -107,5 +110,24 @@ The following properties are synchronized between a HubSpot Contact and a Fresht
      - "string"
    * - properties.work_email
      - official_email
+     - "string"
+
+
+HubSpot Contactcompanyassociation to Freshteam Employee
+-------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a Freshteam Employee.
+
+Once a link between a HubSpot Contactcompanyassociation and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+   * - toObjectId (Dependant on having  in sesam_simpleAssociationTypes)
+     - designation
      - "string"
 
