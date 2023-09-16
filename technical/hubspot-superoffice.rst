@@ -2,7 +2,7 @@
 HubSpot to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-08-30 05:56:13
+Generated: 2023-09-16 14:52:49
 
 Introduction.
 ------------
@@ -86,10 +86,19 @@ The following properties are synchronized between a HubSpot Company and a SuperO
      - ContactId
      - "integer"
    * - properties.address
+     - Address.Postal.Address1
+     - "string"
+   * - properties.address
      - Address.Street.Address1
      - "string"
    * - properties.address2
+     - Address.Postal.Address2
+     - "string"
+   * - properties.address2
      - Address.Street.Address2
+     - "string"
+   * - properties.city
+     - Address.Postal.City
      - "string"
    * - properties.city
      - Address.Street.City
@@ -105,6 +114,9 @@ The following properties are synchronized between a HubSpot Company and a SuperO
      - "list"
    * - properties.website
      - Urls.Value
+     - "string"
+   * - properties.zip
+     - Address.Postal.Zipcode
      - "string"
    * - properties.zip
      - Address.Street.Zipcode
@@ -125,7 +137,7 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - SuperOffice Person Property
      - SuperOffice Data Type
-   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypesDependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - Contact.ContactId
      - "integer"
 
