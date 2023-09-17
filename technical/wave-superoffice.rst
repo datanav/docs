@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-17 18:19:44
+Generated: 2023-09-17 18:22:11
 
 Introduction.
 ------------
@@ -33,17 +33,44 @@ The following properties are synchronized between a Wave Customer person and a S
    * - Wave Customer person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
    * - email
      - Emails.Value
      - "string"
    * - firstName
      - Firstname
      - "string"
+   * - id
+     - PersonId
+     - "integer"
    * - lastName
      - Lastname
      - "string"
    * - mobile
      - MobilePhones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
      - "string"
 
 
@@ -282,6 +309,63 @@ The following properties are synchronized between a Wave Customer person and a S
    * - Wave Customer person Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.country.code
+     - Country.CountryId
+     - "integer"
+   * - address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - shippingDetails.address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Postal.City
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country.CountryId
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
+     - "string"
 
 
 Wave Vendor to SuperOffice Contact
