@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-09-16 14:57:51
+Generated: 2023-09-17 18:18:48
 
 Introduction.
 ------------
@@ -78,6 +78,32 @@ The following properties are synchronized between a Wave Customer and a HubSpot 
    * - shippingDetails.address.postalCode
      - properties.zip
      - "string"
+
+
+Wave Customer person to HubSpot Contact
+---------------------------------------
+Before any synchronization can take place, a link between a Wave Customer person and a HubSpot Contact must be established.
+
+A Wave Customer person will merge with a HubSpot Contact if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - HubSpot Contact Property
+   * - email
+     - properties.email
+
+Once a link between a Wave Customer person and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
 
 
 Wave Vendor to HubSpot Contact
