@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-17 18:18:48
+Generated: 2023-09-17 18:19:36
 
 Introduction.
 ------------
@@ -254,6 +254,22 @@ The following properties are synchronized between a Wave Customer and a SuperOff
    * - website
      - Urls.Value
      - "string"
+
+
+Wave Customer person to SuperOffice Contact
+-------------------------------------------
+Every Wave Customer person will be synchronized with a SuperOffice Contact.
+
+Once a link between a Wave Customer person and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
 
 
 Wave Vendor to SuperOffice Contact
