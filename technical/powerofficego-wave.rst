@@ -2,12 +2,30 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-09-07 10:58:45
+Generated: 2023-09-17 17:21:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to Wave Customer person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Salesorder, or Salesorders that is synchronized into Wave.
+
+Once a link between a Powerofficego Customers and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wave Customer person Property
+     - Wave Data Type
+
 
 Powerofficego Salesorder to Wave Invoice
 ----------------------------------------
