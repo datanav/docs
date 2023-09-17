@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-09-17 18:22:03
+Generated: 2023-09-17 18:22:11
 
 Introduction.
 ------------
@@ -110,17 +110,38 @@ The following properties are synchronized between a Wave Customer person and a H
    * - address.city
      - properties.city
      - "string"
+   * - address.country.code
+     - properties.country
+     - "string"
+   * - address.postalCode
+     - properties.zip
+     - "string"
    * - email
      - properties.email
      - "string"
    * - firstName
      - properties.firstname
      - "string"
+   * - id
+     - id
+     - "string"
    * - lastName
      - properties.lastname
      - "string"
    * - mobile
      - properties.mobilephone
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - properties.address
+     - "string"
+   * - shippingDetails.address.city
+     - properties.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - properties.country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - properties.zip
      - "string"
 
 
@@ -258,6 +279,39 @@ The following properties are synchronized between a Wave Customer person and a H
    * - Wave Customer person Property
      - HubSpot Company Property
      - HubSpot Data Type
+   * - address.addressLine1
+     - properties.address
+     - "string"
+   * - address.addressLine2
+     - properties.address2
+     - "string"
+   * - address.city
+     - properties.city
+     - "string"
+   * - address.country.code
+     - properties.country
+     - "string"
+   * - address.postalCode
+     - properties.zip
+     - "string"
+   * - id
+     - id
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - properties.address
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - properties.address2
+     - "string"
+   * - shippingDetails.address.city
+     - properties.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - properties.country
+     - "string"
+   * - shippingDetails.address.postalCode
+     - properties.zip
+     - "string"
 
 
 Wave Vendor to HubSpot Company
