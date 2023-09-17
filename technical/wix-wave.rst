@@ -2,12 +2,30 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-16 14:57:46
+Generated: 2023-09-17 17:21:43
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wix.com to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wix.com Contacts to Wave Customer person
+----------------------------------------
+Before any synchronization can take place, a link between a Wix.com Contacts and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Wix.com Contacts if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+
+Once a link between a Wix.com Contacts and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Contacts and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Contacts Property
+     - Wave Customer person Property
+     - Wave Data Type
+
 
 Wix.com Contacts to Wave Customer
 ---------------------------------
@@ -35,6 +53,24 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - primaryInfo.phone
      - mobile
      - "string"
+
+
+Wix.com Members to Wave Customer person
+---------------------------------------
+Before any synchronization can take place, a link between a Wix.com Members and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Wix.com Members if it is connected to a Wix.com Wix-orders that is synchronized into Wave.
+
+Once a link between a Wix.com Members and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Members and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Members Property
+     - Wave Customer person Property
+     - Wave Data Type
 
 
 Wix.com Members to Wave Customer
