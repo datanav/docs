@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-17 18:19:36
+Generated: 2023-09-17 18:19:44
 
 Introduction.
 ------------
@@ -33,6 +33,18 @@ The following properties are synchronized between a Wave Customer person and a S
    * - Wave Customer person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - email
+     - Emails.Value
+     - "string"
+   * - firstName
+     - Firstname
+     - "string"
+   * - lastName
+     - Lastname
+     - "string"
+   * - mobile
+     - MobilePhones.Value
+     - "string"
 
 
 Wave Customer to SuperOffice Person
