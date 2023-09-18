@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-16 15:11:46
+Generated: 2023-09-18 08:18:26
 
 Introduction.
 ------------
@@ -229,7 +229,7 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - dateOfBirth
      - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - emailAddress
      - Emails.Value
      - "string"
@@ -330,7 +330,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - SuperOffice Data Type
    * - DateOfBirth
      - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - EmailAddress
      - Emails.Value
      - "string"
@@ -419,7 +419,7 @@ The following properties are synchronized between a Powerofficego Employees and 
      - SuperOffice Data Type
    * - DateOfBirth
      - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - DepartmendId
      - Contact.ContactId
      - "integer"
@@ -557,7 +557,7 @@ The following properties are synchronized between a Powerofficego Suppliers and 
      - SuperOffice Data Type
    * - DateOfBirth
      - BirthDate
-     - "datetime-format","%Y-%m-%dT%H:%M:%S","_."]
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
    * - FirstName
      - Firstname
      - "string"
