@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-17 18:19:11
+Generated: 2023-09-20 15:20:43
 
 Introduction.
 ------------
@@ -196,6 +196,9 @@ The following properties are synchronized between a Wix.com Products and a Wave 
      - name
      - "string"
    * - price.price
+     - unitPrice
+     - "string"
+   * - priceData.price
      - unitPrice
      - "string"
 
