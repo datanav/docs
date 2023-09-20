@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-09-17 18:22:11
+Generated: 2023-09-20 11:19:45
 
 Introduction.
 ------------
@@ -118,9 +118,15 @@ The following properties are synchronized between a Wave Customer and a Triplete
    * - Wave Customer Property
      - Tripletex Contact Property
      - Tripletex Data Type
+   * - email
+     - email
+     - "string"
    * - firstName
      - firstName
      - "string"
+   * - id
+     - customer.id
+     - "integer"
    * - lastName
      - lastName
      - "string"
