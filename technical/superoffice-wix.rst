@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-09-05 14:14:00
+Generated: 2023-09-20 14:38:42
 
 Introduction.
 ------------
@@ -268,7 +268,7 @@ The following properties are synchronized between a SuperOffice Product and a Wi
      - "string"
    * - UnitCost
      - costRange.maxValue
-     - "string"
+     - "decimal"
    * - UnitListPrice
      - price.price
      - "string"
