@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-16 20:59:23
+Generated: 2023-09-20 12:14:00
 
 Introduction.
 ------------
@@ -400,6 +400,32 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - SentDate
      - sentDateTimeOffset
      - "string"
+
+
+Powerofficego Salesorders to PowerOfficeGo Currency
+---------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Salesorders and a PowerOfficeGo Currency must be established.
+
+A Powerofficego Salesorders will merge with a PowerOfficeGo Currency if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - PowerOfficeGo Currency Property
+   * - CurrencyCode
+     - Code
+
+Once a link between a Powerofficego Salesorders and a PowerOfficeGo Currency is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a PowerOfficeGo Currency:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
 
 
 Powerofficego Supplier to PowerOfficeGo Location
