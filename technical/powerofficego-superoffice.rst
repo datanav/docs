@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-18 08:18:26
+Generated: 2023-09-20 12:05:57
 
 Introduction.
 ------------
@@ -170,6 +170,9 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - OrganizationNumber
      - OrgNr (Dependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountryDependant on having  in Country.TwoLetterISOCountry)
+     - "string"
+   * - PhoneNumber
+     - Phones.Value
      - "string"
    * - WebsiteUrl
      - Urls.Value
