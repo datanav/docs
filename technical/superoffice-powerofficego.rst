@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-09-16 15:00:32
+Generated: 2023-09-20 12:06:11
 
 Introduction.
 ------------
@@ -110,6 +110,9 @@ The following properties are synchronized between a SuperOffice Contact and a Po
      - "string"
    * - Phones.Value
      - Number
+     - "string"
+   * - Phones.Value
+     - PhoneNumber
      - "string"
    * - Urls.Value
      - WebsiteUrl
