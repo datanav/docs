@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-21 19:53:43
 
 Introduction.
 ------------
@@ -306,6 +306,9 @@ The following properties are synchronized between a Wave Invoice and a Wix Order
      - "string"
    * - items.quantity
      - lineItems.quantity
+     - "string"
+   * - items.unitPrice
+     - lineItems.price
      - "string"
    * - total.value
      - totals.total
