@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-21 07:07:03
 
 Introduction.
 ------------
@@ -117,6 +117,25 @@ The following properties are synchronized between a Wix.com Inventory and a Supe
    * - Wix.com Inventory Property
      - SuperOffice Product Property
      - SuperOffice Data Type
+
+
+Wix.com Products to SuperOffice Listproducttypeitems
+----------------------------------------------------
+Every Wix.com Products will be synchronized with a SuperOffice Listproducttypeitems.
+
+Once a link between a Wix.com Products and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
+   * - productType
+     - Name
+     - "string"
 
 
 Wix.com Products to SuperOffice Product
