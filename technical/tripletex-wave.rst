@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-17 18:22:11
+Generated: 2023-09-25 12:50:15
 
 Introduction.
 ------------
@@ -98,6 +98,9 @@ The following properties are synchronized between a Tripletex Contact and a Wave
    * - phoneNumberMobile
      - mobile
      - "string"
+   * - phoneNumberWork
+     - phone
+     - "string"
 
 
 Tripletex Employee to Wave Customer
@@ -140,6 +143,9 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
    * - phoneNumberMobile
      - mobile
+     - "string"
+   * - phoneNumberWork
+     - phone
      - "string"
 
 
