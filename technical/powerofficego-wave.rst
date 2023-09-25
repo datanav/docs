@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-09-17 18:24:01
+Generated: 2023-09-25 12:50:15
 
 Introduction.
 ------------
@@ -25,9 +25,6 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - Wave Customer person Property
      - Wave Data Type
-   * - EmailAddress
-     - email
-     - "string"
    * - PhoneNumber
      - phone
      - "string"
@@ -85,6 +82,9 @@ The following properties are synchronized between a Powerofficego Contactperson 
      - "string"
    * - lastName
      - lastName
+     - "string"
+   * - phoneNumber
+     - phone
      - "string"
    * - residenceCountryCode
      - address.country.code
