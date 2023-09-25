@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-21 19:53:43
+Generated: 2023-09-25 12:49:52
 
 Introduction.
 ------------
@@ -25,9 +25,6 @@ The following properties are synchronized between a Wix.com Contacts and a Wave 
    * - Wix.com Contacts Property
      - Wave Customer person Property
      - Wave Data Type
-   * - primaryInfo.email
-     - email
-     - "string"
    * - primaryInfo.phone
      - mobile
      - "string"
