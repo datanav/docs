@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-09-25 12:50:08
+Generated: 2023-09-25 12:50:15
 
 Introduction.
 ------------
@@ -71,9 +71,6 @@ The following properties are synchronized between a Wix.com Members and a Wave C
    * - Wix.com Members Property
      - Wave Customer person Property
      - Wave Data Type
-   * - loginEmail
-     - email
-     - "string"
 
 
 Wix.com Members to Wave Customer
