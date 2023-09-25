@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-09-25 12:59:11
+Generated: 2023-09-25 13:02:07
 
 Introduction.
 ------------
@@ -66,6 +66,22 @@ The following properties are synchronized between a Wave Currency and a PowerOff
 
    * - Wave Currency Property
      - PowerOfficeGo Currency Property
+     - PowerOfficeGo Data Type
+
+
+Wave Customer person to PowerOfficeGo Location
+----------------------------------------------
+Every Wave Customer person will be synchronized with a PowerOfficeGo Location.
+
+Once a link between a Wave Customer person and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer person and a PowerOfficeGo Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer person Property
+     - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
 
 
