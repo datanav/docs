@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-09-25 13:01:42
+Generated: 2023-09-26 09:59:37
 
 Introduction.
 ------------
@@ -370,7 +370,7 @@ The following properties are synchronized between a Wave Customer and a Triplete
      - "string"
    * - mobile
      - phoneNumberMobile
-     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - phone
      - phoneNumberWork
      - "string"
