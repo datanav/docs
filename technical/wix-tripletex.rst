@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-26 09:59:37
 
 Introduction.
 ------------
@@ -195,7 +195,7 @@ The following properties are synchronized between a Wix.com Contacts and a Tripl
      - "string"
    * - primaryInfo.phone
      - phoneNumberMobile
-     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
 
 
 Wix.com Inventory to Tripletex Product
