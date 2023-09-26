@@ -1,3 +1,5 @@
+.. _sesam_talk_systems:
+
 Supported systems
 =================
 

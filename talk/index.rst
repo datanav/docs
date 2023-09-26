@@ -100,6 +100,7 @@ About Sesam Talk
 
    What is Sesam Talk <what-is-sesam-talk>
    Supported systems <systems/index>
+   Pricing <pricing>
    Becoming a partner <partner/index>
    Roadmap <roadmap>
    Service Level Objective <legal-slo>
