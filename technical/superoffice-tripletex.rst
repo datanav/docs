@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-09-16 15:00:32
+Generated: 2023-09-26 09:59:37
 
 Introduction.
 ------------
@@ -304,7 +304,7 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
    * - MobilePhones.Value
      - phoneNumberMobile
-     - "if","matches","+*","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
+     - "if","matches","+* *","_."],"join"," ","slice", 1,"split", " ","_."]]],"_."]
    * - OfficePhones.Value
      - phoneNumberWork
      - "string"
