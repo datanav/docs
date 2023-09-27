@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-27 11:09:48
 
 Introduction.
 ------------
@@ -103,11 +103,20 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Description
      - lineItems.name
      - "string"
+   * - Description
+     - lineItems.name.name
+     - "string"
    * - Quantity
      - lineItems.quantity
      - "string"
+   * - Quantity
+     - lineItems.quantity.quantity
+     - "string"
    * - SalesOrderLineUnitPrice
      - lineItems.price
+     - "string"
+   * - SalesOrderLineUnitPrice
+     - lineItems.price.price
      - "string"
 
 
