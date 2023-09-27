@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-27 06:58:00
 
 Introduction.
 ------------
@@ -156,7 +156,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.contactId
      - "string"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
 
@@ -178,7 +178,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.contactId
      - "string"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
 
@@ -285,7 +285,7 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.contactId
      - "string"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
 
@@ -307,7 +307,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.contactId
      - "string"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
 
@@ -361,7 +361,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.contactId
      - "string"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - buyerInfo.id
      - "string"
 
