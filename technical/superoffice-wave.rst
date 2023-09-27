@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-25 12:50:15
+Generated: 2023-09-27 07:38:59
 
 Introduction.
 ------------
@@ -28,29 +28,59 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
    * - Address.Postal.Address1
      - address.addressLine1
      - "string"
+   * - Address.Postal.Address1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - Address.Postal.Address2
      - address.addressLine2
+     - "string"
+   * - Address.Postal.Address2
+     - shippingDetails.address.addressLine2
      - "string"
    * - Address.Postal.City
      - address.city
      - "string"
+   * - Address.Postal.City
+     - shippingDetails.address.city
+     - "string"
    * - Address.Postal.Zipcode
      - address.postalCode
+     - "string"
+   * - Address.Postal.Zipcode
+     - shippingDetails.address.postalCode
      - "string"
    * - Address.Street.Address1
      - address.addressLine1
      - "string"
+   * - Address.Street.Address1
+     - shippingDetails.address.addressLine1
+     - "string"
    * - Address.Street.Address2
      - address.addressLine2
+     - "string"
+   * - Address.Street.Address2
+     - shippingDetails.address.addressLine2
      - "string"
    * - Address.Street.City
      - address.city
      - "string"
+   * - Address.Street.City
+     - shippingDetails.address.city
+     - "string"
    * - Address.Street.Zipcode
      - address.postalCode
      - "string"
+   * - Address.Street.Zipcode
+     - shippingDetails.address.postalCode
+     - "string"
+   * - ContactId
+     - id
+     - "string"
    * - Country.CountryId
      - address.country.code
+     - "string"
+   * - Country.CountryId
+     - shippingDetails.address.country.code
      - "string"
 
 
