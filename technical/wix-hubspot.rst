@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-20 15:20:43
+Generated: 2023-09-27 08:08:26
 
 Introduction.
 ------------
@@ -103,6 +103,22 @@ The following properties are synchronized between a Wix.com Inventory and a HubS
 
    * - Wix.com Inventory Property
      - HubSpot Product Property
+     - HubSpot Data Type
+
+
+Wix.com Orders to HubSpot Lineitem
+----------------------------------
+Every Wix.com Orders will be synchronized with a HubSpot Lineitem.
+
+Once a link between a Wix.com Orders and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - HubSpot Lineitem Property
      - HubSpot Data Type
 
 
