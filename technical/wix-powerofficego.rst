@@ -2,7 +2,7 @@
 Wix.com to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-28 09:20:21
+Generated: 2023-09-28 20:28:30
 
 Introduction.
 ------------
@@ -179,6 +179,31 @@ The following properties are synchronized between a Wix.com Inventory and a Powe
      - "string"
    * - variants.quantity
      - availableStock
+     - "string"
+
+
+Wix.com Orders to PowerOfficeGo Salesorderlines
+-----------------------------------------------
+Every Wix.com Orders will be synchronized with a PowerOfficeGo Salesorderlines.
+
+Once a link between a Wix.com Orders and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a PowerOfficeGo Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - PowerOfficeGo Salesorderlines Property
+     - PowerOfficeGo Data Type
+   * - lineItems.name
+     - Description
+     - "string"
+   * - lineItems.price
+     - SalesOrderLineUnitPrice
+     - "string"
+   * - lineItems.quantity
+     - Quantity
      - "string"
 
 
