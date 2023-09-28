@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-20 12:05:57
+Generated: 2023-09-28 09:19:24
 
 Introduction.
 ------------
@@ -315,6 +315,22 @@ The following properties are synchronized between a Powerofficego Customer and a
    * - mailAddress.zipCode
      - Address.Postal.Zipcode
      - "string"
+
+
+Powerofficego Customers person to SuperOffice Person
+----------------------------------------------------
+Every Powerofficego Customers person will be synchronized with a SuperOffice Person.
+
+Once a link between a Powerofficego Customers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 Powerofficego Customers to SuperOffice Person
