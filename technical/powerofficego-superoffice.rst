@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-28 09:19:30
+Generated: 2023-09-28 09:20:21
 
 Introduction.
 ------------
@@ -512,6 +512,22 @@ The following properties are synchronized between a Powerofficego Supplier and a
    * - WebsiteUrl
      - Urls.Value
      - "string"
+
+
+Powerofficego Suppliers person to SuperOffice Person
+----------------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a SuperOffice Person.
+
+Once a link between a Powerofficego Suppliers person and a SuperOffice Person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a SuperOffice Person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     - SuperOffice Person Property
+     - SuperOffice Data Type
 
 
 Powerofficego Suppliers to SuperOffice Contact
