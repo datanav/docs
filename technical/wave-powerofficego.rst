@@ -2,12 +2,30 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-09-25 13:02:52
+Generated: 2023-09-28 09:17:28
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to PowerOfficeGo Customers person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into PowerOfficeGo.
+
+Once a link between a Wave Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
+
 
 Wave Invoice to PowerOfficeGo Outgoinginvoices
 ----------------------------------------------
@@ -440,5 +458,30 @@ The following properties are synchronized between a Wave Vendor and a PowerOffic
      - "string"
    * - address.postalCode
      - zipCode
+     - "string"
+
+
+Wave Vendor to PowerOfficeGo Suppliers
+--------------------------------------
+Every Wave Vendor will be synchronized with a PowerOfficeGo Suppliers.
+
+Once a link between a Wave Vendor and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Vendor and a PowerOfficeGo Suppliers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Vendor Property
+     - PowerOfficeGo Suppliers Property
+     - PowerOfficeGo Data Type
+   * - modifiedAt
+     - LastChanged
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - website
+     - WebsiteUrl
      - "string"
 
