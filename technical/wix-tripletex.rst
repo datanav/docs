@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-26 09:59:37
+Generated: 2023-09-28 20:28:30
 
 Introduction.
 ------------
@@ -243,6 +243,37 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
    * - currency
      - currency.id
      - "integer"
+
+
+Wix.com Orders to Tripletex Orderline
+-------------------------------------
+Every Wix.com Orders will be synchronized with a Tripletex Orderline.
+
+Once a link between a Wix.com Orders and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+   * - id
+     - order.id
+     - "integer"
+   * - lineItems.name
+     - description
+     - "string"
+   * - lineItems.price
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - lineItems.productId
+     - product.id
+     - "integer"
+   * - lineItems.quantity
+     - count
+     - "float"
 
 
 Wix.com Products to Tripletex Product
