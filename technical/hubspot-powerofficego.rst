@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-20 12:06:11
+Generated: 2023-09-28 09:17:28
 
 Introduction.
 ------------
@@ -55,6 +55,24 @@ The following properties are synchronized between a HubSpot Company and a PowerO
    * - properties.website
      - WebsiteUrl
      - "string"
+
+
+HubSpot Company to PowerOfficeGo Customers person
+-------------------------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into PowerOfficeGo.
+
+Once a link between a HubSpot Company and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
 
 
 HubSpot Deal to PowerOfficeGo Outgoinginvoices
