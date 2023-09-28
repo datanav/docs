@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-28 11:29:31
+Generated: 2023-09-28 11:30:23
 
 Introduction.
 ------------
@@ -621,37 +621,6 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Name
      - name
      - "string"
-
-
-Powerofficego Salesorderline to Tripletex Orderline
----------------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a Tripletex Orderline.
-
-Once a link between a Powerofficego Salesorderline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a Tripletex Orderline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - Tripletex Orderline Property
-     - Tripletex Data Type
-   * - Description
-     - description
-     - "string"
-   * - Discount
-     - discount
-     - "float"
-   * - Quantity
-     - count
-     - "float"
-   * - SalesOrderLineUnitPrice
-     - unitPriceExcludingVatCurrency
-     - "float"
-   * - VatReturnSpecification
-     - vatType.id
-     - "integer"
 
 
 Powerofficego Salesorderlines to Tripletex Orderline
