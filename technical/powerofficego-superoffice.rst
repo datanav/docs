@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-28 09:20:40
+Generated: 2023-09-28 11:30:23
 
 Introduction.
 ------------
@@ -712,35 +712,4 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Name
      - Name
      - "string"
-
-
-Powerofficego Salesorderline to SuperOffice Quoteline
------------------------------------------------------
-Every Powerofficego Salesorderline will be synchronized with a SuperOffice Quoteline.
-
-Once a link between a Powerofficego Salesorderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderline and a SuperOffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderline Property
-     - SuperOffice Quoteline Property
-     - SuperOffice Data Type
-   * - Description
-     - Name
-     - "string"
-   * - Discount
-     - DiscountPercent
-     - "integer"
-   * - Quantity
-     - Quantity
-     - "integer"
-   * - SalesOrderLineUnitPrice
-     - UnitListPrice
-     - "string"
-   * - VatReturnSpecification
-     - VAT
-     - "integer"
 
