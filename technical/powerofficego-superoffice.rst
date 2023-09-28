@@ -2,7 +2,7 @@
 Powerofficego to SuperOffice Dataflow
 =====================================
 
-Generated: 2023-09-28 09:20:21
+Generated: 2023-09-28 09:20:40
 
 Introduction.
 ------------
@@ -528,6 +528,15 @@ The following properties are synchronized between a Powerofficego Suppliers pers
    * - Powerofficego Suppliers person Property
      - SuperOffice Person Property
      - SuperOffice Data Type
+   * - DateOfBirth
+     - BirthDate
+     - "datetime-format","%Y-%m-%dT%H:%M:%SZ","_."]
+   * - FirstName
+     - Firstname
+     - "string"
+   * - PhoneNumber
+     - OfficePhones.Value
+     - "string"
 
 
 Powerofficego Suppliers to SuperOffice Contact
