@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-09-27 11:09:48
+Generated: 2023-09-28 09:17:28
 
 Introduction.
 ------------
@@ -177,6 +177,22 @@ The following properties are synchronized between a Powerofficego Currency and a
      - Wix Data Type
 
 
+Powerofficego Customers person to Wix Contacts
+----------------------------------------------
+Every Powerofficego Customers person will be synchronized with a Wix Contacts.
+
+Once a link between a Powerofficego Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers person and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers person Property
+     - Wix Contacts Property
+     - Wix Data Type
+
+
 Powerofficego Customers to Wix Contacts
 ---------------------------------------
 Every Powerofficego Customers will be synchronized with a Wix Contacts.
@@ -278,6 +294,22 @@ The following properties are synchronized between a Powerofficego Salesorders an
    * - TotalAmount
      - totals.total
      - "string"
+
+
+Powerofficego Suppliers person to Wix Contacts
+----------------------------------------------
+Every Powerofficego Suppliers person will be synchronized with a Wix Contacts.
+
+Once a link between a Powerofficego Suppliers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     - Wix Contacts Property
+     - Wix Data Type
 
 
 Powerofficego Suppliers to Wix Contacts
