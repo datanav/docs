@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-27 11:09:48
+Generated: 2023-09-28 20:28:30
 
 Introduction.
 ------------
@@ -143,6 +143,25 @@ The following properties are synchronized between a Wix.com Orders and a HubSpot
      - "string"
    * - lineItems.quantity.quantity
      - properties.quantity
+     - "string"
+
+
+Wix.com Orders to HubSpot Lineitemdealassociation
+-------------------------------------------------
+Every Wix.com Orders will be synchronized with a HubSpot Lineitemdealassociation.
+
+Once a link between a Wix.com Orders and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
+   * - id
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
      - "string"
 
 
