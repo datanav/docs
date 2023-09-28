@@ -2,7 +2,7 @@
 Wave Financial to PowerOfficeGo Dataflow
 ========================================
 
-Generated: 2023-09-28 09:18:02
+Generated: 2023-09-28 09:20:21
 
 Introduction.
 ------------
@@ -295,73 +295,6 @@ The following properties are synchronized between a Wave Customer and a PowerOff
      - "string"
    * - shippingDetails.address.postalCode
      - zipCode
-     - "string"
-
-
-Wave Customer to PowerOfficeGo Suppliers
-----------------------------------------
-Every Wave Customer will be synchronized with a PowerOfficeGo Suppliers.
-
-Once a link between a Wave Customer and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a PowerOfficeGo Suppliers:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - PowerOfficeGo Suppliers Property
-     - PowerOfficeGo Data Type
-   * - address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - address.city
-     - MailAddress.City
-     - "string"
-   * - address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - firstName
-     - FirstName
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - modifiedAt
-     - LastChanged
-     - "string"
-   * - name
-     - LegalName
-     - "string"
-   * - phone
-     - PhoneNumber
-     - "string"
-   * - shippingDetails.address.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - shippingDetails.address.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - shippingDetails.address.city
-     - MailAddress.City
-     - "string"
-   * - shippingDetails.address.country.code
-     - MailAddress.CountryCode
-     - "string"
-   * - shippingDetails.address.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - shippingDetails.phone
-     - PhoneNumber
-     - "string"
-   * - website
-     - WebsiteUrl
      - "string"
 
 
