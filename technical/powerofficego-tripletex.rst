@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-28 09:18:02
+Generated: 2023-09-28 09:20:21
 
 Introduction.
 ------------
@@ -264,40 +264,6 @@ The following properties are synchronized between a Powerofficego Customers pers
      - "string"
    * - PhoneNumber
      - phoneNumberWork
-     - "string"
-
-
-Powerofficego Customers to Tripletex Contact
---------------------------------------------
-Every Powerofficego Customers will be synchronized with a Tripletex Contact.
-
-Once a link between a Powerofficego Customers and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - EmailAddress
-     - email
-     - "string"
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
-     - lastName
-     - "string"
-   * - PhoneNumber
-     - phoneNumberWork
-     - "string"
-   * - emailAddress
-     - email
-     - "string"
-   * - firstName
-     - firstName
      - "string"
 
 
@@ -728,31 +694,6 @@ The following properties are synchronized between a Powerofficego Suppliers pers
      - Tripletex Contact Property
      - Tripletex Data Type
    * - FirstName
-     - firstName
-     - "string"
-   * - PhoneNumber
-     - phoneNumberWork
-     - "string"
-
-
-Powerofficego Suppliers to Tripletex Contact
---------------------------------------------
-Every Powerofficego Suppliers will be synchronized with a Tripletex Contact.
-
-Once a link between a Powerofficego Suppliers and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers and a Tripletex Contact:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers Property
-     - Tripletex Contact Property
-     - Tripletex Data Type
-   * - FirstName
-     - firstName
-     - "string"
-   * - LastName
      - firstName
      - "string"
    * - PhoneNumber
