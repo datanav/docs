@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-28 09:29:08
+Generated: 2023-09-28 09:29:32
 
 Introduction.
 ------------
@@ -477,6 +477,32 @@ The following properties are synchronized between a Powerofficego Supplier and a
 
    * - Powerofficego Supplier Property
      - PowerOfficeGo Suppliers Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Suppliers person to PowerOfficeGo Location
+--------------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Suppliers person and a PowerOfficeGo Location must be established.
+
+A Powerofficego Suppliers person will merge with a PowerOfficeGo Location if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     - PowerOfficeGo Location Property
+   * - MailAddress.Id
+     - id
+
+Once a link between a Powerofficego Suppliers person and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers person and a PowerOfficeGo Location:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers person Property
+     - PowerOfficeGo Location Property
      - PowerOfficeGo Data Type
 
 
