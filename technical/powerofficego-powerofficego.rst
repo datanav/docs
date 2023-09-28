@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-28 09:29:32
+Generated: 2023-09-28 11:32:30
 
 Introduction.
 ------------
@@ -718,6 +718,22 @@ The following properties are synchronized between a Powerofficego Salesorderline
    :header-rows: 1
 
    * - Powerofficego Salesorderline Property
+     - PowerOfficeGo Outgoinginvoices Property
+     - PowerOfficeGo Data Type
+
+
+Powerofficego Salesorderlines to PowerOfficeGo Outgoinginvoices
+---------------------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a PowerOfficeGo Outgoinginvoices.
+
+Once a link between a Powerofficego Salesorderlines and a PowerOfficeGo Outgoinginvoices is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a PowerOfficeGo Outgoinginvoices:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
 
