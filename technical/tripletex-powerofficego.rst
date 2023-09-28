@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-09-28 09:29:08
+Generated: 2023-09-28 11:29:29
 
 Introduction.
 ------------
@@ -538,6 +538,22 @@ The following properties are synchronized between a Tripletex Orderline and a Po
    * - vatType.id
      - VatReturnSpecification
      - "string"
+
+
+Tripletex Orderline to PowerOfficeGo Salesorderlines
+----------------------------------------------------
+Every Tripletex Orderline will be synchronized with a PowerOfficeGo Salesorderlines.
+
+Once a link between a Tripletex Orderline and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a PowerOfficeGo Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - PowerOfficeGo Salesorderlines Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Product to PowerOfficeGo Product
