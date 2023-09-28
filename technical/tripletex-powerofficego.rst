@@ -2,110 +2,29 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-09-20 12:06:11
+Generated: 2023-09-28 09:17:28
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to PowerOfficeGo. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
 
-Tripletex Customer to PowerOfficeGo Customers
----------------------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers must be established.
+Tripletex Customer to PowerOfficeGo Customers person
+----------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a PowerOfficeGo Customers person must be established.
 
-A new PowerOfficeGo Customers will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Contact that is synchronized into PowerOfficeGo.
+A new PowerOfficeGo Customers person will be created from a Tripletex Customer if it is connected to a Tripletex Order, or Contact that is synchronized into PowerOfficeGo.
 
-Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a Tripletex Customer and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers:
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers person:
 
 .. list-table::
    :header-rows: 1
 
    * - Tripletex Customer Property
-     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Customers person Property
      - PowerOfficeGo Data Type
-   * - deliveryAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - deliveryAddress.city
-     - MailAddress.City
-     - "string"
-   * - deliveryAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - email
-     - EmailAddress
-     - "string"
-   * - id
-     - Id
-     - "string"
-   * - invoiceEmail
-     - InvoiceEmailAddress
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - organizationNumber
-     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
-     - "string"
-   * - phoneNumber
-     - Number
-     - "string"
-   * - phoneNumber
-     - PhoneNumber
-     - "string"
-   * - physicalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - physicalAddress.city
-     - MailAddress.City
-     - "string"
-   * - physicalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - physicalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.AddressLine1
-     - "string"
-   * - postalAddress.addressLine1
-     - MailAddress.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.AddressLine2
-     - "string"
-   * - postalAddress.addressLine2
-     - MailAddress.addressLine2
-     - "string"
-   * - postalAddress.city
-     - MailAddress.City
-     - "string"
-   * - postalAddress.city
-     - MailAddress.city
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.CountryCode
-     - "string"
-   * - postalAddress.country.id
-     - MailAddress.countryCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.ZipCode
-     - "string"
-   * - postalAddress.postalCode
-     - MailAddress.zipCode
-     - "string"
 
 
 Tripletex Customer to PowerOfficeGo Departments
@@ -130,6 +49,24 @@ The following properties are synchronized between a Tripletex Customer and a Pow
    * - name
      - Name
      - "string"
+
+
+Tripletex Department to PowerOfficeGo Customers person
+------------------------------------------------------
+Before any synchronization can take place, a link between a Tripletex Department and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a Tripletex Department if it is connected to a Tripletex Contact that is synchronized into PowerOfficeGo.
+
+Once a link between a Tripletex Department and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
 
 
 Tripletex Department to PowerOfficeGo Customers
@@ -335,6 +272,103 @@ The following properties are synchronized between a Tripletex Currency and a Pow
    * - Tripletex Currency Property
      - PowerOfficeGo Currency Property
      - PowerOfficeGo Data Type
+
+
+Tripletex Customer to PowerOfficeGo Customers
+---------------------------------------------
+removed person customers for now until that pattern is resolved, it  will be synchronized with a PowerOfficeGo Customers.
+
+Once a link between a Tripletex Customer and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - invoiceEmail
+     - InvoiceEmailAddress
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - organizationNumber
+     - OrganizationNumber (Dependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCodeDependant on having NO in MailAddress.countryCode)
+     - "string"
+   * - phoneNumber
+     - Number
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.addressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.addressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.city
+     - MailAddress.city
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.countryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.zipCode
+     - "string"
 
 
 Tripletex Department to PowerOfficeGo Departments
@@ -600,6 +634,79 @@ The following properties are synchronized between a Tripletex Productgroup and a
      - PowerOfficeGo Data Type
    * - name
      - Name
+     - "string"
+
+
+Tripletex Supplier to PowerOfficeGo Suppliers
+---------------------------------------------
+Every Tripletex Supplier will be synchronized with a PowerOfficeGo Suppliers.
+
+Once a link between a Tripletex Supplier and a PowerOfficeGo Suppliers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a PowerOfficeGo Suppliers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - PowerOfficeGo Suppliers Property
+     - PowerOfficeGo Data Type
+   * - deliveryAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - deliveryAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - deliveryAddress.changes
+     - MailAddress.City
+     - "string"
+   * - deliveryAddress.city
+     - MailAddress.CountryCode
+     - "string"
+   * - deliveryAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - email
+     - EmailAddress
+     - "string"
+   * - id
+     - Id
+     - "string"
+   * - name
+     - LegalName
+     - "string"
+   * - phoneNumber
+     - PhoneNumber
+     - "string"
+   * - physicalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - physicalAddress.city
+     - MailAddress.City
+     - "string"
+   * - physicalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - physicalAddress.postalCode
+     - MailAddress.ZipCode
+     - "string"
+   * - postalAddress.addressLine1
+     - MailAddress.AddressLine1
+     - "string"
+   * - postalAddress.addressLine2
+     - MailAddress.AddressLine2
+     - "string"
+   * - postalAddress.city
+     - MailAddress.City
+     - "string"
+   * - postalAddress.country.id
+     - MailAddress.CountryCode
+     - "string"
+   * - postalAddress.postalCode
+     - MailAddress.ZipCode
      - "string"
 
 
