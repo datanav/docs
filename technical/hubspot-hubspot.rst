@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-29 05:24:25
+Generated: 2023-09-29 05:24:32
 
 Introduction.
 ------------
@@ -1066,6 +1066,15 @@ The following properties are synchronized between a HubSpot Company and a HubSpo
    * - HubSpot Company Property
      - HubSpot Contact Property
      - HubSpot Data Type
+   * - properties.country
+     - properties.country
+     - "string"
+   * - properties.industry
+     - properties.country
+     - "string"
+   * - properties.type
+     - properties.country
+     - "string"
 
 
 HubSpot Contact to HubSpot Company
