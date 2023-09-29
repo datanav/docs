@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-27 11:09:48
+Generated: 2023-09-29 05:23:57
 
 Introduction.
 ------------
@@ -273,6 +273,9 @@ The following properties are synchronized between a HubSpot Quote and a Wix Orde
      - buyerInfo.contactId
      - "string"
    * - associations.companies.results.id
+     - buyerInfo.id
+     - "string"
+   * - associations.contacts.results.id
      - buyerInfo.id
      - "string"
    * - properties.hs_quote_amount
