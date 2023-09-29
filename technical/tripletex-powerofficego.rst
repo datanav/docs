@@ -2,7 +2,7 @@
 Tripletex to PowerOfficeGo Dataflow
 ===================================
 
-Generated: 2023-09-28 11:30:23
+Generated: 2023-09-29 05:23:57
 
 Introduction.
 ------------
@@ -154,6 +154,9 @@ The following properties are synchronized between a Tripletex Order and a PowerO
      - PowerOfficeGo Data Type
    * - changes.timestamp
      - createdDateTimeOffset
+     - "string"
+   * - contact.id
+     - customerId
      - "string"
    * - currency.id
      - CurrencyCode
