@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-29 05:24:25
+Generated: 2023-09-29 05:24:32
 
 Introduction.
 ------------
@@ -187,6 +187,36 @@ The following properties are synchronized between a SuperOffice Person and a Wav
    * - SuperOffice Person Property
      - Wave Customer person Property
      - Wave Data Type
+   * - Address.Street.Address1
+     - address.addressLine1
+     - "string"
+   * - Address.Street.Address2
+     - address.addressLine2
+     - "string"
+   * - Address.Street.City
+     - address.city
+     - "string"
+   * - Address.Street.Zipcode
+     - address.postalCode
+     - "string"
+   * - Country.CountryId
+     - address.country.code
+     - "string"
+   * - Emails.Value
+     - email
+     - "string"
+   * - Firstname
+     - firstName
+     - "string"
+   * - Lastname
+     - lastName
+     - "string"
+   * - MobilePhones.Value
+     - mobile
+     - "string"
+   * - OfficePhones.Value
+     - phone
+     - "string"
 
 
 SuperOffice Person to Wave Customer
@@ -229,9 +259,6 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - MobilePhones.Value
      - mobile
-     - "string"
-   * - OfficePhones.Value
-     - phone
      - "string"
 
 
