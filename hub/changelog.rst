@@ -144,7 +144,7 @@ Changelog
 2023-03-07
 ----------
 
-* Added the possibility to specify permissions to be applied to the pipe in a ``permissions`` ref:`pipe property <pipe_properties>`.
+* Added the possibility to specify permissions to be applied to the pipe in a ``permissions`` :ref:`pipe property <pipe_properties>`.
 
 .. _changelog_2023_02_28:
 
