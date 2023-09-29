@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-09-28 20:28:30
+Generated: 2023-09-29 05:23:57
 
 Introduction.
 ------------
@@ -236,6 +236,9 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
      - Tripletex Data Type
    * - buyerInfo.contactId
      - customer.id
+     - "integer"
+   * - buyerInfo.id
+     - contact.id
      - "integer"
    * - buyerInfo.id
      - customer.id
