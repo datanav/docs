@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-09-25 13:01:42
+Generated: 2023-09-29 14:25:28
 
 Introduction.
 ------------
@@ -210,6 +210,94 @@ The following properties are synchronized between a Wave Vendor and a SuperOffic
      - "string"
    * - phone
      - OfficePhones.Value
+     - "string"
+
+
+Wave Customer to SuperOffice Contact
+------------------------------------
+Every Wave Customer will be synchronized with a SuperOffice Contact.
+
+Once a link between a Wave Customer and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+   * - address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - address.city
+     - Address.Postal.City
+     - "string"
+   * - address.city
+     - Address.Street.City
+     - "string"
+   * - address.country.code
+     - Country.CountryId
+     - "integer"
+   * - address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - id
+     - ContactId
+     - "integer"
+   * - name
+     - Name
+     - "string"
+   * - phone
+     - Phones.Value
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Postal.City
+     - "string"
+   * - shippingDetails.address.city
+     - Address.Street.City
+     - "string"
+   * - shippingDetails.address.country.code
+     - Country.CountryId
+     - "integer"
+   * - shippingDetails.address.postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - shippingDetails.address.postalCode
+     - Address.Street.Zipcode
+     - "string"
+   * - shippingDetails.phone
+     - Phones.Value
+     - "string"
+   * - website
+     - Domains
+     - "list"
+   * - website
+     - Urls.Value
      - "string"
 
 
