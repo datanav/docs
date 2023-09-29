@@ -139,6 +139,13 @@ Changelog
 
 * ``allowed_status_codes`` and ``ignored_status_codes`` can now be specified on :ref:`REST operations <rest_operations>`, but they can only be used with the :ref:`REST transform <rest_transform>`.
 
+.. _changelog_2023_03_07:
+
+2023-03-07
+----------
+
+* Added the possibility to specify permissions to be applied to the pipe in a ``permissions`` ref:`pipe property <pipe_properties>`.
+
 .. _changelog_2023_02_28:
 
 2023-02-28

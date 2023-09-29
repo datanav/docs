@@ -106,6 +106,15 @@ Properties
      -
      -
 
+   * - ``permissions``
+     - List of ACL elements
+     - This property should contain a list of ACL definitions (itself a 3-element list (tuple) of
+       "ALLOW"|"DENY",[list,of,groups,or,roles],[list,of,permissions]) that defines
+       which permissions should be applied to the pipe when it's uploaded and instantiated. See the example configuration
+       below for how this should be formatted.
+     -
+     -
+
    * - ``batch_size``
      - Integer(>=1)
      - The number of source entities to consume before writing to the sink. The batch size
@@ -242,6 +251,10 @@ The following example shows a pipe definition that exposes data from HubSpot's R
           "url": "companies"
         }
       },
+      "permissions": [
+           ["allow", ["group:Developer"], ["read_config", "read_data", "write_data"]],
+           ["deny", ["1298aedf-f1c9-42ed-bfbf-00b6488d39b7_Clown"], ["read_config"]]
+       ]
       "add_namespaces": false,
       "namespaced_identifiers": false
     }
