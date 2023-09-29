@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-29 06:48:35
+Generated: 2023-09-29 14:08:39
 
 Introduction.
 ------------
@@ -56,6 +56,9 @@ The following properties are synchronized between a Tripletex Contact and a Wave
    * - Tripletex Contact Property
      - Wave Customer Property
      - Wave Data Type
+   * - customer.id
+     - id
+     - "string"
    * - email
      - email
      - "string"
@@ -209,6 +212,9 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
    * - address.postalCode
      - address.postalCode
+     - "string"
+   * - department.id
+     - id
      - "string"
    * - email
      - email
