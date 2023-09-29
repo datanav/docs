@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-29 06:31:43
+Generated: 2023-09-29 06:48:25
 
 Introduction.
 ------------
@@ -210,7 +210,7 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - Lastname
      - lastName
-     - "string"
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - MobilePhones.Value
      - mobile
      - "string"
