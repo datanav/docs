@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-09-29 05:23:57
+Generated: 2023-09-29 14:25:28
 
 Introduction.
 ------------
@@ -257,6 +257,24 @@ The following properties are synchronized between a Wave Vendor and a Tripletex 
    * - phone
      - phoneNumberWork
      - "string"
+
+
+Wave Customer to Tripletex Department
+-------------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Tripletex Department must be established.
+
+A new Tripletex Department will be created from a Wave Customer if it is connected to a Wave Vendor, Customer, or Customer-person that is synchronized into Tripletex.
+
+Once a link between a Wave Customer and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Tripletex Department Property
+     - Tripletex Data Type
 
 
 Wave Vendor to Tripletex Customer
