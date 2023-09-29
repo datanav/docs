@@ -2,12 +2,60 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-09-29 14:08:39
+Generated: 2023-09-29 14:25:28
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Powerofficego to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Powerofficego Customers to Wave Customer person
+-----------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Employees, Salesorder, Salesorders, or Contactperson that is synchronized into Wave.
+
+Once a link between a Powerofficego Customers and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Customers and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Customers Property
+     - Wave Customer person Property
+     - Wave Data Type
+   * - EmailAddress
+     - email
+     - "string"
+   * - FirstName
+     - firstName
+     - "string"
+   * - LastName
+     - lastName
+     - "string"
+   * - MailAddress.AddressLine1
+     - address.addressLine1
+     - "string"
+   * - MailAddress.AddressLine2
+     - address.addressLine2
+     - "string"
+   * - MailAddress.City
+     - address.city
+     - "string"
+   * - MailAddress.CountryCode
+     - address.country.code
+     - "string"
+   * - MailAddress.ZipCode
+     - address.postalCode
+     - "string"
+   * - PhoneNumber
+     - phone
+     - "string"
+   * - WebsiteUrl
+     - website
+     - "string"
+
 
 Powerofficego Customers to Wave Customer person
 -----------------------------------------------
@@ -55,6 +103,42 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - WebsiteUrl
      - website
      - "string"
+
+
+Powerofficego Departments to Wave Customer person
+-------------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Departments and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, or Contactperson that is synchronized into Wave.
+
+Once a link between a Powerofficego Departments and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Wave Customer person Property
+     - Wave Data Type
+
+
+Powerofficego Departments to Wave Customer
+------------------------------------------
+Before any synchronization can take place, a link between a Powerofficego Departments and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, or Contactperson that is synchronized into Wave.
+
+Once a link between a Powerofficego Departments and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Departments and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Departments Property
+     - Wave Customer Property
+     - Wave Data Type
 
 
 Powerofficego Salesorder to Wave Invoice
