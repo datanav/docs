@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-09-28 11:30:23
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
@@ -189,6 +189,42 @@ The following properties are synchronized between a SuperOffice Contact and a Po
    * - Name
      - Name
      - "string"
+
+
+SuperOffice Person to PowerOfficeGo Customers person
+----------------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a PowerOfficeGo Customers person must be established.
+
+A new PowerOfficeGo Customers person will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGo.
+
+Once a link between a SuperOffice Person and a PowerOfficeGo Customers person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGo Customers person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGo Customers person Property
+     - PowerOfficeGo Data Type
+
+
+SuperOffice Person to PowerOfficeGo Customers
+---------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a PowerOfficeGo Customers must be established.
+
+A new PowerOfficeGo Customers will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into PowerOfficeGo.
+
+Once a link between a SuperOffice Person and a PowerOfficeGo Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a PowerOfficeGo Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - PowerOfficeGo Customers Property
+     - PowerOfficeGo Data Type
 
 
 SuperOffice Quotealternative to PowerOfficeGo Salesorder
