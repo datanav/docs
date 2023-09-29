@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-29 06:48:45
+Generated: 2023-09-29 14:08:39
 
 Introduction.
 ------------
@@ -244,6 +244,9 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - Address.Street.Zipcode
      - address.postalCode
+     - "string"
+   * - Contact.ContactId
+     - id
      - "string"
    * - Country.CountryId
      - address.country.code
