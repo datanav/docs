@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-09-29 05:23:57
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
@@ -1048,6 +1048,42 @@ The following properties are synchronized between a HubSpot Quotequotetemplateas
    * - toObjectId
      - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
+
+
+HubSpot Company to HubSpot Contact
+----------------------------------
+Before any synchronization can take place, a link between a HubSpot Company and a HubSpot Contact must be established.
+
+A new HubSpot Contact will be created from a HubSpot Company if it is connected to a HubSpot Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
+
+Once a link between a HubSpot Company and a HubSpot Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Company and a HubSpot Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Company Property
+     - HubSpot Contact Property
+     - HubSpot Data Type
+
+
+HubSpot Contact to HubSpot Company
+----------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a HubSpot Company must be established.
+
+A new HubSpot Company will be created from a HubSpot Contact if it is connected to a HubSpot Quotedealassociation, Quotecompanyassociation, Quotecontactassociation, or Quotequotetemplateassociation that is synchronized into HubSpot.
+
+Once a link between a HubSpot Contact and a HubSpot Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a HubSpot Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - HubSpot Company Property
+     - HubSpot Data Type
 
 
 HubSpot User to HubSpot Contact
