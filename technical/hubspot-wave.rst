@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-09-27 07:38:59
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
@@ -164,6 +164,24 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
    * - properties.zip
      - address.postalCode
      - "string"
+
+
+HubSpot Contact to Wave Customer person
+---------------------------------------
+Before any synchronization can take place, a link between a HubSpot Contact and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Wave.
+
+Once a link between a HubSpot Contact and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contact and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contact Property
+     - Wave Customer person Property
+     - Wave Data Type
 
 
 HubSpot Contactcompanyassociation to Wave Customer
