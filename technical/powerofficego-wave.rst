@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-09-29 06:31:43
+Generated: 2023-09-29 06:48:45
 
 Introduction.
 ------------
@@ -168,7 +168,7 @@ The following properties are synchronized between a Powerofficego Customers and 
      - "string"
    * - Name
      - name
-     - "if","eq","","_."],"-","_."]
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - Number
      - phone
      - "string"
