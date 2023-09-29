@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-27 07:38:59
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
@@ -171,28 +171,22 @@ The following properties are synchronized between a SuperOffice Contact and a Wa
      - "string"
 
 
-SuperOffice Quotealternative to Wave Invoice
---------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
+SuperOffice Person to Wave Customer person
+------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Wave Customer person must be established.
 
-A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Wave.
+A new Wave Customer person will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Wave.
 
-Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+Once a link between a SuperOffice Person and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-The following properties are synchronized between a SuperOffice Quotealternative and a Wave Invoice:
+The following properties are synchronized between a SuperOffice Person and a Wave Customer person:
 
 .. list-table::
    :header-rows: 1
 
-   * - SuperOffice Quotealternative Property
-     - Wave Invoice Property
+   * - SuperOffice Person Property
+     - Wave Customer person Property
      - Wave Data Type
-   * - Description
-     - memo
-     - "string"
-   * - Name
-     - title
-     - "string"
 
 
 SuperOffice Person to Wave Customer
@@ -238,6 +232,30 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
    * - OfficePhones.Value
      - phone
+     - "string"
+
+
+SuperOffice Quotealternative to Wave Invoice
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
+
+A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Wave.
+
+Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - Description
+     - memo
+     - "string"
+   * - Name
+     - title
      - "string"
 
 
