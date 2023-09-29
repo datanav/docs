@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-29 14:25:45
+Generated: 2023-09-29 14:26:21
 
 Introduction.
 ------------
@@ -77,7 +77,7 @@ Tripletex Customer to Wave Customer person
 ------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Customer, or Employee that is synchronized into Wave.
+A new Wave Customer person will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Customer, Employee, or Department that is synchronized into Wave.
 
 Once a link between a Tripletex Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -188,7 +188,7 @@ Tripletex Department to Wave Customer person
 --------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, or Employee that is synchronized into Wave.
+A new Wave Customer person will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Employee, or Department that is synchronized into Wave.
 
 Once a link between a Tripletex Department and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -206,7 +206,7 @@ Tripletex Department to Wave Customer
 -------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer must be established.
 
-A new Wave Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, or Employee that is synchronized into Wave.
+A new Wave Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Employee, or Department that is synchronized into Wave.
 
 Once a link between a Tripletex Department and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
