@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-09-26 09:59:37
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
@@ -416,6 +416,24 @@ The following properties are synchronized between a SuperOffice User and a Tripl
      - "string"
 
 
+SuperOffice Contact to Tripletex Contact
+----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Contact must be established.
+
+A new Tripletex Contact will be created from a SuperOffice Contact if it is connected to a SuperOffice Quotealternative that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Contact and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Tripletex Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Tripletex Contact Property
+     - Tripletex Data Type
+
+
 SuperOffice Contact to Tripletex Department
 -------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Contact and a Tripletex Department must be established.
@@ -435,6 +453,24 @@ The following properties are synchronized between a SuperOffice Contact and a Tr
    * - Name
      - name
      - "string"
+
+
+SuperOffice Person to Tripletex Customer
+----------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Person and a Tripletex Customer must be established.
+
+A new Tripletex Customer will be created from a SuperOffice Person if it is connected to a SuperOffice Quotealternative that is synchronized into Tripletex.
+
+Once a link between a SuperOffice Person and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Person and a Tripletex Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Person Property
+     - Tripletex Customer Property
+     - Tripletex Data Type
 
 
 SuperOffice Quotealternative to Tripletex Order
