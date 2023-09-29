@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-09-29 05:24:25
+Generated: 2023-09-29 05:24:32
 
 Introduction.
 ------------
@@ -100,6 +100,9 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGo Customers Property
      - PowerOfficeGo Data Type
+   * - properties.country
+     - MailAddress.CountryCode
+     - "string"
 
 
 HubSpot Contact to PowerOfficeGo Customers person
@@ -118,6 +121,24 @@ The following properties are synchronized between a HubSpot Contact and a PowerO
    * - HubSpot Contact Property
      - PowerOfficeGo Customers person Property
      - PowerOfficeGo Data Type
+   * - properties.country
+     - MailAddress.CountryCode
+     - "string"
+   * - properties.date_of_birth
+     - DateOfBirth
+     - "datetime-format","%Y-%m-%d","_."]
+   * - properties.email
+     - EmailAddress
+     - "string"
+   * - properties.firstname
+     - FirstName
+     - "string"
+   * - properties.lastname
+     - LastName
+     - "string"
+   * - properties.phone
+     - PhoneNumber
+     - "string"
 
 
 HubSpot Deal to PowerOfficeGo Outgoinginvoices
