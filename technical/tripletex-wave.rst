@@ -2,12 +2,61 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-29 05:23:57
+Generated: 2023-09-29 05:24:25
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Wave Customer person
+-----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Contact and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Tripletex Contact if it is connected to a Tripletex Order that is synchronized into Wave.
+
+Once a link between a Tripletex Contact and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wave Customer person Property
+     - Wave Data Type
+
+
+Tripletex Contact to Wave Customer
+----------------------------------
+Every Tripletex Contact will be synchronized with a Wave Customer.
+
+Once a link between a Tripletex Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - email
+     - email
+     - "string"
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - phoneNumberMobile
+     - mobile
+     - "string"
+   * - phoneNumberWork
+     - phone
+     - "string"
+
 
 Tripletex Customer to Wave Customer person
 ------------------------------------------
@@ -117,37 +166,6 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
    * - postalAddress.postalCode
      - shippingDetails.address.postalCode
-     - "string"
-
-
-Tripletex Contact to Wave Customer
-----------------------------------
-Every Tripletex Contact will be synchronized with a Wave Customer.
-
-Once a link between a Tripletex Contact and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - email
-     - email
-     - "string"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - phoneNumberMobile
-     - mobile
-     - "string"
-   * - phoneNumberWork
-     - phone
      - "string"
 
 
