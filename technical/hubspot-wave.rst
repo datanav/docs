@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-09-29 06:48:23
+Generated: 2023-09-29 14:08:39
 
 Introduction.
 ------------
@@ -222,6 +222,9 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
    * - HubSpot Contactcompanyassociation Property
      - Wave Customer Property
      - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
+     - id
+     - "string"
 
 
 HubSpot User to Wave Customer
