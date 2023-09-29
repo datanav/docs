@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-09-29 05:24:32
+Generated: 2023-09-29 06:48:23
 
 Introduction.
 ------------
@@ -196,7 +196,7 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
    * - properties.lastname
      - lastName
-     - "string"
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - properties.mobilephone
      - mobile
      - "string"
