@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-02 14:43:44
+Generated: 2023-10-02 15:00:38
 
 Introduction.
 ------------
@@ -673,6 +673,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - SalesOrderLineUnitPrice
      - unitPriceExcludingVatCurrency
      - "float"
+   * - VatRate
+     - vatType.id
+     - "integer"
    * - VatReturnSpecification
      - vatType.id
      - "integer"
