@@ -4,7 +4,7 @@
 Pricing
 =======
 
-In this guide, we will provide you with detailed information about our pricing model, including the freemium plan and the , :ref:`See premium plans<premium_plans>`Small Talk and Talk.
+In this guide, we will provide you with detailed information about our pricing model, including the freemium plan and the , :ref:`See premium plans<premium_plans>` Small Talk and Talk.
 
 
 Pricing Overview
