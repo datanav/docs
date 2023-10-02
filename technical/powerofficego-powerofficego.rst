@@ -2,7 +2,7 @@
 Powerofficego to PowerOfficeGo Dataflow
 =======================================
 
-Generated: 2023-09-28 11:32:30
+Generated: 2023-10-02 12:32:51
 
 Introduction.
 ------------
@@ -736,6 +736,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
    * - Powerofficego Salesorderlines Property
      - PowerOfficeGo Outgoinginvoices Property
      - PowerOfficeGo Data Type
+   * - sesam_SalesOrdersId
+     - OrderNo
+     - "string"
 
 
 Powerofficego Salesorders to PowerOfficeGo Outgoinginvoices
