@@ -35,7 +35,7 @@ Our freemium plan offers an excellent starting point for users who want to exper
 
 - **System Connections**: You can connect an unlimited number of systems, facilitating comprehensive data synchronisation across multiple services.
 
-- **Monthly Updates**: The freemium plan includes 100 updates per month at no additional charge.
+- **Monthly Updates**: The freemium plan includes 100 updates per month at no  charge.
 
 .. _premium_plans:
 
