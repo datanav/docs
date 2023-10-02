@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-09-29 05:24:25
+Generated: 2023-10-02 12:32:51
 
 Introduction.
 ------------
@@ -669,6 +669,9 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "float"
    * - VatReturnSpecification
      - vatType.id
+     - "integer"
+   * - sesam_SalesOrdersId
+     - order.id
      - "integer"
 
 
