@@ -36,7 +36,7 @@ Data types
 
    * - :ref:`Documentation <datatype_documentation>`
      - true
-     - false
+     - true
 
    * - :ref:`Event <datatype_event>`
      - true
