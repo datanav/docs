@@ -126,6 +126,18 @@ Template properties
      -
      - No
 
+   * - ``operation_lookup_delete``
+     - String
+     - The id of the REST system operation to use for lookups of deletes. This property takes precedence over ``operation_lookup``, so the two cannot be used at the same time. This operation is used to do lookups of deleted entities to verify that they are actually non-existent in the system. If the entitiy does exist, then the ``_deleted`` property will be rewritten to be ``false``.
+     -
+     - Yes
+
+   * - ``operation_lookup_delete_properties``
+     - Object
+     - The properties to pass to the lookup of deletes operation.
+     -
+     - No
+
 
 .. _template_transform_defaults_rest:
 
