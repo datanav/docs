@@ -2,7 +2,7 @@
 SuperOffice to PowerOfficeGo Dataflow
 =====================================
 
-Generated: 2023-10-02 14:43:44
+Generated: 2023-10-04 17:46:47
 
 Introduction.
 ------------
@@ -468,6 +468,9 @@ The following properties are synchronized between a SuperOffice Product and a Po
      - "string"
    * - VAT
      - VatCode
+     - "string"
+   * - VAT
+     - unitOfMeasureCode
      - "string"
    * - VAT
      - vatCode
