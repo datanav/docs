@@ -2,12 +2,30 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:39:58
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Wave Financial to Wave. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Wave Customer to Wave Customer person
+-------------------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Wave Customer person must be established.
+
+A new Wave Customer person will be created from a Wave Customer if it is connected to a Wave Vendor that is synchronized into Wave.
+
+Once a link between a Wave Customer and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Wave Customer person:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wave Customer person Property
+     - Wave Data Type
+
 
 Wave Vendor to Wave Customer
 ----------------------------
