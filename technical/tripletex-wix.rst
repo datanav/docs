@@ -2,7 +2,7 @@
 Tripletex to Wix Dataflow
 =========================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -152,6 +152,49 @@ The following properties are synchronized between a Tripletex Customer and a Wix
      - Wix Data Type
 
 
+Tripletex Orderline to Wix Orders
+---------------------------------
+Every Tripletex Orderline will be synchronized with a Wix Orders.
+
+Once a link between a Tripletex Orderline and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - count
+     - lineItems.quantity
+     - "string"
+   * - count
+     - lineItems.quantity.quantity
+     - "string"
+   * - currency.id
+     - currency
+     - "string"
+   * - description
+     - lineItems.name
+     - "string"
+   * - description
+     - lineItems.name.name
+     - "string"
+   * - product.id
+     - lineItems.productId
+     - "string"
+   * - product.id
+     - lineItems.productId.productId
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - lineItems.price
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - lineItems.price.price
+     - "string"
+
+
 Tripletex Productgrouprelation to Wix Inventory
 -----------------------------------------------
 Every Tripletex Productgrouprelation will be synchronized with a Wix Inventory.
@@ -242,49 +285,6 @@ The following properties are synchronized between a Tripletex Order and a Wix Or
      - "string"
    * - customer.id
      - buyerInfo.id
-     - "string"
-
-
-Tripletex Orderline to Wix Orders
----------------------------------
-Every Tripletex Orderline will be synchronized with a Wix Orders.
-
-Once a link between a Tripletex Orderline and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - count
-     - lineItems.quantity
-     - "string"
-   * - count
-     - lineItems.quantity.quantity
-     - "string"
-   * - currency.id
-     - currency
-     - "string"
-   * - description
-     - lineItems.name
-     - "string"
-   * - description
-     - lineItems.name.name
-     - "string"
-   * - product.id
-     - lineItems.productId
-     - "string"
-   * - product.id
-     - lineItems.productId.productId
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - lineItems.price
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - lineItems.price.price
      - "string"
 
 
