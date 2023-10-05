@@ -2,7 +2,7 @@
 Businesscentral to Tripletex Dataflow
 =====================================
 
-Generated: 2023-10-05 10:41:25
+Generated: 2023-10-05 10:42:28
 
 Introduction.
 ------------
@@ -78,6 +78,12 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - id
      - id
      - "integer"
+   * - mobilePhoneNumber
+     - phoneNumberMobile
+     - "string"
+   * - phoneNumber
+     - phoneNumber
+     - "string"
    * - postalCode
      - deliveryAddress.postalCode
      - "string"
