@@ -2,7 +2,7 @@
 Powerofficego to BusinessCentral Dataflow
 =========================================
 
-Generated: 2023-10-05 06:21:22
+Generated: 2023-10-05 06:21:58
 
 Introduction.
 ------------
@@ -54,6 +54,22 @@ The following properties are synchronized between a Powerofficego Departments an
 
    * - Powerofficego Departments Property
      - BusinessCentral Company Property
+     - BusinessCentral Data Type
+
+
+Powerofficego Employees to BusinessCentral Contact
+--------------------------------------------------
+Every Powerofficego Employees will be synchronized with a BusinessCentral Contact.
+
+Once a link between a Powerofficego Employees and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a BusinessCentral Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - BusinessCentral Contact Property
      - BusinessCentral Data Type
 
 
