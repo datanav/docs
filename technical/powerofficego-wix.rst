@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-10-05 08:43:17
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -139,6 +139,34 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
 
 
+Powerofficego Salesorderlines to Wix Orders
+-------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Wix Orders.
+
+Once a link between a Powerofficego Salesorderlines and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - Wix Orders Property
+     - Wix Data Type
+   * - Description
+     - lineItems.name
+     - "string"
+   * - ProductUnitPrice
+     - lineItems.price
+     - "string"
+   * - Quantity
+     - lineItems.quantity
+     - "string"
+   * - TotalAmount
+     - totals.total
+     - "string"
+
+
 Powerofficego Contactperson to Wix Contacts
 -------------------------------------------
 Every Powerofficego Contactperson will be synchronized with a Wix Contacts.
@@ -243,34 +271,6 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - salesPrice
      - priceData.price
      - "decimal"
-
-
-Powerofficego Salesorderlines to Wix Orders
--------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorderlines and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - Description
-     - lineItems.name
-     - "string"
-   * - ProductUnitPrice
-     - lineItems.price
-     - "string"
-   * - Quantity
-     - lineItems.quantity
-     - "string"
-   * - TotalAmount
-     - totals.total
-     - "string"
 
 
 Powerofficego Salesorders to Wix Orders
