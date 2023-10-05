@@ -2,7 +2,7 @@
 SuperOffice to UniEconomy Dataflow
 ==================================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -24,6 +24,25 @@ The following properties are synchronized between a SuperOffice Contact and a Un
      - UniEconomy Companies Property
      - UniEconomy Data Type
    * - Name
+     - Name
+     - "string"
+
+
+SuperOffice Ownercontactlink to UniEconomy Departments
+------------------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a UniEconomy Departments.
+
+Once a link between a SuperOffice Ownercontactlink and a UniEconomy Departments is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a UniEconomy Departments:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - UniEconomy Departments Property
+     - UniEconomy Data Type
+   * - name
      - Name
      - "string"
 
