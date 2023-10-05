@@ -2,7 +2,7 @@
 Businesscentral to SuperOffice Dataflow
 =======================================
 
-Generated: 2023-10-05 06:51:02
+Generated: 2023-10-05 06:51:09
 
 Introduction.
 ------------
@@ -39,6 +39,39 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - Businesscentral Contact company Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
+   * - addressLine1
+     - Address.Postal.Address1
+     - "string"
+   * - addressLine1
+     - Address.Street.Address1
+     - "string"
+   * - addressLine2
+     - Address.Postal.Address2
+     - "string"
+   * - addressLine2
+     - Address.Street.Address2
+     - "string"
+   * - city
+     - Address.Postal.City
+     - "string"
+   * - city
+     - Address.Street.City
+     - "string"
+   * - country
+     - Country.CountryId
+     - "integer"
+   * - id
+     - ContactId
+     - "integer"
+   * - phoneNumber
+     - Phones.Value
+     - "string"
+   * - postalCode
+     - Address.Postal.Zipcode
+     - "string"
+   * - postalCode
+     - Address.Street.Zipcode
+     - "string"
 
 
 Businesscentral Contact to SuperOffice Person
