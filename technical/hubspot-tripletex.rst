@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 06:16:43
+Generated: 2023-10-05 08:39:58
 
 Introduction.
 ------------
@@ -115,7 +115,7 @@ HubSpot Company to Tripletex Contact
 ------------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Tripletex Contact must be established.
 
-A new Tripletex Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Tripletex.
+A new Tripletex Contact will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
 
 Once a link between a HubSpot Company and a Tripletex Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -209,7 +209,7 @@ HubSpot Contact to Tripletex Customer
 -------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a Tripletex Customer must be established.
 
-A new Tripletex Customer will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Tripletex.
+A new Tripletex Customer will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Tripletex.
 
 Once a link between a HubSpot Contact and a Tripletex Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
