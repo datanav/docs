@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-10-05 06:06:18
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -113,38 +113,6 @@ The following properties are synchronized between a SuperOffice Pricelist and a 
      - Wix Data Type
 
 
-SuperOffice Product to Wix Inventory
-------------------------------------
-Every SuperOffice Product will be synchronized with a Wix Inventory.
-
-If a matching Wix Inventory already exists, the SuperOffice Product will be merged with the existing one.
-If no matching Wix Inventory is found, a new Wix Inventory will be created.
-
-A SuperOffice Product will merge with a Wix Inventory if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Wix Inventory Property
-   * - ERPProductKey
-     - id
-
-Once a link between a SuperOffice Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Wix Inventory Property
-     - Wix Data Type
-   * - ERPProductKey
-     - id
-     - "string"
-
-
 SuperOffice User to Wix Contacts
 --------------------------------
 Before any synchronization can take place, a link between a SuperOffice User and a Wix Contacts must be established.
@@ -212,4 +180,89 @@ The following properties are synchronized between a SuperOffice User and a Wix M
    * - personEmail
      - loginEmail
      - "string"
+
+
+SuperOffice Product to Wix Inventory
+------------------------------------
+Every SuperOffice Product will be synchronized with a Wix Inventory.
+
+If a matching Wix Inventory already exists, the SuperOffice Product will be merged with the existing one.
+If no matching Wix Inventory is found, a new Wix Inventory will be created.
+
+A SuperOffice Product will merge with a Wix Inventory if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Inventory Property
+   * - ERPProductKey
+     - id
+
+Once a link between a SuperOffice Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Inventory Property
+     - Wix Data Type
+   * - ERPProductKey
+     - id
+     - "string"
+
+
+SuperOffice Product to Wix Products
+-----------------------------------
+Every SuperOffice Product will be synchronized with a Wix Products.
+
+Once a link between a SuperOffice Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wix Products Property
+     - Wix Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - price.currency
+     - "string"
+   * - ERPPriceListKey
+     - priceData.currency
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - UnitCost
+     - costRange.maxValue
+     - "string"
+   * - UnitListPrice
+     - price.price
+     - "string"
+   * - UnitListPrice
+     - priceData.price
+     - "decimal"
+
+
+SuperOffice Quoteline to Wix Orders
+-----------------------------------
+Every SuperOffice Quoteline will be synchronized with a Wix Orders.
+
+Once a link between a SuperOffice Quoteline and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Wix Orders Property
+     - Wix Data Type
 
