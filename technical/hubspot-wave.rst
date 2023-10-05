@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -245,7 +245,7 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - Wave Invoice Property
      - Wave Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "string"
 
@@ -264,7 +264,7 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - Wave Invoice Property
      - Wave Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "string"
 
@@ -283,6 +283,18 @@ The following properties are synchronized between a HubSpot Lineitem and a Wave 
    * - HubSpot Lineitem Property
      - Wave Invoice Property
      - Wave Data Type
+   * - properties.hs_product_id
+     - items.product.id
+     - "string"
+   * - properties.name
+     - items.description
+     - "string"
+   * - properties.price
+     - items.price
+     - "float"
+   * - properties.quantity
+     - items.quantity
+     - "float"
 
 
 HubSpot Lineitemquoteassociation to Wave Invoice
@@ -318,6 +330,9 @@ The following properties are synchronized between a HubSpot Quote and a Wave Inv
    * - associations.companies.results.id
      - customer.id
      - "string"
+   * - associations.contacts.results.id
+     - customer.id
+     - "string"
    * - properties.hs_title
      - title
      - "string"
@@ -337,7 +352,7 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociation Property
      - Wave Invoice Property
      - Wave Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "string"
 
@@ -356,7 +371,7 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociation Property
      - Wave Invoice Property
      - Wave Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "string"
 
@@ -407,7 +422,7 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociation Property
      - Wave Invoice Property
      - Wave Data Type
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "string"
 
