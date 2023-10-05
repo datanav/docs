@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 08:41:49
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -297,6 +297,22 @@ The following properties are synchronized between a HubSpot Lineitem and a Wave 
      - "float"
 
 
+HubSpot Lineitemdealassociation to Wave Invoice
+-----------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Lineitemdealassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
 HubSpot Lineitemquoteassociation to Wave Invoice
 ------------------------------------------------
 Every HubSpot Lineitemquoteassociation will be synchronized with a Wave Invoice.
@@ -466,22 +482,6 @@ The following properties are synchronized between a HubSpot Deal and a Wave Invo
    * - properties.description
      - memo
      - "string"
-
-
-HubSpot Lineitemdealassociation to Wave Invoice
------------------------------------------------
-Every HubSpot Lineitemdealassociation will be synchronized with a Wave Invoice.
-
-Once a link between a HubSpot Lineitemdealassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Lineitemdealassociation and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Lineitemdealassociation Property
-     - Wave Invoice Property
-     - Wave Data Type
 
 
 HubSpot Product to Wave Product
