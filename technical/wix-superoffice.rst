@@ -2,7 +2,7 @@
 Wix.com to SuperOffice Dataflow
 ===============================
 
-Generated: 2023-10-05 06:06:18
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -58,32 +58,6 @@ The following properties are synchronized between a Wix.com Contacts and a Super
      - "string"
 
 
-Wix.com Inventory to SuperOffice Product
-----------------------------------------
-Before any synchronization can take place, a link between a Wix.com Inventory and a SuperOffice Product must be established.
-
-A Wix.com Inventory will merge with a SuperOffice Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     - SuperOffice Product Property
-   * - id
-     - ERPProductKey
-
-Once a link between a Wix.com Inventory and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Inventory and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Inventory Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-
-
 Wix.com Members to SuperOffice Person
 -------------------------------------
 Every Wix.com Members will be synchronized with a SuperOffice Person.
@@ -114,4 +88,89 @@ The following properties are synchronized between a Wix.com Members and a SuperO
    * - loginEmail
      - Emails.Value
      - "string"
+
+
+Wix.com Inventory to SuperOffice Product
+----------------------------------------
+Every Wix.com Inventory will be synchronized with a SuperOffice Product.
+
+If a matching SuperOffice Product already exists, the Wix.com Inventory will be merged with the existing one.
+If no matching SuperOffice Product is found, a new SuperOffice Product will be created.
+
+A Wix.com Inventory will merge with a SuperOffice Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Inventory Property
+     - SuperOffice Product Property
+   * - id
+     - ERPProductKey
+
+Once a link between a Wix.com Inventory and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Inventory and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Inventory Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+
+
+Wix.com Products to SuperOffice Listproducttypeitems
+----------------------------------------------------
+Every Wix.com Products will be synchronized with a SuperOffice Listproducttypeitems.
+
+Once a link between a Wix.com Products and a SuperOffice Listproducttypeitems is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a SuperOffice Listproducttypeitems:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - SuperOffice Listproducttypeitems Property
+     - SuperOffice Data Type
+   * - productType
+     - Name
+     - "string"
+
+
+Wix.com Products to SuperOffice Product
+---------------------------------------
+Every Wix.com Products will be synchronized with a SuperOffice Product.
+
+Once a link between a Wix.com Products and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - costRange.maxValue
+     - UnitCost
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - price.currency
+     - ERPPriceListKey
+     - "string"
+   * - price.price
+     - UnitListPrice
+     - "decimal"
+   * - priceData.currency
+     - ERPPriceListKey
+     - "string"
+   * - priceData.price
+     - UnitListPrice
+     - "decimal"
 
