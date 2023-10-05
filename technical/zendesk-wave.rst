@@ -2,7 +2,7 @@
 Zendesk to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -25,7 +25,7 @@ The following properties are synchronized between a Zendesk Organisations and a 
      - Wave Data Type
    * - name
      - name
-     - "string"
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - url
      - website
      - "string"
