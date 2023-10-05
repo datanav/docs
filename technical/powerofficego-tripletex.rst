@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-02 15:00:38
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -147,6 +147,70 @@ The following properties are synchronized between a Powerofficego Salesorder and
      - Tripletex Data Type
 
 
+Powerofficego Currency to Tripletex Customercategory
+----------------------------------------------------
+Every Powerofficego Currency will be synchronized with a Tripletex Customercategory.
+
+Once a link between a Powerofficego Currency and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Currency and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Currency Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+
+
+Powerofficego Outgoinginvoices to Tripletex Order
+-------------------------------------------------
+Every Powerofficego Outgoinginvoices will be synchronized with a Tripletex Order.
+
+Once a link between a Powerofficego Outgoinginvoices and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Outgoinginvoices and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Outgoinginvoices Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
+Powerofficego Productgroup to Tripletex Customercategory
+--------------------------------------------------------
+Every Powerofficego Productgroup will be synchronized with a Tripletex Customercategory.
+
+Once a link between a Powerofficego Productgroup and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Productgroup and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Productgroup Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+
+
+Powerofficego Salesorderlines to Tripletex Order
+------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Tripletex Order.
+
+Once a link between a Powerofficego Salesorderlines and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
 Powerofficego Suppliers to Tripletex Customer
 ---------------------------------------------
 Every Powerofficego Suppliers will be synchronized with a Tripletex Customer.
@@ -218,6 +282,22 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - PhoneNumber
      - phoneNumber
      - "string"
+
+
+Powerofficego Vatcodes to Tripletex Customercategory
+----------------------------------------------------
+Every Powerofficego Vatcodes will be synchronized with a Tripletex Customercategory.
+
+Once a link between a Powerofficego Vatcodes and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Vatcodes and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Vatcodes Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
 
 
 Powerofficego Contactperson to Tripletex Contact
