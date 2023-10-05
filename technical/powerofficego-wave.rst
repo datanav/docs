@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:39:58
 
 Introduction.
 ------------
@@ -13,7 +13,7 @@ Powerofficego Customers to Wave Customer person
 -----------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Customers and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Employees, Salesorder, Departments, Salesorders, or Contactperson that is synchronized into Wave.
+A new Wave Customer person will be created from a Powerofficego Customers if it is connected to a Powerofficego Customers, Employees, Suppliers, Salesorder, Departments, Salesorders, Contactperson, Salesorderlines, or Outgoinginvoices that is synchronized into Wave.
 
 Once a link between a Powerofficego Customers and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -125,7 +125,7 @@ Powerofficego Departments to Wave Customer person
 -------------------------------------------------
 Before any synchronization can take place, a link between a Powerofficego Departments and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, Departments, or Contactperson that is synchronized into Wave.
+A new Wave Customer person will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, Suppliers, Departments, or Contactperson that is synchronized into Wave.
 
 Once a link between a Powerofficego Departments and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
