@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -141,9 +141,7 @@ The following properties are synchronized between a Powerofficego Departments an
 
 Powerofficego Departments to Wave Customer
 ------------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Departments and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Powerofficego Departments if it is connected to a Powerofficego Customers, Employees, Departments, or Contactperson that is synchronized into Wave.
+Every Powerofficego Departments will be synchronized with a Wave Customer.
 
 Once a link between a Powerofficego Departments and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -180,9 +178,7 @@ The following properties are synchronized between a Powerofficego Salesorder and
 
 Powerofficego Salesorders to Wave Invoice
 -----------------------------------------
-Before any synchronization can take place, a link between a Powerofficego Salesorders and a Wave Invoice must be established.
-
-A new Wave Invoice will be created from a Powerofficego Salesorders if it is connected to a Powerofficego Salesorder, or Salesorders that is synchronized into Wave.
+Every Powerofficego Salesorders will be synchronized with a Wave Invoice.
 
 Once a link between a Powerofficego Salesorders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -268,4 +264,68 @@ The following properties are synchronized between a Powerofficego Employees and 
    * - PhoneNumber
      - mobile
      - "string"
+
+
+Powerofficego Outgoinginvoices to Wave Invoice
+----------------------------------------------
+Every Powerofficego Outgoinginvoices will be synchronized with a Wave Invoice.
+
+Once a link between a Powerofficego Outgoinginvoices and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Outgoinginvoices and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Outgoinginvoices Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+Powerofficego Product to Wave Product
+-------------------------------------
+Every Powerofficego Product will be synchronized with a Wave Product.
+
+Once a link between a Powerofficego Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Wave Product Property
+     - Wave Data Type
+
+
+Powerofficego Salesorderlines to Wave Invoice
+---------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Wave Invoice.
+
+Once a link between a Powerofficego Salesorderlines and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+Powerofficego Suppliers to Wave Customer
+----------------------------------------
+Every Powerofficego Suppliers will be synchronized with a Wave Customer.
+
+Once a link between a Powerofficego Suppliers and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Suppliers and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Suppliers Property
+     - Wave Customer Property
+     - Wave Data Type
 
