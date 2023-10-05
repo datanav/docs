@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-10-05 08:43:17
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -310,32 +310,4 @@ The following properties are synchronized between a SuperOffice Product and a Wa
    * - UnitListPrice
      - unitPrice
      - "string"
-
-
-SuperOffice Quoteline to Wave Invoice
--------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Wave Invoice.
-
-Once a link between a SuperOffice Quoteline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - ERPProductKey
-     - items.product.id
-     - "string"
-   * - Name
-     - items.description
-     - "string"
-   * - Quantity
-     - items.quantity
-     - "float"
-   * - UnitListPrice
-     - items.price
-     - "float"
 
