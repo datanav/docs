@@ -2,7 +2,7 @@
 Freshteam to Wave Dataflow
 ==========================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Freshteam Department and a W
    * - Freshteam Department Property
      - Wave Customer Property
      - Wave Data Type
+   * - name
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
 
 
 Freshteam Employee to Wave Customer
