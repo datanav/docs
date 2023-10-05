@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 06:13:43
+Generated: 2023-10-05 06:14:12
 
 Introduction.
 ------------
@@ -349,6 +349,25 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    :header-rows: 1
 
    * - HubSpot Quotecontactassociationtype Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+   * - label
+     - name
+     - "string"
+
+
+HubSpot Quotedealassociationtype to Tripletex Customercategory
+--------------------------------------------------------------
+Every HubSpot Quotedealassociationtype will be synchronized with a Tripletex Customercategory.
+
+Once a link between a HubSpot Quotedealassociationtype and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociationtype and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociationtype Property
      - Tripletex Customercategory Property
      - Tripletex Data Type
    * - label
