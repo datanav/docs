@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -78,4 +78,36 @@ The following properties are synchronized between a Zendesk Organisations and a 
    * - name
      - name
      - "string"
+
+
+Zendesk Ticketcomments to Tripletex Project
+-------------------------------------------
+Every Zendesk Ticketcomments will be synchronized with a Tripletex Project.
+
+Once a link between a Zendesk Ticketcomments and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Ticketcomments and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Ticketcomments Property
+     - Tripletex Project Property
+     - Tripletex Data Type
+
+
+Zendesk Tickets to Tripletex Project
+------------------------------------
+Every Zendesk Tickets will be synchronized with a Tripletex Project.
+
+Once a link between a Zendesk Tickets and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Zendesk Tickets and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Zendesk Tickets Property
+     - Tripletex Project Property
+     - Tripletex Data Type
 
