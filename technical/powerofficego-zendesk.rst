@@ -2,7 +2,7 @@
 Powerofficego to Zendesk Dataflow
 =================================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -57,22 +57,6 @@ The following properties are synchronized between a Powerofficego Departments an
      - Zendesk Data Type
 
 
-Powerofficego Employees to Zendesk Users
-----------------------------------------
-Every Powerofficego Employees will be synchronized with a Zendesk Users.
-
-Once a link between a Powerofficego Employees and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Employees and a Zendesk Users:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Employees Property
-     - Zendesk Users Property
-     - Zendesk Data Type
-
-
 Powerofficego Suppliers to Zendesk Organisations
 ------------------------------------------------
 Every Powerofficego Suppliers will be synchronized with a Zendesk Organisations.
@@ -86,5 +70,21 @@ The following properties are synchronized between a Powerofficego Suppliers and 
 
    * - Powerofficego Suppliers Property
      - Zendesk Organisations Property
+     - Zendesk Data Type
+
+
+Powerofficego Employees to Zendesk Users
+----------------------------------------
+Every Powerofficego Employees will be synchronized with a Zendesk Users.
+
+Once a link between a Powerofficego Employees and a Zendesk Users is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Employees and a Zendesk Users:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Employees Property
+     - Zendesk Users Property
      - Zendesk Data Type
 
