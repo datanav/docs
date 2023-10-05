@@ -2,7 +2,7 @@
 Wix.com to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -107,22 +107,6 @@ The following properties are synchronized between a Wix.com Members and a Wave C
      - "string"
 
 
-Wix.com Orders to Wave Invoice
-------------------------------
-Every Wix.com Orders will be synchronized with a Wave Invoice.
-
-Once a link between a Wix.com Orders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Orders and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Orders Property
-     - Wave Invoice Property
-     - Wave Data Type
-
-
 Wix.com Product to Wave Product
 -------------------------------
 Before any synchronization can take place, a link between a Wix.com Product and a Wave Product must be established.
@@ -141,22 +125,6 @@ The following properties are synchronized between a Wix.com Product and a Wave P
      - Wave Data Type
 
 
-Wix.com Products to Wave Product
---------------------------------
-Every Wix.com Products will be synchronized with a Wave Product.
-
-Once a link between a Wix.com Products and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wix.com Products and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wix.com Products Property
-     - Wave Product Property
-     - Wave Data Type
-
-
 Wix.com Inventory to Wave Product
 ---------------------------------
 Every Wix.com Inventory will be synchronized with a Wave Product.
@@ -171,4 +139,87 @@ The following properties are synchronized between a Wix.com Inventory and a Wave
    * - Wix.com Inventory Property
      - Wave Product Property
      - Wave Data Type
+
+
+Wix.com Orders to Wave Invoice
+------------------------------
+Every Wix.com Orders will be synchronized with a Wave Invoice.
+
+Once a link between a Wix.com Orders and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - buyerInfo.contactId
+     - customer.id
+     - "string"
+   * - buyerInfo.id
+     - customer.id
+     - "string"
+   * - currency
+     - currency.code
+     - "string"
+   * - dateCreated
+     - invoiceDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - lineItems.name
+     - items.description
+     - "string"
+   * - lineItems.name.name
+     - items.description
+     - "string"
+   * - lineItems.price
+     - items.price
+     - "float"
+   * - lineItems.price
+     - items.unitPrice
+     - "float"
+   * - lineItems.price.price
+     - items.price
+     - "float"
+   * - lineItems.productId
+     - items.product.id
+     - "string"
+   * - lineItems.productId.productId
+     - items.product.id
+     - "string"
+   * - lineItems.quantity
+     - items.quantity
+     - "float"
+   * - lineItems.quantity.quantity
+     - items.quantity
+     - "float"
+
+
+Wix.com Products to Wave Product
+--------------------------------
+Every Wix.com Products will be synchronized with a Wave Product.
+
+Once a link between a Wix.com Products and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Products and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Products Property
+     - Wave Product Property
+     - Wave Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - price.price
+     - unitPrice
+     - "string"
+   * - priceData.price
+     - unitPrice
+     - "string"
 
