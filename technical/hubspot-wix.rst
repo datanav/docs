@@ -2,7 +2,7 @@
 HubSpot to Wix Dataflow
 =======================
 
-Generated: 2023-09-29 05:23:57
+Generated: 2023-10-05 06:06:18
 
 Introduction.
 ------------
@@ -123,6 +123,24 @@ The following properties are synchronized between a HubSpot Company and a Wix Me
      - Wix Data Type
 
 
+HubSpot Product to Wix Products
+-------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a Wix Products must be established.
+
+A new Wix Products will be created from a HubSpot Product if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wix.
+
+Once a link between a HubSpot Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Wix Products Property
+     - Wix Data Type
+
+
 HubSpot Contactcompanyassociation to Wix Contacts
 -------------------------------------------------
 Every HubSpot Contactcompanyassociation will be synchronized with a Wix Contacts.
@@ -136,6 +154,22 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
 
    * - HubSpot Contactcompanyassociation Property
      - Wix Contacts Property
+     - Wix Data Type
+
+
+HubSpot Deal to Wix Orders
+--------------------------
+Every HubSpot Deal will be synchronized with a Wix Orders.
+
+Once a link between a HubSpot Deal and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wix Orders Property
      - Wix Data Type
 
 
@@ -252,6 +286,22 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
 
    * - HubSpot Lineitemquoteassociation Property
      - Wix Orders Property
+     - Wix Data Type
+
+
+HubSpot Product to Wix Inventory
+--------------------------------
+Every HubSpot Product will be synchronized with a Wix Inventory.
+
+Once a link between a HubSpot Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Wix Inventory Property
      - Wix Data Type
 
 
@@ -395,134 +445,4 @@ The following properties are synchronized between a HubSpot User and a Wix Conta
    * - HubSpot User Property
      - Wix Contacts Property
      - Wix Data Type
-
-
-HubSpot Account to Wix Currencies
----------------------------------
-Every HubSpot Account will be synchronized with a Wix Currencies.
-
-If a matching Wix Currencies already exists, the HubSpot Account will be merged with the existing one.
-If no matching Wix Currencies is found, a new Wix Currencies will be created.
-
-A HubSpot Account will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - Wix Currencies Property
-   * - companyCurrency
-     - code
-
-Once a link between a HubSpot Account and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Account and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Account Property
-     - Wix Currencies Property
-     - Wix Data Type
-
-
-HubSpot Deal to Wix Currencies
-------------------------------
-Every HubSpot Deal will be synchronized with a Wix Currencies.
-
-If a matching Wix Currencies already exists, the HubSpot Deal will be merged with the existing one.
-If no matching Wix Currencies is found, a new Wix Currencies will be created.
-
-A HubSpot Deal will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Wix Currencies Property
-   * - properties.deal_currency_code
-     - code
-
-Once a link between a HubSpot Deal and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Wix Currencies Property
-     - Wix Data Type
-
-
-HubSpot Deal to Wix Orders
---------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wix Orders.
-
-Once a link between a HubSpot Deal and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - properties.amount
-     - totals.total
-     - "string"
-   * - properties.deal_currency_code
-     - currency
-     - "string"
-
-
-HubSpot Product to Wix Inventory
---------------------------------
-Every HubSpot Product will be synchronized with a Wix Inventory.
-
-Once a link between a HubSpot Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Wix Inventory Property
-     - Wix Data Type
-
-
-HubSpot Product to Wix Products
--------------------------------
-Every HubSpot Product will be synchronized with a Wix Products.
-
-Once a link between a HubSpot Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.hs_cost_of_goods_sold
-     - costRange.maxValue
-     - "string"
-   * - properties.hs_sku
-     - sku
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - price.price
-     - "string"
-   * - properties.price
-     - priceData.price
-     - "decimal"
 
