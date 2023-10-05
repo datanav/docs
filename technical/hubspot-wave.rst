@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:39:58
 
 Introduction.
 ------------
@@ -77,7 +77,7 @@ HubSpot Company to Wave Customer person
 ---------------------------------------
 Before any synchronization can take place, a link between a HubSpot Company and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a HubSpot Company if it is connected to a HubSpot Deal that is synchronized into Wave.
+A new Wave Customer person will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
 
 Once a link between a HubSpot Company and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -171,7 +171,7 @@ HubSpot Contact to Wave Customer person
 ---------------------------------------
 Before any synchronization can take place, a link between a HubSpot Contact and a Wave Customer person must be established.
 
-A new Wave Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal that is synchronized into Wave.
+A new Wave Customer person will be created from a HubSpot Contact if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
 
 Once a link between a HubSpot Contact and a Wave Customer person is established, it will keep in sync between the two systems, regardless of where it is edited.
 
