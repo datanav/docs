@@ -2,7 +2,7 @@
 Zendesk to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -84,6 +84,15 @@ The following properties are synchronized between a Zendesk Tickets and a Triple
    * - Zendesk Tickets Property
      - Tripletex Project Property
      - Tripletex Data Type
+   * - due_at
+     - endDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - requester_id
+     - projectManager.id
+     - "integer"
+   * - subject
+     - name
+     - "string"
 
 
 Zendesk Users to Tripletex Employee
