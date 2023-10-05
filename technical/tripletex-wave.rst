@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-05 08:41:49
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -273,6 +273,37 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
 
 
+Tripletex Orderline to Wave Invoice
+-----------------------------------
+Every Tripletex Orderline will be synchronized with a Wave Invoice.
+
+Once a link between a Tripletex Orderline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - count
+     - items.quantity
+     - "float"
+   * - currency.id
+     - currency.code
+     - "string"
+   * - description
+     - items.description
+     - "string"
+   * - product.id
+     - items.product.id
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - items.price
+     - "float"
+
+
 Tripletex Productgrouprelation to Wave Product
 ----------------------------------------------
 Every Tripletex Productgrouprelation will be synchronized with a Wave Product.
@@ -500,37 +531,6 @@ The following properties are synchronized between a Tripletex Order and a Wave I
    * - reference
      - poNumber
      - "string"
-
-
-Tripletex Orderline to Wave Invoice
------------------------------------
-Every Tripletex Orderline will be synchronized with a Wave Invoice.
-
-Once a link between a Tripletex Orderline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - count
-     - items.quantity
-     - "float"
-   * - currency.id
-     - currency.code
-     - "string"
-   * - description
-     - items.description
-     - "string"
-   * - product.id
-     - items.product.id
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - items.price
-     - "float"
 
 
 Tripletex Product to Wave Product
