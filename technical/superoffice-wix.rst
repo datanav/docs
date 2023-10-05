@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-10-05 08:43:17
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -288,35 +288,4 @@ The following properties are synchronized between a SuperOffice Product and a Wi
    * - UnitListPrice
      - priceData.price
      - "decimal"
-
-
-SuperOffice Quoteline to Wix Orders
------------------------------------
-Every SuperOffice Quoteline will be synchronized with a Wix Orders.
-
-Once a link between a SuperOffice Quoteline and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quoteline and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Quoteline Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - ERPProductKey
-     - lineItems.productId
-     - "string"
-   * - Name
-     - lineItems.name
-     - "string"
-   * - Quantity
-     - lineItems.quantity
-     - "string"
-   * - TotalPrice
-     - totals.total
-     - "string"
-   * - UnitListPrice
-     - lineItems.price
-     - "string"
 
