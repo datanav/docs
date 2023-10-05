@@ -2,7 +2,7 @@
 Businesscentral to PowerOfficeGo Dataflow
 =========================================
 
-Generated: 2023-10-05 06:33:04
+Generated: 2023-10-05 06:36:18
 
 Introduction.
 ------------
@@ -38,20 +38,4 @@ The following properties are synchronized between a Businesscentral Contact pers
    * - postalCode
      - zipCode
      - "string"
-
-
-Businesscentral Contact to PowerOfficeGo Location
--------------------------------------------------
-Every Businesscentral Contact will be synchronized with a PowerOfficeGo Location.
-
-Once a link between a Businesscentral Contact and a PowerOfficeGo Location is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Businesscentral Contact and a PowerOfficeGo Location:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Businesscentral Contact Property
-     - PowerOfficeGo Location Property
-     - PowerOfficeGo Data Type
 
