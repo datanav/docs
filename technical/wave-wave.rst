@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-10-05 08:42:48
+Generated: 2023-10-05 08:43:02
 
 Introduction.
 ------------
@@ -33,6 +33,27 @@ The following properties are synchronized between a Wave Customer and a Wave Cus
      - "string"
    * - address.city
      - address.city
+     - "string"
+   * - address.country.code
+     - address.country.code
+     - "string"
+   * - address.postalCode
+     - address.postalCode
+     - "string"
+   * - shippingDetails.address.addressLine1
+     - address.addressLine1
+     - "string"
+   * - shippingDetails.address.addressLine2
+     - address.addressLine2
+     - "string"
+   * - shippingDetails.address.city
+     - address.city
+     - "string"
+   * - shippingDetails.address.country.code
+     - address.country.code
+     - "string"
+   * - shippingDetails.address.postalCode
+     - address.postalCode
      - "string"
 
 
