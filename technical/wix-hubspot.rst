@@ -2,7 +2,7 @@
 Wix.com to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-05 06:06:18
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -90,11 +90,44 @@ The following properties are synchronized between a Wix.com Members and a HubSpo
      - "string"
 
 
+Wix.com Inventory to HubSpot Product
+------------------------------------
+Every Wix.com Inventory will be synchronized with a HubSpot Product.
+
+Once a link between a Wix.com Inventory and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Inventory and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Inventory Property
+     - HubSpot Product Property
+     - HubSpot Data Type
+
+
+Wix.com Orders to HubSpot Lineitemdealassociation
+-------------------------------------------------
+Every Wix.com Orders will be synchronized with a HubSpot Lineitemdealassociation.
+
+Once a link between a Wix.com Orders and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Orders and a HubSpot Lineitemdealassociation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Orders Property
+     - HubSpot Lineitemdealassociation Property
+     - HubSpot Data Type
+   * - id
+     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypes)
+     - "string"
+
+
 Wix.com Products to HubSpot Product
 -----------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a HubSpot Product must be established.
-
-A new HubSpot Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into HubSpot.
+Every Wix.com Products will be synchronized with a HubSpot Product.
 
 Once a link between a Wix.com Products and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -106,4 +139,22 @@ The following properties are synchronized between a Wix.com Products and a HubSp
    * - Wix.com Products Property
      - HubSpot Product Property
      - HubSpot Data Type
+   * - costRange.maxValue
+     - properties.hs_cost_of_goods_sold
+     - "string"
+   * - description
+     - properties.description
+     - "string"
+   * - name
+     - properties.name
+     - "string"
+   * - price.price
+     - properties.price
+     - "string"
+   * - priceData.price
+     - properties.price
+     - "string"
+   * - sku
+     - properties.hs_sku
+     - "string"
 
