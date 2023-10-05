@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -55,6 +55,12 @@ The following properties are synchronized between a SuperOffice Contact and a Ze
    * - SuperOffice Contact Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - Name
+     - name
+     - "string"
+   * - Urls.Value
+     - url
+     - "string"
 
 
 SuperOffice Ticket to Zendesk Tickets
