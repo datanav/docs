@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-09-16 15:00:32
+Generated: 2023-10-05 06:16:43
 
 Introduction.
 ------------
@@ -116,6 +116,24 @@ The following properties are synchronized between a Tripletex Employee and a Hub
    * - userType
      - properties.country
      - "string"
+
+
+Tripletex Product to HubSpot Product
+------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a HubSpot Product must be established.
+
+A new HubSpot Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into HubSpot.
+
+Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a HubSpot Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - HubSpot Product Property
+     - HubSpot Data Type
 
 
 Tripletex Customer to HubSpot Company
@@ -277,55 +295,5 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
      - "string"
    * - postalAddress.postalCode
      - properties.zip
-     - "string"
-
-
-Tripletex Orderline to HubSpot Lineitemdealassociation
-------------------------------------------------------
-Every Tripletex Orderline will be synchronized with a HubSpot Lineitemdealassociation.
-
-Once a link between a Tripletex Orderline and a HubSpot Lineitemdealassociation is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitemdealassociation:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - HubSpot Lineitemdealassociation Property
-     - HubSpot Data Type
-   * - order.id
-     - toObjectId (Dependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypesDependant on having wd:Q566889 in sesam_simpleAssociationTypes)
-     - "string"
-
-
-Tripletex Product to HubSpot Product
-------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a HubSpot Product.
-
-Once a link between a Tripletex Product and a HubSpot Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a HubSpot Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - HubSpot Product Property
-     - HubSpot Data Type
-   * - costExcludingVatCurrency
-     - properties.hs_cost_of_goods_sold
-     - "string"
-   * - description
-     - properties.description
-     - "string"
-   * - name
-     - properties.name
-     - "string"
-   * - number
-     - properties.hs_sku
-     - "string"
-   * - priceExcludingVatCurrency
-     - properties.price
      - "string"
 
