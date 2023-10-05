@@ -2,12 +2,62 @@
 Tripletex to Freshteam Dataflow
 ===============================
 
-Generated: 2023-10-05 06:16:43
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
 
 This technical document provides a detailed overview of the Sesam Talk data flow from Tripletex to Freshteam. It serves as a QA checklist for testing purposes and is the intellectual property of Sesam.io AS. The content contains confidential information regulated under an NDA agreement, and sharing or distributing it without written permission is prohibited.
+
+Tripletex Contact to Freshteam Employee
+---------------------------------------
+Every Tripletex Contact will be synchronized with a Freshteam Employee.
+
+Once a link between a Tripletex Contact and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Contact and a Freshteam Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Contact Property
+     - Freshteam Employee Property
+     - Freshteam Data Type
+   * - firstName
+     - first_name
+     - "string"
+   * - lastName
+     - last_name
+     - "string"
+   * - phoneNumberMobile
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
+     - "string"
+   * - phoneNumberWork
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
+     - "string"
+
+
+Tripletex Department to Freshteam Department
+--------------------------------------------
+Every Tripletex Department will be synchronized with a Freshteam Department.
+
+Once a link between a Tripletex Department and a Freshteam Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Department and a Freshteam Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Department Property
+     - Freshteam Department Property
+     - Freshteam Data Type
+   * - changes.timestamp
+     - created_at
+     - "string"
+   * - name
+     - name
+     - "string"
+
 
 Tripletex Employee to Freshteam Employee
 ----------------------------------------
@@ -48,32 +98,13 @@ The following properties are synchronized between a Tripletex Employee and a Fre
    * - lastName
      - last_name
      - "string"
-
-
-Tripletex Contact to Freshteam Employee
----------------------------------------
-Every Tripletex Contact will be synchronized with a Freshteam Employee.
-
-Once a link between a Tripletex Contact and a Freshteam Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Contact and a Freshteam Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Contact Property
-     - Freshteam Employee Property
-     - Freshteam Data Type
-   * - firstName
-     - first_name
-     - "string"
-   * - lastName
-     - last_name
+   * - phoneNumberHome
+     - phone_numbers.number (Dependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.nameDependant on having wd:Q67372736 in phone_numbers.name)
      - "string"
    * - phoneNumberMobile
-     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.nameDependant on having wd:Q17517 in phone_numbers.name)
      - "string"
    * - phoneNumberWork
-     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
+     - phone_numbers.number (Dependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.nameDependant on having wd:Q214995 in phone_numbers.name)
      - "string"
 
