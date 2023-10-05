@@ -2,7 +2,7 @@
 Zendesk to Zendesk Dataflow
 ===========================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -23,4 +23,7 @@ The following properties are synchronized between a Zendesk Tickets and a Zendes
    * - Zendesk Tickets Property
      - Zendesk Ticketcomments Property
      - Zendesk Data Type
+   * - created_at
+     - created_at
+     - "string"
 
