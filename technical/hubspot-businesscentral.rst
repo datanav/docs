@@ -2,7 +2,7 @@
 HubSpot to BusinessCentral Dataflow
 ===================================
 
-Generated: 2023-10-05 06:19:39
+Generated: 2023-10-05 06:20:13
 
 Introduction.
 ------------
@@ -37,6 +37,38 @@ The following properties are synchronized between a HubSpot Contact and a Busine
    :header-rows: 1
 
    * - HubSpot Contact Property
+     - BusinessCentral Contact Property
+     - BusinessCentral Data Type
+
+
+HubSpot Contactcompanyassociation to BusinessCentral Contact
+------------------------------------------------------------
+Every HubSpot Contactcompanyassociation will be synchronized with a BusinessCentral Contact.
+
+Once a link between a HubSpot Contactcompanyassociation and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Contactcompanyassociation and a BusinessCentral Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Contactcompanyassociation Property
+     - BusinessCentral Contact Property
+     - BusinessCentral Data Type
+
+
+HubSpot User to BusinessCentral Contact
+---------------------------------------
+Every HubSpot User will be synchronized with a BusinessCentral Contact.
+
+Once a link between a HubSpot User and a BusinessCentral Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot User and a BusinessCentral Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot User Property
      - BusinessCentral Contact Property
      - BusinessCentral Data Type
 
