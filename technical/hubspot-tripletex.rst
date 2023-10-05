@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 06:14:12
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -242,6 +242,28 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - "string"
 
 
+HubSpot Dealcompanyassociation to Tripletex Order
+-------------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Dealcompanyassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - contact.id
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "integer"
+
+
 HubSpot Dealcompanyassociationtype to Tripletex Customercategory
 ----------------------------------------------------------------
 Every HubSpot Dealcompanyassociationtype will be synchronized with a Tripletex Customercategory.
@@ -259,6 +281,28 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - label
      - name
      - "string"
+
+
+HubSpot Dealcontactassociation to Tripletex Order
+-------------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Dealcontactassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - contact.id
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "integer"
 
 
 HubSpot Dealcontactassociationtype to Tripletex Customercategory
@@ -280,6 +324,38 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
      - "string"
 
 
+HubSpot Lineitem to Tripletex Order
+-----------------------------------
+Every HubSpot Lineitem will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Lineitem and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
+HubSpot Lineitemdealassociation to Tripletex Order
+--------------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Lineitemdealassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
 HubSpot Lineitemdealassociationtype to Tripletex Customercategory
 -----------------------------------------------------------------
 Every HubSpot Lineitemdealassociationtype will be synchronized with a Tripletex Customercategory.
@@ -297,6 +373,22 @@ The following properties are synchronized between a HubSpot Lineitemdealassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Lineitemquoteassociation to Tripletex Order
+---------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Lineitemquoteassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
 
 
 HubSpot Lineitemquoteassociationtype to Tripletex Customercategory
@@ -318,6 +410,53 @@ The following properties are synchronized between a HubSpot Lineitemquoteassocia
      - "string"
 
 
+HubSpot Quote to Tripletex Order
+--------------------------------
+Every HubSpot Quote will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Quote and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - associations.companies.results.id
+     - customer.id
+     - "integer"
+   * - associations.contacts.results.id
+     - contact.id
+     - "integer"
+   * - properties.hs_title
+     - invoiceComment
+     - "string"
+
+
+HubSpot Quotecompanyassociation to Tripletex Order
+--------------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Quotecompanyassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - contact.id
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "integer"
+
+
 HubSpot Quotecompanyassociationtype to Tripletex Customercategory
 -----------------------------------------------------------------
 Every HubSpot Quotecompanyassociationtype will be synchronized with a Tripletex Customercategory.
@@ -335,6 +474,28 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - label
      - name
      - "string"
+
+
+HubSpot Quotecontactassociation to Tripletex Order
+--------------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Quotecontactassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - contact.id
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "integer"
 
 
 HubSpot Quotecontactassociationtype to Tripletex Customercategory
@@ -356,6 +517,22 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
      - "string"
 
 
+HubSpot Quotedealassociation to Tripletex Order
+-----------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Quotedealassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
 HubSpot Quotedealassociationtype to Tripletex Customercategory
 --------------------------------------------------------------
 Every HubSpot Quotedealassociationtype will be synchronized with a Tripletex Customercategory.
@@ -368,6 +545,98 @@ The following properties are synchronized between a HubSpot Quotedealassociation
    :header-rows: 1
 
    * - HubSpot Quotedealassociationtype Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+   * - label
+     - name
+     - "string"
+
+
+HubSpot Quotequotetemplateassociation to Tripletex Order
+--------------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+
+
+HubSpot Quotequotetemplateassociationtype to Tripletex Customercategory
+-----------------------------------------------------------------------
+Every HubSpot Quotequotetemplateassociationtype will be synchronized with a Tripletex Customercategory.
+
+Once a link between a HubSpot Quotequotetemplateassociationtype and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociationtype and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociationtype Property
+     - Tripletex Customercategory Property
+     - Tripletex Data Type
+   * - label
+     - name
+     - "string"
+
+
+HubSpot Ticket to Tripletex Project
+-----------------------------------
+Every HubSpot Ticket will be synchronized with a Tripletex Project.
+
+Once a link between a HubSpot Ticket and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticket and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticket Property
+     - Tripletex Project Property
+     - Tripletex Data Type
+
+
+HubSpot Ticketcompanyassociation to Tripletex Order
+---------------------------------------------------
+Every HubSpot Ticketcompanyassociation will be synchronized with a Tripletex Order.
+
+Once a link between a HubSpot Ticketcompanyassociation and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociation and a Tripletex Order:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociation Property
+     - Tripletex Order Property
+     - Tripletex Data Type
+   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+     - contact.id
+     - "integer"
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "integer"
+
+
+HubSpot Ticketcompanyassociationtype to Tripletex Customercategory
+------------------------------------------------------------------
+Every HubSpot Ticketcompanyassociationtype will be synchronized with a Tripletex Customercategory.
+
+Once a link between a HubSpot Ticketcompanyassociationtype and a Tripletex Customercategory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociationtype and a Tripletex Customercategory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociationtype Property
      - Tripletex Customercategory Property
      - Tripletex Data Type
    * - label
