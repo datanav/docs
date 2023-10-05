@@ -2,7 +2,7 @@
 Wave Financial to Tripletex Dataflow
 ====================================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -344,9 +344,7 @@ The following properties are synchronized between a Wave Customer and a Triplete
 
 Wave Invoice to Tripletex Order
 -------------------------------
-Before any synchronization can take place, a link between a Wave Invoice and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a Wave Invoice if it is connected to a Wave Invoice that is synchronized into Tripletex.
+Every Wave Invoice will be synchronized with a Tripletex Order.
 
 Once a link between a Wave Invoice and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
