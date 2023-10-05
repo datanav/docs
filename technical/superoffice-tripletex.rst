@@ -2,7 +2,7 @@
 SuperOffice to Tripletex Dataflow
 =================================
 
-Generated: 2023-10-05 06:16:43
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -378,88 +378,6 @@ The following properties are synchronized between a SuperOffice Person and a Tri
      - "string"
 
 
-SuperOffice Product to Tripletex Product
-----------------------------------------
-Every SuperOffice Product will be synchronized with a Tripletex Product.
-
-If a matching Tripletex Product already exists, the SuperOffice Product will be merged with the existing one.
-If no matching Tripletex Product is found, a new Tripletex Product will be created.
-
-A SuperOffice Product will merge with a Tripletex Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Product Property
-   * - ERPProductKey
-     - number
-
-Once a link between a SuperOffice Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Tripletex Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Product Property
-     - Tripletex Data Type
-   * - Description
-     - description
-     - "string"
-   * - ERPPriceListKey
-     - currency.id
-     - "integer"
-   * - ERPProductKey
-     - number
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - QuantityUnit
-     - productUnit.id
-     - "integer"
-   * - Supplier
-     - supplier.id
-     - "integer"
-   * - UnitCost
-     - costExcludingVatCurrency
-     - "integer"
-   * - UnitListPrice
-     - priceExcludingVatCurrency
-     - "float"
-   * - VAT
-     - vatType.id
-     - "integer"
-
-
-SuperOffice Product to Tripletex Productunit
---------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Product and a Tripletex Productunit must be established.
-
-A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-   * - QuantityUnit
-     - name
-
-Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Tripletex Productunit Property
-     - Tripletex Data Type
-
-
 SuperOffice User to Tripletex Contact
 -------------------------------------
 Before any synchronization can take place, a link between a SuperOffice User and a Tripletex Contact must be established.
@@ -487,44 +405,6 @@ The following properties are synchronized between a SuperOffice User and a Tripl
    * - contactId
      - customer.id
      - "integer"
-   * - firstName
-     - firstName
-     - "string"
-   * - lastName
-     - lastName
-     - "string"
-   * - personEmail
-     - email
-     - "string"
-
-
-SuperOffice User to Tripletex Employee
---------------------------------------
-Before any synchronization can take place, a link between a SuperOffice User and a Tripletex Employee must be established.
-
-A SuperOffice User will merge with a Tripletex Employee if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Tripletex Employee Property
-   * - personEmail
-     - email
-
-Once a link between a SuperOffice User and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice User and a Tripletex Employee:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice User Property
-     - Tripletex Employee Property
-     - Tripletex Data Type
-   * - contactId
-     - department.id
-     - "if", "neq", "_.", "X"], "integer", "string"]
    * - firstName
      - firstName
      - "string"
@@ -782,5 +662,360 @@ The following properties are synchronized between a SuperOffice Listticketcatego
      - Tripletex Data Type
    * - Name
      - name
+     - "string"
+
+
+SuperOffice Listproductcategoryitems to Tripletex Productgroup
+--------------------------------------------------------------
+Every SuperOffice Listproductcategoryitems will be synchronized with a Tripletex Productgroup.
+
+Once a link between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Listproductcategoryitems and a Tripletex Productgroup:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Listproductcategoryitems Property
+     - Tripletex Productgroup Property
+     - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
+
+
+SuperOffice Ownercontactlink to Tripletex Department
+----------------------------------------------------
+Every SuperOffice Ownercontactlink will be synchronized with a Tripletex Department.
+
+Once a link between a SuperOffice Ownercontactlink and a Tripletex Department is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Ownercontactlink and a Tripletex Department:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Ownercontactlink Property
+     - Tripletex Department Property
+     - Tripletex Data Type
+   * - name
+     - name
+     - "string"
+
+
+SuperOffice Product to Tripletex Product
+----------------------------------------
+Every SuperOffice Product will be synchronized with a Tripletex Product.
+
+If a matching Tripletex Product already exists, the SuperOffice Product will be merged with the existing one.
+If no matching Tripletex Product is found, a new Tripletex Product will be created.
+
+A SuperOffice Product will merge with a Tripletex Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Product Property
+   * - ERPProductKey
+     - number
+
+Once a link between a SuperOffice Product and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Product Property
+     - Tripletex Data Type
+   * - Description
+     - description
+     - "string"
+   * - ERPPriceListKey
+     - currency.id
+     - "integer"
+   * - ERPProductKey
+     - number
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - QuantityUnit
+     - productUnit.id
+     - "integer"
+   * - Supplier
+     - supplier.id
+     - "integer"
+   * - UnitCost
+     - costExcludingVatCurrency
+     - "integer"
+   * - UnitListPrice
+     - priceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
+
+
+SuperOffice Product to Tripletex Productunit
+--------------------------------------------
+Every SuperOffice Product will be synchronized with a Tripletex Productunit.
+
+If a matching Tripletex Productunit already exists, the SuperOffice Product will be merged with the existing one.
+If no matching Tripletex Productunit is found, a new Tripletex Productunit will be created.
+
+A SuperOffice Product will merge with a Tripletex Productunit if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+   * - QuantityUnit
+     - name
+
+Once a link between a SuperOffice Product and a Tripletex Productunit is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Tripletex Productunit:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Tripletex Productunit Property
+     - Tripletex Data Type
+   * - QuantityUnit
+     - commonCode
+     - "string"
+   * - QuantityUnit
+     - name
+     - "string"
+   * - VAT
+     - commonCode
+     - "string"
+   * - VATInfo
+     - name
+     - "string"
+
+
+SuperOffice Project to Tripletex Project
+----------------------------------------
+Every SuperOffice Project will be synchronized with a Tripletex Project.
+
+Once a link between a SuperOffice Project and a Tripletex Project is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Project and a Tripletex Project:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Project Property
+     - Tripletex Project Property
+     - Tripletex Data Type
+   * - Associate.AssociateId
+     - projectManager.id
+     - "integer"
+   * - EndDate
+     - endDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - Name
+     - name
+     - "string"
+   * - NextMilestoneDate
+     - startDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - ProjectMembers.PersonId
+     - contact.id
+     - "integer"
+
+
+SuperOffice Quoteline to Tripletex Orderline
+--------------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Tripletex Orderline.
+
+Once a link between a SuperOffice Quoteline and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quoteline and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quoteline Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+   * - DiscountPercent
+     - count
+     - "float"
+   * - DiscountPercent
+     - description
+     - "string"
+   * - DiscountPercent
+     - discount
+     - "float"
+   * - DiscountPercent
+     - unitCostCurrency
+     - "float"
+   * - DiscountPercent
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - DiscountPercent
+     - vatType.id
+     - "integer"
+   * - ERPProductKey
+     - product.id
+     - "integer"
+   * - Name
+     - count
+     - "float"
+   * - Name
+     - description
+     - "string"
+   * - Name
+     - discount
+     - "float"
+   * - Name
+     - unitCostCurrency
+     - "float"
+   * - Name
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Name
+     - vatType.id
+     - "integer"
+   * - Quantity
+     - count
+     - "float"
+   * - Quantity
+     - description
+     - "string"
+   * - Quantity
+     - discount
+     - "float"
+   * - Quantity
+     - unitCostCurrency
+     - "float"
+   * - Quantity
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Quantity
+     - vatType.id
+     - "integer"
+   * - QuantityUnit
+     - count
+     - "float"
+   * - QuantityUnit
+     - description
+     - "string"
+   * - QuantityUnit
+     - discount
+     - "float"
+   * - QuantityUnit
+     - unitCostCurrency
+     - "float"
+   * - QuantityUnit
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - QuantityUnit
+     - vatType.id
+     - "integer"
+   * - QuoteAlternativeId
+     - order.id
+     - "integer"
+   * - Rank (Dependant on having  in Rank)
+     - count
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - description
+     - "string"
+   * - Rank (Dependant on having  in Rank)
+     - discount
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - unitCostCurrency
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - Rank (Dependant on having  in Rank)
+     - vatType.id
+     - "integer"
+   * - UnitListPrice
+     - count
+     - "float"
+   * - UnitListPrice
+     - description
+     - "string"
+   * - UnitListPrice
+     - discount
+     - "float"
+   * - UnitListPrice
+     - unitCostCurrency
+     - "float"
+   * - UnitListPrice
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - UnitListPrice
+     - vatType.id
+     - "integer"
+   * - VAT
+     - count
+     - "float"
+   * - VAT
+     - description
+     - "string"
+   * - VAT
+     - discount
+     - "float"
+   * - VAT
+     - unitCostCurrency
+     - "float"
+   * - VAT
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - VAT
+     - vatType.id
+     - "integer"
+
+
+SuperOffice User to Tripletex Employee
+--------------------------------------
+Every SuperOffice User will be synchronized with a Tripletex Employee.
+
+If a matching Tripletex Employee already exists, the SuperOffice User will be merged with the existing one.
+If no matching Tripletex Employee is found, a new Tripletex Employee will be created.
+
+A SuperOffice User will merge with a Tripletex Employee if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Tripletex Employee Property
+   * - personEmail
+     - email
+
+Once a link between a SuperOffice User and a Tripletex Employee is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice User and a Tripletex Employee:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice User Property
+     - Tripletex Employee Property
+     - Tripletex Data Type
+   * - contactId
+     - department.id
+     - "if", "neq", "_.", "X"], "integer", "string"]
+   * - firstName
+     - firstName
+     - "string"
+   * - lastName
+     - lastName
+     - "string"
+   * - personEmail
+     - email
      - "string"
 
