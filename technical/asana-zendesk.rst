@@ -2,7 +2,7 @@
 Asana to Zendesk Dataflow
 =========================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Asana Projects and a Zendesk
    * - Asana Projects Property
      - Zendesk Ticketcomments Property
      - Zendesk Data Type
+   * - created_at
+     - created_at
+     - "string"
 
 
 Asana Tasks to Zendesk Ticketcomments
@@ -39,6 +42,9 @@ The following properties are synchronized between a Asana Tasks and a Zendesk Ti
    * - Asana Tasks Property
      - Zendesk Ticketcomments Property
      - Zendesk Data Type
+   * - created_at
+     - created_at
+     - "string"
 
 
 Asana Teams to Zendesk Organisations
@@ -55,6 +61,12 @@ The following properties are synchronized between a Asana Teams and a Zendesk Or
    * - Asana Teams Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
+   * - permalink_url
+     - url
+     - "string"
 
 
 Asana Workspaces to Zendesk Organisations
@@ -71,6 +83,12 @@ The following properties are synchronized between a Asana Workspaces and a Zende
    * - Asana Workspaces Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - email_domains
+     - url
+     - "string"
+   * - name
+     - name
+     - "string"
 
 
 Asana Users to Zendesk Users
