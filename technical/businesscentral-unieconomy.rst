@@ -2,7 +2,7 @@
 Businesscentral to UniEconomy Dataflow
 ======================================
 
-Generated: 2023-10-05 06:17:37
+Generated: 2023-10-05 06:51:44
 
 Introduction.
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Businesscentral Company and 
    :header-rows: 1
 
    * - Businesscentral Company Property
+     - UniEconomy Companies Property
+     - UniEconomy Data Type
+
+
+Businesscentral Contact company to UniEconomy Companies
+-------------------------------------------------------
+Every Businesscentral Contact company will be synchronized with a UniEconomy Companies.
+
+Once a link between a Businesscentral Contact company and a UniEconomy Companies is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contact company and a UniEconomy Companies:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contact company Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
 
