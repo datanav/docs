@@ -2,7 +2,7 @@
 Powerofficego to Wave Dataflow
 ==============================
 
-Generated: 2023-10-05 08:43:17
+Generated: 2023-10-05 08:46:20
 
 Introduction.
 ------------
@@ -256,6 +256,31 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
      - "string"
 
 
+Powerofficego Salesorderlines to Wave Invoice
+---------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a Wave Invoice.
+
+Once a link between a Powerofficego Salesorderlines and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - Description
+     - items.description
+     - "string"
+   * - ProductUnitPrice
+     - items.price
+     - "float"
+   * - Quantity
+     - items.quantity
+     - "float"
+
+
 Powerofficego Suppliers to Wave Customer
 ----------------------------------------
 Every Powerofficego Suppliers will be synchronized with a Wave Customer.
@@ -398,31 +423,6 @@ The following properties are synchronized between a Powerofficego Product and a 
    * - salesPrice
      - unitPrice
      - "string"
-
-
-Powerofficego Salesorderlines to Wave Invoice
----------------------------------------------
-Every Powerofficego Salesorderlines will be synchronized with a Wave Invoice.
-
-Once a link between a Powerofficego Salesorderlines and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorderlines and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorderlines Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - Description
-     - items.description
-     - "string"
-   * - ProductUnitPrice
-     - items.price
-     - "float"
-   * - Quantity
-     - items.quantity
-     - "float"
 
 
 Powerofficego Salesorders to Wave Invoice
