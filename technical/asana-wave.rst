@@ -2,7 +2,7 @@
 Asana to Wave Dataflow
 ======================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -23,6 +23,15 @@ The following properties are synchronized between a Asana Teams and a Wave Custo
    * - Asana Teams Property
      - Wave Customer Property
      - Wave Data Type
+   * - description
+     - internalNotes
+     - "string"
+   * - name
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+   * - permalink_url
+     - website
+     - "string"
 
 
 Asana Workspaces to Wave Customer
@@ -39,4 +48,10 @@ The following properties are synchronized between a Asana Workspaces and a Wave 
    * - Asana Workspaces Property
      - Wave Customer Property
      - Wave Data Type
+   * - email_domains
+     - website
+     - "string"
+   * - name
+     - name
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
 
