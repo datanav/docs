@@ -2,7 +2,7 @@
 Wix.com to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 06:06:18
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -187,9 +187,7 @@ The following properties are synchronized between a Wix.com Members and a Triple
 
 Wix.com Orders to Tripletex Order
 ---------------------------------
-Before any synchronization can take place, a link between a Wix.com Orders and a Tripletex Order must be established.
-
-A new Tripletex Order will be created from a Wix.com Orders if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+Every Wix.com Orders will be synchronized with a Tripletex Order.
 
 Once a link between a Wix.com Orders and a Tripletex Order is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -205,9 +203,7 @@ The following properties are synchronized between a Wix.com Orders and a Triplet
 
 Wix.com Products to Tripletex Product
 -------------------------------------
-Before any synchronization can take place, a link between a Wix.com Products and a Tripletex Product must be established.
-
-A new Tripletex Product will be created from a Wix.com Products if it is connected to a Wix.com Wix-orders that is synchronized into Tripletex.
+Every Wix.com Products will be synchronized with a Tripletex Product.
 
 Once a link between a Wix.com Products and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -217,6 +213,22 @@ The following properties are synchronized between a Wix.com Products and a Tripl
    :header-rows: 1
 
    * - Wix.com Products Property
+     - Tripletex Product Property
+     - Tripletex Data Type
+
+
+Wix.com Inventory to Tripletex Product
+--------------------------------------
+Every Wix.com Inventory will be synchronized with a Tripletex Product.
+
+Once a link between a Wix.com Inventory and a Tripletex Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wix.com Inventory and a Tripletex Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wix.com Inventory Property
      - Tripletex Product Property
      - Tripletex Data Type
 
