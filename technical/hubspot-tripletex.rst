@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -256,10 +256,10 @@ The following properties are synchronized between a HubSpot Dealcompanyassociati
    * - HubSpot Dealcompanyassociation Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - contact.id
      - "integer"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "integer"
 
@@ -297,10 +297,10 @@ The following properties are synchronized between a HubSpot Dealcontactassociati
    * - HubSpot Dealcontactassociation Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - contact.id
      - "integer"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "integer"
 
@@ -425,10 +425,16 @@ The following properties are synchronized between a HubSpot Quote and a Triplete
      - Tripletex Order Property
      - Tripletex Data Type
    * - associations.companies.results.id
+     - contact.id
+     - "integer"
+   * - associations.companies.results.id
      - customer.id
      - "integer"
    * - associations.contacts.results.id
      - contact.id
+     - "integer"
+   * - associations.contacts.results.id
+     - customer.id
      - "integer"
    * - properties.hs_title
      - invoiceComment
@@ -449,10 +455,10 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
    * - HubSpot Quotecompanyassociation Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - contact.id
      - "integer"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "integer"
 
@@ -490,10 +496,10 @@ The following properties are synchronized between a HubSpot Quotecontactassociat
    * - HubSpot Quotecontactassociation Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - contact.id
      - "integer"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "integer"
 
@@ -601,6 +607,12 @@ The following properties are synchronized between a HubSpot Ticket and a Triplet
    * - HubSpot Ticket Property
      - Tripletex Project Property
      - Tripletex Data Type
+   * - properties.hubspot_owner_id
+     - projectManager.id
+     - "integer"
+   * - properties.subject
+     - name
+     - "string"
 
 
 HubSpot Ticketcompanyassociation to Tripletex Order
@@ -617,10 +629,10 @@ The following properties are synchronized between a HubSpot Ticketcompanyassocia
    * - HubSpot Ticketcompanyassociation Property
      - Tripletex Order Property
      - Tripletex Data Type
-   * - toObjectId (Dependant on having wd:Q760086 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q760086 in sesam_simpleAssociationTypes)
      - contact.id
      - "integer"
-   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypes)
      - customer.id
      - "integer"
 
