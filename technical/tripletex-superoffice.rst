@@ -2,7 +2,7 @@
 Tripletex to SuperOffice Dataflow
 =================================
 
-Generated: 2023-09-16 15:00:32
+Generated: 2023-10-05 06:16:43
 
 Introduction.
 ------------
@@ -253,6 +253,58 @@ The following properties are synchronized between a Tripletex Employee and a Sup
      - "string"
 
 
+Tripletex Product to SuperOffice Product
+----------------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a SuperOffice Product must be established.
+
+A new SuperOffice Product will be created from a Tripletex Product if it is connected to a Tripletex Orderline that is synchronized into SuperOffice.
+
+A Tripletex Product will merge with a SuperOffice Product if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - SuperOffice Product Property
+   * - number
+     - ERPProductKey
+
+Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - SuperOffice Product Property
+     - SuperOffice Data Type
+   * - costExcludingVatCurrency
+     - UnitCost
+     - "string"
+   * - currency.id
+     - ERPPriceListKey
+     - "string"
+   * - description
+     - Description
+     - "string"
+   * - name
+     - Name
+     - "string"
+   * - priceExcludingVatCurrency
+     - UnitListPrice
+     - "decimal"
+   * - productUnit.id
+     - QuantityUnit
+     - "string"
+   * - supplier.id
+     - Supplier
+     - "string"
+   * - vatType.id
+     - VAT
+     - "integer"
+
+
 Tripletex Supplier to SuperOffice Contact
 -----------------------------------------
 Every Tripletex Supplier will be synchronized with a SuperOffice Contact.
@@ -398,210 +450,11 @@ The following properties are synchronized between a Tripletex Department and a S
      - "string"
 
 
-Tripletex Orderline to SuperOffice Quoteline
---------------------------------------------
-Every Tripletex Orderline will be synchronized with a SuperOffice Quoteline.
-
-Once a link between a Tripletex Orderline and a SuperOffice Quoteline is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Orderline and a SuperOffice Quoteline:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Orderline Property
-     - SuperOffice Quoteline Property
-     - SuperOffice Data Type
-   * - count
-     - DiscountPercent
-     - "integer"
-   * - count
-     - Name
-     - "string"
-   * - count
-     - Quantity
-     - "integer"
-   * - count
-     - QuantityUnit
-     - "integer"
-   * - count
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - count
-     - UnitListPrice
-     - "string"
-   * - count
-     - VAT
-     - "integer"
-   * - description
-     - DiscountPercent
-     - "integer"
-   * - description
-     - Name
-     - "string"
-   * - description
-     - Quantity
-     - "integer"
-   * - description
-     - QuantityUnit
-     - "integer"
-   * - description
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - description
-     - UnitListPrice
-     - "string"
-   * - description
-     - VAT
-     - "integer"
-   * - discount
-     - DiscountPercent
-     - "integer"
-   * - discount
-     - Name
-     - "string"
-   * - discount
-     - Quantity
-     - "integer"
-   * - discount
-     - QuantityUnit
-     - "integer"
-   * - discount
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - discount
-     - UnitListPrice
-     - "string"
-   * - discount
-     - VAT
-     - "integer"
-   * - order.id
-     - QuoteAlternativeId
-     - "integer"
-   * - product.id
-     - ERPProductKey
-     - "string"
-   * - unitCostCurrency
-     - DiscountPercent
-     - "integer"
-   * - unitCostCurrency
-     - Name
-     - "string"
-   * - unitCostCurrency
-     - Quantity
-     - "integer"
-   * - unitCostCurrency
-     - QuantityUnit
-     - "integer"
-   * - unitCostCurrency
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - unitCostCurrency
-     - UnitListPrice
-     - "string"
-   * - unitCostCurrency
-     - VAT
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - DiscountPercent
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - Name
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - Quantity
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - QuantityUnit
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - unitPriceExcludingVatCurrency
-     - UnitListPrice
-     - "string"
-   * - unitPriceExcludingVatCurrency
-     - VAT
-     - "integer"
-   * - vatType.id
-     - DiscountPercent
-     - "integer"
-   * - vatType.id
-     - Name
-     - "string"
-   * - vatType.id
-     - Quantity
-     - "integer"
-   * - vatType.id
-     - QuantityUnit
-     - "integer"
-   * - vatType.id
-     - Rank (Dependant on having  in Rank)
-     - "integer"
-   * - vatType.id
-     - UnitListPrice
-     - "string"
-   * - vatType.id
-     - VAT
-     - "integer"
-
-
-Tripletex Product to SuperOffice Product
-----------------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a SuperOffice Product.
-
-If a matching SuperOffice Product already exists, the Tripletex Product will be merged with the existing one.
-If no matching SuperOffice Product is found, a new SuperOffice Product will be created.
-
-A Tripletex Product will merge with a SuperOffice Product if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-   * - number
-     - ERPProductKey
-
-Once a link between a Tripletex Product and a SuperOffice Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a SuperOffice Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - SuperOffice Product Property
-     - SuperOffice Data Type
-   * - costExcludingVatCurrency
-     - UnitCost
-     - "string"
-   * - currency.id
-     - ERPPriceListKey
-     - "string"
-   * - description
-     - Description
-     - "string"
-   * - name
-     - Name
-     - "string"
-   * - priceExcludingVatCurrency
-     - UnitListPrice
-     - "decimal"
-   * - productUnit.id
-     - QuantityUnit
-     - "string"
-   * - supplier.id
-     - Supplier
-     - "string"
-   * - vatType.id
-     - VAT
-     - "integer"
-
-
 Tripletex Productgroup to SuperOffice Listproductcategoryitems
 --------------------------------------------------------------
-Every Tripletex Productgroup will be synchronized with a SuperOffice Listproductcategoryitems.
+Before any synchronization can take place, a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems must be established.
+
+A new SuperOffice Listproductcategoryitems will be created from a Tripletex Productgroup if it is connected to a Tripletex Product, or Productgrouprelation that is synchronized into SuperOffice.
 
 Once a link between a Tripletex Productgroup and a SuperOffice Listproductcategoryitems is established, it will keep in sync between the two systems, regardless of where it is edited.
 
