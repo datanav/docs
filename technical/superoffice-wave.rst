@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -263,6 +263,30 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
 
 
+SuperOffice Quotealternative to Wave Invoice
+--------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
+
+A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Wave.
+
+Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - Description
+     - memo
+     - "string"
+   * - Name
+     - title
+     - "string"
+
+
 SuperOffice Product to Wave Product
 -----------------------------------
 Every SuperOffice Product will be synchronized with a Wave Product.
@@ -288,26 +312,18 @@ The following properties are synchronized between a SuperOffice Product and a Wa
      - "string"
 
 
-SuperOffice Quotealternative to Wave Invoice
---------------------------------------------
-Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
+SuperOffice Quoteline to Wave Invoice
+-------------------------------------
+Every SuperOffice Quoteline will be synchronized with a Wave Invoice.
 
-A new Wave Invoice will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Wave.
+Once a link between a SuperOffice Quoteline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
-Once a link between a SuperOffice Quotealternative and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Quotealternative and a Wave Invoice:
+The following properties are synchronized between a SuperOffice Quoteline and a Wave Invoice:
 
 .. list-table::
    :header-rows: 1
 
-   * - SuperOffice Quotealternative Property
+   * - SuperOffice Quoteline Property
      - Wave Invoice Property
      - Wave Data Type
-   * - Description
-     - memo
-     - "string"
-   * - Name
-     - title
-     - "string"
 
