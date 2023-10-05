@@ -2,7 +2,7 @@
 Wave Financial to Wave Dataflow
 ===============================
 
-Generated: 2023-10-05 08:39:58
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -76,7 +76,7 @@ The following properties are synchronized between a Wave Vendor and a Wave Custo
      - "string"
    * - name
      - name
-     - "string"
+     - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
    * - phone
      - phone
      - "string"
