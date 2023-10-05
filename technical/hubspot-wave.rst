@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -11,9 +11,7 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 HubSpot Company to Wave Customer
 --------------------------------
-Before any synchronization can take place, a link between a HubSpot Company and a Wave Customer must be established.
-
-A new Wave Customer will be created from a HubSpot Company if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
+Every HubSpot Company will be synchronized with a Wave Customer.
 
 Once a link between a HubSpot Company and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -216,9 +214,7 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
 
 HubSpot Product to Wave Product
 -------------------------------
-Before any synchronization can take place, a link between a HubSpot Product and a Wave Product must be established.
-
-A new Wave Product will be created from a HubSpot Product if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
+Every HubSpot Product will be synchronized with a Wave Product.
 
 Once a link between a HubSpot Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -248,6 +244,219 @@ The following properties are synchronized between a HubSpot Contactcompanyassoci
      - Wave Data Type
    * - toObjectId (Dependant on having wd:Q703534 in sesam_simpleAssociationTypes)
      - id
+     - "string"
+
+
+HubSpot Deal to Wave Invoice
+----------------------------
+Every HubSpot Deal will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Deal and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Deal and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Deal Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Dealcompanyassociation to Wave Invoice
+----------------------------------------------
+Every HubSpot Dealcompanyassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Dealcompanyassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcompanyassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcompanyassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "string"
+
+
+HubSpot Dealcontactassociation to Wave Invoice
+----------------------------------------------
+Every HubSpot Dealcontactassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Dealcontactassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Dealcontactassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Dealcontactassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "string"
+
+
+HubSpot Lineitem to Wave Invoice
+--------------------------------
+Every HubSpot Lineitem will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Lineitem and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Lineitemdealassociation to Wave Invoice
+-----------------------------------------------
+Every HubSpot Lineitemdealassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Lineitemdealassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemdealassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemdealassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Lineitemquoteassociation to Wave Invoice
+------------------------------------------------
+Every HubSpot Lineitemquoteassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Lineitemquoteassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitemquoteassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitemquoteassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Quote to Wave Invoice
+-----------------------------
+Every HubSpot Quote will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Quote and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quote and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quote Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - associations.companies.results.id
+     - customer.id
+     - "string"
+   * - properties.hs_title
+     - title
+     - "string"
+
+
+HubSpot Quotecompanyassociation to Wave Invoice
+-----------------------------------------------
+Every HubSpot Quotecompanyassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Quotecompanyassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecompanyassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecompanyassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "string"
+
+
+HubSpot Quotecontactassociation to Wave Invoice
+-----------------------------------------------
+Every HubSpot Quotecontactassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Quotecontactassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotecontactassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotecontactassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
+     - "string"
+
+
+HubSpot Quotedealassociation to Wave Invoice
+--------------------------------------------
+Every HubSpot Quotedealassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Quotedealassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotedealassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotedealassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Quotequotetemplateassociation to Wave Invoice
+-----------------------------------------------------
+Every HubSpot Quotequotetemplateassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Quotequotetemplateassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Quotequotetemplateassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Quotequotetemplateassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+
+
+HubSpot Ticketcompanyassociation to Wave Invoice
+------------------------------------------------
+Every HubSpot Ticketcompanyassociation will be synchronized with a Wave Invoice.
+
+Once a link between a HubSpot Ticketcompanyassociation and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Ticketcompanyassociation and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Ticketcompanyassociation Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - toObjectId (Dependant on having wd:Q852835 in sesam_simpleAssociationTypes)
+     - customer.id
      - "string"
 
 
