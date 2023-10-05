@@ -2,7 +2,7 @@
 Wave Financial to Wix Dataflow
 ==============================
 
-Generated: 2023-09-27 11:09:48
+Generated: 2023-10-05 06:06:18
 
 Introduction.
 ------------
@@ -59,6 +59,54 @@ The following properties are synchronized between a Wave Customer person and a W
    * - Wave Customer person Property
      - Wix Members Property
      - Wix Data Type
+
+
+Wave Customer to Wix Contacts
+-----------------------------
+Before any synchronization can take place, a link between a Wave Customer and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a Wave Customer if it is connected to a Wave Invoice that is synchronized into Wix.
+
+A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Contacts Property
+   * - email
+     - info.emails
+   * - email
+     - primaryInfo.email
+
+Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - email
+     - info.emails
+     - "string"
+   * - email
+     - primaryInfo.email
+     - "string"
+   * - firstName
+     - info.name.first
+     - "string"
+   * - lastName
+     - info.name.last
+     - "string"
+   * - mobile
+     - info.phones
+     - "string"
+   * - mobile
+     - primaryInfo.phone
+     - "string"
 
 
 Wave Customer to Wix Members
@@ -185,84 +233,6 @@ The following properties are synchronized between a Wave Business and a Wix Cont
      - Wix Data Type
 
 
-Wave Currency to Wix Currencies
--------------------------------
-Every Wave Currency will be synchronized with a Wix Currencies.
-
-If a matching Wix Currencies already exists, the Wave Currency will be merged with the existing one.
-If no matching Wix Currencies is found, a new Wix Currencies will be created.
-
-A Wave Currency will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Wix Currencies Property
-   * - code
-     - code
-
-Once a link between a Wave Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Currency and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Currency Property
-     - Wix Currencies Property
-     - Wix Data Type
-
-
-Wave Customer to Wix Contacts
------------------------------
-Every Wave Customer will be synchronized with a Wix Contacts.
-
-If a matching Wix Contacts already exists, the Wave Customer will be merged with the existing one.
-If no matching Wix Contacts is found, a new Wix Contacts will be created.
-
-A Wave Customer will merge with a Wix Contacts if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Contacts Property
-   * - email
-     - info.emails
-   * - email
-     - primaryInfo.email
-
-Once a link between a Wave Customer and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Customer and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Customer Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - email
-     - info.emails
-     - "string"
-   * - email
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-   * - mobile
-     - info.phones
-     - "string"
-   * - mobile
-     - primaryInfo.phone
-     - "string"
-
-
 Wave Invoice to Wix Orders
 --------------------------
 Every Wave Invoice will be synchronized with a Wix Orders.
@@ -277,54 +247,24 @@ The following properties are synchronized between a Wave Invoice and a Wix Order
    * - Wave Invoice Property
      - Wix Orders Property
      - Wix Data Type
-   * - business.id
-     - buyerInfo.contactId
-     - "string"
-   * - business.id
-     - buyerInfo.id
-     - "string"
-   * - currency.code
-     - currency
-     - "string"
-   * - customer.id
-     - buyerInfo.contactId
-     - "string"
-   * - customer.id
-     - buyerInfo.id
-     - "string"
-   * - invoiceDate
-     - dateCreated
-     - "string"
-   * - items.description
-     - lineItems.name
-     - "string"
-   * - items.description
-     - lineItems.name.name
-     - "string"
-   * - items.price
-     - lineItems.price
-     - "string"
-   * - items.price
-     - lineItems.price.price
-     - "string"
-   * - items.product.id
-     - lineItems.productId
-     - "string"
-   * - items.product.id
-     - lineItems.productId.productId
-     - "string"
-   * - items.quantity
-     - lineItems.quantity
-     - "string"
-   * - items.quantity
-     - lineItems.quantity.quantity
-     - "string"
-   * - items.unitPrice
-     - lineItems.price
-     - "string"
-   * - total.value
-     - totals.total
-     - "string"
+
+
+Wave Product to Wix Products
+----------------------------
+Before any synchronization can take place, a link between a Wave Product and a Wix Products must be established.
+
+A new Wix Products will be created from a Wave Product if it is connected to a Wave Invoice that is synchronized into Wix.
+
+Once a link between a Wave Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Product and a Wix Products:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Product Property
+     - Wix Products Property
+     - Wix Data Type
 
 
 Wave Product to Wix Inventory
@@ -341,32 +281,4 @@ The following properties are synchronized between a Wave Product and a Wix Inven
    * - Wave Product Property
      - Wix Inventory Property
      - Wix Data Type
-
-
-Wave Product to Wix Products
-----------------------------
-Every Wave Product will be synchronized with a Wix Products.
-
-Once a link between a Wave Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Wave Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Wave Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - unitPrice
-     - price.price
-     - "string"
-   * - unitPrice
-     - priceData.price
-     - "decimal"
 
