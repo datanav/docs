@@ -2,7 +2,7 @@
 Businesscentral to Tripletex Dataflow
 =====================================
 
-Generated: 2023-10-05 06:51:23
+Generated: 2023-10-05 10:41:25
 
 Introduction.
 ------------
@@ -39,4 +39,52 @@ The following properties are synchronized between a Businesscentral Contact comp
    * - Businesscentral Contact company Property
      - Tripletex Customer Property
      - Tripletex Data Type
+   * - addressLine1
+     - deliveryAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - physicalAddress.addressLine1
+     - "string"
+   * - addressLine1
+     - postalAddress.addressLine1
+     - "string"
+   * - addressLine2
+     - deliveryAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - physicalAddress.addressLine2
+     - "string"
+   * - addressLine2
+     - postalAddress.addressLine2
+     - "string"
+   * - city
+     - deliveryAddress.city
+     - "string"
+   * - city
+     - physicalAddress.city
+     - "string"
+   * - city
+     - postalAddress.city
+     - "string"
+   * - country
+     - deliveryAddress.country.id
+     - "string"
+   * - country
+     - physicalAddress.country.id
+     - "integer"
+   * - country
+     - postalAddress.country.id
+     - "integer"
+   * - id
+     - id
+     - "integer"
+   * - postalCode
+     - deliveryAddress.postalCode
+     - "string"
+   * - postalCode
+     - physicalAddress.postalCode
+     - "string"
+   * - postalCode
+     - postalAddress.postalCode
+     - "string"
 
