@@ -2,7 +2,7 @@
 Businesscentral to PowerOfficeGo Dataflow
 =========================================
 
-Generated: 2023-10-05 06:32:49
+Generated: 2023-10-05 06:33:04
 
 Introduction.
 ------------
@@ -25,6 +25,18 @@ The following properties are synchronized between a Businesscentral Contact pers
      - PowerOfficeGo Data Type
    * - addressLine1
      - address1
+     - "string"
+   * - addressLine2
+     - address2
+     - "string"
+   * - city
+     - city
+     - "string"
+   * - country
+     - countryCode
+     - "string"
+   * - postalCode
+     - zipCode
      - "string"
 
 
