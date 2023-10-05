@@ -2,7 +2,7 @@
 Wave Financial to UniEconomy Dataflow
 =====================================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 08:40:19
 
 Introduction.
 ------------
@@ -50,5 +50,24 @@ The following properties are synchronized between a Wave Vendor and a UniEconomy
      - "string"
    * - name
      - Name
+     - "string"
+
+
+Wave Customer to UniEconomy Customers
+-------------------------------------
+Every Wave Customer will be synchronized with a UniEconomy Customers.
+
+Once a link between a Wave Customer and a UniEconomy Customers is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Wave Customer and a UniEconomy Customers:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Wave Customer Property
+     - UniEconomy Customers Property
+     - UniEconomy Data Type
+   * - website
+     - WebUrl
      - "string"
 
