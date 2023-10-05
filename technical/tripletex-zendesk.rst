@@ -2,7 +2,7 @@
 Tripletex to Zendesk Dataflow
 =============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -52,6 +52,9 @@ The following properties are synchronized between a Tripletex Customer and a Zen
    * - Tripletex Customer Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Department to Zendesk Organisations
@@ -68,6 +71,9 @@ The following properties are synchronized between a Tripletex Department and a Z
    * - Tripletex Department Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Project to Zendesk Ticketcomments
@@ -100,6 +106,9 @@ The following properties are synchronized between a Tripletex Supplier and a Zen
    * - Tripletex Supplier Property
      - Zendesk Organisations Property
      - Zendesk Data Type
+   * - name
+     - name
+     - "string"
 
 
 Tripletex Employee to Zendesk Users
