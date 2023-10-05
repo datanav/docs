@@ -2,7 +2,7 @@
 Businesscentral to SuperOffice Dataflow
 =======================================
 
-Generated: 2023-10-05 06:16:43
+Generated: 2023-10-05 06:51:02
 
 Introduction.
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Businesscentral Company and 
    :header-rows: 1
 
    * - Businesscentral Company Property
+     - SuperOffice Contact Property
+     - SuperOffice Data Type
+
+
+Businesscentral Contact company to SuperOffice Contact
+------------------------------------------------------
+Every Businesscentral Contact company will be synchronized with a SuperOffice Contact.
+
+Once a link between a Businesscentral Contact company and a SuperOffice Contact is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Businesscentral Contact company and a SuperOffice Contact:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Businesscentral Contact company Property
      - SuperOffice Contact Property
      - SuperOffice Data Type
 
