@@ -2,7 +2,7 @@
 Powerofficego to Wix Dataflow
 =============================
 
-Generated: 2023-10-01 14:13:48
+Generated: 2023-10-05 06:06:18
 
 Introduction.
 ------------
@@ -46,6 +46,41 @@ The following properties are synchronized between a Powerofficego Customers and 
      - Wix Data Type
    * - EmailAddress
      - loginEmail
+     - "string"
+
+
+Powerofficego Salesorders to Wix Orders
+---------------------------------------
+Every Powerofficego Salesorders will be synchronized with a Wix Orders.
+
+Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorders Property
+     - Wix Orders Property
+     - Wix Data Type
+
+
+Powerofficego Contactperson to Wix Contacts
+-------------------------------------------
+Every Powerofficego Contactperson will be synchronized with a Wix Contacts.
+
+Once a link between a Powerofficego Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Contactperson and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Contactperson Property
+     - Wix Contacts Property
+     - Wix Data Type
+   * - emailAddress
+     - info.emails
      - "string"
 
 
@@ -105,6 +140,22 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
      - "string"
 
 
+Powerofficego Product to Wix Inventory
+--------------------------------------
+Every Powerofficego Product will be synchronized with a Wix Inventory.
+
+Once a link between a Powerofficego Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Product and a Wix Inventory:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Product Property
+     - Wix Inventory Property
+     - Wix Data Type
+
+
 Powerofficego Salesorderline to Wix Orders
 ------------------------------------------
 Every Powerofficego Salesorderline will be synchronized with a Wix Orders.
@@ -136,181 +187,5 @@ The following properties are synchronized between a Powerofficego Salesorderline
      - "string"
    * - SalesOrderLineUnitPrice
      - lineItems.price.price
-     - "string"
-
-
-Powerofficego Contactperson to Wix Contacts
--------------------------------------------
-Every Powerofficego Contactperson will be synchronized with a Wix Contacts.
-
-Once a link between a Powerofficego Contactperson and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Contactperson and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Contactperson Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - emailAddress
-     - info.emails
-     - "string"
-   * - emailAddress
-     - primaryInfo.email
-     - "string"
-   * - firstName
-     - info.name.first
-     - "string"
-   * - lastName
-     - info.name.last
-     - "string"
-
-
-Powerofficego Currency to Wix Currencies
-----------------------------------------
-Every Powerofficego Currency will be synchronized with a Wix Currencies.
-
-If a matching Wix Currencies already exists, the Powerofficego Currency will be merged with the existing one.
-If no matching Wix Currencies is found, a new Wix Currencies will be created.
-
-A Powerofficego Currency will merge with a Wix Currencies if one of the following property combinations match:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     - Wix Currencies Property
-   * - Code
-     - code
-
-Once a link between a Powerofficego Currency and a Wix Currencies is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Currency and a Wix Currencies:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Currency Property
-     - Wix Currencies Property
-     - Wix Data Type
-
-
-Powerofficego Customers person to Wix Contacts
-----------------------------------------------
-Every Powerofficego Customers person will be synchronized with a Wix Contacts.
-
-Once a link between a Powerofficego Customers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Customers person and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Customers person Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - EmailAddress
-     - primaryInfo.email
-     - "string"
-   * - FirstName
-     - info.name.first
-     - "string"
-   * - LastName
-     - info.name.last
-     - "string"
-
-
-Powerofficego Product to Wix Inventory
---------------------------------------
-Every Powerofficego Product will be synchronized with a Wix Inventory.
-
-Once a link between a Powerofficego Product and a Wix Inventory is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Wix Inventory:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Wix Inventory Property
-     - Wix Data Type
-   * - availableStock
-     - lastUpdated
-     - "string"
-   * - availableStock
-     - variants.quantity
-     - "string"
-
-
-Powerofficego Product to Wix Products
--------------------------------------
-Every Powerofficego Product will be synchronized with a Wix Products.
-
-Once a link between a Powerofficego Product and a Wix Products is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Product and a Wix Products:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Product Property
-     - Wix Products Property
-     - Wix Data Type
-   * - costPrice
-     - costRange.maxValue
-     - "string"
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - salesPrice
-     - price.price
-     - "string"
-   * - salesPrice
-     - priceData.price
-     - "decimal"
-
-
-Powerofficego Salesorders to Wix Orders
----------------------------------------
-Every Powerofficego Salesorders will be synchronized with a Wix Orders.
-
-Once a link between a Powerofficego Salesorders and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Salesorders and a Wix Orders:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Salesorders Property
-     - Wix Orders Property
-     - Wix Data Type
-   * - CurrencyCode
-     - currency
-     - "string"
-   * - TotalAmount
-     - totals.total
-     - "string"
-
-
-Powerofficego Suppliers person to Wix Contacts
-----------------------------------------------
-Every Powerofficego Suppliers person will be synchronized with a Wix Contacts.
-
-Once a link between a Powerofficego Suppliers person and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Powerofficego Suppliers person and a Wix Contacts:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Powerofficego Suppliers person Property
-     - Wix Contacts Property
-     - Wix Data Type
-   * - FirstName
-     - info.name.first
      - "string"
 
