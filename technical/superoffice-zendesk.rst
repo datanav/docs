@@ -2,7 +2,7 @@
 SuperOffice to Zendesk Dataflow
 ===============================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -11,9 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 SuperOffice Person to Zendesk Users
 -----------------------------------
-Before any synchronization can take place, a link between a SuperOffice Person and a Zendesk Users must be established.
+Every SuperOffice Person will be synchronized with a Zendesk Users.
 
-A new Zendesk Users will be created from a SuperOffice Person if it is connected to a SuperOffice Ticket that is synchronized into Zendesk.
+If a matching Zendesk Users already exists, the SuperOffice Person will be merged with the existing one.
+If no matching Zendesk Users is found, a new Zendesk Users will be created.
 
 A SuperOffice Person will merge with a Zendesk Users if one of the following property combinations match:
 
@@ -63,5 +64,21 @@ The following properties are synchronized between a SuperOffice User and a Zende
 
    * - SuperOffice User Property
      - Zendesk Users Property
+     - Zendesk Data Type
+
+
+SuperOffice Contact to Zendesk Organisations
+--------------------------------------------
+Every SuperOffice Contact will be synchronized with a Zendesk Organisations.
+
+Once a link between a SuperOffice Contact and a Zendesk Organisations is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Zendesk Organisations:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Zendesk Organisations Property
      - Zendesk Data Type
 
