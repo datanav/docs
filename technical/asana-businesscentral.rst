@@ -2,7 +2,7 @@
 Asana to BusinessCentral Dataflow
 =================================
 
-Generated: 2023-10-05 06:14:44
+Generated: 2023-10-05 06:15:05
 
 Introduction.
 ------------
@@ -21,6 +21,22 @@ The following properties are synchronized between a Asana Teams and a BusinessCe
    :header-rows: 1
 
    * - Asana Teams Property
+     - BusinessCentral Company Property
+     - BusinessCentral Data Type
+
+
+Asana Workspaces to BusinessCentral Company
+-------------------------------------------
+Every Asana Workspaces will be synchronized with a BusinessCentral Company.
+
+Once a link between a Asana Workspaces and a BusinessCentral Company is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Asana Workspaces and a BusinessCentral Company:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Asana Workspaces Property
      - BusinessCentral Company Property
      - BusinessCentral Data Type
 
