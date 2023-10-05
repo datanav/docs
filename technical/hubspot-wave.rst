@@ -2,7 +2,7 @@
 HubSpot to Wave Dataflow
 ========================
 
-Generated: 2023-10-02 11:46:53
+Generated: 2023-10-05 06:06:17
 
 Introduction.
 ------------
@@ -214,6 +214,24 @@ The following properties are synchronized between a HubSpot Contact and a Wave C
      - "string"
 
 
+HubSpot Product to Wave Product
+-------------------------------
+Before any synchronization can take place, a link between a HubSpot Product and a Wave Product must be established.
+
+A new Wave Product will be created from a HubSpot Product if it is connected to a HubSpot Deal, Quote, Lineitem, Quotedealassociation, Dealcompanyassociation, Dealcontactassociation, Lineitemdealassociation, Quotecompanyassociation, Quotecontactassociation, Lineitemquoteassociation, Ticketcompanyassociation, or Quotequotetemplateassociation that is synchronized into Wave.
+
+Once a link between a HubSpot Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Product Property
+     - Wave Product Property
+     - Wave Data Type
+
+
 HubSpot Contactcompanyassociation to Wave Customer
 --------------------------------------------------
 Every HubSpot Contactcompanyassociation will be synchronized with a Wave Customer.
@@ -247,54 +265,4 @@ The following properties are synchronized between a HubSpot User and a Wave Cust
    * - HubSpot User Property
      - Wave Customer Property
      - Wave Data Type
-
-
-HubSpot Deal to Wave Invoice
-----------------------------
-When a HubSpot Deal has a 100% probability of beeing sold, it  will be synchronized with a Wave Invoice.
-
-Once a link between a HubSpot Deal and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Deal and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Deal Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - properties.deal_currency_code
-     - currency.code
-     - "string"
-   * - properties.dealname
-     - memo
-     - "string"
-   * - properties.description
-     - memo
-     - "string"
-
-
-HubSpot Product to Wave Product
--------------------------------
-Every HubSpot Product will be synchronized with a Wave Product.
-
-Once a link between a HubSpot Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a HubSpot Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - HubSpot Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - properties.description
-     - description
-     - "string"
-   * - properties.name
-     - name
-     - "string"
-   * - properties.price
-     - unitPrice
-     - "string"
 
