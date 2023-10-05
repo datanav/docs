@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-09-29 14:26:21
+Generated: 2023-10-05 06:06:17
 
 Introduction.
 ------------
@@ -184,6 +184,30 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
 
 
+Tripletex Customer to Wave Customer
+-----------------------------------
+Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer must be established.
+
+A new Wave Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Customer, Employee, Orderline, or Department that is synchronized into Wave.
+
+Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Customer and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Customer Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - name
+     - name
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+
+
 Tripletex Department to Wave Customer person
 --------------------------------------------
 Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer person must be established.
@@ -221,6 +245,63 @@ The following properties are synchronized between a Tripletex Department and a W
    * - name
      - name
      - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
+
+
+Tripletex Order to Wave Invoice
+-------------------------------
+Before any synchronization can take place, a link between a Tripletex Order and a Wave Invoice must be established.
+
+A new Wave Invoice will be created from a Tripletex Order if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
+
+Once a link between a Tripletex Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Order and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Order Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - currency.id
+     - currency.code
+     - "string"
+   * - customer.id
+     - customer.id
+     - "string"
+   * - invoiceComment
+     - title
+     - "string"
+   * - reference
+     - poNumber
+     - "string"
+
+
+Tripletex Product to Wave Product
+---------------------------------
+Before any synchronization can take place, a link between a Tripletex Product and a Wave Product must be established.
+
+A new Wave Product will be created from a Tripletex Product if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
+
+Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Product Property
+     - Wave Product Property
+     - Wave Data Type
+   * - description
+     - description
+     - "string"
+   * - name
+     - name
+     - "string"
+   * - priceExcludingVatCurrency
+     - unitPrice
+     - "string"
 
 
 Tripletex Employee to Wave Customer
@@ -269,243 +350,5 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
    * - phoneNumberWork
      - phone
-     - "string"
-
-
-Tripletex Customer to Wave Customer
------------------------------------
-removed person customers for now until that pattern is resolved, it  will be synchronized with a Wave Customer.
-
-Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Customer and a Wave Customer:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Customer Property
-     - Wave Customer Property
-     - Wave Data Type
-   * - deliveryAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - deliveryAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - deliveryAddress.city
-     - address.city
-     - "string"
-   * - deliveryAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - deliveryAddress.country.id
-     - address.country.code
-     - "string"
-   * - deliveryAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - deliveryAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - phoneNumber
-     - shippingDetails.phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - physicalAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - postalAddress.addressLine1
-     - shippingDetails.address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - postalAddress.addressLine2
-     - shippingDetails.address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - address.city
-     - "string"
-   * - postalAddress.city
-     - shippingDetails.address.city
-     - "string"
-   * - postalAddress.country.id
-     - address.country.code
-     - "string"
-   * - postalAddress.country.id
-     - shippingDetails.address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - postalAddress.postalCode
-     - shippingDetails.address.postalCode
-     - "string"
-
-
-Tripletex Order to Wave Invoice
--------------------------------
-Every Tripletex Order will be synchronized with a Wave Invoice.
-
-Once a link between a Tripletex Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Order and a Wave Invoice:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Order Property
-     - Wave Invoice Property
-     - Wave Data Type
-   * - contact.id
-     - customer.id
-     - "string"
-   * - currency.id
-     - currency.code
-     - "string"
-   * - customer.id
-     - customer.id
-     - "string"
-   * - invoiceComment
-     - title
-     - "string"
-   * - reference
-     - poNumber
-     - "string"
-
-
-Tripletex Product to Wave Product
----------------------------------
-preliminary mapping until we can sort out suppliers. This removes all supplier products for now, it  will be synchronized with a Wave Product.
-
-Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - description
-     - description
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - priceExcludingVatCurrency
-     - unitPrice
-     - "string"
-
-
-Tripletex Supplier to Wave Vendor
----------------------------------
-Every Tripletex Supplier will be synchronized with a Wave Vendor.
-
-Once a link between a Tripletex Supplier and a Wave Vendor is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a Tripletex Supplier and a Wave Vendor:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Tripletex Supplier Property
-     - Wave Vendor Property
-     - Wave Data Type
-   * - deliveryAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - deliveryAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - deliveryAddress.changes
-     - address.city
-     - "string"
-   * - deliveryAddress.city
-     - address.country.code
-     - "string"
-   * - deliveryAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - name
-     - name
-     - "string"
-   * - phoneNumber
-     - phone
-     - "string"
-   * - physicalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - physicalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - physicalAddress.city
-     - address.city
-     - "string"
-   * - physicalAddress.country.id
-     - address.country.code
-     - "string"
-   * - physicalAddress.postalCode
-     - address.postalCode
-     - "string"
-   * - postalAddress.addressLine1
-     - address.addressLine1
-     - "string"
-   * - postalAddress.addressLine2
-     - address.addressLine2
-     - "string"
-   * - postalAddress.city
-     - address.city
-     - "string"
-   * - postalAddress.country.id
-     - address.country.code
-     - "string"
-   * - postalAddress.postalCode
-     - address.postalCode
      - "string"
 
