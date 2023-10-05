@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:39
 
 Introduction.
 ------------
@@ -193,6 +193,12 @@ The following properties are synchronized between a Powerofficego Productgroup a
    * - Powerofficego Productgroup Property
      - Tripletex Customercategory Property
      - Tripletex Data Type
+   * - Code
+     - number
+     - "string"
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Salesorderlines to Tripletex Order
