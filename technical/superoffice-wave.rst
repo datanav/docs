@@ -2,7 +2,7 @@
 SuperOffice to Wave Dataflow
 ============================
 
-Generated: 2023-09-29 14:25:28
+Generated: 2023-10-05 06:06:17
 
 Introduction.
 ------------
@@ -265,6 +265,33 @@ The following properties are synchronized between a SuperOffice Person and a Wav
      - "string"
 
 
+SuperOffice Product to Wave Product
+-----------------------------------
+Before any synchronization can take place, a link between a SuperOffice Product and a Wave Product must be established.
+
+A new Wave Product will be created from a SuperOffice Product if it is connected to a SuperOffice Sale, Quote, Quoteline, or Quotealternative that is synchronized into Wave.
+
+Once a link between a SuperOffice Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Product and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Product Property
+     - Wave Product Property
+     - Wave Data Type
+   * - Description
+     - description
+     - "string"
+   * - Name
+     - name
+     - "string"
+   * - UnitListPrice
+     - unitPrice
+     - "string"
+
+
 SuperOffice Quotealternative to Wave Invoice
 --------------------------------------------
 Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wave Invoice must be established.
@@ -286,30 +313,5 @@ The following properties are synchronized between a SuperOffice Quotealternative
      - "string"
    * - Name
      - title
-     - "string"
-
-
-SuperOffice Product to Wave Product
------------------------------------
-Every SuperOffice Product will be synchronized with a Wave Product.
-
-Once a link between a SuperOffice Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
-
-The following properties are synchronized between a SuperOffice Product and a Wave Product:
-
-.. list-table::
-   :header-rows: 1
-
-   * - SuperOffice Product Property
-     - Wave Product Property
-     - Wave Data Type
-   * - Description
-     - description
-     - "string"
-   * - Name
-     - name
-     - "string"
-   * - UnitListPrice
-     - unitPrice
      - "string"
 
