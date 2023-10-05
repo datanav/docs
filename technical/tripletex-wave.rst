@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-05 06:06:17
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -186,9 +186,7 @@ The following properties are synchronized between a Tripletex Customer and a Wav
 
 Tripletex Customer to Wave Customer
 -----------------------------------
-Before any synchronization can take place, a link between a Tripletex Customer and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Tripletex Customer if it is connected to a Tripletex Order, Contact, Invoice, Customer, Employee, Orderline, or Department that is synchronized into Wave.
+Every Tripletex Customer will be synchronized with a Wave Customer.
 
 Once a link between a Tripletex Customer and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -228,9 +226,7 @@ The following properties are synchronized between a Tripletex Department and a W
 
 Tripletex Department to Wave Customer
 -------------------------------------
-Before any synchronization can take place, a link between a Tripletex Department and a Wave Customer must be established.
-
-A new Wave Customer will be created from a Tripletex Department if it is connected to a Tripletex Contact, Customer, Employee, or Department that is synchronized into Wave.
+Every Tripletex Department will be synchronized with a Wave Customer.
 
 Once a link between a Tripletex Department and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -242,6 +238,9 @@ The following properties are synchronized between a Tripletex Department and a W
    * - Tripletex Department Property
      - Wave Customer Property
      - Wave Data Type
+   * - departmentNumber
+     - internalNotes
+     - "string"
    * - name
      - name
      - "if","or","is-empty","_."],"eq","","_."]],"-","_."]
@@ -249,9 +248,7 @@ The following properties are synchronized between a Tripletex Department and a W
 
 Tripletex Order to Wave Invoice
 -------------------------------
-Before any synchronization can take place, a link between a Tripletex Order and a Wave Invoice must be established.
-
-A new Wave Invoice will be created from a Tripletex Order if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
+Every Tripletex Order will be synchronized with a Wave Invoice.
 
 Once a link between a Tripletex Order and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -279,9 +276,7 @@ The following properties are synchronized between a Tripletex Order and a Wave I
 
 Tripletex Product to Wave Product
 ---------------------------------
-Before any synchronization can take place, a link between a Tripletex Product and a Wave Product must be established.
-
-A new Wave Product will be created from a Tripletex Product if it is connected to a Tripletex Order, Invoice, or Orderline that is synchronized into Wave.
+Every Tripletex Product will be synchronized with a Wave Product.
 
 Once a link between a Tripletex Product and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
 
@@ -350,5 +345,89 @@ The following properties are synchronized between a Tripletex Employee and a Wav
      - "string"
    * - phoneNumberWork
      - phone
+     - "string"
+
+
+Tripletex Orderline to Wave Invoice
+-----------------------------------
+Every Tripletex Orderline will be synchronized with a Wave Invoice.
+
+Once a link between a Tripletex Orderline and a Wave Invoice is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a Wave Invoice:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - Wave Invoice Property
+     - Wave Data Type
+   * - count
+     - items.quantity
+     - "float"
+   * - currency.id
+     - currency.code
+     - "string"
+   * - description
+     - items.description
+     - "string"
+   * - product.id
+     - items.product.id
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - items.price
+     - "float"
+
+
+Tripletex Productgrouprelation to Wave Product
+----------------------------------------------
+Every Tripletex Productgrouprelation will be synchronized with a Wave Product.
+
+Once a link between a Tripletex Productgrouprelation and a Wave Product is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Productgrouprelation and a Wave Product:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Productgrouprelation Property
+     - Wave Product Property
+     - Wave Data Type
+
+
+Tripletex Supplier to Wave Customer
+-----------------------------------
+Every Tripletex Supplier will be synchronized with a Wave Customer.
+
+Once a link between a Tripletex Supplier and a Wave Customer is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Supplier and a Wave Customer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Supplier Property
+     - Wave Customer Property
+     - Wave Data Type
+   * - name
+     - name
+     - "string"
+   * - phoneNumber
+     - phone
+     - "string"
+   * - physicalAddress.addressLine1
+     - address.addressLine1
+     - "string"
+   * - physicalAddress.addressLine2
+     - address.addressLine2
+     - "string"
+   * - physicalAddress.city
+     - address.city
+     - "string"
+   * - physicalAddress.country.id
+     - address.country.code
+     - "string"
+   * - physicalAddress.postalCode
+     - address.postalCode
      - "string"
 
