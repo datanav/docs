@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-10-05 08:40:48
+Generated: 2023-10-05 08:43:17
 
 Introduction.
 ------------
@@ -216,6 +216,9 @@ The following properties are synchronized between a SuperOffice Quotealternative
    * - SuperOffice Quotealternative Property
      - Wix Orders Property
      - Wix Data Type
+   * - TotalPrice
+     - totals.total
+     - "string"
 
 
 SuperOffice Product to Wix Inventory
@@ -301,4 +304,19 @@ The following properties are synchronized between a SuperOffice Quoteline and a 
    * - SuperOffice Quoteline Property
      - Wix Orders Property
      - Wix Data Type
+   * - ERPProductKey
+     - lineItems.productId
+     - "string"
+   * - Name
+     - lineItems.name
+     - "string"
+   * - Quantity
+     - lineItems.quantity
+     - "string"
+   * - TotalPrice
+     - totals.total
+     - "string"
+   * - UnitListPrice
+     - lineItems.price
+     - "string"
 
