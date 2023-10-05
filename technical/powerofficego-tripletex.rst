@@ -2,7 +2,7 @@
 Powerofficego to Tripletex Dataflow
 ===================================
 
-Generated: 2023-10-05 08:41:39
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -177,6 +177,24 @@ The following properties are synchronized between a Powerofficego Outgoinginvoic
    * - Powerofficego Outgoinginvoices Property
      - Tripletex Order Property
      - Tripletex Data Type
+   * - CurrencyCode
+     - currency.id
+     - "integer"
+   * - DeliveryDate
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - OrderDate
+     - orderDate
+     - "datetime-format","%Y-%m-%d","_."]
+   * - customerId
+     - contact.id
+     - "integer"
+   * - customerId
+     - customer.id
+     - "integer"
+   * - sentDateTimeOffset
+     - deliveryDate
+     - "datetime-format","%Y-%m-%d","_."]
 
 
 Powerofficego Productgroup to Tripletex Customercategory
@@ -304,6 +322,9 @@ The following properties are synchronized between a Powerofficego Vatcodes and a
    * - Powerofficego Vatcodes Property
      - Tripletex Customercategory Property
      - Tripletex Data Type
+   * - Name
+     - name
+     - "string"
 
 
 Powerofficego Contactperson to Tripletex Contact
