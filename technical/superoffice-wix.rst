@@ -2,7 +2,7 @@
 SuperOffice to Wix Dataflow
 ===========================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:40:48
 
 Introduction.
 ------------
@@ -180,6 +180,42 @@ The following properties are synchronized between a SuperOffice User and a Wix M
    * - personEmail
      - loginEmail
      - "string"
+
+
+SuperOffice Contact to Wix Contacts
+-----------------------------------
+Before any synchronization can take place, a link between a SuperOffice Contact and a Wix Contacts must be established.
+
+A new Wix Contacts will be created from a SuperOffice Contact if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
+
+Once a link between a SuperOffice Contact and a Wix Contacts is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Contact and a Wix Contacts:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Contact Property
+     - Wix Contacts Property
+     - Wix Data Type
+
+
+SuperOffice Quotealternative to Wix Orders
+------------------------------------------
+Before any synchronization can take place, a link between a SuperOffice Quotealternative and a Wix Orders must be established.
+
+A new Wix Orders will be created from a SuperOffice Quotealternative if it is connected to a SuperOffice Quoteline, or Quotealternative that is synchronized into Wix.
+
+Once a link between a SuperOffice Quotealternative and a Wix Orders is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a SuperOffice Quotealternative and a Wix Orders:
+
+.. list-table::
+   :header-rows: 1
+
+   * - SuperOffice Quotealternative Property
+     - Wix Orders Property
+     - Wix Data Type
 
 
 SuperOffice Product to Wix Inventory
