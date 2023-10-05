@@ -2,7 +2,7 @@
 Wix.com to Zendesk Dataflow
 ===========================
 
-Generated: 2023-09-05 12:56:28
+Generated: 2023-10-05 06:14:44
 
 Introduction.
 ------------
@@ -11,7 +11,10 @@ This technical document provides a detailed overview of the Sesam Talk data flow
 
 Wix.com Contacts to Zendesk Users
 ---------------------------------
-Before any synchronization can take place, a link between a Wix.com Contacts and a Zendesk Users must be established.
+Every Wix.com Contacts will be synchronized with a Zendesk Users.
+
+If a matching Zendesk Users already exists, the Wix.com Contacts will be merged with the existing one.
+If no matching Zendesk Users is found, a new Zendesk Users will be created.
 
 A Wix.com Contacts will merge with a Zendesk Users if one of the following property combinations match:
 
@@ -42,7 +45,10 @@ The following properties are synchronized between a Wix.com Contacts and a Zende
 
 Wix.com Members to Zendesk Users
 --------------------------------
-Before any synchronization can take place, a link between a Wix.com Members and a Zendesk Users must be established.
+Every Wix.com Members will be synchronized with a Zendesk Users.
+
+If a matching Zendesk Users already exists, the Wix.com Members will be merged with the existing one.
+If no matching Zendesk Users is found, a new Zendesk Users will be created.
 
 A Wix.com Members will merge with a Zendesk Users if one of the following property combinations match:
 
