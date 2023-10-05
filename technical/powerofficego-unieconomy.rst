@@ -2,7 +2,7 @@
 Powerofficego to UniEconomy Dataflow
 ====================================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-05 08:41:49
 
 Introduction.
 ------------
@@ -23,6 +23,9 @@ The following properties are synchronized between a Powerofficego Customers and 
    * - Powerofficego Customers Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Powerofficego Departments to UniEconomy Companies
@@ -39,6 +42,9 @@ The following properties are synchronized between a Powerofficego Departments an
    * - Powerofficego Departments Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - Name
+     - Name
+     - "string"
 
 
 Powerofficego Suppliers to UniEconomy Companies
@@ -55,6 +61,12 @@ The following properties are synchronized between a Powerofficego Suppliers and 
    * - Powerofficego Suppliers Property
      - UniEconomy Companies Property
      - UniEconomy Data Type
+   * - LastChanged
+     - UpdatedAt
+     - "string"
+   * - LegalName
+     - Name
+     - "string"
 
 
 Powerofficego Customers to UniEconomy Customers
