@@ -2,7 +2,7 @@
 Wave Financial to SuperOffice Dataflow
 ======================================
 
-Generated: 2023-10-06 14:57:18
+Generated: 2023-10-06 15:00:17
 
 Introduction.
 ------------
@@ -428,6 +428,9 @@ The following properties are synchronized between a Wave Customer person and a S
      - Address.Street.City
      - "string"
    * - address.country.code
+     - Country.CountryId
+     - "integer"
+   * - address.countryCode
      - Country.CountryId
      - "integer"
    * - address.postalCode
