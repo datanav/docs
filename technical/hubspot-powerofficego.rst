@@ -2,7 +2,7 @@
 HubSpot to PowerOfficeGo Dataflow
 =================================
 
-Generated: 2023-10-02 12:32:51
+Generated: 2023-10-06 13:44:17
 
 Introduction.
 ------------
@@ -508,6 +508,22 @@ The following properties are synchronized between a HubSpot Deal and a PowerOffi
    * - properties.deal_currency_code
      - CurrencyCode
      - "string"
+
+
+HubSpot Lineitem to PowerOfficeGo Salesorderlines
+-------------------------------------------------
+Every HubSpot Lineitem will be synchronized with a PowerOfficeGo Salesorderlines.
+
+Once a link between a HubSpot Lineitem and a PowerOfficeGo Salesorderlines is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a PowerOfficeGo Salesorderlines:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - PowerOfficeGo Salesorderlines Property
+     - PowerOfficeGo Data Type
 
 
 HubSpot Lineitemdealassociation to PowerOfficeGo Salesorderlines
