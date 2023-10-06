@@ -2,7 +2,7 @@
 Tripletex to HubSpot Dataflow
 =============================
 
-Generated: 2023-10-05 08:40:19
+Generated: 2023-10-06 13:44:17
 
 Introduction.
 ------------
@@ -277,6 +277,34 @@ The following properties are synchronized between a Tripletex Supplier and a Hub
      - "string"
    * - postalAddress.postalCode
      - properties.zip
+     - "string"
+
+
+Tripletex Orderline to HubSpot Lineitem
+---------------------------------------
+Every Tripletex Orderline will be synchronized with a HubSpot Lineitem.
+
+Once a link between a Tripletex Orderline and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Tripletex Orderline and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Tripletex Orderline Property
+     - HubSpot Lineitem Property
+     - HubSpot Data Type
+   * - count
+     - properties.quantity
+     - "string"
+   * - description
+     - properties.name
+     - "string"
+   * - product.id
+     - properties.hs_product_id
+     - "string"
+   * - unitPriceExcludingVatCurrency
+     - properties.price
      - "string"
 
 
