@@ -2,7 +2,7 @@
 HubSpot to Tripletex Dataflow
 =============================
 
-Generated: 2023-10-05 08:41:49
+Generated: 2023-10-06 13:44:17
 
 Introduction.
 ------------
@@ -679,6 +679,34 @@ The following properties are synchronized between a HubSpot Deal and a Tripletex
    * - properties.deal_currency_code
      - currency.id
      - "integer"
+
+
+HubSpot Lineitem to Tripletex Orderline
+---------------------------------------
+Every HubSpot Lineitem will be synchronized with a Tripletex Orderline.
+
+Once a link between a HubSpot Lineitem and a Tripletex Orderline is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a HubSpot Lineitem and a Tripletex Orderline:
+
+.. list-table::
+   :header-rows: 1
+
+   * - HubSpot Lineitem Property
+     - Tripletex Orderline Property
+     - Tripletex Data Type
+   * - properties.hs_product_id
+     - product.id
+     - "integer"
+   * - properties.name
+     - description
+     - "string"
+   * - properties.price
+     - unitPriceExcludingVatCurrency
+     - "float"
+   * - properties.quantity
+     - count
+     - "float"
 
 
 HubSpot Lineitemdealassociation to Tripletex Orderline
