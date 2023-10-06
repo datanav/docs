@@ -2,7 +2,7 @@
 Powerofficego to HubSpot Dataflow
 =================================
 
-Generated: 2023-10-02 12:32:51
+Generated: 2023-10-06 13:44:17
 
 Introduction.
 ------------
@@ -537,6 +537,22 @@ The following properties are synchronized between a Powerofficego Quote and a Hu
 
    * - Powerofficego Quote Property
      - HubSpot Quote Property
+     - HubSpot Data Type
+
+
+Powerofficego Salesorderlines to HubSpot Lineitem
+-------------------------------------------------
+Every Powerofficego Salesorderlines will be synchronized with a HubSpot Lineitem.
+
+Once a link between a Powerofficego Salesorderlines and a HubSpot Lineitem is established, it will keep in sync between the two systems, regardless of where it is edited.
+
+The following properties are synchronized between a Powerofficego Salesorderlines and a HubSpot Lineitem:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Powerofficego Salesorderlines Property
+     - HubSpot Lineitem Property
      - HubSpot Data Type
 
 
