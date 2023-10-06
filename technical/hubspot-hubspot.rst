@@ -2,7 +2,7 @@
 HubSpot to HubSpot Dataflow
 ===========================
 
-Generated: 2023-10-06 08:59:37
+Generated: 2023-10-06 08:59:40
 
 Introduction.
 ------------
@@ -640,7 +640,7 @@ The following properties are synchronized between a HubSpot Quotecompanyassociat
      - id
      - "string"
    * - toObjectId
-     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
+     - toObjectId (Dependant on having  in sesam_simpleAssociationTypesDependant on having wd:Q852835 in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypesDependant on having  in sesam_simpleAssociationTypes)
      - "string"
 
 
