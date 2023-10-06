@@ -2,7 +2,7 @@
 Tripletex to Wave Dataflow
 ==========================
 
-Generated: 2023-10-05 08:46:20
+Generated: 2023-10-06 14:57:18
 
 Introduction.
 ------------
@@ -250,6 +250,9 @@ The following properties are synchronized between a Tripletex Employee and a Wav
    * - address.country.id
      - address.country.code
      - "string"
+   * - address.country.id
+     - address.countryCode
+     - "string"
    * - address.postalCode
      - address.postalCode
      - "string"
@@ -346,6 +349,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - deliveryAddress.city
      - address.country.code
      - "string"
+   * - deliveryAddress.city
+     - address.countryCode
+     - "string"
    * - deliveryAddress.postalCode
      - address.postalCode
      - "string"
@@ -367,6 +373,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
    * - physicalAddress.country.id
      - address.country.code
      - "string"
+   * - physicalAddress.country.id
+     - address.countryCode
+     - "string"
    * - physicalAddress.postalCode
      - address.postalCode
      - "string"
@@ -381,6 +390,9 @@ The following properties are synchronized between a Tripletex Supplier and a Wav
      - "string"
    * - postalAddress.country.id
      - address.country.code
+     - "string"
+   * - postalAddress.country.id
+     - address.countryCode
      - "string"
    * - postalAddress.postalCode
      - address.postalCode
@@ -423,6 +435,9 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - address.country.code
      - "string"
    * - deliveryAddress.country.id
+     - address.countryCode
+     - "string"
+   * - deliveryAddress.country.id
      - shippingDetails.address.country.code
      - "string"
    * - deliveryAddress.postalCode
@@ -462,6 +477,9 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - address.country.code
      - "string"
    * - physicalAddress.country.id
+     - address.countryCode
+     - "string"
+   * - physicalAddress.country.id
      - shippingDetails.address.country.code
      - "string"
    * - physicalAddress.postalCode
@@ -490,6 +508,9 @@ The following properties are synchronized between a Tripletex Customer and a Wav
      - "string"
    * - postalAddress.country.id
      - address.country.code
+     - "string"
+   * - postalAddress.country.id
+     - address.countryCode
      - "string"
    * - postalAddress.country.id
      - shippingDetails.address.country.code
