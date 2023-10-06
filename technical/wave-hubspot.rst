@@ -2,7 +2,7 @@
 Wave Financial to HubSpot Dataflow
 ==================================
 
-Generated: 2023-10-06 13:44:17
+Generated: 2023-10-06 14:13:48
 
 Introduction.
 ------------
@@ -407,6 +407,9 @@ The following properties are synchronized between a Wave Invoice and a HubSpot L
    * - Wave Invoice Property
      - HubSpot Lineitem Property
      - HubSpot Data Type
+   * - items.description
+     - properties.description
+     - "string"
    * - items.description
      - properties.name
      - "string"
